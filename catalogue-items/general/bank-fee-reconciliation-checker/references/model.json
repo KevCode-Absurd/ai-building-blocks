@@ -1,0 +1,149 @@
+{
+  "inputs": [
+    {
+      "id": "payment_count",
+      "label": "payment count",
+      "value": 100,
+      "unit": "transactions",
+      "min": 0
+    },
+    {
+      "id": "payment_price",
+      "label": "payment price",
+      "value": 0.2,
+      "unit": "USD / transaction",
+      "min": 0
+    },
+    {
+      "id": "receipt_count",
+      "label": "receipt count",
+      "value": 50,
+      "unit": "transactions",
+      "min": 0
+    },
+    {
+      "id": "receipt_price",
+      "label": "receipt price",
+      "value": 0.1,
+      "unit": "USD / transaction",
+      "min": 0
+    },
+    {
+      "id": "fixed_fee",
+      "label": "fixed fee",
+      "value": 10,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "credit_allowance",
+      "label": "credit allowance",
+      "value": 5,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "billed_fee",
+      "label": "billed fee",
+      "value": 33,
+      "unit": "USD / stated period",
+      "min": 0
+    }
+  ],
+  "calculations": [
+    {
+      "id": "payment_fees",
+      "label": "payment fees",
+      "op": "mul",
+      "args": [
+        "payment_count",
+        "payment_price"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "receipt_fees",
+      "label": "receipt fees",
+      "op": "mul",
+      "args": [
+        "receipt_count",
+        "receipt_price"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "gross_fees",
+      "label": "gross fees",
+      "op": "sum",
+      "args": [
+        "payment_fees",
+        "receipt_fees",
+        "fixed_fee"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "applied_credit",
+      "label": "applied credit",
+      "op": "min",
+      "args": [
+        "credit_allowance",
+        "gross_fees"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "expected_fee",
+      "label": "expected fee",
+      "op": "sub",
+      "args": [
+        "gross_fees",
+        "applied_credit"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "billing_difference",
+      "label": "billing difference",
+      "op": "sub",
+      "args": [
+        "billed_fee",
+        "expected_fee"
+      ],
+      "unit": "USD / stated period"
+    }
+  ],
+  "outputs": [
+    "gross_fees",
+    "applied_credit",
+    "expected_fee",
+    "billing_difference"
+  ],
+  "expected": {
+    "gross_fees": 35,
+    "applied_credit": 5,
+    "expected_fee": 30,
+    "billing_difference": 3
+  },
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "inputs": {
+        "payment_count": 150
+      },
+      "expected": {
+        "gross_fees": 45,
+        "expected_fee": 40,
+        "billing_difference": -7
+      }
+    },
+    {
+      "name": "Missing required evidence refuses calculation",
+      "inputs": {
+        "payment_count": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only, in USD unless labelled otherwise. This is a focused schedule with explicit period and timing assumptions. Rebuild from actual dated sources before use; the example is not a full financial forecast."
+}

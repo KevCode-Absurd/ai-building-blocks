@@ -1,0 +1,17 @@
+{
+  "slug": "listed-holding-lookthrough-nav",
+  "modelSha256": "5323ba7a9594e44fa16de2729932e904948cf02b99555b6cb797cc071baac9d6",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Higher quoted A value",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Required input absent",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

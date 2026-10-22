@@ -1,0 +1,105 @@
+{
+  "inputs": [
+    {
+      "id": "payable0",
+      "label": "Opening current tax payable",
+      "value": 10,
+      "unit": "USD million",
+      "min": -1000000000,
+      "max": 1000000000
+    },
+    {
+      "id": "currentExpense",
+      "label": "Current tax expense",
+      "value": 30,
+      "unit": "USD million",
+      "min": -1000000000,
+      "max": 1000000000
+    },
+    {
+      "id": "noncash",
+      "label": "Signed noncash payable additions",
+      "value": 4,
+      "unit": "USD million",
+      "min": -1000000000,
+      "max": 1000000000
+    },
+    {
+      "id": "payable1",
+      "label": "Closing current tax payable",
+      "value": 12,
+      "unit": "USD million",
+      "min": -1000000000,
+      "max": 1000000000
+    },
+    {
+      "id": "reportedCash",
+      "label": "Reported cash income taxes",
+      "value": 32,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    }
+  ],
+  "calculations": [
+    {
+      "id": "available",
+      "label": "Opening payable plus additions",
+      "op": "add",
+      "args": [
+        "payable0",
+        "currentExpense",
+        "noncash"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "inferredCash",
+      "label": "Inferred cash tax paid",
+      "op": "sub",
+      "args": [
+        "available",
+        "payable1"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "residual",
+      "label": "Reported less inferred cash paid",
+      "op": "sub",
+      "args": [
+        "reportedCash",
+        "inferredCash"
+      ],
+      "unit": "USD million"
+    }
+  ],
+  "outputs": [
+    "inferredCash",
+    "residual"
+  ],
+  "expected": {
+    "inferredCash": 32,
+    "residual": 0
+  },
+  "cases": [
+    {
+      "name": "Higher closing tax payable",
+      "inputs": {
+        "payable1": 14
+      },
+      "expected": {
+        "inferredCash": 30,
+        "residual": 2
+      }
+    },
+    {
+      "name": "Required source input missing",
+      "inputs": {
+        "payable0": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures.10+30+4-12=32 inferred cash paid, matching the disclosed32. Closing payable14 implies30 cash paid and an unresolved2 difference."
+}

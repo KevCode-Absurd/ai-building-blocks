@@ -1,0 +1,78 @@
+new_slug: retail-markdown-stock-reconciler
+name: Retail markdown stock reconciler
+headline: Retail markdown stock reconciler
+summary: A stock cohort reconciliation with sold contribution and cumulative purchase cash recovery
+job: track-numbers
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: A stock cohort reconciliation with sold-unit contribution, remaining units and cumulative cash after the full cohort purchase. Share opening stock cohort units and unit purchase cash cost, full-price and markdown units sold and realized prices, clearance cash expenses; identify the timing of the original cohort purchase.
+explain: |-
+  A stock cohort reconciliation with sold-unit contribution, remaining units and cumulative cash after the full cohort purchase.
+
+  Retail stock cash recovery. Illustrative cohort of100 units purchased for5 each costs500. Selling40 at10 and30 at6 realizes580. Sold purchase cost350 plus clearance10 leaves sold-unit contribution220; this excludes150 purchase cost still held in30 units. Cumulative cash after the full500 original purchase and10 clearance is70. At markdown price4 receipts are520, sold-unit contribution160 and cumulative cohort net cash10. Cumulative cash is across purchase and clearance dates, not a single-period cash-flow claim. Overselling stock is refused.
+when:
+  - You need a stock cohort reconciliation with sold-unit contribution, remaining units and cumulative cash after the full cohort purchase.
+  - You work on retail stock cash recovery and need traceable calculations.
+  - A reviewer needs to trace the result back to inputs and assumptions.
+you_give:
+  - Opening stock cohort units and unit purchase cash cost, full-price and markdown units sold and realized prices, clearance cash expenses; identify the timing of the original cohort purchase.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - A stock cohort reconciliation with sold-unit contribution, remaining units and cumulative cash after the full cohort purchase.
+  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: 1. Map dated source records, actual units, period cutoffs, currency, definitions and missing evidence before computing
+    text: Map dated source records, actual units, period cutoffs, currency, definitions and missing evidence before computing.
+  - title: 2. Freeze the cohort, opening quantity and source cost; separate actual sold units from proposed clearance quantities
+    text: Freeze the cohort, opening quantity and source cost; separate actual sold units from proposed clearance quantities.
+  - title: 3. Reconcile full-price plus markdown units sold against opening cohort quantity; refuse sales exceeding available stock
+    text: Reconcile full-price plus markdown units sold against opening cohort quantity; refuse sales exceeding available stock. Separate realized receipts, purchase cost of sold units and the purchase-cost memo of unsold units.
+  - title: 4. Calculate sold-unit contribution after sold purchase cost and clearance expense
+    text: Calculate sold-unit contribution after sold purchase cost and clearance expense. Separately subtract the full original cohort purchase cash from realized receipts and clearance expense to report cumulative cohort net cash, not current-period cash flow.
+output_shape: |-
+  A stock cohort reconciliation with sold-unit contribution, remaining units and cumulative cash after the full cohort purchase.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: Every material driver traces to a dated source; actuals and scenarios remain separate.
+judge:
+  - Every material driver traces to a dated source; actuals and scenarios remain separate.
+  - Missing evidence blocks the affected calculation instead of becoming a zero.
+  - Closing stock equals opening units less all sold units and cannot be negative. Sold-unit cost plus the held purchase-cost memo equals the original cohort purchase cost.
+  - Sold-unit contribution excludes unsold purchase cost; cumulative cohort net cash includes the full original purchase once. The held-cost memo is neither recoverable value nor new cash.
+test:
+  - Run the included baseline and changed-input fixtures, then compare with the stated expected results.
+  - Remove a required input and confirm the affected calculation refuses to invent a zero.
+  - Recalculate the workbook after changing an input and inspect the saved output.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: Node.js 20 or later
+      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

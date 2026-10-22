@@ -1,0 +1,32 @@
+{
+  "engine": "Artifact Tool",
+  "scope": "Illustrative workbook calculations, not source truth or an actual investment conclusion. Native Microsoft Excel application execution is not claimed.",
+  "modelSha256": "20ad8e57585f8b70ea3e80d58e38cb6e8a40b0ddc63e47c9edaad4375926e75a",
+  "xlsxSha256": "cc2b6ee1aaf5cabb86c05015660a72d757b4b92d5e56307888a9f4465dc620a2",
+  "baseline": "pass",
+  "changedInputCase": "No permitted reversal",
+  "invalidInputCase": "Required source input missing",
+  "cases": [
+    {
+      "name": "No permitted reversal",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Required source input missing",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ],
+  "reopenedAndRecalculated": true,
+  "rendered": true,
+  "visualReview": "pass",
+  "workbookSpecSha256": "ca89c6d4ea6d2cfb8e829eaae34e0748cf8ed43022e54075c4897a41dcad17c7",
+  "visualEvidence": {
+    "report": "reports/finance-public-markets-peer-review.json",
+    "reportSha256": "f73f6f5598ba0647c477c547d2776f1221130bb7861b62def472b74331866282",
+    "previewSha256": "df2610b369dd89a38b6fda6afac313484cc4d063d527b2ee415824ad3caa248f",
+    "sheet": "Model",
+    "sourceSpecSha256": "65bc3cef1437844fe56cd1d28a63f15bd48ed57ec6ab0a0bb71079eb90f5e0ab"
+  }
+}

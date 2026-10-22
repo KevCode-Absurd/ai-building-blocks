@@ -1,0 +1,17 @@
+{
+  "slug": "stock-split-eps-restatement",
+  "modelSha256": "24608ba79948c7a2894f68899d93bb4b1f02807d992824dc30ffedec6eba9838",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "One-for-two reverse split",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required source input",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

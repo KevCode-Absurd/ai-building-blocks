@@ -1,0 +1,9 @@
+{
+  "payment_count": 100,
+  "payment_price": 0.2,
+  "receipt_count": 50,
+  "receipt_price": 0.1,
+  "fixed_fee": 10,
+  "credit_allowance": 5,
+  "billed_fee": 33
+}

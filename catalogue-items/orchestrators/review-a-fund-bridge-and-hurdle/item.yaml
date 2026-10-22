@@ -1,0 +1,45 @@
+slug: review-a-fund-bridge-and-hurdle
+name: Review a fund bridge and hurdle
+summary: Separate subscription-line return timing from the actual preferred-return start convention.
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: spreadsheet
+    required: true
+  - type: audit_report
+    required: true
+  - type: document
+    required: true
+uses:
+  - subscription-line-timing-checker
+  - preferred-return-accrual-checker
+  - no-catchup-waterfall-checker
+steps:
+  - uses: subscription-line-timing-checker
+    note: Calculate the supported exact annual call-delay comparison using actual investment, exit and simple bridge cost. Label periodic IRRs and stop for irregular dates requiring XIRR.
+  - uses: preferred-return-accrual-checker
+    note: Independently locate the LPA hurdle start, eligible capital and year fraction. Use draw date or call date only when the actual clause specifies it; do not copy an IRR holding period into accrual automatically.
+  - uses: no-catchup-waterfall-checker
+    note: Use verified eligible unreturned LP capital and the separate accrued preference against actual cash after financing obligations. Reconcile bridge cost once and keep the periodic-return comparison distinct from the distribution allocation.
+execution: coordinator
+origin: own
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/finance-expansion
+example_pending: true
+warnings:
+  - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+credits:
+  - title: Original finance methods and model fixtures
+    by: AI Blocks contributors
+    used: Original instructions, calculations and illustrative examples. External method references are linked separately and retain their own rights.

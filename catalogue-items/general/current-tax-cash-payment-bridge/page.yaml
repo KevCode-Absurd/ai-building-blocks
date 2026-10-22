@@ -1,0 +1,76 @@
+new_slug: current-tax-cash-payment-bridge
+name: Current tax cash-payment bridge
+headline: Current tax cash-payment bridge
+summary: Reconcile current tax expense and tax-payable movements to disclosed cash payments.
+job: track-numbers
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: A current-tax payable-to-cash bridge and an unexplained payment residual. Share current tax expense, opening/closing current tax payable, signed noncash movements and reported cash tax paid.
+explain: |-
+  A current-tax payable-to-cash bridge and an unexplained payment residual.
+
+  Issuer accounting and earnings. Illustrative figures.10+30+4-12=32 inferred cash paid, matching the disclosed32. Closing payable14 implies30 cash paid and an unresolved2 difference.
+when:
+  - You need a current-tax payable-to-cash bridge and an unexplained payment residual.
+  - You work on issuer accounting and earnings and need traceable calculations.
+  - A reviewer needs to trace the result back to inputs and assumptions.
+you_give:
+  - Current tax expense, opening/closing current tax payable, signed noncash movements and reported cash tax paid.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - A current-tax payable-to-cash bridge and an unexplained payment residual.
+  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: 1. Separate current tax from deferred tax expense and confirm payable/receivable netting is valid on the chosen jurisdiction and reporting basis
+    text: Separate current tax from deferred tax expense and confirm payable/receivable netting is valid on the chosen jurisdiction and reporting basis.
+  - title: 2. Start with opening payable, add current tax expense and signed acquisition/FX/other noncash movements, then deduct closing payable to infer cash paid
+    text: Start with opening payable, add current tax expense and signed acquisition/FX/other noncash movements, then deduct closing payable to infer cash paid.
+  - title: 3. Compare with reported cash income-tax payments and explain refunds, discontinued operations and classification differences instead of plugging the gap
+    text: Compare with reported cash income-tax payments and explain refunds, discontinued operations and classification differences instead of plugging the gap.
+output_shape: |-
+  A current-tax payable-to-cash bridge and an unexplained payment residual.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: Deferred tax expense is not treated as a cash payment.
+judge:
+  - Deferred tax expense is not treated as a cash payment.
+  - Payable additions and removals have consistent signs and matching jurisdiction/perimeter.
+  - Tie all inputs to source notes, dates, currency, scale and signs.
+  - Retain reported figures beside analytical adjustments and list every unresolved source gap.
+test:
+  - Run the included baseline and changed-input fixtures, then compare with the stated expected results.
+  - Remove a required input and confirm the affected calculation refuses to invent a zero.
+  - Recalculate the workbook after changing an input and inspect the saved output.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: Node.js 20 or later
+      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

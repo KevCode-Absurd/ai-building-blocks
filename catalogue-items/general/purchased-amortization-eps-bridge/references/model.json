@@ -1,0 +1,121 @@
+{
+  "inputs": [
+    {
+      "id": "income",
+      "label": "Reported ordinary income",
+      "value": 100,
+      "unit": "USD million",
+      "min": -1000000000,
+      "max": 1000000000
+    },
+    {
+      "id": "amortization",
+      "label": "Purchased-intangible amortization",
+      "value": 20,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "taxBenefit",
+      "label": "Recognized tax benefit attributable to amortization",
+      "value": 2.5,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "shares",
+      "label": "Matching diluted shares",
+      "value": 50,
+      "unit": "million shares",
+      "min": 0.001,
+      "max": 1000000000
+    }
+  ],
+  "calculations": [
+    {
+      "id": "afterTax",
+      "label": "After-tax amortization adjustment",
+      "op": "sub",
+      "args": [
+        "amortization",
+        "taxBenefit"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "alternativeIncome",
+      "label": "Amortization-excluded income",
+      "op": "add",
+      "args": [
+        "income",
+        "afterTax"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "reportedEps",
+      "label": "Reported EPS",
+      "op": "div",
+      "args": [
+        "income",
+        "shares"
+      ],
+      "unit": "USD per share"
+    },
+    {
+      "id": "alternativeEps",
+      "label": "Amortization-excluded EPS",
+      "op": "div",
+      "args": [
+        "alternativeIncome",
+        "shares"
+      ],
+      "unit": "USD per share"
+    },
+    {
+      "id": "epsAdjustment",
+      "label": "Per-share adjustment",
+      "op": "div",
+      "args": [
+        "afterTax",
+        "shares"
+      ],
+      "unit": "USD per share"
+    }
+  ],
+  "outputs": [
+    "afterTax",
+    "reportedEps",
+    "alternativeEps",
+    "epsAdjustment"
+  ],
+  "expected": {
+    "afterTax": 17.5,
+    "reportedEps": 2,
+    "alternativeEps": 2.35,
+    "epsAdjustment": 0.35
+  },
+  "cases": [
+    {
+      "name": "Larger attributable recognized tax benefit",
+      "inputs": {
+        "taxBenefit": 5
+      },
+      "expected": {
+        "afterTax": 15,
+        "alternativeEps": 2.3,
+        "epsAdjustment": 0.3
+      }
+    },
+    {
+      "name": "Required source input missing",
+      "inputs": {
+        "income": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures.20 amortization less2.5 tax benefit gives17.5 after-tax adjustment. Income100/50=$2 EPS;117.5/50=$2.35 alternative EPS. A tax benefit5 gives15 adjustment and$2.30 alternative EPS."
+}

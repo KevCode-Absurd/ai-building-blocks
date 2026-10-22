@@ -1,0 +1,170 @@
+{
+  "inputs": [
+    {
+      "id": "transactionValue",
+      "label": "transaction Value",
+      "value": 150,
+      "unit": "USD millions",
+      "min": 0
+    },
+    {
+      "id": "breakpoint",
+      "label": "breakpoint",
+      "value": 100,
+      "unit": "USD millions",
+      "min": 0
+    },
+    {
+      "id": "firstRate",
+      "label": "first Rate",
+      "value": 0.02,
+      "unit": "fraction",
+      "min": 0,
+      "max": 1
+    },
+    {
+      "id": "secondRate",
+      "label": "second Rate",
+      "value": 0.01,
+      "unit": "fraction",
+      "min": 0,
+      "max": 1
+    },
+    {
+      "id": "minimumFee",
+      "label": "minimum Fee",
+      "value": 1,
+      "unit": "USD millions",
+      "min": 0
+    },
+    {
+      "id": "retainerCredit",
+      "label": "retainer Credit",
+      "value": 0.5,
+      "unit": "USD millions",
+      "min": 0
+    }
+  ],
+  "calculations": [
+    {
+      "id": "firstBase",
+      "label": "first Base",
+      "op": "min",
+      "args": [
+        "transactionValue",
+        "breakpoint"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "excessRaw",
+      "label": "excess Raw",
+      "op": "sub",
+      "args": [
+        "transactionValue",
+        "breakpoint"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "secondBase",
+      "label": "second Base",
+      "op": "max",
+      "args": [
+        0,
+        "excessRaw"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "firstFee",
+      "label": "first Fee",
+      "op": "mul",
+      "args": [
+        "firstBase",
+        "firstRate"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "secondFee",
+      "label": "second Fee",
+      "op": "mul",
+      "args": [
+        "secondBase",
+        "secondRate"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "tierFee",
+      "label": "tier Fee",
+      "op": "add",
+      "args": [
+        "firstFee",
+        "secondFee"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "grossFee",
+      "label": "gross Fee",
+      "op": "max",
+      "args": [
+        "tierFee",
+        "minimumFee"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "creditUsed",
+      "label": "credit Used",
+      "op": "min",
+      "args": [
+        "retainerCredit",
+        "grossFee"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "invoice",
+      "label": "invoice",
+      "op": "sub",
+      "args": [
+        "grossFee",
+        "creditUsed"
+      ],
+      "unit": "USD millions"
+    }
+  ],
+  "outputs": [
+    "grossFee",
+    "creditUsed",
+    "invoice"
+  ],
+  "expected": {
+    "grossFee": 2.5,
+    "creditUsed": 0.5,
+    "invoice": 2
+  },
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "inputs": {
+        "transactionValue": 200
+      },
+      "expected": {
+        "grossFee": 3,
+        "invoice": 2.5
+      }
+    },
+    {
+      "name": "Missing required number",
+      "inputs": {
+        "transactionValue": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only. 2% of first100 plus1% of next50 is2.5;0.5 retainer leaves2. Value200 gives3 gross and2.5 due."
+}

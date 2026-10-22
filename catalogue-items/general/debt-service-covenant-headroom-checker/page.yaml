@@ -1,0 +1,78 @@
+new_slug: debt-service-covenant-headroom-checker
+name: Debt service covenant headroom checker
+headline: Debt service covenant headroom checker
+summary: A debt service covenant schedule and minimum cash headroom
+job: money-and-investing
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: A debt service covenant schedule and minimum cash headroom. Share qualifying cash and contractual debt service for three matching periods, signed covenant definition and minimum required cash coverage.
+explain: |-
+  A debt service covenant schedule and minimum cash headroom.
+
+  Credit covenant cash tests. Illustrative figures only in USD unless labelled otherwise. A focused schedule using explicit period, rate and timing conventions; not a full financing model or an approval decision.
+when:
+  - You need a debt service covenant schedule and minimum cash headroom.
+  - You work on credit covenant cash tests and need traceable calculations.
+  - A reviewer needs to trace the result back to inputs and assumptions.
+you_give:
+  - Qualifying cash and contractual debt service for three matching periods, signed covenant definition and minimum required cash coverage.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - A debt service covenant schedule and minimum cash headroom.
+  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: 1. Map dated sources, contractual definitions, period boundaries, currency, scale and source gaps before calculating
+    text: Map dated sources, contractual definitions, period boundaries, currency, scale and source gaps before calculating.
+  - title: 2. Read the actual covenant cash numerator, debt-service denominator, test dates and minimum required coverage; no market benchmark becomes a rule
+    text: Read the actual covenant cash numerator, debt-service denominator, test dates and minimum required coverage; no market benchmark becomes a rule.
+  - title: 3. For each test period multiply debt service by the contractual floor and subtract from qualifying cash to show signed cash headroom
+    text: For each test period multiply debt service by the contractual floor and subtract from qualifying cash to show signed cash headroom.
+  - title: 4. Identify minimum headroom, preserve any deficient period and reconcile ratios to the same period cash/service table
+    text: Identify minimum headroom, preserve any deficient period and reconcile ratios to the same period cash/service table.
+output_shape: |-
+  A debt service covenant schedule and minimum cash headroom.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: Actual records, contractual terms and scenarios remain distinguishable.
+judge:
+  - Actual records, contractual terms and scenarios remain distinguishable.
+  - Missing evidence blocks the affected line; no default zero or unexplained balancing plug.
+  - All tested debt-service amounts are positive; a debt-free period is inapplicable and must be handled separately.
+  - Do not substitute EBITDA, remove debt service or assume waivers without contractual evidence.
+test:
+  - Run the included baseline and changed-input fixtures, then compare with the stated expected results.
+  - Remove a required input and confirm the affected calculation refuses to invent a zero.
+  - Recalculate the workbook after changing an input and inspect the saved output.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: Node.js 20 or later
+      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

@@ -1,0 +1,17 @@
+{
+  "slug": "availability-payment-deduction-checker",
+  "modelSha256": "f7d6c9badfddda85ff2a3e8926f53b6c9878af3e84fe1c8bcac2dddfc7762900",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing or invalid required input",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

@@ -1,0 +1,247 @@
+{
+  "inputs": [
+    {
+      "id": "opening_debt",
+      "label": "opening debt",
+      "value": 100,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "draw_1",
+      "label": "draw 1",
+      "value": 100,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "draw_2",
+      "label": "draw 2",
+      "value": 100,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "draw_3",
+      "label": "draw 3",
+      "value": 0,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "annual_rate",
+      "label": "annual rate",
+      "value": 0.1,
+      "unit": "annual decimal",
+      "min": 0,
+      "max": 1
+    },
+    {
+      "id": "draw_weight",
+      "label": "draw weight",
+      "value": 0.5,
+      "unit": "year fraction",
+      "min": 0,
+      "max": 1
+    }
+  ],
+  "calculations": [
+    {
+      "id": "weighted_draw_1",
+      "label": "weighted draw 1",
+      "op": "mul",
+      "args": [
+        "draw_1",
+        "draw_weight"
+      ],
+      "unit": "USD / annual period"
+    },
+    {
+      "id": "interest_base_1",
+      "label": "interest base 1",
+      "op": "sum",
+      "args": [
+        "opening_debt",
+        "weighted_draw_1"
+      ],
+      "unit": "USD / annual period"
+    },
+    {
+      "id": "interest_1",
+      "label": "interest 1",
+      "op": "mul",
+      "args": [
+        "interest_base_1",
+        "annual_rate"
+      ],
+      "unit": "USD / annual period"
+    },
+    {
+      "id": "close_1",
+      "label": "close 1",
+      "op": "sum",
+      "args": [
+        "opening_debt",
+        "draw_1",
+        "interest_1"
+      ],
+      "unit": "USD / annual period"
+    },
+    {
+      "id": "weighted_draw_2",
+      "label": "weighted draw 2",
+      "op": "mul",
+      "args": [
+        "draw_2",
+        "draw_weight"
+      ],
+      "unit": "USD / annual period"
+    },
+    {
+      "id": "interest_base_2",
+      "label": "interest base 2",
+      "op": "sum",
+      "args": [
+        "close_1",
+        "weighted_draw_2"
+      ],
+      "unit": "USD / annual period"
+    },
+    {
+      "id": "interest_2",
+      "label": "interest 2",
+      "op": "mul",
+      "args": [
+        "interest_base_2",
+        "annual_rate"
+      ],
+      "unit": "USD / annual period"
+    },
+    {
+      "id": "close_2",
+      "label": "close 2",
+      "op": "sum",
+      "args": [
+        "close_1",
+        "draw_2",
+        "interest_2"
+      ],
+      "unit": "USD / annual period"
+    },
+    {
+      "id": "weighted_draw_3",
+      "label": "weighted draw 3",
+      "op": "mul",
+      "args": [
+        "draw_3",
+        "draw_weight"
+      ],
+      "unit": "USD / annual period"
+    },
+    {
+      "id": "interest_base_3",
+      "label": "interest base 3",
+      "op": "sum",
+      "args": [
+        "close_2",
+        "weighted_draw_3"
+      ],
+      "unit": "USD / annual period"
+    },
+    {
+      "id": "interest_3",
+      "label": "interest 3",
+      "op": "mul",
+      "args": [
+        "interest_base_3",
+        "annual_rate"
+      ],
+      "unit": "USD / annual period"
+    },
+    {
+      "id": "close_3",
+      "label": "close 3",
+      "op": "sum",
+      "args": [
+        "close_2",
+        "draw_3",
+        "interest_3"
+      ],
+      "unit": "USD / annual period"
+    },
+    {
+      "id": "total_interest",
+      "label": "total capitalized interest",
+      "op": "sum",
+      "args": [
+        "interest_1",
+        "interest_2",
+        "interest_3"
+      ],
+      "unit": "USD / three years"
+    },
+    {
+      "id": "expected_close",
+      "label": "opening plus draws plus interest",
+      "op": "sum",
+      "args": [
+        "opening_debt",
+        "draw_1",
+        "draw_2",
+        "draw_3",
+        "total_interest"
+      ],
+      "unit": "USD / end year3"
+    },
+    {
+      "id": "rollforward_check",
+      "label": "debt rollforward difference",
+      "op": "sub",
+      "args": [
+        "close_3",
+        "expected_close"
+      ],
+      "unit": "USD / end year3"
+    }
+  ],
+  "outputs": [
+    "interest_1",
+    "interest_2",
+    "interest_3",
+    "total_interest",
+    "close_3",
+    "rollforward_check"
+  ],
+  "expected": {
+    "interest_1": 15,
+    "interest_2": 26.5,
+    "interest_3": 34.15,
+    "total_interest": 75.65,
+    "close_3": 375.65,
+    "rollforward_check": 0
+  },
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "inputs": {
+        "draw_1": 0
+      },
+      "expected": {
+        "interest_1": 10,
+        "interest_2": 16,
+        "interest_3": 22.6,
+        "total_interest": 48.6,
+        "close_3": 248.6,
+        "rollforward_check": 0
+      }
+    },
+    {
+      "name": "Missing or invalid required input",
+      "inputs": {
+        "opening_debt": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only in USD unless labelled otherwise. The model is the focused stated schedule, not a complete company forecast. Annual end-period cash is used unless the inputs state another convention."
+}

@@ -1,0 +1,74 @@
+new_slug: connect-toll-operating-cash-to-debt-repayment
+name: Connect toll cash to debt repayment
+headline: Connect toll cash to debt repayment
+summary: A traffic cash scenario and linked debt repayment profile
+job: money-and-investing
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: "A traffic cash scenario and linked debt repayment profile. Share three annual paid traffic/collection assumptions with sources, operating cost, project cash adjustments, opening debt and financing service-cover terms. Identify operating source basis: accrual before working-capital settlement or actual cash receipts/payments, with a compatible working-capital perimeter. Road passages are chargeable units before collection loss."
+explain: |-
+  A traffic cash scenario and linked debt repayment profile.
+
+  Transport project finance. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+when:
+  - You need a traffic cash scenario and linked debt repayment profile.
+  - You work on transport project finance and need traceable calculations.
+  - A reviewer needs to trace the result back to inputs and assumptions.
+you_give:
+  - "Three annual paid traffic/collection assumptions with sources, operating cost, project cash adjustments, opening debt and financing service-cover terms. Identify operating source basis: accrual before working-capital settlement or actual cash receipts/payments, with a compatible working-capital perimeter. Road passages are chargeable units before collection loss."
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - A traffic cash scenario and linked debt repayment profile.
+  - Original step files, financial assumptions, source coverage and a governing handoff summary.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: Toll revenue ramp model builder
+    text: Build annual toll cash from the supplied chargeable passages before collection loss, realized tariff and collection assumptions. Hand annual operating cash and excluded tax/capital/working-capital items into the qualification bridge. Use chargeable passages before collection loss, not passage counts already paid in cash.
+  - title: Project cash available bridge
+    text: Convert each annual toll operating cash result into financing-defined CFADS. Since operating costs were already deducted upstream, record that source basis and avoid deducting them twice. Declare the source basis. For actual cash receipts/payments or already-cash operating results, do not deduct receivable/payable working-capital settlement again; explicitly omit it only after reconciliation. For accrual revenue/cost proxies, use the signed working-capital bridge with noncash expenses excluded. Never combine these two routes.
+  - title: Debt repayment sculpting planner
+    text: Use the resulting annual eligible cash series to calculate debt service and principal. Preserve traffic sensitivity as a scenario, show interest gaps and maturity residual and never claim a forecast proves repayment.
+output_shape: |-
+  A traffic cash scenario and linked debt repayment profile.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: Traffic is explicitly sourced actuals or assumptions; operating cash is converted to contract-qualified CFADS before sculpting debt. Actual receipt/payment sources do not receive a second working-capital deduction; accrual and cash-basis routes are explicitly distinguished.
+judge:
+  - Traffic is explicitly sourced actuals or assumptions; operating cash is converted to contract-qualified CFADS before sculpting debt. Actual receipt/payment sources do not receive a second working-capital deduction; accrual and cash-basis routes are explicitly distinguished.
+  - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
+  - Reconcile opening balances, additions, deductions and closing balances. Match enterprise or equity cash flows to the corresponding discount rate.
+  - Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
+test:
+  - Try a small sourced case and inspect every component handoff.
+  - Remove one required source and confirm the affected step stops.
+  - Change a currency, date or accounting definition and check the conflict stays visible.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

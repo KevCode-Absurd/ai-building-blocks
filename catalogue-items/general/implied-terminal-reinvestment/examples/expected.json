@@ -1,0 +1,9 @@
+{
+  "basis": "Illustrative figures only.",
+  "outputs": {
+    "fcff": 70,
+    "reinvestment": 30,
+    "rate": 0.3,
+    "roc": 0.1
+  }
+}

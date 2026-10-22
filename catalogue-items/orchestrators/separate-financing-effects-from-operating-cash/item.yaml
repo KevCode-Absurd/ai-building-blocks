@@ -1,0 +1,45 @@
+slug: separate-financing-effects-from-operating-cash
+name: Separate financing effects from operating cash
+summary: Reconcile receivable factoring and supplier-finance effects before interpreting operating cash and leverage.
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: spreadsheet
+    required: true
+  - type: audit_report
+    required: true
+  - type: document
+    required: true
+uses:
+  - factoring-cashflow-timing-bridge
+  - supplier-finance-leverage-bridge
+  - noncash-working-capital-bridge
+steps:
+  - uses: factoring-cashflow-timing-bridge
+    note: Use actual sourced schedules in one linked native workbook; example values are illustrative and must not become issuer inputs. Build a matched receipt-timing view from actual factor advances and customer receipts; preserve reported CFO and fees and avoid inferring cash from face balances alone.
+  - uses: supplier-finance-leverage-bridge
+    note: Map debt-like supplier-finance balances once in the analytical debt/payables view; distinguish balance reclassification from any separately justified cash-flow recast.
+  - uses: noncash-working-capital-bridge
+    note: Use original reported operating balances and exclude identified financing and noncash changes. Reconcile the final analytical cash narrative without adjusting the same factoring or supplier-finance effect twice.
+execution: coordinator
+origin: own
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/finance-expansion
+example_pending: true
+warnings:
+  - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+credits:
+  - title: Original finance methods and model fixtures
+    by: AI Blocks contributors
+    used: Original instructions, calculations and illustrative examples. External method references are linked separately and retain their own rights.

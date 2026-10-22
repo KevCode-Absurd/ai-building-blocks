@@ -1,0 +1,17 @@
+{
+  "slug": "currency-forward-settlement-checker",
+  "modelSha256": "4d5d64b53846812e254278c7f2370163856da9f1861700f9936474a1e50ffe72",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required evidence refuses calculation",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

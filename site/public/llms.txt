@@ -5,7 +5,7 @@
 ## Key facts
 
 - Free to use, no account needed.
-- 4228 skills, workflows and prompts in 60 jobs, 305 minds and 68 mini tools.
+- 4438 skills, workflows and prompts in 60 jobs, 305 minds and 68 mini tools.
 - Imported skills are copied as they are from open-licence GitHub repos (MIT, Apache 2.0, BSD, CC BY, CC BY-SA), credited on their page with a link to the original.
 - Minds are AIs built from a person's public work, with their sources listed. They are not the person. Minds that invest teach frameworks only, never buy or sell advice.
 - Skills that scrape websites or need a paid outside account say so on their page.
@@ -27,11 +27,11 @@
 
 ## Skills by job
 
+- [Handle money and investing](https://useaiblocks.com/llms/money-and-investing.txt): 349 skills and workflows, such as Adviser fee tier checker and Business asset value estimator
 - [Build and ship software](https://useaiblocks.com/llms/build-software.txt): 331 skills and workflows, such as Breaking change reviewer and Code explainer for beginners
 - [Plan your strategy](https://useaiblocks.com/llms/plan-strategy.txt): 200 skills and workflows, such as Decision priority planner and Big problem splitter
-- [Handle money and investing](https://useaiblocks.com/llms/money-and-investing.txt): 169 skills and workflows, such as Business asset value estimator and Debt payment coverage checker
+- [Track your numbers](https://useaiblocks.com/llms/track-numbers.txt): 176 skills and workflows, such as Clinic claims collections bridge and Commodity pass through cost bridge
 - [Teach and train people](https://useaiblocks.com/llms/teach-and-train.txt): 160 skills and workflows, such as Lesson opener planner and Timed practice session planner
-- [Track your numbers](https://useaiblocks.com/llms/track-numbers.txt): 146 skills and workflows, such as Numbers drop explainer and Per-order profit calculator
 - [Test and fix code](https://useaiblocks.com/llms/test-and-fix-code.txt): 142 skills and workflows, such as Bug investigation planner and Fragile code spotter
 - [Think it through and decide](https://useaiblocks.com/llms/think-and-decide.txt): 131 skills and workflows, such as Advice credibility checker and Business bet risk review
 - [Run your online store](https://useaiblocks.com/llms/run-your-store.txt): 127 skills and workflows, such as 3PL bill auditor and Live auction show planner

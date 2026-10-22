@@ -1,0 +1,89 @@
+{
+  "inputs": [
+    {
+      "id": "stake",
+      "label": "stake",
+      "value": 0.1,
+      "unit": "fraction",
+      "min": 0,
+      "max": 0.999999
+    },
+    {
+      "id": "outsideCash",
+      "label": "outside Cash",
+      "value": 90,
+      "unit": "USD thousands",
+      "min": 0
+    }
+  ],
+  "calculations": [
+    {
+      "id": "outsideFraction",
+      "label": "outside Fraction",
+      "op": "sub",
+      "args": [
+        1,
+        "stake"
+      ],
+      "unit": "fraction"
+    },
+    {
+      "id": "factor",
+      "label": "factor",
+      "op": "div",
+      "args": [
+        "stake",
+        "outsideFraction"
+      ],
+      "unit": "multiple"
+    },
+    {
+      "id": "participation",
+      "label": "participation",
+      "op": "mul",
+      "args": [
+        "factor",
+        "outsideCash"
+      ],
+      "unit": "USD thousands"
+    },
+    {
+      "id": "totalRound",
+      "label": "total Round",
+      "op": "add",
+      "args": [
+        "outsideCash",
+        "participation"
+      ],
+      "unit": "USD thousands"
+    }
+  ],
+  "outputs": [
+    "participation",
+    "totalRound"
+  ],
+  "expected": {
+    "participation": 10,
+    "totalRound": 100
+  },
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "inputs": {
+        "outsideCash": 180
+      },
+      "expected": {
+        "participation": 20,
+        "totalRound": 200
+      }
+    },
+    {
+      "name": "Missing required number",
+      "inputs": {
+        "stake": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only. 10% of100 requires10 participation beside90 outside cash; outside180 requires20."
+}

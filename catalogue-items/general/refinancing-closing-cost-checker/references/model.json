@@ -1,0 +1,106 @@
+{
+  "inputs": [
+    {
+      "id": "oldPrincipal",
+      "label": "old Principal",
+      "value": 100,
+      "unit": "USD millions",
+      "min": 0
+    },
+    {
+      "id": "premiumRate",
+      "label": "premium Rate",
+      "value": 0.02,
+      "unit": "fraction",
+      "min": 0,
+      "max": 1
+    },
+    {
+      "id": "refinancingFees",
+      "label": "refinancing Fees",
+      "value": 3,
+      "unit": "USD millions",
+      "min": 0
+    },
+    {
+      "id": "newUsableProceeds",
+      "label": "new Usable Proceeds",
+      "value": 105,
+      "unit": "USD millions",
+      "min": 0
+    }
+  ],
+  "calculations": [
+    {
+      "id": "premium",
+      "label": "premium",
+      "op": "mul",
+      "args": [
+        "oldPrincipal",
+        "premiumRate"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "transactionCost",
+      "label": "transaction Cost",
+      "op": "add",
+      "args": [
+        "premium",
+        "refinancingFees"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "closingNeed",
+      "label": "closing Need",
+      "op": "add",
+      "args": [
+        "oldPrincipal",
+        "transactionCost"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "fundingGap",
+      "label": "funding Gap",
+      "op": "sub",
+      "args": [
+        "closingNeed",
+        "newUsableProceeds"
+      ],
+      "unit": "USD millions"
+    }
+  ],
+  "outputs": [
+    "premium",
+    "transactionCost",
+    "closingNeed",
+    "fundingGap"
+  ],
+  "expected": {
+    "premium": 2,
+    "transactionCost": 5,
+    "closingNeed": 105,
+    "fundingGap": 0
+  },
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "inputs": {
+        "newUsableProceeds": 100
+      },
+      "expected": {
+        "fundingGap": 5
+      }
+    },
+    {
+      "name": "Missing required number",
+      "inputs": {
+        "oldPrincipal": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only. 100 payoff plus2 premium and3 fees needs105; new cash100 leaves5 unfunded."
+}

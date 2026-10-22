@@ -1,0 +1,17 @@
+{
+  "slug": "construction-funding-draw-planner",
+  "modelSha256": "fe89705d96a2245785617d889ee84d3dbc4a3e75caacde0e150009b39b007b23",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing or invalid required input",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

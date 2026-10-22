@@ -1,0 +1,167 @@
+{
+  "inputs": [
+    {
+      "id": "produced_m3",
+      "label": "produced m3",
+      "value": 1000,
+      "unit": "m3 / month",
+      "min": 0
+    },
+    {
+      "id": "billed_m3",
+      "label": "billed m3",
+      "value": 800,
+      "unit": "m3 / month",
+      "min": 0
+    },
+    {
+      "id": "realized_billed_rate",
+      "label": "realized billed rate",
+      "value": 2,
+      "unit": "USD / billed m3",
+      "min": 0
+    },
+    {
+      "id": "opening_receivables",
+      "label": "opening receivables",
+      "value": 400,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "current_bill_receipts",
+      "label": "current bill receipts",
+      "value": 1200,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "arrears_receipts",
+      "label": "arrears receipts",
+      "value": 200,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "approved_adjustments",
+      "label": "approved adjustments",
+      "value": 100,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "operating_cash",
+      "label": "operating cash",
+      "value": 1000,
+      "unit": "USD / stated period",
+      "min": 0
+    }
+  ],
+  "calculations": [
+    {
+      "id": "unbilled_m3",
+      "label": "unbilled m3",
+      "op": "sub",
+      "args": [
+        "produced_m3",
+        "billed_m3"
+      ],
+      "unit": "m3 / month"
+    },
+    {
+      "id": "new_billings",
+      "label": "new billings",
+      "op": "mul",
+      "args": [
+        "billed_m3",
+        "realized_billed_rate"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "total_receipts",
+      "label": "total receipts",
+      "op": "sum",
+      "args": [
+        "current_bill_receipts",
+        "arrears_receipts"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "receivable_before_deductions",
+      "label": "receivable before deductions",
+      "op": "sum",
+      "args": [
+        "opening_receivables",
+        "new_billings"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "receivable_deductions",
+      "label": "receivable deductions",
+      "op": "sum",
+      "args": [
+        "total_receipts",
+        "approved_adjustments"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "closing_receivables",
+      "label": "closing receivables",
+      "op": "sub",
+      "args": [
+        "receivable_before_deductions",
+        "receivable_deductions"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "net_operating_cash",
+      "label": "net operating cash",
+      "op": "sub",
+      "args": [
+        "total_receipts",
+        "operating_cash"
+      ],
+      "unit": "USD / stated period"
+    }
+  ],
+  "outputs": [
+    "unbilled_m3",
+    "new_billings",
+    "total_receipts",
+    "closing_receivables",
+    "net_operating_cash"
+  ],
+  "expected": {
+    "unbilled_m3": 200,
+    "new_billings": 1600,
+    "total_receipts": 1400,
+    "closing_receivables": 500,
+    "net_operating_cash": 400
+  },
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "inputs": {
+        "arrears_receipts": 300
+      },
+      "expected": {
+        "total_receipts": 1500,
+        "closing_receivables": 400,
+        "net_operating_cash": 500
+      }
+    },
+    {
+      "name": "Missing or invalid required input",
+      "inputs": {
+        "produced_m3": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only in USD unless labelled otherwise. This focused operating schedule does not establish a complete business forecast, accounting treatment, market price or approval."
+}

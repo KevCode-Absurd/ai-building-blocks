@@ -1,0 +1,17 @@
+{
+  "slug": "capital-call-allocation-checker",
+  "modelSha256": "f17e4b3fbdfe82172093a4cadac489d6318eae278c8c81a6323d984ed50fd368",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required number",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

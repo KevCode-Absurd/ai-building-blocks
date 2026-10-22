@@ -1,0 +1,9 @@
+{
+  "spent": 600,
+  "original_budget": 1000,
+  "remaining_cost": 350,
+  "contingency_rate": 0.1,
+  "undrawn_debt": 200,
+  "undrawn_equity": 150,
+  "usable_cash": 20
+}

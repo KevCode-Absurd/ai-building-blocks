@@ -1,0 +1,124 @@
+{
+  "inputs": [
+    {
+      "id": "includedDebt",
+      "label": "included Debt",
+      "value": 100,
+      "unit": "USD millions",
+      "min": 0
+    },
+    {
+      "id": "eligibleCash",
+      "label": "eligible Cash",
+      "value": 30,
+      "unit": "USD millions",
+      "min": 0
+    },
+    {
+      "id": "cashCap",
+      "label": "cash Cap",
+      "value": 20,
+      "unit": "USD millions",
+      "min": 0
+    },
+    {
+      "id": "covenantEbitda",
+      "label": "covenant Ebitda",
+      "value": 20,
+      "unit": "USD millions",
+      "min": 0.000001
+    },
+    {
+      "id": "maximumLeverage",
+      "label": "maximum Leverage",
+      "value": 5,
+      "unit": "multiple",
+      "min": 0.000001
+    }
+  ],
+  "calculations": [
+    {
+      "id": "cashCredit",
+      "label": "cash Credit",
+      "op": "min",
+      "args": [
+        "eligibleCash",
+        "cashCap"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "netDebt",
+      "label": "net Debt",
+      "op": "sub",
+      "args": [
+        "includedDebt",
+        "cashCredit"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "leverage",
+      "label": "leverage",
+      "op": "div",
+      "args": [
+        "netDebt",
+        "covenantEbitda"
+      ],
+      "unit": "multiple"
+    },
+    {
+      "id": "permittedNetDebt",
+      "label": "permitted Net Debt",
+      "op": "mul",
+      "args": [
+        "maximumLeverage",
+        "covenantEbitda"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "headroom",
+      "label": "headroom",
+      "op": "sub",
+      "args": [
+        "permittedNetDebt",
+        "netDebt"
+      ],
+      "unit": "USD millions"
+    }
+  ],
+  "outputs": [
+    "netDebt",
+    "leverage",
+    "permittedNetDebt",
+    "headroom"
+  ],
+  "expected": {
+    "netDebt": 80,
+    "leverage": 4,
+    "permittedNetDebt": 100,
+    "headroom": 20
+  },
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "inputs": {
+        "covenantEbitda": 15
+      },
+      "expected": {
+        "leverage": 5.333333333333333,
+        "permittedNetDebt": 75,
+        "headroom": -5
+      }
+    },
+    {
+      "name": "Missing required number",
+      "inputs": {
+        "includedDebt": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only. 100 less permitted cash20 leaves80 net debt; EBITDA20 gives4x and20 headroom at5x. EBITDA15 leaves-5 headroom."
+}

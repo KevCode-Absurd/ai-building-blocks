@@ -1,0 +1,12 @@
+{
+  "basis": "Illustrative figures only.",
+  "outputs": {
+    "receipts_1": 1800,
+    "receipts_2": 2160,
+    "receipts_3": 2700,
+    "cash_1": 800,
+    "cash_2": 1060,
+    "cash_3": 1500,
+    "total_cash": 3360
+  }
+}

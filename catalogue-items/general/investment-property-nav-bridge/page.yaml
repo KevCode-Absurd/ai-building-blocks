@@ -1,0 +1,76 @@
+new_slug: investment-property-nav-bridge
+name: Investment property NAV bridge
+headline: Investment property NAV bridge
+summary: Bridge supplied property valuations to equity NAV and a clearly defined market discount.
+job: money-and-investing
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: A property-to-equity NAV schedule with liability-perimeter checks. Share property valuations and dates, other net assets, debt, separate tax adjustments, ordinary shares and price.
+explain: |-
+  A property-to-equity NAV schedule with liability-perimeter checks.
+
+  Public equity valuation. Illustrative figures.1,200+100-500-50=750 NAV or7.50 per share. Price6 is a20% discount. Property1,000 gives NAV5.50 and a9.0909% premium, shown as negative discount.
+when:
+  - You need a property-to-equity NAV schedule with liability-perimeter checks.
+  - You work on public equity valuation and need traceable calculations.
+  - A reviewer needs to trace the result back to inputs and assumptions.
+you_give:
+  - Property valuations and dates, other net assets, debt, separate tax adjustments, ordinary shares and price.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - A property-to-equity NAV schedule with liability-perimeter checks.
+  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: 1. Identify appraisal scope, tenancy assumptions and ownership; preserve appraised and book values separately
+    text: Identify appraisal scope, tenancy assumptions and ownership; preserve appraised and book values separately.
+  - title: 2. Add other net assets and deduct financing and evidenced tax adjustments without deducting liabilities already netted in other assets
+    text: Add other net assets and deduct financing and evidenced tax adjustments without deducting liabilities already netted in other assets.
+  - title: 3. Divide by closing shares; define market discount as one minus price divided by positive NAV per share
+    text: Divide by closing shares; define market discount as one minus price divided by positive NAV per share.
+output_shape: |-
+  A property-to-equity NAV schedule with liability-perimeter checks.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: Debt, tax and other net assets are each included once.
+judge:
+  - Debt, tax and other net assets are each included once.
+  - Discount denominator is positive NAV with valuation dates disclosed.
+  - Trace dates, currency, scale, accounting perimeter and source pages for every material input.
+  - Keep the focused illustration separate from a complete investment conclusion; list unresolved checks.
+test:
+  - Run the included baseline and changed-input fixtures, then compare with the stated expected results.
+  - Remove a required input and confirm the affected calculation refuses to invent a zero.
+  - Recalculate the workbook after changing an input and inspect the saved output.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: Node.js 20 or later
+      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

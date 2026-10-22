@@ -1,0 +1,8 @@
+{
+  "basis": "Illustrative figures only.",
+  "outputs": {
+    "interest": 5,
+    "commitment_fee": 0.5,
+    "total_charge": 5.5
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "inputs": [
+    {
+      "id": "oldShares",
+      "label": "Pre-rights shares",
+      "value": 4,
+      "unit": "million shares",
+      "min": 0.001,
+      "max": 1000000000
+    },
+    {
+      "id": "rightsShares",
+      "label": "Rights shares",
+      "value": 1,
+      "unit": "million shares",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "cumPrice",
+      "label": "Cum-rights price",
+      "value": 10,
+      "unit": "USD per share",
+      "min": 0.000001,
+      "max": 1000000000
+    },
+    {
+      "id": "subscription",
+      "label": "Subscription price",
+      "value": 5,
+      "unit": "USD per share",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "priorEps",
+      "label": "Comparative EPS",
+      "value": 2,
+      "unit": "USD per share",
+      "min": -1000000000,
+      "max": 1000000000
+    }
+  ],
+  "calculations": [
+    {
+      "id": "oldValue",
+      "label": "Pre-rights market value",
+      "op": "mul",
+      "args": [
+        "oldShares",
+        "cumPrice"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "proceeds",
+      "label": "Subscription proceeds",
+      "op": "mul",
+      "args": [
+        "rightsShares",
+        "subscription"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "totalValue",
+      "label": "Theoretical post-issue value",
+      "op": "add",
+      "args": [
+        "oldValue",
+        "proceeds"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "totalShares",
+      "label": "Post-issue shares",
+      "op": "add",
+      "args": [
+        "oldShares",
+        "rightsShares"
+      ],
+      "unit": "million shares"
+    },
+    {
+      "id": "terp",
+      "label": "Theoretical ex-rights price",
+      "op": "div",
+      "args": [
+        "totalValue",
+        "totalShares"
+      ],
+      "unit": "USD per share"
+    },
+    {
+      "id": "rawFactor",
+      "label": "Raw bonus factor",
+      "op": "div",
+      "args": [
+        "cumPrice",
+        "terp"
+      ],
+      "unit": "times"
+    },
+    {
+      "id": "bonusFactor",
+      "label": "Retrospective bonus factor",
+      "op": "max",
+      "args": [
+        "rawFactor",
+        1
+      ],
+      "unit": "times"
+    },
+    {
+      "id": "restatedEps",
+      "label": "Comparative restated EPS",
+      "op": "div",
+      "args": [
+        "priorEps",
+        "bonusFactor"
+      ],
+      "unit": "USD per share"
+    }
+  ],
+  "outputs": [
+    "terp",
+    "bonusFactor",
+    "restatedEps"
+  ],
+  "expected": {
+    "terp": 9,
+    "bonusFactor": 1.1111111111111112,
+    "restatedEps": 1.8
+  },
+  "cases": [
+    {
+      "name": "Rights offered at cum-rights price",
+      "inputs": {
+        "subscription": 10
+      },
+      "expected": {
+        "terp": 10,
+        "bonusFactor": 1,
+        "restatedEps": 2
+      }
+    },
+    {
+      "name": "Missing required source input",
+      "inputs": {
+        "oldShares": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures. (4 × $10 + 1 × $5) / 5 = $9 theoretical price. Bonus factor 10/9 restates $2 comparative EPS to $1.80. A $10 subscription yields no bonus adjustment."
+}

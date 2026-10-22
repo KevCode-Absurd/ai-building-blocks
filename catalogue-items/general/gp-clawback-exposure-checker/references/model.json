@@ -1,0 +1,123 @@
+{
+  "inputs": [
+    {
+      "id": "carryPaid",
+      "label": "carry Paid",
+      "value": 20,
+      "unit": "USD millions",
+      "min": 0
+    },
+    {
+      "id": "finalEntitlement",
+      "label": "final Entitlement",
+      "value": 12,
+      "unit": "USD millions",
+      "min": 0
+    },
+    {
+      "id": "permittedTaxDeduction",
+      "label": "permitted Tax Deduction",
+      "value": 2,
+      "unit": "USD millions",
+      "min": 0
+    },
+    {
+      "id": "priorRecoveries",
+      "label": "prior Recoveries",
+      "value": 1,
+      "unit": "USD millions",
+      "min": 0
+    },
+    {
+      "id": "availableEscrow",
+      "label": "available Escrow",
+      "value": 4,
+      "unit": "USD millions",
+      "min": 0
+    }
+  ],
+  "calculations": [
+    {
+      "id": "credits",
+      "label": "credits",
+      "op": "sum",
+      "args": [
+        "finalEntitlement",
+        "permittedTaxDeduction",
+        "priorRecoveries"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "rawClawback",
+      "label": "raw Clawback",
+      "op": "sub",
+      "args": [
+        "carryPaid",
+        "credits"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "outstandingClawback",
+      "label": "outstanding Clawback",
+      "op": "max",
+      "args": [
+        0,
+        "rawClawback"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "collateralCovered",
+      "label": "collateral Covered",
+      "op": "min",
+      "args": [
+        "outstandingClawback",
+        "availableEscrow"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "unsecuredExposure",
+      "label": "unsecured Exposure",
+      "op": "sub",
+      "args": [
+        "outstandingClawback",
+        "collateralCovered"
+      ],
+      "unit": "USD millions"
+    }
+  ],
+  "outputs": [
+    "outstandingClawback",
+    "collateralCovered",
+    "unsecuredExposure"
+  ],
+  "expected": {
+    "outstandingClawback": 5,
+    "collateralCovered": 4,
+    "unsecuredExposure": 1
+  },
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "inputs": {
+        "finalEntitlement": 15
+      },
+      "expected": {
+        "outstandingClawback": 2,
+        "collateralCovered": 2,
+        "unsecuredExposure": 0
+      }
+    },
+    {
+      "name": "Missing required number",
+      "inputs": {
+        "carryPaid": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only. 20 paid less12 entitled,2 allowed tax and1 recovered leaves5; escrow4 leaves1 unsecured. Entitlement15 leaves2 covered."
+}

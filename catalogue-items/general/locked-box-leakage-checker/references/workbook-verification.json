@@ -1,0 +1,37 @@
+{
+  "engine": "Artifact Tool",
+  "scope": "Illustrative workbook calculations, not source truth or an actual investment conclusion. Native Microsoft Excel application execution is not claimed.",
+  "modelSha256": "1ce4b7956e4464054b307a9afffc9df2421aab8372aa0ca974219d9f9921bf7a",
+  "xlsxSha256": "6a9fe6ffaa8579fea5b8999965893ba549532617d39564b79b416589f9e5dd14",
+  "baseline": "pass",
+  "changedInputCase": "Hand-derived changed-input golden",
+  "invalidInputCase": "Missing required number",
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required number",
+      "kind": "refusal",
+      "status": "pass"
+    },
+    {
+      "name": "Refuse exclusions exceeding gross transfers",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ],
+  "reopenedAndRecalculated": true,
+  "rendered": true,
+  "visualReview": "pass",
+  "workbookSpecSha256": "b44fbb43100886a0242e410c9dcf3c10120f82dfa3291c65356b8b6bf9853cd0",
+  "visualEvidence": {
+    "report": "reports/finance-private-deals-peer-review.json",
+    "reportSha256": "8867c9111d80d78865752f2b95eba89b6b518fd8bc768452b70057ad5c0dcc23",
+    "previewSha256": "29bb9d0b1a80b952a76a71044a49ab91ac8e2d18bd1859563e9156aae0f31348",
+    "sheet": "Model",
+    "sourceSpecSha256": "bc68339a000dbefab306dbedee4d980c33ad50a8192c90d4e68ed87a77fba4e3"
+  }
+}

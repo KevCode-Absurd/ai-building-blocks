@@ -1,0 +1,32 @@
+{
+  "engine": "Artifact Tool",
+  "scope": "Illustrative workbook calculations, not source truth or an actual investment conclusion. Native Microsoft Excel application execution is not claimed.",
+  "modelSha256": "5604b92d1dd38c626309dc0ffb2b726732a85589eb78972136130aa767ac0c1c",
+  "xlsxSha256": "40787251e09706b8eff790d2dd38fce2a1e4a87a2dd9ee9bf7411c7a8209ca25",
+  "baseline": "pass",
+  "changedInputCase": "Higher net capital spending",
+  "invalidInputCase": "Required input absent",
+  "cases": [
+    {
+      "name": "Higher net capital spending",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Required input absent",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ],
+  "reopenedAndRecalculated": true,
+  "rendered": true,
+  "visualReview": "pass",
+  "workbookSpecSha256": "141f181cf1dac0788fef1c8daf32fa95abcf5db12ecb09702bd5f54bb25cb2f5",
+  "visualEvidence": {
+    "report": "reports/finance-public-markets-peer-review.json",
+    "reportSha256": "f73f6f5598ba0647c477c547d2776f1221130bb7861b62def472b74331866282",
+    "previewSha256": "21d170d8feb89109278a0d1a9e654e4589d23cb158e5bc18add4f314b777177a",
+    "sheet": "Model",
+    "sourceSpecSha256": "25fdb9e5fc6b5f5817a38d0364938a51a254d32fcdc0377fb0e2af0a7d912e10"
+  }
+}

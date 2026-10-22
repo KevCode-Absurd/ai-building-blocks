@@ -1,0 +1,17 @@
+{
+  "slug": "restricted-cash-availability-checker",
+  "modelSha256": "bac0c2d2dd231d36ca6715d5b89661a05a004703a0ad366dacc9039e790174c7",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Restriction released by supplied evidence",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing gross cash",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

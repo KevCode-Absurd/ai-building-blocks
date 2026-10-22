@@ -1,0 +1,126 @@
+{
+  "inputs": [
+    {
+      "id": "purchaseUse",
+      "label": "purchase Use",
+      "value": 100,
+      "unit": "USD millions",
+      "min": 0
+    },
+    {
+      "id": "debtPayoff",
+      "label": "debt Payoff",
+      "value": 20,
+      "unit": "USD millions",
+      "min": 0
+    },
+    {
+      "id": "dealFees",
+      "label": "deal Fees",
+      "value": 5,
+      "unit": "USD millions",
+      "min": 0
+    },
+    {
+      "id": "closingCash",
+      "label": "closing Cash",
+      "value": 5,
+      "unit": "USD millions",
+      "min": 0
+    },
+    {
+      "id": "netDebtCash",
+      "label": "net Debt Cash",
+      "value": 70,
+      "unit": "USD millions",
+      "min": 0
+    },
+    {
+      "id": "buyerCash",
+      "label": "buyer Cash",
+      "value": 10,
+      "unit": "USD millions",
+      "min": 0
+    },
+    {
+      "id": "rolloverSource",
+      "label": "rollover Source",
+      "value": 10,
+      "unit": "USD millions",
+      "min": 0
+    },
+    {
+      "id": "sponsorCash",
+      "label": "sponsor Cash",
+      "value": 30,
+      "unit": "USD millions",
+      "min": 0
+    }
+  ],
+  "calculations": [
+    {
+      "id": "totalUses",
+      "label": "total Uses",
+      "op": "sum",
+      "args": [
+        "purchaseUse",
+        "debtPayoff",
+        "dealFees",
+        "closingCash"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "totalSources",
+      "label": "total Sources",
+      "op": "sum",
+      "args": [
+        "netDebtCash",
+        "buyerCash",
+        "rolloverSource",
+        "sponsorCash"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "fundingGap",
+      "label": "funding Gap",
+      "op": "sub",
+      "args": [
+        "totalUses",
+        "totalSources"
+      ],
+      "unit": "USD millions"
+    }
+  ],
+  "outputs": [
+    "totalUses",
+    "totalSources",
+    "fundingGap"
+  ],
+  "expected": {
+    "totalUses": 130,
+    "totalSources": 120,
+    "fundingGap": 10
+  },
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "inputs": {
+        "netDebtCash": 80
+      },
+      "expected": {
+        "totalSources": 130,
+        "fundingGap": 0
+      }
+    },
+    {
+      "name": "Missing required number",
+      "inputs": {
+        "purchaseUse": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only. Uses100+20+5+5=130; sources70+10+10+30=120 leave10 unfunded. Debt cash80 balances."
+}

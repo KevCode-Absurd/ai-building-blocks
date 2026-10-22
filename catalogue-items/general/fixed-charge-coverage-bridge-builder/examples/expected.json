@@ -1,0 +1,9 @@
+{
+  "basis": "Illustrative figures only.",
+  "outputs": {
+    "qualifying_cash": 250,
+    "fixed_charges": 180,
+    "coverage": 1.3888888888888888,
+    "cash_headroom": 34
+  }
+}

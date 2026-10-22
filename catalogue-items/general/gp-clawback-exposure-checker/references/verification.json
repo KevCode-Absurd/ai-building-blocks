@@ -1,0 +1,17 @@
+{
+  "slug": "gp-clawback-exposure-checker",
+  "modelSha256": "c6f481c0b82a8dbaf1ed20cf660c3416d08636800dfe3dae0f54694a0c9c4721",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required number",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

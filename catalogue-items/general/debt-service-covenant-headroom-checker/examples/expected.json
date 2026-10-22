@@ -1,0 +1,10 @@
+{
+  "basis": "Illustrative figures only.",
+  "outputs": {
+    "headroom_1": 25,
+    "headroom_2": -5,
+    "headroom_3": 30,
+    "minimum_headroom": -5,
+    "cash_gap": 5
+  }
+}

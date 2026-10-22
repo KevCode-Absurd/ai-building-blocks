@@ -1,0 +1,32 @@
+{
+  "engine": "Artifact Tool",
+  "scope": "Illustrative workbook calculations, not source truth or an actual investment conclusion. Native Microsoft Excel application execution is not claimed.",
+  "modelSha256": "d2f84ed414bc4a64efbc3a6f606099a1859b7e7b703eec9af173557686d6b8f7",
+  "xlsxSha256": "f2fe2a7666db3f71ac3bd6e613be9554ac74d850648bbcb8ce22af433b54ad8e",
+  "baseline": "pass",
+  "changedInputCase": "At-the-money exercise price",
+  "invalidInputCase": "Missing required source input",
+  "cases": [
+    {
+      "name": "At-the-money exercise price",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required source input",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ],
+  "reopenedAndRecalculated": true,
+  "rendered": true,
+  "visualReview": "pass",
+  "workbookSpecSha256": "e15860be1381d720e61cc80134de6b9a76e5dd7963fd5e07fb2ce5cd163e4caf",
+  "visualEvidence": {
+    "report": "reports/finance-public-markets-peer-review.json",
+    "reportSha256": "f73f6f5598ba0647c477c547d2776f1221130bb7861b62def472b74331866282",
+    "previewSha256": "8be048315877dc994317b8278edde76cb18194b2bb661038b988e8840d2944ff",
+    "sheet": "Model",
+    "sourceSpecSha256": "ce389c69d4d2b28f603eb639ac0543f6c794d3e357a275db6ca540216a430f52"
+  }
+}

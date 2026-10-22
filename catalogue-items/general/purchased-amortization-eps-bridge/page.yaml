@@ -1,0 +1,76 @@
+new_slug: purchased-amortization-eps-bridge
+name: Purchased amortization EPS bridge
+headline: Purchased amortization EPS bridge
+summary: Tie acquired-intangible amortization and its disclosed tax effect to an alternative EPS measure.
+job: track-numbers
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: A reported-to-amortization-excluded EPS reconciliation with cash and recurrence cautions. Share reported ordinary income, purchased-intangible amortization, its recognized tax benefit and matching diluted shares.
+explain: |-
+  A reported-to-amortization-excluded EPS reconciliation with cash and recurrence cautions.
+
+  Issuer accounting and earnings. Illustrative figures.20 amortization less2.5 tax benefit gives17.5 after-tax adjustment. Income100/50=$2 EPS;117.5/50=$2.35 alternative EPS. A tax benefit5 gives15 adjustment and$2.30 alternative EPS.
+when:
+  - You need a reported-to-amortization-excluded EPS reconciliation with cash and recurrence cautions.
+  - You work on issuer accounting and earnings and need traceable calculations.
+  - A reviewer needs to trace the result back to inputs and assumptions.
+you_give:
+  - Reported ordinary income, purchased-intangible amortization, its recognized tax benefit and matching diluted shares.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - A reported-to-amortization-excluded EPS reconciliation with cash and recurrence cautions.
+  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: 1. Identify purchased-intangible amortization separately from software, financing costs and internally developed assets; retain the statutory line
+    text: Identify purchased-intangible amortization separately from software, financing costs and internally developed assets; retain the statutory line.
+  - title: 2. Subtract the specifically attributable recognized tax benefit from amortization to obtain the after-tax adjustment
+    text: Subtract the specifically attributable recognized tax benefit from amortization to obtain the after-tax adjustment.
+  - title: 3. Divide reported and alternative income by the same appropriate diluted share count, and explain why an addback does not erase purchase cost or ongoing asset replacement
+    text: Divide reported and alternative income by the same appropriate diluted share count, and explain why an addback does not erase purchase cost or ongoing asset replacement.
+output_shape: |-
+  A reported-to-amortization-excluded EPS reconciliation with cash and recurrence cautions.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: The actual disclosed tax effect is used rather than assuming all amortization is deductible.
+judge:
+  - The actual disclosed tax effect is used rather than assuming all amortization is deductible.
+  - Reported and alternative EPS reconcile with the same denominator and ownership attribution.
+  - Tie all inputs to source notes, dates, currency, scale and signs.
+  - Retain reported figures beside analytical adjustments and list every unresolved source gap.
+test:
+  - Run the included baseline and changed-input fixtures, then compare with the stated expected results.
+  - Remove a required input and confirm the affected calculation refuses to invent a zero.
+  - Recalculate the workbook after changing an input and inspect the saved output.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: Node.js 20 or later
+      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

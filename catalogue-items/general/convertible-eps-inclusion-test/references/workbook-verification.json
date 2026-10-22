@@ -1,0 +1,32 @@
+{
+  "engine": "Artifact Tool",
+  "scope": "Illustrative workbook calculations, not source truth or an actual investment conclusion. Native Microsoft Excel application execution is not claimed.",
+  "modelSha256": "c5db315b676bef596e5ddac8727fe9cb55bb827609d113e3a1463051aec057ec",
+  "xlsxSha256": "6641c96262d503e3dedd78c6ba7a4577e9706338a0636f78b646c6158819b96a",
+  "baseline": "pass",
+  "changedInputCase": "High numerator adjustment is anti-dilutive",
+  "invalidInputCase": "Missing required source input",
+  "cases": [
+    {
+      "name": "High numerator adjustment is anti-dilutive",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required source input",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ],
+  "reopenedAndRecalculated": true,
+  "rendered": true,
+  "visualReview": "pass",
+  "workbookSpecSha256": "bab75e577f11923f857b342757f03896dc3659889c3c8d5482a32aef11b29f52",
+  "visualEvidence": {
+    "report": "reports/finance-public-markets-peer-review.json",
+    "reportSha256": "f73f6f5598ba0647c477c547d2776f1221130bb7861b62def472b74331866282",
+    "previewSha256": "ddbe99c3b16f1b7386c65ffc11ca189d458e89c49c064009e2e9334c30f8c6e2",
+    "sheet": "Model",
+    "sourceSpecSha256": "c64e7fc59c4f5052cc1dd51f1bc106264af9094314e23d5a4d643cb98a083e20"
+  }
+}

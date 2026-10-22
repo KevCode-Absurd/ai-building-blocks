@@ -1,0 +1,42 @@
+slug: check-an-escrow-funded-earnout
+name: Check an escrow-funded earnout
+summary: Compare a signed linear earnout reserve with its dedicated escrow coverage.
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: spreadsheet
+    required: true
+  - type: audit_report
+    required: true
+  - type: document
+    required: true
+uses:
+  - earnout-payout-checker
+  - escrow-release-checker
+steps:
+  - uses: earnout-payout-checker
+    note: Calculate the single contractual linear payout from the agreed metric, preserving threshold ordering and disputes. This is a payout scenario, not fair value.
+  - uses: escrow-release-checker
+    note: Pass only a contractually approved pending earnout reserve into claims; a scenario alone does not approve it. Use actual dedicated deposit and disbursement records, then show release and uncovered exposure without a payment instruction.
+execution: coordinator
+origin: own
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/finance-expansion
+example_pending: true
+warnings:
+  - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+credits:
+  - title: Original finance methods and model fixtures
+    by: AI Blocks contributors
+    used: Original instructions, calculations and illustrative examples. External method references are linked separately and retain their own rights.

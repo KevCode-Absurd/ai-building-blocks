@@ -1,0 +1,74 @@
+new_slug: reconcile-working-capital-and-tax-cash
+name: Reconcile working capital and tax cash
+headline: Reconcile working capital and tax cash
+summary: Explain balance-sheet-to-cash differences through noncash operating movements and current tax payables.
+job: money-and-investing
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: A linked operating working-capital and current-tax cash reconciliation workbook. Share opening/closing operating balances, acquisition/FX movements, current tax notes and reported cash-flow lines.
+explain: |-
+  A linked operating working-capital and current-tax cash reconciliation workbook.
+
+  Public-market financial modelling. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+when:
+  - You need a linked operating working-capital and current-tax cash reconciliation workbook.
+  - You work on public-market financial modelling and need traceable calculations.
+  - A reviewer needs to trace the result back to inputs and assumptions.
+you_give:
+  - Opening/closing operating balances, acquisition/FX movements, current tax notes and reported cash-flow lines.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - A linked operating working-capital and current-tax cash reconciliation workbook.
+  - Original step files, financial assumptions, source coverage and a governing handoff summary.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: Noncash working-capital bridge
+    text: Use actual sourced schedules in one linked native workbook; example values are illustrative and must not become issuer inputs. Map operating balances while excluding tax and financing items; remove sourced acquisitions, translation and other noncash movements before deriving the indirect cash effect.
+  - title: Constant-currency revenue bridge
+    text: Use the issuer currency buckets to distinguish revenue translation from balance-sheet translation; never reuse average revenue rates as a substitute for the working-capital FX note.
+  - title: Current tax cash-payment bridge
+    text: Reconcile separately excluded current-tax payables to cash taxes, then connect the two schedules to CFO without counting current tax in operating working capital as well.
+output_shape: |-
+  A linked operating working-capital and current-tax cash reconciliation workbook.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: Operating cash investment and cash taxes reconcile to their independent source notes; FX conventions are explicit; tax/financing balances are excluded from working capital and every residual is retained.
+judge:
+  - Operating cash investment and cash taxes reconcile to their independent source notes; FX conventions are explicit; tax/financing balances are excluded from working capital and every residual is retained.
+  - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
+  - Reconcile opening balances, additions, deductions and closing balances. Match enterprise or equity cash flows to the corresponding discount rate.
+  - Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
+test:
+  - Try a small sourced case and inspect every component handoff.
+  - Remove one required source and confirm the affected step stops.
+  - Change a currency, date or accounting definition and check the conflict stays visible.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

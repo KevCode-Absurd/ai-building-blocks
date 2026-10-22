@@ -1,0 +1,12 @@
+{
+  "basis": "Illustrative figures only.",
+  "outputs": {
+    "sold_nights": 70,
+    "gross_room_revenue": 7600,
+    "commission": 720,
+    "net_channel_revenue": 6880,
+    "contribution": 5480,
+    "occupancy": 0.7,
+    "net_revenue_per_available_night": 68.8
+  }
+}

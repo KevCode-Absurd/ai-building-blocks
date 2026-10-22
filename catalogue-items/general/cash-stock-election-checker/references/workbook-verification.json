@@ -1,0 +1,37 @@
+{
+  "engine": "Artifact Tool",
+  "scope": "Illustrative workbook calculations, not source truth or an actual investment conclusion. Native Microsoft Excel application execution is not claimed.",
+  "modelSha256": "701ccfde7a743e19cebc3fa7d0cd9939ad3abcc425c44504b803aef142d580ea",
+  "xlsxSha256": "1e0defcf3eb8d3eb362228585d5e4056c67c30f84bcea72c6b4e0642e67447d4",
+  "baseline": "pass",
+  "changedInputCase": "Hand-derived changed-input golden",
+  "invalidInputCase": "Missing required number",
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required number",
+      "kind": "refusal",
+      "status": "pass"
+    },
+    {
+      "name": "Refuse holder shares above aggregate elections",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ],
+  "reopenedAndRecalculated": true,
+  "rendered": true,
+  "visualReview": "pass",
+  "workbookSpecSha256": "147fd20c3c57955c132cb5c0b9d6f8598b650650f567e3b10569ca23f6e95b5d",
+  "visualEvidence": {
+    "report": "reports/finance-private-deals-peer-review.json",
+    "reportSha256": "8867c9111d80d78865752f2b95eba89b6b518fd8bc768452b70057ad5c0dcc23",
+    "previewSha256": "37c0050e4d7654f894d877a4ab66dbd192bc3e6bb8697308eb6e03c0c37a5c47",
+    "sheet": "Model",
+    "sourceSpecSha256": "1d891b217fb1f3f47034ca8912d984154850843ff7da2eb25b8c7d677ec6b10c"
+  }
+}

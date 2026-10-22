@@ -1,0 +1,45 @@
+slug: reconcile-basic-and-diluted-issuer-eps
+name: Reconcile basic and diluted issuer EPS
+summary: Build a sourced share timeline and test option and convertible dilution against reported EPS.
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: spreadsheet
+    required: true
+  - type: audit_report
+    required: true
+  - type: document
+    required: true
+uses:
+  - weighted-average-share-schedule
+  - treasury-stock-option-dilution
+  - convertible-eps-inclusion-test
+steps:
+  - uses: weighted-average-share-schedule
+    note: Use actual sourced schedules in one linked native workbook; example values are illustrative and must not become issuer inputs. Reconcile dated ordinary shares and ordinary earnings to basic weighted shares; carry the verified continuing-operations control numerator and denominator forward.
+  - uses: treasury-stock-option-dilution
+    note: Use the verified basic denominator and actual weighted option classes, average prices and all required assumed proceeds. Retain each option class contribution and eligibility evidence.
+  - uses: convertible-eps-inclusion-test
+    note: Use the same control earnings and actual convertible terms; sequence instruments and exclude anti-dilutive effects before reconciling the final diluted EPS note.
+execution: coordinator
+origin: own
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/finance-expansion
+example_pending: true
+warnings:
+  - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+credits:
+  - title: Original finance methods and model fixtures
+    by: AI Blocks contributors
+    used: Original instructions, calculations and illustrative examples. External method references are linked separately and retain their own rights.

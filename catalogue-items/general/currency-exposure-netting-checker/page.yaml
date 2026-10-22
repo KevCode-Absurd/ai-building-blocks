@@ -1,0 +1,78 @@
+new_slug: currency-exposure-netting-checker
+name: Currency exposure netting checker
+headline: Currency exposure netting checker
+summary: A currency-unit exposure bridge and reporting-currency sensitivity
+job: money-and-investing
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: A currency-unit exposure bridge and reporting-currency sensitivity. Share same-currency receivables, payables, committed receipts/payments, confirmed hedge notionals and reporting-currency spot rate for one maturity bucket.
+explain: |-
+  A currency-unit exposure bridge and reporting-currency sensitivity.
+
+  Treasury foreign exchange. Illustrative figures only, in USD unless labelled otherwise. This is a focused schedule with explicit period and timing assumptions. Rebuild from actual dated sources before use; the example is not a full financial forecast.
+when:
+  - You need a currency-unit exposure bridge and reporting-currency sensitivity.
+  - You work on treasury foreign exchange and need traceable calculations.
+  - A reviewer needs to trace the result back to inputs and assumptions.
+you_give:
+  - Same-currency receivables, payables, committed receipts/payments, confirmed hedge notionals and reporting-currency spot rate for one maturity bucket.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - A currency-unit exposure bridge and reporting-currency sensitivity.
+  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: 1. Create a dated source map of the stated balances, transaction IDs, currency, units, period boundaries and contractual definitions
+    text: Create a dated source map of the stated balances, transaction IDs, currency, units, period boundaries and contractual definitions. Stop affected lines on missing evidence.
+  - title: 2. Bucket contractual receipts and payments by currency and maturity; distinguish firm commitments from forecast activity
+    text: Bucket contractual receipts and payments by currency and maturity; distinguish firm commitments from forecast activity.
+  - title: 3. Net contractual foreign receipts less payments within the approved bucket
+    text: "Net contractual foreign receipts less payments within the approved bucket. Add signed confirmed hedge delivery: positive for foreign currency bought and negative for foreign currency sold; preserve the residual in foreign units."
+  - title: 4. Translate the residual at supplied base and scenario rates; reconcile movement to residual units times rate change
+    text: Translate the residual at supplied base and scenario rates; reconcile movement to residual units times rate change.
+output_shape: |-
+  A currency-unit exposure bridge and reporting-currency sensitivity.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: Every material input has a source location, date, unit, sign and approval status.
+judge:
+  - Every material input has a source location, date, unit, sign and approval status.
+  - Keep actual records, contractual inputs and scenarios separate; a missing value never becomes zero.
+  - Rates are reporting currency per foreign unit; inverse quotes must be converted before entry.
+  - Hedge delivery is positive for a buy-foreign contract and negative for a sell-foreign contract; overhedging remains signed rather than disappearing.
+test:
+  - Run the included baseline and changed-input fixtures, then compare with the stated expected results.
+  - Remove a required input and confirm the affected calculation refuses to invent a zero.
+  - Recalculate the workbook after changing an input and inspect the saved output.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: Node.js 20 or later
+      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

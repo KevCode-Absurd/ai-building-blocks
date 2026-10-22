@@ -1,0 +1,9 @@
+{
+  "basis": "Illustrative figures only.",
+  "outputs": {
+    "remainingCapacity": 8,
+    "reusableAmount": 8,
+    "excludedByCap": 7,
+    "priorOveruse": 0
+  }
+}

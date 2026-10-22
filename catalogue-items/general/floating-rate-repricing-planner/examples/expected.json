@@ -1,0 +1,9 @@
+{
+  "basis": "Illustrative figures only.",
+  "outputs": {
+    "increment_a": 5,
+    "increment_b": 2.5,
+    "increment_total": 7.5,
+    "scenario_interest": 67.5
+  }
+}

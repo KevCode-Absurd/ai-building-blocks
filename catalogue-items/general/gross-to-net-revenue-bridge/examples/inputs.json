@@ -1,0 +1,8 @@
+{
+  "billings": 1000,
+  "returns": 50,
+  "rebates": 30,
+  "taxes": 20,
+  "passThrough": 100,
+  "reported": 800
+}

@@ -1,0 +1,78 @@
+new_slug: restaurant-portion-cost-builder
+name: Restaurant portion cost builder
+headline: Restaurant portion cost builder
+summary: A batch yield, portion cost and service contribution schedule
+job: track-numbers
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: A batch yield, portion cost and service contribution schedule. Share purchased batch weight, observed edible yield, actual portion weight, same-batch ingredient/labor/energy cash, confirmed selling price and served demand.
+explain: |-
+  A batch yield, portion cost and service contribution schedule.
+
+  Food service operating finance. Illustrative figures only in USD unless labelled otherwise. This focused operating schedule does not establish a complete business forecast, accounting treatment, market price or approval.
+when:
+  - You need a batch yield, portion cost and service contribution schedule.
+  - You work on food service operating finance and need traceable calculations.
+  - A reviewer needs to trace the result back to inputs and assumptions.
+you_give:
+  - Purchased batch weight, observed edible yield, actual portion weight, same-batch ingredient/labor/energy cash, confirmed selling price and served demand.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - A batch yield, portion cost and service contribution schedule.
+  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: 1. Map dated source records, actual units, period cutoffs, currency, definitions and missing evidence before computing
+    text: Map dated source records, actual units, period cutoffs, currency, definitions and missing evidence before computing.
+  - title: 2. Source actual purchased and edible weights for the same batch; use measured yield, not a culinary safety or handling assumption
+    text: Source actual purchased and edible weights for the same batch; use measured yield, not a culinary safety or handling assumption.
+  - title: 3. Divide edible mass by the approved serving mass to show theoretical portion capacity, then cap modeled served portions at supplied demand
+    text: Divide edible mass by the approved serving mass to show theoretical portion capacity, then cap modeled served portions at supplied demand.
+  - title: 4. Allocate batch cash across theoretical portions, show unserved capacity and reconcile actual modeled service receipts less full batch cash
+    text: Allocate batch cash across theoretical portions, show unserved capacity and reconcile actual modeled service receipts less full batch cash.
+output_shape: |-
+  A batch yield, portion cost and service contribution schedule.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: Every material driver traces to a dated source; actuals and scenarios remain separate.
+judge:
+  - Every material driver traces to a dated source; actuals and scenarios remain separate.
+  - Missing evidence blocks the affected calculation instead of becoming a zero.
+  - Weight units match and yield is positive and at most one; portion size is positive.
+  - Unserved theoretical portions are not automatically saleable later; fractional portions are planning equivalents until owner rounding is applied.
+test:
+  - Run the included baseline and changed-input fixtures, then compare with the stated expected results.
+  - Remove a required input and confirm the affected calculation refuses to invent a zero.
+  - Recalculate the workbook after changing an input and inspect the saved output.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: Node.js 20 or later
+      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

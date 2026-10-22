@@ -1,0 +1,22 @@
+{
+  "slug": "post-money-safe-ownership-checker",
+  "modelSha256": "018a6d1dca2c60612b81f5a1782891d34acd4fccaa4fd0082cacb6a0e3a88ad1",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required number",
+      "kind": "refusal",
+      "status": "pass"
+    },
+    {
+      "name": "Refuse SAFE ownership above 100 percent",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

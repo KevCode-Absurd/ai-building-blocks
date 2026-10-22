@@ -1,0 +1,47 @@
+slug: inventory-accounting-comparability-review-assistant
+name: Inventory accounting comparability review assistant
+summary: Review inventory reserve and charge changes before comparing issuer margins and cash investment.
+category: agent
+type: agent
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: spreadsheet
+    required: true
+  - type: audit_report
+    required: true
+  - type: document
+    required: true
+uses:
+  - explain-inventory-accounting-margin-effects
+  - trailing-period-financial-bridge
+steps:
+  - uses: explain-inventory-accounting-margin-effects
+    note: Run the governing workflow when On a new inventory note or fiscal-period update supplied by the user, compare reserve definitions, charges and write-offs with the prior accepted margin bridge.
+  - uses: trailing-period-financial-bridge
+    note: If the requested comparison uses a trailing period, reconstruct additive revenue and COGS over matching intervals before calculating margins. A change from LIFO or in reserve scope requires a documented new basis rather than a carried-forward formula.
+origin: own
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/finance-expansion
+example_pending: true
+warnings:
+  - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+credits:
+  - title: Original finance methods and model fixtures
+    by: AI Blocks contributors
+    used: Original instructions, calculations and illustrative examples. External method references are linked separately and retain their own rights.
+schedule: Portable review instructions only. Run when the user supplies a new filing or asks for a review; propose a quarterly cadence without installing or claiming a schedule.
+asks_before:
+  - Trading or moving money
+  - Sending or publishing research or deal materials
+  - Changing an account or submitting a filing
+  - Starting or changing a recurring schedule

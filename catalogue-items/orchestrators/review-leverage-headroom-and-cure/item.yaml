@@ -1,0 +1,45 @@
+slug: review-leverage-headroom-and-cure
+name: Review leverage headroom and cure
+summary: Connect supported EBITDA addbacks to exact net leverage and a permitted cure scenario.
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: spreadsheet
+    required: true
+  - type: audit_report
+    required: true
+  - type: document
+    required: true
+uses:
+  - deal-ebitda-addback-checker
+  - net-leverage-covenant-checker
+  - equity-cure-scenario-checker
+steps:
+  - uses: deal-ebitda-addback-checker
+    note: Use only the supported pre-addback cap structure and distinct permitted uncapped adjustments. Stop this path if the agreement instead caps on post-addback EBITDA.
+  - uses: net-leverage-covenant-checker
+    note: Pass the resulting contractual EBITDA into the same-date leverage test after confirming all definitions match. Apply actual eligible cash and netting cap, then show signed headroom.
+  - uses: equity-cure-scenario-checker
+    note: Run only if headroom is negative and an actual EBITDA-only cure right remains eligible. Use the verified net debt unchanged; otherwise skip with a reason and never count cure cash twice.
+execution: coordinator
+origin: own
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/finance-expansion
+example_pending: true
+warnings:
+  - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+credits:
+  - title: Original finance methods and model fixtures
+    by: AI Blocks contributors
+    used: Original instructions, calculations and illustrative examples. External method references are linked separately and retain their own rights.

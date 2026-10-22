@@ -1,0 +1,17 @@
+{
+  "slug": "debt-maturity-funding-ladder",
+  "modelSha256": "87dd97bde7923725ada7b897cfaeaaa579e8d15eca9388b456760e8814814c98",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing or invalid required input",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

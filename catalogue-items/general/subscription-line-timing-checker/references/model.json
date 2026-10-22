@@ -1,0 +1,145 @@
+{
+  "inputs": [
+    {
+      "id": "investment",
+      "label": "investment",
+      "value": 100,
+      "unit": "USD millions",
+      "min": 0.000001
+    },
+    {
+      "id": "exitReceipt",
+      "label": "exit Receipt",
+      "value": 121,
+      "unit": "USD millions",
+      "min": 0.000001
+    },
+    {
+      "id": "annualBridgeRate",
+      "label": "annual Bridge Rate",
+      "value": 0.05,
+      "unit": "annual decimal",
+      "min": 0,
+      "max": 1
+    }
+  ],
+  "calculations": [
+    {
+      "id": "initialOutflow",
+      "label": "initial Outflow",
+      "op": "neg",
+      "args": [
+        "investment"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "unbridgedIrr",
+      "label": "unbridged Irr",
+      "op": "irr",
+      "args": [
+        "initialOutflow",
+        0,
+        "exitReceipt"
+      ],
+      "unit": "annual decimal"
+    },
+    {
+      "id": "bridgeCost",
+      "label": "bridge Cost",
+      "op": "mul",
+      "args": [
+        "investment",
+        "annualBridgeRate"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "delayedCall",
+      "label": "delayed Call",
+      "op": "add",
+      "args": [
+        "investment",
+        "bridgeCost"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "callOutflow",
+      "label": "call Outflow",
+      "op": "neg",
+      "args": [
+        "delayedCall"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "bridgedLpIrr",
+      "label": "bridged Lp Irr",
+      "op": "irr",
+      "args": [
+        "callOutflow",
+        "exitReceipt"
+      ],
+      "unit": "annual decimal"
+    },
+    {
+      "id": "unbridgedMultiple",
+      "label": "unbridged Multiple",
+      "op": "div",
+      "args": [
+        "exitReceipt",
+        "investment"
+      ],
+      "unit": "multiple"
+    },
+    {
+      "id": "bridgedMultiple",
+      "label": "bridged Multiple",
+      "op": "div",
+      "args": [
+        "exitReceipt",
+        "delayedCall"
+      ],
+      "unit": "multiple"
+    }
+  ],
+  "outputs": [
+    "unbridgedIrr",
+    "bridgeCost",
+    "delayedCall",
+    "bridgedLpIrr",
+    "unbridgedMultiple",
+    "bridgedMultiple"
+  ],
+  "expected": {
+    "unbridgedIrr": 0.1,
+    "bridgeCost": 5,
+    "delayedCall": 105,
+    "bridgedLpIrr": 0.1523809523809524,
+    "unbridgedMultiple": 1.21,
+    "bridgedMultiple": 1.1523809523809523
+  },
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "inputs": {
+        "annualBridgeRate": 0.1
+      },
+      "expected": {
+        "bridgeCost": 10,
+        "delayedCall": 110,
+        "bridgedLpIrr": 0.1,
+        "bridgedMultiple": 1.1
+      }
+    },
+    {
+      "name": "Missing required number",
+      "inputs": {
+        "investment": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only. 100 grows to121 over2 years:10%. Bridge cost5 delays105 LP call to year1;121/105-1=16/105. Cost10 reduces LP IRR to10%."
+}

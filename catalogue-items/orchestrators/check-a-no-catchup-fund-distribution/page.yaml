@@ -1,0 +1,72 @@
+new_slug: check-a-no-catchup-fund-distribution
+name: Check a no-catchup fund distribution
+headline: Check a no-catchup fund distribution
+summary: Carry a verified simple preference balance into capital-first residual carry allocation.
+job: money-and-investing
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: Preference accrual, capital and preference payments, residual GP/LP cash and unpaid senior tiers. Share actual no-catchup LPA, constant eligible capital interval, dated accrual basis, unpaid opening preference, distributable cash and residual carry fraction.
+explain: |-
+  Preference accrual, capital and preference payments, residual GP/LP cash and unpaid senior tiers.
+
+  Private fund distributions. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+when:
+  - You need preference accrual, capital and preference payments, residual GP/LP cash and unpaid senior tiers.
+  - You work on private fund distributions and need traceable calculations.
+  - A reviewer needs to trace the result back to inputs and assumptions.
+you_give:
+  - Actual no-catchup LPA, constant eligible capital interval, dated accrual basis, unpaid opening preference, distributable cash and residual carry fraction.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - Preference accrual, capital and preference payments, residual GP/LP cash and unpaid senior tiers.
+  - Original step files, financial assumptions, source coverage and a governing handoff summary.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: Preferred return accrual checker
+    text: Verify constant capital and actual year fraction. Produce accrued unpaid preference separately from capital; split changing-capital intervals before proceeding.
+  - title: No-catchup waterfall checker
+    text: Pass the verified unpaid preference and unreturned capital as separate inputs, using actual available distributable cash. Preserve unpaid capital/preference and zero carry until both tiers are satisfied.
+output_shape: |-
+  Preference accrual, capital and preference payments, residual GP/LP cash and unpaid senior tiers.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: Use only the supported simple-accrual no-catchup structure; record any compounding, GP capital or catch-up as a blocker.
+judge:
+  - Use only the supported simple-accrual no-catchup structure; record any compounding, GP capital or catch-up as a blocker.
+  - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
+  - Reconcile opening balances, additions, deductions and closing balances. Match enterprise or equity cash flows to the corresponding discount rate.
+  - Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
+test:
+  - Try a small sourced case and inspect every component handoff.
+  - Remove one required source and confirm the affected step stops.
+  - Change a currency, date or accounting definition and check the conflict stays visible.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

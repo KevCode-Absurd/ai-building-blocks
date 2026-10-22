@@ -1,0 +1,17 @@
+{
+  "slug": "preferred-return-accrual-checker",
+  "modelSha256": "dd9213523e02eadc29c916d65d67d53624174d188b52c62db07e12603d705b5b",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required number",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

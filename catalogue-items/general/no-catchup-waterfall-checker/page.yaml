@@ -1,0 +1,76 @@
+new_slug: no-catchup-waterfall-checker
+name: No-catchup waterfall checker
+headline: No-catchup waterfall checker
+summary: Allocate one distribution through capital, accrued preference and residual carry without a GP catch-up.
+job: money-and-investing
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: Capital returned, preference paid, GP carry, LP cash and remaining first-tier shortfall. Share available distributable cash, eligible unreturned LP capital, separately verified accrued preference and residual GP carry fraction under a no-catchup LPA.
+explain: |-
+  Capital returned, preference paid, GP carry, LP cash and remaining first-tier shortfall.
+
+  Private fund distributions. Illustrative figures only. 150 pays100 capital then20 preference. Remaining30 splits GP6 and LP24, LP total144. Cash110 leaves10 preference unpaid and zero carry.
+when:
+  - You need capital returned, preference paid, GP carry, LP cash and remaining first-tier shortfall.
+  - You work on private fund distributions and need traceable calculations.
+  - A reviewer needs to trace the result back to inputs and assumptions.
+you_give:
+  - Available distributable cash, eligible unreturned LP capital, separately verified accrued preference and residual GP carry fraction under a no-catchup LPA.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - Capital returned, preference paid, GP carry, LP cash and remaining first-tier shortfall.
+  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: 1. Confirm whole-fund return-of-capital priority and explicitly no GP catch-up or GP co-investment in this schedule
+    text: Confirm whole-fund return-of-capital priority and explicitly no GP catch-up or GP co-investment in this schedule.
+  - title: 2. Pay the lesser of available cash and unreturned capital, then preference only from remaining cash
+    text: Pay the lesser of available cash and unreturned capital, then preference only from remaining cash.
+  - title: 3. Split only cash left after both senior tiers by residual carry fraction; reconcile LP plus GP cash and unpaid senior claims
+    text: Split only cash left after both senior tiers by residual carry fraction; reconcile LP plus GP cash and unpaid senior claims.
+output_shape: |-
+  Capital returned, preference paid, GP carry, LP cash and remaining first-tier shortfall.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: Carry remains zero until the entire supplied capital and preference obligations are met.
+judge:
+  - Carry remains zero until the entire supplied capital and preference obligations are met.
+  - Capital, preference and residual GP/LP cash sum to the distribution exactly.
+  - Trace each input to its dated signed source, currency, scale and period.
+  - Reconcile outputs; preserve MISSING and CHECKS MISSED rather than guessing zero.
+test:
+  - Run the included baseline and changed-input fixtures, then compare with the stated expected results.
+  - Remove a required input and confirm the affected calculation refuses to invent a zero.
+  - Recalculate the workbook after changing an input and inspect the saved output.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: Node.js 20 or later
+      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

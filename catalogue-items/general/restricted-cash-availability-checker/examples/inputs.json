@@ -1,0 +1,7 @@
+{
+  "gross_cash": 1000,
+  "restricted_cash": 200,
+  "collateral_block": 100,
+  "pending_debits": 50,
+  "minimum_cash": 700
+}

@@ -1,0 +1,78 @@
+{
+  "inputs": [
+    {
+      "id": "reportedCfo",
+      "label": "Reported operating cash flow",
+      "value": 100,
+      "unit": "USD million",
+      "min": -1000000000,
+      "max": 1000000000
+    },
+    {
+      "id": "factorAdvances",
+      "label": "Factor advance proceeds included in CFO",
+      "value": 80,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "customerReceipts",
+      "label": "Matched customer receipts retained by factor and absent from CFO",
+      "value": 50,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    }
+  ],
+  "calculations": [
+    {
+      "id": "acceleration",
+      "label": "Advances less matched customer receipts",
+      "op": "sub",
+      "args": [
+        "factorAdvances",
+        "customerReceipts"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "lookThroughCfo",
+      "label": "Analytical CFO on customer receipt timing",
+      "op": "sub",
+      "args": [
+        "reportedCfo",
+        "acceleration"
+      ],
+      "unit": "USD million"
+    }
+  ],
+  "outputs": [
+    "acceleration",
+    "lookThroughCfo"
+  ],
+  "expected": {
+    "acceleration": 30,
+    "lookThroughCfo": 70
+  },
+  "cases": [
+    {
+      "name": "More factored invoices collected by customers",
+      "inputs": {
+        "customerReceipts": 70
+      },
+      "expected": {
+        "acceleration": 10,
+        "lookThroughCfo": 90
+      }
+    },
+    {
+      "name": "Missing required reported input",
+      "inputs": {
+        "reportedCfo": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures.80 factor advances replace50 matched customer receipts, accelerating30 cash;100 reported CFO minus30 gives70 analytical CFO. Receipts70 reduce acceleration to10 and give90 analytical CFO. Real financing fees remain costs."
+}

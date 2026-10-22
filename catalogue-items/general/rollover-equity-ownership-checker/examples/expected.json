@@ -1,0 +1,9 @@
+{
+  "basis": "Illustrative figures only.",
+  "outputs": {
+    "rolledEquity": 10,
+    "sellerCash": 30,
+    "totalEquity": 40,
+    "sellerOwnership": 0.25
+  }
+}

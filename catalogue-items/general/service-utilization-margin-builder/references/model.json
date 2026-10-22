@@ -1,0 +1,177 @@
+{
+  "inputs": [
+    {
+      "id": "paid_hours",
+      "label": "paid hours",
+      "value": 160,
+      "unit": "hours / month",
+      "min": 0.000001
+    },
+    {
+      "id": "fixed_duties",
+      "label": "fixed duties",
+      "value": 40,
+      "unit": "hours / month",
+      "min": 0
+    },
+    {
+      "id": "leave_hours",
+      "label": "leave hours",
+      "value": 16,
+      "unit": "hours / month",
+      "min": 0
+    },
+    {
+      "id": "billable_hours",
+      "label": "billable hours",
+      "value": 80,
+      "unit": "hours / month",
+      "min": 0.000001
+    },
+    {
+      "id": "realized_fee",
+      "label": "realized fee",
+      "value": 100,
+      "unit": "USD / billable hour",
+      "min": 0.000001
+    },
+    {
+      "id": "loaded_labor",
+      "label": "loaded labor",
+      "value": 4000,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "direct_project_cash",
+      "label": "direct project cash",
+      "value": 600,
+      "unit": "USD / stated period",
+      "min": 0
+    }
+  ],
+  "calculations": [
+    {
+      "id": "unavailable",
+      "label": "unavailable",
+      "op": "sum",
+      "args": [
+        "fixed_duties",
+        "leave_hours"
+      ],
+      "unit": "hours / month"
+    },
+    {
+      "id": "available_hours",
+      "label": "available hours",
+      "op": "sub",
+      "args": [
+        "paid_hours",
+        "unavailable"
+      ],
+      "unit": "hours / month"
+    },
+    {
+      "id": "utilization",
+      "label": "utilization",
+      "op": "div",
+      "args": [
+        "billable_hours",
+        "available_hours"
+      ],
+      "unit": "decimal fraction"
+    },
+    {
+      "id": "revenue",
+      "label": "revenue",
+      "op": "mul",
+      "args": [
+        "billable_hours",
+        "realized_fee"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "delivery_cost",
+      "label": "delivery cost",
+      "op": "sum",
+      "args": [
+        "loaded_labor",
+        "direct_project_cash"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "contribution",
+      "label": "contribution",
+      "op": "sub",
+      "args": [
+        "revenue",
+        "delivery_cost"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "contribution_margin",
+      "label": "contribution margin",
+      "op": "div",
+      "args": [
+        "contribution",
+        "revenue"
+      ],
+      "unit": "decimal fraction"
+    }
+  ],
+  "outputs": [
+    "available_hours",
+    "utilization",
+    "revenue",
+    "contribution",
+    "contribution_margin"
+  ],
+  "expected": {
+    "available_hours": 104,
+    "utilization": 0.7692307692307693,
+    "revenue": 8000,
+    "contribution": 3400,
+    "contribution_margin": 0.425
+  },
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "inputs": {
+        "billable_hours": 100
+      },
+      "expected": {
+        "utilization": 0.9615384615384616,
+        "revenue": 10000,
+        "contribution": 5400,
+        "contribution_margin": 0.54
+      }
+    },
+    {
+      "name": "Missing or invalid required input",
+      "inputs": {
+        "fixed_duties": 144,
+        "leave_hours": 16
+      },
+      "error": true
+    },
+    {
+      "name": "Fixed duties and leave exceed paid hours",
+      "inputs": {
+        "paid_hours": 40
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only in USD unless labelled otherwise. The model is the focused stated schedule, not a complete company forecast. Annual end-period cash is used unless the inputs state another convention.",
+  "constraints": [
+    {
+      "left": "available_hours",
+      "operator": "gt",
+      "right": 0,
+      "message": "Paid hours less fixed duties and leave must leave positive available client hours."
+    }
+  ]
+}

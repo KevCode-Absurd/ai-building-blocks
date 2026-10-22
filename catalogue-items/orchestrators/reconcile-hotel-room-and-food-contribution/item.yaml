@@ -1,0 +1,42 @@
+slug: reconcile-hotel-room-and-food-contribution
+name: Reconcile hotel room and food contribution
+summary: A property room and food contribution reconciliation
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: spreadsheet
+    required: true
+  - type: audit_report
+    required: true
+  - type: document
+    required: true
+uses:
+  - hotel-channel-revenue-reconciler
+  - restaurant-portion-cost-builder
+steps:
+  - uses: hotel-channel-revenue-reconciler
+    note: Reconcile actual room-night channel receipts, commissions and occupied-room service costs. Pass the property period, cost boundaries and room contribution as one departmental subtotal.
+  - uses: restaurant-portion-cost-builder
+    note: Build food service batch contributions across that period using actual yield, servings and receipts. Reconcile room and food subtotals in a clearly bounded management summary; exclude shared overhead from both unless separately allocated with source evidence.
+execution: coordinator
+origin: own
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/finance-expansion
+example_pending: true
+warnings:
+  - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+credits:
+  - title: Original finance methods and model fixtures
+    by: AI Blocks contributors
+    used: Original instructions, calculations and illustrative examples. External method references are linked separately and retain their own rights.

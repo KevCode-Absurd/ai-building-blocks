@@ -1,0 +1,119 @@
+{
+  "inputs": [
+    {
+      "id": "nopat",
+      "label": "First stable-year NOPAT",
+      "value": 100,
+      "unit": "USD million",
+      "min": 0.001,
+      "max": 1000000000
+    },
+    {
+      "id": "growth",
+      "label": "Stable growth",
+      "value": 0.03,
+      "unit": "decimal",
+      "min": 0,
+      "max": 0.07
+    },
+    {
+      "id": "roc",
+      "label": "Stable ROC",
+      "value": 0.15,
+      "unit": "decimal",
+      "min": 0.08,
+      "max": 1
+    },
+    {
+      "id": "wacc",
+      "label": "Stable WACC",
+      "value": 0.1,
+      "unit": "decimal",
+      "min": 0.08,
+      "max": 0.5
+    }
+  ],
+  "calculations": [
+    {
+      "id": "rate",
+      "label": "Stable reinvestment rate",
+      "op": "div",
+      "args": [
+        "growth",
+        "roc"
+      ],
+      "unit": "decimal"
+    },
+    {
+      "id": "cashFraction",
+      "label": "NOPAT remaining after reinvestment",
+      "op": "sub",
+      "args": [
+        1,
+        "rate"
+      ],
+      "unit": "decimal"
+    },
+    {
+      "id": "fcff",
+      "label": "First stable-year FCFF",
+      "op": "mul",
+      "args": [
+        "nopat",
+        "cashFraction"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "spread",
+      "label": "WACC less growth",
+      "op": "sub",
+      "args": [
+        "wacc",
+        "growth"
+      ],
+      "unit": "decimal"
+    },
+    {
+      "id": "terminalValue",
+      "label": "Value at stable-period start",
+      "op": "div",
+      "args": [
+        "fcff",
+        "spread"
+      ],
+      "unit": "USD million"
+    }
+  ],
+  "outputs": [
+    "rate",
+    "fcff",
+    "terminalValue"
+  ],
+  "expected": {
+    "rate": 0.2,
+    "fcff": 80,
+    "terminalValue": 1142.857142857143
+  },
+  "cases": [
+    {
+      "name": "ROC falls to WACC",
+      "inputs": {
+        "roc": 0.1
+      },
+      "expected": {
+        "rate": 0.3,
+        "fcff": 70,
+        "terminalValue": 1000
+      }
+    },
+    {
+      "name": "Required input absent",
+      "inputs": {
+        "nopat": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures.3%/15%=20% reinvestment, leaving80 FCFF from100 NOPAT.80/(10%-3%)=1,142.857143. ROC10% leaves70 FCFF and value1,000."
+}

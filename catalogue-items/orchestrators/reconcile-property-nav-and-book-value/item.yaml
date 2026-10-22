@@ -1,0 +1,42 @@
+slug: reconcile-property-nav-and-book-value
+name: Reconcile property NAV and book value
+summary: Explain the difference between supplied property NAV and reported common book value per share.
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: spreadsheet
+    required: true
+  - type: audit_report
+    required: true
+  - type: document
+    required: true
+uses:
+  - book-value-per-share-rollforward
+  - investment-property-nav-bridge
+steps:
+  - uses: book-value-per-share-rollforward
+    note: Use actual sourced schedules in one linked native workbook; example values are illustrative and must not become issuer inputs. Prove closing reported common equity and actual closing shares from the equity statement; retain book values for every asset and liability used.
+  - uses: investment-property-nav-bridge
+    note: Use the same date and shares, replace only the evidenced property book values with supplied appraisals and reconcile tax/debt conventions. Explain the complete NAV-to-book difference rather than treating appraisal uplift as earnings.
+execution: coordinator
+origin: own
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/finance-expansion
+example_pending: true
+warnings:
+  - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+credits:
+  - title: Original finance methods and model fixtures
+    by: AI Blocks contributors
+    used: Original instructions, calculations and illustrative examples. External method references are linked separately and retain their own rights.

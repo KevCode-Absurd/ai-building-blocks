@@ -1,0 +1,153 @@
+{
+  "inputs": [
+    {
+      "id": "ar_advance",
+      "label": "ar advance",
+      "value": 600,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "inventory_advance",
+      "label": "inventory advance",
+      "value": 450,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "commitment",
+      "label": "commitment",
+      "value": 1000,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "drawn",
+      "label": "drawn",
+      "value": 700,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "letters_credit",
+      "label": "letters credit",
+      "value": 100,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "additional_blocks",
+      "label": "additional blocks",
+      "value": 25,
+      "unit": "USD / stated period",
+      "min": 0
+    }
+  ],
+  "calculations": [
+    {
+      "id": "borrowing_base",
+      "label": "borrowing base",
+      "op": "sum",
+      "args": [
+        "ar_advance",
+        "inventory_advance"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "capacity",
+      "label": "capacity",
+      "op": "min",
+      "args": [
+        "borrowing_base",
+        "commitment"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "usage",
+      "label": "usage",
+      "op": "sum",
+      "args": [
+        "drawn",
+        "letters_credit",
+        "additional_blocks"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "signed_availability",
+      "label": "signed availability",
+      "op": "sub",
+      "args": [
+        "capacity",
+        "usage"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "availability",
+      "label": "availability",
+      "op": "max",
+      "args": [
+        0,
+        "signed_availability"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "negative_availability",
+      "label": "negative availability",
+      "op": "neg",
+      "args": [
+        "signed_availability"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "overadvance",
+      "label": "overadvance",
+      "op": "max",
+      "args": [
+        0,
+        "negative_availability"
+      ],
+      "unit": "USD / stated period"
+    }
+  ],
+  "outputs": [
+    "borrowing_base",
+    "capacity",
+    "signed_availability",
+    "availability",
+    "overadvance"
+  ],
+  "expected": {
+    "borrowing_base": 1050,
+    "capacity": 1000,
+    "signed_availability": 175,
+    "availability": 175,
+    "overadvance": 0
+  },
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "inputs": {
+        "drawn": 900
+      },
+      "expected": {
+        "signed_availability": -25,
+        "availability": 0,
+        "overadvance": 25
+      }
+    },
+    {
+      "name": "Missing or invalid required input",
+      "inputs": {
+        "ar_advance": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only in USD unless labelled otherwise. A focused schedule using explicit period, rate and timing conventions; not a full financing model or an approval decision."
+}

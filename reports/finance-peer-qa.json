@@ -1,0 +1,2031 @@
+{
+  "checkedOn": "2026-10-22T16:59:22.281Z",
+  "status": "pass",
+  "items": 210,
+  "independentMethodReviews": 210,
+  "directlyReviewedNativeSheets": 120,
+  "providerCalls": 0,
+  "reports": [
+    {
+      "path": "reports/finance-public-markets-peer-review.json",
+      "sha256": "f73f6f5598ba0647c477c547d2776f1221130bb7861b62def472b74331866282",
+      "sourcePath": "tools/finance-expansion/public-markets.json",
+      "sourceSha256": "4412ac5bff1273eaf4d0aecd62b17c137f5e00d9e76682374cd7a62f1c840eca"
+    },
+    {
+      "path": "reports/finance-private-deals-peer-review.json",
+      "sha256": "8867c9111d80d78865752f2b95eba89b6b518fd8bc768452b70057ad5c0dcc23",
+      "sourcePath": "tools/finance-expansion/private-deals.json",
+      "sourceSha256": "8209b9dcf7b5245e7232033d73b61fdf49d9af5fb01eb2e21d422eb6721d5be9"
+    },
+    {
+      "path": "reports/finance-operating-credit-peer-review.json",
+      "sha256": "ac57e1e1d010a9b5b9e64c1e84ef87d22207254a2844e5e5a205578608d66aa6",
+      "sourcePath": "tools/finance-expansion/operating-credit.json",
+      "sourceSha256": "60d93de7e6e48848caad32fe9893f65cc58520a0d6a66d5c6f2974aac9fba21b"
+    }
+  ],
+  "scope": "Independent source/method/overlap reviews and actual rendered-sheet inspections, matched to final model/title/reference specifications. Existing PNG reviews carry forward only when exact preview bytes match. Current native saved-file recalculation is checked separately.",
+  "results": [
+    {
+      "slug": "weighted-average-share-schedule",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "3fd72504b54376b2120e1d3493f159e2a91c125e793eb4e770a99a020c251436",
+      "peerReport": "reports/finance-public-markets-peer-review.json",
+      "modelSha256": "e7a3517b0e44abd9a01e7684d23e810491d7b3931735fcdac0b2879a1a55e2e8",
+      "xlsxSha256": "77e584fe1dfe46408ac05cd17440636f3fa0941e81467eb6c513a2904eda8194",
+      "pngSha256": "5e722fea136f56ee42f9fd36b77f1e753a95a2563065b80dd0f18e41bbec7bb1",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "treasury-stock-option-dilution",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "ce389c69d4d2b28f603eb639ac0543f6c794d3e357a275db6ca540216a430f52",
+      "peerReport": "reports/finance-public-markets-peer-review.json",
+      "modelSha256": "d2f84ed414bc4a64efbc3a6f606099a1859b7e7b703eec9af173557686d6b8f7",
+      "xlsxSha256": "f2fe2a7666db3f71ac3bd6e613be9554ac74d850648bbcb8ce22af433b54ad8e",
+      "pngSha256": "8be048315877dc994317b8278edde76cb18194b2bb661038b988e8840d2944ff",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "convertible-eps-inclusion-test",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "c64e7fc59c4f5052cc1dd51f1bc106264af9094314e23d5a4d643cb98a083e20",
+      "peerReport": "reports/finance-public-markets-peer-review.json",
+      "modelSha256": "c5db315b676bef596e5ddac8727fe9cb55bb827609d113e3a1463051aec057ec",
+      "xlsxSha256": "6641c96262d503e3dedd78c6ba7a4577e9706338a0636f78b646c6158819b96a",
+      "pngSha256": "ddbe99c3b16f1b7386c65ffc11ca189d458e89c49c064009e2e9334c30f8c6e2",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "stock-split-eps-restatement",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "9187ac1d41c38a1b1fe8c89a7166c4af2b036f9f8528ccbf0bf19c36bd267091",
+      "peerReport": "reports/finance-public-markets-peer-review.json",
+      "modelSha256": "24608ba79948c7a2894f68899d93bb4b1f02807d992824dc30ffedec6eba9838",
+      "xlsxSha256": "2d0904f9281fb4d428dafb0e29e0efdfe7a5be8b6a8e5002e7880b31e9289294",
+      "pngSha256": "3b42ca73d9e591fc36c89a1d7a334e3b0931da9be6ab61740b452ed2552c1e05",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "rights-issue-eps-adjustment",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "3417146cc9e331df31b29e37a11d9ff3a52dd67a0e1a005aa8351be503e60285",
+      "peerReport": "reports/finance-public-markets-peer-review.json",
+      "modelSha256": "78762560d27f186ca9fbbde75e73a79a4587dce11e3593b516f2be9372b2ac5f",
+      "xlsxSha256": "e02ce127170d86e624b7b6bb267a20f27a87a98dec42fb3267a68d3ebb2611e0",
+      "pngSha256": "b210db317736d7421507573a5c705dde1d847891f10c21072644c1482a0cc5f9",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "cash-funded-buyback-eps-bridge",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "469b121858a0356d5d6ce345e74f708b5043330290242b7a92a67bd89b4c17f1",
+      "peerReport": "reports/finance-public-markets-peer-review.json",
+      "modelSha256": "7fd2be4af1e28d5fc4b3431c3a873a1e1af0d0e45fb0281fccd8989688b10f91",
+      "xlsxSha256": "b0c1e4e836b43e6fdebc1025953f23b86aa4105c2d11bbbb2a669edd5efede0d",
+      "pngSha256": "d24cefc70fec6673c2fc201c8772c4826234933bdf23190ba47ece8e371a72cb",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "shareholder-distribution-coverage",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "3e3fb7321b359fc61bd752b7e49a06a090762ad791e4fa9f778ad100173f88aa",
+      "peerReport": "reports/finance-public-markets-peer-review.json",
+      "modelSha256": "5e80e9b42858dd6dad53a9d64ae59975d48d954772dbea8f8c00512830f0571b",
+      "xlsxSha256": "614bc2dc645e5c0d9287322a9ff4a54da1a81fe5061fa253a542bf2442c157f9",
+      "pngSha256": "ae34431501d2c0ea763fd1eaef2f1eefef5d19fb5a1e13aede4a55faf697c3d0",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "eps-multiple-return-bridge",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "0c04bc50f5792b557fc6a37dbaffa2fa142d4e3f51179c6a8fe52fa6c7249071",
+      "peerReport": "reports/finance-public-markets-peer-review.json",
+      "modelSha256": "8eed70d85c22ed73d1fb353eab1e98b3dbd9e863bd0fb0f8c2362393d621a186",
+      "xlsxSha256": "5da103bbd5df48493acb104600b7374eab77deabf86d01889a362753b09869e6",
+      "pngSha256": "7037fd9980c39ff24509bddea6505b8c0d9f9fea9430ab2cb0ca5f1969657825",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "dividend-reinvestment-share-schedule",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "f5af8cb26d8eefae0953ba94d419e47aa2ebff2ca693852f5e3b214526f296b6",
+      "peerReport": "reports/finance-public-markets-peer-review.json",
+      "modelSha256": "e5b8275d23d47dbed1bbd2082af485b73afd434a52e5d3bd06dbef24e96cc0f5",
+      "xlsxSha256": "b1570bc715a09ea58901dac0c55441bdc1071539b1028c84778faa5b9bb91a59",
+      "pngSha256": "66c44b730a6b5638ac1b5db75941a449e50515e9494d12283f1ec0cc5b1257f5",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "book-value-per-share-rollforward",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "05321289d752e066778d8e88f0daa694ce4c694290ea9ff69473f7052839a85d",
+      "peerReport": "reports/finance-public-markets-peer-review.json",
+      "modelSha256": "acce65b8028ae632164332ee82c14fdf5484e9738e4bda3fd3b0229a4b2a0219",
+      "xlsxSha256": "369b23dbf5877db592c8bceba521ad98ae7fd04e13785579f791c894d57dc24f",
+      "pngSha256": "8746cf51917d9adaebd0dae9d550cfd5175823c31d17a80fa9fad2958ee63977",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "minority-interest-multiple-reconciliation",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "41479fd2ff21d775e7895a6f70fe4decaaad4c74f3a1ef7273514af8ac5d95ad",
+      "peerReport": "reports/finance-public-markets-peer-review.json",
+      "modelSha256": "adc8dda100169881ab0f8389fc6653007877b91443ebddd635f9cd74a5042cae",
+      "xlsxSha256": "881f71324b9ecca5bf4fb189500f2e0e4f18b5bddfd49fd71d4a8a9121992706",
+      "pngSha256": "d64ead2c9093012b97ad1a73aa89c311e9b73196e87da3203bebb6319bf01020",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "listed-holding-lookthrough-nav",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "e0f523844355a8a6f25a4493d9a9e51de3b9b49c7b0dadcb27b62d0709cdf0b6",
+      "peerReport": "reports/finance-public-markets-peer-review.json",
+      "modelSha256": "5323ba7a9594e44fa16de2729932e904948cf02b99555b6cb797cc071baac9d6",
+      "xlsxSha256": "20afd214a34756402f5e93bd1f31bffd65cdb5429e80b14aefd1639f788f2f3c",
+      "pngSha256": "d8e1e8e0d8c409a8077127e3c490634e591dbb623552e39add98b95f652915a1",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "segment-profit-elimination-bridge",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "46e453639197af820f13625ce5035244c12b2438da2398c73a47b093fd04f665",
+      "peerReport": "reports/finance-public-markets-peer-review.json",
+      "modelSha256": "dc4437267951ec840296632d04dc152523ab5bdd4dd1dfea01a4a5628750db9f",
+      "xlsxSha256": "5dd0767da8e840e9776bdf35ee63aa0fb28e0955ede04271de1fd8e61ebb0952",
+      "pngSha256": "f86ae463d31660be2cbdcea15027f86186bba907c1d1f35ed722606e2de8d9ce",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "investment-property-nav-bridge",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "fe91a5b8573b87b3ba92ee135c30d216a5fdd0716c54f081216c5839c4002e7c",
+      "peerReport": "reports/finance-public-markets-peer-review.json",
+      "modelSha256": "3a8f729201e132f2a49572ef56d6c3600c1d7bb952cbf50ab88f45a631a86be6",
+      "xlsxSha256": "07a0174ca3263880f29bdcd2259c52029169da13e55ff6ad35909d6eeacfcffa",
+      "pngSha256": "3ede822a0272551ac78308c9315d552359a8f36310f1678bd3d35e97df3d16e5",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "one-period-residual-income-bridge",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "632f0573ed3b02f10d0a8f63037d7465451c62c06ce45469b9a24a090381f425",
+      "peerReport": "reports/finance-public-markets-peer-review.json",
+      "modelSha256": "daf3092f364698ca5b88b0ffe5f568d230d7011cc07e9f98aa18956fc1cba920",
+      "xlsxSha256": "db81960208cb9946663f62edf5faf1d3dc3c9c55ca8568cd34bc440f1049ba75",
+      "pngSha256": "238fe83f71b3939641ea8cdf024195779000605fd48011736fb33539e40deac7",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "justified-price-book-scenario",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "736272c70c63b2981b6450badf263877586303aece2447ca1d816be69b71c147",
+      "peerReport": "reports/finance-public-markets-peer-review.json",
+      "modelSha256": "fe6095191939e7824a70f5edd593a518e08e34befc5ca179cac03d20c1d188a7",
+      "xlsxSha256": "1dfbb0dfe2d3d5236e775e7145ca3ebcb6968ccb1793bdb0bc3d91ecf0860094",
+      "pngSha256": "ec952168e463dc55192401fa43e1d5a6a10818b8d55d8c044d2c9bba277980a5",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "reinvestment-supported-growth",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "25fdb9e5fc6b5f5817a38d0364938a51a254d32fcdc0377fb0e2af0a7d912e10",
+      "peerReport": "reports/finance-public-markets-peer-review.json",
+      "modelSha256": "5604b92d1dd38c626309dc0ffb2b726732a85589eb78972136130aa767ac0c1c",
+      "xlsxSha256": "40787251e09706b8eff790d2dd38fce2a1e4a87a2dd9ee9bf7411c7a8209ca25",
+      "pngSha256": "21d170d8feb89109278a0d1a9e654e4589d23cb158e5bc18add4f314b777177a",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "terminal-growth-reinvestment-consistency",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "1ca3d2119276b9b8ba4b1ee5666a040841f054c4dd11caa44b592eed71183950",
+      "peerReport": "reports/finance-public-markets-peer-review.json",
+      "modelSha256": "a2f0938637b0528ebe7ebf7002f35c58c44b7dc3c2dcb921b495b6f52e09ac43",
+      "xlsxSha256": "257129c8e6d2a02cddc63a4b303b376390251dc8a909255783143c7bcc6cc30a",
+      "pngSha256": "91169922bcdbde8ac6387245df9d78d50ad27b17b888c030ee12f633e8f95218",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "economic-profit-fade-schedule",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "a702455dc615212cd72b9e18cb1bd39ec457783dc84edd5f77f84f64bd948e72",
+      "peerReport": "reports/finance-public-markets-peer-review.json",
+      "modelSha256": "378da7ac1ea3b6c5c086e3b92246d83362761403af23defacbdf023a90126314",
+      "xlsxSha256": "2074a54be53547bcea158eadd7ecdb350c28c96cddea726dac8efe7ed2710067",
+      "pngSha256": "8a4355c5dba242768f7eaaf2d594bb71aa3ae33f4148f47f2cea866e7c26ad8d",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "implied-terminal-reinvestment",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "024b37dae8dd3919b768418de9e75c11205b76cb495b61fbcd64c94906e73e3a",
+      "peerReport": "reports/finance-public-markets-peer-review.json",
+      "modelSha256": "a547e2b29f5bed0505d0c1108a5ac7ad442d5939a84a6a3ca8e89a4fe1b197a0",
+      "xlsxSha256": "e1f2ce6234c8c1ced047c878cfd970ba41f08e5d685bc9dc42dc13565d2d9bae",
+      "pngSha256": "104dc40313ac2525912e2703381e73a33c4b1fa22ca821e01916d072afdf0761",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "research-spend-cohort-adjustment",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "18b6205235b15319c56bb5488aa874c13b580d6947b81a54ebd3654a539a8ead",
+      "peerReport": "reports/finance-public-markets-peer-review.json",
+      "modelSha256": "2198becb9e7644ea0ab7d315ed81f6b9fb3f48b877891a76da1a5622b2e982dd",
+      "xlsxSha256": "825013328b24a59cde304ee12fce866315755371a95d4b8dd7cee589bd8f78bd",
+      "pngSha256": "21db5cd5012af685da8c3f8266b6694afb06348ca99e96fbeeb8d7bf81d7e950",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "noncash-working-capital-bridge",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "06e7ebf641b71e2fc21cf22b728a6542b4611c47da6f25160a7456a87b6acc07",
+      "peerReport": "reports/finance-public-markets-peer-review.json",
+      "modelSha256": "368ea0f5d03e56aa297bd1486984c609bad24449f56b753b54af515cf1c74a24",
+      "xlsxSha256": "d6f06448ca00cfd79fa12cfae2149d4671a4a93c38f7ee24aef3283784f7bb23",
+      "pngSha256": "7ad02930c9fff1f204e7614a9405d085ed706d59a8efedef666bd00d07b75857",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "lifo-reserve-earnings-bridge",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "6568bd8bcc31c12aef3f94f3e19cbbcaa674bdab55b43c25d4088c9c34ba938f",
+      "peerReport": "reports/finance-public-markets-peer-review.json",
+      "modelSha256": "cebd5d0ab6c3c2bfb13365e4931b8a1e706b7d9cec4dba0c2015f0dbe0d7d2f4",
+      "xlsxSha256": "721ed2644b85701a802ec4b7b4abf6d3adcd0cbc0afe1bb90a161895bebc23b8",
+      "pngSha256": "5dcb07f9bede52aa7b2c86ea5234b76f740ce0124f057d407ad2efe256b8931f",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "inventory-charge-margin-bridge",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "65bc3cef1437844fe56cd1d28a63f15bd48ed57ec6ab0a0bb71079eb90f5e0ab",
+      "peerReport": "reports/finance-public-markets-peer-review.json",
+      "modelSha256": "20ad8e57585f8b70ea3e80d58e38cb6e8a40b0ddc63e47c9edaad4375926e75a",
+      "xlsxSha256": "cc2b6ee1aaf5cabb86c05015660a72d757b4b92d5e56307888a9f4465dc620a2",
+      "pngSha256": "df2610b369dd89a38b6fda6afac313484cc4d063d527b2ee415824ad3caa248f",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "pension-funded-status-change",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "67823084c95ca4eefa3a9cba14c757f6659b5c1909e0c573262ef08cf817ba00",
+      "peerReport": "reports/finance-public-markets-peer-review.json",
+      "modelSha256": "abf394b345c4cc513d27bc05d51fe2c53794e60d97c095956bd64cd6b5069ce5",
+      "xlsxSha256": "ba584ba8ed60bedd160e8dae0d3f9fa534b5783f0d8a0b31648975b58eaee7e6",
+      "pngSha256": "d0619a9a4101302a592faf3e64c94acd1b5b065070bab43a777d03634fa59af4",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "pension-service-financing-bridge",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "d45d5f43fd9cbaadea98fdf067e64ed7cc4682ef7c812cc70c0d3458e43c5247",
+      "peerReport": "reports/finance-public-markets-peer-review.json",
+      "modelSha256": "e0d8579cf318471070622a62a5659240a75ac81fb774ac96d77fa4294752fad5",
+      "xlsxSha256": "cdacf656f88119af35f6d13335cc0b7d33ea88264ebe7f9d3252cafead4f0d2e",
+      "pngSha256": "09b5272b3d8ce5d2aae935bd475a6643e2a0299f247c196199444e63d48027de",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "current-tax-cash-payment-bridge",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "cd79a1b24edbe44c66b4730df2000d18d16b9c743e728afb96d6054066781a82",
+      "peerReport": "reports/finance-public-markets-peer-review.json",
+      "modelSha256": "00ccd8a79b9d66d364096c37f10f19ce10afa8f698baff2d15b95b320bfaa20d",
+      "xlsxSha256": "142701faff84b334424ec2f51fdf28be89d0755eb090cd06bcfc071ce511bbdd",
+      "pngSha256": "6ab533abca7a84ff0e53e938c2a6981b4712d9a40c932a8aba6ca663bbc96558",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "oci-reclassification-bridge",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "f1d4312d70b1157c1085bfe38d6111edfe43db7405f39e2acac688fcb2a446b5",
+      "peerReport": "reports/finance-public-markets-peer-review.json",
+      "modelSha256": "30c88632f933c9cbd29dbab73a804f8f371aafa0b2b31108a65dd94dfdf032a5",
+      "xlsxSha256": "cba4b69be568a652f377fd71d47af6df93cbd25c39dad53eba937efaec910477",
+      "pngSha256": "c28f9740edbe5a1ee3d6d5a31911bfb983a48cbcdefb6d525bb25b505bd3eebe",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "purchased-amortization-eps-bridge",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "8eb833914f5cac4e883679e15401b5c749947cfe67e0b5256563b01eebc5eb04",
+      "peerReport": "reports/finance-public-markets-peer-review.json",
+      "modelSha256": "b26791fe9b17b57fb79812e381292ed3f3273973ade7fea3c2e7a9040bf3a1d5",
+      "xlsxSha256": "933d7c5a8bb9b7c41bc5ad197a4a5bc70e1925b4a0f5576f83e309564979dc4d",
+      "pngSha256": "2d3ab46365a97667eee0eafea5650b0ffd7e2539923a9b02c94055884dd231c2",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "sbc-share-offset-cost",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "bff9631da5565c16d3ebf9142dfff480bc1bb32eca1f51ed92ed1848c64d9897",
+      "peerReport": "reports/finance-public-markets-peer-review.json",
+      "modelSha256": "201e1898183d2ec6908266110cd205830c78cc0e180e03e58332f87121d28e2d",
+      "xlsxSha256": "0120b039299cead1381c0adfc00c10e88e128e0768e88ce7910961ad9086c55d",
+      "pngSha256": "67249510089f4e898138d11a9c65c76d3f5ca58192b6addb1c4bc8199dd4a5d6",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "gross-to-net-revenue-bridge",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "0c0511ef742b29d2105eae5f7f56c5407b6a9599898a899c881f4f98eac961d1",
+      "peerReport": "reports/finance-public-markets-peer-review.json",
+      "modelSha256": "f50f5d647b3a549310ddcf5a82a6d24b6a27d2b0aad00958cae71375ba0d8693",
+      "xlsxSha256": "35d9e8320660cd7259a7fcb0edfc15fe7a187a47d53de8a26a556dd8a6f5ac64",
+      "pngSha256": "1d3b3a6e9f800c4b2aeb9eb83c760cdff6656dd93ebba64e83ba6c9aeb606402",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "organic-revenue-perimeter-bridge",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "959597aaecc86357ee146a76edcd1011a8c6b103ffbc16f042c80fa5c9869d80",
+      "peerReport": "reports/finance-public-markets-peer-review.json",
+      "modelSha256": "ca3b29e7b766909d8ca51e51f0d2bc4d6295007c3a66f05fa70dc8aa28d86fac",
+      "xlsxSha256": "feff96f47167d51606c81239f47b92aaadae1a25399bd5ffdeef6ee1dce97aa9",
+      "pngSha256": "3e1cd194cd1e2c4a81219cf86b14d8e539d83a0ebb221acab6952d2f969c7da3",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "constant-currency-revenue-bridge",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "f16261e21e16908e0c67c9a72656401f7835ac051dad6b215e7dc5873f589305",
+      "peerReport": "reports/finance-public-markets-peer-review.json",
+      "modelSha256": "e96f660805b2aee0297636e3eed141454792596f5359cfd051ab400cd2e0f3db",
+      "xlsxSha256": "8623e43dc83ee337f8d372f4fb5c9dd3e6b72db3420ff0780b943edfdc175f57",
+      "pngSha256": "acb8c1355a353580742ded2373875eb29c12c4b1e2e5c6875bcf31e2d031f829",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "trailing-period-financial-bridge",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "0366b1c1d11e7bcd5d29df2c43cc933c511a9c1dce5e59664588f66c49ae4dd9",
+      "peerReport": "reports/finance-public-markets-peer-review.json",
+      "modelSha256": "4d222ded884bf7088273cec181135ba00496cf4654b1c51c5927b878f5321637",
+      "xlsxSha256": "ac657c3ec0ac4fac549c253112bc5f7ecba60d1db707804ea7c6028b8b1fe885",
+      "pngSha256": "a6e1b9f5347cbbe6a28a910672a3fcac38c06cdb3ccff1da4777ab0afe05b870",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "extra-week-revenue-comparability",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "7772224f61987289bd9464e4629d55d198beea2b818c46bb1b07799622ccb742",
+      "peerReport": "reports/finance-public-markets-peer-review.json",
+      "modelSha256": "76fbbed43d5993181285bad9ee402693073829b0f5836de125fda2ac3d8da850",
+      "xlsxSha256": "9e9d52e425938d3f7fc25aab5d33182b0055eba99525eca2e5686dda5c30770e",
+      "pngSha256": "db2793bce2f187f275585f63b4891700bd358c4f040e7437eb395de1a98d8fc7",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "contract-liability-release-bridge",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "efaee3a8d5ce9f439252f726bb898e18a25a5cf61f546a8db920d9c1a662a1df",
+      "peerReport": "reports/finance-public-markets-peer-review.json",
+      "modelSha256": "50b26d207844a185f0f3937c3287cb66d7633ece6ecfbbccc87abb33e0659da0",
+      "xlsxSha256": "659fbce3cd44b35bb5ed211556a52bf3331565ee1729778222c54bdf9efd0d0d",
+      "pngSha256": "5292469b9ea1ac732f0eb7f55beebffdc9c8cc22559bf063d9a3cd860f221e3a",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "contract-asset-billing-cash-bridge",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "3f51dc5e3d4aeb26b7d51ae9bc741733d3519de30a7bd1ce785f647ec461ccc1",
+      "peerReport": "reports/finance-public-markets-peer-review.json",
+      "modelSha256": "a7999938729ea9491eae0a40716f719e0489cbd593644e5911f46b46de4b26a3",
+      "xlsxSha256": "49492525cf39291035f97cf4cd8e5760711abe54c5ab43b6264b85d9535998bb",
+      "pngSha256": "428cd799cbd5d67a1b09f6d35ba1381920527405c9664466575a5e5495c8f95d",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "factoring-cashflow-timing-bridge",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "ff53af87aeb2c61cb9246c7b47f99ef5ba16f3bd0404f3dec5560c5e916c33cf",
+      "peerReport": "reports/finance-public-markets-peer-review.json",
+      "modelSha256": "ec88fa02664b4c423d35da7b6c4b3b955292eb0ce03c432c93a6a33d7e9266d4",
+      "xlsxSha256": "8f5bc51b500f2b35e0c0353b7d44f701c94bb6398b73b6df5ef125f53789d35a",
+      "pngSha256": "4054ffe3f3900c090663bfcea44d0259c0d6ef0c33d8788631ac6b2fb5250191",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "supplier-finance-leverage-bridge",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "f967709c943d35f558847450ad754e5821d78ed1d375ee0a7c20b59372511d73",
+      "peerReport": "reports/finance-public-markets-peer-review.json",
+      "modelSha256": "22444de6e07dda92691c3be0848c3c492c52f2db0acfe6de9abbe86fd4f277f4",
+      "xlsxSha256": "07928d9ce4ddca061e298d8cfc7e36b7202ae0ccf0d424cfe5fd200b1f7a734c",
+      "pngSha256": "8d921c76ba9180839861eb340987250fb053ae1bddb83b3b05517006ac2b51e1",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "receivables-allowance-movement-bridge",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "d8f0c232644c3e0c7c90e94bf4711e008368839e0724bb07f79c0d0e41b8fe49",
+      "peerReport": "reports/finance-public-markets-peer-review.json",
+      "modelSha256": "bb6768e5285e89109d66d21ad72c3b11987ffe191be1f1c4c35f217b3b8ccf8f",
+      "xlsxSha256": "5de264d33017688006d1a448e7cb2cded84f14c473a1c05ace6efe63eea39455",
+      "pngSha256": "9cba642d79f0f9d6a43a708b1b5b5f6adbb39e6fc93bcdd9c2b42129f4a8cbbc",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "reconcile-basic-and-diluted-issuer-eps",
+      "type": "workflow",
+      "status": "pass",
+      "specSha256": "8500da2b0e26c1ccc2ba64b62add14fff3284b171418a56f910b34892d98d187",
+      "peerReport": "reports/finance-public-markets-peer-review.json"
+    },
+    {
+      "slug": "restate-eps-after-splits-and-rights",
+      "type": "workflow",
+      "status": "pass",
+      "specSha256": "12931cb36123e861670fee3b12b09308badfc63d0e7205884386b4dc143bdf71",
+      "peerReport": "reports/finance-public-markets-peer-review.json"
+    },
+    {
+      "slug": "reconcile-buybacks-with-owner-cash",
+      "type": "workflow",
+      "status": "pass",
+      "specSha256": "278bb8137f9729ddc2c2f67feff81b11396e9a1a6b5109f2719d26221c50ec1c",
+      "peerReport": "reports/finance-public-markets-peer-review.json"
+    },
+    {
+      "slug": "reconcile-share-compensation-dilution-and-cash",
+      "type": "workflow",
+      "status": "pass",
+      "specSha256": "2e4f15a89f3b9136db454d9cb003dd45fa4686bd0ab3fdfb299cfddbc88db6b2",
+      "peerReport": "reports/finance-public-markets-peer-review.json"
+    },
+    {
+      "slug": "explain-observed-shareholder-return",
+      "type": "workflow",
+      "status": "pass",
+      "specSha256": "2509a5345ce324f58510e8066e387ce205e24f82c96fb0a998854ae014507466",
+      "peerReport": "reports/finance-public-markets-peer-review.json"
+    },
+    {
+      "slug": "reconcile-conglomerate-valuation-perimeters",
+      "type": "workflow",
+      "status": "pass",
+      "specSha256": "dcf8d67f8da281e292f1e1d85f3f939d00e52823c93a285eaa6f4fccc30ab82b",
+      "peerReport": "reports/finance-public-markets-peer-review.json"
+    },
+    {
+      "slug": "reconcile-property-nav-and-book-value",
+      "type": "workflow",
+      "status": "pass",
+      "specSha256": "afb26d905d4c3a8f43524e2228adcd6cafc34608e4973438369f18ca238fc0da",
+      "peerReport": "reports/finance-public-markets-peer-review.json"
+    },
+    {
+      "slug": "build-a-clean-surplus-residual-income-model",
+      "type": "workflow",
+      "status": "pass",
+      "specSha256": "dedebea1824bb5ff534457246d4acfb8927acaf74037710dbf496105736704f3",
+      "peerReport": "reports/finance-public-markets-peer-review.json"
+    },
+    {
+      "slug": "link-operating-growth-to-terminal-reinvestment",
+      "type": "workflow",
+      "status": "pass",
+      "specSha256": "b970ce76e47647ae2a3a61a9136e59a842cf7a763666ea5a81124c449746a8d8",
+      "peerReport": "reports/finance-public-markets-peer-review.json"
+    },
+    {
+      "slug": "challenge-terminal-value-with-excess-returns",
+      "type": "workflow",
+      "status": "pass",
+      "specSha256": "d8876954f1e8062763d54df293ab2bd05c894e3964b64469d2eec71c27a014d5",
+      "peerReport": "reports/finance-public-markets-peer-review.json"
+    },
+    {
+      "slug": "restate-research-capital-before-growth-modelling",
+      "type": "workflow",
+      "status": "pass",
+      "specSha256": "dcf95055ed1021048ea9cb91bb5bbb34d37fd7fa51d8120ef1424ff8e83021e7",
+      "peerReport": "reports/finance-public-markets-peer-review.json"
+    },
+    {
+      "slug": "reconcile-working-capital-and-tax-cash",
+      "type": "workflow",
+      "status": "pass",
+      "specSha256": "253321ea9841ce3a4559058c9c273190b8046359fecb932542a9133b16a0e164",
+      "peerReport": "reports/finance-public-markets-peer-review.json"
+    },
+    {
+      "slug": "explain-inventory-accounting-margin-effects",
+      "type": "workflow",
+      "status": "pass",
+      "specSha256": "3590bf679b355a478476b9e8eb4533e774eda8670998d4fa27b5c53002b2178e",
+      "peerReport": "reports/finance-public-markets-peer-review.json"
+    },
+    {
+      "slug": "reconcile-revenue-presentation-and-perimeter",
+      "type": "workflow",
+      "status": "pass",
+      "specSha256": "71780ef29a12d3a80839adaf0a8f7d1ab768088fca68f822f2084652df0ed8d5",
+      "peerReport": "reports/finance-public-markets-peer-review.json"
+    },
+    {
+      "slug": "separate-pension-cost-funding-and-remeasurement",
+      "type": "workflow",
+      "status": "pass",
+      "specSha256": "dac84a91948761ccbe25627a8db3be53cedd4abf2bda5fb41c6bad74c72d8a7f",
+      "peerReport": "reports/finance-public-markets-peer-review.json"
+    },
+    {
+      "slug": "reconcile-alternative-eps-and-comprehensive-income",
+      "type": "workflow",
+      "status": "pass",
+      "specSha256": "cf16d6f161c2762fcb3a7505a16d9df1e5788bc97110e0a8e183f93fb3177fae",
+      "peerReport": "reports/finance-public-markets-peer-review.json"
+    },
+    {
+      "slug": "build-a-comparable-trailing-revenue-model",
+      "type": "workflow",
+      "status": "pass",
+      "specSha256": "8e95ed5b449fd2838ca539cd37450fe79fec2e03763ea40fe5515b4a7d838b47",
+      "peerReport": "reports/finance-public-markets-peer-review.json"
+    },
+    {
+      "slug": "reconcile-contract-balances-and-customer-cash",
+      "type": "workflow",
+      "status": "pass",
+      "specSha256": "7c13db5f77ac46a1b21f66b9a3f519a0457a64dc242367dd9796f0685f560e56",
+      "peerReport": "reports/finance-public-markets-peer-review.json"
+    },
+    {
+      "slug": "separate-financing-effects-from-operating-cash",
+      "type": "workflow",
+      "status": "pass",
+      "specSha256": "88fc5ec2f46ef62e7d1bb1457ad10b2fc17fd67a18509098cf3ab379e483ddbd",
+      "peerReport": "reports/finance-public-markets-peer-review.json"
+    },
+    {
+      "slug": "prepare-a-filing-based-earnings-model-update",
+      "type": "workflow",
+      "status": "pass",
+      "specSha256": "7559676373ef8e8d5de449a0380305d80b432d1dec5b60a34072ff6dda4cbe8f",
+      "peerReport": "reports/finance-public-markets-peer-review.json"
+    },
+    {
+      "slug": "issuer-eps-reconciliation-review-assistant",
+      "type": "agent",
+      "status": "pass",
+      "specSha256": "43d6d96650dea219f8e9274d3664ca559650901dd457aa291f9cbbb3a9bab3d1",
+      "peerReport": "reports/finance-public-markets-peer-review.json"
+    },
+    {
+      "slug": "issuer-capital-distribution-review-assistant",
+      "type": "agent",
+      "status": "pass",
+      "specSha256": "440fc957345adef17c09e50a296291a0a0a0e68001f8b5fd9df64ab935200cee",
+      "peerReport": "reports/finance-public-markets-peer-review.json"
+    },
+    {
+      "slug": "employee-share-cost-review-assistant",
+      "type": "agent",
+      "status": "pass",
+      "specSha256": "260bbb4998cc00e4e17be8ce7255cbcb93f3203c3bba7088017814c66e28d0dc",
+      "peerReport": "reports/finance-public-markets-peer-review.json"
+    },
+    {
+      "slug": "conglomerate-perimeter-review-assistant",
+      "type": "agent",
+      "status": "pass",
+      "specSha256": "1eade7be4dbbd7d7d1857db400a3f8be1cef3de9c1a8fa725f61160601c19ee4",
+      "peerReport": "reports/finance-public-markets-peer-review.json"
+    },
+    {
+      "slug": "common-equity-residual-income-review-assistant",
+      "type": "agent",
+      "status": "pass",
+      "specSha256": "17e0facc1137a3a84689b79424880f300cae0b58db58ccf06e681dc1d18cc1a2",
+      "peerReport": "reports/finance-public-markets-peer-review.json"
+    },
+    {
+      "slug": "terminal-economics-review-assistant",
+      "type": "agent",
+      "status": "pass",
+      "specSha256": "6a3e5bc639f3a573de13233dd998bf759f1e761144a3a35588e4b0c855964799",
+      "peerReport": "reports/finance-public-markets-peer-review.json"
+    },
+    {
+      "slug": "inventory-accounting-comparability-review-assistant",
+      "type": "agent",
+      "status": "pass",
+      "specSha256": "9e3f9419aaedbbc8c8137cb883144c85e81639ec167508c67b2e512352f436a7",
+      "peerReport": "reports/finance-public-markets-peer-review.json"
+    },
+    {
+      "slug": "issuer-pension-evidence-review-assistant",
+      "type": "agent",
+      "status": "pass",
+      "specSha256": "d74603fd0e235c5381275dd0ea4a438dfff51813fd89359bd46455bb9b27a19f",
+      "peerReport": "reports/finance-public-markets-peer-review.json"
+    },
+    {
+      "slug": "issuer-revenue-comparability-review-assistant",
+      "type": "agent",
+      "status": "pass",
+      "specSha256": "c6f1b89ed2d15293063285d03e9587c21bf1dc8f4df63dbd2a1bbe6b686a411c",
+      "peerReport": "reports/finance-public-markets-peer-review.json"
+    },
+    {
+      "slug": "operating-cash-financing-review-assistant",
+      "type": "agent",
+      "status": "pass",
+      "specSha256": "87102e0e1dbfce322b61b736d92db35c3788d88de23e70f7ba2806418de2835e",
+      "peerReport": "reports/finance-public-markets-peer-review.json"
+    },
+    {
+      "slug": "post-money-safe-ownership-checker",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "0f591c6db46570af67892f14027392877e85a473bbcf8081f98911bcbb39d991",
+      "peerReport": "reports/finance-private-deals-peer-review.json",
+      "modelSha256": "018a6d1dca2c60612b81f5a1782891d34acd4fccaa4fd0082cacb6a0e3a88ad1",
+      "xlsxSha256": "8a273c49f1c20e0b52fa217aa3c33ffb7e3d2281a48c9b23aba13c582a5a7203",
+      "pngSha256": "032aee8cdaa80b405e29615328ed77855e7cc51c7d5232d1b57b88d336bde660",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "option-pool-top-up-checker",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "44c99e41b5b3ef111e6f3046fac5bef48093792b2bfc279f17f5469831f3bdf7",
+      "peerReport": "reports/finance-private-deals-peer-review.json",
+      "modelSha256": "2c9b7c31fb0f8fe871e14895b909fd937d5d474bb1fc3e10043ef12bc5e08dcb",
+      "xlsxSha256": "e5b16d8008d2df32c42e939851559d5e4a89118e06c3b769fff7c2a5dd4c2b0f",
+      "pngSha256": "a099a7a985fa8fa25f7e66bcd87b58378c02504b6ba80f631f0c08c9a91f4c11",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "pro-rata-allocation-checker",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "a66a5b22f2404a19e2e524f159a9140f79b864f13d650e2926edbb661a11347c",
+      "peerReport": "reports/finance-private-deals-peer-review.json",
+      "modelSha256": "4f8180f3595f1f9ce3d1b830364f09b8ff0187866d08204ae0413cb3beee24b8",
+      "xlsxSha256": "ed833179df9339647b509b7cf9df3316314712645acf9de16ebb3b4159ea20f1",
+      "pngSha256": "75e296d2812a8edc8ca586325e9e5daa1105640965cb6dfe34a0d361ed58c40e",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "convertible-note-interest-checker",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "a291f32f5dcf9b9971726462ccc9fcc1d67334cf58a4755aac40963e65c26ccd",
+      "peerReport": "reports/finance-private-deals-peer-review.json",
+      "modelSha256": "745d2c739aa9a071601d5f82547a1cfdf57bb9db1d13a7f66d21c9ce49062f2a",
+      "xlsxSha256": "0fc491ccee239c736e844f5ea63c44dbc42453c224842c7ac8ba732437a90e06",
+      "pngSha256": "4d802b2f689f87b4a68fed81f5306a61b76bf53a2639ecccc32ef2b30eda33f7",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "cap-and-discount-conversion-checker",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "0b88e5f2f2175a28febad97272bcedaf6a3fa930e7c6428193bb98c4f2183747",
+      "peerReport": "reports/finance-private-deals-peer-review.json",
+      "modelSha256": "98eaa1e34262fdc50ddf4eaf7ef113a363cbb0f172848dfe6f3ef51edba993ed",
+      "xlsxSha256": "1aaaa52a9b18f9a62e54f4f975a0895ac7f04274be2c434a0a8c821b22ec78b5",
+      "pngSha256": "b78aa81ed8dcf875a2b26552f9cc75f8e53d8351a5d31ea118bbdfbe4b91f08f",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "nonparticipating-preference-checker",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "c10d8bbc96ec944c01bdd1282a929bfcff3d0ed98f207a33468688fc162dad1a",
+      "peerReport": "reports/finance-private-deals-peer-review.json",
+      "modelSha256": "f367201e3358e7470480315ab1f981aaaf0331b4ca438880516fd29e1adad7a7",
+      "xlsxSha256": "a454e2c26bfd0602205f38c9019516e11c65995585cd45c8d3f2d2fb50b7f83a",
+      "pngSha256": "88bccfb3f93a7e5826b6603405576c68cb4408f3a39fa8c483a387eda22b08c2",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "capped-participation-checker",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "d2ab069b03714666a67946b330cffee13825a4c4ce786bd5bafe1f15482b9d7b",
+      "peerReport": "reports/finance-private-deals-peer-review.json",
+      "modelSha256": "d1bc0ff8d89ef7aa495bbe23d6a9bc1c62d324106cf7ae66cccc06489aaca8ed",
+      "xlsxSha256": "068ac8d41ebc438e757d56ad9e23185a866be38755aca0912f525194d7e63ba6",
+      "pngSha256": "fb427f66c2a21b15c3470dbd846124cab7beb97bbba617e97ff37ebcb6b32e3a",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "weighted-average-antidilution-checker",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "13882aec1914f12ac46a679d119d685c5f5c2c08aef92aa91b9311137793a148",
+      "peerReport": "reports/finance-private-deals-peer-review.json",
+      "modelSha256": "4a09d06dfc52fdd64208b1eb844042f641ff3e728093af06f85e03043331c2bc",
+      "xlsxSha256": "b0463f09b0f0186093568cf60be4e045fdb4e6cbd6da0e339eae0976026ca55b",
+      "pngSha256": "56a53d84ab79946dc3ade7b2fbc37e768dad56a24ebc614ae71331efa0d0505a",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "milestone-tranche-funding-checker",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "4d284d4bf07d3d48185fb8356440fee5a552ce74e08eb9f74fc71b28bc3c2b53",
+      "peerReport": "reports/finance-private-deals-peer-review.json",
+      "modelSha256": "1d8b7f91542ee11f94e5bf81b94123d929f77f58e10ea498cad4f27b7669d140",
+      "xlsxSha256": "1a3f74f2db6886df04b6e4d9358ed188cbd911007b59d1b68ffcd7a5f1e904e0",
+      "pngSha256": "21c50f1fbef6d441921dc5c1b9ffe841a8de1063dffd4fd05b148d5be60b753f",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "follow-on-reserve-planner",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "222d71ef9b7ed44c5293f70b84b410dcfa8d21ff78deb6b3643cbd8ca3c8ef2a",
+      "peerReport": "reports/finance-private-deals-peer-review.json",
+      "modelSha256": "0e40e410362453ea46c89b49532e3ad1782391a3406af7a6bd7c04bbda79f854",
+      "xlsxSha256": "12cf61568ebf6aac9bb3b56e2ee64f134b2534d2ed62ecfdce7188b8127857a0",
+      "pngSha256": "91a19c70986ba2afac10ab01f2a563bca4d4d470311ada134e2d590960d52ea7",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "closing-equity-proceeds-checker",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "378949e5f2edb9b795ea5e59788577961f2459af4d2b74e01970c7844f2c9a09",
+      "peerReport": "reports/finance-private-deals-peer-review.json",
+      "modelSha256": "8573e0bbafc28566070cb08eb614542a89a9b72e1173ecc208d0757f424ef2f0",
+      "xlsxSha256": "5cf0ff0cf5f077762954aaa08fab2e966e944f1af6283d676266fe6af05301ae",
+      "pngSha256": "faf6a3fe1e480c1e6ea57a351ac272b64995fcec3cf46053b8ea296ee5d9de04",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "working-capital-true-up-checker",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "441f0f94ac0e9241303345721edc433b4d99daf12debbf70d28e1323d2ff23b9",
+      "peerReport": "reports/finance-private-deals-peer-review.json",
+      "modelSha256": "0be4053104211fec63300ddf59b754b5536023c9e37b341ad1bcbbcf95b811dd",
+      "xlsxSha256": "65e9394a3feab627c5a4113f467fa43b88c78fd71cf30d2aa60cb77de9e80039",
+      "pngSha256": "86423e7337235a9932dd5d8ddd20245f68cd99b256e45049b212755d46f457d2",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "locked-box-leakage-checker",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "bc68339a000dbefab306dbedee4d980c33ad50a8192c90d4e68ed87a77fba4e3",
+      "peerReport": "reports/finance-private-deals-peer-review.json",
+      "modelSha256": "1ce4b7956e4464054b307a9afffc9df2421aab8372aa0ca974219d9f9921bf7a",
+      "xlsxSha256": "6a9fe6ffaa8579fea5b8999965893ba549532617d39564b79b416589f9e5dd14",
+      "pngSha256": "29bb9d0b1a80b952a76a71044a49ab91ac8e2d18bd1859563e9156aae0f31348",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "escrow-release-checker",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "089653ed272d429aa419ca127ff6c195e0b6cedc1c7d0f29acc5a9606849adb1",
+      "peerReport": "reports/finance-private-deals-peer-review.json",
+      "modelSha256": "185445e4c40f1c343dae76a1cefeb3292227fe0a202ffceb23d1d145b7ff5054",
+      "xlsxSha256": "b331ce7a9e941df9acc3b893cb3c0e874736d0ed2a047b6dcc572e56cc606d05",
+      "pngSha256": "b7312b9c0a466a2ed0d87270a4333eaa4189a57ed43c8a9bf183f7ff2cf6be02",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "earnout-payout-checker",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "9b4911707bcbcc7bcb39981c88ffd91a504eb1ef8eebe9052918d11b04a50b37",
+      "peerReport": "reports/finance-private-deals-peer-review.json",
+      "modelSha256": "42ee3b1c528b41895cc2d6191fe257daea9e56fbfa26300f572ce34ab1741487",
+      "xlsxSha256": "0b51a1ea9d5766c0ef9a125ade90fd7e62213d8f06b9d64270c84f3d178010d1",
+      "pngSha256": "17653333f6e58e8e38bd089158bd5949f2e020506fe11401fb1345173db1fd93",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "fixed-exchange-consideration-checker",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "1083e34d9e3f0e15c6795cc2932d0f7478baa7d9914b7230bb6a73b8a0869596",
+      "peerReport": "reports/finance-private-deals-peer-review.json",
+      "modelSha256": "1eb147d5b8e8c184391ac8f11420da378547fa05badf5307e90cdca9fcc95caf",
+      "xlsxSha256": "eb2aba197c5fb3ae3007d09224fd54f7c1d315e440cb6d83df2e12431c0cde8c",
+      "pngSha256": "484850ef1450a5fcede16556b5ac78cf38ab43c736e37bf9aeccf958f0b7465e",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "cash-stock-election-checker",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "1d891b217fb1f3f47034ca8912d984154850843ff7da2eb25b8c7d677ec6b10c",
+      "peerReport": "reports/finance-private-deals-peer-review.json",
+      "modelSha256": "701ccfde7a743e19cebc3fa7d0cd9939ad3abcc425c44504b803aef142d580ea",
+      "xlsxSha256": "1e0defcf3eb8d3eb362228585d5e4056c67c30f84bcea72c6b4e0642e67447d4",
+      "pngSha256": "37c0050e4d7654f894d877a4ab66dbd192bc3e6bb8697308eb6e03c0c37a5c47",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "deal-ticking-fee-checker",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "713025846d2a3db5488b6bf69a4f3b40c5e69ce1aac5b3356f9d27bdea9c4258",
+      "peerReport": "reports/finance-private-deals-peer-review.json",
+      "modelSha256": "bb50b37094e8d2e9751c526368ceab21669efdc673a8fd982e4c201c7aab021a",
+      "xlsxSha256": "5f9a00e9560a219e9da9bbcb300a7197e4b5de6e1df63be01d17aa8980ac2ee2",
+      "pngSha256": "35fcf3e661979243ec1a14676dd3bd2289a76a1e7d199ac62a879eb7e646e65f",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "debt-issue-proceeds-checker",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "68446d739ad99cd93f4ccebbdc37c567ebda97c7a46ba30dcdf51a4a430ff8cd",
+      "peerReport": "reports/finance-private-deals-peer-review.json",
+      "modelSha256": "291abdd7a8ca60015d4b03954b7a116f2d44378b43104650e475f860761a086e",
+      "xlsxSha256": "bf7fbd5df3d6ed7e0ac53c8b5106f63236625b18547e1c880947498e652665b8",
+      "pngSha256": "faf9509de6c37f9f1f7fad495b2d7c834ce5f983e70f031a67dae5cdecb2b8d7",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "deal-funding-gap-checker",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "352fa23c5ed545777c6984b53b151c7b808144f4664e5b66ad5f258f81d7a732",
+      "peerReport": "reports/finance-private-deals-peer-review.json",
+      "modelSha256": "d5976547039bc7d2a2054821821478683aae072cea1c6ffa53c7117d835a7399",
+      "xlsxSha256": "10f248c9dc21b1b6efc05e3cbcb4907f2f265f06babf36d4c9a0cdeb209a9354",
+      "pngSha256": "cf0bce70c8e30e8044bf85c408c25fb336ffcc959a44db954a78654a44ca5b79",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "adviser-fee-tier-checker",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "54d923c75121ebd89d7ecf75d85ecbe10ecdb7abc8677c5f56e3b9068217ae4d",
+      "peerReport": "reports/finance-private-deals-peer-review.json",
+      "modelSha256": "f50e239cd7da42c96f0428c050a609c24877975943aa0a3316476c13f8c1de5b",
+      "xlsxSha256": "9996ffd26d806118499d04d44823aa67bb6d4b5e0eabffaab6a5b70466ce342c",
+      "pngSha256": "c8cda8567d8d214eb484275fc1a575d8e258babb088ef9ab0e6272d3a0d569b5",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "rollover-equity-ownership-checker",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "b302db7c28e3bbf03474852bbdb04c8283fa323fd930f96199a7b2d72816a295",
+      "peerReport": "reports/finance-private-deals-peer-review.json",
+      "modelSha256": "c33795019b03772cab775bd227bd82dbc9e7cdb72d4511b165a46d42f8e12978",
+      "xlsxSha256": "cbac14834edb5d5dc7c28b4b6ee0e801be06d969420cf6312096e7adadaac05d",
+      "pngSha256": "4c3618057b2dcb5a5eeec29741d421a79b32c8f7f50a846b7f041e35eaf832f7",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "deal-ebitda-addback-checker",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "1607e8dfb68c1d954d502686ddbbbe4d8fe8ed9fafe5b03309de0c87bace7e86",
+      "peerReport": "reports/finance-private-deals-peer-review.json",
+      "modelSha256": "72bb5f232398be7885338eb14ec20b18d3042ef65722e96d1bcee2d68f62d01f",
+      "xlsxSha256": "a1e310d6ce81cc5a2d2e2ecebd138a2ded1ab2514d033b57b6f377d68da5c58b",
+      "pngSha256": "6c7d31d2af0c75d6dd8f742c067cea46b60f1acef269a0b55c6a6d5a80b2a453",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "net-leverage-covenant-checker",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "c0493d47d5bae20776ae745c3e96b66817e7b64b8623adbfa4db882211cc3dc2",
+      "peerReport": "reports/finance-private-deals-peer-review.json",
+      "modelSha256": "e4d76fc8b3c408340d5c2f65100dd42c0a8b67f1ae4dfc0e95d13921c434796e",
+      "xlsxSha256": "9bc7de0d85334d5109948f6bc91393bdc675809357e2b00274920a15d983d7c9",
+      "pngSha256": "2797c6f4f4e88e1f731dfa120cd139b764c511c48c3c07466a108eac672ae015",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "equity-cure-scenario-checker",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "57ec7134744afd65c6954af7d80c2be147433ee5afca83fd4c44ad04c2b84ae8",
+      "peerReport": "reports/finance-private-deals-peer-review.json",
+      "modelSha256": "0e160918a007712905229caa0bc5252a4a2dad215034aa9bb639b774b577c151",
+      "xlsxSha256": "3930b4d79e82897ea3c5577471e8d31ea753141e0d7da8c35385b28ea93a8b18",
+      "pngSha256": "1021234e3fb9fedc72d80f2ef9ad0ce23bdc09ee643be364c3f6680e04ba7167",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "debt-cash-sweep-checker",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "b9ad8a5680730ddf932986d936b318df2a1779c05f59c620766c5c00579e89c5",
+      "peerReport": "reports/finance-private-deals-peer-review.json",
+      "modelSha256": "835c342713889adf1d600a96a7c1cf7a8b1eb28e730cb8133024b9d6d56dcb8c",
+      "xlsxSha256": "fc353da38c8ffb40145de473524516f989e495092f1a36ad3a45fc1384ec6163",
+      "pngSha256": "d1091686a6a96a7ae776dc53482c8d3eaada17acae7ffdaeda11a518ce353026",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "cash-and-pik-interest-checker",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "4807d449589b891c2f1821b71baa243c602e4b2e0d015cdfc2c350fe16c25c2e",
+      "peerReport": "reports/finance-private-deals-peer-review.json",
+      "modelSha256": "d481a5bcc1f56663602bb4e49520fe8e52859ee195a748daf70d14afe3ba5aa6",
+      "xlsxSha256": "c878bdb71db7b804b084c2b1b05d1924db4ec35dc6ba6464973c742b34dd22de",
+      "pngSha256": "ad2bffbdb2cb408a41eda02ab4fa33f6b211a4c4e4062af8995abf56955ceb1c",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "refinancing-closing-cost-checker",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "74910368213124f90c42effd23d181f0417470d49e8a7f1c2069f79952f61fab",
+      "peerReport": "reports/finance-private-deals-peer-review.json",
+      "modelSha256": "5d0f7f6cebfff33c99638a40fffcccaf5de122c014e995bf448825bd90fba22d",
+      "xlsxSha256": "33fec880ef0876b865e639023546210563a0f79cd8133f3fd511fbedb1e75789",
+      "pngSha256": "4e439d0bc8f1f10d421f692731be04f88197591217e03bf9fd33e83ea8bb7222",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "dividend-recap-timing-checker",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "cbd19093fcad977cb549a0a523ab528429bbd5a458f050942c5227d2f52f19fb",
+      "peerReport": "reports/finance-private-deals-peer-review.json",
+      "modelSha256": "1ad4b1816ad2b3e1299da1d5f132a676a35db598b69629442b2ee72fd94d85bb",
+      "xlsxSha256": "4a519da56bb662af4e50981b3853f82906fcdddcb8e62deb43e76ac32f69cbe9",
+      "pngSha256": "eafbc79169daab42c410a34d7abde17410a72c1d749c6e662a07253797015aef",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "management-equity-hurdle-checker",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "c399a03537f4a4a6db6d62a3a29583c308b52d68de9470ef0b506ef96814f346",
+      "peerReport": "reports/finance-private-deals-peer-review.json",
+      "modelSha256": "8ff14b76060c6e2725e46998df00517339c1cae9c554d5274df1e955514b0c3c",
+      "xlsxSha256": "69dbb39342b46050f189f3e95433a12f9ca231dc077189367b82dac7e95bd44d",
+      "pngSha256": "ac0acd481bb22cf07910604d1c9a6d25de279d9babe122fda032f2fa346c82d1",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "unfunded-commitment-checker",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "2857e2746d692c2b09a06d13bb4a962e09f82a875a0c2fbd4df57b6ddfad5428",
+      "peerReport": "reports/finance-private-deals-peer-review.json",
+      "modelSha256": "4233506e70e294ff40c227b9b06f313ad60b8a7d55fcdee9be57cd14bd6e8200",
+      "xlsxSha256": "b3833ed5b3f6b81e1a629ce464680aff19aa503eb2ec834644f9bb5e2352a611",
+      "pngSha256": "26eb24e42a5fb12d50f7b0cba115a7d97671d2809e1fc49707ba976bbfd82c61",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "capital-call-allocation-checker",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "0553c822092634ca1ccf2ede99d6ad54b3bd63b1780f048d2f8f899a49e6d27f",
+      "peerReport": "reports/finance-private-deals-peer-review.json",
+      "modelSha256": "f17e4b3fbdfe82172093a4cadac489d6318eae278c8c81a6323d984ed50fd368",
+      "xlsxSha256": "f2f3ecf76d3c436e17ee3c69f5400126aee366f6dcf25e6228b088468a93fbd6",
+      "pngSha256": "db40bd238b7df0c29f6e43576ef2a573bc54250af45fc041bed9f215bcf2a18b",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "management-fee-stepdown-checker",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "4cbb1b36f6d085fd25150ae369a1dd249531d4c278334b6e202971615cc89925",
+      "peerReport": "reports/finance-private-deals-peer-review.json",
+      "modelSha256": "e2cff75d6cbc06ee65c757bee060dc6bc1ff71c86e1f7987f0ec19de77314645",
+      "xlsxSha256": "de001cc3bcb35e60f79354db5d7ae934900fb44d13165be5be8d4e900eb801a9",
+      "pngSha256": "cb3659fddab5976b3e0f87e88ea2e5e8878c5faf2b22302f4dd50c4d14f9ae1d",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "transaction-fee-offset-checker",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "fc20b2dabfca67f0ba336a8af06c7ab71e5d0f8e00233f90690c462a63778e5e",
+      "peerReport": "reports/finance-private-deals-peer-review.json",
+      "modelSha256": "cbda3bc69010842814d903ac22a885928c0db904300b7545793d8d66c1da6add",
+      "xlsxSha256": "92c2e40a961a0fa132ace17394b74629bd002bebdafb064cc09bc409a1a38947",
+      "pngSha256": "c45ab077a6b8d28f347848948f4fe7c0812b7271bb2058dc0f3d5972bbd6f11b",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "preferred-return-accrual-checker",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "2a3ac9bba02ceb827d58e9e09a912e34c3b07a0d9aa4a09e5740233522e84e60",
+      "peerReport": "reports/finance-private-deals-peer-review.json",
+      "modelSha256": "dd9213523e02eadc29c916d65d67d53624174d188b52c62db07e12603d705b5b",
+      "xlsxSha256": "2d848f038f4336f55ea8a5e6b9fe437e4118779bdff64578d170102595ee6fe9",
+      "pngSha256": "1c596d48a6c60e26b1a885bc88048563fae4d273bb5d833ae781f47842908c2e",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "no-catchup-waterfall-checker",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "e5685cf106bc47f009ef7cc0ed1f00c2259604a407369d92430f3a53d9aac41d",
+      "peerReport": "reports/finance-private-deals-peer-review.json",
+      "modelSha256": "9d3c6571d6747a0c0a28b79ed03f3fe61b71b98f535920953e66fab031b2ae86",
+      "xlsxSha256": "c3d2e0222a60b16593c5528b8662f06934fbcacf75fb0578535e2e4c834261bd",
+      "pngSha256": "7f7bb3707a2bc4bf5fae79f57ce82e4c17434a87bed37e834f894bfdb0c95464",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "gp-clawback-exposure-checker",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "5d6ae48f5e81946294cc237c4e39e7cc8200bb30d35ea0fe20e8ebc4d51c8a62",
+      "peerReport": "reports/finance-private-deals-peer-review.json",
+      "modelSha256": "c6f481c0b82a8dbaf1ed20cf660c3416d08636800dfe3dae0f54694a0c9c4721",
+      "xlsxSha256": "02a941602f257b79a6f1627c715ffa3f6bbc2f087f452cfa597f09bf38753e41",
+      "pngSha256": "1328e90dc3b519555fda69647beefee1da1b4db3f71b6f51636b84e4932f6b8b",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "fund-recycling-capacity-checker",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "b5ce30cbeba814b2b35017d53632f584ef04628f965cea16d1fc7b0a8e9254ac",
+      "peerReport": "reports/finance-private-deals-peer-review.json",
+      "modelSha256": "c5d8676608125e3e889c3c31e1c409ee2efd38b2b9107a4d05898be3e53fde10",
+      "xlsxSha256": "342d33312a8b9b66dff26c455b02093a430bb2012b1a94fd6348a90f574d586a",
+      "pngSha256": "9dbec2f16a6d408e38ec23fdc07ae2006b33401724cc6302d2baa676635c3b5e",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "secondary-nav-price-checker",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "2970fb0eec15b2117065d40298e9c1491ee2779b9d84f570f78561cbf468b469",
+      "peerReport": "reports/finance-private-deals-peer-review.json",
+      "modelSha256": "a6fc12fd3817db3c923e14a911840a7de59c149273ba002ac07196a7268d4934",
+      "xlsxSha256": "38cbb87a60c8782361721edc023bd4501e2a2e3bf7ff4de0d3cefa460e2f510f",
+      "pngSha256": "c2e368fc66421b621516b505a293569fe9f57f88a70fb89c1c6f50acba479b77",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "subscription-line-timing-checker",
+      "type": "skill",
+      "status": "pass",
+      "specSha256": "86809ddc8afb53cefe767a2b928022d2aa0d726deb2070f9dde1b3f002d7f2dc",
+      "peerReport": "reports/finance-private-deals-peer-review.json",
+      "modelSha256": "da353f7bb744e4e109aead890979b5932c4b91e68b3f43a4b29ae8e9a204624f",
+      "xlsxSha256": "3ef511465b0ea4c2217cc7e7c5f2f29c00c43bd443c6702fd2a1387c01edb678",
+      "pngSha256": "6d6cb70b3f87f86ce955dcdbe7684111242f94225bdc8b262109805bbcff1eb7",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "check-a-safe-into-priced-financing",
+      "type": "workflow",
+      "status": "pass",
+      "specSha256": "5a66a32416fd36039ff8012e7cf3b09b44d2b36b822a1792807efd854bdfe2fa",
+      "peerReport": "reports/finance-private-deals-peer-review.json"
+    },
+    {
+      "slug": "check-a-convertible-note-conversion",
+      "type": "workflow",
+      "status": "pass",
+      "specSha256": "65454c83cab32a652f6816c5285538c56b009ff6974bd5fe7e91ece9bb3710dc",
+      "peerReport": "reports/finance-private-deals-peer-review.json"
+    },
+    {
+      "slug": "review-a-down-round-rights-change",
+      "type": "workflow",
+      "status": "pass",
+      "specSha256": "6066229afe0de1f75f12f11938fca41a5821b71a97e693d44de161951f02cf06",
+      "peerReport": "reports/finance-private-deals-peer-review.json"
+    },
+    {
+      "slug": "compare-preferred-exit-payout-terms",
+      "type": "workflow",
+      "status": "pass",
+      "specSha256": "b9d681024be26506630a724815024d55db907eede6448f76ac341bc7cbd00e56",
+      "peerReport": "reports/finance-private-deals-peer-review.json"
+    },
+    {
+      "slug": "check-staged-follow-on-commitments",
+      "type": "workflow",
+      "status": "pass",
+      "specSha256": "58078c1a8585a1cce3a2144c8df96e30e957f75815e7e163253655190f5e38e7",
+      "peerReport": "reports/finance-private-deals-peer-review.json"
+    },
+    {
+      "slug": "reconcile-seller-closing-cash",
+      "type": "workflow",
+      "status": "pass",
+      "specSha256": "7df917ad81e402493002048984732e1649b5d0e8c74088b1ca7d2cc3cc8179b9",
+      "peerReport": "reports/finance-private-deals-peer-review.json"
+    },
+    {
+      "slug": "reconcile-a-locked-box-closing-price",
+      "type": "workflow",
+      "status": "pass",
+      "specSha256": "10de992202c778a04af6c060c117032f05c97f38f78009959a095228507c2562",
+      "peerReport": "reports/finance-private-deals-peer-review.json"
+    },
+    {
+      "slug": "check-an-escrow-funded-earnout",
+      "type": "workflow",
+      "status": "pass",
+      "specSha256": "3e9b0d8ffd268e1ba9b58ce2ad06b8e05d6edc0376bd95239e146822f1834118",
+      "peerReport": "reports/finance-private-deals-peer-review.json"
+    },
+    {
+      "slug": "compare-merger-cash-election-outcomes",
+      "type": "workflow",
+      "status": "pass",
+      "specSha256": "0d3f5ce82cc870c478e06648183893aa9fdd0612b99e816cc95d948859d9e033",
+      "peerReport": "reports/finance-private-deals-peer-review.json"
+    },
+    {
+      "slug": "check-acquisition-refinancing-funds",
+      "type": "workflow",
+      "status": "pass",
+      "specSha256": "8a3f0815027ef5f4bbef5aa72a3b2167040f9079ff166fa3cb2b00854737edbc",
+      "peerReport": "reports/finance-private-deals-peer-review.json"
+    },
+    {
+      "slug": "check-adviser-fees-in-seller-proceeds",
+      "type": "workflow",
+      "status": "pass",
+      "specSha256": "78933203fab2fd47a5b9d4776b3ff859b9287241701609847d5f7439754b4bcb",
+      "peerReport": "reports/finance-private-deals-peer-review.json"
+    },
+    {
+      "slug": "separate-rollover-and-management-incentives",
+      "type": "workflow",
+      "status": "pass",
+      "specSha256": "91c60162b415e39e59398b9bbafe35915573e23fa7ce5be7fdea5987b9ca40f2",
+      "peerReport": "reports/finance-private-deals-peer-review.json"
+    },
+    {
+      "slug": "review-leverage-headroom-and-cure",
+      "type": "workflow",
+      "status": "pass",
+      "specSha256": "fa637bf472c6dfb680bba7fc408f3582e06828824a02480cccf0825d8eb3a1d1",
+      "peerReport": "reports/finance-private-deals-peer-review.json"
+    },
+    {
+      "slug": "review-sponsor-debt-cash-demands",
+      "type": "workflow",
+      "status": "pass",
+      "specSha256": "4579323bc404b5c5f68cdc8fadcd41713b257f42f4296cfdcb56343dd07ca271",
+      "peerReport": "reports/finance-private-deals-peer-review.json"
+    },
+    {
+      "slug": "check-management-payout-and-sponsor-receipts",
+      "type": "workflow",
+      "status": "pass",
+      "specSha256": "eddc0c87405e7dff9ee3392b3ca571df9d20115d64c83fa2668916c8a59ec76d",
+      "peerReport": "reports/finance-private-deals-peer-review.json"
+    },
+    {
+      "slug": "reconcile-a-private-fund-capital-call",
+      "type": "workflow",
+      "status": "pass",
+      "specSha256": "7e044a3196ff53f50d79550b7ef57d2504ca5260f822b722bfb4d2bf9366214e",
+      "peerReport": "reports/finance-private-deals-peer-review.json"
+    },
+    {
+      "slug": "reconcile-private-fund-fee-charges",
+      "type": "workflow",
+      "status": "pass",
+      "specSha256": "f6bd9fbf3e4ba28eedcd4877b83a85eb0f2886c74edfddedab093417dea2c6a9",
+      "peerReport": "reports/finance-private-deals-peer-review.json"
+    },
+    {
+      "slug": "check-a-no-catchup-fund-distribution",
+      "type": "workflow",
+      "status": "pass",
+      "specSha256": "fcc4d0af36e7e7c7f13910f953899129f853fbb1bfd79a3551aaafb4afab5a25",
+      "peerReport": "reports/finance-private-deals-peer-review.json"
+    },
+    {
+      "slug": "check-secondary-purchase-cash-exposure",
+      "type": "workflow",
+      "status": "pass",
+      "specSha256": "6af9586db7b1413896f8366c11c15f628c4a995ba838771d010c29974d99e78d",
+      "peerReport": "reports/finance-private-deals-peer-review.json"
+    },
+    {
+      "slug": "review-a-fund-bridge-and-hurdle",
+      "type": "workflow",
+      "status": "pass",
+      "specSha256": "c491d672e8a12321e99843522022c159699c3b19828a655ff4550b6ebfebf1dc",
+      "peerReport": "reports/finance-private-deals-peer-review.json"
+    },
+    {
+      "slug": "safe-financing-revision-assistant",
+      "type": "agent",
+      "status": "pass",
+      "specSha256": "062ccc846b1a9d649d53d8fe01ab432380d96dc9da77da75165bf5aa33715a04",
+      "peerReport": "reports/finance-private-deals-peer-review.json"
+    },
+    {
+      "slug": "note-conversion-revision-assistant",
+      "type": "agent",
+      "status": "pass",
+      "specSha256": "aca88c389a8e669a7d0ce7b839cab1907741f91875b5211f3df51846a0f2d1a9",
+      "peerReport": "reports/finance-private-deals-peer-review.json"
+    },
+    {
+      "slug": "seller-closing-revision-assistant",
+      "type": "agent",
+      "status": "pass",
+      "specSha256": "cfa2e6f901df7a1629ebc8b3705dde4053e4fa2a580fb11155298822d4ff5d13",
+      "peerReport": "reports/finance-private-deals-peer-review.json"
+    },
+    {
+      "slug": "locked-box-recovery-review-assistant",
+      "type": "agent",
+      "status": "pass",
+      "specSha256": "02ce5d3dec57d2b42b4f8a73d4f8e680c14146b7a5ae67d921d3fb8f9c1216e8",
+      "peerReport": "reports/finance-private-deals-peer-review.json"
+    },
+    {
+      "slug": "refinancing-payoff-revision-assistant",
+      "type": "agent",
+      "status": "pass",
+      "specSha256": "26496105e6b54e0a7b3bb57150077c4a5b2290dab091d6e3ccd05940ccfc056b",
+      "peerReport": "reports/finance-private-deals-peer-review.json"
+    },
+    {
+      "slug": "leverage-covenant-change-assistant",
+      "type": "agent",
+      "status": "pass",
+      "specSha256": "7cf452b8ed7b63498b579ba3c408453b2a970b85426b85b9a7679d98cf656ef4",
+      "peerReport": "reports/finance-private-deals-peer-review.json"
+    },
+    {
+      "slug": "sponsor-receipt-timing-review-assistant",
+      "type": "agent",
+      "status": "pass",
+      "specSha256": "d9dcde18e22c1932621654c736d99eff51e8f57ee06a929aff29b6dfb6eb2a67",
+      "peerReport": "reports/finance-private-deals-peer-review.json"
+    },
+    {
+      "slug": "fund-commitment-change-assistant",
+      "type": "agent",
+      "status": "pass",
+      "specSha256": "cdf481d54f61fb24a8d3b31e3fd2bcdece02491a9c3a60be8f325c6f50425985",
+      "peerReport": "reports/finance-private-deals-peer-review.json"
+    },
+    {
+      "slug": "fund-fee-revision-assistant",
+      "type": "agent",
+      "status": "pass",
+      "specSha256": "fbb5948feab2be3abaa627a0779b41e3318c3b77ce233319fd49529d957b316e",
+      "peerReport": "reports/finance-private-deals-peer-review.json"
+    },
+    {
+      "slug": "fund-distribution-evidence-assistant",
+      "type": "agent",
+      "status": "pass",
+      "specSha256": "9f80caddbc2c4cc658374159361f4c31cac7e7cdb809e67d359f70fe766e7370",
+      "peerReport": "reports/finance-private-deals-peer-review.json"
+    },
+    {
+      "slug": "restricted-cash-availability-checker",
+      "status": "pass",
+      "specSha256": "8df0ab20a9e99a01e4ae7a4f94ba1cf7e5dd8e1395866519f45347a9ea4f18c8",
+      "peerReport": "reports/finance-operating-credit-peer-review.json",
+      "modelSha256": "bac0c2d2dd231d36ca6715d5b89661a05a004703a0ad366dacc9039e790174c7",
+      "xlsxSha256": "e014bbfdac3fca5e1fd3f35b73a9335e62ca1b726b23e83f0c01e19c993de517",
+      "pngSha256": "74d13a9229758acd537a3c795e8842fbb6edb3a6fd63ff631bf7b0ab0c2f6043",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "settlement-liquidity-ladder-builder",
+      "status": "pass",
+      "specSha256": "631478d561029a63fa90c0c0617c461200f969554113dedcb244157c24a113af",
+      "peerReport": "reports/finance-operating-credit-peer-review.json",
+      "modelSha256": "0572079032a61c77ee708f6dd8f689b8b61dd392d05c0a98344c8871240ce694",
+      "xlsxSha256": "b061aa73ee9c081523687e761bdc5ff50905fb84dbac30213ab3a952a1f43229",
+      "pngSha256": "8fce293eee4ad2c3f71f76b39d6ed27b42321fc6ac67575d169c04c4856fbcd9",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "cash-pool-interest-allocator",
+      "status": "pass",
+      "specSha256": "fb9f6cf331d05f8b888a50d69da34c4c28384bfc6a116d8a35559ed86a3bda46",
+      "peerReport": "reports/finance-operating-credit-peer-review.json",
+      "modelSha256": "cb62a24b6b01ed64e84a62b822008a596b3675b35a9b9981b7247a847a4c2c1d",
+      "xlsxSha256": "b6429f67acbb6eede9b66159c18fa664f0ddb4ac2006cfc6e895962740c839b9",
+      "pngSha256": "4a8852fcdbae186b88bdbf4f265bc5a6b93aca1d9c14a944a76e2bcc4882d457",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "currency-exposure-netting-checker",
+      "status": "pass",
+      "specSha256": "5648a53d068cb25c4ebdca02e7d7c31aa762ed76db45b67abb5b25ab0f530ffc",
+      "peerReport": "reports/finance-operating-credit-peer-review.json",
+      "modelSha256": "d277a677136e706fea2facb6e119ded1e82146706c3fa9d10cab42373a314c2c",
+      "xlsxSha256": "122f46506c0ca78c53ca02c79839fdb0f7d1d4bb455e78aae936ca7b5ff242b3",
+      "pngSha256": "a6bf1ea048a5d4100a26c7b225e23140c94c3187772488f2ea91f93e8c7d3c16",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "currency-forward-settlement-checker",
+      "status": "pass",
+      "specSha256": "31ee538dd8a60ce7014dda275673af4975eb5d570164e6883d4327ae01b08436",
+      "peerReport": "reports/finance-operating-credit-peer-review.json",
+      "modelSha256": "4d5d64b53846812e254278c7f2370163856da9f1861700f9936474a1e50ffe72",
+      "xlsxSha256": "e27dacae11fbc13c8ab963be9f738e043107646f27a942277d8d141a28a68294",
+      "pngSha256": "05df1dafd8e2873ff23de6a621e04f360aca3e26ef3e70d2e4a74f7f64e3a635",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "floating-rate-repricing-planner",
+      "status": "pass",
+      "specSha256": "3230c2c97e8e5d975acf466592874dce85eb0fe700633ff55c2a29b7086fee10",
+      "peerReport": "reports/finance-operating-credit-peer-review.json",
+      "modelSha256": "987c7dba9aa84044b6001a3b0d3b5816f128077c06a6b67f9d4161a0cf9a1031",
+      "xlsxSha256": "ec1411f88bb9dcedae26c8445a19736a2563211ba24a3c02668cfdbd6fd04fa3",
+      "pngSha256": "980a1373c0db57d264772c763b4744e0ff92f77f9edb40e6edea525e7724fe57",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "bank-fee-reconciliation-checker",
+      "status": "pass",
+      "specSha256": "cb94daec74e85afb31301cf5c330ac082d1950e3614dbc4c564f8920264cbddf",
+      "peerReport": "reports/finance-operating-credit-peer-review.json",
+      "modelSha256": "5cbee2b8ecf60388a866e0b8ec23d4be4a9d64a2c3161934007f77cc8dc1640c",
+      "xlsxSha256": "085c831d900def64163708876ec18a8d5288b4925e04db84115f3afe506f26dd",
+      "pngSha256": "7978131145e6614332b9f1363307ae638aaee5fb668738be80c7cf2f2bee5dbb",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "treasury-forecast-backtest-checker",
+      "status": "pass",
+      "specSha256": "9814a701d656943d809fee2b08cb318bdc0ffb461b00cf0220daabdfab1919c2",
+      "peerReport": "reports/finance-operating-credit-peer-review.json",
+      "modelSha256": "f51ce16a925efb32e097aff7b895992290fd70ffa1ee894d57cee62734318c80",
+      "xlsxSha256": "3b3db93733d5c2fa8a22ef5a80a32bc750239d2a6a04ccf8e8cb8ccbff2ddee8",
+      "pngSha256": "f6d8daae0c737222d6d57f013ce646fedc641f71cb61f1996e17435086a0f29a",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "receivables-borrowing-base-builder",
+      "status": "pass",
+      "specSha256": "49cd9c1ebd1567a667ec32903bde3aac0fa1113400b30236073e42fc38efdfbf",
+      "peerReport": "reports/finance-operating-credit-peer-review.json",
+      "modelSha256": "7c6e988a596194d83b0f44edad89b86b4f685412607522d5f265057e77a5105a",
+      "xlsxSha256": "a8f417b31ca5607ec522eb15bb3bef460c00492b517bec35de4d03ee351e000b",
+      "pngSha256": "0c50558caa093178bc51d41505510e701efe8c1f3ff7203d363bada478828340",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "inventory-borrowing-base-builder",
+      "status": "pass",
+      "specSha256": "9d4c324cd517a1703bd5b534c9a04e2b9e7c6d797f5f83dc442cb49434faea8b",
+      "peerReport": "reports/finance-operating-credit-peer-review.json",
+      "modelSha256": "d5a9126c3fd71b6c164b581e54c0e903ebad334a0d4c277024067eea5107defc",
+      "xlsxSha256": "63653e6e7dd6c9440824b15ee85d625dab6891ff3cd5bed2bd65bcf2bbf232e8",
+      "pngSha256": "22e5a15a8443ed18846f9475e1471d66feadefe2e744aec7bab84cd7f25342f4",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "revolver-availability-checker",
+      "status": "pass",
+      "specSha256": "3bdcfcb23ce1b45bbcc9bda1ad3551ba56707e97e3798495aae35b219e0ecf2b",
+      "peerReport": "reports/finance-operating-credit-peer-review.json",
+      "modelSha256": "1145347f4d30c2bc33a543bb143fcdde6357b37addd2a7742af19082790ee26c",
+      "xlsxSha256": "fdaacecddc20de7ae81301ff14b55212302b28c0bcc5c82eaff7a3c7de3750b7",
+      "pngSha256": "e1df282d4e09cb97d12a2533df99df08255052e085dedd68c5eadbb227190fab",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "revolver-interest-fee-checker",
+      "status": "pass",
+      "specSha256": "7214d5a008e36432ac1e47572cde99b21a1125c11681b46f63e062bf98e03937",
+      "peerReport": "reports/finance-operating-credit-peer-review.json",
+      "modelSha256": "465e2596c7220bd6fae6b5e669dd23402e792b3f91a8d0c5756c805cd5b45b67",
+      "xlsxSha256": "15bade4a8b5ff8ff8522d896878e97af6f9dbb61868a3b28d1f2dec9009cc594",
+      "pngSha256": "46f76b36e890ab32440568e277613f422ea76c9ee91f4c0a23c94d3309ef57ae",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "debt-service-covenant-headroom-checker",
+      "status": "pass",
+      "specSha256": "0f026bf4844ab5b71dc3c06012f0182e2c97af7cabd476a370fa056043a804a6",
+      "peerReport": "reports/finance-operating-credit-peer-review.json",
+      "modelSha256": "0dfd2146bfb0112cf20a0f0f7f939dcd48219a1f954ae5621c6ecb8be8396fa4",
+      "xlsxSha256": "48925f54e045d19eb112d5d68ff92d1e0338bd389d962ce7bc0d3532a885633c",
+      "pngSha256": "031f2485909d8fffa0bb6c53efad88765a9928a56dbd2a020a14d58238922133",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "fixed-charge-coverage-bridge-builder",
+      "status": "pass",
+      "specSha256": "533d275f7d649cc22a92419a513405437a74f7995a3c5753a6a151a27f1e2a5a",
+      "peerReport": "reports/finance-operating-credit-peer-review.json",
+      "modelSha256": "a2b6aaa0e47197b33848c74328a58f9542c7bd66f6ad7b67a09b85d6855b939c",
+      "xlsxSha256": "0934980eebf8752d136d1871d5c560d6f05e782b041278ce7e3656ef17132b6b",
+      "pngSha256": "b7e58e7e4fa0b5db4978923cbd172781984806f25ee38e9e13f5b457f2e669ff",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "credit-exposure-limit-checker",
+      "status": "pass",
+      "specSha256": "e9c1beb658954968e1dc21116aee6c344ef70d1e9a6f51c2d1f8bdbef4dfa443",
+      "peerReport": "reports/finance-operating-credit-peer-review.json",
+      "modelSha256": "2a7acc6afde9148bc45c60f8af718e0fd60bc1763041650c8adec0d170550906",
+      "xlsxSha256": "28d601e32278b92adc1260664e144cbd665193139df3aab674af404d0aae0653",
+      "pngSha256": "35d963827cdaa28d8f9770cd9d7cc347f85bebafaaf637a5964f85b7bb73909e",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "debt-maturity-funding-ladder",
+      "status": "pass",
+      "specSha256": "b22d157a44d259b91bf9abdfc44f83477c9b8ec758a852e7175898a01b154ee5",
+      "peerReport": "reports/finance-operating-credit-peer-review.json",
+      "modelSha256": "87dd97bde7923725ada7b897cfaeaaa579e8d15eca9388b456760e8814814c98",
+      "xlsxSha256": "dcc9bd10de4785f4ef7c4a5db759fb84ed512733fa77627d3e47a49ebb027675",
+      "pngSha256": "c68e8927f10a67859006a0f0966d204c37ab15501c935f61881d20cec40a1eb8",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "project-cash-available-bridge",
+      "status": "pass",
+      "specSha256": "a9767a22b2dfb86d9c3f298e64ddf0e77011aba17d4413e7d0816b70d7e810af",
+      "peerReport": "reports/finance-operating-credit-peer-review.json",
+      "modelSha256": "bf1f8205c4420fa4ceca25bbc37f8898f39ccad60ff56db64c61810d9ae43505",
+      "xlsxSha256": "2b9360bb6afc22363df3fcc20d735402c0496cb9a3f934d4f33013eb6389e665",
+      "pngSha256": "6801e8ab75418f4c450eea54d4a7dd5ea69da2ea9fcbd3bc2b4252f301da70bf",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "debt-repayment-sculpting-planner",
+      "status": "pass",
+      "specSha256": "a8600819b9fc576b76ed22c36d4176b29c2e9b94e5ec581541e7c739c31d5fab",
+      "peerReport": "reports/finance-operating-credit-peer-review.json",
+      "modelSha256": "cf69948d0ccec3eb46ab8d8158bf9a19e0bc5f6118afd2fb32bc31062f8dff76",
+      "xlsxSha256": "cae5cdd524eca1996f012072fc5884d6942ed625d77ca8849f75039389f553d2",
+      "pngSha256": "a188fbe8ecc79a0210fa2e1630d7727d71ebe17a6550f57fcf9a834ce003a34a",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "loan-life-cash-cover-checker",
+      "status": "pass",
+      "specSha256": "08d4e22db89fe920a32294c01d699efac576e71afb6e2c656408e666fa48b1f8",
+      "peerReport": "reports/finance-operating-credit-peer-review.json",
+      "modelSha256": "bdda812e97099c6ead9a587393e2725b3df0846dbdf60d9a97d7b137fa5c6aa6",
+      "xlsxSha256": "69cf12f793c49a2457227e4f8d1a669433175a3bc2eefe81e4ae47ae8b17ab80",
+      "pngSha256": "3227eb4fe326862caaa1f9243e0abc4fadbab09709b2cda07057cb88ed02d27a",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "debt-reserve-rollforward-builder",
+      "status": "pass",
+      "specSha256": "eed521a281b6646247e514a0eb25d0f9ddc65869e4e8606d51d106d745642c31",
+      "peerReport": "reports/finance-operating-credit-peer-review.json",
+      "modelSha256": "87f6b9adb1be7022e2b95fb5324343f756ccef9fe1d019824c24a6fc45550776",
+      "xlsxSha256": "3febb851bbcba2900c195d1868f31e06885ee51c1956c7a5aa249b346b187d36",
+      "pngSha256": "824088c6b2c4210d0e048701a2f13026a2fdbe35a82cf722ac7701ede2922b9e",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "project-payment-waterfall-builder",
+      "status": "pass",
+      "specSha256": "b616cfa3094b0fa1e1659fc76e050d67bc03821915d58879a7fb47c4169029ee",
+      "peerReport": "reports/finance-operating-credit-peer-review.json",
+      "modelSha256": "8432ecf2b8e8129823099b5e5b8884c7211a929d071acfe27187a2b8551451ba",
+      "xlsxSha256": "4e15ba9a17f1270dba4909b5b1022af188fa59da7af728b14ab794d444a99550",
+      "pngSha256": "00ba7dfd07fa7b5045aa6692f663a1c411821aed14dc8bd6556b55cdd1b61e57",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "construction-funding-draw-planner",
+      "status": "pass",
+      "specSha256": "89f8f73e49ba08300ae97ffde6ffef94f71431b8704c265c6106e81fff1e81ef",
+      "peerReport": "reports/finance-operating-credit-peer-review.json",
+      "modelSha256": "fe89705d96a2245785617d889ee84d3dbc4a3e75caacde0e150009b39b007b23",
+      "xlsxSha256": "92a1bf9613b9e4fcf25f0f9f94b73232ec0f32077a60cf47d2b1cd7175012fff",
+      "pngSha256": "49ba981bbd0a0bc40edd9624e2e1d1fad493f49c6389ae1fa852105cb6451b42",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "construction-interest-schedule-builder",
+      "status": "pass",
+      "specSha256": "c3ada10af7a8a70a6ef04a51d15cdb86f5b48cf25d28f3f738a75902bed17329",
+      "peerReport": "reports/finance-operating-credit-peer-review.json",
+      "modelSha256": "5ccf081866005871f7412c32cd6988dcd1a3271f084682c61dff71dc5adceb85",
+      "xlsxSha256": "c616143945f703c6c5c4d32f7d453b34d1078c67fd496a364fad489c0fa20e56",
+      "pngSha256": "becb232c1220ea51ff00266c2feb12e74cc99a596d2b9f9efab73173c575bc00",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "completion-funding-gap-checker",
+      "status": "pass",
+      "specSha256": "c69bc782fe0974999f7bff732b05ea3ccdc8481ebb589e5554fce01de2529af0",
+      "peerReport": "reports/finance-operating-credit-peer-review.json",
+      "modelSha256": "dc1ca7d6ab47ac51748e0c14c56b64cadb56cf1ecfcb9f93af090bf7599c2b4c",
+      "xlsxSha256": "d0cec84508184db6a5cecba631a0a46bbde1b74607fd0df45b108b2fdb079057",
+      "pngSha256": "610d195fc2df0f7831f73e50d543334d6c9af82a6e2d7c644f5d8befcdec50d0",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "availability-payment-deduction-checker",
+      "status": "pass",
+      "specSha256": "cdfb7174ddba94bef036c0d3d14b4853ead20ce611715433fc86a1b1f3455019",
+      "peerReport": "reports/finance-operating-credit-peer-review.json",
+      "modelSha256": "f7d6c9badfddda85ff2a3e8926f53b6c9878af3e84fe1c8bcac2dddfc7762900",
+      "xlsxSha256": "749586e5b5a713f1456e00ec46f7d70265cc5fef87cce33b023bb0e4f6afc813",
+      "pngSha256": "b0a049815de7bb0ed6ad81265dfdc0740534b35dc7ba51fea9b709ce732c30c3",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "toll-revenue-ramp-model-builder",
+      "status": "pass",
+      "specSha256": "d8fa65973d3368d1d1af1d863760bbeac620b991e7f60972a274d4a697495453",
+      "peerReport": "reports/finance-operating-credit-peer-review.json",
+      "modelSha256": "2b7beb491db28124141c6c052b61d5eb216324ef808b7197122a37b2730831e3",
+      "xlsxSha256": "522edf393435eb4d81cd07f013fc1f534e0f7dfb7c7e30f40b24326e40195d0b",
+      "pngSha256": "5d71151e0341f07374ce1f17961bd827df7f94a83633ba8ee78d501447984ce3",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "manufacturing-yield-cost-bridge",
+      "status": "pass",
+      "specSha256": "bc34f31ac9a6438063dab801c8409e6b40db1fe74c7d7c90613de1135ea95e9e",
+      "peerReport": "reports/finance-operating-credit-peer-review.json",
+      "modelSha256": "7fe10fe0c0f99d37ba5d91b35603a4dccc164131e370686d3bf7d3ad26ca81e8",
+      "xlsxSha256": "e156fae605386b7eee211ca10d299c0ef7bed3276bfb1f13a0a921e7e379f059",
+      "pngSha256": "d21ef33c85fc9dcaba7452f170363ff0584e29c4013b9356cb29da721796b9ba",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "shared-service-activity-cost-allocator",
+      "status": "pass",
+      "specSha256": "71f397b40540bbb7d09c643f757abdc1c6b5152f1878700096e11ec885454c3e",
+      "peerReport": "reports/finance-operating-credit-peer-review.json",
+      "modelSha256": "e541b0dd842c65fbcae8692d231b7655d2a6041f636b3ff1a686a6f97cb9bd91",
+      "xlsxSha256": "e97037c4f36e72fff88d154875456f6a0bea7e215248b293882e8d0c727a218b",
+      "pngSha256": "7d5a319f7471d2e62f42ba36fa30036dc801346895bd9a28050bc6cbc6bcb688",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "product-mix-capacity-checker",
+      "status": "pass",
+      "specSha256": "e0b8fc1b5a544b993f42c6bdf0e604aea8a5eb90d846d91ea8321960163e81df",
+      "peerReport": "reports/finance-operating-credit-peer-review.json",
+      "modelSha256": "eac6a367612dbfb573fe7eb496091493094e76ea303e50680da136b514bf0011",
+      "xlsxSha256": "3a618e2163a85b8907db536bb9b0dacd484928ec31eaf24963ead3ddfdbb08cd",
+      "pngSha256": "29422e93bba210d3d562d9d10d9d8fba5f17d49bb45ea5a3ff7ab516b3f30736",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "service-utilization-margin-builder",
+      "status": "pass",
+      "specSha256": "47a6bb3a0e457515cb42fd73cbf305c64f7d7423a79685b4ba2c396848abcb75",
+      "peerReport": "reports/finance-operating-credit-peer-review.json",
+      "modelSha256": "0e339dc0995f87b5359e051e109dfd1a707bc51b09f26b1e0ac1e4da88b45ac0",
+      "xlsxSha256": "141f639a04eafc6201434e3cc83fed994974c34eb3d588af41be02cd66fd7a45",
+      "pngSha256": "50b188035aee6b353a3c8518c0055d0fa958118b1f519431171e8883c3413e47",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "hotel-channel-revenue-reconciler",
+      "status": "pass",
+      "specSha256": "ad0441aff4c035dd41f70fc8b150b9395c2ccff457483cbbff6dba338d507199",
+      "peerReport": "reports/finance-operating-credit-peer-review.json",
+      "modelSha256": "49caa82a7a8c4f8893e5cfcfafd8d7297c85628179bfc9d3804be1190a7a77f7",
+      "xlsxSha256": "802511a4c8618eb18e40d06e1d874d49c1af2671363a61ee96b128a9e41ac373",
+      "pngSha256": "fd97564f4f60250deabca36c64582aaa7b44f596ed2c72827ce90a5b45cced47",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "restaurant-portion-cost-builder",
+      "status": "pass",
+      "specSha256": "0627a3d774f03755c563d26674aec1d6c5cc08b271b3bda7133c5fcd5061bd0e",
+      "peerReport": "reports/finance-operating-credit-peer-review.json",
+      "modelSha256": "bb7da8105e069f8251d05065bcfc9948b42ae6e21da352017ccec2c5b2e87377",
+      "xlsxSha256": "1486f68be27d3b11e741319c14b15f3f96362780bf59dcf07f1ec6edecd3daff",
+      "pngSha256": "c88e6bc1ec0a4b9fac6c386ec800db6c9fb0c14f4e9b94a4030ff7e54d181adb",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "retail-markdown-stock-reconciler",
+      "status": "pass",
+      "specSha256": "e0a73968725e8d7213ea2deb05d42f26af62b90f50ba809af04e0c46f90e7454",
+      "peerReport": "reports/finance-operating-credit-peer-review.json",
+      "modelSha256": "359531e0a27902b947c2676cb587beea45acf2316fcf69a827f2fd8692a9b5c1",
+      "xlsxSha256": "2baef9b19bc702230db7ae98cee88dffc618c861c26cbfe56c4ba43817af423c",
+      "pngSha256": "c2f4dbecb6677c67260a01f27ec477ef66fa4330ffd1fd1f8cca233ff068d206",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "contracted-energy-cash-model",
+      "status": "pass",
+      "specSha256": "b5466accaec31166473f856a6f0d2eb95d93a87019efe88e68efe0f3aaee5c5b",
+      "peerReport": "reports/finance-operating-credit-peer-review.json",
+      "modelSha256": "4ff3a298e99f3c3f04fe31bbb9afbdd099b68a2efe0539758a38a7ee2fd71c1c",
+      "xlsxSha256": "574a54b57a97e39bd424bdf2c7c942f73d32fbeca7895cef50bdcfa164fdf8f9",
+      "pngSha256": "f62045cb220a90dcef5279e391ed9a365dbe8080f23f44bccbe30bed76ff413c",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "water-utility-collections-reconciler",
+      "status": "pass",
+      "specSha256": "dc061fde91bb6b79c9c4fa69f2f436cca73664e62e5370b817f35e7ab17defe8",
+      "peerReport": "reports/finance-operating-credit-peer-review.json",
+      "modelSha256": "9e0b5e7069e2ec4f24e21424a17ffe3cfc59dc993e259764fec219edf7819148",
+      "xlsxSha256": "03d849f6af91935f426c4e0adfa115134f5e6c6757f0e268d0e865eda2ca3dc9",
+      "pngSha256": "9cff528542cabaf0c7163c84e0c8cae3cec1efed8e2a31604b1d2b60e67140e8",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "freight-trip-contribution-builder",
+      "status": "pass",
+      "specSha256": "210daaf633c334eaae530154778e2a918e0bbd1d4059c47791647856d38b5e5c",
+      "peerReport": "reports/finance-operating-credit-peer-review.json",
+      "modelSha256": "1df931f5d81629c7ab497ab60d1587039e436418f44162517ab7c796664ad0fa",
+      "xlsxSha256": "08bad122c90a2e76b9275daeff4e6305a867e9a87cfb04d25939cd78945d8d9c",
+      "pngSha256": "3028faac693fa2fa10d29f4aeab9806620f2c10e61cbaddb062af362842a9237",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "fleet-replacement-cash-comparer",
+      "status": "pass",
+      "specSha256": "9444e86deefb394be9e200c045a6976f65819957c4575bf50d6310b7b13abfd5",
+      "peerReport": "reports/finance-operating-credit-peer-review.json",
+      "modelSha256": "725e5e77cd2693d17d04c059cf72c47757425e73d5f3d1acf4f1bd3c900e0f9b",
+      "xlsxSha256": "2cd2475ef7ab822b1c6e691fd4d537b6b1c3c31a67d3c94e8251221da9a8d8c4",
+      "pngSha256": "4b5f476f26f204a565c89b0f164d9a86da0100b400274a35fc619ad9db1d6291",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "clinic-claims-collections-bridge",
+      "status": "pass",
+      "specSha256": "5b119f081745d868702a6dd216ab439e53d0edbc5d316f2543a5e3d7db4a9b7a",
+      "peerReport": "reports/finance-operating-credit-peer-review.json",
+      "modelSha256": "63998ff8b6516bacb307de7b4cdd34c9371a6d60468c02827e1ec27a53a47a2c",
+      "xlsxSha256": "d44d79036498e4af26308d3c9b81ce7df28da3d6b1352693e348a2f0c194044a",
+      "pngSha256": "c2cc58ecda58ea09ae5cdf44de05fcb319331b5de8c70f64693013c571b6b516",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "grant-restrictions-cash-reconciler",
+      "status": "pass",
+      "specSha256": "1488ae9c26439138c0dc615640d6442aeb1ae9ed6f89e4fda2860f79e2bf9dc3",
+      "peerReport": "reports/finance-operating-credit-peer-review.json",
+      "modelSha256": "1b874aebd1520b8db903b3f3cd552350190677e46594a1f96662d29318655985",
+      "xlsxSha256": "99080c20a5737e4e78cc6cb24b94105ae72727fc522eb721266af3613a252ef7",
+      "pngSha256": "269f0401a47e787141c87124f5d027641a0bfbbb12f1d0e5311aecf8ea6f87e1",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "commodity-pass-through-cost-bridge",
+      "status": "pass",
+      "specSha256": "b588a0d714ade8d83b18f768693236a99638bd806a08ff195a68fd8ba2ec3419",
+      "peerReport": "reports/finance-operating-credit-peer-review.json",
+      "modelSha256": "5fb5c8d555438e604a55688660d56725c274087af70c87a9d69bd453fcc16317",
+      "xlsxSha256": "23ec682b4749f00a7df06ff7d438ef748ed30fca4c3ddee98f3d33b6d0f3432d",
+      "pngSha256": "44f4f42a39fe6e540ad40771a9f8f6b55aafd671433038b8127a7db32d4e04d2",
+      "visualReview": "pass",
+      "nativeRecalculation": "pass"
+    },
+    {
+      "slug": "reconcile-treasury-settlement-liquidity",
+      "status": "pass",
+      "specSha256": "6f47c522fee852b8bf956d24533eb88f75005fae1ac6bfac2e7f352e5273d3b4",
+      "peerReport": "reports/finance-operating-credit-peer-review.json"
+    },
+    {
+      "slug": "reconcile-cash-pool-interest-and-fees",
+      "status": "pass",
+      "specSha256": "2b8a55e031c211d8876cf728d90319f63a01065ed9117e2f61c021c7d2dce310",
+      "peerReport": "reports/finance-operating-credit-peer-review.json"
+    },
+    {
+      "slug": "reconcile-currency-exposure-and-settlement",
+      "status": "pass",
+      "specSha256": "f03cb8e280e232cfc9c6fe8319a022e24017963bafe0e56ca37e45093b1f9f75",
+      "peerReport": "reports/finance-operating-credit-peer-review.json"
+    },
+    {
+      "slug": "bridge-floating-rate-changes-to-revolver-cost",
+      "status": "pass",
+      "specSha256": "ca38905b8369277c5fdf3fb7d2d5e4e6f6de99a5ad0f3ccf67f288b4fcc24a90",
+      "peerReport": "reports/finance-operating-credit-peer-review.json"
+    },
+    {
+      "slug": "reconcile-an-asset-based-revolver-certificate",
+      "status": "pass",
+      "specSha256": "177f304b361de42a4e2c605b7a9364db1f25dbffb52079c623e4db199cb35f0e",
+      "peerReport": "reports/finance-operating-credit-peer-review.json"
+    },
+    {
+      "slug": "review-contractual-debt-service-cash-tests",
+      "status": "pass",
+      "specSha256": "b058f6249323490e95dac1bc197b72c3e26c78b260d8f7271e09e1d9466251f2",
+      "peerReport": "reports/finance-operating-credit-peer-review.json"
+    },
+    {
+      "slug": "review-maturity-funding-and-credit-limits",
+      "status": "pass",
+      "specSha256": "bf3e840964d922158682c654f974e8b3f474ae23739e07a09fb23e37a7f11363",
+      "peerReport": "reports/finance-operating-credit-peer-review.json"
+    },
+    {
+      "slug": "build-a-project-debt-service-cash-pack",
+      "status": "pass",
+      "specSha256": "c3728b4f9927b5bd8a242212a4adead4c12659fb2f653d47142ca4a0e9826868",
+      "peerReport": "reports/finance-operating-credit-peer-review.json"
+    },
+    {
+      "slug": "reconcile-project-reserves-and-payment-priority",
+      "status": "pass",
+      "specSha256": "d5a5bd806f2dd5ea5b289b7ab0b8eccd1f9a17d42c547dcfe9c96a23a7309290",
+      "peerReport": "reports/finance-operating-credit-peer-review.json"
+    },
+    {
+      "slug": "reconcile-construction-draws-and-completion-funding",
+      "status": "pass",
+      "specSha256": "5fde76e24ed87ebb1fa6992117b92ea483000b6075a064b1b03761be2ca307e4",
+      "peerReport": "reports/finance-operating-credit-peer-review.json"
+    },
+    {
+      "slug": "bridge-availability-payments-into-project-cash",
+      "status": "pass",
+      "specSha256": "de5ab62942b5107b3b4e113479d05e93a43236d51db846fa0939e0f99c53a964",
+      "peerReport": "reports/finance-operating-credit-peer-review.json"
+    },
+    {
+      "slug": "connect-toll-operating-cash-to-debt-repayment",
+      "status": "pass",
+      "specSha256": "cfd6e10031acb73d41fccc0e8218142535b8775a1b59867713307b34c4bb9b61",
+      "peerReport": "reports/finance-operating-credit-peer-review.json"
+    },
+    {
+      "slug": "connect-production-yield-to-mix-contribution",
+      "status": "pass",
+      "specSha256": "76f44e7cff47f1cc4272e72cd67e7e438159efb64876c135c721386988af79a1",
+      "peerReport": "reports/finance-operating-credit-peer-review.json"
+    },
+    {
+      "slug": "reconcile-service-capacity-and-shared-cost",
+      "status": "pass",
+      "specSha256": "25d30bd8862ef800ca8ba29c7b6c0d7764ccddd3de5fc995e5d864bc6e617c39",
+      "peerReport": "reports/finance-operating-credit-peer-review.json"
+    },
+    {
+      "slug": "reconcile-hotel-room-and-food-contribution",
+      "status": "pass",
+      "specSha256": "cfe616644b9f0114b7d4c7b73be1c3edb6684bdbab71c447f88ebd0c193bd255",
+      "peerReport": "reports/finance-operating-credit-peer-review.json"
+    },
+    {
+      "slug": "test-input-inflation-against-stock-clearance",
+      "status": "pass",
+      "specSha256": "53de62a2ee5959c3816dac4daa845112e6f7c9ce815fa2ef9fe04cc1af383a08",
+      "peerReport": "reports/finance-operating-credit-peer-review.json"
+    },
+    {
+      "slug": "connect-contract-energy-cash-to-loan-life-cover",
+      "status": "pass",
+      "specSha256": "fff9e02360b3a2d18fe138d2b97d9927c72000e4497a10e40ef805d00be19896",
+      "peerReport": "reports/finance-operating-credit-peer-review.json"
+    },
+    {
+      "slug": "compare-transport-cash-and-fleet-replacement",
+      "status": "pass",
+      "specSha256": "c90bb74bdff70de048fe07d08aad8e0b0613bb128935266bbfa3d0fc42ca64b7",
+      "peerReport": "reports/finance-operating-credit-peer-review.json"
+    },
+    {
+      "slug": "reconcile-restricted-utility-program-cash",
+      "status": "pass",
+      "specSha256": "70621f2b31fcfe994e56ff67aaaef9b8298f57af9b1ecb904196357b29ce57cb",
+      "peerReport": "reports/finance-operating-credit-peer-review.json"
+    },
+    {
+      "slug": "reconcile-clinic-remittances-to-settlement-cash",
+      "status": "pass",
+      "specSha256": "3f85c5a1ac83268e98ab133c51b7be43dfe8eb4bf41fd55cd71be389deec71d4",
+      "peerReport": "reports/finance-operating-credit-peer-review.json"
+    },
+    {
+      "slug": "treasury-settlement-evidence-reviewer",
+      "status": "pass",
+      "specSha256": "5831cd7663ee3a473a8672bbb2a1c7670b83d04936a4d79b4fa97580c6a56983",
+      "peerReport": "reports/finance-operating-credit-peer-review.json"
+    },
+    {
+      "slug": "currency-maturity-evidence-reviewer",
+      "status": "pass",
+      "specSha256": "d917987b6be5dedf7668c45fcf9e2b7740ce62577cd55420e1ca97070d367786",
+      "peerReport": "reports/finance-operating-credit-peer-review.json"
+    },
+    {
+      "slug": "borrowing-base-evidence-reviewer",
+      "status": "pass",
+      "specSha256": "2f064efe3e841e87700194f52da3399803a1b8be3cd9144a3a9112b24ca782b6",
+      "peerReport": "reports/finance-operating-credit-peer-review.json"
+    },
+    {
+      "slug": "debt-service-covenant-evidence-reviewer",
+      "status": "pass",
+      "specSha256": "b0938aa0429ce6a1b399b0d1c4f4ba21c6e7451a447c756fa5c6212b424e91b3",
+      "peerReport": "reports/finance-operating-credit-peer-review.json"
+    },
+    {
+      "slug": "maturity-funding-evidence-reviewer",
+      "status": "pass",
+      "specSha256": "c3161dc3fcb3eb23893adbc395ae1e95bf64a2181b7283da4d039bcc946cd2a7",
+      "peerReport": "reports/finance-operating-credit-peer-review.json"
+    },
+    {
+      "slug": "project-debt-cash-evidence-reviewer",
+      "status": "pass",
+      "specSha256": "9aa2453f7fdd18919bde5d2f4cf0e6d5e10932129f4b97d38602cbbc769fde8a",
+      "peerReport": "reports/finance-operating-credit-peer-review.json"
+    },
+    {
+      "slug": "project-reserve-evidence-reviewer",
+      "status": "pass",
+      "specSha256": "af8cd14dba4c0e8abaeea3458c63729e54f8634d86da21a327e22f1e2dbc82ee",
+      "peerReport": "reports/finance-operating-credit-peer-review.json"
+    },
+    {
+      "slug": "construction-funding-evidence-reviewer",
+      "status": "pass",
+      "specSha256": "ffdaf21eae44b8d28a7032882caee2e2f4ba68e86d80aca905b3585c8f6b3243",
+      "peerReport": "reports/finance-operating-credit-peer-review.json"
+    },
+    {
+      "slug": "production-contribution-evidence-reviewer",
+      "status": "pass",
+      "specSha256": "ef7c53d9c0eef3dfc8ce48ea9d6fdff8cb4719145a083b71e67264dcd02c8e2a",
+      "peerReport": "reports/finance-operating-credit-peer-review.json"
+    },
+    {
+      "slug": "utility-restricted-cash-evidence-reviewer",
+      "status": "pass",
+      "specSha256": "53e44b5538336887e2da944d29a27c063472b8352844be6fdd7f604d574777cf",
+      "peerReport": "reports/finance-operating-credit-peer-review.json"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+slug: reconcile-alternative-eps-and-comprehensive-income
+name: Reconcile alternative EPS and comprehensive income
+summary: Keep acquired-amortization adjustments and OCI recycling consistent with reported earnings and equity performance.
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: spreadsheet
+    required: true
+  - type: audit_report
+    required: true
+  - type: document
+    required: true
+uses:
+  - purchased-amortization-eps-bridge
+  - oci-reclassification-bridge
+steps:
+  - uses: purchased-amortization-eps-bridge
+    note: Use actual sourced schedules in one linked native workbook; example values are illustrative and must not become issuer inputs. Use the actual acquired-intangible charge, attributable recognized tax effect and matching diluted denominator; preserve reported income and the recurring economic cost.
+  - uses: oci-reclassification-bridge
+    note: Identify actual permitted after-tax recycling amounts inside the reported profit and OCI. Prove total comprehensive income is conserved, and do not apply the same recycled item again as an amortization adjustment.
+execution: coordinator
+origin: own
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/finance-expansion
+example_pending: true
+warnings:
+  - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+credits:
+  - title: Original finance methods and model fixtures
+    by: AI Blocks contributors
+    used: Original instructions, calculations and illustrative examples. External method references are linked separately and retain their own rights.

@@ -1,0 +1,45 @@
+slug: reconcile-revenue-presentation-and-perimeter
+name: Reconcile revenue presentation and perimeter
+summary: Explain reported revenue changes through gross-to-net deductions, business scope and extra trading weeks.
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: spreadsheet
+    required: true
+  - type: audit_report
+    required: true
+  - type: document
+    required: true
+uses:
+  - gross-to-net-revenue-bridge
+  - organic-revenue-perimeter-bridge
+  - extra-week-revenue-comparability
+steps:
+  - uses: gross-to-net-revenue-bridge
+    note: Use actual sourced schedules in one linked native workbook; example values are illustrative and must not become issuer inputs. Reconcile reported net revenue from actual policy-supported deductions; fix presentation differences before comparing reported growth.
+  - uses: organic-revenue-perimeter-bridge
+    note: Use the reconciled reported periods, map continuing businesses and remove sourced acquisition/disposal and FX effects once with a stated ordering.
+  - uses: extra-week-revenue-comparability
+    note: Apply only an evidenced calendar adjustment not already included in the organic bridge; retain the exact extra-week amount and explain residual trading-day/holiday differences.
+execution: coordinator
+origin: own
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/finance-expansion
+example_pending: true
+warnings:
+  - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+credits:
+  - title: Original finance methods and model fixtures
+    by: AI Blocks contributors
+    used: Original instructions, calculations and illustrative examples. External method references are linked separately and retain their own rights.

@@ -1,0 +1,165 @@
+{
+  "inputs": [
+    {
+      "id": "cashAvailable",
+      "label": "cash Available",
+      "value": 150,
+      "unit": "USD millions",
+      "min": 0
+    },
+    {
+      "id": "unreturnedCapital",
+      "label": "unreturned Capital",
+      "value": 100,
+      "unit": "USD millions",
+      "min": 0
+    },
+    {
+      "id": "accruedPreference",
+      "label": "accrued Preference",
+      "value": 20,
+      "unit": "USD millions",
+      "min": 0
+    },
+    {
+      "id": "carryFraction",
+      "label": "carry Fraction",
+      "value": 0.2,
+      "unit": "fraction",
+      "min": 0,
+      "max": 1
+    }
+  ],
+  "calculations": [
+    {
+      "id": "capitalPaid",
+      "label": "capital Paid",
+      "op": "min",
+      "args": [
+        "cashAvailable",
+        "unreturnedCapital"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "afterCapital",
+      "label": "after Capital",
+      "op": "sub",
+      "args": [
+        "cashAvailable",
+        "capitalPaid"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "preferencePaid",
+      "label": "preference Paid",
+      "op": "min",
+      "args": [
+        "afterCapital",
+        "accruedPreference"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "residual",
+      "label": "residual",
+      "op": "sub",
+      "args": [
+        "afterCapital",
+        "preferencePaid"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "gpCarry",
+      "label": "gp Carry",
+      "op": "mul",
+      "args": [
+        "residual",
+        "carryFraction"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "lpResidual",
+      "label": "lp Residual",
+      "op": "sub",
+      "args": [
+        "residual",
+        "gpCarry"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "lpCash",
+      "label": "lp Cash",
+      "op": "sum",
+      "args": [
+        "capitalPaid",
+        "preferencePaid",
+        "lpResidual"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "capitalShortfall",
+      "label": "capital Shortfall",
+      "op": "sub",
+      "args": [
+        "unreturnedCapital",
+        "capitalPaid"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "preferenceShortfall",
+      "label": "preference Shortfall",
+      "op": "sub",
+      "args": [
+        "accruedPreference",
+        "preferencePaid"
+      ],
+      "unit": "USD millions"
+    }
+  ],
+  "outputs": [
+    "capitalPaid",
+    "preferencePaid",
+    "gpCarry",
+    "lpCash",
+    "capitalShortfall",
+    "preferenceShortfall"
+  ],
+  "expected": {
+    "capitalPaid": 100,
+    "preferencePaid": 20,
+    "gpCarry": 6,
+    "lpCash": 144,
+    "capitalShortfall": 0,
+    "preferenceShortfall": 0
+  },
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "inputs": {
+        "cashAvailable": 110
+      },
+      "expected": {
+        "capitalPaid": 100,
+        "preferencePaid": 10,
+        "gpCarry": 0,
+        "lpCash": 110,
+        "preferenceShortfall": 10
+      }
+    },
+    {
+      "name": "Missing required number",
+      "inputs": {
+        "cashAvailable": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only. 150 pays100 capital then20 preference. Remaining30 splits GP6 and LP24, LP total144. Cash110 leaves10 preference unpaid and zero carry."
+}

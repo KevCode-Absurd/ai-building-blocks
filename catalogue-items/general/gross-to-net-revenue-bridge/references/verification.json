@@ -1,0 +1,17 @@
+{
+  "slug": "gross-to-net-revenue-bridge",
+  "modelSha256": "f50f5d647b3a549310ddcf5a82a6d24b6a27d2b0aad00958cae71375ba0d8693",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Higher rebate accrual",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required reported input",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

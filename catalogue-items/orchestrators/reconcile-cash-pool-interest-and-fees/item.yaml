@@ -1,0 +1,42 @@
+slug: reconcile-cash-pool-interest-and-fees
+name: Reconcile cash pool interest and fees
+summary: A pool interest residual and external fee reconciliation
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: spreadsheet
+    required: true
+  - type: audit_report
+    required: true
+  - type: document
+    required: true
+uses:
+  - cash-pool-interest-allocator
+  - bank-fee-reconciliation-checker
+steps:
+  - uses: cash-pool-interest-allocator
+    note: Build the entity interest schedule from the approved internal rates and actual principal-days. Pass the center residual and accrual window as one component of pool economics, not a cash balance or accounting profit.
+  - uses: bank-fee-reconciliation-checker
+    note: Recompute external fees using matching account-period activity. Compare the bank-fee amount with the pool residual in a separate summary bridge; disclose bank interest, taxes and other costs not included before describing a net result.
+execution: coordinator
+origin: own
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/finance-expansion
+example_pending: true
+warnings:
+  - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+credits:
+  - title: Original finance methods and model fixtures
+    by: AI Blocks contributors
+    used: Original instructions, calculations and illustrative examples. External method references are linked separately and retain their own rights.

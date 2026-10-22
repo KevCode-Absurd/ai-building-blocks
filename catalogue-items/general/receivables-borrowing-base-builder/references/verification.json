@@ -1,0 +1,17 @@
+{
+  "slug": "receivables-borrowing-base-builder",
+  "modelSha256": "7c6e988a596194d83b0f44edad89b86b4f685412607522d5f265057e77a5105a",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required evidence refuses calculation",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

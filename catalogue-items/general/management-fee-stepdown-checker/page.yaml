@@ -1,0 +1,76 @@
+new_slug: management-fee-stepdown-checker
+name: Management fee stepdown checker
+headline: Management fee stepdown checker
+summary: Compare two documented quarterly fees when the rate and chargeable basis change.
+job: money-and-investing
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: Fee before and after the basis change with a bridge of the difference. Share lPA fee clauses, commitment basis before stepdown, eligible invested basis after stepdown, both annual rates and comparable quarter year fraction.
+explain: |-
+  Fee before and after the basis change with a bridge of the difference.
+
+  Private fund fees. Illustrative figures only. 100 at2% for a quarter costs0.5. Eligible basis60 at1.5% costs0.225; basis80 costs0.3.
+when:
+  - You need fee before and after the basis change with a bridge of the difference.
+  - You work on private fund fees and need traceable calculations.
+  - A reviewer needs to trace the result back to inputs and assumptions.
+you_give:
+  - LPA fee clauses, commitment basis before stepdown, eligible invested basis after stepdown, both annual rates and comparable quarter year fraction.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - Fee before and after the basis change with a bridge of the difference.
+  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: 1. Identify the contractual stepdown date, exact post-period investment-cost exclusions and each rate; keep fee waivers separate
+    text: Identify the contractual stepdown date, exact post-period investment-cost exclusions and each rate; keep fee waivers separate.
+  - title: 2. Compute the before fee on commitment basis and the after fee on eligible invested basis using their respective annual rates and the same period fraction
+    text: Compute the before fee on commitment basis and the after fee on eligible invested basis using their respective annual rates and the same period fraction.
+  - title: 3. Reconcile the difference as a comparable-period bridge rather than assuming it is a booked annual saving
+    text: Reconcile the difference as a comparable-period bridge rather than assuming it is a booked annual saving.
+output_shape: |-
+  Fee before and after the basis change with a bridge of the difference.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: Post-stepdown basis is supplied from actual contractual records, not automatically NAV.
+judge:
+  - Post-stepdown basis is supplied from actual contractual records, not automatically NAV.
+  - Fees apply to comparable periods; partial-quarter timing needs explicit split periods.
+  - Trace each input to its dated signed source, currency, scale and period.
+  - Reconcile outputs; preserve MISSING and CHECKS MISSED rather than guessing zero.
+test:
+  - Run the included baseline and changed-input fixtures, then compare with the stated expected results.
+  - Remove a required input and confirm the affected calculation refuses to invent a zero.
+  - Recalculate the workbook after changing an input and inspect the saved output.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: Node.js 20 or later
+      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

@@ -1,0 +1,117 @@
+{
+  "inputs": [
+    {
+      "id": "billings",
+      "label": "Gross billings before listed deductions",
+      "value": 1000,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "returns",
+      "label": "Returns",
+      "value": 50,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "rebates",
+      "label": "Rebates",
+      "value": 30,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "taxes",
+      "label": "Collected taxes excluded from revenue",
+      "value": 20,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "passThrough",
+      "label": "Evidenced agent pass-through amount",
+      "value": 100,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "reported",
+      "label": "Reported net revenue",
+      "value": 800,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    }
+  ],
+  "calculations": [
+    {
+      "id": "deductions",
+      "label": "Total distinct deductions",
+      "op": "add",
+      "args": [
+        "returns",
+        "rebates",
+        "taxes",
+        "passThrough"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "netRevenue",
+      "label": "Computed net revenue",
+      "op": "sub",
+      "args": [
+        "billings",
+        "deductions"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "residual",
+      "label": "Reported less computed revenue",
+      "op": "sub",
+      "args": [
+        "reported",
+        "netRevenue"
+      ],
+      "unit": "USD million"
+    }
+  ],
+  "outputs": [
+    "deductions",
+    "netRevenue",
+    "residual"
+  ],
+  "expected": {
+    "deductions": 200,
+    "netRevenue": 800,
+    "residual": 0
+  },
+  "cases": [
+    {
+      "name": "Higher rebate accrual",
+      "inputs": {
+        "rebates": 50
+      },
+      "expected": {
+        "deductions": 220,
+        "netRevenue": 780,
+        "residual": 20
+      }
+    },
+    {
+      "name": "Missing required reported input",
+      "inputs": {
+        "billings": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures.1,000-50-30-20-100=800 net revenue. Rebates50 produce780 and leave20 unexplained against the unchanged reported800."
+}

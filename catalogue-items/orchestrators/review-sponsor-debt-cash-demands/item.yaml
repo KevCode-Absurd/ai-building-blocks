@@ -1,0 +1,45 @@
+slug: review-sponsor-debt-cash-demands
+name: Review sponsor debt cash demands
+summary: Connect one-period cash and PIK charges to a bounded sweep and ending leverage test.
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: spreadsheet
+    required: true
+  - type: audit_report
+    required: true
+  - type: document
+    required: true
+uses:
+  - cash-and-pik-interest-checker
+  - debt-cash-sweep-checker
+  - net-leverage-covenant-checker
+steps:
+  - uses: cash-and-pik-interest-checker
+    note: Calculate actual simultaneous coupons on opening principal for the supported simple period; identify cash paid versus period-end PIK capitalization.
+  - uses: debt-cash-sweep-checker
+    note: Derive cashBeforeSweep from actual cash evidence after cash interest and other observed flows. Use capitalized ending principal as eligible debt only when the sweep clause includes it; retain certified ECF as a distinct measure.
+  - uses: net-leverage-covenant-checker
+    note: Use debt after actual or clearly proposed sweep and cash eligible at the same end date. Present actual and proposed cases separately; do not mark a covenant satisfied by an unexecuted prepayment.
+execution: coordinator
+origin: own
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/finance-expansion
+example_pending: true
+warnings:
+  - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+credits:
+  - title: Original finance methods and model fixtures
+    by: AI Blocks contributors
+    used: Original instructions, calculations and illustrative examples. External method references are linked separately and retain their own rights.

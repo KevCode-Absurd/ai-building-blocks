@@ -1,0 +1,121 @@
+{
+  "inputs": [
+    {
+      "id": "book0",
+      "label": "Opening common book equity",
+      "value": 100,
+      "unit": "USD million",
+      "min": 0.001,
+      "max": 1000000000
+    },
+    {
+      "id": "income",
+      "label": "Ordinary net income",
+      "value": 15,
+      "unit": "USD million",
+      "min": -1000000000,
+      "max": 1000000000
+    },
+    {
+      "id": "ke",
+      "label": "Required equity return",
+      "value": 0.1,
+      "unit": "decimal",
+      "min": 0.000001,
+      "max": 1
+    },
+    {
+      "id": "dividends",
+      "label": "Common dividends",
+      "value": 4,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    }
+  ],
+  "calculations": [
+    {
+      "id": "charge",
+      "label": "Opening equity charge",
+      "op": "mul",
+      "args": [
+        "book0",
+        "ke"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "residualIncome",
+      "label": "One-period residual income",
+      "op": "sub",
+      "args": [
+        "income",
+        "charge"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "preDividend",
+      "label": "Book plus income",
+      "op": "add",
+      "args": [
+        "book0",
+        "income"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "book1",
+      "label": "Clean-surplus closing book",
+      "op": "sub",
+      "args": [
+        "preDividend",
+        "dividends"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "pvResidual",
+      "label": "PV of one-period residual",
+      "op": "npv",
+      "args": [
+        "ke",
+        "residualIncome"
+      ],
+      "unit": "USD million"
+    }
+  ],
+  "outputs": [
+    "charge",
+    "residualIncome",
+    "book1",
+    "pvResidual"
+  ],
+  "expected": {
+    "charge": 10,
+    "residualIncome": 5,
+    "book1": 111,
+    "pvResidual": 4.545454545454545
+  },
+  "cases": [
+    {
+      "name": "Earnings meet the equity charge",
+      "inputs": {
+        "income": 10
+      },
+      "expected": {
+        "residualIncome": 0,
+        "book1": 106,
+        "pvResidual": 0
+      }
+    },
+    {
+      "name": "Required input absent",
+      "inputs": {
+        "book0": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures.100×10%=10 charge;15-10=5 residual. Closing book100+15-4=111. PV5/1.1=4.545455 is a single contribution, not full valuation."
+}

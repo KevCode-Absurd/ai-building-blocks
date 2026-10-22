@@ -1,0 +1,9 @@
+{
+  "basis": "Illustrative figures only.",
+  "outputs": {
+    "weighted_undrawn": 50,
+    "group_exposure": 350,
+    "headroom": 50,
+    "excess": 0
+  }
+}

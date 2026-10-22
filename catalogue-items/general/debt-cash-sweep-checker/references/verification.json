@@ -1,0 +1,17 @@
+{
+  "slug": "debt-cash-sweep-checker",
+  "modelSha256": "835c342713889adf1d600a96a7c1cf7a8b1eb28e730cb8133024b9d6d56dcb8c",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required number",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

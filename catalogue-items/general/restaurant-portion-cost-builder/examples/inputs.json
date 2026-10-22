@@ -1,0 +1,10 @@
+{
+  "purchased_kg": 10,
+  "edible_yield": 0.8,
+  "portion_kg": 0.2,
+  "ingredient_cash": 100,
+  "batch_labor_cash": 40,
+  "energy_cash": 20,
+  "portion_price": 10,
+  "served_demand": 30
+}

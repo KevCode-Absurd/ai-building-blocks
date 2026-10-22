@@ -1,0 +1,124 @@
+{
+  "inputs": [
+    {
+      "id": "deposit_principal",
+      "label": "deposit principal",
+      "value": 1000,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "borrow_principal",
+      "label": "borrow principal",
+      "value": 600,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "deposit_rate",
+      "label": "deposit rate",
+      "value": 0.03,
+      "unit": "annual decimal",
+      "min": 0,
+      "max": 1
+    },
+    {
+      "id": "borrow_rate",
+      "label": "borrow rate",
+      "value": 0.05,
+      "unit": "annual decimal",
+      "min": 0,
+      "max": 1
+    },
+    {
+      "id": "days",
+      "label": "days",
+      "value": 30,
+      "unit": "days",
+      "min": 0,
+      "max": 366
+    },
+    {
+      "id": "basis",
+      "label": "basis",
+      "value": 360,
+      "unit": "days / year",
+      "min": 1,
+      "max": 366
+    }
+  ],
+  "calculations": [
+    {
+      "id": "fraction",
+      "label": "fraction",
+      "op": "div",
+      "args": [
+        "days",
+        "basis"
+      ],
+      "unit": "year fraction"
+    },
+    {
+      "id": "deposit_interest",
+      "label": "deposit interest",
+      "op": "mul",
+      "args": [
+        "deposit_principal",
+        "deposit_rate",
+        "fraction"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "borrow_interest",
+      "label": "borrow interest",
+      "op": "mul",
+      "args": [
+        "borrow_principal",
+        "borrow_rate",
+        "fraction"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "center_residual",
+      "label": "center residual",
+      "op": "sub",
+      "args": [
+        "borrow_interest",
+        "deposit_interest"
+      ],
+      "unit": "USD / stated period"
+    }
+  ],
+  "outputs": [
+    "deposit_interest",
+    "borrow_interest",
+    "center_residual"
+  ],
+  "expected": {
+    "deposit_interest": 2.5,
+    "borrow_interest": 2.5,
+    "center_residual": 0
+  },
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "inputs": {
+        "borrow_rate": 0.06
+      },
+      "expected": {
+        "borrow_interest": 3,
+        "center_residual": 0.5
+      }
+    },
+    {
+      "name": "Missing required evidence refuses calculation",
+      "inputs": {
+        "deposit_principal": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only, in USD unless labelled otherwise. This is a focused schedule with explicit period and timing assumptions. Rebuild from actual dated sources before use; the example is not a full financial forecast."
+}

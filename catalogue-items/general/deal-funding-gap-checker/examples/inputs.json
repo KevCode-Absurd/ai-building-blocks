@@ -1,0 +1,10 @@
+{
+  "purchaseUse": 100,
+  "debtPayoff": 20,
+  "dealFees": 5,
+  "closingCash": 5,
+  "netDebtCash": 70,
+  "buyerCash": 10,
+  "rolloverSource": 10,
+  "sponsorCash": 30
+}

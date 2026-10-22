@@ -1,0 +1,17 @@
+{
+  "slug": "fixed-exchange-consideration-checker",
+  "modelSha256": "1eb147d5b8e8c184391ac8f11420da378547fa05badf5307e90cdca9fcc95caf",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required number",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

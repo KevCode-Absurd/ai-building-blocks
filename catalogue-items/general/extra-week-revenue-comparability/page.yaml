@@ -1,0 +1,76 @@
+new_slug: extra-week-revenue-comparability
+name: Extra-week revenue comparability schedule
+headline: Extra-week revenue comparability schedule
+summary: Isolate an evidenced extra fiscal week before comparing annual revenue growth.
+job: track-numbers
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: A reported-to-comparable revenue growth bridge with the calendar assumption exposed. Share reported current/prior revenue, actual or separately estimated extra-week revenue and fiscal-calendar disclosures.
+explain: |-
+  A reported-to-comparable revenue growth bridge with the calendar assumption exposed.
+
+  Issuer revenue and cash-flow reconciliation. Illustrative figures. Reported1,060/1,000-1=6%; subtract the evidenced20 extra week to obtain1,040/1,000-1=4%. Extra-week revenue40 leaves2% comparable growth.
+when:
+  - You need a reported-to-comparable revenue growth bridge with the calendar assumption exposed.
+  - You work on issuer revenue and cash-flow reconciliation and need traceable calculations.
+  - A reviewer needs to trace the result back to inputs and assumptions.
+you_give:
+  - Reported current/prior revenue, actual or separately estimated extra-week revenue and fiscal-calendar disclosures.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - A reported-to-comparable revenue growth bridge with the calendar assumption exposed.
+  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: 1. Read the fiscal calendar to identify the extra week and any shift in holiday or trading days
+    text: Read the fiscal calendar to identify the extra week and any shift in holiday or trading days.
+  - title: 2. Use separately evidenced extra-week revenue rather than automatically treating every week as average; subtract it from the longer current period
+    text: Use separately evidenced extra-week revenue rather than automatically treating every week as average; subtract it from the longer current period.
+  - title: 3. Compare the adjusted amount with the matching shorter prior period and disclose remaining calendar-shift effects or estimates
+    text: Compare the adjusted amount with the matching shorter prior period and disclose remaining calendar-shift effects or estimates.
+output_shape: |-
+  A reported-to-comparable revenue growth bridge with the calendar assumption exposed.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: The extra-week amount is attributed to the correct period and business perimeter.
+judge:
+  - The extra-week amount is attributed to the correct period and business perimeter.
+  - Reported growth remains visible alongside the adjusted convention.
+  - Source each balance, flow, period, perimeter, currency and sign; distinguish a true zero from missing evidence.
+  - Preserve reported measures beside analytical measures and retain unexplained residuals.
+test:
+  - Run the included baseline and changed-input fixtures, then compare with the stated expected results.
+  - Remove a required input and confirm the affected calculation refuses to invent a zero.
+  - Recalculate the workbook after changing an input and inspect the saved output.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: Node.js 20 or later
+      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

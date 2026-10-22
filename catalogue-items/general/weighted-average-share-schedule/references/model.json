@@ -1,0 +1,96 @@
+{
+  "inputs": [
+    {
+      "id": "openingShares",
+      "label": "Opening shares",
+      "value": 100,
+      "unit": "million shares",
+      "min": 0.001,
+      "max": 1000000000
+    },
+    {
+      "id": "issuedShares",
+      "label": "New shares",
+      "value": 20,
+      "unit": "million shares",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "fractionOutstanding",
+      "label": "Fraction of period new shares outstanding",
+      "value": 0.5,
+      "unit": "decimal",
+      "min": 0,
+      "max": 1
+    },
+    {
+      "id": "ordinaryProfit",
+      "label": "Profit attributable to ordinary holders",
+      "value": 220,
+      "unit": "USD million",
+      "min": -1000000000,
+      "max": 1000000000
+    }
+  ],
+  "calculations": [
+    {
+      "id": "weightedIssue",
+      "label": "Weighted new shares",
+      "op": "mul",
+      "args": [
+        "issuedShares",
+        "fractionOutstanding"
+      ],
+      "unit": "million shares"
+    },
+    {
+      "id": "weightedShares",
+      "label": "Weighted-average shares",
+      "op": "add",
+      "args": [
+        "openingShares",
+        "weightedIssue"
+      ],
+      "unit": "million shares"
+    },
+    {
+      "id": "basicEps",
+      "label": "Basic EPS",
+      "op": "div",
+      "args": [
+        "ordinaryProfit",
+        "weightedShares"
+      ],
+      "unit": "USD per share"
+    }
+  ],
+  "outputs": [
+    "weightedShares",
+    "basicEps"
+  ],
+  "expected": {
+    "weightedShares": 110,
+    "basicEps": 2
+  },
+  "cases": [
+    {
+      "name": "Issue outstanding for the full period",
+      "inputs": {
+        "fractionOutstanding": 1
+      },
+      "expected": {
+        "weightedShares": 120,
+        "basicEps": 1.8333333333333333
+      }
+    },
+    {
+      "name": "Missing required source input",
+      "inputs": {
+        "openingShares": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures. 100 + 20 × 0.5 = 110 million weighted shares; 220 / 110 = $2.00. Full-period issuance gives 120 and $1.833333. The time fraction comes from an independently checked day ledger."
+}

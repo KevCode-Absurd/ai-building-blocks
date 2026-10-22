@@ -1,0 +1,32 @@
+{
+  "engine": "Artifact Tool",
+  "scope": "Illustrative workbook calculations, not source truth or an actual investment conclusion. Native Microsoft Excel application execution is not claimed.",
+  "modelSha256": "378da7ac1ea3b6c5c086e3b92246d83362761403af23defacbdf023a90126314",
+  "xlsxSha256": "2074a54be53547bcea158eadd7ecdb350c28c96cddea726dac8efe7ed2710067",
+  "baseline": "pass",
+  "changedInputCase": "Zero excess return begins in year2",
+  "invalidInputCase": "Required input absent",
+  "cases": [
+    {
+      "name": "Zero excess return begins in year2",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Required input absent",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ],
+  "reopenedAndRecalculated": true,
+  "rendered": true,
+  "visualReview": "pass",
+  "workbookSpecSha256": "cb2fe9b927b722043364cbdbd714c54a83d72725d2e3f2a82d331ffeca31c0df",
+  "visualEvidence": {
+    "report": "reports/finance-public-markets-peer-review.json",
+    "reportSha256": "f73f6f5598ba0647c477c547d2776f1221130bb7861b62def472b74331866282",
+    "previewSha256": "8a4355c5dba242768f7eaaf2d594bb71aa3ae33f4148f47f2cea866e7c26ad8d",
+    "sheet": "Model",
+    "sourceSpecSha256": "a702455dc615212cd72b9e18cb1bd39ec457783dc84edd5f77f84f64bd948e72"
+  }
+}

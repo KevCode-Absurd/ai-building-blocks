@@ -1,0 +1,156 @@
+{
+  "inputs": [
+    {
+      "id": "units_a",
+      "label": "units a",
+      "value": 30,
+      "unit": "units / period",
+      "min": 0
+    },
+    {
+      "id": "units_b",
+      "label": "units b",
+      "value": 10,
+      "unit": "units / period",
+      "min": 0
+    },
+    {
+      "id": "contribution_a",
+      "label": "contribution a",
+      "value": 10,
+      "unit": "USD / unit",
+      "min": 0
+    },
+    {
+      "id": "contribution_b",
+      "label": "contribution b",
+      "value": 15,
+      "unit": "USD / unit",
+      "min": 0
+    },
+    {
+      "id": "hours_a",
+      "label": "hours a",
+      "value": 2,
+      "unit": "bottleneck hours / unit",
+      "min": 0
+    },
+    {
+      "id": "hours_b",
+      "label": "hours b",
+      "value": 5,
+      "unit": "bottleneck hours / unit",
+      "min": 0
+    },
+    {
+      "id": "available_hours",
+      "label": "available hours",
+      "value": 100,
+      "unit": "bottleneck hours / period",
+      "min": 0
+    }
+  ],
+  "calculations": [
+    {
+      "id": "required_a",
+      "label": "required a",
+      "op": "mul",
+      "args": [
+        "units_a",
+        "hours_a"
+      ],
+      "unit": "hours / period"
+    },
+    {
+      "id": "required_b",
+      "label": "required b",
+      "op": "mul",
+      "args": [
+        "units_b",
+        "hours_b"
+      ],
+      "unit": "hours / period"
+    },
+    {
+      "id": "required_hours",
+      "label": "required hours",
+      "op": "sum",
+      "args": [
+        "required_a",
+        "required_b"
+      ],
+      "unit": "hours / period"
+    },
+    {
+      "id": "capacity_headroom",
+      "label": "capacity headroom",
+      "op": "sub",
+      "args": [
+        "available_hours",
+        "required_hours"
+      ],
+      "unit": "hours / period"
+    },
+    {
+      "id": "contribution_a_total",
+      "label": "contribution a total",
+      "op": "mul",
+      "args": [
+        "units_a",
+        "contribution_a"
+      ],
+      "unit": "USD / period"
+    },
+    {
+      "id": "contribution_b_total",
+      "label": "contribution b total",
+      "op": "mul",
+      "args": [
+        "units_b",
+        "contribution_b"
+      ],
+      "unit": "USD / period"
+    },
+    {
+      "id": "contribution_total",
+      "label": "contribution total",
+      "op": "sum",
+      "args": [
+        "contribution_a_total",
+        "contribution_b_total"
+      ],
+      "unit": "USD / period"
+    }
+  ],
+  "outputs": [
+    "required_hours",
+    "capacity_headroom",
+    "contribution_total"
+  ],
+  "expected": {
+    "required_hours": 110,
+    "capacity_headroom": -10,
+    "contribution_total": 450
+  },
+  "cases": [
+    {
+      "name": "Reduce proposed second product units",
+      "inputs": {
+        "units_b": 5
+      },
+      "expected": {
+        "required_hours": 85,
+        "capacity_headroom": 15,
+        "contribution_total": 375
+      }
+    },
+    {
+      "name": "Missing available hours",
+      "inputs": {
+        "available_hours": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only in USD unless labelled otherwise. The model is the focused stated schedule, not a complete company forecast. Annual end-period cash is used unless the inputs state another convention."
+}

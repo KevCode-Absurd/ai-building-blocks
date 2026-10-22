@@ -1,0 +1,76 @@
+new_slug: rollover-equity-ownership-checker
+name: Rollover equity ownership checker
+headline: Rollover equity ownership checker
+summary: Reconcile a seller rollover amount with cash proceeds and same-class post-close ownership.
+job: money-and-investing
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: Seller cash, rollover contribution and post-close ownership fraction. Share seller proceeds before rollover, approved rollover fraction, new sponsor cash and documents confirming identical class and issue price.
+explain: |-
+  Seller cash, rollover contribution and post-close ownership fraction.
+
+  Private equity ownership. Illustrative figures only. 25% of40 rolls10 beside sponsor30, giving25% ownership and30 cash.50% rolls20 for40% ownership and20 cash.
+when:
+  - You need seller cash, rollover contribution and post-close ownership fraction.
+  - You work on private equity ownership and need traceable calculations.
+  - A reviewer needs to trace the result back to inputs and assumptions.
+you_give:
+  - Seller proceeds before rollover, approved rollover fraction, new sponsor cash and documents confirming identical class and issue price.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - Seller cash, rollover contribution and post-close ownership fraction.
+  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: 1. Confirm seller and sponsor buy identical economic units at the same price; separate any sweet equity or preference security
+    text: Confirm seller and sponsor buy identical economic units at the same price; separate any sweet equity or preference security.
+  - title: 2. Multiply seller proceeds by rollover fraction and subtract it from seller cash
+    text: Multiply seller proceeds by rollover fraction and subtract it from seller cash.
+  - title: 3. Divide rollover contribution by rollover plus sponsor cash; reconcile each holder contribution to total same-class equity
+    text: Divide rollover contribution by rollover plus sponsor cash; reconcile each holder contribution to total same-class equity.
+output_shape: |-
+  Seller cash, rollover contribution and post-close ownership fraction.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: Rollover reduces seller cash once and enters funding as a noncash source once.
+judge:
+  - Rollover reduces seller cash once and enters funding as a noncash source once.
+  - Equal contribution valuation is valid only for the same price and economic class.
+  - Trace each input to its dated signed source, currency, scale and period.
+  - Reconcile outputs; preserve MISSING and CHECKS MISSED rather than guessing zero.
+test:
+  - Run the included baseline and changed-input fixtures, then compare with the stated expected results.
+  - Remove a required input and confirm the affected calculation refuses to invent a zero.
+  - Recalculate the workbook after changing an input and inspect the saved output.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: Node.js 20 or later
+      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

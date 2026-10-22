@@ -1,0 +1,45 @@
+slug: restate-research-capital-before-growth-modelling
+name: Restate research capital before growth modelling
+summary: Carry an explicit research cohort adjustment consistently into operating reinvestment and terminal assumptions.
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: spreadsheet
+    required: true
+  - type: audit_report
+    required: true
+  - type: document
+    required: true
+uses:
+  - research-spend-cohort-adjustment
+  - reinvestment-supported-growth
+  - terminal-growth-reinvestment-consistency
+steps:
+  - uses: research-spend-cohort-adjustment
+    note: Use actual sourced schedules in one linked native workbook; example values are illustrative and must not become issuer inputs. Build dated cohorts with the chosen life and preserve statutory treatment. Pass economic amortization and research-asset balances with the unchanged cash-tax convention.
+  - uses: reinvestment-supported-growth
+    note: Adjust both capital and operating investment consistently for expensed research; reconcile cash taxes separately, and do not mechanically tax an economic addback or use unadjusted historical ROC.
+  - uses: terminal-growth-reinvestment-consistency
+    note: Use a defensible stable research life and marginal capital return to couple terminal growth with reinvestment; reject a terminal cash-flow boost created only by omitting research replacement spending.
+execution: coordinator
+origin: own
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/finance-expansion
+example_pending: true
+warnings:
+  - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+credits:
+  - title: Original finance methods and model fixtures
+    by: AI Blocks contributors
+    used: Original instructions, calculations and illustrative examples. External method references are linked separately and retain their own rights.

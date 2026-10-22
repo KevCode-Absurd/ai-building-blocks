@@ -1,0 +1,148 @@
+{
+  "inputs": [
+    {
+      "id": "deficit0",
+      "label": "Opening net pension deficit",
+      "value": 20,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "discount",
+      "label": "Net interest discount rate",
+      "value": 0.05,
+      "unit": "decimal",
+      "min": 0,
+      "max": 1
+    },
+    {
+      "id": "service",
+      "label": "Service cost",
+      "value": 5,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "remeasurement",
+      "label": "OCI remeasurement loss",
+      "value": 3,
+      "unit": "USD million",
+      "min": -1000000000,
+      "max": 1000000000
+    },
+    {
+      "id": "contribution",
+      "label": "Employer contribution",
+      "value": 4,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "reportedExpense",
+      "label": "Reported service plus net interest",
+      "value": 6,
+      "unit": "USD million",
+      "min": -1000000000,
+      "max": 1000000000
+    }
+  ],
+  "calculations": [
+    {
+      "id": "interest",
+      "label": "Net interest expense",
+      "op": "mul",
+      "args": [
+        "deficit0",
+        "discount"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "pensionPL",
+      "label": "Service plus net interest",
+      "op": "add",
+      "args": [
+        "service",
+        "interest"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "plResidual",
+      "label": "Reported less calculated P&L",
+      "op": "sub",
+      "args": [
+        "reportedExpense",
+        "pensionPL"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "totalCost",
+      "label": "P&L plus OCI cost",
+      "op": "add",
+      "args": [
+        "pensionPL",
+        "remeasurement"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "beforeFunding",
+      "label": "Deficit before contributions",
+      "op": "add",
+      "args": [
+        "deficit0",
+        "totalCost"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "deficit1",
+      "label": "Computed closing deficit",
+      "op": "sub",
+      "args": [
+        "beforeFunding",
+        "contribution"
+      ],
+      "unit": "USD million"
+    }
+  ],
+  "outputs": [
+    "interest",
+    "pensionPL",
+    "plResidual",
+    "totalCost",
+    "deficit1"
+  ],
+  "expected": {
+    "interest": 1,
+    "pensionPL": 6,
+    "plResidual": 0,
+    "totalCost": 9,
+    "deficit1": 25
+  },
+  "cases": [
+    {
+      "name": "Higher OCI remeasurement loss",
+      "inputs": {
+        "remeasurement": 8
+      },
+      "expected": {
+        "totalCost": 14,
+        "deficit1": 30
+      }
+    },
+    {
+      "name": "Required source input missing",
+      "inputs": {
+        "deficit0": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures.20×5%=1 net interest; service5 makes6 P&L. Add OCI loss3 for9 total cost;20+9-4 funding=25 closing deficit. OCI loss8 raises the deficit to30 without changing P&L."
+}

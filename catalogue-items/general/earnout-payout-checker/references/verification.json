@@ -1,0 +1,17 @@
+{
+  "slug": "earnout-payout-checker",
+  "modelSha256": "42ee3b1c528b41895cc2d6191fe257daea9e56fbfa26300f572ce34ab1741487",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required number",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

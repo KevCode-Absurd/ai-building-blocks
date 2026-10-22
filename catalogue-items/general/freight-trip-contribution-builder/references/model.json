@@ -1,0 +1,169 @@
+{
+  "inputs": [
+    {
+      "id": "loaded_km",
+      "label": "loaded km",
+      "value": 500,
+      "unit": "km / trip",
+      "min": 0
+    },
+    {
+      "id": "empty_km",
+      "label": "empty km",
+      "value": 100,
+      "unit": "km / trip",
+      "min": 0
+    },
+    {
+      "id": "liters_per_km",
+      "label": "liters per km",
+      "value": 0.3,
+      "unit": "liters / km",
+      "min": 0
+    },
+    {
+      "id": "diesel_price",
+      "label": "diesel price",
+      "value": 2,
+      "unit": "USD / liter",
+      "min": 0
+    },
+    {
+      "id": "driver_cash",
+      "label": "driver cash",
+      "value": 200,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "tolls",
+      "label": "tolls",
+      "value": 50,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "maintenance_per_km",
+      "label": "maintenance per km",
+      "value": 0.1,
+      "unit": "USD / km",
+      "min": 0
+    },
+    {
+      "id": "other_trip_cash",
+      "label": "other trip cash",
+      "value": 80,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "trip_receipts",
+      "label": "trip receipts",
+      "value": 1000,
+      "unit": "USD / stated period",
+      "min": 0
+    }
+  ],
+  "calculations": [
+    {
+      "id": "total_km",
+      "label": "total km",
+      "op": "sum",
+      "args": [
+        "loaded_km",
+        "empty_km"
+      ],
+      "unit": "km / trip"
+    },
+    {
+      "id": "fuel_liters",
+      "label": "fuel liters",
+      "op": "mul",
+      "args": [
+        "total_km",
+        "liters_per_km"
+      ],
+      "unit": "liters / trip"
+    },
+    {
+      "id": "fuel_cash",
+      "label": "fuel cash",
+      "op": "mul",
+      "args": [
+        "fuel_liters",
+        "diesel_price"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "maintenance_cash",
+      "label": "maintenance cash",
+      "op": "mul",
+      "args": [
+        "total_km",
+        "maintenance_per_km"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "total_trip_cash",
+      "label": "total trip cash",
+      "op": "sum",
+      "args": [
+        "fuel_cash",
+        "maintenance_cash",
+        "driver_cash",
+        "tolls",
+        "other_trip_cash"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "trip_contribution",
+      "label": "trip contribution",
+      "op": "sub",
+      "args": [
+        "trip_receipts",
+        "total_trip_cash"
+      ],
+      "unit": "USD / stated period"
+    }
+  ],
+  "outputs": [
+    "total_km",
+    "fuel_liters",
+    "fuel_cash",
+    "total_trip_cash",
+    "trip_contribution"
+  ],
+  "expected": {
+    "total_km": 600,
+    "fuel_liters": 180,
+    "fuel_cash": 360,
+    "total_trip_cash": 750,
+    "trip_contribution": 250
+  },
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "inputs": {
+        "empty_km": 200
+      },
+      "expected": {
+        "total_km": 700,
+        "fuel_liters": 210,
+        "fuel_cash": 420,
+        "total_trip_cash": 820,
+        "trip_contribution": 180
+      }
+    },
+    {
+      "name": "Missing or invalid required input",
+      "inputs": {
+        "loaded_km": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only in USD unless labelled otherwise. This focused operating schedule does not establish a complete business forecast, accounting treatment, market price or approval."
+}

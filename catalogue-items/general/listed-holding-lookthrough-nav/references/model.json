@@ -1,0 +1,159 @@
+{
+  "inputs": [
+    {
+      "id": "valueA",
+      "label": "Quoted equity value A",
+      "value": 200,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "stakeA",
+      "label": "Economic stake A",
+      "value": 0.2,
+      "unit": "decimal",
+      "min": 0,
+      "max": 1
+    },
+    {
+      "id": "valueB",
+      "label": "Quoted equity value B",
+      "value": 300,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "stakeB",
+      "label": "Economic stake B",
+      "value": 0.3,
+      "unit": "decimal",
+      "min": 0,
+      "max": 1
+    },
+    {
+      "id": "cash",
+      "label": "Parent-only cash",
+      "value": 20,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "debt",
+      "label": "Parent-only debt",
+      "value": 50,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "costValue",
+      "label": "Present value of parent costs",
+      "value": 10,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "shares",
+      "label": "Parent shares",
+      "value": 10,
+      "unit": "million shares",
+      "min": 0.001,
+      "max": 1000000000
+    }
+  ],
+  "calculations": [
+    {
+      "id": "attributedA",
+      "label": "Attributed A value",
+      "op": "mul",
+      "args": [
+        "valueA",
+        "stakeA"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "attributedB",
+      "label": "Attributed B value",
+      "op": "mul",
+      "args": [
+        "valueB",
+        "stakeB"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "grossValue",
+      "label": "Holdings plus parent cash",
+      "op": "add",
+      "args": [
+        "attributedA",
+        "attributedB",
+        "cash"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "deductions",
+      "label": "Debt and cost value",
+      "op": "add",
+      "args": [
+        "debt",
+        "costValue"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "nav",
+      "label": "Look-through NAV",
+      "op": "sub",
+      "args": [
+        "grossValue",
+        "deductions"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "navPerShare",
+      "label": "NAV per parent share",
+      "op": "div",
+      "args": [
+        "nav",
+        "shares"
+      ],
+      "unit": "USD per share"
+    }
+  ],
+  "outputs": [
+    "nav",
+    "navPerShare"
+  ],
+  "expected": {
+    "nav": 90,
+    "navPerShare": 9
+  },
+  "cases": [
+    {
+      "name": "Higher quoted A value",
+      "inputs": {
+        "valueA": 300
+      },
+      "expected": {
+        "nav": 110,
+        "navPerShare": 11
+      }
+    },
+    {
+      "name": "Required input absent",
+      "inputs": {
+        "valueA": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures.200×20%+300×30%+20-50-10=90 NAV, or9 per share. Increasing A by100 adds20 to NAV and2 per share."
+}

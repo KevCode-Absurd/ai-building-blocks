@@ -1,0 +1,42 @@
+slug: compare-merger-cash-election-outcomes
+name: Compare merger cash election outcomes
+summary: Compare fixed-ratio market value with the documented cash-election proration branch.
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: spreadsheet
+    required: true
+  - type: audit_report
+    required: true
+  - type: document
+    required: true
+uses:
+  - fixed-exchange-consideration-checker
+  - cash-stock-election-checker
+steps:
+  - uses: fixed-exchange-consideration-checker
+    note: Value the signed base fixed-ratio stock and cash legs at the dated acquirer price, preserving issued share count and ratio.
+  - uses: cash-stock-election-checker
+    note: Use the distinct cash-election replacement ratio and actual post-reservation cash pool, not a presumed reuse of the base ratio. Compare the holder allocation with base value without summing mutually exclusive outcomes.
+execution: coordinator
+origin: own
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/finance-expansion
+example_pending: true
+warnings:
+  - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+credits:
+  - title: Original finance methods and model fixtures
+    by: AI Blocks contributors
+    used: Original instructions, calculations and illustrative examples. External method references are linked separately and retain their own rights.

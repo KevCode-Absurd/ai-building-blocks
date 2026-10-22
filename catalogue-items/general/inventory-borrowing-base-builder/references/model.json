@@ -1,0 +1,134 @@
+{
+  "inputs": [
+    {
+      "id": "eligible_cost",
+      "label": "eligible cost",
+      "value": 1000,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "cost_advance_rate",
+      "label": "cost advance rate",
+      "value": 0.5,
+      "unit": "decimal fraction",
+      "min": 0,
+      "max": 1
+    },
+    {
+      "id": "appraised_nolv",
+      "label": "appraised nolv",
+      "value": 800,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "nolv_advance_rate",
+      "label": "nolv advance rate",
+      "value": 0.7,
+      "unit": "decimal fraction",
+      "min": 0,
+      "max": 1
+    },
+    {
+      "id": "sublimit",
+      "label": "sublimit",
+      "value": 600,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "reserve",
+      "label": "reserve",
+      "value": 50,
+      "unit": "USD / stated period",
+      "min": 0
+    }
+  ],
+  "calculations": [
+    {
+      "id": "cost_cap",
+      "label": "cost cap",
+      "op": "mul",
+      "args": [
+        "eligible_cost",
+        "cost_advance_rate"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "appraisal_cap",
+      "label": "appraisal cap",
+      "op": "mul",
+      "args": [
+        "appraised_nolv",
+        "nolv_advance_rate"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "advance_before_reserve",
+      "label": "advance before reserve",
+      "op": "min",
+      "args": [
+        "cost_cap",
+        "appraisal_cap",
+        "sublimit"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "signed_advance",
+      "label": "signed advance",
+      "op": "sub",
+      "args": [
+        "advance_before_reserve",
+        "reserve"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "net_advance",
+      "label": "net advance",
+      "op": "max",
+      "args": [
+        0,
+        "signed_advance"
+      ],
+      "unit": "USD / stated period"
+    }
+  ],
+  "outputs": [
+    "cost_cap",
+    "appraisal_cap",
+    "advance_before_reserve",
+    "net_advance"
+  ],
+  "expected": {
+    "cost_cap": 500,
+    "appraisal_cap": 560,
+    "advance_before_reserve": 500,
+    "net_advance": 450
+  },
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "inputs": {
+        "cost_advance_rate": 0.6
+      },
+      "expected": {
+        "cost_cap": 600,
+        "advance_before_reserve": 560,
+        "net_advance": 510
+      }
+    },
+    {
+      "name": "Missing required evidence refuses calculation",
+      "inputs": {
+        "eligible_cost": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only, in USD unless labelled otherwise. This is a focused schedule with explicit period and timing assumptions. Rebuild from actual dated sources before use; the example is not a full financial forecast."
+}

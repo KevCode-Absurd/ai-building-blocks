@@ -1,0 +1,84 @@
+{
+  "inputs": [
+    {
+      "id": "peg",
+      "label": "peg",
+      "value": 11,
+      "unit": "USD millions"
+    },
+    {
+      "id": "estimate",
+      "label": "estimate",
+      "value": 12,
+      "unit": "USD millions"
+    },
+    {
+      "id": "final",
+      "label": "final",
+      "value": 10,
+      "unit": "USD millions"
+    }
+  ],
+  "calculations": [
+    {
+      "id": "closingAdjustment",
+      "label": "closing Adjustment",
+      "op": "sub",
+      "args": [
+        "estimate",
+        "peg"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "finalAdjustment",
+      "label": "final Adjustment",
+      "op": "sub",
+      "args": [
+        "final",
+        "peg"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "settlementToSeller",
+      "label": "settlement To Seller",
+      "op": "sub",
+      "args": [
+        "finalAdjustment",
+        "closingAdjustment"
+      ],
+      "unit": "USD millions"
+    }
+  ],
+  "outputs": [
+    "closingAdjustment",
+    "finalAdjustment",
+    "settlementToSeller"
+  ],
+  "expected": {
+    "closingAdjustment": 1,
+    "finalAdjustment": -1,
+    "settlementToSeller": -2
+  },
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "inputs": {
+        "final": 14
+      },
+      "expected": {
+        "finalAdjustment": 3,
+        "settlementToSeller": 2
+      }
+    },
+    {
+      "name": "Missing required number",
+      "inputs": {
+        "peg": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only. Estimate12 versus peg11 paid1; final10 needs-1, so seller returns2. Final14 yields another2 to seller."
+}

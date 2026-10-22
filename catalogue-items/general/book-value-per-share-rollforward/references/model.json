@@ -1,0 +1,132 @@
+{
+  "inputs": [
+    {
+      "id": "openingEquity",
+      "label": "Opening common equity",
+      "value": 500,
+      "unit": "USD million",
+      "min": -1000000000,
+      "max": 1000000000
+    },
+    {
+      "id": "profit",
+      "label": "Ordinary profit",
+      "value": 80,
+      "unit": "USD million",
+      "min": -1000000000,
+      "max": 1000000000
+    },
+    {
+      "id": "oci",
+      "label": "Common-owner OCI",
+      "value": -10,
+      "unit": "USD million",
+      "min": -1000000000,
+      "max": 1000000000
+    },
+    {
+      "id": "issuance",
+      "label": "Common issuance proceeds",
+      "value": 40,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "dividends",
+      "label": "Common dividends",
+      "value": 30,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "repurchases",
+      "label": "Repurchase cash",
+      "value": 60,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "closingShares",
+      "label": "Closing ordinary shares",
+      "value": 52,
+      "unit": "million shares",
+      "min": 0.001,
+      "max": 1000000000
+    }
+  ],
+  "calculations": [
+    {
+      "id": "additions",
+      "label": "Equity additions",
+      "op": "add",
+      "args": [
+        "openingEquity",
+        "profit",
+        "oci",
+        "issuance"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "distributions",
+      "label": "Capital distributions",
+      "op": "add",
+      "args": [
+        "dividends",
+        "repurchases"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "closingEquity",
+      "label": "Reconciled closing equity",
+      "op": "sub",
+      "args": [
+        "additions",
+        "distributions"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "bookPerShare",
+      "label": "Book value per closing share",
+      "op": "div",
+      "args": [
+        "closingEquity",
+        "closingShares"
+      ],
+      "unit": "USD per share"
+    }
+  ],
+  "outputs": [
+    "closingEquity",
+    "bookPerShare"
+  ],
+  "expected": {
+    "closingEquity": 520,
+    "bookPerShare": 10
+  },
+  "cases": [
+    {
+      "name": "Additional dividend",
+      "inputs": {
+        "dividends": 82
+      },
+      "expected": {
+        "closingEquity": 468,
+        "bookPerShare": 9
+      }
+    },
+    {
+      "name": "Missing required source input",
+      "inputs": {
+        "openingEquity": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures. 500+80-10+40-30-60 = $520 million closing equity. Dividing by 52 million closing shares gives $10. Raising dividends by $52 million lowers book value per share to $9."
+}

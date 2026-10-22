@@ -1,0 +1,324 @@
+{
+  "inputs": [
+    {
+      "id": "equity_commitment",
+      "label": "equity commitment",
+      "value": 200,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "debt_commitment",
+      "label": "debt commitment",
+      "value": 300,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "cost_1",
+      "label": "cost 1",
+      "value": 100,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "cost_2",
+      "label": "cost 2",
+      "value": 150,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "cost_3",
+      "label": "cost 3",
+      "value": 200,
+      "unit": "USD / stated period",
+      "min": 0
+    }
+  ],
+  "calculations": [
+    {
+      "id": "equity_used_1",
+      "label": "equity used 1",
+      "op": "min",
+      "args": [
+        "equity_commitment",
+        "cost_1"
+      ],
+      "unit": "USD / construction period"
+    },
+    {
+      "id": "after_equity_1",
+      "label": "after equity 1",
+      "op": "sub",
+      "args": [
+        "cost_1",
+        "equity_used_1"
+      ],
+      "unit": "USD / construction period"
+    },
+    {
+      "id": "debt_used_1",
+      "label": "debt used 1",
+      "op": "min",
+      "args": [
+        "debt_commitment",
+        "after_equity_1"
+      ],
+      "unit": "USD / construction period"
+    },
+    {
+      "id": "shortfall_1",
+      "label": "shortfall 1",
+      "op": "sub",
+      "args": [
+        "after_equity_1",
+        "debt_used_1"
+      ],
+      "unit": "USD / construction period"
+    },
+    {
+      "id": "equity_remaining_1",
+      "label": "equity remaining 1",
+      "op": "sub",
+      "args": [
+        "equity_commitment",
+        "equity_used_1"
+      ],
+      "unit": "USD / construction period"
+    },
+    {
+      "id": "debt_remaining_1",
+      "label": "debt remaining 1",
+      "op": "sub",
+      "args": [
+        "debt_commitment",
+        "debt_used_1"
+      ],
+      "unit": "USD / construction period"
+    },
+    {
+      "id": "equity_used_2",
+      "label": "equity used 2",
+      "op": "min",
+      "args": [
+        "equity_remaining_1",
+        "cost_2"
+      ],
+      "unit": "USD / construction period"
+    },
+    {
+      "id": "after_equity_2",
+      "label": "after equity 2",
+      "op": "sub",
+      "args": [
+        "cost_2",
+        "equity_used_2"
+      ],
+      "unit": "USD / construction period"
+    },
+    {
+      "id": "debt_used_2",
+      "label": "debt used 2",
+      "op": "min",
+      "args": [
+        "debt_remaining_1",
+        "after_equity_2"
+      ],
+      "unit": "USD / construction period"
+    },
+    {
+      "id": "shortfall_2",
+      "label": "shortfall 2",
+      "op": "sub",
+      "args": [
+        "after_equity_2",
+        "debt_used_2"
+      ],
+      "unit": "USD / construction period"
+    },
+    {
+      "id": "equity_remaining_2",
+      "label": "equity remaining 2",
+      "op": "sub",
+      "args": [
+        "equity_remaining_1",
+        "equity_used_2"
+      ],
+      "unit": "USD / construction period"
+    },
+    {
+      "id": "debt_remaining_2",
+      "label": "debt remaining 2",
+      "op": "sub",
+      "args": [
+        "debt_remaining_1",
+        "debt_used_2"
+      ],
+      "unit": "USD / construction period"
+    },
+    {
+      "id": "equity_used_3",
+      "label": "equity used 3",
+      "op": "min",
+      "args": [
+        "equity_remaining_2",
+        "cost_3"
+      ],
+      "unit": "USD / construction period"
+    },
+    {
+      "id": "after_equity_3",
+      "label": "after equity 3",
+      "op": "sub",
+      "args": [
+        "cost_3",
+        "equity_used_3"
+      ],
+      "unit": "USD / construction period"
+    },
+    {
+      "id": "debt_used_3",
+      "label": "debt used 3",
+      "op": "min",
+      "args": [
+        "debt_remaining_2",
+        "after_equity_3"
+      ],
+      "unit": "USD / construction period"
+    },
+    {
+      "id": "shortfall_3",
+      "label": "shortfall 3",
+      "op": "sub",
+      "args": [
+        "after_equity_3",
+        "debt_used_3"
+      ],
+      "unit": "USD / construction period"
+    },
+    {
+      "id": "equity_remaining_3",
+      "label": "equity remaining 3",
+      "op": "sub",
+      "args": [
+        "equity_remaining_2",
+        "equity_used_3"
+      ],
+      "unit": "USD / construction period"
+    },
+    {
+      "id": "debt_remaining_3",
+      "label": "debt remaining 3",
+      "op": "sub",
+      "args": [
+        "debt_remaining_2",
+        "debt_used_3"
+      ],
+      "unit": "USD / construction period"
+    },
+    {
+      "id": "equity_used_total",
+      "label": "equity used total",
+      "op": "sum",
+      "args": [
+        "equity_used_1",
+        "equity_used_2",
+        "equity_used_3"
+      ],
+      "unit": "USD / three periods"
+    },
+    {
+      "id": "debt_used_total",
+      "label": "debt used total",
+      "op": "sum",
+      "args": [
+        "debt_used_1",
+        "debt_used_2",
+        "debt_used_3"
+      ],
+      "unit": "USD / three periods"
+    },
+    {
+      "id": "shortfall_total",
+      "label": "shortfall total",
+      "op": "sum",
+      "args": [
+        "shortfall_1",
+        "shortfall_2",
+        "shortfall_3"
+      ],
+      "unit": "USD / three periods"
+    },
+    {
+      "id": "total_cost",
+      "label": "total construction cost",
+      "op": "sum",
+      "args": [
+        "cost_1",
+        "cost_2",
+        "cost_3"
+      ],
+      "unit": "USD / three periods"
+    },
+    {
+      "id": "sources_and_gap",
+      "label": "funded costs plus gap",
+      "op": "sum",
+      "args": [
+        "equity_used_total",
+        "debt_used_total",
+        "shortfall_total"
+      ],
+      "unit": "USD / three periods"
+    },
+    {
+      "id": "funding_check",
+      "label": "funding identity difference",
+      "op": "sub",
+      "args": [
+        "total_cost",
+        "sources_and_gap"
+      ],
+      "unit": "USD / three periods"
+    }
+  ],
+  "outputs": [
+    "equity_used_total",
+    "debt_used_total",
+    "shortfall_total",
+    "equity_remaining_3",
+    "debt_remaining_3",
+    "funding_check"
+  ],
+  "expected": {
+    "equity_used_total": 200,
+    "debt_used_total": 250,
+    "shortfall_total": 0,
+    "equity_remaining_3": 0,
+    "debt_remaining_3": 50,
+    "funding_check": 0
+  },
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "inputs": {
+        "cost_3": 300
+      },
+      "expected": {
+        "debt_used_total": 300,
+        "shortfall_total": 50,
+        "debt_remaining_3": 0,
+        "funding_check": 0
+      }
+    },
+    {
+      "name": "Missing or invalid required input",
+      "inputs": {
+        "equity_commitment": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only in USD unless labelled otherwise. The model is the focused stated schedule, not a complete company forecast. Annual end-period cash is used unless the inputs state another convention."
+}

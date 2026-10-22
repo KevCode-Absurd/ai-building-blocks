@@ -1,0 +1,134 @@
+{
+  "inputs": [
+    {
+      "id": "forward_notional",
+      "label": "forward notional",
+      "value": 100,
+      "unit": "EUR",
+      "min": 0
+    },
+    {
+      "id": "payable_foreign",
+      "label": "payable foreign",
+      "value": 120,
+      "unit": "EUR",
+      "min": 0
+    },
+    {
+      "id": "forward_rate",
+      "label": "forward rate",
+      "value": 1.1,
+      "unit": "USD / EUR",
+      "min": 0.000001
+    },
+    {
+      "id": "settlement_spot",
+      "label": "settlement spot",
+      "value": 1.2,
+      "unit": "USD / EUR",
+      "min": 0.000001
+    },
+    {
+      "id": "fees",
+      "label": "fees",
+      "value": 2,
+      "unit": "USD",
+      "min": 0
+    }
+  ],
+  "calculations": [
+    {
+      "id": "locked_payment",
+      "label": "locked payment",
+      "op": "mul",
+      "args": [
+        "forward_notional",
+        "forward_rate"
+      ],
+      "unit": "USD"
+    },
+    {
+      "id": "spot_equivalent",
+      "label": "spot equivalent",
+      "op": "mul",
+      "args": [
+        "forward_notional",
+        "settlement_spot"
+      ],
+      "unit": "USD"
+    },
+    {
+      "id": "cash_advantage",
+      "label": "cash advantage",
+      "op": "sub",
+      "args": [
+        "spot_equivalent",
+        "locked_payment"
+      ],
+      "unit": "USD"
+    },
+    {
+      "id": "residual_foreign",
+      "label": "residual foreign",
+      "op": "sub",
+      "args": [
+        "payable_foreign",
+        "forward_notional"
+      ],
+      "unit": "EUR"
+    },
+    {
+      "id": "residual_cash",
+      "label": "residual cash",
+      "op": "mul",
+      "args": [
+        "residual_foreign",
+        "settlement_spot"
+      ],
+      "unit": "USD"
+    },
+    {
+      "id": "total_cash",
+      "label": "total cash",
+      "op": "sum",
+      "args": [
+        "locked_payment",
+        "residual_cash",
+        "fees"
+      ],
+      "unit": "USD"
+    }
+  ],
+  "outputs": [
+    "locked_payment",
+    "cash_advantage",
+    "residual_foreign",
+    "total_cash"
+  ],
+  "expected": {
+    "locked_payment": 110,
+    "cash_advantage": 10,
+    "residual_foreign": 20,
+    "total_cash": 136
+  },
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "inputs": {
+        "settlement_spot": 1.3
+      },
+      "expected": {
+        "cash_advantage": 20,
+        "total_cash": 138
+      }
+    },
+    {
+      "name": "Missing required evidence refuses calculation",
+      "inputs": {
+        "forward_notional": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only, in USD unless labelled otherwise. This is a focused schedule with explicit period and timing assumptions. Rebuild from actual dated sources before use; the example is not a full financial forecast."
+}

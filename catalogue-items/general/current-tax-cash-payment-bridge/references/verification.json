@@ -1,0 +1,17 @@
+{
+  "slug": "current-tax-cash-payment-bridge",
+  "modelSha256": "00ccd8a79b9d66d364096c37f10f19ce10afa8f698baff2d15b95b320bfaa20d",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Higher closing tax payable",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Required source input missing",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

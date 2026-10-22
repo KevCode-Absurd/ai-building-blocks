@@ -1,0 +1,9 @@
+{
+  "cash_before_fixed": 300,
+  "cash_taxes": 20,
+  "maintenance_capex": 30,
+  "interest": 40,
+  "principal": 80,
+  "rent": 60,
+  "required_cover": 1.2
+}

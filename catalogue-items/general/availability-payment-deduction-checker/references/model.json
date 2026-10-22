@@ -1,0 +1,125 @@
+{
+  "inputs": [
+    {
+      "id": "gross_payment",
+      "label": "gross payment",
+      "value": 500,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "approved_deduction",
+      "label": "approved deduction",
+      "value": 50,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "deduction_cap",
+      "label": "deduction cap",
+      "value": 100,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "other_charges",
+      "label": "other charges",
+      "value": 20,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "operating_cost",
+      "label": "operating cost",
+      "value": 100,
+      "unit": "USD / stated period",
+      "min": 0
+    }
+  ],
+  "calculations": [
+    {
+      "id": "applied_deduction",
+      "label": "applied deduction",
+      "op": "min",
+      "args": [
+        "approved_deduction",
+        "deduction_cap"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "excess_claimed",
+      "label": "excess claimed",
+      "op": "sub",
+      "args": [
+        "approved_deduction",
+        "applied_deduction"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "after_deduction",
+      "label": "after deduction",
+      "op": "sub",
+      "args": [
+        "gross_payment",
+        "applied_deduction"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "net_payment",
+      "label": "net payment",
+      "op": "sub",
+      "args": [
+        "after_deduction",
+        "other_charges"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "operating_cash",
+      "label": "operating cash",
+      "op": "sub",
+      "args": [
+        "net_payment",
+        "operating_cost"
+      ],
+      "unit": "USD / stated period"
+    }
+  ],
+  "outputs": [
+    "applied_deduction",
+    "excess_claimed",
+    "net_payment",
+    "operating_cash"
+  ],
+  "expected": {
+    "applied_deduction": 50,
+    "excess_claimed": 0,
+    "net_payment": 430,
+    "operating_cash": 330
+  },
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "inputs": {
+        "approved_deduction": 150
+      },
+      "expected": {
+        "applied_deduction": 100,
+        "excess_claimed": 50,
+        "net_payment": 380,
+        "operating_cash": 280
+      }
+    },
+    {
+      "name": "Missing or invalid required input",
+      "inputs": {
+        "gross_payment": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only in USD unless labelled otherwise. The model is the focused stated schedule, not a complete company forecast. Annual end-period cash is used unless the inputs state another convention."
+}

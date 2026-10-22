@@ -1,0 +1,72 @@
+new_slug: reconcile-property-nav-and-book-value
+name: Reconcile property NAV and book value
+headline: Reconcile property NAV and book value
+summary: Explain the difference between supplied property NAV and reported common book value per share.
+job: money-and-investing
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: A linked property NAV and book-value bridge with source-dated differences. Share appraisals, balance sheet, property/other net asset perimeter, tax adjustments, equity movements and closing share ledger.
+explain: |-
+  A linked property NAV and book-value bridge with source-dated differences.
+
+  Public-market financial modelling. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+when:
+  - You need a linked property NAV and book-value bridge with source-dated differences.
+  - You work on public-market financial modelling and need traceable calculations.
+  - A reviewer needs to trace the result back to inputs and assumptions.
+you_give:
+  - Appraisals, balance sheet, property/other net asset perimeter, tax adjustments, equity movements and closing share ledger.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - A linked property NAV and book-value bridge with source-dated differences.
+  - Original step files, financial assumptions, source coverage and a governing handoff summary.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: Book value per share roll-forward
+    text: Use actual sourced schedules in one linked native workbook; example values are illustrative and must not become issuer inputs. Prove closing reported common equity and actual closing shares from the equity statement; retain book values for every asset and liability used.
+  - title: Investment property NAV bridge
+    text: Use the same date and shares, replace only the evidenced property book values with supplied appraisals and reconcile tax/debt conventions. Explain the complete NAV-to-book difference rather than treating appraisal uplift as earnings.
+output_shape: |-
+  A linked property NAV and book-value bridge with source-dated differences.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: Common shares and liability perimeters match; NAV-to-book differences reconcile to disclosed valuation/tax adjustments; appraisal inputs are sourced and no valuation is invented.
+judge:
+  - Common shares and liability perimeters match; NAV-to-book differences reconcile to disclosed valuation/tax adjustments; appraisal inputs are sourced and no valuation is invented.
+  - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
+  - Reconcile opening balances, additions, deductions and closing balances. Match enterprise or equity cash flows to the corresponding discount rate.
+  - Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
+test:
+  - Try a small sourced case and inspect every component handoff.
+  - Remove one required source and confirm the affected step stops.
+  - Change a currency, date or accounting definition and check the conflict stays visible.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

@@ -1,0 +1,13 @@
+{
+  "deployedOn": "2026-10-22T17:19:27.238Z",
+  "status": "deployed-awaiting-public-verification",
+  "environment": "staging",
+  "origin": "https://ai-building-blocks-staging.kevinmark7498.workers.dev",
+  "previousVersionId": "13610a91-1509-48c3-8f7a-d6b7aab775ce",
+  "versionId": "410605dc-57af-4e26-8b85-dc83a0125d7f",
+  "releaseRoot": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r18-finance",
+  "workerSha256": "e0eabe892d923971589729a486e791878aa6e5c74d1e4e38c4aee7bb10c54a00",
+  "catalogueSha256": "5c4afed89a5a43a4ffe8b173ae79cf9b8f4e4a555bf9319e23cb19bc86a6395d",
+  "bindingsPreserved": 21,
+  "cliExitCode": 0
+}

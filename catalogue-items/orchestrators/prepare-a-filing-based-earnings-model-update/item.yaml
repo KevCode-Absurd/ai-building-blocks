@@ -1,0 +1,51 @@
+slug: prepare-a-filing-based-earnings-model-update
+name: Prepare a filing-based earnings model update
+summary: Update a sourced earnings workbook while keeping periods, shares, adjustments, taxes and OCI reconciled.
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: spreadsheet
+    required: true
+  - type: audit_report
+    required: true
+  - type: document
+    required: true
+uses:
+  - trailing-period-financial-bridge
+  - weighted-average-share-schedule
+  - purchased-amortization-eps-bridge
+  - current-tax-cash-payment-bridge
+  - oci-reclassification-bridge
+steps:
+  - uses: trailing-period-financial-bridge
+    note: Use actual sourced schedules in one linked native workbook; example values are illustrative and must not become issuer inputs. Map restated annual/YTD additive earnings lines to trailing periods; retain prior source versions and document every changed period or definition.
+  - uses: weighted-average-share-schedule
+    note: Rebuild each required weighted denominator from actual transactions. A trailing EPS denominator must be constructed for its actual interval, not formed by adding quarterly weighted shares.
+  - uses: purchased-amortization-eps-bridge
+    note: Update the actual charge and attributable recognized tax effect against matching reported ordinary income and sourced diluted shares; basic weighted shares feed this only when no dilution is evidenced.
+  - uses: current-tax-cash-payment-bridge
+    note: Reconcile current tax expense/payables to cash taxes separately from the non-GAAP tax adjustment; retained deferred-tax differences must not become cash.
+  - uses: oci-reclassification-bridge
+    note: Trace permitted recycling changes to both profit and OCI and prove conservation before issuing the update; list source changes and unresolved model checks for the reviewer.
+execution: coordinator
+origin: own
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/finance-expansion
+example_pending: true
+warnings:
+  - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+credits:
+  - title: Original finance methods and model fixtures
+    by: AI Blocks contributors
+    used: Original instructions, calculations and illustrative examples. External method references are linked separately and retain their own rights.

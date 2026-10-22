@@ -1,0 +1,143 @@
+{
+  "inputs": [
+    {
+      "id": "prior",
+      "label": "Reported prior revenue",
+      "value": 100,
+      "unit": "USD million",
+      "min": 0.001,
+      "max": 1000000000
+    },
+    {
+      "id": "current",
+      "label": "Reported current revenue",
+      "value": 130,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "acquired",
+      "label": "Current acquired-business revenue excluded",
+      "value": 20,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "disposedPrior",
+      "label": "Prior disposed-business revenue excluded",
+      "value": 10,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "fxEffect",
+      "label": "Signed current currency contribution",
+      "value": 5,
+      "unit": "USD million",
+      "min": -1000000000,
+      "max": 1000000000
+    }
+  ],
+  "calculations": [
+    {
+      "id": "comparablePrior",
+      "label": "Comparable prior revenue",
+      "op": "sub",
+      "args": [
+        "prior",
+        "disposedPrior"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "currentExAcquired",
+      "label": "Current revenue excluding acquisitions",
+      "op": "sub",
+      "args": [
+        "current",
+        "acquired"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "comparableCurrent",
+      "label": "Comparable current at constant currency",
+      "op": "sub",
+      "args": [
+        "currentExAcquired",
+        "fxEffect"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "positivePrior",
+      "label": "Positive comparable prior denominator required",
+      "op": "max",
+      "args": [
+        "comparablePrior",
+        0
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "ratio",
+      "label": "Comparable revenue ratio",
+      "op": "div",
+      "args": [
+        "comparableCurrent",
+        "positivePrior"
+      ],
+      "unit": "times"
+    },
+    {
+      "id": "organicGrowth",
+      "label": "Comparable organic growth",
+      "op": "sub",
+      "args": [
+        "ratio",
+        1
+      ],
+      "unit": "decimal"
+    }
+  ],
+  "outputs": [
+    "comparablePrior",
+    "comparableCurrent",
+    "organicGrowth"
+  ],
+  "expected": {
+    "comparablePrior": 90,
+    "comparableCurrent": 105,
+    "organicGrowth": 0.16666666666666666
+  },
+  "cases": [
+    {
+      "name": "Smaller acquired-business contribution",
+      "inputs": {
+        "acquired": 15
+      },
+      "expected": {
+        "comparableCurrent": 110,
+        "organicGrowth": 0.2222222222222222
+      }
+    },
+    {
+      "name": "Missing required reported input",
+      "inputs": {
+        "prior": null
+      },
+      "error": true
+    },
+    {
+      "name": "Disposed business exceeds prior revenue",
+      "inputs": {
+        "disposedPrior": 110
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures. Prior comparable revenue100-10=90; current comparable130-20-5=105. Growth105/90-1=16.666667%. Acquired revenue15 gives110/90-1=22.222222%."
+}

@@ -1,0 +1,17 @@
+{
+  "slug": "shareholder-distribution-coverage",
+  "modelSha256": "5e80e9b42858dd6dad53a9d64ae59975d48d954772dbea8f8c00512830f0571b",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Lower executed repurchases",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required source input",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

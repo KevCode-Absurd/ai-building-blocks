@@ -1,0 +1,99 @@
+{
+  "inputs": [
+    {
+      "id": "issuedShares",
+      "label": "Net employee shares actually issued",
+      "value": 3,
+      "unit": "million shares",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "price",
+      "label": "Repurchase execution-price scenario",
+      "value": 20,
+      "unit": "USD per share",
+      "min": 0.000001,
+      "max": 1000000000
+    },
+    {
+      "id": "proceeds",
+      "label": "Employee exercise proceeds",
+      "value": 10,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "reportedSbc",
+      "label": "Reported compensation expense",
+      "value": 40,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    }
+  ],
+  "calculations": [
+    {
+      "id": "grossCost",
+      "label": "Gross share-offset cash",
+      "op": "mul",
+      "args": [
+        "issuedShares",
+        "price"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "netCashCost",
+      "label": "Share-offset cash less exercise proceeds",
+      "op": "sub",
+      "args": [
+        "grossCost",
+        "proceeds"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "difference",
+      "label": "Net cash cost less accounting expense",
+      "op": "sub",
+      "args": [
+        "netCashCost",
+        "reportedSbc"
+      ],
+      "unit": "USD million"
+    }
+  ],
+  "outputs": [
+    "grossCost",
+    "netCashCost",
+    "difference"
+  ],
+  "expected": {
+    "grossCost": 60,
+    "netCashCost": 50,
+    "difference": 10
+  },
+  "cases": [
+    {
+      "name": "Lower repurchase price scenario",
+      "inputs": {
+        "price": 15
+      },
+      "expected": {
+        "grossCost": 45,
+        "netCashCost": 35,
+        "difference": -5
+      }
+    },
+    {
+      "name": "Required source input missing",
+      "inputs": {
+        "issuedShares": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures.Three million issued shares×$20 cost60 to offset; employee proceeds10 reduce net cash to50,10 above reported expense40. Price15 makes gross45, net35 and a negative5 comparison."
+}

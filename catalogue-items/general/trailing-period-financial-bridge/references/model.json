@@ -1,0 +1,75 @@
+{
+  "inputs": [
+    {
+      "id": "annual",
+      "label": "Last full-year additive flow",
+      "value": 100,
+      "unit": "USD million",
+      "min": -1000000000,
+      "max": 1000000000
+    },
+    {
+      "id": "currentYtd",
+      "label": "Current year-to-date flow",
+      "value": 40,
+      "unit": "USD million",
+      "min": -1000000000,
+      "max": 1000000000
+    },
+    {
+      "id": "priorYtd",
+      "label": "Matching prior year-to-date flow",
+      "value": 30,
+      "unit": "USD million",
+      "min": -1000000000,
+      "max": 1000000000
+    }
+  ],
+  "calculations": [
+    {
+      "id": "annualPlusCurrent",
+      "label": "Annual plus current YTD",
+      "op": "add",
+      "args": [
+        "annual",
+        "currentYtd"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "trailing",
+      "label": "Trailing-year additive flow",
+      "op": "sub",
+      "args": [
+        "annualPlusCurrent",
+        "priorYtd"
+      ],
+      "unit": "USD million"
+    }
+  ],
+  "outputs": [
+    "trailing"
+  ],
+  "expected": {
+    "trailing": 110
+  },
+  "cases": [
+    {
+      "name": "Higher current YTD flow",
+      "inputs": {
+        "currentYtd": 50
+      },
+      "expected": {
+        "trailing": 120
+      }
+    },
+    {
+      "name": "Missing required reported input",
+      "inputs": {
+        "annual": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures. Annual100 + current YTD40 - matching prior YTD30 = trailing110. Current YTD50 gives120. This identity must not be applied to EPS or balance-sheet stocks."
+}

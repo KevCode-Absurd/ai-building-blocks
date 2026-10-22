@@ -1,0 +1,22 @@
+{
+  "slug": "cash-funded-buyback-eps-bridge",
+  "modelSha256": "7fd2be4af1e28d5fc4b3431c3a873a1e1af0d0e45fb0281fccd8989688b10f91",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Cash earns no return",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required source input",
+      "kind": "refusal",
+      "status": "pass"
+    },
+    {
+      "name": "Repurchase would remove all shares",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "basis": "Illustrative figures only.",
+  "outputs": {
+    "net_initial_outlay": 800,
+    "present_future_cash": 1000,
+    "incremental_npv": 200,
+    "undiscounted_net": 200
+  }
+}

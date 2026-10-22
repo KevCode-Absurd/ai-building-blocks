@@ -1,0 +1,102 @@
+{
+  "inputs": [
+    {
+      "id": "sellerProceeds",
+      "label": "seller Proceeds",
+      "value": 40,
+      "unit": "USD millions",
+      "min": 0
+    },
+    {
+      "id": "rolloverFraction",
+      "label": "rollover Fraction",
+      "value": 0.25,
+      "unit": "fraction",
+      "min": 0,
+      "max": 1
+    },
+    {
+      "id": "sponsorCash",
+      "label": "sponsor Cash",
+      "value": 30,
+      "unit": "USD millions",
+      "min": 0.000001
+    }
+  ],
+  "calculations": [
+    {
+      "id": "rolledEquity",
+      "label": "rolled Equity",
+      "op": "mul",
+      "args": [
+        "sellerProceeds",
+        "rolloverFraction"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "sellerCash",
+      "label": "seller Cash",
+      "op": "sub",
+      "args": [
+        "sellerProceeds",
+        "rolledEquity"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "totalEquity",
+      "label": "total Equity",
+      "op": "add",
+      "args": [
+        "rolledEquity",
+        "sponsorCash"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "sellerOwnership",
+      "label": "seller Ownership",
+      "op": "div",
+      "args": [
+        "rolledEquity",
+        "totalEquity"
+      ],
+      "unit": "fraction"
+    }
+  ],
+  "outputs": [
+    "rolledEquity",
+    "sellerCash",
+    "totalEquity",
+    "sellerOwnership"
+  ],
+  "expected": {
+    "rolledEquity": 10,
+    "sellerCash": 30,
+    "totalEquity": 40,
+    "sellerOwnership": 0.25
+  },
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "inputs": {
+        "rolloverFraction": 0.5
+      },
+      "expected": {
+        "rolledEquity": 20,
+        "sellerCash": 20,
+        "totalEquity": 50,
+        "sellerOwnership": 0.4
+      }
+    },
+    {
+      "name": "Missing required number",
+      "inputs": {
+        "sellerProceeds": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only. 25% of40 rolls10 beside sponsor30, giving25% ownership and30 cash.50% rolls20 for40% ownership and20 cash."
+}

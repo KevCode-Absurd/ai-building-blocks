@@ -1,0 +1,22 @@
+{
+  "slug": "option-pool-top-up-checker",
+  "modelSha256": "2c9b7c31fb0f8fe871e14895b909fd937d5d474bb1fc3e10043ef12bc5e08dcb",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required number",
+      "kind": "refusal",
+      "status": "pass"
+    },
+    {
+      "name": "Refuse reserve exceeding total shares",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

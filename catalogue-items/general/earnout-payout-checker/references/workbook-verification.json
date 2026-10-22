@@ -1,0 +1,32 @@
+{
+  "engine": "Artifact Tool",
+  "scope": "Illustrative workbook calculations, not source truth or an actual investment conclusion. Native Microsoft Excel application execution is not claimed.",
+  "modelSha256": "42ee3b1c528b41895cc2d6191fe257daea9e56fbfa26300f572ce34ab1741487",
+  "xlsxSha256": "0b51a1ea9d5766c0ef9a125ade90fd7e62213d8f06b9d64270c84f3d178010d1",
+  "baseline": "pass",
+  "changedInputCase": "Hand-derived changed-input golden",
+  "invalidInputCase": "Missing required number",
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required number",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ],
+  "reopenedAndRecalculated": true,
+  "rendered": true,
+  "visualReview": "pass",
+  "workbookSpecSha256": "10a0a5f079e0d50df5db19d093e9a167d16be1387b6eb55eb1f59e086694be03",
+  "visualEvidence": {
+    "report": "reports/finance-private-deals-peer-review.json",
+    "reportSha256": "8867c9111d80d78865752f2b95eba89b6b518fd8bc768452b70057ad5c0dcc23",
+    "previewSha256": "17653333f6e58e8e38bd089158bd5949f2e020506fe11401fb1345173db1fd93",
+    "sheet": "Model",
+    "sourceSpecSha256": "9b4911707bcbcc7bcb39981c88ffd91a504eb1ef8eebe9052918d11b04a50b37"
+  }
+}

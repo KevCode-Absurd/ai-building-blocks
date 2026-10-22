@@ -1,0 +1,157 @@
+{
+  "inputs": [
+    {
+      "id": "opening_bank_cash",
+      "label": "opening bank cash",
+      "value": 1200,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "opening_restricted_cash",
+      "label": "opening restricted cash",
+      "value": 500,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "restricted_receipts",
+      "label": "restricted receipts",
+      "value": 300,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "unrestricted_receipts",
+      "label": "unrestricted receipts",
+      "value": 100,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "approved_restricted_payments",
+      "label": "approved restricted payments",
+      "value": 200,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "other_payments",
+      "label": "other payments",
+      "value": 100,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "restricted_refunds",
+      "label": "restricted refunds",
+      "value": 50,
+      "unit": "USD / stated period",
+      "min": 0
+    }
+  ],
+  "calculations": [
+    {
+      "id": "restricted_sources",
+      "label": "restricted sources",
+      "op": "sum",
+      "args": [
+        "opening_restricted_cash",
+        "restricted_receipts"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "restricted_uses",
+      "label": "restricted uses",
+      "op": "sum",
+      "args": [
+        "approved_restricted_payments",
+        "restricted_refunds"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "ending_restricted_cash",
+      "label": "ending restricted cash",
+      "op": "sub",
+      "args": [
+        "restricted_sources",
+        "restricted_uses"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "bank_sources",
+      "label": "bank sources",
+      "op": "sum",
+      "args": [
+        "opening_bank_cash",
+        "restricted_receipts",
+        "unrestricted_receipts"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "bank_uses",
+      "label": "bank uses",
+      "op": "sum",
+      "args": [
+        "approved_restricted_payments",
+        "other_payments",
+        "restricted_refunds"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "ending_bank_cash",
+      "label": "ending bank cash",
+      "op": "sub",
+      "args": [
+        "bank_sources",
+        "bank_uses"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "general_cash",
+      "label": "general cash",
+      "op": "sub",
+      "args": [
+        "ending_bank_cash",
+        "ending_restricted_cash"
+      ],
+      "unit": "USD / stated period"
+    }
+  ],
+  "outputs": [
+    "ending_restricted_cash",
+    "ending_bank_cash",
+    "general_cash"
+  ],
+  "expected": {
+    "ending_restricted_cash": 550,
+    "ending_bank_cash": 1250,
+    "general_cash": 700
+  },
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "inputs": {
+        "other_payments": 200
+      },
+      "expected": {
+        "ending_bank_cash": 1150,
+        "general_cash": 600
+      }
+    },
+    {
+      "name": "Missing or invalid required input",
+      "inputs": {
+        "opening_bank_cash": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only in USD unless labelled otherwise. This focused operating schedule does not establish a complete business forecast, accounting treatment, market price or approval."
+}

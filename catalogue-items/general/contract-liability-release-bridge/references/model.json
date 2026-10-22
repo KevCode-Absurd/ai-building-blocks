@@ -1,0 +1,126 @@
+{
+  "inputs": [
+    {
+      "id": "opening",
+      "label": "Opening contract liability",
+      "value": 100,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "additions",
+      "label": "New deferred consideration additions",
+      "value": 80,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "other",
+      "label": "Signed other liability additions",
+      "value": 0,
+      "unit": "USD million",
+      "min": -1000000000,
+      "max": 1000000000
+    },
+    {
+      "id": "closing",
+      "label": "Closing contract liability",
+      "value": 120,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "disclosedRelease",
+      "label": "Disclosed total release",
+      "value": 60,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "totalRevenue",
+      "label": "Total recognized revenue",
+      "value": 150,
+      "unit": "USD million",
+      "min": 0.001,
+      "max": 1000000000
+    }
+  ],
+  "calculations": [
+    {
+      "id": "available",
+      "label": "Liability before revenue releases",
+      "op": "add",
+      "args": [
+        "opening",
+        "additions",
+        "other"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "release",
+      "label": "Inferred revenue release",
+      "op": "sub",
+      "args": [
+        "available",
+        "closing"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "residual",
+      "label": "Disclosed less inferred release",
+      "op": "sub",
+      "args": [
+        "disclosedRelease",
+        "release"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "releaseShare",
+      "label": "Release as share of total revenue",
+      "op": "div",
+      "args": [
+        "release",
+        "totalRevenue"
+      ],
+      "unit": "decimal"
+    }
+  ],
+  "outputs": [
+    "release",
+    "residual",
+    "releaseShare"
+  ],
+  "expected": {
+    "release": 60,
+    "residual": 0,
+    "releaseShare": 0.4
+  },
+  "cases": [
+    {
+      "name": "Higher closing deferred balance",
+      "inputs": {
+        "closing": 130
+      },
+      "expected": {
+        "release": 50,
+        "residual": 10,
+        "releaseShare": 0.3333333333333333
+      }
+    },
+    {
+      "name": "Missing required reported input",
+      "inputs": {
+        "opening": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures.100 opening+80 additions-120 closing=60 releases, matching the disclosure and40% of150 total revenue. Closing130 implies50 releases and a10 unexplained difference."
+}

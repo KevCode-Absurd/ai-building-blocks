@@ -1,0 +1,32 @@
+{
+  "engine": "Artifact Tool",
+  "scope": "Illustrative workbook calculations, not source truth or an actual investment conclusion. Native Microsoft Excel application execution is not claimed.",
+  "modelSha256": "acce65b8028ae632164332ee82c14fdf5484e9738e4bda3fd3b0229a4b2a0219",
+  "xlsxSha256": "369b23dbf5877db592c8bceba521ad98ae7fd04e13785579f791c894d57dc24f",
+  "baseline": "pass",
+  "changedInputCase": "Additional dividend",
+  "invalidInputCase": "Missing required source input",
+  "cases": [
+    {
+      "name": "Additional dividend",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required source input",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ],
+  "reopenedAndRecalculated": true,
+  "rendered": true,
+  "visualReview": "pass",
+  "workbookSpecSha256": "a4bf195b1c7c6bda261f82afc56f09e717810ff0b5b54758cd89ad72c3fdc15b",
+  "visualEvidence": {
+    "report": "reports/finance-public-markets-peer-review.json",
+    "reportSha256": "f73f6f5598ba0647c477c547d2776f1221130bb7861b62def472b74331866282",
+    "previewSha256": "8746cf51917d9adaebd0dae9d550cfd5175823c31d17a80fa9fad2958ee63977",
+    "sheet": "Model",
+    "sourceSpecSha256": "05321289d752e066778d8e88f0daa694ce4c694290ea9ff69473f7052839a85d"
+  }
+}

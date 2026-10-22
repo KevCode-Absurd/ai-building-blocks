@@ -1,0 +1,17 @@
+{
+  "slug": "debt-repayment-sculpting-planner",
+  "modelSha256": "cf69948d0ccec3eb46ab8d8158bf9a19e0bc5f6118afd2fb32bc31062f8dff76",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing or invalid required input",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

@@ -1,0 +1,3218 @@
+{
+  "date": "2026-10-22",
+  "source_path": "tools/finance-expansion/operating-credit.json",
+  "source_sha256": "60d93de7e6e48848caad32fe9893f65cc58520a0d6a66d5c6f2974aac9fba21b",
+  "status": "pass",
+  "scope": "Independent full70 source/method/duplicate review; all40 baseline and changed/refusal cases; actual PNG layout inspection of unchanged examples and final revised examples when supplied. No source edits to reviewed shard.",
+  "issues": [],
+  "counts": {
+    "skills": 40,
+    "workflows": 20,
+    "agents": 10,
+    "source_items": 70,
+    "baseline_pass": 40,
+    "changed_pass": 41,
+    "refusal_pass": 43,
+    "total_model_fixtures": 124,
+    "actual_native_png_inspections": 40
+  },
+  "items": [
+    {
+      "slug": "restricted-cash-availability-checker",
+      "kind": "skill",
+      "source_spec_sha256": "8df0ab20a9e99a01e4ae7a4f94ba1cf7e5dd8e1395866519f45347a9ea4f18c8",
+      "model_sha256": "bac0c2d2dd231d36ca6715d5b89661a05a004703a0ad366dacc9039e790174c7",
+      "status": "pass",
+      "issues": [],
+      "method_review": "1000 less200 restrictions,100 collateral and50 pending debits=650; versus700 minimum gives50 gap. Distinct availability perimeter, not generic cash ratio.",
+      "distinct_from": [
+        {
+          "slug": "cash-and-currency-risk-planner",
+          "why": "Separates encumbered cash and transfer barriers explicitly before settlement; existing broad treasury report does not provide this controlled availability bridge."
+        }
+      ],
+      "cases": [
+        {
+          "name": "Restriction released by supplied evidence",
+          "kind": "changed",
+          "status": "pass"
+        },
+        {
+          "name": "Missing gross cash",
+          "kind": "refusal",
+          "status": "pass",
+          "refusal_message": "gross_cash must be a finite number."
+        }
+      ],
+      "visual_review": {
+        "status": "pass",
+        "inspected": true,
+        "method": "Actual rendered PNG inspected through view_image; revised seven final previews re-viewed after regeneration and unchanged other33 verified by exact PNG hash.",
+        "findings": [],
+        "notes": "Clear title, illustrative label, outputs and units first, transparent calculation rows, blue editable inputs and readable scope/reference footer. No clipped labels, overlapping rows, formula errors or unreadable monetary/percentage values observed."
+      },
+      "source_path": "tools/finance-expansion/operating-credit.json",
+      "source_pointer": "/skills/0",
+      "xlsx_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\restricted-cash-availability-checker.xlsx",
+      "png_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\restricted-cash-availability-checker.png",
+      "xlsx_sha256": "e014bbfdac3fca5e1fd3f35b73a9335e62ca1b726b23e83f0c01e19c993de517",
+      "png_sha256": "74d13a9229758acd537a3c795e8842fbb6edb3a6fd63ff631bf7b0ab0c2f6043",
+      "workbook_spec_sha256": "91991d087bfd2be9563ad3fdd94324795ae56161dc5755c10ee8fa1007456f0c",
+      "native_author_checks": {
+        "status": "pass",
+        "reopenedAndRecalculated": true,
+        "cases": [
+          {
+            "name": "Restriction released by supplied evidence",
+            "kind": "changed-input",
+            "status": "pass"
+          },
+          {
+            "name": "Missing gross cash",
+            "kind": "refusal",
+            "status": "pass"
+          }
+        ],
+        "formulaCount": 5
+      }
+    },
+    {
+      "slug": "settlement-liquidity-ladder-builder",
+      "kind": "skill",
+      "source_spec_sha256": "631478d561029a63fa90c0c0617c461200f969554113dedcb244157c24a113af",
+      "model_sha256": "0572079032a61c77ee708f6dd8f689b8b61dd392d05c0a98344c8871240ce694",
+      "status": "pass",
+      "issues": [],
+      "method_review": "Ordered buckets close at40,-20,60; minimum -20 establishes20 peak liquidity gap. Changed second receipt40 leaves10,90. Intraday ordering preserved.",
+      "distinct_from": [
+        {
+          "slug": "cash-forecast-builder",
+          "why": "Builds ordered intraday settlement buckets and minimum liquidity, rather than 30/60/90-day forecast bands or a generic runway estimate."
+        }
+      ],
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required evidence refuses calculation",
+          "kind": "refusal",
+          "status": "pass",
+          "refusal_message": "opening must be a finite number."
+        }
+      ],
+      "visual_review": {
+        "status": "pass",
+        "inspected": true,
+        "method": "Actual rendered PNG inspected through view_image; revised seven final previews re-viewed after regeneration and unchanged other33 verified by exact PNG hash.",
+        "findings": [],
+        "notes": "Clear title, illustrative label, outputs and units first, transparent calculation rows, blue editable inputs and readable scope/reference footer. No clipped labels, overlapping rows, formula errors or unreadable monetary/percentage values observed."
+      },
+      "source_path": "tools/finance-expansion/operating-credit.json",
+      "source_pointer": "/skills/1",
+      "xlsx_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\settlement-liquidity-ladder-builder.xlsx",
+      "png_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\settlement-liquidity-ladder-builder.png",
+      "xlsx_sha256": "b061aa73ee9c081523687e761bdc5ff50905fb84dbac30213ab3a952a1f43229",
+      "png_sha256": "8fce293eee4ad2c3f71f76b39d6ed27b42321fc6ac67575d169c04c4856fbcd9",
+      "workbook_spec_sha256": "846b40a2089a511ad069b6839a3032bab0d7f06a03058c66bbc63997d047394f",
+      "native_author_checks": {
+        "status": "pass",
+        "reopenedAndRecalculated": true,
+        "cases": [
+          {
+            "name": "Changed source assumption, hand-calculated result",
+            "kind": "changed-input",
+            "status": "pass"
+          },
+          {
+            "name": "Missing required evidence refuses calculation",
+            "kind": "refusal",
+            "status": "pass"
+          }
+        ],
+        "formulaCount": 9
+      }
+    },
+    {
+      "slug": "cash-pool-interest-allocator",
+      "kind": "skill",
+      "source_spec_sha256": "fb9f6cf331d05f8b888a50d69da34c4c28384bfc6a116d8a35559ed86a3bda46",
+      "model_sha256": "cb62a24b6b01ed64e84a62b822008a596b3675b35a9b9981b7247a847a4c2c1d",
+      "status": "pass",
+      "issues": [],
+      "method_review": "Deposit interest1000×3%×30/360=2.5 and borrowing600×5%×30/360=2.5; supplied center credit3 leaves0.5 residual. External pool economics are not inferred.",
+      "distinct_from": [
+        {
+          "slug": "cash-and-currency-risk-planner",
+          "why": "Allocates signed intercompany cash-pool interest with a balancing pool-center residual; broad treasury sweeps do not supply this entity-level calculation."
+        }
+      ],
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required evidence refuses calculation",
+          "kind": "refusal",
+          "status": "pass",
+          "refusal_message": "deposit_principal must be a finite number."
+        }
+      ],
+      "visual_review": {
+        "status": "pass",
+        "inspected": true,
+        "method": "Actual rendered PNG inspected through view_image; revised seven final previews re-viewed after regeneration and unchanged other33 verified by exact PNG hash.",
+        "findings": [],
+        "notes": "Clear title, illustrative label, outputs and units first, transparent calculation rows, blue editable inputs and readable scope/reference footer. No clipped labels, overlapping rows, formula errors or unreadable monetary/percentage values observed."
+      },
+      "source_path": "tools/finance-expansion/operating-credit.json",
+      "source_pointer": "/skills/2",
+      "xlsx_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\cash-pool-interest-allocator.xlsx",
+      "png_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\cash-pool-interest-allocator.png",
+      "xlsx_sha256": "b6429f67acbb6eede9b66159c18fa664f0ddb4ac2006cfc6e895962740c839b9",
+      "png_sha256": "4a8852fcdbae186b88bdbf4f265bc5a6b93aca1d9c14a944a76e2bcc4882d457",
+      "workbook_spec_sha256": "9b3ff5797f4ccdb85b804cd3de42ba6fb1fb7f95719099de326ddc447db5808c",
+      "native_author_checks": {
+        "status": "pass",
+        "reopenedAndRecalculated": true,
+        "cases": [
+          {
+            "name": "Changed source assumption, hand-calculated result",
+            "kind": "changed-input",
+            "status": "pass"
+          },
+          {
+            "name": "Missing required evidence refuses calculation",
+            "kind": "refusal",
+            "status": "pass"
+          }
+        ],
+        "formulaCount": 4
+      }
+    },
+    {
+      "slug": "currency-exposure-netting-checker",
+      "kind": "skill",
+      "source_spec_sha256": "5648a53d068cb25c4ebdca02e7d7c31aa762ed76db45b67abb5b25ab0f530ffc",
+      "model_sha256": "d277a677136e706fea2facb6e119ded1e82146706c3fa9d10cab42373a314c2c",
+      "status": "pass",
+      "issues": [],
+      "method_review": "100+20-60-10=50 foreign units; signed hedge -30 leaves20. At1.1 value22 and1.2 value24, move2. Hedge direction remains explicit.",
+      "distinct_from": [
+        {
+          "slug": "cash-and-currency-risk-planner",
+          "why": "Produces dated currency-unit exposure and settlement mismatch rather than a broad hedge recommendation or unsupported VaR estimate."
+        }
+      ],
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required evidence refuses calculation",
+          "kind": "refusal",
+          "status": "pass",
+          "refusal_message": "receivables must be a finite number."
+        }
+      ],
+      "visual_review": {
+        "status": "pass",
+        "inspected": true,
+        "method": "Actual rendered PNG inspected through view_image; revised seven final previews re-viewed after regeneration and unchanged other33 verified by exact PNG hash.",
+        "findings": [],
+        "notes": "Clear title, illustrative label, outputs and units first, transparent calculation rows, blue editable inputs and readable scope/reference footer. No clipped labels, overlapping rows, formula errors or unreadable monetary/percentage values observed."
+      },
+      "source_path": "tools/finance-expansion/operating-credit.json",
+      "source_pointer": "/skills/3",
+      "xlsx_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\currency-exposure-netting-checker.xlsx",
+      "png_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\currency-exposure-netting-checker.png",
+      "xlsx_sha256": "122f46506c0ca78c53ca02c79839fdb0f7d1d4bb455e78aae936ca7b5ff242b3",
+      "png_sha256": "a6bf1ea048a5d4100a26c7b225e23140c94c3187772488f2ea91f93e8c7d3c16",
+      "workbook_spec_sha256": "50fef18c687442146625c4c11a17a74f86fd27d8e09ad76cf169bfa18fcd6d24",
+      "native_author_checks": {
+        "status": "pass",
+        "reopenedAndRecalculated": true,
+        "cases": [
+          {
+            "name": "Changed source assumption, hand-calculated result",
+            "kind": "changed-input",
+            "status": "pass"
+          },
+          {
+            "name": "Missing required evidence refuses calculation",
+            "kind": "refusal",
+            "status": "pass"
+          }
+        ],
+        "formulaCount": 7
+      }
+    },
+    {
+      "slug": "currency-forward-settlement-checker",
+      "kind": "skill",
+      "source_spec_sha256": "31ee538dd8a60ce7014dda275673af4975eb5d570164e6883d4327ae01b08436",
+      "model_sha256": "4d5d64b53846812e254278c7f2370163856da9f1861700f9936474a1e50ffe72",
+      "status": "pass",
+      "issues": [],
+      "method_review": "100 forward foreign units at1.1 cost110; remaining payable20 at1.2 cost24 plus fee2 totals136. At1.3 total138. Existing buy-forward only, not fair value or advice.",
+      "distinct_from": [
+        {
+          "slug": "cash-and-currency-risk-planner",
+          "why": "Reconciles cash on one already contracted buy-forward and its payable, without claiming fair value, option pricing or a hedge recommendation."
+        }
+      ],
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required evidence refuses calculation",
+          "kind": "refusal",
+          "status": "pass",
+          "refusal_message": "forward_notional must be a finite number."
+        }
+      ],
+      "visual_review": {
+        "status": "pass",
+        "inspected": true,
+        "method": "Actual rendered PNG inspected through view_image; revised seven final previews re-viewed after regeneration and unchanged other33 verified by exact PNG hash.",
+        "findings": [],
+        "notes": "Clear title, illustrative label, outputs and units first, transparent calculation rows, blue editable inputs and readable scope/reference footer. No clipped labels, overlapping rows, formula errors or unreadable monetary/percentage values observed."
+      },
+      "source_path": "tools/finance-expansion/operating-credit.json",
+      "source_pointer": "/skills/4",
+      "xlsx_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\currency-forward-settlement-checker.xlsx",
+      "png_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\currency-forward-settlement-checker.png",
+      "xlsx_sha256": "e27dacae11fbc13c8ab963be9f738e043107646f27a942277d8d141a28a68294",
+      "png_sha256": "05df1dafd8e2873ff23de6a621e04f360aca3e26ef3e70d2e4a74f7f64e3a635",
+      "workbook_spec_sha256": "2f4b8206772bfc3f97d81d89de2b49e3c9723c7f95da76ffa1fcade49881c757",
+      "native_author_checks": {
+        "status": "pass",
+        "reopenedAndRecalculated": true,
+        "cases": [
+          {
+            "name": "Changed source assumption, hand-calculated result",
+            "kind": "changed-input",
+            "status": "pass"
+          },
+          {
+            "name": "Missing required evidence refuses calculation",
+            "kind": "refusal",
+            "status": "pass"
+          }
+        ],
+        "formulaCount": 6
+      }
+    },
+    {
+      "slug": "floating-rate-repricing-planner",
+      "kind": "skill",
+      "source_spec_sha256": "3230c2c97e8e5d975acf466592874dce85eb0fe700633ff55c2a29b7086fee10",
+      "model_sha256": "987c7dba9aa84044b6001a3b0d3b5816f128077c06a6b67f9d4161a0cf9a1031",
+      "status": "pass",
+      "issues": [],
+      "method_review": "1000×1%×0.5 plus500×2%×0.25=7.5 incremental cash interest; base60 becomes67.5. Separate repricing fractions prevent full-year overstatement.",
+      "distinct_from": [
+        {
+          "slug": "cash-and-currency-risk-planner",
+          "why": "Maps separate repricing fractions on two floating-rate facilities to incremental cash interest; it does not value swaps or advise hedges."
+        }
+      ],
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required evidence refuses calculation",
+          "kind": "refusal",
+          "status": "pass",
+          "refusal_message": "floating_a must be a finite number."
+        }
+      ],
+      "visual_review": {
+        "status": "pass",
+        "inspected": true,
+        "method": "Actual rendered PNG inspected through view_image; revised seven final previews re-viewed after regeneration and unchanged other33 verified by exact PNG hash.",
+        "findings": [],
+        "notes": "Clear title, illustrative label, outputs and units first, transparent calculation rows, blue editable inputs and readable scope/reference footer. No clipped labels, overlapping rows, formula errors or unreadable monetary/percentage values observed."
+      },
+      "source_path": "tools/finance-expansion/operating-credit.json",
+      "source_pointer": "/skills/5",
+      "xlsx_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\floating-rate-repricing-planner.xlsx",
+      "png_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\floating-rate-repricing-planner.png",
+      "xlsx_sha256": "ec1411f88bb9dcedae26c8445a19736a2563211ba24a3c02668cfdbd6fd04fa3",
+      "png_sha256": "980a1373c0db57d264772c763b4744e0ff92f77f9edb40e6edea525e7724fe57",
+      "workbook_spec_sha256": "f9c00edea31b1d0c821cd9c6aeeafa588eddd5c1bf3c19221e8d2d0a4c2c2c2e",
+      "native_author_checks": {
+        "status": "pass",
+        "reopenedAndRecalculated": true,
+        "cases": [
+          {
+            "name": "Changed source assumption, hand-calculated result",
+            "kind": "changed-input",
+            "status": "pass"
+          },
+          {
+            "name": "Missing required evidence refuses calculation",
+            "kind": "refusal",
+            "status": "pass"
+          }
+        ],
+        "formulaCount": 4
+      }
+    },
+    {
+      "slug": "bank-fee-reconciliation-checker",
+      "kind": "skill",
+      "source_spec_sha256": "cb94daec74e85afb31301cf5c330ac082d1950e3614dbc4c564f8920264cbddf",
+      "model_sha256": "5cbee2b8ecf60388a866e0b8ec23d4be4a9d64a2c3161934007f77cc8dc1640c",
+      "status": "pass",
+      "issues": [],
+      "method_review": "100×0.2 +50×0.1 +10=35 gross, less5 credit=30; bill33 differs3. Count150 givesnet40 and billed-minus-calculated -7.",
+      "distinct_from": [
+        {
+          "slug": "invoice-totals-checker",
+          "why": "Matches contracted service counts and credit allowances to billed bank charges; generic invoice arithmetic lacks balance-credit and service evidence."
+        }
+      ],
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required evidence refuses calculation",
+          "kind": "refusal",
+          "status": "pass",
+          "refusal_message": "payment_count must be a finite number."
+        }
+      ],
+      "visual_review": {
+        "status": "pass",
+        "inspected": true,
+        "method": "Actual rendered PNG inspected through view_image; revised seven final previews re-viewed after regeneration and unchanged other33 verified by exact PNG hash.",
+        "findings": [],
+        "notes": "Clear title, illustrative label, outputs and units first, transparent calculation rows, blue editable inputs and readable scope/reference footer. No clipped labels, overlapping rows, formula errors or unreadable monetary/percentage values observed."
+      },
+      "source_path": "tools/finance-expansion/operating-credit.json",
+      "source_pointer": "/skills/6",
+      "xlsx_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\bank-fee-reconciliation-checker.xlsx",
+      "png_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\bank-fee-reconciliation-checker.png",
+      "xlsx_sha256": "085c831d900def64163708876ec18a8d5288b4925e04db84115f3afe506f26dd",
+      "png_sha256": "7978131145e6614332b9f1363307ae638aaee5fb668738be80c7cf2f2bee5dbb",
+      "workbook_spec_sha256": "161b0020ca9cd195cb2dca91e3ff7557c4d3b45b9ec0b893c5877228d43df7dc",
+      "native_author_checks": {
+        "status": "pass",
+        "reopenedAndRecalculated": true,
+        "cases": [
+          {
+            "name": "Changed source assumption, hand-calculated result",
+            "kind": "changed-input",
+            "status": "pass"
+          },
+          {
+            "name": "Missing required evidence refuses calculation",
+            "kind": "refusal",
+            "status": "pass"
+          }
+        ],
+        "formulaCount": 6
+      }
+    },
+    {
+      "slug": "treasury-forecast-backtest-checker",
+      "kind": "skill",
+      "source_spec_sha256": "9814a701d656943d809fee2b08cb318bdc0ffb461b00cf0220daabdfab1919c2",
+      "model_sha256": "f51ce16a925efb32e097aff7b895992290fd70ffa1ee894d57cee62734318c80",
+      "status": "pass",
+      "issues": [],
+      "method_review": "Frozen signed forecast20,-10,30 versus actual10,0,20 gives absolute errors10 each, MAE10 and net bias -10. Opening100 ends140 forecast,130 actual.",
+      "distinct_from": [
+        {
+          "slug": "budget-variance-explainer",
+          "why": "Tests signed treasury flow errors and cumulative cash drift against frozen dated forecasts; broad budget variance does not distinguish net-flow bias from cash-balance drift."
+        }
+      ],
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required evidence refuses calculation",
+          "kind": "refusal",
+          "status": "pass",
+          "refusal_message": "opening must be a finite number."
+        }
+      ],
+      "visual_review": {
+        "status": "pass",
+        "inspected": true,
+        "method": "Actual rendered PNG inspected through view_image; revised seven final previews re-viewed after regeneration and unchanged other33 verified by exact PNG hash.",
+        "findings": [],
+        "notes": "Clear title, illustrative label, outputs and units first, transparent calculation rows, blue editable inputs and readable scope/reference footer. No clipped labels, overlapping rows, formula errors or unreadable monetary/percentage values observed."
+      },
+      "source_path": "tools/finance-expansion/operating-credit.json",
+      "source_pointer": "/skills/7",
+      "xlsx_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\treasury-forecast-backtest-checker.xlsx",
+      "png_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\treasury-forecast-backtest-checker.png",
+      "xlsx_sha256": "3b3db93733d5c2fa8a22ef5a80a32bc750239d2a6a04ccf8e8cb8ccbff2ddee8",
+      "png_sha256": "f6d8daae0c737222d6d57f013ce646fedc641f71cb61f1996e17435086a0f29a",
+      "workbook_spec_sha256": "95b5450cddbbf6b9733800c44564ce5c4d23d7b969ab83f3d07cab8ebf399ed1",
+      "native_author_checks": {
+        "status": "pass",
+        "reopenedAndRecalculated": true,
+        "cases": [
+          {
+            "name": "Changed source assumption, hand-calculated result",
+            "kind": "changed-input",
+            "status": "pass"
+          },
+          {
+            "name": "Missing required evidence refuses calculation",
+            "kind": "refusal",
+            "status": "pass"
+          }
+        ],
+        "formulaCount": 11
+      }
+    },
+    {
+      "slug": "receivables-borrowing-base-builder",
+      "kind": "skill",
+      "source_spec_sha256": "49cd9c1ebd1567a667ec32903bde3aac0fa1113400b30236073e42fc38efdfbf",
+      "model_sha256": "7c6e988a596194d83b0f44edad89b86b4f685412607522d5f265057e77a5105a",
+      "status": "pass",
+      "issues": [],
+      "method_review": "Gross1000 less nonoverlapping100 ineligibles and100 concentration excess gives800;80% advance640 less40 reserve=600. Changed ineligible200 yields520. Signed invalid-eligibility exceptions require correction, not certification.",
+      "distinct_from": [
+        {
+          "slug": "borrower-credit-memo-writer",
+          "why": "Builds a contract-defined receivables eligibility and concentration deduction schedule rather than broad credit ratios or a lender verdict."
+        }
+      ],
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required evidence refuses calculation",
+          "kind": "refusal",
+          "status": "pass",
+          "refusal_message": "gross_receivables must be a finite number."
+        }
+      ],
+      "visual_review": {
+        "status": "pass",
+        "inspected": true,
+        "method": "Actual rendered PNG inspected through view_image; revised seven final previews re-viewed after regeneration and unchanged other33 verified by exact PNG hash.",
+        "findings": [],
+        "notes": "Clear title, illustrative label, outputs and units first, transparent calculation rows, blue editable inputs and readable scope/reference footer. No clipped labels, overlapping rows, formula errors or unreadable monetary/percentage values observed."
+      },
+      "source_path": "tools/finance-expansion/operating-credit.json",
+      "source_pointer": "/skills/8",
+      "xlsx_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\receivables-borrowing-base-builder.xlsx",
+      "png_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\receivables-borrowing-base-builder.png",
+      "xlsx_sha256": "a8f417b31ca5607ec522eb15bb3bef460c00492b517bec35de4d03ee351e000b",
+      "png_sha256": "0c50558caa093178bc51d41505510e701efe8c1f3ff7203d363bada478828340",
+      "workbook_spec_sha256": "080ee6fd58bd6c94a617e664e33a682c5dd39963014f7f7fd7d783846c90c931",
+      "native_author_checks": {
+        "status": "pass",
+        "reopenedAndRecalculated": true,
+        "cases": [
+          {
+            "name": "Changed source assumption, hand-calculated result",
+            "kind": "changed-input",
+            "status": "pass"
+          },
+          {
+            "name": "Missing required evidence refuses calculation",
+            "kind": "refusal",
+            "status": "pass"
+          }
+        ],
+        "formulaCount": 6
+      }
+    },
+    {
+      "slug": "inventory-borrowing-base-builder",
+      "kind": "skill",
+      "source_spec_sha256": "9d4c324cd517a1703bd5b534c9a04e2b9e7c6d797f5f83dc442cb49434faea8b",
+      "model_sha256": "d5a9126c3fd71b6c164b581e54c0e903ebad334a0d4c277024067eea5107defc",
+      "status": "pass",
+      "issues": [],
+      "method_review": "Lower of cost advance1000×50%=500, liquidation advance800×70%=560 and600 cap, less50 reserve=450. Cost advance60% makes liquidation560 bind; result510.",
+      "distinct_from": [
+        {
+          "slug": "inventory-value-calculator",
+          "why": "Uses contractual lower-of-cost and liquidation-value caps with sublimits; inventory accounting valuation and general credit memo do not calculate this borrowing certificate tier."
+        }
+      ],
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required evidence refuses calculation",
+          "kind": "refusal",
+          "status": "pass",
+          "refusal_message": "eligible_cost must be a finite number."
+        }
+      ],
+      "visual_review": {
+        "status": "pass",
+        "inspected": true,
+        "method": "Actual rendered PNG inspected through view_image; revised seven final previews re-viewed after regeneration and unchanged other33 verified by exact PNG hash.",
+        "findings": [],
+        "notes": "Clear title, illustrative label, outputs and units first, transparent calculation rows, blue editable inputs and readable scope/reference footer. No clipped labels, overlapping rows, formula errors or unreadable monetary/percentage values observed."
+      },
+      "source_path": "tools/finance-expansion/operating-credit.json",
+      "source_pointer": "/skills/9",
+      "xlsx_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\inventory-borrowing-base-builder.xlsx",
+      "png_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\inventory-borrowing-base-builder.png",
+      "xlsx_sha256": "63653e6e7dd6c9440824b15ee85d625dab6891ff3cd5bed2bd65bcf2bbf232e8",
+      "png_sha256": "22e5a15a8443ed18846f9475e1471d66feadefe2e744aec7bab84cd7f25342f4",
+      "workbook_spec_sha256": "a14317048a8eea00eae2eaf1337bc1d28b98a4525c2df3eceac32da2ebda986e",
+      "native_author_checks": {
+        "status": "pass",
+        "reopenedAndRecalculated": true,
+        "cases": [
+          {
+            "name": "Changed source assumption, hand-calculated result",
+            "kind": "changed-input",
+            "status": "pass"
+          },
+          {
+            "name": "Missing required evidence refuses calculation",
+            "kind": "refusal",
+            "status": "pass"
+          }
+        ],
+        "formulaCount": 5
+      }
+    },
+    {
+      "slug": "revolver-availability-checker",
+      "kind": "skill",
+      "source_spec_sha256": "3bdcfcb23ce1b45bbcc9bda1ad3551ba56707e97e3798495aae35b219e0ecf2b",
+      "model_sha256": "1145347f4d30c2bc33a543bb143fcdde6357b37addd2a7742af19082790ee26c",
+      "status": "pass",
+      "issues": [],
+      "method_review": "600+450 collateral is capped at1000 commitment;700 drawn+100LC+25block=825 usage leaves175. Draw900 exposes25 overuse rather than hiding it.",
+      "distinct_from": [
+        {
+          "slug": "borrower-credit-memo-writer",
+          "why": "Reconciles permitted collateral capacity and facility commitment with drawings, letters of credit and blocks; a broad ratio memo does not establish usable availability."
+        }
+      ],
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed",
+          "status": "pass"
+        },
+        {
+          "name": "Missing or invalid required input",
+          "kind": "refusal",
+          "status": "pass",
+          "refusal_message": "ar_advance must be a finite number."
+        }
+      ],
+      "visual_review": {
+        "status": "pass",
+        "inspected": true,
+        "method": "Actual rendered PNG inspected through view_image; revised seven final previews re-viewed after regeneration and unchanged other33 verified by exact PNG hash.",
+        "findings": [],
+        "notes": "Clear title, illustrative label, outputs and units first, transparent calculation rows, blue editable inputs and readable scope/reference footer. No clipped labels, overlapping rows, formula errors or unreadable monetary/percentage values observed."
+      },
+      "source_path": "tools/finance-expansion/operating-credit.json",
+      "source_pointer": "/skills/10",
+      "xlsx_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\revolver-availability-checker.xlsx",
+      "png_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\revolver-availability-checker.png",
+      "xlsx_sha256": "fdaacecddc20de7ae81301ff14b55212302b28c0bcc5c82eaff7a3c7de3750b7",
+      "png_sha256": "e1df282d4e09cb97d12a2533df99df08255052e085dedd68c5eadbb227190fab",
+      "workbook_spec_sha256": "b1fe5a2c78d47aac71e9cd19edae60eef3b53c2fe8719c8dde8497d87447549a",
+      "native_author_checks": {
+        "status": "pass",
+        "reopenedAndRecalculated": true,
+        "cases": [
+          {
+            "name": "Changed source assumption, hand-calculated result",
+            "kind": "changed-input",
+            "status": "pass"
+          },
+          {
+            "name": "Missing or invalid required input",
+            "kind": "refusal",
+            "status": "pass"
+          }
+        ],
+        "formulaCount": 7
+      }
+    },
+    {
+      "slug": "revolver-interest-fee-checker",
+      "kind": "skill",
+      "source_spec_sha256": "7214d5a008e36432ac1e47572cde99b21a1125c11681b46f63e062bf98e03937",
+      "model_sha256": "465e2596c7220bd6fae6b5e669dd23402e792b3f91a8d0c5756c805cd5b45b67",
+      "status": "pass",
+      "issues": [],
+      "method_review": "Average draw500×12%×30/360=5; undrawn500×1.2%×30/360=0.5; total5.5. Rate24% makes10.5. Facility-day-count basis differs from amortizing loans.",
+      "distinct_from": [
+        {
+          "slug": "debt-payoff-planner",
+          "why": "Calculates separate daily-balance interest and undrawn commitment fee with actual day-count; a fixed amortizing loan payment calculator does not model revolving facility charges."
+        }
+      ],
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed",
+          "status": "pass"
+        },
+        {
+          "name": "Missing or invalid required input",
+          "kind": "refusal",
+          "status": "pass",
+          "refusal_message": "average_drawn must be a finite number."
+        }
+      ],
+      "visual_review": {
+        "status": "pass",
+        "inspected": true,
+        "method": "Actual rendered PNG inspected through view_image; revised seven final previews re-viewed after regeneration and unchanged other33 verified by exact PNG hash.",
+        "findings": [],
+        "notes": "Clear title, illustrative label, outputs and units first, transparent calculation rows, blue editable inputs and readable scope/reference footer. No clipped labels, overlapping rows, formula errors or unreadable monetary/percentage values observed."
+      },
+      "source_path": "tools/finance-expansion/operating-credit.json",
+      "source_pointer": "/skills/11",
+      "xlsx_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\revolver-interest-fee-checker.xlsx",
+      "png_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\revolver-interest-fee-checker.png",
+      "xlsx_sha256": "15bade4a8b5ff8ff8522d896878e97af6f9dbb61868a3b28d1f2dec9009cc594",
+      "png_sha256": "46f76b36e890ab32440568e277613f422ea76c9ee91f4c0a23c94d3309ef57ae",
+      "workbook_spec_sha256": "c683c94d7bb48bebdc3eb754fab77be3c4a426994238847ba463ecd96c92dd56",
+      "native_author_checks": {
+        "status": "pass",
+        "reopenedAndRecalculated": true,
+        "cases": [
+          {
+            "name": "Changed source assumption, hand-calculated result",
+            "kind": "changed-input",
+            "status": "pass"
+          },
+          {
+            "name": "Missing or invalid required input",
+            "kind": "refusal",
+            "status": "pass"
+          }
+        ],
+        "formulaCount": 4
+      }
+    },
+    {
+      "slug": "debt-service-covenant-headroom-checker",
+      "kind": "skill",
+      "source_spec_sha256": "0f026bf4844ab5b71dc3c06012f0182e2c97af7cabd476a370fa056043a804a6",
+      "model_sha256": "0dfd2146bfb0112cf20a0f0f7f939dcd48219a1f954ae5621c6ecb8be8396fa4",
+      "status": "pass",
+      "issues": [],
+      "method_review": "Cash150,120,180 versus service100,100,120 at1.25 minimum yields headroom25,-5,30 and5 worst shortfall. Period2 cash140 clears deficit. No universal lending threshold.",
+      "distinct_from": [
+        {
+          "slug": "borrower-credit-memo-writer",
+          "why": "Produces contract-defined cash headroom across three debt-service periods, explicitly excluding net-leverage calculations and equity cures covered elsewhere."
+        }
+      ],
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed",
+          "status": "pass"
+        },
+        {
+          "name": "Missing or invalid required input",
+          "kind": "refusal",
+          "status": "pass",
+          "refusal_message": "cash_1 must be a finite number."
+        }
+      ],
+      "visual_review": {
+        "status": "pass",
+        "inspected": true,
+        "method": "Actual rendered PNG inspected through view_image; revised seven final previews re-viewed after regeneration and unchanged other33 verified by exact PNG hash.",
+        "findings": [],
+        "notes": "Clear title, illustrative label, outputs and units first, transparent calculation rows, blue editable inputs and readable scope/reference footer. No clipped labels, overlapping rows, formula errors or unreadable monetary/percentage values observed."
+      },
+      "source_path": "tools/finance-expansion/operating-credit.json",
+      "source_pointer": "/skills/12",
+      "xlsx_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\debt-service-covenant-headroom-checker.xlsx",
+      "png_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\debt-service-covenant-headroom-checker.png",
+      "xlsx_sha256": "48925f54e045d19eb112d5d68ff92d1e0338bd389d962ce7bc0d3532a885633c",
+      "png_sha256": "031f2485909d8fffa0bb6c53efad88765a9928a56dbd2a020a14d58238922133",
+      "workbook_spec_sha256": "155532dd9bc5373d62e6a097286b1c95278b148ce1557c0be17b6b25f0efc223",
+      "native_author_checks": {
+        "status": "pass",
+        "reopenedAndRecalculated": true,
+        "cases": [
+          {
+            "name": "Changed source assumption, hand-calculated result",
+            "kind": "changed-input",
+            "status": "pass"
+          },
+          {
+            "name": "Missing or invalid required input",
+            "kind": "refusal",
+            "status": "pass"
+          }
+        ],
+        "formulaCount": 9
+      }
+    },
+    {
+      "slug": "fixed-charge-coverage-bridge-builder",
+      "kind": "skill",
+      "source_spec_sha256": "533d275f7d649cc22a92419a513405437a74f7995a3c5753a6a151a27f1e2a5a",
+      "model_sha256": "a2b6aaa0e47197b33848c74328a58f9542c7bd66f6ad7b67a09b85d6855b939c",
+      "status": "pass",
+      "issues": [],
+      "method_review": "Cash-before-charges300 less20 tax and30 maintenance=250. Interest40+principal80+rent60=180; cover1.3889,1.2-minimum headroom34. Rent80 leaves10.",
+      "distinct_from": [
+        {
+          "slug": "average-earnings-coverage-tester",
+          "why": "Reconciles a specified cash-before-fixed-charges numerator to rent and debt payments; existing historical average earnings coverage is a different numerator and review horizon."
+        }
+      ],
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed",
+          "status": "pass"
+        },
+        {
+          "name": "Missing or invalid required input",
+          "kind": "refusal",
+          "status": "pass",
+          "refusal_message": "Division denominator is zero."
+        }
+      ],
+      "visual_review": {
+        "status": "pass",
+        "inspected": true,
+        "method": "Actual rendered PNG inspected through view_image; revised seven final previews re-viewed after regeneration and unchanged other33 verified by exact PNG hash.",
+        "findings": [],
+        "notes": "Clear title, illustrative label, outputs and units first, transparent calculation rows, blue editable inputs and readable scope/reference footer. No clipped labels, overlapping rows, formula errors or unreadable monetary/percentage values observed."
+      },
+      "source_path": "tools/finance-expansion/operating-credit.json",
+      "source_pointer": "/skills/13",
+      "xlsx_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\fixed-charge-coverage-bridge-builder.xlsx",
+      "png_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\fixed-charge-coverage-bridge-builder.png",
+      "xlsx_sha256": "0934980eebf8752d136d1871d5c560d6f05e782b041278ce7e3656ef17132b6b",
+      "png_sha256": "b7e58e7e4fa0b5db4978923cbd172781984806f25ee38e9e13f5b457f2e669ff",
+      "workbook_spec_sha256": "757abef26a8d694f054b1b25294ce8ce8a055c406b0f8392ae48bc694b89160d",
+      "native_author_checks": {
+        "status": "pass",
+        "reopenedAndRecalculated": true,
+        "cases": [
+          {
+            "name": "Changed source assumption, hand-calculated result",
+            "kind": "changed-input",
+            "status": "pass"
+          },
+          {
+            "name": "Missing or invalid required input",
+            "kind": "refusal",
+            "status": "pass"
+          }
+        ],
+        "formulaCount": 6
+      }
+    },
+    {
+      "slug": "credit-exposure-limit-checker",
+      "kind": "skill",
+      "source_spec_sha256": "e9c1beb658954968e1dc21116aee6c344ef70d1e9a6f51c2d1f8bdbef4dfa443",
+      "model_sha256": "2a7acc6afde9148bc45c60f8af718e0fd60bc1763041650c8adec0d170550906",
+      "status": "pass",
+      "issues": [],
+      "method_review": "Funded200 +100×50% eligible undrawn +100 other exposure=350, limit400 leaves50. Funded300 exposes50 excess. Connected group scope is supplied policy, not revenue concentration.",
+      "distinct_from": [
+        {
+          "slug": "customer-concentration-risk",
+          "why": "Aggregates funded and policy-weighted undrawn credit across a connected borrower group; sales-customer revenue concentration does not measure creditor exposure."
+        }
+      ],
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed",
+          "status": "pass"
+        },
+        {
+          "name": "Missing or invalid required input",
+          "kind": "refusal",
+          "status": "pass",
+          "refusal_message": "funded must be a finite number."
+        }
+      ],
+      "visual_review": {
+        "status": "pass",
+        "inspected": true,
+        "method": "Actual rendered PNG inspected through view_image; revised seven final previews re-viewed after regeneration and unchanged other33 verified by exact PNG hash.",
+        "findings": [],
+        "notes": "Clear title, illustrative label, outputs and units first, transparent calculation rows, blue editable inputs and readable scope/reference footer. No clipped labels, overlapping rows, formula errors or unreadable monetary/percentage values observed."
+      },
+      "source_path": "tools/finance-expansion/operating-credit.json",
+      "source_pointer": "/skills/14",
+      "xlsx_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\credit-exposure-limit-checker.xlsx",
+      "png_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\credit-exposure-limit-checker.png",
+      "xlsx_sha256": "28d601e32278b92adc1260664e144cbd665193139df3aab674af404d0aae0653",
+      "png_sha256": "35d963827cdaa28d8f9770cd9d7cc347f85bebafaaf637a5964f85b7bb73909e",
+      "workbook_spec_sha256": "cdbd9fd87ec60b868fe77632e6407583ee2888579af7de79e44b7e8f3e4cb57c",
+      "native_author_checks": {
+        "status": "pass",
+        "reopenedAndRecalculated": true,
+        "cases": [
+          {
+            "name": "Changed source assumption, hand-calculated result",
+            "kind": "changed-input",
+            "status": "pass"
+          },
+          {
+            "name": "Missing or invalid required input",
+            "kind": "refusal",
+            "status": "pass"
+          }
+        ],
+        "formulaCount": 5
+      }
+    },
+    {
+      "slug": "debt-maturity-funding-ladder",
+      "kind": "skill",
+      "source_spec_sha256": "b22d157a44d259b91bf9abdfc44f83477c9b8ec758a852e7175898a01b154ee5",
+      "model_sha256": "87dd97bde7923725ada7b897cfaeaaa579e8d15eca9388b456760e8814814c98",
+      "status": "pass",
+      "issues": [],
+      "method_review": "Opening50 with period cash10,20,30, confirmed refinancing0,50,0 and maturities40,80,60 closes20,10,-20; gap20. Additional final refi30 leaves10.",
+      "distinct_from": [
+        {
+          "slug": "debt-restructuring-plan-drafter",
+          "why": "Shows dated contractual maturities against already accessible cash and confirmed refinancing; it does not invent restructuring terms or estimate creditor haircuts."
+        }
+      ],
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed",
+          "status": "pass"
+        },
+        {
+          "name": "Missing or invalid required input",
+          "kind": "refusal",
+          "status": "pass",
+          "refusal_message": "opening must be a finite number."
+        }
+      ],
+      "visual_review": {
+        "status": "pass",
+        "inspected": true,
+        "method": "Actual rendered PNG inspected through view_image; revised seven final previews re-viewed after regeneration and unchanged other33 verified by exact PNG hash.",
+        "findings": [],
+        "notes": "Clear title, illustrative label, outputs and units first, transparent calculation rows, blue editable inputs and readable scope/reference footer. No clipped labels, overlapping rows, formula errors or unreadable monetary/percentage values observed."
+      },
+      "source_path": "tools/finance-expansion/operating-credit.json",
+      "source_pointer": "/skills/15",
+      "xlsx_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\debt-maturity-funding-ladder.xlsx",
+      "png_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\debt-maturity-funding-ladder.png",
+      "xlsx_sha256": "dcc9bd10de4785f4ef7c4a5db759fb84ed512733fa77627d3e47a49ebb027675",
+      "png_sha256": "c68e8927f10a67859006a0f0966d204c37ab15501c935f61881d20cec40a1eb8",
+      "workbook_spec_sha256": "9558c57ff384400686963c3e5a1e43dd6e6d1adab3b31429d585f9f9817edca0",
+      "native_author_checks": {
+        "status": "pass",
+        "reopenedAndRecalculated": true,
+        "cases": [
+          {
+            "name": "Changed source assumption, hand-calculated result",
+            "kind": "changed-input",
+            "status": "pass"
+          },
+          {
+            "name": "Missing or invalid required input",
+            "kind": "refusal",
+            "status": "pass"
+          }
+        ],
+        "formulaCount": 9
+      }
+    },
+    {
+      "slug": "project-cash-available-bridge",
+      "kind": "skill",
+      "source_spec_sha256": "a9767a22b2dfb86d9c3f298e64ddf0e77011aba17d4413e7d0816b70d7e810af",
+      "model_sha256": "bf1f8205c4420fa4ceca25bbc37f8898f39ccad60ff56db64c61810d9ae43505",
+      "status": "pass",
+      "issues": [],
+      "method_review": "Corrected pre-WC accrual revenue and cash-cost proxies exclude noncash expenses. Actual receipt/payment route must omit already-embedded working-capital adjustment; source qualified CFADS is not EBITDA or general FCF.",
+      "distinct_from": [
+        {
+          "slug": "cash-versus-earnings-checker",
+          "why": "Builds a contract-specific CFADS bridge from accrual operating revenue and costs before signed working-capital movements, taxes and permitted maintenance; a generic earnings-to-cash review does not establish project cash eligibility."
+        }
+      ],
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed",
+          "status": "pass"
+        },
+        {
+          "name": "Missing or invalid required input",
+          "kind": "refusal",
+          "status": "pass",
+          "refusal_message": "accrual_operating_revenue must be a finite number."
+        }
+      ],
+      "visual_review": {
+        "status": "pass",
+        "inspected": true,
+        "method": "Actual rendered PNG inspected through view_image; revised seven final previews re-viewed after regeneration and unchanged other33 verified by exact PNG hash.",
+        "findings": [],
+        "notes": "Clear title, illustrative label, outputs and units first, transparent calculation rows, blue editable inputs and readable scope/reference footer. No clipped labels, overlapping rows, formula errors or unreadable monetary/percentage values observed."
+      },
+      "source_path": "tools/finance-expansion/operating-credit.json",
+      "source_pointer": "/skills/16",
+      "xlsx_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\project-cash-available-bridge.xlsx",
+      "png_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\project-cash-available-bridge.png",
+      "xlsx_sha256": "2b9360bb6afc22363df3fcc20d735402c0496cb9a3f934d4f33013eb6389e665",
+      "png_sha256": "6801e8ab75418f4c450eea54d4a7dd5ea69da2ea9fcbd3bc2b4252f301da70bf",
+      "workbook_spec_sha256": "b61d57ec6eb08b6fc12681bf11f06b379a00bf3b480ef7e0721e2aa8eaee4291",
+      "native_author_checks": {
+        "status": "pass",
+        "reopenedAndRecalculated": true,
+        "cases": [
+          {
+            "name": "Changed source assumption, hand-calculated result",
+            "kind": "changed-input",
+            "status": "pass"
+          },
+          {
+            "name": "Missing or invalid required input",
+            "kind": "refusal",
+            "status": "pass"
+          }
+        ],
+        "formulaCount": 3
+      }
+    },
+    {
+      "slug": "debt-repayment-sculpting-planner",
+      "kind": "skill",
+      "source_spec_sha256": "a8600819b9fc576b76ed22c36d4176b29c2e9b94e5ec581541e7c739c31d5fab",
+      "model_sha256": "cf69948d0ccec3eb46ab8d8158bf9a19e0bc5f6118afd2fb32bc31062f8dff76",
+      "status": "pass",
+      "issues": [],
+      "method_review": "Opening240 at10%, annual eligible cash132/1.2=110 service cap. Interest24,15.4,5.94; principal86,94.6,59.4 retires240. Total interest45.34; no invented capitalized interest when cash short.",
+      "distinct_from": [
+        {
+          "slug": "borrower-credit-memo-writer",
+          "why": "Builds a sequential principal and interest profile from annual qualifying cash and target service cover, rather than static debt capacity ratios."
+        }
+      ],
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed",
+          "status": "pass"
+        },
+        {
+          "name": "Missing or invalid required input",
+          "kind": "refusal",
+          "status": "pass",
+          "refusal_message": "opening_debt must be a finite number."
+        }
+      ],
+      "visual_review": {
+        "status": "pass",
+        "inspected": true,
+        "method": "Actual rendered PNG inspected through view_image; revised seven final previews re-viewed after regeneration and unchanged other33 verified by exact PNG hash.",
+        "findings": [],
+        "notes": "Clear title, illustrative label, outputs and units first, transparent calculation rows, blue editable inputs and readable scope/reference footer. No clipped labels, overlapping rows, formula errors or unreadable monetary/percentage values observed."
+      },
+      "source_path": "tools/finance-expansion/operating-credit.json",
+      "source_pointer": "/skills/17",
+      "xlsx_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\debt-repayment-sculpting-planner.xlsx",
+      "png_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\debt-repayment-sculpting-planner.png",
+      "xlsx_sha256": "cae5cdd524eca1996f012072fc5884d6942ed625d77ca8849f75039389f553d2",
+      "png_sha256": "a188fbe8ecc79a0210fa2e1630d7727d71ebe17a6550f57fcf9a834ce003a34a",
+      "workbook_spec_sha256": "49a55c34a9bd75f71f64841ecf531ee5201d2e63bcb6d99fbcae8abd5a037a46",
+      "native_author_checks": {
+        "status": "pass",
+        "reopenedAndRecalculated": true,
+        "cases": [
+          {
+            "name": "Changed source assumption, hand-calculated result",
+            "kind": "changed-input",
+            "status": "pass"
+          },
+          {
+            "name": "Missing or invalid required input",
+            "kind": "refusal",
+            "status": "pass"
+          }
+        ],
+        "formulaCount": 30
+      }
+    },
+    {
+      "slug": "loan-life-cash-cover-checker",
+      "kind": "skill",
+      "source_spec_sha256": "08d4e22db89fe920a32294c01d699efac576e71afb6e2c656408e666fa48b1f8",
+      "model_sha256": "bdda812e97099c6ead9a587393e2725b3df0846dbdf60d9a97d7b137fa5c6aa6",
+      "status": "pass",
+      "issues": [],
+      "method_review": "Contract-rate PV of110,121,133.1 at10%=300; loan240 gives1.25 cover and60 cushion. Loan200 gives1.5. Horizon excludes cash beyond actual maturity.",
+      "distinct_from": [
+        {
+          "slug": "average-earnings-coverage-tester",
+          "why": "Discounts qualifying cash through the remaining loan term at the financing-agreement rate; historical earnings cover and enterprise WACC valuation measure different cash."
+        }
+      ],
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed",
+          "status": "pass"
+        },
+        {
+          "name": "Missing or invalid required input",
+          "kind": "refusal",
+          "status": "pass",
+          "refusal_message": "cash_year_1 must be a finite number."
+        }
+      ],
+      "visual_review": {
+        "status": "pass",
+        "inspected": true,
+        "method": "Actual rendered PNG inspected through view_image; revised seven final previews re-viewed after regeneration and unchanged other33 verified by exact PNG hash.",
+        "findings": [],
+        "notes": "Clear title, illustrative label, outputs and units first, transparent calculation rows, blue editable inputs and readable scope/reference footer. No clipped labels, overlapping rows, formula errors or unreadable monetary/percentage values observed."
+      },
+      "source_path": "tools/finance-expansion/operating-credit.json",
+      "source_pointer": "/skills/18",
+      "xlsx_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\loan-life-cash-cover-checker.xlsx",
+      "png_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\loan-life-cash-cover-checker.png",
+      "xlsx_sha256": "69cf12f793c49a2457227e4f8d1a669433175a3bc2eefe81e4ae47ae8b17ab80",
+      "png_sha256": "3227eb4fe326862caaa1f9243e0abc4fadbab09709b2cda07057cb88ed02d27a",
+      "workbook_spec_sha256": "5fcf5c159a42d87e1f6ec2766e5c43582e494c9f5d614090125a01895e999346",
+      "native_author_checks": {
+        "status": "pass",
+        "reopenedAndRecalculated": true,
+        "cases": [
+          {
+            "name": "Changed source assumption, hand-calculated result",
+            "kind": "changed-input",
+            "status": "pass"
+          },
+          {
+            "name": "Missing or invalid required input",
+            "kind": "refusal",
+            "status": "pass"
+          }
+        ],
+        "formulaCount": 3
+      }
+    },
+    {
+      "slug": "debt-reserve-rollforward-builder",
+      "kind": "skill",
+      "source_spec_sha256": "eed521a281b6646247e514a0eb25d0f9ddc65869e4e8606d51d106d745642c31",
+      "model_sha256": "87f6b9adb1be7022e2b95fb5324343f756ccef9fe1d019824c24a6fc45550776",
+      "status": "pass",
+      "issues": [],
+      "method_review": "Uniform illustrative annual service120/12×6=60 reserve need. Opening40 plus deposit10 ends50 with10 gap; deposit30 caps funded reserve60. Uneven actual calendar requires actual service window.",
+      "distinct_from": [
+        {
+          "slug": "cash-and-currency-risk-planner",
+          "why": "Separates authorized reserve draws, required coverage, funded top-ups and actual shortfalls; unrestricted treasury cash alone cannot establish a debt reserve movement."
+        }
+      ],
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed",
+          "status": "pass"
+        },
+        {
+          "name": "Missing or invalid required input",
+          "kind": "refusal",
+          "status": "pass",
+          "refusal_message": "opening_reserve must be a finite number."
+        }
+      ],
+      "visual_review": {
+        "status": "pass",
+        "inspected": true,
+        "method": "Actual rendered PNG inspected through view_image; revised seven final previews re-viewed after regeneration and unchanged other33 verified by exact PNG hash.",
+        "findings": [],
+        "notes": "Clear title, illustrative label, outputs and units first, transparent calculation rows, blue editable inputs and readable scope/reference footer. No clipped labels, overlapping rows, formula errors or unreadable monetary/percentage values observed."
+      },
+      "source_path": "tools/finance-expansion/operating-credit.json",
+      "source_pointer": "/skills/19",
+      "xlsx_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\debt-reserve-rollforward-builder.xlsx",
+      "png_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\debt-reserve-rollforward-builder.png",
+      "xlsx_sha256": "3febb851bbcba2900c195d1868f31e06885ee51c1956c7a5aa249b346b187d36",
+      "png_sha256": "824088c6b2c4210d0e048701a2f13026a2fdbe35a82cf722ac7701ede2922b9e",
+      "workbook_spec_sha256": "84ec818ab1d958d502b51977eba08136f7afd3d424effecfc4fbad98199aa14e",
+      "native_author_checks": {
+        "status": "pass",
+        "reopenedAndRecalculated": true,
+        "cases": [
+          {
+            "name": "Changed source assumption, hand-calculated result",
+            "kind": "changed-input",
+            "status": "pass"
+          },
+          {
+            "name": "Missing or invalid required input",
+            "kind": "refusal",
+            "status": "pass"
+          }
+        ],
+        "formulaCount": 12
+      }
+    },
+    {
+      "slug": "project-payment-waterfall-builder",
+      "kind": "skill",
+      "source_spec_sha256": "b616cfa3094b0fa1e1659fc76e050d67bc03821915d58879a7fb47c4169029ee",
+      "model_sha256": "8432ecf2b8e8129823099b5e5b8884c7211a929d071acfe27187a2b8551451ba",
+      "status": "pass",
+      "issues": [],
+      "method_review": "Cash200 pays senior100 then reserve30 then junior50, leaving20; all amounts reconcile. Cash80 pays80 senior, exposes20 gap and pays no lower tiers. Contractual order must be supplied.",
+      "distinct_from": [
+        {
+          "slug": "debt-restructuring-plan-drafter",
+          "why": "Allocates project qualifying cash in supplied senior-service, reserve and junior-service priority, distinct from recovery restructuring or private fund carried-interest waterfalls."
+        }
+      ],
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed",
+          "status": "pass"
+        },
+        {
+          "name": "Missing or invalid required input",
+          "kind": "refusal",
+          "status": "pass",
+          "refusal_message": "cash_available must be a finite number."
+        }
+      ],
+      "visual_review": {
+        "status": "pass",
+        "inspected": true,
+        "method": "Actual rendered PNG inspected through view_image; revised seven final previews re-viewed after regeneration and unchanged other33 verified by exact PNG hash.",
+        "findings": [],
+        "notes": "Clear title, illustrative label, outputs and units first, transparent calculation rows, blue editable inputs and readable scope/reference footer. No clipped labels, overlapping rows, formula errors or unreadable monetary/percentage values observed."
+      },
+      "source_path": "tools/finance-expansion/operating-credit.json",
+      "source_pointer": "/skills/20",
+      "xlsx_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\project-payment-waterfall-builder.xlsx",
+      "png_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\project-payment-waterfall-builder.png",
+      "xlsx_sha256": "4e15ba9a17f1270dba4909b5b1022af188fa59da7af728b14ab794d444a99550",
+      "png_sha256": "00ba7dfd07fa7b5045aa6692f663a1c411821aed14dc8bd6556b55cdd1b61e57",
+      "workbook_spec_sha256": "ff03af1d112c9ab5457e1b70107a6880479d9833f546dc264c19e6419eb22c97",
+      "native_author_checks": {
+        "status": "pass",
+        "reopenedAndRecalculated": true,
+        "cases": [
+          {
+            "name": "Changed source assumption, hand-calculated result",
+            "kind": "changed-input",
+            "status": "pass"
+          },
+          {
+            "name": "Missing or invalid required input",
+            "kind": "refusal",
+            "status": "pass"
+          }
+        ],
+        "formulaCount": 9
+      }
+    },
+    {
+      "slug": "construction-funding-draw-planner",
+      "kind": "skill",
+      "source_spec_sha256": "89f8f73e49ba08300ae97ffde6ffef94f71431b8704c265c6106e81fff1e81ef",
+      "model_sha256": "fe89705d96a2245785617d889ee84d3dbc4a3e75caacde0e150009b39b007b23",
+      "status": "pass",
+      "issues": [],
+      "method_review": "Equity-first costs100,150,200 use200 equity and250 debt, leaving50 debt commitment. Final cost300 uses all300 debt and exposes50 funding gap. Construction costs exclude separately modeled interest.",
+      "distinct_from": [
+        {
+          "slug": "project-cost-progress-tracker",
+          "why": "Rolls equity-first cash draws and finite committed debt through construction costs; EVM earned-value indices do not track financing sources or undrawn commitments."
+        }
+      ],
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed",
+          "status": "pass"
+        },
+        {
+          "name": "Missing or invalid required input",
+          "kind": "refusal",
+          "status": "pass",
+          "refusal_message": "equity_commitment must be a finite number."
+        }
+      ],
+      "visual_review": {
+        "status": "pass",
+        "inspected": true,
+        "method": "Actual rendered PNG inspected through view_image; revised seven final previews re-viewed after regeneration and unchanged other33 verified by exact PNG hash.",
+        "findings": [],
+        "notes": "Clear title, illustrative label, outputs and units first, transparent calculation rows, blue editable inputs and readable scope/reference footer. No clipped labels, overlapping rows, formula errors or unreadable monetary/percentage values observed."
+      },
+      "source_path": "tools/finance-expansion/operating-credit.json",
+      "source_pointer": "/skills/21",
+      "xlsx_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\construction-funding-draw-planner.xlsx",
+      "png_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\construction-funding-draw-planner.png",
+      "xlsx_sha256": "92a1bf9613b9e4fcf25f0f9f94b73232ec0f32077a60cf47d2b1cd7175012fff",
+      "png_sha256": "49ba981bbd0a0bc40edd9624e2e1d1fad493f49c6389ae1fa852105cb6451b42",
+      "workbook_spec_sha256": "9a1b18d0ff5b753c896f4b8a585e81e95ef6bf50b932a950f66c79936cb8b98e",
+      "native_author_checks": {
+        "status": "pass",
+        "reopenedAndRecalculated": true,
+        "cases": [
+          {
+            "name": "Changed source assumption, hand-calculated result",
+            "kind": "changed-input",
+            "status": "pass"
+          },
+          {
+            "name": "Missing or invalid required input",
+            "kind": "refusal",
+            "status": "pass"
+          }
+        ],
+        "formulaCount": 24
+      }
+    },
+    {
+      "slug": "construction-interest-schedule-builder",
+      "kind": "skill",
+      "source_spec_sha256": "c3ada10af7a8a70a6ef04a51d15cdb86f5b48cf25d28f3f738a75902bed17329",
+      "model_sha256": "5ccf081866005871f7412c32cd6988dcd1a3271f084682c61dff71dc5adceb85",
+      "status": "pass",
+      "issues": [],
+      "method_review": "Opening100, draws100/100/0 at10% half-year draw weighting give interest15,26.5,34.15 and closing375.65. First draw0 gives total interest48.6; noncircular capitalized interest identity holds.",
+      "distinct_from": [
+        {
+          "slug": "debt-payoff-planner",
+          "why": "Builds noncircular capitalized interest using opening debt and explicitly timed draws; amortizing payment examples do not model construction funding timing."
+        }
+      ],
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed",
+          "status": "pass"
+        },
+        {
+          "name": "Missing or invalid required input",
+          "kind": "refusal",
+          "status": "pass",
+          "refusal_message": "opening_debt must be a finite number."
+        }
+      ],
+      "visual_review": {
+        "status": "pass",
+        "inspected": true,
+        "method": "Actual rendered PNG inspected through view_image; revised seven final previews re-viewed after regeneration and unchanged other33 verified by exact PNG hash.",
+        "findings": [],
+        "notes": "Clear title, illustrative label, outputs and units first, transparent calculation rows, blue editable inputs and readable scope/reference footer. No clipped labels, overlapping rows, formula errors or unreadable monetary/percentage values observed."
+      },
+      "source_path": "tools/finance-expansion/operating-credit.json",
+      "source_pointer": "/skills/22",
+      "xlsx_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\construction-interest-schedule-builder.xlsx",
+      "png_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\construction-interest-schedule-builder.png",
+      "xlsx_sha256": "c616143945f703c6c5c4d32f7d453b34d1078c67fd496a364fad489c0fa20e56",
+      "png_sha256": "becb232c1220ea51ff00266c2feb12e74cc99a596d2b9f9efab73173c575bc00",
+      "workbook_spec_sha256": "7cc3688ddf286ebd138c27c3c9aec51531dbe0bc7c5e753aa835f42b2f0f295d",
+      "native_author_checks": {
+        "status": "pass",
+        "reopenedAndRecalculated": true,
+        "cases": [
+          {
+            "name": "Changed source assumption, hand-calculated result",
+            "kind": "changed-input",
+            "status": "pass"
+          },
+          {
+            "name": "Missing or invalid required input",
+            "kind": "refusal",
+            "status": "pass"
+          }
+        ],
+        "formulaCount": 15
+      }
+    },
+    {
+      "slug": "completion-funding-gap-checker",
+      "kind": "skill",
+      "source_spec_sha256": "c69bc782fe0974999f7bff732b05ea3ccdc8481ebb589e5554fce01de2529af0",
+      "model_sha256": "dc1ca7d6ab47ac51748e0c14c56b64cadb56cf1ecfcb9f93af090bf7599c2b4c",
+      "status": "pass",
+      "issues": [],
+      "method_review": "Spent600 plus remaining350 and10% contingency35 revises total985; future sources200+150+20=370 versus385 need exposes15 funding gap despite15 budget headroom. Remaining400 raises gap70.",
+      "distinct_from": [
+        {
+          "slug": "project-cost-progress-tracker",
+          "why": "Compares current cost to complete plus explicit contingency with undrawn eligible commitments; EVM cost performance forecasts do not establish available completion funding."
+        }
+      ],
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed",
+          "status": "pass"
+        },
+        {
+          "name": "Missing or invalid required input",
+          "kind": "refusal",
+          "status": "pass",
+          "refusal_message": "spent must be a finite number."
+        }
+      ],
+      "visual_review": {
+        "status": "pass",
+        "inspected": true,
+        "method": "Actual rendered PNG inspected through view_image; revised seven final previews re-viewed after regeneration and unchanged other33 verified by exact PNG hash.",
+        "findings": [],
+        "notes": "Clear title, illustrative label, outputs and units first, transparent calculation rows, blue editable inputs and readable scope/reference footer. No clipped labels, overlapping rows, formula errors or unreadable monetary/percentage values observed."
+      },
+      "source_path": "tools/finance-expansion/operating-credit.json",
+      "source_pointer": "/skills/23",
+      "xlsx_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\completion-funding-gap-checker.xlsx",
+      "png_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\completion-funding-gap-checker.png",
+      "xlsx_sha256": "d0cec84508184db6a5cecba631a0a46bbde1b74607fd0df45b108b2fdb079057",
+      "png_sha256": "610d195fc2df0f7831f73e50d543334d6c9af82a6e2d7c644f5d8befcdec50d0",
+      "workbook_spec_sha256": "46dfcdfed4c967890eef655bc76c353bd9d403c356e174a70b305f7546252739",
+      "native_author_checks": {
+        "status": "pass",
+        "reopenedAndRecalculated": true,
+        "cases": [
+          {
+            "name": "Changed source assumption, hand-calculated result",
+            "kind": "changed-input",
+            "status": "pass"
+          },
+          {
+            "name": "Missing or invalid required input",
+            "kind": "refusal",
+            "status": "pass"
+          }
+        ],
+        "formulaCount": 8
+      }
+    },
+    {
+      "slug": "availability-payment-deduction-checker",
+      "kind": "skill",
+      "source_spec_sha256": "cdfb7174ddba94bef036c0d3d14b4853ead20ce611715433fc86a1b1f3455019",
+      "model_sha256": "f7d6c9badfddda85ff2a3e8926f53b6c9878af3e84fe1c8bcac2dddfc7762900",
+      "status": "pass",
+      "issues": [],
+      "method_review": "Gross500 less approved50 within100 cap less20 other charge=430 net; less100 costs=330 operating surplus. Deduction150 caps100, leaves380 net280 surplus. Invoice entitlement and actual receipt timing remain separate.",
+      "distinct_from": [
+        {
+          "slug": "invoice-totals-checker",
+          "why": "Separates approved service deductions, contract caps and operating cash on an infrastructure availability payment; ordinary invoice totals do not establish this capped contract bridge."
+        }
+      ],
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed",
+          "status": "pass"
+        },
+        {
+          "name": "Missing or invalid required input",
+          "kind": "refusal",
+          "status": "pass",
+          "refusal_message": "gross_payment must be a finite number."
+        }
+      ],
+      "visual_review": {
+        "status": "pass",
+        "inspected": true,
+        "method": "Actual rendered PNG inspected through view_image; revised seven final previews re-viewed after regeneration and unchanged other33 verified by exact PNG hash.",
+        "findings": [],
+        "notes": "Clear title, illustrative label, outputs and units first, transparent calculation rows, blue editable inputs and readable scope/reference footer. No clipped labels, overlapping rows, formula errors or unreadable monetary/percentage values observed."
+      },
+      "source_path": "tools/finance-expansion/operating-credit.json",
+      "source_pointer": "/skills/24",
+      "xlsx_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\availability-payment-deduction-checker.xlsx",
+      "png_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\availability-payment-deduction-checker.png",
+      "xlsx_sha256": "749586e5b5a713f1456e00ec46f7d70265cc5fef87cce33b023bb0e4f6afc813",
+      "png_sha256": "b0a049815de7bb0ed6ad81265dfdc0740534b35dc7ba51fea9b709ce732c30c3",
+      "workbook_spec_sha256": "951cc5841bc4fe1c0481d987c02d39c969b3150ee83d82ff2e695032512759b3",
+      "native_author_checks": {
+        "status": "pass",
+        "reopenedAndRecalculated": true,
+        "cases": [
+          {
+            "name": "Changed source assumption, hand-calculated result",
+            "kind": "changed-input",
+            "status": "pass"
+          },
+          {
+            "name": "Missing or invalid required input",
+            "kind": "refusal",
+            "status": "pass"
+          }
+        ],
+        "formulaCount": 5
+      }
+    },
+    {
+      "slug": "toll-revenue-ramp-model-builder",
+      "kind": "skill",
+      "source_spec_sha256": "d8fa65973d3368d1d1af1d863760bbeac620b991e7f60972a274d4a697495453",
+      "model_sha256": "2b7beb491db28124141c6c052b61d5eb216324ef808b7197122a37b2730831e3",
+      "status": "pass",
+      "issues": [],
+      "method_review": "Chargeable passages1000,1200,1500 before collection loss at toll2 and90% realize1800,2160,2700; operating costs leave800,1060,1500=3360. Already-paid counts cannot receive collection haircut twice.",
+      "distinct_from": [
+        {
+          "slug": "store-revenue-forecast-builder",
+          "why": "Models chargeable road passages before collection loss, tariff realization and operating cash over three years; an online store spend/cohort forecast has different demand and collection units."
+        }
+      ],
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed",
+          "status": "pass"
+        },
+        {
+          "name": "Missing or invalid required input",
+          "kind": "refusal",
+          "status": "pass",
+          "refusal_message": "passages_1 must be a finite number."
+        }
+      ],
+      "visual_review": {
+        "status": "pass",
+        "inspected": true,
+        "method": "Actual rendered PNG inspected through view_image; revised seven final previews re-viewed after regeneration and unchanged other33 verified by exact PNG hash.",
+        "findings": [],
+        "notes": "Clear title, illustrative label, outputs and units first, transparent calculation rows, blue editable inputs and readable scope/reference footer. No clipped labels, overlapping rows, formula errors or unreadable monetary/percentage values observed."
+      },
+      "source_path": "tools/finance-expansion/operating-credit.json",
+      "source_pointer": "/skills/25",
+      "xlsx_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\toll-revenue-ramp-model-builder.xlsx",
+      "png_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\toll-revenue-ramp-model-builder.png",
+      "xlsx_sha256": "522edf393435eb4d81cd07f013fc1f534e0f7dfb7c7e30f40b24326e40195d0b",
+      "png_sha256": "5d71151e0341f07374ce1f17961bd827df7f94a83633ba8ee78d501447984ce3",
+      "workbook_spec_sha256": "05411a7ee383d68d89419fc8f4257755a21068aba0d24eeca50c6bfb90e5d44b",
+      "native_author_checks": {
+        "status": "pass",
+        "reopenedAndRecalculated": true,
+        "cases": [
+          {
+            "name": "Changed source assumption, hand-calculated result",
+            "kind": "changed-input",
+            "status": "pass"
+          },
+          {
+            "name": "Missing or invalid required input",
+            "kind": "refusal",
+            "status": "pass"
+          }
+        ],
+        "formulaCount": 7
+      }
+    },
+    {
+      "slug": "manufacturing-yield-cost-bridge",
+      "kind": "skill",
+      "source_spec_sha256": "bc34f31ac9a6438063dab801c8409e6b40db1fe74c7d7c90613de1135ea95e9e",
+      "model_sha256": "7fe10fe0c0f99d37ba5d91b35603a4dccc164131e370686d3bf7d3ad26ca81e8",
+      "status": "pass",
+      "issues": [],
+      "method_review": "Input1000kg at80% yield makes800 good,200 scrap. Scrap recovery100 offsets3000 cash cost to2900;3.625 per goodkg. Yield90% gives2950/900. Quantity and unit conversion evidence required.",
+      "distinct_from": [
+        {
+          "slug": "production-cost-variance",
+          "why": "Tracks input mass to good output, scrap proceeds and conversion cash per good unit; standard price/usage variance does not reconcile this physical yield and recovery bridge."
+        }
+      ],
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed",
+          "status": "pass"
+        },
+        {
+          "name": "Missing or invalid required input",
+          "kind": "refusal",
+          "status": "pass",
+          "refusal_message": "input_kg must be a finite number."
+        }
+      ],
+      "visual_review": {
+        "status": "pass",
+        "inspected": true,
+        "method": "Actual rendered PNG inspected through view_image; revised seven final previews re-viewed after regeneration and unchanged other33 verified by exact PNG hash.",
+        "findings": [],
+        "notes": "Clear title, illustrative label, outputs and units first, transparent calculation rows, blue editable inputs and readable scope/reference footer. No clipped labels, overlapping rows, formula errors or unreadable monetary/percentage values observed."
+      },
+      "source_path": "tools/finance-expansion/operating-credit.json",
+      "source_pointer": "/skills/26",
+      "xlsx_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\manufacturing-yield-cost-bridge.xlsx",
+      "png_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\manufacturing-yield-cost-bridge.png",
+      "xlsx_sha256": "e156fae605386b7eee211ca10d299c0ef7bed3276bfb1f13a0a921e7e379f059",
+      "png_sha256": "d21ef33c85fc9dcaba7452f170363ff0584e29c4013b9356cb29da721796b9ba",
+      "workbook_spec_sha256": "eee23c4e018f31850b304bad533e25e553d23900b0d35eb1ba6525b8677cbfb5",
+      "native_author_checks": {
+        "status": "pass",
+        "reopenedAndRecalculated": true,
+        "cases": [
+          {
+            "name": "Changed source assumption, hand-calculated result",
+            "kind": "changed-input",
+            "status": "pass"
+          },
+          {
+            "name": "Missing or invalid required input",
+            "kind": "refusal",
+            "status": "pass"
+          }
+        ],
+        "formulaCount": 6
+      }
+    },
+    {
+      "slug": "shared-service-activity-cost-allocator",
+      "kind": "skill",
+      "source_spec_sha256": "71f397b40540bbb7d09c643f757abdc1c6b5152f1878700096e11ec885454c3e",
+      "model_sha256": "e541b0dd842c65fbcae8692d231b7655d2a6041f636b3ff1a686a6f97cb9bd91",
+      "status": "pass",
+      "issues": [],
+      "method_review": "Pool1000/normal100 units gives10 per activity unit. Observed40 and30 allocate400+300, leaving300 idle/unassigned cost and30 unused units. Explicit normal-capacity identity differs from arbitrary overhead share.",
+      "distinct_from": [
+        {
+          "slug": "channel-cost-and-roi-comparer",
+          "why": "Reconciles a shared service cost pool across observed workload and unused capacity; channel ROI comparisons do not provide this capacity-based allocation identity."
+        }
+      ],
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed",
+          "status": "pass"
+        },
+        {
+          "name": "Missing or invalid required input",
+          "kind": "refusal",
+          "status": "pass",
+          "refusal_message": "cost_pool must be a finite number."
+        }
+      ],
+      "visual_review": {
+        "status": "pass",
+        "inspected": true,
+        "method": "Actual rendered PNG inspected through view_image; revised seven final previews re-viewed after regeneration and unchanged other33 verified by exact PNG hash.",
+        "findings": [],
+        "notes": "Clear title, illustrative label, outputs and units first, transparent calculation rows, blue editable inputs and readable scope/reference footer. No clipped labels, overlapping rows, formula errors or unreadable monetary/percentage values observed."
+      },
+      "source_path": "tools/finance-expansion/operating-credit.json",
+      "source_pointer": "/skills/27",
+      "xlsx_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\shared-service-activity-cost-allocator.xlsx",
+      "png_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\shared-service-activity-cost-allocator.png",
+      "xlsx_sha256": "e97037c4f36e72fff88d154875456f6a0bea7e215248b293882e8d0c727a218b",
+      "png_sha256": "7d5a319f7471d2e62f42ba36fa30036dc801346895bd9a28050bc6cbc6bcb688",
+      "workbook_spec_sha256": "2c0c73713ba8f159b5b966f5c31d2b165c3f9f43eea7e2d009728123f09f6646",
+      "native_author_checks": {
+        "status": "pass",
+        "reopenedAndRecalculated": true,
+        "cases": [
+          {
+            "name": "Changed source assumption, hand-calculated result",
+            "kind": "changed-input",
+            "status": "pass"
+          },
+          {
+            "name": "Missing or invalid required input",
+            "kind": "refusal",
+            "status": "pass"
+          }
+        ],
+        "formulaCount": 7
+      }
+    },
+    {
+      "slug": "product-mix-capacity-checker",
+      "kind": "skill",
+      "source_spec_sha256": "e0b8fc1b5a544b993f42c6bdf0e604aea8a5eb90d846d91ea8321960163e81df",
+      "model_sha256": "eac6a367612dbfb573fe7eb496091493094e76ea303e50680da136b514bf0011",
+      "status": "pass",
+      "issues": [],
+      "method_review": "Proposed30A×2h+10B×5h=110 exceeds100 bottleneck by10; contribution30×10+10×15=450. B5 uses85h and contributes375. Supplied plan test only, not an optimizer or full production feasibility.",
+      "distinct_from": [
+        {
+          "slug": "production-capacity-checker",
+          "why": "Checks a supplied two-product plan against one financial bottleneck and contribution bridge; it neither reruns general production planning nor claims an optimized mix."
+        }
+      ],
+      "cases": [
+        {
+          "name": "Reduce proposed second product units",
+          "kind": "changed",
+          "status": "pass"
+        },
+        {
+          "name": "Missing available hours",
+          "kind": "refusal",
+          "status": "pass",
+          "refusal_message": "available_hours must be a finite number."
+        }
+      ],
+      "visual_review": {
+        "status": "pass",
+        "inspected": true,
+        "method": "Actual rendered PNG inspected through view_image; revised seven final previews re-viewed after regeneration and unchanged other33 verified by exact PNG hash.",
+        "findings": [],
+        "notes": "Clear title, illustrative label, outputs and units first, transparent calculation rows, blue editable inputs and readable scope/reference footer. No clipped labels, overlapping rows, formula errors or unreadable monetary/percentage values observed."
+      },
+      "source_path": "tools/finance-expansion/operating-credit.json",
+      "source_pointer": "/skills/28",
+      "xlsx_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\product-mix-capacity-checker.xlsx",
+      "png_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\product-mix-capacity-checker.png",
+      "xlsx_sha256": "3a618e2163a85b8907db536bb9b0dacd484928ec31eaf24963ead3ddfdbb08cd",
+      "png_sha256": "29422e93bba210d3d562d9d10d9d8fba5f17d49bb45ea5a3ff7ab516b3f30736",
+      "workbook_spec_sha256": "2176b0a00885a4aaf3b3bfd9e2ea2dd2041a0156c46ba964b80260cd4e63dcf4",
+      "native_author_checks": {
+        "status": "pass",
+        "reopenedAndRecalculated": true,
+        "cases": [
+          {
+            "name": "Reduce proposed second product units",
+            "kind": "changed-input",
+            "status": "pass"
+          },
+          {
+            "name": "Missing available hours",
+            "kind": "refusal",
+            "status": "pass"
+          }
+        ],
+        "formulaCount": 7
+      }
+    },
+    {
+      "slug": "service-utilization-margin-builder",
+      "kind": "skill",
+      "source_spec_sha256": "47a6bb3a0e457515cb42fd73cbf305c64f7d7423a79685b4ba2c396848abcb75",
+      "model_sha256": "0e339dc0995f87b5359e051e109dfd1a707bc51b09f26b1e0ac1e4da88b45ac0",
+      "status": "pass",
+      "issues": [],
+      "method_review": "Paid160 less40 fixed duties and16 leave=104 available client hours. Billable80 gives76.923%; fees8000 less4600 cost leaves3400/42.5%. Positive availability constraint prevents negative-ratio misuse.",
+      "distinct_from": [
+        {
+          "slug": "team-capacity-planner",
+          "why": "Reconciles paid time, available client hours, billed fees and actual delivery cash; an hourly-rate target calculator does not model observed utilization and workload."
+        }
+      ],
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed",
+          "status": "pass"
+        },
+        {
+          "name": "Missing or invalid required input",
+          "kind": "refusal",
+          "status": "pass",
+          "refusal_message": "Division denominator is zero."
+        },
+        {
+          "name": "Fixed duties and leave exceed paid hours",
+          "kind": "refusal",
+          "status": "pass",
+          "refusal_message": "Unsupported numeric domain: Paid hours less fixed duties and leave must leave positive available client hours."
+        }
+      ],
+      "visual_review": {
+        "status": "pass",
+        "inspected": true,
+        "method": "Actual rendered PNG inspected through view_image; revised seven final previews re-viewed after regeneration and unchanged other33 verified by exact PNG hash.",
+        "findings": [],
+        "notes": "Clear title, illustrative label, outputs and units first, transparent calculation rows, blue editable inputs and readable scope/reference footer. No clipped labels, overlapping rows, formula errors or unreadable monetary/percentage values observed."
+      },
+      "source_path": "tools/finance-expansion/operating-credit.json",
+      "source_pointer": "/skills/29",
+      "xlsx_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\service-utilization-margin-builder.xlsx",
+      "png_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\service-utilization-margin-builder.png",
+      "xlsx_sha256": "141f639a04eafc6201434e3cc83fed994974c34eb3d588af41be02cd66fd7a45",
+      "png_sha256": "50b188035aee6b353a3c8518c0055d0fa958118b1f519431171e8883c3413e47",
+      "workbook_spec_sha256": "b30e7a8dc812e9fe1c94492cc23d96971112f9dc26d64eb81088f92b37440c81",
+      "native_author_checks": {
+        "status": "pass",
+        "reopenedAndRecalculated": true,
+        "cases": [
+          {
+            "name": "Changed source assumption, hand-calculated result",
+            "kind": "changed-input",
+            "status": "pass"
+          },
+          {
+            "name": "Missing or invalid required input",
+            "kind": "refusal",
+            "status": "pass"
+          },
+          {
+            "name": "Fixed duties and leave exceed paid hours",
+            "kind": "refusal",
+            "status": "pass"
+          }
+        ],
+        "formulaCount": 7
+      }
+    },
+    {
+      "slug": "hotel-channel-revenue-reconciler",
+      "kind": "skill",
+      "source_spec_sha256": "ad0441aff4c035dd41f70fc8b150b9395c2ccff457483cbbff6dba338d507199",
+      "model_sha256": "49caa82a7a8c4f8893e5cfcfafd8d7297c85628179bfc9d3804be1190a7a77f7",
+      "status": "pass",
+      "issues": [],
+      "method_review": "40 direct nights×100 plus30 agent×120=7600;720 commission leaves6880;1400 occupied-night service cost leaves5480.70/100 occupancy=70%. Sold-night constraint prevents impossible same-property population.",
+      "distinct_from": [
+        {
+          "slug": "hotel-room-pricing-planner",
+          "why": "Reconciles actual room-night sales to channel commissions and occupied-room cash costs; this avoids the existing optimizer scaffold and does not propose prices or overbooking."
+        }
+      ],
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed",
+          "status": "pass"
+        },
+        {
+          "name": "Missing or invalid required input",
+          "kind": "refusal",
+          "status": "pass",
+          "refusal_message": "available_nights must be a finite number."
+        },
+        {
+          "name": "Sold room nights exceed available physical nights",
+          "kind": "refusal",
+          "status": "pass",
+          "refusal_message": "Unsupported numeric domain: Sold room nights cannot exceed the same-property available nights in this focused reconciliation."
+        }
+      ],
+      "visual_review": {
+        "status": "pass",
+        "inspected": true,
+        "method": "Actual rendered PNG inspected through view_image; revised seven final previews re-viewed after regeneration and unchanged other33 verified by exact PNG hash.",
+        "findings": [],
+        "notes": "Clear title, illustrative label, outputs and units first, transparent calculation rows, blue editable inputs and readable scope/reference footer. No clipped labels, overlapping rows, formula errors or unreadable monetary/percentage values observed."
+      },
+      "source_path": "tools/finance-expansion/operating-credit.json",
+      "source_pointer": "/skills/30",
+      "xlsx_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\hotel-channel-revenue-reconciler.xlsx",
+      "png_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\hotel-channel-revenue-reconciler.png",
+      "xlsx_sha256": "802511a4c8618eb18e40d06e1d874d49c1af2671363a61ee96b128a9e41ac373",
+      "png_sha256": "fd97564f4f60250deabca36c64582aaa7b44f596ed2c72827ce90a5b45cced47",
+      "workbook_spec_sha256": "d3773c8284732d9fbbc89fa78ee76e48de4c3b0251948df0e8da3ddff841f32f",
+      "native_author_checks": {
+        "status": "pass",
+        "reopenedAndRecalculated": true,
+        "cases": [
+          {
+            "name": "Changed source assumption, hand-calculated result",
+            "kind": "changed-input",
+            "status": "pass"
+          },
+          {
+            "name": "Missing or invalid required input",
+            "kind": "refusal",
+            "status": "pass"
+          },
+          {
+            "name": "Sold room nights exceed available physical nights",
+            "kind": "refusal",
+            "status": "pass"
+          }
+        ],
+        "formulaCount": 10
+      }
+    },
+    {
+      "slug": "restaurant-portion-cost-builder",
+      "kind": "skill",
+      "source_spec_sha256": "0627a3d774f03755c563d26674aec1d6c5cc08b271b3bda7133c5fcd5061bd0e",
+      "model_sha256": "bb7da8105e069f8251d05065bcfc9948b42ae6e21da352017ccec2c5b2e87377",
+      "status": "pass",
+      "issues": [],
+      "method_review": "10kg at80% edible gives8kg or40 portion equivalents;160 whole-batch cash cost gives4 capacity portion cost. Demand30 realizes300, whole batch contribution140 and10 unserved capacity. No health or production safety advice.",
+      "distinct_from": [
+        {
+          "slug": "product-bill-of-materials-builder",
+          "why": "Reconciles purchased mass, observed edible yield, saleable portions, batch cash and unserved capacity; a product parts cost sheet lacks this food-portion and batch timing bridge."
+        }
+      ],
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed",
+          "status": "pass"
+        },
+        {
+          "name": "Missing or invalid required input",
+          "kind": "refusal",
+          "status": "pass",
+          "refusal_message": "purchased_kg must be a finite number."
+        }
+      ],
+      "visual_review": {
+        "status": "pass",
+        "inspected": true,
+        "method": "Actual rendered PNG inspected through view_image; revised seven final previews re-viewed after regeneration and unchanged other33 verified by exact PNG hash.",
+        "findings": [],
+        "notes": "Clear title, illustrative label, outputs and units first, transparent calculation rows, blue editable inputs and readable scope/reference footer. No clipped labels, overlapping rows, formula errors or unreadable monetary/percentage values observed."
+      },
+      "source_path": "tools/finance-expansion/operating-credit.json",
+      "source_pointer": "/skills/31",
+      "xlsx_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\restaurant-portion-cost-builder.xlsx",
+      "png_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\restaurant-portion-cost-builder.png",
+      "xlsx_sha256": "1486f68be27d3b11e741319c14b15f3f96362780bf59dcf07f1ec6edecd3daff",
+      "png_sha256": "c88e6bc1ec0a4b9fac6c386ec800db6c9fb0c14f4e9b94a4030ff7e54d181adb",
+      "workbook_spec_sha256": "44435cd035fe867ee89336d6b53789708f80443185ff18a8972020bfd3c9f89b",
+      "native_author_checks": {
+        "status": "pass",
+        "reopenedAndRecalculated": true,
+        "cases": [
+          {
+            "name": "Changed source assumption, hand-calculated result",
+            "kind": "changed-input",
+            "status": "pass"
+          },
+          {
+            "name": "Missing or invalid required input",
+            "kind": "refusal",
+            "status": "pass"
+          }
+        ],
+        "formulaCount": 8
+      }
+    },
+    {
+      "slug": "retail-markdown-stock-reconciler",
+      "kind": "skill",
+      "source_spec_sha256": "e0a73968725e8d7213ea2deb05d42f26af62b90f50ba809af04e0c46f90e7454",
+      "model_sha256": "359531e0a27902b947c2676cb587beea45acf2316fcf69a827f2fd8692a9b5c1",
+      "status": "pass",
+      "issues": [],
+      "method_review": "100 units×5 purchase cost500. Selling40×10+30×6 yields580; sold-cost350 and clearance10 leave220 sold-unit contribution. Whole-cohort net cash70 subtracts original500 once;150 held-cost memo is separate. Negative closing stock refused.",
+      "distinct_from": [
+        {
+          "slug": "discount-impact-checker",
+          "why": "Tracks full-price and markdown units against one opening stock cohort with remaining stock and realized cash; discount margin arithmetic does not reconcile unsold quantity."
+        }
+      ],
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed",
+          "status": "pass"
+        },
+        {
+          "name": "Missing or invalid required input",
+          "kind": "refusal",
+          "status": "pass",
+          "refusal_message": "opening_units must be a finite number."
+        },
+        {
+          "name": "Sales exceed stock available in the cohort",
+          "kind": "refusal",
+          "status": "pass",
+          "refusal_message": "Unsupported numeric domain: Cohort units sold cannot exceed opening cohort stock."
+        }
+      ],
+      "visual_review": {
+        "status": "pass",
+        "inspected": true,
+        "method": "Actual rendered PNG inspected through view_image; revised seven final previews re-viewed after regeneration and unchanged other33 verified by exact PNG hash.",
+        "findings": [],
+        "notes": "Clear title, illustrative label, outputs and units first, transparent calculation rows, blue editable inputs and readable scope/reference footer. No clipped labels, overlapping rows, formula errors or unreadable monetary/percentage values observed."
+      },
+      "source_path": "tools/finance-expansion/operating-credit.json",
+      "source_pointer": "/skills/32",
+      "xlsx_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\retail-markdown-stock-reconciler.xlsx",
+      "png_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\retail-markdown-stock-reconciler.png",
+      "xlsx_sha256": "2baef9b19bc702230db7ae98cee88dffc618c861c26cbfe56c4ba43817af423c",
+      "png_sha256": "c2f4dbecb6677c67260a01f27ec477ef66fa4330ffd1fd1f8cca233ff068d206",
+      "workbook_spec_sha256": "972f47e47c02f694f3ae0bf9d5794709150b27176b3e48e3f05a6042342a0522",
+      "native_author_checks": {
+        "status": "pass",
+        "reopenedAndRecalculated": true,
+        "cases": [
+          {
+            "name": "Changed source assumption, hand-calculated result",
+            "kind": "changed-input",
+            "status": "pass"
+          },
+          {
+            "name": "Missing or invalid required input",
+            "kind": "refusal",
+            "status": "pass"
+          },
+          {
+            "name": "Sales exceed stock available in the cohort",
+            "kind": "refusal",
+            "status": "pass"
+          }
+        ],
+        "formulaCount": 12
+      }
+    },
+    {
+      "slug": "contracted-energy-cash-model",
+      "kind": "skill",
+      "source_spec_sha256": "b5466accaec31166473f856a6f0d2eb95d93a87019efe88e68efe0f3aaee5c5b",
+      "model_sha256": "4ff3a298e99f3c3f04fe31bbb9afbdd099b68a2efe0539758a38a7ee2fd71c1c",
+      "status": "pass",
+      "issues": [],
+      "method_review": "Accepted MWh1000,1100,900 at50 less10 variable and10000 annual fixed cash gives30000,34000,26000=90000. Price60 gives120000; not a generation forecast or full project model.",
+      "distinct_from": [
+        {
+          "slug": "budget-and-forecast-builder",
+          "why": "Uses delivered metered MWh, actual contract prices and operating cash over three periods; a generic budget lacks energy settlement units and contract boundaries."
+        }
+      ],
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed",
+          "status": "pass"
+        },
+        {
+          "name": "Missing or invalid required input",
+          "kind": "refusal",
+          "status": "pass",
+          "refusal_message": "mwh_1 must be a finite number."
+        }
+      ],
+      "visual_review": {
+        "status": "pass",
+        "inspected": true,
+        "method": "Actual rendered PNG inspected through view_image; revised seven final previews re-viewed after regeneration and unchanged other33 verified by exact PNG hash.",
+        "findings": [],
+        "notes": "Clear title, illustrative label, outputs and units first, transparent calculation rows, blue editable inputs and readable scope/reference footer. No clipped labels, overlapping rows, formula errors or unreadable monetary/percentage values observed."
+      },
+      "source_path": "tools/finance-expansion/operating-credit.json",
+      "source_pointer": "/skills/33",
+      "xlsx_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\contracted-energy-cash-model.xlsx",
+      "png_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\contracted-energy-cash-model.png",
+      "xlsx_sha256": "574a54b57a97e39bd424bdf2c7c942f73d32fbeca7895cef50bdcfa164fdf8f9",
+      "png_sha256": "f62045cb220a90dcef5279e391ed9a365dbe8080f23f44bccbe30bed76ff413c",
+      "workbook_spec_sha256": "7ef8300146da74e5c1c7d23efa2413481adbedbff93806e44bb1c0eebd56d065",
+      "native_author_checks": {
+        "status": "pass",
+        "reopenedAndRecalculated": true,
+        "cases": [
+          {
+            "name": "Changed source assumption, hand-calculated result",
+            "kind": "changed-input",
+            "status": "pass"
+          },
+          {
+            "name": "Missing or invalid required input",
+            "kind": "refusal",
+            "status": "pass"
+          }
+        ],
+        "formulaCount": 8
+      }
+    },
+    {
+      "slug": "water-utility-collections-reconciler",
+      "kind": "skill",
+      "source_spec_sha256": "dc061fde91bb6b79c9c4fa69f2f436cca73664e62e5370b817f35e7ab17defe8",
+      "model_sha256": "9e0b5e7069e2ec4f24e21424a17ffe3cfc59dc993e259764fec219edf7819148",
+      "status": "pass",
+      "issues": [],
+      "method_review": "Billed800×2=1600 plus openingAR400 less receipts1400 and adjustment100 gives endingAR500. Produced1000 less billed800 is200 unbilled, not automatically leakage. Cash1400 less1000 operating=400.",
+      "distinct_from": [
+        {
+          "slug": "cash-forecast-builder",
+          "why": "Separates produced volume, billed water, current/arrears collection and receivable movement; a general cash forecast cannot identify this volume-to-billing-to-cash chain."
+        }
+      ],
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed",
+          "status": "pass"
+        },
+        {
+          "name": "Missing or invalid required input",
+          "kind": "refusal",
+          "status": "pass",
+          "refusal_message": "produced_m3 must be a finite number."
+        }
+      ],
+      "visual_review": {
+        "status": "pass",
+        "inspected": true,
+        "method": "Actual rendered PNG inspected through view_image; revised seven final previews re-viewed after regeneration and unchanged other33 verified by exact PNG hash.",
+        "findings": [],
+        "notes": "Clear title, illustrative label, outputs and units first, transparent calculation rows, blue editable inputs and readable scope/reference footer. No clipped labels, overlapping rows, formula errors or unreadable monetary/percentage values observed."
+      },
+      "source_path": "tools/finance-expansion/operating-credit.json",
+      "source_pointer": "/skills/34",
+      "xlsx_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\water-utility-collections-reconciler.xlsx",
+      "png_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\water-utility-collections-reconciler.png",
+      "xlsx_sha256": "03d849f6af91935f426c4e0adfa115134f5e6c6757f0e268d0e865eda2ca3dc9",
+      "png_sha256": "9cff528542cabaf0c7163c84e0c8cae3cec1efed8e2a31604b1d2b60e67140e8",
+      "workbook_spec_sha256": "334d2e176f8d3ba5d6b0fafb12989570bd6544ac43d7d08e55e3943fa73dbcf4",
+      "native_author_checks": {
+        "status": "pass",
+        "reopenedAndRecalculated": true,
+        "cases": [
+          {
+            "name": "Changed source assumption, hand-calculated result",
+            "kind": "changed-input",
+            "status": "pass"
+          },
+          {
+            "name": "Missing or invalid required input",
+            "kind": "refusal",
+            "status": "pass"
+          }
+        ],
+        "formulaCount": 7
+      }
+    },
+    {
+      "slug": "freight-trip-contribution-builder",
+      "kind": "skill",
+      "source_spec_sha256": "210daaf633c334eaae530154778e2a918e0bbd1d4059c47791647856d38b5e5c",
+      "model_sha256": "1df931f5d81629c7ab497ab60d1587039e436418f44162517ab7c796664ad0fa",
+      "status": "pass",
+      "issues": [],
+      "method_review": "Loaded500+empty100=600km;180L fuel×2=360 plus maintenance60,driver200,toll50,other80 totals750; receipts1000 leave250. Extra empty100km raises cost70 and reduces contribution180.",
+      "distinct_from": [
+        {
+          "slug": "shipping-cost-analyzer",
+          "why": "Builds operator trip cash from loaded and empty distance, actual fuel consumption and route charges; store shipping invoice analysis does not capture carrier empty-running economics."
+        }
+      ],
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed",
+          "status": "pass"
+        },
+        {
+          "name": "Missing or invalid required input",
+          "kind": "refusal",
+          "status": "pass",
+          "refusal_message": "loaded_km must be a finite number."
+        }
+      ],
+      "visual_review": {
+        "status": "pass",
+        "inspected": true,
+        "method": "Actual rendered PNG inspected through view_image; revised seven final previews re-viewed after regeneration and unchanged other33 verified by exact PNG hash.",
+        "findings": [],
+        "notes": "Clear title, illustrative label, outputs and units first, transparent calculation rows, blue editable inputs and readable scope/reference footer. No clipped labels, overlapping rows, formula errors or unreadable monetary/percentage values observed."
+      },
+      "source_path": "tools/finance-expansion/operating-credit.json",
+      "source_pointer": "/skills/35",
+      "xlsx_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\freight-trip-contribution-builder.xlsx",
+      "png_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\freight-trip-contribution-builder.png",
+      "xlsx_sha256": "08bad122c90a2e76b9275daeff4e6305a867e9a87cfb04d25939cd78945d8d9c",
+      "png_sha256": "3028faac693fa2fa10d29f4aeab9806620f2c10e61cbaddb062af362842a9237",
+      "workbook_spec_sha256": "d9d415a3ed43cecf4be4322d9e40a10a28f1fd6699bd9d52cf2944cb0b2725a6",
+      "native_author_checks": {
+        "status": "pass",
+        "reopenedAndRecalculated": true,
+        "cases": [
+          {
+            "name": "Changed source assumption, hand-calculated result",
+            "kind": "changed-input",
+            "status": "pass"
+          },
+          {
+            "name": "Missing or invalid required input",
+            "kind": "refusal",
+            "status": "pass"
+          }
+        ],
+        "formulaCount": 6
+      }
+    },
+    {
+      "slug": "fleet-replacement-cash-comparer",
+      "kind": "skill",
+      "source_spec_sha256": "9444e86deefb394be9e200c045a6976f65819957c4575bf50d6310b7b13abfd5",
+      "model_sha256": "725e5e77cd2693d17d04c059cf72c47757425e73d5f3d1acf4f1bd3c900e0f9b",
+      "status": "pass",
+      "issues": [],
+      "method_review": "Purchase1000 less immediate old sale200 costs800. Annual incremental savings300 each plus signed replacement-minus-keep terminal100 gives1000 future cash at0%, NPV200. Terminal -100 gives0 NPV; old retained value is not silently zero.",
+      "distinct_from": [
+        {
+          "slug": "vehicle-fleet-planner",
+          "why": "Provides a bounded incremental keep-versus-replace cash comparison with time-zero proceeds and terminal value; broad fleet planning does not establish these source-specific cash timings."
+        }
+      ],
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed",
+          "status": "pass"
+        },
+        {
+          "name": "Missing or invalid required input",
+          "kind": "refusal",
+          "status": "pass",
+          "refusal_message": "purchase_cash must be a finite number."
+        },
+        {
+          "name": "Foregone keep-vehicle sale exceeds replacement terminal sale",
+          "kind": "changed",
+          "status": "pass"
+        }
+      ],
+      "visual_review": {
+        "status": "pass",
+        "inspected": true,
+        "method": "Actual rendered PNG inspected through view_image; revised seven final previews re-viewed after regeneration and unchanged other33 verified by exact PNG hash.",
+        "findings": [],
+        "notes": "Clear title, illustrative label, outputs and units first, transparent calculation rows, blue editable inputs and readable scope/reference footer. No clipped labels, overlapping rows, formula errors or unreadable monetary/percentage values observed."
+      },
+      "source_path": "tools/finance-expansion/operating-credit.json",
+      "source_pointer": "/skills/36",
+      "xlsx_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\fleet-replacement-cash-comparer.xlsx",
+      "png_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\fleet-replacement-cash-comparer.png",
+      "xlsx_sha256": "2cd2475ef7ab822b1c6e691fd4d537b6b1c3c31a67d3c94e8251221da9a8d8c4",
+      "png_sha256": "4b5f476f26f204a565c89b0f164d9a86da0100b400274a35fc619ad9db1d6291",
+      "workbook_spec_sha256": "191a3feccdbf4d0a955cd0a7bf0984ca40e96bdcd0ac446bd9bb5879c92c626f",
+      "native_author_checks": {
+        "status": "pass",
+        "reopenedAndRecalculated": true,
+        "cases": [
+          {
+            "name": "Changed source assumption, hand-calculated result",
+            "kind": "changed-input",
+            "status": "pass"
+          },
+          {
+            "name": "Missing or invalid required input",
+            "kind": "refusal",
+            "status": "pass"
+          },
+          {
+            "name": "Foregone keep-vehicle sale exceeds replacement terminal sale",
+            "kind": "changed-input",
+            "status": "pass"
+          }
+        ],
+        "formulaCount": 6
+      }
+    },
+    {
+      "slug": "clinic-claims-collections-bridge",
+      "kind": "skill",
+      "source_spec_sha256": "5b119f081745d868702a6dd216ab439e53d0edbc5d316f2543a5e3d7db4a9b7a",
+      "model_sha256": "63998ff8b6516bacb307de7b4cdd34c9371a6d60468c02827e1ec27a53a47a2c",
+      "status": "pass",
+      "issues": [],
+      "method_review": "Opening claims500 +billings1000-adjustments200-appliedcash700=600 ending claims. Appliedcash700 less provider offset50=650 bank receipt; actual650 ties. Applied750 yields bank shortfall50. Administrative deidentified reconciliation only.",
+      "distinct_from": [
+        {
+          "slug": "revenue-recognition-checker",
+          "why": "Reconciles deidentified billed claims, approved adjustments, claim-applied cash and provider offsets to bank settlement; it neither recognizes revenue under accounting standards nor assesses medical coverage."
+        }
+      ],
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed",
+          "status": "pass"
+        },
+        {
+          "name": "Missing or invalid required input",
+          "kind": "refusal",
+          "status": "pass",
+          "refusal_message": "opening_claims must be a finite number."
+        }
+      ],
+      "visual_review": {
+        "status": "pass",
+        "inspected": true,
+        "method": "Actual rendered PNG inspected through view_image; revised seven final previews re-viewed after regeneration and unchanged other33 verified by exact PNG hash.",
+        "findings": [],
+        "notes": "Clear title, illustrative label, outputs and units first, transparent calculation rows, blue editable inputs and readable scope/reference footer. No clipped labels, overlapping rows, formula errors or unreadable monetary/percentage values observed."
+      },
+      "source_path": "tools/finance-expansion/operating-credit.json",
+      "source_pointer": "/skills/37",
+      "xlsx_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\clinic-claims-collections-bridge.xlsx",
+      "png_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\clinic-claims-collections-bridge.png",
+      "xlsx_sha256": "d44d79036498e4af26308d3c9b81ce7df28da3d6b1352693e348a2f0c194044a",
+      "png_sha256": "c2cc58ecda58ea09ae5cdf44de05fcb319331b5de8c70f64693013c571b6b516",
+      "workbook_spec_sha256": "203e87f9cc045dd1a16f8b89d941a80b797f4915d68a0e6b29956b7d62047f48",
+      "native_author_checks": {
+        "status": "pass",
+        "reopenedAndRecalculated": true,
+        "cases": [
+          {
+            "name": "Changed source assumption, hand-calculated result",
+            "kind": "changed-input",
+            "status": "pass"
+          },
+          {
+            "name": "Missing or invalid required input",
+            "kind": "refusal",
+            "status": "pass"
+          }
+        ],
+        "formulaCount": 5
+      }
+    },
+    {
+      "slug": "grant-restrictions-cash-reconciler",
+      "kind": "skill",
+      "source_spec_sha256": "1488ae9c26439138c0dc615640d6442aeb1ae9ed6f89e4fda2860f79e2bf9dc3",
+      "model_sha256": "1b874aebd1520b8db903b3f3cd552350190677e46594a1f96662d29318655985",
+      "status": "pass",
+      "issues": [],
+      "method_review": "Opening restricted500 +restricted receipts300-payments200-refund50=550 restricted ending. Total bank1200+400-350=1250; general700. Eligibility is supplied award evidence, not decided by arithmetic.",
+      "distinct_from": [
+        {
+          "slug": "prepare-a-grant-spending-evidence-pack",
+          "why": "Builds a restriction movement and bank cash reconciliation separating available general cash; a spending evidence pack checks receipts and variance but does not supply this linked liquidity identity."
+        }
+      ],
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed",
+          "status": "pass"
+        },
+        {
+          "name": "Missing or invalid required input",
+          "kind": "refusal",
+          "status": "pass",
+          "refusal_message": "opening_bank_cash must be a finite number."
+        }
+      ],
+      "visual_review": {
+        "status": "pass",
+        "inspected": true,
+        "method": "Actual rendered PNG inspected through view_image; revised seven final previews re-viewed after regeneration and unchanged other33 verified by exact PNG hash.",
+        "findings": [],
+        "notes": "Clear title, illustrative label, outputs and units first, transparent calculation rows, blue editable inputs and readable scope/reference footer. No clipped labels, overlapping rows, formula errors or unreadable monetary/percentage values observed."
+      },
+      "source_path": "tools/finance-expansion/operating-credit.json",
+      "source_pointer": "/skills/38",
+      "xlsx_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\grant-restrictions-cash-reconciler.xlsx",
+      "png_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\grant-restrictions-cash-reconciler.png",
+      "xlsx_sha256": "99080c20a5737e4e78cc6cb24b94105ae72727fc522eb721266af3613a252ef7",
+      "png_sha256": "269f0401a47e787141c87124f5d027641a0bfbbb12f1d0e5311aecf8ea6f87e1",
+      "workbook_spec_sha256": "4d5ed0bae0e24acea3910664f9f69981c2439420b972ec0eefcf19b6c9598a17",
+      "native_author_checks": {
+        "status": "pass",
+        "reopenedAndRecalculated": true,
+        "cases": [
+          {
+            "name": "Changed source assumption, hand-calculated result",
+            "kind": "changed-input",
+            "status": "pass"
+          },
+          {
+            "name": "Missing or invalid required input",
+            "kind": "refusal",
+            "status": "pass"
+          }
+        ],
+        "formulaCount": 7
+      }
+    },
+    {
+      "slug": "commodity-pass-through-cost-bridge",
+      "kind": "skill",
+      "source_spec_sha256": "b588a0d714ade8d83b18f768693236a99638bd806a08ff195a68fd8ba2ec3419",
+      "model_sha256": "5fb5c8d555438e604a55688660d56725c274087af70c87a9d69bd453fcc16317",
+      "status": "pass",
+      "issues": [],
+      "method_review": "Commodity move2→3 at0.2kg/unit adds0.2 unit cost;50% approved recovery raises price0.1 to10.1. New total cost4.6 leaves5.5 contribution×1000=5500. Full pass-through5600 with fixed volume, no demand inference.",
+      "distinct_from": [
+        {
+          "slug": "raw-cost-breakdown-finder",
+          "why": "Reconciles input commodity price changes, physical consumption and approved partial customer pass-through; a static raw-parts cost breakdown does not model this signed margin movement."
+        }
+      ],
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed",
+          "status": "pass"
+        },
+        {
+          "name": "Missing or invalid required input",
+          "kind": "refusal",
+          "status": "pass",
+          "refusal_message": "original_input_price must be a finite number."
+        }
+      ],
+      "visual_review": {
+        "status": "pass",
+        "inspected": true,
+        "method": "Actual rendered PNG inspected through view_image; revised seven final previews re-viewed after regeneration and unchanged other33 verified by exact PNG hash.",
+        "findings": [],
+        "notes": "Clear title, illustrative label, outputs and units first, transparent calculation rows, blue editable inputs and readable scope/reference footer. No clipped labels, overlapping rows, formula errors or unreadable monetary/percentage values observed."
+      },
+      "source_path": "tools/finance-expansion/operating-credit.json",
+      "source_pointer": "/skills/39",
+      "xlsx_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\commodity-pass-through-cost-bridge.xlsx",
+      "png_path": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\commodity-pass-through-cost-bridge.png",
+      "xlsx_sha256": "23ec682b4749f00a7df06ff7d438ef748ed30fca4c3ddee98f3d33b6d0f3432d",
+      "png_sha256": "44f4f42a39fe6e540ad40771a9f8f6b55aafd671433038b8127a7db32d4e04d2",
+      "workbook_spec_sha256": "26715ccd97c68c8020ce6b8ba2f1f65b65ed2b81e42667ed5bbd129089097b18",
+      "native_author_checks": {
+        "status": "pass",
+        "reopenedAndRecalculated": true,
+        "cases": [
+          {
+            "name": "Changed source assumption, hand-calculated result",
+            "kind": "changed-input",
+            "status": "pass"
+          },
+          {
+            "name": "Missing or invalid required input",
+            "kind": "refusal",
+            "status": "pass"
+          }
+        ],
+        "formulaCount": 8
+      }
+    },
+    {
+      "slug": "reconcile-treasury-settlement-liquidity",
+      "kind": "workflow",
+      "source_spec_sha256": "6f47c522fee852b8bf956d24533eb88f75005fae1ac6bfac2e7f352e5273d3b4",
+      "status": "pass",
+      "issues": [],
+      "method_review": "Forecast backtest uses its own historic opening and does not get added to future liquidity. Accessible opening cash enters ordered current buckets once.",
+      "uses": [
+        "restricted-cash-availability-checker",
+        "treasury-forecast-backtest-checker",
+        "settlement-liquidity-ladder-builder"
+      ],
+      "distinct_from": [
+        {
+          "slug": "cash-forecast-builder",
+          "why": "A frozen forecast backtest, accessible-cash bridge and ordered settlement ladder create an audit of timing and restrictions beyond broad 30/60/90 forecasts."
+        }
+      ],
+      "source_path": "tools/finance-expansion/operating-credit.json",
+      "source_pointer": "/workflows/0"
+    },
+    {
+      "slug": "reconcile-cash-pool-interest-and-fees",
+      "kind": "workflow",
+      "source_spec_sha256": "2b8a55e031c211d8876cf728d90319f63a01065ed9117e2f61c021c7d2dce310",
+      "status": "pass",
+      "issues": [],
+      "method_review": "Entity interest allocation and bank-service fees use disjoint cost ledgers; pool-center residual is not claimed as complete profit.",
+      "uses": [
+        "cash-pool-interest-allocator",
+        "bank-fee-reconciliation-checker"
+      ],
+      "distinct_from": [
+        {
+          "slug": "cash-and-currency-risk-planner",
+          "why": "Connects source-specific intercompany interest residual to actual external bank charges; broad sweeps and hedge recommendations do not reconcile these cost tiers."
+        }
+      ],
+      "source_path": "tools/finance-expansion/operating-credit.json",
+      "source_pointer": "/workflows/1"
+    },
+    {
+      "slug": "reconcile-currency-exposure-and-settlement",
+      "kind": "workflow",
+      "source_spec_sha256": "f03cb8e280e232cfc9c6fe8319a022e24017963bafe0e56ca37e45093b1f9f75",
+      "status": "pass",
+      "issues": [],
+      "method_review": "Currency netting preserves signed foreign units. Forward step uses the actual gross contracted payable, avoiding a second hedge deduction.",
+      "uses": [
+        "currency-exposure-netting-checker",
+        "currency-forward-settlement-checker"
+      ],
+      "distinct_from": [
+        {
+          "slug": "cash-and-currency-risk-planner",
+          "why": "Separates exposure inventory from an existing forward settlement; no broad hedge recommendation or invented risk forecast."
+        }
+      ],
+      "source_path": "tools/finance-expansion/operating-credit.json",
+      "source_pointer": "/workflows/2"
+    },
+    {
+      "slug": "bridge-floating-rate-changes-to-revolver-cost",
+      "kind": "workflow",
+      "source_spec_sha256": "ca38905b8369277c5fdf3fb7d2d5e4e6f6de99a5ad0f3ccf67f288b4fcc24a90",
+      "status": "pass",
+      "issues": [],
+      "method_review": "Repricing change is converted to actual contractual facility rate before the separate revolver charge step; annual dollar sensitivity is not used as a rate.",
+      "uses": [
+        "floating-rate-repricing-planner",
+        "revolver-interest-fee-checker"
+      ],
+      "distinct_from": [
+        {
+          "slug": "cash-and-currency-risk-planner",
+          "why": "Links reset timing to facility statement charges, separating annual exposure change from monthly interest/commitment fees."
+        }
+      ],
+      "source_path": "tools/finance-expansion/operating-credit.json",
+      "source_pointer": "/workflows/3"
+    },
+    {
+      "slug": "reconcile-an-asset-based-revolver-certificate",
+      "kind": "workflow",
+      "source_spec_sha256": "177f304b361de42a4e2c605b7a9364db1f25dbffb52079c623e4db199cb35f0e",
+      "status": "pass",
+      "issues": [],
+      "method_review": "AR and inventory certificates use disjoint eligible populations, contract caps and reserves once; combined capacity flows into commitment and usage comparison.",
+      "uses": [
+        "receivables-borrowing-base-builder",
+        "inventory-borrowing-base-builder",
+        "revolver-availability-checker"
+      ],
+      "distinct_from": [
+        {
+          "slug": "borrower-credit-memo-writer",
+          "why": "Builds actual collateral-tier schedules and facility availability; the existing general credit memo supplies ratios and recommendations rather than a borrowing certificate identity."
+        }
+      ],
+      "source_path": "tools/finance-expansion/operating-credit.json",
+      "source_pointer": "/workflows/4"
+    },
+    {
+      "slug": "review-contractual-debt-service-cash-tests",
+      "kind": "workflow",
+      "source_spec_sha256": "b058f6249323490e95dac1bc197b72c3e26c78b260d8f7271e09e1d9466251f2",
+      "status": "pass",
+      "issues": [],
+      "method_review": "DSCR and fixed-charge test use distinct contract numerators and denominator definitions; same cash is not implicitly used for unrelated agreements.",
+      "uses": [
+        "debt-service-covenant-headroom-checker",
+        "fixed-charge-coverage-bridge-builder"
+      ],
+      "distinct_from": [
+        {
+          "slug": "borrower-credit-memo-writer",
+          "why": "Reconciles defined cash tests across periods and fixed charges; excludes generic leverage, equity cures and automatic credit conclusions."
+        }
+      ],
+      "source_path": "tools/finance-expansion/operating-credit.json",
+      "source_pointer": "/workflows/5"
+    },
+    {
+      "slug": "review-maturity-funding-and-credit-limits",
+      "kind": "workflow",
+      "source_spec_sha256": "bf3e840964d922158682c654f974e8b3f474ae23739e07a09fb23e37a7f11363",
+      "status": "pass",
+      "issues": [],
+      "method_review": "Confirmed refinancing timing is separate from connected-credit policy headroom. Unused limit is not a bank commitment or funding receipt.",
+      "uses": [
+        "debt-maturity-funding-ladder",
+        "credit-exposure-limit-checker"
+      ],
+      "distinct_from": [
+        {
+          "slug": "debt-restructuring-plan-drafter",
+          "why": "Reconciles already committed maturity funding and lender exposure capacity without proposing haircut, refinancing certainty or legal restructuring terms."
+        }
+      ],
+      "source_path": "tools/finance-expansion/operating-credit.json",
+      "source_pointer": "/workflows/6"
+    },
+    {
+      "slug": "build-a-project-debt-service-cash-pack",
+      "kind": "workflow",
+      "source_spec_sha256": "c3728b4f9927b5bd8a242212a4adead4c12659fb2f653d47142ca4a0e9826868",
+      "status": "pass",
+      "issues": [],
+      "method_review": "Corrected accrual-versus-cash CFADS basis is explicit, then only qualified annual cash enters sculpting and contract-rate remaining-loan-horizon cover.",
+      "uses": [
+        "project-cash-available-bridge",
+        "debt-repayment-sculpting-planner",
+        "loan-life-cash-cover-checker"
+      ],
+      "distinct_from": [
+        {
+          "slug": "borrower-credit-memo-writer",
+          "why": "Links contract-qualified operating cash to an actual repayment rollforward and discounted loan-life coverage; broad credit ratios do not supply these compatible schedules."
+        }
+      ],
+      "source_path": "tools/finance-expansion/operating-credit.json",
+      "source_pointer": "/workflows/7"
+    },
+    {
+      "slug": "reconcile-project-reserves-and-payment-priority",
+      "kind": "workflow",
+      "source_spec_sha256": "d5a5bd806f2dd5ea5b289b7ab0b8eccd1f9a17d42c547dcfe9c96a23a7309290",
+      "status": "pass",
+      "issues": [],
+      "method_review": "Reserve funding is recomputed from actual senior-priority cash before waterfall; no second cash deduction or automatic release authority.",
+      "uses": [
+        "debt-reserve-rollforward-builder",
+        "project-payment-waterfall-builder"
+      ],
+      "distinct_from": [
+        {
+          "slug": "cash-and-currency-risk-planner",
+          "why": "Combines required reserve movements and operating payment priority with explicit cash ties, beyond general cash positioning."
+        }
+      ],
+      "source_path": "tools/finance-expansion/operating-credit.json",
+      "source_pointer": "/workflows/8"
+    },
+    {
+      "slug": "reconcile-construction-draws-and-completion-funding",
+      "kind": "workflow",
+      "source_spec_sha256": "5fde76e24ed87ebb1fa6992117b92ea483000b6075a064b1b03761be2ca307e4",
+      "status": "pass",
+      "issues": [],
+      "method_review": "Cost-only construction draws feed noncircular interest, then completion funding includes separately eligible costs once; interest is not duplicated inside base draws.",
+      "uses": [
+        "construction-funding-draw-planner",
+        "construction-interest-schedule-builder",
+        "completion-funding-gap-checker"
+      ],
+      "distinct_from": [
+        {
+          "slug": "project-cost-progress-tracker",
+          "why": "Combines committed cash draws, timed capitalized interest and remaining cost funding; earned-value progress alone does not establish lender commitment capacity."
+        }
+      ],
+      "source_path": "tools/finance-expansion/operating-credit.json",
+      "source_pointer": "/workflows/9"
+    },
+    {
+      "slug": "bridge-availability-payments-into-project-cash",
+      "kind": "workflow",
+      "source_spec_sha256": "de5ab62942b5107b3b4e113479d05e93a43236d51db846fa0939e0f99c53a964",
+      "status": "pass",
+      "issues": [],
+      "method_review": "Certified availability entitlement is reconciled to actual receipts; CFADS bridge declares accrual/cash basis and avoids another operating cost or working-capital deduction.",
+      "uses": [
+        "availability-payment-deduction-checker",
+        "project-cash-available-bridge"
+      ],
+      "distinct_from": [
+        {
+          "slug": "invoice-totals-checker",
+          "why": "Maps capped approved contract deductions into qualified project cash; generic invoice checking lacks project operating cash exclusions and financing definitions."
+        }
+      ],
+      "source_path": "tools/finance-expansion/operating-credit.json",
+      "source_pointer": "/workflows/10"
+    },
+    {
+      "slug": "connect-toll-operating-cash-to-debt-repayment",
+      "kind": "workflow",
+      "source_spec_sha256": "cfd6e10031acb73d41fccc0e8218142535b8775a1b59867713307b34c4bb9b61",
+      "status": "pass",
+      "issues": [],
+      "method_review": "Chargeable traffic before collection loss feeds operating cash; CFADS adjustments preserve actual payment basis and debt schedule uses only eligible annual cash.",
+      "uses": [
+        "toll-revenue-ramp-model-builder",
+        "project-cash-available-bridge",
+        "debt-repayment-sculpting-planner"
+      ],
+      "distinct_from": [
+        {
+          "slug": "borrower-credit-memo-writer",
+          "why": "Uses traffic-unit cash scenarios and a debt principal rollforward rather than a store revenue forecast or a static coverage ratio."
+        }
+      ],
+      "source_path": "tools/finance-expansion/operating-credit.json",
+      "source_pointer": "/workflows/11"
+    },
+    {
+      "slug": "connect-production-yield-to-mix-contribution",
+      "kind": "workflow",
+      "source_spec_sha256": "76f44e7cff47f1cc4272e72cd67e7e438159efb64876c135c721386988af79a1",
+      "status": "pass",
+      "issues": [],
+      "method_review": "Good-output cost converts into each proposed selling unit using source evidence; one bottleneck capacity check does not optimize or establish whole-machine feasibility.",
+      "uses": [
+        "manufacturing-yield-cost-bridge",
+        "product-mix-capacity-checker"
+      ],
+      "distinct_from": [
+        {
+          "slug": "production-cost-variance",
+          "why": "Links physical yield and scrap recovery to proposed product-mix contribution and a single bottleneck check; standard cost variance alone does not supply this forward source map."
+        }
+      ],
+      "source_path": "tools/finance-expansion/operating-credit.json",
+      "source_pointer": "/workflows/12"
+    },
+    {
+      "slug": "reconcile-service-capacity-and-shared-cost",
+      "kind": "workflow",
+      "source_spec_sha256": "25d30bd8862ef800ca8ba29c7b6c0d7764ccddd3de5fc995e5d864bc6e617c39",
+      "status": "pass",
+      "issues": [],
+      "method_review": "Delivery labor and separately allocated normal-capacity shared pool remain disjoint; idle capacity cost stays visible rather than improving one department by omission.",
+      "uses": [
+        "service-utilization-margin-builder",
+        "shared-service-activity-cost-allocator"
+      ],
+      "distinct_from": [
+        {
+          "slug": "team-capacity-planner",
+          "why": "Adds evidenced service fee realization, delivery cash and normal-capacity activity allocation to staffing hours; capacity planning alone does not reconcile margin or idle shared cost."
+        }
+      ],
+      "source_path": "tools/finance-expansion/operating-credit.json",
+      "source_pointer": "/workflows/13"
+    },
+    {
+      "slug": "reconcile-hotel-room-and-food-contribution",
+      "kind": "workflow",
+      "source_spec_sha256": "cfe616644b9f0114b7d4c7b73be1c3edb6684bdbab71c447f88ebd0c193bd255",
+      "status": "pass",
+      "issues": [],
+      "method_review": "Room-night contribution and actual food batches use identical property/period/currency and separate cost boundaries; shared overhead is not deducted twice.",
+      "uses": [
+        "hotel-channel-revenue-reconciler",
+        "restaurant-portion-cost-builder"
+      ],
+      "distinct_from": [
+        {
+          "slug": "hotel-room-pricing-planner",
+          "why": "Produces source-tied room-channel and restaurant-batch contribution views for one hospitality operation; optimizer and shift-handover workflows do not establish these financial reconciliations."
+        }
+      ],
+      "source_path": "tools/finance-expansion/operating-credit.json",
+      "source_pointer": "/workflows/14"
+    },
+    {
+      "slug": "test-input-inflation-against-stock-clearance",
+      "kind": "workflow",
+      "source_spec_sha256": "53de62a2ee5959c3816dac4daa845112e6f7c9ce815fa2ef9fe04cc1af383a08",
+      "status": "pass",
+      "issues": [],
+      "method_review": "Historical cohort cost remains original; new input-price inflation applies only to prospective replenishment. Corrected whole-cohort recovery is separate from sold-unit contribution.",
+      "uses": [
+        "retail-markdown-stock-reconciler",
+        "commodity-pass-through-cost-bridge"
+      ],
+      "distinct_from": [
+        {
+          "slug": "discount-impact-checker",
+          "why": "Separates prospective input inflation from historical stock-cohort cash recovery; an isolated discount calculator cannot reconcile these different cost vintages."
+        }
+      ],
+      "source_path": "tools/finance-expansion/operating-credit.json",
+      "source_pointer": "/workflows/15"
+    },
+    {
+      "slug": "connect-contract-energy-cash-to-loan-life-cover",
+      "kind": "workflow",
+      "source_spec_sha256": "fff9e02360b3a2d18fe138d2b97d9927c72000e4497a10e40ef805d00be19896",
+      "status": "pass",
+      "issues": [],
+      "method_review": "Accepted contract-energy operating results enter financing cash with explicit accrual/cash-route mapping, no second variable/fixed cash cost or working-capital deduction.",
+      "uses": [
+        "contracted-energy-cash-model",
+        "project-cash-available-bridge",
+        "loan-life-cash-cover-checker"
+      ],
+      "distinct_from": [
+        {
+          "slug": "borrower-credit-memo-writer",
+          "why": "Links metered contracted energy cash to agreement-qualified debt-horizon cover using the loan rate, distinct from generic valuation or funding pitches."
+        }
+      ],
+      "source_path": "tools/finance-expansion/operating-credit.json",
+      "source_pointer": "/workflows/16"
+    },
+    {
+      "slug": "compare-transport-cash-and-fleet-replacement",
+      "kind": "workflow",
+      "source_spec_sha256": "c90bb74bdff70de048fe07d08aad8e0b0613bb128935266bbfa3d0fc42ca64b7",
+      "status": "pass",
+      "issues": [],
+      "method_review": "Comparable annual trip workload supports incremental replacement savings; terminal cash uses replacement minus keep at one horizon, not trip contribution as savings.",
+      "uses": [
+        "freight-trip-contribution-builder",
+        "fleet-replacement-cash-comparer"
+      ],
+      "distinct_from": [
+        {
+          "slug": "vehicle-fleet-planner",
+          "why": "Maps actual empty-running trip cash into an incremental replacement decision; broad fleet planning or parcel-shipping reports do not reconcile same-workload replacement cash."
+        }
+      ],
+      "source_path": "tools/finance-expansion/operating-credit.json",
+      "source_pointer": "/workflows/17"
+    },
+    {
+      "slug": "reconcile-restricted-utility-program-cash",
+      "kind": "workflow",
+      "source_spec_sha256": "70621f2b31fcfe994e56ff67aaaef9b8298f57af9b1ecb904196357b29ce57cb",
+      "status": "pass",
+      "issues": [],
+      "method_review": "Consumer collections and restricted award cash remain distinct; total/restricted bank rollforwards feed one available-cash calculation without a second restriction deduction.",
+      "uses": [
+        "water-utility-collections-reconciler",
+        "grant-restrictions-cash-reconciler",
+        "restricted-cash-availability-checker"
+      ],
+      "distinct_from": [
+        {
+          "slug": "prepare-a-grant-spending-evidence-pack",
+          "why": "Adds the water billing-to-cash chain and bank-accessible cash to restricted award movements; a general grant spending pack does not reconcile utility consumer collections and award cash separately."
+        }
+      ],
+      "source_path": "tools/finance-expansion/operating-credit.json",
+      "source_pointer": "/workflows/18"
+    },
+    {
+      "slug": "reconcile-clinic-remittances-to-settlement-cash",
+      "kind": "workflow",
+      "source_spec_sha256": "3f85c5a1ac83268e98ab133c51b7be43dfe8eb4bf41fd55cd71be389deec71d4",
+      "status": "pass",
+      "issues": [],
+      "method_review": "Deidentified claim-applied cash reconciles provider offsets to actual bank cash and availability timestamp; only confirmed same-account accessible receipts enter the ordered liquidity ladder. Gross billings and pending remittances are excluded from confirmed inflows.",
+      "uses": [
+        "clinic-claims-collections-bridge",
+        "settlement-liquidity-ladder-builder"
+      ],
+      "distinct_from": [
+        {
+          "slug": "cash-forecast-builder",
+          "why": "Connects aggregate claim/offset records to actual bank settlement cutoffs; existing clinic intake/referral workflows do not create a financial collection bridge."
+        }
+      ],
+      "source_path": "tools/finance-expansion/operating-credit.json",
+      "source_pointer": "/workflows/19"
+    },
+    {
+      "slug": "treasury-settlement-evidence-reviewer",
+      "kind": "agent",
+      "source_spec_sha256": "5831cd7663ee3a473a8672bbb2a1c7670b83d04936a4d79b4fa97580c6a56983",
+      "status": "pass",
+      "issues": [],
+      "method_review": "Dated source/state trigger governs reconcile-treasury-settlement-liquidity. Branch applicability reviewed against the actual selected extra method: If an unexpected bank charge explains a cash difference, reconcile only that statement fee against actual counts and contractual rates before changing the cash source map. Missing fee evidence stays unresolved. Portable review schedule is a proposal, no installed task or external action.",
+      "acceptance": "Forecast errors use the frozen prior version; current opening cash equals verified accessible cash; each ordered bucket reconciles and funding gaps remain explicit. Report changed evidence and actual recalculation; no external transaction or submission is authorized.",
+      "distinct_from": [
+        {
+          "slug": "cash-forecast-builder",
+          "why": "A frozen forecast backtest, accessible-cash bridge and ordered settlement ladder create an audit of timing and restrictions beyond broad 30/60/90 forecasts."
+        }
+      ],
+      "source_path": "tools/finance-expansion/operating-credit.json",
+      "source_pointer": "/agents/0"
+    },
+    {
+      "slug": "currency-maturity-evidence-reviewer",
+      "kind": "agent",
+      "source_spec_sha256": "d917987b6be5dedf7668c45fcf9e2b7740ce62577cd55420e1ca97070d367786",
+      "status": "pass",
+      "issues": [],
+      "method_review": "Dated source/state trigger governs reconcile-currency-exposure-and-settlement. Branch applicability reviewed against the actual selected extra method: If the counterparty documents a collateral cash block, check accessible cash using the actual notice and existing restriction ledger. Do not infer a collateral call from an exchange-rate scenario or arrange a trade. Portable review schedule is a proposal, no installed task or external action.",
+      "acceptance": "Maturity, currency units and rate quote direction match; forward notional appears once in exposure netting and once in settlement, never as two hedges. Report changed evidence and actual recalculation; no external transaction or submission is authorized.",
+      "distinct_from": [
+        {
+          "slug": "cash-and-currency-risk-planner",
+          "why": "Separates exposure inventory from an existing forward settlement; no broad hedge recommendation or invented risk forecast."
+        }
+      ],
+      "source_path": "tools/finance-expansion/operating-credit.json",
+      "source_pointer": "/agents/1"
+    },
+    {
+      "slug": "borrowing-base-evidence-reviewer",
+      "kind": "agent",
+      "source_spec_sha256": "2f064efe3e841e87700194f52da3399803a1b8be3cd9144a3a9112b24ca782b6",
+      "status": "pass",
+      "issues": [],
+      "method_review": "Dated source/state trigger governs reconcile-an-asset-based-revolver-certificate. Branch applicability reviewed against the actual selected extra method: If the new certificate accompanies a specific proposed funding request and a supplied connected-party limit, review the requested exposure against that limit. Headroom remains a monitoring result, not draw permission. Portable review schedule is a proposal, no installed task or external action.",
+      "acceptance": "Source populations and certificate date match; every reserve and usage deduction appears once; negative availability stays an overadvance exception. Report changed evidence and actual recalculation; no external transaction or submission is authorized.",
+      "distinct_from": [
+        {
+          "slug": "borrower-credit-memo-writer",
+          "why": "Builds actual collateral-tier schedules and facility availability; the existing general credit memo supplies ratios and recommendations rather than a borrowing certificate identity."
+        }
+      ],
+      "source_path": "tools/finance-expansion/operating-credit.json",
+      "source_pointer": "/agents/2"
+    },
+    {
+      "slug": "debt-service-covenant-evidence-reviewer",
+      "kind": "agent",
+      "source_spec_sha256": "b0938aa0429ce6a1b399b0d1c4f4ba21c6e7451a447c756fa5c6212b424e91b3",
+      "status": "pass",
+      "issues": [],
+      "method_review": "Dated source/state trigger governs review-contractual-debt-service-cash-tests. Branch applicability reviewed against the actual selected extra method: If only one test period changes, rebuild that period from its source cash and service components and compare the new minimum headroom with the prior dated result. A proposed waiver never replaces the signed threshold. Portable review schedule is a proposal, no installed task or external action.",
+      "acceptance": "Each test keeps its own numerator and denominator; shared source debt service is tied across tables but ratios and cash definitions are never substituted. Report changed evidence and actual recalculation; no external transaction or submission is authorized.",
+      "distinct_from": [
+        {
+          "slug": "borrower-credit-memo-writer",
+          "why": "Reconciles defined cash tests across periods and fixed charges; excludes generic leverage, equity cures and automatic credit conclusions."
+        }
+      ],
+      "source_path": "tools/finance-expansion/operating-credit.json",
+      "source_pointer": "/agents/3"
+    },
+    {
+      "slug": "maturity-funding-evidence-reviewer",
+      "kind": "agent",
+      "source_spec_sha256": "c3161dc3fcb3eb23893adbc395ae1e95bf64a2181b7283da4d039bcc946cd2a7",
+      "status": "pass",
+      "issues": [],
+      "method_review": "Dated source/state trigger governs review-maturity-funding-and-credit-limits. Branch applicability reviewed against the actual selected extra method: If confirmed refinancing changes revolving interest or commitment fees, compute the actual period charge from verified average balances and terms. Feed only supported cash costs into the affected future cash bucket. Portable review schedule is a proposal, no installed task or external action.",
+      "acceptance": "Only confirmed proceeds fund maturities; unused exposure limit is not cash or loan approval; funding and monitoring limits remain separate. Report changed evidence and actual recalculation; no external transaction or submission is authorized.",
+      "distinct_from": [
+        {
+          "slug": "debt-restructuring-plan-drafter",
+          "why": "Reconciles already committed maturity funding and lender exposure capacity without proposing haircut, refinancing certainty or legal restructuring terms."
+        }
+      ],
+      "source_path": "tools/finance-expansion/operating-credit.json",
+      "source_pointer": "/agents/4"
+    },
+    {
+      "slug": "project-debt-cash-evidence-reviewer",
+      "kind": "agent",
+      "source_spec_sha256": "9aa2453f7fdd18919bde5d2f4cf0e6d5e10932129f4b97d38602cbbc769fde8a",
+      "status": "pass",
+      "issues": [],
+      "method_review": "Dated source/state trigger governs build-a-project-debt-service-cash-pack. Branch applicability reviewed against the actual selected extra method: If the changed receipt is an availability payment and the actual contract deduction certificate is supplied, reconcile that certified deduction before revising the affected CFADS period. Otherwise preserve the missing payment evidence. Any changed receipt or cost source must preserve the declared accrual-versus-cash basis; do not deduct working-capital settlement twice. Portable review schedule is a proposal, no installed task or external action.",
+      "acceptance": "All annual cash is rebuilt from dated sources; principal rollforward ties; cash beyond maturity and financing proceeds are excluded from loan-life cover. Actual receipt/payment sources do not receive a second working-capital deduction; accrual and cash-basis routes are explicitly distinguished. Preserve changed-source evidence; no external transaction is authorized.",
+      "distinct_from": [
+        {
+          "slug": "borrower-credit-memo-writer",
+          "why": "Links contract-qualified operating cash to an actual repayment rollforward and discounted loan-life coverage; broad credit ratios do not supply these compatible schedules."
+        }
+      ],
+      "source_path": "tools/finance-expansion/operating-credit.json",
+      "source_pointer": "/agents/5"
+    },
+    {
+      "slug": "project-reserve-evidence-reviewer",
+      "kind": "agent",
+      "source_spec_sha256": "af8cd14dba4c0e8abaeea3458c63729e54f8634d86da21a327e22f1e2dbc82ee",
+      "status": "pass",
+      "issues": [],
+      "method_review": "Dated source/state trigger governs reconcile-project-reserves-and-payment-priority. Branch applicability reviewed against the actual selected extra method: If a signed debt-service test gate is relevant to a requested distribution review, calculate only that cash covenant using the actual definition and periods. A cash residual does not satisfy an unverified distribution gate. Portable review schedule is a proposal, no installed task or external action.",
+      "acceptance": "Reserve top-up appears once; preliminary available funding is reconciled to actual waterfall allocation; every unfilled service or reserve obligation stays visible. Report changed evidence and actual recalculation; no external transaction or submission is authorized.",
+      "distinct_from": [
+        {
+          "slug": "cash-and-currency-risk-planner",
+          "why": "Combines required reserve movements and operating payment priority with explicit cash ties, beyond general cash positioning."
+        }
+      ],
+      "source_path": "tools/finance-expansion/operating-credit.json",
+      "source_pointer": "/agents/6"
+    },
+    {
+      "slug": "construction-funding-evidence-reviewer",
+      "kind": "agent",
+      "source_spec_sha256": "ffdaf21eae44b8d28a7032882caee2e2f4ba68e86d80aca905b3585c8f6b3243",
+      "status": "pass",
+      "issues": [],
+      "method_review": "Dated source/state trigger governs reconcile-construction-draws-and-completion-funding. Branch applicability reviewed against the actual selected extra method: If actual draw timing differs from the prior assumption, recalculate capitalized interest with the evidenced timing fraction and test final debt against remaining commitment. Preserve uncovered interest as a funding gap. Portable review schedule is a proposal, no installed task or external action.",
+      "acceptance": "Cost draws exclude separately capitalized interest; interest is checked against commitment capacity; no uncovered interest or cost is silently financed. Report changed evidence and actual recalculation; no external transaction or submission is authorized.",
+      "distinct_from": [
+        {
+          "slug": "project-cost-progress-tracker",
+          "why": "Combines committed cash draws, timed capitalized interest and remaining cost funding; earned-value progress alone does not establish lender commitment capacity."
+        }
+      ],
+      "source_path": "tools/finance-expansion/operating-credit.json",
+      "source_pointer": "/agents/7"
+    },
+    {
+      "slug": "production-contribution-evidence-reviewer",
+      "kind": "agent",
+      "source_spec_sha256": "ef7c53d9c0eef3dfc8ce48ea9d6fdff8cb4719145a083b71e67264dcd02c8e2a",
+      "status": "pass",
+      "issues": [],
+      "method_review": "Dated source/state trigger governs connect-production-yield-to-mix-contribution. Branch applicability reviewed against the actual selected extra method: If an input invoice price changes, bridge commodity intensity and only the approved customer pass-through assumption before rebuilding product contribution. Preserve the original stock cost vintage and do not infer demand or production feasibility. Portable review schedule is a proposal, no installed task or external action.",
+      "acceptance": "Per-good-unit costs and product mix quantities use identical physical units; planned volume is not increased automatically from contribution rankings. Report changed evidence and actual recalculation; no external transaction or submission is authorized.",
+      "distinct_from": [
+        {
+          "slug": "production-cost-variance",
+          "why": "Links physical yield and scrap recovery to proposed product-mix contribution and a single bottleneck check; standard cost variance alone does not supply this forward source map."
+        }
+      ],
+      "source_path": "tools/finance-expansion/operating-credit.json",
+      "source_pointer": "/agents/8"
+    },
+    {
+      "slug": "utility-restricted-cash-evidence-reviewer",
+      "kind": "agent",
+      "source_spec_sha256": "53e44b5538336887e2da944d29a27c063472b8352844be6fdd7f604d574777cf",
+      "status": "pass",
+      "issues": [],
+      "method_review": "Dated source/state trigger governs reconcile-restricted-utility-program-cash. Branch applicability reviewed against the actual selected extra method: If the utility has an actual signed debt-service cash test due, compare only contract-qualifying cash after restriction mapping with the supplied service schedule. If no applicable loan test exists, mark this branch inapplicable rather than inventing a covenant. Portable review schedule is a proposal, no installed task or external action.",
+      "acceptance": "Consumer receipts and grant receipts remain separate source streams; restricted releases require evidence and general cash is not double-counted. Report changed evidence and actual recalculation; no external transaction or submission is authorized.",
+      "distinct_from": [
+        {
+          "slug": "prepare-a-grant-spending-evidence-pack",
+          "why": "Adds the water billing-to-cash chain and bank-accessible cash to restricted award movements; a general grant spending pack does not reconcile utility consumer collections and award cash separately."
+        }
+      ],
+      "source_path": "tools/finance-expansion/operating-credit.json",
+      "source_pointer": "/agents/9"
+    }
+  ],
+  "findings": [
+    {
+      "id": "CFADS-basis",
+      "status": "resolved-final-source-and-native",
+      "detail": "Pre-WC accrual proxies exclude noncash expenses; already-cash sources omit previously embedded working-capital adjustment."
+    },
+    {
+      "id": "fleet-terminal",
+      "status": "resolved-final-source-and-native",
+      "detail": "Terminal input is signed replacement-minus-keep difference, not replacement sale alone."
+    },
+    {
+      "id": "retail-cohort",
+      "status": "resolved-final-source-and-native",
+      "detail": "Sold-unit contribution and full-cohort net cash are separately calculated and labeled."
+    },
+    {
+      "id": "toll-basis",
+      "status": "resolved-final-source-and-native",
+      "detail": "Chargeable passages precede collection loss; already-paid traffic is not discounted twice."
+    },
+    {
+      "id": "DSRA-window",
+      "status": "resolved-final-source-and-native",
+      "detail": "Annual-service/12 assumption is explicitly uniform monthly service only."
+    }
+  ],
+  "limitations": [
+    "No claim of source transaction truth or legal eligibility: signed contracts and dated records remain required.",
+    "Native author has separately tested workbook recalculation/export/reimport; this independent report additionally verifies exact hashes and actual rendered layout.",
+    "Nearest existing method evidence is pinned separately; broad treasury/credit/planning methods do not replace these focused actual-source financial schedules."
+  ],
+  "open_findings": [],
+  "native_report": {
+    "path": "reports/finance-workbooks-operating-credit.json",
+    "sha256": "714a0da9e713ea085150761e258c6d3ef82cbc6b790af37b74312411ee5ae08c",
+    "checks": "Author baseline all calculations/output cells, changed/refusal outputs and saved-workbook reopen checks; independent hash/model/packaged-XLSX pin checks and actual PNG inspection."
+  },
+  "source_research": {
+    "path": "reports/finance-operating-credit-research.json",
+    "sha256": "e349a91c61dd745487a85eee89b06021f22b80df7d833bfcb98f09bf6ce30c4d",
+    "nearest_existing_methods": [
+      {
+        "slug": "cash-and-currency-risk-planner",
+        "path": "catalogue-items/imported/cash-and-currency-risk-planner/SKILL.md",
+        "sha256": "5406d200024ecd8b4d37e9feb8aa86a08894c07993713a02a50f25983b484984",
+        "source_evidence": "Full main method: broad cash ladder, VaR/forwards, sweep and investment policy report. New schedules are explicit restrictions, signed settlement and rate/fee reconciliations; no copy of broad recommendations or VaR claim."
+      },
+      {
+        "slug": "cash-forecast-builder",
+        "path": "catalogue-items/imported/cash-forecast-builder/SKILL.md",
+        "sha256": "0f30dbe051c0fd6173bcb2e55d7dd7b04c4cbfd0dd046c77c245671e002e831b",
+        "source_evidence": "Full main method: connector/CSV30/60/90 net windows, historical lag and percentage-variance bands, source-dependent XLSX. New intraday ordered buckets and frozen signed-flow drift avoid generic forecast duplication and unsupported default confidence bands."
+      },
+      {
+        "slug": "invoice-totals-checker",
+        "path": "catalogue-items/imported/invoice-totals-checker/SKILL.md",
+        "sha256": "6d4b7bd87da8f09a659fbcca50b7382757d5b7bcb4e0a600868298c9ce7f25d0",
+        "source_evidence": "Full-method prior audit reused at exact hash: decimal line/subtotal/tax arithmetic and invoice completeness. New bank/availability schedules add actual contract fee bases, credits/caps and period records; no tax inference."
+      },
+      {
+        "slug": "budget-variance-explainer",
+        "path": "catalogue-items/imported/budget-variance-explainer/SKILL.md",
+        "sha256": "cfd3c25aae3cfe02daca30f08162a930ea9cc460ba887b0896a3240501554f95",
+        "source_evidence": "Full-method prior audit reused at exact hash: budget/actual bridge, materiality and MAPE. New treasury backtest explicitly reconciles frozen signed net flows to cumulative cash drift, uses currency MAE with zero/negative flows, and claims no statistical accuracy score."
+      },
+      {
+        "slug": "borrower-credit-memo-writer",
+        "path": "catalogue-items/imported/borrower-credit-memo-writer/SKILL.md",
+        "sha256": "10459cad4ab89d106a2f92e6a4dc49b80176710123f4810c895eb6ce9db58c2d",
+        "source_evidence": "Full method read: broad5Cs, ratios, capacity, stress, collateral and covenant design. New borrowing-base tiers, actual capacity bridge, cash service tests and principal schedule are source-specific numeric contracts, with no approve/decline benchmark copied."
+      },
+      {
+        "slug": "inventory-value-calculator",
+        "path": "catalogue-items/imported/inventory-value-calculator/SKILL.md",
+        "sha256": "5add0e739116a6dff711920314b60e447a2f58a9b659638dc8062c248de55eed",
+        "source_evidence": "Full method read: IAS2/ASC330 inventory formula, absorption and NRV/provisions. New collateral certificate uses legal eligible population, appraisal advance caps and lender reserves, not statutory inventory valuation."
+      },
+      {
+        "slug": "debt-payoff-planner",
+        "path": "catalogue-items/imported/debt-payoff-planner/SKILL.md",
+        "sha256": "14c8a9402c151281f9caed73a44a968f7ad4b3ee1f9e1df72392148eb9399b97",
+        "source_evidence": "Full method read: consumer avalanche/snowball monthly minimum/extra payment simulation. New revolver fees and construction interest use contractual facility bases and draw timing, not consumer payoff strategies."
+      },
+      {
+        "slug": "average-earnings-coverage-tester",
+        "path": "catalogue-items/general/average-earnings-coverage-tester/SKILL.md",
+        "sha256": "c2798b316a382196ea7a5b32b4495495f7e5c764018891208ed0b09f0831c1b3",
+        "source_evidence": "Full method read: multi-year normalized earnings, all fixed claims, historical bars and refinancing cover. New cash fixed-charge bridge and loan-life contract PV have different numerator, period and purpose, with no inherited heuristic score."
+      },
+      {
+        "slug": "customer-concentration-risk",
+        "path": "catalogue-items/general/customer-concentration-risk/SKILL.md",
+        "sha256": "167b57a16e3eae57f1dd24f9ad9c0aad5cac62c4ea1edb89292fbc05d844c1d4",
+        "source_evidence": "Full method read: business dependence by client/platform/region/work/keyperson, supplier/credit dependence and proposed limits. New creditor exposure uses connected funded and policy-weighted undrawn facilities, not revenue shares or client exit plans."
+      },
+      {
+        "slug": "debt-restructuring-plan-drafter",
+        "path": "catalogue-items/imported/debt-restructuring-plan-drafter/SKILL.md",
+        "sha256": "d154db789f903704d91f6578f15cbf9ea60406e4cf32d4c3e7d5ad782d441a72",
+        "source_evidence": "Full method read: haircuts, term extensions, debt/equity swaps and restructuring versus liquidation. New maturity funding ladder and operating payment priority use already contracted terms, not restructuring negotiation or recovery priorities."
+      },
+      {
+        "slug": "cash-versus-earnings-checker",
+        "path": "catalogue-items/general/cash-versus-earnings-checker/SKILL.md",
+        "sha256": "c10880ddccf3763aa39c4df8ccd49c2c99440197c2aa7d4efc5215e57a9547a0",
+        "source_evidence": "Full method read: earnings/depreciation/working capital/capex and four25point tests. New CFADS is explicitly contract-qualified receipt/payment cash with no synthetic100score or equity valuation."
+      },
+      {
+        "slug": "project-cost-progress-tracker",
+        "path": "catalogue-items/imported/project-cost-progress-tracker/SKILL.md",
+        "sha256": "304d6f1393226957cec7108bbb3578941753454091a240f75a4b94366be68da2",
+        "source_evidence": "Full method read: earned value, CPI/SPI, EAC and TCPI. New committed funding/draw/interest/completion schedules distinguish actual financing capacity from cost performance and avoid inferring completion date from financial ratio."
+      },
+      {
+        "slug": "store-revenue-forecast-builder",
+        "path": "catalogue-items/ecommerce/store-revenue-forecast-builder/SKILL.md",
+        "sha256": "738122ef45a76368be7bd98c3dd29b924a0eb55b4ce717f5907856c7b86e3af1",
+        "source_evidence": "Full method read: ad efficiency curves, returning cohorts, events and target-gap sizing. Toll schedule uses sourced chargeable passages before collection loss and realized collections, not ecommerce curves or claimed forecast accuracy."
+      },
+      {
+        "slug": "production-cost-variance",
+        "path": "catalogue-items/imported/production-cost-variance/SKILL.md",
+        "sha256": "ef768bab019b4fa2da1890f30905bb22e3a5b0af251fc04d61d45a518289af62",
+        "source_evidence": "Full method read: material/labor price/efficiency and overhead spending/volume variances. Replaced initially proposed absorption duplicate with shared-service activity allocation. Yield model is physical mass plus evidenced scrap cash, not a renamed standard variance."
+      },
+      {
+        "slug": "channel-cost-and-roi-comparer",
+        "path": "catalogue-items/imported/channel-cost-and-roi-comparer/SKILL.md",
+        "sha256": "80f523ff307aea564760ce01b0ba77f44423448ea21b0160c13a5ce9ac1a46f1",
+        "source_evidence": "Full method read: direct versus partner fullyloaded cost-to-serve, cash/LTV/marginal ROI and mix optimizer. New shared-service activity pool explicitly reconciles unused capacity, and service hours/fees avoids channel ROI verdicts or optimization."
+      },
+      {
+        "slug": "production-capacity-checker",
+        "path": "catalogue-items/imported/production-capacity-checker/SKILL.md",
+        "sha256": "254ff5e61353a86c2babebf23752a7d85c4da2c28ee48c605e2f6a51f7e84bfb",
+        "source_evidence": "Full method read: design/effective/OEE, process bottleneck, DBR, aggregate LP, CRP, capacity investment and decision trees. Product mix checker is explicitly a supplied proposal with financial contribution and one bottleneck identity, not an optimizer or full capacity/production feasibility model."
+      },
+      {
+        "slug": "team-capacity-planner",
+        "path": "catalogue-items/imported/team-capacity-planner/SKILL.md",
+        "sha256": "2ae470d9ff3f13425fd05f36c99182f16938ca824fbf54f4eb8410769f1b7957",
+        "source_evidence": "Full method reused/current read: workload, skills, time/budget and utilization targets. New service actual hours and realized fees reconcile direct contribution with explicit cost scope; no inherited utilization benchmark or personnel performance rating."
+      },
+      {
+        "slug": "hotel-room-pricing-planner",
+        "path": "catalogue-items/imported/hotel-room-pricing-planner/SKILL.md",
+        "sha256": "2aff15465a550a4554d432e0fc8548f831fb42cc7a991fc91635fdd26a9254df",
+        "source_evidence": "Full main source read in earlier independent audit, same hash rechecked: property room pricing/LOS/channel/overbooking/forecast scaffold. New actual channel contribution avoids source code bugs, optimizer claims, hardcoded values and overbooking advice."
+      },
+      {
+        "slug": "product-bill-of-materials-builder",
+        "path": "catalogue-items/ecommerce/product-bill-of-materials-builder/SKILL.md",
+        "sha256": "ad65a965024f93c9b3491421628aee487ecf1cf9a525751d44fcea69d026e0e3",
+        "source_evidence": "Full method read: factory unit-price parts/labor/overhead/margin sheet, sourcing, volume breaks and return-risk ideas. New restaurant schedule adds measured edible mass, portions, served demand and complete batch cash rather than factory negotiation."
+      },
+      {
+        "slug": "discount-impact-checker",
+        "path": "catalogue-items/ecommerce/discount-impact-checker/SKILL.md",
+        "sha256": "e00b1f0fb3cadfdd92c7f346322655afb57723daf834078e7a9249e1788cd787",
+        "source_evidence": "Full method read: per-order discount, requiredROAS/CPA, offer types and heuristic100score. New old-stock cohort reconciles sold/full/markdown/closing units and preserves historical purchase cost without forecasting conversion or assigning a score."
+      },
+      {
+        "slug": "budget-and-forecast-builder",
+        "path": "catalogue-items/imported/budget-and-forecast-builder/SKILL.md",
+        "sha256": "b6886fae26db0ca8da08e4f8b163963bf90be76fc6c892cf6ad039fbc0786b6f",
+        "source_evidence": "Full method read: general pipeline/churn revenue, fixed/variable cost, scenarios, headcount/P&L roadmap. New energy model is focused accepted-MWh/contract-price and operating cash schedule, explicitly not a whole-business forecast."
+      },
+      {
+        "slug": "shipping-cost-analyzer",
+        "path": "catalogue-items/imported/shipping-cost-analyzer/SKILL.md",
+        "sha256": "bee6fca349eb0de275e1bfcecc326c9c1de89a0f2825c0b9df9cfaf4d93d7725",
+        "source_evidence": "Full method read: Shopify read-only shipping charges and recorded carrier costs by order/method. New operator trip model uses measured loaded/emptykm and fuel/driver/maintenance cash; Shopify original versus discount prices are not carrier cost."
+      },
+      {
+        "slug": "vehicle-fleet-planner",
+        "path": "catalogue-items/imported/vehicle-fleet-planner/SKILL.md",
+        "sha256": "17350de18a2411f0e5431f14e612e971bb36182b01a1b00915e815cc66221507",
+        "source_evidence": "Full source read: fleet demand/queue/simulation, TCO, replacement EAC/age scores and maintenance. New replacement compares actual same-workload incremental cash with separate timezero/terminal proceeds. Avoids source TCO double-counting purchase plus depreciation and its default safety/maintenance thresholds."
+      },
+      {
+        "slug": "revenue-recognition-checker",
+        "path": "catalogue-items/imported/revenue-recognition-checker/SKILL.md",
+        "sha256": "7c42c56b63dc2144c56fa1d37f468a871ee0aa349a43124cb712c56832446ed2",
+        "source_evidence": "Full method read: IFRS15/ASC606 obligations, SSP allocation, contract assets, deferral and entries. New clinic claims/remittance is administrative receivable and actual bank settlement, not accounting recognition, codes or clinical coverage."
+      },
+      {
+        "slug": "prepare-a-grant-spending-evidence-pack",
+        "path": "catalogue-items/orchestrators/prepare-a-grant-spending-evidence-pack/SKILL.md",
+        "sha256": "6029944672cd5f75b0ac0b5b11797b36cae102b0c8c90c21c5a64df4aa74ee99",
+        "source_evidence": "Full governing source read: transactions/receipts, budget variance and stakeholder update under award rules. New linked total-bank/restricted movement calculates available general cash without deciding eligibility or filing."
+      },
+      {
+        "slug": "raw-cost-breakdown-finder",
+        "path": "catalogue-items/general/raw-cost-breakdown-finder/SKILL.md",
+        "sha256": "7cf26153c7801666a02c559b5e89280762b139090a4537c5b7849d2e5afe729d",
+        "source_evidence": "Full method read: input parts/steps, prices, source-or-estimate gaps and ranked make/buy/design moves. New commodity scenario tracks actual input intensity and approved partial pass-through into signed contribution, preserving purchase vintages."
+      }
+    ]
+  },
+  "primary_reference_spot_checks": [
+    {
+      "url": "https://ppp.worldbank.org/finance-structures-ppp",
+      "date": "2026-10-22",
+      "basis": "Primary project-finance contractual debt/equity and cash structure context; actual financing agreement sets qualifying cash."
+    },
+    {
+      "url": "https://openstax.org/books/principles-managerial-accounting/pages/3-1-explain-contribution-margin-and-calculate-contribution-margin-per-unit-contribution-margin-ratio-and-total-contribution-margin",
+      "date": "2026-10-22",
+      "basis": "Academic revenue less variable-cost contribution boundary; fixed overhead and full cash recovery require explicit separate schedules."
+    },
+    {
+      "url": "https://www.cms.gov/medicare/coding-billing/electronic-billing/health-care-payment-remittance-advice",
+      "date": "2026-10-22",
+      "basis": "Primary remittance/payment record context; no clinical or benefit determination inferred."
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "slug": "settlement-liquidity-ladder-builder",
+  "modelSha256": "0572079032a61c77ee708f6dd8f689b8b61dd392d05c0a98344c8871240ce694",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required evidence refuses calculation",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

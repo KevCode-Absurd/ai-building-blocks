@@ -1,0 +1,78 @@
+new_slug: construction-funding-draw-planner
+name: Construction funding draw planner
+headline: Construction funding draw planner
+summary: A construction draw schedule and uncovered cost register
+job: money-and-investing
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: A construction draw schedule and uncovered cost register. Share three-period certified eligible construction costs, usable equity commitment, usable debt commitment and explicit equity-first funding order.
+explain: |-
+  A construction draw schedule and uncovered cost register.
+
+  Project construction funding. Illustrative figures only in USD unless labelled otherwise. The model is the focused stated schedule, not a complete company forecast. Annual end-period cash is used unless the inputs state another convention.
+when:
+  - You need a construction draw schedule and uncovered cost register.
+  - You work on project construction funding and need traceable calculations.
+  - A reviewer needs to trace the result back to inputs and assumptions.
+you_give:
+  - Three-period certified eligible construction costs, usable equity commitment, usable debt commitment and explicit equity-first funding order.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - A construction draw schedule and uncovered cost register.
+  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: 1. Build a dated source ledger of balances, operating units, period boundaries, contractual terms and unresolved evidence gaps
+    text: Build a dated source ledger of balances, operating units, period boundaries, contractual terms and unresolved evidence gaps.
+  - title: 2. Separate certified costs from unapproved change requests and record actual draw conditions, available commitments and funding order
+    text: Separate certified costs from unapproved change requests and record actual draw conditions, available commitments and funding order.
+  - title: 3. Apply equity-first funding period by period, then debt limited to remaining commitment; carry undrawn balances forward
+    text: Apply equity-first funding period by period, then debt limited to remaining commitment; carry undrawn balances forward.
+  - title: 4. Show unfunded cost per period and total, reconcile funded and unfunded costs, and preserve any proposed funding as uncommitted
+    text: Show unfunded cost per period and total, reconcile funded and unfunded costs, and preserve any proposed funding as uncommitted.
+output_shape: |-
+  A construction draw schedule and uncovered cost register.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: Each material input is sourced with currency, scale, sign and period.
+judge:
+  - Each material input is sourced with currency, scale, sign and period.
+  - Actual records and scenarios remain separate; missing evidence is not zero.
+  - Used equity plus remaining equity equals commitment; the same holds for debt.
+  - Total cost equals equity used plus debt used plus shortfall; uncovered cost is not silently financed.
+test:
+  - Run the included baseline and changed-input fixtures, then compare with the stated expected results.
+  - Remove a required input and confirm the affected calculation refuses to invent a zero.
+  - Recalculate the workbook after changing an input and inspect the saved output.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: Node.js 20 or later
+      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

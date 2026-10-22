@@ -1,0 +1,17 @@
+{
+  "slug": "net-leverage-covenant-checker",
+  "modelSha256": "e4d76fc8b3c408340d5c2f65100dd42c0a8b67f1ae4dfc0e95d13921c434796e",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required number",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

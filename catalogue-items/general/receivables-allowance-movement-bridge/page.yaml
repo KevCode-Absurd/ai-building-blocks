@@ -1,0 +1,76 @@
+new_slug: receivables-allowance-movement-bridge
+name: Receivables allowance roll-forward
+headline: Receivables allowance roll-forward
+summary: Reconcile credit-loss expense, write-offs and recoveries to the reported closing allowance.
+job: track-numbers
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: A signed allowance roll-forward, coverage ratio and unexplained closing residual. Share opening/closing allowance, credit-loss expense, gross write-offs, recoveries credited to allowance, FX/other movements and gross receivables.
+explain: |-
+  A signed allowance roll-forward, coverage ratio and unexplained closing residual.
+
+  Issuer revenue and cash-flow reconciliation. Illustrative figures.10+8+1-1-5=13 allowance, or13/200=6.5% gross receivable coverage. Expense10 produces15, a negative2 residual against reported13, and7.5% computed coverage.
+when:
+  - You need a signed allowance roll-forward, coverage ratio and unexplained closing residual.
+  - You work on issuer revenue and cash-flow reconciliation and need traceable calculations.
+  - A reviewer needs to trace the result back to inputs and assumptions.
+you_give:
+  - Opening/closing allowance, credit-loss expense, gross write-offs, recoveries credited to allowance, FX/other movements and gross receivables.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - A signed allowance roll-forward, coverage ratio and unexplained closing residual.
+  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: 1. Confirm allowance perimeter and the posting convention for recoveries; separate gross receivable changes from loss-allowance changes
+    text: Confirm allowance perimeter and the posting convention for recoveries; separate gross receivable changes from loss-allowance changes.
+  - title: 2. Roll opening allowance through expense, recoveries and signed noncash movements, deduct gross write-offs and reconcile reported closing allowance
+    text: Roll opening allowance through expense, recoveries and signed noncash movements, deduct gross write-offs and reconcile reported closing allowance.
+  - title: 3. Divide the reconciled allowance by matching gross receivables and explain movements without claiming that a higher coverage ratio proves adequate provisioning
+    text: Divide the reconciled allowance by matching gross receivables and explain movements without claiming that a higher coverage ratio proves adequate provisioning.
+output_shape: |-
+  A signed allowance roll-forward, coverage ratio and unexplained closing residual.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: Gross write-offs and recoveries are not both netted and separately deducted.
+judge:
+  - Gross write-offs and recoveries are not both netted and separately deducted.
+  - The supplied recovery amount is actually credited to the allowance under the applicable accounting policy.
+  - Source each balance, flow, period, perimeter, currency and sign; distinguish a true zero from missing evidence.
+  - Preserve reported measures beside analytical measures and retain unexplained residuals.
+test:
+  - Run the included baseline and changed-input fixtures, then compare with the stated expected results.
+  - Remove a required input and confirm the affected calculation refuses to invent a zero.
+  - Recalculate the workbook after changing an input and inspect the saved output.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: Node.js 20 or later
+      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

@@ -1,0 +1,13 @@
+{
+  "opening": 50,
+  "cash_1": 10,
+  "cash_2": 20,
+  "cash_3": 30,
+  "refi_1": 0,
+  "refi_2": 50,
+  "refi_3": 0,
+  "maturity_1": 40,
+  "maturity_2": 80,
+  "maturity_3": 60,
+  "floor": 0
+}

@@ -1,0 +1,74 @@
+new_slug: reconcile-conglomerate-valuation-perimeters
+name: Reconcile conglomerate valuation perimeters
+headline: Reconcile conglomerate valuation perimeters
+summary: Align segment earnings, consolidated minority interests and separately held equity stakes before valuation.
+job: money-and-investing
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: A linked perimeter ledger for segment profit, consolidated EV and nonoperating holdings. Share segment reconciliations, consolidation perimeter, market equity, subsidiary ownership, parent-only balances and dated holding values.
+explain: |-
+  A linked perimeter ledger for segment profit, consolidated EV and nonoperating holdings.
+
+  Public-market financial modelling. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+when:
+  - You need a linked perimeter ledger for segment profit, consolidated EV and nonoperating holdings.
+  - You work on public-market financial modelling and need traceable calculations.
+  - A reviewer needs to trace the result back to inputs and assumptions.
+you_give:
+  - Segment reconciliations, consolidation perimeter, market equity, subsidiary ownership, parent-only balances and dated holding values.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - A linked perimeter ledger for segment profit, consolidated EV and nonoperating holdings.
+  - Original step files, financial assumptions, source coverage and a governing handoff summary.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: Segment profit elimination bridge
+    text: Use actual sourced schedules in one linked native workbook; example values are illustrative and must not become issuer inputs. Tie segment measures to consolidated operating profit and preserve all corporate costs and profit eliminations before passing earnings into valuation.
+  - title: Minority-interest multiple reconciliation
+    text: Map subsidiaries included at 100% in the earnings denominator and include their outside ownership consistently in consolidated enterprise value. Keep book and estimated market minority values distinct.
+  - title: Listed holding look-through NAV
+    text: Value separately held equity stakes only where their operating earnings were excluded from the consolidated model. Reconcile parent-only liabilities and label all additions/exclusions to prevent double counting.
+output_shape: |-
+  A linked perimeter ledger for segment profit, consolidated EV and nonoperating holdings.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: Every subsidiary or holding has one documented treatment; group profit reconciles and assets, debt, cash and outside ownership enter once; unresolved perimeter differences stop the affected valuation.
+judge:
+  - Every subsidiary or holding has one documented treatment; group profit reconciles and assets, debt, cash and outside ownership enter once; unresolved perimeter differences stop the affected valuation.
+  - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
+  - Reconcile opening balances, additions, deductions and closing balances. Match enterprise or equity cash flows to the corresponding discount rate.
+  - Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
+test:
+  - Try a small sourced case and inspect every component handoff.
+  - Remove one required source and confirm the affected step stops.
+  - Change a currency, date or accounting definition and check the conflict stays visible.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

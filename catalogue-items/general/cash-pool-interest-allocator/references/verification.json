@@ -1,0 +1,17 @@
+{
+  "slug": "cash-pool-interest-allocator",
+  "modelSha256": "cb62a24b6b01ed64e84a62b822008a596b3675b35a9b9981b7247a847a4c2c1d",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required evidence refuses calculation",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

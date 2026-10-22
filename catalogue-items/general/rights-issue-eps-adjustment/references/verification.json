@@ -1,0 +1,17 @@
+{
+  "slug": "rights-issue-eps-adjustment",
+  "modelSha256": "78762560d27f186ca9fbbde75e73a79a4587dce11e3593b516f2be9372b2ac5f",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Rights offered at cum-rights price",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required source input",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

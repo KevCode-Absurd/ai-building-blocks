@@ -1,0 +1,17 @@
+{
+  "slug": "deal-funding-gap-checker",
+  "modelSha256": "d5976547039bc7d2a2054821821478683aae072cea1c6ffa53c7117d835a7399",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required number",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

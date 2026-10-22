@@ -1,0 +1,45 @@
+slug: explain-observed-shareholder-return
+name: Explain an observed shareholder return
+summary: Reconcile share-price changes and dividend reinvestment using consistent corporate-action-adjusted evidence.
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: spreadsheet
+    required: true
+  - type: audit_report
+    required: true
+  - type: document
+    required: true
+uses:
+  - stock-split-eps-restatement
+  - eps-multiple-return-bridge
+  - dividend-reinvestment-share-schedule
+steps:
+  - uses: stock-split-eps-restatement
+    note: Use actual sourced schedules in one linked native workbook; example values are illustrative and must not become issuer inputs. Put historical EPS and shares on the confirmed common split basis; preserve unadjusted price and dividend records to avoid total-return double counting.
+  - uses: eps-multiple-return-bridge
+    note: Use comparable positive EPS and dated P/E observations to decompose observed price change; state sequential ordering and reconcile the earnings/multiple interaction exactly.
+  - uses: dividend-reinvestment-share-schedule
+    note: Use actual payment and reinvestment prices to build shares and ending wealth. Compare with the cash-held case and reconcile separately from the non-reinvested simple return.
+execution: coordinator
+origin: own
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/finance-expansion
+example_pending: true
+warnings:
+  - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+credits:
+  - title: Original finance methods and model fixtures
+    by: AI Blocks contributors
+    used: Original instructions, calculations and illustrative examples. External method references are linked separately and retain their own rights.

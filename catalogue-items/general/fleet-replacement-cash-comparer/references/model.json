@@ -1,0 +1,163 @@
+{
+  "inputs": [
+    {
+      "id": "purchase_cash",
+      "label": "purchase cash",
+      "value": 1000,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "old_sale_proceeds",
+      "label": "old sale proceeds",
+      "value": 200,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "saving_1",
+      "label": "saving 1",
+      "value": 300,
+      "unit": "USD / year1",
+      "min": -1000000
+    },
+    {
+      "id": "saving_2",
+      "label": "saving 2",
+      "value": 300,
+      "unit": "USD / year2",
+      "min": -1000000
+    },
+    {
+      "id": "saving_3",
+      "label": "saving 3",
+      "value": 300,
+      "unit": "USD / year3",
+      "min": -1000000
+    },
+    {
+      "id": "terminal_cash_difference",
+      "label": "New-minus-keep terminal cash difference",
+      "value": 100,
+      "unit": "USD / end of year3",
+      "min": -1000000
+    },
+    {
+      "id": "discount_rate",
+      "label": "discount rate",
+      "value": 0,
+      "unit": "annual decimal",
+      "min": 0,
+      "max": 1
+    }
+  ],
+  "calculations": [
+    {
+      "id": "net_initial_outlay",
+      "label": "net initial outlay",
+      "op": "sub",
+      "args": [
+        "purchase_cash",
+        "old_sale_proceeds"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "last_year_cash",
+      "label": "last year cash",
+      "op": "sum",
+      "args": [
+        "saving_3",
+        "terminal_cash_difference"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "present_future_cash",
+      "label": "present future cash",
+      "op": "npv",
+      "args": [
+        "discount_rate",
+        "saving_1",
+        "saving_2",
+        "last_year_cash"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "incremental_npv",
+      "label": "incremental npv",
+      "op": "sub",
+      "args": [
+        "present_future_cash",
+        "net_initial_outlay"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "undiscounted_future_cash",
+      "label": "undiscounted future cash",
+      "op": "sum",
+      "args": [
+        "saving_1",
+        "saving_2",
+        "last_year_cash"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "undiscounted_net",
+      "label": "undiscounted net",
+      "op": "sub",
+      "args": [
+        "undiscounted_future_cash",
+        "net_initial_outlay"
+      ],
+      "unit": "USD / stated period"
+    }
+  ],
+  "outputs": [
+    "net_initial_outlay",
+    "present_future_cash",
+    "incremental_npv",
+    "undiscounted_net"
+  ],
+  "expected": {
+    "net_initial_outlay": 800,
+    "present_future_cash": 1000,
+    "incremental_npv": 200,
+    "undiscounted_net": 200
+  },
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "inputs": {
+        "purchase_cash": 1200
+      },
+      "expected": {
+        "net_initial_outlay": 1000,
+        "incremental_npv": 0,
+        "undiscounted_net": 0
+      }
+    },
+    {
+      "name": "Missing or invalid required input",
+      "inputs": {
+        "purchase_cash": null
+      },
+      "error": true
+    },
+    {
+      "name": "Foregone keep-vehicle sale exceeds replacement terminal sale",
+      "inputs": {
+        "terminal_cash_difference": -100
+      },
+      "expected": {
+        "present_future_cash": 800,
+        "incremental_npv": 0,
+        "undiscounted_net": 0
+      }
+    }
+  ],
+  "explanation": "Illustrative USD amounts only. Replace now costs1000 less old sale200=800 at time zero. Annual incremental operating savings are300 each; the terminal input100 is replacement sale proceeds less the keep-vehicle terminal sale forgone, so final-year incremental cash400 gives present future cash1000 at zero discount and net benefit200. With a negative terminal difference of100, future cash800 exactly covers the initial800. No depreciation or financing cash is included."
+}

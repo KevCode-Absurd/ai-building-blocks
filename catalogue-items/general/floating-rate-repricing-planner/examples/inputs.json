@@ -1,0 +1,9 @@
+{
+  "floating_a": 1000,
+  "floating_b": 500,
+  "shock_a": 0.01,
+  "shock_b": 0.02,
+  "affected_a": 0.5,
+  "affected_b": 0.25,
+  "base_interest": 60
+}

@@ -1,0 +1,17 @@
+{
+  "slug": "economic-profit-fade-schedule",
+  "modelSha256": "378da7ac1ea3b6c5c086e3b92246d83362761403af23defacbdf023a90126314",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Zero excess return begins in year2",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Required input absent",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

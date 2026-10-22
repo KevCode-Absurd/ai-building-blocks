@@ -1,0 +1,10 @@
+{
+  "valueA": 200,
+  "stakeA": 0.2,
+  "valueB": 300,
+  "stakeB": 0.3,
+  "cash": 20,
+  "debt": 50,
+  "costValue": 10,
+  "shares": 10
+}

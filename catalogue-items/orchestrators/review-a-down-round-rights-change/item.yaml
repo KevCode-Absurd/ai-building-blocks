@@ -1,0 +1,42 @@
+slug: review-a-down-round-rights-change
+name: Review a down-round rights change
+summary: Check a qualifying price reset and the separately negotiated reserve expansion.
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: spreadsheet
+    required: true
+  - type: audit_report
+    required: true
+  - type: document
+    required: true
+uses:
+  - weighted-average-antidilution-checker
+  - option-pool-top-up-checker
+steps:
+  - uses: weighted-average-antidilution-checker
+    note: Use the actual charter A/B/C definitions to calculate the qualifying reset. Preserve new conversion ratio, rounding, exemptions and the document version used.
+  - uses: option-pool-top-up-checker
+    note: Require a freshly approved fully diluted denominator reflecting the actual protected conversion ratios where the term sheet requires them. Calculate only the separate pre-cash reserve top-up and flag missing interacting classes.
+execution: coordinator
+origin: own
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/finance-expansion
+example_pending: true
+warnings:
+  - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+credits:
+  - title: Original finance methods and model fixtures
+    by: AI Blocks contributors
+    used: Original instructions, calculations and illustrative examples. External method references are linked separately and retain their own rights.

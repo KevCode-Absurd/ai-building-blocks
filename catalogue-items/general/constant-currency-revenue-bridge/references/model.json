@@ -1,0 +1,201 @@
+{
+  "inputs": [
+    {
+      "id": "foreign0",
+      "label": "Prior foreign local revenue",
+      "value": 100,
+      "unit": "million local currency",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "foreign1",
+      "label": "Current foreign local revenue",
+      "value": 120,
+      "unit": "million local currency",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "rate0",
+      "label": "Prior reporting currency per local currency",
+      "value": 1,
+      "unit": "USD per local currency",
+      "min": 0.000001,
+      "max": 1000000000
+    },
+    {
+      "id": "rate1",
+      "label": "Current reporting currency per local currency",
+      "value": 0.8,
+      "unit": "USD per local currency",
+      "min": 0.000001,
+      "max": 1000000000
+    },
+    {
+      "id": "domestic0",
+      "label": "Prior domestic revenue",
+      "value": 40,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "domestic1",
+      "label": "Current domestic revenue",
+      "value": 50,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    }
+  ],
+  "calculations": [
+    {
+      "id": "foreignPrior",
+      "label": "Prior translated foreign revenue",
+      "op": "mul",
+      "args": [
+        "foreign0",
+        "rate0"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "foreignCurrent",
+      "label": "Current translated foreign revenue",
+      "op": "mul",
+      "args": [
+        "foreign1",
+        "rate1"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "foreignCC",
+      "label": "Current foreign revenue at prior rates",
+      "op": "mul",
+      "args": [
+        "foreign1",
+        "rate0"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "priorRevenue",
+      "label": "Reported prior revenue",
+      "op": "add",
+      "args": [
+        "foreignPrior",
+        "domestic0"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "currentRevenue",
+      "label": "Reported current revenue",
+      "op": "add",
+      "args": [
+        "foreignCurrent",
+        "domestic1"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "ccRevenue",
+      "label": "Current constant-currency revenue",
+      "op": "add",
+      "args": [
+        "foreignCC",
+        "domestic1"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "reportedRatio",
+      "label": "Reported revenue ratio",
+      "op": "div",
+      "args": [
+        "currentRevenue",
+        "priorRevenue"
+      ],
+      "unit": "times"
+    },
+    {
+      "id": "ccRatio",
+      "label": "Constant-currency ratio",
+      "op": "div",
+      "args": [
+        "ccRevenue",
+        "priorRevenue"
+      ],
+      "unit": "times"
+    },
+    {
+      "id": "reportedGrowth",
+      "label": "Reported growth",
+      "op": "sub",
+      "args": [
+        "reportedRatio",
+        1
+      ],
+      "unit": "decimal"
+    },
+    {
+      "id": "ccGrowth",
+      "label": "Constant-currency growth",
+      "op": "sub",
+      "args": [
+        "ccRatio",
+        1
+      ],
+      "unit": "decimal"
+    },
+    {
+      "id": "translation",
+      "label": "Reported less constant-currency revenue",
+      "op": "sub",
+      "args": [
+        "currentRevenue",
+        "ccRevenue"
+      ],
+      "unit": "USD million"
+    }
+  ],
+  "outputs": [
+    "priorRevenue",
+    "currentRevenue",
+    "ccRevenue",
+    "reportedGrowth",
+    "ccGrowth",
+    "translation"
+  ],
+  "expected": {
+    "priorRevenue": 140,
+    "currentRevenue": 146,
+    "ccRevenue": 170,
+    "reportedGrowth": 0.04285714285714286,
+    "ccGrowth": 0.21428571428571427,
+    "translation": -24
+  },
+  "cases": [
+    {
+      "name": "Exchange rate unchanged",
+      "inputs": {
+        "rate1": 1
+      },
+      "expected": {
+        "currentRevenue": 170,
+        "reportedGrowth": 0.21428571428571427,
+        "translation": 0
+      }
+    },
+    {
+      "name": "Missing required reported input",
+      "inputs": {
+        "foreign0": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures. Prior100×1+40=140. Current120×.8+50=146; fixed-rate current120×1+50=170. Reported growth4.285714%, constant-currency21.428571%; translation effect minus24."
+}

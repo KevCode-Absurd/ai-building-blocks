@@ -1,0 +1,112 @@
+{
+  "inputs": [
+    {
+      "id": "openingPrincipal",
+      "label": "opening Principal",
+      "value": 100,
+      "unit": "USD millions",
+      "min": 0
+    },
+    {
+      "id": "cashRate",
+      "label": "cash Rate",
+      "value": 0.08,
+      "unit": "annual decimal",
+      "min": 0,
+      "max": 1
+    },
+    {
+      "id": "pikRate",
+      "label": "pik Rate",
+      "value": 0.04,
+      "unit": "annual decimal",
+      "min": 0,
+      "max": 1
+    },
+    {
+      "id": "yearFraction",
+      "label": "year Fraction",
+      "value": 1,
+      "unit": "years",
+      "min": 0
+    }
+  ],
+  "calculations": [
+    {
+      "id": "cashInterest",
+      "label": "cash Interest",
+      "op": "mul",
+      "args": [
+        "openingPrincipal",
+        "cashRate",
+        "yearFraction"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "pikInterest",
+      "label": "pik Interest",
+      "op": "mul",
+      "args": [
+        "openingPrincipal",
+        "pikRate",
+        "yearFraction"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "endingPrincipal",
+      "label": "ending Principal",
+      "op": "add",
+      "args": [
+        "openingPrincipal",
+        "pikInterest"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "totalInterest",
+      "label": "total Interest",
+      "op": "add",
+      "args": [
+        "cashInterest",
+        "pikInterest"
+      ],
+      "unit": "USD millions"
+    }
+  ],
+  "outputs": [
+    "cashInterest",
+    "pikInterest",
+    "endingPrincipal",
+    "totalInterest"
+  ],
+  "expected": {
+    "cashInterest": 8,
+    "pikInterest": 4,
+    "endingPrincipal": 104,
+    "totalInterest": 12
+  },
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "inputs": {
+        "yearFraction": 0.5
+      },
+      "expected": {
+        "cashInterest": 4,
+        "pikInterest": 2,
+        "endingPrincipal": 102,
+        "totalInterest": 6
+      }
+    },
+    {
+      "name": "Missing required number",
+      "inputs": {
+        "openingPrincipal": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only. 100 at8% cash and4% PIK for one year costs8 cash and adds4 principal. Half a year halves both charges."
+}

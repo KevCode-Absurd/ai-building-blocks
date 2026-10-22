@@ -1,0 +1,158 @@
+{
+  "inputs": [
+    {
+      "id": "lifoInventory",
+      "label": "Reported LIFO inventory",
+      "value": 200,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "reserve0",
+      "label": "Opening LIFO reserve",
+      "value": 40,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "reserve1",
+      "label": "Closing LIFO reserve",
+      "value": 60,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "cogs",
+      "label": "Reported LIFO COGS",
+      "value": 350,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "revenue",
+      "label": "Revenue",
+      "value": 500,
+      "unit": "USD million",
+      "min": 0.001,
+      "max": 1000000000
+    },
+    {
+      "id": "tax",
+      "label": "Illustrative tax effect rate",
+      "value": 0.25,
+      "unit": "decimal",
+      "min": 0,
+      "max": 1
+    }
+  ],
+  "calculations": [
+    {
+      "id": "reserveChange",
+      "label": "LIFO reserve increase",
+      "op": "sub",
+      "args": [
+        "reserve1",
+        "reserve0"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "fifoInventory",
+      "label": "Analytical FIFO inventory",
+      "op": "add",
+      "args": [
+        "lifoInventory",
+        "reserve1"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "fifoCogs",
+      "label": "Analytical FIFO COGS",
+      "op": "sub",
+      "args": [
+        "cogs",
+        "reserveChange"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "fifoProfit",
+      "label": "FIFO gross profit",
+      "op": "sub",
+      "args": [
+        "revenue",
+        "fifoCogs"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "fifoMargin",
+      "label": "FIFO gross margin",
+      "op": "div",
+      "args": [
+        "fifoProfit",
+        "revenue"
+      ],
+      "unit": "decimal"
+    },
+    {
+      "id": "afterTaxFraction",
+      "label": "After-tax fraction",
+      "op": "sub",
+      "args": [
+        1,
+        "tax"
+      ],
+      "unit": "decimal"
+    },
+    {
+      "id": "earningsChange",
+      "label": "After-tax FIFO earnings adjustment",
+      "op": "mul",
+      "args": [
+        "reserveChange",
+        "afterTaxFraction"
+      ],
+      "unit": "USD million"
+    }
+  ],
+  "outputs": [
+    "fifoInventory",
+    "fifoCogs",
+    "fifoMargin",
+    "earningsChange"
+  ],
+  "expected": {
+    "fifoInventory": 260,
+    "fifoCogs": 330,
+    "fifoMargin": 0.34,
+    "earningsChange": 15
+  },
+  "cases": [
+    {
+      "name": "Reserve falls below opening balance",
+      "inputs": {
+        "reserve1": 30
+      },
+      "expected": {
+        "fifoInventory": 230,
+        "fifoCogs": 360,
+        "fifoMargin": 0.28,
+        "earningsChange": -7.5
+      }
+    },
+    {
+      "name": "Required source input missing",
+      "inputs": {
+        "lifoInventory": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures. Reserve increase60-40=20 lowers FIFO COGS from350 to330; gross margin is170/500=34%. Inventory200+60=260 and after-tax earnings rise20×75%=15. Reserve30 reverses these directions."
+}

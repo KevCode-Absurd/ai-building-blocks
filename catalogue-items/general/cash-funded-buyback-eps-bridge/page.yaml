@@ -1,0 +1,76 @@
+new_slug: cash-funded-buyback-eps-bridge
+name: Cash-funded buyback EPS bridge
+headline: Cash-funded buyback EPS bridge
+summary: Separate share-count accretion from the earnings lost when cash funds a buyback.
+job: money-and-investing
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: Before-and-after EPS and a cash opportunity-cost reconciliation. Share ordinary profit, opening shares, cash-funded repurchase amount, execution price, timing and after-tax return forgone on cash.
+explain: |-
+  Before-and-after EPS and a cash opportunity-cost reconciliation.
+
+  Public equity and share counts. Illustrative figures. Spending $100 million at $20 removes five of 50 million shares. Lost cash income is $5 million, so EPS moves from 100/50=$2 to 95/45=$2.111111. The arithmetic alone cannot establish fair repurchase value.
+when:
+  - You need before-and-after EPS and a cash opportunity-cost reconciliation.
+  - You work on public equity and share counts and need traceable calculations.
+  - A reviewer needs to trace the result back to inputs and assumptions.
+you_give:
+  - Ordinary profit, opening shares, cash-funded repurchase amount, execution price, timing and after-tax return forgone on cash.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - Before-and-after EPS and a cash opportunity-cost reconciliation.
+  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: 1. Check the mandate is an illustrative scenario or historical review; distinguish announced authorization from actual executed repurchases
+    text: Check the mandate is an illustrative scenario or historical review; distinguish announced authorization from actual executed repurchases.
+  - title: 2. Compute shares retired from executed cash and price; calculate the after-tax earnings forgone on that cash for the same period
+    text: Compute shares retired from executed cash and price; calculate the after-tax earnings forgone on that cash for the same period.
+  - title: 3. Reconcile lower earnings and lower weighted shares to EPS; isolate timing, transaction costs and financing assumptions before interpreting accretion
+    text: Reconcile lower earnings and lower weighted shares to EPS; isolate timing, transaction costs and financing assumptions before interpreting accretion.
+output_shape: |-
+  Before-and-after EPS and a cash opportunity-cost reconciliation.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: Repurchases do not remove all outstanding shares.
+judge:
+  - Repurchases do not remove all outstanding shares.
+  - After-tax cash earnings lost are deducted; EPS accretion is not described as value creation.
+  - Tie every material input to its filing page, period, currency and scale.
+  - Keep illustrative figures separate from sourced issuer facts; report unresolved checks.
+test:
+  - Run the included baseline and changed-input fixtures, then compare with the stated expected results.
+  - Remove a required input and confirm the affected calculation refuses to invent a zero.
+  - Recalculate the workbook after changing an input and inspect the saved output.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: Node.js 20 or later
+      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

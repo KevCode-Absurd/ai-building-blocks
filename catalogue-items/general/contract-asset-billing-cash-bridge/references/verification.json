@@ -1,0 +1,17 @@
+{
+  "slug": "contract-asset-billing-cash-bridge",
+  "modelSha256": "a7999938729ea9491eae0a40716f719e0489cbd593644e5911f46b46de4b26a3",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "More revenue remains unbilled",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required reported input",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "slug": "project-cash-available-bridge",
+  "modelSha256": "bf1f8205c4420fa4ceca25bbc37f8898f39ccad60ff56db64c61810d9ae43505",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing or invalid required input",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

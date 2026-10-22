@@ -1,0 +1,42 @@
+slug: reconcile-private-fund-fee-charges
+name: Reconcile private fund fee charges
+summary: Carry a documented stepdown charge into the actual fee-offset ledger.
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: spreadsheet
+    required: true
+  - type: audit_report
+    required: true
+  - type: document
+    required: true
+uses:
+  - management-fee-stepdown-checker
+  - transaction-fee-offset-checker
+steps:
+  - uses: management-fee-stepdown-checker
+    note: Recompute both comparable-period fees using the exact basis and rates. Select the fee applicable to the actual invoice period and split partial periods separately when needed.
+  - uses: transaction-fee-offset-checker
+    note: Convert the selected gross charge explicitly to the offset ledger currency scale, then apply actual eligible fee receipts and beginning credits. Reconcile ending credit and net invoice without inventing carryforward permission.
+execution: coordinator
+origin: own
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/finance-expansion
+example_pending: true
+warnings:
+  - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+credits:
+  - title: Original finance methods and model fixtures
+    by: AI Blocks contributors
+    used: Original instructions, calculations and illustrative examples. External method references are linked separately and retain their own rights.

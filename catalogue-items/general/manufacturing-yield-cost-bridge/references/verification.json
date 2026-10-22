@@ -1,0 +1,17 @@
+{
+  "slug": "manufacturing-yield-cost-bridge",
+  "modelSha256": "7fe10fe0c0f99d37ba5d91b35603a4dccc164131e370686d3bf7d3ad26ca81e8",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing or invalid required input",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

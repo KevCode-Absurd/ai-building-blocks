@@ -1,0 +1,126 @@
+{
+  "inputs": [
+    {
+      "id": "amount",
+      "label": "amount",
+      "value": 120,
+      "unit": "USD thousands",
+      "min": 0
+    },
+    {
+      "id": "capPrice",
+      "label": "cap Price",
+      "value": 2,
+      "unit": "USD thousands per share",
+      "min": 0.000001
+    },
+    {
+      "id": "roundPrice",
+      "label": "round Price",
+      "value": 4,
+      "unit": "USD thousands per share",
+      "min": 0.000001
+    },
+    {
+      "id": "discount",
+      "label": "discount",
+      "value": 0.25,
+      "unit": "fraction",
+      "min": 0,
+      "max": 0.999999
+    }
+  ],
+  "calculations": [
+    {
+      "id": "priceRetention",
+      "label": "price Retention",
+      "op": "sub",
+      "args": [
+        1,
+        "discount"
+      ],
+      "unit": "fraction"
+    },
+    {
+      "id": "discountPrice",
+      "label": "discount Price",
+      "op": "mul",
+      "args": [
+        "roundPrice",
+        "priceRetention"
+      ],
+      "unit": "USD thousands per share"
+    },
+    {
+      "id": "selectedPrice",
+      "label": "selected Price",
+      "op": "min",
+      "args": [
+        "capPrice",
+        "discountPrice"
+      ],
+      "unit": "USD thousands per share"
+    },
+    {
+      "id": "shares",
+      "label": "shares",
+      "op": "div",
+      "args": [
+        "amount",
+        "selectedPrice"
+      ],
+      "unit": "shares"
+    },
+    {
+      "id": "roundShares",
+      "label": "round Shares",
+      "op": "div",
+      "args": [
+        "amount",
+        "roundPrice"
+      ],
+      "unit": "shares"
+    },
+    {
+      "id": "extraShares",
+      "label": "extra Shares",
+      "op": "sub",
+      "args": [
+        "shares",
+        "roundShares"
+      ],
+      "unit": "shares"
+    }
+  ],
+  "outputs": [
+    "selectedPrice",
+    "shares",
+    "extraShares"
+  ],
+  "expected": {
+    "selectedPrice": 2,
+    "shares": 60,
+    "extraShares": 30
+  },
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "inputs": {
+        "capPrice": 3.5
+      },
+      "expected": {
+        "selectedPrice": 3,
+        "shares": 40,
+        "extraShares": 10
+      }
+    },
+    {
+      "name": "Missing required number",
+      "inputs": {
+        "amount": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only. 120 converts into60 at cap price2; cap price3.5 makes discounted price3 bind, producing40 shares."
+}

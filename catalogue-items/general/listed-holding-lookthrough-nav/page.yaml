@@ -1,0 +1,76 @@
+new_slug: listed-holding-lookthrough-nav
+name: Listed holding look-through NAV
+headline: Listed holding look-through NAV
+summary: Reconcile quoted ownership stakes and holding-company costs to look-through value per share.
+job: money-and-investing
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: A look-through NAV table with ownership and double-count checks. Share dated quoted subsidiary equity values, economic stakes, parent-only cash/debt, holding-cost value and parent shares.
+explain: |-
+  A look-through NAV table with ownership and double-count checks.
+
+  Public equity valuation. Illustrative figures.200×20%+300×30%+20-50-10=90 NAV, or9 per share. Increasing A by100 adds20 to NAV and2 per share.
+when:
+  - You need a look-through NAV table with ownership and double-count checks.
+  - You work on public equity valuation and need traceable calculations.
+  - A reviewer needs to trace the result back to inputs and assumptions.
+you_give:
+  - Dated quoted subsidiary equity values, economic stakes, parent-only cash/debt, holding-cost value and parent shares.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - A look-through NAV table with ownership and double-count checks.
+  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: 1. Use quoted equity rather than enterprise values, economic stakes and one consistent market date
+    text: Use quoted equity rather than enterprise values, economic stakes and one consistent market date.
+  - title: 2. Multiply each equity value by the parent stake; add parent-only nonoperating cash and deduct parent-only debt and independently valued holding costs
+    text: Multiply each equity value by the parent stake; add parent-only nonoperating cash and deduct parent-only debt and independently valued holding costs.
+  - title: 3. Divide by parent shares and reconcile excluded assets, tax leakage and cross holdings; separate quoted value from realizable proceeds
+    text: Divide by parent shares and reconcile excluded assets, tax leakage and cross holdings; separate quoted value from realizable proceeds.
+output_shape: |-
+  A look-through NAV table with ownership and double-count checks.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: Subsidiary debt is already inside quoted equity value and is not deducted again.
+judge:
+  - Subsidiary debt is already inside quoted equity value and is not deducted again.
+  - Parent-only and consolidated cash/debt are distinguished.
+  - Trace dates, currency, scale, accounting perimeter and source pages for every material input.
+  - Keep the focused illustration separate from a complete investment conclusion; list unresolved checks.
+test:
+  - Run the included baseline and changed-input fixtures, then compare with the stated expected results.
+  - Remove a required input and confirm the affected calculation refuses to invent a zero.
+  - Recalculate the workbook after changing an input and inspect the saved output.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: Node.js 20 or later
+      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

@@ -1,0 +1,8 @@
+{
+  "basis": "Illustrative figures only.",
+  "outputs": {
+    "reinvestment": 25,
+    "rate": 0.25,
+    "growth": 0.05
+  }
+}

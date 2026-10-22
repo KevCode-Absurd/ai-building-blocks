@@ -1,0 +1,17 @@
+{
+  "slug": "revolver-interest-fee-checker",
+  "modelSha256": "465e2596c7220bd6fae6b5e669dd23402e792b3f91a8d0c5756c805cd5b45b67",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing or invalid required input",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

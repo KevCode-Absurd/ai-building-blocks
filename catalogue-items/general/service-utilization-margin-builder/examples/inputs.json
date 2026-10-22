@@ -1,0 +1,9 @@
+{
+  "paid_hours": 160,
+  "fixed_duties": 40,
+  "leave_hours": 16,
+  "billable_hours": 80,
+  "realized_fee": 100,
+  "loaded_labor": 4000,
+  "direct_project_cash": 600
+}

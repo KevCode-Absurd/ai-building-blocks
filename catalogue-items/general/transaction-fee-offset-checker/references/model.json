@@ -1,0 +1,116 @@
+{
+  "inputs": [
+    {
+      "id": "grossManagementFee",
+      "label": "gross Management Fee",
+      "value": 10,
+      "unit": "USD thousands",
+      "min": 0
+    },
+    {
+      "id": "eligibleTransactionFees",
+      "label": "eligible Transaction Fees",
+      "value": 6,
+      "unit": "USD thousands",
+      "min": 0
+    },
+    {
+      "id": "offsetFraction",
+      "label": "offset Fraction",
+      "value": 1,
+      "unit": "fraction",
+      "min": 0,
+      "max": 1
+    },
+    {
+      "id": "beginningCarryforward",
+      "label": "beginning Carryforward",
+      "value": 2,
+      "unit": "USD thousands",
+      "min": 0
+    }
+  ],
+  "calculations": [
+    {
+      "id": "newOffset",
+      "label": "new Offset",
+      "op": "mul",
+      "args": [
+        "eligibleTransactionFees",
+        "offsetFraction"
+      ],
+      "unit": "USD thousands"
+    },
+    {
+      "id": "availableOffset",
+      "label": "available Offset",
+      "op": "add",
+      "args": [
+        "newOffset",
+        "beginningCarryforward"
+      ],
+      "unit": "USD thousands"
+    },
+    {
+      "id": "usedOffset",
+      "label": "used Offset",
+      "op": "min",
+      "args": [
+        "grossManagementFee",
+        "availableOffset"
+      ],
+      "unit": "USD thousands"
+    },
+    {
+      "id": "netManagementFee",
+      "label": "net Management Fee",
+      "op": "sub",
+      "args": [
+        "grossManagementFee",
+        "usedOffset"
+      ],
+      "unit": "USD thousands"
+    },
+    {
+      "id": "endingCarryforward",
+      "label": "ending Carryforward",
+      "op": "sub",
+      "args": [
+        "availableOffset",
+        "usedOffset"
+      ],
+      "unit": "USD thousands"
+    }
+  ],
+  "outputs": [
+    "usedOffset",
+    "netManagementFee",
+    "endingCarryforward"
+  ],
+  "expected": {
+    "usedOffset": 8,
+    "netManagementFee": 2,
+    "endingCarryforward": 0
+  },
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "inputs": {
+        "eligibleTransactionFees": 12
+      },
+      "expected": {
+        "usedOffset": 10,
+        "netManagementFee": 0,
+        "endingCarryforward": 4
+      }
+    },
+    {
+      "name": "Missing required number",
+      "inputs": {
+        "grossManagementFee": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only. Fees6 plus prior credit2 offset8 of10 due. Eligible fees12 plus2 offset10 and leave4 credit."
+}

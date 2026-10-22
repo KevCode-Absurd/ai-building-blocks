@@ -1,0 +1,32 @@
+{
+  "engine": "Artifact Tool",
+  "scope": "Illustrative workbook calculations, not source truth or an actual investment conclusion. Native Microsoft Excel application execution is not claimed.",
+  "modelSha256": "4d222ded884bf7088273cec181135ba00496cf4654b1c51c5927b878f5321637",
+  "xlsxSha256": "ac657c3ec0ac4fac549c253112bc5f7ecba60d1db707804ea7c6028b8b1fe885",
+  "baseline": "pass",
+  "changedInputCase": "Higher current YTD flow",
+  "invalidInputCase": "Missing required reported input",
+  "cases": [
+    {
+      "name": "Higher current YTD flow",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required reported input",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ],
+  "reopenedAndRecalculated": true,
+  "rendered": true,
+  "visualReview": "pass",
+  "workbookSpecSha256": "01e2af002cb22c7262cf8fe39c436f7128bf7bb6f299af536de38b31f0ae1069",
+  "visualEvidence": {
+    "report": "reports/finance-public-markets-peer-review.json",
+    "reportSha256": "f73f6f5598ba0647c477c547d2776f1221130bb7861b62def472b74331866282",
+    "previewSha256": "a6e1b9f5347cbbe6a28a910672a3fcac38c06cdb3ccff1da4777ab0afe05b870",
+    "sheet": "Model",
+    "sourceSpecSha256": "0366b1c1d11e7bcd5d29df2c43cc933c511a9c1dce5e59664588f66c49ae4dd9"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "engine": "Artifact Tool",
+  "scope": "Illustrative workbook calculations, not source truth or an actual investment conclusion. Native Microsoft Excel application execution is not claimed.",
+  "modelSha256": "2c9b7c31fb0f8fe871e14895b909fd937d5d474bb1fc3e10043ef12bc5e08dcb",
+  "xlsxSha256": "e5b16d8008d2df32c42e939851559d5e4a89118e06c3b769fff7c2a5dd4c2b0f",
+  "baseline": "pass",
+  "changedInputCase": "Hand-derived changed-input golden",
+  "invalidInputCase": "Missing required number",
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required number",
+      "kind": "refusal",
+      "status": "pass"
+    },
+    {
+      "name": "Refuse reserve exceeding total shares",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ],
+  "reopenedAndRecalculated": true,
+  "rendered": true,
+  "visualReview": "pass",
+  "workbookSpecSha256": "2e396710fbd97dc9b9bcd78b79409bfd48f615357435587baaa800734a06fc2e",
+  "visualEvidence": {
+    "report": "reports/finance-private-deals-peer-review.json",
+    "reportSha256": "8867c9111d80d78865752f2b95eba89b6b518fd8bc768452b70057ad5c0dcc23",
+    "previewSha256": "a099a7a985fa8fa25f7e66bcd87b58378c02504b6ba80f631f0c08c9a91f4c11",
+    "sheet": "Model",
+    "sourceSpecSha256": "44c99e41b5b3ef111e6f3046fac5bef48093792b2bfc279f17f5469831f3bdf7"
+  }
+}

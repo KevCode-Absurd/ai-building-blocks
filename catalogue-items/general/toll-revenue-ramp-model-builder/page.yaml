@@ -1,0 +1,79 @@
+new_slug: toll-revenue-ramp-model-builder
+name: Toll revenue ramp model builder
+headline: Toll revenue ramp model builder
+summary: A three-year toll receipts and operating cash schedule
+job: money-and-investing
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: A three-year toll receipts and operating cash schedule. Share three annual chargeable-passage forecasts before collection losses, applicable toll per billable passage, cash collection share and operating cash costs, with independent traffic study sources.
+explain: |-
+  A three-year toll receipts and operating cash schedule.
+
+  Infrastructure traffic revenue. Illustrative three-year chargeable passages before collection loss of1000,1200,1500 at toll2 and collection90% realize1800,2160,2700. Less operating costs1000,1100,1200 leaves cash800,1060,1500. Counts already representing cash-paid passages must not be multiplied by collection loss a second time. Annual cash excludes debt service and capital spending handled downstream.
+when:
+  - You need a three-year toll receipts and operating cash schedule.
+  - You work on infrastructure traffic revenue and need traceable calculations.
+  - A reviewer needs to trace the result back to inputs and assumptions.
+you_give:
+  - Three annual chargeable-passage forecasts before collection losses, applicable toll per billable passage, cash collection share and operating cash costs, with independent traffic study sources.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - A three-year toll receipts and operating cash schedule.
+  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: 1. Build a dated source ledger of balances, operating units, period boundaries, contractual terms and unresolved evidence gaps
+    text: Build a dated source ledger of balances, operating units, period boundaries, contractual terms and unresolved evidence gaps.
+  - title: 2. Separate traffic-study assumptions from measured chargeable passages before collection loss; exclude exempt passages and document vehicle mix, collection losses and nominal toll basis
+    text: Separate traffic-study assumptions from measured chargeable passages before collection loss; exclude exempt passages and document vehicle mix, collection losses and nominal toll basis.
+  - title: 3. Multiply each year chargeable passages before collection loss by the applicable toll and cash collection share; retain gross billing versus cash realization
+    text: Multiply each year chargeable passages before collection loss by the applicable toll and cash collection share; retain gross billing versus cash realization. Already-paid passage counts must not be reduced by collection losses again.
+  - title: 4. Deduct same-year operating cash costs, hand each annual cash result to project coverage and show volume and collection sensitivities separately
+    text: Deduct same-year operating cash costs, hand each annual cash result to project coverage and show volume and collection sensitivities separately.
+output_shape: |-
+  A three-year toll receipts and operating cash schedule.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: Each material input is sourced with currency, scale, sign and period.
+judge:
+  - Each material input is sourced with currency, scale, sign and period.
+  - Actual records and scenarios remain separate; missing evidence is not zero.
+  - Passages and toll cover the same vehicle mix; forecast traffic is never presented as independently measured demand.
+  - Annual receipts sum to total receipts; operating cash excludes debt service and capital spending handled downstream.
+  - Passage inputs mean billable or chargeable passages before collection loss; already-cash-paid units require a separately reconciled basis and must not receive the collection deduction again.
+test:
+  - Run the included baseline and changed-input fixtures, then compare with the stated expected results.
+  - Remove a required input and confirm the affected calculation refuses to invent a zero.
+  - Recalculate the workbook after changing an input and inspect the saved output.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: Node.js 20 or later
+      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

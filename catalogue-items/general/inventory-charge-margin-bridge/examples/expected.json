@@ -1,0 +1,9 @@
+{
+  "basis": "Illustrative figures only.",
+  "outputs": {
+    "reportedMargin": 0.3,
+    "netCharge": 20,
+    "excludedMargin": 0.32,
+    "marginEffect": 0.02
+  }
+}

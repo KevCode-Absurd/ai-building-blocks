@@ -1,0 +1,105 @@
+{
+  "inputs": [
+    {
+      "id": "commitmentBasis",
+      "label": "commitment Basis",
+      "value": 100,
+      "unit": "USD millions",
+      "min": 0
+    },
+    {
+      "id": "beforeRate",
+      "label": "before Rate",
+      "value": 0.02,
+      "unit": "annual decimal",
+      "min": 0,
+      "max": 1
+    },
+    {
+      "id": "investedBasis",
+      "label": "invested Basis",
+      "value": 60,
+      "unit": "USD millions",
+      "min": 0
+    },
+    {
+      "id": "afterRate",
+      "label": "after Rate",
+      "value": 0.015,
+      "unit": "annual decimal",
+      "min": 0,
+      "max": 1
+    },
+    {
+      "id": "yearFraction",
+      "label": "year Fraction",
+      "value": 0.25,
+      "unit": "years",
+      "min": 0
+    }
+  ],
+  "calculations": [
+    {
+      "id": "beforeFee",
+      "label": "before Fee",
+      "op": "mul",
+      "args": [
+        "commitmentBasis",
+        "beforeRate",
+        "yearFraction"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "afterFee",
+      "label": "after Fee",
+      "op": "mul",
+      "args": [
+        "investedBasis",
+        "afterRate",
+        "yearFraction"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "feeDifference",
+      "label": "fee Difference",
+      "op": "sub",
+      "args": [
+        "beforeFee",
+        "afterFee"
+      ],
+      "unit": "USD millions"
+    }
+  ],
+  "outputs": [
+    "beforeFee",
+    "afterFee",
+    "feeDifference"
+  ],
+  "expected": {
+    "beforeFee": 0.5,
+    "afterFee": 0.225,
+    "feeDifference": 0.275
+  },
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "inputs": {
+        "investedBasis": 80
+      },
+      "expected": {
+        "afterFee": 0.3,
+        "feeDifference": 0.2
+      }
+    },
+    {
+      "name": "Missing required number",
+      "inputs": {
+        "commitmentBasis": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only. 100 at2% for a quarter costs0.5. Eligible basis60 at1.5% costs0.225; basis80 costs0.3."
+}

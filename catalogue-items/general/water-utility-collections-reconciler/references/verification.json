@@ -1,0 +1,17 @@
+{
+  "slug": "water-utility-collections-reconciler",
+  "modelSha256": "9e0b5e7069e2ec4f24e21424a17ffe3cfc59dc993e259764fec219edf7819148",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing or invalid required input",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

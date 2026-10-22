@@ -1,0 +1,76 @@
+new_slug: refinancing-closing-cost-checker
+name: Refinancing closing cost checker
+headline: Refinancing closing cost checker
+summary: Reconcile a documented debt payoff, premium and refinancing fees against usable new funding.
+job: money-and-investing
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: Total closing cash need, financing gap and transaction cost. Share old principal payoff, approved prepayment premium, separately confirmed refinancing fees and net new proceeds excluding those same fees.
+explain: |-
+  Total closing cash need, financing gap and transaction cost.
+
+  Private credit refinancing. Illustrative figures only. 100 payoff plus2 premium and3 fees needs105; new cash100 leaves5 unfunded.
+when:
+  - You need total closing cash need, financing gap and transaction cost.
+  - You work on private credit refinancing and need traceable calculations.
+  - A reviewer needs to trace the result back to inputs and assumptions.
+you_give:
+  - Old principal payoff, approved prepayment premium, separately confirmed refinancing fees and net new proceeds excluding those same fees.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - Total closing cash need, financing gap and transaction cost.
+  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: 1. Confirm whether payoff includes accrued interest and whether new net proceeds already deduct any listed fee
+    text: Confirm whether payoff includes accrued interest and whether new net proceeds already deduct any listed fee.
+  - title: 2. Apply premium to the correct payoff base and add distinct refinancing cash fees
+    text: Apply premium to the correct payoff base and add distinct refinancing cash fees.
+  - title: 3. Compare total payoff need to usable new proceeds; list funding surplus or gap without claiming economic savings
+    text: Compare total payoff need to usable new proceeds; list funding surplus or gap without claiming economic savings.
+output_shape: |-
+  Total closing cash need, financing gap and transaction cost.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: Do not double count fees already netted from new debt proceeds.
+judge:
+  - Do not double count fees already netted from new debt proceeds.
+  - Premium base and date match the actual payoff letter and call-protection terms.
+  - Trace each input to its dated signed source, currency, scale and period.
+  - Reconcile outputs; preserve MISSING and CHECKS MISSED rather than guessing zero.
+test:
+  - Run the included baseline and changed-input fixtures, then compare with the stated expected results.
+  - Remove a required input and confirm the affected calculation refuses to invent a zero.
+  - Recalculate the workbook after changing an input and inspect the saved output.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: Node.js 20 or later
+      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

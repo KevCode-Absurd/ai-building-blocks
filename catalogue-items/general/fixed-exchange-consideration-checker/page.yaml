@@ -1,0 +1,76 @@
+new_slug: fixed-exchange-consideration-checker
+name: Fixed exchange consideration checker
+headline: Fixed exchange consideration checker
+summary: Show fixed-ratio stock consideration changing with the dated acquirer share price.
+job: money-and-investing
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: Shares issued, cash leg and total consideration at the supplied price. Share signed fixed ratio, eligible target shares, cash per target share and dated acquirer market price.
+explain: |-
+  Shares issued, cash leg and total consideration at the supplied price.
+
+  Merger consideration. Illustrative figures only. 100 target shares at0.5 issue50 acquirer shares; price20 and cash2 per target give1200. Price30 gives1700.
+when:
+  - You need shares issued, cash leg and total consideration at the supplied price.
+  - You work on merger consideration and need traceable calculations.
+  - A reviewer needs to trace the result back to inputs and assumptions.
+you_give:
+  - Signed fixed ratio, eligible target shares, cash per target share and dated acquirer market price.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - Shares issued, cash leg and total consideration at the supplied price.
+  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: 1. Confirm a fixed rather than floating or collared ratio and identify excluded target shares
+    text: Confirm a fixed rather than floating or collared ratio and identify excluded target shares.
+  - title: 2. Multiply target shares by ratio; calculate cash per target share separately
+    text: Multiply target shares by ratio; calculate cash per target share separately.
+  - title: 3. Value the same issued shares at the dated acquirer price and reconcile stock plus cash without resetting the ratio
+    text: Value the same issued shares at the dated acquirer price and reconcile stock plus cash without resetting the ratio.
+output_shape: |-
+  Shares issued, cash leg and total consideration at the supplied price.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: Do not reset a fixed ratio to preserve announced dollar value.
+judge:
+  - Do not reset a fixed ratio to preserve announced dollar value.
+  - Stock and cash legs reconcile; price date and units stay explicit.
+  - Trace each input to its dated signed source, currency, scale and period.
+  - Reconcile outputs; preserve MISSING and CHECKS MISSED rather than guessing zero.
+test:
+  - Run the included baseline and changed-input fixtures, then compare with the stated expected results.
+  - Remove a required input and confirm the affected calculation refuses to invent a zero.
+  - Recalculate the workbook after changing an input and inspect the saved output.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: Node.js 20 or later
+      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

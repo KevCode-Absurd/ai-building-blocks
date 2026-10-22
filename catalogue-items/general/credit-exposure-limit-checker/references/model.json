@@ -1,0 +1,125 @@
+{
+  "inputs": [
+    {
+      "id": "funded",
+      "label": "funded",
+      "value": 200,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "undrawn",
+      "label": "undrawn",
+      "value": 100,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "monitoring_factor",
+      "label": "monitoring factor",
+      "value": 0.5,
+      "unit": "decimal fraction",
+      "min": 0,
+      "max": 1
+    },
+    {
+      "id": "connected_other",
+      "label": "connected other",
+      "value": 100,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "approved_limit",
+      "label": "approved limit",
+      "value": 400,
+      "unit": "USD / stated period",
+      "min": 0
+    }
+  ],
+  "calculations": [
+    {
+      "id": "weighted_undrawn",
+      "label": "weighted undrawn",
+      "op": "mul",
+      "args": [
+        "undrawn",
+        "monitoring_factor"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "group_exposure",
+      "label": "group exposure",
+      "op": "sum",
+      "args": [
+        "funded",
+        "weighted_undrawn",
+        "connected_other"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "headroom",
+      "label": "headroom",
+      "op": "sub",
+      "args": [
+        "approved_limit",
+        "group_exposure"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "negative_headroom",
+      "label": "negative headroom",
+      "op": "neg",
+      "args": [
+        "headroom"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "excess",
+      "label": "excess",
+      "op": "max",
+      "args": [
+        0,
+        "negative_headroom"
+      ],
+      "unit": "USD / stated period"
+    }
+  ],
+  "outputs": [
+    "weighted_undrawn",
+    "group_exposure",
+    "headroom",
+    "excess"
+  ],
+  "expected": {
+    "weighted_undrawn": 50,
+    "group_exposure": 350,
+    "headroom": 50,
+    "excess": 0
+  },
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "inputs": {
+        "funded": 300
+      },
+      "expected": {
+        "group_exposure": 450,
+        "headroom": -50,
+        "excess": 50
+      }
+    },
+    {
+      "name": "Missing or invalid required input",
+      "inputs": {
+        "funded": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only in USD unless labelled otherwise. A focused schedule using explicit period, rate and timing conventions; not a full financing model or an approval decision."
+}

@@ -1,0 +1,22 @@
+{
+  "slug": "capped-participation-checker",
+  "modelSha256": "d1bc0ff8d89ef7aa495bbe23d6a9bc1c62d324106cf7ae66cccc06489aaca8ed",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required number",
+      "kind": "refusal",
+      "status": "pass"
+    },
+    {
+      "name": "Refuse participation cap below preference",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

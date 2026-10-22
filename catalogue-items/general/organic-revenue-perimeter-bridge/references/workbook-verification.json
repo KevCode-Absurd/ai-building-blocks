@@ -1,0 +1,37 @@
+{
+  "engine": "Artifact Tool",
+  "scope": "Illustrative workbook calculations, not source truth or an actual investment conclusion. Native Microsoft Excel application execution is not claimed.",
+  "modelSha256": "ca3b29e7b766909d8ca51e51f0d2bc4d6295007c3a66f05fa70dc8aa28d86fac",
+  "xlsxSha256": "feff96f47167d51606c81239f47b92aaadae1a25399bd5ffdeef6ee1dce97aa9",
+  "baseline": "pass",
+  "changedInputCase": "Smaller acquired-business contribution",
+  "invalidInputCase": "Missing required reported input",
+  "cases": [
+    {
+      "name": "Smaller acquired-business contribution",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required reported input",
+      "kind": "refusal",
+      "status": "pass"
+    },
+    {
+      "name": "Disposed business exceeds prior revenue",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ],
+  "reopenedAndRecalculated": true,
+  "rendered": true,
+  "visualReview": "pass",
+  "workbookSpecSha256": "4bddcdbd9fb7dabfe1b053c277b171eeec9799ab5c62290fb9f7bb045f33c2db",
+  "visualEvidence": {
+    "report": "reports/finance-public-markets-peer-review.json",
+    "reportSha256": "f73f6f5598ba0647c477c547d2776f1221130bb7861b62def472b74331866282",
+    "previewSha256": "3e1cd194cd1e2c4a81219cf86b14d8e539d83a0ebb221acab6952d2f969c7da3",
+    "sheet": "Model",
+    "sourceSpecSha256": "959597aaecc86357ee146a76edcd1011a8c6b103ffbc16f042c80fa5c9869d80"
+  }
+}

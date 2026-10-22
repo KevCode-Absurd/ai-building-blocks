@@ -1,0 +1,76 @@
+new_slug: fund-recycling-capacity-checker
+name: Fund recycling capacity checker
+headline: Fund recycling capacity checker
+summary: Bound eligible recycled distributions by the signed fund recycling cap and usage to date.
+job: money-and-investing
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: Remaining cap, reusable amount, excluded excess and prior cap overuse. Share commitment cap base, contractual recycling fraction, actual cumulative recycling used, eligible distributions and confirmation the recycling window remains open.
+explain: |-
+  Remaining cap, reusable amount, excluded excess and prior cap overuse.
+
+  Private fund commitments. Illustrative figures only. Cap20 on commitment100, used12, leaves8 of15 eligible distributions reusable. Used18 leaves only2.
+when:
+  - You need remaining cap, reusable amount, excluded excess and prior cap overuse.
+  - You work on private fund commitments and need traceable calculations.
+  - A reviewer needs to trace the result back to inputs and assumptions.
+you_give:
+  - Commitment cap base, contractual recycling fraction, actual cumulative recycling used, eligible distributions and confirmation the recycling window remains open.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - Remaining cap, reusable amount, excluded excess and prior cap overuse.
+  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: 1. Check the exact cap basis, investment-period cutoff, eligible distribution categories and any LP approvals
+    text: Check the exact cap basis, investment-period cutoff, eligible distribution categories and any LP approvals.
+  - title: 2. Compute aggregate cap and subtract actual previously recycled amounts, keeping any historic overuse visible
+    text: Compute aggregate cap and subtract actual previously recycled amounts, keeping any historic overuse visible.
+  - title: 3. Admit only eligible new distributions within remaining capacity; reconcile distributions left ineligible under the cap
+    text: Admit only eligible new distributions within remaining capacity; reconcile distributions left ineligible under the cap.
+output_shape: |-
+  Remaining cap, reusable amount, excluded excess and prior cap overuse.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: Eligible distributions are confirmed separately; a cash receipt is not automatically recyclable.
+judge:
+  - Eligible distributions are confirmed separately; a cash receipt is not automatically recyclable.
+  - Previously recycled amounts cannot be omitted when reusing the same distribution notice.
+  - Trace each input to its dated signed source, currency, scale and period.
+  - Reconcile outputs; preserve MISSING and CHECKS MISSED rather than guessing zero.
+test:
+  - Run the included baseline and changed-input fixtures, then compare with the stated expected results.
+  - Remove a required input and confirm the affected calculation refuses to invent a zero.
+  - Recalculate the workbook after changing an input and inspect the saved output.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: Node.js 20 or later
+      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

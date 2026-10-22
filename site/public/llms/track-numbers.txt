@@ -1,6 +1,6 @@
 # Track your numbers: AI Blocks
 
-> 146 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 176 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [A/B test verdict maker](https://useaiblocks.com/skills/a-b-test-verdict-maker): Give it your A/B test data. Get a split check, results with confidence ranges and a ship call.
 - [Account reconciler](https://useaiblocks.com/skills/account-reconciler): Give it a ledger and a bank statement. Get matched items, the gaps sorted by type and a next step each.
@@ -26,11 +26,18 @@
 - [Cash forecast builder](https://useaiblocks.com/skills/cash-forecast-builder): Give it your invoices, bills and fixed costs. Get a 30, 60 and 90 day cash forecast with risks named.
 - [Check payroll inputs before the cut off](https://useaiblocks.com/workflows/check-payroll-inputs-before-the-cut-off): Share the source files. Get an exception list, source reconciliation and payroll questions for review.
 - [Check supplier invoices before approval](https://useaiblocks.com/workflows/check-supplier-invoices-before-approval): Share the source files. Get a matched invoice register and a list of amounts needing investigation.
+- [Clinic claims collections bridge](https://useaiblocks.com/skills/clinic-claims-collections-bridge): A claims receivable and remittance settlement bridge
+- [Commodity pass through cost bridge](https://useaiblocks.com/skills/commodity-pass-through-cost-bridge): A commodity cost and pass-through contribution bridge
+- [Constant-currency revenue bridge](https://useaiblocks.com/skills/constant-currency-revenue-bridge): Separate reported growth from translation effects using an explicit exchange-rate convention.
+- [Contract asset billing cash bridge](https://useaiblocks.com/skills/contract-asset-billing-cash-bridge): Separate recognized unbilled revenue, invoices and collections in a historical cash-conversion bridge.
+- [Contract-liability release bridge](https://useaiblocks.com/skills/contract-liability-release-bridge): Reconcile customer advances and liability balances to revenue released from deferred obligations.
+- [Contracted energy cash model](https://useaiblocks.com/skills/contracted-energy-cash-model): A three-year contracted energy operating cash schedule
 - [Control testing workpaper builder](https://useaiblocks.com/skills/control-testing-workpaper): Name a control area. Get a test sample, a workpaper and a rating for any gap. Not audit advice.
 - [Conversion funnel analyst](https://useaiblocks.com/skills/conversion-funnel-analyst): Give it an event log and your steps. Get conversion per step, drop-offs, time to convert and what to fix.
 - [Cost per funnel stage reporter](https://useaiblocks.com/skills/cost-per-funnel-stage-reporter): Give it your CRM stages and ad spend. Get a trusted funnel with the true cost of each stage.
 - [Cross-platform conversion reconciler](https://useaiblocks.com/skills/conversion-reconciliation): Give it your Meta and Google conversion reports. Get why the numbers differ and a plan to make them match.
 - [Crypto asset bookkeeper](https://useaiblocks.com/skills/crypto-asset-bookkeeper): Describe your coin or NFT holdings. Get them classified, valued and recorded under accounting standards.
+- [Current tax cash-payment bridge](https://useaiblocks.com/skills/current-tax-cash-payment-bridge): Reconcile current tax expense and tax-payable movements to disclosed cash payments.
 - [Customer acquisition profitability review](https://useaiblocks.com/skills/ltgp-to-cac-checker): Give it ad spend, new customers and cohort revenue. Get your ratio, its band and a score.
 - [Customer value and payback review](https://useaiblocks.com/skills/store-ltv-payback-reader): Give it first-order cohorts by month. Get repeat rate, LTV and true CAC payback, scored out of 100.
 - [Daily contribution margin tracker](https://useaiblocks.com/skills/daily-contribution-margin-tracker): Give it daily sales, costs and ad spend. Get a daily contribution margin sheet with a returns accrual.
@@ -45,15 +52,23 @@
 - [Experiment result analyst](https://useaiblocks.com/skills/experiment-result-analyst): Give it test numbers. Get the right test, sample size and whether the result is real, in plain words.
 - [Explain a department budget overrun](https://useaiblocks.com/workflows/explain-a-department-budget-overrun): Share the source files. Get a reconciled variance report and options for the budget owner.
 - [Explain appointment no show patterns](https://useaiblocks.com/workflows/explain-appointment-no-show-patterns): Share the source files. Get a reconciled attendance table, pattern summary and evidence gaps.
+- [Extra-week revenue comparability schedule](https://useaiblocks.com/skills/extra-week-revenue-comparability): Isolate an evidenced extra fiscal week before comparing annual revenue growth.
+- [Factoring cash-flow timing bridge](https://useaiblocks.com/skills/factoring-cashflow-timing-bridge): Reconcile reported operating cash with receivable-sale advances and customer receipts received by a factor.
 - [Find duplicate and unused business subscriptions](https://useaiblocks.com/workflows/find-duplicate-and-unused-business-subscriptions): Share the source files. Get a subscription register, savings scenarios and a renewal action list.
 - [First-party tracking pixel builder](https://useaiblocks.com/skills/first-party-tracking-pixel): Answer a few questions about your site. Get a tracking script and database that keep your visit data in your own hands.
+- [Fleet replacement cash comparer](https://useaiblocks.com/skills/fleet-replacement-cash-comparer): An incremental replacement cash schedule and present value
+- [Freight trip contribution builder](https://useaiblocks.com/skills/freight-trip-contribution-builder): A loaded and empty distance trip contribution bridge
 - [GA4 raw data analyst](https://useaiblocks.com/skills/ga4-raw-data-analyst): Point it at your GA4 export in BigQuery. Get sessions, channels and sign-ups, plus why they differ from the GA4 screen.
 - [GA4 store setup checker](https://useaiblocks.com/skills/ga4-store-setup-checker): Describe your GA4 setup. Get missing day-one settings, store events to add and a setup score out of 100.
 - [Google Analytics reader](https://useaiblocks.com/skills/google-analytics-reader): Ask about your traffic, sign-ups or top pages. Get a clear Google Analytics report, pulled live and read only.
+- [Grant restrictions cash reconciler](https://useaiblocks.com/skills/grant-restrictions-cash-reconciler): A restricted fund movement and general cash bridge
 - [Grant spending evidence review assistant](https://useaiblocks.com/agents/grant-spending-evidence-review-assistant): A reconciled grant spending table, variance brief and evidence gaps.
+- [Gross-to-net revenue bridge](https://useaiblocks.com/skills/gross-to-net-revenue-bridge): Reconcile gross billings to reported revenue using evidenced deductions and presentation policies.
+- [Hotel channel revenue reconciler](https://useaiblocks.com/skills/hotel-channel-revenue-reconciler): A room-night and net channel contribution bridge
 - [Ignition delay simulator](https://useaiblocks.com/skills/ignition-delay-simulator): Give it a fuel mix, heat and pressure. Get an ignition delay with checks that the result is sound.
 - [Incrementality test planner](https://useaiblocks.com/skills/incrementality-test-planner): Tell it your spend and regions. Get a lift test sized to you and how to read it.
 - [Insight brief writer](https://useaiblocks.com/skills/insight-brief-writer): Give it your findings and goals. Get the top insights ranked by impact and confidence, each with an action.
+- [Inventory charge margin bridge](https://useaiblocks.com/skills/inventory-charge-margin-bridge): Reconcile disclosed inventory charges and reversals to their gross-margin contribution.
 - [Invoice checker](https://useaiblocks.com/skills/invoice-checker): Give it invoices and purchase orders. Get fields pulled out, matched, checked and coded to the right accounts.
 - [Invoice totals checker](https://useaiblocks.com/skills/invoice-totals-checker): Give it an invoice. Get every line and total recalculated, and any missing fields or date problems listed.
 - [Journal entry drafter](https://useaiblocks.com/skills/journal-entry-drafter): Describe the transaction. Get a balanced journal entry with debits, credits and support notes.
@@ -62,6 +77,7 @@
 - [Lead source field checker](https://useaiblocks.com/skills/lead-source-field-checker): Give it your CRM leads and ad history. Learn if your lead source fields are good enough to link leads to ads.
 - [Lead to ad matcher](https://useaiblocks.com/skills/lead-to-ad-matcher): Give it your CRM lead export. Get each lead linked to the paid channel and ad that brought it in.
 - [Ledger to subledger reconciler](https://useaiblocks.com/skills/ledger-to-subledger-reconciler): Give it ledger and subledger data. Get matches, breaks and a likely cause for each break.
+- [LIFO reserve earnings bridge](https://useaiblocks.com/skills/lifo-reserve-earnings-bridge): Translate disclosed LIFO reserves into a comparable FIFO inventory and earnings bridge.
 - [Marketing budget scenario planner](https://useaiblocks.com/skills/marketing-budget-scenarios): Give it past spend and results by channel. Get low and high forecasts for a new budget, with diminishing returns built in.
 - [Meta pixel and server events fixer](https://useaiblocks.com/skills/meta-pixel-capi-fix): Give it your site and Meta pixel. Get a tracking audit, a match quality score and step-by-step fixes for your platform.
 - [Meta server tracking checker](https://useaiblocks.com/skills/meta-server-tracking-checker): Describe your Meta setup. Get the best server route, a double-count check and a score out of 100.
@@ -81,11 +97,16 @@
 - [New and returning P&L splitter](https://useaiblocks.com/skills/new-and-returning-pl-splitter): Paste your monthly P&L and order tags. Get one P&L for first-time and one for returning customers, scored.
 - [New dataset explorer](https://useaiblocks.com/skills/new-dataset-explorer): Give it a new dataset. Get its structure, spread, links and odd spots mapped before you use it.
 - [New-customer profit dashboard builder](https://useaiblocks.com/skills/new-customer-profit-dashboard-builder): Give it Shopify and ad exports. Get a daily sheet of new-customer MER, CAC and profit.
+- [Noncash working-capital bridge](https://useaiblocks.com/skills/noncash-working-capital-bridge): Separate operating cash investment from acquisition, currency and other noncash balance movements.
 - [North star metric picker](https://useaiblocks.com/skills/north-star-metric-picker): Describe your product. Get the one metric to steer by, plus 3 to 5 supporting numbers that feed it.
 - [Notion time log updater](https://useaiblocks.com/skills/time-log-keeper): Tell it what you did today in plain words. Get rows added to your Notion time log, asking when unsure.
 - [Numbers drop explainer](https://useaiblocks.com/prompts/numbers-drop-explainer): Paste the numbers before and after a drop. Get the likely causes ranked by evidence, and what to check.
+- [OCI reclassification bridge](https://useaiblocks.com/skills/oci-reclassification-bridge): Prove how recycling between OCI and profit leaves total comprehensive income unchanged.
 - [Opportunity size estimator](https://useaiblocks.com/skills/opportunity-size-estimator): Give it a baseline and an expected change. Get a low, base and high estimate with every assumption listed.
+- [Organic revenue perimeter bridge](https://useaiblocks.com/skills/organic-revenue-perimeter-bridge): Separate acquisition, disposal and currency effects from a comparable revenue growth calculation.
 - [P&L and balance sheet writer](https://useaiblocks.com/skills/p-l-and-balance-sheet-writer): Give it your books. Get an income statement, balance sheet or cash flow with big swings flagged. Review with an accountant.
+- [Pension funded-status change schedule](https://useaiblocks.com/skills/pension-funded-status-change): Explain changes in an issuer’s pension deficit separately from employer contributions.
+- [Pension service and financing bridge](https://useaiblocks.com/skills/pension-service-financing-bridge): Separate pension service cost, net interest, remeasurement and funding in a single reconciliation.
 - [Per-order profit calculator](https://useaiblocks.com/prompts/per-order-profit-calculator): Paste your price and every cost per order. Get the profit per order, the break-even and what moves it most.
 - [Plain-words SQL writer](https://useaiblocks.com/skills/plain-words-sql-writer): Describe the data you need. Get a working SQL query for your database type, with a note on how it runs.
 - [Prediction driver explainer](https://useaiblocks.com/skills/prediction-driver-explainer): Give it a trained model and data. Get which inputs drove each prediction and overall, with checked plots.
@@ -94,16 +115,21 @@
 - [Prepare expenses for your bookkeeper](https://useaiblocks.com/workflows/prepare-expenses-for-your-bookkeeper): Share the source files. Get a categorized expense file, receipt gaps and a reconciliation summary.
 - [Product cost category organizer](https://useaiblocks.com/skills/cogs-line-sorter): Paste your cost lines. Get each sorted into COGS or expense, with the rule used, scored out of 100.
 - [Product margin checker](https://useaiblocks.com/skills/product-margin-checker): Give it a price and every cost. Get true margin, break-even ROAS and CAC, scored out of 100.
+- [Purchased amortization EPS bridge](https://useaiblocks.com/skills/purchased-amortization-eps-bridge): Tie acquired-intangible amortization and its disclosed tax effect to an alternative EPS measure.
 - [Queue and process simulator](https://useaiblocks.com/skills/queue-and-process-simulator): Describe a process with queues and limited resources. Get a simulation with repeated runs and a clear summary of results.
 - [Quick time series forecaster](https://useaiblocks.com/skills/quick-time-series-forecaster): Give it a CSV of past values. Get a forecast with ranges and a test on held-back data, with no model training.
 - [Rates and economy dashboard builder](https://useaiblocks.com/skills/rates-economy-dashboard): Name a region. Get a dashboard of key indicators, the yield curve and what they say about the cycle.
+- [Receivables allowance roll-forward](https://useaiblocks.com/skills/receivables-allowance-movement-bridge): Reconcile credit-loss expense, write-offs and recoveries to the reported closing allowance.
 - [Reconcile donated goods records](https://useaiblocks.com/workflows/reconcile-donated-goods-records): Share the source files. Get an in kind goods reconciliation, missing records and handover notes.
 - [Reconciliation break tracer](https://useaiblocks.com/skills/reconciliation-break-tracer): Give it a break from a reconciliation. Get it traced to its source entries on both sides, and what differs.
 - [Recurring invoice exception review assistant](https://useaiblocks.com/agents/recurring-invoice-exception-review-assistant): New invoice exceptions, resolved items with evidence and an approval review list.
 - [Recurring KPI report maker](https://useaiblocks.com/skills/recurring-kpi-report-maker): Describe the report you want in plain words. Get the numbers pulled, a workbook, and a saved report to rerun.
 - [Regression and forecast modeller](https://useaiblocks.com/skills/regression-and-forecast-modeller): Give it a data table. Get a fitted regression or time series model with checks and a plain read of the results.
 - [Report definition drift review assistant](https://useaiblocks.com/agents/report-definition-drift-review-assistant): A metric difference table, reconciled examples and reporting procedure.
+- [Research spend cohort adjustment](https://useaiblocks.com/skills/research-spend-cohort-adjustment): Build an analyst research asset and amortization schedule from dated R&D expense cohorts.
 - [Research test picker and reporter](https://useaiblocks.com/skills/statistical-test-picker): Give it your data and question. Get the right test, assumption checks, effect sizes and a write-up in APA style.
+- [Restaurant portion cost builder](https://useaiblocks.com/skills/restaurant-portion-cost-builder): A batch yield, portion cost and service contribution schedule
+- [Retail markdown stock reconciler](https://useaiblocks.com/skills/retail-markdown-stock-reconciler): A stock cohort reconciliation with sold contribution and cumulative purchase cash recovery
 - [Retention cohort analyst](https://useaiblocks.com/skills/retention-cohort-analyst): Give it user activity data. Get retention curves by sign-up group, feature adoption trends and what they suggest.
 - [Retention heatmap maker](https://useaiblocks.com/skills/retention-heatmap-maker): Give it signup and activity dates. Get retention by group over time, as a colour-coded grid with a plain reading.
 - [Sales drop cause finder](https://useaiblocks.com/prompts/sales-drop-cause-finder): Paste store numbers from before and after a drop. Get the lever that moved and the next check.
@@ -111,6 +137,7 @@
 - [Seawater carbonate calculator](https://useaiblocks.com/skills/seawater-carbonate-calculator): Give it two seawater measures like alkalinity and pH. Get the full carbonate chemistry worked out.
 - [Set up product tracking and build a retention dashboard](https://useaiblocks.com/workflows/set-up-product-tracking-and-build-a-retention-dashboard): Describe your product. Get an event plan to ship, then a retention grid and dashboard from real use.
 - [Set up tracking you can trust before scaling](https://useaiblocks.com/workflows/set-up-tracking-you-can-trust-before-you-scale): Give it your GA4, Meta and campaign setup. Get fix lists, tagged links and a truer ROAS.
+- [Share compensation cash-offset cost](https://useaiblocks.com/skills/sbc-share-offset-cost): Estimate cash needed to offset actual employee share issuance without confusing it with reported compensation expense.
 - [Share of search tracker planner](https://useaiblocks.com/prompts/share-of-search-tracker-planner): Paste your brand and your rivals. Get a monthly share-of-search tracker and how to read it.
 - [Shopify dashboard reader](https://useaiblocks.com/skills/shopify-dashboard-reader): Paste your Shopify analytics numbers. Get which tiles to trust, your cash collected and a score out of 100.
 - [Spend savings finder](https://useaiblocks.com/skills/spend-savings-finder): Give it a list of what you paid suppliers. Get spend grouped by type, the biggest savings chances and quick wins.
@@ -127,10 +154,12 @@
 - [Store profit per visitor calculator](https://useaiblocks.com/skills/store-profit-per-visitor-calculator): Paste your Shopify and analytics numbers. Get corrected revenue and gross profit per visitor, and a trust score.
 - [Store revenue forecast builder](https://useaiblocks.com/skills/store-revenue-forecast-builder): Give it past spend, cohorts and a calendar. Get daily new and returning revenue and the target gap.
 - [Store sales decline investigation](https://useaiblocks.com/skills/store-sales-drop-splitter): Tell it sales fell. Get the drop split into sessions, conversion and AOV, the likely cause and a score out of 100.
+- [Supplier finance leverage bridge](https://useaiblocks.com/skills/supplier-finance-leverage-bridge): Show how an evidenced supplier-finance debt treatment changes net debt and operating payables.
 - [Supply chain carbon tracker](https://useaiblocks.com/skills/supply-chain-carbon-tracker): Give it your shipping, energy and supplier data. Get emissions worked out by source, plus ways to cut them.
 - [Supply chain dashboard designer](https://useaiblocks.com/skills/supply-chain-dashboard-designer): Tell it what you ship and from where. Get a one-screen design showing delays, low stock and orders at risk.
 - [Time-to-event model builder](https://useaiblocks.com/skills/time-to-event-model-builder): Give it follow-up data with dropouts. Get survival models that avoid data leaks, with scores and risk curves.
 - [Traffic channel classifier](https://useaiblocks.com/skills/traffic-channel-classifier): Give it your visits and orders. Get every one sorted into the same 11 channels, whatever tool it came from.
+- [Trailing-period financial bridge](https://useaiblocks.com/skills/trailing-period-financial-bridge): Build a trailing-year flow from annual and matching year-to-date statements.
 - [Training curve viewer](https://useaiblocks.com/skills/training-curve-viewer): Give it your training code. Get live charts of loss and accuracy, plus a way to compare runs.
 - [Trend and forecast analyst](https://useaiblocks.com/skills/trend-and-forecast-analyst): Give it numbers over time. Get trend, seasons and odd spikes found, plus a forecast table and plain insights.
 - [Turn a dataset into a checked brief of top insights](https://useaiblocks.com/workflows/turn-a-raw-dataset-into-a-checked-brief-of-top-insights): Give it a data file and a question. Get a checked analysis and a ranked insight brief.
@@ -142,6 +171,7 @@
 - [Virus variant trend reader](https://useaiblocks.com/skills/virus-variant-trend-reader): Name a virus and a region. Get current lineages, weekly sequence shares and mutation frequencies from public data.
 - [Visitor to contact matcher](https://useaiblocks.com/skills/visitor-to-contact-matcher): Give it your site visit records and contact list. Get anonymous visits linked to known contacts, with unclear links flagged.
 - [Warehouse A/B test runner](https://useaiblocks.com/skills/warehouse-a-b-test-runner): Describe your data setup. Get SQL steps to split users, log exposure and read results with proper stats.
+- [Water utility collections reconciler](https://useaiblocks.com/skills/water-utility-collections-reconciler): A water billing, collection and receivables bridge
 - [Weekly invoice and cash chaser](https://useaiblocks.com/agents/weekly-invoice-and-cash-chaser): Give it your open invoices each week. Get who to chase, a reminder for each and a 90-day cash view.
 - [Weekly numbers sheet designer](https://useaiblocks.com/prompts/weekly-numbers-sheet-designer): Paste what your business does and what you can measure. Get a one-page weekly sheet of seven numbers.
 - [Weekly SaaS performance review](https://useaiblocks.com/agents/weekly-saas-numbers-keeper): Share weekly revenue and customer data. Review recurring revenue, churn and acquisition payback, then choose one growth priority.

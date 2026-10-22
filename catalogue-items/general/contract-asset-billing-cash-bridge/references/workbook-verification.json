@@ -1,0 +1,32 @@
+{
+  "engine": "Artifact Tool",
+  "scope": "Illustrative workbook calculations, not source truth or an actual investment conclusion. Native Microsoft Excel application execution is not claimed.",
+  "modelSha256": "a7999938729ea9491eae0a40716f719e0489cbd593644e5911f46b46de4b26a3",
+  "xlsxSha256": "49492525cf39291035f97cf4cd8e5760711abe54c5ab43b6264b85d9535998bb",
+  "baseline": "pass",
+  "changedInputCase": "More revenue remains unbilled",
+  "invalidInputCase": "Missing required reported input",
+  "cases": [
+    {
+      "name": "More revenue remains unbilled",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required reported input",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ],
+  "reopenedAndRecalculated": true,
+  "rendered": true,
+  "visualReview": "pass",
+  "workbookSpecSha256": "8e689b93d465aabacd27e598252e9074c01de95a447449395d3ae34880b7fa58",
+  "visualEvidence": {
+    "report": "reports/finance-public-markets-peer-review.json",
+    "reportSha256": "f73f6f5598ba0647c477c547d2776f1221130bb7861b62def472b74331866282",
+    "previewSha256": "428cd799cbd5d67a1b09f6d35ba1381920527405c9664466575a5e5495c8f95d",
+    "sheet": "Model",
+    "sourceSpecSha256": "3f51dc5e3d4aeb26b7d51ae9bc741733d3519de30a7bd1ce785f647ec461ccc1"
+  }
+}

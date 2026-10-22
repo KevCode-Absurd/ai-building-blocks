@@ -1,0 +1,17 @@
+{
+  "slug": "one-period-residual-income-bridge",
+  "modelSha256": "daf3092f364698ca5b88b0ffe5f568d230d7011cc07e9f98aa18956fc1cba920",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Earnings meet the equity charge",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Required input absent",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

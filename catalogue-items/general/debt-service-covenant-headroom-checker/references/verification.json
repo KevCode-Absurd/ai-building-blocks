@@ -1,0 +1,17 @@
+{
+  "slug": "debt-service-covenant-headroom-checker",
+  "modelSha256": "0dfd2146bfb0112cf20a0f0f7f939dcd48219a1f954ae5621c6ecb8be8396fa4",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing or invalid required input",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

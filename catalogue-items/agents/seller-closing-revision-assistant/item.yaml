@@ -1,0 +1,47 @@
+slug: seller-closing-revision-assistant
+name: Seller closing revision assistant
+summary: Review supplied changes, preserve the last evidence baseline and return only affected calculations and unresolved approval questions.
+category: agent
+type: agent
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: spreadsheet
+    required: true
+  - type: audit_report
+    required: true
+  - type: document
+    required: true
+uses:
+  - reconcile-seller-closing-cash
+  - adviser-fee-tier-checker
+steps:
+  - uses: reconcile-seller-closing-cash
+    note: Run the governing workflow when A revised closing statement, final working-capital determination, paid claim or signed fee amendment arrives.
+  - uses: adviser-fee-tier-checker
+    note: If the adviser fee changed, recompute only the supported marginal tier schedule and update unpaid seller expenses using the net remaining invoice. Preserve paid retainers and prior settlement records to prevent duplicate deductions. Otherwise leave the fee branch unrun.
+origin: own
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/finance-expansion
+example_pending: true
+warnings:
+  - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+credits:
+  - title: Original finance methods and model fixtures
+    by: AI Blocks contributors
+    used: Original instructions, calculations and illustrative examples. External method references are linked separately and retain their own rights.
+schedule: On explicit request after the user supplies changed evidence. Installing the pack creates no schedule or account connection.
+asks_before:
+  - Trading or moving money
+  - Sending or publishing research or deal materials
+  - Changing an account or submitting a filing
+  - Starting or changing a recurring schedule

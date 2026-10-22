@@ -1,0 +1,166 @@
+{
+  "inputs": [
+    {
+      "id": "mwh_1",
+      "label": "mwh 1",
+      "value": 1000,
+      "unit": "accepted MWh / year1",
+      "min": 0
+    },
+    {
+      "id": "mwh_2",
+      "label": "mwh 2",
+      "value": 1100,
+      "unit": "accepted MWh / year2",
+      "min": 0
+    },
+    {
+      "id": "mwh_3",
+      "label": "mwh 3",
+      "value": 900,
+      "unit": "accepted MWh / year3",
+      "min": 0
+    },
+    {
+      "id": "contract_price",
+      "label": "contract price",
+      "value": 50,
+      "unit": "USD / MWh",
+      "min": 0
+    },
+    {
+      "id": "variable_cash_per_mwh",
+      "label": "variable cash per mwh",
+      "value": 10,
+      "unit": "USD / MWh",
+      "min": 0
+    },
+    {
+      "id": "fixed_annual_cash",
+      "label": "fixed annual cash",
+      "value": 10000,
+      "unit": "USD / year",
+      "min": 0
+    }
+  ],
+  "calculations": [
+    {
+      "id": "unit_cash_margin",
+      "label": "unit cash margin",
+      "op": "sub",
+      "args": [
+        "contract_price",
+        "variable_cash_per_mwh"
+      ],
+      "unit": "USD / MWh"
+    },
+    {
+      "id": "gross_margin_1",
+      "label": "gross margin 1",
+      "op": "mul",
+      "args": [
+        "mwh_1",
+        "unit_cash_margin"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "gross_margin_2",
+      "label": "gross margin 2",
+      "op": "mul",
+      "args": [
+        "mwh_2",
+        "unit_cash_margin"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "gross_margin_3",
+      "label": "gross margin 3",
+      "op": "mul",
+      "args": [
+        "mwh_3",
+        "unit_cash_margin"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "cash_1",
+      "label": "cash 1",
+      "op": "sub",
+      "args": [
+        "gross_margin_1",
+        "fixed_annual_cash"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "cash_2",
+      "label": "cash 2",
+      "op": "sub",
+      "args": [
+        "gross_margin_2",
+        "fixed_annual_cash"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "cash_3",
+      "label": "cash 3",
+      "op": "sub",
+      "args": [
+        "gross_margin_3",
+        "fixed_annual_cash"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "total_cash",
+      "label": "total cash",
+      "op": "sum",
+      "args": [
+        "cash_1",
+        "cash_2",
+        "cash_3"
+      ],
+      "unit": "USD / stated period"
+    }
+  ],
+  "outputs": [
+    "unit_cash_margin",
+    "cash_1",
+    "cash_2",
+    "cash_3",
+    "total_cash"
+  ],
+  "expected": {
+    "unit_cash_margin": 40,
+    "cash_1": 30000,
+    "cash_2": 34000,
+    "cash_3": 26000,
+    "total_cash": 90000
+  },
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "inputs": {
+        "contract_price": 60
+      },
+      "expected": {
+        "unit_cash_margin": 50,
+        "cash_1": 40000,
+        "cash_2": 45000,
+        "cash_3": 35000,
+        "total_cash": 120000
+      }
+    },
+    {
+      "name": "Missing or invalid required input",
+      "inputs": {
+        "mwh_1": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only in USD unless labelled otherwise. This focused operating schedule does not establish a complete business forecast, accounting treatment, market price or approval."
+}

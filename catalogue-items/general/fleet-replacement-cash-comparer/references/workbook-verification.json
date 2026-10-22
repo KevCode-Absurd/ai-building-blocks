@@ -1,0 +1,37 @@
+{
+  "engine": "Artifact Tool",
+  "scope": "Illustrative workbook calculations, not source truth or an actual investment conclusion. Native Microsoft Excel application execution is not claimed.",
+  "modelSha256": "725e5e77cd2693d17d04c059cf72c47757425e73d5f3d1acf4f1bd3c900e0f9b",
+  "xlsxSha256": "2cd2475ef7ab822b1c6e691fd4d537b6b1c3c31a67d3c94e8251221da9a8d8c4",
+  "baseline": "pass",
+  "changedInputCase": "Changed source assumption, hand-calculated result",
+  "invalidInputCase": "Missing or invalid required input",
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing or invalid required input",
+      "kind": "refusal",
+      "status": "pass"
+    },
+    {
+      "name": "Foregone keep-vehicle sale exceeds replacement terminal sale",
+      "kind": "changed-input",
+      "status": "pass"
+    }
+  ],
+  "reopenedAndRecalculated": true,
+  "rendered": true,
+  "visualReview": "pass",
+  "workbookSpecSha256": "191a3feccdbf4d0a955cd0a7bf0984ca40e96bdcd0ac446bd9bb5879c92c626f",
+  "visualEvidence": {
+    "report": "reports/finance-operating-credit-peer-review.json",
+    "reportSha256": "ac57e1e1d010a9b5b9e64c1e84ef87d22207254a2844e5e5a205578608d66aa6",
+    "previewSha256": "4b5f476f26f204a565c89b0f164d9a86da0100b400274a35fc619ad9db1d6291",
+    "sheet": "Model",
+    "sourceSpecSha256": "9444e86deefb394be9e200c045a6976f65819957c4575bf50d6310b7b13abfd5"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "slug": "segment-profit-elimination-bridge",
+  "modelSha256": "dc4437267951ec840296632d04dc152523ab5bdd4dd1dfea01a4a5628750db9f",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Higher corporate cost",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Required input absent",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

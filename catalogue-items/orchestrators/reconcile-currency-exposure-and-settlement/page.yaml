@@ -1,0 +1,72 @@
+new_slug: reconcile-currency-exposure-and-settlement
+name: Reconcile currency exposure and settlement
+headline: Reconcile currency exposure and settlement
+summary: A currency exposure bridge and matched forward settlement schedule
+job: money-and-investing
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: A currency exposure bridge and matched forward settlement schedule. Share one currency maturity bucket, documented receivables/payables and commitments, existing buy-forward contract and settlement rates/fees.
+explain: |-
+  A currency exposure bridge and matched forward settlement schedule.
+
+  Treasury foreign exchange settlement. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+when:
+  - You need a currency exposure bridge and matched forward settlement schedule.
+  - You work on treasury foreign exchange settlement and need traceable calculations.
+  - A reviewer needs to trace the result back to inputs and assumptions.
+you_give:
+  - One currency maturity bucket, documented receivables/payables and commitments, existing buy-forward contract and settlement rates/fees.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - A currency exposure bridge and matched forward settlement schedule.
+  - Original step files, financial assumptions, source coverage and a governing handoff summary.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: Currency exposure netting checker
+    text: Reconcile gross foreign receipts and obligations. Record the existing buy-forward as a positive foreign delivery, or a sell-forward as negative, in the exposure map. Pass the original matched obligation and actual hedge notional to settlement, never the already-net residual as the full payable. This workflow settlement branch supports buy-foreign contracts only.
+  - title: Currency forward settlement checker
+    text: Reconcile the same existing buy-forward against its underlying payable using contractual forward price, settlement spot and fees. Return cash settlement, overhedge or residual exposure and source discrepancies; no new contract is selected or executed.
+output_shape: |-
+  A currency exposure bridge and matched forward settlement schedule.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: Maturity, currency units and rate quote direction match; forward notional appears once in exposure netting and once in settlement, never as two hedges.
+judge:
+  - Maturity, currency units and rate quote direction match; forward notional appears once in exposure netting and once in settlement, never as two hedges.
+  - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
+  - Reconcile opening balances, additions, deductions and closing balances. Match enterprise or equity cash flows to the corresponding discount rate.
+  - Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
+test:
+  - Try a small sourced case and inspect every component handoff.
+  - Remove one required source and confirm the affected step stops.
+  - Change a currency, date or accounting definition and check the conflict stays visible.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

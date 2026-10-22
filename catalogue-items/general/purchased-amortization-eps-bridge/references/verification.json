@@ -1,0 +1,17 @@
+{
+  "slug": "purchased-amortization-eps-bridge",
+  "modelSha256": "b26791fe9b17b57fb79812e381292ed3f3273973ade7fea3c2e7a9040bf3a1d5",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Larger attributable recognized tax benefit",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Required source input missing",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

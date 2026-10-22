@@ -1,0 +1,45 @@
+slug: reconcile-working-capital-and-tax-cash
+name: Reconcile working capital and tax cash
+summary: Explain balance-sheet-to-cash differences through noncash operating movements and current tax payables.
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: spreadsheet
+    required: true
+  - type: audit_report
+    required: true
+  - type: document
+    required: true
+uses:
+  - noncash-working-capital-bridge
+  - constant-currency-revenue-bridge
+  - current-tax-cash-payment-bridge
+steps:
+  - uses: noncash-working-capital-bridge
+    note: Use actual sourced schedules in one linked native workbook; example values are illustrative and must not become issuer inputs. Map operating balances while excluding tax and financing items; remove sourced acquisitions, translation and other noncash movements before deriving the indirect cash effect.
+  - uses: constant-currency-revenue-bridge
+    note: Use the issuer currency buckets to distinguish revenue translation from balance-sheet translation; never reuse average revenue rates as a substitute for the working-capital FX note.
+  - uses: current-tax-cash-payment-bridge
+    note: Reconcile separately excluded current-tax payables to cash taxes, then connect the two schedules to CFO without counting current tax in operating working capital as well.
+execution: coordinator
+origin: own
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/finance-expansion
+example_pending: true
+warnings:
+  - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+credits:
+  - title: Original finance methods and model fixtures
+    by: AI Blocks contributors
+    used: Original instructions, calculations and illustrative examples. External method references are linked separately and retain their own rights.

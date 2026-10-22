@@ -1,0 +1,17 @@
+{
+  "slug": "clinic-claims-collections-bridge",
+  "modelSha256": "63998ff8b6516bacb307de7b4cdd34c9371a6d60468c02827e1ec27a53a47a2c",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing or invalid required input",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

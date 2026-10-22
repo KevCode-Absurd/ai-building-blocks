@@ -79,7 +79,7 @@ for (const dirName of ["general", "ecommerce", "orchestrators", "agents", "impor
     fs.copyFileSync(skillPath, path.join(OUT_SKILLS, slug, "SKILL.md"));
     // Reference files and a licence travel with the skill, so a download installs complete.
     const refDir = path.join(folder, "references");
-    const files = imported ? walk(folder) : [...(fs.existsSync(refDir) ? fs.readdirSync(refDir).filter((f) => f.endsWith(".md")).sort().map((f) => `references/${f}`) : []), ...(fs.existsSync(path.join(folder, "LICENSE")) ? ["LICENSE"] : [])];
+    const files = imported || item.package_files === "all" ? walk(folder) : [...(fs.existsSync(refDir) ? fs.readdirSync(refDir).filter((f) => f.endsWith(".md")).sort().map((f) => `references/${f}`) : []), ...(fs.existsSync(path.join(folder, "LICENSE")) ? ["LICENSE"] : [])];
     // They ship as one zip per skill (skills/<slug>.zip, the folder Claude installs), not one file each: the site stays
     // under Cloudflare Pages' file limit, and a download is one request. The skill's own files are never changed.
     if (files.length) {

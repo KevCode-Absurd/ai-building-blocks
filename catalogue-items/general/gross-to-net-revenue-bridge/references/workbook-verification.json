@@ -1,0 +1,32 @@
+{
+  "engine": "Artifact Tool",
+  "scope": "Illustrative workbook calculations, not source truth or an actual investment conclusion. Native Microsoft Excel application execution is not claimed.",
+  "modelSha256": "f50f5d647b3a549310ddcf5a82a6d24b6a27d2b0aad00958cae71375ba0d8693",
+  "xlsxSha256": "35d9e8320660cd7259a7fcb0edfc15fe7a187a47d53de8a26a556dd8a6f5ac64",
+  "baseline": "pass",
+  "changedInputCase": "Higher rebate accrual",
+  "invalidInputCase": "Missing required reported input",
+  "cases": [
+    {
+      "name": "Higher rebate accrual",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required reported input",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ],
+  "reopenedAndRecalculated": true,
+  "rendered": true,
+  "visualReview": "pass",
+  "workbookSpecSha256": "6c1a9ca23911c18ef6adb6f1fc1f871b500e1b98869c6973cade2983ffa896e4",
+  "visualEvidence": {
+    "report": "reports/finance-public-markets-peer-review.json",
+    "reportSha256": "f73f6f5598ba0647c477c547d2776f1221130bb7861b62def472b74331866282",
+    "previewSha256": "1d3b3a6e9f800c4b2aeb9eb83c760cdff6656dd93ebba64e83ba6c9aeb606402",
+    "sheet": "Model",
+    "sourceSpecSha256": "0c0511ef742b29d2105eae5f7f56c5407b6a9599898a899c881f4f98eac961d1"
+  }
+}

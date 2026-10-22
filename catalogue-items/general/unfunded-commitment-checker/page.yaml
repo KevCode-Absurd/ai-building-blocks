@@ -1,0 +1,76 @@
+new_slug: unfunded-commitment-checker
+name: Unfunded commitment checker
+headline: Unfunded commitment checker
+summary: Reconcile a fund commitment with original calls, recallable restoration and recalled capital.
+job: money-and-investing
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: Remaining callable commitment and a classification exception ledger. Share signed commitment register, original calls excluding recall calls, distributions contractually restoring commitment, actual recalls and approved commitment reductions.
+explain: |-
+  Remaining callable commitment and a classification exception ledger.
+
+  Private fund commitments. Illustrative figures only. 100-60+10-5-2=43 callable; increasing approved reductions to5 leaves40.
+when:
+  - You need remaining callable commitment and a classification exception ledger.
+  - You work on private fund commitments and need traceable calculations.
+  - A reviewer needs to trace the result back to inputs and assumptions.
+you_give:
+  - Signed commitment register, original calls excluding recall calls, distributions contractually restoring commitment, actual recalls and approved commitment reductions.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - Remaining callable commitment and a classification exception ledger.
+  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: 1. Separate capital account NAV movements from contractual commitment changes; identify which distributions genuinely restore callable commitment
+    text: Separate capital account NAV movements from contractual commitment changes; identify which distributions genuinely restore callable commitment.
+  - title: 2. Subtract original calls and approved reductions from commitment; add eligible restoration and subtract subsequent recall calls
+    text: Subtract original calls and approved reductions from commitment; add eligible restoration and subtract subsequent recall calls.
+  - title: 3. Tie opening and closing callable balance to dated notices without treating every cash distribution as recallable
+    text: Tie opening and closing callable balance to dated notices without treating every cash distribution as recallable.
+output_shape: |-
+  Remaining callable commitment and a classification exception ledger.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: Original calls exclude the separate recall-calls input, preventing duplicate deduction.
+judge:
+  - Original calls exclude the separate recall-calls input, preventing duplicate deduction.
+  - Restored commitment requires contractual eligibility and actual distribution evidence.
+  - Trace each input to its dated signed source, currency, scale and period.
+  - Reconcile outputs; preserve MISSING and CHECKS MISSED rather than guessing zero.
+test:
+  - Run the included baseline and changed-input fixtures, then compare with the stated expected results.
+  - Remove a required input and confirm the affected calculation refuses to invent a zero.
+  - Recalculate the workbook after changing an input and inspect the saved output.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: Node.js 20 or later
+      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

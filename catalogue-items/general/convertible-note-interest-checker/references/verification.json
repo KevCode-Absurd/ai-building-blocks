@@ -1,0 +1,17 @@
+{
+  "slug": "convertible-note-interest-checker",
+  "modelSha256": "745d2c739aa9a071601d5f82547a1cfdf57bb9db1d13a7f66d21c9ce49062f2a",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required number",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

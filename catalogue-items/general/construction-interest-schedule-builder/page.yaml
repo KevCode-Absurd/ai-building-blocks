@@ -1,0 +1,78 @@
+new_slug: construction-interest-schedule-builder
+name: Construction interest schedule builder
+headline: Construction interest schedule builder
+summary: A timed capitalized interest schedule and debt rollforward
+job: money-and-investing
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: A timed capitalized interest schedule and debt rollforward. Share opening construction debt, three annual eligible draws, fixed annual rate and weighted fraction of each draw outstanding during its year.
+explain: |-
+  A timed capitalized interest schedule and debt rollforward.
+
+  Project construction interest. Illustrative figures only in USD unless labelled otherwise. The model is the focused stated schedule, not a complete company forecast. Annual end-period cash is used unless the inputs state another convention.
+when:
+  - You need a timed capitalized interest schedule and debt rollforward.
+  - You work on project construction interest and need traceable calculations.
+  - A reviewer needs to trace the result back to inputs and assumptions.
+you_give:
+  - Opening construction debt, three annual eligible draws, fixed annual rate and weighted fraction of each draw outstanding during its year.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - A timed capitalized interest schedule and debt rollforward.
+  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: 1. Build a dated source ledger of balances, operating units, period boundaries, contractual terms and unresolved evidence gaps
+    text: Build a dated source ledger of balances, operating units, period boundaries, contractual terms and unresolved evidence gaps.
+  - title: 2. Read the capitalization agreement and distinguish cash-paid interest from interest legally added to debt
+    text: Read the capitalization agreement and distinguish cash-paid interest from interest legally added to debt.
+  - title: 3. Calculate interest on opening debt plus explicitly time-weighted current draws; add it to closing debt only at year end
+    text: Calculate interest on opening debt plus explicitly time-weighted current draws; add it to closing debt only at year end.
+  - title: 4. Carry closing debt into the next period, compare to commitments and reconcile opening debt plus draws plus capitalized interest to final debt
+    text: Carry closing debt into the next period, compare to commitments and reconcile opening debt plus draws plus capitalized interest to final debt.
+output_shape: |-
+  A timed capitalized interest schedule and debt rollforward.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: Each material input is sourced with currency, scale, sign and period.
+judge:
+  - Each material input is sourced with currency, scale, sign and period.
+  - Actual records and scenarios remain separate; missing evidence is not zero.
+  - Current-year interest does not enter its own base; the model assumes capitalization at each year end.
+  - Draw weighting is sourced timing, not an automatic half-year assumption for actual data.
+test:
+  - Run the included baseline and changed-input fixtures, then compare with the stated expected results.
+  - Remove a required input and confirm the affected calculation refuses to invent a zero.
+  - Recalculate the workbook after changing an input and inspect the saved output.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: Node.js 20 or later
+      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

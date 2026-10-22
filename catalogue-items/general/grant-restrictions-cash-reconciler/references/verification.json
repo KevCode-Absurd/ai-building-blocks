@@ -1,0 +1,17 @@
+{
+  "slug": "grant-restrictions-cash-reconciler",
+  "modelSha256": "1b874aebd1520b8db903b3f3cd552350190677e46594a1f96662d29318655985",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing or invalid required input",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

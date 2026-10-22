@@ -1,0 +1,78 @@
+new_slug: revolver-availability-checker
+name: Revolver availability checker
+headline: Revolver availability checker
+summary: A revolver capacity bridge and overadvance exception
+job: money-and-investing
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: A revolver capacity bridge and overadvance exception. Share same-date receivables and inventory borrowing-base advances, commitment, drawn debt, outstanding letters of credit and nonduplicated blocks.
+explain: |-
+  A revolver capacity bridge and overadvance exception.
+
+  Asset based liquidity. Illustrative figures only in USD unless labelled otherwise. A focused schedule using explicit period, rate and timing conventions; not a full financing model or an approval decision.
+when:
+  - You need a revolver capacity bridge and overadvance exception.
+  - You work on asset based liquidity and need traceable calculations.
+  - A reviewer needs to trace the result back to inputs and assumptions.
+you_give:
+  - Same-date receivables and inventory borrowing-base advances, commitment, drawn debt, outstanding letters of credit and nonduplicated blocks.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - A revolver capacity bridge and overadvance exception.
+  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: 1. Map dated sources, contractual definitions, period boundaries, currency, scale and source gaps before calculating
+    text: Map dated sources, contractual definitions, period boundaries, currency, scale and source gaps before calculating.
+  - title: 2. Reconcile component collateral advances to one certificate date, avoiding reserves already applied in the source tiers
+    text: Reconcile component collateral advances to one certificate date, avoiding reserves already applied in the source tiers.
+  - title: 3. Limit capacity to the lower of total borrowing base and legal commitment; deduct funded and contingent usage plus additional documented blocks
+    text: Limit capacity to the lower of total borrowing base and legal commitment; deduct funded and contingent usage plus additional documented blocks.
+  - title: 4. Keep signed availability and an overadvance amount visible; identify authorization or certificate conditions before describing capacity as drawable
+    text: Keep signed availability and an overadvance amount visible; identify authorization or certificate conditions before describing capacity as drawable.
+output_shape: |-
+  A revolver capacity bridge and overadvance exception.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: Actual records, contractual terms and scenarios remain distinguishable.
+judge:
+  - Actual records, contractual terms and scenarios remain distinguishable.
+  - Missing evidence blocks the affected line; no default zero or unexplained balancing plug.
+  - Every reserve is applied exactly once across certificate and facility tiers.
+  - Capacity less drawings, letters of credit and blocks equals signed availability; negative availability is an overadvance, not zero debt.
+test:
+  - Run the included baseline and changed-input fixtures, then compare with the stated expected results.
+  - Remove a required input and confirm the affected calculation refuses to invent a zero.
+  - Recalculate the workbook after changing an input and inspect the saved output.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: Node.js 20 or later
+      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

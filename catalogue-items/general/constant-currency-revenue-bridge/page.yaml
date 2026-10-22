@@ -1,0 +1,76 @@
+new_slug: constant-currency-revenue-bridge
+name: Constant-currency revenue bridge
+headline: Constant-currency revenue bridge
+summary: Separate reported growth from translation effects using an explicit exchange-rate convention.
+job: track-numbers
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: A reported and constant-currency growth bridge with a signed translation effect. Share prior/current local revenue by currency, matching domestic revenue and prior/current average reporting-currency-per-local-currency rates.
+explain: |-
+  A reported and constant-currency growth bridge with a signed translation effect.
+
+  Issuer revenue and cash-flow reconciliation. Illustrative figures. Prior100×1+40=140. Current120×.8+50=146; fixed-rate current120×1+50=170. Reported growth4.285714%, constant-currency21.428571%; translation effect minus24.
+when:
+  - You need a reported and constant-currency growth bridge with a signed translation effect.
+  - You work on issuer revenue and cash-flow reconciliation and need traceable calculations.
+  - A reviewer needs to trace the result back to inputs and assumptions.
+you_give:
+  - Prior/current local revenue by currency, matching domestic revenue and prior/current average reporting-currency-per-local-currency rates.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - A reported and constant-currency growth bridge with a signed translation effect.
+  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: 1. Fix the convention as current local revenue translated at prior-period average rates; do not mix the inverse rate or a different issuer convention
+    text: Fix the convention as current local revenue translated at prior-period average rates; do not mix the inverse rate or a different issuer convention.
+  - title: 2. Translate each currency bucket at actual current rates for reported revenue and at prior rates for constant-currency revenue; add unchanged domestic amounts
+    text: Translate each currency bucket at actual current rates for reported revenue and at prior rates for constant-currency revenue; add unchanged domestic amounts.
+  - title: 3. Calculate both growth rates against reported prior revenue and reconcile their dollar difference; separate hedging, hyperinflation and transaction FX as needed
+    text: Calculate both growth rates against reported prior revenue and reconcile their dollar difference; separate hedging, hyperinflation and transaction FX as needed.
+output_shape: |-
+  A reported and constant-currency growth bridge with a signed translation effect.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: Exchange-rate units explicitly state reporting currency per local currency.
+judge:
+  - Exchange-rate units explicitly state reporting currency per local currency.
+  - Average revenue translation rates are not replaced with closing balance-sheet rates.
+  - Source each balance, flow, period, perimeter, currency and sign; distinguish a true zero from missing evidence.
+  - Preserve reported measures beside analytical measures and retain unexplained residuals.
+test:
+  - Run the included baseline and changed-input fixtures, then compare with the stated expected results.
+  - Remove a required input and confirm the affected calculation refuses to invent a zero.
+  - Recalculate the workbook after changing an input and inspect the saved output.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: Node.js 20 or later
+      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

@@ -1,0 +1,107 @@
+{
+  "inputs": [
+    {
+      "id": "reportedEbitda",
+      "label": "reported Ebitda",
+      "value": 100,
+      "unit": "USD millions",
+      "min": 0.000001
+    },
+    {
+      "id": "supportedCapped",
+      "label": "supported Capped",
+      "value": 40,
+      "unit": "USD millions",
+      "min": 0
+    },
+    {
+      "id": "capFraction",
+      "label": "cap Fraction",
+      "value": 0.2,
+      "unit": "fraction",
+      "min": 0,
+      "max": 1
+    },
+    {
+      "id": "uncappedAllowed",
+      "label": "uncapped Allowed",
+      "value": 10,
+      "unit": "USD millions",
+      "min": 0
+    }
+  ],
+  "calculations": [
+    {
+      "id": "capAmount",
+      "label": "cap Amount",
+      "op": "mul",
+      "args": [
+        "reportedEbitda",
+        "capFraction"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "allowedCapped",
+      "label": "allowed Capped",
+      "op": "min",
+      "args": [
+        "supportedCapped",
+        "capAmount"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "adjustedEbitda",
+      "label": "adjusted Ebitda",
+      "op": "sum",
+      "args": [
+        "reportedEbitda",
+        "allowedCapped",
+        "uncappedAllowed"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "rejected",
+      "label": "rejected",
+      "op": "sub",
+      "args": [
+        "supportedCapped",
+        "allowedCapped"
+      ],
+      "unit": "USD millions"
+    }
+  ],
+  "outputs": [
+    "allowedCapped",
+    "adjustedEbitda",
+    "rejected"
+  ],
+  "expected": {
+    "allowedCapped": 20,
+    "adjustedEbitda": 130,
+    "rejected": 20
+  },
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "inputs": {
+        "capFraction": 0.1
+      },
+      "expected": {
+        "allowedCapped": 10,
+        "adjustedEbitda": 120,
+        "rejected": 30
+      }
+    },
+    {
+      "name": "Missing required number",
+      "inputs": {
+        "reportedEbitda": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only. Cap20% of100 permits20 of requested40; adding10 uncapped gives130. Cap10% gives120 and rejects30."
+}

@@ -1,0 +1,17 @@
+{
+  "slug": "restaurant-portion-cost-builder",
+  "modelSha256": "bb7da8105e069f8251d05065bcfc9948b42ae6e21da352017ccec2c5b2e87377",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing or invalid required input",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

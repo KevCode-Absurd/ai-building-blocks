@@ -1,0 +1,72 @@
+new_slug: project-reserve-evidence-reviewer
+name: Project reserve evidence reviewer
+headline: Project reserve evidence reviewer
+summary: A dated evidence review with changed assumptions, reconciliations and unresolved source gaps.
+job: money-and-investing
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: A debt reserve rollforward and payment priority reconciliation. Share actual project cash after operations, senior and junior service schedule, approved reserve draws, next-service requirement, reserve balance and contract payment priority. Include the previous dated review and source versions when available.
+explain: |-
+  A debt reserve rollforward and payment priority reconciliation.
+
+  Project reserve controls. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+when:
+  - You need a debt reserve rollforward and payment priority reconciliation.
+  - You work on project reserve controls and need traceable calculations.
+  - New evidence needs comparison with the prior dated review.
+you_give:
+  - Actual project cash after operations, senior and junior service schedule, approved reserve draws, next-service requirement, reserve balance and contract payment priority. Include the previous dated review and source versions when available.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - A debt reserve rollforward and payment priority reconciliation.
+  - Original step files, financial assumptions, source coverage and a governing handoff summary.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: Reconcile project reserves and payment priority
+    text: Run the governing workflow when A reserve requirement, authorized draw, upcoming service or payment-priority source changes.
+  - title: Debt service covenant headroom checker
+    text: If a signed debt-service test gate is relevant to a requested distribution review, calculate only that cash covenant using the actual definition and periods. A cash residual does not satisfy an unverified distribution gate.
+output_shape: |-
+  A debt reserve rollforward and payment priority reconciliation.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: Reserve top-up appears once; preliminary available funding is reconciled to actual waterfall allocation; every unfilled service or reserve obligation stays visible. Report changed evidence and actual recalculation; no external transaction or submission is authorized.
+judge:
+  - Reserve top-up appears once; preliminary available funding is reconciled to actual waterfall allocation; every unfilled service or reserve obligation stays visible. Report changed evidence and actual recalculation; no external transaction or submission is authorized.
+  - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
+  - Reconcile opening balances, additions, deductions and closing balances. Match enterprise or equity cash flows to the corresponding discount rate.
+  - Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
+test:
+  - Try a small sourced case and inspect every component handoff.
+  - Remove one required source and confirm the affected step stops.
+  - Change a currency, date or accounting definition and check the conflict stays visible.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

@@ -1,0 +1,32 @@
+{
+  "engine": "Artifact Tool",
+  "scope": "Illustrative workbook calculations, not source truth or an actual investment conclusion. Native Microsoft Excel application execution is not claimed.",
+  "modelSha256": "cebd5d0ab6c3c2bfb13365e4931b8a1e706b7d9cec4dba0c2015f0dbe0d7d2f4",
+  "xlsxSha256": "721ed2644b85701a802ec4b7b4abf6d3adcd0cbc0afe1bb90a161895bebc23b8",
+  "baseline": "pass",
+  "changedInputCase": "Reserve falls below opening balance",
+  "invalidInputCase": "Required source input missing",
+  "cases": [
+    {
+      "name": "Reserve falls below opening balance",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Required source input missing",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ],
+  "reopenedAndRecalculated": true,
+  "rendered": true,
+  "visualReview": "pass",
+  "workbookSpecSha256": "459be0d175e3b5f5d131ced1ff9ad848895a03778b9cb4cba65376c179e5b461",
+  "visualEvidence": {
+    "report": "reports/finance-public-markets-peer-review.json",
+    "reportSha256": "f73f6f5598ba0647c477c547d2776f1221130bb7861b62def472b74331866282",
+    "previewSha256": "5dcb07f9bede52aa7b2c86ea5234b76f740ce0124f057d407ad2efe256b8931f",
+    "sheet": "Model",
+    "sourceSpecSha256": "6568bd8bcc31c12aef3f94f3e19cbbcaa674bdab55b43c25d4088c9c34ba938f"
+  }
+}

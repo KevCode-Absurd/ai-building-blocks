@@ -1,0 +1,17 @@
+{
+  "slug": "equity-cure-scenario-checker",
+  "modelSha256": "0e160918a007712905229caa0bc5252a4a2dad215034aa9bb639b774b577c151",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required number",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "engine": "Artifact Tool",
+  "scope": "Illustrative workbook calculations, not source truth or an actual investment conclusion. Native Microsoft Excel application execution is not claimed.",
+  "modelSha256": "49caa82a7a8c4f8893e5cfcfafd8d7297c85628179bfc9d3804be1190a7a77f7",
+  "xlsxSha256": "802511a4c8618eb18e40d06e1d874d49c1af2671363a61ee96b128a9e41ac373",
+  "baseline": "pass",
+  "changedInputCase": "Changed source assumption, hand-calculated result",
+  "invalidInputCase": "Missing or invalid required input",
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing or invalid required input",
+      "kind": "refusal",
+      "status": "pass"
+    },
+    {
+      "name": "Sold room nights exceed available physical nights",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ],
+  "reopenedAndRecalculated": true,
+  "rendered": true,
+  "visualReview": "pass",
+  "workbookSpecSha256": "d3773c8284732d9fbbc89fa78ee76e48de4c3b0251948df0e8da3ddff841f32f",
+  "visualEvidence": {
+    "report": "reports/finance-operating-credit-peer-review.json",
+    "reportSha256": "ac57e1e1d010a9b5b9e64c1e84ef87d22207254a2844e5e5a205578608d66aa6",
+    "previewSha256": "fd97564f4f60250deabca36c64582aaa7b44f596ed2c72827ce90a5b45cced47",
+    "sheet": "Model",
+    "sourceSpecSha256": "ad0441aff4c035dd41f70fc8b150b9395c2ccff457483cbbff6dba338d507199"
+  }
+}

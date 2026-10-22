@@ -1,0 +1,137 @@
+{
+  "inputs": [
+    {
+      "id": "netDebt",
+      "label": "net Debt",
+      "value": 80,
+      "unit": "USD millions",
+      "min": 0
+    },
+    {
+      "id": "covenantEbitda",
+      "label": "covenant Ebitda",
+      "value": 15,
+      "unit": "USD millions",
+      "min": 0.000001
+    },
+    {
+      "id": "maximumLeverage",
+      "label": "maximum Leverage",
+      "value": 4,
+      "unit": "multiple",
+      "min": 0.000001
+    },
+    {
+      "id": "remainingCureCap",
+      "label": "remaining Cure Cap",
+      "value": 10,
+      "unit": "USD millions",
+      "min": 0
+    }
+  ],
+  "calculations": [
+    {
+      "id": "neededEbitda",
+      "label": "needed Ebitda",
+      "op": "div",
+      "args": [
+        "netDebt",
+        "maximumLeverage"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "rawCure",
+      "label": "raw Cure",
+      "op": "sub",
+      "args": [
+        "neededEbitda",
+        "covenantEbitda"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "requiredCure",
+      "label": "required Cure",
+      "op": "max",
+      "args": [
+        0,
+        "rawCure"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "allowedCure",
+      "label": "allowed Cure",
+      "op": "min",
+      "args": [
+        "requiredCure",
+        "remainingCureCap"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "curedEbitda",
+      "label": "cured Ebitda",
+      "op": "add",
+      "args": [
+        "covenantEbitda",
+        "allowedCure"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "curedRatio",
+      "label": "cured Ratio",
+      "op": "div",
+      "args": [
+        "netDebt",
+        "curedEbitda"
+      ],
+      "unit": "multiple"
+    },
+    {
+      "id": "residualGap",
+      "label": "residual Gap",
+      "op": "sub",
+      "args": [
+        "requiredCure",
+        "allowedCure"
+      ],
+      "unit": "USD millions"
+    }
+  ],
+  "outputs": [
+    "requiredCure",
+    "allowedCure",
+    "curedRatio",
+    "residualGap"
+  ],
+  "expected": {
+    "requiredCure": 5,
+    "allowedCure": 5,
+    "curedRatio": 4,
+    "residualGap": 0
+  },
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "inputs": {
+        "remainingCureCap": 3
+      },
+      "expected": {
+        "allowedCure": 3,
+        "curedRatio": 4.444444444444445,
+        "residualGap": 2
+      }
+    },
+    {
+      "name": "Missing required number",
+      "inputs": {
+        "netDebt": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only. 80/4 requires EBITDA20, five above15. Cure cap3 gives EBITDA18, ratio40/9 and2 remaining gap."
+}

@@ -1,0 +1,17 @@
+{
+  "slug": "cash-and-pik-interest-checker",
+  "modelSha256": "d481a5bcc1f56663602bb4e49520fe8e52859ee195a748daf70d14afe3ba5aa6",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required number",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

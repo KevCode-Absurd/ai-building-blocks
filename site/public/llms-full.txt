@@ -5,7 +5,7 @@
 ## Key facts
 
 - Free to use, no account needed.
-- 4228 skills, workflows and prompts in 60 jobs, 305 minds and 68 mini tools.
+- 4438 skills, workflows and prompts in 60 jobs, 305 minds and 68 mini tools.
 - Imported skills are copied as they are from open-licence GitHub repos (MIT, Apache 2.0, BSD, CC BY, CC BY-SA), credited on their page with a link to the original.
 - Minds are AIs built from a person's public work, with their sources listed. They are not the person. Minds that invest teach frameworks only, never buy or sell advice.
 - Skills that scrape websites or need a paid outside account say so on their page.
@@ -38,7 +38,7 @@
 - [Find products worth selling](https://useaiblocks.com/llms/find-products.txt): 17 skills and workflows, such as Category and trend risk checker and Competitor revenue estimator
 - [Get found in search and AI answers](https://useaiblocks.com/llms/get-found-in-search.txt): 95 skills and workflows, such as Customer question keyword finder and Customer FAQ writer
 - [Grow on social](https://useaiblocks.com/llms/grow-social.txt): 98 skills and workflows, such as First customer outreach planner and Founder video series planner
-- [Handle money and investing](https://useaiblocks.com/llms/money-and-investing.txt): 169 skills and workflows, such as Business asset value estimator and Debt payment coverage checker
+- [Handle money and investing](https://useaiblocks.com/llms/money-and-investing.txt): 349 skills and workflows, such as Adviser fee tier checker and Business asset value estimator
 - [Help your customers](https://useaiblocks.com/llms/help-customers.txt): 36 skills and workflows, such as Angry customer reply writer and Customer reply commitment checker
 - [Hire and look after your people](https://useaiblocks.com/llms/hire-people.txt): 108 skills and workflows, such as Candidate comparison table builder and Candidate reply drafter
 - [Keep customers coming back](https://useaiblocks.com/llms/keep-customers.txt): 30 skills and workflows, such as Community growth experiment planner and Viral growth experiment planner
@@ -79,7 +79,7 @@
 - [Test and fix code](https://useaiblocks.com/llms/test-and-fix-code.txt): 142 skills and workflows, such as Bug investigation planner and Fragile code spotter
 - [Test changes to your store](https://useaiblocks.com/llms/test-store-changes.txt): 12 skills and workflows, such as High-impact experiment planner and Heatmap and recording reader
 - [Think it through and decide](https://useaiblocks.com/llms/think-and-decide.txt): 131 skills and workflows, such as Advice credibility checker and Business bet risk review
-- [Track your numbers](https://useaiblocks.com/llms/track-numbers.txt): 146 skills and workflows, such as Numbers drop explainer and Per-order profit calculator
+- [Track your numbers](https://useaiblocks.com/llms/track-numbers.txt): 176 skills and workflows, such as Clinic claims collections bridge and Commodity pass through cost bridge
 - [Turn speech into text and back](https://useaiblocks.com/llms/work-with-audio.txt): 14 skills and workflows, such as Cut a raw recording and get chapters and short clips and Make a voiceover and ship it in other languages
 - [Understand your customers](https://useaiblocks.com/llms/understand-customers.txt): 96 skills and workflows, such as Customer community finder and Best customer finder
 - [Write ad copy](https://useaiblocks.com/llms/write-ad-copy.txt): 65 skills and workflows, such as Ad angle planner and Ad call to action writer

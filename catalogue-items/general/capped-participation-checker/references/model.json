@@ -1,0 +1,195 @@
+{
+  "inputs": [
+    {
+      "id": "investment",
+      "label": "investment",
+      "value": 100,
+      "unit": "USD thousands",
+      "min": 0
+    },
+    {
+      "id": "preferenceMultiple",
+      "label": "preference Multiple",
+      "value": 1,
+      "unit": "multiple",
+      "min": 0
+    },
+    {
+      "id": "capMultiple",
+      "label": "cap Multiple",
+      "value": 3,
+      "unit": "multiple",
+      "min": 0
+    },
+    {
+      "id": "proceeds",
+      "label": "proceeds",
+      "value": 1000,
+      "unit": "USD thousands",
+      "min": 0
+    },
+    {
+      "id": "ownership",
+      "label": "ownership",
+      "value": 0.2,
+      "unit": "fraction",
+      "min": 0,
+      "max": 1
+    }
+  ],
+  "calculations": [
+    {
+      "id": "prefClaim",
+      "label": "pref Claim",
+      "op": "mul",
+      "args": [
+        "investment",
+        "preferenceMultiple"
+      ],
+      "unit": "USD thousands"
+    },
+    {
+      "id": "prefPaid",
+      "label": "pref Paid",
+      "op": "min",
+      "args": [
+        "prefClaim",
+        "proceeds"
+      ],
+      "unit": "USD thousands"
+    },
+    {
+      "id": "residual",
+      "label": "residual",
+      "op": "sub",
+      "args": [
+        "proceeds",
+        "prefPaid"
+      ],
+      "unit": "USD thousands"
+    },
+    {
+      "id": "participation",
+      "label": "participation",
+      "op": "mul",
+      "args": [
+        "residual",
+        "ownership"
+      ],
+      "unit": "USD thousands"
+    },
+    {
+      "id": "uncapped",
+      "label": "uncapped",
+      "op": "add",
+      "args": [
+        "prefPaid",
+        "participation"
+      ],
+      "unit": "USD thousands"
+    },
+    {
+      "id": "capAmount",
+      "label": "cap Amount",
+      "op": "mul",
+      "args": [
+        "investment",
+        "capMultiple"
+      ],
+      "unit": "USD thousands"
+    },
+    {
+      "id": "capped",
+      "label": "capped",
+      "op": "min",
+      "args": [
+        "uncapped",
+        "capAmount"
+      ],
+      "unit": "USD thousands"
+    },
+    {
+      "id": "conversion",
+      "label": "conversion",
+      "op": "mul",
+      "args": [
+        "proceeds",
+        "ownership"
+      ],
+      "unit": "USD thousands"
+    },
+    {
+      "id": "elected",
+      "label": "elected",
+      "op": "max",
+      "args": [
+        "capped",
+        "conversion"
+      ],
+      "unit": "USD thousands"
+    },
+    {
+      "id": "preferredPayout",
+      "label": "preferred Payout",
+      "op": "min",
+      "args": [
+        "proceeds",
+        "elected"
+      ],
+      "unit": "USD thousands"
+    },
+    {
+      "id": "commonPayout",
+      "label": "common Payout",
+      "op": "sub",
+      "args": [
+        "proceeds",
+        "preferredPayout"
+      ],
+      "unit": "USD thousands"
+    }
+  ],
+  "outputs": [
+    "preferredPayout",
+    "commonPayout"
+  ],
+  "expected": {
+    "preferredPayout": 280,
+    "commonPayout": 720
+  },
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "inputs": {
+        "proceeds": 2000
+      },
+      "expected": {
+        "preferredPayout": 400,
+        "commonPayout": 1600
+      }
+    },
+    {
+      "name": "Missing required number",
+      "inputs": {
+        "investment": null
+      },
+      "error": true
+    },
+    {
+      "name": "Refuse participation cap below preference",
+      "inputs": {
+        "capMultiple": 0.5
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only. 100 preference plus20% of900 pays280 at1000 proceeds. At2000 conversion400 exceeds the300 participation cap.",
+  "constraints": [
+    {
+      "left": "capMultiple",
+      "operator": "gte",
+      "right": "preferenceMultiple",
+      "message": "Inclusive participation cap cannot be below the initial preference multiple."
+    }
+  ]
+}

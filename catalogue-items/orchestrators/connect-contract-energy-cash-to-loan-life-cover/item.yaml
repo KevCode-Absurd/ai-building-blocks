@@ -1,0 +1,45 @@
+slug: connect-contract-energy-cash-to-loan-life-cover
+name: Connect energy cash to loan life cover
+summary: An energy cash schedule and qualified loan-life cover
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: spreadsheet
+    required: true
+  - type: audit_report
+    required: true
+  - type: document
+    required: true
+uses:
+  - contracted-energy-cash-model
+  - project-cash-available-bridge
+  - loan-life-cash-cover-checker
+steps:
+  - uses: contracted-energy-cash-model
+    note: Build operating cash by accepted MWh and actual contract terms. Pass each annual cash result and separately excluded nonoperating adjustments, preserving generation forecasts as assumptions.
+  - uses: project-cash-available-bridge
+    note: Convert operating cash to contract CFADS each year, explicitly avoiding a second deduction of variable and fixed operating cash already included in the energy model. Declare the source basis. For actual cash receipts/payments or already-cash operating results, do not deduct receivable/payable working-capital settlement again; explicitly omit it only after reconciliation. For accrual revenue/cost proxies, use the signed working-capital bridge with noncash expenses excluded. Never combine these two routes.
+  - uses: loan-life-cash-cover-checker
+    note: Calculate remaining-loan-horizon coverage using the same eligible annual cash series, actual loan balance and contractual discount basis. Preserve downside generation or price changes as separate scenarios.
+execution: coordinator
+origin: own
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/finance-expansion
+example_pending: true
+warnings:
+  - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+credits:
+  - title: Original finance methods and model fixtures
+    by: AI Blocks contributors
+    used: Original instructions, calculations and illustrative examples. External method references are linked separately and retain their own rights.

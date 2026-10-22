@@ -1,0 +1,17 @@
+{
+  "slug": "adviser-fee-tier-checker",
+  "modelSha256": "f50e239cd7da42c96f0428c050a609c24877975943aa0a3316476c13f8c1de5b",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required number",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

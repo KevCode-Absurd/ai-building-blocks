@@ -1,0 +1,190 @@
+{
+  "inputs": [
+    {
+      "id": "opening",
+      "label": "opening",
+      "value": 100,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "receipt_1",
+      "label": "receipt 1",
+      "value": 20,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "payment_1",
+      "label": "payment 1",
+      "value": 80,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "receipt_2",
+      "label": "receipt 2",
+      "value": 10,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "payment_2",
+      "label": "payment 2",
+      "value": 70,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "receipt_3",
+      "label": "receipt 3",
+      "value": 90,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "payment_3",
+      "label": "payment 3",
+      "value": 10,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "floor",
+      "label": "floor",
+      "value": 0,
+      "unit": "USD / stated period",
+      "min": 0
+    }
+  ],
+  "calculations": [
+    {
+      "id": "net_1",
+      "label": "net 1",
+      "op": "sub",
+      "args": [
+        "receipt_1",
+        "payment_1"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "close_1",
+      "label": "close 1",
+      "op": "add",
+      "args": [
+        "opening",
+        "net_1"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "net_2",
+      "label": "net 2",
+      "op": "sub",
+      "args": [
+        "receipt_2",
+        "payment_2"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "close_2",
+      "label": "close 2",
+      "op": "add",
+      "args": [
+        "close_1",
+        "net_2"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "net_3",
+      "label": "net 3",
+      "op": "sub",
+      "args": [
+        "receipt_3",
+        "payment_3"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "close_3",
+      "label": "close 3",
+      "op": "add",
+      "args": [
+        "close_2",
+        "net_3"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "minimum_balance",
+      "label": "minimum balance",
+      "op": "min",
+      "args": [
+        "opening",
+        "close_1",
+        "close_2",
+        "close_3"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "floor_gap",
+      "label": "floor gap",
+      "op": "sub",
+      "args": [
+        "floor",
+        "minimum_balance"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "funding_gap",
+      "label": "funding gap",
+      "op": "max",
+      "args": [
+        0,
+        "floor_gap"
+      ],
+      "unit": "USD / stated period"
+    }
+  ],
+  "outputs": [
+    "close_1",
+    "close_2",
+    "close_3",
+    "minimum_balance",
+    "funding_gap"
+  ],
+  "expected": {
+    "close_1": 40,
+    "close_2": -20,
+    "close_3": 60,
+    "minimum_balance": -20,
+    "funding_gap": 20
+  },
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "inputs": {
+        "receipt_2": 40
+      },
+      "expected": {
+        "close_2": 10,
+        "close_3": 90,
+        "minimum_balance": 10,
+        "funding_gap": 0
+      }
+    },
+    {
+      "name": "Missing required evidence refuses calculation",
+      "inputs": {
+        "opening": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only, in USD unless labelled otherwise. This is a focused schedule with explicit period and timing assumptions. Rebuild from actual dated sources before use; the example is not a full financial forecast."
+}

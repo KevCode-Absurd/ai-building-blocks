@@ -1,0 +1,17 @@
+{
+  "slug": "debt-reserve-rollforward-builder",
+  "modelSha256": "87f6b9adb1be7022e2b95fb5324343f756ccef9fe1d019824c24a6fc45550776",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing or invalid required input",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

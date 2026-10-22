@@ -1,0 +1,166 @@
+{
+  "inputs": [
+    {
+      "id": "cash_available",
+      "label": "cash available",
+      "value": 200,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "senior_due",
+      "label": "senior due",
+      "value": 100,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "reserve_requirement",
+      "label": "reserve requirement",
+      "value": 30,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "junior_due",
+      "label": "junior due",
+      "value": 50,
+      "unit": "USD / stated period",
+      "min": 0
+    }
+  ],
+  "calculations": [
+    {
+      "id": "senior_paid",
+      "label": "senior paid",
+      "op": "min",
+      "args": [
+        "cash_available",
+        "senior_due"
+      ],
+      "unit": "USD / payment period"
+    },
+    {
+      "id": "senior_gap",
+      "label": "senior gap",
+      "op": "sub",
+      "args": [
+        "senior_due",
+        "senior_paid"
+      ],
+      "unit": "USD / payment period"
+    },
+    {
+      "id": "after_senior",
+      "label": "after senior",
+      "op": "sub",
+      "args": [
+        "cash_available",
+        "senior_paid"
+      ],
+      "unit": "USD / payment period"
+    },
+    {
+      "id": "reserve_funded",
+      "label": "reserve funded",
+      "op": "min",
+      "args": [
+        "after_senior",
+        "reserve_requirement"
+      ],
+      "unit": "USD / payment period"
+    },
+    {
+      "id": "after_reserve",
+      "label": "after reserve",
+      "op": "sub",
+      "args": [
+        "after_senior",
+        "reserve_funded"
+      ],
+      "unit": "USD / payment period"
+    },
+    {
+      "id": "junior_paid",
+      "label": "junior paid",
+      "op": "min",
+      "args": [
+        "after_reserve",
+        "junior_due"
+      ],
+      "unit": "USD / payment period"
+    },
+    {
+      "id": "distribution",
+      "label": "distribution",
+      "op": "sub",
+      "args": [
+        "after_reserve",
+        "junior_paid"
+      ],
+      "unit": "USD / payment period"
+    },
+    {
+      "id": "cash_used",
+      "label": "cash used",
+      "op": "sum",
+      "args": [
+        "senior_paid",
+        "reserve_funded",
+        "junior_paid",
+        "distribution"
+      ],
+      "unit": "USD / payment period"
+    },
+    {
+      "id": "cash_check",
+      "label": "cash check",
+      "op": "sub",
+      "args": [
+        "cash_available",
+        "cash_used"
+      ],
+      "unit": "USD / payment period"
+    }
+  ],
+  "outputs": [
+    "senior_paid",
+    "senior_gap",
+    "reserve_funded",
+    "junior_paid",
+    "distribution",
+    "cash_check"
+  ],
+  "expected": {
+    "senior_paid": 100,
+    "senior_gap": 0,
+    "reserve_funded": 30,
+    "junior_paid": 50,
+    "distribution": 20,
+    "cash_check": 0
+  },
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "inputs": {
+        "cash_available": 80
+      },
+      "expected": {
+        "senior_paid": 80,
+        "senior_gap": 20,
+        "reserve_funded": 0,
+        "junior_paid": 0,
+        "distribution": 0,
+        "cash_check": 0
+      }
+    },
+    {
+      "name": "Missing or invalid required input",
+      "inputs": {
+        "cash_available": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only in USD unless labelled otherwise. The model is the focused stated schedule, not a complete company forecast. Annual end-period cash is used unless the inputs state another convention."
+}

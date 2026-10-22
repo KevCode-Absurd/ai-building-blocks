@@ -1,0 +1,8 @@
+{
+  "transactionValue": 150,
+  "breakpoint": 100,
+  "firstRate": 0.02,
+  "secondRate": 0.01,
+  "minimumFee": 1,
+  "retainerCredit": 0.5
+}

@@ -1,0 +1,22 @@
+{
+  "slug": "cash-stock-election-checker",
+  "modelSha256": "701ccfde7a743e19cebc3fa7d0cd9939ad3abcc425c44504b803aef142d580ea",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required number",
+      "kind": "refusal",
+      "status": "pass"
+    },
+    {
+      "name": "Refuse holder shares above aggregate elections",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

@@ -1,0 +1,212 @@
+{
+  "inputs": [
+    {
+      "id": "available_nights",
+      "label": "available nights",
+      "value": 100,
+      "unit": "room nights / period",
+      "min": 0.000001
+    },
+    {
+      "id": "direct_nights",
+      "label": "direct nights",
+      "value": 40,
+      "unit": "room nights / period",
+      "min": 0
+    },
+    {
+      "id": "agent_nights",
+      "label": "agent nights",
+      "value": 30,
+      "unit": "room nights / period",
+      "min": 0
+    },
+    {
+      "id": "direct_rate",
+      "label": "direct rate",
+      "value": 100,
+      "unit": "USD / sold night",
+      "min": 0
+    },
+    {
+      "id": "agent_rate",
+      "label": "agent rate",
+      "value": 120,
+      "unit": "USD / sold night",
+      "min": 0
+    },
+    {
+      "id": "commission_rate",
+      "label": "commission rate",
+      "value": 0.2,
+      "unit": "decimal fraction",
+      "min": 0,
+      "max": 1
+    },
+    {
+      "id": "occupied_service_cost",
+      "label": "occupied service cost",
+      "value": 20,
+      "unit": "USD / occupied night",
+      "min": 0
+    }
+  ],
+  "calculations": [
+    {
+      "id": "sold_nights",
+      "label": "sold nights",
+      "op": "sum",
+      "args": [
+        "direct_nights",
+        "agent_nights"
+      ],
+      "unit": "room nights / period"
+    },
+    {
+      "id": "direct_revenue",
+      "label": "direct revenue",
+      "op": "mul",
+      "args": [
+        "direct_nights",
+        "direct_rate"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "agent_revenue",
+      "label": "agent revenue",
+      "op": "mul",
+      "args": [
+        "agent_nights",
+        "agent_rate"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "gross_room_revenue",
+      "label": "gross room revenue",
+      "op": "sum",
+      "args": [
+        "direct_revenue",
+        "agent_revenue"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "commission",
+      "label": "commission",
+      "op": "mul",
+      "args": [
+        "agent_revenue",
+        "commission_rate"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "net_channel_revenue",
+      "label": "net channel revenue",
+      "op": "sub",
+      "args": [
+        "gross_room_revenue",
+        "commission"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "service_cost",
+      "label": "service cost",
+      "op": "mul",
+      "args": [
+        "sold_nights",
+        "occupied_service_cost"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "contribution",
+      "label": "contribution",
+      "op": "sub",
+      "args": [
+        "net_channel_revenue",
+        "service_cost"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "occupancy",
+      "label": "occupancy",
+      "op": "div",
+      "args": [
+        "sold_nights",
+        "available_nights"
+      ],
+      "unit": "decimal fraction"
+    },
+    {
+      "id": "net_revenue_per_available_night",
+      "label": "net revenue per available night",
+      "op": "div",
+      "args": [
+        "net_channel_revenue",
+        "available_nights"
+      ],
+      "unit": "USD / available room night"
+    }
+  ],
+  "outputs": [
+    "sold_nights",
+    "gross_room_revenue",
+    "commission",
+    "net_channel_revenue",
+    "contribution",
+    "occupancy",
+    "net_revenue_per_available_night"
+  ],
+  "expected": {
+    "sold_nights": 70,
+    "gross_room_revenue": 7600,
+    "commission": 720,
+    "net_channel_revenue": 6880,
+    "contribution": 5480,
+    "occupancy": 0.7,
+    "net_revenue_per_available_night": 68.8
+  },
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "inputs": {
+        "commission_rate": 0.1
+      },
+      "expected": {
+        "commission": 360,
+        "net_channel_revenue": 7240,
+        "contribution": 5840,
+        "net_revenue_per_available_night": 72.4
+      }
+    },
+    {
+      "name": "Missing or invalid required input",
+      "inputs": {
+        "available_nights": null
+      },
+      "error": true
+    },
+    {
+      "name": "Sold room nights exceed available physical nights",
+      "inputs": {
+        "direct_nights": 80,
+        "agent_nights": 30
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only in USD unless labelled otherwise. This focused operating schedule does not establish a complete business forecast, accounting treatment, market price or approval.",
+  "constraints": [
+    {
+      "left": "sold_nights",
+      "operator": "lte",
+      "right": "available_nights",
+      "message": "Sold room nights cannot exceed the same-property available nights in this focused reconciliation."
+    }
+  ]
+}

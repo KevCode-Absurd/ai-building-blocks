@@ -1,0 +1,17 @@
+{
+  "slug": "unfunded-commitment-checker",
+  "modelSha256": "4233506e70e294ff40c227b9b06f313ad60b8a7d55fcdee9be57cd14bd6e8200",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required number",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

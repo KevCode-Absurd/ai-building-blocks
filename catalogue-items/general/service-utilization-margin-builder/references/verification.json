@@ -1,0 +1,22 @@
+{
+  "slug": "service-utilization-margin-builder",
+  "modelSha256": "0e339dc0995f87b5359e051e109dfd1a707bc51b09f26b1e0ac1e4da88b45ac0",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing or invalid required input",
+      "kind": "refusal",
+      "status": "pass"
+    },
+    {
+      "name": "Fixed duties and leave exceed paid hours",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

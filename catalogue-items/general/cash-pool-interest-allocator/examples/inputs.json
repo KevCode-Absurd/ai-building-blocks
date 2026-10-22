@@ -1,0 +1,8 @@
+{
+  "deposit_principal": 1000,
+  "borrow_principal": 600,
+  "deposit_rate": 0.03,
+  "borrow_rate": 0.05,
+  "days": 30,
+  "basis": 360
+}

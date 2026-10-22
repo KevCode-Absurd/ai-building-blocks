@@ -1,0 +1,42 @@
+slug: reconcile-service-capacity-and-shared-cost
+name: Reconcile service capacity and shared cost
+summary: A service contribution bridge with allocated and idle shared cost
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: spreadsheet
+    required: true
+  - type: audit_report
+    required: true
+  - type: document
+    required: true
+uses:
+  - service-utilization-margin-builder
+  - shared-service-activity-cost-allocator
+steps:
+  - uses: service-utilization-margin-builder
+    note: Reconcile paid time, available client capacity and actual fee realization to delivery contribution. Pass contribution, month and direct-cost ledger to the allocation step, preserving unbilled work.
+  - uses: shared-service-activity-cost-allocator
+    note: Allocate only the separate approved shared service pool using observed activity drivers and normal capacity. Present direct contribution less allocated share as a management view; show idle cost separately and prevent a second deduction of delivery labor.
+execution: coordinator
+origin: own
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/finance-expansion
+example_pending: true
+warnings:
+  - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+credits:
+  - title: Original finance methods and model fixtures
+    by: AI Blocks contributors
+    used: Original instructions, calculations and illustrative examples. External method references are linked separately and retain their own rights.

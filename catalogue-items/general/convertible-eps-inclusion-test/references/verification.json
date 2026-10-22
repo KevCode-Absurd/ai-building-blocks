@@ -1,0 +1,17 @@
+{
+  "slug": "convertible-eps-inclusion-test",
+  "modelSha256": "c5db315b676bef596e5ddac8727fe9cb55bb827609d113e3a1463051aec057ec",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "High numerator adjustment is anti-dilutive",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required source input",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "inputs": [
+    {
+      "id": "roe",
+      "label": "Next-period earnings per current book",
+      "value": 0.15,
+      "unit": "decimal",
+      "min": 0.1,
+      "max": 0.5
+    },
+    {
+      "id": "growth",
+      "label": "Stable book growth",
+      "value": 0.03,
+      "unit": "decimal",
+      "min": 0,
+      "max": 0.07
+    },
+    {
+      "id": "ke",
+      "label": "Required equity return",
+      "value": 0.1,
+      "unit": "decimal",
+      "min": 0.08,
+      "max": 0.5
+    }
+  ],
+  "calculations": [
+    {
+      "id": "retention",
+      "label": "Implied retention",
+      "op": "div",
+      "args": [
+        "growth",
+        "roe"
+      ],
+      "unit": "decimal"
+    },
+    {
+      "id": "roeSpread",
+      "label": "Forward ROE less growth",
+      "op": "sub",
+      "args": [
+        "roe",
+        "growth"
+      ],
+      "unit": "decimal"
+    },
+    {
+      "id": "spread",
+      "label": "Required return less growth",
+      "op": "sub",
+      "args": [
+        "ke",
+        "growth"
+      ],
+      "unit": "decimal"
+    },
+    {
+      "id": "justifiedPB",
+      "label": "Justified current P/B",
+      "op": "div",
+      "args": [
+        "roeSpread",
+        "spread"
+      ],
+      "unit": "times"
+    }
+  ],
+  "outputs": [
+    "retention",
+    "justifiedPB"
+  ],
+  "expected": {
+    "retention": 0.2,
+    "justifiedPB": 1.7142857142857142
+  },
+  "cases": [
+    {
+      "name": "ROE equals required return",
+      "inputs": {
+        "roe": 0.1
+      },
+      "expected": {
+        "retention": 0.3,
+        "justifiedPB": 1
+      }
+    },
+    {
+      "name": "Required input absent",
+      "inputs": {
+        "roe": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures.3/15=20% retention. P/B=(.15-.03)/(.10-.03)=1.714286. Forward ROE10% gives P/B1. Inputs are constrained to preserve a positive spread in the fixture."
+}

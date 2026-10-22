@@ -1,0 +1,138 @@
+{
+  "inputs": [
+    {
+      "id": "input_kg",
+      "label": "input kg",
+      "value": 1000,
+      "unit": "kg / batch",
+      "min": 0.000001
+    },
+    {
+      "id": "good_yield",
+      "label": "good yield",
+      "value": 0.8,
+      "unit": "decimal fraction",
+      "min": 0.000001,
+      "max": 1
+    },
+    {
+      "id": "input_cash_cost",
+      "label": "input cash cost",
+      "value": 2000,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "conversion_cash",
+      "label": "conversion cash",
+      "value": 1000,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "scrap_price",
+      "label": "scrap price",
+      "value": 0.5,
+      "unit": "USD / kg",
+      "min": 0
+    }
+  ],
+  "calculations": [
+    {
+      "id": "good_kg",
+      "label": "good kg",
+      "op": "mul",
+      "args": [
+        "input_kg",
+        "good_yield"
+      ],
+      "unit": "kg / batch"
+    },
+    {
+      "id": "scrap_kg",
+      "label": "scrap kg",
+      "op": "sub",
+      "args": [
+        "input_kg",
+        "good_kg"
+      ],
+      "unit": "kg / batch"
+    },
+    {
+      "id": "scrap_recovery",
+      "label": "scrap recovery",
+      "op": "mul",
+      "args": [
+        "scrap_kg",
+        "scrap_price"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "gross_batch_cost",
+      "label": "gross batch cost",
+      "op": "sum",
+      "args": [
+        "input_cash_cost",
+        "conversion_cash"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "net_batch_cost",
+      "label": "net batch cost",
+      "op": "sub",
+      "args": [
+        "gross_batch_cost",
+        "scrap_recovery"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "cost_per_good_kg",
+      "label": "cost per good kg",
+      "op": "div",
+      "args": [
+        "net_batch_cost",
+        "good_kg"
+      ],
+      "unit": "USD / good kg"
+    }
+  ],
+  "outputs": [
+    "good_kg",
+    "scrap_kg",
+    "scrap_recovery",
+    "net_batch_cost",
+    "cost_per_good_kg"
+  ],
+  "expected": {
+    "good_kg": 800,
+    "scrap_kg": 200,
+    "scrap_recovery": 100,
+    "net_batch_cost": 2900,
+    "cost_per_good_kg": 3.625
+  },
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "inputs": {
+        "good_yield": 0.9
+      },
+      "expected": {
+        "good_kg": 900,
+        "scrap_kg": 100,
+        "net_batch_cost": 2950,
+        "cost_per_good_kg": 3.2777777777777777
+      }
+    },
+    {
+      "name": "Missing or invalid required input",
+      "inputs": {
+        "input_kg": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only in USD unless labelled otherwise. The model is the focused stated schedule, not a complete company forecast. Annual end-period cash is used unless the inputs state another convention."
+}

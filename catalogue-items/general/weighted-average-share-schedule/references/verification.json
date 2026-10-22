@@ -1,0 +1,17 @@
+{
+  "slug": "weighted-average-share-schedule",
+  "modelSha256": "e7a3517b0e44abd9a01e7684d23e810491d7b3931735fcdac0b2879a1a55e2e8",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Issue outstanding for the full period",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required source input",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

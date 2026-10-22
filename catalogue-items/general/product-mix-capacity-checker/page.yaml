@@ -1,0 +1,78 @@
+new_slug: product-mix-capacity-checker
+name: Product mix capacity checker
+headline: Product mix capacity checker
+summary: A proposed product mix contribution and capacity check
+job: money-and-investing
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: A proposed product mix contribution and capacity check. Share owner-selected quantities for two products, verified unit contributions, bottleneck hours per unit and available qualified bottleneck hours.
+explain: |-
+  A proposed product mix contribution and capacity check.
+
+  Manufacturing contribution plans. Illustrative figures only in USD unless labelled otherwise. The model is the focused stated schedule, not a complete company forecast. Annual end-period cash is used unless the inputs state another convention.
+when:
+  - You need a proposed product mix contribution and capacity check.
+  - You work on manufacturing contribution plans and need traceable calculations.
+  - A reviewer needs to trace the result back to inputs and assumptions.
+you_give:
+  - Owner-selected quantities for two products, verified unit contributions, bottleneck hours per unit and available qualified bottleneck hours.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - A proposed product mix contribution and capacity check.
+  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: 1. Build a dated source ledger of balances, operating units, period boundaries, contractual terms and unresolved evidence gaps
+    text: Build a dated source ledger of balances, operating units, period boundaries, contractual terms and unresolved evidence gaps.
+  - title: 2. Source unit contributions and avoid including the same shared fixed costs in both unit margin and period overhead
+    text: Source unit contributions and avoid including the same shared fixed costs in both unit margin and period overhead.
+  - title: 3. Multiply proposed units by bottleneck hours and contribution, then sum across the two products
+    text: Multiply proposed units by bottleneck hours and contribution, then sum across the two products.
+  - title: 4. Compare required versus available hours, report unused capacity or overload and retain the selected mix as an owner proposal
+    text: Compare required versus available hours, report unused capacity or overload and retain the selected mix as an owner proposal.
+output_shape: |-
+  A proposed product mix contribution and capacity check.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: Each material input is sourced with currency, scale, sign and period.
+judge:
+  - Each material input is sourced with currency, scale, sign and period.
+  - Actual records and scenarios remain separate; missing evidence is not zero.
+  - Both products use the same bottleneck-hour definition and period; other machine and material constraints remain explicit gaps.
+  - Total contribution is not net profit; an over-capacity proposal is not described as feasible production.
+test:
+  - Run the included baseline and changed-input fixtures, then compare with the stated expected results.
+  - Remove a required input and confirm the affected calculation refuses to invent a zero.
+  - Recalculate the workbook after changing an input and inspect the saved output.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: Node.js 20 or later
+      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

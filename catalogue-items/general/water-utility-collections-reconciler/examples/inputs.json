@@ -1,0 +1,10 @@
+{
+  "produced_m3": 1000,
+  "billed_m3": 800,
+  "realized_billed_rate": 2,
+  "opening_receivables": 400,
+  "current_bill_receipts": 1200,
+  "arrears_receipts": 200,
+  "approved_adjustments": 100,
+  "operating_cash": 1000
+}

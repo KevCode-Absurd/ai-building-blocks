@@ -1,0 +1,74 @@
+new_slug: review-sponsor-debt-cash-demands
+name: Review sponsor debt cash demands
+headline: Review sponsor debt cash demands
+summary: Connect one-period cash and PIK charges to a bounded sweep and ending leverage test.
+job: money-and-investing
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: Cash interest, capitalized debt, sweep limits and ending net leverage evidence. Share actual opening debt, fixed cash and PIK terms, year fraction, cash before interest, certified ECF, minimum cash, sweep clause and ending covenant definitions.
+explain: |-
+  Cash interest, capitalized debt, sweep limits and ending net leverage evidence.
+
+  Private credit interest. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+when:
+  - You need cash interest, capitalized debt, sweep limits and ending net leverage evidence.
+  - You work on private credit interest and need traceable calculations.
+  - A reviewer needs to trace the result back to inputs and assumptions.
+you_give:
+  - Actual opening debt, fixed cash and PIK terms, year fraction, cash before interest, certified ECF, minimum cash, sweep clause and ending covenant definitions.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - Cash interest, capitalized debt, sweep limits and ending net leverage evidence.
+  - Original step files, financial assumptions, source coverage and a governing handoff summary.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: Cash and PIK interest checker
+    text: Calculate actual simultaneous coupons on opening principal for the supported simple period; identify cash paid versus period-end PIK capitalization.
+  - title: Debt cash sweep checker
+    text: Derive cashBeforeSweep from actual cash evidence after cash interest and other observed flows. Use capitalized ending principal as eligible debt only when the sweep clause includes it; retain certified ECF as a distinct measure.
+  - title: Net leverage covenant checker
+    text: Use debt after actual or clearly proposed sweep and cash eligible at the same end date. Present actual and proposed cases separately; do not mark a covenant satisfied by an unexecuted prepayment.
+output_shape: |-
+  Cash interest, capitalized debt, sweep limits and ending net leverage evidence.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: Ending PIK is added once, cash interest is paid once and ECF is never added again to cash already generated.
+judge:
+  - Ending PIK is added once, cash interest is paid once and ECF is never added again to cash already generated.
+  - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
+  - Reconcile opening balances, additions, deductions and closing balances. Match enterprise or equity cash flows to the corresponding discount rate.
+  - Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
+test:
+  - Try a small sourced case and inspect every component handoff.
+  - Remove one required source and confirm the affected step stops.
+  - Change a currency, date or accounting definition and check the conflict stays visible.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

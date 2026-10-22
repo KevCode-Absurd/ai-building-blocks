@@ -1,0 +1,45 @@
+slug: separate-rollover-and-management-incentives
+name: Separate rollover and management incentives
+summary: Distinguish seller purchased equity, closing funding and a separate management award scenario.
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: spreadsheet
+    required: true
+  - type: audit_report
+    required: true
+  - type: document
+    required: true
+uses:
+  - rollover-equity-ownership-checker
+  - deal-funding-gap-checker
+  - management-equity-hurdle-checker
+steps:
+  - uses: rollover-equity-ownership-checker
+    note: Reconcile seller cash and same-class purchased ownership using the actual rollover election; stop if sponsor and seller securities differ.
+  - uses: deal-funding-gap-checker
+    note: Map the rollover amount once as a noncash source against full equity purchase use, alongside actual sponsor cash and usable financing. Do not reduce purchase use by rollover again.
+  - uses: management-equity-hurdle-checker
+    note: Keep the incentive award separate from purchased equity. Use a separately sourced net equity exit scenario, fixed hurdle and vested percentage; do not call its residual percentage current voting ownership.
+execution: coordinator
+origin: own
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/finance-expansion
+example_pending: true
+warnings:
+  - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+credits:
+  - title: Original finance methods and model fixtures
+    by: AI Blocks contributors
+    used: Original instructions, calculations and illustrative examples. External method references are linked separately and retain their own rights.

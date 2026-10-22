@@ -1,0 +1,48 @@
+slug: build-a-comparable-trailing-revenue-model
+name: Build a comparable trailing revenue model
+summary: Link fiscal periods, currency, business scope and extra-week adjustments into a comparable revenue model.
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: spreadsheet
+    required: true
+  - type: audit_report
+    required: true
+  - type: document
+    required: true
+uses:
+  - trailing-period-financial-bridge
+  - constant-currency-revenue-bridge
+  - organic-revenue-perimeter-bridge
+  - extra-week-revenue-comparability
+steps:
+  - uses: trailing-period-financial-bridge
+    note: Use actual sourced schedules in one linked native workbook; example values are illustrative and must not become issuer inputs. Build reported trailing additive revenue from annual plus current YTD minus matching prior YTD, preserving every fiscal boundary and restatement.
+  - uses: constant-currency-revenue-bridge
+    note: Use period/currency buckets underlying the trailing bridge and one documented rate convention; reconstruct comparable currency revenue rather than applying an unsupported single global FX percentage.
+  - uses: organic-revenue-perimeter-bridge
+    note: Apply evidenced acquisition/disposal adjustments to the same currency-normalized period; map both numerator and denominator to one continuing perimeter and exclude duplicate FX adjustments.
+  - uses: extra-week-revenue-comparability
+    note: Remove any extra-week contribution still inside the comparable period using sourced calendar evidence; reconcile final comparable revenue back to reported trailing revenue by adjustment.
+execution: coordinator
+origin: own
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/finance-expansion
+example_pending: true
+warnings:
+  - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+credits:
+  - title: Original finance methods and model fixtures
+    by: AI Blocks contributors
+    used: Original instructions, calculations and illustrative examples. External method references are linked separately and retain their own rights.

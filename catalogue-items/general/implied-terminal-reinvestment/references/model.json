@@ -1,0 +1,139 @@
+{
+  "inputs": [
+    {
+      "id": "value",
+      "label": "Supplied terminal operating value",
+      "value": 1000,
+      "unit": "USD million",
+      "min": 0.001,
+      "max": 1000000000
+    },
+    {
+      "id": "nopat",
+      "label": "First stable-year NOPAT",
+      "value": 100,
+      "unit": "USD million",
+      "min": 0.001,
+      "max": 1000000000
+    },
+    {
+      "id": "growth",
+      "label": "Stable growth",
+      "value": 0.03,
+      "unit": "decimal",
+      "min": 0.000001,
+      "max": 0.07
+    },
+    {
+      "id": "wacc",
+      "label": "Stable WACC",
+      "value": 0.1,
+      "unit": "decimal",
+      "min": 0.08,
+      "max": 0.5
+    }
+  ],
+  "calculations": [
+    {
+      "id": "spread",
+      "label": "WACC less growth",
+      "op": "sub",
+      "args": [
+        "wacc",
+        "growth"
+      ],
+      "unit": "decimal"
+    },
+    {
+      "id": "fcff",
+      "label": "Implied FCFF",
+      "op": "mul",
+      "args": [
+        "value",
+        "spread"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "reinvestment",
+      "label": "Implied reinvestment",
+      "op": "sub",
+      "args": [
+        "nopat",
+        "fcff"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "rate",
+      "label": "Implied reinvestment rate",
+      "op": "div",
+      "args": [
+        "reinvestment",
+        "nopat"
+      ],
+      "unit": "decimal"
+    },
+    {
+      "id": "positiveRate",
+      "label": "Positive reinvestment required for implied ROC",
+      "op": "max",
+      "args": [
+        "rate",
+        0
+      ],
+      "unit": "decimal"
+    },
+    {
+      "id": "roc",
+      "label": "Implied ROC",
+      "op": "div",
+      "args": [
+        "growth",
+        "positiveRate"
+      ],
+      "unit": "decimal"
+    }
+  ],
+  "outputs": [
+    "fcff",
+    "reinvestment",
+    "rate",
+    "roc"
+  ],
+  "expected": {
+    "fcff": 70,
+    "reinvestment": 30,
+    "rate": 0.3,
+    "roc": 0.1
+  },
+  "cases": [
+    {
+      "name": "Lower supplied value",
+      "inputs": {
+        "value": 800
+      },
+      "expected": {
+        "fcff": 56,
+        "reinvestment": 44,
+        "rate": 0.44,
+        "roc": 0.06818181818181818
+      }
+    },
+    {
+      "name": "Required input absent",
+      "inputs": {
+        "value": null
+      },
+      "error": true
+    },
+    {
+      "name": "Terminal value implies negative reinvestment",
+      "inputs": {
+        "value": 2000
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures.1,000×(10%-3%)=70 FCFF;100-70=30 reinvestment, or30%.3%/30%=10% ROC. Value800 implies56 FCFF,44% reinvestment and6.818182% ROC."
+}

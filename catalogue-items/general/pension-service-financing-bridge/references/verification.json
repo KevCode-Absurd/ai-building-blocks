@@ -1,0 +1,17 @@
+{
+  "slug": "pension-service-financing-bridge",
+  "modelSha256": "e0d8579cf318471070622a62a5659240a75ac81fb774ac96d77fa4294752fad5",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Higher OCI remeasurement loss",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Required source input missing",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

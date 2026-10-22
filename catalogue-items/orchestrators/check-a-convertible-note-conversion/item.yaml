@@ -1,0 +1,42 @@
+slug: check-a-convertible-note-conversion
+name: Check a convertible note conversion
+summary: Carry the approved interest balance into the actual lower-of conversion election.
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: spreadsheet
+    required: true
+  - type: audit_report
+    required: true
+  - type: document
+    required: true
+uses:
+  - convertible-note-interest-checker
+  - cap-and-discount-conversion-checker
+steps:
+  - uses: convertible-note-interest-checker
+    note: Calculate actual simple accrual from funded principal and contractual dates. Save the interest-converting balance with currency and scale; keep share rounding unresolved until the agreement is checked.
+  - uses: cap-and-discount-conversion-checker
+    note: Pass the verified converting balance as amount, converting scale explicitly if necessary. Use the approved cap price and actual round discount, confirm lower-of language and compare resulting shares against round-price shares.
+execution: coordinator
+origin: own
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/finance-expansion
+example_pending: true
+warnings:
+  - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+credits:
+  - title: Original finance methods and model fixtures
+    by: AI Blocks contributors
+    used: Original instructions, calculations and illustrative examples. External method references are linked separately and retain their own rights.

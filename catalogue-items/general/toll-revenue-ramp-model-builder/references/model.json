@@ -1,0 +1,177 @@
+{
+  "inputs": [
+    {
+      "id": "passages_1",
+      "label": "Chargeable passages before collection loss, year1",
+      "value": 1000,
+      "unit": "chargeable passages / year1",
+      "min": 0
+    },
+    {
+      "id": "passages_2",
+      "label": "Chargeable passages before collection loss, year2",
+      "value": 1200,
+      "unit": "chargeable passages / year2",
+      "min": 0
+    },
+    {
+      "id": "passages_3",
+      "label": "Chargeable passages before collection loss, year3",
+      "value": 1500,
+      "unit": "chargeable passages / year3",
+      "min": 0
+    },
+    {
+      "id": "toll",
+      "label": "toll",
+      "value": 2,
+      "unit": "USD / passage",
+      "min": 0
+    },
+    {
+      "id": "collection_share",
+      "label": "collection share",
+      "value": 0.9,
+      "unit": "decimal fraction",
+      "min": 0,
+      "max": 1
+    },
+    {
+      "id": "opex_1",
+      "label": "opex 1",
+      "value": 1000,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "opex_2",
+      "label": "opex 2",
+      "value": 1100,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "opex_3",
+      "label": "opex 3",
+      "value": 1200,
+      "unit": "USD / stated period",
+      "min": 0
+    }
+  ],
+  "calculations": [
+    {
+      "id": "receipts_1",
+      "label": "receipts 1",
+      "op": "mul",
+      "args": [
+        "passages_1",
+        "toll",
+        "collection_share"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "receipts_2",
+      "label": "receipts 2",
+      "op": "mul",
+      "args": [
+        "passages_2",
+        "toll",
+        "collection_share"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "receipts_3",
+      "label": "receipts 3",
+      "op": "mul",
+      "args": [
+        "passages_3",
+        "toll",
+        "collection_share"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "cash_1",
+      "label": "cash 1",
+      "op": "sub",
+      "args": [
+        "receipts_1",
+        "opex_1"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "cash_2",
+      "label": "cash 2",
+      "op": "sub",
+      "args": [
+        "receipts_2",
+        "opex_2"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "cash_3",
+      "label": "cash 3",
+      "op": "sub",
+      "args": [
+        "receipts_3",
+        "opex_3"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "total_cash",
+      "label": "total cash",
+      "op": "sum",
+      "args": [
+        "cash_1",
+        "cash_2",
+        "cash_3"
+      ],
+      "unit": "USD / stated period"
+    }
+  ],
+  "outputs": [
+    "receipts_1",
+    "receipts_2",
+    "receipts_3",
+    "cash_1",
+    "cash_2",
+    "cash_3",
+    "total_cash"
+  ],
+  "expected": {
+    "receipts_1": 1800,
+    "receipts_2": 2160,
+    "receipts_3": 2700,
+    "cash_1": 800,
+    "cash_2": 1060,
+    "cash_3": 1500,
+    "total_cash": 3360
+  },
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "inputs": {
+        "toll": 3
+      },
+      "expected": {
+        "receipts_1": 2700,
+        "receipts_2": 3240,
+        "receipts_3": 4050,
+        "total_cash": 6690
+      }
+    },
+    {
+      "name": "Missing or invalid required input",
+      "inputs": {
+        "passages_1": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative three-year chargeable passages before collection loss of1000,1200,1500 at toll2 and collection90% realize1800,2160,2700. Less operating costs1000,1100,1200 leaves cash800,1060,1500. Counts already representing cash-paid passages must not be multiplied by collection loss a second time. Annual cash excludes debt service and capital spending handled downstream."
+}

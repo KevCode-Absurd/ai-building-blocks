@@ -1,0 +1,47 @@
+slug: sponsor-receipt-timing-review-assistant
+name: Sponsor receipt timing review assistant
+summary: Review supplied changes, preserve the last evidence baseline and return only affected calculations and unresolved approval questions.
+category: agent
+type: agent
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: spreadsheet
+    required: true
+  - type: audit_report
+    required: true
+  - type: document
+    required: true
+uses:
+  - check-management-payout-and-sponsor-receipts
+  - rollover-equity-ownership-checker
+steps:
+  - uses: check-management-payout-and-sponsor-receipts
+    note: Run the governing workflow when Actual sponsor distribution, management vesting evidence, exit receipt or holder allocation changes.
+  - uses: rollover-equity-ownership-checker
+    note: If another rollover holder appears, check same-class ownership but stop the sole-sponsor payout workflow until a complete holder allocation is supplied. Otherwise rerun only changed annual receipts. If dates are irregular, request a suitable XIRR engine instead of reporting the periodic fixture as annualized actual performance.
+origin: own
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/finance-expansion
+example_pending: true
+warnings:
+  - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+credits:
+  - title: Original finance methods and model fixtures
+    by: AI Blocks contributors
+    used: Original instructions, calculations and illustrative examples. External method references are linked separately and retain their own rights.
+schedule: On explicit request after the user supplies changed evidence. Installing the pack creates no schedule or account connection.
+asks_before:
+  - Trading or moving money
+  - Sending or publishing research or deal materials
+  - Changing an account or submitting a filing
+  - Starting or changing a recurring schedule

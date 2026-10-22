@@ -1,0 +1,97 @@
+{
+  "inputs": [
+    {
+      "id": "unreturnedCapital",
+      "label": "unreturned Capital",
+      "value": 100,
+      "unit": "USD millions",
+      "min": 0
+    },
+    {
+      "id": "annualHurdle",
+      "label": "annual Hurdle",
+      "value": 0.08,
+      "unit": "annual decimal",
+      "min": 0,
+      "max": 1
+    },
+    {
+      "id": "yearFraction",
+      "label": "year Fraction",
+      "value": 2,
+      "unit": "years",
+      "min": 0
+    },
+    {
+      "id": "openingUnpaidPreference",
+      "label": "opening Unpaid Preference",
+      "value": 5,
+      "unit": "USD millions",
+      "min": 0
+    }
+  ],
+  "calculations": [
+    {
+      "id": "periodPreference",
+      "label": "period Preference",
+      "op": "mul",
+      "args": [
+        "unreturnedCapital",
+        "annualHurdle",
+        "yearFraction"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "unpaidPreference",
+      "label": "unpaid Preference",
+      "op": "add",
+      "args": [
+        "openingUnpaidPreference",
+        "periodPreference"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "firstTierObligation",
+      "label": "first Tier Obligation",
+      "op": "add",
+      "args": [
+        "unreturnedCapital",
+        "unpaidPreference"
+      ],
+      "unit": "USD millions"
+    }
+  ],
+  "outputs": [
+    "periodPreference",
+    "unpaidPreference",
+    "firstTierObligation"
+  ],
+  "expected": {
+    "periodPreference": 16,
+    "unpaidPreference": 21,
+    "firstTierObligation": 121
+  },
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "inputs": {
+        "yearFraction": 1
+      },
+      "expected": {
+        "periodPreference": 8,
+        "unpaidPreference": 13,
+        "firstTierObligation": 113
+      }
+    },
+    {
+      "name": "Missing required number",
+      "inputs": {
+        "unreturnedCapital": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only. 100 at8% simple for2 years accrues16; opening unpaid5 yields21 and first tier121. One year yields13 unpaid."
+}

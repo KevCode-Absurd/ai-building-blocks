@@ -1,0 +1,17 @@
+{
+  "slug": "secondary-nav-price-checker",
+  "modelSha256": "a6fc12fd3817db3c923e14a911840a7de59c149273ba002ac07196a7268d4934",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required number",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

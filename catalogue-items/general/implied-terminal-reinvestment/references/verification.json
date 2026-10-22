@@ -1,0 +1,22 @@
+{
+  "slug": "implied-terminal-reinvestment",
+  "modelSha256": "a547e2b29f5bed0505d0c1108a5ac7ad442d5939a84a6a3ca8e89a4fe1b197a0",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Lower supplied value",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Required input absent",
+      "kind": "refusal",
+      "status": "pass"
+    },
+    {
+      "name": "Terminal value implies negative reinvestment",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

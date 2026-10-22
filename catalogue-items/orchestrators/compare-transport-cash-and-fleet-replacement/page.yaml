@@ -1,0 +1,72 @@
+new_slug: compare-transport-cash-and-fleet-replacement
+name: Compare transport cash and fleet replacement
+headline: Compare transport cash and fleet replacement
+summary: A trip contribution baseline and incremental replacement cash comparison
+job: money-and-investing
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: A trip contribution baseline and incremental replacement cash comparison. Share actual comparable loaded/empty trips, fuel and maintenance cash, replacement quote, old sale evidence, annual workload, downtime and incremental terminal cash assumptions. Source both replacement and retained-vehicle terminal proceeds at the same horizon.
+explain: |-
+  A trip contribution baseline and incremental replacement cash comparison.
+
+  Transport capital planning. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+when:
+  - You need a trip contribution baseline and incremental replacement cash comparison.
+  - You work on transport capital planning and need traceable calculations.
+  - A reviewer needs to trace the result back to inputs and assumptions.
+you_give:
+  - Actual comparable loaded/empty trips, fuel and maintenance cash, replacement quote, old sale evidence, annual workload, downtime and incremental terminal cash assumptions. Source both replacement and retained-vehicle terminal proceeds at the same horizon.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - A trip contribution baseline and incremental replacement cash comparison.
+  - Original step files, financial assumptions, source coverage and a governing handoff summary.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: Freight trip contribution builder
+    text: Build current trip cash contribution from actual loaded and empty kilometers. Preserve measured fuel and maintenance amounts and derive same-workload annual cost only with documented annual trip counts.
+  - title: Fleet replacement cash comparer
+    text: Use sourced incremental annual operating differences, actual purchase/sale timing and terminal value to compare replacement cash. Do not substitute trip contribution for savings; disclose workload, downtime, tax and financing gaps. Carry the signed new-minus-keep terminal proceeds difference, not new-vehicle sale proceeds alone.
+output_shape: |-
+  A trip contribution baseline and incremental replacement cash comparison.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: Both vehicle cases carry the same workload; actual trip cost changes support annual savings; vehicle capital is not deducted twice. The terminal cash difference is replacement minus keep; the foregone old-vehicle terminal sale is not omitted.
+judge:
+  - Both vehicle cases carry the same workload; actual trip cost changes support annual savings; vehicle capital is not deducted twice. The terminal cash difference is replacement minus keep; the foregone old-vehicle terminal sale is not omitted.
+  - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
+  - Reconcile opening balances, additions, deductions and closing balances. Match enterprise or equity cash flows to the corresponding discount rate.
+  - Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
+test:
+  - Try a small sourced case and inspect every component handoff.
+  - Remove one required source and confirm the affected step stops.
+  - Change a currency, date or accounting definition and check the conflict stays visible.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

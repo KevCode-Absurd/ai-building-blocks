@@ -1,0 +1,9 @@
+{
+  "receivables": 100,
+  "payables": 60,
+  "committed_receipts": 20,
+  "committed_payments": 10,
+  "hedge_foreign_delivery": -30,
+  "spot": 1.1,
+  "scenario_spot": 1.2
+}

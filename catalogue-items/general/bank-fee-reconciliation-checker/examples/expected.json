@@ -1,0 +1,9 @@
+{
+  "basis": "Illustrative figures only.",
+  "outputs": {
+    "gross_fees": 35,
+    "applied_credit": 5,
+    "expected_fee": 30,
+    "billing_difference": 3
+  }
+}

@@ -1,0 +1,74 @@
+new_slug: explain-observed-shareholder-return
+name: Explain an observed shareholder return
+headline: Explain an observed shareholder return
+summary: Reconcile share-price changes and dividend reinvestment using consistent corporate-action-adjusted evidence.
+job: money-and-investing
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: A historical price-attribution and dividend-share reconciliation workbook. Share dated unadjusted prices, comparable EPS/P-E observations, confirmed split factors, dividend payments and reinvestment records.
+explain: |-
+  A historical price-attribution and dividend-share reconciliation workbook.
+
+  Public-market financial modelling. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+when:
+  - You need a historical price-attribution and dividend-share reconciliation workbook.
+  - You work on public-market financial modelling and need traceable calculations.
+  - A reviewer needs to trace the result back to inputs and assumptions.
+you_give:
+  - Dated unadjusted prices, comparable EPS/P-E observations, confirmed split factors, dividend payments and reinvestment records.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - A historical price-attribution and dividend-share reconciliation workbook.
+  - Original step files, financial assumptions, source coverage and a governing handoff summary.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: Stock-split EPS restatement
+    text: Use actual sourced schedules in one linked native workbook; example values are illustrative and must not become issuer inputs. Put historical EPS and shares on the confirmed common split basis; preserve unadjusted price and dividend records to avoid total-return double counting.
+  - title: EPS and multiple return bridge
+    text: Use comparable positive EPS and dated P/E observations to decompose observed price change; state sequential ordering and reconcile the earnings/multiple interaction exactly.
+  - title: Dividend reinvestment share schedule
+    text: Use actual payment and reinvestment prices to build shares and ending wealth. Compare with the cash-held case and reconcile separately from the non-reinvested simple return.
+output_shape: |-
+  A historical price-attribution and dividend-share reconciliation workbook.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: Price effects sum to observed price change; explicit dividends are not added to already-adjusted return series; reinvested wealth reconciles to shares and cash with fees/withholding disclosed.
+judge:
+  - Price effects sum to observed price change; explicit dividends are not added to already-adjusted return series; reinvested wealth reconciles to shares and cash with fees/withholding disclosed.
+  - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
+  - Reconcile opening balances, additions, deductions and closing balances. Match enterprise or equity cash flows to the corresponding discount rate.
+  - Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
+test:
+  - Try a small sourced case and inspect every component handoff.
+  - Remove one required source and confirm the affected step stops.
+  - Change a currency, date or accounting definition and check the conflict stays visible.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

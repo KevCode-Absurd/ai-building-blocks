@@ -1,0 +1,22 @@
+{
+  "slug": "hotel-channel-revenue-reconciler",
+  "modelSha256": "49caa82a7a8c4f8893e5cfcfafd8d7297c85628179bfc9d3804be1190a7a77f7",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing or invalid required input",
+      "kind": "refusal",
+      "status": "pass"
+    },
+    {
+      "name": "Sold room nights exceed available physical nights",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

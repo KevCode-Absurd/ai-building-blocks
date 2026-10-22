@@ -1,0 +1,17 @@
+{
+  "slug": "inventory-charge-margin-bridge",
+  "modelSha256": "20ad8e57585f8b70ea3e80d58e38cb6e8a40b0ddc63e47c9edaad4375926e75a",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "No permitted reversal",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Required source input missing",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

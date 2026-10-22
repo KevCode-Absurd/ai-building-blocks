@@ -1,0 +1,17 @@
+{
+  "slug": "eps-multiple-return-bridge",
+  "modelSha256": "8eed70d85c22ed73d1fb353eab1e98b3dbd9e863bd0fb0f8c2362393d621a186",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Ending multiple unchanged",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required source input",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

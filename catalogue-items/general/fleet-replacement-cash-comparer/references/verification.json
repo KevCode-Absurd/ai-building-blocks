@@ -1,0 +1,22 @@
+{
+  "slug": "fleet-replacement-cash-comparer",
+  "modelSha256": "725e5e77cd2693d17d04c059cf72c47757425e73d5f3d1acf4f1bd3c900e0f9b",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing or invalid required input",
+      "kind": "refusal",
+      "status": "pass"
+    },
+    {
+      "name": "Foregone keep-vehicle sale exceeds replacement terminal sale",
+      "kind": "changed-input",
+      "status": "pass"
+    }
+  ]
+}

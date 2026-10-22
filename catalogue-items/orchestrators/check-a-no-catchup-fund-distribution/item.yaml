@@ -1,0 +1,42 @@
+slug: check-a-no-catchup-fund-distribution
+name: Check a no-catchup fund distribution
+summary: Carry a verified simple preference balance into capital-first residual carry allocation.
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: spreadsheet
+    required: true
+  - type: audit_report
+    required: true
+  - type: document
+    required: true
+uses:
+  - preferred-return-accrual-checker
+  - no-catchup-waterfall-checker
+steps:
+  - uses: preferred-return-accrual-checker
+    note: Verify constant capital and actual year fraction. Produce accrued unpaid preference separately from capital; split changing-capital intervals before proceeding.
+  - uses: no-catchup-waterfall-checker
+    note: Pass the verified unpaid preference and unreturned capital as separate inputs, using actual available distributable cash. Preserve unpaid capital/preference and zero carry until both tiers are satisfied.
+execution: coordinator
+origin: own
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/finance-expansion
+example_pending: true
+warnings:
+  - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+credits:
+  - title: Original finance methods and model fixtures
+    by: AI Blocks contributors
+    used: Original instructions, calculations and illustrative examples. External method references are linked separately and retain their own rights.

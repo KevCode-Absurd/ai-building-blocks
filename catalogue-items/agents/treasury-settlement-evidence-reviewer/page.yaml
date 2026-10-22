@@ -1,0 +1,72 @@
+new_slug: treasury-settlement-evidence-reviewer
+name: Treasury settlement evidence reviewer
+headline: Treasury settlement evidence reviewer
+summary: A dated evidence review with changed assumptions, reconciliations and unresolved source gaps.
+job: money-and-investing
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: A dated settlement ladder, forecast drift and accessible cash reconciliation. Share dated bank cash and restrictions, frozen prior forecast and matching actual net flows, current confirmed bucketed receipts/payments and approved cash floor. Include the previous dated review and source versions when available.
+explain: |-
+  A dated settlement ladder, forecast drift and accessible cash reconciliation.
+
+  Treasury settlement controls. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+when:
+  - You need a dated settlement ladder, forecast drift and accessible cash reconciliation.
+  - You work on treasury settlement controls and need traceable calculations.
+  - New evidence needs comparison with the prior dated review.
+you_give:
+  - Dated bank cash and restrictions, frozen prior forecast and matching actual net flows, current confirmed bucketed receipts/payments and approved cash floor. Include the previous dated review and source versions when available.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - A dated settlement ladder, forecast drift and accessible cash reconciliation.
+  - Original step files, financial assumptions, source coverage and a governing handoff summary.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: Reconcile treasury settlement liquidity
+    text: Run the governing workflow when A bank balance, restriction, settlement cutoff or confirmed payment record changes.
+  - title: Bank fee reconciliation checker
+    text: If an unexpected bank charge explains a cash difference, reconcile only that statement fee against actual counts and contractual rates before changing the cash source map. Missing fee evidence stays unresolved.
+output_shape: |-
+  A dated settlement ladder, forecast drift and accessible cash reconciliation.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: Forecast errors use the frozen prior version; current opening cash equals verified accessible cash; each ordered bucket reconciles and funding gaps remain explicit. Report changed evidence and actual recalculation; no external transaction or submission is authorized.
+judge:
+  - Forecast errors use the frozen prior version; current opening cash equals verified accessible cash; each ordered bucket reconciles and funding gaps remain explicit. Report changed evidence and actual recalculation; no external transaction or submission is authorized.
+  - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
+  - Reconcile opening balances, additions, deductions and closing balances. Match enterprise or equity cash flows to the corresponding discount rate.
+  - Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
+test:
+  - Try a small sourced case and inspect every component handoff.
+  - Remove one required source and confirm the affected step stops.
+  - Change a currency, date or accounting definition and check the conflict stays visible.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

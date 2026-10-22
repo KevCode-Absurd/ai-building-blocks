@@ -1,0 +1,42 @@
+slug: check-secondary-purchase-cash-exposure
+name: Check secondary purchase cash exposure
+summary: Connect transferred callable commitments with the signed NAV-based purchase price adjustment.
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: spreadsheet
+    required: true
+  - type: audit_report
+    required: true
+  - type: document
+    required: true
+uses:
+  - unfunded-commitment-checker
+  - secondary-nav-price-checker
+steps:
+  - uses: unfunded-commitment-checker
+    note: Reconcile only the interest being transferred and its actual post-call, restoration and reduction balance at the transfer cutoff. Flag consent and assumption terms for the authorized reviewer.
+  - uses: secondary-nav-price-checker
+    note: Pass the verified transferred callable balance into transferredUnfunded. Use the signed reference-NAV quote and only contractually credited interim distributions, keeping current price and future calls separate.
+execution: coordinator
+origin: own
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/finance-expansion
+example_pending: true
+warnings:
+  - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+credits:
+  - title: Original finance methods and model fixtures
+    by: AI Blocks contributors
+    used: Original instructions, calculations and illustrative examples. External method references are linked separately and retain their own rights.

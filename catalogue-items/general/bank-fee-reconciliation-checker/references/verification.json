@@ -1,0 +1,17 @@
+{
+  "slug": "bank-fee-reconciliation-checker",
+  "modelSha256": "5cbee2b8ecf60388a866e0b8ec23d4be4a9d64a2c3161934007f77cc8dc1640c",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required evidence refuses calculation",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

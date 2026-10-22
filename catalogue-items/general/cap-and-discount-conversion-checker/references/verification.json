@@ -1,0 +1,17 @@
+{
+  "slug": "cap-and-discount-conversion-checker",
+  "modelSha256": "98eaa1e34262fdc50ddf4eaf7ef113a363cbb0f172848dfe6f3ef51edba993ed",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required number",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

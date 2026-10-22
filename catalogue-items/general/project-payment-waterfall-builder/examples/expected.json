@@ -1,0 +1,11 @@
+{
+  "basis": "Illustrative figures only.",
+  "outputs": {
+    "senior_paid": 100,
+    "senior_gap": 0,
+    "reserve_funded": 30,
+    "junior_paid": 50,
+    "distribution": 20,
+    "cash_check": 0
+  }
+}

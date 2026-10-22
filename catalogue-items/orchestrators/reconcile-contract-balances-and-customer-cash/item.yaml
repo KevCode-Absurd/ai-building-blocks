@@ -1,0 +1,45 @@
+slug: reconcile-contract-balances-and-customer-cash
+name: Reconcile contract balances and customer cash
+summary: Link deferred revenue, unbilled assets, receivables and allowance movements before judging customer cash conversion.
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: spreadsheet
+    required: true
+  - type: audit_report
+    required: true
+  - type: document
+    required: true
+uses:
+  - contract-liability-release-bridge
+  - contract-asset-billing-cash-bridge
+  - receivables-allowance-movement-bridge
+steps:
+  - uses: contract-liability-release-bridge
+    note: Use actual sourced schedules in one linked native workbook; example values are illustrative and must not become issuer inputs. Reconcile aggregate customer advance liability additions and releases; distinguish new deferred billings from actual cash and isolate releases from opening balances.
+  - uses: contract-asset-billing-cash-bridge
+    note: Use the same revenue/perimeter to reconcile unbilled revenue transfers, direct invoices and receivable collections. Prevent revenue releases from being counted twice across contract categories.
+  - uses: receivables-allowance-movement-bridge
+    note: Reconcile write-offs and credited recoveries separately and carry the actual gross-receivable adjustments into the collection bridge; validate all other noncash movements before accepting implied cash.
+execution: coordinator
+origin: own
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/finance-expansion
+example_pending: true
+warnings:
+  - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+credits:
+  - title: Original finance methods and model fixtures
+    by: AI Blocks contributors
+    used: Original instructions, calculations and illustrative examples. External method references are linked separately and retain their own rights.

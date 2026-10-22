@@ -1,0 +1,47 @@
+slug: conglomerate-perimeter-review-assistant
+name: Conglomerate perimeter review assistant
+summary: Review consolidation and ownership changes before reusing segment or holding values.
+category: agent
+type: agent
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: spreadsheet
+    required: true
+  - type: audit_report
+    required: true
+  - type: document
+    required: true
+uses:
+  - reconcile-conglomerate-valuation-perimeters
+  - investment-property-nav-bridge
+steps:
+  - uses: reconcile-conglomerate-valuation-perimeters
+    note: Run the governing workflow when When the user supplies a new segment note, ownership change or acquisition/disposal filing, compare the legal/economic perimeter with the prior accepted valuation model.
+  - uses: investment-property-nav-bridge
+    note: If an identified nonoperating property holding has a supplied dated appraisal, build a separately labeled property NAV bridge. Otherwise retain the asset as missing valuation evidence; do not invent a property yield or value.
+origin: own
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/finance-expansion
+example_pending: true
+warnings:
+  - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+credits:
+  - title: Original finance methods and model fixtures
+    by: AI Blocks contributors
+    used: Original instructions, calculations and illustrative examples. External method references are linked separately and retain their own rights.
+schedule: Portable review instructions only. Run when the user supplies a new filing or asks for a review; propose a quarterly cadence without installing or claiming a schedule.
+asks_before:
+  - Trading or moving money
+  - Sending or publishing research or deal materials
+  - Changing an account or submitting a filing
+  - Starting or changing a recurring schedule

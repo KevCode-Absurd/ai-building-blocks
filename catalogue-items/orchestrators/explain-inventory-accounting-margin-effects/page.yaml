@@ -1,0 +1,74 @@
+new_slug: explain-inventory-accounting-margin-effects
+name: Explain inventory accounting margin effects
+headline: Explain inventory accounting margin effects
+summary: Reconcile inventory reserve movements and charges before comparing margins and cash investment.
+job: money-and-investing
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: A linked inventory-accounting margin and cash-investment workbook. Share lIFO disclosures where applicable, reported COGS, inventory charges/reversals, inventory balances and noncash movement notes.
+explain: |-
+  A linked inventory-accounting margin and cash-investment workbook.
+
+  Public-market financial modelling. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+when:
+  - You need a linked inventory-accounting margin and cash-investment workbook.
+  - You work on public-market financial modelling and need traceable calculations.
+  - A reviewer needs to trace the result back to inputs and assumptions.
+you_give:
+  - LIFO disclosures where applicable, reported COGS, inventory charges/reversals, inventory balances and noncash movement notes.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - A linked inventory-accounting margin and cash-investment workbook.
+  - Original step files, financial assumptions, source coverage and a governing handoff summary.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: LIFO reserve earnings bridge
+    text: Use actual sourced schedules in one linked native workbook; example values are illustrative and must not become issuer inputs. For an actual LIFO issuer, reconcile the reserve to FIFO inventory and COGS; document FX, acquired reserves and liquidation effects before using the movement.
+  - title: Inventory charge margin bridge
+    text: Attribute disclosed inventory charges to the same COGS period. Keep permitted reversals and LIFO effects distinct, identify overlap and prevent two adjustments to the same expense.
+  - title: Noncash working-capital bridge
+    text: Use original reported inventory balances and separately identified noncash write-downs/reserve changes to derive operating cash investment; analytical FIFO values must not silently replace statutory cash-flow inputs.
+output_shape: |-
+  A linked inventory-accounting margin and cash-investment workbook.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: Reported-to-comparable COGS reconciles with no double-counted charge; LIFO is not applied as an IFRS costing method; noncash inventory movements do not become cash investment.
+judge:
+  - Reported-to-comparable COGS reconciles with no double-counted charge; LIFO is not applied as an IFRS costing method; noncash inventory movements do not become cash investment.
+  - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
+  - Reconcile opening balances, additions, deductions and closing balances. Match enterprise or equity cash flows to the corresponding discount rate.
+  - Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
+test:
+  - Try a small sourced case and inspect every component handoff.
+  - Remove one required source and confirm the affected step stops.
+  - Change a currency, date or accounting definition and check the conflict stays visible.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

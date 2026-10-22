@@ -1,0 +1,45 @@
+slug: reconcile-restricted-utility-program-cash
+name: Reconcile restricted utility program cash
+summary: A utility collections, restricted fund and usable cash reconciliation
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: spreadsheet
+    required: true
+  - type: audit_report
+    required: true
+  - type: document
+    required: true
+uses:
+  - water-utility-collections-reconciler
+  - grant-restrictions-cash-reconciler
+  - restricted-cash-availability-checker
+steps:
+  - uses: water-utility-collections-reconciler
+    note: Reconcile consumer water billings, current/arrears receipts and receivables on the actual period. Pass only actual collected cash to the program bank map and preserve billing balances outside cash.
+  - uses: grant-restrictions-cash-reconciler
+    note: Map the award-funded program with consumer collections classified only by the supplied restriction rules. Roll restricted and total bank cash separately; do not describe consumer receipts as grant revenue or assume award spending eligibility.
+  - uses: restricted-cash-availability-checker
+    note: Use the reconciled bank and restriction balances to calculate accessible cash after any additional nonoverlapping collateral or pending debit blocks. Tie final general cash to the prior fund bridge before concluding available funding.
+execution: coordinator
+origin: own
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/finance-expansion
+example_pending: true
+warnings:
+  - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+credits:
+  - title: Original finance methods and model fixtures
+    by: AI Blocks contributors
+    used: Original instructions, calculations and illustrative examples. External method references are linked separately and retain their own rights.

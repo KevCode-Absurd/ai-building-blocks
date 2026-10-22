@@ -1,0 +1,10 @@
+{
+  "opening": 100,
+  "receipt_1": 20,
+  "payment_1": 80,
+  "receipt_2": 10,
+  "payment_2": 70,
+  "receipt_3": 90,
+  "payment_3": 10,
+  "floor": 0
+}

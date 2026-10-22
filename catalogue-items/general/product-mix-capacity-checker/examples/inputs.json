@@ -1,0 +1,9 @@
+{
+  "units_a": 30,
+  "units_b": 10,
+  "contribution_a": 10,
+  "contribution_b": 15,
+  "hours_a": 2,
+  "hours_b": 5,
+  "available_hours": 100
+}

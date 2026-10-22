@@ -1,0 +1,9 @@
+{
+  "purchase_cash": 1000,
+  "old_sale_proceeds": 200,
+  "saving_1": 300,
+  "saving_2": 300,
+  "saving_3": 300,
+  "terminal_cash_difference": 100,
+  "discount_rate": 0
+}

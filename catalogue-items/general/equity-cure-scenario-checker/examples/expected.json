@@ -1,0 +1,9 @@
+{
+  "basis": "Illustrative figures only.",
+  "outputs": {
+    "requiredCure": 5,
+    "allowedCure": 5,
+    "curedRatio": 4,
+    "residualGap": 0
+  }
+}

@@ -1,0 +1,47 @@
+slug: common-equity-residual-income-review-assistant
+name: Common equity residual-income review assistant
+summary: Review common-equity changes that affect residual income and stable price-to-book assumptions.
+category: agent
+type: agent
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: spreadsheet
+    required: true
+  - type: audit_report
+    required: true
+  - type: document
+    required: true
+uses:
+  - build-a-clean-surplus-residual-income-model
+  - oci-reclassification-bridge
+steps:
+  - uses: build-a-clean-surplus-residual-income-model
+    note: Run the governing workflow when On new common-equity, comprehensive-income or capital-return evidence supplied by the user, compare beginning-book balances and clean-surplus assumptions with the accepted model.
+  - uses: oci-reclassification-bridge
+    note: If profit/OCI recycling changed, reconcile the permitted after-tax reclassification before updating residual income. Dirty-surplus changes stay separately identified; they are never forced through ordinary earnings to make book value tie.
+origin: own
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/finance-expansion
+example_pending: true
+warnings:
+  - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+credits:
+  - title: Original finance methods and model fixtures
+    by: AI Blocks contributors
+    used: Original instructions, calculations and illustrative examples. External method references are linked separately and retain their own rights.
+schedule: Portable review instructions only. Run when the user supplies a new filing or asks for a review; propose a quarterly cadence without installing or claiming a schedule.
+asks_before:
+  - Trading or moving money
+  - Sending or publishing research or deal materials
+  - Changing an account or submitting a filing
+  - Starting or changing a recurring schedule

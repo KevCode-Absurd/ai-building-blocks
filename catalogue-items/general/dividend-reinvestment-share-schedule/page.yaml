@@ -1,0 +1,76 @@
+new_slug: dividend-reinvestment-share-schedule
+name: Dividend reinvestment share schedule
+headline: Dividend reinvestment share schedule
+summary: Track how a cash dividend changes share count at an actual reinvestment price.
+job: money-and-investing
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: A dividend cash-to-shares schedule with a no-reinvestment comparator. Share shares before the dividend, dividend per share, actual reinvestment price, fees, withholding treatment and ending price.
+explain: |-
+  A dividend cash-to-shares schedule with a no-reinvestment comparator.
+
+  Public equity and share counts. Illustrative figures. 100 shares × $1 yields $100, acquiring five shares at $20. At $22, 105 shares are worth $2,310 versus $2,300 if the dividend stayed cash. Reinvesting at $22 makes both values $2,300.
+when:
+  - You need a dividend cash-to-shares schedule with a no-reinvestment comparator.
+  - You work on public equity and share counts and need traceable calculations.
+  - A reviewer needs to trace the result back to inputs and assumptions.
+you_give:
+  - Shares before the dividend, dividend per share, actual reinvestment price, fees, withholding treatment and ending price.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - A dividend cash-to-shares schedule with a no-reinvestment comparator.
+  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: 1. Confirm payment date, eligible shares and actual reinvestment execution price; use unadjusted prices when dividends are modeled explicitly
+    text: Confirm payment date, eligible shares and actual reinvestment execution price; use unadjusted prices when dividends are modeled explicitly.
+  - title: 2. Compute dividend cash, deduct any supplied fees or withholding separately, and divide eligible net cash by the actual reinvestment price
+    text: Compute dividend cash, deduct any supplied fees or withholding separately, and divide eligible net cash by the actual reinvestment price.
+  - title: 3. Add fractional or permitted whole shares according to the plan and compare ending wealth with the cash-held case
+    text: Add fractional or permitted whole shares according to the plan and compare ending wealth with the cash-held case.
+output_shape: |-
+  A dividend cash-to-shares schedule with a no-reinvestment comparator.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: An adjusted total-return price series is not combined with explicit dividends.
+judge:
+  - An adjusted total-return price series is not combined with explicit dividends.
+  - Residual cash and fractional-share restrictions are disclosed rather than silently rounded away.
+  - Tie every material input to its filing page, period, currency and scale.
+  - Keep illustrative figures separate from sourced issuer facts; report unresolved checks.
+test:
+  - Run the included baseline and changed-input fixtures, then compare with the stated expected results.
+  - Remove a required input and confirm the affected calculation refuses to invent a zero.
+  - Recalculate the workbook after changing an input and inspect the saved output.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: Node.js 20 or later
+      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

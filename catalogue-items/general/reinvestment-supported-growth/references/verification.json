@@ -1,0 +1,17 @@
+{
+  "slug": "reinvestment-supported-growth",
+  "modelSha256": "5604b92d1dd38c626309dc0ffb2b726732a85589eb78972136130aa767ac0c1c",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Higher net capital spending",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Required input absent",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

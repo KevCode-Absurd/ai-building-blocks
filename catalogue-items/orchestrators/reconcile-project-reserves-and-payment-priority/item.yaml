@@ -1,0 +1,42 @@
+slug: reconcile-project-reserves-and-payment-priority
+name: Reconcile project reserves and payment priority
+summary: A debt reserve rollforward and payment priority reconciliation
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: spreadsheet
+    required: true
+  - type: audit_report
+    required: true
+  - type: document
+    required: true
+uses:
+  - debt-reserve-rollforward-builder
+  - project-payment-waterfall-builder
+steps:
+  - uses: debt-reserve-rollforward-builder
+    note: Calculate reserve requirement, approved draws and top-up need from the same debt schedule. Use a sourced cash-after-senior-service limit for preliminary funding and pass requirement, need and opening reserve separately to the waterfall.
+  - uses: project-payment-waterfall-builder
+    note: Allocate the same available operating cash through actual senior-service, reserve and junior-service priorities. Tie actual reserve allocation to the rollforward deposit; if it differs from preliminary funding, correct the input map and record the reconciliation instead of forcing a plug.
+execution: coordinator
+origin: own
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/finance-expansion
+example_pending: true
+warnings:
+  - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+credits:
+  - title: Original finance methods and model fixtures
+    by: AI Blocks contributors
+    used: Original instructions, calculations and illustrative examples. External method references are linked separately and retain their own rights.

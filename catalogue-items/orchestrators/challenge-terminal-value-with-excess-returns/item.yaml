@@ -1,0 +1,45 @@
+slug: challenge-terminal-value-with-excess-returns
+name: Challenge terminal value with excess returns
+summary: Compare explicit excess-return fade assumptions with the economics implied by a terminal value.
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: spreadsheet
+    required: true
+  - type: audit_report
+    required: true
+  - type: document
+    required: true
+uses:
+  - economic-profit-fade-schedule
+  - terminal-growth-reinvestment-consistency
+  - implied-terminal-reinvestment
+steps:
+  - uses: economic-profit-fade-schedule
+    note: Use actual sourced schedules in one linked native workbook; example values are illustrative and must not become issuer inputs. Build a sourced or explicitly hypothetical excess-return fade case; require the constant-capital/no-later-excess-return assumptions for this focused fixture and expand when actual capital changes.
+  - uses: terminal-growth-reinvestment-consistency
+    note: Build a separate stable operating case with evidenced reinvestment and ROC; document whether it assumes perpetual excess returns that differ from the fade case.
+  - uses: implied-terminal-reinvestment
+    note: Backsolve the supplied or exit-multiple terminal value into reinvestment and ROC. Reconcile periods and explain scenario differences rather than blending incompatible values automatically.
+execution: coordinator
+origin: own
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/finance-expansion
+example_pending: true
+warnings:
+  - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+credits:
+  - title: Original finance methods and model fixtures
+    by: AI Blocks contributors
+    used: Original instructions, calculations and illustrative examples. External method references are linked separately and retain their own rights.

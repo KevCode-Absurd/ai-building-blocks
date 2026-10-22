@@ -1,0 +1,9 @@
+{
+  "original_input_price": 2,
+  "scenario_input_price": 3,
+  "input_kg_per_unit": 0.2,
+  "other_cash_per_unit": 4,
+  "original_selling_price": 10,
+  "pass_through_share": 0.5,
+  "planned_units": 1000
+}

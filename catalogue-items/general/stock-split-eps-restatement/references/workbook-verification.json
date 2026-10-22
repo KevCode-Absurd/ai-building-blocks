@@ -1,0 +1,32 @@
+{
+  "engine": "Artifact Tool",
+  "scope": "Illustrative workbook calculations, not source truth or an actual investment conclusion. Native Microsoft Excel application execution is not claimed.",
+  "modelSha256": "24608ba79948c7a2894f68899d93bb4b1f02807d992824dc30ffedec6eba9838",
+  "xlsxSha256": "2d0904f9281fb4d428dafb0e29e0efdfe7a5be8b6a8e5002e7880b31e9289294",
+  "baseline": "pass",
+  "changedInputCase": "One-for-two reverse split",
+  "invalidInputCase": "Missing required source input",
+  "cases": [
+    {
+      "name": "One-for-two reverse split",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required source input",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ],
+  "reopenedAndRecalculated": true,
+  "rendered": true,
+  "visualReview": "pass",
+  "workbookSpecSha256": "2bf4f2e24db47376a833f8c8797294ee0061482e2933bd8f86e04ab3e92c97a5",
+  "visualEvidence": {
+    "report": "reports/finance-public-markets-peer-review.json",
+    "reportSha256": "f73f6f5598ba0647c477c547d2776f1221130bb7861b62def472b74331866282",
+    "previewSha256": "3b42ca73d9e591fc36c89a1d7a334e3b0931da9be6ab61740b452ed2552c1e05",
+    "sheet": "Model",
+    "sourceSpecSha256": "9187ac1d41c38a1b1fe8c89a7166c4af2b036f9f8528ccbf0bf19c36bd267091"
+  }
+}

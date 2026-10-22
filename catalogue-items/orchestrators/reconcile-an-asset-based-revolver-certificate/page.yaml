@@ -1,0 +1,74 @@
+new_slug: reconcile-an-asset-based-revolver-certificate
+name: Reconcile an asset based revolver certificate
+headline: Reconcile an asset based revolver certificate
+summary: A collateral certificate reconciliation and signed revolver availability
+job: money-and-investing
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: A collateral certificate reconciliation and signed revolver availability. Share same-date receivables aging, eligible inventory cost/appraisal, credit agreement, advance rates, caps, reserves, commitment, debt drawings and letters of credit.
+explain: |-
+  A collateral certificate reconciliation and signed revolver availability.
+
+  Asset based credit controls. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+when:
+  - You need a collateral certificate reconciliation and signed revolver availability.
+  - You work on asset based credit controls and need traceable calculations.
+  - A reviewer needs to trace the result back to inputs and assumptions.
+you_give:
+  - Same-date receivables aging, eligible inventory cost/appraisal, credit agreement, advance rates, caps, reserves, commitment, debt drawings and letters of credit.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - A collateral certificate reconciliation and signed revolver availability.
+  - Original step files, financial assumptions, source coverage and a governing handoff summary.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: Receivables borrowing base builder
+    text: Reconcile eligible receivables and contractual concentration deductions to the aging control total. Pass the net receivables advance plus a reserve ledger to the facility bridge.
+  - title: Inventory borrowing base builder
+    text: Calculate inventory advance on the same certificate date using matching cost and liquidation-value populations. Pass net advance and already-applied reserves, identifying appraisal coverage gaps.
+  - title: Revolver availability checker
+    text: Combine only compatible net collateral advances, cap by commitment and deduct actual funded/contingent usage and additional nonduplicated blocks. Return signed capacity and all draw-condition gaps without submitting or certifying the certificate.
+output_shape: |-
+  A collateral certificate reconciliation and signed revolver availability.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: Source populations and certificate date match; every reserve and usage deduction appears once; negative availability stays an overadvance exception.
+judge:
+  - Source populations and certificate date match; every reserve and usage deduction appears once; negative availability stays an overadvance exception.
+  - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
+  - Reconcile opening balances, additions, deductions and closing balances. Match enterprise or equity cash flows to the corresponding discount rate.
+  - Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
+test:
+  - Try a small sourced case and inspect every component handoff.
+  - Remove one required source and confirm the affected step stops.
+  - Change a currency, date or accounting definition and check the conflict stays visible.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

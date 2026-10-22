@@ -1,0 +1,76 @@
+new_slug: shareholder-distribution-coverage
+name: Shareholder distribution coverage
+headline: Shareholder distribution coverage
+summary: Compare dividends and net repurchases with independently reconciled equity cash flow.
+job: money-and-investing
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: A distribution-to-equity-cash-flow bridge with the funding surplus or shortfall. Share cash dividends, actual repurchases, equity issuance proceeds and a sourced free-cash-flow-to-equity schedule for matching periods.
+explain: |-
+  A distribution-to-equity-cash-flow bridge with the funding surplus or shortfall.
+
+  Public equity and share counts. Illustrative figures. $40 dividends + $100 repurchases - $10 issuance = $130 distributions, exceeding $120 FCFE by $10. Reducing repurchases to $70 leaves $20 after $100 distributions.
+when:
+  - You need a distribution-to-equity-cash-flow bridge with the funding surplus or shortfall.
+  - You work on public equity and share counts and need traceable calculations.
+  - A reviewer needs to trace the result back to inputs and assumptions.
+you_give:
+  - Cash dividends, actual repurchases, equity issuance proceeds and a sourced free-cash-flow-to-equity schedule for matching periods.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - A distribution-to-equity-cash-flow bridge with the funding surplus or shortfall.
+  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: 1. Identify distributions and equity issuance separately in the cash-flow statement; exclude announced but unexecuted buybacks
+    text: Identify distributions and equity issuance separately in the cash-flow statement; exclude announced but unexecuted buybacks.
+  - title: 2. Net issuance cash against executed repurchases, add ordinary cash dividends and compare with independently defined equity free cash flow
+    text: Net issuance cash against executed repurchases, add ordinary cash dividends and compare with independently defined equity free cash flow.
+  - title: 3. Show cash retained or external funding required; reconcile debt movements and cash-balance changes before interpreting the shortfall
+    text: Show cash retained or external funding required; reconcile debt movements and cash-balance changes before interpreting the shortfall.
+output_shape: |-
+  A distribution-to-equity-cash-flow bridge with the funding surplus or shortfall.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: FCFE definition and debt cash flows are disclosed and not confused with FCFF or EBITDA.
+judge:
+  - FCFE definition and debt cash flows are disclosed and not confused with FCFF or EBITDA.
+  - Gross buybacks and issuance proceeds remain visible behind the net figure.
+  - Tie every material input to its filing page, period, currency and scale.
+  - Keep illustrative figures separate from sourced issuer facts; report unresolved checks.
+test:
+  - Run the included baseline and changed-input fixtures, then compare with the stated expected results.
+  - Remove a required input and confirm the affected calculation refuses to invent a zero.
+  - Recalculate the workbook after changing an input and inspect the saved output.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: Node.js 20 or later
+      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

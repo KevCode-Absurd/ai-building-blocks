@@ -1,0 +1,17 @@
+{
+  "slug": "supplier-finance-leverage-bridge",
+  "modelSha256": "22444de6e07dda92691c3be0848c3c492c52f2db0acfe6de9abbe86fd4f277f4",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Larger identified supplier-finance balance",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required reported input",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+slug: reconcile-conglomerate-valuation-perimeters
+name: Reconcile conglomerate valuation perimeters
+summary: Align segment earnings, consolidated minority interests and separately held equity stakes before valuation.
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: spreadsheet
+    required: true
+  - type: audit_report
+    required: true
+  - type: document
+    required: true
+uses:
+  - segment-profit-elimination-bridge
+  - minority-interest-multiple-reconciliation
+  - listed-holding-lookthrough-nav
+steps:
+  - uses: segment-profit-elimination-bridge
+    note: Use actual sourced schedules in one linked native workbook; example values are illustrative and must not become issuer inputs. Tie segment measures to consolidated operating profit and preserve all corporate costs and profit eliminations before passing earnings into valuation.
+  - uses: minority-interest-multiple-reconciliation
+    note: Map subsidiaries included at 100% in the earnings denominator and include their outside ownership consistently in consolidated enterprise value. Keep book and estimated market minority values distinct.
+  - uses: listed-holding-lookthrough-nav
+    note: Value separately held equity stakes only where their operating earnings were excluded from the consolidated model. Reconcile parent-only liabilities and label all additions/exclusions to prevent double counting.
+execution: coordinator
+origin: own
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/finance-expansion
+example_pending: true
+warnings:
+  - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+credits:
+  - title: Original finance methods and model fixtures
+    by: AI Blocks contributors
+    used: Original instructions, calculations and illustrative examples. External method references are linked separately and retain their own rights.

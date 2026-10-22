@@ -1,0 +1,45 @@
+slug: reconcile-treasury-settlement-liquidity
+name: Reconcile treasury settlement liquidity
+summary: A dated settlement ladder, forecast drift and accessible cash reconciliation
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: spreadsheet
+    required: true
+  - type: audit_report
+    required: true
+  - type: document
+    required: true
+uses:
+  - restricted-cash-availability-checker
+  - treasury-forecast-backtest-checker
+  - settlement-liquidity-ladder-builder
+steps:
+  - uses: restricted-cash-availability-checker
+    note: Establish current accessible cash from dated bank balances and nonoverlapping restrictions. Pass that dated opening amount, account scope and currency to the current settlement ladder; retain restriction evidence.
+  - uses: treasury-forecast-backtest-checker
+    note: Backtest the prior frozen net-flow forecast against matching actual periods using its own historical opening balance. Explain bias and ending drift without replacing the current opening balance or adding past forecast errors to future cash.
+  - uses: settlement-liquidity-ladder-builder
+    note: Build the current ordered ladder from accessible cash in step1 and actual supplied settlement records. Use step2 only to challenge timing assumptions; never paste its illustrative amounts into the new forecast. Reconcile final cash to the actual source map.
+execution: coordinator
+origin: own
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/finance-expansion
+example_pending: true
+warnings:
+  - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+credits:
+  - title: Original finance methods and model fixtures
+    by: AI Blocks contributors
+    used: Original instructions, calculations and illustrative examples. External method references are linked separately and retain their own rights.

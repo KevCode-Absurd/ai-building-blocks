@@ -1,0 +1,127 @@
+{
+  "inputs": [
+    {
+      "id": "parentEquity",
+      "label": "Parent equity market value",
+      "value": 100,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "debt",
+      "label": "Consolidated debt",
+      "value": 50,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "cash",
+      "label": "Consolidated cash",
+      "value": 10,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "minorityValue",
+      "label": "Outside subsidiary ownership market value",
+      "value": 40,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "ebitda",
+      "label": "Consolidated EBITDA",
+      "value": 20,
+      "unit": "USD million",
+      "min": 0.000001,
+      "max": 1000000000
+    }
+  ],
+  "calculations": [
+    {
+      "id": "grossEV",
+      "label": "Parent equity plus debt",
+      "op": "add",
+      "args": [
+        "parentEquity",
+        "debt"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "incompleteEV",
+      "label": "EV omitting minority interests",
+      "op": "sub",
+      "args": [
+        "grossEV",
+        "cash"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "matchedEV",
+      "label": "Matched consolidated EV",
+      "op": "add",
+      "args": [
+        "incompleteEV",
+        "minorityValue"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "matchedMultiple",
+      "label": "Matched EV to EBITDA",
+      "op": "div",
+      "args": [
+        "matchedEV",
+        "ebitda"
+      ],
+      "unit": "times"
+    },
+    {
+      "id": "omissionEffect",
+      "label": "Multiple understatement",
+      "op": "div",
+      "args": [
+        "minorityValue",
+        "ebitda"
+      ],
+      "unit": "times"
+    }
+  ],
+  "outputs": [
+    "matchedEV",
+    "matchedMultiple",
+    "omissionEffect"
+  ],
+  "expected": {
+    "matchedEV": 180,
+    "matchedMultiple": 9,
+    "omissionEffect": 2
+  },
+  "cases": [
+    {
+      "name": "No outside subsidiary owners",
+      "inputs": {
+        "minorityValue": 0
+      },
+      "expected": {
+        "matchedEV": 140,
+        "matchedMultiple": 7,
+        "omissionEffect": 0
+      }
+    },
+    {
+      "name": "Required input absent",
+      "inputs": {
+        "parentEquity": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures.100+50-10+40=180 consolidated EV;180/20=9 times. Omitting40 minority value understates the multiple by2 times."
+}

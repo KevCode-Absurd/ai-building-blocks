@@ -1,0 +1,172 @@
+{
+  "inputs": [
+    {
+      "id": "original_input_price",
+      "label": "original input price",
+      "value": 2,
+      "unit": "USD / kg",
+      "min": 0
+    },
+    {
+      "id": "scenario_input_price",
+      "label": "scenario input price",
+      "value": 3,
+      "unit": "USD / kg",
+      "min": 0
+    },
+    {
+      "id": "input_kg_per_unit",
+      "label": "input kg per unit",
+      "value": 0.2,
+      "unit": "kg / finished unit",
+      "min": 0
+    },
+    {
+      "id": "other_cash_per_unit",
+      "label": "other cash per unit",
+      "value": 4,
+      "unit": "USD / unit",
+      "min": 0
+    },
+    {
+      "id": "original_selling_price",
+      "label": "original selling price",
+      "value": 10,
+      "unit": "USD / unit",
+      "min": 0
+    },
+    {
+      "id": "pass_through_share",
+      "label": "pass through share",
+      "value": 0.5,
+      "unit": "decimal fraction",
+      "min": 0,
+      "max": 1
+    },
+    {
+      "id": "planned_units",
+      "label": "planned units",
+      "value": 1000,
+      "unit": "finished units / period",
+      "min": 0
+    }
+  ],
+  "calculations": [
+    {
+      "id": "price_change",
+      "label": "price change",
+      "op": "sub",
+      "args": [
+        "scenario_input_price",
+        "original_input_price"
+      ],
+      "unit": "USD / kg"
+    },
+    {
+      "id": "incremental_input_cost",
+      "label": "incremental input cost",
+      "op": "mul",
+      "args": [
+        "price_change",
+        "input_kg_per_unit"
+      ],
+      "unit": "USD / unit"
+    },
+    {
+      "id": "price_recovery",
+      "label": "price recovery",
+      "op": "mul",
+      "args": [
+        "incremental_input_cost",
+        "pass_through_share"
+      ],
+      "unit": "USD / unit"
+    },
+    {
+      "id": "scenario_selling_price",
+      "label": "scenario selling price",
+      "op": "sum",
+      "args": [
+        "original_selling_price",
+        "price_recovery"
+      ],
+      "unit": "USD / unit"
+    },
+    {
+      "id": "scenario_material_cost",
+      "label": "scenario material cost",
+      "op": "mul",
+      "args": [
+        "scenario_input_price",
+        "input_kg_per_unit"
+      ],
+      "unit": "USD / unit"
+    },
+    {
+      "id": "scenario_total_unit_cash",
+      "label": "scenario total unit cash",
+      "op": "sum",
+      "args": [
+        "scenario_material_cost",
+        "other_cash_per_unit"
+      ],
+      "unit": "USD / unit"
+    },
+    {
+      "id": "scenario_unit_contribution",
+      "label": "scenario unit contribution",
+      "op": "sub",
+      "args": [
+        "scenario_selling_price",
+        "scenario_total_unit_cash"
+      ],
+      "unit": "USD / unit"
+    },
+    {
+      "id": "period_contribution",
+      "label": "period contribution",
+      "op": "mul",
+      "args": [
+        "scenario_unit_contribution",
+        "planned_units"
+      ],
+      "unit": "USD / stated period"
+    }
+  ],
+  "outputs": [
+    "incremental_input_cost",
+    "price_recovery",
+    "scenario_selling_price",
+    "scenario_unit_contribution",
+    "period_contribution"
+  ],
+  "expected": {
+    "incremental_input_cost": 0.2,
+    "price_recovery": 0.1,
+    "scenario_selling_price": 10.1,
+    "scenario_unit_contribution": 5.5,
+    "period_contribution": 5500
+  },
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "inputs": {
+        "pass_through_share": 1
+      },
+      "expected": {
+        "price_recovery": 0.2,
+        "scenario_selling_price": 10.2,
+        "scenario_unit_contribution": 5.6,
+        "period_contribution": 5600
+      }
+    },
+    {
+      "name": "Missing or invalid required input",
+      "inputs": {
+        "original_input_price": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only in USD unless labelled otherwise. This focused operating schedule does not establish a complete business forecast, accounting treatment, market price or approval."
+}

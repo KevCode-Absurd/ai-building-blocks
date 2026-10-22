@@ -1,0 +1,11 @@
+{
+  "loaded_km": 500,
+  "empty_km": 100,
+  "liters_per_km": 0.3,
+  "diesel_price": 2,
+  "driver_cash": 200,
+  "tolls": 50,
+  "maintenance_per_km": 0.1,
+  "other_trip_cash": 80,
+  "trip_receipts": 1000
+}

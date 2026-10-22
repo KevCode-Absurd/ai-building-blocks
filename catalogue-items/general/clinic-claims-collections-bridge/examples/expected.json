@@ -1,0 +1,9 @@
+{
+  "basis": "Illustrative figures only.",
+  "outputs": {
+    "net_new_claims": 800,
+    "closing_claims": 600,
+    "expected_bank_cash": 650,
+    "settlement_difference": 0
+  }
+}

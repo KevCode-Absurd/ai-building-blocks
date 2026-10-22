@@ -1,0 +1,17 @@
+{
+  "slug": "credit-exposure-limit-checker",
+  "modelSha256": "2a7acc6afde9148bc45c60f8af718e0fd60bc1763041650c8adec0d170550906",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing or invalid required input",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

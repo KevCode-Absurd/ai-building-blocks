@@ -1,0 +1,72 @@
+new_slug: reconcile-alternative-eps-and-comprehensive-income
+name: Reconcile alternative EPS and comprehensive income
+headline: Reconcile alternative EPS and comprehensive income
+summary: Keep acquired-amortization adjustments and OCI recycling consistent with reported earnings and equity performance.
+job: money-and-investing
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: A linked reported-to-alternative EPS and OCI conservation workbook. Share reported ordinary profit, amortization/tax reconciliation, diluted shares, OCI reserves and specific reclassification evidence.
+explain: |-
+  A linked reported-to-alternative EPS and OCI conservation workbook.
+
+  Public-market financial modelling. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+when:
+  - You need a linked reported-to-alternative EPS and OCI conservation workbook.
+  - You work on public-market financial modelling and need traceable calculations.
+  - A reviewer needs to trace the result back to inputs and assumptions.
+you_give:
+  - Reported ordinary profit, amortization/tax reconciliation, diluted shares, OCI reserves and specific reclassification evidence.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - A linked reported-to-alternative EPS and OCI conservation workbook.
+  - Original step files, financial assumptions, source coverage and a governing handoff summary.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: Purchased amortization EPS bridge
+    text: Use actual sourced schedules in one linked native workbook; example values are illustrative and must not become issuer inputs. Use the actual acquired-intangible charge, attributable recognized tax effect and matching diluted denominator; preserve reported income and the recurring economic cost.
+  - title: OCI reclassification bridge
+    text: Identify actual permitted after-tax recycling amounts inside the reported profit and OCI. Prove total comprehensive income is conserved, and do not apply the same recycled item again as an amortization adjustment.
+output_shape: |-
+  A linked reported-to-alternative EPS and OCI conservation workbook.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: Reported profit is the common anchor, tax effects are traceable, OCI recycling has equal/opposite entries and total comprehensive income reconciles; alternative EPS is labeled as an analytical measure.
+judge:
+  - Reported profit is the common anchor, tax effects are traceable, OCI recycling has equal/opposite entries and total comprehensive income reconciles; alternative EPS is labeled as an analytical measure.
+  - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
+  - Reconcile opening balances, additions, deductions and closing balances. Match enterprise or equity cash flows to the corresponding discount rate.
+  - Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
+test:
+  - Try a small sourced case and inspect every component handoff.
+  - Remove one required source and confirm the affected step stops.
+  - Change a currency, date or accounting definition and check the conflict stays visible.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

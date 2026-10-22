@@ -1,0 +1,76 @@
+new_slug: milestone-tranche-funding-checker
+name: Milestone tranche funding checker
+headline: Milestone tranche funding checker
+summary: Check approved tranche cash and the commitment still awaiting funding.
+job: money-and-investing
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: Authorized draw, net cash, remaining commitment and unsupported request. Share signed commitment, actual funded amount, requested tranche, evidence-backed approved draw ceiling and this draw fees.
+explain: |-
+  Authorized draw, net cash, remaining commitment and unsupported request.
+
+  Venture financing. Illustrative figures only. 100 less40 leaves60 undrawn. Approval25 limits request30, yielding23 after2 fees. Approval30 yields28 cash.
+when:
+  - You need authorized draw, net cash, remaining commitment and unsupported request.
+  - You work on venture financing and need traceable calculations.
+  - A reviewer needs to trace the result back to inputs and assumptions.
+you_give:
+  - Signed commitment, actual funded amount, requested tranche, evidence-backed approved draw ceiling and this draw fees.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - Authorized draw, net cash, remaining commitment and unsupported request.
+  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: 1. Match each milestone condition to actual dated approval; projected completion is not approval
+    text: Match each milestone condition to actual dated approval; projected completion is not approval.
+  - title: 2. Bound requested draw by undrawn commitment and the independently confirmed approved ceiling
+    text: Bound requested draw by undrawn commitment and the independently confirmed approved ceiling.
+  - title: 3. Deduct fees once and reconcile commitment, funded amount, new draw and remaining unsupported request
+    text: Deduct fees once and reconcile commitment, funded amount, new draw and remaining unsupported request.
+output_shape: |-
+  Authorized draw, net cash, remaining commitment and unsupported request.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: Funded amount cannot exceed signed commitment.
+judge:
+  - Funded amount cannot exceed signed commitment.
+  - Fees cannot exceed authorized draw without a separate funding source.
+  - Trace each input to its dated signed source, currency, scale and period.
+  - Reconcile outputs; preserve MISSING and CHECKS MISSED rather than guessing zero.
+test:
+  - Run the included baseline and changed-input fixtures, then compare with the stated expected results.
+  - Remove a required input and confirm the affected calculation refuses to invent a zero.
+  - Recalculate the workbook after changing an input and inspect the saved output.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: Node.js 20 or later
+      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

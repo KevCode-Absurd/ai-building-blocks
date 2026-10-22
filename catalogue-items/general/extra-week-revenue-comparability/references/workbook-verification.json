@@ -1,0 +1,32 @@
+{
+  "engine": "Artifact Tool",
+  "scope": "Illustrative workbook calculations, not source truth or an actual investment conclusion. Native Microsoft Excel application execution is not claimed.",
+  "modelSha256": "76fbbed43d5993181285bad9ee402693073829b0f5836de125fda2ac3d8da850",
+  "xlsxSha256": "9e9d52e425938d3f7fc25aab5d33182b0055eba99525eca2e5686dda5c30770e",
+  "baseline": "pass",
+  "changedInputCase": "Extra week contributes more revenue",
+  "invalidInputCase": "Missing required reported input",
+  "cases": [
+    {
+      "name": "Extra week contributes more revenue",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required reported input",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ],
+  "reopenedAndRecalculated": true,
+  "rendered": true,
+  "visualReview": "pass",
+  "workbookSpecSha256": "bed785ece568cea8d13e3ecaf3c6c117485e70511381b5289e190028caea1508",
+  "visualEvidence": {
+    "report": "reports/finance-public-markets-peer-review.json",
+    "reportSha256": "f73f6f5598ba0647c477c547d2776f1221130bb7861b62def472b74331866282",
+    "previewSha256": "db2793bce2f187f275585f63b4891700bd358c4f040e7437eb395de1a98d8fc7",
+    "sheet": "Model",
+    "sourceSpecSha256": "7772224f61987289bd9464e4629d55d198beea2b818c46bb1b07799622ccb742"
+  }
+}

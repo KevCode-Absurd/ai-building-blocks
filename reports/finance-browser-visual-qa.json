@@ -1,0 +1,256 @@
+{
+  "status": "pass",
+  "date": "2026-10-22",
+  "screenshots": 12,
+  "scope": "Read-only visual review of all12 captured finance mobile full-page screenshots, six at320px and six at390px.",
+  "method": "Every original PNG directly opened with view_image. Readable in-memory crops inspected for navigation/header, title and primary buttons, install/download panel, workflow cards, next-step cards and footer. No screenshot or UI files changed.",
+  "issues": [
+    {
+      "severity": "minor",
+      "blocking": false,
+      "existing": true,
+      "owner": "Shared R17 Questions widget / next shared UI release",
+      "description": "The fixed Questions pill overlays the right side of the Thinking it needs card around y790–828 in the390px captures, obscuring parts of supporting guidance text. Primary calls to action and finance titles are not covered.",
+      "affectedFiles": [
+        "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-browser\\finance-expansion--mobile-finance-390px-all-210-pages-mobile\\390-contract-liability-release-bridge.png",
+        "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-browser\\finance-expansion--mobile-finance-390px-all-210-pages-mobile\\390-freight-trip-contribution-builder.png",
+        "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-browser\\finance-expansion--mobile-finance-390px-all-210-pages-mobile\\390-no-catchup-waterfall-checker.png",
+        "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-browser\\finance-expansion--mobile-finance-390px-all-210-pages-mobile\\390-post-money-safe-ownership-checker.png",
+        "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-browser\\finance-expansion--mobile-finance-390px-all-210-pages-mobile\\390-restricted-cash-availability-checker.png",
+        "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-browser\\finance-expansion--mobile-finance-390px-all-210-pages-mobile\\390-weighted-average-share-schedule.png"
+      ],
+      "disposition": "Reported to root. Root confirmed this is an existing shared R17 widget and is deferred to the next shared UI release; finance release is content only and app bytes are frozen."
+    }
+  ],
+  "limitations": [
+    "Full-page PNGs were opened individually with view_image. Their long dimensions required in-memory readable crops for top 1900px, a central 2000px panel and the final 2000px/footer; crops were not written to disk.",
+    "This is a static visual review of six representative skill pages at two widths, not a claim to read every tiny line in each reduced full-page image.",
+    "All210 desktop download tests and all420 mobile width checks are separate root runtime evidence; they were not executed by this visual reviewer.",
+    "The existing shared R17 Questions widget overlap is retained as a minor issue. No claim of zero overlap is made.",
+    "Static screenshots do not independently establish keyboard access, tab scrolling, live download behavior or offscreen interactive states."
+  ],
+  "items": [
+    {
+      "file": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-browser\\finance-expansion--mobile-finance-320px-all-210-pages-mobile\\320-contract-liability-release-bridge.png",
+      "sha256": "4498a976817f51f66177fc0af114f81d64b4fab1122434420be49154f3459fa5",
+      "width": 320,
+      "height": 13950,
+      "visualOutcome": "pass; compact navigation and title/CTA wrapping readable; installation panel, workflow cards and footer fit the narrow column",
+      "inspected": true,
+      "checks": [
+        "Header navigation remains within the screenshot width; Menu wraps to a second row at320px without a collision.",
+        "Title, description and primary action labels wrap legibly; action buttons remain distinct.",
+        "Installation/download panel and workflow pills stay within their containing cards.",
+        "Next-step cards and footer links remain separated and readable.",
+        "No material finance-content clipping, overlapping primary action or broken major section layout observed."
+      ],
+      "limitations": [
+        "Static capture only; full-page image is reduced for overview, supplemented with native-width crops."
+      ]
+    },
+    {
+      "file": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-browser\\finance-expansion--mobile-finance-320px-all-210-pages-mobile\\320-freight-trip-contribution-builder.png",
+      "sha256": "80fc2aa6edfcf5c2a2d1633255efb8b0934780189d4345f7282e71d000fd75d2",
+      "width": 320,
+      "height": 13873,
+      "visualOutcome": "pass; compact navigation and title/CTA wrapping readable; installation panel, workflow cards and footer fit the narrow column",
+      "inspected": true,
+      "checks": [
+        "Header navigation remains within the screenshot width; Menu wraps to a second row at320px without a collision.",
+        "Title, description and primary action labels wrap legibly; action buttons remain distinct.",
+        "Installation/download panel and workflow pills stay within their containing cards.",
+        "Next-step cards and footer links remain separated and readable.",
+        "No material finance-content clipping, overlapping primary action or broken major section layout observed."
+      ],
+      "limitations": [
+        "Static capture only; full-page image is reduced for overview, supplemented with native-width crops."
+      ]
+    },
+    {
+      "file": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-browser\\finance-expansion--mobile-finance-320px-all-210-pages-mobile\\320-no-catchup-waterfall-checker.png",
+      "sha256": "b4e5eec8325d283c0dc64576fff6e42c5a5e4f2f5fbe81f834cb1b8cf74d25e5",
+      "width": 320,
+      "height": 13756,
+      "visualOutcome": "pass; compact navigation and title/CTA wrapping readable; installation panel, workflow cards and footer fit the narrow column",
+      "inspected": true,
+      "checks": [
+        "Header navigation remains within the screenshot width; Menu wraps to a second row at320px without a collision.",
+        "Title, description and primary action labels wrap legibly; action buttons remain distinct.",
+        "Installation/download panel and workflow pills stay within their containing cards.",
+        "Next-step cards and footer links remain separated and readable.",
+        "No material finance-content clipping, overlapping primary action or broken major section layout observed."
+      ],
+      "limitations": [
+        "Static capture only; full-page image is reduced for overview, supplemented with native-width crops."
+      ]
+    },
+    {
+      "file": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-browser\\finance-expansion--mobile-finance-320px-all-210-pages-mobile\\320-post-money-safe-ownership-checker.png",
+      "sha256": "2060ee42400ac558a6117a3a59bff0c9ed277aa5b59e23ad76a239c3145059b7",
+      "width": 320,
+      "height": 13434,
+      "visualOutcome": "pass; compact navigation and title/CTA wrapping readable; installation panel, workflow cards and footer fit the narrow column",
+      "inspected": true,
+      "checks": [
+        "Header navigation remains within the screenshot width; Menu wraps to a second row at320px without a collision.",
+        "Title, description and primary action labels wrap legibly; action buttons remain distinct.",
+        "Installation/download panel and workflow pills stay within their containing cards.",
+        "Next-step cards and footer links remain separated and readable.",
+        "No material finance-content clipping, overlapping primary action or broken major section layout observed."
+      ],
+      "limitations": [
+        "Static capture only; full-page image is reduced for overview, supplemented with native-width crops."
+      ]
+    },
+    {
+      "file": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-browser\\finance-expansion--mobile-finance-320px-all-210-pages-mobile\\320-restricted-cash-availability-checker.png",
+      "sha256": "31c166307b0eff0dc15dfd63ffb493fbc4363f832f25857e6006898ba26ed695",
+      "width": 320,
+      "height": 14726,
+      "visualOutcome": "pass; compact navigation and title/CTA wrapping readable; installation panel, workflow cards and footer fit the narrow column",
+      "inspected": true,
+      "checks": [
+        "Header navigation remains within the screenshot width; Menu wraps to a second row at320px without a collision.",
+        "Title, description and primary action labels wrap legibly; action buttons remain distinct.",
+        "Installation/download panel and workflow pills stay within their containing cards.",
+        "Next-step cards and footer links remain separated and readable.",
+        "No material finance-content clipping, overlapping primary action or broken major section layout observed."
+      ],
+      "limitations": [
+        "Static capture only; full-page image is reduced for overview, supplemented with native-width crops."
+      ]
+    },
+    {
+      "file": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-browser\\finance-expansion--mobile-finance-320px-all-210-pages-mobile\\320-weighted-average-share-schedule.png",
+      "sha256": "25c79695b8edbf08200c9281dc1c12f6b251de7622f99d53bf2589a0d469e330",
+      "width": 320,
+      "height": 14695,
+      "visualOutcome": "pass; compact navigation and title/CTA wrapping readable; installation panel, workflow cards and footer fit the narrow column",
+      "inspected": true,
+      "checks": [
+        "Header navigation remains within the screenshot width; Menu wraps to a second row at320px without a collision.",
+        "Title, description and primary action labels wrap legibly; action buttons remain distinct.",
+        "Installation/download panel and workflow pills stay within their containing cards.",
+        "Next-step cards and footer links remain separated and readable.",
+        "No material finance-content clipping, overlapping primary action or broken major section layout observed."
+      ],
+      "limitations": [
+        "Static capture only; full-page image is reduced for overview, supplemented with native-width crops."
+      ]
+    },
+    {
+      "file": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-browser\\finance-expansion--mobile-finance-390px-all-210-pages-mobile\\390-contract-liability-release-bridge.png",
+      "sha256": "d584b1307e41abb6143ef66cd0bae42df8e7d86aafa212735c8965b0244cab33",
+      "width": 390,
+      "height": 12000,
+      "visualOutcome": "pass; finance content, CTAs, wrapping and major layout readable, with existing minor Questions-widget text overlay recorded",
+      "inspected": true,
+      "checks": [
+        "Header navigation remains within the screenshot width; Menu wraps to a second row at320px without a collision.",
+        "Title, description and primary action labels wrap legibly; action buttons remain distinct.",
+        "Installation/download panel and workflow pills stay within their containing cards.",
+        "Next-step cards and footer links remain separated and readable.",
+        "No material finance-content clipping, overlapping primary action or broken major section layout observed."
+      ],
+      "limitations": [
+        "Static capture only; full-page image is reduced for overview, supplemented with native-width crops.",
+        "Existing fixed Questions widget overlaps supporting model-guidance text; see shared issue."
+      ]
+    },
+    {
+      "file": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-browser\\finance-expansion--mobile-finance-390px-all-210-pages-mobile\\390-freight-trip-contribution-builder.png",
+      "sha256": "8686b82fa1e33912eb0a14f7fb717b3df56c4465475ec2198886c283d0dcf639",
+      "width": 390,
+      "height": 11931,
+      "visualOutcome": "pass; finance content, CTAs, wrapping and major layout readable, with existing minor Questions-widget text overlay recorded",
+      "inspected": true,
+      "checks": [
+        "Header navigation remains within the screenshot width; Menu wraps to a second row at320px without a collision.",
+        "Title, description and primary action labels wrap legibly; action buttons remain distinct.",
+        "Installation/download panel and workflow pills stay within their containing cards.",
+        "Next-step cards and footer links remain separated and readable.",
+        "No material finance-content clipping, overlapping primary action or broken major section layout observed."
+      ],
+      "limitations": [
+        "Static capture only; full-page image is reduced for overview, supplemented with native-width crops.",
+        "Existing fixed Questions widget overlaps supporting model-guidance text; see shared issue."
+      ]
+    },
+    {
+      "file": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-browser\\finance-expansion--mobile-finance-390px-all-210-pages-mobile\\390-no-catchup-waterfall-checker.png",
+      "sha256": "dfdbd5b08782e44015dc6b99bd3cf2d4256f92f434308abfd5e52f39ce292f85",
+      "width": 390,
+      "height": 11809,
+      "visualOutcome": "pass; finance content, CTAs, wrapping and major layout readable, with existing minor Questions-widget text overlay recorded",
+      "inspected": true,
+      "checks": [
+        "Header navigation remains within the screenshot width; Menu wraps to a second row at320px without a collision.",
+        "Title, description and primary action labels wrap legibly; action buttons remain distinct.",
+        "Installation/download panel and workflow pills stay within their containing cards.",
+        "Next-step cards and footer links remain separated and readable.",
+        "No material finance-content clipping, overlapping primary action or broken major section layout observed."
+      ],
+      "limitations": [
+        "Static capture only; full-page image is reduced for overview, supplemented with native-width crops.",
+        "Existing fixed Questions widget overlaps supporting model-guidance text; see shared issue."
+      ]
+    },
+    {
+      "file": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-browser\\finance-expansion--mobile-finance-390px-all-210-pages-mobile\\390-post-money-safe-ownership-checker.png",
+      "sha256": "ce22662bc76e6dd29783073c66041dd5bc268314c01638e5321ae8db1994a07b",
+      "width": 390,
+      "height": 11515,
+      "visualOutcome": "pass; finance content, CTAs, wrapping and major layout readable, with existing minor Questions-widget text overlay recorded",
+      "inspected": true,
+      "checks": [
+        "Header navigation remains within the screenshot width; Menu wraps to a second row at320px without a collision.",
+        "Title, description and primary action labels wrap legibly; action buttons remain distinct.",
+        "Installation/download panel and workflow pills stay within their containing cards.",
+        "Next-step cards and footer links remain separated and readable.",
+        "No material finance-content clipping, overlapping primary action or broken major section layout observed."
+      ],
+      "limitations": [
+        "Static capture only; full-page image is reduced for overview, supplemented with native-width crops.",
+        "Existing fixed Questions widget overlaps supporting model-guidance text; see shared issue."
+      ]
+    },
+    {
+      "file": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-browser\\finance-expansion--mobile-finance-390px-all-210-pages-mobile\\390-restricted-cash-availability-checker.png",
+      "sha256": "843db254a38c507e135d2f76b08afcd25e1129e44846b0762415d81b28f67643",
+      "width": 390,
+      "height": 12457,
+      "visualOutcome": "pass; finance content, CTAs, wrapping and major layout readable, with existing minor Questions-widget text overlay recorded",
+      "inspected": true,
+      "checks": [
+        "Header navigation remains within the screenshot width; Menu wraps to a second row at320px without a collision.",
+        "Title, description and primary action labels wrap legibly; action buttons remain distinct.",
+        "Installation/download panel and workflow pills stay within their containing cards.",
+        "Next-step cards and footer links remain separated and readable.",
+        "No material finance-content clipping, overlapping primary action or broken major section layout observed."
+      ],
+      "limitations": [
+        "Static capture only; full-page image is reduced for overview, supplemented with native-width crops.",
+        "Existing fixed Questions widget overlaps supporting model-guidance text; see shared issue."
+      ]
+    },
+    {
+      "file": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-browser\\finance-expansion--mobile-finance-390px-all-210-pages-mobile\\390-weighted-average-share-schedule.png",
+      "sha256": "6456a413ba61c63fca4bfab5059fdfbee2f12b02887fa60564efc4e9385bdf61",
+      "width": 390,
+      "height": 12636,
+      "visualOutcome": "pass; finance content, CTAs, wrapping and major layout readable, with existing minor Questions-widget text overlay recorded",
+      "inspected": true,
+      "checks": [
+        "Header navigation remains within the screenshot width; Menu wraps to a second row at320px without a collision.",
+        "Title, description and primary action labels wrap legibly; action buttons remain distinct.",
+        "Installation/download panel and workflow pills stay within their containing cards.",
+        "Next-step cards and footer links remain separated and readable.",
+        "No material finance-content clipping, overlapping primary action or broken major section layout observed."
+      ],
+      "limitations": [
+        "Static capture only; full-page image is reduced for overview, supplemented with native-width crops.",
+        "Existing fixed Questions widget overlaps supporting model-guidance text; see shared issue."
+      ]
+    }
+  ]
+}

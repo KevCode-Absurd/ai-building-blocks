@@ -1,0 +1,139 @@
+{
+  "inputs": [
+    {
+      "id": "cost_pool",
+      "label": "cost pool",
+      "value": 1000,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "normal_capacity",
+      "label": "normal capacity",
+      "value": 100,
+      "unit": "activity units / month",
+      "min": 0.000001
+    },
+    {
+      "id": "department_a_units",
+      "label": "department a units",
+      "value": 40,
+      "unit": "activity units / month",
+      "min": 0
+    },
+    {
+      "id": "department_b_units",
+      "label": "department b units",
+      "value": 30,
+      "unit": "activity units / month",
+      "min": 0
+    }
+  ],
+  "calculations": [
+    {
+      "id": "driver_rate",
+      "label": "driver rate",
+      "op": "div",
+      "args": [
+        "cost_pool",
+        "normal_capacity"
+      ],
+      "unit": "USD / activity unit"
+    },
+    {
+      "id": "allocated_a",
+      "label": "allocated a",
+      "op": "mul",
+      "args": [
+        "department_a_units",
+        "driver_rate"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "allocated_b",
+      "label": "allocated b",
+      "op": "mul",
+      "args": [
+        "department_b_units",
+        "driver_rate"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "allocated_total",
+      "label": "allocated total",
+      "op": "sum",
+      "args": [
+        "allocated_a",
+        "allocated_b"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "unassigned_cost",
+      "label": "unassigned cost",
+      "op": "sub",
+      "args": [
+        "cost_pool",
+        "allocated_total"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "used_units",
+      "label": "used units",
+      "op": "sum",
+      "args": [
+        "department_a_units",
+        "department_b_units"
+      ],
+      "unit": "activity units / month"
+    },
+    {
+      "id": "unused_units",
+      "label": "unused units",
+      "op": "sub",
+      "args": [
+        "normal_capacity",
+        "used_units"
+      ],
+      "unit": "activity units / month"
+    }
+  ],
+  "outputs": [
+    "driver_rate",
+    "allocated_a",
+    "allocated_b",
+    "unassigned_cost",
+    "unused_units"
+  ],
+  "expected": {
+    "driver_rate": 10,
+    "allocated_a": 400,
+    "allocated_b": 300,
+    "unassigned_cost": 300,
+    "unused_units": 30
+  },
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "inputs": {
+        "department_a_units": 50
+      },
+      "expected": {
+        "allocated_a": 500,
+        "unassigned_cost": 200,
+        "unused_units": 20
+      }
+    },
+    {
+      "name": "Missing or invalid required input",
+      "inputs": {
+        "cost_pool": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only in USD unless labelled otherwise. The model is the focused stated schedule, not a complete company forecast. Annual end-period cash is used unless the inputs state another convention."
+}

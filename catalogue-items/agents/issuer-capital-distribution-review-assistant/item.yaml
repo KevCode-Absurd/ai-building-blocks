@@ -1,0 +1,47 @@
+slug: issuer-capital-distribution-review-assistant
+name: Issuer capital distribution review assistant
+summary: Review executed buybacks and dividends against equity cash flow and the share ledger.
+category: agent
+type: agent
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: spreadsheet
+    required: true
+  - type: audit_report
+    required: true
+  - type: document
+    required: true
+uses:
+  - reconcile-buybacks-with-owner-cash
+  - dividend-reinvestment-share-schedule
+steps:
+  - uses: reconcile-buybacks-with-owner-cash
+    note: Run the governing workflow when When the user provides updated repurchase execution, dividend or equity-statement evidence, compare actual amounts with the previously accepted cash-allocation model.
+  - uses: dividend-reinvestment-share-schedule
+    note: If the review includes an actual shareholder reinvestment statement, reconcile dividend cash to acquired shares separately. An authorization without executions stays pending evidence and is never treated as completed buyback cash.
+origin: own
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/finance-expansion
+example_pending: true
+warnings:
+  - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+credits:
+  - title: Original finance methods and model fixtures
+    by: AI Blocks contributors
+    used: Original instructions, calculations and illustrative examples. External method references are linked separately and retain their own rights.
+schedule: Portable review instructions only. Run when the user supplies a new filing or asks for a review; propose a quarterly cadence without installing or claiming a schedule.
+asks_before:
+  - Trading or moving money
+  - Sending or publishing research or deal materials
+  - Changing an account or submitting a filing
+  - Starting or changing a recurring schedule

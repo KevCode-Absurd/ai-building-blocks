@@ -1,0 +1,11 @@
+{
+  "basis": "Illustrative figures only.",
+  "outputs": {
+    "contingency": 35,
+    "future_need": 385,
+    "revised_total_cost": 985,
+    "budget_headroom": 15,
+    "future_sources": 370,
+    "funding_gap": 15
+  }
+}

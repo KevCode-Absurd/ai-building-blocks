@@ -1,0 +1,119 @@
+{
+  "inputs": [
+    {
+      "id": "opening",
+      "label": "Opening operating working capital",
+      "value": 100,
+      "unit": "USD million",
+      "min": -1000000000,
+      "max": 1000000000
+    },
+    {
+      "id": "closing",
+      "label": "Closing operating working capital",
+      "value": 150,
+      "unit": "USD million",
+      "min": -1000000000,
+      "max": 1000000000
+    },
+    {
+      "id": "acquired",
+      "label": "Acquisition balance increase",
+      "value": 20,
+      "unit": "USD million",
+      "min": -1000000000,
+      "max": 1000000000
+    },
+    {
+      "id": "fx",
+      "label": "FX translation increase",
+      "value": 5,
+      "unit": "USD million",
+      "min": -1000000000,
+      "max": 1000000000
+    },
+    {
+      "id": "otherNoncash",
+      "label": "Other signed noncash balance change",
+      "value": -5,
+      "unit": "USD million",
+      "min": -1000000000,
+      "max": 1000000000
+    }
+  ],
+  "calculations": [
+    {
+      "id": "balanceChange",
+      "label": "Closing less opening",
+      "op": "sub",
+      "args": [
+        "closing",
+        "opening"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "noncash",
+      "label": "Signed noncash movements",
+      "op": "add",
+      "args": [
+        "acquired",
+        "fx",
+        "otherNoncash"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "operatingInvestment",
+      "label": "Operating balance investment",
+      "op": "sub",
+      "args": [
+        "balanceChange",
+        "noncash"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "cashEffect",
+      "label": "Indirect operating cash effect",
+      "op": "neg",
+      "args": [
+        "operatingInvestment"
+      ],
+      "unit": "USD million"
+    }
+  ],
+  "outputs": [
+    "balanceChange",
+    "noncash",
+    "operatingInvestment",
+    "cashEffect"
+  ],
+  "expected": {
+    "balanceChange": 50,
+    "noncash": 20,
+    "operatingInvestment": 30,
+    "cashEffect": -30
+  },
+  "cases": [
+    {
+      "name": "Larger acquired working-capital balance",
+      "inputs": {
+        "acquired": 30
+      },
+      "expected": {
+        "noncash": 30,
+        "operatingInvestment": 20,
+        "cashEffect": -20
+      }
+    },
+    {
+      "name": "Required source input missing",
+      "inputs": {
+        "opening": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures. Balance increase150-100=50. Noncash20+5-5=20 leaves30 operating investment and a negative30 cash effect. Acquisition balance30 leaves only20 operating investment."
+}

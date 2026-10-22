@@ -1,0 +1,147 @@
+{
+  "inputs": [
+    {
+      "id": "cashBeforeSweep",
+      "label": "cash Before Sweep",
+      "value": 30,
+      "unit": "USD millions",
+      "min": 0
+    },
+    {
+      "id": "minimumCash",
+      "label": "minimum Cash",
+      "value": 10,
+      "unit": "USD millions",
+      "min": 0
+    },
+    {
+      "id": "eligibleEcf",
+      "label": "eligible Ecf",
+      "value": 15,
+      "unit": "USD millions",
+      "min": 0
+    },
+    {
+      "id": "sweepFraction",
+      "label": "sweep Fraction",
+      "value": 0.5,
+      "unit": "fraction",
+      "min": 0,
+      "max": 1
+    },
+    {
+      "id": "eligibleDebt",
+      "label": "eligible Debt",
+      "value": 100,
+      "unit": "USD millions",
+      "min": 0
+    }
+  ],
+  "calculations": [
+    {
+      "id": "rawAvailable",
+      "label": "raw Available",
+      "op": "sub",
+      "args": [
+        "cashBeforeSweep",
+        "minimumCash"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "availableCash",
+      "label": "available Cash",
+      "op": "max",
+      "args": [
+        0,
+        "rawAvailable"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "contractSweep",
+      "label": "contract Sweep",
+      "op": "mul",
+      "args": [
+        "eligibleEcf",
+        "sweepFraction"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "actualSweep",
+      "label": "actual Sweep",
+      "op": "min",
+      "args": [
+        "availableCash",
+        "contractSweep",
+        "eligibleDebt"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "endingCash",
+      "label": "ending Cash",
+      "op": "sub",
+      "args": [
+        "cashBeforeSweep",
+        "actualSweep"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "endingDebt",
+      "label": "ending Debt",
+      "op": "sub",
+      "args": [
+        "eligibleDebt",
+        "actualSweep"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "unpaidSweep",
+      "label": "unpaid Sweep",
+      "op": "sub",
+      "args": [
+        "contractSweep",
+        "actualSweep"
+      ],
+      "unit": "USD millions"
+    }
+  ],
+  "outputs": [
+    "actualSweep",
+    "endingCash",
+    "endingDebt",
+    "unpaidSweep"
+  ],
+  "expected": {
+    "actualSweep": 7.5,
+    "endingCash": 22.5,
+    "endingDebt": 92.5,
+    "unpaidSweep": 0
+  },
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "inputs": {
+        "cashBeforeSweep": 12
+      },
+      "expected": {
+        "actualSweep": 2,
+        "endingCash": 10,
+        "endingDebt": 98,
+        "unpaidSweep": 5.5
+      }
+    },
+    {
+      "name": "Missing required number",
+      "inputs": {
+        "cashBeforeSweep": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only. ECF15 at50% implies7.5 sweep. Cash30 with floor10 permits it; cash12 limits payment to2 and leaves5.5 unpaid."
+}

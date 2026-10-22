@@ -1,0 +1,17 @@
+{
+  "slug": "sbc-share-offset-cost",
+  "modelSha256": "201e1898183d2ec6908266110cd205830c78cc0e180e03e58332f87121d28e2d",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Lower repurchase price scenario",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Required source input missing",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

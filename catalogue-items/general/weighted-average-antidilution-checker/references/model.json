@@ -1,0 +1,132 @@
+{
+  "inputs": [
+    {
+      "id": "oldPrice",
+      "label": "old Price",
+      "value": 10,
+      "unit": "USD per share",
+      "min": 0.000001
+    },
+    {
+      "id": "existingShares",
+      "label": "existing Shares",
+      "value": 100,
+      "unit": "shares",
+      "min": 0.000001
+    },
+    {
+      "id": "newShares",
+      "label": "new Shares",
+      "value": 40,
+      "unit": "shares",
+      "min": 0.000001
+    },
+    {
+      "id": "consideration",
+      "label": "consideration",
+      "value": 200,
+      "unit": "USD",
+      "min": 0
+    }
+  ],
+  "calculations": [
+    {
+      "id": "bShares",
+      "label": "b Shares",
+      "op": "div",
+      "args": [
+        "consideration",
+        "oldPrice"
+      ],
+      "unit": "shares"
+    },
+    {
+      "id": "numerator",
+      "label": "numerator",
+      "op": "add",
+      "args": [
+        "existingShares",
+        "bShares"
+      ],
+      "unit": "shares"
+    },
+    {
+      "id": "denominator",
+      "label": "denominator",
+      "op": "add",
+      "args": [
+        "existingShares",
+        "newShares"
+      ],
+      "unit": "shares"
+    },
+    {
+      "id": "resetFactor",
+      "label": "reset Factor",
+      "op": "div",
+      "args": [
+        "numerator",
+        "denominator"
+      ],
+      "unit": "fraction"
+    },
+    {
+      "id": "rawPrice",
+      "label": "raw Price",
+      "op": "mul",
+      "args": [
+        "oldPrice",
+        "resetFactor"
+      ],
+      "unit": "USD per share"
+    },
+    {
+      "id": "newPrice",
+      "label": "new Price",
+      "op": "min",
+      "args": [
+        "oldPrice",
+        "rawPrice"
+      ],
+      "unit": "USD per share"
+    },
+    {
+      "id": "conversionRatio",
+      "label": "conversion Ratio",
+      "op": "div",
+      "args": [
+        "oldPrice",
+        "newPrice"
+      ],
+      "unit": "multiple"
+    }
+  ],
+  "outputs": [
+    "newPrice",
+    "conversionRatio"
+  ],
+  "expected": {
+    "newPrice": 8.571428571428571,
+    "conversionRatio": 1.1666666666666667
+  },
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "inputs": {
+        "consideration": 400
+      },
+      "expected": {
+        "newPrice": 10,
+        "conversionRatio": 1
+      }
+    },
+    {
+      "name": "Missing required number",
+      "inputs": {
+        "oldPrice": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only. A100,C40,old price10 and consideration200 give B20 and price60/7. Consideration400 leaves conversion price10."
+}

@@ -1,0 +1,9 @@
+{
+  "available_nights": 100,
+  "direct_nights": 40,
+  "agent_nights": 30,
+  "direct_rate": 100,
+  "agent_rate": 120,
+  "commission_rate": 0.2,
+  "occupied_service_cost": 20
+}

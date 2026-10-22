@@ -1,0 +1,1335 @@
+{
+  "checkedOn": "2026-10-22T16:47:51.487Z",
+  "engine": "Artifact Tool",
+  "scope": "Illustrative native workbooks; baseline and changed-input recalculation, render, XLSX export and saved-file reimport checked. Visual review is recorded separately.",
+  "passed": 40,
+  "results": [
+    {
+      "slug": "post-money-safe-ownership-checker",
+      "status": "pass",
+      "modelSha256": "018a6d1dca2c60612b81f5a1782891d34acd4fccaa4fd0082cacb6a0e3a88ad1",
+      "baselineOutputs": {
+        "ownership": 0.1,
+        "afterRound": 0.08000000000000002
+      },
+      "changedInputCase": "Hand-derived changed-input golden",
+      "invalidInputCase": "Missing required number",
+      "cases": [
+        {
+          "name": "Hand-derived changed-input golden",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required number",
+          "kind": "refusal",
+          "status": "pass"
+        },
+        {
+          "name": "Refuse SAFE ownership above 100 percent",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 3,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\post-money-safe-ownership-checker.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\post-money-safe-ownership-checker\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\post-money-safe-ownership-checker.png",
+      "xlsxSha256": "8a273c49f1c20e0b52fa217aa3c33ffb7e3d2281a48c9b23aba13c582a5a7203",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D8\",\"rows\":2,\"cols\":3,\"nonEmpty\":6,\"text\":6,\"maxTextLength\":19,\"preview\":[[\"ownership\",\"0.1\",\"fraction\"],[\"after Round\",\"0.08000000000000002\",\"fraction\"]],\"previewAddress\":\"B7:D8\",\"previewRows\":2,\"previewCols\":3}",
+      "workbookSpecSha256": "8f7c3b8a74c830c1d08830486ae900922bedd7ceba61374d347ac5ebdff24269"
+    },
+    {
+      "slug": "option-pool-top-up-checker",
+      "status": "pass",
+      "modelSha256": "2c9b7c31fb0f8fe871e14895b909fd937d5d474bb1fc3e10043ef12bc5e08dcb",
+      "baselineOutputs": {
+        "topup": 125,
+        "newTotal": 1125,
+        "actualFraction": 0.2
+      },
+      "changedInputCase": "Hand-derived changed-input golden",
+      "invalidInputCase": "Missing required number",
+      "cases": [
+        {
+          "name": "Hand-derived changed-input golden",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required number",
+          "kind": "refusal",
+          "status": "pass"
+        },
+        {
+          "name": "Refuse reserve exceeding total shares",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 8,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\option-pool-top-up-checker.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\option-pool-top-up-checker\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\option-pool-top-up-checker.png",
+      "xlsxSha256": "e5b16d8008d2df32c42e939851559d5e4a89118e06c3b769fff7c2a5dd4c2b0f",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D9\",\"rows\":3,\"cols\":3,\"nonEmpty\":9,\"text\":9,\"maxTextLength\":15,\"preview\":[[\"topup\",\"125\",\"shares\"],[\"new Total\",\"1125\",\"shares\"],[\"actual Fraction\",\"0.2\",\"fraction\"]],\"previewAddress\":\"B7:D9\",\"previewRows\":3,\"previewCols\":3}",
+      "workbookSpecSha256": "2e396710fbd97dc9b9bcd78b79409bfd48f615357435587baaa800734a06fc2e"
+    },
+    {
+      "slug": "pro-rata-allocation-checker",
+      "status": "pass",
+      "modelSha256": "4f8180f3595f1f9ce3d1b830364f09b8ff0187866d08204ae0413cb3beee24b8",
+      "baselineOutputs": {
+        "participation": 10,
+        "totalRound": 100
+      },
+      "changedInputCase": "Hand-derived changed-input golden",
+      "invalidInputCase": "Missing required number",
+      "cases": [
+        {
+          "name": "Hand-derived changed-input golden",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required number",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 4,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\pro-rata-allocation-checker.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\pro-rata-allocation-checker\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\pro-rata-allocation-checker.png",
+      "xlsxSha256": "ed833179df9339647b509b7cf9df3316314712645acf9de16ebb3b4159ea20f1",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D8\",\"rows\":2,\"cols\":3,\"nonEmpty\":6,\"text\":6,\"maxTextLength\":13,\"preview\":[[\"participation\",\"10\",\"USD thousands\"],[\"total Round\",\"100\",\"USD thousands\"]],\"previewAddress\":\"B7:D8\",\"previewRows\":2,\"previewCols\":3}",
+      "workbookSpecSha256": "8461a403ae76861311c0ada3081ec485f8d089a3af46e186b84e2e1bd7b46380"
+    },
+    {
+      "slug": "convertible-note-interest-checker",
+      "status": "pass",
+      "modelSha256": "745d2c739aa9a071601d5f82547a1cfdf57bb9db1d13a7f66d21c9ce49062f2a",
+      "baselineOutputs": {
+        "interest": 20,
+        "balance": 120,
+        "conversionShares": 60
+      },
+      "changedInputCase": "Hand-derived changed-input golden",
+      "invalidInputCase": "Missing required number",
+      "cases": [
+        {
+          "name": "Hand-derived changed-input golden",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required number",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 3,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\convertible-note-interest-checker.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\convertible-note-interest-checker\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\convertible-note-interest-checker.png",
+      "xlsxSha256": "0fc491ccee239c736e844f5ea63c44dbc42453c224842c7ac8ba732437a90e06",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D9\",\"rows\":3,\"cols\":3,\"nonEmpty\":9,\"text\":9,\"maxTextLength\":17,\"preview\":[[\"interest\",\"20\",\"USD thousands\"],[\"balance\",\"120\",\"USD thousands\"],[\"conversion Shares\",\"60\",\"shares\"]],\"previewAddress\":\"B7:D9\",\"previewRows\":3,\"previewCols\":3}",
+      "workbookSpecSha256": "f3de1efa6f2e5602421b09803e1c626ceafcb7c08a4a9e77d6118c1b3e9acfee"
+    },
+    {
+      "slug": "cap-and-discount-conversion-checker",
+      "status": "pass",
+      "modelSha256": "98eaa1e34262fdc50ddf4eaf7ef113a363cbb0f172848dfe6f3ef51edba993ed",
+      "baselineOutputs": {
+        "selectedPrice": 2,
+        "shares": 60,
+        "extraShares": 30
+      },
+      "changedInputCase": "Hand-derived changed-input golden",
+      "invalidInputCase": "Missing required number",
+      "cases": [
+        {
+          "name": "Hand-derived changed-input golden",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required number",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 6,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\cap-and-discount-conversion-checker.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\cap-and-discount-conversion-checker\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\cap-and-discount-conversion-checker.png",
+      "xlsxSha256": "1aaaa52a9b18f9a62e54f4f975a0895ac7f04274be2c434a0a8c821b22ec78b5",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D9\",\"rows\":3,\"cols\":3,\"nonEmpty\":9,\"text\":9,\"maxTextLength\":23,\"preview\":[[\"selected Price\",\"2\",\"USD thousands per share\"],[\"shares\",\"60\",\"shares\"],[\"extra Shares\",\"30\",\"shares\"]],\"previewAddress\":\"B7:D9\",\"previewRows\":3,\"previewCols\":3}",
+      "workbookSpecSha256": "abc3cde1d506cf2a66493fe0e2fede4ee33ed4d81add275a2b75a1e8b33b1c1e"
+    },
+    {
+      "slug": "nonparticipating-preference-checker",
+      "status": "pass",
+      "modelSha256": "f367201e3358e7470480315ab1f981aaaf0331b4ca438880516fd29e1adad7a7",
+      "baselineOutputs": {
+        "preferredPayout": 100,
+        "commonPayout": 200
+      },
+      "changedInputCase": "Hand-derived changed-input golden",
+      "invalidInputCase": "Missing required number",
+      "cases": [
+        {
+          "name": "Hand-derived changed-input golden",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required number",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 5,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\nonparticipating-preference-checker.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\nonparticipating-preference-checker\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\nonparticipating-preference-checker.png",
+      "xlsxSha256": "a454e2c26bfd0602205f38c9019516e11c65995585cd45c8d3f2d2fb50b7f83a",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D8\",\"rows\":2,\"cols\":3,\"nonEmpty\":6,\"text\":6,\"maxTextLength\":16,\"preview\":[[\"preferred Payout\",\"100\",\"USD thousands\"],[\"common Payout\",\"200\",\"USD thousands\"]],\"previewAddress\":\"B7:D8\",\"previewRows\":2,\"previewCols\":3}",
+      "workbookSpecSha256": "bd76fbfe47c7c3ddf51920883a1a8b711fc1d1997bb027197b9d9f7f25839269"
+    },
+    {
+      "slug": "capped-participation-checker",
+      "status": "pass",
+      "modelSha256": "d1bc0ff8d89ef7aa495bbe23d6a9bc1c62d324106cf7ae66cccc06489aaca8ed",
+      "baselineOutputs": {
+        "preferredPayout": 280,
+        "commonPayout": 720
+      },
+      "changedInputCase": "Hand-derived changed-input golden",
+      "invalidInputCase": "Missing required number",
+      "cases": [
+        {
+          "name": "Hand-derived changed-input golden",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required number",
+          "kind": "refusal",
+          "status": "pass"
+        },
+        {
+          "name": "Refuse participation cap below preference",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 11,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\capped-participation-checker.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\capped-participation-checker\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\capped-participation-checker.png",
+      "xlsxSha256": "068ac8d41ebc438e757d56ad9e23185a866be38755aca0912f525194d7e63ba6",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D8\",\"rows\":2,\"cols\":3,\"nonEmpty\":6,\"text\":6,\"maxTextLength\":16,\"preview\":[[\"preferred Payout\",\"280\",\"USD thousands\"],[\"common Payout\",\"720\",\"USD thousands\"]],\"previewAddress\":\"B7:D8\",\"previewRows\":2,\"previewCols\":3}",
+      "workbookSpecSha256": "ecb1c7d45e284bd24549bfe9bda1bebf1cd999df9074380510ae7ed2d1a1a8f1"
+    },
+    {
+      "slug": "weighted-average-antidilution-checker",
+      "status": "pass",
+      "modelSha256": "4a09d06dfc52fdd64208b1eb844042f641ff3e728093af06f85e03043331c2bc",
+      "baselineOutputs": {
+        "newPrice": 8.571428571428571,
+        "conversionRatio": 1.1666666666666667
+      },
+      "changedInputCase": "Hand-derived changed-input golden",
+      "invalidInputCase": "Missing required number",
+      "cases": [
+        {
+          "name": "Hand-derived changed-input golden",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required number",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 7,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\weighted-average-antidilution-checker.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\weighted-average-antidilution-checker\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\weighted-average-antidilution-checker.png",
+      "xlsxSha256": "b0463f09b0f0186093568cf60be4e045fdb4e6cbd6da0e339eae0976026ca55b",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D8\",\"rows\":2,\"cols\":3,\"nonEmpty\":6,\"text\":6,\"maxTextLength\":18,\"preview\":[[\"new Price\",\"8.571428571428571\",\"USD per share\"],[\"conversion Ratio\",\"1.1666666666666667\",\"multiple\"]],\"previewAddress\":\"B7:D8\",\"previewRows\":2,\"previewCols\":3}",
+      "workbookSpecSha256": "7d9eb246a239b479019724e1c0951dd0176ccf7f0239181036f774da3156dfe1"
+    },
+    {
+      "slug": "milestone-tranche-funding-checker",
+      "status": "pass",
+      "modelSha256": "1d8b7f91542ee11f94e5bf81b94123d929f77f58e10ea498cad4f27b7669d140",
+      "baselineOutputs": {
+        "draw": 25,
+        "netCash": 23,
+        "remaining": 35,
+        "unsupported": 5
+      },
+      "changedInputCase": "Hand-derived changed-input golden",
+      "invalidInputCase": "Missing required number",
+      "cases": [
+        {
+          "name": "Hand-derived changed-input golden",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required number",
+          "kind": "refusal",
+          "status": "pass"
+        },
+        {
+          "name": "Refuse draw fees exceeding authorized funding",
+          "kind": "refusal",
+          "status": "pass"
+        },
+        {
+          "name": "Refuse already funded above commitment",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 6,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\milestone-tranche-funding-checker.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\milestone-tranche-funding-checker\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\milestone-tranche-funding-checker.png",
+      "xlsxSha256": "1a3f74f2db6886df04b6e4d9358ed188cbd911007b59d1b68ffcd7a5f1e904e0",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D10\",\"rows\":4,\"cols\":3,\"nonEmpty\":12,\"text\":12,\"maxTextLength\":13,\"preview\":[[\"draw\",\"25\",\"USD thousands\"],[\"net Cash\",\"23\",\"USD thousands\"],[\"remaining\",\"35\",\"USD thousands\"],[\"unsupported\",\"5\",\"USD thousands\"]],\"previewAddress\":\"B7:D10\",\"previewRows\":4,\"previewCols\":3}",
+      "workbookSpecSha256": "d598e3d6ccfd0c77821fc73570d1b717225bd0ea61b558e8de3f306149b4de0d"
+    },
+    {
+      "slug": "follow-on-reserve-planner",
+      "status": "pass",
+      "modelSha256": "0e40e410362453ea46c89b49532e3ad1782391a3406af7a6bd7c04bbda79f854",
+      "baselineOutputs": {
+        "cashA": 10,
+        "cashB": 20,
+        "required": 30,
+        "headroom": 0
+      },
+      "changedInputCase": "Hand-derived changed-input golden",
+      "invalidInputCase": "Missing required number",
+      "cases": [
+        {
+          "name": "Hand-derived changed-input golden",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required number",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 4,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\follow-on-reserve-planner.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\follow-on-reserve-planner\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\follow-on-reserve-planner.png",
+      "xlsxSha256": "12cf61568ebf6aac9bb3b56e2ee64f134b2534d2ed62ecfdce7188b8127857a0",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D10\",\"rows\":4,\"cols\":3,\"nonEmpty\":12,\"text\":12,\"maxTextLength\":13,\"preview\":[[\"cash A\",\"10\",\"USD thousands\"],[\"cash B\",\"20\",\"USD thousands\"],[\"required\",\"30\",\"USD thousands\"],[\"headroom\",\"0\",\"USD thousands\"]],\"previewAddress\":\"B7:D10\",\"previewRows\":4,\"previewCols\":3}",
+      "workbookSpecSha256": "9cc46bcbe9e5df1cb0e160e395d308d20a9d49cb5e2c1633a231ddc1950dda7c"
+    },
+    {
+      "slug": "closing-equity-proceeds-checker",
+      "status": "pass",
+      "modelSha256": "8573e0bbafc28566070cb08eb614542a89a9b72e1173ecc208d0757f424ef2f0",
+      "baselineOutputs": {
+        "equityProceeds": 72,
+        "deductions": 38
+      },
+      "changedInputCase": "Hand-derived changed-input golden",
+      "invalidInputCase": "Missing required number",
+      "cases": [
+        {
+          "name": "Hand-derived changed-input golden",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required number",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 3,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\closing-equity-proceeds-checker.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\closing-equity-proceeds-checker\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\closing-equity-proceeds-checker.png",
+      "xlsxSha256": "5cf0ff0cf5f077762954aaa08fab2e966e944f1af6283d676266fe6af05301ae",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D8\",\"rows\":2,\"cols\":3,\"nonEmpty\":6,\"text\":6,\"maxTextLength\":15,\"preview\":[[\"equity Proceeds\",\"72\",\"USD millions\"],[\"deductions\",\"38\",\"USD millions\"]],\"previewAddress\":\"B7:D8\",\"previewRows\":2,\"previewCols\":3}",
+      "workbookSpecSha256": "c8ccda30f271ae53ebbb8433b79ec063057bc0b54161bc1a922ce5c0c87faba3"
+    },
+    {
+      "slug": "working-capital-true-up-checker",
+      "status": "pass",
+      "modelSha256": "0be4053104211fec63300ddf59b754b5536023c9e37b341ad1bcbbcf95b811dd",
+      "baselineOutputs": {
+        "closingAdjustment": 1,
+        "finalAdjustment": -1,
+        "settlementToSeller": -2
+      },
+      "changedInputCase": "Hand-derived changed-input golden",
+      "invalidInputCase": "Missing required number",
+      "cases": [
+        {
+          "name": "Hand-derived changed-input golden",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required number",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 3,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\working-capital-true-up-checker.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\working-capital-true-up-checker\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\working-capital-true-up-checker.png",
+      "xlsxSha256": "65e9394a3feab627c5a4113f467fa43b88c78fd71cf30d2aa60cb77de9e80039",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D9\",\"rows\":3,\"cols\":3,\"nonEmpty\":9,\"text\":9,\"maxTextLength\":20,\"preview\":[[\"closing Adjustment\",\"1\",\"USD millions\"],[\"final Adjustment\",\"-1\",\"USD millions\"],[\"settlement To Seller\",\"-2\",\"USD millions\"]],\"previewAddress\":\"B7:D9\",\"previewRows\":3,\"previewCols\":3}",
+      "workbookSpecSha256": "f8c524de1f2a1eaf1049415768c1fece16010d72f96be621c897ad5a0c3be6af"
+    },
+    {
+      "slug": "locked-box-leakage-checker",
+      "status": "pass",
+      "modelSha256": "1ce4b7956e4464054b307a9afffc9df2421aab8372aa0ca974219d9f9921bf7a",
+      "baselineOutputs": {
+        "leakage": 3,
+        "sellerPrice": 97
+      },
+      "changedInputCase": "Hand-derived changed-input golden",
+      "invalidInputCase": "Missing required number",
+      "cases": [
+        {
+          "name": "Hand-derived changed-input golden",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required number",
+          "kind": "refusal",
+          "status": "pass"
+        },
+        {
+          "name": "Refuse exclusions exceeding gross transfers",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 4,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\locked-box-leakage-checker.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\locked-box-leakage-checker\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\locked-box-leakage-checker.png",
+      "xlsxSha256": "6a9fe6ffaa8579fea5b8999965893ba549532617d39564b79b416589f9e5dd14",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D8\",\"rows\":2,\"cols\":3,\"nonEmpty\":6,\"text\":6,\"maxTextLength\":12,\"preview\":[[\"leakage\",\"3\",\"USD millions\"],[\"seller Price\",\"97\",\"USD millions\"]],\"previewAddress\":\"B7:D8\",\"previewRows\":2,\"previewCols\":3}",
+      "workbookSpecSha256": "b44fbb43100886a0242e410c9dcf3c10120f82dfa3291c65356b8b6bf9853cd0"
+    },
+    {
+      "slug": "escrow-release-checker",
+      "status": "pass",
+      "modelSha256": "185445e4c40f1c343dae76a1cefeb3292227fe0a202ffceb23d1d145b7ff5054",
+      "baselineOutputs": {
+        "remaining": 8,
+        "retained": 3,
+        "release": 5,
+        "unsecured": 0
+      },
+      "changedInputCase": "Hand-derived changed-input golden",
+      "invalidInputCase": "Missing required number",
+      "cases": [
+        {
+          "name": "Hand-derived changed-input golden",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required number",
+          "kind": "refusal",
+          "status": "pass"
+        },
+        {
+          "name": "Refuse escrow disbursements above deposit",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 5,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\escrow-release-checker.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\escrow-release-checker\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\escrow-release-checker.png",
+      "xlsxSha256": "b331ce7a9e941df9acc3b893cb3c0e874736d0ed2a047b6dcc572e56cc606d05",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D10\",\"rows\":4,\"cols\":3,\"nonEmpty\":12,\"text\":12,\"maxTextLength\":12,\"preview\":[[\"remaining\",\"8\",\"USD millions\"],[\"retained\",\"3\",\"USD millions\"],[\"release\",\"5\",\"USD millions\"],[\"unsecured\",\"0\",\"USD millions\"]],\"previewAddress\":\"B7:D10\",\"previewRows\":4,\"previewCols\":3}",
+      "workbookSpecSha256": "1effab37955c298f6f4fd75703f2f90ecd8aab02011a8b7f7d6555611861b750"
+    },
+    {
+      "slug": "earnout-payout-checker",
+      "status": "pass",
+      "modelSha256": "42ee3b1c528b41895cc2d6191fe257daea9e56fbfa26300f572ce34ab1741487",
+      "baselineOutputs": {
+        "achievement": 0.5,
+        "payout": 20
+      },
+      "changedInputCase": "Hand-derived changed-input golden",
+      "invalidInputCase": "Missing required number",
+      "cases": [
+        {
+          "name": "Hand-derived changed-input golden",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required number",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 7,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\earnout-payout-checker.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\earnout-payout-checker\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\earnout-payout-checker.png",
+      "xlsxSha256": "0b51a1ea9d5766c0ef9a125ade90fd7e62213d8f06b9d64270c84f3d178010d1",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D8\",\"rows\":2,\"cols\":3,\"nonEmpty\":6,\"text\":6,\"maxTextLength\":12,\"preview\":[[\"achievement\",\"0.5\",\"fraction\"],[\"payout\",\"20\",\"USD millions\"]],\"previewAddress\":\"B7:D8\",\"previewRows\":2,\"previewCols\":3}",
+      "workbookSpecSha256": "10a0a5f079e0d50df5db19d093e9a167d16be1387b6eb55eb1f59e086694be03"
+    },
+    {
+      "slug": "fixed-exchange-consideration-checker",
+      "status": "pass",
+      "modelSha256": "1eb147d5b8e8c184391ac8f11420da378547fa05badf5307e90cdca9fcc95caf",
+      "baselineOutputs": {
+        "issuedShares": 50,
+        "stockValue": 1000,
+        "cashValue": 200,
+        "totalValue": 1200
+      },
+      "changedInputCase": "Hand-derived changed-input golden",
+      "invalidInputCase": "Missing required number",
+      "cases": [
+        {
+          "name": "Hand-derived changed-input golden",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required number",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 4,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\fixed-exchange-consideration-checker.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\fixed-exchange-consideration-checker\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\fixed-exchange-consideration-checker.png",
+      "xlsxSha256": "eb2aba197c5fb3ae3007d09224fd54f7c1d315e440cb6d83df2e12431c0cde8c",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D10\",\"rows\":4,\"cols\":3,\"nonEmpty\":12,\"text\":12,\"maxTextLength\":14,\"preview\":[[\"issued Shares\",\"50\",\"million shares\"],[\"stock Value\",\"1000\",\"USD millions\"],[\"cash Value\",\"200\",\"USD millions\"],[\"total Value\",\"1200\",\"USD millions\"]],\"previewAddress\":\"B7:D10\",\"previewRows\":4,\"previewCols\":3}",
+      "workbookSpecSha256": "51edcac933923e4fc3135f667c087fd03bba29f3eabc0b46748ad6343d2f6675"
+    },
+    {
+      "slug": "cash-stock-election-checker",
+      "status": "pass",
+      "modelSha256": "701ccfde7a743e19cebc3fa7d0cd9939ad3abcc425c44504b803aef142d580ea",
+      "baselineOutputs": {
+        "cashFraction": 0.6,
+        "holderCash": 60,
+        "replacementShares": 2
+      },
+      "changedInputCase": "Hand-derived changed-input golden",
+      "invalidInputCase": "Missing required number",
+      "cases": [
+        {
+          "name": "Hand-derived changed-input golden",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required number",
+          "kind": "refusal",
+          "status": "pass"
+        },
+        {
+          "name": "Refuse holder shares above aggregate elections",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 7,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\cash-stock-election-checker.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\cash-stock-election-checker\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\cash-stock-election-checker.png",
+      "xlsxSha256": "1e0defcf3eb8d3eb362228585d5e4056c67c30f84bcea72c6b4e0642e67447d4",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D9\",\"rows\":3,\"cols\":3,\"nonEmpty\":9,\"text\":9,\"maxTextLength\":18,\"preview\":[[\"cash Fraction\",\"0.6\",\"fraction\"],[\"holder Cash\",\"60\",\"USD\"],[\"replacement Shares\",\"2\",\"acquirer shares\"]],\"previewAddress\":\"B7:D9\",\"previewRows\":3,\"previewCols\":3}",
+      "workbookSpecSha256": "147fd20c3c57955c132cb5c0b9d6f8598b650650f567e3b10569ca23f6e95b5d"
+    },
+    {
+      "slug": "deal-ticking-fee-checker",
+      "status": "pass",
+      "modelSha256": "bb50b37094e8d2e9751c526368ceab21669efdc673a8fd982e4c201c7aab021a",
+      "baselineOutputs": {
+        "tickingAmount": 3,
+        "totalConsideration": 103
+      },
+      "changedInputCase": "Hand-derived changed-input golden",
+      "invalidInputCase": "Missing required number",
+      "cases": [
+        {
+          "name": "Hand-derived changed-input golden",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required number",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 2,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\deal-ticking-fee-checker.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\deal-ticking-fee-checker\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\deal-ticking-fee-checker.png",
+      "xlsxSha256": "5f9a00e9560a219e9da9bbcb300a7197e4b5de6e1df63be01d17aa8980ac2ee2",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D8\",\"rows\":2,\"cols\":3,\"nonEmpty\":6,\"text\":6,\"maxTextLength\":19,\"preview\":[[\"ticking Amount\",\"3\",\"USD millions\"],[\"total Consideration\",\"103\",\"USD millions\"]],\"previewAddress\":\"B7:D8\",\"previewRows\":2,\"previewCols\":3}",
+      "workbookSpecSha256": "5556031a961e5f51c2d236262d3e1120b5c661b2d7e47773df012c4519bbf667"
+    },
+    {
+      "slug": "debt-issue-proceeds-checker",
+      "status": "pass",
+      "modelSha256": "291abdd7a8ca60015d4b03954b7a116f2d44378b43104650e475f860761a086e",
+      "baselineOutputs": {
+        "grossProceeds": 98,
+        "issueDiscount": 2,
+        "netProceeds": 97
+      },
+      "changedInputCase": "Hand-derived changed-input golden",
+      "invalidInputCase": "Missing required number",
+      "cases": [
+        {
+          "name": "Hand-derived changed-input golden",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required number",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 3,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\debt-issue-proceeds-checker.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\debt-issue-proceeds-checker\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\debt-issue-proceeds-checker.png",
+      "xlsxSha256": "bf7fbd5df3d6ed7e0ac53c8b5106f63236625b18547e1c880947498e652665b8",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D9\",\"rows\":3,\"cols\":3,\"nonEmpty\":9,\"text\":9,\"maxTextLength\":14,\"preview\":[[\"gross Proceeds\",\"98\",\"USD millions\"],[\"issue Discount\",\"2\",\"USD millions\"],[\"net Proceeds\",\"97\",\"USD millions\"]],\"previewAddress\":\"B7:D9\",\"previewRows\":3,\"previewCols\":3}",
+      "workbookSpecSha256": "bc5c74f266ec6770664ba96e300693f9d37d5ff7786d7db441b43d82f259c639"
+    },
+    {
+      "slug": "deal-funding-gap-checker",
+      "status": "pass",
+      "modelSha256": "d5976547039bc7d2a2054821821478683aae072cea1c6ffa53c7117d835a7399",
+      "baselineOutputs": {
+        "totalUses": 130,
+        "totalSources": 120,
+        "fundingGap": 10
+      },
+      "changedInputCase": "Hand-derived changed-input golden",
+      "invalidInputCase": "Missing required number",
+      "cases": [
+        {
+          "name": "Hand-derived changed-input golden",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required number",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 3,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\deal-funding-gap-checker.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\deal-funding-gap-checker\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\deal-funding-gap-checker.png",
+      "xlsxSha256": "10f248c9dc21b1b6efc05e3cbcb4907f2f265f06babf36d4c9a0cdeb209a9354",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D9\",\"rows\":3,\"cols\":3,\"nonEmpty\":9,\"text\":9,\"maxTextLength\":13,\"preview\":[[\"total Uses\",\"130\",\"USD millions\"],[\"total Sources\",\"120\",\"USD millions\"],[\"funding Gap\",\"10\",\"USD millions\"]],\"previewAddress\":\"B7:D9\",\"previewRows\":3,\"previewCols\":3}",
+      "workbookSpecSha256": "f1e494e53aa4a8b1b53b650c9948fc10a311eb344e9b29115f970ed861f16d52"
+    },
+    {
+      "slug": "adviser-fee-tier-checker",
+      "status": "pass",
+      "modelSha256": "f50e239cd7da42c96f0428c050a609c24877975943aa0a3316476c13f8c1de5b",
+      "baselineOutputs": {
+        "grossFee": 2.5,
+        "creditUsed": 0.5,
+        "invoice": 2
+      },
+      "changedInputCase": "Hand-derived changed-input golden",
+      "invalidInputCase": "Missing required number",
+      "cases": [
+        {
+          "name": "Hand-derived changed-input golden",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required number",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 9,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\adviser-fee-tier-checker.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\adviser-fee-tier-checker\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\adviser-fee-tier-checker.png",
+      "xlsxSha256": "9996ffd26d806118499d04d44823aa67bb6d4b5e0eabffaab6a5b70466ce342c",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D9\",\"rows\":3,\"cols\":3,\"nonEmpty\":9,\"text\":9,\"maxTextLength\":12,\"preview\":[[\"gross Fee\",\"2.5\",\"USD millions\"],[\"credit Used\",\"0.5\",\"USD millions\"],[\"invoice\",\"2\",\"USD millions\"]],\"previewAddress\":\"B7:D9\",\"previewRows\":3,\"previewCols\":3}",
+      "workbookSpecSha256": "b88a459ce0cba29f8d49e2d67bba9604bfd397798572cfc5fcc0831c4dbc201f"
+    },
+    {
+      "slug": "rollover-equity-ownership-checker",
+      "status": "pass",
+      "modelSha256": "c33795019b03772cab775bd227bd82dbc9e7cdb72d4511b165a46d42f8e12978",
+      "baselineOutputs": {
+        "rolledEquity": 10,
+        "sellerCash": 30,
+        "totalEquity": 40,
+        "sellerOwnership": 0.25
+      },
+      "changedInputCase": "Hand-derived changed-input golden",
+      "invalidInputCase": "Missing required number",
+      "cases": [
+        {
+          "name": "Hand-derived changed-input golden",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required number",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 4,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\rollover-equity-ownership-checker.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\rollover-equity-ownership-checker\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\rollover-equity-ownership-checker.png",
+      "xlsxSha256": "cbac14834edb5d5dc7c28b4b6ee0e801be06d969420cf6312096e7adadaac05d",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D10\",\"rows\":4,\"cols\":3,\"nonEmpty\":12,\"text\":12,\"maxTextLength\":16,\"preview\":[[\"rolled Equity\",\"10\",\"USD millions\"],[\"seller Cash\",\"30\",\"USD millions\"],[\"total Equity\",\"40\",\"USD millions\"],[\"seller Ownership\",\"0.25\",\"fraction\"]],\"previewAddress\":\"B7:D10\",\"previewRows\":4,\"previewCols\":3}",
+      "workbookSpecSha256": "7d6bbf1b832bec7ee978cd19e03eb0ca165412759e00e4a8fdcbc18c20ab8af9"
+    },
+    {
+      "slug": "deal-ebitda-addback-checker",
+      "status": "pass",
+      "modelSha256": "72bb5f232398be7885338eb14ec20b18d3042ef65722e96d1bcee2d68f62d01f",
+      "baselineOutputs": {
+        "allowedCapped": 20,
+        "adjustedEbitda": 130,
+        "rejected": 20
+      },
+      "changedInputCase": "Hand-derived changed-input golden",
+      "invalidInputCase": "Missing required number",
+      "cases": [
+        {
+          "name": "Hand-derived changed-input golden",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required number",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 4,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\deal-ebitda-addback-checker.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\deal-ebitda-addback-checker\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\deal-ebitda-addback-checker.png",
+      "xlsxSha256": "a1e310d6ce81cc5a2d2e2ecebd138a2ded1ab2514d033b57b6f377d68da5c58b",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D9\",\"rows\":3,\"cols\":3,\"nonEmpty\":9,\"text\":9,\"maxTextLength\":15,\"preview\":[[\"allowed Capped\",\"20\",\"USD millions\"],[\"adjusted Ebitda\",\"130\",\"USD millions\"],[\"rejected\",\"20\",\"USD millions\"]],\"previewAddress\":\"B7:D9\",\"previewRows\":3,\"previewCols\":3}",
+      "workbookSpecSha256": "5f32ad195a7b70daf34de36d823d7775ae7bf1960f40329a20ab472fb4681f47"
+    },
+    {
+      "slug": "net-leverage-covenant-checker",
+      "status": "pass",
+      "modelSha256": "e4d76fc8b3c408340d5c2f65100dd42c0a8b67f1ae4dfc0e95d13921c434796e",
+      "baselineOutputs": {
+        "netDebt": 80,
+        "leverage": 4,
+        "permittedNetDebt": 100,
+        "headroom": 20
+      },
+      "changedInputCase": "Hand-derived changed-input golden",
+      "invalidInputCase": "Missing required number",
+      "cases": [
+        {
+          "name": "Hand-derived changed-input golden",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required number",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 5,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\net-leverage-covenant-checker.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\net-leverage-covenant-checker\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\net-leverage-covenant-checker.png",
+      "xlsxSha256": "9bc7de0d85334d5109948f6bc91393bdc675809357e2b00274920a15d983d7c9",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D10\",\"rows\":4,\"cols\":3,\"nonEmpty\":12,\"text\":12,\"maxTextLength\":18,\"preview\":[[\"net Debt\",\"80\",\"USD millions\"],[\"leverage\",\"4\",\"multiple\"],[\"permitted Net Debt\",\"100\",\"USD millions\"],[\"headroom\",\"20\",\"USD millions\"]],\"previewAddress\":\"B7:D10\",\"previewRows\":4,\"previewCols\":3}",
+      "workbookSpecSha256": "31b24299dcf663f6d1f66befba956c16d5f477b9af93bbe9e4241cbdb72ca8d9"
+    },
+    {
+      "slug": "equity-cure-scenario-checker",
+      "status": "pass",
+      "modelSha256": "0e160918a007712905229caa0bc5252a4a2dad215034aa9bb639b774b577c151",
+      "baselineOutputs": {
+        "requiredCure": 5,
+        "allowedCure": 5,
+        "curedRatio": 4,
+        "residualGap": 0
+      },
+      "changedInputCase": "Hand-derived changed-input golden",
+      "invalidInputCase": "Missing required number",
+      "cases": [
+        {
+          "name": "Hand-derived changed-input golden",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required number",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 7,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\equity-cure-scenario-checker.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\equity-cure-scenario-checker\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\equity-cure-scenario-checker.png",
+      "xlsxSha256": "3930b4d79e82897ea3c5577471e8d31ea753141e0d7da8c35385b28ea93a8b18",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D10\",\"rows\":4,\"cols\":3,\"nonEmpty\":12,\"text\":12,\"maxTextLength\":13,\"preview\":[[\"required Cure\",\"5\",\"USD millions\"],[\"allowed Cure\",\"5\",\"USD millions\"],[\"cured Ratio\",\"4\",\"multiple\"],[\"residual Gap\",\"0\",\"USD millions\"]],\"previewAddress\":\"B7:D10\",\"previewRows\":4,\"previewCols\":3}",
+      "workbookSpecSha256": "4edf601b9c1a07d5656d6721aecd841e41aba082812c3b0616c7d97a8cc866d1"
+    },
+    {
+      "slug": "debt-cash-sweep-checker",
+      "status": "pass",
+      "modelSha256": "835c342713889adf1d600a96a7c1cf7a8b1eb28e730cb8133024b9d6d56dcb8c",
+      "baselineOutputs": {
+        "actualSweep": 7.5,
+        "endingCash": 22.5,
+        "endingDebt": 92.5,
+        "unpaidSweep": 0
+      },
+      "changedInputCase": "Hand-derived changed-input golden",
+      "invalidInputCase": "Missing required number",
+      "cases": [
+        {
+          "name": "Hand-derived changed-input golden",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required number",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 7,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\debt-cash-sweep-checker.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\debt-cash-sweep-checker\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\debt-cash-sweep-checker.png",
+      "xlsxSha256": "fc353da38c8ffb40145de473524516f989e495092f1a36ad3a45fc1384ec6163",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D10\",\"rows\":4,\"cols\":3,\"nonEmpty\":12,\"text\":12,\"maxTextLength\":12,\"preview\":[[\"actual Sweep\",\"7.5\",\"USD millions\"],[\"ending Cash\",\"22.5\",\"USD millions\"],[\"ending Debt\",\"92.5\",\"USD millions\"],[\"unpaid Sweep\",\"0\",\"USD millions\"]],\"previewAddress\":\"B7:D10\",\"previewRows\":4,\"previewCols\":3}",
+      "workbookSpecSha256": "70a4784ea69f6f7583172791286e167b37715075e10634783d791e52a661a632"
+    },
+    {
+      "slug": "cash-and-pik-interest-checker",
+      "status": "pass",
+      "modelSha256": "d481a5bcc1f56663602bb4e49520fe8e52859ee195a748daf70d14afe3ba5aa6",
+      "baselineOutputs": {
+        "cashInterest": 8,
+        "pikInterest": 4,
+        "endingPrincipal": 104,
+        "totalInterest": 12
+      },
+      "changedInputCase": "Hand-derived changed-input golden",
+      "invalidInputCase": "Missing required number",
+      "cases": [
+        {
+          "name": "Hand-derived changed-input golden",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required number",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 4,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\cash-and-pik-interest-checker.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\cash-and-pik-interest-checker\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\cash-and-pik-interest-checker.png",
+      "xlsxSha256": "c878bdb71db7b804b084c2b1b05d1924db4ec35dc6ba6464973c742b34dd22de",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D10\",\"rows\":4,\"cols\":3,\"nonEmpty\":12,\"text\":12,\"maxTextLength\":16,\"preview\":[[\"cash Interest\",\"8\",\"USD millions\"],[\"pik Interest\",\"4\",\"USD millions\"],[\"ending Principal\",\"104\",\"USD millions\"],[\"total Interest\",\"12\",\"USD millions\"]],\"previewAddress\":\"B7:D10\",\"previewRows\":4,\"previewCols\":3}",
+      "workbookSpecSha256": "54d074771b58f3154b76dd24cc73afb2fc043a3c82bfc8ccd4d73cd88f219bf5"
+    },
+    {
+      "slug": "refinancing-closing-cost-checker",
+      "status": "pass",
+      "modelSha256": "5d0f7f6cebfff33c99638a40fffcccaf5de122c014e995bf448825bd90fba22d",
+      "baselineOutputs": {
+        "premium": 2,
+        "transactionCost": 5,
+        "closingNeed": 105,
+        "fundingGap": 0
+      },
+      "changedInputCase": "Hand-derived changed-input golden",
+      "invalidInputCase": "Missing required number",
+      "cases": [
+        {
+          "name": "Hand-derived changed-input golden",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required number",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 4,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\refinancing-closing-cost-checker.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\refinancing-closing-cost-checker\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\refinancing-closing-cost-checker.png",
+      "xlsxSha256": "33fec880ef0876b865e639023546210563a0f79cd8133f3fd511fbedb1e75789",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D10\",\"rows\":4,\"cols\":3,\"nonEmpty\":12,\"text\":12,\"maxTextLength\":16,\"preview\":[[\"premium\",\"2\",\"USD millions\"],[\"transaction Cost\",\"5\",\"USD millions\"],[\"closing Need\",\"105\",\"USD millions\"],[\"funding Gap\",\"0\",\"USD millions\"]],\"previewAddress\":\"B7:D10\",\"previewRows\":4,\"previewCols\":3}",
+      "workbookSpecSha256": "afc84320c609e601448c8c41efa0c2940dba655ad747c6849a7c966795db886d"
+    },
+    {
+      "slug": "dividend-recap-timing-checker",
+      "status": "pass",
+      "modelSha256": "1ad4b1816ad2b3e1299da1d5f132a676a35db598b69629442b2ee72fd94d85bb",
+      "baselineOutputs": {
+        "periodicIrr": 0.09999999999999998,
+        "moneyMultiple": 1.2,
+        "netCashGain": 20
+      },
+      "changedInputCase": "Hand-derived changed-input golden",
+      "invalidInputCase": "Missing required number",
+      "cases": [
+        {
+          "name": "Hand-derived changed-input golden",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required number",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 5,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\dividend-recap-timing-checker.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\dividend-recap-timing-checker\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\dividend-recap-timing-checker.png",
+      "xlsxSha256": "4a519da56bb662af4e50981b3853f82906fcdddcb8e62deb43e76ac32f69cbe9",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D9\",\"rows\":3,\"cols\":3,\"nonEmpty\":9,\"text\":9,\"maxTextLength\":14,\"preview\":[[\"periodic Irr\",\"0.1\",\"annual decimal\"],[\"money Multiple\",\"1.2\",\"multiple\"],[\"net Cash Gain\",\"20\",\"USD millions\"]],\"previewAddress\":\"B7:D9\",\"previewRows\":3,\"previewCols\":3}",
+      "workbookSpecSha256": "2f16fa2d91a03a7dc2483933d86a109f9f2d73dfc36e8ff73b5f2a17ed0a47eb"
+    },
+    {
+      "slug": "management-equity-hurdle-checker",
+      "status": "pass",
+      "modelSha256": "8ff14b76060c6e2725e46998df00517339c1cae9c554d5274df1e955514b0c3c",
+      "baselineOutputs": {
+        "managementPayout": 4.5,
+        "otherHolders": 155.5,
+        "hurdleShortfall": 0
+      },
+      "changedInputCase": "Hand-derived changed-input golden",
+      "invalidInputCase": "Missing required number",
+      "cases": [
+        {
+          "name": "Hand-derived changed-input golden",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required number",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 6,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\management-equity-hurdle-checker.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\management-equity-hurdle-checker\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\management-equity-hurdle-checker.png",
+      "xlsxSha256": "69dbb39342b46050f189f3e95433a12f9ca231dc077189367b82dac7e95bd44d",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D9\",\"rows\":3,\"cols\":3,\"nonEmpty\":9,\"text\":9,\"maxTextLength\":17,\"preview\":[[\"management Payout\",\"4.5\",\"USD millions\"],[\"other Holders\",\"155.5\",\"USD millions\"],[\"hurdle Shortfall\",\"0\",\"USD millions\"]],\"previewAddress\":\"B7:D9\",\"previewRows\":3,\"previewCols\":3}",
+      "workbookSpecSha256": "7419477a50181a09ae2e2f13ed9f40c44320b6493ea8eff332073bc61897644a"
+    },
+    {
+      "slug": "unfunded-commitment-checker",
+      "status": "pass",
+      "modelSha256": "4233506e70e294ff40c227b9b06f313ad60b8a7d55fcdee9be57cd14bd6e8200",
+      "baselineOutputs": {
+        "unfunded": 43
+      },
+      "changedInputCase": "Hand-derived changed-input golden",
+      "invalidInputCase": "Missing required number",
+      "cases": [
+        {
+          "name": "Hand-derived changed-input golden",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required number",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 3,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\unfunded-commitment-checker.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\unfunded-commitment-checker\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\unfunded-commitment-checker.png",
+      "xlsxSha256": "b3833ed5b3f6b81e1a629ce464680aff19aa503eb2ec834644f9bb5e2352a611",
+      "inspection": "{\"kind\":\"notice\",\"message\":\"No records matched the requested kinds.\"}",
+      "workbookSpecSha256": "98796fa063cd1135509c71f0b6f97a53c9a6adcdae208155bb5053ee343ff635"
+    },
+    {
+      "slug": "capital-call-allocation-checker",
+      "status": "pass",
+      "modelSha256": "f17e4b3fbdfe82172093a4cadac489d6318eae278c8c81a6323d984ed50fd368",
+      "baselineOutputs": {
+        "subjectFraction": 0.2,
+        "allocatedCall": 10,
+        "collectibleCall": 10,
+        "allocationShortfall": 0
+      },
+      "changedInputCase": "Hand-derived changed-input golden",
+      "invalidInputCase": "Missing required number",
+      "cases": [
+        {
+          "name": "Hand-derived changed-input golden",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required number",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 5,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\capital-call-allocation-checker.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\capital-call-allocation-checker\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\capital-call-allocation-checker.png",
+      "xlsxSha256": "f2f3ecf76d3c436e17ee3c69f5400126aee366f6dcf25e6228b088468a93fbd6",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D10\",\"rows\":4,\"cols\":3,\"nonEmpty\":12,\"text\":12,\"maxTextLength\":20,\"preview\":[[\"subject Fraction\",\"0.2\",\"fraction\"],[\"allocated Call\",\"10\",\"USD millions\"],[\"collectible Call\",\"10\",\"USD millions\"],[\"allocation Shortfall\",\"0\",\"USD millions\"]],\"previewAddress\":\"B7:D10\",\"previewRows\":4,\"previewCols\":3}",
+      "workbookSpecSha256": "93b23de6eef928969e71ee60c74ff401eef9ae2c357f73e52ba1084dc65cdcbd"
+    },
+    {
+      "slug": "management-fee-stepdown-checker",
+      "status": "pass",
+      "modelSha256": "e2cff75d6cbc06ee65c757bee060dc6bc1ff71c86e1f7987f0ec19de77314645",
+      "baselineOutputs": {
+        "beforeFee": 0.5,
+        "afterFee": 0.22499999999999998,
+        "feeDifference": 0.275
+      },
+      "changedInputCase": "Hand-derived changed-input golden",
+      "invalidInputCase": "Missing required number",
+      "cases": [
+        {
+          "name": "Hand-derived changed-input golden",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required number",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 3,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\management-fee-stepdown-checker.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\management-fee-stepdown-checker\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\management-fee-stepdown-checker.png",
+      "xlsxSha256": "de001cc3bcb35e60f79354db5d7ae934900fb44d13165be5be8d4e900eb801a9",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D9\",\"rows\":3,\"cols\":3,\"nonEmpty\":9,\"text\":9,\"maxTextLength\":19,\"preview\":[[\"before Fee\",\"0.5\",\"USD millions\"],[\"after Fee\",\"0.22499999999999998\",\"USD millions\"],[\"fee Difference\",\"0.275\",\"USD millions\"]],\"previewAddress\":\"B7:D9\",\"previewRows\":3,\"previewCols\":3}",
+      "workbookSpecSha256": "7f27b3311461d44c479583f54664b6d6a0b54279cff16064a2eabd9934ddfb81"
+    },
+    {
+      "slug": "transaction-fee-offset-checker",
+      "status": "pass",
+      "modelSha256": "cbda3bc69010842814d903ac22a885928c0db904300b7545793d8d66c1da6add",
+      "baselineOutputs": {
+        "usedOffset": 8,
+        "netManagementFee": 2,
+        "endingCarryforward": 0
+      },
+      "changedInputCase": "Hand-derived changed-input golden",
+      "invalidInputCase": "Missing required number",
+      "cases": [
+        {
+          "name": "Hand-derived changed-input golden",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required number",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 5,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\transaction-fee-offset-checker.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\transaction-fee-offset-checker\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\transaction-fee-offset-checker.png",
+      "xlsxSha256": "92c2e40a961a0fa132ace17394b74629bd002bebdafb064cc09bc409a1a38947",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D9\",\"rows\":3,\"cols\":3,\"nonEmpty\":9,\"text\":9,\"maxTextLength\":19,\"preview\":[[\"used Offset\",\"8\",\"USD thousands\"],[\"net Management Fee\",\"2\",\"USD thousands\"],[\"ending Carryforward\",\"0\",\"USD thousands\"]],\"previewAddress\":\"B7:D9\",\"previewRows\":3,\"previewCols\":3}",
+      "workbookSpecSha256": "ba598d47ba3931276a0a6841bddf1cd3546476d6c0ad221535b4e4cd670a525f"
+    },
+    {
+      "slug": "preferred-return-accrual-checker",
+      "status": "pass",
+      "modelSha256": "dd9213523e02eadc29c916d65d67d53624174d188b52c62db07e12603d705b5b",
+      "baselineOutputs": {
+        "periodPreference": 16,
+        "unpaidPreference": 21,
+        "firstTierObligation": 121
+      },
+      "changedInputCase": "Hand-derived changed-input golden",
+      "invalidInputCase": "Missing required number",
+      "cases": [
+        {
+          "name": "Hand-derived changed-input golden",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required number",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 3,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\preferred-return-accrual-checker.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\preferred-return-accrual-checker\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\preferred-return-accrual-checker.png",
+      "xlsxSha256": "2d848f038f4336f55ea8a5e6b9fe437e4118779bdff64578d170102595ee6fe9",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D9\",\"rows\":3,\"cols\":3,\"nonEmpty\":9,\"text\":9,\"maxTextLength\":21,\"preview\":[[\"period Preference\",\"16\",\"USD millions\"],[\"unpaid Preference\",\"21\",\"USD millions\"],[\"first Tier Obligation\",\"121\",\"USD millions\"]],\"previewAddress\":\"B7:D9\",\"previewRows\":3,\"previewCols\":3}",
+      "workbookSpecSha256": "2d427a294c113a3ef0fbd9e9dac9057c46c7b18c1b53010bb53d03c21479162d"
+    },
+    {
+      "slug": "no-catchup-waterfall-checker",
+      "status": "pass",
+      "modelSha256": "9d3c6571d6747a0c0a28b79ed03f3fe61b71b98f535920953e66fab031b2ae86",
+      "baselineOutputs": {
+        "capitalPaid": 100,
+        "preferencePaid": 20,
+        "gpCarry": 6,
+        "lpCash": 144,
+        "capitalShortfall": 0,
+        "preferenceShortfall": 0
+      },
+      "changedInputCase": "Hand-derived changed-input golden",
+      "invalidInputCase": "Missing required number",
+      "cases": [
+        {
+          "name": "Hand-derived changed-input golden",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required number",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 9,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\no-catchup-waterfall-checker.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\no-catchup-waterfall-checker\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\no-catchup-waterfall-checker.png",
+      "xlsxSha256": "c3d2e0222a60b16593c5528b8662f06934fbcacf75fb0578535e2e4c834261bd",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D12\",\"rows\":6,\"cols\":3,\"nonEmpty\":18,\"text\":18,\"maxTextLength\":20,\"preview\":[[\"capital Paid\",\"100\",\"USD millions\"],[\"preference Paid\",\"20\",\"USD millions\"],[\"gp Carry\",\"6\",\"USD millions\"],[\"lp Cash\",\"144\",\"USD millions\"],[\"capital Shortfall\",\"0\",\"USD millions\"],[\"preference Shortfall\",\"0\",\"USD millions\"]],\"previewAddress\":\"B7:D12\",\"previewRows\":6,\"previewCols\":3}",
+      "workbookSpecSha256": "e4cf3377863022569c4ea47f5e190508040cecbcc5f92cb3435ad23f97ddc90e"
+    },
+    {
+      "slug": "gp-clawback-exposure-checker",
+      "status": "pass",
+      "modelSha256": "c6f481c0b82a8dbaf1ed20cf660c3416d08636800dfe3dae0f54694a0c9c4721",
+      "baselineOutputs": {
+        "outstandingClawback": 5,
+        "collateralCovered": 4,
+        "unsecuredExposure": 1
+      },
+      "changedInputCase": "Hand-derived changed-input golden",
+      "invalidInputCase": "Missing required number",
+      "cases": [
+        {
+          "name": "Hand-derived changed-input golden",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required number",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 5,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\gp-clawback-exposure-checker.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\gp-clawback-exposure-checker\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\gp-clawback-exposure-checker.png",
+      "xlsxSha256": "02a941602f257b79a6f1627c715ffa3f6bbc2f087f452cfa597f09bf38753e41",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D9\",\"rows\":3,\"cols\":3,\"nonEmpty\":9,\"text\":9,\"maxTextLength\":20,\"preview\":[[\"outstanding Clawback\",\"5\",\"USD millions\"],[\"collateral Covered\",\"4\",\"USD millions\"],[\"unsecured Exposure\",\"1\",\"USD millions\"]],\"previewAddress\":\"B7:D9\",\"previewRows\":3,\"previewCols\":3}",
+      "workbookSpecSha256": "d78b1ca0033cd234c5d7ff350b0bb726c10ff3fd601af1c85a2d96400d503146"
+    },
+    {
+      "slug": "fund-recycling-capacity-checker",
+      "status": "pass",
+      "modelSha256": "c5d8676608125e3e889c3c31e1c409ee2efd38b2b9107a4d05898be3e53fde10",
+      "baselineOutputs": {
+        "remainingCapacity": 8,
+        "reusableAmount": 8,
+        "excludedByCap": 7,
+        "priorOveruse": 0
+      },
+      "changedInputCase": "Hand-derived changed-input golden",
+      "invalidInputCase": "Missing required number",
+      "cases": [
+        {
+          "name": "Hand-derived changed-input golden",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required number",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 7,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\fund-recycling-capacity-checker.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\fund-recycling-capacity-checker\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\fund-recycling-capacity-checker.png",
+      "xlsxSha256": "342d33312a8b9b66dff26c455b02093a430bb2012b1a94fd6348a90f574d586a",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D10\",\"rows\":4,\"cols\":3,\"nonEmpty\":12,\"text\":12,\"maxTextLength\":18,\"preview\":[[\"remaining Capacity\",\"8\",\"USD millions\"],[\"reusable Amount\",\"8\",\"USD millions\"],[\"excluded By Cap\",\"7\",\"USD millions\"],[\"prior Overuse\",\"0\",\"USD millions\"]],\"previewAddress\":\"B7:D10\",\"previewRows\":4,\"previewCols\":3}",
+      "workbookSpecSha256": "de85e85502a72560103f1426f677bfca4f894c9e0598a7385cd37f0c3bfec597"
+    },
+    {
+      "slug": "secondary-nav-price-checker",
+      "status": "pass",
+      "modelSha256": "a6fc12fd3817db3c923e14a911840a7de59c149273ba002ac07196a7268d4934",
+      "baselineOutputs": {
+        "quotedPrice": 80,
+        "closingPayment": 75,
+        "grossCashBudget": 105
+      },
+      "changedInputCase": "Hand-derived changed-input golden",
+      "invalidInputCase": "Missing required number",
+      "cases": [
+        {
+          "name": "Hand-derived changed-input golden",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required number",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 3,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\secondary-nav-price-checker.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\secondary-nav-price-checker\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\secondary-nav-price-checker.png",
+      "xlsxSha256": "38cbb87a60c8782361721edc023bd4501e2a2e3bf7ff4de0d3cefa460e2f510f",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D9\",\"rows\":3,\"cols\":3,\"nonEmpty\":9,\"text\":9,\"maxTextLength\":17,\"preview\":[[\"quoted Price\",\"80\",\"USD millions\"],[\"closing Payment\",\"75\",\"USD millions\"],[\"gross Cash Budget\",\"105\",\"USD millions\"]],\"previewAddress\":\"B7:D9\",\"previewRows\":3,\"previewCols\":3}",
+      "workbookSpecSha256": "f3d64276275e3b994e245175ded1dfc62f804271458288c005fdcbb07e83e84b"
+    },
+    {
+      "slug": "subscription-line-timing-checker",
+      "status": "pass",
+      "modelSha256": "da353f7bb744e4e109aead890979b5932c4b91e68b3f43a4b29ae8e9a204624f",
+      "baselineOutputs": {
+        "unbridgedIrr": 0.09999999999999998,
+        "bridgeCost": 5,
+        "delayedCall": 105,
+        "bridgedLpIrr": 0.1523809523809524,
+        "unbridgedMultiple": 1.21,
+        "bridgedMultiple": 1.1523809523809523
+      },
+      "changedInputCase": "Hand-derived changed-input golden",
+      "invalidInputCase": "Missing required number",
+      "cases": [
+        {
+          "name": "Hand-derived changed-input golden",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required number",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 8,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\subscription-line-timing-checker.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\subscription-line-timing-checker\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\subscription-line-timing-checker.png",
+      "xlsxSha256": "3ef511465b0ea4c2217cc7e7c5f2f29c00c43bd443c6702fd2a1387c01edb678",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D12\",\"rows\":6,\"cols\":3,\"nonEmpty\":18,\"text\":18,\"maxTextLength\":18,\"preview\":[[\"unbridged Irr\",\"0.1\",\"annual decimal\"],[\"bridge Cost\",\"5\",\"USD millions\"],[\"delayed Call\",\"105\",\"USD millions\"],[\"bridged Lp Irr\",\"0.1523809523913307\",\"annual decimal\"],[\"unbridged Multiple\",\"1.21\",\"multiple\"],[\"bridged Multiple\",\"1.1523809523809523\",\"multiple\"]],\"previewAddress\":\"B7:D12\",\"previewRows\":6,\"previewCols\":3}",
+      "workbookSpecSha256": "7750f54c79a7d8fe234a263310edd9cf0008d309976324f455c465200ea85bd7"
+    }
+  ]
+}

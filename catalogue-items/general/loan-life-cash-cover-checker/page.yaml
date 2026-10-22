@@ -1,0 +1,78 @@
+new_slug: loan-life-cash-cover-checker
+name: Loan life cash cover checker
+headline: Loan life cash cover checker
+summary: A discounted loan-life cash cover and cushion
+job: money-and-investing
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: A discounted loan-life cash cover and cushion. Share three annual qualifying debt-service cash amounts, current loan balance and agreement-defined loan-life discount rate.
+explain: |-
+  A discounted loan-life cash cover and cushion.
+
+  Project loan life coverage. Illustrative figures only in USD unless labelled otherwise. A focused schedule using explicit period, rate and timing conventions; not a full financing model or an approval decision.
+when:
+  - You need a discounted loan-life cash cover and cushion.
+  - You work on project loan life coverage and need traceable calculations.
+  - A reviewer needs to trace the result back to inputs and assumptions.
+you_give:
+  - Three annual qualifying debt-service cash amounts, current loan balance and agreement-defined loan-life discount rate.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - A discounted loan-life cash cover and cushion.
+  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: 1. Map dated sources, contractual definitions, period boundaries, currency, scale and source gaps before calculating
+    text: Map dated sources, contractual definitions, period boundaries, currency, scale and source gaps before calculating.
+  - title: 2. Confirm the remaining loan horizon and remove cash beyond maturity or excluded by the agreement
+    text: Confirm the remaining loan horizon and remove cash beyond maturity or excluded by the agreement.
+  - title: 3. Discount end-year qualifying cash at the supplied financing-definition rate; keep valuation WACC and equity returns out of the calculation
+    text: Discount end-year qualifying cash at the supplied financing-definition rate; keep valuation WACC and equity returns out of the calculation.
+  - title: 4. Divide present qualifying cash by opening loan balance and show the signed currency cushion over debt
+    text: Divide present qualifying cash by opening loan balance and show the signed currency cushion over debt.
+output_shape: |-
+  A discounted loan-life cash cover and cushion.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: Actual records, contractual terms and scenarios remain distinguishable.
+judge:
+  - Actual records, contractual terms and scenarios remain distinguishable.
+  - Missing evidence blocks the affected line; no default zero or unexplained balancing plug.
+  - Loan balance must be positive and all included cash falls inside the remaining debt tenor.
+  - Rate and cash frequency match; no automatic reserve balance addition without contractual permission.
+test:
+  - Run the included baseline and changed-input fixtures, then compare with the stated expected results.
+  - Remove a required input and confirm the affected calculation refuses to invent a zero.
+  - Recalculate the workbook after changing an input and inspect the saved output.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: Node.js 20 or later
+      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

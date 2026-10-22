@@ -1,0 +1,76 @@
+new_slug: capital-call-allocation-checker
+name: Capital call allocation checker
+headline: Capital call allocation checker
+summary: Allocate one call over eligible commitments and expose an LP remaining-commitment limit.
+job: money-and-investing
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: Subject LP obligation, collectible amount and allocation shortfall. Share approved call budget, subject LP eligible commitment, other eligible commitments, actual subject unfunded balance and excuse/default rules.
+explain: |-
+  Subject LP obligation, collectible amount and allocation shortfall.
+
+  Private fund calls. Illustrative figures only. 20 of100 eligible commitments gets10 of a50 call. Budget100 allocates20 but remaining commitment15 leaves5 for review.
+when:
+  - You need subject LP obligation, collectible amount and allocation shortfall.
+  - You work on private fund calls and need traceable calculations.
+  - A reviewer needs to trace the result back to inputs and assumptions.
+you_give:
+  - Approved call budget, subject LP eligible commitment, other eligible commitments, actual subject unfunded balance and excuse/default rules.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - Subject LP obligation, collectible amount and allocation shortfall.
+  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: 1. Confirm the eligible denominator after actual excuse and default elections; do not use total fund commitments blindly
+    text: Confirm the eligible denominator after actual excuse and default elections; do not use total fund commitments blindly.
+  - title: 2. Allocate the approved call budget in proportion to the subject eligible commitment
+    text: Allocate the approved call budget in proportion to the subject eligible commitment.
+  - title: 3. Compare allocated amount with its actual remaining callable balance; show any shortfall for fund counsel rather than silently reallocating it
+    text: Compare allocated amount with its actual remaining callable balance; show any shortfall for fund counsel rather than silently reallocating it.
+output_shape: |-
+  Subject LP obligation, collectible amount and allocation shortfall.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: Eligible commitments share the same transaction and allocation rules.
+judge:
+  - Eligible commitments share the same transaction and allocation rules.
+  - A capped collectible amount does not waive or reallocate the unfilled obligation.
+  - Trace each input to its dated signed source, currency, scale and period.
+  - Reconcile outputs; preserve MISSING and CHECKS MISSED rather than guessing zero.
+test:
+  - Run the included baseline and changed-input fixtures, then compare with the stated expected results.
+  - Remove a required input and confirm the affected calculation refuses to invent a zero.
+  - Recalculate the workbook after changing an input and inspect the saved output.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: Node.js 20 or later
+      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

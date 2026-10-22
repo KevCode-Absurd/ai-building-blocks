@@ -1,0 +1,72 @@
+new_slug: issuer-capital-distribution-review-assistant
+name: Issuer capital distribution review assistant
+headline: Issuer capital distribution review assistant
+summary: Review executed buybacks and dividends against equity cash flow and the share ledger.
+job: money-and-investing
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: A capital-distribution review brief and linked cash, EPS and common-equity schedules. Share the prior accepted model and review log, newly supplied dated filings, changed source notes and the user-defined materiality threshold.
+explain: |-
+  A capital-distribution review brief and linked cash, EPS and common-equity schedules.
+
+  Public-market evidence review. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+when:
+  - You need a capital-distribution review brief and linked cash, EPS and common-equity schedules.
+  - You work on public-market evidence review and need traceable calculations.
+  - New evidence needs comparison with the prior dated review.
+you_give:
+  - The prior accepted model and review log, newly supplied dated filings, changed source notes and the user-defined materiality threshold.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - A capital-distribution review brief and linked cash, EPS and common-equity schedules.
+  - Original step files, financial assumptions, source coverage and a governing handoff summary.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: Reconcile buybacks with owner cash
+    text: Run the governing workflow when When the user provides updated repurchase execution, dividend or equity-statement evidence, compare actual amounts with the previously accepted cash-allocation model.
+  - title: Dividend reinvestment share schedule
+    text: If the review includes an actual shareholder reinvestment statement, reconcile dividend cash to acquired shares separately. An authorization without executions stays pending evidence and is never treated as completed buyback cash.
+output_shape: |-
+  A capital-distribution review brief and linked cash, EPS and common-equity schedules.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: Executed cash and shares reconcile to source records and equity; EPS accretion is distinguished from value creation, and reinvestment is used only for actual or labeled scenarios.
+judge:
+  - Executed cash and shares reconcile to source records and equity; EPS accretion is distinguished from value creation, and reinvestment is used only for actual or labeled scenarios.
+  - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
+  - Reconcile opening balances, additions, deductions and closing balances. Match enterprise or equity cash flows to the corresponding discount rate.
+  - Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
+test:
+  - Try a small sourced case and inspect every component handoff.
+  - Remove one required source and confirm the affected step stops.
+  - Change a currency, date or accounting definition and check the conflict stays visible.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

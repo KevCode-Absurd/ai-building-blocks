@@ -1,0 +1,45 @@
+slug: connect-toll-operating-cash-to-debt-repayment
+name: Connect toll cash to debt repayment
+summary: A traffic cash scenario and linked debt repayment profile
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: spreadsheet
+    required: true
+  - type: audit_report
+    required: true
+  - type: document
+    required: true
+uses:
+  - toll-revenue-ramp-model-builder
+  - project-cash-available-bridge
+  - debt-repayment-sculpting-planner
+steps:
+  - uses: toll-revenue-ramp-model-builder
+    note: Build annual toll cash from the supplied chargeable passages before collection loss, realized tariff and collection assumptions. Hand annual operating cash and excluded tax/capital/working-capital items into the qualification bridge. Use chargeable passages before collection loss, not passage counts already paid in cash.
+  - uses: project-cash-available-bridge
+    note: Convert each annual toll operating cash result into financing-defined CFADS. Since operating costs were already deducted upstream, record that source basis and avoid deducting them twice. Declare the source basis. For actual cash receipts/payments or already-cash operating results, do not deduct receivable/payable working-capital settlement again; explicitly omit it only after reconciliation. For accrual revenue/cost proxies, use the signed working-capital bridge with noncash expenses excluded. Never combine these two routes.
+  - uses: debt-repayment-sculpting-planner
+    note: Use the resulting annual eligible cash series to calculate debt service and principal. Preserve traffic sensitivity as a scenario, show interest gaps and maturity residual and never claim a forecast proves repayment.
+execution: coordinator
+origin: own
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/finance-expansion
+example_pending: true
+warnings:
+  - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+credits:
+  - title: Original finance methods and model fixtures
+    by: AI Blocks contributors
+    used: Original instructions, calculations and illustrative examples. External method references are linked separately and retain their own rights.

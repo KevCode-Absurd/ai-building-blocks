@@ -1,0 +1,17 @@
+{
+  "slug": "contracted-energy-cash-model",
+  "modelSha256": "4ff3a298e99f3c3f04fe31bbb9afbdd099b68a2efe0539758a38a7ee2fd71c1c",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing or invalid required input",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "inputs": [
+    {
+      "id": "property",
+      "label": "Supplied property value",
+      "value": 1200,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "otherNet",
+      "label": "Other net assets excluding debt and tax below",
+      "value": 100,
+      "unit": "USD million",
+      "min": -1000000000,
+      "max": 1000000000
+    },
+    {
+      "id": "debt",
+      "label": "Financing debt",
+      "value": 500,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "tax",
+      "label": "Separate tax adjustment",
+      "value": 50,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "shares",
+      "label": "Closing shares",
+      "value": 100,
+      "unit": "million shares",
+      "min": 0.001,
+      "max": 1000000000
+    },
+    {
+      "id": "price",
+      "label": "Market price",
+      "value": 6,
+      "unit": "USD per share",
+      "min": 0,
+      "max": 1000000000
+    }
+  ],
+  "calculations": [
+    {
+      "id": "gross",
+      "label": "Property plus other assets",
+      "op": "add",
+      "args": [
+        "property",
+        "otherNet"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "deductions",
+      "label": "Debt and tax",
+      "op": "add",
+      "args": [
+        "debt",
+        "tax"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "nav",
+      "label": "Equity NAV",
+      "op": "sub",
+      "args": [
+        "gross",
+        "deductions"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "navPerShare",
+      "label": "NAV per share",
+      "op": "div",
+      "args": [
+        "nav",
+        "shares"
+      ],
+      "unit": "USD per share"
+    },
+    {
+      "id": "positiveNav",
+      "label": "Positive NAV denominator required for discount",
+      "op": "max",
+      "args": [
+        "navPerShare",
+        0
+      ],
+      "unit": "USD per share"
+    },
+    {
+      "id": "priceToNav",
+      "label": "Price to NAV",
+      "op": "div",
+      "args": [
+        "price",
+        "positiveNav"
+      ],
+      "unit": "times"
+    },
+    {
+      "id": "discount",
+      "label": "Discount to NAV",
+      "op": "sub",
+      "args": [
+        1,
+        "priceToNav"
+      ],
+      "unit": "decimal"
+    }
+  ],
+  "outputs": [
+    "nav",
+    "navPerShare",
+    "discount"
+  ],
+  "expected": {
+    "nav": 750,
+    "navPerShare": 7.5,
+    "discount": 0.2
+  },
+  "cases": [
+    {
+      "name": "Lower appraised property value",
+      "inputs": {
+        "property": 1000
+      },
+      "expected": {
+        "nav": 550,
+        "navPerShare": 5.5,
+        "discount": -0.09090909090909091
+      }
+    },
+    {
+      "name": "Required input absent",
+      "inputs": {
+        "property": null
+      },
+      "error": true
+    },
+    {
+      "name": "Nonpositive equity NAV cannot support a discount",
+      "inputs": {
+        "property": 400
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures.1,200+100-500-50=750 NAV or7.50 per share. Price6 is a20% discount. Property1,000 gives NAV5.50 and a9.0909% premium, shown as negative discount."
+}

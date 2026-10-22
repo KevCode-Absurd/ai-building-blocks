@@ -1,0 +1,199 @@
+{
+  "inputs": [
+    {
+      "id": "opening_reserve",
+      "label": "opening reserve",
+      "value": 40,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "authorized_draw",
+      "label": "authorized draw",
+      "value": 0,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "annual_service_next",
+      "label": "Next annual debt service, assumed uniform monthly",
+      "value": 120,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "coverage_months",
+      "label": "coverage months",
+      "value": 6,
+      "unit": "months",
+      "min": 0,
+      "max": 12
+    },
+    {
+      "id": "funding_available",
+      "label": "funding available",
+      "value": 10,
+      "unit": "USD / stated period",
+      "min": 0
+    }
+  ],
+  "calculations": [
+    {
+      "id": "draw",
+      "label": "draw",
+      "op": "min",
+      "args": [
+        "opening_reserve",
+        "authorized_draw"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "after_draw",
+      "label": "after draw",
+      "op": "sub",
+      "args": [
+        "opening_reserve",
+        "draw"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "monthly_service",
+      "label": "monthly service",
+      "op": "div",
+      "args": [
+        "annual_service_next",
+        12
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "required_reserve",
+      "label": "required reserve",
+      "op": "mul",
+      "args": [
+        "monthly_service",
+        "coverage_months"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "need_signed",
+      "label": "need signed",
+      "op": "sub",
+      "args": [
+        "required_reserve",
+        "after_draw"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "topup_need",
+      "label": "topup need",
+      "op": "max",
+      "args": [
+        0,
+        "need_signed"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "deposit",
+      "label": "deposit",
+      "op": "min",
+      "args": [
+        "topup_need",
+        "funding_available"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "excess_signed",
+      "label": "excess signed",
+      "op": "sub",
+      "args": [
+        "after_draw",
+        "required_reserve"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "modeled_release",
+      "label": "modeled release",
+      "op": "max",
+      "args": [
+        0,
+        "excess_signed"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "before_release",
+      "label": "before release",
+      "op": "sum",
+      "args": [
+        "after_draw",
+        "deposit"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "ending_reserve",
+      "label": "ending reserve",
+      "op": "sub",
+      "args": [
+        "before_release",
+        "modeled_release"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "gap",
+      "label": "gap",
+      "op": "sub",
+      "args": [
+        "required_reserve",
+        "ending_reserve"
+      ],
+      "unit": "USD / stated period"
+    }
+  ],
+  "outputs": [
+    "draw",
+    "required_reserve",
+    "deposit",
+    "modeled_release",
+    "ending_reserve",
+    "gap"
+  ],
+  "expected": {
+    "draw": 0,
+    "required_reserve": 60,
+    "deposit": 10,
+    "modeled_release": 0,
+    "ending_reserve": 50,
+    "gap": 10
+  },
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "inputs": {
+        "funding_available": 30
+      },
+      "expected": {
+        "deposit": 20,
+        "ending_reserve": 60,
+        "gap": 0
+      }
+    },
+    {
+      "name": "Missing or invalid required input",
+      "inputs": {
+        "opening_reserve": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative USD reserve rollforward. Required reserve uses annual debt service120 divided by12 times6 coverage months=60, explicitly assuming uniform monthly service. Opening40 plus available deposit10 leaves50 and requirement gap10. An uneven actual repayment calendar requires the actual contractual future-service window instead of the uniform monthly shortcut. Draws and modeled releases require supplied authorizations."
+}

@@ -1,0 +1,45 @@
+slug: reconcile-construction-draws-and-completion-funding
+name: Reconcile construction draws and completion funding
+summary: A construction funding, capitalized interest and completion gap schedule
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: spreadsheet
+    required: true
+  - type: audit_report
+    required: true
+  - type: document
+    required: true
+uses:
+  - construction-funding-draw-planner
+  - construction-interest-schedule-builder
+  - completion-funding-gap-checker
+steps:
+  - uses: construction-funding-draw-planner
+    note: Build the cost-only equity/debt draw schedule using the actual contractual funding order. Pass actual debt draws and undrawn commitment by period to the interest and completion bridges.
+  - uses: construction-interest-schedule-builder
+    note: Accrue interest using actual opening debt and sourced draw timing, adding interest only at period end if the contract permits. Identify interest outside the cost-only draw schedule and reconcile final debt, including interest, against the facility cap.
+  - uses: completion-funding-gap-checker
+    note: Include future unpaid cost and interest requirements exactly once in cost to complete, then compare with genuinely usable cash and remaining commitments. Distinguish cost overrun from funding gap and retain any interest-funding shortfall explicitly.
+execution: coordinator
+origin: own
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/finance-expansion
+example_pending: true
+warnings:
+  - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+credits:
+  - title: Original finance methods and model fixtures
+    by: AI Blocks contributors
+    used: Original instructions, calculations and illustrative examples. External method references are linked separately and retain their own rights.

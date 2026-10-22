@@ -1,0 +1,32 @@
+{
+  "engine": "Artifact Tool",
+  "scope": "Illustrative workbook calculations, not source truth or an actual investment conclusion. Native Microsoft Excel application execution is not claimed.",
+  "modelSha256": "dc4437267951ec840296632d04dc152523ab5bdd4dd1dfea01a4a5628750db9f",
+  "xlsxSha256": "5dd0767da8e840e9776bdf35ee63aa0fb28e0955ede04271de1fd8e61ebb0952",
+  "baseline": "pass",
+  "changedInputCase": "Higher corporate cost",
+  "invalidInputCase": "Required input absent",
+  "cases": [
+    {
+      "name": "Higher corporate cost",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Required input absent",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ],
+  "reopenedAndRecalculated": true,
+  "rendered": true,
+  "visualReview": "pass",
+  "workbookSpecSha256": "e9bbc3cb64538e08f235d631ed0b8b162d9ab85ca200ce20836c98f9dff721ed",
+  "visualEvidence": {
+    "report": "reports/finance-public-markets-peer-review.json",
+    "reportSha256": "f73f6f5598ba0647c477c547d2776f1221130bb7861b62def472b74331866282",
+    "previewSha256": "f86ae463d31660be2cbdcea15027f86186bba907c1d1f35ed722606e2de8d9ce",
+    "sheet": "Model",
+    "sourceSpecSha256": "46e453639197af820f13625ce5035244c12b2438da2398c73a47b093fd04f665"
+  }
+}

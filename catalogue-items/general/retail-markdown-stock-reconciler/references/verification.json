@@ -1,0 +1,22 @@
+{
+  "slug": "retail-markdown-stock-reconciler",
+  "modelSha256": "359531e0a27902b947c2676cb587beea45acf2316fcf69a827f2fd8692a9b5c1",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing or invalid required input",
+      "kind": "refusal",
+      "status": "pass"
+    },
+    {
+      "name": "Sales exceed stock available in the cohort",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

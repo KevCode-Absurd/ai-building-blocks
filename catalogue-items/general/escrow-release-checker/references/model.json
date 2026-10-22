@@ -1,0 +1,125 @@
+{
+  "inputs": [
+    {
+      "id": "deposit",
+      "label": "deposit",
+      "value": 10,
+      "unit": "USD millions",
+      "min": 0
+    },
+    {
+      "id": "paid",
+      "label": "paid",
+      "value": 2,
+      "unit": "USD millions",
+      "min": 0
+    },
+    {
+      "id": "claims",
+      "label": "claims",
+      "value": 3,
+      "unit": "USD millions",
+      "min": 0
+    }
+  ],
+  "calculations": [
+    {
+      "id": "remaining",
+      "label": "remaining",
+      "op": "sub",
+      "args": [
+        "deposit",
+        "paid"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "retained",
+      "label": "retained",
+      "op": "min",
+      "args": [
+        "remaining",
+        "claims"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "release",
+      "label": "release",
+      "op": "sub",
+      "args": [
+        "remaining",
+        "retained"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "rawShortfall",
+      "label": "raw Shortfall",
+      "op": "sub",
+      "args": [
+        "claims",
+        "remaining"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "unsecured",
+      "label": "unsecured",
+      "op": "max",
+      "args": [
+        0,
+        "rawShortfall"
+      ],
+      "unit": "USD millions"
+    }
+  ],
+  "outputs": [
+    "remaining",
+    "retained",
+    "release",
+    "unsecured"
+  ],
+  "expected": {
+    "remaining": 8,
+    "retained": 3,
+    "release": 5,
+    "unsecured": 0
+  },
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "inputs": {
+        "claims": 12
+      },
+      "expected": {
+        "retained": 8,
+        "release": 0,
+        "unsecured": 4
+      }
+    },
+    {
+      "name": "Missing required number",
+      "inputs": {
+        "deposit": null
+      },
+      "error": true
+    },
+    {
+      "name": "Refuse escrow disbursements above deposit",
+      "inputs": {
+        "paid": 12
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only. 10 deposited less2 paid leaves8. Claims3 retain3 and release5; claims12 leave4 beyond escrow.",
+  "constraints": [
+    {
+      "left": "paid",
+      "operator": "lte",
+      "right": "deposit",
+      "message": "Prior escrow disbursements cannot exceed the opening deposit."
+    }
+  ]
+}

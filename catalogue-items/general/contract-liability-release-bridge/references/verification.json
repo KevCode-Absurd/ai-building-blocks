@@ -1,0 +1,17 @@
+{
+  "slug": "contract-liability-release-bridge",
+  "modelSha256": "50b26d207844a185f0f3937c3287cb66d7633ece6ecfbbccc87abb33e0659da0",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Higher closing deferred balance",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required reported input",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

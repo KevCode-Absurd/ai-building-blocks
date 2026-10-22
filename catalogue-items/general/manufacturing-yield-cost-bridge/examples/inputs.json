@@ -1,0 +1,7 @@
+{
+  "input_kg": 1000,
+  "good_yield": 0.8,
+  "input_cash_cost": 2000,
+  "conversion_cash": 1000,
+  "scrap_price": 0.5
+}

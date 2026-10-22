@@ -1,0 +1,32 @@
+{
+  "engine": "Artifact Tool",
+  "scope": "Illustrative workbook calculations, not source truth or an actual investment conclusion. Native Microsoft Excel application execution is not claimed.",
+  "modelSha256": "368ea0f5d03e56aa297bd1486984c609bad24449f56b753b54af515cf1c74a24",
+  "xlsxSha256": "d6f06448ca00cfd79fa12cfae2149d4671a4a93c38f7ee24aef3283784f7bb23",
+  "baseline": "pass",
+  "changedInputCase": "Larger acquired working-capital balance",
+  "invalidInputCase": "Required source input missing",
+  "cases": [
+    {
+      "name": "Larger acquired working-capital balance",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Required source input missing",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ],
+  "reopenedAndRecalculated": true,
+  "rendered": true,
+  "visualReview": "pass",
+  "workbookSpecSha256": "58b81567b3c76192cae893e2a40e34287bc54ef0b822e42d1f3193afad7f0af0",
+  "visualEvidence": {
+    "report": "reports/finance-public-markets-peer-review.json",
+    "reportSha256": "f73f6f5598ba0647c477c547d2776f1221130bb7861b62def472b74331866282",
+    "previewSha256": "7ad02930c9fff1f204e7614a9405d085ed706d59a8efedef666bd00d07b75857",
+    "sheet": "Model",
+    "sourceSpecSha256": "06e7ebf641b71e2fc21cf22b728a6542b4611c47da6f25160a7456a87b6acc07"
+  }
+}

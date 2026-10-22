@@ -1,0 +1,42 @@
+slug: reconcile-clinic-remittances-to-settlement-cash
+name: Reconcile clinic remittances to settlement cash
+summary: A clinic claims reconciliation and ordered settlement cash ladder
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: spreadsheet
+    required: true
+  - type: audit_report
+    required: true
+  - type: document
+    required: true
+uses:
+  - clinic-claims-collections-bridge
+  - settlement-liquidity-ladder-builder
+steps:
+  - uses: clinic-claims-collections-bridge
+    note: Reconcile opening claims, new billings, approved adjustments, applied cash and provider offsets. Pass actual reconciled bank receipts and their availability timestamps, not gross billings or claim-applied cash, downstream.
+  - uses: settlement-liquidity-ladder-builder
+    note: Build the same-account ordered settlement ladder using verified opening accessible cash and actual bank receipts. Keep pending payer remittances outside confirmed inflows and preserve payment authorization and clinical independence.
+execution: coordinator
+origin: own
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/finance-expansion
+example_pending: true
+warnings:
+  - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+credits:
+  - title: Original finance methods and model fixtures
+    by: AI Blocks contributors
+    used: Original instructions, calculations and illustrative examples. External method references are linked separately and retain their own rights.

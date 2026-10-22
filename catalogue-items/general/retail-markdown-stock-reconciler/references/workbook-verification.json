@@ -1,0 +1,37 @@
+{
+  "engine": "Artifact Tool",
+  "scope": "Illustrative workbook calculations, not source truth or an actual investment conclusion. Native Microsoft Excel application execution is not claimed.",
+  "modelSha256": "359531e0a27902b947c2676cb587beea45acf2316fcf69a827f2fd8692a9b5c1",
+  "xlsxSha256": "2baef9b19bc702230db7ae98cee88dffc618c861c26cbfe56c4ba43817af423c",
+  "baseline": "pass",
+  "changedInputCase": "Changed source assumption, hand-calculated result",
+  "invalidInputCase": "Missing or invalid required input",
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing or invalid required input",
+      "kind": "refusal",
+      "status": "pass"
+    },
+    {
+      "name": "Sales exceed stock available in the cohort",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ],
+  "reopenedAndRecalculated": true,
+  "rendered": true,
+  "visualReview": "pass",
+  "workbookSpecSha256": "972f47e47c02f694f3ae0bf9d5794709150b27176b3e48e3f05a6042342a0522",
+  "visualEvidence": {
+    "report": "reports/finance-operating-credit-peer-review.json",
+    "reportSha256": "ac57e1e1d010a9b5b9e64c1e84ef87d22207254a2844e5e5a205578608d66aa6",
+    "previewSha256": "c2f4dbecb6677c67260a01f27ec477ef66fa4330ffd1fd1f8cca233ff068d206",
+    "sheet": "Model",
+    "sourceSpecSha256": "e0a73968725e8d7213ea2deb05d42f26af62b90f50ba809af04e0c46f90e7454"
+  }
+}

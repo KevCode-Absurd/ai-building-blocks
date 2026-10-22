@@ -1,0 +1,78 @@
+new_slug: inventory-borrowing-base-builder
+name: Inventory borrowing base builder
+headline: Inventory borrowing base builder
+summary: An inventory collateral advance with binding caps
+job: money-and-investing
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: An inventory collateral advance with binding caps. Share eligible inventory at cost after exclusions, current appraised net orderly liquidation value, contractual rates, category sublimit and reserves.
+explain: |-
+  An inventory collateral advance with binding caps.
+
+  Asset based credit. Illustrative figures only, in USD unless labelled otherwise. This is a focused schedule with explicit period and timing assumptions. Rebuild from actual dated sources before use; the example is not a full financial forecast.
+when:
+  - You need an inventory collateral advance with binding caps.
+  - You work on asset based credit and need traceable calculations.
+  - A reviewer needs to trace the result back to inputs and assumptions.
+you_give:
+  - Eligible inventory at cost after exclusions, current appraised net orderly liquidation value, contractual rates, category sublimit and reserves.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - An inventory collateral advance with binding caps.
+  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: 1. Create a dated source map of the stated balances, transaction IDs, currency, units, period boundaries and contractual definitions
+    text: Create a dated source map of the stated balances, transaction IDs, currency, units, period boundaries and contractual definitions. Stop affected lines on missing evidence.
+  - title: 2. Reconcile eligible inventory to the SKU/location register after documented exclusions; retain cost and appraisal basis separately
+    text: Reconcile eligible inventory to the SKU/location register after documented exclusions; retain cost and appraisal basis separately.
+  - title: 3. Compute cost-based and appraisal-based advances, then apply the contractual category sublimit using the lowest amount
+    text: Compute cost-based and appraisal-based advances, then apply the contractual category sublimit using the lowest amount.
+  - title: 4. Subtract documented reserves, show the binding constraint and retain appraisal date and unsupported valuation assumptions
+    text: Subtract documented reserves, show the binding constraint and retain appraisal date and unsupported valuation assumptions.
+output_shape: |-
+  An inventory collateral advance with binding caps.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: Every material input has a source location, date, unit, sign and approval status.
+judge:
+  - Every material input has a source location, date, unit, sign and approval status.
+  - Keep actual records, contractual inputs and scenarios separate; a missing value never becomes zero.
+  - Cost and liquidation value cover identical eligible inventory, currency and valuation date.
+  - Advances cannot exceed either permitted basis or sublimit; reserves must not duplicate appraisal deductions.
+test:
+  - Run the included baseline and changed-input fixtures, then compare with the stated expected results.
+  - Remove a required input and confirm the affected calculation refuses to invent a zero.
+  - Recalculate the workbook after changing an input and inspect the saved output.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: Node.js 20 or later
+      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

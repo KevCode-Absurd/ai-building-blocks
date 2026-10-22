@@ -1,0 +1,17 @@
+{
+  "slug": "deal-ticking-fee-checker",
+  "modelSha256": "bb50b37094e8d2e9751c526368ceab21669efdc673a8fd982e4c201c7aab021a",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required number",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

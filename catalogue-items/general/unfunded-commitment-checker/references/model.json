@@ -1,0 +1,97 @@
+{
+  "inputs": [
+    {
+      "id": "commitment",
+      "label": "commitment",
+      "value": 100,
+      "unit": "USD millions",
+      "min": 0
+    },
+    {
+      "id": "originalCalls",
+      "label": "original Calls",
+      "value": 60,
+      "unit": "USD millions",
+      "min": 0
+    },
+    {
+      "id": "recallableRestoration",
+      "label": "recallable Restoration",
+      "value": 10,
+      "unit": "USD millions",
+      "min": 0
+    },
+    {
+      "id": "recallCalls",
+      "label": "recall Calls",
+      "value": 5,
+      "unit": "USD millions",
+      "min": 0
+    },
+    {
+      "id": "commitmentReductions",
+      "label": "commitment Reductions",
+      "value": 2,
+      "unit": "USD millions",
+      "min": 0
+    }
+  ],
+  "calculations": [
+    {
+      "id": "restoredBase",
+      "label": "restored Base",
+      "op": "add",
+      "args": [
+        "commitment",
+        "recallableRestoration"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "usedOrReduced",
+      "label": "used Or Reduced",
+      "op": "sum",
+      "args": [
+        "originalCalls",
+        "recallCalls",
+        "commitmentReductions"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "unfunded",
+      "label": "unfunded",
+      "op": "sub",
+      "args": [
+        "restoredBase",
+        "usedOrReduced"
+      ],
+      "unit": "USD millions"
+    }
+  ],
+  "outputs": [
+    "unfunded"
+  ],
+  "expected": {
+    "unfunded": 43
+  },
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "inputs": {
+        "commitmentReductions": 5
+      },
+      "expected": {
+        "unfunded": 40
+      }
+    },
+    {
+      "name": "Missing required number",
+      "inputs": {
+        "commitment": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only. 100-60+10-5-2=43 callable; increasing approved reductions to5 leaves40."
+}

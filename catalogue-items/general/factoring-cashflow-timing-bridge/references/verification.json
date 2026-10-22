@@ -1,0 +1,17 @@
+{
+  "slug": "factoring-cashflow-timing-bridge",
+  "modelSha256": "ec88fa02664b4c423d35da7b6c4b3b955292eb0ce03c432c93a6a33d7e9266d4",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "More factored invoices collected by customers",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required reported input",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

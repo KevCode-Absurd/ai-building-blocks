@@ -1,0 +1,7 @@
+{
+  "commitment": 100,
+  "originalCalls": 60,
+  "recallableRestoration": 10,
+  "recallCalls": 5,
+  "commitmentReductions": 2
+}

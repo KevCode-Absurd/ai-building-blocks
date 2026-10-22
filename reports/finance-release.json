@@ -1,0 +1,28 @@
+{
+  "createdOn": "2026-10-22T17:05:08.494Z",
+  "root": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r18-finance",
+  "assets": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r18-finance\\assets",
+  "sourceCommit": "b7a543442f4e6c9091e85197ebd91148b2a33409",
+  "archivedSite": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r18-finance\\source\\site",
+  "previous": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r17-account-minds",
+  "previousVersionId": "359e91b6-8ce9-4e0f-8a4b-030c9a6c302e",
+  "files": 25328,
+  "counts": {
+    "skills": 120,
+    "workflows": 60,
+    "agents": 30,
+    "total": 210
+  },
+  "workerSha256": "e0eabe892d923971589729a486e791878aa6e5c74d1e4e38c4aee7bb10c54a00",
+  "catalogueSha256": "5c4afed89a5a43a4ffe8b173ae79cf9b8f4e4a555bf9319e23cb19bc86a6395d",
+  "sourceManifestSha256": "14f4b254fc2c7208ad3dbea5e967c5ae09ee1ec693cb38f301d2639a6105aeb6",
+  "browserAssetsUnchanged": true,
+  "workerUnchanged": true,
+  "scope": "210 original finance source packs and pages. Existing verified browser and Worker bundles retained byte-for-byte; archived committed content-build and pack code excludes unrelated working-tree app edits.",
+  "buildIndexOverlay": {
+    "path": "site/scripts/build-index.mjs",
+    "sha256": "6224992df69312c99fb17653f54113da6f2f42fbfdc544d41afd1b9ab29fba28",
+    "scope": "Explicit package_files: all opt-in for original skills with native examples, calculation scripts and JSON references. Existing browser and Worker unchanged."
+  },
+  "completedPackagesOn": "2026-10-22T17:09:29.456Z"
+}

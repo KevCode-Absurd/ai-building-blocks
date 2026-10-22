@@ -1,0 +1,45 @@
+slug: reconcile-share-compensation-dilution-and-cash
+name: Reconcile share compensation dilution and cash
+summary: Separate accounting diluted shares from actual employee issuance and a cash-offset scenario.
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: spreadsheet
+    required: true
+  - type: audit_report
+    required: true
+  - type: document
+    required: true
+uses:
+  - weighted-average-share-schedule
+  - treasury-stock-option-dilution
+  - sbc-share-offset-cost
+steps:
+  - uses: weighted-average-share-schedule
+    note: Use actual sourced schedules in one linked native workbook; example values are illustrative and must not become issuer inputs. Reconcile actual employee issuance dates to basic weighted ordinary shares and distinguish issued shares from future potential shares.
+  - uses: treasury-stock-option-dilution
+    note: Use award-class terms and the verified weighted basic denominator to calculate accounting incremental shares; do not substitute actual issued-share counts for weighted options.
+  - uses: sbc-share-offset-cost
+    note: Use separately sourced net shares actually issued and employee cash proceeds for an explicit offset scenario. Compare cash cost with accounting compensation while retaining both and avoiding duplicate dilution deductions.
+execution: coordinator
+origin: own
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/finance-expansion
+example_pending: true
+warnings:
+  - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+credits:
+  - title: Original finance methods and model fixtures
+    by: AI Blocks contributors
+    used: Original instructions, calculations and illustrative examples. External method references are linked separately and retain their own rights.

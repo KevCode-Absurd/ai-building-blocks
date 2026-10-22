@@ -1,22 +1,32 @@
 # Handle money and investing: AI Blocks
 
-> 169 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 349 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Accrual schedule drafter](https://useaiblocks.com/skills/accrual-schedule-drafter): Give it the period's expenses and accrual policy. Get a schedule with each entry, its support and a draft journal entry.
 - [Acquisition due diligence planner](https://useaiblocks.com/skills/acquisition-due-diligence): Describe the deal. Get a due diligence checklist, valuation checks, red flags and an integration plan.
+- [Adviser fee tier checker](https://useaiblocks.com/skills/adviser-fee-tier-checker): Check a two-tier marginal success fee and the retainer credited against it.
 - [Analyst estimate reader](https://useaiblocks.com/skills/analyst-estimate-reader): Give it a stock ticker. Get how analyst profit and sales forecasts are changing and where they differ. Collects data from websites.
 - [Anonymous company teaser writer](https://useaiblocks.com/skills/anonymous-company-teaser-writer): Give it company facts. Get a one-page teaser that sells the business without naming it.
 - [Audit readiness checker](https://useaiblocks.com/skills/audit-readiness-checker): Give it your records and controls. Get a checklist of gaps to fix before an audit.
+- [Availability payment deduction checker](https://useaiblocks.com/skills/availability-payment-deduction-checker): An availability payment bridge and deduction exceptions
 - [Bad year plan stress tester](https://useaiblocks.com/prompts/bad-year-plan-stress-tester): Paste a budget or plan. Get three bad-year tests, your breaking point and a survival score.
 - [Bad-year break-even tester](https://useaiblocks.com/skills/bad-year-break-even-tester): Paste a business and its worst risks. Get how big a loss one year can bring before it stops earning.
 - [Balance roll-forward builder](https://useaiblocks.com/skills/balance-roll-forward-builder): Name an account. Get a schedule from opening to closing balance, with each movement tied to the ledger.
+- [Bank fee reconciliation checker](https://useaiblocks.com/skills/bank-fee-reconciliation-checker): A service charge bridge and billing difference
 - [Bargain investment portfolio planner](https://useaiblocks.com/skills/bargain-group-rules-writer): Paste your bargain candidates. Get group size, caps, an exit rule and a scorecard that judges the method, not one stock.
 - [Big purchase pause check](https://useaiblocks.com/prompts/big-purchase-pause-check): Paste what you want to buy and why. Get the real cost, what drives it and a small test.
 - [Bond portfolio reviewer](https://useaiblocks.com/skills/bond-portfolio-reviewer): Give it your bond holdings. Get yield, duration and mix by rating, plus a rate shock test. It collects data from websites.
 - [Bond type and maturity chooser](https://useaiblocks.com/skills/bond-type-and-maturity-chooser): Paste your split and tax rate. Get the bond kind that fits, taxable or tax-free, short or long, with the sums.
+- [Book value per share roll-forward](https://useaiblocks.com/skills/book-value-per-share-rollforward): Reconcile retained earnings, capital movements and closing shares to book value per share.
 - [Bookings forecast builder](https://useaiblocks.com/skills/bookings-forecast-builder): Give it your pipeline and cohorts. Get a commit, best case and pipe-only forecast with the maths shown.
 - [Borrower credit memo writer](https://useaiblocks.com/skills/borrower-credit-memo-writer): Give it a borrower's accounts. Get a credit memo on repayment ability, debt capacity and covenant room.
+- [Borrowing base evidence reviewer](https://useaiblocks.com/agents/borrowing-base-evidence-reviewer): A dated evidence review with changed assumptions, reconciliations and unresolved source gaps.
+- [Bridge availability payments into project cash](https://useaiblocks.com/workflows/bridge-availability-payments-into-project-cash): A contract payment and project cash eligibility bridge
+- [Bridge rate changes to revolver cost](https://useaiblocks.com/workflows/bridge-floating-rate-changes-to-revolver-cost): A rate repricing scenario and revolving charge reconciliation
 - [Budget and forecast builder](https://useaiblocks.com/skills/budget-and-forecast-builder): Give it your past numbers and plans. Get a budget, a forecast and a note on gaps against actuals.
+- [Build a clean-surplus residual income model](https://useaiblocks.com/workflows/build-a-clean-surplus-residual-income-model): Link common equity movements to residual income and a separate stable price-to-book scenario.
+- [Build a comparable trailing revenue model](https://useaiblocks.com/workflows/build-a-comparable-trailing-revenue-model): Link fiscal periods, currency, business scope and extra-week adjustments into a comparable revenue model.
+- [Build a project debt service cash pack](https://useaiblocks.com/workflows/build-a-project-debt-service-cash-pack): A linked project cash, debt repayment and loan-life cover schedule
 - [Build an equity thesis counterevidence brief](https://useaiblocks.com/workflows/build-an-equity-thesis-counterevidence-brief): Share the source files. Get a thesis claim ledger, contradictory evidence and open research questions.
 - [Business asset value estimator](https://useaiblocks.com/skills/asset-floor-estimator): Paste a balance sheet and share price. Get book value, net current assets, sale value and a cash strength rating.
 - [Business investment analyst](https://useaiblocks.com/skills/business-investment-analyst): Describe a purchase. Get payback, return and risk worked out, so you can decide whether to invest.
@@ -25,37 +35,85 @@
 - [Business value range calculator](https://useaiblocks.com/skills/business-value-range-calculator): Paste a business's owner earnings. Get a no-growth floor value and low, middle and high growth values, with what each assumes.
 - [Buyout model template filler](https://useaiblocks.com/skills/buyout-model-template-filler): Give it a blank buyout template and deal facts. Get the model filled with live formulas and checked.
 - [Buyout returns modeler](https://useaiblocks.com/skills/buyout-returns-modeler): Give it a company and deal terms. Get a buyout model with debt paydown, IRR and MOIC.
+- [Cap and discount conversion checker](https://useaiblocks.com/skills/cap-and-discount-conversion-checker): Compare actual cap and discount conversion prices for a lower-of instrument.
+- [Capital call allocation checker](https://useaiblocks.com/skills/capital-call-allocation-checker): Allocate one call over eligible commitments and expose an LP remaining-commitment limit.
+- [Capped participation checker](https://useaiblocks.com/skills/capped-participation-checker): Check one preferred class participation cap against its optional conversion payout.
 - [Cash and currency risk planner](https://useaiblocks.com/skills/cash-and-currency-risk-planner): Give it your cash, debts and currency exposure. Get a liquidity plan and ways to cut rate and exchange risk.
+- [Cash and PIK interest checker](https://useaiblocks.com/skills/cash-and-pik-interest-checker): Separate cash interest from principal growth under one fixed opening-balance PIK period.
+- [Cash pool interest allocator](https://useaiblocks.com/skills/cash-pool-interest-allocator): An entity interest schedule with a pool residual
+- [Cash stock election checker](https://useaiblocks.com/skills/cash-stock-election-checker): Check holder cash and replacement shares when cash elections exceed the reserved pool.
 - [Cash tied-up finder](https://useaiblocks.com/skills/cash-tied-up-finder): Give it your receivables, payables and stock. Get days outstanding, the cash cycle and where cash is stuck.
 - [Cash versus earnings checker](https://useaiblocks.com/skills/cash-versus-earnings-checker): Paste your profit and cash figures. Get free cash flow beside earnings, what growth costs and a score out of 100.
+- [Cash-funded buyback EPS bridge](https://useaiblocks.com/skills/cash-funded-buyback-eps-bridge): Separate share-count accretion from the earnings lost when cash funds a buyback.
+- [Challenge terminal value with excess returns](https://useaiblocks.com/workflows/challenge-terminal-value-with-excess-returns): Compare explicit excess-return fade assumptions with the economics implied by a terminal value.
 - [Channel cost and ROI comparer](https://useaiblocks.com/skills/channel-cost-and-roi-comparer): Give it direct and partner sales costs. Get cost to serve, ROI by channel and the best mix.
+- [Check a convertible note conversion](https://useaiblocks.com/workflows/check-a-convertible-note-conversion): Carry the approved interest balance into the actual lower-of conversion election.
+- [Check a no-catchup fund distribution](https://useaiblocks.com/workflows/check-a-no-catchup-fund-distribution): Carry a verified simple preference balance into capital-first residual carry allocation.
+- [Check a SAFE into priced financing](https://useaiblocks.com/workflows/check-a-safe-into-priced-financing): Reconcile a cap-only SAFE stake, pre-round reserve change and eligible participation.
 - [Check a small business before you buy it](https://useaiblocks.com/workflows/check-a-small-business-before-you-buy-it): Give it the listing and the books. Get a checklist, seller questions, owner earnings and a value range.
+- [Check acquisition refinancing funds](https://useaiblocks.com/workflows/check-acquisition-refinancing-funds): Trace debt face value to refinancing payoff cash and the complete closing funding gap.
+- [Check adviser fees in seller proceeds](https://useaiblocks.com/workflows/check-adviser-fees-in-seller-proceeds): Carry the signed success-fee invoice into seller closing proceeds.
+- [Check an escrow-funded earnout](https://useaiblocks.com/workflows/check-an-escrow-funded-earnout): Compare a signed linear earnout reserve with its dedicated escrow coverage.
 - [Check if a bond or loan is safe to hold](https://useaiblocks.com/workflows/bond-safety-check): Paste the debt terms and the borrower's statements. Get coverage and cushion tests and a safe, speculative or reject call.
+- [Check management payout and sponsor receipts](https://useaiblocks.com/workflows/check-management-payout-and-sponsor-receipts): Carry a simple vested incentive payout into a sole sponsor annual receipt timeline.
+- [Check secondary purchase cash exposure](https://useaiblocks.com/workflows/check-secondary-purchase-cash-exposure): Connect transferred callable commitments with the signed NAV-based purchase price adjustment.
+- [Check staged follow-on commitments](https://useaiblocks.com/workflows/check-staged-follow-on-commitments): Reconcile participation plans, two-company reserves and one milestone-limited draw.
 - [Choose your investing style and your stock and bond split](https://useaiblocks.com/workflows/investing-style-split): Tell it your time, skill and nerve. Get your investor type, a stock and bond split with rules, and a one-page policy.
 - [Circle of competence sorter](https://useaiblocks.com/skills/circle-of-competence-sorter): Describe a business or bet. Get it sorted as yes, no or too tough, with your real edge written down.
 - [Cleanup cost liability calculator](https://useaiblocks.com/skills/cleanup-liability-calculator): Give it an asset and its cleanup cost. Get the liability, yearly interest cost and journal entries worked out.
 - [Close the month and explain every line that moved](https://useaiblocks.com/workflows/close-the-month-and-explain-every-line-that-moved): List your close tasks. Get a close plan, accruals, draft statements and a reason for each big move.
+- [Closing equity proceeds checker](https://useaiblocks.com/skills/closing-equity-proceeds-checker): Reconcile enterprise value to seller equity proceeds under the signed closing definitions.
 - [Code vendor bills, flag odd ones and find supplier savings](https://useaiblocks.com/workflows/code-vendor-bills-flag-odd-ones-and-find-supplier-savings): Give it your vendor bills. Get each coded, the odd ones flagged and the biggest savings ranked.
+- [Common equity residual-income review assistant](https://useaiblocks.com/agents/common-equity-residual-income-review-assistant): Review common-equity changes that affect residual income and stable price-to-book assumptions.
 - [Company fair value modeler](https://useaiblocks.com/skills/company-fair-value-modeler): Give it a stock ticker. Get a fair value range from three methods, with a sensitivity grid. Collects data from websites.
 - [Company financial health reviewer](https://useaiblocks.com/skills/company-financial-health): Give it a company's filings. Get ratios, cash flow and balance sheet health explained in plain words.
 - [Company one-page tear sheet maker](https://useaiblocks.com/skills/company-tear-sheet): Name a company. Get a dense one-page Word profile with numbers, ratios and a business summary. It collects data from websites.
 - [Company stock analyst](https://useaiblocks.com/skills/company-stock-analyst): Name a listed company. Get a sector-relative review of its numbers, strengths and risks.
 - [Company strip profile slide maker](https://useaiblocks.com/skills/company-profile-slide): Name a company. Get a one-slide profile with business, key numbers and ownership in a standard layout.
+- [Compare merger cash election outcomes](https://useaiblocks.com/workflows/compare-merger-cash-election-outcomes): Compare fixed-ratio market value with the documented cash-election proration branch.
+- [Compare preferred exit payout terms](https://useaiblocks.com/workflows/compare-preferred-exit-payout-terms): Compare nonparticipating and capped-participating alternatives on the same single-class proceeds scenarios.
+- [Compare transport cash and fleet replacement](https://useaiblocks.com/workflows/compare-transport-cash-and-fleet-replacement): A trip contribution baseline and incremental replacement cash comparison
+- [Completion funding gap checker](https://useaiblocks.com/skills/completion-funding-gap-checker): A completion cost and committed funding gap bridge
+- [Conglomerate perimeter review assistant](https://useaiblocks.com/agents/conglomerate-perimeter-review-assistant): Review consolidation and ownership changes before reusing segment or holding values.
+- [Connect energy cash to loan life cover](https://useaiblocks.com/workflows/connect-contract-energy-cash-to-loan-life-cover): An energy cash schedule and qualified loan-life cover
+- [Connect production yield to mix contribution](https://useaiblocks.com/workflows/connect-production-yield-to-mix-contribution): A yield-linked product contribution and capacity comparison
+- [Connect toll cash to debt repayment](https://useaiblocks.com/workflows/connect-toll-operating-cash-to-debt-repayment): A traffic cash scenario and linked debt repayment profile
+- [Construction funding draw planner](https://useaiblocks.com/skills/construction-funding-draw-planner): A construction draw schedule and uncovered cost register
+- [Construction funding evidence reviewer](https://useaiblocks.com/agents/construction-funding-evidence-reviewer): A dated evidence review with changed assumptions, reconciliations and unresolved source gaps.
+- [Construction interest schedule builder](https://useaiblocks.com/skills/construction-interest-schedule-builder): A timed capitalized interest schedule and debt rollforward
+- [Convertible EPS inclusion test](https://useaiblocks.com/skills/convertible-eps-inclusion-test): Compare incremental convertible earnings with basic EPS before deciding whether to include dilution.
+- [Convertible note interest checker](https://useaiblocks.com/skills/convertible-note-interest-checker): Check simple accrued interest and the balance converting into shares.
 - [Cost of capital calculator](https://useaiblocks.com/skills/cost-of-capital-calculator): Give it a company's debt, equity and market inputs. Get its WACC with cost of equity and debt shown.
 - [Cover an earnings release from preview to written update](https://useaiblocks.com/workflows/cover-an-earnings-release-from-preview-to-written-update): Give it the company and the release. Get a preview, a tone read, a recap and an update.
+- [Credit exposure limit checker](https://useaiblocks.com/skills/credit-exposure-limit-checker): A connected credit exposure bridge and limit gap
+- [Currency exposure netting checker](https://useaiblocks.com/skills/currency-exposure-netting-checker): A currency-unit exposure bridge and reporting-currency sensitivity
+- [Currency forward settlement checker](https://useaiblocks.com/skills/currency-forward-settlement-checker): A payable and forward settlement reconciliation
+- [Currency maturity evidence reviewer](https://useaiblocks.com/agents/currency-maturity-evidence-reviewer): A dated evidence review with changed assumptions, reconciliations and unresolved source gaps.
 - [DCF model builder for India](https://useaiblocks.com/skills/dcf-model-builder-for-india): Name a listed Indian company. Get a discounted cash flow Excel model with WACC, sensitivities and a summary.
+- [Deal EBITDA addback checker](https://useaiblocks.com/skills/deal-ebitda-addback-checker): Bound a requested addback using a documented cap measured on pre-addback EBITDA.
+- [Deal funding gap checker](https://useaiblocks.com/skills/deal-funding-gap-checker): Find the closing funding gap after cash sources and noncash rollover are classified consistently.
 - [Deal returns sensitivity builder](https://useaiblocks.com/skills/deal-returns-sensitivity-builder): Give it deal terms. Get IRR and MOIC tables across entry price, debt, exit price and hold time.
 - [Deal screening memo writer](https://useaiblocks.com/skills/deal-screening-memo-writer): Give it a teaser or CIM and your criteria. Get a one-page memo marking each test pass or fail.
+- [Deal ticking fee checker](https://useaiblocks.com/skills/deal-ticking-fee-checker): Check additional consideration from confirmed eligible delay days and a signed daily amount.
+- [Debt cash sweep checker](https://useaiblocks.com/skills/debt-cash-sweep-checker): Bound a contractual excess-cash sweep by available cash and remaining eligible debt.
+- [Debt issue proceeds checker](https://useaiblocks.com/skills/debt-issue-proceeds-checker): Reconcile financing face value to cash received after issue discount and distinct upfront fees.
+- [Debt maturity funding ladder](https://useaiblocks.com/skills/debt-maturity-funding-ladder): A maturity funding ladder with cumulative shortfalls
 - [Debt payment coverage checker](https://useaiblocks.com/skills/average-earnings-coverage-tester): Paste a borrower's debts and earnings. Get cover against all charges, in a bad year too, and a pass or fail.
 - [Debt payoff planner](https://useaiblocks.com/skills/debt-payoff-planner): List your debts and extra cash. Get snowball and avalanche timelines with total interest for each.
 - [Debt protection ratio checker](https://useaiblocks.com/skills/equity-cushion-ratio-tester): Paste a borrower's debts and its owners' stake value. Get the cushion behind your claim and whether it clears the bar.
+- [Debt repayment sculpting planner](https://useaiblocks.com/skills/debt-repayment-sculpting-planner): A three-period sculpted debt schedule and residual balance
+- [Debt reserve rollforward builder](https://useaiblocks.com/skills/debt-reserve-rollforward-builder): A debt reserve rollforward and unfunded requirement
 - [Debt restructuring plan drafter](https://useaiblocks.com/skills/debt-restructuring-plan-drafter): Give it a company's debts and cash flow. Get a draft plan with new terms for each creditor.
+- [Debt service covenant evidence reviewer](https://useaiblocks.com/agents/debt-service-covenant-evidence-reviewer): A dated evidence review with changed assumptions, reconciliations and unresolved source gaps.
+- [Debt service covenant headroom checker](https://useaiblocks.com/skills/debt-service-covenant-headroom-checker): A debt service covenant schedule and minimum cash headroom
 - [Decision knowledge checklist](https://useaiblocks.com/prompts/know-it-or-skip-it-sorter): Describe a business or bet. Get it sorted yes, no or too tough, based on what you know.
 - [Defensive stock list builder](https://useaiblocks.com/skills/defensive-stock-list-builder): Paste the companies that passed your tests. Get a spread list of 10 to 30, size limits and a yearly review date.
 - [Defensive stock quality screener](https://useaiblocks.com/skills/defensive-stock-quality-screener): Paste a company's ten-year figures. Get it passed or failed on size, strength, profit record, dividends and growth.
 - [Deferred tax calculator](https://useaiblocks.com/skills/deferred-tax-calculator): Give it asset and liability figures. Get deferred tax, whether it can be used, and a tax rate reconciliation.
 - [Department budget planner](https://useaiblocks.com/skills/department-budget-planner): Give it past spending and targets. Get a phased budget by department, with variance reports and fixes.
 - [Diligence meeting prep writer](https://useaiblocks.com/skills/diligence-meeting-prep-writer): Name the meeting and company. Get sharp questions, benchmarks and red flags to probe.
+- [Dividend recap timing checker](https://useaiblocks.com/skills/dividend-recap-timing-checker): Reconcile two annual equity receipts to show the timing effect of an interim distribution.
+- [Dividend reinvestment share schedule](https://useaiblocks.com/skills/dividend-reinvestment-share-schedule): Track how a cash dividend changes share count at an actual reinvestment price.
 - [Due diligence checklist builder](https://useaiblocks.com/skills/due-diligence-checklist-builder): Describe the deal and sector. Get a request list by workstream with status tracking and red flag notes.
 - [Early-stage valuation estimator](https://useaiblocks.com/skills/early-stage-valuation-estimator): Give it a young company's facts. Get a value range from methods such as Berkus, scorecard and the VC method.
 - [Earnings call tone reader](https://useaiblocks.com/skills/earnings-call-tone-reader): Give it an earnings call transcript. Get shifts in management tone and confidence flagged, with quotes.
@@ -67,11 +125,19 @@
 - [Earnings update report writer](https://useaiblocks.com/skills/earnings-update-report-writer): Give it a company's quarterly results. Get an 8 to 12 page update on beats, misses and key numbers.
 - [Earnings value range builder](https://useaiblocks.com/skills/earnings-value-range-builder): Paste normal earnings and the share price. Get a low, middle and high value and how much of the price is hope.
 - [Earnings week briefing writer](https://useaiblocks.com/skills/earnings-week-briefing-writer): Name a company about to report. Get what to watch, scenario cases and the numbers that matter.
+- [Earnout payout checker](https://useaiblocks.com/skills/earnout-payout-checker): Check one linear earnout payout between its signed threshold and cap.
+- [Economic profit fade schedule](https://useaiblocks.com/skills/economic-profit-fade-schedule): Show two excess-return years followed by an explicit zero-excess-return terminal state.
+- [Employee share cost review assistant](https://useaiblocks.com/agents/employee-share-cost-review-assistant): Review employee award changes across actual issuance, diluted shares and cash-offset scenarios.
+- [EPS and multiple return bridge](https://useaiblocks.com/skills/eps-multiple-return-bridge): Explain an observed share-price change through earnings and valuation-multiple effects.
 - [Equity assumption review assistant](https://useaiblocks.com/agents/equity-assumption-review-assistant): A checked valuation scenario report and assumption challenge list.
+- [Equity cure scenario checker](https://useaiblocks.com/skills/equity-cure-scenario-checker): Check an EBITDA-only cure without giving the cash a second debt-netting benefit.
 - [Equity research and valuation report builder](https://useaiblocks.com/skills/equity-research-valuation-report-builder): Share company reports and a dated share price. Get a stock research report with value ranges, source checks and clear assumptions.
+- [Escrow release checker](https://useaiblocks.com/skills/escrow-release-checker): Reconcile remaining escrow with supported claim reserves and available release cash.
 - [ESG report preparer](https://useaiblocks.com/skills/esg-report-preparer): Give it your environmental, social and governance data. Get a draft sustainability report or a check of an existing one.
 - [Expected credit loss calculator](https://useaiblocks.com/skills/expected-credit-loss-calculator): Give it loan data. Get expected credit losses worked out under IFRS 9 or CECL.
 - [Expense sorter](https://useaiblocks.com/skills/expense-sorter): Give it transactions. Get each sorted by category, department and tax treatment.
+- [Explain an observed shareholder return](https://useaiblocks.com/workflows/explain-observed-shareholder-return): Reconcile share-price changes and dividend reinvestment using consistent corporate-action-adjusted evidence.
+- [Explain inventory accounting margin effects](https://useaiblocks.com/workflows/explain-inventory-accounting-margin-effects): Reconcile inventory reserve movements and charges before comparing margins and cash investment.
 - [Financial data pack builder](https://useaiblocks.com/skills/financial-data-pack-builder): Give it a deal document or filing. Get its financials pulled into a clean, standard Excel data pack.
 - [Financial instrument pricer](https://useaiblocks.com/skills/financial-instrument-pricer): Name the option or bond. Get it priced by the right method, with MATLAB code you can rerun.
 - [Financial model builder](https://useaiblocks.com/skills/financial-model-builder): Give it assumptions and past results. Get a P&L, DCF and valuation model you can adjust.
@@ -84,38 +150,75 @@
 - [Find bargain stocks with a screen and a group test](https://useaiblocks.com/workflows/bargain-stock-screen): Paste a table of listed companies. Get the cheap ones that pass five safety tests, their asset floor and the group rules.
 - [Find out if a business is worth owning long term](https://useaiblocks.com/workflows/business-worth-owning): Give it a business and its figures. Get a pass, fail or too-hard call on ten tests, and what to check next.
 - [Fixed asset register keeper](https://useaiblocks.com/skills/fixed-asset-register-keeper): Give it your purchases and disposals. Get what to capitalise, yearly depreciation and impairment checks.
+- [Fixed charge coverage bridge builder](https://useaiblocks.com/skills/fixed-charge-coverage-bridge-builder): A fixed charge cash bridge and contractual headroom
+- [Fixed exchange consideration checker](https://useaiblocks.com/skills/fixed-exchange-consideration-checker): Show fixed-ratio stock consideration changing with the dated acquirer share price.
+- [Floating rate repricing planner](https://useaiblocks.com/skills/floating-rate-repricing-planner): A repricing ladder and incremental interest bridge
+- [Follow-on reserve planner](https://useaiblocks.com/skills/follow-on-reserve-planner): Compare documented participation plans with the fund approved follow-on reserve.
 - [Forecast your startup runway and prepare a finance pack](https://useaiblocks.com/workflows/forecast-your-startup-runway-and-prepare-a-finance-pack): Give it your plan. Get a cash model, a cash-out date with ranges and a board finance plan.
+- [Fund commitment change assistant](https://useaiblocks.com/agents/fund-commitment-change-assistant): Review supplied changes, preserve the last evidence baseline and return only affected calculations and unresolved approval questions.
+- [Fund distribution evidence assistant](https://useaiblocks.com/agents/fund-distribution-evidence-assistant): Review supplied changes, preserve the last evidence baseline and return only affected calculations and unresolved approval questions.
+- [Fund fee revision assistant](https://useaiblocks.com/agents/fund-fee-revision-assistant): Review supplied changes, preserve the last evidence baseline and return only affected calculations and unresolved approval questions.
+- [Fund recycling capacity checker](https://useaiblocks.com/skills/fund-recycling-capacity-checker): Bound eligible recycled distributions by the signed fund recycling cap and usage to date.
 - [Funding round multiple analyst](https://useaiblocks.com/skills/funding-round-multiple-analyst): Give it a software company. Get how its value multiple changed across funding rounds and what drove the shift.
 - [Get your money in order with room for error](https://useaiblocks.com/workflows/get-your-personal-money-in-order-with-room-for-error): Give it your income, spending and debts. Get a budget, a debt plan and a savings forecast.
+- [GP clawback exposure checker](https://useaiblocks.com/skills/gp-clawback-exposure-checker): Compare paid carry with verified final entitlement and the collateral available for a potential clawback.
 - [Group accounts combiner](https://useaiblocks.com/skills/group-accounts-combiner): Give it each company's accounts. Get one set of group statements with the cancelled internal items shown.
 - [Holding value change checker](https://useaiblocks.com/skills/holding-value-change-checker): Paste a holding and why you bought it. Get what changed in the business and a keep, watch or weak mark.
 - [Holdings business results reviewer](https://useaiblocks.com/skills/holdings-results-review): List your holdings and what you know of each. Get every one sorted keeper, watch or weak by business results.
 - [Hormuz shipping status reader](https://useaiblocks.com/skills/hormuz-shipping-status-reader): Ask about the Strait of Hormuz. Get open or closed status, ship counts and oil price impact. Collects data from websites.
 - [Hyperliquid market data reader](https://useaiblocks.com/skills/hyperliquid-market-data-reader): Give it a coin. Get prices, funding rates, open interest and the order book. Collects data from websites.
+- [Implied terminal reinvestment schedule](https://useaiblocks.com/skills/implied-terminal-reinvestment): Backsolve reinvestment and capital returns embedded in a supplied terminal operating value.
 - [India modeling rules checker](https://useaiblocks.com/skills/india-modeling-rules-checker): Give it an Indian company model. Get April to March years, crore units, Ind AS and listing rules checked.
 - [Insurance claims reserve calculator](https://useaiblocks.com/skills/claims-reserve-calculator): Give it claims history. Get loss reserves, IBNR estimates and loss and combined ratios.
 - [Intercompany balance matcher](https://useaiblocks.com/skills/intercompany-balance-matcher): Give it each entity's balances. Get mismatches found, settlement netted and elimination entries drafted.
+- [Inventory accounting comparability review assistant](https://useaiblocks.com/agents/inventory-accounting-comparability-review-assistant): Review inventory reserve and charge changes before comparing issuer margins and cash investment.
+- [Inventory borrowing base builder](https://useaiblocks.com/skills/inventory-borrowing-base-builder): An inventory collateral advance with binding caps
 - [Investing policy page writer](https://useaiblocks.com/skills/investing-policy-page-writer): Paste your type, split and bond choice. Get one page with your plan, what you won't do and a review date.
 - [Investment approach questionnaire](https://useaiblocks.com/skills/investor-type-quiz): Tell it your time, skill and nerve. Get sorted as a defensive or enterprising investor, with the paths to skip.
 - [Investment committee memo drafter](https://useaiblocks.com/skills/investment-committee-memo): Give it diligence findings and deal terms. Get a structured committee memo with facts, risks and open questions.
 - [Investment margin of safety review](https://useaiblocks.com/skills/price-versus-value-gap-judge): Paste your value range, asset floor and the price. Get whether there is a real margin of safety and what removes it.
 - [Investment or speculation sorter](https://useaiblocks.com/skills/investment-or-speculation-sorter): Paste a purchase you are weighing and why. Get it sorted as investment or speculation, with the questions a careful buyer asks.
 - [Investment priority planner](https://useaiblocks.com/skills/lifetime-punch-card-bet-ranker): List your bet ideas. Get the top one to three ranked and sized, and a written no for the rest.
+- [Investment property NAV bridge](https://useaiblocks.com/skills/investment-property-nav-bridge): Bridge supplied property valuations to equity NAV and a clearly defined market discount.
 - [Investor statement NAV checker](https://useaiblocks.com/skills/investor-statement-nav-checker): Give it an investor statement and the fund's NAV pack. Get the capital account recomputed and any mismatch flagged.
+- [Issuer capital distribution review assistant](https://useaiblocks.com/agents/issuer-capital-distribution-review-assistant): Review executed buybacks and dividends against equity cash flow and the share ledger.
+- [Issuer EPS reconciliation review assistant](https://useaiblocks.com/agents/issuer-eps-reconciliation-review-assistant): Review new share and instrument disclosures for changes to a reconciled EPS model.
+- [Issuer pension evidence review assistant](https://useaiblocks.com/agents/issuer-pension-evidence-review-assistant): Review pension funded status, recognized costs and cash contributions as separate measures.
+- [Issuer revenue comparability review assistant](https://useaiblocks.com/agents/issuer-revenue-comparability-review-assistant): Review new revenue disclosures for period, currency, perimeter and presentation changes.
 - [Judge if a business is great enough to hold](https://useaiblocks.com/workflows/great-business-judge): Describe a business. Get its edge tested, who keeps the gain, and a keep, wait or pass call.
+- [Justified price-to-book scenario](https://useaiblocks.com/skills/justified-price-book-scenario): Link a stable price-to-book scenario to forward ROE, retention and required equity return.
 - [Lease accounting calculator](https://useaiblocks.com/skills/lease-accounting-calculator): Give it a lease contract. Get the lease liability, right-of-use asset and yearly entries under IFRS 16 or ASC 842.
 - [Lender safety verdict writer](https://useaiblocks.com/skills/lender-safety-verdict-writer): Paste your coverage and cushion results. Get a meets-the-bar, speculative or reject call, with reasons and what would change it.
+- [Leverage covenant change assistant](https://useaiblocks.com/agents/leverage-covenant-change-assistant): Review supplied changes, preserve the last evidence baseline and return only affected calculations and unresolved approval questions.
 - [Likely buyers list builder](https://useaiblocks.com/skills/likely-buyers-list-builder): Describe a company for sale. Get a ranked list of likely buyers, strategic and financial, with fit notes.
+- [Link operating growth to terminal reinvestment](https://useaiblocks.com/workflows/link-operating-growth-to-terminal-reinvestment): Connect an operating forecast’s growth to the investment needed in its stable terminal state.
 - [Linked financial model builder](https://useaiblocks.com/skills/linked-financial-model-builder): Give it your past accounts and drivers. Get income, balance sheet and cash flow models that tie together.
+- [Listed holding look-through NAV](https://useaiblocks.com/skills/listed-holding-lookthrough-nav): Reconcile quoted ownership stakes and holding-company costs to look-through value per share.
+- [Loan life cash cover checker](https://useaiblocks.com/skills/loan-life-cash-cover-checker): A discounted loan-life cash cover and cushion
+- [Locked-box leakage checker](https://useaiblocks.com/skills/locked-box-leakage-checker): Find unrecovered nonpermitted leakage still reducing the locked-box equity price.
+- [Locked-box recovery review assistant](https://useaiblocks.com/agents/locked-box-recovery-review-assistant): Review supplied changes, preserve the last evidence baseline and return only affected calculations and unresolved approval questions.
 - [Long-hold return calculator](https://useaiblocks.com/skills/long-hold-return-calculator): Paste what you know about a business and its price. Get the long-run sums and a keep, wait or pass call.
+- [Management equity hurdle checker](https://useaiblocks.com/skills/management-equity-hurdle-checker): Check a vested management participation percentage above a fixed equity-value hurdle.
+- [Management fee stepdown checker](https://useaiblocks.com/skills/management-fee-stepdown-checker): Compare two documented quarterly fees when the rate and chargeable basis change.
+- [Manufacturing yield cost bridge](https://useaiblocks.com/skills/manufacturing-yield-cost-bridge): A physical yield and net conversion cost bridge
 - [Market mood reader](https://useaiblocks.com/skills/market-mood-reader): Paste holdings and price moves. Get each move sorted as business or mood, plus take, ignore or wait.
 - [Match bank to books and issue a clean P&L](https://useaiblocks.com/workflows/reconcile-the-bank-to-your-books-and-issue-a-clean-p-and-l): Give it a bank statement and your ledger. Get matches, causes for the gaps and clean statements.
+- [Maturity funding evidence reviewer](https://useaiblocks.com/agents/maturity-funding-evidence-reviewer): A dated evidence review with changed assumptions, reconciliations and unresolved source gaps.
 - [Merger effect modeler](https://useaiblocks.com/skills/merger-effect-modeler): Give it two companies and deal terms. Get the effect on earnings per share, cost savings cases and price split.
+- [Milestone tranche funding checker](https://useaiblocks.com/skills/milestone-tranche-funding-checker): Check approved tranche cash and the commitment still awaiting funding.
+- [Minority-interest multiple reconciliation](https://useaiblocks.com/skills/minority-interest-multiple-reconciliation): Match consolidated earnings with an enterprise-value numerator that includes outside subsidiary ownership.
 - [Mispriced bet tester](https://useaiblocks.com/skills/mispriced-bet-tester): List your bets and prices. Get each called near cinch, fair bet or no bet, with the odds.
+- [Net leverage covenant checker](https://useaiblocks.com/skills/net-leverage-covenant-checker): Check contractual net leverage and debt headroom with an explicit cash-netting cap.
 - [Net worth calculator](https://useaiblocks.com/skills/net-worth-calculator): List your assets and debts. Get your net worth, how it splits, and a monthly view to track.
+- [No-catchup waterfall checker](https://useaiblocks.com/skills/no-catchup-waterfall-checker): Allocate one distribution through capital, accrued preference and residual carry without a GP catch-up.
+- [Nonparticipating preference checker](https://useaiblocks.com/skills/nonparticipating-preference-checker): Compare one preferred class preference payout with its conversion proceeds.
 - [Normal earnings estimator](https://useaiblocks.com/skills/normal-earnings-estimator): Paste cleaned earnings and a reliability rating. Get low, normal and high earnings for an ordinary year.
+- [Note conversion revision assistant](https://useaiblocks.com/agents/note-conversion-revision-assistant): Review supplied changes, preserve the last evidence baseline and return only affected calculations and unresolved approval questions.
 - [Oil and gas reserves valuer](https://useaiblocks.com/skills/oil-and-gas-reserves-valuer): Give it reserve and cost data. Get the present value of the reserves, such as PV-10.
 - [One-off items separator](https://useaiblocks.com/skills/one-off-items-separator): Paste several years of income statements. Get each year's profit rebuilt without one-off gains and losses.
+- [One-period residual income bridge](https://useaiblocks.com/skills/one-period-residual-income-bridge): Measure one period’s earnings above the required return on opening common equity.
+- [Operating cash financing review assistant](https://useaiblocks.com/agents/operating-cash-financing-review-assistant): Review factoring and supplier-finance evidence before interpreting changes in cash generation and leverage.
+- [Option pool top-up checker](https://useaiblocks.com/skills/option-pool-top-up-checker): Solve added reserved shares under an agreed pre-financing pool target.
 - [Options flow reader](https://useaiblocks.com/skills/options-flow-reader): Give it options data. Get real bets told apart from cheap lottery calls, so the put-call ratio is not misleading.
 - [Options payoff chart maker](https://useaiblocks.com/skills/options-payoff-chart-maker): Give it your option strikes and prices. Get a chart of what the trade earns or loses. Collects data from websites.
 - [Owner earnings calculator](https://useaiblocks.com/skills/owner-earnings-calculator): Paste a company's profit, depreciation and spending. Get the cash an owner could take out each year, as a range.
@@ -128,25 +231,87 @@
 - [Plan a purchase around your real budget](https://useaiblocks.com/workflows/plan-a-purchase-around-your-real-budget): Share the source files. Get a total-cost comparison and a decision brief that respects your cash limit.
 - [Portfolio company tracker](https://useaiblocks.com/skills/portfolio-company-tracker): Give it monthly or quarterly reports. Get KPIs pulled out, variances to budget flagged and a summary dashboard.
 - [Portfolio mix optimizer](https://useaiblocks.com/skills/portfolio-mix-optimizer): Give it asset returns. Get the best mix by risk and return, with an efficient frontier chart.
+- [Post-money SAFE ownership checker](https://useaiblocks.com/skills/post-money-safe-ownership-checker): Check cap-only SAFE ownership before and after a later priced round.
+- [Preferred return accrual checker](https://useaiblocks.com/skills/preferred-return-accrual-checker): Accrue a simple preferred-return period on a constant unreturned capital balance.
+- [Prepare a filing-based earnings model update](https://useaiblocks.com/workflows/prepare-a-filing-based-earnings-model-update): Update a sourced earnings workbook while keeping periods, shares, adjustments, taxes and OCI reconciled.
 - [Price against value checker](https://useaiblocks.com/skills/price-against-value-checker): Paste what you would get and what it costs. Get a value range, a walk-away price and the best alternative to beat.
 - [Price drop rules writer](https://useaiblocks.com/skills/price-drop-rules-writer): Paste your holdings plan. Get a one-page set of rules for when prices fall or jump, written before it happens.
+- [Pro rata allocation checker](https://useaiblocks.com/skills/pro-rata-allocation-checker): Calculate participation cash when the quoted round allocation excludes the existing investor.
+- [Product mix capacity checker](https://useaiblocks.com/skills/product-mix-capacity-checker): A proposed product mix contribution and capacity check
+- [Production contribution evidence reviewer](https://useaiblocks.com/agents/production-contribution-evidence-reviewer): A dated evidence review with changed assumptions, reconciliations and unresolved source gaps.
 - [Production cost variance explainer](https://useaiblocks.com/skills/production-cost-variance): Give it standard and actual production costs. Get the gap split into price, volume and efficiency causes.
+- [Project cash available bridge](https://useaiblocks.com/skills/project-cash-available-bridge): A project cash available bridge with a declared working-capital basis
 - [Project cost progress tracker](https://useaiblocks.com/skills/project-cost-progress-tracker): Give it a project's budget, schedule and spend. Get cost and schedule indexes and a finish cost estimate.
+- [Project debt cash evidence reviewer](https://useaiblocks.com/agents/project-debt-cash-evidence-reviewer): A dated evidence review with changed assumptions, reconciliations and unresolved source gaps.
+- [Project payment waterfall builder](https://useaiblocks.com/skills/project-payment-waterfall-builder): A payment priority waterfall with unpaid obligations
+- [Project reserve evidence reviewer](https://useaiblocks.com/agents/project-reserve-evidence-reviewer): A dated evidence review with changed assumptions, reconciliations and unresolved source gaps.
+- [Receivables borrowing base builder](https://useaiblocks.com/skills/receivables-borrowing-base-builder): A receivables eligibility bridge and collateral advance
+- [Reconcile a locked-box closing price](https://useaiblocks.com/workflows/reconcile-a-locked-box-closing-price): Combine unrecovered leakage and a separately documented ticking amount.
+- [Reconcile a private fund capital call](https://useaiblocks.com/workflows/reconcile-a-private-fund-capital-call): Carry the actual callable commitment ledger into one eligible LP call allocation.
+- [Reconcile alternative EPS and comprehensive income](https://useaiblocks.com/workflows/reconcile-alternative-eps-and-comprehensive-income): Keep acquired-amortization adjustments and OCI recycling consistent with reported earnings and equity performance.
+- [Reconcile an asset based revolver certificate](https://useaiblocks.com/workflows/reconcile-an-asset-based-revolver-certificate): A collateral certificate reconciliation and signed revolver availability
+- [Reconcile basic and diluted issuer EPS](https://useaiblocks.com/workflows/reconcile-basic-and-diluted-issuer-eps): Build a sourced share timeline and test option and convertible dilution against reported EPS.
+- [Reconcile buybacks with owner cash](https://useaiblocks.com/workflows/reconcile-buybacks-with-owner-cash): Connect executed repurchases to EPS, shareholder cash distributions and closing book value.
+- [Reconcile cash pool interest and fees](https://useaiblocks.com/workflows/reconcile-cash-pool-interest-and-fees): A pool interest residual and external fee reconciliation
+- [Reconcile clinic remittances to settlement cash](https://useaiblocks.com/workflows/reconcile-clinic-remittances-to-settlement-cash): A clinic claims reconciliation and ordered settlement cash ladder
+- [Reconcile conglomerate valuation perimeters](https://useaiblocks.com/workflows/reconcile-conglomerate-valuation-perimeters): Align segment earnings, consolidated minority interests and separately held equity stakes before valuation.
+- [Reconcile construction draws and completion funding](https://useaiblocks.com/workflows/reconcile-construction-draws-and-completion-funding): A construction funding, capitalized interest and completion gap schedule
+- [Reconcile contract balances and customer cash](https://useaiblocks.com/workflows/reconcile-contract-balances-and-customer-cash): Link deferred revenue, unbilled assets, receivables and allowance movements before judging customer cash conversion.
+- [Reconcile currency exposure and settlement](https://useaiblocks.com/workflows/reconcile-currency-exposure-and-settlement): A currency exposure bridge and matched forward settlement schedule
+- [Reconcile hotel room and food contribution](https://useaiblocks.com/workflows/reconcile-hotel-room-and-food-contribution): A property room and food contribution reconciliation
+- [Reconcile private fund fee charges](https://useaiblocks.com/workflows/reconcile-private-fund-fee-charges): Carry a documented stepdown charge into the actual fee-offset ledger.
+- [Reconcile project reserves and payment priority](https://useaiblocks.com/workflows/reconcile-project-reserves-and-payment-priority): A debt reserve rollforward and payment priority reconciliation
+- [Reconcile property NAV and book value](https://useaiblocks.com/workflows/reconcile-property-nav-and-book-value): Explain the difference between supplied property NAV and reported common book value per share.
+- [Reconcile restricted utility program cash](https://useaiblocks.com/workflows/reconcile-restricted-utility-program-cash): A utility collections, restricted fund and usable cash reconciliation
+- [Reconcile revenue presentation and perimeter](https://useaiblocks.com/workflows/reconcile-revenue-presentation-and-perimeter): Explain reported revenue changes through gross-to-net deductions, business scope and extra trading weeks.
+- [Reconcile seller closing cash](https://useaiblocks.com/workflows/reconcile-seller-closing-cash): Connect seller proceeds, working-capital settlement and escrow balances without double counting.
+- [Reconcile service capacity and shared cost](https://useaiblocks.com/workflows/reconcile-service-capacity-and-shared-cost): A service contribution bridge with allocated and idle shared cost
+- [Reconcile share compensation dilution and cash](https://useaiblocks.com/workflows/reconcile-share-compensation-dilution-and-cash): Separate accounting diluted shares from actual employee issuance and a cash-offset scenario.
+- [Reconcile treasury settlement liquidity](https://useaiblocks.com/workflows/reconcile-treasury-settlement-liquidity): A dated settlement ladder, forecast drift and accessible cash reconciliation
+- [Reconcile working capital and tax cash](https://useaiblocks.com/workflows/reconcile-working-capital-and-tax-cash): Explain balance-sheet-to-cash differences through noncash operating movements and current tax payables.
+- [Refinancing closing cost checker](https://useaiblocks.com/skills/refinancing-closing-cost-checker): Reconcile a documented debt payoff, premium and refinancing fees against usable new funding.
+- [Refinancing payoff revision assistant](https://useaiblocks.com/agents/refinancing-payoff-revision-assistant): Review supplied changes, preserve the last evidence baseline and return only affected calculations and unresolved approval questions.
+- [Reinvestment-supported growth schedule](https://useaiblocks.com/skills/reinvestment-supported-growth): Connect operating growth assumptions to actual reinvestment and incremental capital returns.
+- [Restate EPS after splits and rights](https://useaiblocks.com/workflows/restate-eps-after-splits-and-rights): Put split and discounted rights events onto a consistent comparative EPS and share basis.
+- [Restate research capital before growth modelling](https://useaiblocks.com/workflows/restate-research-capital-before-growth-modelling): Carry an explicit research cohort adjustment consistently into operating reinvestment and terminal assumptions.
+- [Restricted cash availability checker](https://useaiblocks.com/skills/restricted-cash-availability-checker): A reconciled cash availability bridge and funding gap
 - [Retirement savings projector](https://useaiblocks.com/skills/retirement-savings-projector): Give it your age, savings and goals. Get a projected nest egg and the gap to your target.
 - [Return on equity and margin checker](https://useaiblocks.com/skills/roe-margin-check): Paste several years of a company's accounts. Get return on equity, margins and a one-dollar test, each marked pass or fail.
 - [Revenue recognition checker](https://useaiblocks.com/skills/revenue-recognition-checker): Give it a customer contract. Get its promises, price split and timing of revenue under IFRS 15 or ASC 606.
+- [Review a down-round rights change](https://useaiblocks.com/workflows/review-a-down-round-rights-change): Check a qualifying price reset and the separately negotiated reserve expansion.
+- [Review a fund bridge and hurdle](https://useaiblocks.com/workflows/review-a-fund-bridge-and-hurdle): Separate subscription-line return timing from the actual preferred-return start convention.
+- [Review contractual debt service cash tests](https://useaiblocks.com/workflows/review-contractual-debt-service-cash-tests): A defined cash coverage pack with period headroom and source exceptions
 - [Review equity valuation sensitivity assumptions](https://useaiblocks.com/workflows/review-equity-valuation-sensitivity-assumptions): Share the source files. Get a checked valuation scenario report and assumption challenge list.
+- [Review leverage headroom and cure](https://useaiblocks.com/workflows/review-leverage-headroom-and-cure): Connect supported EBITDA addbacks to exact net leverage and a permitted cure scenario.
+- [Review maturity funding and credit limits](https://useaiblocks.com/workflows/review-maturity-funding-and-credit-limits): A maturity funding ladder and connected exposure exception pack
+- [Review sponsor debt cash demands](https://useaiblocks.com/workflows/review-sponsor-debt-cash-demands): Connect one-period cash and PIK charges to a bounded sweep and ending leverage test.
 - [Review your investments by business results, not price](https://useaiblocks.com/workflows/investment-results-review): Give it your holdings. Get each judged on business results, a short ranked list with sizes and rules for sitting still.
+- [Revolver availability checker](https://useaiblocks.com/skills/revolver-availability-checker): A revolver capacity bridge and overadvance exception
+- [Revolver interest and fee checker](https://useaiblocks.com/skills/revolver-interest-fee-checker): A revolver interest and commitment fee reconciliation
+- [Rights-issue EPS adjustment](https://useaiblocks.com/skills/rights-issue-eps-adjustment): Calculate a public rights issue’s theoretical price and comparative EPS bonus adjustment.
+- [Rollover equity ownership checker](https://useaiblocks.com/skills/rollover-equity-ownership-checker): Reconcile a seller rollover amount with cash proceeds and same-class post-close ownership.
 - [Room for error plan checker](https://useaiblocks.com/skills/room-for-error-plan-checker): Paste a budget or business plan. Get a survival score out of 100, where it breaks in a bad year, and fixes.
 - [SaaS metrics coach](https://useaiblocks.com/skills/saas-metrics-coach): Share your revenue and customers. Get your ARR, churn, CAC and LTV read, with what to fix first.
+- [SAFE financing revision assistant](https://useaiblocks.com/agents/safe-financing-revision-assistant): Review supplied changes, preserve the last evidence baseline and return only affected calculations and unresolved approval questions.
 - [Sale memorandum drafter](https://useaiblocks.com/skills/sale-memorandum-drafter): Give it company facts. Get a draft sale memorandum with a clear structure and story.
 - [Sale process letter drafter](https://useaiblocks.com/skills/sale-process-letter-drafter): Describe a sale process. Get a draft letter with bid instructions, deadlines and meeting details.
 - [Screen a startup deal from first look to committee memo](https://useaiblocks.com/workflows/screen-a-startup-deal-from-first-look-to-committee-memo): Give it the pitch and the numbers. Get a diligence review, a valuation range and the committee memo.
 - [Screen stocks with a defensive investor's seven tests](https://useaiblocks.com/workflows/defensive-stock-screen): Paste company figures. Get each company passed or failed on seven tests, with the price sums shown, and a short list.
+- [Secondary NAV price checker](https://useaiblocks.com/skills/secondary-nav-price-checker): Reconcile an LP-interest NAV quote with interim distributions and remaining cash-call exposure.
 - [Sector landscape report writer](https://useaiblocks.com/skills/sector-landscape-report-writer): Name an industry. Get a report on its size, main players, competition and trends.
+- [Segment profit elimination bridge](https://useaiblocks.com/skills/segment-profit-elimination-bridge): Tie segment profit to consolidated operating profit before using segment values.
+- [Seller closing revision assistant](https://useaiblocks.com/agents/seller-closing-revision-assistant): Review supplied changes, preserve the last evidence baseline and return only affected calculations and unresolved approval questions.
+- [Separate financing effects from operating cash](https://useaiblocks.com/workflows/separate-financing-effects-from-operating-cash): Reconcile receivable factoring and supplier-finance effects before interpreting operating cash and leverage.
+- [Separate pension cost funding and remeasurement](https://useaiblocks.com/workflows/separate-pension-cost-funding-and-remeasurement): Link pension obligations and assets to service cost, financing, OCI and actual contributions.
+- [Separate rollover and management incentives](https://useaiblocks.com/workflows/separate-rollover-and-management-incentives): Distinguish seller purchased equity, closing funding and a separate management award scenario.
+- [Service utilization margin builder](https://useaiblocks.com/skills/service-utilization-margin-builder): A service hours and delivery contribution bridge
+- [Settlement liquidity ladder builder](https://useaiblocks.com/skills/settlement-liquidity-ladder-builder): An ordered settlement ladder and peak funding gap
+- [Shared service activity cost allocator](https://useaiblocks.com/skills/shared-service-activity-cost-allocator): An activity cost allocation and unused capacity bridge
+- [Shareholder distribution coverage](https://useaiblocks.com/skills/shareholder-distribution-coverage): Compare dividends and net repurchases with independently reconciled equity cash flow.
 - [Sit-still rule writer](https://useaiblocks.com/skills/sit-still-rule-writer): Paste your picks. Get one page of holding rules: what must stay true, review dates and the only reasons to act.
 - [Software spend auditor](https://useaiblocks.com/skills/software-spend-auditor): Give it your spend list. Get spend by category, duplicate tools and a plan to cut suppliers.
 - [Spending story reviewer](https://useaiblocks.com/skills/spending-story-reviewer): Paste a purchase you are weighing. Get what drives it, its hidden costs and a small test of whether it pleases.
+- [Sponsor receipt timing review assistant](https://useaiblocks.com/agents/sponsor-receipt-timing-review-assistant): Review supplied changes, preserve the last evidence baseline and return only affected calculations and unresolved approval questions.
 - [Startup due diligence reviewer](https://useaiblocks.com/skills/startup-due-diligence-reviewer): Name a startup. Get its market, traction, money and team reviewed from an investor, job seeker and founder view.
 - [Startup finance advisor](https://useaiblocks.com/skills/startup-finance-advisor): Give it your numbers. Get unit economics, runway, fundraising steps and a finance pack for the board.
 - [Startup financial model builder](https://useaiblocks.com/skills/startup-financial-model-builder): Give your numbers and plans. Get a 3 to 5 year model with revenue, costs, cash flow and scenarios.
@@ -160,14 +325,29 @@
 - [Stock purchase price checker](https://useaiblocks.com/skills/defensive-price-ceiling-tester): Paste a company's earnings, book value and share price. Get a pass or fail on three price ceilings, with every sum shown.
 - [Stock research snapshot writer](https://useaiblocks.com/skills/stock-research-snapshot-writer): Name a stock. Get a note combining estimates, reported numbers, price history and the macro backdrop. It collects data from websites.
 - [Stock trading cost checker](https://useaiblocks.com/skills/stock-trading-cost-checker): Give it a stock. Get how easy it is to trade and what a big order may cost. Collects data from websites.
+- [Stock-split EPS restatement](https://useaiblocks.com/skills/stock-split-eps-restatement): Restate historical shares and EPS onto a consistent post-split basis.
+- [Subscription line timing checker](https://useaiblocks.com/skills/subscription-line-timing-checker): Compare periodic LP returns with and without a one-year capital-call bridge.
 - [Subscription unit economics analyst](https://useaiblocks.com/skills/subscription-unit-economics): Give it customer and revenue data. Get cohorts, LTV to CAC, retention and payback worked out.
 - [Suspicious money trail reviewer](https://useaiblocks.com/skills/suspicious-money-trail-reviewer): Give it records that do not add up. Get red flags, money flow traces and what to check next.
+- [Terminal economics review assistant](https://useaiblocks.com/agents/terminal-economics-review-assistant): Review whether updated growth and terminal assumptions still fund the required reinvestment.
+- [Terminal growth reinvestment check](https://useaiblocks.com/skills/terminal-growth-reinvestment-consistency): Expose the reinvestment required by a stable-growth terminal-value assumption.
+- [Test input inflation against stock clearance](https://useaiblocks.com/workflows/test-input-inflation-against-stock-clearance): A stock recovery bridge and separate replenishment margin scenario
+- [Toll revenue ramp model builder](https://useaiblocks.com/skills/toll-revenue-ramp-model-builder): A three-year toll receipts and operating cash schedule
+- [Transaction fee offset checker](https://useaiblocks.com/skills/transaction-fee-offset-checker): Reconcile eligible portfolio fees, carryforward offsets and the management fee still due.
+- [Treasury forecast backtest checker](https://useaiblocks.com/skills/treasury-forecast-backtest-checker): A signed flow backtest and cumulative cash drift bridge
+- [Treasury settlement evidence reviewer](https://useaiblocks.com/agents/treasury-settlement-evidence-reviewer): A dated evidence review with changed assumptions, reconciliations and unresolved source gaps.
+- [Treasury-stock option dilution](https://useaiblocks.com/skills/treasury-stock-option-dilution): Use option terms and average share prices to reconcile incremental diluted shares.
 - [Undervalued stock screener](https://useaiblocks.com/skills/enterprising-bargain-screener): Paste a table of listed companies. Get the cheap ones that pass five safety tests, with the failed test beside every cut.
+- [Unfunded commitment checker](https://useaiblocks.com/skills/unfunded-commitment-checker): Reconcile a fund commitment with original calls, recallable restoration and recalled capital.
 - [Unusual transaction finder](https://useaiblocks.com/skills/unusual-transaction-finder): Give it a large set of transactions. Get the odd ones flagged, with a short reason for each.
 - [Upcoming events calendar builder](https://useaiblocks.com/skills/upcoming-events-calendar-builder): Give it a list of companies. Get a dated calendar of earnings, conferences and decisions that could move them.
+- [Utility restricted cash evidence reviewer](https://useaiblocks.com/agents/utility-restricted-cash-evidence-reviewer): A dated evidence review with changed assumptions, reconciliations and unresolved source gaps.
 - [Valuation method comparer](https://useaiblocks.com/skills/valuation-method-comparer): Give it a company's numbers. Get a value range from DCF, peer multiples and past deals, with the key assumptions.
 - [Value a business and the discount to ask for](https://useaiblocks.com/workflows/business-valuation-discount): Give it a business, its figures and a price. Get a value range, a bad-year test and a discount verdict.
 - [Value a stock with a margin of safety](https://useaiblocks.com/workflows/stock-margin-of-safety): Paste a company's results, its balance sheet and the share price. Get an earnings value, an asset floor and the gap.
 - [Venture loan terms reviewer](https://useaiblocks.com/skills/venture-loan-terms-reviewer): Give it a startup loan offer. Get the cost, warrants and covenants explained, with points to question.
+- [Weighted-average antidilution checker](https://useaiblocks.com/skills/weighted-average-antidilution-checker): Check one charter-defined conversion price reset after a qualifying cash issuance.
+- [Weighted-average share schedule](https://useaiblocks.com/skills/weighted-average-share-schedule): Turn dated share changes into a checked EPS denominator and a timing sensitivity.
+- [Working capital true-up checker](https://useaiblocks.com/skills/working-capital-true-up-checker): Isolate the actual post-close settlement from working capital already reflected in price.
 - [Write your plan for a falling market before it happens](https://useaiblocks.com/workflows/falling-market-plan): Paste your holdings and what you paid. Get the market's mood read, each holding checked for real change, and a written plan.
 - [Yield curve explainer](https://useaiblocks.com/skills/yield-curve-explainer): Name a government. Get its curve shape, key slopes and real rate split explained in plain words.

@@ -1,0 +1,166 @@
+{
+  "inputs": [
+    {
+      "id": "profit",
+      "label": "Pre-buyback ordinary profit",
+      "value": 100,
+      "unit": "USD million",
+      "min": -1000000000,
+      "max": 1000000000
+    },
+    {
+      "id": "shares",
+      "label": "Pre-buyback shares",
+      "value": 50,
+      "unit": "million shares",
+      "min": 0.001,
+      "max": 1000000000
+    },
+    {
+      "id": "cashSpent",
+      "label": "Executed repurchase cash",
+      "value": 100,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "price",
+      "label": "Average repurchase price",
+      "value": 20,
+      "unit": "USD per share",
+      "min": 0.000001,
+      "max": 1000000000
+    },
+    {
+      "id": "cashYield",
+      "label": "After-tax cash yield forgone",
+      "value": 0.05,
+      "unit": "decimal",
+      "min": 0,
+      "max": 1
+    }
+  ],
+  "calculations": [
+    {
+      "id": "sharesBought",
+      "label": "Shares retired",
+      "op": "div",
+      "args": [
+        "cashSpent",
+        "price"
+      ],
+      "unit": "million shares"
+    },
+    {
+      "id": "remainingShares",
+      "label": "Remaining shares",
+      "op": "sub",
+      "args": [
+        "shares",
+        "sharesBought"
+      ],
+      "unit": "million shares"
+    },
+    {
+      "id": "lostIncome",
+      "label": "Cash earnings forgone",
+      "op": "mul",
+      "args": [
+        "cashSpent",
+        "cashYield"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "newProfit",
+      "label": "Post-buyback profit",
+      "op": "sub",
+      "args": [
+        "profit",
+        "lostIncome"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "oldEps",
+      "label": "Pre-buyback EPS",
+      "op": "div",
+      "args": [
+        "profit",
+        "shares"
+      ],
+      "unit": "USD per share"
+    },
+    {
+      "id": "positiveRemaining",
+      "label": "Supported positive remaining-share denominator",
+      "op": "max",
+      "args": [
+        "remainingShares",
+        0
+      ],
+      "unit": "million shares"
+    },
+    {
+      "id": "newEps",
+      "label": "Post-buyback EPS",
+      "op": "div",
+      "args": [
+        "newProfit",
+        "positiveRemaining"
+      ],
+      "unit": "USD per share"
+    },
+    {
+      "id": "epsAccretion",
+      "label": "EPS accretion",
+      "op": "sub",
+      "args": [
+        "newEps",
+        "oldEps"
+      ],
+      "unit": "USD per share"
+    }
+  ],
+  "outputs": [
+    "sharesBought",
+    "lostIncome",
+    "newEps",
+    "epsAccretion"
+  ],
+  "expected": {
+    "sharesBought": 5,
+    "lostIncome": 5,
+    "newEps": 2.111111111111111,
+    "epsAccretion": 0.1111111111111111
+  },
+  "cases": [
+    {
+      "name": "Cash earns no return",
+      "inputs": {
+        "cashYield": 0
+      },
+      "expected": {
+        "lostIncome": 0,
+        "newEps": 2.2222222222222223,
+        "epsAccretion": 0.2222222222222222
+      }
+    },
+    {
+      "name": "Missing required source input",
+      "inputs": {
+        "profit": null
+      },
+      "error": true
+    },
+    {
+      "name": "Repurchase would remove all shares",
+      "inputs": {
+        "cashSpent": 1000
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures. Spending $100 million at $20 removes five of 50 million shares. Lost cash income is $5 million, so EPS moves from 100/50=$2 to 95/45=$2.111111. The arithmetic alone cannot establish fair repurchase value."
+}

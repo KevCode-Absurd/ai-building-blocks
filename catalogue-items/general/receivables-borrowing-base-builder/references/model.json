@@ -1,0 +1,133 @@
+{
+  "inputs": [
+    {
+      "id": "gross_receivables",
+      "label": "gross receivables",
+      "value": 1000,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "ineligible",
+      "label": "ineligible",
+      "value": 100,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "concentration_excess",
+      "label": "concentration excess",
+      "value": 100,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "advance_rate",
+      "label": "advance rate",
+      "value": 0.8,
+      "unit": "decimal fraction",
+      "min": 0,
+      "max": 1
+    },
+    {
+      "id": "reserve",
+      "label": "reserve",
+      "value": 40,
+      "unit": "USD / stated period",
+      "min": 0
+    }
+  ],
+  "calculations": [
+    {
+      "id": "deductions",
+      "label": "deductions",
+      "op": "sum",
+      "args": [
+        "ineligible",
+        "concentration_excess"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "eligible_signed",
+      "label": "eligible signed",
+      "op": "sub",
+      "args": [
+        "gross_receivables",
+        "deductions"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "eligible",
+      "label": "eligible",
+      "op": "max",
+      "args": [
+        0,
+        "eligible_signed"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "gross_advance",
+      "label": "gross advance",
+      "op": "mul",
+      "args": [
+        "eligible",
+        "advance_rate"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "net_advance_signed",
+      "label": "net advance signed",
+      "op": "sub",
+      "args": [
+        "gross_advance",
+        "reserve"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "net_advance",
+      "label": "net advance",
+      "op": "max",
+      "args": [
+        0,
+        "net_advance_signed"
+      ],
+      "unit": "USD / stated period"
+    }
+  ],
+  "outputs": [
+    "eligible_signed",
+    "gross_advance",
+    "net_advance"
+  ],
+  "expected": {
+    "eligible_signed": 800,
+    "gross_advance": 640,
+    "net_advance": 600
+  },
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "inputs": {
+        "ineligible": 200
+      },
+      "expected": {
+        "eligible_signed": 700,
+        "gross_advance": 560,
+        "net_advance": 520
+      }
+    },
+    {
+      "name": "Missing required evidence refuses calculation",
+      "inputs": {
+        "gross_receivables": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only, in USD unless labelled otherwise. This is a focused schedule with explicit period and timing assumptions. Rebuild from actual dated sources before use; the example is not a full financial forecast."
+}

@@ -1,0 +1,76 @@
+new_slug: noncash-working-capital-bridge
+name: Noncash working-capital bridge
+headline: Noncash working-capital bridge
+summary: Separate operating cash investment from acquisition, currency and other noncash balance movements.
+job: track-numbers
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: An operating working-capital investment bridge with a signed cash-flow counterpart. Share opening and closing operating working capital plus signed acquisition, FX and other noncash movements on the same perimeter.
+explain: |-
+  An operating working-capital investment bridge with a signed cash-flow counterpart.
+
+  Issuer accounting and earnings. Illustrative figures. Balance increase150-100=50. Noncash20+5-5=20 leaves30 operating investment and a negative30 cash effect. Acquisition balance30 leaves only20 operating investment.
+when:
+  - You need an operating working-capital investment bridge with a signed cash-flow counterpart.
+  - You work on issuer accounting and earnings and need traceable calculations.
+  - A reviewer needs to trace the result back to inputs and assumptions.
+you_give:
+  - Opening and closing operating working capital plus signed acquisition, FX and other noncash movements on the same perimeter.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - An operating working-capital investment bridge with a signed cash-flow counterpart.
+  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: 1. Define operating working capital consistently, excluding cash, financing and tax balances unless explicitly part of the chosen measure
+    text: Define operating working capital consistently, excluding cash, financing and tax balances unless explicitly part of the chosen measure.
+  - title: 2. Reconcile closing minus opening balances to acquisition additions, currency translation, write-offs and other noncash movements from the notes
+    text: Reconcile closing minus opening balances to acquisition additions, currency translation, write-offs and other noncash movements from the notes.
+  - title: 3. Subtract signed noncash movements to isolate operating balance investment; reverse its sign for the indirect cash-flow contribution and investigate residual classification differences
+    text: Subtract signed noncash movements to isolate operating balance investment; reverse its sign for the indirect cash-flow contribution and investigate residual classification differences.
+output_shape: |-
+  An operating working-capital investment bridge with a signed cash-flow counterpart.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: Balance-sheet changes are not treated as cash movements before removing acquisitions and FX.
+judge:
+  - Balance-sheet changes are not treated as cash movements before removing acquisitions and FX.
+  - Increases and decreases use an explicit sign convention; no unexplained item becomes a balancing plug.
+  - Tie all inputs to source notes, dates, currency, scale and signs.
+  - Retain reported figures beside analytical adjustments and list every unresolved source gap.
+test:
+  - Run the included baseline and changed-input fixtures, then compare with the stated expected results.
+  - Remove a required input and confirm the affected calculation refuses to invent a zero.
+  - Recalculate the workbook after changing an input and inspect the saved output.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: Node.js 20 or later
+      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

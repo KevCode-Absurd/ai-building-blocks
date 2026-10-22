@@ -1,0 +1,7 @@
+{
+  "includedDebt": 100,
+  "eligibleCash": 30,
+  "cashCap": 20,
+  "covenantEbitda": 20,
+  "maximumLeverage": 5
+}

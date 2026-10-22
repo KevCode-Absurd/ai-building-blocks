@@ -1,0 +1,37 @@
+{
+  "engine": "Artifact Tool",
+  "scope": "Illustrative workbook calculations, not source truth or an actual investment conclusion. Native Microsoft Excel application execution is not claimed.",
+  "modelSha256": "0e339dc0995f87b5359e051e109dfd1a707bc51b09f26b1e0ac1e4da88b45ac0",
+  "xlsxSha256": "141f639a04eafc6201434e3cc83fed994974c34eb3d588af41be02cd66fd7a45",
+  "baseline": "pass",
+  "changedInputCase": "Changed source assumption, hand-calculated result",
+  "invalidInputCase": "Missing or invalid required input",
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing or invalid required input",
+      "kind": "refusal",
+      "status": "pass"
+    },
+    {
+      "name": "Fixed duties and leave exceed paid hours",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ],
+  "reopenedAndRecalculated": true,
+  "rendered": true,
+  "visualReview": "pass",
+  "workbookSpecSha256": "b30e7a8dc812e9fe1c94492cc23d96971112f9dc26d64eb81088f92b37440c81",
+  "visualEvidence": {
+    "report": "reports/finance-operating-credit-peer-review.json",
+    "reportSha256": "ac57e1e1d010a9b5b9e64c1e84ef87d22207254a2844e5e5a205578608d66aa6",
+    "previewSha256": "50b188035aee6b353a3c8518c0055d0fa958118b1f519431171e8883c3413e47",
+    "sheet": "Model",
+    "sourceSpecSha256": "47a6bb3a0e457515cb42fd73cbf305c64f7d7423a79685b4ba2c396848abcb75"
+  }
+}

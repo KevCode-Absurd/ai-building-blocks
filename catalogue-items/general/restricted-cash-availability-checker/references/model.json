@@ -1,0 +1,122 @@
+{
+  "inputs": [
+    {
+      "id": "gross_cash",
+      "label": "gross cash",
+      "value": 1000,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "restricted_cash",
+      "label": "restricted cash",
+      "value": 200,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "collateral_block",
+      "label": "collateral block",
+      "value": 100,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "pending_debits",
+      "label": "pending debits",
+      "value": 50,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "minimum_cash",
+      "label": "minimum cash",
+      "value": 700,
+      "unit": "USD / stated period",
+      "min": 0
+    }
+  ],
+  "calculations": [
+    {
+      "id": "deductions",
+      "label": "deductions",
+      "op": "sum",
+      "args": [
+        "restricted_cash",
+        "collateral_block",
+        "pending_debits"
+      ],
+      "unit": "USD / as-of date"
+    },
+    {
+      "id": "available_cash",
+      "label": "available cash",
+      "op": "sub",
+      "args": [
+        "gross_cash",
+        "deductions"
+      ],
+      "unit": "USD / as-of date"
+    },
+    {
+      "id": "headroom",
+      "label": "headroom",
+      "op": "sub",
+      "args": [
+        "available_cash",
+        "minimum_cash"
+      ],
+      "unit": "USD / as-of date"
+    },
+    {
+      "id": "gap_signed",
+      "label": "gap signed",
+      "op": "neg",
+      "args": [
+        "headroom"
+      ],
+      "unit": "USD / as-of date"
+    },
+    {
+      "id": "shortfall",
+      "label": "shortfall",
+      "op": "max",
+      "args": [
+        0,
+        "gap_signed"
+      ],
+      "unit": "USD / as-of date"
+    }
+  ],
+  "outputs": [
+    "available_cash",
+    "headroom",
+    "shortfall"
+  ],
+  "expected": {
+    "available_cash": 650,
+    "headroom": -50,
+    "shortfall": 50
+  },
+  "cases": [
+    {
+      "name": "Restriction released by supplied evidence",
+      "inputs": {
+        "restricted_cash": 100
+      },
+      "expected": {
+        "available_cash": 750,
+        "headroom": 50,
+        "shortfall": 0
+      }
+    },
+    {
+      "name": "Missing gross cash",
+      "inputs": {
+        "gross_cash": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only, in USD unless labelled otherwise. This is a focused schedule with explicit period and timing assumptions. Rebuild from actual dated sources before use; the example is not a full financial forecast."
+}

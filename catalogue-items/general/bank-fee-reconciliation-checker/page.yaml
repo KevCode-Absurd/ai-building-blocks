@@ -1,0 +1,78 @@
+new_slug: bank-fee-reconciliation-checker
+name: Bank fee reconciliation checker
+headline: Bank fee reconciliation checker
+summary: A service charge bridge and billing difference
+job: money-and-investing
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: A service charge bridge and billing difference. Share bank service agreement, transaction counts, per-item prices, fixed account fee, eligible balance credit and actual billed amount for one month.
+explain: |-
+  A service charge bridge and billing difference.
+
+  Treasury bank fees. Illustrative figures only, in USD unless labelled otherwise. This is a focused schedule with explicit period and timing assumptions. Rebuild from actual dated sources before use; the example is not a full financial forecast.
+when:
+  - You need a service charge bridge and billing difference.
+  - You work on treasury bank fees and need traceable calculations.
+  - A reviewer needs to trace the result back to inputs and assumptions.
+you_give:
+  - Bank service agreement, transaction counts, per-item prices, fixed account fee, eligible balance credit and actual billed amount for one month.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - A service charge bridge and billing difference.
+  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: 1. Create a dated source map of the stated balances, transaction IDs, currency, units, period boundaries and contractual definitions
+    text: Create a dated source map of the stated balances, transaction IDs, currency, units, period boundaries and contractual definitions. Stop affected lines on missing evidence.
+  - title: 2. Match each service count to account and month; trace contracted unit prices, fixed fees and valid credit allowance
+    text: Match each service count to account and month; trace contracted unit prices, fixed fees and valid credit allowance.
+  - title: 3. Recompute gross service fees then apply only the documented credit capped at gross fees; retain unused credit separately
+    text: Recompute gross service fees then apply only the documented credit capped at gross fees; retain unused credit separately.
+  - title: 4. Compare expected net charges with the actual bank invoice and return evidence questions without changing bank settings
+    text: Compare expected net charges with the actual bank invoice and return evidence questions without changing bank settings.
+output_shape: |-
+  A service charge bridge and billing difference.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: Every material input has a source location, date, unit, sign and approval status.
+judge:
+  - Every material input has a source location, date, unit, sign and approval status.
+  - Keep actual records, contractual inputs and scenarios separate; a missing value never becomes zero.
+  - Counts and prices use matching service units and period; credit allowance is not an assumed interest rate.
+  - Gross less applied credit equals expected net charge; signed difference remains billed minus expected.
+test:
+  - Run the included baseline and changed-input fixtures, then compare with the stated expected results.
+  - Remove a required input and confirm the affected calculation refuses to invent a zero.
+  - Recalculate the workbook after changing an input and inspect the saved output.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: Node.js 20 or later
+      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

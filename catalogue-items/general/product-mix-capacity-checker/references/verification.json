@@ -1,0 +1,17 @@
+{
+  "slug": "product-mix-capacity-checker",
+  "modelSha256": "eac6a367612dbfb573fe7eb496091493094e76ea303e50680da136b514bf0011",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Reduce proposed second product units",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing available hours",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

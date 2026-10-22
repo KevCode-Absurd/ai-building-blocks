@@ -1,0 +1,8 @@
+{
+  "lifoInventory": 200,
+  "reserve0": 40,
+  "reserve1": 60,
+  "cogs": 350,
+  "revenue": 500,
+  "tax": 0.25
+}

@@ -1,0 +1,17 @@
+{
+  "slug": "working-capital-true-up-checker",
+  "modelSha256": "0be4053104211fec63300ddf59b754b5536023c9e37b341ad1bcbbcf95b811dd",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required number",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

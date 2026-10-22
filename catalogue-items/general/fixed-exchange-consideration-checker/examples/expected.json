@@ -1,0 +1,9 @@
+{
+  "basis": "Illustrative figures only.",
+  "outputs": {
+    "issuedShares": 50,
+    "stockValue": 1000,
+    "cashValue": 200,
+    "totalValue": 1200
+  }
+}

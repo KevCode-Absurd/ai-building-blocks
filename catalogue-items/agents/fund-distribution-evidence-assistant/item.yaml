@@ -1,0 +1,47 @@
+slug: fund-distribution-evidence-assistant
+name: Fund distribution evidence assistant
+summary: Review supplied changes, preserve the last evidence baseline and return only affected calculations and unresolved approval questions.
+category: agent
+type: agent
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: spreadsheet
+    required: true
+  - type: audit_report
+    required: true
+  - type: document
+    required: true
+uses:
+  - check-a-no-catchup-fund-distribution
+  - gp-clawback-exposure-checker
+steps:
+  - uses: check-a-no-catchup-fund-distribution
+    note: Run the governing workflow when A distribution proposal, dated preference record, final entitlement notice or actual GP carry recovery changes.
+  - uses: gp-clawback-exposure-checker
+    note: If a terminal entitlement review is supplied, compare actual paid carry with that independently verified whole-fund entitlement and collateral. Do not treat one current distribution carry amount as final lifetime entitlement. Otherwise skip clawback and keep the current distribution scenario separate from executed payments.
+origin: own
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/finance-expansion
+example_pending: true
+warnings:
+  - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+credits:
+  - title: Original finance methods and model fixtures
+    by: AI Blocks contributors
+    used: Original instructions, calculations and illustrative examples. External method references are linked separately and retain their own rights.
+schedule: On explicit request after the user supplies changed evidence. Installing the pack creates no schedule or account connection.
+asks_before:
+  - Trading or moving money
+  - Sending or publishing research or deal materials
+  - Changing an account or submitting a filing
+  - Starting or changing a recurring schedule

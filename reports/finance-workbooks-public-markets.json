@@ -1,0 +1,1319 @@
+{
+  "checkedOn": "2026-10-22T16:48:31.571Z",
+  "engine": "Artifact Tool",
+  "scope": "Illustrative native workbooks; baseline and changed-input recalculation, render, XLSX export and saved-file reimport checked. Visual review is recorded separately.",
+  "passed": 40,
+  "results": [
+    {
+      "slug": "weighted-average-share-schedule",
+      "status": "pass",
+      "modelSha256": "e7a3517b0e44abd9a01e7684d23e810491d7b3931735fcdac0b2879a1a55e2e8",
+      "baselineOutputs": {
+        "weightedShares": 110,
+        "basicEps": 2
+      },
+      "changedInputCase": "Issue outstanding for the full period",
+      "invalidInputCase": "Missing required source input",
+      "cases": [
+        {
+          "name": "Issue outstanding for the full period",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required source input",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 3,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\weighted-average-share-schedule.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\weighted-average-share-schedule\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\weighted-average-share-schedule.png",
+      "xlsxSha256": "77e584fe1dfe46408ac05cd17440636f3fa0941e81467eb6c513a2904eda8194",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D8\",\"rows\":2,\"cols\":3,\"nonEmpty\":6,\"text\":6,\"maxTextLength\":23,\"preview\":[[\"Weighted-average shares\",\"110\",\"million shares\"],[\"Basic EPS\",\"2\",\"USD per share\"]],\"previewAddress\":\"B7:D8\",\"previewRows\":2,\"previewCols\":3}",
+      "workbookSpecSha256": "22d12030cb66f3a466fea2390a9ee4644acb7ac5f91c1996e717adb651880ac0"
+    },
+    {
+      "slug": "treasury-stock-option-dilution",
+      "status": "pass",
+      "modelSha256": "d2f84ed414bc4a64efbc3a6f606099a1859b7e7b703eec9af173557686d6b8f7",
+      "baselineOutputs": {
+        "incrementalShares": 4,
+        "candidateShares": 104,
+        "candidateEps": 2
+      },
+      "changedInputCase": "At-the-money exercise price",
+      "invalidInputCase": "Missing required source input",
+      "cases": [
+        {
+          "name": "At-the-money exercise price",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required source input",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 6,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\treasury-stock-option-dilution.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\treasury-stock-option-dilution\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\treasury-stock-option-dilution.png",
+      "xlsxSha256": "f2fe2a7666db3f71ac3bd6e613be9554ac74d850648bbcb8ce22af433b54ad8e",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D9\",\"rows\":3,\"cols\":3,\"nonEmpty\":9,\"text\":9,\"maxTextLength\":25,\"preview\":[[\"Incremental option shares\",\"4\",\"million shares\"],[\"Candidate diluted shares\",\"104\",\"million shares\"],[\"Candidate diluted EPS\",\"2\",\"USD per share\"]],\"previewAddress\":\"B7:D9\",\"previewRows\":3,\"previewCols\":3}",
+      "workbookSpecSha256": "e15860be1381d720e61cc80134de6b9a76e5dd7963fd5e07fb2ce5cd163e4caf"
+    },
+    {
+      "slug": "convertible-eps-inclusion-test",
+      "status": "pass",
+      "modelSha256": "c5db315b676bef596e5ddac8727fe9cb55bb827609d113e3a1463051aec057ec",
+      "baselineOutputs": {
+        "basicEps": 1,
+        "incrementalEps": 0.04,
+        "candidateEps": 0.68,
+        "epsChange": -0.31999999999999995
+      },
+      "changedInputCase": "High numerator adjustment is anti-dilutive",
+      "invalidInputCase": "Missing required source input",
+      "cases": [
+        {
+          "name": "High numerator adjustment is anti-dilutive",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required source input",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 6,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\convertible-eps-inclusion-test.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\convertible-eps-inclusion-test\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\convertible-eps-inclusion-test.png",
+      "xlsxSha256": "6641c96262d503e3dedd78c6ba7a4577e9706338a0636f78b646c6158819b96a",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D10\",\"rows\":4,\"cols\":3,\"nonEmpty\":12,\"text\":12,\"maxTextLength\":26,\"preview\":[[\"Basic control EPS\",\"1\",\"USD per share\"],[\"Incremental instrument EPS\",\"0.04\",\"USD per share\"],[\"If-converted candidate EPS\",\"0.68\",\"USD per share\"],[\"Candidate less basic EPS\",\"-0.31999999999999995\",\"USD per share\"]],\"previewAddress\":\"B7:D10\",\"previewRows\":4,\"previewCols\":3}",
+      "workbookSpecSha256": "bab75e577f11923f857b342757f03896dc3659889c3c8d5482a32aef11b29f52"
+    },
+    {
+      "slug": "stock-split-eps-restatement",
+      "status": "pass",
+      "modelSha256": "24608ba79948c7a2894f68899d93bb4b1f02807d992824dc30ffedec6eba9838",
+      "baselineOutputs": {
+        "restatedEps": 1,
+        "restatedShares": 200,
+        "earnings": 200
+      },
+      "changedInputCase": "One-for-two reverse split",
+      "invalidInputCase": "Missing required source input",
+      "cases": [
+        {
+          "name": "One-for-two reverse split",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required source input",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 3,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\stock-split-eps-restatement.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\stock-split-eps-restatement\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\stock-split-eps-restatement.png",
+      "xlsxSha256": "2d0904f9281fb4d428dafb0e29e0efdfe7a5be8b6a8e5002e7880b31e9289294",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D9\",\"rows\":3,\"cols\":3,\"nonEmpty\":9,\"text\":9,\"maxTextLength\":28,\"preview\":[[\"Restated EPS\",\"1\",\"USD per share\"],[\"Restated weighted shares\",\"200\",\"million shares\"],[\"Reconciled ordinary earnings\",\"200\",\"USD million\"]],\"previewAddress\":\"B7:D9\",\"previewRows\":3,\"previewCols\":3}",
+      "workbookSpecSha256": "2bf4f2e24db47376a833f8c8797294ee0061482e2933bd8f86e04ab3e92c97a5"
+    },
+    {
+      "slug": "rights-issue-eps-adjustment",
+      "status": "pass",
+      "modelSha256": "78762560d27f186ca9fbbde75e73a79a4587dce11e3593b516f2be9372b2ac5f",
+      "baselineOutputs": {
+        "terp": 9,
+        "bonusFactor": 1.1111111111111112,
+        "restatedEps": 1.7999999999999998
+      },
+      "changedInputCase": "Rights offered at cum-rights price",
+      "invalidInputCase": "Missing required source input",
+      "cases": [
+        {
+          "name": "Rights offered at cum-rights price",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required source input",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 8,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\rights-issue-eps-adjustment.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\rights-issue-eps-adjustment\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\rights-issue-eps-adjustment.png",
+      "xlsxSha256": "e02ce127170d86e624b7b6bb267a20f27a87a98dec42fb3267a68d3ebb2611e0",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D9\",\"rows\":3,\"cols\":3,\"nonEmpty\":9,\"text\":9,\"maxTextLength\":27,\"preview\":[[\"Theoretical ex-rights price\",\"9\",\"USD per share\"],[\"Retrospective bonus factor\",\"1.1111111111111112\",\"times\"],[\"Comparative restated EPS\",\"1.7999999999999998\",\"USD per share\"]],\"previewAddress\":\"B7:D9\",\"previewRows\":3,\"previewCols\":3}",
+      "workbookSpecSha256": "6e315bfdd718f710a95be949ed4d76c484ae7a22ba260ec3166f14fc8226201a"
+    },
+    {
+      "slug": "cash-funded-buyback-eps-bridge",
+      "status": "pass",
+      "modelSha256": "7fd2be4af1e28d5fc4b3431c3a873a1e1af0d0e45fb0281fccd8989688b10f91",
+      "baselineOutputs": {
+        "sharesBought": 5,
+        "lostIncome": 5,
+        "newEps": 2.111111111111111,
+        "epsAccretion": 0.11111111111111116
+      },
+      "changedInputCase": "Cash earns no return",
+      "invalidInputCase": "Missing required source input",
+      "cases": [
+        {
+          "name": "Cash earns no return",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required source input",
+          "kind": "refusal",
+          "status": "pass"
+        },
+        {
+          "name": "Repurchase would remove all shares",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 8,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\cash-funded-buyback-eps-bridge.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\cash-funded-buyback-eps-bridge\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\cash-funded-buyback-eps-bridge.png",
+      "xlsxSha256": "b0c1e4e836b43e6fdebc1025953f23b86aa4105c2d11bbbb2a669edd5efede0d",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D10\",\"rows\":4,\"cols\":3,\"nonEmpty\":12,\"text\":12,\"maxTextLength\":21,\"preview\":[[\"Shares retired\",\"5\",\"million shares\"],[\"Cash earnings forgone\",\"5\",\"USD million\"],[\"Post-buyback EPS\",\"2.111111111111111\",\"USD per share\"],[\"EPS accretion\",\"0.11111111111111116\",\"USD per share\"]],\"previewAddress\":\"B7:D10\",\"previewRows\":4,\"previewCols\":3}",
+      "workbookSpecSha256": "0891eb497a479b1c4c31c4f82b57904f2731b17af66632327f304e02f59f55b6"
+    },
+    {
+      "slug": "shareholder-distribution-coverage",
+      "status": "pass",
+      "modelSha256": "5e80e9b42858dd6dad53a9d64ae59975d48d954772dbea8f8c00512830f0571b",
+      "baselineOutputs": {
+        "netBuybacks": 90,
+        "netDistributions": 130,
+        "retainedCash": -10
+      },
+      "changedInputCase": "Lower executed repurchases",
+      "invalidInputCase": "Missing required source input",
+      "cases": [
+        {
+          "name": "Lower executed repurchases",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required source input",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 3,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\shareholder-distribution-coverage.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\shareholder-distribution-coverage\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\shareholder-distribution-coverage.png",
+      "xlsxSha256": "614bc2dc645e5c0d9287322a9ff4a54da1a81fe5061fa253a542bf2442c157f9",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D9\",\"rows\":3,\"cols\":3,\"nonEmpty\":9,\"text\":9,\"maxTextLength\":35,\"preview\":[[\"Repurchases less issuance\",\"90\",\"USD million\"],[\"Net shareholder distributions\",\"130\",\"USD million\"],[\"Equity cash flow less distributions\",\"-10\",\"USD million\"]],\"previewAddress\":\"B7:D9\",\"previewRows\":3,\"previewCols\":3}",
+      "workbookSpecSha256": "6b63276d419b9b148e8527523b0e2b147bbce95456d25e3c7d2940525e991241"
+    },
+    {
+      "slug": "eps-multiple-return-bridge",
+      "status": "pass",
+      "modelSha256": "8eed70d85c22ed73d1fb353eab1e98b3dbd9e863bd0fb0f8c2362393d621a186",
+      "baselineOutputs": {
+        "earningsEffect": 10,
+        "multipleEffect": 6,
+        "priceChange": 16,
+        "simpleReturn": 0.85
+      },
+      "changedInputCase": "Ending multiple unchanged",
+      "invalidInputCase": "Missing required source input",
+      "cases": [
+        {
+          "name": "Ending multiple unchanged",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required source input",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 9,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\eps-multiple-return-bridge.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\eps-multiple-return-bridge\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\eps-multiple-return-bridge.png",
+      "xlsxSha256": "5da103bbd5df48493acb104600b7374eab77deabf86d01889a362753b09869e6",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D10\",\"rows\":4,\"cols\":3,\"nonEmpty\":12,\"text\":12,\"maxTextLength\":35,\"preview\":[[\"Earnings effect at opening multiple\",\"10\",\"USD per share\"],[\"Multiple effect at ending EPS\",\"6\",\"USD per share\"],[\"Reconciled price change\",\"16\",\"USD per share\"],[\"Simple total period return\",\"0.85\",\"decimal\"]],\"previewAddress\":\"B7:D10\",\"previewRows\":4,\"previewCols\":3}",
+      "workbookSpecSha256": "aaa818af383c7a0c8aaf0dfc4b31fcb51200ec15b01fe9ea2ab41ce7558b6a02"
+    },
+    {
+      "slug": "dividend-reinvestment-share-schedule",
+      "status": "pass",
+      "modelSha256": "e5b8275d23d47dbed1bbd2082af485b73afd434a52e5d3bd06dbef24e96cc0f5",
+      "baselineOutputs": {
+        "cashDividend": 100,
+        "newShares": 5,
+        "endingShares": 105,
+        "endingWealth": 2310,
+        "reinvestmentDifference": 10
+      },
+      "changedInputCase": "Reinvestment price equals ending price",
+      "invalidInputCase": "Missing required source input",
+      "cases": [
+        {
+          "name": "Reinvestment price equals ending price",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required source input",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 7,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\dividend-reinvestment-share-schedule.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\dividend-reinvestment-share-schedule\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\dividend-reinvestment-share-schedule.png",
+      "xlsxSha256": "b1570bc715a09ea58901dac0c55441bdc1071539b1028c84778faa5b9bb91a59",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D11\",\"rows\":5,\"cols\":3,\"nonEmpty\":15,\"text\":15,\"maxTextLength\":34,\"preview\":[[\"Dividend cash\",\"100\",\"USD\"],[\"Shares acquired\",\"5\",\"shares\"],[\"Ending shares\",\"105\",\"shares\"],[\"Reinvested ending wealth\",\"2310\",\"USD\"],[\"Reinvestment less cash-held wealth\",\"10\",\"USD\"]],\"previewAddress\":\"B7:D11\",\"previewRows\":5,\"previewCols\":3}",
+      "workbookSpecSha256": "a38390dbc4b0aff30f92c45c272e82434699e0b3b428dae357a82a48c75c4eca"
+    },
+    {
+      "slug": "book-value-per-share-rollforward",
+      "status": "pass",
+      "modelSha256": "acce65b8028ae632164332ee82c14fdf5484e9738e4bda3fd3b0229a4b2a0219",
+      "baselineOutputs": {
+        "closingEquity": 520,
+        "bookPerShare": 10
+      },
+      "changedInputCase": "Additional dividend",
+      "invalidInputCase": "Missing required source input",
+      "cases": [
+        {
+          "name": "Additional dividend",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required source input",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 4,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\book-value-per-share-rollforward.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\book-value-per-share-rollforward\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\book-value-per-share-rollforward.png",
+      "xlsxSha256": "369b23dbf5877db592c8bceba521ad98ae7fd04e13785579f791c894d57dc24f",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D8\",\"rows\":2,\"cols\":3,\"nonEmpty\":6,\"text\":6,\"maxTextLength\":28,\"preview\":[[\"Reconciled closing equity\",\"520\",\"USD million\"],[\"Book value per closing share\",\"10\",\"USD per share\"]],\"previewAddress\":\"B7:D8\",\"previewRows\":2,\"previewCols\":3}",
+      "workbookSpecSha256": "a4bf195b1c7c6bda261f82afc56f09e717810ff0b5b54758cd89ad72c3fdc15b"
+    },
+    {
+      "slug": "minority-interest-multiple-reconciliation",
+      "status": "pass",
+      "modelSha256": "adc8dda100169881ab0f8389fc6653007877b91443ebddd635f9cd74a5042cae",
+      "baselineOutputs": {
+        "matchedEV": 180,
+        "matchedMultiple": 9,
+        "omissionEffect": 2
+      },
+      "changedInputCase": "No outside subsidiary owners",
+      "invalidInputCase": "Required input absent",
+      "cases": [
+        {
+          "name": "No outside subsidiary owners",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Required input absent",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 5,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\minority-interest-multiple-reconciliation.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\minority-interest-multiple-reconciliation\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\minority-interest-multiple-reconciliation.png",
+      "xlsxSha256": "881f71324b9ecca5bf4fb189500f2e0e4f18b5bddfd49fd71d4a8a9121992706",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D9\",\"rows\":3,\"cols\":3,\"nonEmpty\":9,\"text\":9,\"maxTextLength\":23,\"preview\":[[\"Matched consolidated EV\",\"180\",\"USD million\"],[\"Matched EV to EBITDA\",\"9\",\"times\"],[\"Multiple understatement\",\"2\",\"times\"]],\"previewAddress\":\"B7:D9\",\"previewRows\":3,\"previewCols\":3}",
+      "workbookSpecSha256": "44c3da1d6ce37b5d96df33aed5d36db3523e3678131c28f4eb9af821f7c190c3"
+    },
+    {
+      "slug": "listed-holding-lookthrough-nav",
+      "status": "pass",
+      "modelSha256": "5323ba7a9594e44fa16de2729932e904948cf02b99555b6cb797cc071baac9d6",
+      "baselineOutputs": {
+        "nav": 90,
+        "navPerShare": 9
+      },
+      "changedInputCase": "Higher quoted A value",
+      "invalidInputCase": "Required input absent",
+      "cases": [
+        {
+          "name": "Higher quoted A value",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Required input absent",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 6,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\listed-holding-lookthrough-nav.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\listed-holding-lookthrough-nav\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\listed-holding-lookthrough-nav.png",
+      "xlsxSha256": "20afd214a34756402f5e93bd1f31bffd65cdb5429e80b14aefd1639f788f2f3c",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D8\",\"rows\":2,\"cols\":3,\"nonEmpty\":6,\"text\":6,\"maxTextLength\":20,\"preview\":[[\"Look-through NAV\",\"90\",\"USD million\"],[\"NAV per parent share\",\"9\",\"USD per share\"]],\"previewAddress\":\"B7:D8\",\"previewRows\":2,\"previewCols\":3}",
+      "workbookSpecSha256": "14a9ba07ec98d13a475d87e52feb13be0db1a8c1c9a32c6c6342e9012aae56d2"
+    },
+    {
+      "slug": "segment-profit-elimination-bridge",
+      "status": "pass",
+      "modelSha256": "dc4437267951ec840296632d04dc152523ab5bdd4dd1dfea01a4a5628750db9f",
+      "baselineOutputs": {
+        "computed": 70,
+        "residual": 0
+      },
+      "changedInputCase": "Higher corporate cost",
+      "invalidInputCase": "Required input absent",
+      "cases": [
+        {
+          "name": "Higher corporate cost",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Required input absent",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 4,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\segment-profit-elimination-bridge.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\segment-profit-elimination-bridge\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\segment-profit-elimination-bridge.png",
+      "xlsxSha256": "5dd0767da8e840e9776bdf35ee63aa0fb28e0955ede04271de1fd8e61ebb0952",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D8\",\"rows\":2,\"cols\":3,\"nonEmpty\":6,\"text\":6,\"maxTextLength\":22,\"preview\":[[\"Computed group profit\",\"70\",\"USD million\"],[\"Reported less computed\",\"0\",\"USD million\"]],\"previewAddress\":\"B7:D8\",\"previewRows\":2,\"previewCols\":3}",
+      "workbookSpecSha256": "e9bbc3cb64538e08f235d631ed0b8b162d9ab85ca200ce20836c98f9dff721ed"
+    },
+    {
+      "slug": "investment-property-nav-bridge",
+      "status": "pass",
+      "modelSha256": "3a8f729201e132f2a49572ef56d6c3600c1d7bb952cbf50ab88f45a631a86be6",
+      "baselineOutputs": {
+        "nav": 750,
+        "navPerShare": 7.5,
+        "discount": 0.19999999999999996
+      },
+      "changedInputCase": "Lower appraised property value",
+      "invalidInputCase": "Required input absent",
+      "cases": [
+        {
+          "name": "Lower appraised property value",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Required input absent",
+          "kind": "refusal",
+          "status": "pass"
+        },
+        {
+          "name": "Nonpositive equity NAV cannot support a discount",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 7,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\investment-property-nav-bridge.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\investment-property-nav-bridge\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\investment-property-nav-bridge.png",
+      "xlsxSha256": "07a0174ca3263880f29bdcd2259c52029169da13e55ff6ad35909d6eeacfcffa",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D9\",\"rows\":3,\"cols\":3,\"nonEmpty\":9,\"text\":9,\"maxTextLength\":19,\"preview\":[[\"Equity NAV\",\"750\",\"USD million\"],[\"NAV per share\",\"7.5\",\"USD per share\"],[\"Discount to NAV\",\"0.19999999999999996\",\"decimal\"]],\"previewAddress\":\"B7:D9\",\"previewRows\":3,\"previewCols\":3}",
+      "workbookSpecSha256": "bbb7b47da8ba7a842e434c88395b940f278e7fbe0f6a0c6101cc61de2b8a8d45"
+    },
+    {
+      "slug": "one-period-residual-income-bridge",
+      "status": "pass",
+      "modelSha256": "daf3092f364698ca5b88b0ffe5f568d230d7011cc07e9f98aa18956fc1cba920",
+      "baselineOutputs": {
+        "charge": 10,
+        "residualIncome": 5,
+        "book1": 111,
+        "pvResidual": 4.545454545454545
+      },
+      "changedInputCase": "Earnings meet the equity charge",
+      "invalidInputCase": "Required input absent",
+      "cases": [
+        {
+          "name": "Earnings meet the equity charge",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Required input absent",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 5,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\one-period-residual-income-bridge.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\one-period-residual-income-bridge\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\one-period-residual-income-bridge.png",
+      "xlsxSha256": "db81960208cb9946663f62edf5faf1d3dc3c9c55ca8568cd34bc440f1049ba75",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D10\",\"rows\":4,\"cols\":3,\"nonEmpty\":12,\"text\":12,\"maxTextLength\":26,\"preview\":[[\"Opening equity charge\",\"10\",\"USD million\"],[\"One-period residual income\",\"5\",\"USD million\"],[\"Clean-surplus closing book\",\"111\",\"USD million\"],[\"PV of one-period residual\",\"4.545454545454545\",\"USD million\"]],\"previewAddress\":\"B7:D10\",\"previewRows\":4,\"previewCols\":3}",
+      "workbookSpecSha256": "5926a281ead2cf124977132381da2a12b5c581eec7e49f7f4cb2a3a59ec2aede"
+    },
+    {
+      "slug": "justified-price-book-scenario",
+      "status": "pass",
+      "modelSha256": "fe6095191939e7824a70f5edd593a518e08e34befc5ca179cac03d20c1d188a7",
+      "baselineOutputs": {
+        "retention": 0.2,
+        "justifiedPB": 1.714285714285714
+      },
+      "changedInputCase": "ROE equals required return",
+      "invalidInputCase": "Required input absent",
+      "cases": [
+        {
+          "name": "ROE equals required return",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Required input absent",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 4,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\justified-price-book-scenario.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\justified-price-book-scenario\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\justified-price-book-scenario.png",
+      "xlsxSha256": "1dfbb0dfe2d3d5236e775e7145ca3ebcb6968ccb1793bdb0bc3d91ecf0860094",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D8\",\"rows\":2,\"cols\":3,\"nonEmpty\":6,\"text\":6,\"maxTextLength\":21,\"preview\":[[\"Implied retention\",\"0.2\",\"decimal\"],[\"Justified current P/B\",\"1.714285714285714\",\"times\"]],\"previewAddress\":\"B7:D8\",\"previewRows\":2,\"previewCols\":3}",
+      "workbookSpecSha256": "d0ab5086e1f3314a91fa7d2c60ca16d929e4407c1e0fb0fd35abbda01adabec3"
+    },
+    {
+      "slug": "reinvestment-supported-growth",
+      "status": "pass",
+      "modelSha256": "5604b92d1dd38c626309dc0ffb2b726732a85589eb78972136130aa767ac0c1c",
+      "baselineOutputs": {
+        "reinvestment": 25,
+        "rate": 0.25,
+        "growth": 0.05
+      },
+      "changedInputCase": "Higher net capital spending",
+      "invalidInputCase": "Required input absent",
+      "cases": [
+        {
+          "name": "Higher net capital spending",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Required input absent",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 3,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\reinvestment-supported-growth.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\reinvestment-supported-growth\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\reinvestment-supported-growth.png",
+      "xlsxSha256": "40787251e09706b8eff790d2dd38fce2a1e4a87a2dd9ee9bf7411c7a8209ca25",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D9\",\"rows\":3,\"cols\":3,\"nonEmpty\":9,\"text\":9,\"maxTextLength\":26,\"preview\":[[\"Net reinvestment\",\"25\",\"USD million\"],[\"Reinvestment rate\",\"0.25\",\"decimal\"],[\"Supported operating growth\",\"0.05\",\"decimal\"]],\"previewAddress\":\"B7:D9\",\"previewRows\":3,\"previewCols\":3}",
+      "workbookSpecSha256": "141f181cf1dac0788fef1c8daf32fa95abcf5db12ecb09702bd5f54bb25cb2f5"
+    },
+    {
+      "slug": "terminal-growth-reinvestment-consistency",
+      "status": "pass",
+      "modelSha256": "a2f0938637b0528ebe7ebf7002f35c58c44b7dc3c2dcb921b495b6f52e09ac43",
+      "baselineOutputs": {
+        "rate": 0.2,
+        "fcff": 80,
+        "terminalValue": 1142.8571428571427
+      },
+      "changedInputCase": "ROC falls to WACC",
+      "invalidInputCase": "Required input absent",
+      "cases": [
+        {
+          "name": "ROC falls to WACC",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Required input absent",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 5,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\terminal-growth-reinvestment-consistency.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\terminal-growth-reinvestment-consistency\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\terminal-growth-reinvestment-consistency.png",
+      "xlsxSha256": "257129c8e6d2a02cddc63a4b303b376390251dc8a909255783143c7bcc6cc30a",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D9\",\"rows\":3,\"cols\":3,\"nonEmpty\":9,\"text\":9,\"maxTextLength\":28,\"preview\":[[\"Stable reinvestment rate\",\"0.2\",\"decimal\"],[\"First stable-year FCFF\",\"80\",\"USD million\"],[\"Value at stable-period start\",\"1142.8571428571427\",\"USD million\"]],\"previewAddress\":\"B7:D9\",\"previewRows\":3,\"previewCols\":3}",
+      "workbookSpecSha256": "4f6c935266001869f607c9c59f65c2f539be7cf7ebd0e60144551edc6c81e101"
+    },
+    {
+      "slug": "economic-profit-fade-schedule",
+      "status": "pass",
+      "modelSha256": "378da7ac1ea3b6c5c086e3b92246d83362761403af23defacbdf023a90126314",
+      "baselineOutputs": {
+        "ep1": 20,
+        "ep2": 10,
+        "pvExcess": 26.446280991735534,
+        "componentValue": 1026.4462809917354
+      },
+      "changedInputCase": "Zero excess return begins in year2",
+      "invalidInputCase": "Required input absent",
+      "cases": [
+        {
+          "name": "Zero excess return begins in year2",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Required input absent",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 5,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\economic-profit-fade-schedule.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\economic-profit-fade-schedule\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\economic-profit-fade-schedule.png",
+      "xlsxSha256": "2074a54be53547bcea158eadd7ecdb350c28c96cddea726dac8efe7ed2710067",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D10\",\"rows\":4,\"cols\":3,\"nonEmpty\":12,\"text\":12,\"maxTextLength\":32,\"preview\":[[\"Year1 economic profit\",\"20\",\"USD million\"],[\"Year2 economic profit\",\"10\",\"USD million\"],[\"PV explicit economic profits\",\"26.446280991735534\",\"USD million\"],[\"Constant-capital operating value\",\"1026.4462809917354\",\"USD million\"]],\"previewAddress\":\"B7:D10\",\"previewRows\":4,\"previewCols\":3}",
+      "workbookSpecSha256": "cb2fe9b927b722043364cbdbd714c54a83d72725d2e3f2a82d331ffeca31c0df"
+    },
+    {
+      "slug": "implied-terminal-reinvestment",
+      "status": "pass",
+      "modelSha256": "a547e2b29f5bed0505d0c1108a5ac7ad442d5939a84a6a3ca8e89a4fe1b197a0",
+      "baselineOutputs": {
+        "fcff": 70,
+        "reinvestment": 30,
+        "rate": 0.3,
+        "roc": 0.1
+      },
+      "changedInputCase": "Lower supplied value",
+      "invalidInputCase": "Required input absent",
+      "cases": [
+        {
+          "name": "Lower supplied value",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Required input absent",
+          "kind": "refusal",
+          "status": "pass"
+        },
+        {
+          "name": "Terminal value implies negative reinvestment",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 6,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\implied-terminal-reinvestment.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\implied-terminal-reinvestment\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\implied-terminal-reinvestment.png",
+      "xlsxSha256": "e1f2ce6234c8c1ced047c878cfd970ba41f08e5d685bc9dc42dc13565d2d9bae",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D10\",\"rows\":4,\"cols\":3,\"nonEmpty\":12,\"text\":12,\"maxTextLength\":25,\"preview\":[[\"Implied FCFF\",\"70\",\"USD million\"],[\"Implied reinvestment\",\"30\",\"USD million\"],[\"Implied reinvestment rate\",\"0.3\",\"decimal\"],[\"Implied ROC\",\"0.1\",\"decimal\"]],\"previewAddress\":\"B7:D10\",\"previewRows\":4,\"previewCols\":3}",
+      "workbookSpecSha256": "9e76c12635510796cba0b5a3ec23d5dec4ad0e273025b80c32dd21eb3cf0d969"
+    },
+    {
+      "slug": "research-spend-cohort-adjustment",
+      "status": "pass",
+      "modelSha256": "2198becb9e7644ea0ab7d315ed81f6b9fb3f48b877891a76da1a5622b2e982dd",
+      "baselineOutputs": {
+        "researchAsset": 52,
+        "amortization": 18,
+        "adjustedEbit": 112
+      },
+      "changedInputCase": "Larger current-year research cohort",
+      "invalidInputCase": "Required source input missing",
+      "cases": [
+        {
+          "name": "Larger current-year research cohort",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Required source input missing",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 7,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\research-spend-cohort-adjustment.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\research-spend-cohort-adjustment\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\research-spend-cohort-adjustment.png",
+      "xlsxSha256": "825013328b24a59cde304ee12fce866315755371a95d4b8dd7cee589bd8f78bd",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D9\",\"rows\":3,\"cols\":3,\"nonEmpty\":9,\"text\":9,\"maxTextLength\":30,\"preview\":[[\"Closing analyst research asset\",\"52\",\"USD million\"],[\"Current analyst amortization\",\"18\",\"USD million\"],[\"Analyst adjusted EBIT\",\"112\",\"USD million\"]],\"previewAddress\":\"B7:D9\",\"previewRows\":3,\"previewCols\":3}",
+      "workbookSpecSha256": "47e1f150915342aea63607e5b127dec9a046a5a7a53c0af8061bb8114f84261b"
+    },
+    {
+      "slug": "noncash-working-capital-bridge",
+      "status": "pass",
+      "modelSha256": "368ea0f5d03e56aa297bd1486984c609bad24449f56b753b54af515cf1c74a24",
+      "baselineOutputs": {
+        "balanceChange": 50,
+        "noncash": 20,
+        "operatingInvestment": 30,
+        "cashEffect": -30
+      },
+      "changedInputCase": "Larger acquired working-capital balance",
+      "invalidInputCase": "Required source input missing",
+      "cases": [
+        {
+          "name": "Larger acquired working-capital balance",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Required source input missing",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 4,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\noncash-working-capital-bridge.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\noncash-working-capital-bridge\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\noncash-working-capital-bridge.png",
+      "xlsxSha256": "d6f06448ca00cfd79fa12cfae2149d4671a4a93c38f7ee24aef3283784f7bb23",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D10\",\"rows\":4,\"cols\":3,\"nonEmpty\":12,\"text\":12,\"maxTextLength\":30,\"preview\":[[\"Closing less opening\",\"50\",\"USD million\"],[\"Signed noncash movements\",\"20\",\"USD million\"],[\"Operating balance investment\",\"30\",\"USD million\"],[\"Indirect operating cash effect\",\"-30\",\"USD million\"]],\"previewAddress\":\"B7:D10\",\"previewRows\":4,\"previewCols\":3}",
+      "workbookSpecSha256": "58b81567b3c76192cae893e2a40e34287bc54ef0b822e42d1f3193afad7f0af0"
+    },
+    {
+      "slug": "lifo-reserve-earnings-bridge",
+      "status": "pass",
+      "modelSha256": "cebd5d0ab6c3c2bfb13365e4931b8a1e706b7d9cec4dba0c2015f0dbe0d7d2f4",
+      "baselineOutputs": {
+        "fifoInventory": 260,
+        "fifoCogs": 330,
+        "fifoMargin": 0.34,
+        "earningsChange": 15
+      },
+      "changedInputCase": "Reserve falls below opening balance",
+      "invalidInputCase": "Required source input missing",
+      "cases": [
+        {
+          "name": "Reserve falls below opening balance",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Required source input missing",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 7,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\lifo-reserve-earnings-bridge.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\lifo-reserve-earnings-bridge\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\lifo-reserve-earnings-bridge.png",
+      "xlsxSha256": "721ed2644b85701a802ec4b7b4abf6d3adcd0cbc0afe1bb90a161895bebc23b8",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D10\",\"rows\":4,\"cols\":3,\"nonEmpty\":12,\"text\":12,\"maxTextLength\":34,\"preview\":[[\"Analytical FIFO inventory\",\"260\",\"USD million\"],[\"Analytical FIFO COGS\",\"330\",\"USD million\"],[\"FIFO gross margin\",\"0.34\",\"decimal\"],[\"After-tax FIFO earnings adjustment\",\"15\",\"USD million\"]],\"previewAddress\":\"B7:D10\",\"previewRows\":4,\"previewCols\":3}",
+      "workbookSpecSha256": "459be0d175e3b5f5d131ced1ff9ad848895a03778b9cb4cba65376c179e5b461"
+    },
+    {
+      "slug": "inventory-charge-margin-bridge",
+      "status": "pass",
+      "modelSha256": "20ad8e57585f8b70ea3e80d58e38cb6e8a40b0ddc63e47c9edaad4375926e75a",
+      "baselineOutputs": {
+        "reportedMargin": 0.3,
+        "netCharge": 20,
+        "excludedMargin": 0.32,
+        "marginEffect": 0.02
+      },
+      "changedInputCase": "No permitted reversal",
+      "invalidInputCase": "Required source input missing",
+      "cases": [
+        {
+          "name": "No permitted reversal",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Required source input missing",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 7,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\inventory-charge-margin-bridge.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\inventory-charge-margin-bridge\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\inventory-charge-margin-bridge.png",
+      "xlsxSha256": "cc2b6ee1aaf5cabb86c05015660a72d757b4b92d5e56307888a9f4465dc620a2",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D10\",\"rows\":4,\"cols\":3,\"nonEmpty\":12,\"text\":12,\"maxTextLength\":28,\"preview\":[[\"Reported gross margin\",\"0.3\",\"decimal\"],[\"Net inventory charge\",\"20\",\"USD million\"],[\"Charge-excluded gross margin\",\"0.32\",\"decimal\"],[\"Margin impact of net charge\",\"0.02\",\"decimal\"]],\"previewAddress\":\"B7:D10\",\"previewRows\":4,\"previewCols\":3}",
+      "workbookSpecSha256": "ca89c6d4ea6d2cfb8e829eaae34e0748cf8ed43022e54075c4897a41dcad17c7"
+    },
+    {
+      "slug": "pension-funded-status-change",
+      "status": "pass",
+      "modelSha256": "abf394b345c4cc513d27bc05d51fe2c53794e60d97c095956bd64cd6b5069ce5",
+      "baselineOutputs": {
+        "deficit0": 20,
+        "deficit1": 30,
+        "change": 10,
+        "nonContribution": 20
+      },
+      "changedInputCase": "Lower actual contribution with same reported balances",
+      "invalidInputCase": "Required source input missing",
+      "cases": [
+        {
+          "name": "Lower actual contribution with same reported balances",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Required source input missing",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 4,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\pension-funded-status-change.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\pension-funded-status-change\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\pension-funded-status-change.png",
+      "xlsxSha256": "ba584ba8ed60bedd160e8dae0d3f9fa534b5783f0d8a0b31648975b58eaee7e6",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D10\",\"rows\":4,\"cols\":3,\"nonEmpty\":12,\"text\":12,\"maxTextLength\":39,\"preview\":[[\"Opening deficit\",\"20\",\"USD million\"],[\"Closing deficit\",\"30\",\"USD million\"],[\"Deficit increase\",\"10\",\"USD million\"],[\"Total non-contribution deficit movement\",\"20\",\"USD million\"]],\"previewAddress\":\"B7:D10\",\"previewRows\":4,\"previewCols\":3}",
+      "workbookSpecSha256": "7d7de59f72aac55f51624325b188af616932588442c2d3399d23e7975aeda2a1"
+    },
+    {
+      "slug": "pension-service-financing-bridge",
+      "status": "pass",
+      "modelSha256": "e0d8579cf318471070622a62a5659240a75ac81fb774ac96d77fa4294752fad5",
+      "baselineOutputs": {
+        "interest": 1,
+        "pensionPL": 6,
+        "plResidual": 0,
+        "totalCost": 9,
+        "deficit1": 25
+      },
+      "changedInputCase": "Higher OCI remeasurement loss",
+      "invalidInputCase": "Required source input missing",
+      "cases": [
+        {
+          "name": "Higher OCI remeasurement loss",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Required source input missing",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 6,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\pension-service-financing-bridge.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\pension-service-financing-bridge\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\pension-service-financing-bridge.png",
+      "xlsxSha256": "cdacf656f88119af35f6d13335cc0b7d33ea88264ebe7f9d3252cafead4f0d2e",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D11\",\"rows\":5,\"cols\":3,\"nonEmpty\":15,\"text\":15,\"maxTextLength\":28,\"preview\":[[\"Net interest expense\",\"1\",\"USD million\"],[\"Service plus net interest\",\"6\",\"USD million\"],[\"Reported less calculated P&L\",\"0\",\"USD million\"],[\"P&L plus OCI cost\",\"9\",\"USD million\"],[\"Computed closing deficit\",\"25\",\"USD million\"]],\"previewAddress\":\"B7:D11\",\"previewRows\":5,\"previewCols\":3}",
+      "workbookSpecSha256": "7772aa61abce29e5134dda290fa2ccb5fbb1b098c4d36dd9a81f81aaa8e5d355"
+    },
+    {
+      "slug": "current-tax-cash-payment-bridge",
+      "status": "pass",
+      "modelSha256": "00ccd8a79b9d66d364096c37f10f19ce10afa8f698baff2d15b95b320bfaa20d",
+      "baselineOutputs": {
+        "inferredCash": 32,
+        "residual": 0
+      },
+      "changedInputCase": "Higher closing tax payable",
+      "invalidInputCase": "Required source input missing",
+      "cases": [
+        {
+          "name": "Higher closing tax payable",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Required source input missing",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 3,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\current-tax-cash-payment-bridge.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\current-tax-cash-payment-bridge\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\current-tax-cash-payment-bridge.png",
+      "xlsxSha256": "142701faff84b334424ec2f51fdf28be89d0755eb090cd06bcfc071ce511bbdd",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D8\",\"rows\":2,\"cols\":3,\"nonEmpty\":6,\"text\":6,\"maxTextLength\":32,\"preview\":[[\"Inferred cash tax paid\",\"32\",\"USD million\"],[\"Reported less inferred cash paid\",\"0\",\"USD million\"]],\"previewAddress\":\"B7:D8\",\"previewRows\":2,\"previewCols\":3}",
+      "workbookSpecSha256": "43e86e2eb853b3aae7641d898d4f325d46ab11a60288ff445d4934d35c2cb22b"
+    },
+    {
+      "slug": "oci-reclassification-bridge",
+      "status": "pass",
+      "modelSha256": "30c88632f933c9cbd29dbab73a804f8f371aafa0b2b31108a65dd94dfdf032a5",
+      "baselineOutputs": {
+        "profitAfter": 85,
+        "ociAfter": 15,
+        "comprehensiveAfter": 100,
+        "conservation": 0
+      },
+      "changedInputCase": "A loss is recycled instead",
+      "invalidInputCase": "Required source input missing",
+      "cases": [
+        {
+          "name": "A loss is recycled instead",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Required source input missing",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 5,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\oci-reclassification-bridge.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\oci-reclassification-bridge\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\oci-reclassification-bridge.png",
+      "xlsxSha256": "cba4b69be568a652f377fd71d47af6df93cbd25c39dad53eba937efaec910477",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D10\",\"rows\":4,\"cols\":3,\"nonEmpty\":12,\"text\":12,\"maxTextLength\":36,\"preview\":[[\"Profit after recycling\",\"85\",\"USD million\"],[\"OCI after recycling\",\"15\",\"USD million\"],[\"Comprehensive income after\",\"100\",\"USD million\"],[\"Change in total comprehensive income\",\"0\",\"USD million\"]],\"previewAddress\":\"B7:D10\",\"previewRows\":4,\"previewCols\":3}",
+      "workbookSpecSha256": "2e7c9b6029455f9f4481becb77367ebb45b0d4b0819d7027e0a028b266346359"
+    },
+    {
+      "slug": "purchased-amortization-eps-bridge",
+      "status": "pass",
+      "modelSha256": "b26791fe9b17b57fb79812e381292ed3f3273973ade7fea3c2e7a9040bf3a1d5",
+      "baselineOutputs": {
+        "afterTax": 17.5,
+        "reportedEps": 2,
+        "alternativeEps": 2.35,
+        "epsAdjustment": 0.35
+      },
+      "changedInputCase": "Larger attributable recognized tax benefit",
+      "invalidInputCase": "Required source input missing",
+      "cases": [
+        {
+          "name": "Larger attributable recognized tax benefit",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Required source input missing",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 5,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\purchased-amortization-eps-bridge.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\purchased-amortization-eps-bridge\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\purchased-amortization-eps-bridge.png",
+      "xlsxSha256": "933d7c5a8bb9b7c41bc5ad197a4a5bc70e1925b4a0f5576f83e309564979dc4d",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D10\",\"rows\":4,\"cols\":3,\"nonEmpty\":12,\"text\":12,\"maxTextLength\":33,\"preview\":[[\"After-tax amortization adjustment\",\"17.5\",\"USD million\"],[\"Reported EPS\",\"2\",\"USD per share\"],[\"Amortization-excluded EPS\",\"2.35\",\"USD per share\"],[\"Per-share adjustment\",\"0.35\",\"USD per share\"]],\"previewAddress\":\"B7:D10\",\"previewRows\":4,\"previewCols\":3}",
+      "workbookSpecSha256": "077d6b60b5a3cebbbff639e59e24f33b8f3def14acfec86209f1cf8c7c37652c"
+    },
+    {
+      "slug": "sbc-share-offset-cost",
+      "status": "pass",
+      "modelSha256": "201e1898183d2ec6908266110cd205830c78cc0e180e03e58332f87121d28e2d",
+      "baselineOutputs": {
+        "grossCost": 60,
+        "netCashCost": 50,
+        "difference": 10
+      },
+      "changedInputCase": "Lower repurchase price scenario",
+      "invalidInputCase": "Required source input missing",
+      "cases": [
+        {
+          "name": "Lower repurchase price scenario",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Required source input missing",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 3,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\sbc-share-offset-cost.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\sbc-share-offset-cost\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\sbc-share-offset-cost.png",
+      "xlsxSha256": "0120b039299cead1381c0adfc00c10e88e128e0768e88ce7910961ad9086c55d",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D9\",\"rows\":3,\"cols\":3,\"nonEmpty\":9,\"text\":9,\"maxTextLength\":40,\"preview\":[[\"Gross share-offset cash\",\"60\",\"USD million\"],[\"Share-offset cash less exercise proceeds\",\"50\",\"USD million\"],[\"Net cash cost less accounting expense\",\"10\",\"USD million\"]],\"previewAddress\":\"B7:D9\",\"previewRows\":3,\"previewCols\":3}",
+      "workbookSpecSha256": "6d7db2c9f34696a03ad8ea0317d4cee43732e5f804025c473094133121a2f869"
+    },
+    {
+      "slug": "gross-to-net-revenue-bridge",
+      "status": "pass",
+      "modelSha256": "f50f5d647b3a549310ddcf5a82a6d24b6a27d2b0aad00958cae71375ba0d8693",
+      "baselineOutputs": {
+        "deductions": 200,
+        "netRevenue": 800,
+        "residual": 0
+      },
+      "changedInputCase": "Higher rebate accrual",
+      "invalidInputCase": "Missing required reported input",
+      "cases": [
+        {
+          "name": "Higher rebate accrual",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required reported input",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 3,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\gross-to-net-revenue-bridge.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\gross-to-net-revenue-bridge\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\gross-to-net-revenue-bridge.png",
+      "xlsxSha256": "35d9e8320660cd7259a7fcb0edfc15fe7a187a47d53de8a26a556dd8a6f5ac64",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D9\",\"rows\":3,\"cols\":3,\"nonEmpty\":9,\"text\":9,\"maxTextLength\":30,\"preview\":[[\"Total distinct deductions\",\"200\",\"USD million\"],[\"Computed net revenue\",\"800\",\"USD million\"],[\"Reported less computed revenue\",\"0\",\"USD million\"]],\"previewAddress\":\"B7:D9\",\"previewRows\":3,\"previewCols\":3}",
+      "workbookSpecSha256": "6c1a9ca23911c18ef6adb6f1fc1f871b500e1b98869c6973cade2983ffa896e4"
+    },
+    {
+      "slug": "organic-revenue-perimeter-bridge",
+      "status": "pass",
+      "modelSha256": "ca3b29e7b766909d8ca51e51f0d2bc4d6295007c3a66f05fa70dc8aa28d86fac",
+      "baselineOutputs": {
+        "comparablePrior": 90,
+        "comparableCurrent": 105,
+        "organicGrowth": 0.16666666666666674
+      },
+      "changedInputCase": "Smaller acquired-business contribution",
+      "invalidInputCase": "Missing required reported input",
+      "cases": [
+        {
+          "name": "Smaller acquired-business contribution",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required reported input",
+          "kind": "refusal",
+          "status": "pass"
+        },
+        {
+          "name": "Disposed business exceeds prior revenue",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 6,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\organic-revenue-perimeter-bridge.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\organic-revenue-perimeter-bridge\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\organic-revenue-perimeter-bridge.png",
+      "xlsxSha256": "feff96f47167d51606c81239f47b92aaadae1a25399bd5ffdeef6ee1dce97aa9",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D9\",\"rows\":3,\"cols\":3,\"nonEmpty\":9,\"text\":9,\"maxTextLength\":39,\"preview\":[[\"Comparable prior revenue\",\"90\",\"USD million\"],[\"Comparable current at constant currency\",\"105\",\"USD million\"],[\"Comparable organic growth\",\"0.16666666666666674\",\"decimal\"]],\"previewAddress\":\"B7:D9\",\"previewRows\":3,\"previewCols\":3}",
+      "workbookSpecSha256": "4bddcdbd9fb7dabfe1b053c277b171eeec9799ab5c62290fb9f7bb045f33c2db"
+    },
+    {
+      "slug": "constant-currency-revenue-bridge",
+      "status": "pass",
+      "modelSha256": "e96f660805b2aee0297636e3eed141454792596f5359cfd051ab400cd2e0f3db",
+      "baselineOutputs": {
+        "priorRevenue": 140,
+        "currentRevenue": 146,
+        "ccRevenue": 170,
+        "reportedGrowth": 0.04285714285714293,
+        "ccGrowth": 0.2142857142857142,
+        "translation": -24
+      },
+      "changedInputCase": "Exchange rate unchanged",
+      "invalidInputCase": "Missing required reported input",
+      "cases": [
+        {
+          "name": "Exchange rate unchanged",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required reported input",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 11,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\constant-currency-revenue-bridge.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\constant-currency-revenue-bridge\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\constant-currency-revenue-bridge.png",
+      "xlsxSha256": "8623e43dc83ee337f8d372f4fb5c9dd3e6b72db3420ff0780b943edfdc175f57",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D12\",\"rows\":6,\"cols\":3,\"nonEmpty\":18,\"text\":18,\"maxTextLength\":39,\"preview\":[[\"Reported prior revenue\",\"140\",\"USD million\"],[\"Reported current revenue\",\"146\",\"USD million\"],[\"Current constant-currency revenue\",\"170\",\"USD million\"],[\"Reported growth\",\"0.04285714285714293\",\"decimal\"],[\"Constant-currency growth\",\"0.2142857142857142\",\"decimal\"],[\"Reported less constant-currency revenue\",\"-24\",\"USD million\"]],\"previewAddress\":\"B7:D12\",\"previewRows\":6,\"previewCols\":3}",
+      "workbookSpecSha256": "8a5885556fdb004a1064f93b39bf6357045e6ae1878ab89539d96f91a72ad791"
+    },
+    {
+      "slug": "trailing-period-financial-bridge",
+      "status": "pass",
+      "modelSha256": "4d222ded884bf7088273cec181135ba00496cf4654b1c51c5927b878f5321637",
+      "baselineOutputs": {
+        "trailing": 110
+      },
+      "changedInputCase": "Higher current YTD flow",
+      "invalidInputCase": "Missing required reported input",
+      "cases": [
+        {
+          "name": "Higher current YTD flow",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required reported input",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 2,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\trailing-period-financial-bridge.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\trailing-period-financial-bridge\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\trailing-period-financial-bridge.png",
+      "xlsxSha256": "ac657c3ec0ac4fac549c253112bc5f7ecba60d1db707804ea7c6028b8b1fe885",
+      "inspection": "{\"kind\":\"notice\",\"message\":\"No records matched the requested kinds.\"}",
+      "workbookSpecSha256": "01e2af002cb22c7262cf8fe39c436f7128bf7bb6f299af536de38b31f0ae1069"
+    },
+    {
+      "slug": "extra-week-revenue-comparability",
+      "status": "pass",
+      "modelSha256": "76fbbed43d5993181285bad9ee402693073829b0f5836de125fda2ac3d8da850",
+      "baselineOutputs": {
+        "comparable": 1040,
+        "reportedGrowth": 0.06000000000000005,
+        "comparableGrowth": 0.040000000000000036
+      },
+      "changedInputCase": "Extra week contributes more revenue",
+      "invalidInputCase": "Missing required reported input",
+      "cases": [
+        {
+          "name": "Extra week contributes more revenue",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required reported input",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 5,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\extra-week-revenue-comparability.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\extra-week-revenue-comparability\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\extra-week-revenue-comparability.png",
+      "xlsxSha256": "9e9d52e425938d3f7fc25aab5d33182b0055eba99525eca2e5686dda5c30770e",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D9\",\"rows\":3,\"cols\":3,\"nonEmpty\":9,\"text\":9,\"maxTextLength\":36,\"preview\":[[\"Current revenue excluding extra week\",\"1040\",\"USD million\"],[\"Reported growth\",\"0.06000000000000005\",\"decimal\"],[\"Growth excluding extra week\",\"0.040000000000000036\",\"decimal\"]],\"previewAddress\":\"B7:D9\",\"previewRows\":3,\"previewCols\":3}",
+      "workbookSpecSha256": "bed785ece568cea8d13e3ecaf3c6c117485e70511381b5289e190028caea1508"
+    },
+    {
+      "slug": "contract-liability-release-bridge",
+      "status": "pass",
+      "modelSha256": "50b26d207844a185f0f3937c3287cb66d7633ece6ecfbbccc87abb33e0659da0",
+      "baselineOutputs": {
+        "release": 60,
+        "residual": 0,
+        "releaseShare": 0.4
+      },
+      "changedInputCase": "Higher closing deferred balance",
+      "invalidInputCase": "Missing required reported input",
+      "cases": [
+        {
+          "name": "Higher closing deferred balance",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required reported input",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 4,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\contract-liability-release-bridge.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\contract-liability-release-bridge\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\contract-liability-release-bridge.png",
+      "xlsxSha256": "659fbce3cd44b35bb5ed211556a52bf3331565ee1729778222c54bdf9efd0d0d",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D9\",\"rows\":3,\"cols\":3,\"nonEmpty\":9,\"text\":9,\"maxTextLength\":33,\"preview\":[[\"Inferred revenue release\",\"60\",\"USD million\"],[\"Disclosed less inferred release\",\"0\",\"USD million\"],[\"Release as share of total revenue\",\"0.4\",\"decimal\"]],\"previewAddress\":\"B7:D9\",\"previewRows\":3,\"previewCols\":3}",
+      "workbookSpecSha256": "c275b57cace296e8ace41b477e73506bdc4bddb4105df3f9157f18a68fe79cef"
+    },
+    {
+      "slug": "contract-asset-billing-cash-bridge",
+      "status": "pass",
+      "modelSha256": "a7999938729ea9491eae0a40716f719e0489cbd593644e5911f46b46de4b26a3",
+      "baselineOutputs": {
+        "transfers": 90,
+        "totalInvoices": 290,
+        "collections": 280
+      },
+      "changedInputCase": "More revenue remains unbilled",
+      "invalidInputCase": "Missing required reported input",
+      "cases": [
+        {
+          "name": "More revenue remains unbilled",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required reported input",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 5,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\contract-asset-billing-cash-bridge.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\contract-asset-billing-cash-bridge\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\contract-asset-billing-cash-bridge.png",
+      "xlsxSha256": "49492525cf39291035f97cf4cd8e5760711abe54c5ab43b6264b85d9535998bb",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D9\",\"rows\":3,\"cols\":3,\"nonEmpty\":9,\"text\":9,\"maxTextLength\":56,\"preview\":[[\"Transfers to receivables\",\"90\",\"USD million\"],[\"Direct invoices plus transfers\",\"290\",\"USD million\"],[\"Implied collections under zero-other-movement assumption\",\"280\",\"USD million\"]],\"previewAddress\":\"B7:D9\",\"previewRows\":3,\"previewCols\":3}",
+      "workbookSpecSha256": "8e689b93d465aabacd27e598252e9074c01de95a447449395d3ae34880b7fa58"
+    },
+    {
+      "slug": "factoring-cashflow-timing-bridge",
+      "status": "pass",
+      "modelSha256": "ec88fa02664b4c423d35da7b6c4b3b955292eb0ce03c432c93a6a33d7e9266d4",
+      "baselineOutputs": {
+        "acceleration": 30,
+        "lookThroughCfo": 70
+      },
+      "changedInputCase": "More factored invoices collected by customers",
+      "invalidInputCase": "Missing required reported input",
+      "cases": [
+        {
+          "name": "More factored invoices collected by customers",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required reported input",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 2,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\factoring-cashflow-timing-bridge.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\factoring-cashflow-timing-bridge\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\factoring-cashflow-timing-bridge.png",
+      "xlsxSha256": "8f5bc51b500f2b35e0c0353b7d44f701c94bb6398b73b6df5ef125f53789d35a",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D8\",\"rows\":2,\"cols\":3,\"nonEmpty\":6,\"text\":6,\"maxTextLength\":41,\"preview\":[[\"Advances less matched customer receipts\",\"30\",\"USD million\"],[\"Analytical CFO on customer receipt timing\",\"70\",\"USD million\"]],\"previewAddress\":\"B7:D8\",\"previewRows\":2,\"previewCols\":3}",
+      "workbookSpecSha256": "c3e50e187f8b5942f4e18f336d3c10a32ee0ca92b22db9c6baa02c244c97bbed"
+    },
+    {
+      "slug": "supplier-finance-leverage-bridge",
+      "status": "pass",
+      "modelSha256": "22444de6e07dda92691c3be0848c3c492c52f2db0acfe6de9abbe86fd4f277f4",
+      "baselineOutputs": {
+        "analyticalDebt": 280,
+        "netDebt": 230,
+        "operatingPayables": 220,
+        "conservation": 0
+      },
+      "changedInputCase": "Larger identified supplier-finance balance",
+      "invalidInputCase": "Missing required reported input",
+      "cases": [
+        {
+          "name": "Larger identified supplier-finance balance",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required reported input",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 6,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\supplier-finance-leverage-bridge.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\supplier-finance-leverage-bridge\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\supplier-finance-leverage-bridge.png",
+      "xlsxSha256": "07928d9ce4ddca061e298d8cfc7e36b7202ae0ccf0d424cfe5fd200b1f7a734c",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D10\",\"rows\":4,\"cols\":3,\"nonEmpty\":12,\"text\":12,\"maxTextLength\":43,\"preview\":[[\"Debt including supplier-finance scenario\",\"280\",\"USD million\"],[\"Analytical net debt\",\"230\",\"USD million\"],[\"Trade payables excluding supplier financing\",\"220\",\"USD million\"],[\"Liability conservation difference\",\"0\",\"USD million\"]],\"previewAddress\":\"B7:D10\",\"previewRows\":4,\"previewCols\":3}",
+      "workbookSpecSha256": "f241d14a6d8e27d14fe9d65ad4ecf2f713f2ee3a66a1a3e2224fa525bdc5dff9"
+    },
+    {
+      "slug": "receivables-allowance-movement-bridge",
+      "status": "pass",
+      "modelSha256": "bb6768e5285e89109d66d21ad72c3b11987ffe191be1f1c4c35f217b3b8ccf8f",
+      "baselineOutputs": {
+        "computedClosing": 13,
+        "residual": 0,
+        "coverage": 0.065
+      },
+      "changedInputCase": "Higher credit-loss expense",
+      "invalidInputCase": "Missing required reported input",
+      "cases": [
+        {
+          "name": "Higher credit-loss expense",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required reported input",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 4,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\receivables-allowance-movement-bridge.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\receivables-allowance-movement-bridge\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\receivables-allowance-movement-bridge.png",
+      "xlsxSha256": "5de264d33017688006d1a448e7cb2cded84f14c473a1c05ace6efe63eea39455",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D9\",\"rows\":3,\"cols\":3,\"nonEmpty\":9,\"text\":9,\"maxTextLength\":40,\"preview\":[[\"Computed closing allowance\",\"13\",\"USD million\"],[\"Reported less computed closing allowance\",\"0\",\"USD million\"],[\"Computed allowance to gross receivables\",\"0.065\",\"decimal\"]],\"previewAddress\":\"B7:D9\",\"previewRows\":3,\"previewCols\":3}",
+      "workbookSpecSha256": "0643617ae0873371ab783c445d9cb932926632ddf4060f2c5f1f518d00d00b86"
+    }
+  ]
+}

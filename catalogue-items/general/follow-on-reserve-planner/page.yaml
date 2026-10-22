@@ -1,0 +1,76 @@
+new_slug: follow-on-reserve-planner
+name: Follow-on reserve planner
+headline: Follow-on reserve planner
+summary: Compare documented participation plans with the fund approved follow-on reserve.
+job: money-and-investing
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: Participation cash by company, total reserve need and budget headroom. Share two companies approved target ownership, inclusive round sizes, eligible rights, scenario dates and the available reserve.
+explain: |-
+  Participation cash by company, total reserve need and budget headroom.
+
+  Venture portfolio reserves. Illustrative figures only. 10% of100 plus20% of100 requires30. Doubling A round raises requirement to40 and creates a10 gap.
+when:
+  - You need participation cash by company, total reserve need and budget headroom.
+  - You work on venture portfolio reserves and need traceable calculations.
+  - A reviewer needs to trace the result back to inputs and assumptions.
+you_give:
+  - Two companies approved target ownership, inclusive round sizes, eligible rights, scenario dates and the available reserve.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - Participation cash by company, total reserve need and budget headroom.
+  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: 1. Confirm round sizes include fund participation and link each target to approved rights and a dated scenario
+    text: Confirm round sizes include fund participation and link each target to approved rights and a dated scenario.
+  - title: 2. Multiply each target by its matching inclusive round size and sum the cash needs
+    text: Multiply each target by its matching inclusive round size and sum the cash needs.
+  - title: 3. Compare combined need to available reserve; list constraints before proposing any reallocation
+    text: Compare combined need to available reserve; list constraints before proposing any reallocation.
+output_shape: |-
+  Participation cash by company, total reserve need and budget headroom.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: Outside-only allocations must first be converted to inclusive round sizes.
+judge:
+  - Outside-only allocations must first be converted to inclusive round sizes.
+  - Targets are approved scenarios, not financing-success probabilities.
+  - Trace each input to its dated signed source, currency, scale and period.
+  - Reconcile outputs; preserve MISSING and CHECKS MISSED rather than guessing zero.
+test:
+  - Run the included baseline and changed-input fixtures, then compare with the stated expected results.
+  - Remove a required input and confirm the affected calculation refuses to invent a zero.
+  - Recalculate the workbook after changing an input and inspect the saved output.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: Node.js 20 or later
+      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

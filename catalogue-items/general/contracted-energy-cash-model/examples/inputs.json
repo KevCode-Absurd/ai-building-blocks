@@ -1,0 +1,8 @@
+{
+  "mwh_1": 1000,
+  "mwh_2": 1100,
+  "mwh_3": 900,
+  "contract_price": 50,
+  "variable_cash_per_mwh": 10,
+  "fixed_annual_cash": 10000
+}

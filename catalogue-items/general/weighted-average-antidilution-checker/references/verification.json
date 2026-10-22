@@ -1,0 +1,17 @@
+{
+  "slug": "weighted-average-antidilution-checker",
+  "modelSha256": "4a09d06dfc52fdd64208b1eb844042f641ff3e728093af06f85e03043331c2bc",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required number",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

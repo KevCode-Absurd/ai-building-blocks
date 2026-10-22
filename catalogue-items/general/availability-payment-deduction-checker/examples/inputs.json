@@ -1,0 +1,7 @@
+{
+  "gross_payment": 500,
+  "approved_deduction": 50,
+  "deduction_cap": 100,
+  "other_charges": 20,
+  "operating_cost": 100
+}

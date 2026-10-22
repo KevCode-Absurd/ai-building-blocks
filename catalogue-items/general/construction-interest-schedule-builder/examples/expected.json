@@ -1,0 +1,11 @@
+{
+  "basis": "Illustrative figures only.",
+  "outputs": {
+    "interest_1": 15,
+    "interest_2": 26.5,
+    "interest_3": 34.15,
+    "total_interest": 75.65,
+    "close_3": 375.65,
+    "rollforward_check": 0
+  }
+}

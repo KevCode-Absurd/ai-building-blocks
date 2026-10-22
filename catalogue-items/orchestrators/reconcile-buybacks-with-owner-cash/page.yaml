@@ -1,0 +1,74 @@
+new_slug: reconcile-buybacks-with-owner-cash
+name: Reconcile buybacks with owner cash
+headline: Reconcile buybacks with owner cash
+summary: Connect executed repurchases to EPS, shareholder cash distributions and closing book value.
+job: money-and-investing
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: A linked repurchase, distribution-funding and common-equity workbook. Share executed buyback records, opening/closing shares, ordinary earnings, cash yields, FCFE and equity movements.
+explain: |-
+  A linked repurchase, distribution-funding and common-equity workbook.
+
+  Public-market financial modelling. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+when:
+  - You need a linked repurchase, distribution-funding and common-equity workbook.
+  - You work on public-market financial modelling and need traceable calculations.
+  - A reviewer needs to trace the result back to inputs and assumptions.
+you_give:
+  - Executed buyback records, opening/closing shares, ordinary earnings, cash yields, FCFE and equity movements.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - A linked repurchase, distribution-funding and common-equity workbook.
+  - Original step files, financial assumptions, source coverage and a governing handoff summary.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: Cash-funded buyback EPS bridge
+    text: Use actual sourced schedules in one linked native workbook; example values are illustrative and must not become issuer inputs. Use actual execution or a clearly labeled cash-funded scenario. Carry repurchase cash, retired shares and foregone cash income as separate sourced drivers.
+  - title: Shareholder distribution coverage
+    text: Use executed buyback cash from the first schedule, sourced dividends and issuance proceeds, and an independently reconciled FCFE schedule. Reconcile the funding shortfall without counting cash or debt twice.
+  - title: Book value per share roll-forward
+    text: Carry the same actual distributions into common-equity movements and the actual closing share ledger; reconcile book value separately from EPS accretion and value creation.
+output_shape: |-
+  A linked repurchase, distribution-funding and common-equity workbook.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: Cash distributions, share retirement and closing common equity reconcile across schedules; foregone income and execution timing are explicit; EPS accretion is not treated as proof of value creation.
+judge:
+  - Cash distributions, share retirement and closing common equity reconcile across schedules; foregone income and execution timing are explicit; EPS accretion is not treated as proof of value creation.
+  - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
+  - Reconcile opening balances, additions, deductions and closing balances. Match enterprise or equity cash flows to the corresponding discount rate.
+  - Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
+test:
+  - Try a small sourced case and inspect every component handoff.
+  - Remove one required source and confirm the affected step stops.
+  - Change a currency, date or accounting definition and check the conflict stays visible.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

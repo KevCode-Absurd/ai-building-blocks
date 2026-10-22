@@ -1,0 +1,72 @@
+new_slug: bridge-availability-payments-into-project-cash
+name: Bridge availability payments into project cash
+headline: Bridge availability payments into project cash
+summary: A contract payment and project cash eligibility bridge
+job: money-and-investing
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: "A contract payment and project cash eligibility bridge. Share certified availability payment, approved deductions/caps, invoice/receipt timing, operating costs and financing CFADS definition with taxes/capital/working capital. Identify operating source basis: accrual before working-capital settlement or actual cash receipts/payments, with a compatible working-capital perimeter."
+explain: |-
+  A contract payment and project cash eligibility bridge.
+
+  Infrastructure contracted cash. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+when:
+  - You need a contract payment and project cash eligibility bridge.
+  - You work on infrastructure contracted cash and need traceable calculations.
+  - A reviewer needs to trace the result back to inputs and assumptions.
+you_give:
+  - "Certified availability payment, approved deductions/caps, invoice/receipt timing, operating costs and financing CFADS definition with taxes/capital/working capital. Identify operating source basis: accrual before working-capital settlement or actual cash receipts/payments, with a compatible working-capital perimeter."
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - A contract payment and project cash eligibility bridge.
+  - Original step files, financial assumptions, source coverage and a governing handoff summary.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: Availability payment deduction checker
+    text: Reconcile the certified gross payment and approved capped deductions. Pass net certified payment and actual bank-received timing separately; do not transfer the example operating-cash subtotal as new gross receipts.
+  - title: Project cash available bridge
+    text: Build CFADS from actual eligible payment receipts, deducting operating payments and financing-definition adjustments once. Tie the opening payment bridge to receipts and list unreceived amounts or contractual disputes as gaps. Declare the source basis. For actual cash receipts/payments or already-cash operating results, do not deduct receivable/payable working-capital settlement again; explicitly omit it only after reconciliation. For accrual revenue/cost proxies, use the signed working-capital bridge with noncash expenses excluded. Never combine these two routes.
+output_shape: |-
+  A contract payment and project cash eligibility bridge.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: A certified net payment is not assumed received; operating costs are deducted once; source cash and financing exclusions reconcile. Actual receipt/payment sources do not receive a second working-capital deduction; accrual and cash-basis routes are explicitly distinguished.
+judge:
+  - A certified net payment is not assumed received; operating costs are deducted once; source cash and financing exclusions reconcile. Actual receipt/payment sources do not receive a second working-capital deduction; accrual and cash-basis routes are explicitly distinguished.
+  - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
+  - Reconcile opening balances, additions, deductions and closing balances. Match enterprise or equity cash flows to the corresponding discount rate.
+  - Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
+test:
+  - Try a small sourced case and inspect every component handoff.
+  - Remove one required source and confirm the affected step stops.
+  - Change a currency, date or accounting definition and check the conflict stays visible.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

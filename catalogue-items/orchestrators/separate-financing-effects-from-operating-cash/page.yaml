@@ -1,0 +1,74 @@
+new_slug: separate-financing-effects-from-operating-cash
+name: Separate financing effects from operating cash
+headline: Separate financing effects from operating cash
+summary: Reconcile receivable factoring and supplier-finance effects before interpreting operating cash and leverage.
+job: money-and-investing
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: A linked reported and analytical cash/leverage workbook with financing perimeters. Share transfer/facility terms, matched factoring cash ledgers, supplier-finance notes, operating balances, debt and CFO.
+explain: |-
+  A linked reported and analytical cash/leverage workbook with financing perimeters.
+
+  Public-market financial modelling. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+when:
+  - You need a linked reported and analytical cash/leverage workbook with financing perimeters.
+  - You work on public-market financial modelling and need traceable calculations.
+  - A reviewer needs to trace the result back to inputs and assumptions.
+you_give:
+  - Transfer/facility terms, matched factoring cash ledgers, supplier-finance notes, operating balances, debt and CFO.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - A linked reported and analytical cash/leverage workbook with financing perimeters.
+  - Original step files, financial assumptions, source coverage and a governing handoff summary.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: Factoring cash-flow timing bridge
+    text: Use actual sourced schedules in one linked native workbook; example values are illustrative and must not become issuer inputs. Build a matched receipt-timing view from actual factor advances and customer receipts; preserve reported CFO and fees and avoid inferring cash from face balances alone.
+  - title: Supplier finance leverage bridge
+    text: Map debt-like supplier-finance balances once in the analytical debt/payables view; distinguish balance reclassification from any separately justified cash-flow recast.
+  - title: Noncash working-capital bridge
+    text: Use original reported operating balances and exclude identified financing and noncash changes. Reconcile the final analytical cash narrative without adjusting the same factoring or supplier-finance effect twice.
+output_shape: |-
+  A linked reported and analytical cash/leverage workbook with financing perimeters.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: Reported accounts stay visible, each financing effect has source-backed classification and timing, cash and balance movements are not mixed and analytical reclassifications conserve total liabilities.
+judge:
+  - Reported accounts stay visible, each financing effect has source-backed classification and timing, cash and balance movements are not mixed and analytical reclassifications conserve total liabilities.
+  - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
+  - Reconcile opening balances, additions, deductions and closing balances. Match enterprise or equity cash flows to the corresponding discount rate.
+  - Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
+test:
+  - Try a small sourced case and inspect every component handoff.
+  - Remove one required source and confirm the affected step stops.
+  - Change a currency, date or accounting definition and check the conflict stays visible.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

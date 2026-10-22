@@ -1,0 +1,6 @@
+{
+  "netDebt": 80,
+  "covenantEbitda": 15,
+  "maximumLeverage": 4,
+  "remainingCureCap": 10
+}

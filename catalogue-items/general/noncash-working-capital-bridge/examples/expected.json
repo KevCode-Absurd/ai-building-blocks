@@ -1,0 +1,9 @@
+{
+  "basis": "Illustrative figures only.",
+  "outputs": {
+    "balanceChange": 50,
+    "noncash": 20,
+    "operatingInvestment": 30,
+    "cashEffect": -30
+  }
+}

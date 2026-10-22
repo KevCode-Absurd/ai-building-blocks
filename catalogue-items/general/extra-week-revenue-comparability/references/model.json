@@ -1,0 +1,110 @@
+{
+  "inputs": [
+    {
+      "id": "current",
+      "label": "Reported longer-period revenue",
+      "value": 1060,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "prior",
+      "label": "Reported shorter comparable revenue",
+      "value": 1000,
+      "unit": "USD million",
+      "min": 0.001,
+      "max": 1000000000
+    },
+    {
+      "id": "extraWeek",
+      "label": "Evidenced extra-week revenue",
+      "value": 20,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    }
+  ],
+  "calculations": [
+    {
+      "id": "comparable",
+      "label": "Current revenue excluding extra week",
+      "op": "sub",
+      "args": [
+        "current",
+        "extraWeek"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "reportedRatio",
+      "label": "Reported growth ratio",
+      "op": "div",
+      "args": [
+        "current",
+        "prior"
+      ],
+      "unit": "times"
+    },
+    {
+      "id": "comparableRatio",
+      "label": "Comparable growth ratio",
+      "op": "div",
+      "args": [
+        "comparable",
+        "prior"
+      ],
+      "unit": "times"
+    },
+    {
+      "id": "reportedGrowth",
+      "label": "Reported growth",
+      "op": "sub",
+      "args": [
+        "reportedRatio",
+        1
+      ],
+      "unit": "decimal"
+    },
+    {
+      "id": "comparableGrowth",
+      "label": "Growth excluding extra week",
+      "op": "sub",
+      "args": [
+        "comparableRatio",
+        1
+      ],
+      "unit": "decimal"
+    }
+  ],
+  "outputs": [
+    "comparable",
+    "reportedGrowth",
+    "comparableGrowth"
+  ],
+  "expected": {
+    "comparable": 1040,
+    "reportedGrowth": 0.06,
+    "comparableGrowth": 0.04
+  },
+  "cases": [
+    {
+      "name": "Extra week contributes more revenue",
+      "inputs": {
+        "extraWeek": 40
+      },
+      "expected": {
+        "comparable": 1020,
+        "comparableGrowth": 0.02
+      }
+    },
+    {
+      "name": "Missing required reported input",
+      "inputs": {
+        "current": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures. Reported1,060/1,000-1=6%; subtract the evidenced20 extra week to obtain1,040/1,000-1=4%. Extra-week revenue40 leaves2% comparable growth."
+}

@@ -1,0 +1,45 @@
+slug: build-a-project-debt-service-cash-pack
+name: Build a project debt service cash pack
+summary: A linked project cash, debt repayment and loan-life cover schedule
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: spreadsheet
+    required: true
+  - type: audit_report
+    required: true
+  - type: document
+    required: true
+uses:
+  - project-cash-available-bridge
+  - debt-repayment-sculpting-planner
+  - loan-life-cash-cover-checker
+steps:
+  - uses: project-cash-available-bridge
+    note: Build one source-driven CFADS bridge for each of the three annual periods. Pass the actual annual qualifying cash series and definition ledger; the single-period example is a method reference, not a full forecast. Declare the source basis. For actual cash receipts/payments or already-cash operating results, do not deduct receivable/payable working-capital settlement again; explicitly omit it only after reconciliation. For accrual revenue/cost proxies, use the signed working-capital bridge with noncash expenses excluded. Never combine these two routes.
+  - uses: debt-repayment-sculpting-planner
+    note: Use that qualifying annual series, actual opening debt and financing rate to calculate target service, interest, principal, residual balance and any interest-capacity gap. Return the exact debt horizon and balance to the coverage step.
+  - uses: loan-life-cash-cover-checker
+    note: Discount the same eligible cash over the remaining debt tenor at the contract-defined loan-life rate. Reconcile source cash and opening debt to prior steps; do not substitute WACC or include cash beyond maturity.
+execution: coordinator
+origin: own
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/finance-expansion
+example_pending: true
+warnings:
+  - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+credits:
+  - title: Original finance methods and model fixtures
+    by: AI Blocks contributors
+    used: Original instructions, calculations and illustrative examples. External method references are linked separately and retain their own rights.

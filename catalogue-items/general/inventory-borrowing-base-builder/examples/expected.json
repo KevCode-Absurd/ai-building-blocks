@@ -1,0 +1,9 @@
+{
+  "basis": "Illustrative figures only.",
+  "outputs": {
+    "cost_cap": 500,
+    "appraisal_cap": 560,
+    "advance_before_reserve": 500,
+    "net_advance": 450
+  }
+}

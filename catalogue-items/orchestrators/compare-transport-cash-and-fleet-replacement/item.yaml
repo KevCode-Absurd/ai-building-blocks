@@ -1,0 +1,42 @@
+slug: compare-transport-cash-and-fleet-replacement
+name: Compare transport cash and fleet replacement
+summary: A trip contribution baseline and incremental replacement cash comparison
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: spreadsheet
+    required: true
+  - type: audit_report
+    required: true
+  - type: document
+    required: true
+uses:
+  - freight-trip-contribution-builder
+  - fleet-replacement-cash-comparer
+steps:
+  - uses: freight-trip-contribution-builder
+    note: Build current trip cash contribution from actual loaded and empty kilometers. Preserve measured fuel and maintenance amounts and derive same-workload annual cost only with documented annual trip counts.
+  - uses: fleet-replacement-cash-comparer
+    note: Use sourced incremental annual operating differences, actual purchase/sale timing and terminal value to compare replacement cash. Do not substitute trip contribution for savings; disclose workload, downtime, tax and financing gaps. Carry the signed new-minus-keep terminal proceeds difference, not new-vehicle sale proceeds alone.
+execution: coordinator
+origin: own
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/finance-expansion
+example_pending: true
+warnings:
+  - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+credits:
+  - title: Original finance methods and model fixtures
+    by: AI Blocks contributors
+    used: Original instructions, calculations and illustrative examples. External method references are linked separately and retain their own rights.

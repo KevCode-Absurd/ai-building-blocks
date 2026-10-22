@@ -1,0 +1,74 @@
+new_slug: build-a-clean-surplus-residual-income-model
+name: Build a clean-surplus residual income model
+headline: Build a clean-surplus residual income model
+summary: Link common equity movements to residual income and a separate stable price-to-book scenario.
+job: money-and-investing
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: A linked common-equity and residual-income workbook with explicit clean-surplus exceptions. Share common equity history, ordinary earnings, distributions, OCI, capital movements, forward ROE and cost-of-equity assumptions.
+explain: |-
+  A linked common-equity and residual-income workbook with explicit clean-surplus exceptions.
+
+  Public-market financial modelling. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+when:
+  - You need a linked common-equity and residual-income workbook with explicit clean-surplus exceptions.
+  - You work on public-market financial modelling and need traceable calculations.
+  - A reviewer needs to trace the result back to inputs and assumptions.
+you_give:
+  - Common equity history, ordinary earnings, distributions, OCI, capital movements, forward ROE and cost-of-equity assumptions.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - A linked common-equity and residual-income workbook with explicit clean-surplus exceptions.
+  - Original step files, financial assumptions, source coverage and a governing handoff summary.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: Book value per share roll-forward
+    text: Use actual sourced schedules in one linked native workbook; example values are illustrative and must not become issuer inputs. Prove beginning and ending common book equity; identify OCI and capital movements so reported book changes are not assumed to equal retained earnings.
+  - title: One-period residual income bridge
+    text: Use each period beginning common book balance and matching ordinary income for the equity charge. Reconcile dirty-surplus items separately and do not sum the illustration as a full valuation.
+  - title: Justified price-to-book scenario
+    text: Build a distinct stable-state forward ROE/growth/required-return case only after documenting clean surplus and feasible retention; label it a scenario rather than the historical residual-income result.
+output_shape: |-
+  A linked common-equity and residual-income workbook with explicit clean-surplus exceptions.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: Beginning-book charges and equity rates match; all non-income equity changes are reconciled; historical residuals and stable-state assumptions stay separate and every forecast needs source evidence.
+judge:
+  - Beginning-book charges and equity rates match; all non-income equity changes are reconciled; historical residuals and stable-state assumptions stay separate and every forecast needs source evidence.
+  - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
+  - Reconcile opening balances, additions, deductions and closing balances. Match enterprise or equity cash flows to the corresponding discount rate.
+  - Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
+test:
+  - Try a small sourced case and inspect every component handoff.
+  - Remove one required source and confirm the affected step stops.
+  - Change a currency, date or accounting definition and check the conflict stays visible.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

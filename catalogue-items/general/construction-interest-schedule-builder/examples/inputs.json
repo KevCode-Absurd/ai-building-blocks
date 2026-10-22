@@ -1,0 +1,8 @@
+{
+  "opening_debt": 100,
+  "draw_1": 100,
+  "draw_2": 100,
+  "draw_3": 0,
+  "annual_rate": 0.1,
+  "draw_weight": 0.5
+}

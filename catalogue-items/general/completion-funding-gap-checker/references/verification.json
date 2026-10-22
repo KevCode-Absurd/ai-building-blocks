@@ -1,0 +1,17 @@
+{
+  "slug": "completion-funding-gap-checker",
+  "modelSha256": "dc1ca7d6ab47ac51748e0c14c56b64cadb56cf1ecfcb9f93af090bf7599c2b4c",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing or invalid required input",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "inputs": [
+    {
+      "id": "entryEquity",
+      "label": "entry Equity",
+      "value": 100,
+      "unit": "USD millions",
+      "min": 0.000001
+    },
+    {
+      "id": "yearOneDistribution",
+      "label": "year One Distribution",
+      "value": 10,
+      "unit": "USD millions",
+      "min": 0
+    },
+    {
+      "id": "yearTwoExit",
+      "label": "year Two Exit",
+      "value": 110,
+      "unit": "USD millions",
+      "min": 0
+    }
+  ],
+  "calculations": [
+    {
+      "id": "entryOutflow",
+      "label": "entry Outflow",
+      "op": "neg",
+      "args": [
+        "entryEquity"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "periodicIrr",
+      "label": "periodic Irr",
+      "op": "irr",
+      "args": [
+        "entryOutflow",
+        "yearOneDistribution",
+        "yearTwoExit"
+      ],
+      "unit": "annual decimal"
+    },
+    {
+      "id": "receipts",
+      "label": "receipts",
+      "op": "add",
+      "args": [
+        "yearOneDistribution",
+        "yearTwoExit"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "moneyMultiple",
+      "label": "money Multiple",
+      "op": "div",
+      "args": [
+        "receipts",
+        "entryEquity"
+      ],
+      "unit": "multiple"
+    },
+    {
+      "id": "netCashGain",
+      "label": "net Cash Gain",
+      "op": "sub",
+      "args": [
+        "receipts",
+        "entryEquity"
+      ],
+      "unit": "USD millions"
+    }
+  ],
+  "outputs": [
+    "periodicIrr",
+    "moneyMultiple",
+    "netCashGain"
+  ],
+  "expected": {
+    "periodicIrr": 0.1,
+    "moneyMultiple": 1.2,
+    "netCashGain": 20
+  },
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "inputs": {
+        "yearOneDistribution": 20,
+        "yearTwoExit": 120
+      },
+      "expected": {
+        "periodicIrr": 0.2,
+        "moneyMultiple": 1.4,
+        "netCashGain": 40
+      }
+    },
+    {
+      "name": "Missing required number",
+      "inputs": {
+        "entryEquity": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only. 10/1.1+110/1.1^2=100, so IRR10%. Changed20 and120 solve20% and1.4x."
+}

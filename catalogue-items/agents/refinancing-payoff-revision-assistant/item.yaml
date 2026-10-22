@@ -1,0 +1,47 @@
+slug: refinancing-payoff-revision-assistant
+name: Refinancing payoff revision assistant
+summary: Review supplied changes, preserve the last evidence baseline and return only affected calculations and unresolved approval questions.
+category: agent
+type: agent
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: spreadsheet
+    required: true
+  - type: audit_report
+    required: true
+  - type: document
+    required: true
+uses:
+  - check-acquisition-refinancing-funds
+  - cash-and-pik-interest-checker
+steps:
+  - uses: check-acquisition-refinancing-funds
+    note: Run the governing workflow when A lender sends revised issue proceeds, a payoff letter, fee invoice or confirmed closing date.
+  - uses: cash-and-pik-interest-checker
+    note: If a capitalized PIK interval explains changed old principal, verify the supported single-period cash/PIK calculation and then obtain the actual revised payoff letter. Never add illustrative accrual to a legally binding payoff amount or count the same charge again as a closing fee.
+origin: own
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/finance-expansion
+example_pending: true
+warnings:
+  - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+credits:
+  - title: Original finance methods and model fixtures
+    by: AI Blocks contributors
+    used: Original instructions, calculations and illustrative examples. External method references are linked separately and retain their own rights.
+schedule: On explicit request after the user supplies changed evidence. Installing the pack creates no schedule or account connection.
+asks_before:
+  - Trading or moving money
+  - Sending or publishing research or deal materials
+  - Changing an account or submitting a filing
+  - Starting or changing a recurring schedule

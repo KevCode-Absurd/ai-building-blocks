@@ -1,0 +1,17 @@
+{
+  "slug": "noncash-working-capital-bridge",
+  "modelSha256": "368ea0f5d03e56aa297bd1486984c609bad24449f56b753b54af515cf1c74a24",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Larger acquired working-capital balance",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Required source input missing",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

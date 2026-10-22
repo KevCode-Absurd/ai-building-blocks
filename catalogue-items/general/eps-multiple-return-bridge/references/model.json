@@ -1,0 +1,169 @@
+{
+  "inputs": [
+    {
+      "id": "eps0",
+      "label": "Opening comparable EPS",
+      "value": 2,
+      "unit": "USD per share",
+      "min": 0.000001,
+      "max": 1000000000
+    },
+    {
+      "id": "eps1",
+      "label": "Ending comparable EPS",
+      "value": 3,
+      "unit": "USD per share",
+      "min": 0.000001,
+      "max": 1000000000
+    },
+    {
+      "id": "pe0",
+      "label": "Opening P/E",
+      "value": 10,
+      "unit": "times",
+      "min": 0.000001,
+      "max": 1000000000
+    },
+    {
+      "id": "pe1",
+      "label": "Ending P/E",
+      "value": 12,
+      "unit": "times",
+      "min": 0.000001,
+      "max": 1000000000
+    },
+    {
+      "id": "dividend",
+      "label": "Cash dividends during period",
+      "value": 1,
+      "unit": "USD per share",
+      "min": 0,
+      "max": 1000000000
+    }
+  ],
+  "calculations": [
+    {
+      "id": "price0",
+      "label": "Opening price",
+      "op": "mul",
+      "args": [
+        "eps0",
+        "pe0"
+      ],
+      "unit": "USD per share"
+    },
+    {
+      "id": "price1",
+      "label": "Ending price",
+      "op": "mul",
+      "args": [
+        "eps1",
+        "pe1"
+      ],
+      "unit": "USD per share"
+    },
+    {
+      "id": "epsDelta",
+      "label": "EPS change",
+      "op": "sub",
+      "args": [
+        "eps1",
+        "eps0"
+      ],
+      "unit": "USD per share"
+    },
+    {
+      "id": "earningsEffect",
+      "label": "Earnings effect at opening multiple",
+      "op": "mul",
+      "args": [
+        "epsDelta",
+        "pe0"
+      ],
+      "unit": "USD per share"
+    },
+    {
+      "id": "peDelta",
+      "label": "Multiple change",
+      "op": "sub",
+      "args": [
+        "pe1",
+        "pe0"
+      ],
+      "unit": "times"
+    },
+    {
+      "id": "multipleEffect",
+      "label": "Multiple effect at ending EPS",
+      "op": "mul",
+      "args": [
+        "peDelta",
+        "eps1"
+      ],
+      "unit": "USD per share"
+    },
+    {
+      "id": "priceChange",
+      "label": "Reconciled price change",
+      "op": "add",
+      "args": [
+        "earningsEffect",
+        "multipleEffect"
+      ],
+      "unit": "USD per share"
+    },
+    {
+      "id": "cashGain",
+      "label": "Price gain plus dividends",
+      "op": "add",
+      "args": [
+        "priceChange",
+        "dividend"
+      ],
+      "unit": "USD per share"
+    },
+    {
+      "id": "simpleReturn",
+      "label": "Simple total period return",
+      "op": "div",
+      "args": [
+        "cashGain",
+        "price0"
+      ],
+      "unit": "decimal"
+    }
+  ],
+  "outputs": [
+    "earningsEffect",
+    "multipleEffect",
+    "priceChange",
+    "simpleReturn"
+  ],
+  "expected": {
+    "earningsEffect": 10,
+    "multipleEffect": 6,
+    "priceChange": 16,
+    "simpleReturn": 0.85
+  },
+  "cases": [
+    {
+      "name": "Ending multiple unchanged",
+      "inputs": {
+        "pe1": 10
+      },
+      "expected": {
+        "multipleEffect": 0,
+        "priceChange": 10,
+        "simpleReturn": 0.55
+      }
+    },
+    {
+      "name": "Missing required source input",
+      "inputs": {
+        "eps0": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures. Price rises from $20 to $36: $10 comes from EPS growth at 10× and $6 from the multiple change on $3 EPS. With $1 cash dividend, period return is 17/20=85%."
+}

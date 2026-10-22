@@ -1,0 +1,9 @@
+{
+  "opening_bank_cash": 1200,
+  "opening_restricted_cash": 500,
+  "restricted_receipts": 300,
+  "unrestricted_receipts": 100,
+  "approved_restricted_payments": 200,
+  "other_payments": 100,
+  "restricted_refunds": 50
+}

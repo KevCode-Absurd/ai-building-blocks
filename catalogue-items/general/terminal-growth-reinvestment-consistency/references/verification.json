@@ -1,0 +1,17 @@
+{
+  "slug": "terminal-growth-reinvestment-consistency",
+  "modelSha256": "a2f0938637b0528ebe7ebf7002f35c58c44b7dc3c2dcb921b495b6f52e09ac43",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "ROC falls to WACC",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Required input absent",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

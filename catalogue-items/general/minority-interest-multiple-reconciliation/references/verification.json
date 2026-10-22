@@ -1,0 +1,17 @@
+{
+  "slug": "minority-interest-multiple-reconciliation",
+  "modelSha256": "adc8dda100169881ab0f8389fc6653007877b91443ebddd635f9cd74a5042cae",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "No outside subsidiary owners",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Required input absent",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

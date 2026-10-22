@@ -1,0 +1,17 @@
+{
+  "slug": "justified-price-book-scenario",
+  "modelSha256": "fe6095191939e7824a70f5edd593a518e08e34befc5ca179cac03d20c1d188a7",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "ROE equals required return",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Required input absent",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

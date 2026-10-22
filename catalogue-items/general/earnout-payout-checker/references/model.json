@@ -1,0 +1,128 @@
+{
+  "inputs": [
+    {
+      "id": "actualMetric",
+      "label": "actual Metric",
+      "value": 15,
+      "unit": "USD millions"
+    },
+    {
+      "id": "threshold",
+      "label": "threshold",
+      "value": 10,
+      "unit": "USD millions"
+    },
+    {
+      "id": "ceiling",
+      "label": "ceiling",
+      "value": 20,
+      "unit": "USD millions"
+    },
+    {
+      "id": "maximum",
+      "label": "maximum",
+      "value": 40,
+      "unit": "USD millions",
+      "min": 0
+    }
+  ],
+  "calculations": [
+    {
+      "id": "span",
+      "label": "span",
+      "op": "sub",
+      "args": [
+        "ceiling",
+        "threshold"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "spanDomainCheck",
+      "label": "span Domain Check",
+      "op": "sqrt",
+      "args": [
+        "span"
+      ],
+      "unit": "sqrt USD millions"
+    },
+    {
+      "id": "excess",
+      "label": "excess",
+      "op": "sub",
+      "args": [
+        "actualMetric",
+        "threshold"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "rawFraction",
+      "label": "raw Fraction",
+      "op": "div",
+      "args": [
+        "excess",
+        "span"
+      ],
+      "unit": "fraction"
+    },
+    {
+      "id": "floored",
+      "label": "floored",
+      "op": "max",
+      "args": [
+        0,
+        "rawFraction"
+      ],
+      "unit": "fraction"
+    },
+    {
+      "id": "achievement",
+      "label": "achievement",
+      "op": "min",
+      "args": [
+        1,
+        "floored"
+      ],
+      "unit": "fraction"
+    },
+    {
+      "id": "payout",
+      "label": "payout",
+      "op": "mul",
+      "args": [
+        "maximum",
+        "achievement"
+      ],
+      "unit": "USD millions"
+    }
+  ],
+  "outputs": [
+    "achievement",
+    "payout"
+  ],
+  "expected": {
+    "achievement": 0.5,
+    "payout": 20
+  },
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "inputs": {
+        "actualMetric": 25
+      },
+      "expected": {
+        "achievement": 1,
+        "payout": 40
+      }
+    },
+    {
+      "name": "Missing required number",
+      "inputs": {
+        "actualMetric": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only. 15 is halfway between10 and20, paying20 of40. Result25 caps payment at40."
+}

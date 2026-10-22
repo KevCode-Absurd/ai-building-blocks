@@ -1,0 +1,17 @@
+{
+  "slug": "loan-life-cash-cover-checker",
+  "modelSha256": "bdda812e97099c6ead9a587393e2725b3df0846dbdf60d9a97d7b137fa5c6aa6",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing or invalid required input",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

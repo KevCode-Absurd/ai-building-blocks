@@ -1,0 +1,17 @@
+{
+  "slug": "floating-rate-repricing-planner",
+  "modelSha256": "987c7dba9aa84044b6001a3b0d3b5816f128077c06a6b67f9d4161a0cf9a1031",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required evidence refuses calculation",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

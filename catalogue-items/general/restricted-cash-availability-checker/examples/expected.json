@@ -1,0 +1,8 @@
+{
+  "basis": "Illustrative figures only.",
+  "outputs": {
+    "available_cash": 650,
+    "headroom": -50,
+    "shortfall": 50
+  }
+}

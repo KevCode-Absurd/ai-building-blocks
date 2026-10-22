@@ -1,0 +1,76 @@
+new_slug: weighted-average-share-schedule
+name: Weighted-average share schedule
+headline: Weighted-average share schedule
+summary: Turn dated share changes into a checked EPS denominator and a timing sensitivity.
+job: money-and-investing
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: A dated share timeline, weighted-average denominator and basic EPS reconciliation. Share opening ordinary shares, issue or repurchase dates, daily share ledger, period length and profit attributable to ordinary holders.
+explain: |-
+  A dated share timeline, weighted-average denominator and basic EPS reconciliation.
+
+  Public equity and share counts. Illustrative figures. 100 + 20 × 0.5 = 110 million weighted shares; 220 / 110 = $2.00. Full-period issuance gives 120 and $1.833333. The time fraction comes from an independently checked day ledger.
+when:
+  - You need a dated share timeline, weighted-average denominator and basic EPS reconciliation.
+  - You work on public equity and share counts and need traceable calculations.
+  - A reviewer needs to trace the result back to inputs and assumptions.
+you_give:
+  - Opening ordinary shares, issue or repurchase dates, daily share ledger, period length and profit attributable to ordinary holders.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - A dated share timeline, weighted-average denominator and basic EPS reconciliation.
+  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: 1. Separate ordinary shares outstanding from treasury shares; collect opening balance and every issue or cancellation date
+    text: Separate ordinary shares outstanding from treasury shares; collect opening balance and every issue or cancellation date.
+  - title: 2. For each unchanged-share interval, multiply shares by days divided by total period days; sum the interval contributions and reconcile the closing ledger
+    text: For each unchanged-share interval, multiply shares by days divided by total period days; sum the interval contributions and reconcile the closing ledger.
+  - title: 3. Use profit attributable to ordinary holders after relevant preference distributions; divide by weighted shares, then test a changed transaction date
+    text: Use profit attributable to ordinary holders after relevant preference distributions; divide by weighted shares, then test a changed transaction date.
+output_shape: |-
+  A dated share timeline, weighted-average denominator and basic EPS reconciliation.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: Interval day fractions add to one and every transaction appears once.
+judge:
+  - Interval day fractions add to one and every transaction appears once.
+  - Closing outstanding shares reconcile to the filing; the weighted denominator lies within the observed range.
+  - Tie every material input to its filing page, period, currency and scale.
+  - Keep illustrative figures separate from sourced issuer facts; report unresolved checks.
+test:
+  - Run the included baseline and changed-input fixtures, then compare with the stated expected results.
+  - Remove a required input and confirm the affected calculation refuses to invent a zero.
+  - Recalculate the workbook after changing an input and inspect the saved output.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: Node.js 20 or later
+      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

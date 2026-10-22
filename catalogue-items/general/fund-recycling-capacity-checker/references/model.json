@@ -1,0 +1,138 @@
+{
+  "inputs": [
+    {
+      "id": "commitmentBase",
+      "label": "commitment Base",
+      "value": 100,
+      "unit": "USD millions",
+      "min": 0
+    },
+    {
+      "id": "capFraction",
+      "label": "cap Fraction",
+      "value": 0.2,
+      "unit": "fraction",
+      "min": 0,
+      "max": 1
+    },
+    {
+      "id": "usedRecycling",
+      "label": "used Recycling",
+      "value": 12,
+      "unit": "USD millions",
+      "min": 0
+    },
+    {
+      "id": "eligibleDistributions",
+      "label": "eligible Distributions",
+      "value": 15,
+      "unit": "USD millions",
+      "min": 0
+    }
+  ],
+  "calculations": [
+    {
+      "id": "capAmount",
+      "label": "cap Amount",
+      "op": "mul",
+      "args": [
+        "commitmentBase",
+        "capFraction"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "rawRemaining",
+      "label": "raw Remaining",
+      "op": "sub",
+      "args": [
+        "capAmount",
+        "usedRecycling"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "remainingCapacity",
+      "label": "remaining Capacity",
+      "op": "max",
+      "args": [
+        0,
+        "rawRemaining"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "reusableAmount",
+      "label": "reusable Amount",
+      "op": "min",
+      "args": [
+        "remainingCapacity",
+        "eligibleDistributions"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "excludedByCap",
+      "label": "excluded By Cap",
+      "op": "sub",
+      "args": [
+        "eligibleDistributions",
+        "reusableAmount"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "overuseRaw",
+      "label": "overuse Raw",
+      "op": "sub",
+      "args": [
+        "usedRecycling",
+        "capAmount"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "priorOveruse",
+      "label": "prior Overuse",
+      "op": "max",
+      "args": [
+        0,
+        "overuseRaw"
+      ],
+      "unit": "USD millions"
+    }
+  ],
+  "outputs": [
+    "remainingCapacity",
+    "reusableAmount",
+    "excludedByCap",
+    "priorOveruse"
+  ],
+  "expected": {
+    "remainingCapacity": 8,
+    "reusableAmount": 8,
+    "excludedByCap": 7,
+    "priorOveruse": 0
+  },
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "inputs": {
+        "usedRecycling": 18
+      },
+      "expected": {
+        "remainingCapacity": 2,
+        "reusableAmount": 2,
+        "excludedByCap": 13
+      }
+    },
+    {
+      "name": "Missing required number",
+      "inputs": {
+        "commitmentBase": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only. Cap20 on commitment100, used12, leaves8 of15 eligible distributions reusable. Used18 leaves only2."
+}

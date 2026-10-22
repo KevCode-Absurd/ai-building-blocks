@@ -1,0 +1,114 @@
+{
+  "inputs": [
+    {
+      "id": "profitBefore",
+      "label": "Profit before selected recycling",
+      "value": 80,
+      "unit": "USD million",
+      "min": -1000000000,
+      "max": 1000000000
+    },
+    {
+      "id": "ociBefore",
+      "label": "OCI before selected recycling",
+      "value": 20,
+      "unit": "USD million",
+      "min": -1000000000,
+      "max": 1000000000
+    },
+    {
+      "id": "reclassified",
+      "label": "After-tax amount recycled into profit",
+      "value": 5,
+      "unit": "USD million",
+      "min": -1000000000,
+      "max": 1000000000
+    }
+  ],
+  "calculations": [
+    {
+      "id": "profitAfter",
+      "label": "Profit after recycling",
+      "op": "add",
+      "args": [
+        "profitBefore",
+        "reclassified"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "ociAfter",
+      "label": "OCI after recycling",
+      "op": "sub",
+      "args": [
+        "ociBefore",
+        "reclassified"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "comprehensiveBefore",
+      "label": "Comprehensive income before",
+      "op": "add",
+      "args": [
+        "profitBefore",
+        "ociBefore"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "comprehensiveAfter",
+      "label": "Comprehensive income after",
+      "op": "add",
+      "args": [
+        "profitAfter",
+        "ociAfter"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "conservation",
+      "label": "Change in total comprehensive income",
+      "op": "sub",
+      "args": [
+        "comprehensiveAfter",
+        "comprehensiveBefore"
+      ],
+      "unit": "USD million"
+    }
+  ],
+  "outputs": [
+    "profitAfter",
+    "ociAfter",
+    "comprehensiveAfter",
+    "conservation"
+  ],
+  "expected": {
+    "profitAfter": 85,
+    "ociAfter": 15,
+    "comprehensiveAfter": 100,
+    "conservation": 0
+  },
+  "cases": [
+    {
+      "name": "A loss is recycled instead",
+      "inputs": {
+        "reclassified": -10
+      },
+      "expected": {
+        "profitAfter": 70,
+        "ociAfter": 30,
+        "comprehensiveAfter": 100,
+        "conservation": 0
+      }
+    },
+    {
+      "name": "Required source input missing",
+      "inputs": {
+        "profitBefore": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures. Recycling5 into profit changes80/20 profit/OCI to85/15; total remains100. A signed loss of10 produces70/30 and still100. The calculation does not establish whether recycling is permitted."
+}

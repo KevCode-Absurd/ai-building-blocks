@@ -1,0 +1,76 @@
+new_slug: gross-to-net-revenue-bridge
+name: Gross-to-net revenue bridge
+headline: Gross-to-net revenue bridge
+summary: Reconcile gross billings to reported revenue using evidenced deductions and presentation policies.
+job: track-numbers
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: A billings-to-revenue bridge with deduction and presentation checks. Share gross billings, returns, rebates, excluded collected taxes, pass-through amounts and principal-versus-agent policy evidence.
+explain: |-
+  A billings-to-revenue bridge with deduction and presentation checks.
+
+  Issuer revenue and cash-flow reconciliation. Illustrative figures.1,000-50-30-20-100=800 net revenue. Rebates50 produce780 and leave20 unexplained against the unchanged reported800.
+when:
+  - You need a billings-to-revenue bridge with deduction and presentation checks.
+  - You work on issuer revenue and cash-flow reconciliation and need traceable calculations.
+  - A reviewer needs to trace the result back to inputs and assumptions.
+you_give:
+  - Gross billings, returns, rebates, excluded collected taxes, pass-through amounts and principal-versus-agent policy evidence.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - A billings-to-revenue bridge with deduction and presentation checks.
+  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: 1. Read contract and revenue policies to identify which deductions are valid; do not infer principal-versus-agent status from a numeric margin
+    text: Read contract and revenue policies to identify which deductions are valid; do not infer principal-versus-agent status from a numeric margin.
+  - title: 2. Separate returns, rebates, taxes collected for others and any evidenced agent pass-through amount, preserving signs and avoiding overlapping definitions
+    text: Separate returns, rebates, taxes collected for others and any evidenced agent pass-through amount, preserving signs and avoiding overlapping definitions.
+  - title: 3. Deduct each item once from gross billings and reconcile to reported net revenue; investigate timing and accounting-policy residuals
+    text: Deduct each item once from gross billings and reconcile to reported net revenue; investigate timing and accounting-policy residuals.
+output_shape: |-
+  A billings-to-revenue bridge with deduction and presentation checks.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: Returns and rebates have not already been netted in the gross input.
+judge:
+  - Returns and rebates have not already been netted in the gross input.
+  - Principal-versus-agent conclusions are supported by control evidence, not produced by the calculator.
+  - Source each balance, flow, period, perimeter, currency and sign; distinguish a true zero from missing evidence.
+  - Preserve reported measures beside analytical measures and retain unexplained residuals.
+test:
+  - Run the included baseline and changed-input fixtures, then compare with the stated expected results.
+  - Remove a required input and confirm the affected calculation refuses to invent a zero.
+  - Recalculate the workbook after changing an input and inspect the saved output.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: Node.js 20 or later
+      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

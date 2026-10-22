@@ -1,0 +1,72 @@
+new_slug: sponsor-receipt-timing-review-assistant
+name: Sponsor receipt timing review assistant
+headline: Sponsor receipt timing review assistant
+summary: Review supplied changes, preserve the last evidence baseline and return only affected calculations and unresolved approval questions.
+job: money-and-investing
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: Management payout reconciliation and sponsor-only periodic IRR and cash multiple. Include changed inputs, source versions, branch reasons and checks still blocked. Share actual sole institutional sponsor entry cash, separately vested residual management award, net equity proceeds after debt, first-anniversary distribution and second-anniversary exit evidence. Include actual rollover ownership records when a new holder or changed ownership is reported. Supply the previous approved review and actual changed source files with dates.
+explain: |-
+  Management payout reconciliation and sponsor-only periodic IRR and cash multiple. Include changed inputs, source versions, branch reasons and checks still blocked.
+
+  Private equity distributions. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+when:
+  - You need management payout reconciliation and sponsor-only periodic IRR and cash multiple. Include changed inputs, source versions, branch reasons and checks still blocked.
+  - You work on private equity distributions and need traceable calculations.
+  - New evidence needs comparison with the prior dated review.
+you_give:
+  - Actual sole institutional sponsor entry cash, separately vested residual management award, net equity proceeds after debt, first-anniversary distribution and second-anniversary exit evidence. Include actual rollover ownership records when a new holder or changed ownership is reported. Supply the previous approved review and actual changed source files with dates.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - Management payout reconciliation and sponsor-only periodic IRR and cash multiple. Include changed inputs, source versions, branch reasons and checks still blocked.
+  - Original step files, financial assumptions, source coverage and a governing handoff summary.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: Check management payout and sponsor receipts
+    text: Run the governing workflow when Actual sponsor distribution, management vesting evidence, exit receipt or holder allocation changes.
+  - title: Rollover equity ownership checker
+    text: If another rollover holder appears, check same-class ownership but stop the sole-sponsor payout workflow until a complete holder allocation is supplied. Otherwise rerun only changed annual receipts. If dates are irregular, request a suitable XIRR engine instead of reporting the periodic fixture as annualized actual performance.
+output_shape: |-
+  Management payout reconciliation and sponsor-only periodic IRR and cash multiple. Include changed inputs, source versions, branch reasons and checks still blocked.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: Use only a sole-sponsor plus simple management award structure; other rollover holders or preferences require a full ownership allocation first. Never overwrite an accepted baseline with an unapproved scenario; record which branch ran or was skipped.
+judge:
+  - Use only a sole-sponsor plus simple management award structure; other rollover holders or preferences require a full ownership allocation first. Never overwrite an accepted baseline with an unapproved scenario; record which branch ran or was skipped.
+  - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
+  - Reconcile opening balances, additions, deductions and closing balances. Match enterprise or equity cash flows to the corresponding discount rate.
+  - Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
+test:
+  - Try a small sourced case and inspect every component handoff.
+  - Remove one required source and confirm the affected step stops.
+  - Change a currency, date or accounting definition and check the conflict stays visible.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

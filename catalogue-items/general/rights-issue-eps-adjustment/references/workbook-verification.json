@@ -1,0 +1,32 @@
+{
+  "engine": "Artifact Tool",
+  "scope": "Illustrative workbook calculations, not source truth or an actual investment conclusion. Native Microsoft Excel application execution is not claimed.",
+  "modelSha256": "78762560d27f186ca9fbbde75e73a79a4587dce11e3593b516f2be9372b2ac5f",
+  "xlsxSha256": "e02ce127170d86e624b7b6bb267a20f27a87a98dec42fb3267a68d3ebb2611e0",
+  "baseline": "pass",
+  "changedInputCase": "Rights offered at cum-rights price",
+  "invalidInputCase": "Missing required source input",
+  "cases": [
+    {
+      "name": "Rights offered at cum-rights price",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required source input",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ],
+  "reopenedAndRecalculated": true,
+  "rendered": true,
+  "visualReview": "pass",
+  "workbookSpecSha256": "6e315bfdd718f710a95be949ed4d76c484ae7a22ba260ec3166f14fc8226201a",
+  "visualEvidence": {
+    "report": "reports/finance-public-markets-peer-review.json",
+    "reportSha256": "f73f6f5598ba0647c477c547d2776f1221130bb7861b62def472b74331866282",
+    "previewSha256": "b210db317736d7421507573a5c705dde1d847891f10c21072644c1482a0cc5f9",
+    "sheet": "Model",
+    "sourceSpecSha256": "3417146cc9e331df31b29e37a11d9ff3a52dd67a0e1a005aa8351be503e60285"
+  }
+}

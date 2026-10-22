@@ -1,0 +1,17 @@
+{
+  "slug": "toll-revenue-ramp-model-builder",
+  "modelSha256": "2b7beb491db28124141c6c052b61d5eb216324ef808b7197122a37b2730831e3",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing or invalid required input",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

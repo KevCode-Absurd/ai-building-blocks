@@ -1,0 +1,42 @@
+slug: bridge-floating-rate-changes-to-revolver-cost
+name: Bridge rate changes to revolver cost
+summary: A rate repricing scenario and revolving charge reconciliation
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: spreadsheet
+    required: true
+  - type: audit_report
+    required: true
+  - type: document
+    required: true
+uses:
+  - floating-rate-repricing-planner
+  - revolver-interest-fee-checker
+steps:
+  - uses: floating-rate-repricing-planner
+    note: Calculate scenario interest changes by exposed facility and reset fraction. Preserve the annual versus statement-period basis and pass the actual changed facility rate, not an annual dollar total, into the revolver charge model.
+  - uses: revolver-interest-fee-checker
+    note: Recompute the affected statement interest and undrawn fee on actual average balances. Compare base and scenario charges with step1 on a reconciled period basis; retain floors, caps and day-specific reset gaps as missing coverage.
+execution: coordinator
+origin: own
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/finance-expansion
+example_pending: true
+warnings:
+  - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+credits:
+  - title: Original finance methods and model fixtures
+    by: AI Blocks contributors
+    used: Original instructions, calculations and illustrative examples. External method references are linked separately and retain their own rights.

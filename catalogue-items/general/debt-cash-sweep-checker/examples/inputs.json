@@ -1,0 +1,7 @@
+{
+  "cashBeforeSweep": 30,
+  "minimumCash": 10,
+  "eligibleEcf": 15,
+  "sweepFraction": 0.5,
+  "eligibleDebt": 100
+}

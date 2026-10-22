@@ -1,0 +1,137 @@
+{
+  "inputs": [
+    {
+      "id": "options",
+      "label": "Weighted options",
+      "value": 10,
+      "unit": "million options",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "exercisePrice",
+      "label": "Exercise-only assumed proceeds per option",
+      "value": 6,
+      "unit": "USD per option",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "averagePrice",
+      "label": "Average market price",
+      "value": 10,
+      "unit": "USD per share",
+      "min": 0.000001,
+      "max": 1000000000
+    },
+    {
+      "id": "basicShares",
+      "label": "Basic weighted shares",
+      "value": 100,
+      "unit": "million shares",
+      "min": 0.001,
+      "max": 1000000000
+    },
+    {
+      "id": "profit",
+      "label": "Continuing ordinary earnings",
+      "value": 208,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    }
+  ],
+  "calculations": [
+    {
+      "id": "proceeds",
+      "label": "Assumed cash proceeds",
+      "op": "mul",
+      "args": [
+        "options",
+        "exercisePrice"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "repurchased",
+      "label": "Hypothetical shares repurchased",
+      "op": "div",
+      "args": [
+        "proceeds",
+        "averagePrice"
+      ],
+      "unit": "million shares"
+    },
+    {
+      "id": "difference",
+      "label": "Options less repurchases",
+      "op": "sub",
+      "args": [
+        "options",
+        "repurchased"
+      ],
+      "unit": "million shares"
+    },
+    {
+      "id": "incrementalShares",
+      "label": "Incremental option shares",
+      "op": "max",
+      "args": [
+        "difference",
+        0
+      ],
+      "unit": "million shares"
+    },
+    {
+      "id": "candidateShares",
+      "label": "Candidate diluted shares",
+      "op": "add",
+      "args": [
+        "basicShares",
+        "incrementalShares"
+      ],
+      "unit": "million shares"
+    },
+    {
+      "id": "candidateEps",
+      "label": "Candidate diluted EPS",
+      "op": "div",
+      "args": [
+        "profit",
+        "candidateShares"
+      ],
+      "unit": "USD per share"
+    }
+  ],
+  "outputs": [
+    "incrementalShares",
+    "candidateShares",
+    "candidateEps"
+  ],
+  "expected": {
+    "incrementalShares": 4,
+    "candidateShares": 104,
+    "candidateEps": 2
+  },
+  "cases": [
+    {
+      "name": "At-the-money exercise price",
+      "inputs": {
+        "exercisePrice": 10
+      },
+      "expected": {
+        "incrementalShares": 0,
+        "candidateShares": 100,
+        "candidateEps": 2.08
+      }
+    },
+    {
+      "name": "Missing required source input",
+      "inputs": {
+        "options": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures. Ten million options × $6 yields $60 million proceeds, buying six million shares at $10. Four million incremental shares produce 208 / 104 = $2 EPS. At $10 exercise price there is no incremental dilution."
+}

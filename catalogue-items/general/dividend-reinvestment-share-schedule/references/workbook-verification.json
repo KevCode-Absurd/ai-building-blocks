@@ -1,0 +1,32 @@
+{
+  "engine": "Artifact Tool",
+  "scope": "Illustrative workbook calculations, not source truth or an actual investment conclusion. Native Microsoft Excel application execution is not claimed.",
+  "modelSha256": "e5b8275d23d47dbed1bbd2082af485b73afd434a52e5d3bd06dbef24e96cc0f5",
+  "xlsxSha256": "b1570bc715a09ea58901dac0c55441bdc1071539b1028c84778faa5b9bb91a59",
+  "baseline": "pass",
+  "changedInputCase": "Reinvestment price equals ending price",
+  "invalidInputCase": "Missing required source input",
+  "cases": [
+    {
+      "name": "Reinvestment price equals ending price",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required source input",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ],
+  "reopenedAndRecalculated": true,
+  "rendered": true,
+  "visualReview": "pass",
+  "workbookSpecSha256": "a38390dbc4b0aff30f92c45c272e82434699e0b3b428dae357a82a48c75c4eca",
+  "visualEvidence": {
+    "report": "reports/finance-public-markets-peer-review.json",
+    "reportSha256": "f73f6f5598ba0647c477c547d2776f1221130bb7861b62def472b74331866282",
+    "previewSha256": "66c44b730a6b5638ac1b5db75941a449e50515e9494d12283f1ec0cc5b1257f5",
+    "sheet": "Model",
+    "sourceSpecSha256": "f5af8cb26d8eefae0953ba94d419e47aa2ebff2ca693852f5e3b214526f296b6"
+  }
+}

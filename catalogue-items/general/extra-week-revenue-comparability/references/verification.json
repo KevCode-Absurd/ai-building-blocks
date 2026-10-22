@@ -1,0 +1,17 @@
+{
+  "slug": "extra-week-revenue-comparability",
+  "modelSha256": "76fbbed43d5993181285bad9ee402693073829b0f5836de125fda2ac3d8da850",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Extra week contributes more revenue",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required reported input",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

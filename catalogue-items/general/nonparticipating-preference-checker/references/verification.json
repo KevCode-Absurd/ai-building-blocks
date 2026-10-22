@@ -1,0 +1,17 @@
+{
+  "slug": "nonparticipating-preference-checker",
+  "modelSha256": "f367201e3358e7470480315ab1f981aaaf0331b4ca438880516fd29e1adad7a7",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required number",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

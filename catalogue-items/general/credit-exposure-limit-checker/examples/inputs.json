@@ -1,0 +1,7 @@
+{
+  "funded": 200,
+  "undrawn": 100,
+  "monitoring_factor": 0.5,
+  "connected_other": 100,
+  "approved_limit": 400
+}

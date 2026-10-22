@@ -1,0 +1,22 @@
+{
+  "slug": "investment-property-nav-bridge",
+  "modelSha256": "3a8f729201e132f2a49572ef56d6c3600c1d7bb952cbf50ab88f45a631a86be6",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Lower appraised property value",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Required input absent",
+      "kind": "refusal",
+      "status": "pass"
+    },
+    {
+      "name": "Nonpositive equity NAV cannot support a discount",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

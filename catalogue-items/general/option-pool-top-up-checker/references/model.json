@@ -1,0 +1,154 @@
+{
+  "inputs": [
+    {
+      "id": "shares",
+      "label": "shares",
+      "value": 1000,
+      "unit": "shares",
+      "min": 0.000001
+    },
+    {
+      "id": "existingPool",
+      "label": "existing Pool",
+      "value": 100,
+      "unit": "shares",
+      "min": 0
+    },
+    {
+      "id": "target",
+      "label": "target",
+      "value": 0.2,
+      "unit": "fraction",
+      "min": 0,
+      "max": 0.999999
+    }
+  ],
+  "calculations": [
+    {
+      "id": "targetShares",
+      "label": "target Shares",
+      "op": "mul",
+      "args": [
+        "target",
+        "shares"
+      ],
+      "unit": "shares"
+    },
+    {
+      "id": "gap",
+      "label": "gap",
+      "op": "sub",
+      "args": [
+        "targetShares",
+        "existingPool"
+      ],
+      "unit": "shares"
+    },
+    {
+      "id": "nonPool",
+      "label": "non Pool",
+      "op": "sub",
+      "args": [
+        1,
+        "target"
+      ],
+      "unit": "fraction"
+    },
+    {
+      "id": "rawTopup",
+      "label": "raw Topup",
+      "op": "div",
+      "args": [
+        "gap",
+        "nonPool"
+      ],
+      "unit": "shares"
+    },
+    {
+      "id": "topup",
+      "label": "topup",
+      "op": "max",
+      "args": [
+        0,
+        "rawTopup"
+      ],
+      "unit": "shares"
+    },
+    {
+      "id": "newTotal",
+      "label": "new Total",
+      "op": "add",
+      "args": [
+        "shares",
+        "topup"
+      ],
+      "unit": "shares"
+    },
+    {
+      "id": "newPool",
+      "label": "new Pool",
+      "op": "add",
+      "args": [
+        "existingPool",
+        "topup"
+      ],
+      "unit": "shares"
+    },
+    {
+      "id": "actualFraction",
+      "label": "actual Fraction",
+      "op": "div",
+      "args": [
+        "newPool",
+        "newTotal"
+      ],
+      "unit": "fraction"
+    }
+  ],
+  "outputs": [
+    "topup",
+    "newTotal",
+    "actualFraction"
+  ],
+  "expected": {
+    "topup": 125,
+    "newTotal": 1125,
+    "actualFraction": 0.2
+  },
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "inputs": {
+        "target": 0.25
+      },
+      "expected": {
+        "topup": 200,
+        "newTotal": 1200,
+        "actualFraction": 0.25
+      }
+    },
+    {
+      "name": "Missing required number",
+      "inputs": {
+        "shares": null
+      },
+      "error": true
+    },
+    {
+      "name": "Refuse reserve exceeding total shares",
+      "inputs": {
+        "existingPool": 1200
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only. Reserve100 in1000 shares needs125 added for20%, or200 for25%.",
+  "constraints": [
+    {
+      "left": "existingPool",
+      "operator": "lte",
+      "right": "shares",
+      "message": "Existing reserve must be included within the fully diluted share denominator."
+    }
+  ]
+}

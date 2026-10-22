@@ -1,0 +1,116 @@
+{
+  "inputs": [
+    {
+      "id": "ownershipA",
+      "label": "ownership A",
+      "value": 0.1,
+      "unit": "fraction",
+      "min": 0,
+      "max": 1
+    },
+    {
+      "id": "roundA",
+      "label": "round A",
+      "value": 100,
+      "unit": "USD thousands",
+      "min": 0
+    },
+    {
+      "id": "ownershipB",
+      "label": "ownership B",
+      "value": 0.2,
+      "unit": "fraction",
+      "min": 0,
+      "max": 1
+    },
+    {
+      "id": "roundB",
+      "label": "round B",
+      "value": 100,
+      "unit": "USD thousands",
+      "min": 0
+    },
+    {
+      "id": "reserve",
+      "label": "reserve",
+      "value": 30,
+      "unit": "USD thousands",
+      "min": 0
+    }
+  ],
+  "calculations": [
+    {
+      "id": "cashA",
+      "label": "cash A",
+      "op": "mul",
+      "args": [
+        "ownershipA",
+        "roundA"
+      ],
+      "unit": "USD thousands"
+    },
+    {
+      "id": "cashB",
+      "label": "cash B",
+      "op": "mul",
+      "args": [
+        "ownershipB",
+        "roundB"
+      ],
+      "unit": "USD thousands"
+    },
+    {
+      "id": "required",
+      "label": "required",
+      "op": "add",
+      "args": [
+        "cashA",
+        "cashB"
+      ],
+      "unit": "USD thousands"
+    },
+    {
+      "id": "headroom",
+      "label": "headroom",
+      "op": "sub",
+      "args": [
+        "reserve",
+        "required"
+      ],
+      "unit": "USD thousands"
+    }
+  ],
+  "outputs": [
+    "cashA",
+    "cashB",
+    "required",
+    "headroom"
+  ],
+  "expected": {
+    "cashA": 10,
+    "cashB": 20,
+    "required": 30,
+    "headroom": 0
+  },
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "inputs": {
+        "roundA": 200
+      },
+      "expected": {
+        "cashA": 20,
+        "required": 40,
+        "headroom": -10
+      }
+    },
+    {
+      "name": "Missing required number",
+      "inputs": {
+        "ownershipA": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only. 10% of100 plus20% of100 requires30. Doubling A round raises requirement to40 and creates a10 gap."
+}

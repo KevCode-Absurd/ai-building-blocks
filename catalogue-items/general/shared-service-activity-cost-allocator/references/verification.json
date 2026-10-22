@@ -1,0 +1,17 @@
+{
+  "slug": "shared-service-activity-cost-allocator",
+  "modelSha256": "e541b0dd842c65fbcae8692d231b7655d2a6041f636b3ff1a686a6f97cb9bd91",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing or invalid required input",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

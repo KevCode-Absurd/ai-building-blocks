@@ -1,0 +1,17 @@
+{
+  "slug": "treasury-stock-option-dilution",
+  "modelSha256": "d2f84ed414bc4a64efbc3a6f606099a1859b7e7b703eec9af173557686d6b8f7",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "At-the-money exercise price",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required source input",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

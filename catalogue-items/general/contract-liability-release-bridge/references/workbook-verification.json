@@ -1,0 +1,32 @@
+{
+  "engine": "Artifact Tool",
+  "scope": "Illustrative workbook calculations, not source truth or an actual investment conclusion. Native Microsoft Excel application execution is not claimed.",
+  "modelSha256": "50b26d207844a185f0f3937c3287cb66d7633ece6ecfbbccc87abb33e0659da0",
+  "xlsxSha256": "659fbce3cd44b35bb5ed211556a52bf3331565ee1729778222c54bdf9efd0d0d",
+  "baseline": "pass",
+  "changedInputCase": "Higher closing deferred balance",
+  "invalidInputCase": "Missing required reported input",
+  "cases": [
+    {
+      "name": "Higher closing deferred balance",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required reported input",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ],
+  "reopenedAndRecalculated": true,
+  "rendered": true,
+  "visualReview": "pass",
+  "workbookSpecSha256": "c275b57cace296e8ace41b477e73506bdc4bddb4105df3f9157f18a68fe79cef",
+  "visualEvidence": {
+    "report": "reports/finance-public-markets-peer-review.json",
+    "reportSha256": "f73f6f5598ba0647c477c547d2776f1221130bb7861b62def472b74331866282",
+    "previewSha256": "5292469b9ea1ac732f0eb7f55beebffdc9c8cc22559bf063d9a3cd860f221e3a",
+    "sheet": "Model",
+    "sourceSpecSha256": "efaee3a8d5ce9f439252f726bb898e18a25a5cf61f546a8db920d9c1a662a1df"
+  }
+}

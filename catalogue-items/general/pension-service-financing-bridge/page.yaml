@@ -1,0 +1,76 @@
+new_slug: pension-service-financing-bridge
+name: Pension service and financing bridge
+headline: Pension service and financing bridge
+summary: Separate pension service cost, net interest, remeasurement and funding in a single reconciliation.
+job: track-numbers
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: A pension expense and net-liability movement schedule with separate cash funding. Share opening net deficit, applicable discount rate, service cost, OCI remeasurement, contributions and reported pension expense.
+explain: |-
+  A pension expense and net-liability movement schedule with separate cash funding.
+
+  Issuer accounting and earnings. Illustrative figures.20×5%=1 net interest; service5 makes6 P&L. Add OCI loss3 for9 total cost;20+9-4 funding=25 closing deficit. OCI loss8 raises the deficit to30 without changing P&L.
+when:
+  - You need a pension expense and net-liability movement schedule with separate cash funding.
+  - You work on issuer accounting and earnings and need traceable calculations.
+  - A reviewer needs to trace the result back to inputs and assumptions.
+you_give:
+  - Opening net deficit, applicable discount rate, service cost, OCI remeasurement, contributions and reported pension expense.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - A pension expense and net-liability movement schedule with separate cash funding.
+  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: 1. Verify the applicable accounting basis; for the simple IAS19 fixture apply the discount rate to the opening net deficit
+    text: Verify the applicable accounting basis; for the simple IAS19 fixture apply the discount rate to the opening net deficit.
+  - title: 2. Separate current service cost and net interest in P&L from remeasurement in OCI; identify settlements, plan changes and asset-ceiling adjustments separately
+    text: Separate current service cost and net interest in P&L from remeasurement in OCI; identify settlements, plan changes and asset-ceiling adjustments separately.
+  - title: 3. Roll opening net deficit through total recognized cost and cash contributions and reconcile to reported closing funded status
+    text: Roll opening net deficit through total recognized cost and cash contributions and reconcile to reported closing funded status.
+output_shape: |-
+  A pension expense and net-liability movement schedule with separate cash funding.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: Expected asset-return accounting from a different regime is not substituted for IAS19 net interest.
+judge:
+  - Expected asset-return accounting from a different regime is not substituted for IAS19 net interest.
+  - Contributions are funding movements and remeasurement is not silently moved into operating service cost.
+  - Tie all inputs to source notes, dates, currency, scale and signs.
+  - Retain reported figures beside analytical adjustments and list every unresolved source gap.
+test:
+  - Run the included baseline and changed-input fixtures, then compare with the stated expected results.
+  - Remove a required input and confirm the affected calculation refuses to invent a zero.
+  - Recalculate the workbook after changing an input and inspect the saved output.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: Node.js 20 or later
+      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

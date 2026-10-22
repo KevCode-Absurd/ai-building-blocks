@@ -1,0 +1,22 @@
+{
+  "slug": "escrow-release-checker",
+  "modelSha256": "185445e4c40f1c343dae76a1cefeb3292227fe0a202ffceb23d1d145b7ff5054",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required number",
+      "kind": "refusal",
+      "status": "pass"
+    },
+    {
+      "name": "Refuse escrow disbursements above deposit",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

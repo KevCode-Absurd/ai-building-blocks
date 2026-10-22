@@ -1,0 +1,78 @@
+new_slug: project-cash-available-bridge
+name: Project cash available bridge
+headline: Project cash available bridge
+summary: A project cash available bridge with a declared working-capital basis
+job: money-and-investing
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: A contract-defined project cash available bridge with declared accrual or cash basis and no duplicated working-capital movements. Share financing cash definition; accrual operating revenue and operating costs excluding depreciation/noncash costs before working-capital cash movements; contract exclusions, cash taxes, maintenance capital and signed working-capital investment. Identify whether source data instead already represents actual cash receipts/payments.
+explain: |-
+  A contract-defined project cash available bridge with declared accrual or cash basis and no duplicated working-capital movements.
+
+  Project finance cash definitions. Illustrative figures only in USD for one period. This fixture is an accrual-to-cash bridge: operating revenue1000 less operating cost proxy400 excluding depreciation/noncash expenses gives600 before working-capital movements. Contract exclusions100, cash taxes50, maintenance capital100 and working-capital investment50 leave CFADS300. An actual receipts/payments source already embeds working-capital settlement and must not deduct that50 again. A verified cash-basis route explicitly omits the extra working-capital adjustment; unknown data never becomes zero.
+when:
+  - You need a contract-defined project cash available bridge with declared accrual or cash basis and no duplicated working-capital movements.
+  - You work on project finance cash definitions and need traceable calculations.
+  - A reviewer needs to trace the result back to inputs and assumptions.
+you_give:
+  - Financing cash definition; accrual operating revenue and operating costs excluding depreciation/noncash costs before working-capital cash movements; contract exclusions, cash taxes, maintenance capital and signed working-capital investment. Identify whether source data instead already represents actual cash receipts/payments.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - A contract-defined project cash available bridge with declared accrual or cash basis and no duplicated working-capital movements.
+  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: 1. Declare the source basis before calculating
+    text: Declare the source basis before calculating. The included model uses accrual operating revenue and an operating cost proxy excluding depreciation and other noncash expenses, both before working-capital settlement movements. Source the financing CFADS definition and matching periods.
+  - title: 2. For the pre-working-capital accrual route, subtract contract exclusions, the operating cost proxy, cash taxes, permitted maintenance capital and signed working-capital investment
+    text: For the pre-working-capital accrual route, subtract contract exclusions, the operating cost proxy, cash taxes, permitted maintenance capital and signed working-capital investment. Match exclusions to the working-capital perimeter to avoid adjusting excluded revenue twice.
+  - title: 3. If actual cash receipts and actual cash operating payments are used instead, those already reflect receivable/payable settlement
+    text: If actual cash receipts and actual cash operating payments are used instead, those already reflect receivable/payable settlement. Build a cash-basis bridge and explicitly omit the working-capital adjustment; use zero in that model field only after verifying and recording that it is already embedded, never because evidence is missing.
+  - title: 4. Reconcile the chosen route to source cash and the contract definition
+    text: Reconcile the chosen route to source cash and the contract definition. Do not mix accrual revenues with cash-paid operating costs or deduct working-capital movements twice. Keep debt service below the bridge and source every other cash/noncash adjustment.
+output_shape: |-
+  A contract-defined project cash available bridge with declared accrual or cash basis and no duplicated working-capital movements.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: The source map identifies accrual-before-working-capital or actual-cash basis for every operating line; mixed bases stop the affected bridge.
+judge:
+  - The source map identifies accrual-before-working-capital or actual-cash basis for every operating line; mixed bases stop the affected bridge.
+  - The fixture working-capital increase is an outflow and a decrease a release. An actual cash-receipt/payment bridge explicitly excludes this additional adjustment.
+  - Excluded operating income and its receivable/payable balances use the same qualifying cash perimeter, preventing duplicated exclusions.
+  - Depreciation/noncash expenses and financing proceeds are not included as operating cash uses/sources; debt service stays below CFADS.
+test:
+  - Run the included baseline and changed-input fixtures, then compare with the stated expected results.
+  - Remove a required input and confirm the affected calculation refuses to invent a zero.
+  - Recalculate the workbook after changing an input and inspect the saved output.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: Node.js 20 or later
+      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

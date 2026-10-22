@@ -1,0 +1,32 @@
+{
+  "engine": "Artifact Tool",
+  "scope": "Illustrative workbook calculations, not source truth or an actual investment conclusion. Native Microsoft Excel application execution is not claimed.",
+  "modelSha256": "eac6a367612dbfb573fe7eb496091493094e76ea303e50680da136b514bf0011",
+  "xlsxSha256": "3a618e2163a85b8907db536bb9b0dacd484928ec31eaf24963ead3ddfdbb08cd",
+  "baseline": "pass",
+  "changedInputCase": "Reduce proposed second product units",
+  "invalidInputCase": "Missing available hours",
+  "cases": [
+    {
+      "name": "Reduce proposed second product units",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing available hours",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ],
+  "reopenedAndRecalculated": true,
+  "rendered": true,
+  "visualReview": "pass",
+  "workbookSpecSha256": "2176b0a00885a4aaf3b3bfd9e2ea2dd2041a0156c46ba964b80260cd4e63dcf4",
+  "visualEvidence": {
+    "report": "reports/finance-operating-credit-peer-review.json",
+    "reportSha256": "ac57e1e1d010a9b5b9e64c1e84ef87d22207254a2844e5e5a205578608d66aa6",
+    "previewSha256": "29422e93bba210d3d562d9d10d9d8fba5f17d49bb45ea5a3ff7ab516b3f30736",
+    "sheet": "Model",
+    "sourceSpecSha256": "e0b8fc1b5a544b993f42c6bdf0e604aea8a5eb90d846d91ea8321960163e81df"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "basis": "Illustrative figures only.",
+  "outputs": {
+    "equity_used_total": 200,
+    "debt_used_total": 250,
+    "shortfall_total": 0,
+    "equity_remaining_3": 0,
+    "debt_remaining_3": 50,
+    "funding_check": 0
+  }
+}

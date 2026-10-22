@@ -1,0 +1,42 @@
+slug: test-input-inflation-against-stock-clearance
+name: Test input inflation against stock clearance
+summary: A stock recovery bridge and separate replenishment margin scenario
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: spreadsheet
+    required: true
+  - type: audit_report
+    required: true
+  - type: document
+    required: true
+uses:
+  - retail-markdown-stock-reconciler
+  - commodity-pass-through-cost-bridge
+steps:
+  - uses: retail-markdown-stock-reconciler
+    note: Reconcile old-cohort units, receipts, sold purchase cost and held stock cost memo. Pass remaining quantity and actual purchase-cost vintage, not a hypothetical replacement price. Preserve both sold-unit contribution and full-cohort cumulative purchase cash recovery; never use the unsold purchase-cost memo as new cash.
+  - uses: commodity-pass-through-cost-bridge
+    note: Model the future replenishment input-price and approved price-recovery scenario using the correct physical intensity. Present old-stock cash recovery and new-cohort margin as separate bridges with explicit timing and no assumed demand response.
+execution: coordinator
+origin: own
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/finance-expansion
+example_pending: true
+warnings:
+  - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+credits:
+  - title: Original finance methods and model fixtures
+    by: AI Blocks contributors
+    used: Original instructions, calculations and illustrative examples. External method references are linked separately and retain their own rights.

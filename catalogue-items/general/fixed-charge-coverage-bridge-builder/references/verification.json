@@ -1,0 +1,17 @@
+{
+  "slug": "fixed-charge-coverage-bridge-builder",
+  "modelSha256": "a2b6aaa0e47197b33848c74328a58f9542c7bd66f6ad7b67a09b85d6855b939c",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing or invalid required input",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

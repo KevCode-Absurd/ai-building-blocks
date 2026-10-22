@@ -1,0 +1,131 @@
+{
+  "inputs": [
+    {
+      "id": "profit",
+      "label": "Continuing ordinary earnings",
+      "value": 100,
+      "unit": "USD million",
+      "min": 0.001,
+      "max": 1000000000
+    },
+    {
+      "id": "basicShares",
+      "label": "Basic weighted shares",
+      "value": 100,
+      "unit": "million shares",
+      "min": 0.001,
+      "max": 1000000000
+    },
+    {
+      "id": "earningsAdjustment",
+      "label": "After-tax if-converted numerator adjustment",
+      "value": 2,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "addedShares",
+      "label": "Weighted conversion shares",
+      "value": 50,
+      "unit": "million shares",
+      "min": 0.001,
+      "max": 1000000000
+    }
+  ],
+  "calculations": [
+    {
+      "id": "basicEps",
+      "label": "Basic control EPS",
+      "op": "div",
+      "args": [
+        "profit",
+        "basicShares"
+      ],
+      "unit": "USD per share"
+    },
+    {
+      "id": "incrementalEps",
+      "label": "Incremental instrument EPS",
+      "op": "div",
+      "args": [
+        "earningsAdjustment",
+        "addedShares"
+      ],
+      "unit": "USD per share"
+    },
+    {
+      "id": "newProfit",
+      "label": "If-converted profit",
+      "op": "add",
+      "args": [
+        "profit",
+        "earningsAdjustment"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "newShares",
+      "label": "If-converted shares",
+      "op": "add",
+      "args": [
+        "basicShares",
+        "addedShares"
+      ],
+      "unit": "million shares"
+    },
+    {
+      "id": "candidateEps",
+      "label": "If-converted candidate EPS",
+      "op": "div",
+      "args": [
+        "newProfit",
+        "newShares"
+      ],
+      "unit": "USD per share"
+    },
+    {
+      "id": "epsChange",
+      "label": "Candidate less basic EPS",
+      "op": "sub",
+      "args": [
+        "candidateEps",
+        "basicEps"
+      ],
+      "unit": "USD per share"
+    }
+  ],
+  "outputs": [
+    "basicEps",
+    "incrementalEps",
+    "candidateEps",
+    "epsChange"
+  ],
+  "expected": {
+    "basicEps": 1,
+    "incrementalEps": 0.04,
+    "candidateEps": 0.68,
+    "epsChange": -0.32
+  },
+  "cases": [
+    {
+      "name": "High numerator adjustment is anti-dilutive",
+      "inputs": {
+        "earningsAdjustment": 60
+      },
+      "expected": {
+        "incrementalEps": 1.2,
+        "candidateEps": 1.0666666666666667,
+        "epsChange": 0.06666666666666667
+      }
+    },
+    {
+      "name": "Missing required source input",
+      "inputs": {
+        "profit": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures. Basic EPS is 100/100 = $1. Incremental EPS is 2/50 = $0.04 and candidate EPS is 102/150 = $0.68. A $60 million adjustment instead raises EPS to $1.066667 and fails the profitable anti-dilution test."
+}

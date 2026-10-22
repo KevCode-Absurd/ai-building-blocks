@@ -1,0 +1,32 @@
+{
+  "engine": "Artifact Tool",
+  "scope": "Illustrative workbook calculations, not source truth or an actual investment conclusion. Native Microsoft Excel application execution is not claimed.",
+  "modelSha256": "bb6768e5285e89109d66d21ad72c3b11987ffe191be1f1c4c35f217b3b8ccf8f",
+  "xlsxSha256": "5de264d33017688006d1a448e7cb2cded84f14c473a1c05ace6efe63eea39455",
+  "baseline": "pass",
+  "changedInputCase": "Higher credit-loss expense",
+  "invalidInputCase": "Missing required reported input",
+  "cases": [
+    {
+      "name": "Higher credit-loss expense",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required reported input",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ],
+  "reopenedAndRecalculated": true,
+  "rendered": true,
+  "visualReview": "pass",
+  "workbookSpecSha256": "0643617ae0873371ab783c445d9cb932926632ddf4060f2c5f1f518d00d00b86",
+  "visualEvidence": {
+    "report": "reports/finance-public-markets-peer-review.json",
+    "reportSha256": "f73f6f5598ba0647c477c547d2776f1221130bb7861b62def472b74331866282",
+    "previewSha256": "9cba642d79f0f9d6a43a708b1b5b5f6adbb39e6fc93bcdd9c2b42129f4a8cbbc",
+    "sheet": "Model",
+    "sourceSpecSha256": "d8f0c232644c3e0c7c90e94bf4711e008368839e0724bb07f79c0d0e41b8fe49"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "slug": "book-value-per-share-rollforward",
+  "modelSha256": "acce65b8028ae632164332ee82c14fdf5484e9738e4bda3fd3b0229a4b2a0219",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Additional dividend",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required source input",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

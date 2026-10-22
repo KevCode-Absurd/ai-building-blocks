@@ -1,0 +1,143 @@
+{
+  "inputs": [
+    {
+      "id": "shares",
+      "label": "Shares before dividend",
+      "value": 100,
+      "unit": "shares",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "dividend",
+      "label": "Dividend per share",
+      "value": 1,
+      "unit": "USD per share",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "reinvestPrice",
+      "label": "Reinvestment execution price",
+      "value": 20,
+      "unit": "USD per share",
+      "min": 0.000001,
+      "max": 1000000000
+    },
+    {
+      "id": "endPrice",
+      "label": "Ending unadjusted price",
+      "value": 22,
+      "unit": "USD per share",
+      "min": 0,
+      "max": 1000000000
+    }
+  ],
+  "calculations": [
+    {
+      "id": "cashDividend",
+      "label": "Dividend cash",
+      "op": "mul",
+      "args": [
+        "shares",
+        "dividend"
+      ],
+      "unit": "USD"
+    },
+    {
+      "id": "newShares",
+      "label": "Shares acquired",
+      "op": "div",
+      "args": [
+        "cashDividend",
+        "reinvestPrice"
+      ],
+      "unit": "shares"
+    },
+    {
+      "id": "endingShares",
+      "label": "Ending shares",
+      "op": "add",
+      "args": [
+        "shares",
+        "newShares"
+      ],
+      "unit": "shares"
+    },
+    {
+      "id": "endingWealth",
+      "label": "Reinvested ending wealth",
+      "op": "mul",
+      "args": [
+        "endingShares",
+        "endPrice"
+      ],
+      "unit": "USD"
+    },
+    {
+      "id": "oldShareValue",
+      "label": "Original shares ending value",
+      "op": "mul",
+      "args": [
+        "shares",
+        "endPrice"
+      ],
+      "unit": "USD"
+    },
+    {
+      "id": "cashHeldWealth",
+      "label": "Ending wealth with cash dividend held",
+      "op": "add",
+      "args": [
+        "oldShareValue",
+        "cashDividend"
+      ],
+      "unit": "USD"
+    },
+    {
+      "id": "reinvestmentDifference",
+      "label": "Reinvestment less cash-held wealth",
+      "op": "sub",
+      "args": [
+        "endingWealth",
+        "cashHeldWealth"
+      ],
+      "unit": "USD"
+    }
+  ],
+  "outputs": [
+    "cashDividend",
+    "newShares",
+    "endingShares",
+    "endingWealth",
+    "reinvestmentDifference"
+  ],
+  "expected": {
+    "cashDividend": 100,
+    "newShares": 5,
+    "endingShares": 105,
+    "endingWealth": 2310,
+    "reinvestmentDifference": 10
+  },
+  "cases": [
+    {
+      "name": "Reinvestment price equals ending price",
+      "inputs": {
+        "reinvestPrice": 22
+      },
+      "expected": {
+        "newShares": 4.545454545454546,
+        "endingWealth": 2300,
+        "reinvestmentDifference": 0
+      }
+    },
+    {
+      "name": "Missing required source input",
+      "inputs": {
+        "shares": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures. 100 shares × $1 yields $100, acquiring five shares at $20. At $22, 105 shares are worth $2,310 versus $2,300 if the dividend stayed cash. Reinvesting at $22 makes both values $2,300."
+}

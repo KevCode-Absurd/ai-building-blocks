@@ -1,0 +1,32 @@
+{
+  "engine": "Artifact Tool",
+  "scope": "Illustrative workbook calculations, not source truth or an actual investment conclusion. Native Microsoft Excel application execution is not claimed.",
+  "modelSha256": "00ccd8a79b9d66d364096c37f10f19ce10afa8f698baff2d15b95b320bfaa20d",
+  "xlsxSha256": "142701faff84b334424ec2f51fdf28be89d0755eb090cd06bcfc071ce511bbdd",
+  "baseline": "pass",
+  "changedInputCase": "Higher closing tax payable",
+  "invalidInputCase": "Required source input missing",
+  "cases": [
+    {
+      "name": "Higher closing tax payable",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Required source input missing",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ],
+  "reopenedAndRecalculated": true,
+  "rendered": true,
+  "visualReview": "pass",
+  "workbookSpecSha256": "43e86e2eb853b3aae7641d898d4f325d46ab11a60288ff445d4934d35c2cb22b",
+  "visualEvidence": {
+    "report": "reports/finance-public-markets-peer-review.json",
+    "reportSha256": "f73f6f5598ba0647c477c547d2776f1221130bb7861b62def472b74331866282",
+    "previewSha256": "6ab533abca7a84ff0e53e938c2a6981b4712d9a40c932a8aba6ca663bbc96558",
+    "sheet": "Model",
+    "sourceSpecSha256": "cd79a1b24edbe44c66b4730df2000d18d16b9c743e728afb96d6054066781a82"
+  }
+}

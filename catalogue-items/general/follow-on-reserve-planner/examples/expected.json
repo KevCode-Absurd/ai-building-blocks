@@ -1,0 +1,9 @@
+{
+  "basis": "Illustrative figures only.",
+  "outputs": {
+    "cashA": 10,
+    "cashB": 20,
+    "required": 30,
+    "headroom": 0
+  }
+}

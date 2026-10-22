@@ -1,0 +1,104 @@
+{
+  "inputs": [
+    {
+      "id": "cash_year_1",
+      "label": "cash year 1",
+      "value": 110,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "cash_year_2",
+      "label": "cash year 2",
+      "value": 121,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "cash_year_3",
+      "label": "cash year 3",
+      "value": 133.1,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "loan_balance",
+      "label": "loan balance",
+      "value": 240,
+      "unit": "USD / start",
+      "min": 0.000001
+    },
+    {
+      "id": "contract_discount_rate",
+      "label": "contract discount rate",
+      "value": 0.1,
+      "unit": "annual decimal",
+      "min": 0,
+      "max": 1
+    }
+  ],
+  "calculations": [
+    {
+      "id": "present_qualifying_cash",
+      "label": "present qualifying cash",
+      "op": "npv",
+      "args": [
+        "contract_discount_rate",
+        "cash_year_1",
+        "cash_year_2",
+        "cash_year_3"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "loan_life_cover",
+      "label": "loan life cover",
+      "op": "div",
+      "args": [
+        "present_qualifying_cash",
+        "loan_balance"
+      ],
+      "unit": "multiple"
+    },
+    {
+      "id": "cash_cushion",
+      "label": "cash cushion",
+      "op": "sub",
+      "args": [
+        "present_qualifying_cash",
+        "loan_balance"
+      ],
+      "unit": "USD / stated period"
+    }
+  ],
+  "outputs": [
+    "present_qualifying_cash",
+    "loan_life_cover",
+    "cash_cushion"
+  ],
+  "expected": {
+    "present_qualifying_cash": 300,
+    "loan_life_cover": 1.25,
+    "cash_cushion": 60
+  },
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "inputs": {
+        "loan_balance": 200
+      },
+      "expected": {
+        "loan_life_cover": 1.5,
+        "cash_cushion": 100
+      }
+    },
+    {
+      "name": "Missing or invalid required input",
+      "inputs": {
+        "cash_year_1": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only in USD unless labelled otherwise. A focused schedule using explicit period, rate and timing conventions; not a full financing model or an approval decision."
+}

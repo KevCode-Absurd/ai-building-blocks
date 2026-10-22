@@ -1,0 +1,89 @@
+{
+  "inputs": [
+    {
+      "id": "faceAmount",
+      "label": "face Amount",
+      "value": 100,
+      "unit": "USD millions",
+      "min": 0
+    },
+    {
+      "id": "issueFraction",
+      "label": "issue Fraction",
+      "value": 0.98,
+      "unit": "fraction of par",
+      "min": 0,
+      "max": 1
+    },
+    {
+      "id": "upfrontFees",
+      "label": "upfront Fees",
+      "value": 1,
+      "unit": "USD millions",
+      "min": 0
+    }
+  ],
+  "calculations": [
+    {
+      "id": "grossProceeds",
+      "label": "gross Proceeds",
+      "op": "mul",
+      "args": [
+        "faceAmount",
+        "issueFraction"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "issueDiscount",
+      "label": "issue Discount",
+      "op": "sub",
+      "args": [
+        "faceAmount",
+        "grossProceeds"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "netProceeds",
+      "label": "net Proceeds",
+      "op": "sub",
+      "args": [
+        "grossProceeds",
+        "upfrontFees"
+      ],
+      "unit": "USD millions"
+    }
+  ],
+  "outputs": [
+    "grossProceeds",
+    "issueDiscount",
+    "netProceeds"
+  ],
+  "expected": {
+    "grossProceeds": 98,
+    "issueDiscount": 2,
+    "netProceeds": 97
+  },
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "inputs": {
+        "issueFraction": 0.95
+      },
+      "expected": {
+        "grossProceeds": 95,
+        "issueDiscount": 5,
+        "netProceeds": 94
+      }
+    },
+    {
+      "name": "Missing required number",
+      "inputs": {
+        "faceAmount": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only. 100 face at98% provides98, less1 fee gives97. At95% it gives94 while principal remains100."
+}

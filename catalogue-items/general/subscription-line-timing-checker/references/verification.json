@@ -1,0 +1,17 @@
+{
+  "slug": "subscription-line-timing-checker",
+  "modelSha256": "da353f7bb744e4e109aead890979b5932c4b91e68b3f43a4b29ae8e9a204624f",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required number",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

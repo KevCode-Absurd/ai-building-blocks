@@ -1,0 +1,17 @@
+{
+  "slug": "project-payment-waterfall-builder",
+  "modelSha256": "8432ecf2b8e8129823099b5e5b8884c7211a929d071acfe27187a2b8551451ba",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing or invalid required input",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

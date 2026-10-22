@@ -1,0 +1,135 @@
+{
+  "inputs": [
+    {
+      "id": "ca0",
+      "label": "Opening contract assets",
+      "value": 30,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "unbilledRevenue",
+      "label": "New unbilled revenue",
+      "value": 100,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "ca1",
+      "label": "Closing contract assets",
+      "value": 40,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "ar0",
+      "label": "Opening receivables",
+      "value": 50,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "directInvoices",
+      "label": "Direct invoices excluding contract-asset transfers",
+      "value": 200,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "ar1",
+      "label": "Closing receivables",
+      "value": 60,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    }
+  ],
+  "calculations": [
+    {
+      "id": "caAvailable",
+      "label": "Contract assets before transfers",
+      "op": "add",
+      "args": [
+        "ca0",
+        "unbilledRevenue"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "transfers",
+      "label": "Transfers to receivables",
+      "op": "sub",
+      "args": [
+        "caAvailable",
+        "ca1"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "totalInvoices",
+      "label": "Direct invoices plus transfers",
+      "op": "add",
+      "args": [
+        "directInvoices",
+        "transfers"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "arAvailable",
+      "label": "Receivables before collections",
+      "op": "add",
+      "args": [
+        "ar0",
+        "totalInvoices"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "collections",
+      "label": "Implied collections under zero-other-movement assumption",
+      "op": "sub",
+      "args": [
+        "arAvailable",
+        "ar1"
+      ],
+      "unit": "USD million"
+    }
+  ],
+  "outputs": [
+    "transfers",
+    "totalInvoices",
+    "collections"
+  ],
+  "expected": {
+    "transfers": 90,
+    "totalInvoices": 290,
+    "collections": 280
+  },
+  "cases": [
+    {
+      "name": "More revenue remains unbilled",
+      "inputs": {
+        "ca1": 50
+      },
+      "expected": {
+        "transfers": 80,
+        "totalInvoices": 280,
+        "collections": 270
+      }
+    },
+    {
+      "name": "Missing required reported input",
+      "inputs": {
+        "ca0": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures. Contract assets30+100-40 imply90 transferred to invoices. Add200 direct invoices and opening receivables50, then subtract closing60: collections280. Closing contract assets50 lowers transfers and inferred collections by10."
+}

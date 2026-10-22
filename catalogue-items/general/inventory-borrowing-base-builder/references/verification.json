@@ -1,0 +1,17 @@
+{
+  "slug": "inventory-borrowing-base-builder",
+  "modelSha256": "d5a9126c3fd71b6c164b581e54c0e903ebad334a0d4c277024067eea5107defc",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required evidence refuses calculation",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

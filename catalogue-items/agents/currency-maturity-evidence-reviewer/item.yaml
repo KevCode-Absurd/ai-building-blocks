@@ -1,0 +1,47 @@
+slug: currency-maturity-evidence-reviewer
+name: Currency maturity evidence reviewer
+summary: A dated evidence review with changed assumptions, reconciliations and unresolved source gaps.
+category: agent
+type: agent
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: spreadsheet
+    required: true
+  - type: audit_report
+    required: true
+  - type: document
+    required: true
+uses:
+  - reconcile-currency-exposure-and-settlement
+  - restricted-cash-availability-checker
+steps:
+  - uses: reconcile-currency-exposure-and-settlement
+    note: Run the governing workflow when An underlying payable, hedge confirmation, settlement rate or collateral notice changes.
+  - uses: restricted-cash-availability-checker
+    note: If the counterparty documents a collateral cash block, check accessible cash using the actual notice and existing restriction ledger. Do not infer a collateral call from an exchange-rate scenario or arrange a trade.
+origin: own
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/finance-expansion
+example_pending: true
+warnings:
+  - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+credits:
+  - title: Original finance methods and model fixtures
+    by: AI Blocks contributors
+    used: Original instructions, calculations and illustrative examples. External method references are linked separately and retain their own rights.
+schedule: On request or at a user-authorized reporting checkpoint. Installing this agent creates no recurring schedule.
+asks_before:
+  - Trading or moving money
+  - Sending or publishing research or deal materials
+  - Changing an account or submitting a filing
+  - Starting or changing a recurring schedule

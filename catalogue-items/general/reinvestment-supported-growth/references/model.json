@@ -1,0 +1,99 @@
+{
+  "inputs": [
+    {
+      "id": "nopat",
+      "label": "After-tax operating profit",
+      "value": 100,
+      "unit": "USD million",
+      "min": 0.001,
+      "max": 1000000000
+    },
+    {
+      "id": "netCapex",
+      "label": "Capex less depreciation",
+      "value": 20,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "wc",
+      "label": "Operating working-capital investment",
+      "value": 5,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "roc",
+      "label": "Return on new capital",
+      "value": 0.2,
+      "unit": "decimal",
+      "min": 0,
+      "max": 1
+    }
+  ],
+  "calculations": [
+    {
+      "id": "reinvestment",
+      "label": "Net reinvestment",
+      "op": "add",
+      "args": [
+        "netCapex",
+        "wc"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "rate",
+      "label": "Reinvestment rate",
+      "op": "div",
+      "args": [
+        "reinvestment",
+        "nopat"
+      ],
+      "unit": "decimal"
+    },
+    {
+      "id": "growth",
+      "label": "Supported operating growth",
+      "op": "mul",
+      "args": [
+        "rate",
+        "roc"
+      ],
+      "unit": "decimal"
+    }
+  ],
+  "outputs": [
+    "reinvestment",
+    "rate",
+    "growth"
+  ],
+  "expected": {
+    "reinvestment": 25,
+    "rate": 0.25,
+    "growth": 0.05
+  },
+  "cases": [
+    {
+      "name": "Higher net capital spending",
+      "inputs": {
+        "netCapex": 30
+      },
+      "expected": {
+        "reinvestment": 35,
+        "rate": 0.35,
+        "growth": 0.07
+      }
+    },
+    {
+      "name": "Required input absent",
+      "inputs": {
+        "nopat": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures.(20+5)/100=25% reinvestment.25%×20%=5% growth. Net capex30 makes reinvestment35 and growth7% under the same return assumption."
+}

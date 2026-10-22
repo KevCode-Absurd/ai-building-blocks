@@ -1,0 +1,91 @@
+{
+  "inputs": [
+    {
+      "id": "oldEps",
+      "label": "Historical EPS",
+      "value": 2,
+      "unit": "USD per share",
+      "min": -1000000000,
+      "max": 1000000000
+    },
+    {
+      "id": "oldShares",
+      "label": "Historical weighted shares",
+      "value": 100,
+      "unit": "million shares",
+      "min": 0.001,
+      "max": 1000000000
+    },
+    {
+      "id": "splitFactor",
+      "label": "New shares per old share",
+      "value": 2,
+      "unit": "times",
+      "min": 0.000001,
+      "max": 1000000000
+    }
+  ],
+  "calculations": [
+    {
+      "id": "restatedEps",
+      "label": "Restated EPS",
+      "op": "div",
+      "args": [
+        "oldEps",
+        "splitFactor"
+      ],
+      "unit": "USD per share"
+    },
+    {
+      "id": "restatedShares",
+      "label": "Restated weighted shares",
+      "op": "mul",
+      "args": [
+        "oldShares",
+        "splitFactor"
+      ],
+      "unit": "million shares"
+    },
+    {
+      "id": "earnings",
+      "label": "Reconciled ordinary earnings",
+      "op": "mul",
+      "args": [
+        "restatedEps",
+        "restatedShares"
+      ],
+      "unit": "USD million"
+    }
+  ],
+  "outputs": [
+    "restatedEps",
+    "restatedShares",
+    "earnings"
+  ],
+  "expected": {
+    "restatedEps": 1,
+    "restatedShares": 200,
+    "earnings": 200
+  },
+  "cases": [
+    {
+      "name": "One-for-two reverse split",
+      "inputs": {
+        "splitFactor": 0.5
+      },
+      "expected": {
+        "restatedEps": 4,
+        "restatedShares": 50,
+        "earnings": 200
+      }
+    },
+    {
+      "name": "Missing required source input",
+      "inputs": {
+        "oldEps": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures. A two-for-one split changes $2 EPS and 100 million shares into $1 EPS and 200 million shares; earnings remain $200 million. A 0.5 reverse factor yields $4 and 50 million."
+}

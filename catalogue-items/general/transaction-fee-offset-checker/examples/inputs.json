@@ -1,0 +1,6 @@
+{
+  "grossManagementFee": 10,
+  "eligibleTransactionFees": 6,
+  "offsetFraction": 1,
+  "beginningCarryforward": 2
+}

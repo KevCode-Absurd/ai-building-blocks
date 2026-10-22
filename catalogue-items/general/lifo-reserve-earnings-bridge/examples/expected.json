@@ -1,0 +1,9 @@
+{
+  "basis": "Illustrative figures only.",
+  "outputs": {
+    "fifoInventory": 260,
+    "fifoCogs": 330,
+    "fifoMargin": 0.34,
+    "earningsChange": 15
+  }
+}

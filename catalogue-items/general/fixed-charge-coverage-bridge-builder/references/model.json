@@ -1,0 +1,151 @@
+{
+  "inputs": [
+    {
+      "id": "cash_before_fixed",
+      "label": "cash before fixed",
+      "value": 300,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "cash_taxes",
+      "label": "cash taxes",
+      "value": 20,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "maintenance_capex",
+      "label": "maintenance capex",
+      "value": 30,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "interest",
+      "label": "interest",
+      "value": 40,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "principal",
+      "label": "principal",
+      "value": 80,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "rent",
+      "label": "rent",
+      "value": 60,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "required_cover",
+      "label": "required cover",
+      "value": 1.2,
+      "unit": "multiple",
+      "min": 0.000001
+    }
+  ],
+  "calculations": [
+    {
+      "id": "deductions",
+      "label": "deductions",
+      "op": "sum",
+      "args": [
+        "cash_taxes",
+        "maintenance_capex"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "qualifying_cash",
+      "label": "qualifying cash",
+      "op": "sub",
+      "args": [
+        "cash_before_fixed",
+        "deductions"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "fixed_charges",
+      "label": "fixed charges",
+      "op": "sum",
+      "args": [
+        "interest",
+        "principal",
+        "rent"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "coverage",
+      "label": "coverage",
+      "op": "div",
+      "args": [
+        "qualifying_cash",
+        "fixed_charges"
+      ],
+      "unit": "multiple"
+    },
+    {
+      "id": "required_cash",
+      "label": "required cash",
+      "op": "mul",
+      "args": [
+        "fixed_charges",
+        "required_cover"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "cash_headroom",
+      "label": "cash headroom",
+      "op": "sub",
+      "args": [
+        "qualifying_cash",
+        "required_cash"
+      ],
+      "unit": "USD / stated period"
+    }
+  ],
+  "outputs": [
+    "qualifying_cash",
+    "fixed_charges",
+    "coverage",
+    "cash_headroom"
+  ],
+  "expected": {
+    "qualifying_cash": 250,
+    "fixed_charges": 180,
+    "coverage": 1.3888888888888888,
+    "cash_headroom": 34
+  },
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "inputs": {
+        "rent": 80
+      },
+      "expected": {
+        "fixed_charges": 200,
+        "coverage": 1.25,
+        "cash_headroom": 10
+      }
+    },
+    {
+      "name": "Missing or invalid required input",
+      "inputs": {
+        "interest": 0,
+        "principal": 0,
+        "rent": 0
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only in USD unless labelled otherwise. A focused schedule using explicit period, rate and timing conventions; not a full financing model or an approval decision."
+}

@@ -1,0 +1,9 @@
+{
+  "basis": "Illustrative figures only.",
+  "outputs": {
+    "cashInterest": 8,
+    "pikInterest": 4,
+    "endingPrincipal": 104,
+    "totalInterest": 12
+  }
+}

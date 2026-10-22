@@ -1,0 +1,74 @@
+new_slug: reconcile-revenue-presentation-and-perimeter
+name: Reconcile revenue presentation and perimeter
+headline: Reconcile revenue presentation and perimeter
+summary: Explain reported revenue changes through gross-to-net deductions, business scope and extra trading weeks.
+job: money-and-investing
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: A linked reported revenue and comparable-growth reconciliation workbook. Share gross billings and revenue policies, deductions, acquisition/disposal revenue, currency effects and fiscal-calendar evidence.
+explain: |-
+  A linked reported revenue and comparable-growth reconciliation workbook.
+
+  Public-market financial modelling. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+when:
+  - You need a linked reported revenue and comparable-growth reconciliation workbook.
+  - You work on public-market financial modelling and need traceable calculations.
+  - A reviewer needs to trace the result back to inputs and assumptions.
+you_give:
+  - Gross billings and revenue policies, deductions, acquisition/disposal revenue, currency effects and fiscal-calendar evidence.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - A linked reported revenue and comparable-growth reconciliation workbook.
+  - Original step files, financial assumptions, source coverage and a governing handoff summary.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: Gross-to-net revenue bridge
+    text: Use actual sourced schedules in one linked native workbook; example values are illustrative and must not become issuer inputs. Reconcile reported net revenue from actual policy-supported deductions; fix presentation differences before comparing reported growth.
+  - title: Organic revenue perimeter bridge
+    text: Use the reconciled reported periods, map continuing businesses and remove sourced acquisition/disposal and FX effects once with a stated ordering.
+  - title: Extra-week revenue comparability schedule
+    text: Apply only an evidenced calendar adjustment not already included in the organic bridge; retain the exact extra-week amount and explain residual trading-day/holiday differences.
+output_shape: |-
+  A linked reported revenue and comparable-growth reconciliation workbook.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: Gross-to-net, perimeter and calendar effects are mutually exclusive and reconcile; reported revenue remains primary; no unexplained gap is relabeled organic growth.
+judge:
+  - Gross-to-net, perimeter and calendar effects are mutually exclusive and reconcile; reported revenue remains primary; no unexplained gap is relabeled organic growth.
+  - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
+  - Reconcile opening balances, additions, deductions and closing balances. Match enterprise or equity cash flows to the corresponding discount rate.
+  - Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
+test:
+  - Try a small sourced case and inspect every component handoff.
+  - Remove one required source and confirm the affected step stops.
+  - Change a currency, date or accounting definition and check the conflict stays visible.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

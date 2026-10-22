@@ -1,0 +1,76 @@
+new_slug: deal-ebitda-addback-checker
+name: Deal EBITDA addback checker
+headline: Deal EBITDA addback checker
+summary: Bound a requested addback using a documented cap measured on pre-addback EBITDA.
+job: money-and-investing
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: Adjusted EBITDA, allowed capped addback and disallowed excess. Share actual EBITDA, separately permitted uncapped adjustments, supported capped addbacks and a signed cap explicitly based on pre-addback EBITDA.
+explain: |-
+  Adjusted EBITDA, allowed capped addback and disallowed excess.
+
+  Private credit definitions. Illustrative figures only. Cap20% of100 permits20 of requested40; adding10 uncapped gives130. Cap10% gives120 and rejects30.
+when:
+  - You need adjusted EBITDA, allowed capped addback and disallowed excess.
+  - You work on private credit definitions and need traceable calculations.
+  - A reviewer needs to trace the result back to inputs and assumptions.
+you_give:
+  - Actual EBITDA, separately permitted uncapped adjustments, supported capped addbacks and a signed cap explicitly based on pre-addback EBITDA.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - Adjusted EBITDA, allowed capped addback and disallowed excess.
+  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: 1. Separate realized earnings from proposed adjustments; remove duplicate costs, unsupported synergy claims and amounts already realized
+    text: Separate realized earnings from proposed adjustments; remove duplicate costs, unsupported synergy claims and amounts already realized.
+  - title: 2. For a pre-addback cap, multiply reported EBITDA by the contractual cap fraction and admit the lesser of that amount and supported requests
+    text: For a pre-addback cap, multiply reported EBITDA by the contractual cap fraction and admit the lesser of that amount and supported requests.
+  - title: 3. Add allowed capped and distinct uncapped adjustments; reconcile rejected amounts and list the actual evidence supporting each accepted item
+    text: Add allowed capped and distinct uncapped adjustments; reconcile rejected amounts and list the actual evidence supporting each accepted item.
+output_shape: |-
+  Adjusted EBITDA, allowed capped addback and disallowed excess.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: Do not use this formula when the cap denominator includes the addbacks themselves.
+judge:
+  - Do not use this formula when the cap denominator includes the addbacks themselves.
+  - Capped and uncapped categories must not overlap or duplicate reported benefit.
+  - Trace each input to its dated signed source, currency, scale and period.
+  - Reconcile outputs; preserve MISSING and CHECKS MISSED rather than guessing zero.
+test:
+  - Run the included baseline and changed-input fixtures, then compare with the stated expected results.
+  - Remove a required input and confirm the affected calculation refuses to invent a zero.
+  - Recalculate the workbook after changing an input and inspect the saved output.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: Node.js 20 or later
+      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

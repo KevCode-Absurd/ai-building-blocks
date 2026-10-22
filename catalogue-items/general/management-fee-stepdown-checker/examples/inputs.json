@@ -1,0 +1,7 @@
+{
+  "commitmentBasis": 100,
+  "beforeRate": 0.02,
+  "investedBasis": 60,
+  "afterRate": 0.015,
+  "yearFraction": 0.25
+}

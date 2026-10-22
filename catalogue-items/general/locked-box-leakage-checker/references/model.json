@@ -1,0 +1,118 @@
+{
+  "inputs": [
+    {
+      "id": "basePrice",
+      "label": "base Price",
+      "value": 100,
+      "unit": "USD millions",
+      "min": 0
+    },
+    {
+      "id": "transfers",
+      "label": "transfers",
+      "value": 8,
+      "unit": "USD millions",
+      "min": 0
+    },
+    {
+      "id": "permitted",
+      "label": "permitted",
+      "value": 2,
+      "unit": "USD millions",
+      "min": 0
+    },
+    {
+      "id": "repaid",
+      "label": "repaid",
+      "value": 3,
+      "unit": "USD millions",
+      "min": 0
+    }
+  ],
+  "calculations": [
+    {
+      "id": "exclusions",
+      "label": "exclusions",
+      "op": "add",
+      "args": [
+        "permitted",
+        "repaid"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "rawLeakage",
+      "label": "raw Leakage",
+      "op": "sub",
+      "args": [
+        "transfers",
+        "exclusions"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "leakage",
+      "label": "leakage",
+      "op": "max",
+      "args": [
+        0,
+        "rawLeakage"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "sellerPrice",
+      "label": "seller Price",
+      "op": "sub",
+      "args": [
+        "basePrice",
+        "leakage"
+      ],
+      "unit": "USD millions"
+    }
+  ],
+  "outputs": [
+    "leakage",
+    "sellerPrice"
+  ],
+  "expected": {
+    "leakage": 3,
+    "sellerPrice": 97
+  },
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "inputs": {
+        "repaid": 0
+      },
+      "expected": {
+        "leakage": 6,
+        "sellerPrice": 94
+      }
+    },
+    {
+      "name": "Missing required number",
+      "inputs": {
+        "basePrice": null
+      },
+      "error": true
+    },
+    {
+      "name": "Refuse exclusions exceeding gross transfers",
+      "inputs": {
+        "permitted": 6,
+        "repaid": 3
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only. 8 identified less2 permitted and3 repaid leaves3; price100 becomes97. Without repayment price is94.",
+  "constraints": [
+    {
+      "left": "exclusions",
+      "operator": "lte",
+      "right": "transfers",
+      "message": "Distinct permitted and repaid subsets cannot together exceed identified transfers."
+    }
+  ]
+}

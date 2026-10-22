@@ -1,0 +1,76 @@
+new_slug: contract-liability-release-bridge
+name: Contract-liability release bridge
+headline: Contract-liability release bridge
+summary: Reconcile customer advances and liability balances to revenue released from deferred obligations.
+job: track-numbers
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: A historical contract-liability roll-forward with inferred release and reconciliation residual. Share opening/closing contract liabilities, new advances or deferred billings, signed non-revenue changes and disclosed releases.
+explain: |-
+  A historical contract-liability roll-forward with inferred release and reconciliation residual.
+
+  Issuer revenue and cash-flow reconciliation. Illustrative figures.100 opening+80 additions-120 closing=60 releases, matching the disclosure and40% of150 total revenue. Closing130 implies50 releases and a10 unexplained difference.
+when:
+  - You need a historical contract-liability roll-forward with inferred release and reconciliation residual.
+  - You work on issuer revenue and cash-flow reconciliation and need traceable calculations.
+  - A reviewer needs to trace the result back to inputs and assumptions.
+you_give:
+  - Opening/closing contract liabilities, new advances or deferred billings, signed non-revenue changes and disclosed releases.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - A historical contract-liability roll-forward with inferred release and reconciliation residual.
+  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: 1. Separate contract liabilities from receivables, refundable deposits and other payables; verify whether new additions are billings or cash advances under the source definition
+    text: Separate contract liabilities from receivables, refundable deposits and other payables; verify whether new additions are billings or cash advances under the source definition.
+  - title: 2. Start with opening liability, add new deferred consideration and signed acquisition/FX/other changes, then deduct closing liability to infer revenue release
+    text: Start with opening liability, add new deferred consideration and signed acquisition/FX/other changes, then deduct closing liability to infer revenue release.
+  - title: 3. Compare with the disclosed release and total recognized revenue; distinguish revenue from opening balances from all releases during the period
+    text: Compare with the disclosed release and total recognized revenue; distinguish revenue from opening balances from all releases during the period.
+output_shape: |-
+  A historical contract-liability roll-forward with inferred release and reconciliation residual.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: Liability additions are not all called cash collections without source evidence.
+judge:
+  - Liability additions are not all called cash collections without source evidence.
+  - Release from opening liabilities and total annual release are kept distinct.
+  - Source each balance, flow, period, perimeter, currency and sign; distinguish a true zero from missing evidence.
+  - Preserve reported measures beside analytical measures and retain unexplained residuals.
+test:
+  - Run the included baseline and changed-input fixtures, then compare with the stated expected results.
+  - Remove a required input and confirm the affected calculation refuses to invent a zero.
+  - Recalculate the workbook after changing an input and inspect the saved output.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: Node.js 20 or later
+      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

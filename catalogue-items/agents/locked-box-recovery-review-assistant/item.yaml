@@ -1,0 +1,47 @@
+slug: locked-box-recovery-review-assistant
+name: Locked-box recovery review assistant
+summary: Review supplied changes, preserve the last evidence baseline and return only affected calculations and unresolved approval questions.
+category: agent
+type: agent
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: spreadsheet
+    required: true
+  - type: audit_report
+    required: true
+  - type: document
+    required: true
+uses:
+  - reconcile-a-locked-box-closing-price
+  - escrow-release-checker
+steps:
+  - uses: reconcile-a-locked-box-closing-price
+    note: Run the governing workflow when A new seller-benefit transfer, permitted-item consent, verified repayment or ticking-day confirmation is supplied.
+  - uses: escrow-release-checker
+    note: If unrecovered leakage has a specific approved escrow reserve, reconcile only that account and claim ledger before proposing a release or collateral shortfall. If no dedicated escrow or authority is evidenced, return a question and never divert an unrelated earnout or indemnity account.
+origin: own
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/finance-expansion
+example_pending: true
+warnings:
+  - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+credits:
+  - title: Original finance methods and model fixtures
+    by: AI Blocks contributors
+    used: Original instructions, calculations and illustrative examples. External method references are linked separately and retain their own rights.
+schedule: On explicit request after the user supplies changed evidence. Installing the pack creates no schedule or account connection.
+asks_before:
+  - Trading or moving money
+  - Sending or publishing research or deal materials
+  - Changing an account or submitting a filing
+  - Starting or changing a recurring schedule

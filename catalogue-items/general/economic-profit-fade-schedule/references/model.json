@@ -1,0 +1,122 @@
+{
+  "inputs": [
+    {
+      "id": "capital",
+      "label": "Opening operating capital",
+      "value": 1000,
+      "unit": "USD million",
+      "min": 0.001,
+      "max": 1000000000
+    },
+    {
+      "id": "nopat1",
+      "label": "Year1 NOPAT",
+      "value": 120,
+      "unit": "USD million",
+      "min": -1000000000,
+      "max": 1000000000
+    },
+    {
+      "id": "nopat2",
+      "label": "Year2 NOPAT",
+      "value": 110,
+      "unit": "USD million",
+      "min": -1000000000,
+      "max": 1000000000
+    },
+    {
+      "id": "wacc",
+      "label": "Operating discount rate",
+      "value": 0.1,
+      "unit": "decimal",
+      "min": 0.000001,
+      "max": 1
+    }
+  ],
+  "calculations": [
+    {
+      "id": "charge",
+      "label": "Annual capital charge",
+      "op": "mul",
+      "args": [
+        "capital",
+        "wacc"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "ep1",
+      "label": "Year1 economic profit",
+      "op": "sub",
+      "args": [
+        "nopat1",
+        "charge"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "ep2",
+      "label": "Year2 economic profit",
+      "op": "sub",
+      "args": [
+        "nopat2",
+        "charge"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "pvExcess",
+      "label": "PV explicit economic profits",
+      "op": "npv",
+      "args": [
+        "wacc",
+        "ep1",
+        "ep2"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "componentValue",
+      "label": "Constant-capital operating value",
+      "op": "add",
+      "args": [
+        "capital",
+        "pvExcess"
+      ],
+      "unit": "USD million"
+    }
+  ],
+  "outputs": [
+    "ep1",
+    "ep2",
+    "pvExcess",
+    "componentValue"
+  ],
+  "expected": {
+    "ep1": 20,
+    "ep2": 10,
+    "pvExcess": 26.446280991735538,
+    "componentValue": 1026.4462809917354
+  },
+  "cases": [
+    {
+      "name": "Zero excess return begins in year2",
+      "inputs": {
+        "nopat2": 100
+      },
+      "expected": {
+        "ep2": 0,
+        "pvExcess": 18.181818181818183,
+        "componentValue": 1018.1818181818182
+      }
+    },
+    {
+      "name": "Required input absent",
+      "inputs": {
+        "capital": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures.Capital charge1,000×10%=100. Excess returns20 and10 have PV20/1.1+10/1.21=26.446281. Add constant capital1,000 to obtain1,026.446281 under the imposed terminal assumptions."
+}

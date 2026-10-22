@@ -1,0 +1,32 @@
+{
+  "engine": "Artifact Tool",
+  "scope": "Illustrative workbook calculations, not source truth or an actual investment conclusion. Native Microsoft Excel application execution is not claimed.",
+  "modelSha256": "30c88632f933c9cbd29dbab73a804f8f371aafa0b2b31108a65dd94dfdf032a5",
+  "xlsxSha256": "cba4b69be568a652f377fd71d47af6df93cbd25c39dad53eba937efaec910477",
+  "baseline": "pass",
+  "changedInputCase": "A loss is recycled instead",
+  "invalidInputCase": "Required source input missing",
+  "cases": [
+    {
+      "name": "A loss is recycled instead",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Required source input missing",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ],
+  "reopenedAndRecalculated": true,
+  "rendered": true,
+  "visualReview": "pass",
+  "workbookSpecSha256": "2e7c9b6029455f9f4481becb77367ebb45b0d4b0819d7027e0a028b266346359",
+  "visualEvidence": {
+    "report": "reports/finance-public-markets-peer-review.json",
+    "reportSha256": "f73f6f5598ba0647c477c547d2776f1221130bb7861b62def472b74331866282",
+    "previewSha256": "c28f9740edbe5a1ee3d6d5a31911bfb983a48cbcdefb6d525bb25b505bd3eebe",
+    "sheet": "Model",
+    "sourceSpecSha256": "f1d4312d70b1157c1085bfe38d6111edfe43db7405f39e2acac688fcb2a446b5"
+  }
+}

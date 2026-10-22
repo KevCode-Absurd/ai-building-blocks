@@ -1,0 +1,72 @@
+new_slug: reconcile-service-capacity-and-shared-cost
+name: Reconcile service capacity and shared cost
+headline: Reconcile service capacity and shared cost
+summary: A service contribution bridge with allocated and idle shared cost
+job: money-and-investing
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: A service contribution bridge with allocated and idle shared cost. Share actual paid/client hours, leave/fixed duties, realized fees, loaded delivery cost, a separate shared service pool and homogeneous activity drivers for the same month.
+explain: |-
+  A service contribution bridge with allocated and idle shared cost.
+
+  Professional services FP&A. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+when:
+  - You need a service contribution bridge with allocated and idle shared cost.
+  - You work on professional services fp&a and need traceable calculations.
+  - A reviewer needs to trace the result back to inputs and assumptions.
+you_give:
+  - Actual paid/client hours, leave/fixed duties, realized fees, loaded delivery cost, a separate shared service pool and homogeneous activity drivers for the same month.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - A service contribution bridge with allocated and idle shared cost.
+  - Original step files, financial assumptions, source coverage and a governing handoff summary.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: Service utilization margin builder
+    text: Reconcile paid time, available client capacity and actual fee realization to delivery contribution. Pass contribution, month and direct-cost ledger to the allocation step, preserving unbilled work.
+  - title: Shared service activity cost allocator
+    text: Allocate only the separate approved shared service pool using observed activity drivers and normal capacity. Present direct contribution less allocated share as a management view; show idle cost separately and prevent a second deduction of delivery labor.
+output_shape: |-
+  A service contribution bridge with allocated and idle shared cost.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: Delivery labor and shared pool do not overlap; activity units and hours are bridged explicitly; unused capacity cost remains visible rather than being hidden in unit fees.
+judge:
+  - Delivery labor and shared pool do not overlap; activity units and hours are bridged explicitly; unused capacity cost remains visible rather than being hidden in unit fees.
+  - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
+  - Reconcile opening balances, additions, deductions and closing balances. Match enterprise or equity cash flows to the corresponding discount rate.
+  - Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
+test:
+  - Try a small sourced case and inspect every component handoff.
+  - Remove one required source and confirm the affected step stops.
+  - Change a currency, date or accounting definition and check the conflict stays visible.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

@@ -1,0 +1,27 @@
+{
+  "slug": "milestone-tranche-funding-checker",
+  "modelSha256": "1d8b7f91542ee11f94e5bf81b94123d929f77f58e10ea498cad4f27b7669d140",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required number",
+      "kind": "refusal",
+      "status": "pass"
+    },
+    {
+      "name": "Refuse draw fees exceeding authorized funding",
+      "kind": "refusal",
+      "status": "pass"
+    },
+    {
+      "name": "Refuse already funded above commitment",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

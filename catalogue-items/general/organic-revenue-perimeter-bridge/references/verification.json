@@ -1,0 +1,22 @@
+{
+  "slug": "organic-revenue-perimeter-bridge",
+  "modelSha256": "ca3b29e7b766909d8ca51e51f0d2bc4d6295007c3a66f05fa70dc8aa28d86fac",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Smaller acquired-business contribution",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required reported input",
+      "kind": "refusal",
+      "status": "pass"
+    },
+    {
+      "name": "Disposed business exceeds prior revenue",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

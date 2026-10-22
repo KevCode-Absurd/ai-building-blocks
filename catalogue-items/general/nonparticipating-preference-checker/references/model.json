@@ -1,0 +1,113 @@
+{
+  "inputs": [
+    {
+      "id": "investment",
+      "label": "investment",
+      "value": 100,
+      "unit": "USD thousands",
+      "min": 0
+    },
+    {
+      "id": "multiple",
+      "label": "multiple",
+      "value": 1,
+      "unit": "multiple",
+      "min": 0
+    },
+    {
+      "id": "proceeds",
+      "label": "proceeds",
+      "value": 300,
+      "unit": "USD thousands",
+      "min": 0
+    },
+    {
+      "id": "ownership",
+      "label": "ownership",
+      "value": 0.2,
+      "unit": "fraction",
+      "min": 0,
+      "max": 1
+    }
+  ],
+  "calculations": [
+    {
+      "id": "preference",
+      "label": "preference",
+      "op": "mul",
+      "args": [
+        "investment",
+        "multiple"
+      ],
+      "unit": "USD thousands"
+    },
+    {
+      "id": "conversion",
+      "label": "conversion",
+      "op": "mul",
+      "args": [
+        "proceeds",
+        "ownership"
+      ],
+      "unit": "USD thousands"
+    },
+    {
+      "id": "elected",
+      "label": "elected",
+      "op": "max",
+      "args": [
+        "preference",
+        "conversion"
+      ],
+      "unit": "USD thousands"
+    },
+    {
+      "id": "preferredPayout",
+      "label": "preferred Payout",
+      "op": "min",
+      "args": [
+        "proceeds",
+        "elected"
+      ],
+      "unit": "USD thousands"
+    },
+    {
+      "id": "commonPayout",
+      "label": "common Payout",
+      "op": "sub",
+      "args": [
+        "proceeds",
+        "preferredPayout"
+      ],
+      "unit": "USD thousands"
+    }
+  ],
+  "outputs": [
+    "preferredPayout",
+    "commonPayout"
+  ],
+  "expected": {
+    "preferredPayout": 100,
+    "commonPayout": 200
+  },
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "inputs": {
+        "proceeds": 1000
+      },
+      "expected": {
+        "preferredPayout": 200,
+        "commonPayout": 800
+      }
+    },
+    {
+      "name": "Missing required number",
+      "inputs": {
+        "investment": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only. At300, preference100 beats conversion60. At1000, conversion20% pays200."
+}

@@ -1,0 +1,32 @@
+{
+  "engine": "Artifact Tool",
+  "scope": "Illustrative workbook calculations, not source truth or an actual investment conclusion. Native Microsoft Excel application execution is not claimed.",
+  "modelSha256": "fe6095191939e7824a70f5edd593a518e08e34befc5ca179cac03d20c1d188a7",
+  "xlsxSha256": "1dfbb0dfe2d3d5236e775e7145ca3ebcb6968ccb1793bdb0bc3d91ecf0860094",
+  "baseline": "pass",
+  "changedInputCase": "ROE equals required return",
+  "invalidInputCase": "Required input absent",
+  "cases": [
+    {
+      "name": "ROE equals required return",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Required input absent",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ],
+  "reopenedAndRecalculated": true,
+  "rendered": true,
+  "visualReview": "pass",
+  "workbookSpecSha256": "d0ab5086e1f3314a91fa7d2c60ca16d929e4407c1e0fb0fd35abbda01adabec3",
+  "visualEvidence": {
+    "report": "reports/finance-public-markets-peer-review.json",
+    "reportSha256": "f73f6f5598ba0647c477c547d2776f1221130bb7861b62def472b74331866282",
+    "previewSha256": "ec952168e463dc55192401fa43e1d5a6a10818b8d55d8c044d2c9bba277980a5",
+    "sheet": "Model",
+    "sourceSpecSha256": "736272c70c63b2981b6450badf263877586303aece2447ca1d816be69b71c147"
+  }
+}

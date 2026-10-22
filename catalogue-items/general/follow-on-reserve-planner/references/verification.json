@@ -1,0 +1,17 @@
+{
+  "slug": "follow-on-reserve-planner",
+  "modelSha256": "0e40e410362453ea46c89b49532e3ad1782391a3406af7a6bd7c04bbda79f854",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required number",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

@@ -1,0 +1,158 @@
+{
+  "inputs": [
+    {
+      "id": "receivables",
+      "label": "receivables",
+      "value": 100,
+      "unit": "EUR",
+      "min": 0
+    },
+    {
+      "id": "payables",
+      "label": "payables",
+      "value": 60,
+      "unit": "EUR",
+      "min": 0
+    },
+    {
+      "id": "committed_receipts",
+      "label": "committed receipts",
+      "value": 20,
+      "unit": "EUR",
+      "min": 0
+    },
+    {
+      "id": "committed_payments",
+      "label": "committed payments",
+      "value": 10,
+      "unit": "EUR",
+      "min": 0
+    },
+    {
+      "id": "hedge_foreign_delivery",
+      "label": "confirmed hedge foreign delivery; positive buys, negative sells",
+      "value": -30,
+      "unit": "EUR / maturity bucket",
+      "min": -1000000000
+    },
+    {
+      "id": "spot",
+      "label": "spot",
+      "value": 1.1,
+      "unit": "USD / EUR",
+      "min": 0.000001
+    },
+    {
+      "id": "scenario_spot",
+      "label": "scenario spot",
+      "value": 1.2,
+      "unit": "USD / EUR",
+      "min": 0.000001
+    }
+  ],
+  "calculations": [
+    {
+      "id": "inflows",
+      "label": "inflows",
+      "op": "sum",
+      "args": [
+        "receivables",
+        "committed_receipts"
+      ],
+      "unit": "EUR"
+    },
+    {
+      "id": "outflows",
+      "label": "outflows",
+      "op": "sum",
+      "args": [
+        "payables",
+        "committed_payments"
+      ],
+      "unit": "EUR"
+    },
+    {
+      "id": "unhedged_foreign",
+      "label": "net unhedged foreign receipts",
+      "op": "sub",
+      "args": [
+        "inflows",
+        "outflows"
+      ],
+      "unit": "EUR"
+    },
+    {
+      "id": "residual_foreign",
+      "label": "residual foreign after signed hedge delivery",
+      "op": "add",
+      "args": [
+        "unhedged_foreign",
+        "hedge_foreign_delivery"
+      ],
+      "unit": "EUR"
+    },
+    {
+      "id": "base_value",
+      "label": "base value",
+      "op": "mul",
+      "args": [
+        "residual_foreign",
+        "spot"
+      ],
+      "unit": "USD"
+    },
+    {
+      "id": "scenario_value",
+      "label": "scenario value",
+      "op": "mul",
+      "args": [
+        "residual_foreign",
+        "scenario_spot"
+      ],
+      "unit": "USD"
+    },
+    {
+      "id": "movement",
+      "label": "movement",
+      "op": "sub",
+      "args": [
+        "scenario_value",
+        "base_value"
+      ],
+      "unit": "USD"
+    }
+  ],
+  "outputs": [
+    "residual_foreign",
+    "base_value",
+    "scenario_value",
+    "movement"
+  ],
+  "expected": {
+    "residual_foreign": 20,
+    "base_value": 22,
+    "scenario_value": 24,
+    "movement": 2
+  },
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "inputs": {
+        "payables": 70
+      },
+      "expected": {
+        "residual_foreign": 10,
+        "base_value": 11,
+        "movement": 1
+      }
+    },
+    {
+      "name": "Missing required evidence refuses calculation",
+      "inputs": {
+        "receivables": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only, in USD unless labelled otherwise. This is a focused schedule with explicit period and timing assumptions. Rebuild from actual dated sources before use; the example is not a full financial forecast."
+}

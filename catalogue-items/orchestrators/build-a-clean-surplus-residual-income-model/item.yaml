@@ -1,0 +1,45 @@
+slug: build-a-clean-surplus-residual-income-model
+name: Build a clean-surplus residual income model
+summary: Link common equity movements to residual income and a separate stable price-to-book scenario.
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: spreadsheet
+    required: true
+  - type: audit_report
+    required: true
+  - type: document
+    required: true
+uses:
+  - book-value-per-share-rollforward
+  - one-period-residual-income-bridge
+  - justified-price-book-scenario
+steps:
+  - uses: book-value-per-share-rollforward
+    note: Use actual sourced schedules in one linked native workbook; example values are illustrative and must not become issuer inputs. Prove beginning and ending common book equity; identify OCI and capital movements so reported book changes are not assumed to equal retained earnings.
+  - uses: one-period-residual-income-bridge
+    note: Use each period beginning common book balance and matching ordinary income for the equity charge. Reconcile dirty-surplus items separately and do not sum the illustration as a full valuation.
+  - uses: justified-price-book-scenario
+    note: Build a distinct stable-state forward ROE/growth/required-return case only after documenting clean surplus and feasible retention; label it a scenario rather than the historical residual-income result.
+execution: coordinator
+origin: own
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/finance-expansion
+example_pending: true
+warnings:
+  - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+credits:
+  - title: Original finance methods and model fixtures
+    by: AI Blocks contributors
+    used: Original instructions, calculations and illustrative examples. External method references are linked separately and retain their own rights.

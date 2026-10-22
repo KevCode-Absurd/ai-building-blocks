@@ -1,0 +1,47 @@
+slug: employee-share-cost-review-assistant
+name: Employee share cost review assistant
+summary: Review employee award changes across actual issuance, diluted shares and cash-offset scenarios.
+category: agent
+type: agent
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: spreadsheet
+    required: true
+  - type: audit_report
+    required: true
+  - type: document
+    required: true
+uses:
+  - reconcile-share-compensation-dilution-and-cash
+  - convertible-eps-inclusion-test
+steps:
+  - uses: reconcile-share-compensation-dilution-and-cash
+    note: Run the governing workflow when On a new user-supplied award note, share ledger or compensation reconciliation, compare award classes and settlement terms with the accepted model.
+  - uses: convertible-eps-inclusion-test
+    note: If an award-related instrument requires if-converted rather than treasury-stock treatment, route its actual terms to the inclusion test and apply the continuing-operations control. Unsupported hybrid awards remain unresolved rather than coerced into an option formula.
+origin: own
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/finance-expansion
+example_pending: true
+warnings:
+  - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+credits:
+  - title: Original finance methods and model fixtures
+    by: AI Blocks contributors
+    used: Original instructions, calculations and illustrative examples. External method references are linked separately and retain their own rights.
+schedule: Portable review instructions only. Run when the user supplies a new filing or asks for a review; propose a quarterly cadence without installing or claiming a schedule.
+asks_before:
+  - Trading or moving money
+  - Sending or publishing research or deal materials
+  - Changing an account or submitting a filing
+  - Starting or changing a recurring schedule

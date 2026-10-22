@@ -1,0 +1,180 @@
+{
+  "inputs": [
+    {
+      "id": "cash_1",
+      "label": "cash 1",
+      "value": 150,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "cash_2",
+      "label": "cash 2",
+      "value": 120,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "cash_3",
+      "label": "cash 3",
+      "value": 180,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "service_1",
+      "label": "service 1",
+      "value": 100,
+      "unit": "USD / period1",
+      "min": 0.000001
+    },
+    {
+      "id": "service_2",
+      "label": "service 2",
+      "value": 100,
+      "unit": "USD / period2",
+      "min": 0.000001
+    },
+    {
+      "id": "service_3",
+      "label": "service 3",
+      "value": 120,
+      "unit": "USD / period3",
+      "min": 0.000001
+    },
+    {
+      "id": "minimum_cover",
+      "label": "minimum cover",
+      "value": 1.25,
+      "unit": "multiple",
+      "min": 0.000001
+    }
+  ],
+  "calculations": [
+    {
+      "id": "required_1",
+      "label": "required 1",
+      "op": "mul",
+      "args": [
+        "service_1",
+        "minimum_cover"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "required_2",
+      "label": "required 2",
+      "op": "mul",
+      "args": [
+        "service_2",
+        "minimum_cover"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "required_3",
+      "label": "required 3",
+      "op": "mul",
+      "args": [
+        "service_3",
+        "minimum_cover"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "headroom_1",
+      "label": "headroom 1",
+      "op": "sub",
+      "args": [
+        "cash_1",
+        "required_1"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "headroom_2",
+      "label": "headroom 2",
+      "op": "sub",
+      "args": [
+        "cash_2",
+        "required_2"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "headroom_3",
+      "label": "headroom 3",
+      "op": "sub",
+      "args": [
+        "cash_3",
+        "required_3"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "minimum_headroom",
+      "label": "minimum headroom",
+      "op": "min",
+      "args": [
+        "headroom_1",
+        "headroom_2",
+        "headroom_3"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "negative_headroom",
+      "label": "negative headroom",
+      "op": "neg",
+      "args": [
+        "minimum_headroom"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "cash_gap",
+      "label": "cash gap",
+      "op": "max",
+      "args": [
+        0,
+        "negative_headroom"
+      ],
+      "unit": "USD / stated period"
+    }
+  ],
+  "outputs": [
+    "headroom_1",
+    "headroom_2",
+    "headroom_3",
+    "minimum_headroom",
+    "cash_gap"
+  ],
+  "expected": {
+    "headroom_1": 25,
+    "headroom_2": -5,
+    "headroom_3": 30,
+    "minimum_headroom": -5,
+    "cash_gap": 5
+  },
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "inputs": {
+        "cash_2": 140
+      },
+      "expected": {
+        "headroom_2": 15,
+        "minimum_headroom": 15,
+        "cash_gap": 0
+      }
+    },
+    {
+      "name": "Missing or invalid required input",
+      "inputs": {
+        "cash_1": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only in USD unless labelled otherwise. A focused schedule using explicit period, rate and timing conventions; not a full financing model or an approval decision."
+}

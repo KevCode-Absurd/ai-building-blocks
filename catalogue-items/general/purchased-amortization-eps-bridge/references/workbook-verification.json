@@ -1,0 +1,32 @@
+{
+  "engine": "Artifact Tool",
+  "scope": "Illustrative workbook calculations, not source truth or an actual investment conclusion. Native Microsoft Excel application execution is not claimed.",
+  "modelSha256": "b26791fe9b17b57fb79812e381292ed3f3273973ade7fea3c2e7a9040bf3a1d5",
+  "xlsxSha256": "933d7c5a8bb9b7c41bc5ad197a4a5bc70e1925b4a0f5576f83e309564979dc4d",
+  "baseline": "pass",
+  "changedInputCase": "Larger attributable recognized tax benefit",
+  "invalidInputCase": "Required source input missing",
+  "cases": [
+    {
+      "name": "Larger attributable recognized tax benefit",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Required source input missing",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ],
+  "reopenedAndRecalculated": true,
+  "rendered": true,
+  "visualReview": "pass",
+  "workbookSpecSha256": "077d6b60b5a3cebbbff639e59e24f33b8f3def14acfec86209f1cf8c7c37652c",
+  "visualEvidence": {
+    "report": "reports/finance-public-markets-peer-review.json",
+    "reportSha256": "f73f6f5598ba0647c477c547d2776f1221130bb7861b62def472b74331866282",
+    "previewSha256": "2d3ab46365a97667eee0eafea5650b0ffd7e2539923a9b02c94055884dd231c2",
+    "sheet": "Model",
+    "sourceSpecSha256": "8eb833914f5cac4e883679e15401b5c749947cfe67e0b5256563b01eebc5eb04"
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "inputs": [
+    {
+      "id": "baseConsideration",
+      "label": "base Consideration",
+      "value": 100,
+      "unit": "USD millions",
+      "min": 0
+    },
+    {
+      "id": "dailyFee",
+      "label": "daily Fee",
+      "value": 0.1,
+      "unit": "USD millions per eligible day",
+      "min": 0
+    },
+    {
+      "id": "eligibleDays",
+      "label": "eligible Days",
+      "value": 30,
+      "unit": "eligible days",
+      "min": 0
+    }
+  ],
+  "calculations": [
+    {
+      "id": "tickingAmount",
+      "label": "ticking Amount",
+      "op": "mul",
+      "args": [
+        "dailyFee",
+        "eligibleDays"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "totalConsideration",
+      "label": "total Consideration",
+      "op": "add",
+      "args": [
+        "baseConsideration",
+        "tickingAmount"
+      ],
+      "unit": "USD millions"
+    }
+  ],
+  "outputs": [
+    "tickingAmount",
+    "totalConsideration"
+  ],
+  "expected": {
+    "tickingAmount": 3,
+    "totalConsideration": 103
+  },
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "inputs": {
+        "eligibleDays": 60
+      },
+      "expected": {
+        "tickingAmount": 6,
+        "totalConsideration": 106
+      }
+    },
+    {
+      "name": "Missing required number",
+      "inputs": {
+        "baseConsideration": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only. 0.1 for30 eligible days adds3 to100;60 eligible days add6."
+}

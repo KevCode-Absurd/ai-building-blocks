@@ -1,0 +1,37 @@
+{
+  "engine": "Artifact Tool",
+  "scope": "Illustrative workbook calculations, not source truth or an actual investment conclusion. Native Microsoft Excel application execution is not claimed.",
+  "modelSha256": "185445e4c40f1c343dae76a1cefeb3292227fe0a202ffceb23d1d145b7ff5054",
+  "xlsxSha256": "b331ce7a9e941df9acc3b893cb3c0e874736d0ed2a047b6dcc572e56cc606d05",
+  "baseline": "pass",
+  "changedInputCase": "Hand-derived changed-input golden",
+  "invalidInputCase": "Missing required number",
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required number",
+      "kind": "refusal",
+      "status": "pass"
+    },
+    {
+      "name": "Refuse escrow disbursements above deposit",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ],
+  "reopenedAndRecalculated": true,
+  "rendered": true,
+  "visualReview": "pass",
+  "workbookSpecSha256": "1effab37955c298f6f4fd75703f2f90ecd8aab02011a8b7f7d6555611861b750",
+  "visualEvidence": {
+    "report": "reports/finance-private-deals-peer-review.json",
+    "reportSha256": "8867c9111d80d78865752f2b95eba89b6b518fd8bc768452b70057ad5c0dcc23",
+    "previewSha256": "b7312b9c0a466a2ed0d87270a4333eaa4189a57ed43c8a9bf183f7ff2cf6be02",
+    "sheet": "Model",
+    "sourceSpecSha256": "089653ed272d429aa419ca127ff6c195e0b6cedc1c7d0f29acc5a9606849adb1"
+  }
+}

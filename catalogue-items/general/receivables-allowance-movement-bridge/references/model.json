@@ -1,0 +1,135 @@
+{
+  "inputs": [
+    {
+      "id": "opening",
+      "label": "Opening loss allowance",
+      "value": 10,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "expense",
+      "label": "Credit-loss expense",
+      "value": 8,
+      "unit": "USD million",
+      "min": -1000000000,
+      "max": 1000000000
+    },
+    {
+      "id": "writeoffs",
+      "label": "Gross write-offs charged to allowance",
+      "value": 5,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "recoveries",
+      "label": "Recoveries credited to allowance",
+      "value": 1,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "other",
+      "label": "Signed FX and other allowance movements",
+      "value": -1,
+      "unit": "USD million",
+      "min": -1000000000,
+      "max": 1000000000
+    },
+    {
+      "id": "reportedClosing",
+      "label": "Reported closing allowance",
+      "value": 13,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "grossAr",
+      "label": "Closing gross receivables",
+      "value": 200,
+      "unit": "USD million",
+      "min": 0.001,
+      "max": 1000000000
+    }
+  ],
+  "calculations": [
+    {
+      "id": "beforeWriteoffs",
+      "label": "Opening allowance plus additions",
+      "op": "add",
+      "args": [
+        "opening",
+        "expense",
+        "recoveries",
+        "other"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "computedClosing",
+      "label": "Computed closing allowance",
+      "op": "sub",
+      "args": [
+        "beforeWriteoffs",
+        "writeoffs"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "residual",
+      "label": "Reported less computed closing allowance",
+      "op": "sub",
+      "args": [
+        "reportedClosing",
+        "computedClosing"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "coverage",
+      "label": "Computed allowance to gross receivables",
+      "op": "div",
+      "args": [
+        "computedClosing",
+        "grossAr"
+      ],
+      "unit": "decimal"
+    }
+  ],
+  "outputs": [
+    "computedClosing",
+    "residual",
+    "coverage"
+  ],
+  "expected": {
+    "computedClosing": 13,
+    "residual": 0,
+    "coverage": 0.065
+  },
+  "cases": [
+    {
+      "name": "Higher credit-loss expense",
+      "inputs": {
+        "expense": 10
+      },
+      "expected": {
+        "computedClosing": 15,
+        "residual": -2,
+        "coverage": 0.075
+      }
+    },
+    {
+      "name": "Missing required reported input",
+      "inputs": {
+        "opening": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures.10+8+1-1-5=13 allowance, or13/200=6.5% gross receivable coverage. Expense10 produces15, a negative2 residual against reported13, and7.5% computed coverage."
+}

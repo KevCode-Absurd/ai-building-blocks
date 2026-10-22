@@ -1,0 +1,110 @@
+{
+  "inputs": [
+    {
+      "id": "accrual_operating_revenue",
+      "label": "Accrual operating revenue before working-capital cash movements",
+      "value": 1000,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "excluded_revenue",
+      "label": "Contractually excluded revenue before working-capital adjustment",
+      "value": 100,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "accrual_cash_cost_proxy",
+      "label": "Accrual operating costs excluding depreciation and other noncash costs",
+      "value": 400,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "cash_taxes",
+      "label": "cash taxes",
+      "value": 50,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "maintenance_capex",
+      "label": "maintenance capex",
+      "value": 100,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "working_capital_increase",
+      "label": "working capital increase",
+      "value": 50,
+      "unit": "USD / period",
+      "min": -1000000
+    }
+  ],
+  "calculations": [
+    {
+      "id": "pre_wc_operating_surplus",
+      "label": "Operating surplus before working-capital cash movements",
+      "op": "sub",
+      "args": [
+        "accrual_operating_revenue",
+        "accrual_cash_cost_proxy"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "other_deductions",
+      "label": "other deductions",
+      "op": "sum",
+      "args": [
+        "excluded_revenue",
+        "cash_taxes",
+        "maintenance_capex",
+        "working_capital_increase"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "cfads",
+      "label": "cfads",
+      "op": "sub",
+      "args": [
+        "pre_wc_operating_surplus",
+        "other_deductions"
+      ],
+      "unit": "USD / stated period"
+    }
+  ],
+  "outputs": [
+    "pre_wc_operating_surplus",
+    "other_deductions",
+    "cfads"
+  ],
+  "expected": {
+    "pre_wc_operating_surplus": 600,
+    "other_deductions": 300,
+    "cfads": 300
+  },
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "inputs": {
+        "working_capital_increase": -50
+      },
+      "expected": {
+        "other_deductions": 200,
+        "cfads": 400
+      }
+    },
+    {
+      "name": "Missing or invalid required input",
+      "inputs": {
+        "accrual_operating_revenue": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only in USD for one period. This fixture is an accrual-to-cash bridge: operating revenue1000 less operating cost proxy400 excluding depreciation/noncash expenses gives600 before working-capital movements. Contract exclusions100, cash taxes50, maintenance capital100 and working-capital investment50 leave CFADS300. An actual receipts/payments source already embeds working-capital settlement and must not deduct that50 again. A verified cash-basis route explicitly omits the extra working-capital adjustment; unknown data never becomes zero."
+}

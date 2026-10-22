@@ -1,0 +1,184 @@
+{
+  "inputs": [
+    {
+      "id": "purchased_kg",
+      "label": "purchased kg",
+      "value": 10,
+      "unit": "kg / batch",
+      "min": 0.000001
+    },
+    {
+      "id": "edible_yield",
+      "label": "edible yield",
+      "value": 0.8,
+      "unit": "decimal fraction",
+      "min": 0.000001,
+      "max": 1
+    },
+    {
+      "id": "portion_kg",
+      "label": "portion kg",
+      "value": 0.2,
+      "unit": "kg / portion",
+      "min": 0.000001
+    },
+    {
+      "id": "ingredient_cash",
+      "label": "ingredient cash",
+      "value": 100,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "batch_labor_cash",
+      "label": "batch labor cash",
+      "value": 40,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "energy_cash",
+      "label": "energy cash",
+      "value": 20,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "portion_price",
+      "label": "portion price",
+      "value": 10,
+      "unit": "USD / portion",
+      "min": 0
+    },
+    {
+      "id": "served_demand",
+      "label": "served demand",
+      "value": 30,
+      "unit": "portion equivalents / service",
+      "min": 0
+    }
+  ],
+  "calculations": [
+    {
+      "id": "edible_kg",
+      "label": "edible kg",
+      "op": "mul",
+      "args": [
+        "purchased_kg",
+        "edible_yield"
+      ],
+      "unit": "kg / batch"
+    },
+    {
+      "id": "portion_capacity",
+      "label": "portion capacity",
+      "op": "div",
+      "args": [
+        "edible_kg",
+        "portion_kg"
+      ],
+      "unit": "portion equivalents / batch"
+    },
+    {
+      "id": "batch_cash",
+      "label": "batch cash",
+      "op": "sum",
+      "args": [
+        "ingredient_cash",
+        "batch_labor_cash",
+        "energy_cash"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "cash_per_capacity_portion",
+      "label": "cash per capacity portion",
+      "op": "div",
+      "args": [
+        "batch_cash",
+        "portion_capacity"
+      ],
+      "unit": "USD / theoretical portion"
+    },
+    {
+      "id": "served",
+      "label": "served",
+      "op": "min",
+      "args": [
+        "portion_capacity",
+        "served_demand"
+      ],
+      "unit": "portion equivalents / service"
+    },
+    {
+      "id": "unserved",
+      "label": "unserved",
+      "op": "sub",
+      "args": [
+        "portion_capacity",
+        "served"
+      ],
+      "unit": "portion equivalents / service"
+    },
+    {
+      "id": "service_receipts",
+      "label": "service receipts",
+      "op": "mul",
+      "args": [
+        "served",
+        "portion_price"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "batch_contribution",
+      "label": "batch contribution",
+      "op": "sub",
+      "args": [
+        "service_receipts",
+        "batch_cash"
+      ],
+      "unit": "USD / stated period"
+    }
+  ],
+  "outputs": [
+    "edible_kg",
+    "portion_capacity",
+    "cash_per_capacity_portion",
+    "served",
+    "unserved",
+    "service_receipts",
+    "batch_contribution"
+  ],
+  "expected": {
+    "edible_kg": 8,
+    "portion_capacity": 40,
+    "cash_per_capacity_portion": 4,
+    "served": 30,
+    "unserved": 10,
+    "service_receipts": 300,
+    "batch_contribution": 140
+  },
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "inputs": {
+        "edible_yield": 0.6
+      },
+      "expected": {
+        "edible_kg": 6,
+        "portion_capacity": 30,
+        "cash_per_capacity_portion": 5.333333333333333,
+        "unserved": 0
+      }
+    },
+    {
+      "name": "Missing or invalid required input",
+      "inputs": {
+        "purchased_kg": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only in USD unless labelled otherwise. This focused operating schedule does not establish a complete business forecast, accounting treatment, market price or approval."
+}

@@ -1,0 +1,17 @@
+{
+  "slug": "treasury-forecast-backtest-checker",
+  "modelSha256": "f51ce16a925efb32e097aff7b895992290fd70ffa1ee894d57cee62734318c80",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required evidence refuses calculation",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

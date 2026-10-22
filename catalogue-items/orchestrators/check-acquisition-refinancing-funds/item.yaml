@@ -1,0 +1,45 @@
+slug: check-acquisition-refinancing-funds
+name: Check acquisition refinancing funds
+summary: Trace debt face value to refinancing payoff cash and the complete closing funding gap.
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: spreadsheet
+    required: true
+  - type: audit_report
+    required: true
+  - type: document
+    required: true
+uses:
+  - debt-issue-proceeds-checker
+  - refinancing-closing-cost-checker
+  - deal-funding-gap-checker
+steps:
+  - uses: debt-issue-proceeds-checker
+    note: Reconcile issued face to actual cash proceeds after OID and only those fees withheld at issue. Preserve the principal amount separately.
+  - uses: refinancing-closing-cost-checker
+    note: Use net financing cash from the first schedule and the real payoff letter. Include only refinancing fees not already deducted, identifying the old debt payoff and premium separately.
+  - uses: deal-funding-gap-checker
+    note: Map actual old principal and premium into payoff use and remaining fees into distinct fee uses. Use the same net debt cash as source, then reconcile purchase use, closing cash, rollover and sponsor funding without plugging a gap.
+execution: coordinator
+origin: own
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/finance-expansion
+example_pending: true
+warnings:
+  - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+credits:
+  - title: Original finance methods and model fixtures
+    by: AI Blocks contributors
+    used: Original instructions, calculations and illustrative examples. External method references are linked separately and retain their own rights.

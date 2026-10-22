@@ -1,0 +1,132 @@
+{
+  "inputs": [
+    {
+      "id": "reportedDebt",
+      "label": "Reported financing debt",
+      "value": 200,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "supplierFinance",
+      "label": "Supplier-finance balance excluded from debt",
+      "value": 80,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "cash",
+      "label": "Eligible cash",
+      "value": 50,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "reportedPayables",
+      "label": "Reported operating trade payables including supplier balance",
+      "value": 300,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    }
+  ],
+  "calculations": [
+    {
+      "id": "analyticalDebt",
+      "label": "Debt including supplier-finance scenario",
+      "op": "add",
+      "args": [
+        "reportedDebt",
+        "supplierFinance"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "netDebt",
+      "label": "Analytical net debt",
+      "op": "sub",
+      "args": [
+        "analyticalDebt",
+        "cash"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "operatingPayables",
+      "label": "Trade payables excluding supplier financing",
+      "op": "sub",
+      "args": [
+        "reportedPayables",
+        "supplierFinance"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "reportedLiabilities",
+      "label": "Original debt plus payables",
+      "op": "add",
+      "args": [
+        "reportedDebt",
+        "reportedPayables"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "analyticalLiabilities",
+      "label": "Reclassified debt plus payables",
+      "op": "add",
+      "args": [
+        "analyticalDebt",
+        "operatingPayables"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "conservation",
+      "label": "Liability conservation difference",
+      "op": "sub",
+      "args": [
+        "analyticalLiabilities",
+        "reportedLiabilities"
+      ],
+      "unit": "USD million"
+    }
+  ],
+  "outputs": [
+    "analyticalDebt",
+    "netDebt",
+    "operatingPayables",
+    "conservation"
+  ],
+  "expected": {
+    "analyticalDebt": 280,
+    "netDebt": 230,
+    "operatingPayables": 220,
+    "conservation": 0
+  },
+  "cases": [
+    {
+      "name": "Larger identified supplier-finance balance",
+      "inputs": {
+        "supplierFinance": 100
+      },
+      "expected": {
+        "analyticalDebt": 300,
+        "netDebt": 250,
+        "operatingPayables": 200,
+        "conservation": 0
+      }
+    },
+    {
+      "name": "Missing required reported input",
+      "inputs": {
+        "reportedDebt": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures.200 debt+80 supplier financing=280 debt; less50 cash gives230 net debt. Operating payables300-80=220. Total liabilities remain500. A100 balance gives300 debt,250 net debt and200 payables."
+}

@@ -1,0 +1,8 @@
+{
+  "accrual_operating_revenue": 1000,
+  "excluded_revenue": 100,
+  "accrual_cash_cost_proxy": 400,
+  "cash_taxes": 50,
+  "maintenance_capex": 100,
+  "working_capital_increase": 50
+}

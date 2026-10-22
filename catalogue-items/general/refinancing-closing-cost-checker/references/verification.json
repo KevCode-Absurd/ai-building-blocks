@@ -1,0 +1,17 @@
+{
+  "slug": "refinancing-closing-cost-checker",
+  "modelSha256": "5d0f7f6cebfff33c99638a40fffcccaf5de122c014e995bf448825bd90fba22d",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required number",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

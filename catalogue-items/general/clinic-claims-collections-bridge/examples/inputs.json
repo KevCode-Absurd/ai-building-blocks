@@ -1,0 +1,8 @@
+{
+  "opening_claims": 500,
+  "gross_billings": 1000,
+  "approved_claim_adjustments": 200,
+  "claim_applied_cash": 700,
+  "provider_offset": 50,
+  "bank_receipt": 650
+}

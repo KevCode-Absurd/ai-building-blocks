@@ -1,0 +1,13 @@
+{
+  "basis": "Illustrative figures only.",
+  "outputs": {
+    "service_cap_1": 110,
+    "total_principal": 240,
+    "total_interest": 45.34,
+    "closing_3": 0,
+    "total_service": 285.34000000000003,
+    "interest_gap_1": 0,
+    "interest_gap_2": 0,
+    "interest_gap_3": 0
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "engine": "Artifact Tool",
+  "scope": "Illustrative workbook calculations, not source truth or an actual investment conclusion. Native Microsoft Excel application execution is not claimed.",
+  "modelSha256": "abf394b345c4cc513d27bc05d51fe2c53794e60d97c095956bd64cd6b5069ce5",
+  "xlsxSha256": "ba584ba8ed60bedd160e8dae0d3f9fa534b5783f0d8a0b31648975b58eaee7e6",
+  "baseline": "pass",
+  "changedInputCase": "Lower actual contribution with same reported balances",
+  "invalidInputCase": "Required source input missing",
+  "cases": [
+    {
+      "name": "Lower actual contribution with same reported balances",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Required source input missing",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ],
+  "reopenedAndRecalculated": true,
+  "rendered": true,
+  "visualReview": "pass",
+  "workbookSpecSha256": "7d7de59f72aac55f51624325b188af616932588442c2d3399d23e7975aeda2a1",
+  "visualEvidence": {
+    "report": "reports/finance-public-markets-peer-review.json",
+    "reportSha256": "f73f6f5598ba0647c477c547d2776f1221130bb7861b62def472b74331866282",
+    "previewSha256": "d0619a9a4101302a592faf3e64c94acd1b5b065070bab43a777d03634fa59af4",
+    "sheet": "Model",
+    "sourceSpecSha256": "67823084c95ca4eefa3a9cba14c757f6659b5c1909e0c573262ef08cf817ba00"
+  }
+}

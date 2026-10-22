@@ -1,0 +1,17 @@
+{
+  "slug": "lifo-reserve-earnings-bridge",
+  "modelSha256": "cebd5d0ab6c3c2bfb13365e4931b8a1e706b7d9cec4dba0c2015f0dbe0d7d2f4",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Reserve falls below opening balance",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Required source input missing",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

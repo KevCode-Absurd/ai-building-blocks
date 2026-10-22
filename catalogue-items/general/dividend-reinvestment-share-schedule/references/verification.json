@@ -1,0 +1,17 @@
+{
+  "slug": "dividend-reinvestment-share-schedule",
+  "modelSha256": "e5b8275d23d47dbed1bbd2082af485b73afd434a52e5d3bd06dbef24e96cc0f5",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Reinvestment price equals ending price",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required source input",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

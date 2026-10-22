@@ -1,0 +1,76 @@
+new_slug: rights-issue-eps-adjustment
+name: Rights-issue EPS adjustment
+headline: Rights-issue EPS adjustment
+summary: Calculate a public rights issue’s theoretical price and comparative EPS bonus adjustment.
+job: money-and-investing
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: A theoretical ex-rights price and retrospective bonus-factor workpaper. Share pre-rights market price, subscription price, existing and rights shares, issue timetable and historical EPS.
+explain: |-
+  A theoretical ex-rights price and retrospective bonus-factor workpaper.
+
+  Public equity and share counts. Illustrative figures. (4 × $10 + 1 × $5) / 5 = $9 theoretical price. Bonus factor 10/9 restates $2 comparative EPS to $1.80. A $10 subscription yields no bonus adjustment.
+when:
+  - You need a theoretical ex-rights price and retrospective bonus-factor workpaper.
+  - You work on public equity and share counts and need traceable calculations.
+  - A reviewer needs to trace the result back to inputs and assumptions.
+you_give:
+  - Pre-rights market price, subscription price, existing and rights shares, issue timetable and historical EPS.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - A theoretical ex-rights price and retrospective bonus-factor workpaper.
+  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: 1. Confirm the issue is a pro-rata rights offer and identify the cum-rights price immediately before exercise
+    text: Confirm the issue is a pro-rata rights offer and identify the cum-rights price immediately before exercise.
+  - title: 2. Divide pre-issue market value plus subscription proceeds by total shares to obtain theoretical ex-rights price; calculate the bonus factor as pre-rights price divided by theoretical price
+    text: Divide pre-issue market value plus subscription proceeds by total shares to obtain theoretical ex-rights price; calculate the bonus factor as pre-rights price divided by theoretical price.
+  - title: 3. Apply a bonus factor of at least one to comparative EPS and pre-rights weighted shares; time-weight actual new shares separately in the current-period EPS ledger
+    text: Apply a bonus factor of at least one to comparative EPS and pre-rights weighted shares; time-weight actual new shares separately in the current-period EPS ledger.
+output_shape: |-
+  A theoretical ex-rights price and retrospective bonus-factor workpaper.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: Cash proceeds, old shares and new shares use consistent per-share units.
+judge:
+  - Cash proceeds, old shares and new shares use consistent per-share units.
+  - Only the bonus element is retrospective; actual current-period issue timing is preserved.
+  - Tie every material input to its filing page, period, currency and scale.
+  - Keep illustrative figures separate from sourced issuer facts; report unresolved checks.
+test:
+  - Run the included baseline and changed-input fixtures, then compare with the stated expected results.
+  - Remove a required input and confirm the affected calculation refuses to invent a zero.
+  - Recalculate the workbook after changing an input and inspect the saved output.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: Node.js 20 or later
+      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

@@ -1,0 +1,76 @@
+new_slug: supplier-finance-leverage-bridge
+name: Supplier finance leverage bridge
+headline: Supplier finance leverage bridge
+summary: Show how an evidenced supplier-finance debt treatment changes net debt and operating payables.
+job: track-numbers
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: A reported-to-analytical leverage bridge with supplier balances shown separately. Share reported financing debt, cash, trade payables and identified supplier-finance balances with classification evidence.
+explain: |-
+  A reported-to-analytical leverage bridge with supplier balances shown separately.
+
+  Issuer revenue and cash-flow reconciliation. Illustrative figures.200 debt+80 supplier financing=280 debt; less50 cash gives230 net debt. Operating payables300-80=220. Total liabilities remain500. A100 balance gives300 debt,250 net debt and200 payables.
+when:
+  - You need a reported-to-analytical leverage bridge with supplier balances shown separately.
+  - You work on issuer revenue and cash-flow reconciliation and need traceable calculations.
+  - A reviewer needs to trace the result back to inputs and assumptions.
+you_give:
+  - Reported financing debt, cash, trade payables and identified supplier-finance balances with classification evidence.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - A reported-to-analytical leverage bridge with supplier balances shown separately.
+  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: 1. Read payment terms, provider payments and balance disclosures; distinguish arrangement identification from a conclusion that every balance must be classified as borrowing
+    text: Read payment terms, provider payments and balance disclosures; distinguish arrangement identification from a conclusion that every balance must be classified as borrowing.
+  - title: 2. For a clearly labeled debt-like scenario, add only the identified balance to financing debt and remove it from operating trade payables
+    text: For a clearly labeled debt-like scenario, add only the identified balance to financing debt and remove it from operating trade payables.
+  - title: 3. Deduct the same eligible cash once for net debt; reconcile the balance-sheet perimeter and preserve reported classifications beside the analytical scenario
+    text: Deduct the same eligible cash once for net debt; reconcile the balance-sheet perimeter and preserve reported classifications beside the analytical scenario.
+output_shape: |-
+  A reported-to-analytical leverage bridge with supplier balances shown separately.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: Supplier balances are not already included in financing debt.
+judge:
+  - Supplier balances are not already included in financing debt.
+  - Reclassification changes debt and operating payables consistently without changing total liabilities.
+  - Source each balance, flow, period, perimeter, currency and sign; distinguish a true zero from missing evidence.
+  - Preserve reported measures beside analytical measures and retain unexplained residuals.
+test:
+  - Run the included baseline and changed-input fixtures, then compare with the stated expected results.
+  - Remove a required input and confirm the affected calculation refuses to invent a zero.
+  - Recalculate the workbook after changing an input and inspect the saved output.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: Node.js 20 or later
+      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

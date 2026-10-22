@@ -1,0 +1,45 @@
+slug: reconcile-buybacks-with-owner-cash
+name: Reconcile buybacks with owner cash
+summary: Connect executed repurchases to EPS, shareholder cash distributions and closing book value.
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: spreadsheet
+    required: true
+  - type: audit_report
+    required: true
+  - type: document
+    required: true
+uses:
+  - cash-funded-buyback-eps-bridge
+  - shareholder-distribution-coverage
+  - book-value-per-share-rollforward
+steps:
+  - uses: cash-funded-buyback-eps-bridge
+    note: Use actual sourced schedules in one linked native workbook; example values are illustrative and must not become issuer inputs. Use actual execution or a clearly labeled cash-funded scenario. Carry repurchase cash, retired shares and foregone cash income as separate sourced drivers.
+  - uses: shareholder-distribution-coverage
+    note: Use executed buyback cash from the first schedule, sourced dividends and issuance proceeds, and an independently reconciled FCFE schedule. Reconcile the funding shortfall without counting cash or debt twice.
+  - uses: book-value-per-share-rollforward
+    note: Carry the same actual distributions into common-equity movements and the actual closing share ledger; reconcile book value separately from EPS accretion and value creation.
+execution: coordinator
+origin: own
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/finance-expansion
+example_pending: true
+warnings:
+  - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+credits:
+  - title: Original finance methods and model fixtures
+    by: AI Blocks contributors
+    used: Original instructions, calculations and illustrative examples. External method references are linked separately and retain their own rights.

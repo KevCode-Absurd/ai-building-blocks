@@ -1,0 +1,32 @@
+{
+  "engine": "Artifact Tool",
+  "scope": "Illustrative workbook calculations, not source truth or an actual investment conclusion. Native Microsoft Excel application execution is not claimed.",
+  "modelSha256": "e0d8579cf318471070622a62a5659240a75ac81fb774ac96d77fa4294752fad5",
+  "xlsxSha256": "cdacf656f88119af35f6d13335cc0b7d33ea88264ebe7f9d3252cafead4f0d2e",
+  "baseline": "pass",
+  "changedInputCase": "Higher OCI remeasurement loss",
+  "invalidInputCase": "Required source input missing",
+  "cases": [
+    {
+      "name": "Higher OCI remeasurement loss",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Required source input missing",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ],
+  "reopenedAndRecalculated": true,
+  "rendered": true,
+  "visualReview": "pass",
+  "workbookSpecSha256": "7772aa61abce29e5134dda290fa2ccb5fbb1b098c4d36dd9a81f81aaa8e5d355",
+  "visualEvidence": {
+    "report": "reports/finance-public-markets-peer-review.json",
+    "reportSha256": "f73f6f5598ba0647c477c547d2776f1221130bb7861b62def472b74331866282",
+    "previewSha256": "09b5272b3d8ce5d2aae935bd475a6643e2a0299f247c196199444e63d48027de",
+    "sheet": "Model",
+    "sourceSpecSha256": "d45d5f43fd9cbaadea98fdf067e64ed7cc4682ef7c812cc70c0d3458e43c5247"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "reportedEbitda": 100,
+  "supportedCapped": 40,
+  "capFraction": 0.2,
+  "uncappedAllowed": 10
+}

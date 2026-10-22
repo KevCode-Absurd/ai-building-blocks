@@ -1,0 +1,17 @@
+{
+  "slug": "commodity-pass-through-cost-bridge",
+  "modelSha256": "5fb5c8d555438e604a55688660d56725c274087af70c87a9d69bd453fcc16317",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing or invalid required input",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

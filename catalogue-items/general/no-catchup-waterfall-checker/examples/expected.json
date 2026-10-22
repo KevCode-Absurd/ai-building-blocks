@@ -1,0 +1,11 @@
+{
+  "basis": "Illustrative figures only.",
+  "outputs": {
+    "capitalPaid": 100,
+    "preferencePaid": 20,
+    "gpCarry": 6,
+    "lpCash": 144,
+    "capitalShortfall": 0,
+    "preferenceShortfall": 0
+  }
+}

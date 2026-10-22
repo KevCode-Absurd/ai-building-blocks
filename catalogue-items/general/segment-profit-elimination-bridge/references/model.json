@@ -1,0 +1,114 @@
+{
+  "inputs": [
+    {
+      "id": "segmentA",
+      "label": "Segment A profit",
+      "value": 60,
+      "unit": "USD million",
+      "min": -1000000000,
+      "max": 1000000000
+    },
+    {
+      "id": "segmentB",
+      "label": "Segment B profit",
+      "value": 40,
+      "unit": "USD million",
+      "min": -1000000000,
+      "max": 1000000000
+    },
+    {
+      "id": "eliminations",
+      "label": "Profit eliminated",
+      "value": 10,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "corporateCosts",
+      "label": "Unallocated costs",
+      "value": 20,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "reported",
+      "label": "Reported group profit",
+      "value": 70,
+      "unit": "USD million",
+      "min": -1000000000,
+      "max": 1000000000
+    }
+  ],
+  "calculations": [
+    {
+      "id": "total",
+      "label": "Segment total",
+      "op": "add",
+      "args": [
+        "segmentA",
+        "segmentB"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "deductions",
+      "label": "Eliminations and costs",
+      "op": "add",
+      "args": [
+        "eliminations",
+        "corporateCosts"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "computed",
+      "label": "Computed group profit",
+      "op": "sub",
+      "args": [
+        "total",
+        "deductions"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "residual",
+      "label": "Reported less computed",
+      "op": "sub",
+      "args": [
+        "reported",
+        "computed"
+      ],
+      "unit": "USD million"
+    }
+  ],
+  "outputs": [
+    "computed",
+    "residual"
+  ],
+  "expected": {
+    "computed": 70,
+    "residual": 0
+  },
+  "cases": [
+    {
+      "name": "Higher corporate cost",
+      "inputs": {
+        "corporateCosts": 25
+      },
+      "expected": {
+        "computed": 65,
+        "residual": 5
+      }
+    },
+    {
+      "name": "Required input absent",
+      "inputs": {
+        "segmentA": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures.60+40-10-20=70. Costs25 imply65 and an unresolved5 difference from the reported70; no balancing plug is allowed."
+}

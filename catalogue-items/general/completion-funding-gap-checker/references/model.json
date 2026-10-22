@@ -1,0 +1,175 @@
+{
+  "inputs": [
+    {
+      "id": "spent",
+      "label": "spent",
+      "value": 600,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "original_budget",
+      "label": "original budget",
+      "value": 1000,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "remaining_cost",
+      "label": "remaining cost",
+      "value": 350,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "contingency_rate",
+      "label": "contingency rate",
+      "value": 0.1,
+      "unit": "decimal fraction",
+      "min": 0,
+      "max": 1
+    },
+    {
+      "id": "undrawn_debt",
+      "label": "undrawn debt",
+      "value": 200,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "undrawn_equity",
+      "label": "undrawn equity",
+      "value": 150,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "usable_cash",
+      "label": "usable cash",
+      "value": 20,
+      "unit": "USD / stated period",
+      "min": 0
+    }
+  ],
+  "calculations": [
+    {
+      "id": "contingency",
+      "label": "contingency",
+      "op": "mul",
+      "args": [
+        "remaining_cost",
+        "contingency_rate"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "future_need",
+      "label": "future need",
+      "op": "sum",
+      "args": [
+        "remaining_cost",
+        "contingency"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "revised_total_cost",
+      "label": "revised total cost",
+      "op": "sum",
+      "args": [
+        "spent",
+        "future_need"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "budget_headroom",
+      "label": "budget headroom",
+      "op": "sub",
+      "args": [
+        "original_budget",
+        "revised_total_cost"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "future_sources",
+      "label": "future sources",
+      "op": "sum",
+      "args": [
+        "undrawn_debt",
+        "undrawn_equity",
+        "usable_cash"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "funding_headroom",
+      "label": "funding headroom",
+      "op": "sub",
+      "args": [
+        "future_sources",
+        "future_need"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "negative_headroom",
+      "label": "negative headroom",
+      "op": "neg",
+      "args": [
+        "funding_headroom"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "funding_gap",
+      "label": "funding gap",
+      "op": "max",
+      "args": [
+        0,
+        "negative_headroom"
+      ],
+      "unit": "USD / stated period"
+    }
+  ],
+  "outputs": [
+    "contingency",
+    "future_need",
+    "revised_total_cost",
+    "budget_headroom",
+    "future_sources",
+    "funding_gap"
+  ],
+  "expected": {
+    "contingency": 35,
+    "future_need": 385,
+    "revised_total_cost": 985,
+    "budget_headroom": 15,
+    "future_sources": 370,
+    "funding_gap": 15
+  },
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "inputs": {
+        "remaining_cost": 400
+      },
+      "expected": {
+        "contingency": 40,
+        "future_need": 440,
+        "revised_total_cost": 1040,
+        "budget_headroom": -40,
+        "funding_gap": 70
+      }
+    },
+    {
+      "name": "Missing or invalid required input",
+      "inputs": {
+        "spent": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only in USD unless labelled otherwise. The model is the focused stated schedule, not a complete company forecast. Annual end-period cash is used unless the inputs state another convention."
+}

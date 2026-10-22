@@ -1,0 +1,42 @@
+slug: reconcile-currency-exposure-and-settlement
+name: Reconcile currency exposure and settlement
+summary: A currency exposure bridge and matched forward settlement schedule
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: spreadsheet
+    required: true
+  - type: audit_report
+    required: true
+  - type: document
+    required: true
+uses:
+  - currency-exposure-netting-checker
+  - currency-forward-settlement-checker
+steps:
+  - uses: currency-exposure-netting-checker
+    note: Reconcile gross foreign receipts and obligations. Record the existing buy-forward as a positive foreign delivery, or a sell-forward as negative, in the exposure map. Pass the original matched obligation and actual hedge notional to settlement, never the already-net residual as the full payable. This workflow settlement branch supports buy-foreign contracts only.
+  - uses: currency-forward-settlement-checker
+    note: Reconcile the same existing buy-forward against its underlying payable using contractual forward price, settlement spot and fees. Return cash settlement, overhedge or residual exposure and source discrepancies; no new contract is selected or executed.
+execution: coordinator
+origin: own
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/finance-expansion
+example_pending: true
+warnings:
+  - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+credits:
+  - title: Original finance methods and model fixtures
+    by: AI Blocks contributors
+    used: Original instructions, calculations and illustrative examples. External method references are linked separately and retain their own rights.

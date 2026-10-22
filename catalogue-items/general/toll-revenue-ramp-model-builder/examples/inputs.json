@@ -1,0 +1,10 @@
+{
+  "passages_1": 1000,
+  "passages_2": 1200,
+  "passages_3": 1500,
+  "toll": 2,
+  "collection_share": 0.9,
+  "opex_1": 1000,
+  "opex_2": 1100,
+  "opex_3": 1200
+}

@@ -1,0 +1,78 @@
+new_slug: prepare-a-filing-based-earnings-model-update
+name: Prepare a filing-based earnings model update
+headline: Prepare a filing-based earnings model update
+summary: Update a sourced earnings workbook while keeping periods, shares, adjustments, taxes and OCI reconciled.
+job: money-and-investing
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: A linked filing update workbook and change log with five reconciled schedules. Share new filing and prior model, annual/YTD statements, share ledger, acquired-amortization reconciliation, current-tax and OCI notes.
+explain: |-
+  A linked filing update workbook and change log with five reconciled schedules.
+
+  Public-market financial modelling. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+when:
+  - You need a linked filing update workbook and change log with five reconciled schedules.
+  - You work on public-market financial modelling and need traceable calculations.
+  - A reviewer needs to trace the result back to inputs and assumptions.
+you_give:
+  - New filing and prior model, annual/YTD statements, share ledger, acquired-amortization reconciliation, current-tax and OCI notes.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - A linked filing update workbook and change log with five reconciled schedules.
+  - Original step files, financial assumptions, source coverage and a governing handoff summary.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: Trailing-period financial bridge
+    text: Use actual sourced schedules in one linked native workbook; example values are illustrative and must not become issuer inputs. Map restated annual/YTD additive earnings lines to trailing periods; retain prior source versions and document every changed period or definition.
+  - title: Weighted-average share schedule
+    text: Rebuild each required weighted denominator from actual transactions. A trailing EPS denominator must be constructed for its actual interval, not formed by adding quarterly weighted shares.
+  - title: Purchased amortization EPS bridge
+    text: Update the actual charge and attributable recognized tax effect against matching reported ordinary income and sourced diluted shares; basic weighted shares feed this only when no dilution is evidenced.
+  - title: Current tax cash-payment bridge
+    text: Reconcile current tax expense/payables to cash taxes separately from the non-GAAP tax adjustment; retained deferred-tax differences must not become cash.
+  - title: OCI reclassification bridge
+    text: Trace permitted recycling changes to both profit and OCI and prove conservation before issuing the update; list source changes and unresolved model checks for the reviewer.
+output_shape: |-
+  A linked filing update workbook and change log with five reconciled schedules.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: All updated schedules reference actual source dates, additive periods and share denominators are correct, tax and OCI differences reconcile and no illustrative fixture is substituted for missing issuer data.
+judge:
+  - All updated schedules reference actual source dates, additive periods and share denominators are correct, tax and OCI differences reconcile and no illustrative fixture is substituted for missing issuer data.
+  - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
+  - Reconcile opening balances, additions, deductions and closing balances. Match enterprise or equity cash flows to the corresponding discount rate.
+  - Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
+test:
+  - Try a small sourced case and inspect every component handoff.
+  - Remove one required source and confirm the affected step stops.
+  - Change a currency, date or accounting definition and check the conflict stays visible.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

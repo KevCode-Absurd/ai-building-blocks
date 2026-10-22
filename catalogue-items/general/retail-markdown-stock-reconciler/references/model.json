@@ -1,0 +1,230 @@
+{
+  "inputs": [
+    {
+      "id": "opening_units",
+      "label": "opening units",
+      "value": 100,
+      "unit": "units / cohort",
+      "min": 0
+    },
+    {
+      "id": "purchase_cost",
+      "label": "purchase cost",
+      "value": 5,
+      "unit": "USD / unit",
+      "min": 0
+    },
+    {
+      "id": "full_price_units",
+      "label": "full price units",
+      "value": 40,
+      "unit": "units / cohort",
+      "min": 0
+    },
+    {
+      "id": "full_price",
+      "label": "full price",
+      "value": 10,
+      "unit": "USD / unit",
+      "min": 0
+    },
+    {
+      "id": "markdown_units",
+      "label": "markdown units",
+      "value": 30,
+      "unit": "units / cohort",
+      "min": 0
+    },
+    {
+      "id": "markdown_price",
+      "label": "markdown price",
+      "value": 6,
+      "unit": "USD / unit",
+      "min": 0
+    },
+    {
+      "id": "clearance_cash_cost",
+      "label": "clearance cash cost",
+      "value": 10,
+      "unit": "USD / stated period",
+      "min": 0
+    }
+  ],
+  "calculations": [
+    {
+      "id": "sold_units",
+      "label": "sold units",
+      "op": "sum",
+      "args": [
+        "full_price_units",
+        "markdown_units"
+      ],
+      "unit": "units / cohort"
+    },
+    {
+      "id": "closing_units",
+      "label": "closing units",
+      "op": "sub",
+      "args": [
+        "opening_units",
+        "sold_units"
+      ],
+      "unit": "units / cohort"
+    },
+    {
+      "id": "full_receipts",
+      "label": "full receipts",
+      "op": "mul",
+      "args": [
+        "full_price_units",
+        "full_price"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "markdown_receipts",
+      "label": "markdown receipts",
+      "op": "mul",
+      "args": [
+        "markdown_units",
+        "markdown_price"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "total_receipts",
+      "label": "total receipts",
+      "op": "sum",
+      "args": [
+        "full_receipts",
+        "markdown_receipts"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "sold_purchase_cost",
+      "label": "sold purchase cost",
+      "op": "mul",
+      "args": [
+        "sold_units",
+        "purchase_cost"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "total_sold_cash_cost",
+      "label": "total sold cash cost",
+      "op": "sum",
+      "args": [
+        "sold_purchase_cost",
+        "clearance_cash_cost"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "cash_contribution",
+      "label": "Sold-unit contribution after clearance expense",
+      "op": "sub",
+      "args": [
+        "total_receipts",
+        "total_sold_cash_cost"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "held_cost_memo",
+      "label": "held cost memo",
+      "op": "mul",
+      "args": [
+        "closing_units",
+        "purchase_cost"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "original_cohort_purchase_cash",
+      "label": "Original full-cohort purchase cash",
+      "op": "mul",
+      "args": [
+        "opening_units",
+        "purchase_cost"
+      ],
+      "unit": "USD / cohort purchase"
+    },
+    {
+      "id": "cohort_purchase_and_clearance_cash",
+      "label": "Full-cohort purchase plus clearance cash",
+      "op": "sum",
+      "args": [
+        "original_cohort_purchase_cash",
+        "clearance_cash_cost"
+      ],
+      "unit": "USD / cumulative cohort"
+    },
+    {
+      "id": "cumulative_cohort_net_cash",
+      "label": "Cumulative cohort cash after full purchase",
+      "op": "sub",
+      "args": [
+        "total_receipts",
+        "cohort_purchase_and_clearance_cash"
+      ],
+      "unit": "USD / cumulative cohort"
+    }
+  ],
+  "outputs": [
+    "closing_units",
+    "total_receipts",
+    "sold_purchase_cost",
+    "cash_contribution",
+    "held_cost_memo",
+    "original_cohort_purchase_cash",
+    "cumulative_cohort_net_cash"
+  ],
+  "expected": {
+    "closing_units": 30,
+    "total_receipts": 580,
+    "sold_purchase_cost": 350,
+    "cash_contribution": 220,
+    "held_cost_memo": 150,
+    "original_cohort_purchase_cash": 500,
+    "cumulative_cohort_net_cash": 70
+  },
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "inputs": {
+        "markdown_price": 4
+      },
+      "expected": {
+        "total_receipts": 520,
+        "cash_contribution": 160,
+        "cumulative_cohort_net_cash": 10
+      }
+    },
+    {
+      "name": "Missing or invalid required input",
+      "inputs": {
+        "opening_units": null
+      },
+      "error": true
+    },
+    {
+      "name": "Sales exceed stock available in the cohort",
+      "inputs": {
+        "full_price_units": 80,
+        "markdown_units": 30
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative cohort of100 units purchased for5 each costs500. Selling40 at10 and30 at6 realizes580. Sold purchase cost350 plus clearance10 leaves sold-unit contribution220; this excludes150 purchase cost still held in30 units. Cumulative cash after the full500 original purchase and10 clearance is70. At markdown price4 receipts are520, sold-unit contribution160 and cumulative cohort net cash10. Cumulative cash is across purchase and clearance dates, not a single-period cash-flow claim. Overselling stock is refused.",
+  "constraints": [
+    {
+      "left": "closing_units",
+      "operator": "gte",
+      "right": 0,
+      "message": "Cohort units sold cannot exceed opening cohort stock."
+    }
+  ]
+}

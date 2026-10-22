@@ -1,0 +1,96 @@
+{
+  "inputs": [
+    {
+      "id": "referenceNav",
+      "label": "reference Nav",
+      "value": 100,
+      "unit": "USD millions",
+      "min": 0
+    },
+    {
+      "id": "priceFraction",
+      "label": "price Fraction",
+      "value": 0.8,
+      "unit": "fraction of NAV",
+      "min": 0,
+      "max": 2
+    },
+    {
+      "id": "sellerRetainedDistribution",
+      "label": "seller Retained Distribution",
+      "value": 5,
+      "unit": "USD millions",
+      "min": 0
+    },
+    {
+      "id": "transferredUnfunded",
+      "label": "transferred Unfunded",
+      "value": 30,
+      "unit": "USD millions",
+      "min": 0
+    }
+  ],
+  "calculations": [
+    {
+      "id": "quotedPrice",
+      "label": "quoted Price",
+      "op": "mul",
+      "args": [
+        "referenceNav",
+        "priceFraction"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "closingPayment",
+      "label": "closing Payment",
+      "op": "sub",
+      "args": [
+        "quotedPrice",
+        "sellerRetainedDistribution"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "grossCashBudget",
+      "label": "gross Cash Budget",
+      "op": "add",
+      "args": [
+        "closingPayment",
+        "transferredUnfunded"
+      ],
+      "unit": "USD millions"
+    }
+  ],
+  "outputs": [
+    "quotedPrice",
+    "closingPayment",
+    "grossCashBudget"
+  ],
+  "expected": {
+    "quotedPrice": 80,
+    "closingPayment": 75,
+    "grossCashBudget": 105
+  },
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "inputs": {
+        "priceFraction": 0.9
+      },
+      "expected": {
+        "quotedPrice": 90,
+        "closingPayment": 85,
+        "grossCashBudget": 115
+      }
+    },
+    {
+      "name": "Missing required number",
+      "inputs": {
+        "referenceNav": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only. 80% of reference NAV100 gives80. Credited distribution5 leaves75 at closing; future commitments30 make105 gross budget.90% gives115."
+}

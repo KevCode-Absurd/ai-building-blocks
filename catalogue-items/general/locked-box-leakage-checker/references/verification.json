@@ -1,0 +1,22 @@
+{
+  "slug": "locked-box-leakage-checker",
+  "modelSha256": "1ce4b7956e4464054b307a9afffc9df2421aab8372aa0ca974219d9f9921bf7a",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required number",
+      "kind": "refusal",
+      "status": "pass"
+    },
+    {
+      "name": "Refuse exclusions exceeding gross transfers",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

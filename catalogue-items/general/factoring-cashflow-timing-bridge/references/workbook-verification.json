@@ -1,0 +1,32 @@
+{
+  "engine": "Artifact Tool",
+  "scope": "Illustrative workbook calculations, not source truth or an actual investment conclusion. Native Microsoft Excel application execution is not claimed.",
+  "modelSha256": "ec88fa02664b4c423d35da7b6c4b3b955292eb0ce03c432c93a6a33d7e9266d4",
+  "xlsxSha256": "8f5bc51b500f2b35e0c0353b7d44f701c94bb6398b73b6df5ef125f53789d35a",
+  "baseline": "pass",
+  "changedInputCase": "More factored invoices collected by customers",
+  "invalidInputCase": "Missing required reported input",
+  "cases": [
+    {
+      "name": "More factored invoices collected by customers",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required reported input",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ],
+  "reopenedAndRecalculated": true,
+  "rendered": true,
+  "visualReview": "pass",
+  "workbookSpecSha256": "c3e50e187f8b5942f4e18f336d3c10a32ee0ca92b22db9c6baa02c244c97bbed",
+  "visualEvidence": {
+    "report": "reports/finance-public-markets-peer-review.json",
+    "reportSha256": "f73f6f5598ba0647c477c547d2776f1221130bb7861b62def472b74331866282",
+    "previewSha256": "4054ffe3f3900c090663bfcea44d0259c0d6ef0c33d8788631ac6b2fb5250191",
+    "sheet": "Model",
+    "sourceSpecSha256": "ff53af87aeb2c61cb9246c7b47f99ef5ba16f3bd0404f3dec5560c5e916c33cf"
+  }
+}

@@ -1,0 +1,72 @@
+new_slug: employee-share-cost-review-assistant
+name: Employee share cost review assistant
+headline: Employee share cost review assistant
+summary: Review employee award changes across actual issuance, diluted shares and cash-offset scenarios.
+job: money-and-investing
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: An award-method exception table and linked dilution/cash-cost workbook. Share the prior accepted model and review log, newly supplied dated filings, changed source notes and the user-defined materiality threshold.
+explain: |-
+  An award-method exception table and linked dilution/cash-cost workbook.
+
+  Public-market evidence review. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+when:
+  - You need an award-method exception table and linked dilution/cash-cost workbook.
+  - You work on public-market evidence review and need traceable calculations.
+  - New evidence needs comparison with the prior dated review.
+you_give:
+  - The prior accepted model and review log, newly supplied dated filings, changed source notes and the user-defined materiality threshold.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - An award-method exception table and linked dilution/cash-cost workbook.
+  - Original step files, financial assumptions, source coverage and a governing handoff summary.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: Reconcile share compensation dilution and cash
+    text: Run the governing workflow when On a new user-supplied award note, share ledger or compensation reconciliation, compare award classes and settlement terms with the accepted model.
+  - title: Convertible EPS inclusion test
+    text: If an award-related instrument requires if-converted rather than treasury-stock treatment, route its actual terms to the inclusion test and apply the continuing-operations control. Unsupported hybrid awards remain unresolved rather than coerced into an option formula.
+output_shape: |-
+  An award-method exception table and linked dilution/cash-cost workbook.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: Each instrument uses an applicable method, actual issuance remains distinct from potential dilution, and cash-offset scenarios neither replace accounting expense automatically nor trigger a buyback.
+judge:
+  - Each instrument uses an applicable method, actual issuance remains distinct from potential dilution, and cash-offset scenarios neither replace accounting expense automatically nor trigger a buyback.
+  - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
+  - Reconcile opening balances, additions, deductions and closing balances. Match enterprise or equity cash flows to the corresponding discount rate.
+  - Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
+test:
+  - Try a small sourced case and inspect every component handoff.
+  - Remove one required source and confirm the affected step stops.
+  - Change a currency, date or accounting definition and check the conflict stays visible.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

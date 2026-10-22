@@ -1,0 +1,76 @@
+new_slug: subscription-line-timing-checker
+name: Subscription line timing checker
+headline: Subscription line timing checker
+summary: Compare periodic LP returns with and without a one-year capital-call bridge.
+job: money-and-investing
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: Unbridged periodic IRR, bridged LP IRR, financing cost and both money multiples. Share actual investment and exit evidence, exactly two annual investment periods, one-year bridge, annual simple bridge cost and a call at the first anniversary.
+explain: |-
+  Unbridged periodic IRR, bridged LP IRR, financing cost and both money multiples.
+
+  Private fund performance. Illustrative figures only. 100 grows to121 over2 years:10%. Bridge cost5 delays105 LP call to year1;121/105-1=16/105. Cost10 reduces LP IRR to10%.
+when:
+  - You need unbridged periodic IRR, bridged LP IRR, financing cost and both money multiples.
+  - You work on private fund performance and need traceable calculations.
+  - A reviewer needs to trace the result back to inputs and assumptions.
+you_give:
+  - Actual investment and exit evidence, exactly two annual investment periods, one-year bridge, annual simple bridge cost and a call at the first anniversary.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - Unbridged periodic IRR, bridged LP IRR, financing cost and both money multiples.
+  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: 1. Verify exact annual spacing; for irregular actual dates use XIRR in a suitable engine rather than relabeling periodic IRR
+    text: Verify exact annual spacing; for irregular actual dates use XIRR in a suitable engine rather than relabeling periodic IRR.
+  - title: 2. Calculate one-year bridge cost and add it to the LP contribution called at year one; retain the same year-two exit receipt
+    text: Calculate one-year bridge cost and add it to the LP contribution called at year one; retain the same year-two exit receipt.
+  - title: 3. Compare two-period unbridged IRR against one-period LP IRR after delayed call, showing cost and lower money multiple separately
+    text: Compare two-period unbridged IRR against one-period LP IRR after delayed call, showing cost and lower money multiple separately.
+output_shape: |-
+  Unbridged periodic IRR, bridged LP IRR, financing cost and both money multiples.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: No period shortening is presented as improved asset performance.
+judge:
+  - No period shortening is presented as improved asset performance.
+  - IRR uses one initial negative flow followed by nonnegative inflows; every cash flow has evidence.
+  - Trace each input to its dated signed source, currency, scale and period.
+  - Reconcile outputs; preserve MISSING and CHECKS MISSED rather than guessing zero.
+test:
+  - Run the included baseline and changed-input fixtures, then compare with the stated expected results.
+  - Remove a required input and confirm the affected calculation refuses to invent a zero.
+  - Recalculate the workbook after changing an input and inspect the saved output.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: Node.js 20 or later
+      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

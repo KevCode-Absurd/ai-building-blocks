@@ -1,0 +1,17 @@
+{
+  "slug": "closing-equity-proceeds-checker",
+  "modelSha256": "8573e0bbafc28566070cb08eb614542a89a9b72e1173ecc208d0757f424ef2f0",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required number",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

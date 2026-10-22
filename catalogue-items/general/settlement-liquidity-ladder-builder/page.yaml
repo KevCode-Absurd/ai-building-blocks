@@ -1,0 +1,78 @@
+new_slug: settlement-liquidity-ladder-builder
+name: Settlement liquidity ladder builder
+headline: Settlement liquidity ladder builder
+summary: An ordered settlement ladder and peak funding gap
+job: money-and-investing
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: An ordered settlement ladder and peak funding gap. Share opening accessible cash, three ordered settlement buckets with confirmed receipts and debits, settlement times and a minimum balance.
+explain: |-
+  An ordered settlement ladder and peak funding gap.
+
+  Treasury settlement. Illustrative figures only, in USD unless labelled otherwise. This is a focused schedule with explicit period and timing assumptions. Rebuild from actual dated sources before use; the example is not a full financial forecast.
+when:
+  - You need an ordered settlement ladder and peak funding gap.
+  - You work on treasury settlement and need traceable calculations.
+  - A reviewer needs to trace the result back to inputs and assumptions.
+you_give:
+  - Opening accessible cash, three ordered settlement buckets with confirmed receipts and debits, settlement times and a minimum balance.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - An ordered settlement ladder and peak funding gap.
+  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: 1. Create a dated source map of the stated balances, transaction IDs, currency, units, period boundaries and contractual definitions
+    text: Create a dated source map of the stated balances, transaction IDs, currency, units, period boundaries and contractual definitions. Stop affected lines on missing evidence.
+  - title: 2. Group confirmed receipts and payments by actual settlement cutoff; do not net flows from different accounts or currencies
+    text: Group confirmed receipts and payments by actual settlement cutoff; do not net flows from different accounts or currencies.
+  - title: 3. Roll each bucket closing balance into the next opening balance and identify the lowest balance across the day
+    text: Roll each bucket closing balance into the next opening balance and identify the lowest balance across the day.
+  - title: 4. Compare the minimum balance with the approved floor and disclose that within-bucket sequencing remains unmodeled
+    text: Compare the minimum balance with the approved floor and disclose that within-bucket sequencing remains unmodeled.
+output_shape: |-
+  An ordered settlement ladder and peak funding gap.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: Every material input has a source location, date, unit, sign and approval status.
+judge:
+  - Every material input has a source location, date, unit, sign and approval status.
+  - Keep actual records, contractual inputs and scenarios separate; a missing value never becomes zero.
+  - Opening cash plus all receipts minus all payments must reconcile to the final balance.
+  - Bucket order and currency must match; a bucket-end minimum does not establish continuous intraday sufficiency.
+test:
+  - Run the included baseline and changed-input fixtures, then compare with the stated expected results.
+  - Remove a required input and confirm the affected calculation refuses to invent a zero.
+  - Recalculate the workbook after changing an input and inspect the saved output.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: Node.js 20 or later
+      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

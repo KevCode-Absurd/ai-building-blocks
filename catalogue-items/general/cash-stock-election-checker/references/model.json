@@ -1,0 +1,157 @@
+{
+  "inputs": [
+    {
+      "id": "electedShares",
+      "label": "elected Shares",
+      "value": 100,
+      "unit": "target shares",
+      "min": 0.000001
+    },
+    {
+      "id": "cashPool",
+      "label": "cash Pool",
+      "value": 600,
+      "unit": "USD",
+      "min": 0
+    },
+    {
+      "id": "cashPrice",
+      "label": "cash Price",
+      "value": 10,
+      "unit": "USD per target share",
+      "min": 0.000001
+    },
+    {
+      "id": "holderShares",
+      "label": "holder Shares",
+      "value": 10,
+      "unit": "target shares",
+      "min": 0
+    },
+    {
+      "id": "replacementRatio",
+      "label": "replacement Ratio",
+      "value": 0.5,
+      "unit": "acquirer shares per target share",
+      "min": 0
+    }
+  ],
+  "calculations": [
+    {
+      "id": "cashDemand",
+      "label": "cash Demand",
+      "op": "mul",
+      "args": [
+        "electedShares",
+        "cashPrice"
+      ],
+      "unit": "USD"
+    },
+    {
+      "id": "rawFraction",
+      "label": "raw Fraction",
+      "op": "div",
+      "args": [
+        "cashPool",
+        "cashDemand"
+      ],
+      "unit": "fraction"
+    },
+    {
+      "id": "cashFraction",
+      "label": "cash Fraction",
+      "op": "min",
+      "args": [
+        1,
+        "rawFraction"
+      ],
+      "unit": "fraction"
+    },
+    {
+      "id": "cashTargetShares",
+      "label": "cash Target Shares",
+      "op": "mul",
+      "args": [
+        "holderShares",
+        "cashFraction"
+      ],
+      "unit": "target shares"
+    },
+    {
+      "id": "holderCash",
+      "label": "holder Cash",
+      "op": "mul",
+      "args": [
+        "cashTargetShares",
+        "cashPrice"
+      ],
+      "unit": "USD"
+    },
+    {
+      "id": "stockTargetShares",
+      "label": "stock Target Shares",
+      "op": "sub",
+      "args": [
+        "holderShares",
+        "cashTargetShares"
+      ],
+      "unit": "target shares"
+    },
+    {
+      "id": "replacementShares",
+      "label": "replacement Shares",
+      "op": "mul",
+      "args": [
+        "stockTargetShares",
+        "replacementRatio"
+      ],
+      "unit": "acquirer shares"
+    }
+  ],
+  "outputs": [
+    "cashFraction",
+    "holderCash",
+    "replacementShares"
+  ],
+  "expected": {
+    "cashFraction": 0.6,
+    "holderCash": 60,
+    "replacementShares": 2
+  },
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "inputs": {
+        "cashPool": 1000
+      },
+      "expected": {
+        "cashFraction": 1,
+        "holderCash": 100,
+        "replacementShares": 0
+      }
+    },
+    {
+      "name": "Missing required number",
+      "inputs": {
+        "electedShares": null
+      },
+      "error": true
+    },
+    {
+      "name": "Refuse holder shares above aggregate elections",
+      "inputs": {
+        "holderShares": 120
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only. 600 covers60% of100 shares at10; a10-share holder gets60 cash and2 replacement shares. Pool1000 fulfills all cash.",
+  "constraints": [
+    {
+      "left": "holderShares",
+      "operator": "lte",
+      "right": "electedShares",
+      "message": "Holder cash-election shares must be a subset of aggregate eligible cash-election shares."
+    }
+  ]
+}

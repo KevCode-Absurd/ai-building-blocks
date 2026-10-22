@@ -1,0 +1,210 @@
+{
+  "inputs": [
+    {
+      "id": "opening",
+      "label": "opening",
+      "value": 50,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "cash_1",
+      "label": "cash 1",
+      "value": 10,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "cash_2",
+      "label": "cash 2",
+      "value": 20,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "cash_3",
+      "label": "cash 3",
+      "value": 30,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "refi_1",
+      "label": "refi 1",
+      "value": 0,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "refi_2",
+      "label": "refi 2",
+      "value": 50,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "refi_3",
+      "label": "refi 3",
+      "value": 0,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "maturity_1",
+      "label": "maturity 1",
+      "value": 40,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "maturity_2",
+      "label": "maturity 2",
+      "value": 80,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "maturity_3",
+      "label": "maturity 3",
+      "value": 60,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "floor",
+      "label": "floor",
+      "value": 0,
+      "unit": "USD / stated period",
+      "min": 0
+    }
+  ],
+  "calculations": [
+    {
+      "id": "sources_1",
+      "label": "sources 1",
+      "op": "sum",
+      "args": [
+        "opening",
+        "cash_1",
+        "refi_1"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "close_1",
+      "label": "close 1",
+      "op": "sub",
+      "args": [
+        "sources_1",
+        "maturity_1"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "sources_2",
+      "label": "sources 2",
+      "op": "sum",
+      "args": [
+        "close_1",
+        "cash_2",
+        "refi_2"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "close_2",
+      "label": "close 2",
+      "op": "sub",
+      "args": [
+        "sources_2",
+        "maturity_2"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "sources_3",
+      "label": "sources 3",
+      "op": "sum",
+      "args": [
+        "close_2",
+        "cash_3",
+        "refi_3"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "close_3",
+      "label": "close 3",
+      "op": "sub",
+      "args": [
+        "sources_3",
+        "maturity_3"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "minimum_cash",
+      "label": "minimum cash",
+      "op": "min",
+      "args": [
+        "opening",
+        "close_1",
+        "close_2",
+        "close_3"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "signed_gap",
+      "label": "signed gap",
+      "op": "sub",
+      "args": [
+        "floor",
+        "minimum_cash"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "funding_gap",
+      "label": "funding gap",
+      "op": "max",
+      "args": [
+        0,
+        "signed_gap"
+      ],
+      "unit": "USD / stated period"
+    }
+  ],
+  "outputs": [
+    "close_1",
+    "close_2",
+    "close_3",
+    "funding_gap"
+  ],
+  "expected": {
+    "close_1": 20,
+    "close_2": 10,
+    "close_3": -20,
+    "funding_gap": 20
+  },
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "inputs": {
+        "refi_3": 30
+      },
+      "expected": {
+        "close_3": 10,
+        "funding_gap": 0
+      }
+    },
+    {
+      "name": "Missing or invalid required input",
+      "inputs": {
+        "opening": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only in USD unless labelled otherwise. A focused schedule using explicit period, rate and timing conventions; not a full financing model or an approval decision."
+}

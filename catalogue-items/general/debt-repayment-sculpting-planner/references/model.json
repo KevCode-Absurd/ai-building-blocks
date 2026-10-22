@@ -1,0 +1,393 @@
+{
+  "inputs": [
+    {
+      "id": "opening_debt",
+      "label": "opening debt",
+      "value": 240,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "annual_rate",
+      "label": "annual rate",
+      "value": 0.1,
+      "unit": "annual decimal",
+      "min": 0,
+      "max": 1
+    },
+    {
+      "id": "target_dscr",
+      "label": "target dscr",
+      "value": 1.2,
+      "unit": "multiple",
+      "min": 0.000001
+    },
+    {
+      "id": "cfads_1",
+      "label": "cfads 1",
+      "value": 132,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "cfads_2",
+      "label": "cfads 2",
+      "value": 132,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "cfads_3",
+      "label": "cfads 3",
+      "value": 132,
+      "unit": "USD / stated period",
+      "min": 0
+    }
+  ],
+  "calculations": [
+    {
+      "id": "service_cap_1",
+      "label": "service cap 1",
+      "op": "div",
+      "args": [
+        "cfads_1",
+        "target_dscr"
+      ],
+      "unit": "USD / annual period"
+    },
+    {
+      "id": "interest_1",
+      "label": "interest 1",
+      "op": "mul",
+      "args": [
+        "opening_debt",
+        "annual_rate"
+      ],
+      "unit": "USD / annual period"
+    },
+    {
+      "id": "principal_room_1",
+      "label": "principal room 1",
+      "op": "sub",
+      "args": [
+        "service_cap_1",
+        "interest_1"
+      ],
+      "unit": "USD / annual period"
+    },
+    {
+      "id": "nonnegative_room_1",
+      "label": "nonnegative room 1",
+      "op": "max",
+      "args": [
+        0,
+        "principal_room_1"
+      ],
+      "unit": "USD / annual period"
+    },
+    {
+      "id": "principal_1",
+      "label": "principal 1",
+      "op": "min",
+      "args": [
+        "opening_debt",
+        "nonnegative_room_1"
+      ],
+      "unit": "USD / annual period"
+    },
+    {
+      "id": "closing_1",
+      "label": "closing 1",
+      "op": "sub",
+      "args": [
+        "opening_debt",
+        "principal_1"
+      ],
+      "unit": "USD / annual period"
+    },
+    {
+      "id": "service_1",
+      "label": "service 1",
+      "op": "sum",
+      "args": [
+        "interest_1",
+        "principal_1"
+      ],
+      "unit": "USD / annual period"
+    },
+    {
+      "id": "interest_gap_signed_1",
+      "label": "interest gap signed 1",
+      "op": "sub",
+      "args": [
+        "interest_1",
+        "service_cap_1"
+      ],
+      "unit": "USD / annual period"
+    },
+    {
+      "id": "interest_gap_1",
+      "label": "interest gap 1",
+      "op": "max",
+      "args": [
+        0,
+        "interest_gap_signed_1"
+      ],
+      "unit": "USD / annual period"
+    },
+    {
+      "id": "service_cap_2",
+      "label": "service cap 2",
+      "op": "div",
+      "args": [
+        "cfads_2",
+        "target_dscr"
+      ],
+      "unit": "USD / annual period"
+    },
+    {
+      "id": "interest_2",
+      "label": "interest 2",
+      "op": "mul",
+      "args": [
+        "closing_1",
+        "annual_rate"
+      ],
+      "unit": "USD / annual period"
+    },
+    {
+      "id": "principal_room_2",
+      "label": "principal room 2",
+      "op": "sub",
+      "args": [
+        "service_cap_2",
+        "interest_2"
+      ],
+      "unit": "USD / annual period"
+    },
+    {
+      "id": "nonnegative_room_2",
+      "label": "nonnegative room 2",
+      "op": "max",
+      "args": [
+        0,
+        "principal_room_2"
+      ],
+      "unit": "USD / annual period"
+    },
+    {
+      "id": "principal_2",
+      "label": "principal 2",
+      "op": "min",
+      "args": [
+        "closing_1",
+        "nonnegative_room_2"
+      ],
+      "unit": "USD / annual period"
+    },
+    {
+      "id": "closing_2",
+      "label": "closing 2",
+      "op": "sub",
+      "args": [
+        "closing_1",
+        "principal_2"
+      ],
+      "unit": "USD / annual period"
+    },
+    {
+      "id": "service_2",
+      "label": "service 2",
+      "op": "sum",
+      "args": [
+        "interest_2",
+        "principal_2"
+      ],
+      "unit": "USD / annual period"
+    },
+    {
+      "id": "interest_gap_signed_2",
+      "label": "interest gap signed 2",
+      "op": "sub",
+      "args": [
+        "interest_2",
+        "service_cap_2"
+      ],
+      "unit": "USD / annual period"
+    },
+    {
+      "id": "interest_gap_2",
+      "label": "interest gap 2",
+      "op": "max",
+      "args": [
+        0,
+        "interest_gap_signed_2"
+      ],
+      "unit": "USD / annual period"
+    },
+    {
+      "id": "service_cap_3",
+      "label": "service cap 3",
+      "op": "div",
+      "args": [
+        "cfads_3",
+        "target_dscr"
+      ],
+      "unit": "USD / annual period"
+    },
+    {
+      "id": "interest_3",
+      "label": "interest 3",
+      "op": "mul",
+      "args": [
+        "closing_2",
+        "annual_rate"
+      ],
+      "unit": "USD / annual period"
+    },
+    {
+      "id": "principal_room_3",
+      "label": "principal room 3",
+      "op": "sub",
+      "args": [
+        "service_cap_3",
+        "interest_3"
+      ],
+      "unit": "USD / annual period"
+    },
+    {
+      "id": "nonnegative_room_3",
+      "label": "nonnegative room 3",
+      "op": "max",
+      "args": [
+        0,
+        "principal_room_3"
+      ],
+      "unit": "USD / annual period"
+    },
+    {
+      "id": "principal_3",
+      "label": "principal 3",
+      "op": "min",
+      "args": [
+        "closing_2",
+        "nonnegative_room_3"
+      ],
+      "unit": "USD / annual period"
+    },
+    {
+      "id": "closing_3",
+      "label": "closing 3",
+      "op": "sub",
+      "args": [
+        "closing_2",
+        "principal_3"
+      ],
+      "unit": "USD / annual period"
+    },
+    {
+      "id": "service_3",
+      "label": "service 3",
+      "op": "sum",
+      "args": [
+        "interest_3",
+        "principal_3"
+      ],
+      "unit": "USD / annual period"
+    },
+    {
+      "id": "interest_gap_signed_3",
+      "label": "interest gap signed 3",
+      "op": "sub",
+      "args": [
+        "interest_3",
+        "service_cap_3"
+      ],
+      "unit": "USD / annual period"
+    },
+    {
+      "id": "interest_gap_3",
+      "label": "interest gap 3",
+      "op": "max",
+      "args": [
+        0,
+        "interest_gap_signed_3"
+      ],
+      "unit": "USD / annual period"
+    },
+    {
+      "id": "total_principal",
+      "label": "total principal",
+      "op": "sum",
+      "args": [
+        "principal_1",
+        "principal_2",
+        "principal_3"
+      ],
+      "unit": "USD / three years"
+    },
+    {
+      "id": "total_interest",
+      "label": "total interest",
+      "op": "sum",
+      "args": [
+        "interest_1",
+        "interest_2",
+        "interest_3"
+      ],
+      "unit": "USD / three years"
+    },
+    {
+      "id": "total_service",
+      "label": "total service",
+      "op": "sum",
+      "args": [
+        "service_1",
+        "service_2",
+        "service_3"
+      ],
+      "unit": "USD / three years"
+    }
+  ],
+  "outputs": [
+    "service_cap_1",
+    "total_principal",
+    "total_interest",
+    "closing_3",
+    "total_service",
+    "interest_gap_1",
+    "interest_gap_2",
+    "interest_gap_3"
+  ],
+  "expected": {
+    "service_cap_1": 110,
+    "total_principal": 240,
+    "total_interest": 45.34,
+    "closing_3": 0,
+    "total_service": 285.34,
+    "interest_gap_1": 0,
+    "interest_gap_2": 0,
+    "interest_gap_3": 0
+  },
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "inputs": {
+        "cfads_1": 120
+      },
+      "expected": {
+        "service_cap_1": 100,
+        "total_interest": 47.44,
+        "total_service": 287.44
+      }
+    },
+    {
+      "name": "Missing or invalid required input",
+      "inputs": {
+        "opening_debt": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only in USD unless labelled otherwise. A focused schedule using explicit period, rate and timing conventions; not a full financing model or an approval decision."
+}

@@ -1,0 +1,76 @@
+new_slug: pension-funded-status-change
+name: Pension funded-status change schedule
+headline: Pension funded-status change schedule
+summary: Explain changes in an issuer’s pension deficit separately from employer contributions.
+job: track-numbers
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: A funded-status bridge separating cash funding from other deficit movements. Share opening/closing benefit obligations and plan assets, contributions, asset ceilings, currency effects and plan perimeter.
+explain: |-
+  A funded-status bridge separating cash funding from other deficit movements.
+
+  Issuer accounting and earnings. Illustrative figures. Deficit rises from100-80=20 to120-90=30, an increase10. With contributions10 the other deficit-increasing movements total20. Contributions5 with the same observed balances imply other movements15.
+when:
+  - You need a funded-status bridge separating cash funding from other deficit movements.
+  - You work on issuer accounting and earnings and need traceable calculations.
+  - A reviewer needs to trace the result back to inputs and assumptions.
+you_give:
+  - Opening/closing benefit obligations and plan assets, contributions, asset ceilings, currency effects and plan perimeter.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - A funded-status bridge separating cash funding from other deficit movements.
+  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: 1. Match obligation and asset measurements by date, plan and currency; preserve surpluses, deficits and any asset-ceiling restriction separately
+    text: Match obligation and asset measurements by date, plan and currency; preserve surpluses, deficits and any asset-ceiling restriction separately.
+  - title: 2. Subtract plan assets from obligations at both dates and reconcile the deficit movement
+    text: Subtract plan assets from obligations at both dates and reconcile the deficit movement.
+  - title: 3. Add employer cash contributions back to the deficit increase to isolate total non-contribution movement; decompose that movement from disclosed service, financing, remeasurement and FX rows
+    text: Add employer cash contributions back to the deficit increase to isolate total non-contribution movement; decompose that movement from disclosed service, financing, remeasurement and FX rows.
+output_shape: |-
+  A funded-status bridge separating cash funding from other deficit movements.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: Contributions reduce the deficit rather than pension expense automatically.
+judge:
+  - Contributions reduce the deficit rather than pension expense automatically.
+  - The residual non-contribution movement is not mislabeled as current P&L pension cost.
+  - Tie all inputs to source notes, dates, currency, scale and signs.
+  - Retain reported figures beside analytical adjustments and list every unresolved source gap.
+test:
+  - Run the included baseline and changed-input fixtures, then compare with the stated expected results.
+  - Remove a required input and confirm the affected calculation refuses to invent a zero.
+  - Recalculate the workbook after changing an input and inspect the saved output.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: Node.js 20 or later
+      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

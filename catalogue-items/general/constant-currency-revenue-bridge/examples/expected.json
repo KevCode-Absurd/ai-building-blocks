@@ -1,0 +1,11 @@
+{
+  "basis": "Illustrative figures only.",
+  "outputs": {
+    "priorRevenue": 140,
+    "currentRevenue": 146,
+    "ccRevenue": 170,
+    "reportedGrowth": 0.04285714285714293,
+    "ccGrowth": 0.2142857142857142,
+    "translation": -24
+  }
+}

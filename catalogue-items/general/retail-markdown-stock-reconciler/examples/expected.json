@@ -1,0 +1,12 @@
+{
+  "basis": "Illustrative figures only.",
+  "outputs": {
+    "closing_units": 30,
+    "total_receipts": 580,
+    "sold_purchase_cost": 350,
+    "cash_contribution": 220,
+    "held_cost_memo": 150,
+    "original_cohort_purchase_cash": 500,
+    "cumulative_cohort_net_cash": 70
+  }
+}

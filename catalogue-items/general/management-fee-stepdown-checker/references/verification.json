@@ -1,0 +1,17 @@
+{
+  "slug": "management-fee-stepdown-checker",
+  "modelSha256": "e2cff75d6cbc06ee65c757bee060dc6bc1ff71c86e1f7987f0ec19de77314645",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required number",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

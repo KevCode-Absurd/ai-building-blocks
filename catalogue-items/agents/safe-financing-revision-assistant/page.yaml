@@ -1,0 +1,72 @@
+new_slug: safe-financing-revision-assistant
+name: SAFE financing revision assistant
+headline: SAFE financing revision assistant
+summary: Review supplied changes, preserve the last evidence baseline and return only affected calculations and unresolved approval questions.
+job: money-and-investing
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: A sourced ownership and reserve bridge with an explicit outside-versus-inclusive cash allocation. Include changed inputs, source versions, branch reasons and checks still blocked. Share executed cap-only post-money SAFE, full capitalization definitions, funded amounts, before-top-up denominator and reserve, pre-cash pool target, later round terms and actual participation side letter. Include the actual protected-series charter and qualifying issuance records if a down round changes the denominator. Supply the previous approved review and actual changed source files with dates.
+explain: |-
+  A sourced ownership and reserve bridge with an explicit outside-versus-inclusive cash allocation. Include changed inputs, source versions, branch reasons and checks still blocked.
+
+  Venture financing. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+when:
+  - You need a sourced ownership and reserve bridge with an explicit outside-versus-inclusive cash allocation. Include changed inputs, source versions, branch reasons and checks still blocked.
+  - You work on venture financing and need traceable calculations.
+  - New evidence needs comparison with the prior dated review.
+you_give:
+  - Executed cap-only post-money SAFE, full capitalization definitions, funded amounts, before-top-up denominator and reserve, pre-cash pool target, later round terms and actual participation side letter. Include the actual protected-series charter and qualifying issuance records if a down round changes the denominator. Supply the previous approved review and actual changed source files with dates.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - A sourced ownership and reserve bridge with an explicit outside-versus-inclusive cash allocation. Include changed inputs, source versions, branch reasons and checks still blocked.
+  - Original step files, financial assumptions, source coverage and a governing handoff summary.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: Check a SAFE into priced financing
+    text: Run the governing workflow when A new funded SAFE, signed round term, pool target or approved participation right is supplied.
+  - title: Weighted-average antidilution checker
+    text: If a qualifying down round changes protected conversion ratios, run the actual charter reset check and require an approved revised capitalization denominator before rerunning affected SAFE, pool or allocation work. Otherwise skip the antidilution branch. Never infer multiple-class ownership from the single-SAFE example.
+output_shape: |-
+  A sourced ownership and reserve bridge with an explicit outside-versus-inclusive cash allocation. Include changed inputs, source versions, branch reasons and checks still blocked.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: Use actual contract denominators; keep pool expansion and financing dilution separate and never treat illustrative defaults as deal facts. Never overwrite an accepted baseline with an unapproved scenario; record which branch ran or was skipped.
+judge:
+  - Use actual contract denominators; keep pool expansion and financing dilution separate and never treat illustrative defaults as deal facts. Never overwrite an accepted baseline with an unapproved scenario; record which branch ran or was skipped.
+  - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
+  - Reconcile opening balances, additions, deductions and closing balances. Match enterprise or equity cash flows to the corresponding discount rate.
+  - Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
+test:
+  - Try a small sourced case and inspect every component handoff.
+  - Remove one required source and confirm the affected step stops.
+  - Change a currency, date or accounting definition and check the conflict stays visible.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

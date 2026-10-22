@@ -1,0 +1,97 @@
+{
+  "inputs": [
+    {
+      "id": "principal",
+      "label": "principal",
+      "value": 100,
+      "unit": "USD thousands",
+      "min": 0
+    },
+    {
+      "id": "annualRate",
+      "label": "annual Rate",
+      "value": 0.1,
+      "unit": "annual decimal",
+      "min": 0,
+      "max": 1
+    },
+    {
+      "id": "yearFraction",
+      "label": "year Fraction",
+      "value": 2,
+      "unit": "years",
+      "min": 0
+    },
+    {
+      "id": "conversionPrice",
+      "label": "conversion Price",
+      "value": 2,
+      "unit": "USD thousands per share",
+      "min": 0.000001
+    }
+  ],
+  "calculations": [
+    {
+      "id": "interest",
+      "label": "interest",
+      "op": "mul",
+      "args": [
+        "principal",
+        "annualRate",
+        "yearFraction"
+      ],
+      "unit": "USD thousands"
+    },
+    {
+      "id": "balance",
+      "label": "balance",
+      "op": "add",
+      "args": [
+        "principal",
+        "interest"
+      ],
+      "unit": "USD thousands"
+    },
+    {
+      "id": "conversionShares",
+      "label": "conversion Shares",
+      "op": "div",
+      "args": [
+        "balance",
+        "conversionPrice"
+      ],
+      "unit": "shares"
+    }
+  ],
+  "outputs": [
+    "interest",
+    "balance",
+    "conversionShares"
+  ],
+  "expected": {
+    "interest": 20,
+    "balance": 120,
+    "conversionShares": 60
+  },
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "inputs": {
+        "yearFraction": 1
+      },
+      "expected": {
+        "interest": 10,
+        "balance": 110,
+        "conversionShares": 55
+      }
+    },
+    {
+      "name": "Missing required number",
+      "inputs": {
+        "principal": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only. 100 at10% simple for2 years adds20, and120/2=60 shares;1 year yields110 and55 shares."
+}

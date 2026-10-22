@@ -1,0 +1,117 @@
+{
+  "inputs": [
+    {
+      "id": "subjectEligible",
+      "label": "subject Eligible",
+      "value": 20,
+      "unit": "USD millions",
+      "min": 0.000001
+    },
+    {
+      "id": "otherEligible",
+      "label": "other Eligible",
+      "value": 80,
+      "unit": "USD millions",
+      "min": 0
+    },
+    {
+      "id": "callBudget",
+      "label": "call Budget",
+      "value": 50,
+      "unit": "USD millions",
+      "min": 0
+    },
+    {
+      "id": "subjectUnfunded",
+      "label": "subject Unfunded",
+      "value": 15,
+      "unit": "USD millions",
+      "min": 0
+    }
+  ],
+  "calculations": [
+    {
+      "id": "eligibleTotal",
+      "label": "eligible Total",
+      "op": "add",
+      "args": [
+        "subjectEligible",
+        "otherEligible"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "subjectFraction",
+      "label": "subject Fraction",
+      "op": "div",
+      "args": [
+        "subjectEligible",
+        "eligibleTotal"
+      ],
+      "unit": "fraction"
+    },
+    {
+      "id": "allocatedCall",
+      "label": "allocated Call",
+      "op": "mul",
+      "args": [
+        "subjectFraction",
+        "callBudget"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "collectibleCall",
+      "label": "collectible Call",
+      "op": "min",
+      "args": [
+        "allocatedCall",
+        "subjectUnfunded"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "allocationShortfall",
+      "label": "allocation Shortfall",
+      "op": "sub",
+      "args": [
+        "allocatedCall",
+        "collectibleCall"
+      ],
+      "unit": "USD millions"
+    }
+  ],
+  "outputs": [
+    "subjectFraction",
+    "allocatedCall",
+    "collectibleCall",
+    "allocationShortfall"
+  ],
+  "expected": {
+    "subjectFraction": 0.2,
+    "allocatedCall": 10,
+    "collectibleCall": 10,
+    "allocationShortfall": 0
+  },
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "inputs": {
+        "callBudget": 100
+      },
+      "expected": {
+        "allocatedCall": 20,
+        "collectibleCall": 15,
+        "allocationShortfall": 5
+      }
+    },
+    {
+      "name": "Missing required number",
+      "inputs": {
+        "subjectEligible": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only. 20 of100 eligible commitments gets10 of a50 call. Budget100 allocates20 but remaining commitment15 leaves5 for review."
+}

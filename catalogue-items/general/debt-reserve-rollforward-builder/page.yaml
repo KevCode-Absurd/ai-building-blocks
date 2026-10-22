@@ -1,0 +1,78 @@
+new_slug: debt-reserve-rollforward-builder
+name: Debt reserve rollforward builder
+headline: Debt reserve rollforward builder
+summary: A debt reserve rollforward and unfunded requirement
+job: money-and-investing
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: A debt reserve rollforward and unfunded requirement. Share opening debt reserve, authorized draw, next annual debt service, required coverage months and cash actually available for reserve funding.
+explain: |-
+  A debt reserve rollforward and unfunded requirement.
+
+  Project debt reserves. Illustrative USD reserve rollforward. Required reserve uses annual debt service120 divided by12 times6 coverage months=60, explicitly assuming uniform monthly service. Opening40 plus available deposit10 leaves50 and requirement gap10. An uneven actual repayment calendar requires the actual contractual future-service window instead of the uniform monthly shortcut. Draws and modeled releases require supplied authorizations.
+when:
+  - You need a debt reserve rollforward and unfunded requirement.
+  - You work on project debt reserves and need traceable calculations.
+  - A reviewer needs to trace the result back to inputs and assumptions.
+you_give:
+  - Opening debt reserve, authorized draw, next annual debt service, required coverage months and cash actually available for reserve funding.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - A debt reserve rollforward and unfunded requirement.
+  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: 1. Map dated sources, contractual definitions, period boundaries, currency, scale and source gaps before calculating
+    text: Map dated sources, contractual definitions, period boundaries, currency, scale and source gaps before calculating.
+  - title: 2. Source the agreement coverage window, reserve-eligible assets and permitted draw/release conditions
+    text: Source the agreement coverage window, reserve-eligible assets and permitted draw/release conditions.
+  - title: 3. Apply only the supplied authorized draw capped at opening reserve, then compute required reserve from the upcoming service profile
+    text: Apply only the supplied authorized draw capped at opening reserve, then compute required reserve from the upcoming service profile.
+  - title: 4. Fund the shortfall only from available cash, release excess only as a modeled authorized scenario and reconcile ending reserve to opening plus deposits less draws and releases
+    text: Fund the shortfall only from available cash, release excess only as a modeled authorized scenario and reconcile ending reserve to opening plus deposits less draws and releases.
+output_shape: |-
+  A debt reserve rollforward and unfunded requirement.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: Actual records, contractual terms and scenarios remain distinguishable.
+judge:
+  - Actual records, contractual terms and scenarios remain distinguishable.
+  - Missing evidence blocks the affected line; no default zero or unexplained balancing plug.
+  - Required reserve follows the actual future service profile; annual service divided by twelve assumes even monthly service only in this illustration.
+  - Opening plus deposit minus draw minus release equals ending reserve; any remaining requirement is explicit.
+test:
+  - Run the included baseline and changed-input fixtures, then compare with the stated expected results.
+  - Remove a required input and confirm the affected calculation refuses to invent a zero.
+  - Recalculate the workbook after changing an input and inspect the saved output.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: Node.js 20 or later
+      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

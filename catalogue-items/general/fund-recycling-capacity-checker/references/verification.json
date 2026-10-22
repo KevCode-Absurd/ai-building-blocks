@@ -1,0 +1,17 @@
+{
+  "slug": "fund-recycling-capacity-checker",
+  "modelSha256": "c5d8676608125e3e889c3c31e1c409ee2efd38b2b9107a4d05898be3e53fde10",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required number",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

@@ -1,0 +1,204 @@
+{
+  "inputs": [
+    {
+      "id": "opening",
+      "label": "opening",
+      "value": 100,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "forecast_1",
+      "label": "forecast 1",
+      "value": 20,
+      "unit": "USD / period",
+      "min": -1000000
+    },
+    {
+      "id": "forecast_2",
+      "label": "forecast 2",
+      "value": -10,
+      "unit": "USD / period",
+      "min": -1000000
+    },
+    {
+      "id": "forecast_3",
+      "label": "forecast 3",
+      "value": 30,
+      "unit": "USD / period",
+      "min": -1000000
+    },
+    {
+      "id": "actual_1",
+      "label": "actual 1",
+      "value": 10,
+      "unit": "USD / period",
+      "min": -1000000
+    },
+    {
+      "id": "actual_2",
+      "label": "actual 2",
+      "value": 0,
+      "unit": "USD / period",
+      "min": -1000000
+    },
+    {
+      "id": "actual_3",
+      "label": "actual 3",
+      "value": 20,
+      "unit": "USD / period",
+      "min": -1000000
+    }
+  ],
+  "calculations": [
+    {
+      "id": "error_1",
+      "label": "error 1",
+      "op": "sub",
+      "args": [
+        "actual_1",
+        "forecast_1"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "error_2",
+      "label": "error 2",
+      "op": "sub",
+      "args": [
+        "actual_2",
+        "forecast_2"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "error_3",
+      "label": "error 3",
+      "op": "sub",
+      "args": [
+        "actual_3",
+        "forecast_3"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "abs_1",
+      "label": "abs 1",
+      "op": "abs",
+      "args": [
+        "error_1"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "abs_2",
+      "label": "abs 2",
+      "op": "abs",
+      "args": [
+        "error_2"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "abs_3",
+      "label": "abs 3",
+      "op": "abs",
+      "args": [
+        "error_3"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "mae",
+      "label": "mae",
+      "op": "mean",
+      "args": [
+        "abs_1",
+        "abs_2",
+        "abs_3"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "bias_total",
+      "label": "bias total",
+      "op": "sum",
+      "args": [
+        "error_1",
+        "error_2",
+        "error_3"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "forecast_close",
+      "label": "forecast close",
+      "op": "sum",
+      "args": [
+        "opening",
+        "forecast_1",
+        "forecast_2",
+        "forecast_3"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "actual_close",
+      "label": "actual close",
+      "op": "sum",
+      "args": [
+        "opening",
+        "actual_1",
+        "actual_2",
+        "actual_3"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "drift",
+      "label": "drift",
+      "op": "sub",
+      "args": [
+        "actual_close",
+        "forecast_close"
+      ],
+      "unit": "USD / stated period"
+    }
+  ],
+  "outputs": [
+    "mae",
+    "bias_total",
+    "forecast_close",
+    "actual_close",
+    "drift"
+  ],
+  "expected": {
+    "mae": 10,
+    "bias_total": -10,
+    "forecast_close": 140,
+    "actual_close": 130,
+    "drift": -10
+  },
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "inputs": {
+        "actual_3": 50
+      },
+      "expected": {
+        "mae": 13.333333333333334,
+        "bias_total": 20,
+        "actual_close": 160,
+        "drift": 20
+      }
+    },
+    {
+      "name": "Missing required evidence refuses calculation",
+      "inputs": {
+        "opening": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only, in USD unless labelled otherwise. This is a focused schedule with explicit period and timing assumptions. Rebuild from actual dated sources before use; the example is not a full financial forecast."
+}

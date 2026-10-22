@@ -1,0 +1,141 @@
+{
+  "inputs": [
+    {
+      "id": "revenue",
+      "label": "Revenue",
+      "value": 1000,
+      "unit": "USD million",
+      "min": 0.001,
+      "max": 1000000000
+    },
+    {
+      "id": "cogs",
+      "label": "Reported COGS",
+      "value": 700,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "charge",
+      "label": "Inventory charges in COGS",
+      "value": 30,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "reversal",
+      "label": "Permitted reversals in COGS",
+      "value": 10,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    }
+  ],
+  "calculations": [
+    {
+      "id": "reportedProfit",
+      "label": "Reported gross profit",
+      "op": "sub",
+      "args": [
+        "revenue",
+        "cogs"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "reportedMargin",
+      "label": "Reported gross margin",
+      "op": "div",
+      "args": [
+        "reportedProfit",
+        "revenue"
+      ],
+      "unit": "decimal"
+    },
+    {
+      "id": "netCharge",
+      "label": "Net inventory charge",
+      "op": "sub",
+      "args": [
+        "charge",
+        "reversal"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "excludedCogs",
+      "label": "COGS excluding disclosed net charge",
+      "op": "sub",
+      "args": [
+        "cogs",
+        "netCharge"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "excludedProfit",
+      "label": "Charge-excluded gross profit",
+      "op": "sub",
+      "args": [
+        "revenue",
+        "excludedCogs"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "excludedMargin",
+      "label": "Charge-excluded gross margin",
+      "op": "div",
+      "args": [
+        "excludedProfit",
+        "revenue"
+      ],
+      "unit": "decimal"
+    },
+    {
+      "id": "marginEffect",
+      "label": "Margin impact of net charge",
+      "op": "div",
+      "args": [
+        "netCharge",
+        "revenue"
+      ],
+      "unit": "decimal"
+    }
+  ],
+  "outputs": [
+    "reportedMargin",
+    "netCharge",
+    "excludedMargin",
+    "marginEffect"
+  ],
+  "expected": {
+    "reportedMargin": 0.3,
+    "netCharge": 20,
+    "excludedMargin": 0.32,
+    "marginEffect": 0.02
+  },
+  "cases": [
+    {
+      "name": "No permitted reversal",
+      "inputs": {
+        "reversal": 0
+      },
+      "expected": {
+        "netCharge": 30,
+        "excludedMargin": 0.33,
+        "marginEffect": 0.03
+      }
+    },
+    {
+      "name": "Required source input missing",
+      "inputs": {
+        "revenue": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures. Reported margin(1,000-700)/1,000=30%. Charge30 less reversal10 is20, or2 percentage points; charge-excluded margin32%. A zero reversal gives a30 charge and33% charge-excluded margin."
+}

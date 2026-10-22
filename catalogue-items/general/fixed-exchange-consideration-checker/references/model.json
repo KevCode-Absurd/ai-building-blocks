@@ -1,0 +1,107 @@
+{
+  "inputs": [
+    {
+      "id": "targetShares",
+      "label": "target Shares",
+      "value": 100,
+      "unit": "million shares",
+      "min": 0
+    },
+    {
+      "id": "exchangeRatio",
+      "label": "exchange Ratio",
+      "value": 0.5,
+      "unit": "acquirer shares per target share",
+      "min": 0
+    },
+    {
+      "id": "acquirerPrice",
+      "label": "acquirer Price",
+      "value": 20,
+      "unit": "USD per share",
+      "min": 0
+    },
+    {
+      "id": "cashPerShare",
+      "label": "cash Per Share",
+      "value": 2,
+      "unit": "USD per target share",
+      "min": 0
+    }
+  ],
+  "calculations": [
+    {
+      "id": "issuedShares",
+      "label": "issued Shares",
+      "op": "mul",
+      "args": [
+        "targetShares",
+        "exchangeRatio"
+      ],
+      "unit": "million shares"
+    },
+    {
+      "id": "stockValue",
+      "label": "stock Value",
+      "op": "mul",
+      "args": [
+        "issuedShares",
+        "acquirerPrice"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "cashValue",
+      "label": "cash Value",
+      "op": "mul",
+      "args": [
+        "targetShares",
+        "cashPerShare"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "totalValue",
+      "label": "total Value",
+      "op": "add",
+      "args": [
+        "stockValue",
+        "cashValue"
+      ],
+      "unit": "USD millions"
+    }
+  ],
+  "outputs": [
+    "issuedShares",
+    "stockValue",
+    "cashValue",
+    "totalValue"
+  ],
+  "expected": {
+    "issuedShares": 50,
+    "stockValue": 1000,
+    "cashValue": 200,
+    "totalValue": 1200
+  },
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "inputs": {
+        "acquirerPrice": 30
+      },
+      "expected": {
+        "issuedShares": 50,
+        "stockValue": 1500,
+        "totalValue": 1700
+      }
+    },
+    {
+      "name": "Missing required number",
+      "inputs": {
+        "targetShares": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only. 100 target shares at0.5 issue50 acquirer shares; price20 and cash2 per target give1200. Price30 gives1700."
+}

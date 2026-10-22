@@ -1,0 +1,99 @@
+{
+  "inputs": [
+    {
+      "id": "fcfe",
+      "label": "Reconciled equity free cash flow",
+      "value": 120,
+      "unit": "USD million",
+      "min": -1000000000,
+      "max": 1000000000
+    },
+    {
+      "id": "dividends",
+      "label": "Cash dividends",
+      "value": 40,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "buybacks",
+      "label": "Executed repurchases",
+      "value": 100,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "issuance",
+      "label": "Equity issuance proceeds",
+      "value": 10,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    }
+  ],
+  "calculations": [
+    {
+      "id": "netBuybacks",
+      "label": "Repurchases less issuance",
+      "op": "sub",
+      "args": [
+        "buybacks",
+        "issuance"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "netDistributions",
+      "label": "Net shareholder distributions",
+      "op": "add",
+      "args": [
+        "dividends",
+        "netBuybacks"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "retainedCash",
+      "label": "Equity cash flow less distributions",
+      "op": "sub",
+      "args": [
+        "fcfe",
+        "netDistributions"
+      ],
+      "unit": "USD million"
+    }
+  ],
+  "outputs": [
+    "netBuybacks",
+    "netDistributions",
+    "retainedCash"
+  ],
+  "expected": {
+    "netBuybacks": 90,
+    "netDistributions": 130,
+    "retainedCash": -10
+  },
+  "cases": [
+    {
+      "name": "Lower executed repurchases",
+      "inputs": {
+        "buybacks": 70
+      },
+      "expected": {
+        "netBuybacks": 60,
+        "netDistributions": 100,
+        "retainedCash": 20
+      }
+    },
+    {
+      "name": "Missing required source input",
+      "inputs": {
+        "fcfe": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures. $40 dividends + $100 repurchases - $10 issuance = $130 distributions, exceeding $120 FCFE by $10. Reducing repurchases to $70 leaves $20 after $100 distributions."
+}

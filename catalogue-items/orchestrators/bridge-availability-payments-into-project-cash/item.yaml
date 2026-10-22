@@ -1,0 +1,42 @@
+slug: bridge-availability-payments-into-project-cash
+name: Bridge availability payments into project cash
+summary: A contract payment and project cash eligibility bridge
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: spreadsheet
+    required: true
+  - type: audit_report
+    required: true
+  - type: document
+    required: true
+uses:
+  - availability-payment-deduction-checker
+  - project-cash-available-bridge
+steps:
+  - uses: availability-payment-deduction-checker
+    note: Reconcile the certified gross payment and approved capped deductions. Pass net certified payment and actual bank-received timing separately; do not transfer the example operating-cash subtotal as new gross receipts.
+  - uses: project-cash-available-bridge
+    note: Build CFADS from actual eligible payment receipts, deducting operating payments and financing-definition adjustments once. Tie the opening payment bridge to receipts and list unreceived amounts or contractual disputes as gaps. Declare the source basis. For actual cash receipts/payments or already-cash operating results, do not deduct receivable/payable working-capital settlement again; explicitly omit it only after reconciliation. For accrual revenue/cost proxies, use the signed working-capital bridge with noncash expenses excluded. Never combine these two routes.
+execution: coordinator
+origin: own
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/finance-expansion
+example_pending: true
+warnings:
+  - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+credits:
+  - title: Original finance methods and model fixtures
+    by: AI Blocks contributors
+    used: Original instructions, calculations and illustrative examples. External method references are linked separately and retain their own rights.

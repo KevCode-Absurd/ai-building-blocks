@@ -1,0 +1,6 @@
+{
+  "cash_available": 200,
+  "senior_due": 100,
+  "reserve_requirement": 30,
+  "junior_due": 50
+}

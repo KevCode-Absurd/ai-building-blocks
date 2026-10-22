@@ -1,0 +1,76 @@
+new_slug: reinvestment-supported-growth
+name: Reinvestment-supported growth schedule
+headline: Reinvestment-supported growth schedule
+summary: Connect operating growth assumptions to actual reinvestment and incremental capital returns.
+job: money-and-investing
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: A reinvestment-rate and supported-growth schedule with financing feasibility notes. Share nOPAT, net capital expenditure, operating working-capital investment and an evidenced incremental return assumption.
+explain: |-
+  A reinvestment-rate and supported-growth schedule with financing feasibility notes.
+
+  Public equity valuation. Illustrative figures.(20+5)/100=25% reinvestment.25%×20%=5% growth. Net capex30 makes reinvestment35 and growth7% under the same return assumption.
+when:
+  - You need a reinvestment-rate and supported-growth schedule with financing feasibility notes.
+  - You work on public equity valuation and need traceable calculations.
+  - A reviewer needs to trace the result back to inputs and assumptions.
+you_give:
+  - NOPAT, net capital expenditure, operating working-capital investment and an evidenced incremental return assumption.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - A reinvestment-rate and supported-growth schedule with financing feasibility notes.
+  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: 1. Reconcile NOPAT, net capex and operating working capital on the same business perimeter; separate acquisitions
+    text: Reconcile NOPAT, net capex and operating working capital on the same business perimeter; separate acquisitions.
+  - title: 2. Divide net reinvestment by positive NOPAT and multiply by the incremental return assumed on new capital
+    text: Divide net reinvestment by positive NOPAT and multiply by the incremental return assumed on new capital.
+  - title: 3. Compare the result with forecast growth; distinguish historical average returns from prospective incremental returns and efficiency gains
+    text: Compare the result with forecast growth; distinguish historical average returns from prospective incremental returns and efficiency gains.
+output_shape: |-
+  A reinvestment-rate and supported-growth schedule with financing feasibility notes.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: Depreciation is deducted exactly once in net capex.
+judge:
+  - Depreciation is deducted exactly once in net capex.
+  - Efficiency-driven growth is separated from growth requiring new capital.
+  - Trace dates, currency, scale, accounting perimeter and source pages for every material input.
+  - Keep the focused illustration separate from a complete investment conclusion; list unresolved checks.
+test:
+  - Run the included baseline and changed-input fixtures, then compare with the stated expected results.
+  - Remove a required input and confirm the affected calculation refuses to invent a zero.
+  - Recalculate the workbook after changing an input and inspect the saved output.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: Node.js 20 or later
+      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

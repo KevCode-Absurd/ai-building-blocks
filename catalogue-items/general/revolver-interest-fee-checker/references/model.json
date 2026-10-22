@@ -1,0 +1,132 @@
+{
+  "inputs": [
+    {
+      "id": "average_drawn",
+      "label": "average drawn",
+      "value": 500,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "average_fee_undrawn",
+      "label": "average fee undrawn",
+      "value": 500,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "interest_rate",
+      "label": "interest rate",
+      "value": 0.12,
+      "unit": "annual decimal",
+      "min": 0,
+      "max": 2
+    },
+    {
+      "id": "commitment_fee_rate",
+      "label": "commitment fee rate",
+      "value": 0.012,
+      "unit": "annual decimal",
+      "min": 0,
+      "max": 1
+    },
+    {
+      "id": "days",
+      "label": "days",
+      "value": 30,
+      "unit": "days",
+      "min": 0,
+      "max": 366
+    },
+    {
+      "id": "basis",
+      "label": "basis",
+      "value": 360,
+      "unit": "days / year",
+      "min": 1,
+      "max": 366
+    },
+    {
+      "id": "other_fees",
+      "label": "other fees",
+      "value": 0,
+      "unit": "USD / stated period",
+      "min": 0
+    }
+  ],
+  "calculations": [
+    {
+      "id": "fraction",
+      "label": "fraction",
+      "op": "div",
+      "args": [
+        "days",
+        "basis"
+      ],
+      "unit": "year fraction"
+    },
+    {
+      "id": "interest",
+      "label": "interest",
+      "op": "mul",
+      "args": [
+        "average_drawn",
+        "interest_rate",
+        "fraction"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "commitment_fee",
+      "label": "commitment fee",
+      "op": "mul",
+      "args": [
+        "average_fee_undrawn",
+        "commitment_fee_rate",
+        "fraction"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "total_charge",
+      "label": "total charge",
+      "op": "sum",
+      "args": [
+        "interest",
+        "commitment_fee",
+        "other_fees"
+      ],
+      "unit": "USD / stated period"
+    }
+  ],
+  "outputs": [
+    "interest",
+    "commitment_fee",
+    "total_charge"
+  ],
+  "expected": {
+    "interest": 5,
+    "commitment_fee": 0.5,
+    "total_charge": 5.5
+  },
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "inputs": {
+        "interest_rate": 0.24
+      },
+      "expected": {
+        "interest": 10,
+        "total_charge": 10.5
+      }
+    },
+    {
+      "name": "Missing or invalid required input",
+      "inputs": {
+        "average_drawn": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only in USD unless labelled otherwise. A focused schedule using explicit period, rate and timing conventions; not a full financing model or an approval decision."
+}

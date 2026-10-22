@@ -1,0 +1,17 @@
+{
+  "slug": "constant-currency-revenue-bridge",
+  "modelSha256": "e96f660805b2aee0297636e3eed141454792596f5359cfd051ab400cd2e0f3db",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Exchange rate unchanged",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required reported input",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "inputs": [
+    {
+      "id": "obligation0",
+      "label": "Opening defined-benefit obligation",
+      "value": 100,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "assets0",
+      "label": "Opening plan assets",
+      "value": 80,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "obligation1",
+      "label": "Closing obligation",
+      "value": 120,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "assets1",
+      "label": "Closing plan assets",
+      "value": 90,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    },
+    {
+      "id": "contribution",
+      "label": "Employer cash contributions",
+      "value": 10,
+      "unit": "USD million",
+      "min": 0,
+      "max": 1000000000
+    }
+  ],
+  "calculations": [
+    {
+      "id": "deficit0",
+      "label": "Opening deficit",
+      "op": "sub",
+      "args": [
+        "obligation0",
+        "assets0"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "deficit1",
+      "label": "Closing deficit",
+      "op": "sub",
+      "args": [
+        "obligation1",
+        "assets1"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "change",
+      "label": "Deficit increase",
+      "op": "sub",
+      "args": [
+        "deficit1",
+        "deficit0"
+      ],
+      "unit": "USD million"
+    },
+    {
+      "id": "nonContribution",
+      "label": "Total non-contribution deficit movement",
+      "op": "add",
+      "args": [
+        "change",
+        "contribution"
+      ],
+      "unit": "USD million"
+    }
+  ],
+  "outputs": [
+    "deficit0",
+    "deficit1",
+    "change",
+    "nonContribution"
+  ],
+  "expected": {
+    "deficit0": 20,
+    "deficit1": 30,
+    "change": 10,
+    "nonContribution": 20
+  },
+  "cases": [
+    {
+      "name": "Lower actual contribution with same reported balances",
+      "inputs": {
+        "contribution": 5
+      },
+      "expected": {
+        "nonContribution": 15
+      }
+    },
+    {
+      "name": "Required source input missing",
+      "inputs": {
+        "obligation0": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures. Deficit rises from100-80=20 to120-90=30, an increase10. With contributions10 the other deficit-increasing movements total20. Contributions5 with the same observed balances imply other movements15."
+}

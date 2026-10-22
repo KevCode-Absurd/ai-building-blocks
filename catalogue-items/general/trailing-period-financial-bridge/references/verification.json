@@ -1,0 +1,17 @@
+{
+  "slug": "trailing-period-financial-bridge",
+  "modelSha256": "4d222ded884bf7088273cec181135ba00496cf4654b1c51c5927b878f5321637",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Higher current YTD flow",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required reported input",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

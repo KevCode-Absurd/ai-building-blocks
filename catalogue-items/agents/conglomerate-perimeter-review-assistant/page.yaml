@@ -1,0 +1,72 @@
+new_slug: conglomerate-perimeter-review-assistant
+name: Conglomerate perimeter review assistant
+headline: Conglomerate perimeter review assistant
+summary: Review consolidation and ownership changes before reusing segment or holding values.
+job: money-and-investing
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: A perimeter-change memo, treatment ledger and linked valuation-input schedules. Share the prior accepted model and review log, newly supplied dated filings, changed source notes and the user-defined materiality threshold.
+explain: |-
+  A perimeter-change memo, treatment ledger and linked valuation-input schedules.
+
+  Public-market evidence review. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+when:
+  - You need a perimeter-change memo, treatment ledger and linked valuation-input schedules.
+  - You work on public-market evidence review and need traceable calculations.
+  - New evidence needs comparison with the prior dated review.
+you_give:
+  - The prior accepted model and review log, newly supplied dated filings, changed source notes and the user-defined materiality threshold.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - A perimeter-change memo, treatment ledger and linked valuation-input schedules.
+  - Original step files, financial assumptions, source coverage and a governing handoff summary.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: Reconcile conglomerate valuation perimeters
+    text: Run the governing workflow when When the user supplies a new segment note, ownership change or acquisition/disposal filing, compare the legal/economic perimeter with the prior accepted valuation model.
+  - title: Investment property NAV bridge
+    text: If an identified nonoperating property holding has a supplied dated appraisal, build a separately labeled property NAV bridge. Otherwise retain the asset as missing valuation evidence; do not invent a property yield or value.
+output_shape: |-
+  A perimeter-change memo, treatment ledger and linked valuation-input schedules.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: Every holding has one treatment, profit reconciles and liabilities/assets enter once; changed ownership is source-backed and unavailable values do not receive automatic peer estimates.
+judge:
+  - Every holding has one treatment, profit reconciles and liabilities/assets enter once; changed ownership is source-backed and unavailable values do not receive automatic peer estimates.
+  - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
+  - Reconcile opening balances, additions, deductions and closing balances. Match enterprise or equity cash flows to the corresponding discount rate.
+  - Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
+test:
+  - Try a small sourced case and inspect every component handoff.
+  - Remove one required source and confirm the affected step stops.
+  - Change a currency, date or accounting definition and check the conflict stays visible.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

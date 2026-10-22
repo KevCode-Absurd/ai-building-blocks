@@ -1,0 +1,128 @@
+{
+  "inputs": [
+    {
+      "id": "equityValue",
+      "label": "equity Value",
+      "value": 160,
+      "unit": "USD millions",
+      "min": 0
+    },
+    {
+      "id": "hurdle",
+      "label": "hurdle",
+      "value": 100,
+      "unit": "USD millions",
+      "min": 0
+    },
+    {
+      "id": "participation",
+      "label": "participation",
+      "value": 0.1,
+      "unit": "fraction",
+      "min": 0,
+      "max": 1
+    },
+    {
+      "id": "vestedFraction",
+      "label": "vested Fraction",
+      "value": 0.75,
+      "unit": "fraction",
+      "min": 0,
+      "max": 1
+    }
+  ],
+  "calculations": [
+    {
+      "id": "rawResidual",
+      "label": "raw Residual",
+      "op": "sub",
+      "args": [
+        "equityValue",
+        "hurdle"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "eligibleResidual",
+      "label": "eligible Residual",
+      "op": "max",
+      "args": [
+        0,
+        "rawResidual"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "managementPayout",
+      "label": "management Payout",
+      "op": "mul",
+      "args": [
+        "eligibleResidual",
+        "participation",
+        "vestedFraction"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "otherHolders",
+      "label": "other Holders",
+      "op": "sub",
+      "args": [
+        "equityValue",
+        "managementPayout"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "shortfallRaw",
+      "label": "shortfall Raw",
+      "op": "sub",
+      "args": [
+        "hurdle",
+        "equityValue"
+      ],
+      "unit": "USD millions"
+    },
+    {
+      "id": "hurdleShortfall",
+      "label": "hurdle Shortfall",
+      "op": "max",
+      "args": [
+        0,
+        "shortfallRaw"
+      ],
+      "unit": "USD millions"
+    }
+  ],
+  "outputs": [
+    "managementPayout",
+    "otherHolders",
+    "hurdleShortfall"
+  ],
+  "expected": {
+    "managementPayout": 4.5,
+    "otherHolders": 155.5,
+    "hurdleShortfall": 0
+  },
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "inputs": {
+        "equityValue": 80
+      },
+      "expected": {
+        "managementPayout": 0,
+        "otherHolders": 80,
+        "hurdleShortfall": 20
+      }
+    },
+    {
+      "name": "Missing required number",
+      "inputs": {
+        "equityValue": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only. Equity160 less hurdle100 gives60;10% participation with75% vesting pays4.5. Equity80 pays management zero."
+}

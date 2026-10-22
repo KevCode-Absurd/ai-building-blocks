@@ -1,0 +1,17 @@
+{
+  "slug": "no-catchup-waterfall-checker",
+  "modelSha256": "9d3c6571d6747a0c0a28b79ed03f3fe61b71b98f535920953e66fab031b2ae86",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required number",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

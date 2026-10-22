@@ -1,0 +1,17 @@
+{
+  "slug": "revolver-availability-checker",
+  "modelSha256": "1145347f4d30c2bc33a543bb143fcdde6357b37addd2a7742af19082790ee26c",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing or invalid required input",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

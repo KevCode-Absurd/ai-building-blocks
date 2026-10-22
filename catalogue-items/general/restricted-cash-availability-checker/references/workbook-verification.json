@@ -1,0 +1,32 @@
+{
+  "engine": "Artifact Tool",
+  "scope": "Illustrative workbook calculations, not source truth or an actual investment conclusion. Native Microsoft Excel application execution is not claimed.",
+  "modelSha256": "bac0c2d2dd231d36ca6715d5b89661a05a004703a0ad366dacc9039e790174c7",
+  "xlsxSha256": "e014bbfdac3fca5e1fd3f35b73a9335e62ca1b726b23e83f0c01e19c993de517",
+  "baseline": "pass",
+  "changedInputCase": "Restriction released by supplied evidence",
+  "invalidInputCase": "Missing gross cash",
+  "cases": [
+    {
+      "name": "Restriction released by supplied evidence",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing gross cash",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ],
+  "reopenedAndRecalculated": true,
+  "rendered": true,
+  "visualReview": "pass",
+  "workbookSpecSha256": "91991d087bfd2be9563ad3fdd94324795ae56161dc5755c10ee8fa1007456f0c",
+  "visualEvidence": {
+    "report": "reports/finance-operating-credit-peer-review.json",
+    "reportSha256": "ac57e1e1d010a9b5b9e64c1e84ef87d22207254a2844e5e5a205578608d66aa6",
+    "previewSha256": "74d13a9229758acd537a3c795e8842fbb6edb3a6fd63ff631bf7b0ab0c2f6043",
+    "sheet": "Model",
+    "sourceSpecSha256": "8df0ab20a9e99a01e4ae7a4f94ba1cf7e5dd8e1395866519f45347a9ea4f18c8"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "cost_pool": 1000,
+  "normal_capacity": 100,
+  "department_a_units": 40,
+  "department_b_units": 30
+}

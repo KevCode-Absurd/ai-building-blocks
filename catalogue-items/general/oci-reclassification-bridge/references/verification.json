@@ -1,0 +1,17 @@
+{
+  "slug": "oci-reclassification-bridge",
+  "modelSha256": "30c88632f933c9cbd29dbab73a804f8f371aafa0b2b31108a65dd94dfdf032a5",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "A loss is recycled instead",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Required source input missing",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

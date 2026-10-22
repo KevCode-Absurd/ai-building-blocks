@@ -1,0 +1,164 @@
+{
+  "inputs": [
+    {
+      "id": "commitment",
+      "label": "commitment",
+      "value": 100,
+      "unit": "USD thousands",
+      "min": 0
+    },
+    {
+      "id": "funded",
+      "label": "funded",
+      "value": 40,
+      "unit": "USD thousands",
+      "min": 0
+    },
+    {
+      "id": "request",
+      "label": "request",
+      "value": 30,
+      "unit": "USD thousands",
+      "min": 0
+    },
+    {
+      "id": "approved",
+      "label": "approved",
+      "value": 25,
+      "unit": "USD thousands",
+      "min": 0
+    },
+    {
+      "id": "fees",
+      "label": "fees",
+      "value": 2,
+      "unit": "USD thousands",
+      "min": 0
+    }
+  ],
+  "calculations": [
+    {
+      "id": "undrawn",
+      "label": "undrawn",
+      "op": "sub",
+      "args": [
+        "commitment",
+        "funded"
+      ],
+      "unit": "USD thousands"
+    },
+    {
+      "id": "available",
+      "label": "available",
+      "op": "max",
+      "args": [
+        0,
+        "undrawn"
+      ],
+      "unit": "USD thousands"
+    },
+    {
+      "id": "draw",
+      "label": "draw",
+      "op": "min",
+      "args": [
+        "request",
+        "approved",
+        "available"
+      ],
+      "unit": "USD thousands"
+    },
+    {
+      "id": "netCash",
+      "label": "net Cash",
+      "op": "sub",
+      "args": [
+        "draw",
+        "fees"
+      ],
+      "unit": "USD thousands"
+    },
+    {
+      "id": "remaining",
+      "label": "remaining",
+      "op": "sub",
+      "args": [
+        "available",
+        "draw"
+      ],
+      "unit": "USD thousands"
+    },
+    {
+      "id": "unsupported",
+      "label": "unsupported",
+      "op": "sub",
+      "args": [
+        "request",
+        "draw"
+      ],
+      "unit": "USD thousands"
+    }
+  ],
+  "outputs": [
+    "draw",
+    "netCash",
+    "remaining",
+    "unsupported"
+  ],
+  "expected": {
+    "draw": 25,
+    "netCash": 23,
+    "remaining": 35,
+    "unsupported": 5
+  },
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "inputs": {
+        "approved": 30
+      },
+      "expected": {
+        "draw": 30,
+        "netCash": 28,
+        "remaining": 30,
+        "unsupported": 0
+      }
+    },
+    {
+      "name": "Missing required number",
+      "inputs": {
+        "commitment": null
+      },
+      "error": true
+    },
+    {
+      "name": "Refuse draw fees exceeding authorized funding",
+      "inputs": {
+        "fees": 30
+      },
+      "error": true
+    },
+    {
+      "name": "Refuse already funded above commitment",
+      "inputs": {
+        "funded": 110
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only. 100 less40 leaves60 undrawn. Approval25 limits request30, yielding23 after2 fees. Approval30 yields28 cash.",
+  "constraints": [
+    {
+      "left": "funded",
+      "operator": "lte",
+      "right": "commitment",
+      "message": "Previously funded capital cannot exceed the signed commitment."
+    },
+    {
+      "left": "fees",
+      "operator": "lte",
+      "right": "draw",
+      "message": "This simplified draw requires fees no greater than the authorized draw; separate funding is unsupported."
+    }
+  ]
+}

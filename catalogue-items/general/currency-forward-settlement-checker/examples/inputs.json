@@ -1,0 +1,7 @@
+{
+  "forward_notional": 100,
+  "payable_foreign": 120,
+  "forward_rate": 1.1,
+  "settlement_spot": 1.2,
+  "fees": 2
+}

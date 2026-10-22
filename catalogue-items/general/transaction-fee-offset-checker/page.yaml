@@ -1,0 +1,76 @@
+new_slug: transaction-fee-offset-checker
+name: Transaction fee offset checker
+headline: Transaction fee offset checker
+summary: Reconcile eligible portfolio fees, carryforward offsets and the management fee still due.
+job: money-and-investing
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: Offset used, net management fee and carryforward roll-forward. Share gross management fee, eligible received transaction fees, contractual offset percentage and verified beginning offset carryforward.
+explain: |-
+  Offset used, net management fee and carryforward roll-forward.
+
+  Private fund fees. Illustrative figures only. Fees6 plus prior credit2 offset8 of10 due. Eligible fees12 plus2 offset10 and leave4 credit.
+when:
+  - You need offset used, net management fee and carryforward roll-forward.
+  - You work on private fund fees and need traceable calculations.
+  - A reviewer needs to trace the result back to inputs and assumptions.
+you_give:
+  - Gross management fee, eligible received transaction fees, contractual offset percentage and verified beginning offset carryforward.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - Offset used, net management fee and carryforward roll-forward.
+  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: 1. Map every received fee to the LPA eligible categories and fund allocation; separate prohibited or excluded interest and broken-deal costs
+    text: Map every received fee to the LPA eligible categories and fund allocation; separate prohibited or excluded interest and broken-deal costs.
+  - title: 2. Apply the actual offset percentage to eligible fees and add beginning carryforward
+    text: Apply the actual offset percentage to eligible fees and add beginning carryforward.
+  - title: 3. Use offsets only up to gross fee; carry unused credit forward only if the LPA allows it and reconcile the ending balance
+    text: Use offsets only up to gross fee; carry unused credit forward only if the LPA allows it and reconcile the ending balance.
+output_shape: |-
+  Offset used, net management fee and carryforward roll-forward.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: Offsets are not inferred from gross cash receipts without eligibility and allocation evidence.
+judge:
+  - Offsets are not inferred from gross cash receipts without eligibility and allocation evidence.
+  - Used plus ending carryforward equals beginning credit plus newly eligible offsets.
+  - Trace each input to its dated signed source, currency, scale and period.
+  - Reconcile outputs; preserve MISSING and CHECKS MISSED rather than guessing zero.
+test:
+  - Run the included baseline and changed-input fixtures, then compare with the stated expected results.
+  - Remove a required input and confirm the affected calculation refuses to invent a zero.
+  - Recalculate the workbook after changing an input and inspect the saved output.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: Node.js 20 or later
+      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

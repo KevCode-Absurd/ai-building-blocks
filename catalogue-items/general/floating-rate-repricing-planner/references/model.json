@@ -1,0 +1,134 @@
+{
+  "inputs": [
+    {
+      "id": "floating_a",
+      "label": "floating a",
+      "value": 1000,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "floating_b",
+      "label": "floating b",
+      "value": 500,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "shock_a",
+      "label": "shock a",
+      "value": 0.01,
+      "unit": "annual decimal",
+      "min": -1,
+      "max": 1
+    },
+    {
+      "id": "shock_b",
+      "label": "shock b",
+      "value": 0.02,
+      "unit": "annual decimal",
+      "min": -1,
+      "max": 1
+    },
+    {
+      "id": "affected_a",
+      "label": "affected a",
+      "value": 0.5,
+      "unit": "year fraction",
+      "min": 0,
+      "max": 1
+    },
+    {
+      "id": "affected_b",
+      "label": "affected b",
+      "value": 0.25,
+      "unit": "year fraction",
+      "min": 0,
+      "max": 1
+    },
+    {
+      "id": "base_interest",
+      "label": "base interest",
+      "value": 60,
+      "unit": "USD / stated period",
+      "min": 0
+    }
+  ],
+  "calculations": [
+    {
+      "id": "increment_a",
+      "label": "increment a",
+      "op": "mul",
+      "args": [
+        "floating_a",
+        "shock_a",
+        "affected_a"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "increment_b",
+      "label": "increment b",
+      "op": "mul",
+      "args": [
+        "floating_b",
+        "shock_b",
+        "affected_b"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "increment_total",
+      "label": "increment total",
+      "op": "sum",
+      "args": [
+        "increment_a",
+        "increment_b"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "scenario_interest",
+      "label": "scenario interest",
+      "op": "add",
+      "args": [
+        "base_interest",
+        "increment_total"
+      ],
+      "unit": "USD / stated period"
+    }
+  ],
+  "outputs": [
+    "increment_a",
+    "increment_b",
+    "increment_total",
+    "scenario_interest"
+  ],
+  "expected": {
+    "increment_a": 5,
+    "increment_b": 2.5,
+    "increment_total": 7.5,
+    "scenario_interest": 67.5
+  },
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "inputs": {
+        "shock_a": 0.02
+      },
+      "expected": {
+        "increment_a": 10,
+        "increment_total": 12.5,
+        "scenario_interest": 72.5
+      }
+    },
+    {
+      "name": "Missing required evidence refuses calculation",
+      "inputs": {
+        "floating_a": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only, in USD unless labelled otherwise. This is a focused schedule with explicit period and timing assumptions. Rebuild from actual dated sources before use; the example is not a full financial forecast."
+}

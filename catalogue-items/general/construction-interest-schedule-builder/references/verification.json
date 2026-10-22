@@ -1,0 +1,17 @@
+{
+  "slug": "construction-interest-schedule-builder",
+  "modelSha256": "5ccf081866005871f7412c32cd6988dcd1a3271f084682c61dff71dc5adceb85",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing or invalid required input",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

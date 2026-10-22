@@ -1,0 +1,76 @@
+new_slug: treasury-stock-option-dilution
+name: Treasury-stock option dilution
+headline: Treasury-stock option dilution
+summary: Use option terms and average share prices to reconcile incremental diluted shares.
+job: money-and-investing
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: A treasury-stock-method option schedule with out-of-money and diluted-EPS checks. Share weighted options, exercise proceeds including applicable assumed proceeds, average market price, basic weighted shares and continuing ordinary earnings.
+explain: |-
+  A treasury-stock-method option schedule with out-of-money and diluted-EPS checks.
+
+  Public equity and share counts. Illustrative figures. Ten million options × $6 yields $60 million proceeds, buying six million shares at $10. Four million incremental shares produce 208 / 104 = $2 EPS. At $10 exercise price there is no incremental dilution.
+when:
+  - You need a treasury-stock-method option schedule with out-of-money and diluted-EPS checks.
+  - You work on public equity and share counts and need traceable calculations.
+  - A reviewer needs to trace the result back to inputs and assumptions.
+you_give:
+  - Weighted options, exercise proceeds including applicable assumed proceeds, average market price, basic weighted shares and continuing ordinary earnings.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - A treasury-stock-method option schedule with out-of-money and diluted-EPS checks.
+  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: 1. Read the option terms and identify instruments eligible for the treasury-stock method; determine all assumed proceeds required by the applicable standard
+    text: Read the option terms and identify instruments eligible for the treasury-stock method; determine all assumed proceeds required by the applicable standard.
+  - title: 2. Divide assumed proceeds by average period market price to obtain hypothetical repurchases; incremental shares are the positive excess of options over repurchases
+    text: Divide assumed proceeds by average period market price to obtain hypothetical repurchases; incremental shares are the positive excess of options over repurchases.
+  - title: 3. Add eligible incremental shares to basic weighted shares, calculate candidate EPS and check anti-dilution and time weighting before inclusion
+    text: Add eligible incremental shares to basic weighted shares, calculate candidate EPS and check anti-dilution and time weighting before inclusion.
+output_shape: |-
+  A treasury-stock-method option schedule with out-of-money and diluted-EPS checks.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: Average period price is used rather than the closing price.
+judge:
+  - Average period price is used rather than the closing price.
+  - Out-of-money options contribute zero incremental shares; assumed proceeds include required non-exercise components where applicable.
+  - Tie every material input to its filing page, period, currency and scale.
+  - Keep illustrative figures separate from sourced issuer facts; report unresolved checks.
+test:
+  - Run the included baseline and changed-input fixtures, then compare with the stated expected results.
+  - Remove a required input and confirm the affected calculation refuses to invent a zero.
+  - Recalculate the workbook after changing an input and inspect the saved output.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: Node.js 20 or later
+      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

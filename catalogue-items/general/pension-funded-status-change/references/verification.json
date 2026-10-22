@@ -1,0 +1,17 @@
+{
+  "slug": "pension-funded-status-change",
+  "modelSha256": "abf394b345c4cc513d27bc05d51fe2c53794e60d97c095956bd64cd6b5069ce5",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Lower actual contribution with same reported balances",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Required source input missing",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

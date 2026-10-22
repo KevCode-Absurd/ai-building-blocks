@@ -1,0 +1,17 @@
+{
+  "slug": "currency-exposure-netting-checker",
+  "modelSha256": "d277a677136e706fea2facb6e119ded1e82146706c3fa9d10cab42373a314c2c",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required evidence refuses calculation",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

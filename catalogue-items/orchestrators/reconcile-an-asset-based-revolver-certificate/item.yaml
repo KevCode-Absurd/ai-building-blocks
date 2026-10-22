@@ -1,0 +1,45 @@
+slug: reconcile-an-asset-based-revolver-certificate
+name: Reconcile an asset based revolver certificate
+summary: A collateral certificate reconciliation and signed revolver availability
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: spreadsheet
+    required: true
+  - type: audit_report
+    required: true
+  - type: document
+    required: true
+uses:
+  - receivables-borrowing-base-builder
+  - inventory-borrowing-base-builder
+  - revolver-availability-checker
+steps:
+  - uses: receivables-borrowing-base-builder
+    note: Reconcile eligible receivables and contractual concentration deductions to the aging control total. Pass the net receivables advance plus a reserve ledger to the facility bridge.
+  - uses: inventory-borrowing-base-builder
+    note: Calculate inventory advance on the same certificate date using matching cost and liquidation-value populations. Pass net advance and already-applied reserves, identifying appraisal coverage gaps.
+  - uses: revolver-availability-checker
+    note: Combine only compatible net collateral advances, cap by commitment and deduct actual funded/contingent usage and additional nonduplicated blocks. Return signed capacity and all draw-condition gaps without submitting or certifying the certificate.
+execution: coordinator
+origin: own
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/finance-expansion
+example_pending: true
+warnings:
+  - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+credits:
+  - title: Original finance methods and model fixtures
+    by: AI Blocks contributors
+    used: Original instructions, calculations and illustrative examples. External method references are linked separately and retain their own rights.

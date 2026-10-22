@@ -1,0 +1,17 @@
+{
+  "slug": "deal-ebitda-addback-checker",
+  "modelSha256": "72bb5f232398be7885338eb14ec20b18d3042ef65722e96d1bcee2d68f62d01f",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required number",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

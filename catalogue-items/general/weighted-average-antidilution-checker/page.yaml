@@ -1,0 +1,76 @@
+new_slug: weighted-average-antidilution-checker
+name: Weighted-average antidilution checker
+headline: Weighted-average antidilution checker
+summary: Check one charter-defined conversion price reset after a qualifying cash issuance.
+job: money-and-investing
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: Revised conversion price and protected-series conversion ratio. Share actual charter formula, old conversion price, defined A shares, qualifying C shares, cash consideration and trigger/exemption confirmation.
+explain: |-
+  Revised conversion price and protected-series conversion ratio.
+
+  Venture financing. Illustrative figures only. A100,C40,old price10 and consideration200 give B20 and price60/7. Consideration400 leaves conversion price10.
+when:
+  - You need revised conversion price and protected-series conversion ratio.
+  - You work on venture financing and need traceable calculations.
+  - A reviewer needs to trace the result back to inputs and assumptions.
+you_give:
+  - Actual charter formula, old conversion price, defined A shares, qualifying C shares, cash consideration and trigger/exemption confirmation.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - Revised conversion price and protected-series conversion ratio.
+  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: 1. Map actual A, B and C definitions including outstanding options and deemed issuances; verify exemptions and trigger
+    text: Map actual A, B and C definitions including outstanding options and deemed issuances; verify exemptions and trigger.
+  - title: 2. Calculate B as qualifying consideration divided by old price, then old price times (A plus B)/(A plus C)
+    text: Calculate B as qualifying consideration divided by old price, then old price times (A plus B)/(A plus C).
+  - title: 3. Retain the old price when there is no qualifying downward reset; document required contractual rounding separately
+    text: Retain the old price when there is no qualifying downward reset; document required contractual rounding separately.
+output_shape: |-
+  Revised conversion price and protected-series conversion ratio.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: A must follow the actual broad- or narrow-based charter denominator.
+judge:
+  - A must follow the actual broad- or narrow-based charter denominator.
+  - Only a qualifying down-round issuance enters this calculation.
+  - Trace each input to its dated signed source, currency, scale and period.
+  - Reconcile outputs; preserve MISSING and CHECKS MISSED rather than guessing zero.
+test:
+  - Run the included baseline and changed-input fixtures, then compare with the stated expected results.
+  - Remove a required input and confirm the affected calculation refuses to invent a zero.
+  - Recalculate the workbook after changing an input and inspect the saved output.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: Node.js 20 or later
+      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

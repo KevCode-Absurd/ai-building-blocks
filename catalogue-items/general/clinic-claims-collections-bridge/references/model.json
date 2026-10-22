@@ -1,0 +1,131 @@
+{
+  "inputs": [
+    {
+      "id": "opening_claims",
+      "label": "opening claims",
+      "value": 500,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "gross_billings",
+      "label": "gross billings",
+      "value": 1000,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "approved_claim_adjustments",
+      "label": "approved claim adjustments",
+      "value": 200,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "claim_applied_cash",
+      "label": "claim applied cash",
+      "value": 700,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "provider_offset",
+      "label": "provider offset",
+      "value": 50,
+      "unit": "USD / stated period",
+      "min": 0
+    },
+    {
+      "id": "bank_receipt",
+      "label": "bank receipt",
+      "value": 650,
+      "unit": "USD / stated period",
+      "min": 0
+    }
+  ],
+  "calculations": [
+    {
+      "id": "net_new_claims",
+      "label": "net new claims",
+      "op": "sub",
+      "args": [
+        "gross_billings",
+        "approved_claim_adjustments"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "claims_before_cash",
+      "label": "claims before cash",
+      "op": "sum",
+      "args": [
+        "opening_claims",
+        "net_new_claims"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "closing_claims",
+      "label": "closing claims",
+      "op": "sub",
+      "args": [
+        "claims_before_cash",
+        "claim_applied_cash"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "expected_bank_cash",
+      "label": "expected bank cash",
+      "op": "sub",
+      "args": [
+        "claim_applied_cash",
+        "provider_offset"
+      ],
+      "unit": "USD / stated period"
+    },
+    {
+      "id": "settlement_difference",
+      "label": "settlement difference",
+      "op": "sub",
+      "args": [
+        "bank_receipt",
+        "expected_bank_cash"
+      ],
+      "unit": "USD / stated period"
+    }
+  ],
+  "outputs": [
+    "net_new_claims",
+    "closing_claims",
+    "expected_bank_cash",
+    "settlement_difference"
+  ],
+  "expected": {
+    "net_new_claims": 800,
+    "closing_claims": 600,
+    "expected_bank_cash": 650,
+    "settlement_difference": 0
+  },
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "inputs": {
+        "claim_applied_cash": 750
+      },
+      "expected": {
+        "closing_claims": 550,
+        "expected_bank_cash": 700,
+        "settlement_difference": -50
+      }
+    },
+    {
+      "name": "Missing or invalid required input",
+      "inputs": {
+        "opening_claims": null
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only in USD unless labelled otherwise. This focused operating schedule does not establish a complete business forecast, accounting treatment, market price or approval."
+}

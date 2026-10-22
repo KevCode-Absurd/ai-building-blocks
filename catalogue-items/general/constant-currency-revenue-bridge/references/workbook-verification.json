@@ -1,0 +1,32 @@
+{
+  "engine": "Artifact Tool",
+  "scope": "Illustrative workbook calculations, not source truth or an actual investment conclusion. Native Microsoft Excel application execution is not claimed.",
+  "modelSha256": "e96f660805b2aee0297636e3eed141454792596f5359cfd051ab400cd2e0f3db",
+  "xlsxSha256": "8623e43dc83ee337f8d372f4fb5c9dd3e6b72db3420ff0780b943edfdc175f57",
+  "baseline": "pass",
+  "changedInputCase": "Exchange rate unchanged",
+  "invalidInputCase": "Missing required reported input",
+  "cases": [
+    {
+      "name": "Exchange rate unchanged",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required reported input",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ],
+  "reopenedAndRecalculated": true,
+  "rendered": true,
+  "visualReview": "pass",
+  "workbookSpecSha256": "8a5885556fdb004a1064f93b39bf6357045e6ae1878ab89539d96f91a72ad791",
+  "visualEvidence": {
+    "report": "reports/finance-public-markets-peer-review.json",
+    "reportSha256": "f73f6f5598ba0647c477c547d2776f1221130bb7861b62def472b74331866282",
+    "previewSha256": "acb8c1355a353580742ded2373875eb29c12c4b1e2e5c6875bcf31e2d031f829",
+    "sheet": "Model",
+    "sourceSpecSha256": "f16261e21e16908e0c67c9a72656401f7835ac051dad6b215e7dc5873f589305"
+  }
+}

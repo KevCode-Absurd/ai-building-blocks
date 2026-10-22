@@ -1,0 +1,76 @@
+new_slug: nonparticipating-preference-checker
+name: Nonparticipating preference checker
+headline: Nonparticipating preference checker
+summary: Compare one preferred class preference payout with its conversion proceeds.
+job: money-and-investing
+thinking: high
+thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+subhead: Preferred and common payouts with the economically better election. Share available equity proceeds after senior claims, one preferred class investment, preference multiple and as-converted ownership.
+explain: |-
+  Preferred and common payouts with the economically better election.
+
+  Venture financing. Illustrative figures only. At300, preference100 beats conversion60. At1000, conversion20% pays200.
+when:
+  - You need preferred and common payouts with the economically better election.
+  - You work on venture financing and need traceable calculations.
+  - A reviewer needs to trace the result back to inputs and assumptions.
+you_give:
+  - Available equity proceeds after senior claims, one preferred class investment, preference multiple and as-converted ownership.
+  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
+  - Available spreadsheet tools and required native output format.
+you_get:
+  - Preferred and common payouts with the economically better election.
+  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
+  - Reconciliation results, unresolved inputs and actual checks completed.
+how_to_use:
+  - Download the complete pack and read its governing SKILL.md.
+  - Share the actual sources and the financial question you need answered.
+  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
+  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+how_it_works:
+  - title: 1. Confirm one senior preferred class, optional conversion, no participation and no accrued dividend
+    text: Confirm one senior preferred class, optional conversion, no participation and no accrued dividend.
+  - title: 2. Compute investment times preference multiple and available proceeds times as-converted fraction
+    text: Compute investment times preference multiple and available proceeds times as-converted fraction.
+  - title: 3. Choose the larger claim capped by available proceeds; allocate the remainder to common holders
+    text: Choose the larger claim capped by available proceeds; allocate the remainder to common holders.
+output_shape: |-
+  Preferred and common payouts with the economically better election.
+  Scope and dated sources
+  Inputs and assumptions
+  Model calculations and reconciliations
+  Actual file verification
+  MISSING: and CHECKS MISSED
+tweaks:
+  - what: Period and currency
+    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Assumptions
+    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Acceptance
+    how: Preferred plus common proceeds equals available equity proceeds.
+judge:
+  - Preferred plus common proceeds equals available equity proceeds.
+  - A preference cannot pay more than available proceeds.
+  - Trace each input to its dated signed source, currency, scale and period.
+  - Reconcile outputs; preserve MISSING and CHECKS MISSED rather than guessing zero.
+test:
+  - Run the included baseline and changed-input fixtures, then compare with the stated expected results.
+  - Remove a required input and confirm the affected calculation refuses to invent a zero.
+  - Recalculate the workbook after changing an input and inspect the saved output.
+improve:
+  - Add a dated approved example and your actual acceptance rules.
+  - Record corrections with the affected source and model version.
+works_best_with:
+  tools:
+    - name: A spreadsheet engine and file-capable AI
+      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: Node.js 20 or later
+      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+  inputs:
+    - Dated primary financial records and the applicable contractual definitions.
+    - A named reviewer and an explicit financial question.
+terms:
+  - term: Illustrative figures
+    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Reconciliation
+    meaning: An independent comparison that explains a difference between matching records or financial schedules.

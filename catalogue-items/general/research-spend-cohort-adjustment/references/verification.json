@@ -1,0 +1,17 @@
+{
+  "slug": "research-spend-cohort-adjustment",
+  "modelSha256": "2198becb9e7644ea0ab7d315ed81f6b9fb3f48b877891a76da1a5622b2e982dd",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Larger current-year research cohort",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Required source input missing",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

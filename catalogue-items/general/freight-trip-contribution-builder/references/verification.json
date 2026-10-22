@@ -1,0 +1,17 @@
+{
+  "slug": "freight-trip-contribution-builder",
+  "modelSha256": "1df931f5d81629c7ab497ab60d1587039e436418f44162517ab7c796664ad0fa",
+  "baseline": "pass",
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing or invalid required input",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ]
+}

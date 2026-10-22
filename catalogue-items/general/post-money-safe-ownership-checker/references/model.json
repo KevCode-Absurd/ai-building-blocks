@@ -1,0 +1,101 @@
+{
+  "inputs": [
+    {
+      "id": "investment",
+      "label": "investment",
+      "value": 100,
+      "unit": "USD thousands",
+      "min": 0
+    },
+    {
+      "id": "postMoneyCap",
+      "label": "post Money Cap",
+      "value": 1000,
+      "unit": "USD thousands",
+      "min": 0.000001
+    },
+    {
+      "id": "roundDilution",
+      "label": "round Dilution",
+      "value": 0.2,
+      "unit": "fraction",
+      "min": 0,
+      "max": 1
+    }
+  ],
+  "calculations": [
+    {
+      "id": "ownership",
+      "label": "ownership",
+      "op": "div",
+      "args": [
+        "investment",
+        "postMoneyCap"
+      ],
+      "unit": "fraction"
+    },
+    {
+      "id": "retention",
+      "label": "retention",
+      "op": "sub",
+      "args": [
+        1,
+        "roundDilution"
+      ],
+      "unit": "fraction"
+    },
+    {
+      "id": "afterRound",
+      "label": "after Round",
+      "op": "mul",
+      "args": [
+        "ownership",
+        "retention"
+      ],
+      "unit": "fraction"
+    }
+  ],
+  "outputs": [
+    "ownership",
+    "afterRound"
+  ],
+  "expected": {
+    "ownership": 0.1,
+    "afterRound": 0.08
+  },
+  "cases": [
+    {
+      "name": "Hand-derived changed-input golden",
+      "inputs": {
+        "investment": 200
+      },
+      "expected": {
+        "ownership": 0.2,
+        "afterRound": 0.16
+      }
+    },
+    {
+      "name": "Missing required number",
+      "inputs": {
+        "investment": null
+      },
+      "error": true
+    },
+    {
+      "name": "Refuse SAFE ownership above 100 percent",
+      "inputs": {
+        "investment": 2000
+      },
+      "error": true
+    }
+  ],
+  "explanation": "Illustrative figures only. 100/1000=10%; retaining80% leaves8%. Investment200 produces20% and16%.",
+  "constraints": [
+    {
+      "left": "investment",
+      "operator": "lte",
+      "right": "postMoneyCap",
+      "message": "One SAFE investment cannot exceed its post-money cap."
+    }
+  ]
+}

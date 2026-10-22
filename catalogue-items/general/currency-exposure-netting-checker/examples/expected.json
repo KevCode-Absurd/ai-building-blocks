@@ -1,0 +1,9 @@
+{
+  "basis": "Illustrative figures only.",
+  "outputs": {
+    "residual_foreign": 20,
+    "base_value": 22,
+    "scenario_value": 24,
+    "movement": 2
+  }
+}

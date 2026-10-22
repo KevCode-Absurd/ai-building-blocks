@@ -1,0 +1,42 @@
+slug: connect-production-yield-to-mix-contribution
+name: Connect production yield to mix contribution
+summary: A yield-linked product contribution and capacity comparison
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: spreadsheet
+    required: true
+  - type: audit_report
+    required: true
+  - type: document
+    required: true
+uses:
+  - manufacturing-yield-cost-bridge
+  - product-mix-capacity-checker
+steps:
+  - uses: manufacturing-yield-cost-bridge
+    note: Reconcile each product batch mass and net cash after evidenced scrap recovery. Convert cost per good kilogram into the owner-specified selling unit and retain conversion evidence.
+  - uses: product-mix-capacity-checker
+    note: Build proposed product contributions from the reconciled yield cost and actual selling assumptions, then check selected volumes against the same-period bottleneck. Expose other production constraints and avoid describing the plan as optimized.
+execution: coordinator
+origin: own
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/finance-expansion
+example_pending: true
+warnings:
+  - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+credits:
+  - title: Original finance methods and model fixtures
+    by: AI Blocks contributors
+    used: Original instructions, calculations and illustrative examples. External method references are linked separately and retain their own rights.

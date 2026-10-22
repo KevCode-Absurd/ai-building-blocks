@@ -1,0 +1,32 @@
+{
+  "engine": "Artifact Tool",
+  "scope": "Illustrative workbook calculations, not source truth or an actual investment conclusion. Native Microsoft Excel application execution is not claimed.",
+  "modelSha256": "daf3092f364698ca5b88b0ffe5f568d230d7011cc07e9f98aa18956fc1cba920",
+  "xlsxSha256": "db81960208cb9946663f62edf5faf1d3dc3c9c55ca8568cd34bc440f1049ba75",
+  "baseline": "pass",
+  "changedInputCase": "Earnings meet the equity charge",
+  "invalidInputCase": "Required input absent",
+  "cases": [
+    {
+      "name": "Earnings meet the equity charge",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Required input absent",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ],
+  "reopenedAndRecalculated": true,
+  "rendered": true,
+  "visualReview": "pass",
+  "workbookSpecSha256": "5926a281ead2cf124977132381da2a12b5c581eec7e49f7f4cb2a3a59ec2aede",
+  "visualEvidence": {
+    "report": "reports/finance-public-markets-peer-review.json",
+    "reportSha256": "f73f6f5598ba0647c477c547d2776f1221130bb7861b62def472b74331866282",
+    "previewSha256": "238fe83f71b3939641ea8cdf024195779000605fd48011736fb33539e40deac7",
+    "sheet": "Model",
+    "sourceSpecSha256": "632f0573ed3b02f10d0a8f63037d7465451c62c06ce45469b9a24a090381f425"
+  }
+}

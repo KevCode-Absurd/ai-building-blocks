@@ -1,0 +1,8 @@
+{
+  "eligible_cost": 1000,
+  "cost_advance_rate": 0.5,
+  "appraised_nolv": 800,
+  "nolv_advance_rate": 0.7,
+  "sublimit": 600,
+  "reserve": 50
+}

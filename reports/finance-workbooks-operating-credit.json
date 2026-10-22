@@ -1,0 +1,1377 @@
+{
+  "checkedOn": "2026-10-22T16:50:55.409Z",
+  "engine": "Artifact Tool",
+  "scope": "Illustrative native workbooks; baseline and changed-input recalculation, render, XLSX export and saved-file reimport checked. Visual review is recorded separately.",
+  "passed": 40,
+  "results": [
+    {
+      "slug": "restricted-cash-availability-checker",
+      "status": "pass",
+      "modelSha256": "bac0c2d2dd231d36ca6715d5b89661a05a004703a0ad366dacc9039e790174c7",
+      "baselineOutputs": {
+        "available_cash": 650,
+        "headroom": -50,
+        "shortfall": 50
+      },
+      "changedInputCase": "Restriction released by supplied evidence",
+      "invalidInputCase": "Missing gross cash",
+      "cases": [
+        {
+          "name": "Restriction released by supplied evidence",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing gross cash",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 5,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\restricted-cash-availability-checker.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\restricted-cash-availability-checker\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\restricted-cash-availability-checker.png",
+      "xlsxSha256": "e014bbfdac3fca5e1fd3f35b73a9335e62ca1b726b23e83f0c01e19c993de517",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D9\",\"rows\":3,\"cols\":3,\"nonEmpty\":9,\"text\":9,\"maxTextLength\":16,\"preview\":[[\"available cash\",\"650\",\"USD / as-of date\"],[\"headroom\",\"-50\",\"USD / as-of date\"],[\"shortfall\",\"50\",\"USD / as-of date\"]],\"previewAddress\":\"B7:D9\",\"previewRows\":3,\"previewCols\":3}",
+      "workbookSpecSha256": "91991d087bfd2be9563ad3fdd94324795ae56161dc5755c10ee8fa1007456f0c"
+    },
+    {
+      "slug": "settlement-liquidity-ladder-builder",
+      "status": "pass",
+      "modelSha256": "0572079032a61c77ee708f6dd8f689b8b61dd392d05c0a98344c8871240ce694",
+      "baselineOutputs": {
+        "close_1": 40,
+        "close_2": -20,
+        "close_3": 60,
+        "minimum_balance": -20,
+        "funding_gap": 20
+      },
+      "changedInputCase": "Changed source assumption, hand-calculated result",
+      "invalidInputCase": "Missing required evidence refuses calculation",
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required evidence refuses calculation",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 9,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\settlement-liquidity-ladder-builder.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\settlement-liquidity-ladder-builder\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\settlement-liquidity-ladder-builder.png",
+      "xlsxSha256": "b061aa73ee9c081523687e761bdc5ff50905fb84dbac30213ab3a952a1f43229",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D11\",\"rows\":5,\"cols\":3,\"nonEmpty\":15,\"text\":15,\"maxTextLength\":19,\"preview\":[[\"close 1\",\"40\",\"USD / stated period\"],[\"close 2\",\"-20\",\"USD / stated period\"],[\"close 3\",\"60\",\"USD / stated period\"],[\"minimum balance\",\"-20\",\"USD / stated period\"],[\"funding gap\",\"20\",\"USD / stated period\"]],\"previewAddress\":\"B7:D11\",\"previewRows\":5,\"previewCols\":3}",
+      "workbookSpecSha256": "846b40a2089a511ad069b6839a3032bab0d7f06a03058c66bbc63997d047394f"
+    },
+    {
+      "slug": "cash-pool-interest-allocator",
+      "status": "pass",
+      "modelSha256": "cb62a24b6b01ed64e84a62b822008a596b3675b35a9b9981b7247a847a4c2c1d",
+      "baselineOutputs": {
+        "deposit_interest": 2.5,
+        "borrow_interest": 2.5,
+        "center_residual": 0
+      },
+      "changedInputCase": "Changed source assumption, hand-calculated result",
+      "invalidInputCase": "Missing required evidence refuses calculation",
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required evidence refuses calculation",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 4,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\cash-pool-interest-allocator.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\cash-pool-interest-allocator\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\cash-pool-interest-allocator.png",
+      "xlsxSha256": "b6429f67acbb6eede9b66159c18fa664f0ddb4ac2006cfc6e895962740c839b9",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D9\",\"rows\":3,\"cols\":3,\"nonEmpty\":9,\"text\":9,\"maxTextLength\":19,\"preview\":[[\"deposit interest\",\"2.5\",\"USD / stated period\"],[\"borrow interest\",\"2.5\",\"USD / stated period\"],[\"center residual\",\"0\",\"USD / stated period\"]],\"previewAddress\":\"B7:D9\",\"previewRows\":3,\"previewCols\":3}",
+      "workbookSpecSha256": "9b3ff5797f4ccdb85b804cd3de42ba6fb1fb7f95719099de326ddc447db5808c"
+    },
+    {
+      "slug": "currency-exposure-netting-checker",
+      "status": "pass",
+      "modelSha256": "d277a677136e706fea2facb6e119ded1e82146706c3fa9d10cab42373a314c2c",
+      "baselineOutputs": {
+        "residual_foreign": 20,
+        "base_value": 22,
+        "scenario_value": 24,
+        "movement": 2
+      },
+      "changedInputCase": "Changed source assumption, hand-calculated result",
+      "invalidInputCase": "Missing required evidence refuses calculation",
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required evidence refuses calculation",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 7,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\currency-exposure-netting-checker.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\currency-exposure-netting-checker\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\currency-exposure-netting-checker.png",
+      "xlsxSha256": "122f46506c0ca78c53ca02c79839fdb0f7d1d4bb455e78aae936ca7b5ff242b3",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D10\",\"rows\":4,\"cols\":3,\"nonEmpty\":12,\"text\":12,\"maxTextLength\":44,\"preview\":[[\"residual foreign after signed hedge delivery\",\"20\",\"EUR\"],[\"base value\",\"22\",\"USD\"],[\"scenario value\",\"24\",\"USD\"],[\"movement\",\"2\",\"USD\"]],\"previewAddress\":\"B7:D10\",\"previewRows\":4,\"previewCols\":3}",
+      "workbookSpecSha256": "50fef18c687442146625c4c11a17a74f86fd27d8e09ad76cf169bfa18fcd6d24"
+    },
+    {
+      "slug": "currency-forward-settlement-checker",
+      "status": "pass",
+      "modelSha256": "4d5d64b53846812e254278c7f2370163856da9f1861700f9936474a1e50ffe72",
+      "baselineOutputs": {
+        "locked_payment": 110.00000000000001,
+        "cash_advantage": 9.999999999999986,
+        "residual_foreign": 20,
+        "total_cash": 136
+      },
+      "changedInputCase": "Changed source assumption, hand-calculated result",
+      "invalidInputCase": "Missing required evidence refuses calculation",
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required evidence refuses calculation",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 6,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\currency-forward-settlement-checker.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\currency-forward-settlement-checker\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\currency-forward-settlement-checker.png",
+      "xlsxSha256": "e27dacae11fbc13c8ab963be9f738e043107646f27a942277d8d141a28a68294",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D10\",\"rows\":4,\"cols\":3,\"nonEmpty\":12,\"text\":12,\"maxTextLength\":18,\"preview\":[[\"locked payment\",\"110.00000000000001\",\"USD\"],[\"cash advantage\",\"9.999999999999986\",\"USD\"],[\"residual foreign\",\"20\",\"EUR\"],[\"total cash\",\"136\",\"USD\"]],\"previewAddress\":\"B7:D10\",\"previewRows\":4,\"previewCols\":3}",
+      "workbookSpecSha256": "2f4b8206772bfc3f97d81d89de2b49e3c9723c7f95da76ffa1fcade49881c757"
+    },
+    {
+      "slug": "floating-rate-repricing-planner",
+      "status": "pass",
+      "modelSha256": "987c7dba9aa84044b6001a3b0d3b5816f128077c06a6b67f9d4161a0cf9a1031",
+      "baselineOutputs": {
+        "increment_a": 5,
+        "increment_b": 2.5,
+        "increment_total": 7.5,
+        "scenario_interest": 67.5
+      },
+      "changedInputCase": "Changed source assumption, hand-calculated result",
+      "invalidInputCase": "Missing required evidence refuses calculation",
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required evidence refuses calculation",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 4,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\floating-rate-repricing-planner.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\floating-rate-repricing-planner\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\floating-rate-repricing-planner.png",
+      "xlsxSha256": "ec1411f88bb9dcedae26c8445a19736a2563211ba24a3c02668cfdbd6fd04fa3",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D10\",\"rows\":4,\"cols\":3,\"nonEmpty\":12,\"text\":12,\"maxTextLength\":19,\"preview\":[[\"increment a\",\"5\",\"USD / stated period\"],[\"increment b\",\"2.5\",\"USD / stated period\"],[\"increment total\",\"7.5\",\"USD / stated period\"],[\"scenario interest\",\"67.5\",\"USD / stated period\"]],\"previewAddress\":\"B7:D10\",\"previewRows\":4,\"previewCols\":3}",
+      "workbookSpecSha256": "f9c00edea31b1d0c821cd9c6aeeafa588eddd5c1bf3c19221e8d2d0a4c2c2c2e"
+    },
+    {
+      "slug": "bank-fee-reconciliation-checker",
+      "status": "pass",
+      "modelSha256": "5cbee2b8ecf60388a866e0b8ec23d4be4a9d64a2c3161934007f77cc8dc1640c",
+      "baselineOutputs": {
+        "gross_fees": 35,
+        "applied_credit": 5,
+        "expected_fee": 30,
+        "billing_difference": 3
+      },
+      "changedInputCase": "Changed source assumption, hand-calculated result",
+      "invalidInputCase": "Missing required evidence refuses calculation",
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required evidence refuses calculation",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 6,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\bank-fee-reconciliation-checker.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\bank-fee-reconciliation-checker\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\bank-fee-reconciliation-checker.png",
+      "xlsxSha256": "085c831d900def64163708876ec18a8d5288b4925e04db84115f3afe506f26dd",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D10\",\"rows\":4,\"cols\":3,\"nonEmpty\":12,\"text\":12,\"maxTextLength\":19,\"preview\":[[\"gross fees\",\"35\",\"USD / stated period\"],[\"applied credit\",\"5\",\"USD / stated period\"],[\"expected fee\",\"30\",\"USD / stated period\"],[\"billing difference\",\"3\",\"USD / stated period\"]],\"previewAddress\":\"B7:D10\",\"previewRows\":4,\"previewCols\":3}",
+      "workbookSpecSha256": "161b0020ca9cd195cb2dca91e3ff7557c4d3b45b9ec0b893c5877228d43df7dc"
+    },
+    {
+      "slug": "treasury-forecast-backtest-checker",
+      "status": "pass",
+      "modelSha256": "f51ce16a925efb32e097aff7b895992290fd70ffa1ee894d57cee62734318c80",
+      "baselineOutputs": {
+        "mae": 10,
+        "bias_total": -10,
+        "forecast_close": 140,
+        "actual_close": 130,
+        "drift": -10
+      },
+      "changedInputCase": "Changed source assumption, hand-calculated result",
+      "invalidInputCase": "Missing required evidence refuses calculation",
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required evidence refuses calculation",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 11,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\treasury-forecast-backtest-checker.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\treasury-forecast-backtest-checker\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\treasury-forecast-backtest-checker.png",
+      "xlsxSha256": "3b3db93733d5c2fa8a22ef5a80a32bc750239d2a6a04ccf8e8cb8ccbff2ddee8",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D11\",\"rows\":5,\"cols\":3,\"nonEmpty\":15,\"text\":15,\"maxTextLength\":19,\"preview\":[[\"mae\",\"10\",\"USD / stated period\"],[\"bias total\",\"-10\",\"USD / stated period\"],[\"forecast close\",\"140\",\"USD / stated period\"],[\"actual close\",\"130\",\"USD / stated period\"],[\"drift\",\"-10\",\"USD / stated period\"]],\"previewAddress\":\"B7:D11\",\"previewRows\":5,\"previewCols\":3}",
+      "workbookSpecSha256": "95b5450cddbbf6b9733800c44564ce5c4d23d7b969ab83f3d07cab8ebf399ed1"
+    },
+    {
+      "slug": "receivables-borrowing-base-builder",
+      "status": "pass",
+      "modelSha256": "7c6e988a596194d83b0f44edad89b86b4f685412607522d5f265057e77a5105a",
+      "baselineOutputs": {
+        "eligible_signed": 800,
+        "gross_advance": 640,
+        "net_advance": 600
+      },
+      "changedInputCase": "Changed source assumption, hand-calculated result",
+      "invalidInputCase": "Missing required evidence refuses calculation",
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required evidence refuses calculation",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 6,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\receivables-borrowing-base-builder.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\receivables-borrowing-base-builder\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\receivables-borrowing-base-builder.png",
+      "xlsxSha256": "a8f417b31ca5607ec522eb15bb3bef460c00492b517bec35de4d03ee351e000b",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D9\",\"rows\":3,\"cols\":3,\"nonEmpty\":9,\"text\":9,\"maxTextLength\":19,\"preview\":[[\"eligible signed\",\"800\",\"USD / stated period\"],[\"gross advance\",\"640\",\"USD / stated period\"],[\"net advance\",\"600\",\"USD / stated period\"]],\"previewAddress\":\"B7:D9\",\"previewRows\":3,\"previewCols\":3}",
+      "workbookSpecSha256": "080ee6fd58bd6c94a617e664e33a682c5dd39963014f7f7fd7d783846c90c931"
+    },
+    {
+      "slug": "inventory-borrowing-base-builder",
+      "status": "pass",
+      "modelSha256": "d5a9126c3fd71b6c164b581e54c0e903ebad334a0d4c277024067eea5107defc",
+      "baselineOutputs": {
+        "cost_cap": 500,
+        "appraisal_cap": 560,
+        "advance_before_reserve": 500,
+        "net_advance": 450
+      },
+      "changedInputCase": "Changed source assumption, hand-calculated result",
+      "invalidInputCase": "Missing required evidence refuses calculation",
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing required evidence refuses calculation",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 5,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\inventory-borrowing-base-builder.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\inventory-borrowing-base-builder\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\inventory-borrowing-base-builder.png",
+      "xlsxSha256": "63653e6e7dd6c9440824b15ee85d625dab6891ff3cd5bed2bd65bcf2bbf232e8",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D10\",\"rows\":4,\"cols\":3,\"nonEmpty\":12,\"text\":12,\"maxTextLength\":22,\"preview\":[[\"cost cap\",\"500\",\"USD / stated period\"],[\"appraisal cap\",\"560\",\"USD / stated period\"],[\"advance before reserve\",\"500\",\"USD / stated period\"],[\"net advance\",\"450\",\"USD / stated period\"]],\"previewAddress\":\"B7:D10\",\"previewRows\":4,\"previewCols\":3}",
+      "workbookSpecSha256": "a14317048a8eea00eae2eaf1337bc1d28b98a4525c2df3eceac32da2ebda986e"
+    },
+    {
+      "slug": "revolver-availability-checker",
+      "status": "pass",
+      "modelSha256": "1145347f4d30c2bc33a543bb143fcdde6357b37addd2a7742af19082790ee26c",
+      "baselineOutputs": {
+        "borrowing_base": 1050,
+        "capacity": 1000,
+        "signed_availability": 175,
+        "availability": 175,
+        "overadvance": 0
+      },
+      "changedInputCase": "Changed source assumption, hand-calculated result",
+      "invalidInputCase": "Missing or invalid required input",
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing or invalid required input",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 7,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\revolver-availability-checker.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\revolver-availability-checker\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\revolver-availability-checker.png",
+      "xlsxSha256": "fdaacecddc20de7ae81301ff14b55212302b28c0bcc5c82eaff7a3c7de3750b7",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D11\",\"rows\":5,\"cols\":3,\"nonEmpty\":15,\"text\":15,\"maxTextLength\":19,\"preview\":[[\"borrowing base\",\"1050\",\"USD / stated period\"],[\"capacity\",\"1000\",\"USD / stated period\"],[\"signed availability\",\"175\",\"USD / stated period\"],[\"availability\",\"175\",\"USD / stated period\"],[\"overadvance\",\"0\",\"USD / stated period\"]],\"previewAddress\":\"B7:D11\",\"previewRows\":5,\"previewCols\":3}",
+      "workbookSpecSha256": "b1fe5a2c78d47aac71e9cd19edae60eef3b53c2fe8719c8dde8497d87447549a"
+    },
+    {
+      "slug": "revolver-interest-fee-checker",
+      "status": "pass",
+      "modelSha256": "465e2596c7220bd6fae6b5e669dd23402e792b3f91a8d0c5756c805cd5b45b67",
+      "baselineOutputs": {
+        "interest": 5,
+        "commitment_fee": 0.5,
+        "total_charge": 5.5
+      },
+      "changedInputCase": "Changed source assumption, hand-calculated result",
+      "invalidInputCase": "Missing or invalid required input",
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing or invalid required input",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 4,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\revolver-interest-fee-checker.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\revolver-interest-fee-checker\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\revolver-interest-fee-checker.png",
+      "xlsxSha256": "15bade4a8b5ff8ff8522d896878e97af6f9dbb61868a3b28d1f2dec9009cc594",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D9\",\"rows\":3,\"cols\":3,\"nonEmpty\":9,\"text\":9,\"maxTextLength\":19,\"preview\":[[\"interest\",\"5\",\"USD / stated period\"],[\"commitment fee\",\"0.5\",\"USD / stated period\"],[\"total charge\",\"5.5\",\"USD / stated period\"]],\"previewAddress\":\"B7:D9\",\"previewRows\":3,\"previewCols\":3}",
+      "workbookSpecSha256": "c683c94d7bb48bebdc3eb754fab77be3c4a426994238847ba463ecd96c92dd56"
+    },
+    {
+      "slug": "debt-service-covenant-headroom-checker",
+      "status": "pass",
+      "modelSha256": "0dfd2146bfb0112cf20a0f0f7f939dcd48219a1f954ae5621c6ecb8be8396fa4",
+      "baselineOutputs": {
+        "headroom_1": 25,
+        "headroom_2": -5,
+        "headroom_3": 30,
+        "minimum_headroom": -5,
+        "cash_gap": 5
+      },
+      "changedInputCase": "Changed source assumption, hand-calculated result",
+      "invalidInputCase": "Missing or invalid required input",
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing or invalid required input",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 9,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\debt-service-covenant-headroom-checker.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\debt-service-covenant-headroom-checker\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\debt-service-covenant-headroom-checker.png",
+      "xlsxSha256": "48925f54e045d19eb112d5d68ff92d1e0338bd389d962ce7bc0d3532a885633c",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D11\",\"rows\":5,\"cols\":3,\"nonEmpty\":15,\"text\":15,\"maxTextLength\":19,\"preview\":[[\"headroom 1\",\"25\",\"USD / stated period\"],[\"headroom 2\",\"-5\",\"USD / stated period\"],[\"headroom 3\",\"30\",\"USD / stated period\"],[\"minimum headroom\",\"-5\",\"USD / stated period\"],[\"cash gap\",\"5\",\"USD / stated period\"]],\"previewAddress\":\"B7:D11\",\"previewRows\":5,\"previewCols\":3}",
+      "workbookSpecSha256": "155532dd9bc5373d62e6a097286b1c95278b148ce1557c0be17b6b25f0efc223"
+    },
+    {
+      "slug": "fixed-charge-coverage-bridge-builder",
+      "status": "pass",
+      "modelSha256": "a2b6aaa0e47197b33848c74328a58f9542c7bd66f6ad7b67a09b85d6855b939c",
+      "baselineOutputs": {
+        "qualifying_cash": 250,
+        "fixed_charges": 180,
+        "coverage": 1.3888888888888888,
+        "cash_headroom": 34
+      },
+      "changedInputCase": "Changed source assumption, hand-calculated result",
+      "invalidInputCase": "Missing or invalid required input",
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing or invalid required input",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 6,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\fixed-charge-coverage-bridge-builder.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\fixed-charge-coverage-bridge-builder\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\fixed-charge-coverage-bridge-builder.png",
+      "xlsxSha256": "0934980eebf8752d136d1871d5c560d6f05e782b041278ce7e3656ef17132b6b",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D10\",\"rows\":4,\"cols\":3,\"nonEmpty\":12,\"text\":12,\"maxTextLength\":19,\"preview\":[[\"qualifying cash\",\"250\",\"USD / stated period\"],[\"fixed charges\",\"180\",\"USD / stated period\"],[\"coverage\",\"1.3888888888888888\",\"multiple\"],[\"cash headroom\",\"34\",\"USD / stated period\"]],\"previewAddress\":\"B7:D10\",\"previewRows\":4,\"previewCols\":3}",
+      "workbookSpecSha256": "757abef26a8d694f054b1b25294ce8ce8a055c406b0f8392ae48bc694b89160d"
+    },
+    {
+      "slug": "credit-exposure-limit-checker",
+      "status": "pass",
+      "modelSha256": "2a7acc6afde9148bc45c60f8af718e0fd60bc1763041650c8adec0d170550906",
+      "baselineOutputs": {
+        "weighted_undrawn": 50,
+        "group_exposure": 350,
+        "headroom": 50,
+        "excess": 0
+      },
+      "changedInputCase": "Changed source assumption, hand-calculated result",
+      "invalidInputCase": "Missing or invalid required input",
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing or invalid required input",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 5,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\credit-exposure-limit-checker.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\credit-exposure-limit-checker\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\credit-exposure-limit-checker.png",
+      "xlsxSha256": "28d601e32278b92adc1260664e144cbd665193139df3aab674af404d0aae0653",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D10\",\"rows\":4,\"cols\":3,\"nonEmpty\":12,\"text\":12,\"maxTextLength\":19,\"preview\":[[\"weighted undrawn\",\"50\",\"USD / stated period\"],[\"group exposure\",\"350\",\"USD / stated period\"],[\"headroom\",\"50\",\"USD / stated period\"],[\"excess\",\"0\",\"USD / stated period\"]],\"previewAddress\":\"B7:D10\",\"previewRows\":4,\"previewCols\":3}",
+      "workbookSpecSha256": "cdbd9fd87ec60b868fe77632e6407583ee2888579af7de79e44b7e8f3e4cb57c"
+    },
+    {
+      "slug": "debt-maturity-funding-ladder",
+      "status": "pass",
+      "modelSha256": "87dd97bde7923725ada7b897cfaeaaa579e8d15eca9388b456760e8814814c98",
+      "baselineOutputs": {
+        "close_1": 20,
+        "close_2": 10,
+        "close_3": -20,
+        "funding_gap": 20
+      },
+      "changedInputCase": "Changed source assumption, hand-calculated result",
+      "invalidInputCase": "Missing or invalid required input",
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing or invalid required input",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 9,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\debt-maturity-funding-ladder.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\debt-maturity-funding-ladder\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\debt-maturity-funding-ladder.png",
+      "xlsxSha256": "dcc9bd10de4785f4ef7c4a5db759fb84ed512733fa77627d3e47a49ebb027675",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D10\",\"rows\":4,\"cols\":3,\"nonEmpty\":12,\"text\":12,\"maxTextLength\":19,\"preview\":[[\"close 1\",\"20\",\"USD / stated period\"],[\"close 2\",\"10\",\"USD / stated period\"],[\"close 3\",\"-20\",\"USD / stated period\"],[\"funding gap\",\"20\",\"USD / stated period\"]],\"previewAddress\":\"B7:D10\",\"previewRows\":4,\"previewCols\":3}",
+      "workbookSpecSha256": "9558c57ff384400686963c3e5a1e43dd6e6d1adab3b31429d585f9f9817edca0"
+    },
+    {
+      "slug": "project-cash-available-bridge",
+      "status": "pass",
+      "modelSha256": "bf1f8205c4420fa4ceca25bbc37f8898f39ccad60ff56db64c61810d9ae43505",
+      "baselineOutputs": {
+        "pre_wc_operating_surplus": 600,
+        "other_deductions": 300,
+        "cfads": 300
+      },
+      "changedInputCase": "Changed source assumption, hand-calculated result",
+      "invalidInputCase": "Missing or invalid required input",
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing or invalid required input",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 3,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\project-cash-available-bridge.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\project-cash-available-bridge\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\project-cash-available-bridge.png",
+      "xlsxSha256": "2b9360bb6afc22363df3fcc20d735402c0496cb9a3f934d4f33013eb6389e665",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D9\",\"rows\":3,\"cols\":3,\"nonEmpty\":9,\"text\":9,\"maxTextLength\":55,\"preview\":[[\"Operating surplus before working-capital cash movements\",\"600\",\"USD / stated period\"],[\"other deductions\",\"300\",\"USD / stated period\"],[\"cfads\",\"300\",\"USD / stated period\"]],\"previewAddress\":\"B7:D9\",\"previewRows\":3,\"previewCols\":3}",
+      "workbookSpecSha256": "b61d57ec6eb08b6fc12681bf11f06b379a00bf3b480ef7e0721e2aa8eaee4291"
+    },
+    {
+      "slug": "debt-repayment-sculpting-planner",
+      "status": "pass",
+      "modelSha256": "cf69948d0ccec3eb46ab8d8158bf9a19e0bc5f6118afd2fb32bc31062f8dff76",
+      "baselineOutputs": {
+        "service_cap_1": 110,
+        "total_principal": 240,
+        "total_interest": 45.34,
+        "closing_3": 0,
+        "total_service": 285.34000000000003,
+        "interest_gap_1": 0,
+        "interest_gap_2": 0,
+        "interest_gap_3": 0
+      },
+      "changedInputCase": "Changed source assumption, hand-calculated result",
+      "invalidInputCase": "Missing or invalid required input",
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing or invalid required input",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 30,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\debt-repayment-sculpting-planner.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\debt-repayment-sculpting-planner\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\debt-repayment-sculpting-planner.png",
+      "xlsxSha256": "cae5cdd524eca1996f012072fc5884d6942ed625d77ca8849f75039389f553d2",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D14\",\"rows\":8,\"cols\":3,\"nonEmpty\":24,\"text\":24,\"maxTextLength\":19,\"preview\":[[\"service cap 1\",\"110\",\"USD / annual period\"],[\"total principal\",\"240\",\"USD / three years\"],[\"total interest\",\"45.34\",\"USD / three years\"],[\"closing 3\",\"0\",\"USD / annual period\"],[\"total service\",\"285.34000000000003\",\"USD / three years\"],[\"interest gap 1\",\"0\",\"USD / annual period\"],[\"interest gap 2\",\"0\",\"USD / annual period\"],[\"interest gap 3\",\"0\",\"USD / annual period\"]],\"previewAddress\":\"B7:D14\",\"previewRows\":8,\"previewCols\":3}",
+      "workbookSpecSha256": "49a55c34a9bd75f71f64841ecf531ee5201d2e63bcb6d99fbcae8abd5a037a46"
+    },
+    {
+      "slug": "loan-life-cash-cover-checker",
+      "status": "pass",
+      "modelSha256": "bdda812e97099c6ead9a587393e2725b3df0846dbdf60d9a97d7b137fa5c6aa6",
+      "baselineOutputs": {
+        "present_qualifying_cash": 299.99999999999994,
+        "loan_life_cover": 1.2499999999999998,
+        "cash_cushion": 59.99999999999994
+      },
+      "changedInputCase": "Changed source assumption, hand-calculated result",
+      "invalidInputCase": "Missing or invalid required input",
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing or invalid required input",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 3,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\loan-life-cash-cover-checker.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\loan-life-cash-cover-checker\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\loan-life-cash-cover-checker.png",
+      "xlsxSha256": "69cf12f793c49a2457227e4f8d1a669433175a3bc2eefe81e4ae47ae8b17ab80",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D9\",\"rows\":3,\"cols\":3,\"nonEmpty\":9,\"text\":9,\"maxTextLength\":23,\"preview\":[[\"present qualifying cash\",\"299.99999999999994\",\"USD / stated period\"],[\"loan life cover\",\"1.2499999999999998\",\"multiple\"],[\"cash cushion\",\"59.99999999999994\",\"USD / stated period\"]],\"previewAddress\":\"B7:D9\",\"previewRows\":3,\"previewCols\":3}",
+      "workbookSpecSha256": "5fcf5c159a42d87e1f6ec2766e5c43582e494c9f5d614090125a01895e999346"
+    },
+    {
+      "slug": "debt-reserve-rollforward-builder",
+      "status": "pass",
+      "modelSha256": "87f6b9adb1be7022e2b95fb5324343f756ccef9fe1d019824c24a6fc45550776",
+      "baselineOutputs": {
+        "draw": 0,
+        "required_reserve": 60,
+        "deposit": 10,
+        "modeled_release": 0,
+        "ending_reserve": 50,
+        "gap": 10
+      },
+      "changedInputCase": "Changed source assumption, hand-calculated result",
+      "invalidInputCase": "Missing or invalid required input",
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing or invalid required input",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 12,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\debt-reserve-rollforward-builder.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\debt-reserve-rollforward-builder\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\debt-reserve-rollforward-builder.png",
+      "xlsxSha256": "3febb851bbcba2900c195d1868f31e06885ee51c1956c7a5aa249b346b187d36",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D12\",\"rows\":6,\"cols\":3,\"nonEmpty\":18,\"text\":18,\"maxTextLength\":19,\"preview\":[[\"draw\",\"0\",\"USD / stated period\"],[\"required reserve\",\"60\",\"USD / stated period\"],[\"deposit\",\"10\",\"USD / stated period\"],[\"modeled release\",\"0\",\"USD / stated period\"],[\"ending reserve\",\"50\",\"USD / stated period\"],[\"gap\",\"10\",\"USD / stated period\"]],\"previewAddress\":\"B7:D12\",\"previewRows\":6,\"previewCols\":3}",
+      "workbookSpecSha256": "84ec818ab1d958d502b51977eba08136f7afd3d424effecfc4fbad98199aa14e"
+    },
+    {
+      "slug": "project-payment-waterfall-builder",
+      "status": "pass",
+      "modelSha256": "8432ecf2b8e8129823099b5e5b8884c7211a929d071acfe27187a2b8551451ba",
+      "baselineOutputs": {
+        "senior_paid": 100,
+        "senior_gap": 0,
+        "reserve_funded": 30,
+        "junior_paid": 50,
+        "distribution": 20,
+        "cash_check": 0
+      },
+      "changedInputCase": "Changed source assumption, hand-calculated result",
+      "invalidInputCase": "Missing or invalid required input",
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing or invalid required input",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 9,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\project-payment-waterfall-builder.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\project-payment-waterfall-builder\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\project-payment-waterfall-builder.png",
+      "xlsxSha256": "4e15ba9a17f1270dba4909b5b1022af188fa59da7af728b14ab794d444a99550",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D12\",\"rows\":6,\"cols\":3,\"nonEmpty\":18,\"text\":18,\"maxTextLength\":20,\"preview\":[[\"senior paid\",\"100\",\"USD / payment period\"],[\"senior gap\",\"0\",\"USD / payment period\"],[\"reserve funded\",\"30\",\"USD / payment period\"],[\"junior paid\",\"50\",\"USD / payment period\"],[\"distribution\",\"20\",\"USD / payment period\"],[\"cash check\",\"0\",\"USD / payment period\"]],\"previewAddress\":\"B7:D12\",\"previewRows\":6,\"previewCols\":3}",
+      "workbookSpecSha256": "ff03af1d112c9ab5457e1b70107a6880479d9833f546dc264c19e6419eb22c97"
+    },
+    {
+      "slug": "construction-funding-draw-planner",
+      "status": "pass",
+      "modelSha256": "fe89705d96a2245785617d889ee84d3dbc4a3e75caacde0e150009b39b007b23",
+      "baselineOutputs": {
+        "equity_used_total": 200,
+        "debt_used_total": 250,
+        "shortfall_total": 0,
+        "equity_remaining_3": 0,
+        "debt_remaining_3": 50,
+        "funding_check": 0
+      },
+      "changedInputCase": "Changed source assumption, hand-calculated result",
+      "invalidInputCase": "Missing or invalid required input",
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing or invalid required input",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 24,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\construction-funding-draw-planner.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\construction-funding-draw-planner\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\construction-funding-draw-planner.png",
+      "xlsxSha256": "92a1bf9613b9e4fcf25f0f9f94b73232ec0f32077a60cf47d2b1cd7175012fff",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D12\",\"rows\":6,\"cols\":3,\"nonEmpty\":18,\"text\":18,\"maxTextLength\":27,\"preview\":[[\"equity used total\",\"200\",\"USD / three periods\"],[\"debt used total\",\"250\",\"USD / three periods\"],[\"shortfall total\",\"0\",\"USD / three periods\"],[\"equity remaining 3\",\"0\",\"USD / construction period\"],[\"debt remaining 3\",\"50\",\"USD / construction period\"],[\"funding identity difference\",\"0\",\"USD / three periods\"]],\"previewAddress\":\"B7:D12\",\"previewRows\":6,\"previewCols\":3}",
+      "workbookSpecSha256": "9a1b18d0ff5b753c896f4b8a585e81e95ef6bf50b932a950f66c79936cb8b98e"
+    },
+    {
+      "slug": "construction-interest-schedule-builder",
+      "status": "pass",
+      "modelSha256": "5ccf081866005871f7412c32cd6988dcd1a3271f084682c61dff71dc5adceb85",
+      "baselineOutputs": {
+        "interest_1": 15,
+        "interest_2": 26.5,
+        "interest_3": 34.15,
+        "total_interest": 75.65,
+        "close_3": 375.65,
+        "rollforward_check": 0
+      },
+      "changedInputCase": "Changed source assumption, hand-calculated result",
+      "invalidInputCase": "Missing or invalid required input",
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing or invalid required input",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 15,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\construction-interest-schedule-builder.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\construction-interest-schedule-builder\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\construction-interest-schedule-builder.png",
+      "xlsxSha256": "c616143945f703c6c5c4d32f7d453b34d1078c67fd496a364fad489c0fa20e56",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D12\",\"rows\":6,\"cols\":3,\"nonEmpty\":18,\"text\":18,\"maxTextLength\":27,\"preview\":[[\"interest 1\",\"15\",\"USD / annual period\"],[\"interest 2\",\"26.5\",\"USD / annual period\"],[\"interest 3\",\"34.15\",\"USD / annual period\"],[\"total capitalized interest\",\"75.65\",\"USD / three years\"],[\"close 3\",\"375.65\",\"USD / annual period\"],[\"debt rollforward difference\",\"0\",\"USD / end year3\"]],\"previewAddress\":\"B7:D12\",\"previewRows\":6,\"previewCols\":3}",
+      "workbookSpecSha256": "7cc3688ddf286ebd138c27c3c9aec51531dbe0bc7c5e753aa835f42b2f0f295d"
+    },
+    {
+      "slug": "completion-funding-gap-checker",
+      "status": "pass",
+      "modelSha256": "dc1ca7d6ab47ac51748e0c14c56b64cadb56cf1ecfcb9f93af090bf7599c2b4c",
+      "baselineOutputs": {
+        "contingency": 35,
+        "future_need": 385,
+        "revised_total_cost": 985,
+        "budget_headroom": 15,
+        "future_sources": 370,
+        "funding_gap": 15
+      },
+      "changedInputCase": "Changed source assumption, hand-calculated result",
+      "invalidInputCase": "Missing or invalid required input",
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing or invalid required input",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 8,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\completion-funding-gap-checker.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\completion-funding-gap-checker\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\completion-funding-gap-checker.png",
+      "xlsxSha256": "d0cec84508184db6a5cecba631a0a46bbde1b74607fd0df45b108b2fdb079057",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D12\",\"rows\":6,\"cols\":3,\"nonEmpty\":18,\"text\":18,\"maxTextLength\":19,\"preview\":[[\"contingency\",\"35\",\"USD / stated period\"],[\"future need\",\"385\",\"USD / stated period\"],[\"revised total cost\",\"985\",\"USD / stated period\"],[\"budget headroom\",\"15\",\"USD / stated period\"],[\"future sources\",\"370\",\"USD / stated period\"],[\"funding gap\",\"15\",\"USD / stated period\"]],\"previewAddress\":\"B7:D12\",\"previewRows\":6,\"previewCols\":3}",
+      "workbookSpecSha256": "46dfcdfed4c967890eef655bc76c353bd9d403c356e174a70b305f7546252739"
+    },
+    {
+      "slug": "availability-payment-deduction-checker",
+      "status": "pass",
+      "modelSha256": "f7d6c9badfddda85ff2a3e8926f53b6c9878af3e84fe1c8bcac2dddfc7762900",
+      "baselineOutputs": {
+        "applied_deduction": 50,
+        "excess_claimed": 0,
+        "net_payment": 430,
+        "operating_cash": 330
+      },
+      "changedInputCase": "Changed source assumption, hand-calculated result",
+      "invalidInputCase": "Missing or invalid required input",
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing or invalid required input",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 5,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\availability-payment-deduction-checker.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\availability-payment-deduction-checker\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\availability-payment-deduction-checker.png",
+      "xlsxSha256": "749586e5b5a713f1456e00ec46f7d70265cc5fef87cce33b023bb0e4f6afc813",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D10\",\"rows\":4,\"cols\":3,\"nonEmpty\":12,\"text\":12,\"maxTextLength\":19,\"preview\":[[\"applied deduction\",\"50\",\"USD / stated period\"],[\"excess claimed\",\"0\",\"USD / stated period\"],[\"net payment\",\"430\",\"USD / stated period\"],[\"operating cash\",\"330\",\"USD / stated period\"]],\"previewAddress\":\"B7:D10\",\"previewRows\":4,\"previewCols\":3}",
+      "workbookSpecSha256": "951cc5841bc4fe1c0481d987c02d39c969b3150ee83d82ff2e695032512759b3"
+    },
+    {
+      "slug": "toll-revenue-ramp-model-builder",
+      "status": "pass",
+      "modelSha256": "2b7beb491db28124141c6c052b61d5eb216324ef808b7197122a37b2730831e3",
+      "baselineOutputs": {
+        "receipts_1": 1800,
+        "receipts_2": 2160,
+        "receipts_3": 2700,
+        "cash_1": 800,
+        "cash_2": 1060,
+        "cash_3": 1500,
+        "total_cash": 3360
+      },
+      "changedInputCase": "Changed source assumption, hand-calculated result",
+      "invalidInputCase": "Missing or invalid required input",
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing or invalid required input",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 7,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\toll-revenue-ramp-model-builder.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\toll-revenue-ramp-model-builder\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\toll-revenue-ramp-model-builder.png",
+      "xlsxSha256": "522edf393435eb4d81cd07f013fc1f534e0f7dfb7c7e30f40b24326e40195d0b",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D13\",\"rows\":7,\"cols\":3,\"nonEmpty\":21,\"text\":21,\"maxTextLength\":19,\"preview\":[[\"receipts 1\",\"1800\",\"USD / stated period\"],[\"receipts 2\",\"2160\",\"USD / stated period\"],[\"receipts 3\",\"2700\",\"USD / stated period\"],[\"cash 1\",\"800\",\"USD / stated period\"],[\"cash 2\",\"1060\",\"USD / stated period\"],[\"cash 3\",\"1500\",\"USD / stated period\"],[\"total cash\",\"3360\",\"USD / stated period\"]],\"previewAddress\":\"B7:D13\",\"previewRows\":7,\"previewCols\":3}",
+      "workbookSpecSha256": "05411a7ee383d68d89419fc8f4257755a21068aba0d24eeca50c6bfb90e5d44b"
+    },
+    {
+      "slug": "manufacturing-yield-cost-bridge",
+      "status": "pass",
+      "modelSha256": "7fe10fe0c0f99d37ba5d91b35603a4dccc164131e370686d3bf7d3ad26ca81e8",
+      "baselineOutputs": {
+        "good_kg": 800,
+        "scrap_kg": 200,
+        "scrap_recovery": 100,
+        "net_batch_cost": 2900,
+        "cost_per_good_kg": 3.625
+      },
+      "changedInputCase": "Changed source assumption, hand-calculated result",
+      "invalidInputCase": "Missing or invalid required input",
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing or invalid required input",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 6,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\manufacturing-yield-cost-bridge.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\manufacturing-yield-cost-bridge\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\manufacturing-yield-cost-bridge.png",
+      "xlsxSha256": "e156fae605386b7eee211ca10d299c0ef7bed3276bfb1f13a0a921e7e379f059",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D11\",\"rows\":5,\"cols\":3,\"nonEmpty\":15,\"text\":15,\"maxTextLength\":19,\"preview\":[[\"good kg\",\"800\",\"kg / batch\"],[\"scrap kg\",\"200\",\"kg / batch\"],[\"scrap recovery\",\"100\",\"USD / stated period\"],[\"net batch cost\",\"2900\",\"USD / stated period\"],[\"cost per good kg\",\"3.625\",\"USD / good kg\"]],\"previewAddress\":\"B7:D11\",\"previewRows\":5,\"previewCols\":3}",
+      "workbookSpecSha256": "eee23c4e018f31850b304bad533e25e553d23900b0d35eb1ba6525b8677cbfb5"
+    },
+    {
+      "slug": "shared-service-activity-cost-allocator",
+      "status": "pass",
+      "modelSha256": "e541b0dd842c65fbcae8692d231b7655d2a6041f636b3ff1a686a6f97cb9bd91",
+      "baselineOutputs": {
+        "driver_rate": 10,
+        "allocated_a": 400,
+        "allocated_b": 300,
+        "unassigned_cost": 300,
+        "unused_units": 30
+      },
+      "changedInputCase": "Changed source assumption, hand-calculated result",
+      "invalidInputCase": "Missing or invalid required input",
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing or invalid required input",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 7,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\shared-service-activity-cost-allocator.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\shared-service-activity-cost-allocator\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\shared-service-activity-cost-allocator.png",
+      "xlsxSha256": "e97037c4f36e72fff88d154875456f6a0bea7e215248b293882e8d0c727a218b",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D11\",\"rows\":5,\"cols\":3,\"nonEmpty\":15,\"text\":15,\"maxTextLength\":22,\"preview\":[[\"driver rate\",\"10\",\"USD / activity unit\"],[\"allocated a\",\"400\",\"USD / stated period\"],[\"allocated b\",\"300\",\"USD / stated period\"],[\"unassigned cost\",\"300\",\"USD / stated period\"],[\"unused units\",\"30\",\"activity units / month\"]],\"previewAddress\":\"B7:D11\",\"previewRows\":5,\"previewCols\":3}",
+      "workbookSpecSha256": "2c0c73713ba8f159b5b966f5c31d2b165c3f9f43eea7e2d009728123f09f6646"
+    },
+    {
+      "slug": "product-mix-capacity-checker",
+      "status": "pass",
+      "modelSha256": "eac6a367612dbfb573fe7eb496091493094e76ea303e50680da136b514bf0011",
+      "baselineOutputs": {
+        "required_hours": 110,
+        "capacity_headroom": -10,
+        "contribution_total": 450
+      },
+      "changedInputCase": "Reduce proposed second product units",
+      "invalidInputCase": "Missing available hours",
+      "cases": [
+        {
+          "name": "Reduce proposed second product units",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing available hours",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 7,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\product-mix-capacity-checker.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\product-mix-capacity-checker\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\product-mix-capacity-checker.png",
+      "xlsxSha256": "3a618e2163a85b8907db536bb9b0dacd484928ec31eaf24963ead3ddfdbb08cd",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D9\",\"rows\":3,\"cols\":3,\"nonEmpty\":9,\"text\":9,\"maxTextLength\":18,\"preview\":[[\"required hours\",\"110\",\"hours / period\"],[\"capacity headroom\",\"-10\",\"hours / period\"],[\"contribution total\",\"450\",\"USD / period\"]],\"previewAddress\":\"B7:D9\",\"previewRows\":3,\"previewCols\":3}",
+      "workbookSpecSha256": "2176b0a00885a4aaf3b3bfd9e2ea2dd2041a0156c46ba964b80260cd4e63dcf4"
+    },
+    {
+      "slug": "service-utilization-margin-builder",
+      "status": "pass",
+      "modelSha256": "0e339dc0995f87b5359e051e109dfd1a707bc51b09f26b1e0ac1e4da88b45ac0",
+      "baselineOutputs": {
+        "available_hours": 104,
+        "utilization": 0.7692307692307693,
+        "revenue": 8000,
+        "contribution": 3400,
+        "contribution_margin": 0.425
+      },
+      "changedInputCase": "Changed source assumption, hand-calculated result",
+      "invalidInputCase": "Missing or invalid required input",
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing or invalid required input",
+          "kind": "refusal",
+          "status": "pass"
+        },
+        {
+          "name": "Fixed duties and leave exceed paid hours",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 7,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\service-utilization-margin-builder.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\service-utilization-margin-builder\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\service-utilization-margin-builder.png",
+      "xlsxSha256": "141f639a04eafc6201434e3cc83fed994974c34eb3d588af41be02cd66fd7a45",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D11\",\"rows\":5,\"cols\":3,\"nonEmpty\":15,\"text\":15,\"maxTextLength\":19,\"preview\":[[\"available hours\",\"104\",\"hours / month\"],[\"utilization\",\"0.7692307692307693\",\"decimal fraction\"],[\"revenue\",\"8000\",\"USD / stated period\"],[\"contribution\",\"3400\",\"USD / stated period\"],[\"contribution margin\",\"0.425\",\"decimal fraction\"]],\"previewAddress\":\"B7:D11\",\"previewRows\":5,\"previewCols\":3}",
+      "workbookSpecSha256": "b30e7a8dc812e9fe1c94492cc23d96971112f9dc26d64eb81088f92b37440c81"
+    },
+    {
+      "slug": "hotel-channel-revenue-reconciler",
+      "status": "pass",
+      "modelSha256": "49caa82a7a8c4f8893e5cfcfafd8d7297c85628179bfc9d3804be1190a7a77f7",
+      "baselineOutputs": {
+        "sold_nights": 70,
+        "gross_room_revenue": 7600,
+        "commission": 720,
+        "net_channel_revenue": 6880,
+        "contribution": 5480,
+        "occupancy": 0.7,
+        "net_revenue_per_available_night": 68.8
+      },
+      "changedInputCase": "Changed source assumption, hand-calculated result",
+      "invalidInputCase": "Missing or invalid required input",
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing or invalid required input",
+          "kind": "refusal",
+          "status": "pass"
+        },
+        {
+          "name": "Sold room nights exceed available physical nights",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 10,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\hotel-channel-revenue-reconciler.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\hotel-channel-revenue-reconciler\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\hotel-channel-revenue-reconciler.png",
+      "xlsxSha256": "802511a4c8618eb18e40d06e1d874d49c1af2671363a61ee96b128a9e41ac373",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D13\",\"rows\":7,\"cols\":3,\"nonEmpty\":21,\"text\":21,\"maxTextLength\":31,\"preview\":[[\"sold nights\",\"70\",\"room nights / period\"],[\"gross room revenue\",\"7600\",\"USD / stated period\"],[\"commission\",\"720\",\"USD / stated period\"],[\"net channel revenue\",\"6880\",\"USD / stated period\"],[\"contribution\",\"5480\",\"USD / stated period\"],[\"occupancy\",\"0.7\",\"decimal fraction\"],[\"net revenue per available night\",\"68.8\",\"USD / available room night\"]],\"previewAddress\":\"B7:D13\",\"previewRows\":7,\"previewCols\":3}",
+      "workbookSpecSha256": "d3773c8284732d9fbbc89fa78ee76e48de4c3b0251948df0e8da3ddff841f32f"
+    },
+    {
+      "slug": "restaurant-portion-cost-builder",
+      "status": "pass",
+      "modelSha256": "bb7da8105e069f8251d05065bcfc9948b42ae6e21da352017ccec2c5b2e87377",
+      "baselineOutputs": {
+        "edible_kg": 8,
+        "portion_capacity": 40,
+        "cash_per_capacity_portion": 4,
+        "served": 30,
+        "unserved": 10,
+        "service_receipts": 300,
+        "batch_contribution": 140
+      },
+      "changedInputCase": "Changed source assumption, hand-calculated result",
+      "invalidInputCase": "Missing or invalid required input",
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing or invalid required input",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 8,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\restaurant-portion-cost-builder.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\restaurant-portion-cost-builder\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\restaurant-portion-cost-builder.png",
+      "xlsxSha256": "1486f68be27d3b11e741319c14b15f3f96362780bf59dcf07f1ec6edecd3daff",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D13\",\"rows\":7,\"cols\":3,\"nonEmpty\":21,\"text\":21,\"maxTextLength\":29,\"preview\":[[\"edible kg\",\"8\",\"kg / batch\"],[\"portion capacity\",\"40\",\"portion equivalents / batch\"],[\"cash per capacity portion\",\"4\",\"USD / theoretical portion\"],[\"served\",\"30\",\"portion equivalents / service\"],[\"unserved\",\"10\",\"portion equivalents / service\"],[\"service receipts\",\"300\",\"USD / stated period\"],[\"batch contribution\",\"140\",\"USD / stated period\"]],\"previewAddress\":\"B7:D13\",\"previewRows\":7,\"previewCols\":3}",
+      "workbookSpecSha256": "44435cd035fe867ee89336d6b53789708f80443185ff18a8972020bfd3c9f89b"
+    },
+    {
+      "slug": "retail-markdown-stock-reconciler",
+      "status": "pass",
+      "modelSha256": "359531e0a27902b947c2676cb587beea45acf2316fcf69a827f2fd8692a9b5c1",
+      "baselineOutputs": {
+        "closing_units": 30,
+        "total_receipts": 580,
+        "sold_purchase_cost": 350,
+        "cash_contribution": 220,
+        "held_cost_memo": 150,
+        "original_cohort_purchase_cash": 500,
+        "cumulative_cohort_net_cash": 70
+      },
+      "changedInputCase": "Changed source assumption, hand-calculated result",
+      "invalidInputCase": "Missing or invalid required input",
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing or invalid required input",
+          "kind": "refusal",
+          "status": "pass"
+        },
+        {
+          "name": "Sales exceed stock available in the cohort",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 12,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\retail-markdown-stock-reconciler.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\retail-markdown-stock-reconciler\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\retail-markdown-stock-reconciler.png",
+      "xlsxSha256": "2baef9b19bc702230db7ae98cee88dffc618c861c26cbfe56c4ba43817af423c",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D13\",\"rows\":7,\"cols\":3,\"nonEmpty\":21,\"text\":21,\"maxTextLength\":46,\"preview\":[[\"closing units\",\"30\",\"units / cohort\"],[\"total receipts\",\"580\",\"USD / stated period\"],[\"sold purchase cost\",\"350\",\"USD / stated period\"],[\"Sold-unit contribution after clearance expense\",\"220\",\"USD / stated period\"],[\"held cost memo\",\"150\",\"USD / stated period\"],[\"Original full-cohort purchase cash\",\"500\",\"USD / cohort purchase\"],[\"Cumulative cohort cash after full purchase\",\"70\",\"USD / cumulative cohort\"]],\"previewAddress\":\"B7:D13\",\"previewRows\":7,\"previewCols\":3}",
+      "workbookSpecSha256": "972f47e47c02f694f3ae0bf9d5794709150b27176b3e48e3f05a6042342a0522"
+    },
+    {
+      "slug": "contracted-energy-cash-model",
+      "status": "pass",
+      "modelSha256": "4ff3a298e99f3c3f04fe31bbb9afbdd099b68a2efe0539758a38a7ee2fd71c1c",
+      "baselineOutputs": {
+        "unit_cash_margin": 40,
+        "cash_1": 30000,
+        "cash_2": 34000,
+        "cash_3": 26000,
+        "total_cash": 90000
+      },
+      "changedInputCase": "Changed source assumption, hand-calculated result",
+      "invalidInputCase": "Missing or invalid required input",
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing or invalid required input",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 8,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\contracted-energy-cash-model.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\contracted-energy-cash-model\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\contracted-energy-cash-model.png",
+      "xlsxSha256": "574a54b57a97e39bd424bdf2c7c942f73d32fbeca7895cef50bdcfa164fdf8f9",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D11\",\"rows\":5,\"cols\":3,\"nonEmpty\":15,\"text\":15,\"maxTextLength\":19,\"preview\":[[\"unit cash margin\",\"40\",\"USD / MWh\"],[\"cash 1\",\"30000\",\"USD / stated period\"],[\"cash 2\",\"34000\",\"USD / stated period\"],[\"cash 3\",\"26000\",\"USD / stated period\"],[\"total cash\",\"90000\",\"USD / stated period\"]],\"previewAddress\":\"B7:D11\",\"previewRows\":5,\"previewCols\":3}",
+      "workbookSpecSha256": "7ef8300146da74e5c1c7d23efa2413481adbedbff93806e44bb1c0eebd56d065"
+    },
+    {
+      "slug": "water-utility-collections-reconciler",
+      "status": "pass",
+      "modelSha256": "9e0b5e7069e2ec4f24e21424a17ffe3cfc59dc993e259764fec219edf7819148",
+      "baselineOutputs": {
+        "unbilled_m3": 200,
+        "new_billings": 1600,
+        "total_receipts": 1400,
+        "closing_receivables": 500,
+        "net_operating_cash": 400
+      },
+      "changedInputCase": "Changed source assumption, hand-calculated result",
+      "invalidInputCase": "Missing or invalid required input",
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing or invalid required input",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 7,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\water-utility-collections-reconciler.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\water-utility-collections-reconciler\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\water-utility-collections-reconciler.png",
+      "xlsxSha256": "03d849f6af91935f426c4e0adfa115134f5e6c6757f0e268d0e865eda2ca3dc9",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D11\",\"rows\":5,\"cols\":3,\"nonEmpty\":15,\"text\":15,\"maxTextLength\":19,\"preview\":[[\"unbilled m3\",\"200\",\"m3 / month\"],[\"new billings\",\"1600\",\"USD / stated period\"],[\"total receipts\",\"1400\",\"USD / stated period\"],[\"closing receivables\",\"500\",\"USD / stated period\"],[\"net operating cash\",\"400\",\"USD / stated period\"]],\"previewAddress\":\"B7:D11\",\"previewRows\":5,\"previewCols\":3}",
+      "workbookSpecSha256": "334d2e176f8d3ba5d6b0fafb12989570bd6544ac43d7d08e55e3943fa73dbcf4"
+    },
+    {
+      "slug": "freight-trip-contribution-builder",
+      "status": "pass",
+      "modelSha256": "1df931f5d81629c7ab497ab60d1587039e436418f44162517ab7c796664ad0fa",
+      "baselineOutputs": {
+        "total_km": 600,
+        "fuel_liters": 180,
+        "fuel_cash": 360,
+        "total_trip_cash": 750,
+        "trip_contribution": 250
+      },
+      "changedInputCase": "Changed source assumption, hand-calculated result",
+      "invalidInputCase": "Missing or invalid required input",
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing or invalid required input",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 6,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\freight-trip-contribution-builder.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\freight-trip-contribution-builder\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\freight-trip-contribution-builder.png",
+      "xlsxSha256": "08bad122c90a2e76b9275daeff4e6305a867e9a87cfb04d25939cd78945d8d9c",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D11\",\"rows\":5,\"cols\":3,\"nonEmpty\":15,\"text\":15,\"maxTextLength\":19,\"preview\":[[\"total km\",\"600\",\"km / trip\"],[\"fuel liters\",\"180\",\"liters / trip\"],[\"fuel cash\",\"360\",\"USD / stated period\"],[\"total trip cash\",\"750\",\"USD / stated period\"],[\"trip contribution\",\"250\",\"USD / stated period\"]],\"previewAddress\":\"B7:D11\",\"previewRows\":5,\"previewCols\":3}",
+      "workbookSpecSha256": "d9d415a3ed43cecf4be4322d9e40a10a28f1fd6699bd9d52cf2944cb0b2725a6"
+    },
+    {
+      "slug": "fleet-replacement-cash-comparer",
+      "status": "pass",
+      "modelSha256": "725e5e77cd2693d17d04c059cf72c47757425e73d5f3d1acf4f1bd3c900e0f9b",
+      "baselineOutputs": {
+        "net_initial_outlay": 800,
+        "present_future_cash": 1000,
+        "incremental_npv": 200,
+        "undiscounted_net": 200
+      },
+      "changedInputCase": "Changed source assumption, hand-calculated result",
+      "invalidInputCase": "Missing or invalid required input",
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing or invalid required input",
+          "kind": "refusal",
+          "status": "pass"
+        },
+        {
+          "name": "Foregone keep-vehicle sale exceeds replacement terminal sale",
+          "kind": "changed-input",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 6,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\fleet-replacement-cash-comparer.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\fleet-replacement-cash-comparer\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\fleet-replacement-cash-comparer.png",
+      "xlsxSha256": "2cd2475ef7ab822b1c6e691fd4d537b6b1c3c31a67d3c94e8251221da9a8d8c4",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D10\",\"rows\":4,\"cols\":3,\"nonEmpty\":12,\"text\":12,\"maxTextLength\":19,\"preview\":[[\"net initial outlay\",\"800\",\"USD / stated period\"],[\"present future cash\",\"1000\",\"USD / stated period\"],[\"incremental npv\",\"200\",\"USD / stated period\"],[\"undiscounted net\",\"200\",\"USD / stated period\"]],\"previewAddress\":\"B7:D10\",\"previewRows\":4,\"previewCols\":3}",
+      "workbookSpecSha256": "191a3feccdbf4d0a955cd0a7bf0984ca40e96bdcd0ac446bd9bb5879c92c626f"
+    },
+    {
+      "slug": "clinic-claims-collections-bridge",
+      "status": "pass",
+      "modelSha256": "63998ff8b6516bacb307de7b4cdd34c9371a6d60468c02827e1ec27a53a47a2c",
+      "baselineOutputs": {
+        "net_new_claims": 800,
+        "closing_claims": 600,
+        "expected_bank_cash": 650,
+        "settlement_difference": 0
+      },
+      "changedInputCase": "Changed source assumption, hand-calculated result",
+      "invalidInputCase": "Missing or invalid required input",
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing or invalid required input",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 5,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\clinic-claims-collections-bridge.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\clinic-claims-collections-bridge\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\clinic-claims-collections-bridge.png",
+      "xlsxSha256": "d44d79036498e4af26308d3c9b81ce7df28da3d6b1352693e348a2f0c194044a",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D10\",\"rows\":4,\"cols\":3,\"nonEmpty\":12,\"text\":12,\"maxTextLength\":21,\"preview\":[[\"net new claims\",\"800\",\"USD / stated period\"],[\"closing claims\",\"600\",\"USD / stated period\"],[\"expected bank cash\",\"650\",\"USD / stated period\"],[\"settlement difference\",\"0\",\"USD / stated period\"]],\"previewAddress\":\"B7:D10\",\"previewRows\":4,\"previewCols\":3}",
+      "workbookSpecSha256": "203e87f9cc045dd1a16f8b89d941a80b797f4915d68a0e6b29956b7d62047f48"
+    },
+    {
+      "slug": "grant-restrictions-cash-reconciler",
+      "status": "pass",
+      "modelSha256": "1b874aebd1520b8db903b3f3cd552350190677e46594a1f96662d29318655985",
+      "baselineOutputs": {
+        "ending_restricted_cash": 550,
+        "ending_bank_cash": 1250,
+        "general_cash": 700
+      },
+      "changedInputCase": "Changed source assumption, hand-calculated result",
+      "invalidInputCase": "Missing or invalid required input",
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing or invalid required input",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 7,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\grant-restrictions-cash-reconciler.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\grant-restrictions-cash-reconciler\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\grant-restrictions-cash-reconciler.png",
+      "xlsxSha256": "99080c20a5737e4e78cc6cb24b94105ae72727fc522eb721266af3613a252ef7",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D9\",\"rows\":3,\"cols\":3,\"nonEmpty\":9,\"text\":9,\"maxTextLength\":22,\"preview\":[[\"ending restricted cash\",\"550\",\"USD / stated period\"],[\"ending bank cash\",\"1250\",\"USD / stated period\"],[\"general cash\",\"700\",\"USD / stated period\"]],\"previewAddress\":\"B7:D9\",\"previewRows\":3,\"previewCols\":3}",
+      "workbookSpecSha256": "4d5ed0bae0e24acea3910664f9f69981c2439420b972ec0eefcf19b6c9598a17"
+    },
+    {
+      "slug": "commodity-pass-through-cost-bridge",
+      "status": "pass",
+      "modelSha256": "5fb5c8d555438e604a55688660d56725c274087af70c87a9d69bd453fcc16317",
+      "baselineOutputs": {
+        "incremental_input_cost": 0.2,
+        "price_recovery": 0.1,
+        "scenario_selling_price": 10.1,
+        "scenario_unit_contribution": 5.5,
+        "period_contribution": 5500
+      },
+      "changedInputCase": "Changed source assumption, hand-calculated result",
+      "invalidInputCase": "Missing or invalid required input",
+      "cases": [
+        {
+          "name": "Changed source assumption, hand-calculated result",
+          "kind": "changed-input",
+          "status": "pass"
+        },
+        {
+          "name": "Missing or invalid required input",
+          "kind": "refusal",
+          "status": "pass"
+        }
+      ],
+      "reopenedAndRecalculated": true,
+      "formulaCount": 8,
+      "nativePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\commodity-pass-through-cost-bridge.xlsx",
+      "packagePath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\runs\\finance-source\\catalogue-items\\general\\commodity-pass-through-cost-bridge\\examples\\model.xlsx",
+      "previewPath": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16358-342e-75a3-acab-0faec070ecef\\outputs\\finance-models\\commodity-pass-through-cost-bridge.png",
+      "xlsxSha256": "23ec682b4749f00a7df06ff7d438ef748ed30fca4c3ddee98f3d33b6d0f3432d",
+      "inspection": "{\"kind\":\"region\",\"sheet\":\"Model\",\"address\":\"B7:D11\",\"rows\":5,\"cols\":3,\"nonEmpty\":15,\"text\":15,\"maxTextLength\":26,\"preview\":[[\"incremental input cost\",\"0.2\",\"USD / unit\"],[\"price recovery\",\"0.1\",\"USD / unit\"],[\"scenario selling price\",\"10.1\",\"USD / unit\"],[\"scenario unit contribution\",\"5.5\",\"USD / unit\"],[\"period contribution\",\"5500\",\"USD / stated period\"]],\"previewAddress\":\"B7:D11\",\"previewRows\":5,\"previewCols\":3}",
+      "workbookSpecSha256": "26715ccd97c68c8020ce6b8ba2f1f65b65ed2b81e42667ed5bbd129089097b18"
+    }
+  ]
+}

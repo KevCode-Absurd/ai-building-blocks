@@ -1,0 +1,32 @@
+{
+  "engine": "Artifact Tool",
+  "scope": "Illustrative workbook calculations, not source truth or an actual investment conclusion. Native Microsoft Excel application execution is not claimed.",
+  "modelSha256": "4d5d64b53846812e254278c7f2370163856da9f1861700f9936474a1e50ffe72",
+  "xlsxSha256": "e27dacae11fbc13c8ab963be9f738e043107646f27a942277d8d141a28a68294",
+  "baseline": "pass",
+  "changedInputCase": "Changed source assumption, hand-calculated result",
+  "invalidInputCase": "Missing required evidence refuses calculation",
+  "cases": [
+    {
+      "name": "Changed source assumption, hand-calculated result",
+      "kind": "changed-input",
+      "status": "pass"
+    },
+    {
+      "name": "Missing required evidence refuses calculation",
+      "kind": "refusal",
+      "status": "pass"
+    }
+  ],
+  "reopenedAndRecalculated": true,
+  "rendered": true,
+  "visualReview": "pass",
+  "workbookSpecSha256": "2f4b8206772bfc3f97d81d89de2b49e3c9723c7f95da76ffa1fcade49881c757",
+  "visualEvidence": {
+    "report": "reports/finance-operating-credit-peer-review.json",
+    "reportSha256": "ac57e1e1d010a9b5b9e64c1e84ef87d22207254a2844e5e5a205578608d66aa6",
+    "previewSha256": "05df1dafd8e2873ff23de6a621e04f360aca3e26ef3e70d2e4a74f7f64e3a635",
+    "sheet": "Model",
+    "sourceSpecSha256": "31ee538dd8a60ce7014dda275673af4975eb5d570164e6883d4327ae01b08436"
+  }
+}

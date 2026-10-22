@@ -1,5 +1,5 @@
 {
-  "checkedOn": "2026-10-22T11:02:10.330Z",
+  "checkedOn": "2026-10-22T12:19:30.795Z",
   "deadline": "2026-10-22 Asia/Kolkata",
   "accountAuthenticated": true,
   "workersPaid": {
@@ -14,7 +14,7 @@
     "canonicalURL": "https://useaiblocks.com/"
   },
   "staging": {
-    "status": "R9 frontend candidate4;12localstartup+4authregressions and6currentremote stagingchecks pass;unchangedbackend;historicalpositiveproofretained",
+    "status": "R10 exact frozen release verified:24 remote asset/header checks,21 bindings preserved; private preview and isolated Clerk test account retained",
     "worker": "ai-building-blocks-staging",
     "database": "ai-blocks-staging",
     "databaseId": "eeb9d0d4-cbed-4751-8df4-1aaf81fd6cb3",
@@ -38,13 +38,13 @@
     "turnstileConfigured": true,
     "assetsToUpload": 12252,
     "url": "https://ai-building-blocks-staging.kevinmark7498.workers.dev",
-    "versionId": "6c556ca3-f730-4a30-b249-ac51328e342d",
-    "deployedOn": "2026-10-22T09:48:54.676Z",
+    "versionId": "4cd70873-0f3b-43a4-907b-d57dc118da53",
+    "deployedOn": "2026-10-22T12:08:12.467Z",
     "uploadedAssets": 4500,
     "reusedAssets": 14110,
     "workerStartupMs": 5,
     "verified": true,
-    "previousVersionId": "80bc2a97-5835-4936-bd81-8c994a9552b6",
+    "previousVersionId": "6c556ca3-f730-4a30-b249-ac51328e342d",
     "workerSha256": "892f4aaae4cfd8dc723acc5ddf17f714c59416ee66b3d932057e590f76410d2c",
     "previousFunctionalChecks": {
       "versionId": "723795d5-403c-461a-a910-4088612a0022",
@@ -53,17 +53,16 @@
       "routing": "pass"
     },
     "manifestCache": {
-      "entries": 18610,
-      "algorithm": "Wrangler 4.151.3 BLAKE3/base64/extension",
-      "generationMs": 10467
+      "entries": 23837,
+      "algorithm": "Wrangler 4.151.3 BLAKE3/base64/extension"
     },
     "clerkConfigured": true,
-    "releaseRoot": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r9-candidate4",
-    "assetReleaseRoot": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r9-candidate4",
-    "verifiedOn": "2026-10-22T10:54:03.975Z"
+    "releaseRoot": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r10-candidate3",
+    "assetReleaseRoot": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r10-candidate3",
+    "verifiedOn": "2026-10-22T12:19:30.795Z"
   },
   "production": {
-    "status": "R9live verified:12productionstartup+27productionchecks+oneactualAIworkflowanddownloads pass",
+    "status": "R10 public verified:27 smoke+23 exact asset/header+16 SPA metadata checks pass;20 bindings preserved; earlier real Google/AI workflow proof retained",
     "database": "ai-blocks",
     "databaseId": "a886eeae-4014-4da2-842f-a5bebc4d7f71",
     "migrations": [
@@ -88,7 +87,7 @@
       "blockSeconds": 10,
       "includedRule": true
     },
-    "versionId": "fcc0a974-2fce-4a16-8acb-0294a9ab6448",
+    "versionId": "ce40fda4-8705-421b-aff4-0522ac6c2550",
     "workerSha256": "892f4aaae4cfd8dc723acc5ddf17f714c59416ee66b3d932057e590f76410d2c",
     "uploadedAssets": 4500,
     "reusedAssets": 14110,
@@ -96,11 +95,11 @@
     "workersDevEnabled": false,
     "previewUrlsEnabled": false,
     "clerkConfigured": true,
-    "previousVersionId": "d24c827d-ba6f-4fc8-b22f-b0dacdb4478e",
-    "deployedOn": "2026-10-22T10:56:21.328Z",
-    "releaseRoot": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r9-candidate4",
-    "assetReleaseRoot": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r9-candidate4",
-    "sourceCommit": "9d93068a",
+    "previousVersionId": "fcc0a974-2fce-4a16-8acb-0294a9ab6448",
+    "deployedOn": "2026-10-22T12:17:25.469Z",
+    "releaseRoot": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r10-candidate3",
+    "assetReleaseRoot": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r10-candidate3",
+    "sourceCommit": "0975db5a6374d072371480e421abee30763706d5",
     "publicVerified": true,
     "gitEvidenceBeforeActivation": "56269425",
     "aiEnabled": true,
@@ -108,17 +107,21 @@
     "configurationCommitBeforeAIEnable": "0a6a3fd6",
     "defaultProviderKeyConfigured": true,
     "customerPriceUSD": 0,
-    "pendingFrontendRelease": null
+    "pendingFrontendRelease": null,
+    "verifiedOn": "2026-10-22T12:19:30.795Z",
+    "manifestCache": {
+      "entries": 23837,
+      "algorithm": "Wrangler 4.151.3 BLAKE3/base64/extension"
+    }
   },
   "releaseScope": {
-    "blocks": 4359,
-    "prerenderedPages": 4479,
-    "files": 18614,
+    "blocks": 4438,
+    "prerenderedPages": 4670,
+    "files": 23841,
     "combinedBuild": "pass",
     "unitTests": {
-      "passed": 96,
-      "failed": 0,
-      "skipped": 0
+      "passed": 120,
+      "failed": 0
     },
     "clientCredentialScan": "pass;4 provider secrets,2 Clerk secrets and development public key absent across21JS bundles",
     "workerSha256": "892f4aaae4cfd8dc723acc5ddf17f714c59416ee66b3d932057e590f76410d2c",
@@ -139,7 +142,24 @@
       "liveSessionSecurityChecksPassed": 10,
       "sourcePreviewSha256": "eb47b3f579c8adfa36076684d3b62db2764839b0a76b582a091ac44b3e322355"
     },
-    "finalFrontend": "R9 assembling-block startup screen + session token acquired after human verification;4authregressions and12local+12productionstartupchecks pass"
+    "finalFrontend": "R9 assembling-block startup screen + session token acquired after human verification;4authregressions and12local+12productionstartupchecks pass",
+    "responsiveChecks": 412,
+    "responsiveWidths": [
+      320,
+      390,
+      600,
+      768,
+      1024,
+      1440,
+      1920
+    ],
+    "seoPages": 4670,
+    "seoBrowserChecks": 16,
+    "toolBrowserChecks": 83,
+    "completeNewWorkflowAndAgentPacks": 79,
+    "calculatorUnitTests": 483,
+    "frontendRelease": "R10 candidate3",
+    "runtimeBackendChanged": false
   },
   "accountOwnerActionPending": false,
   "clerk": {

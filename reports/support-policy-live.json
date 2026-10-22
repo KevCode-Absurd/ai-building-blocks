@@ -1,0 +1,487 @@
+{
+  "checkedOn": "2026-10-22T12:18:58.553Z",
+  "deployedVersion": "ce40fda4-8705-421b-aff4-0522ac6c2550",
+  "origin": "https://useaiblocks.com",
+  "readOnly": true,
+  "providerCalls": 0,
+  "pages": [
+    {
+      "path": "/support",
+      "status": 200,
+      "heading": "Get help with AI Blocks",
+      "canonical": true,
+      "allSixNavigationLinks": true
+    },
+    {
+      "path": "/about",
+      "status": 200,
+      "heading": "Reusable instructions for the work you do",
+      "canonical": true,
+      "allSixNavigationLinks": true
+    },
+    {
+      "path": "/privacy",
+      "status": 200,
+      "heading": "Privacy policy",
+      "canonical": true,
+      "allSixNavigationLinks": true
+    },
+    {
+      "path": "/terms",
+      "status": 200,
+      "heading": "Terms of service",
+      "canonical": true,
+      "allSixNavigationLinks": true
+    },
+    {
+      "path": "/cookies",
+      "status": 200,
+      "heading": "Cookies and browser storage",
+      "canonical": true,
+      "allSixNavigationLinks": true
+    },
+    {
+      "path": "/ai-disclaimer",
+      "status": 200,
+      "heading": "Understand and check AI output",
+      "canonical": true,
+      "allSixNavigationLinks": true
+    },
+    {
+      "path": "/analytics-privacy.html",
+      "status": 200,
+      "readableChoicesHelp": true
+    },
+    {
+      "path": "/",
+      "status": 200,
+      "footerSupportAndPolicies": true
+    },
+    {
+      "path": "/compose",
+      "status": 200,
+      "footerSupportAndPolicies": true
+    },
+    {
+      "path": "/how-it-works",
+      "status": 200,
+      "footerSupportAndPolicies": true
+    },
+    {
+      "path": "/tools",
+      "status": 200,
+      "footerSupportAndPolicies": true
+    },
+    {
+      "path": "/skills/website-brand-brain-builder",
+      "status": 200,
+      "footerSupportAndPolicies": true
+    }
+  ],
+  "links": [
+    {
+      "href": "https://useaiblocks.com/jobs",
+      "foundOn": "/ai-disclaimer",
+      "status": 200
+    },
+    {
+      "href": "https://useaiblocks.com/",
+      "foundOn": "/analytics-privacy.html",
+      "status": 200
+    },
+    {
+      "href": "https://useaiblocks.com/minds",
+      "foundOn": "/ai-disclaimer",
+      "status": 200
+    },
+    {
+      "href": "https://useaiblocks.com/tools",
+      "foundOn": "/ai-disclaimer",
+      "status": 200
+    },
+    {
+      "href": "https://useaiblocks.com/how-it-works",
+      "foundOn": "/ai-disclaimer",
+      "status": 200
+    },
+    {
+      "href": "https://useaiblocks.com/from-a-source",
+      "foundOn": "/ai-disclaimer",
+      "status": 200
+    },
+    {
+      "href": "https://useaiblocks.com/apps",
+      "foundOn": "/ai-disclaimer",
+      "status": 200
+    },
+    {
+      "href": "https://useaiblocks.com/support#contact",
+      "foundOn": "/support",
+      "status": 200,
+      "fragmentExists": true
+    },
+    {
+      "href": "https://useaiblocks.com/support#start",
+      "foundOn": "/support",
+      "status": 200,
+      "fragmentExists": true
+    },
+    {
+      "href": "https://useaiblocks.com/support#accounts",
+      "foundOn": "/support",
+      "status": 200,
+      "fragmentExists": true
+    },
+    {
+      "href": "https://useaiblocks.com/support#saved-work",
+      "foundOn": "/support",
+      "status": 200,
+      "fragmentExists": true
+    },
+    {
+      "href": "https://useaiblocks.com/support#privacy",
+      "foundOn": "/support",
+      "status": 200,
+      "fragmentExists": true
+    },
+    {
+      "href": "mailto:hello@useaiblocks.com?subject=AI%20Blocks%20support",
+      "foundOn": "/ai-disclaimer",
+      "status": "valid mailto; no email sent"
+    },
+    {
+      "href": "mailto:hello@useaiblocks.com?subject=Broken%20page%20or%20skill",
+      "foundOn": "/support",
+      "status": "valid mailto; no email sent"
+    },
+    {
+      "href": "mailto:hello@useaiblocks.com?subject=Tailored%20skill%20request",
+      "foundOn": "/support",
+      "status": "valid mailto; no email sent"
+    },
+    {
+      "href": "https://useaiblocks.com/compose",
+      "foundOn": "/support",
+      "status": 200
+    },
+    {
+      "href": "https://useaiblocks.com/space",
+      "foundOn": "/support",
+      "status": 200
+    },
+    {
+      "href": "https://useaiblocks.com/cookies",
+      "foundOn": "/analytics-privacy.html",
+      "status": 200
+    },
+    {
+      "href": "mailto:hello@useaiblocks.com?subject=Privacy%20request",
+      "foundOn": "/cookies",
+      "status": "valid mailto; no email sent"
+    },
+    {
+      "href": "mailto:hello@useaiblocks.com?subject=Content%20or%20rights%20issue",
+      "foundOn": "/support",
+      "status": "valid mailto; no email sent"
+    },
+    {
+      "href": "mailto:hello@useaiblocks.com?subject=Security%20report",
+      "foundOn": "/support",
+      "status": "valid mailto; no email sent"
+    },
+    {
+      "href": "https://useaiblocks.com/llms.txt",
+      "foundOn": "/ai-disclaimer",
+      "status": 200
+    },
+    {
+      "href": "https://useaiblocks.com/sitemap.xml",
+      "foundOn": "/ai-disclaimer",
+      "status": 200
+    },
+    {
+      "href": "https://useaiblocks.com/support",
+      "foundOn": "/ai-disclaimer",
+      "status": 200
+    },
+    {
+      "href": "https://useaiblocks.com/about",
+      "foundOn": "/ai-disclaimer",
+      "status": 200
+    },
+    {
+      "href": "https://useaiblocks.com/privacy",
+      "foundOn": "/analytics-privacy.html",
+      "status": 200
+    },
+    {
+      "href": "https://useaiblocks.com/terms",
+      "foundOn": "/ai-disclaimer",
+      "status": 200
+    },
+    {
+      "href": "https://useaiblocks.com/ai-disclaimer",
+      "foundOn": "/ai-disclaimer",
+      "status": 200
+    },
+    {
+      "href": "https://useaiblocks.com/about#library",
+      "foundOn": "/about",
+      "status": 200,
+      "fragmentExists": true
+    },
+    {
+      "href": "https://useaiblocks.com/about#execution",
+      "foundOn": "/about",
+      "status": 200,
+      "fragmentExists": true
+    },
+    {
+      "href": "https://useaiblocks.com/about#sources",
+      "foundOn": "/about",
+      "status": 200,
+      "fragmentExists": true
+    },
+    {
+      "href": "https://useaiblocks.com/about#operator",
+      "foundOn": "/about",
+      "status": 200,
+      "fragmentExists": true
+    },
+    {
+      "href": "https://useaiblocks.com/privacy#operator",
+      "foundOn": "/privacy",
+      "status": 200,
+      "fragmentExists": true
+    },
+    {
+      "href": "https://useaiblocks.com/privacy#device",
+      "foundOn": "/privacy",
+      "status": 200,
+      "fragmentExists": true
+    },
+    {
+      "href": "https://useaiblocks.com/privacy#server",
+      "foundOn": "/privacy",
+      "status": 200,
+      "fragmentExists": true
+    },
+    {
+      "href": "https://useaiblocks.com/privacy#purposes",
+      "foundOn": "/privacy",
+      "status": 200,
+      "fragmentExists": true
+    },
+    {
+      "href": "https://useaiblocks.com/privacy#analytics",
+      "foundOn": "/privacy",
+      "status": 200,
+      "fragmentExists": true
+    },
+    {
+      "href": "https://useaiblocks.com/privacy#providers",
+      "foundOn": "/privacy",
+      "status": 200,
+      "fragmentExists": true
+    },
+    {
+      "href": "https://useaiblocks.com/privacy#retention",
+      "foundOn": "/privacy",
+      "status": 200,
+      "fragmentExists": true
+    },
+    {
+      "href": "https://useaiblocks.com/privacy#choices",
+      "foundOn": "/privacy",
+      "status": 200,
+      "fragmentExists": true
+    },
+    {
+      "href": "https://useaiblocks.com/privacy#age-changes",
+      "foundOn": "/privacy",
+      "status": 200,
+      "fragmentExists": true
+    },
+    {
+      "href": "https://useaiblocks.com/analytics-privacy.html",
+      "foundOn": "/cookies",
+      "status": 200
+    },
+    {
+      "href": "https://www.cloudflare.com/privacypolicy/",
+      "foundOn": "/privacy",
+      "status": "external verified",
+      "method": "HTTP200",
+      "checkedOn": "2026-10-22T11:45:55.068Z"
+    },
+    {
+      "href": "https://clerk.com/legal/privacy",
+      "foundOn": "/privacy",
+      "status": "external verified",
+      "method": "HTTP200",
+      "checkedOn": "2026-10-22T11:45:55.068Z"
+    },
+    {
+      "href": "https://policies.google.com/privacy",
+      "foundOn": "/analytics-privacy.html",
+      "status": "external verified",
+      "method": "HTTP200",
+      "checkedOn": "2026-10-22T11:45:55.068Z"
+    },
+    {
+      "href": "https://privacy.microsoft.com/privacystatement",
+      "foundOn": "/analytics-privacy.html",
+      "status": "external verified",
+      "method": "HTTP200",
+      "checkedOn": "2026-10-22T11:45:55.068Z"
+    },
+    {
+      "href": "https://openai.com/policies/privacy-policy/",
+      "foundOn": "/privacy",
+      "status": "external verified",
+      "method": "actual browser; native fetch was blocked",
+      "checkedOn": "2026-10-22T11:46:35.302747Z"
+    },
+    {
+      "href": "https://useaiblocks.com/terms#agreement",
+      "foundOn": "/terms",
+      "status": 200,
+      "fragmentExists": true
+    },
+    {
+      "href": "https://useaiblocks.com/terms#access",
+      "foundOn": "/terms",
+      "status": 200,
+      "fragmentExists": true
+    },
+    {
+      "href": "https://useaiblocks.com/terms#responsibility",
+      "foundOn": "/terms",
+      "status": 200,
+      "fragmentExists": true
+    },
+    {
+      "href": "https://useaiblocks.com/terms#acceptable-use",
+      "foundOn": "/terms",
+      "status": 200,
+      "fragmentExists": true
+    },
+    {
+      "href": "https://useaiblocks.com/terms#licences",
+      "foundOn": "/terms",
+      "status": 200,
+      "fragmentExists": true
+    },
+    {
+      "href": "https://useaiblocks.com/terms#ai",
+      "foundOn": "/terms",
+      "status": 200,
+      "fragmentExists": true
+    },
+    {
+      "href": "https://useaiblocks.com/terms#limits",
+      "foundOn": "/terms",
+      "status": 200,
+      "fragmentExists": true
+    },
+    {
+      "href": "https://useaiblocks.com/terms#changes",
+      "foundOn": "/terms",
+      "status": 200,
+      "fragmentExists": true
+    },
+    {
+      "href": "https://useaiblocks.com/cookies#local",
+      "foundOn": "/cookies",
+      "status": 200,
+      "fragmentExists": true
+    },
+    {
+      "href": "https://useaiblocks.com/cookies#analytics",
+      "foundOn": "/cookies",
+      "status": 200,
+      "fragmentExists": true
+    },
+    {
+      "href": "https://useaiblocks.com/cookies#choices",
+      "foundOn": "/cookies",
+      "status": 200,
+      "fragmentExists": true
+    },
+    {
+      "href": "https://useaiblocks.com/cookies#server",
+      "foundOn": "/cookies",
+      "status": 200,
+      "fragmentExists": true
+    },
+    {
+      "href": "https://useaiblocks.com/ai-disclaimer#output",
+      "foundOn": "/ai-disclaimer",
+      "status": 200,
+      "fragmentExists": true
+    },
+    {
+      "href": "https://useaiblocks.com/ai-disclaimer#workflows",
+      "foundOn": "/ai-disclaimer",
+      "status": 200,
+      "fragmentExists": true
+    },
+    {
+      "href": "https://useaiblocks.com/ai-disclaimer#minds",
+      "foundOn": "/ai-disclaimer",
+      "status": 200,
+      "fragmentExists": true
+    },
+    {
+      "href": "https://useaiblocks.com/ai-disclaimer#professional",
+      "foundOn": "/ai-disclaimer",
+      "status": 200,
+      "fragmentExists": true
+    },
+    {
+      "href": "https://useaiblocks.com/ai-disclaimer#privacy",
+      "foundOn": "/ai-disclaimer",
+      "status": 200,
+      "fragmentExists": true
+    },
+    {
+      "href": "mailto:hello@useaiblocks.com?subject=Inaccurate%20or%20unsafe%20block",
+      "foundOn": "/ai-disclaimer",
+      "status": "valid mailto; no email sent"
+    },
+    {
+      "href": "mailto:hello@useaiblocks.com",
+      "foundOn": "/analytics-privacy.html",
+      "status": "valid mailto; no email sent"
+    },
+    {
+      "href": "https://learn.microsoft.com/en-us/clarity/setup-and-installation/privacy-disclosure",
+      "foundOn": "/analytics-privacy.html",
+      "status": "external verified",
+      "method": "HTTP200",
+      "checkedOn": "2026-10-22T11:45:55.068Z"
+    }
+  ],
+  "failures": [],
+  "status": "pass",
+  "browserChecks": {
+    "durationSeconds": 12.9,
+    "screenshots": [
+      "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16345-6149-73e1-85e7-f03725fbc63c\\support-desktop.png",
+      "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a16345-6149-73e1-85e7-f03725fbc63c\\support-mobile.png"
+    ],
+    "analyticsChoice": "declined in isolated browser",
+    "browserClosed": true,
+    "report": "reports/support-policy-live-browser.json",
+    "accountOrWorkflowSubmissions": 0,
+    "passed": 3,
+    "browser": "installed Chrome",
+    "status": "pass",
+    "checks": [
+      "Live footer and six policy route navigation, mail links, titles and canonicals",
+      "Live section anchor and native analytics choices help navigation",
+      "All six pages at320 and390px and visible support contact",
+      "Live AI composition Terms and Privacy links, including privacy#server landing"
+    ]
+  }
+}

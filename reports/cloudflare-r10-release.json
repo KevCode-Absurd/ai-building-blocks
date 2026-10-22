@@ -1,6 +1,6 @@
 {
-  "checkedOn": "2026-10-22T12:14:00.140Z",
-  "status": "ready-for-production",
+  "checkedOn": "2026-10-22T12:21:27.200Z",
+  "status": "published-and-verified",
   "origin": "https://useaiblocks.com",
   "frozenReleaseRoot": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r10-candidate3",
   "workerSha256": "892f4aaae4cfd8dc723acc5ddf17f714c59416ee66b3d932057e590f76410d2c",
@@ -70,8 +70,25 @@
     "exactAssetAndHeaderChecks": 24
   },
   "production": {
-    "status": "pending",
-    "sourceCommitBeforeDeployment": null
+    "status": "pass",
+    "sourceCommitBeforeDeployment": "0975db5a6374d072371480e421abee30763706d5",
+    "versionId": "ce40fda4-8705-421b-aff4-0522ac6c2550",
+    "bindingsPreserved": 20,
+    "exactAssetAndHeaderChecks": 23,
+    "AIEnabled": true,
+    "dailyReservationCapUSD": 10,
+    "analytics": {
+      "status": "pass",
+      "GoogleCollect": 204,
+      "ClarityCollect": 204,
+      "consentAndPrivateInputChecks": "pass",
+      "report": "reports/analytics-browser/production-checks.json"
+    },
+    "policies": {
+      "status": "pass",
+      "report": "reports/support-policy-live.json"
+    },
+    "homeTypingMs": 2236.0999999996275
   },
   "limits": "New workflow methods and complete downloads were reviewed and checked. These checks do not claim execution of all business outcomes. The earlier successful real Google/Turnstile AI workflow canary remains recorded separately; no additional paid AI calls were made for this frontend/content release."
 }

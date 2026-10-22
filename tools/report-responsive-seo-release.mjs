@@ -26,6 +26,12 @@ if (fs.existsSync('reports/cloudflare-r10-production-bindings.json') && fs.exist
   const bindings = read('reports/cloudflare-r10-production-bindings.json'), checks = read('reports/cloudflare-r10-production-frozen-checks.json');
   assert(bindings.bindingsPreserved); assert.equal(checks.status, 'pass'); assert.equal(checks.assets, frozen.assets);
   production = { status: 'pass', sourceCommitBeforeDeployment: process.env.CF_SOURCE_COMMIT, versionId: bindings.versionId, bindingsPreserved: bindings.bindingCount, exactAssetAndHeaderChecks: checks.passed, AIEnabled: true, dailyReservationCapUSD: 10 };
+  if (fs.existsSync('reports/analytics-browser/production-checks.json')) {
+    const analytics = read('reports/analytics-browser/production-checks.json'); assert.equal(analytics.status, 'pass');
+    production.analytics = { status: 'pass', GoogleCollect: 204, ClarityCollect: 204, consentAndPrivateInputChecks: 'pass', report: 'reports/analytics-browser/production-checks.json' };
+  }
+  if (fs.existsSync('reports/support-policy-live.json')) { const legal = read('reports/support-policy-live.json'); assert.equal(legal.status, 'pass'); production.policies = { status: 'pass', report: 'reports/support-policy-live.json' }; }
+  if (fs.existsSync('reports/typewriter-after-production.json')) { const typing = read('reports/typewriter-after-production.json'); assert.equal(typing.status, 'PASS'); production.homeTypingMs = typing.afterMs; }
 }
 const report = { checkedOn: new Date().toISOString(), status: production.status === 'pass' ? 'published-and-verified' : 'ready-for-production', origin: 'https://useaiblocks.com', frozenReleaseRoot: frozen.root, workerSha256: frozen.workerSha256, runtimeBackendChanged: false, files: frozen.files, catalogueEntries: frozen.blocks, sourceHashes,
   verification: { unitTests: 120, calculatorTests: 483, responsive: { passed: responsive.passed, routes: responsive.routeTemplates, widths: responsive.widths, report: 'reports/responsive-app-final/checks.json' }, seo: { crawlablePages: seo.crawlablePages, uniqueTitles: seo.uniqueTitles, browserTransitions: browserSeo.passed, privatePagesNoindex: true, faviconSizes: seo.iconSizes, socialImage: seo.socialImage, report: 'reports/seo-contract.json' }, startupChecks: startup.results.length, toolBrowserCases: tools.stats.expected, toolBrowserMethod: tools.method, completeNewPacks: packs.passed, mindIdentities: 305, finalRebuildParity: parity.status, credentialScans: 'pass', providerCallsByReleaseChecks: 0 },

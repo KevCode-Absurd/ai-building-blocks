@@ -34,7 +34,7 @@
   },
   "productionBuild": "Delegated to sole combined release owner; my earlier build was stopped and must not be used",
   "publicationOwnerThread": "01a16276-6e77-7c51-bd36-a283b29f6c47",
-  "publication": "pending combined release",
+  "publication": "live and verified",
   "operatingLimit": "Server-side records have no automatic expiry; policy explicitly describes manual deletion requests",
   "researchReferences": [
     "https://www.meity.gov.in/static/uploads/2024/02/Digital-Personal-Data-Protection-Act-2023.pdf",
@@ -52,5 +52,15 @@
     "finalRerun": "Owned by combined release publisher",
     "checkedOn": "2026-10-22T11:48:14.6630673Z",
     "change": "Updated only the two home-return assertions to the release-owner-confirmed final hero heading and title"
+  },
+  "liveRelease": {
+    "status": "pass",
+    "version": "ce40fda4-8705-421b-aff4-0522ac6c2550",
+    "browserTestsPassed": 3,
+    "report": "reports/support-policy-live.json",
+    "sourceCommit": "0975db5a",
+    "pageChecks": 12,
+    "linksChecked": 67,
+    "origin": "https://useaiblocks.com"
   }
 }

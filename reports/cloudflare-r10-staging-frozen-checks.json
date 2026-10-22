@@ -1,8 +1,8 @@
 {
-  "checkedOn": "2026-10-22T17:41:22.600Z",
+  "checkedOn": "2026-10-22T18:04:47.437Z",
   "environment": "staging",
   "origin": "https://ai-building-blocks-staging.kevinmark7498.workers.dev",
-  "assets": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r19-workflow-editor\\assets",
+  "assets": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r20-audience\\assets",
   "status": "pass",
   "passed": 24,
   "readOnly": true,

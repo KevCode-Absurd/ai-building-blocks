@@ -1,0 +1,41 @@
+{
+  "checkedAt": "2026-10-22T18:08:29.730Z",
+  "status": "LIVE_VERIFIED",
+  "releaseRoot": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r20-audience",
+  "sourceCommit": "32767cea9271ffc2f824ee2a88732e3736d71120",
+  "audienceChoices": [
+    "Students",
+    "Professionals",
+    "Startups",
+    "Enterprise"
+  ],
+  "fullLibraryRetained": true,
+  "starterResultsPerAudience": 8,
+  "legacyLinksCanonicalized": true,
+  "units": {
+    "passed": 236,
+    "failed": 0
+  },
+  "typecheck": "pass",
+  "builtBrowser": {
+    "passed": 4,
+    "failed": 0
+  },
+  "productionBrowser": {
+    "passed": 4,
+    "failed": 0
+  },
+  "browserWidths": [
+    1440,
+    320
+  ],
+  "stagingChecks": 66,
+  "productionChecks": 65,
+  "stagingVersion": "7f5c620d-8473-4be1-982b-76eaf600635c",
+  "productionVersion": "1661cda4-2bc1-4e22-9f01-bf8e44b85393",
+  "workerUnchanged": true,
+  "catalogueSha256": "5c4afed89a5a43a4ffe8b173ae79cf9b8f4e4a555bf9319e23cb19bc86a6395d",
+  "providerCalls": 0,
+  "privateAccountWrites": 0,
+  "testMaintenance": "Updated the existing download scenario from the removed install-claude selector to install-code before recording the final passing checks."
+}

@@ -402,8 +402,8 @@ function Home({ c, toast }: { c: Catalogue | null; toast: (m: string) => void })
       <section className="hero">
         <Suspense fallback={null}><Globe /></Suspense>
         <div className="wrap hero-in">
-          <h1 className="h1">Build AI workflows for your work</h1>
-          <Typewriter text="Find a skill for your next task, or connect several into a workflow. Edit the steps, download the pack and run it in your own AI." />
+          <h1 className="h1">Use AI like the top 1%</h1>
+          <Typewriter text="Turn hours of work into minutes. Spend the time you save on the work only you can do. Or at the beach (we won't tell)." />
           <div className="hero-actions">
             <Link to="/#library" className="btn btn-primary">Browse the blocks <ArrowIcon /></Link>
             <Link to="/#build" className="btn btn-dark">Build a workflow</Link>

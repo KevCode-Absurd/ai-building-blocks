@@ -55,9 +55,9 @@ try {
     });
     const page = await context.newPage();
     await page.goto('https://useaiblocks.com/');
-    await page.getByRole('button', { name: 'Allow analytics', exact: true }).waitFor();
+    await page.getByRole('button', { name: 'Accept cookies', exact: true }).waitFor();
     assert.equal(vendorRequests, 0);
-    await page.getByRole('button', { name: 'Allow analytics', exact: true }).click();
+    await page.getByRole('button', { name: 'Accept cookies', exact: true }).click();
     await page.waitForFunction(() => window.dataLayer?.length > 0);
     if (!delayed) await page.waitForFunction(() => window.__replay?.active);
     const input = page.getByTestId('library-search');
@@ -73,9 +73,9 @@ try {
     assert(!records.some(record => /synthetic|compose|owner|\/s\//.test(record[1])));
     const events = await page.evaluate(() => window.dataLayer.map(args => [...args]).filter(args => args[0] === 'event'));
     assert(events.length >= 1); assert(!JSON.stringify(events).includes('synthetic'));
-    await page.getByRole('button', { name: 'Analytics choices', exact: true }).click();
+    await page.getByRole('button', { name: 'Cookies', exact: true }).click();
     await page.screenshot({ path: path.join(output, delayed ? 'late-vendor-mobile.png' : 'consent-mobile.png') });
-    await page.getByRole('button', { name: 'Decline analytics', exact: true }).click();
+    await page.getByRole('button', { name: 'Reject cookies', exact: true }).click();
     await page.waitForLoadState();
     assert.equal(await page.evaluate(() => JSON.parse(localStorage.getItem('abb:analytics-consent:v1')).value), 'denied');
     results.push({ name: delayed ? 'late vendor download after typing' : 'active vendor stopped before typing', status: 'pass', noReload: true, focusAndValuePreserved: true, noPrivateAnalyticsEvents: true, noPrivateReplayMetadata: true, revocationPersisted: true });

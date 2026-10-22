@@ -1,15 +1,15 @@
 {
-  "frozenOn": "2026-10-22T12:06:17.529Z",
-  "root": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r10-candidate3",
-  "assets": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r10-candidate3\\assets",
-  "worker": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r10-candidate3\\worker\\worker.js",
+  "frozenOn": "2026-10-22T12:37:53.930Z",
+  "root": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r11-hero-cookies",
+  "assets": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r11-hero-cookies\\assets",
+  "worker": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r11-hero-cookies\\worker\\worker.js",
   "workerSha256": "892f4aaae4cfd8dc723acc5ddf17f714c59416ee66b3d932057e590f76410d2c",
   "files": 23841,
   "blocks": 4438,
   "criticalAssets": {
-    "index.html": "28398580b453e761cf35367885b2a84ea31bb0a86c7f05f42e3f72ed993262c3",
-    "compose.html": "3f96d166b178bbb661543073cf1ee79b373894b44d4fde8b97c21b470519bfc5",
-    "skills/loss-framing-writer.html": "4d4be574d81f1f86406691d502ffacda0d0475e7517786f9edc3f8cb94e9e257",
+    "index.html": "1a4d3b0fd6b2a53a2b933c587153ea313994163e1e35b3fb0d41e2e6165a3266",
+    "compose.html": "603d356b9369d3898b2d5b1e6f41dea1906af75f016fed5ae895cacf9b7d0572",
+    "skills/loss-framing-writer.html": "803c194a809618f4853d377aab5f1b26c9c0b523b450d5d9131b50fbaef27717",
     "data/blocks.json": "a10e0eb52877f31a97323b083f1469811e9efc2286b71974cfdc5824125c8791",
     "skills/storyboard-to-powerpoint-deck-builder.zip": "e42453c498209497795b4d5b1a96aabf885f75057e8682a625ebf8bccbc31d78",
     "skills/case-competition-slide-deck-builder.zip": "4f0082408e6c73038076adec275105a06029db7d771eda8286e8afdc1333e4bb",
@@ -17,7 +17,7 @@
     "skills/equity-research-valuation-report-builder.zip": "40a5601a67953d73331de3f4b5b9603c07771329a923d0f7ef084a1f9bc07f6c"
   },
   "configs": {
-    "staging": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r10-candidate3\\wrangler.staging.jsonc",
-    "production": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r10-candidate3\\wrangler.production.jsonc"
+    "staging": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r11-hero-cookies\\wrangler.staging.jsonc",
+    "production": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r11-hero-cookies\\wrangler.production.jsonc"
   }
 }

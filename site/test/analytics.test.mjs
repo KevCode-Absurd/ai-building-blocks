@@ -32,11 +32,11 @@ function browser({ url = 'https://useaiblocks.com/', consent = null, gpc = false
 
 test('no vendor requests before consent or after a saved decline', () => {
   const fresh = browser(); assert.equal(fresh.vendors().length, 0); assert(fresh.nodes.has('abb-analytics-choice'));
-  fresh.clickChoice('Decline analytics'); assert.equal(fresh.vendors().length, 0); assert.equal(JSON.parse(fresh.values.get(key)).value, 'denied');
+  fresh.clickChoice('Reject cookies'); assert.equal(fresh.vendors().length, 0); assert.equal(JSON.parse(fresh.values.get(key)).value, 'denied');
   assert.equal(browser({ consent: 'denied' }).vendors().length, 0);
 });
 test('opt-in loads exactly the intended vendors, masks all text and denies advertising', () => {
-  const b = browser(); b.clickChoice('Allow analytics');
+  const b = browser(); b.clickChoice('Accept cookies');
   assert.deepEqual(b.vendors().map(c => c[1]), ['https://www.googletagmanager.com/gtag/js?id=G-FLLHB8ZGN7', 'https://www.clarity.ms/tag/z1oj0rgzrv']);
   assert.equal(b.document.documentElement.attrs['data-clarity-mask'], 'true');
   const page = b.events().find(args => args[0] === 'event' && args[1] === 'page_view')[2];
@@ -90,7 +90,7 @@ test('a late vendor download cannot queue start after entering a private flow', 
   assert.equal(b.window.clarity.q.some(args => args[0] === 'start'), false);
 });
 test('revocation persists denial, signals both vendors and reloads', () => {
-  const b = browser({ consent: 'granted' }); b.nodes.get('abb-analytics-settings').events.click(); b.clickChoice('Decline analytics');
+  const b = browser({ consent: 'granted' }); b.nodes.get('abb-analytics-settings').events.click(); b.clickChoice('Reject cookies');
   assert.equal(JSON.parse(b.values.get(key)).value, 'denied'); assert.equal(b.calls.at(-1)[0], 'reload');
   const updates = b.events().filter(args => args[0] === 'consent' && args[1] === 'update'); assert.equal(updates.at(-1)[2].analytics_storage, 'denied');
   assert.equal([...b.window.clarity.q.at(-1)][1].analytics_Storage, 'denied');

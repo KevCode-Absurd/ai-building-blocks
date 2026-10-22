@@ -251,8 +251,8 @@ const titles = new Map(), problems = [];
 const tasks = Object.entries(byTask).sort((a, b) => b[1].length - a[1].length);
 fs.writeFileSync(path.join(DIST, "index.html"), render("/", {
   documentTitle: "Free AI Skills & Custom Workflow Builder | AI Blocks",
-  title: "Free AI skills, workflows and minds", desc: "Explore free AI skills, prompts and workflows. Build a custom workflow, edit the steps and download a pack to run in your AI. Try free browser tools too.", h1: "Build AI workflows for your work",
-  body: `<p class="bp-sub">Find a skill for your next task, or connect several into a workflow. Edit the steps, download the pack and run it in your own AI.</p><p><a href="/compose">Build a custom workflow</a> · <a href="/tools">Explore free browser tools</a></p><h2>Skills by job</h2>${list(tasks.map(([t, bs]) => `<a href="${jobHref(t)}">${esc(TASK_NAMES[t] ?? t)}</a> (${bs.length}): ${bs.slice(0, 3).map(link).join(", ")}`))}<h2>Minds</h2>${list(cat.blocks.filter((b) => b.type === "mind").slice(0, 24).map(link))}<p><a href="/minds">All minds</a></p>`,
+  title: "Free AI skills, workflows and minds", desc: "Explore free AI skills, prompts and workflows. Build a custom workflow, edit the steps and download a pack to run in your AI. Try free browser tools too.", h1: "Use AI like the top 1%",
+  body: `<p class="bp-sub">Turn hours of work into minutes. Spend the time you save on the work only you can do. Or at the beach (we won't tell).</p><p><a href="/compose">Build a custom workflow</a> · <a href="/tools">Explore free browser tools</a></p><h2>Skills by job</h2>${list(tasks.map(([t, bs]) => `<a href="${jobHref(t)}">${esc(TASK_NAMES[t] ?? t)}</a> (${bs.length}): ${bs.slice(0, 3).map(link).join(", ")}`))}<h2>Minds</h2>${list(cat.blocks.filter((b) => b.type === "mind").slice(0, 24).map(link))}<p><a href="/minds">All minds</a></p>`,
 }).replace(/<title>[^<]*<\/title>/, "<title>Free AI Skills &amp; Custom Workflow Builder | AI Blocks</title>"));
 
 // Job hubs: /jobs lists every job; /jobs/<job> lists every page for it with its one line, 150 to a page.

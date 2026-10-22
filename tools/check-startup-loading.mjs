@@ -103,7 +103,7 @@ try {
       }, first, { timeout: 3000 });
       await page.screenshot({ path: path.join(output, 'desktop-loading.png') });
       gate.release(); await ready(page);
-        assert.match(await page.locator('h1').first().textContent(), /Build AI workflows for your work/);
+        assert.match(await page.locator('h1').first().textContent(), /Use AI like the top 1%/);
       await page.screenshot({ path: path.join(output, 'desktop-ready.png') });
     } finally { gate.release(); await ctx.close(); }
   });
@@ -150,7 +150,7 @@ try {
       const ctx = await context(); const page = await ctx.newPage(); const gate = await held(page, '**/data/blocks.json');
       try {
         await page.goto(origin + route, { waitUntil: 'commit' }); await ready(page);
-        if (route === '/') assert.match(await page.locator('h1').first().textContent(), /Build AI workflows for your work/);
+        if (route === '/') assert.match(await page.locator('h1').first().textContent(), /Use AI like the top 1%/);
         else assert(await page.getByRole('button', { name: /Make my space/i }).isVisible());
       } finally { gate.release(); await ctx.close(); }
     }

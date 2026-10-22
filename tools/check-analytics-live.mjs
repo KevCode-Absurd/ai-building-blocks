@@ -28,11 +28,11 @@ try {
     if (/google-analytics\.com$|clarity\.ms$|googletagmanager\.com$/.test(url.hostname)) providerResponses.push({ host: url.hostname, path: url.pathname, status: response.status() });
   });
   await page.goto('https://useaiblocks.com/');
-  await page.getByRole('button', { name: 'Allow analytics', exact: true }).waitFor();
+  await page.getByRole('button', { name: 'Accept cookies', exact: true }).waitFor();
   assert.equal(providerRequests.length, 0, 'no vendors before opt-in');
   const gaReceived = page.waitForResponse(r => /google-analytics\.com\/g\/collect/.test(r.url()) && r.status() === 204, { timeout: 45000 });
   const clarityReceived = page.waitForResponse(r => /clarity\.ms\/collect/.test(r.url()) && r.status() >= 200 && r.status() < 300, { timeout: 45000 });
-  await page.getByRole('button', { name: 'Allow analytics', exact: true }).click();
+  await page.getByRole('button', { name: 'Accept cookies', exact: true }).click();
   await Promise.all([gaReceived, clarityReceived]);
   await page.waitForFunction(() => !!window.clarity?.v);
   const before = navigationCount;

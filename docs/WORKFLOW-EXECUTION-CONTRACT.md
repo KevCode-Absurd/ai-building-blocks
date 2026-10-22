@@ -68,6 +68,8 @@ The specification's INV-01–03, 05–09, 11–16 are expressed as portable inst
 
 ## Verification and next work
 
+The combined R19 update was published and verified on 22 October 2026. The release owner recorded 235 passing unit tests, 48 passing browser cases, 66 staging checks and 65 production checks. Ten live browser cases covered the editor, Spaces and mind-linked workflow paths using controlled sample APIs, without writing real private Space/account data or executing provider workflows. Production version: `d2494491-f4ca-4de9-a8d9-599a41a22773`. Source commit: `17f9f8574edf623b8e410f8be458e1c192a4d4f1`. These checks validate the shipped application and package behavior; they do not measure external AI obedience or generated-output quality.
+
 Run the unit suite from `site/` with `npm run test:unit`, and TypeScript with `npx tsc -b`. The focused browser suite uses `playwright.execution.config.ts`; set `EXECUTION_TEST_URL` to a running local preview. This configuration does not regenerate assets or deploy. Browser connectivity may require running both preview and browser outside the localhost-restricted sandbox.
 
 The focused tests cover original skill bytes and hashes, deterministic ZIPs, missing/optional/upstream inputs, graph and binding failures, unsafe ZIP paths/attributes, missing concrete references, source-injection text remaining unapproved data, reciprocal support links, exact prompt copying, denied clipboard, mobile overflow and source-authoring approval. Space-specific tests also cover context retention, complete workflow and agent archives, blocked source-only bundles, privacy scope, large workflows, and persistent missing-skill errors. They do not simulate a real user's confirmation or run the downloaded skills.

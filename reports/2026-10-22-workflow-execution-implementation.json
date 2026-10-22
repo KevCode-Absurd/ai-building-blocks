@@ -2,8 +2,8 @@
   "date": "2026-10-22",
   "scope": "Portable workflow package export and execution instructions",
   "contract": "abb-execution/1",
-  "implementation_status": "ALL_SUPPORTED_EXPORT_ROUTES_IMPLEMENTED_FINAL_INTEGRATED_CHECKS_PASSED",
-  "release_status": "R19_PRODUCTION_VERIFIED",
+  "implementation_status": "PORTABLE_PACKAGE_PHASE_IMPLEMENTED_AND_VERIFIED",
+  "release_status": "R19_PUBLISHED_AND_PRODUCTION_VERIFIED",
   "assurance": "Portable execution is assistant-reported. No backend execution enforcement or cross-model reliability guarantee.",
   "checks": [
     {
@@ -109,8 +109,7 @@
     "No provider adapter conformance or measured 99.95% reliability",
     "No backend input-acceptance or durable execution-state enforcement",
     "Catalogue page lint reports 22 pages with field/taxonomy issues outside this change; routed to coordinated release owners.",
-    "Known source blocker: event-tracking-planner lacks references/retention-measurement-patterns.md; dependent exports including weekly-product-funnel-watcher remain blocked.",
-    "Final R19 staging/production deployment and live verification are pending the sole publisher; all integrated source/build tests have passed."
+    "Known source blocker: event-tracking-planner lacks references/retention-measurement-patterns.md; dependent exports including weekly-product-funnel-watcher remain blocked."
   ],
   "source_hashes": [
     {
@@ -175,7 +174,7 @@
     },
     {
       "path": "docs/WORKFLOW-EXECUTION-CONTRACT.md",
-      "sha256": "2fcbe3ffce0a59a802b2b9ef91e12437fe50eaf1d3ffae20fef460369133b213"
+      "sha256": "dcc9370ce817df07700d042475c93db4d387903bea5ddcc661e702316a9eeba9"
     },
     {
       "path": "site/src/MindPack.tsx",
@@ -222,39 +221,31 @@
     "source_commit": "17f9f8574edf623b8e410f8be458e1c192a4d4f1",
     "production_checks": 65,
     "live_client_browser_cases": 10,
-    "production_status": "PASS_RELEASE_OWNER_VERIFIED",
-    "scope": "Real production assets/UI/downloads; controlled Space/account API fixtures in client tests. No real private Space mutation or provider calls."
+    "production_status": "PASS",
+    "scope": "Real production assets/UI/downloads; controlled Space/account API fixtures in client tests. No real private Space mutation or provider calls.",
+    "live_browser_cases": 10,
+    "live_browser_passed": 10
   },
   "space_followup": {
-    "status": "PRODUCTION_CLIENT_VERIFIED",
+    "status": "PUBLISHED_AND_PRODUCTION_CLIENT_VERIFIED",
     "report": "reports/2026-10-22-space-workflow-execution.json",
     "focused_unit_tests": 5,
     "focused_browser_tests": 3,
     "typescript": "PASS",
     "independent_primary_review": "PASS_CODE_AND_VISUAL_REVIEW",
     "API_scope": "Mocked account and Space APIs; actual Chrome UI and downloaded archives",
-    "production_checks": {
-      "status": "PASS",
-      "cases": 3,
-      "evidence_owner": "Release owner",
-      "scope": "Live production UI/archive downloads with controlled account/Space API fixtures; no real private Space writes."
-    },
+    "production_checks": "PASS_RELEASE_OWNER_VERIFIED_CONTROLLED_SAMPLE_APIS",
     "source_only_status": "BLOCKED_UNVERIFIED_SOURCE",
     "source_privacy_review": "NOT_RUN",
     "integrated_browser_status": "PASS_R19_RELEASE_OWNER_VERIFIED"
   },
   "mind_collection_followup": {
-    "status": "PRODUCTION_CLIENT_VERIFIED",
+    "status": "PUBLISHED_AND_PRODUCTION_CLIENT_VERIFIED",
     "catalogue_workflow_links": 33,
     "routing": "Visible links to complete workflow pages; standalone collection exporter rejects workflow/routine/agent selections before fetch",
     "focused_export_tests": 9,
     "browser_case": "mind collections route workflow entries to complete workflow downloads",
-    "production_checks": {
-      "status": "PASS",
-      "cases": 2,
-      "evidence_owner": "Release owner",
-      "scope": "Live public Mind workflow routing and complete ZIP; existing missing-reference workflow correctly blocked with no ZIP."
-    },
+    "production_checks": "PASS_POSITIVE_AND_EXPECTED_MISSING_REFERENCE_BLOCK",
     "browser_positive": {
       "workflow": "daily-shutdown-planner",
       "mind": "cal-newport",
@@ -277,5 +268,18 @@
       "observed_behavior": "Exporter reports the missing reference and releases no incomplete pack",
       "next_action": "Recover the actual permitted reference, or explicitly amend the affected workflow. Do not invent a reference or claim compatibility."
     }
-  ]
+  ],
+  "production": {
+    "version": "d2494491-f4ca-4de9-a8d9-599a41a22773",
+    "source_commit": "17f9f8574edf623b8e410f8be458e1c192a4d4f1",
+    "source_pushed": true,
+    "byte_and_API_checks": 65,
+    "status": "PASS_RELEASE_OWNER_VERIFIED",
+    "live_browser_cases": 10,
+    "live_browser_passed": 10,
+    "live_browser_scope": "Public production client with controlled sample API fixtures: Add skill 5, Space 3, mind-linked workflow positive and expected missing-reference block 2",
+    "private_account_or_Space_writes": 0,
+    "provider_workflow_executions": 0,
+    "evidence_owner": "01a16276-6e77-7c51-bd36-a283b29f6c47"
+  }
 }

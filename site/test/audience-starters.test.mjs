@@ -3,10 +3,11 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import { AUDIENCE_STARTERS, STARTER_PATHS, isAudienceStarter, starterFor } from '../src/lib/audience-starters.ts';
 
-test('all five audience paths contain complete, published packs and no new tested claims', () => {
+test('exactly four audience paths contain complete, published packs and no new tested claims', () => {
   const cat = JSON.parse(fs.readFileSync('public/data/blocks.json', 'utf8'));
   const bySlug = new Map(cat.blocks.map(b => [b.slug, b]));
-  assert.deepEqual(AUDIENCE_STARTERS.map(a => a.id), ['students', 'workers', 'small-businesses', 'enterprise', 'startups']);
+  assert.deepEqual(AUDIENCE_STARTERS.map(a => [a.id, a.name]), [['students', 'Students'], ['professionals', 'Professionals'], ['startups', 'Startups'], ['enterprise', 'Enterprise']]);
+  assert.equal(STARTER_PATHS, AUDIENCE_STARTERS);
   for (const audience of STARTER_PATHS) {
     assert.equal(new Set(audience.slugs).size, audience.slugs.length);
     for (const slug of audience.slugs) {
@@ -22,6 +23,13 @@ test('all five audience paths contain complete, published packs and no new teste
     const page = JSON.parse(fs.readFileSync(`public/data/pages/${slug}.json`, 'utf8'));
     assert.ok(page.source?.commit && page.source?.licence, `${slug}: missing provenance`);
     assert.ok(page.files.some(f => /LICENSE$/.test(f)), `${slug}: missing license`);
+  }
+});
+
+test('old audience and task links resolve to one of the four current audiences', () => {
+  for (const [old, current] of [['workers', 'professionals'], ['small-businesses', 'startups'], ['presentations', 'professionals'], ['case-competitions', 'students'], ['research-documents', 'students'], ['equity-research', 'professionals']]) {
+    assert.equal(starterFor(old)?.id, current);
+    assert.ok(isAudienceStarter(starterFor(current).slugs[0], old));
   }
 });
 

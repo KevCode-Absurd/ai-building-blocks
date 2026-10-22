@@ -1,0 +1,26 @@
+{
+  "createdAt": "2026-10-22T17:58:57.680Z",
+  "profile": "audience",
+  "root": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r20-audience",
+  "assets": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r20-audience\\assets",
+  "files": 25373,
+  "previous": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r19-workflow-editor",
+  "previousVersionId": "d2494491-f4ca-4de9-a8d9-599a41a22773",
+  "sourceCommit": "05c0df7ac97283b1e6bb1a43c467d4f039fa9358",
+  "sourceHashes": {
+    "site/src/lib/audience-starters.ts": "7a82bfd65ab425c3aea9d09761fd7d90e0b79fd32bec450b0dd21820597169d1"
+  },
+  "oldRefs": [
+    "/assets/index-DTbdziKd.js",
+    "/assets/index-BMzLFYlh.css"
+  ],
+  "newRefs": [
+    "/assets/index-DohpDMBU.js",
+    "/assets/index-BMzLFYlh.css"
+  ],
+  "htmlFiles": 4937,
+  "workerUnchanged": true,
+  "workerSha256": "e0eabe892d923971589729a486e791878aa6e5c74d1e4e38c4aee7bb10c54a00",
+  "catalogueSha256": "5c4afed89a5a43a4ffe8b173ae79cf9b8f4e4a555bf9319e23cb19bc86a6395d",
+  "scope": "Four audience choices: Students, Professionals, Startups and Enterprise. Legacy links resolve to a current audience."
+}

@@ -3,7 +3,8 @@ import path from 'node:path';
 import assert from 'node:assert/strict';
 import crypto from 'node:crypto';
 import { spawn } from 'node:child_process';
-const [environment, input] = process.argv.slice(2);
+const [environment, input, profile = 'workflow-editor'] = process.argv.slice(2);
+assert(['workflow-editor', 'audience'].includes(profile));
 assert(['staging', 'production'].includes(environment));
 const releaseRoot = path.resolve(input ?? ''), assets = path.join(releaseRoot, 'assets');
 assert(releaseRoot.startsWith(path.resolve('site/.wrangler/releases') + path.sep));
@@ -23,4 +24,4 @@ for (let at = 0; at < chunks.length; at += 4) await Promise.all(chunks.slice(at,
   assert.equal(response.status, 200, file); assert.equal(sha(Buffer.from(await response.arrayBuffer())), sha(await fs.readFile(path.join(assets, 'assets', file))), 'Deployed browser chunk differs: ' + file);
 }));
 const report = { checkedAt: new Date().toISOString(), status: 'pass', environment, releaseRoot, catalogueSha256: sha(await fs.readFile(path.join(assets, 'data/blocks.json'))), passed: general.passed + account.checks.length + chunks.length, exactBrowserChunks: chunks.length, providerCalls: 0, checks: [...general.checks, ...account.checks, 'Every new JavaScript and CSS chunk matches the frozen build'] };
-await fs.writeFile(`reports/2026-10-22-workflow-editor-${environment}.json`, JSON.stringify(report, null, 2) + '\n'); console.log(JSON.stringify({ environment, status: report.status, passed: report.passed }));
+await fs.writeFile(`reports/2026-10-22-${profile}-${environment}.json`, JSON.stringify(report, null, 2) + '\n'); console.log(JSON.stringify({ environment, status: report.status, passed: report.passed }));

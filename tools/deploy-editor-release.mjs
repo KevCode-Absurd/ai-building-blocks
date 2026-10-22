@@ -4,14 +4,16 @@ import path from 'node:path';
 import assert from 'node:assert/strict';
 import crypto from 'node:crypto';
 import { spawn, execFileSync } from 'node:child_process';
-const [environment, input, expectedVersion] = process.argv.slice(2);
+const [environment, input, expectedVersion, profile = 'workflow-editor'] = process.argv.slice(2);
+assert(['workflow-editor', 'audience'].includes(profile));
 assert(['staging', 'production'].includes(environment)); assert(expectedVersion);
 const root = path.resolve(input ?? ''); assert(root.startsWith(path.resolve('site/.wrangler/releases') + path.sep));
 const manifest = JSON.parse(await fs.readFile(path.join(root, 'release-manifest.json'), 'utf8'));
 const sha = bytes => crypto.createHash('sha256').update(bytes).digest('hex');
 assert.equal(manifest.workerUnchanged, true);
-const browser = JSON.parse(await fs.readFile('reports/2026-10-22-workflow-editor-built-browser.json', 'utf8'));
-assert(browser.stats.expected >= 46 && browser.stats.unexpected === 0 && browser.stats.flaky === 0 && browser.stats.skipped === 0, 'Final built browser checks must pass.');
+assert.equal(manifest.profile ?? 'workflow-editor', profile);
+const browser = JSON.parse(await fs.readFile(`reports/2026-10-22-${profile}-built-browser.json`, 'utf8'));
+assert(browser.stats.expected >= (profile === 'audience' ? 4 : 46) && browser.stats.unexpected === 0 && browser.stats.flaky === 0 && browser.stats.skipped === 0, 'Final built browser checks must pass.');
 assert.equal(browser.config.metadata.editorReleaseRoot, root, 'Browser checks used a different release.');
 assert.equal(sha(await fs.readFile(path.join(root, 'worker/worker.js'))), manifest.workerSha256);
 assert.equal(sha(await fs.readFile(path.join(root, 'assets/data/blocks.json'))), manifest.catalogueSha256);
@@ -24,7 +26,7 @@ const live = JSON.parse(await fs.readFile('reports/cloudflare-live-release.json'
 assert.equal(manifest.workerSha256, live.production.workerSha256);
 if (environment === 'production') {
   assert.equal(manifest.previousVersionId, expectedVersion);
-  const staging = JSON.parse(await fs.readFile('reports/2026-10-22-workflow-editor-staging.json', 'utf8'));
+  const staging = JSON.parse(await fs.readFile(`reports/2026-10-22-${profile}-staging.json`, 'utf8'));
   assert.equal(staging.status, 'pass'); assert.equal(staging.releaseRoot, root);
   const commit = execFileSync('git', ['rev-parse', 'HEAD'], { encoding: 'utf8', windowsHide: true }).trim();
   const remote = execFileSync('git', ['ls-remote', 'origin', 'refs/heads/main'], { encoding: 'utf8', windowsHide: true }).trim().split(/\s+/)[0];
@@ -50,6 +52,6 @@ const shortConfig = path.join(shortFolder, `editor-${environment}.jsonc`); await
 const code = await new Promise((resolve, reject) => { const child = spawn(process.execPath, ['tools/wrangler-frozen.mjs', 'deploy', '--env=', '--keep-vars', '--config', shortConfig], { cwd: path.resolve('.'), windowsHide: true, stdio: 'inherit', env: { ...process.env, CF_FROZEN_ASSET_MANIFEST: path.join(root, 'frozen-assets-manifest.json'), WRANGLER_LOG_PATH: path.join(root, `${environment}-deploy.log`) } }); child.on('error', reject); child.on('exit', resolve); });
 const versionId = await currentVersion(); assert.deepEqual(bindings(await api('/settings')), before, 'Live bindings changed.'); assert.notEqual(versionId, expectedVersion, 'Deployment did not activate; CLI exit ' + code);
 const report = { deployedOn: new Date().toISOString(), environment, previousVersionId: expectedVersion, versionId, releaseRoot: root, assetReleaseRoot: root, workerSha256: manifest.workerSha256, catalogueSha256: manifest.catalogueSha256, bindingsPreserved: before.length, cliExitCode: code, status: 'deployed-awaiting-verification' };
-await fs.writeFile(`reports/2026-10-22-workflow-editor-${environment}-deployment.json`, JSON.stringify(report, null, 2) + '\n');
+await fs.writeFile(`reports/2026-10-22-${profile}-${environment}-deployment.json`, JSON.stringify(report, null, 2) + '\n');
 Object.assign(live[environment], report); live.checkedOn = report.deployedOn;
 await fs.writeFile('reports/cloudflare-live-release.json', JSON.stringify(live, null, 2) + '\n'); console.log(JSON.stringify(report));

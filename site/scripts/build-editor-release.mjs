@@ -9,6 +9,8 @@ import preact from '@preact/preset-vite';
 const repo = path.resolve(import.meta.dirname, '../..');
 const root = path.resolve(repo, process.argv[2] ?? '');
 const version = process.argv[3];
+const profile = process.argv[4] ?? 'workflow-editor';
+assert(['workflow-editor', 'audience'].includes(profile));
 assert(root.startsWith(path.join(repo, 'site/.wrangler/releases') + path.sep));
 await assert.rejects(fs.stat(root), { code: 'ENOENT' });
 const live = JSON.parse(await fs.readFile(path.join(repo, 'reports/cloudflare-live-release.json'), 'utf8'));
@@ -16,7 +18,7 @@ assert.equal(live.production.versionId, version, 'The verified production baseli
 const previous = path.resolve(live.production.assetReleaseRoot ?? live.production.releaseRoot);
 const sha = bytes => crypto.createHash('sha256').update(bytes).digest('hex');
 const git = args => execFileSync('git', ['-c', 'core.longpaths=true', ...args], { cwd: repo, windowsHide: true, maxBuffer: 64 * 1024 * 1024 });
-const overlays = ['site/src/Builder.tsx', 'site/src/SkillAdd.tsx', 'site/src/skill-add.css', 'site/src/lib/insert-flow-skill.ts', 'site/src/ExecutionPrompt.tsx', 'site/src/space/SpacePage.tsx', 'site/src/lib/space-workflow-export.ts', 'site/src/MindPack.tsx', 'site/src/lib/handoff.ts'];
+const overlays = profile === 'audience' ? ['site/src/lib/audience-starters.ts'] : ['site/src/Builder.tsx', 'site/src/SkillAdd.tsx', 'site/src/skill-add.css', 'site/src/lib/insert-flow-skill.ts', 'site/src/ExecutionPrompt.tsx', 'site/src/space/SpacePage.tsx', 'site/src/lib/space-workflow-export.ts', 'site/src/MindPack.tsx', 'site/src/lib/handoff.ts'];
 const dirty = git(['status', '--porcelain', '--untracked-files=all', '--', 'site/src']).toString().trimEnd().split(/\r?\n/).filter(Boolean).map(line => line.slice(3).replaceAll('\\', '/'));
 for (const file of dirty) assert(overlays.includes(file), 'Unreviewed app change: ' + file);
 const sourceCommit = git(['rev-parse', 'HEAD']).toString().trim();
@@ -40,13 +42,15 @@ assert.equal(oldRefs.length, 2); assert.equal(newRefs.length, 2);
 await fs.cp(path.join(root, 'browser/assets'), path.join(assets, 'assets'), { recursive: true });
 let htmlFiles = 0;
 const assetEntries = await fs.readdir(assets, { recursive: true, withFileTypes: true });
-for (const entry of assetEntries) {
+let nextHtml = 0;
+await Promise.all(Array.from({ length: 16 }, async () => { while (nextHtml < assetEntries.length) {
+  const entry = assetEntries[nextHtml++];
   if (!entry.isFile() || !entry.name.endsWith('.html')) continue;
   const file = path.join(entry.parentPath, entry.name), old = await fs.readFile(file, 'utf8');
   let updated = old;
   for (let i = 0; i < oldRefs.length; i++) updated = updated.replaceAll(oldRefs[i], newRefs[i]);
   if (updated !== old) { await fs.writeFile(file, updated); htmlFiles++; }
-}
+} }));
 await fs.mkdir(path.join(root, 'worker'), { recursive: true });
 const previousWorker = path.join(path.resolve(live.production.releaseRoot), 'worker/worker.js');
 assert.equal(sha(await fs.readFile(previousWorker)), live.production.workerSha256);
@@ -59,7 +63,7 @@ for (const environment of ['staging', 'production']) {
 }
 for (const file of ['data/blocks.json', 'sitemap-skills.xml', 'sitemap-workflows.xml', 'sitemap-agents.xml']) assert.equal(sha(await fs.readFile(path.join(assets, file))), sha(await fs.readFile(path.join(previous, 'assets', file))), 'Catalogue changed: ' + file);
 for (const [file, hash] of Object.entries(sourceHashes)) assert.equal(sha(await fs.readFile(path.join(repo, file))), hash, 'Source changed during build: ' + file);
-const report = { createdAt: new Date().toISOString(), root, assets, files: assetEntries.filter(e => e.isFile()).length, previous, previousVersionId: version, sourceCommit, sourceHashes, oldRefs, newRefs, htmlFiles, workerUnchanged: true, workerSha256: live.production.workerSha256, catalogueSha256: sha(await fs.readFile(path.join(assets, 'data/blocks.json'))), scope: 'Searchable Add skill insertion and verified Space workflow exports. Latest verified content and backend retained.' };
+const report = { createdAt: new Date().toISOString(), profile, root, assets, files: assetEntries.filter(e => e.isFile()).length, previous, previousVersionId: version, sourceCommit, sourceHashes, oldRefs, newRefs, htmlFiles, workerUnchanged: true, workerSha256: live.production.workerSha256, catalogueSha256: sha(await fs.readFile(path.join(assets, 'data/blocks.json'))), scope: profile === 'audience' ? 'Four audience choices: Students, Professionals, Startups and Enterprise. Legacy links resolve to a current audience.' : 'Searchable Add skill insertion and verified Space workflow exports. Latest verified content and backend retained.' };
 await fs.writeFile(path.join(root, 'release-manifest.json'), JSON.stringify(report, null, 2) + '\n');
-await fs.writeFile(path.join(repo, 'reports/2026-10-22-workflow-editor-release.json'), JSON.stringify(report, null, 2) + '\n');
+await fs.writeFile(path.join(repo, `reports/2026-10-22-${profile}-release.json`), JSON.stringify(report, null, 2) + '\n');
 console.log(JSON.stringify(report));

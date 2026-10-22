@@ -111,10 +111,10 @@
   }
   function boot() {
     if (!allowedHost) return;
+    document.addEventListener('abb:cookie-settings', preferences);
     const style = document.createElement('style');
     style.textContent = '#abb-analytics-choice{position:fixed;bottom:56px;left:16px;z-index:2147483000;box-sizing:border-box;width:min(440px,calc(100vw - 32px));max-height:75vh;overflow:auto;background:#151515;color:#f6f6f6;border:1px solid #666;border-radius:12px;padding:20px;box-shadow:0 8px 32px #0006;font:14px/1.5 system-ui,sans-serif}#abb-analytics-choice h2{font-size:18px;margin:0 0 8px}#abb-analytics-choice p{margin:0 0 12px}#abb-analytics-choice a{color:#b6e477;text-decoration:underline}.abb-analytics-actions{display:flex;gap:10px;margin-top:16px}.abb-analytics-actions button,#abb-analytics-settings{font:inherit;cursor:pointer;border:1px solid #888;border-radius:6px;background:#222;color:#fff;padding:10px 12px}.abb-analytics-actions button{flex:1}.abb-analytics-actions button:disabled{opacity:.5;cursor:default}#abb-analytics-settings{position:fixed;bottom:10px;left:12px;z-index:2147482999;font:12px system-ui,sans-serif}#abb-analytics-choice button:focus-visible,#abb-analytics-settings:focus-visible,#abb-analytics-choice a:focus-visible{outline:3px solid #b6e477;outline-offset:3px}';
     document.head.appendChild(style);
-    const settings = document.createElement('button'); settings.id = 'abb-analytics-settings'; settings.type = 'button'; settings.textContent = 'Cookies'; settings.addEventListener('click', preferences); document.body.appendChild(settings);
     if (!choice && !optedOut && safeHere()) preferences();
     if (optedOut) forgetCookies(); else start();
   }

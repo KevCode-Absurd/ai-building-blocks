@@ -90,7 +90,7 @@ test('a late vendor download cannot queue start after entering a private flow', 
   assert.equal(b.window.clarity.q.some(args => args[0] === 'start'), false);
 });
 test('revocation persists denial, signals both vendors and reloads', () => {
-  const b = browser({ consent: 'granted' }); b.nodes.get('abb-analytics-settings').events.click(); b.clickChoice('Reject cookies');
+  const b = browser({ consent: 'granted' }); b.documentEvents['abb:cookie-settings'](); b.clickChoice('Reject cookies');
   assert.equal(JSON.parse(b.values.get(key)).value, 'denied'); assert.equal(b.calls.at(-1)[0], 'reload');
   const updates = b.events().filter(args => args[0] === 'consent' && args[1] === 'update'); assert.equal(updates.at(-1)[2].analytics_storage, 'denied');
   assert.equal([...b.window.clarity.q.at(-1)][1].analytics_Storage, 'denied');

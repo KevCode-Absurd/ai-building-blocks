@@ -7,7 +7,7 @@ import { createRequire } from 'node:module';
 const require = createRequire(path.resolve('site/package.json'));
 const { chromium } = require('@playwright/test');
 const release = JSON.parse(await fs.readFile('reports/cloudflare-live-release.json', 'utf8'));
-const assets = path.join(release.production.assetReleaseRoot.replaceAll('\\\\', '\\'), 'assets');
+const assets = process.env.ANALYTICS_DIST || path.join(release.production.assetReleaseRoot.replaceAll('\\\\', '\\'), 'assets');
 const analytics = await fs.readFile('site/public/analytics.js', 'utf8');
 const output = 'reports/analytics-browser'; await fs.mkdir(output, { recursive: true });
 const mime = file => file.endsWith('.js') ? 'text/javascript' : file.endsWith('.css') ? 'text/css' : file.endsWith('.json') ? 'application/json' : file.endsWith('.svg') ? 'image/svg+xml' : file.endsWith('.html') ? 'text/html' : 'application/octet-stream';
@@ -73,7 +73,8 @@ try {
     assert(!records.some(record => /synthetic|compose|owner|\/s\//.test(record[1])));
     const events = await page.evaluate(() => window.dataLayer.map(args => [...args]).filter(args => args[0] === 'event'));
     assert(events.length >= 1); assert(!JSON.stringify(events).includes('synthetic'));
-    await page.getByRole('button', { name: 'Cookies', exact: true }).click();
+    await page.goto('https://useaiblocks.com/cookies');
+    await page.getByRole('button', { name: 'Cookie preferences', exact: true }).click();
     await page.screenshot({ path: path.join(output, delayed ? 'late-vendor-mobile.png' : 'consent-mobile.png') });
     await page.getByRole('button', { name: 'Reject cookies', exact: true }).click();
     await page.waitForLoadState();

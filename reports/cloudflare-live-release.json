@@ -1,5 +1,5 @@
 {
-  "checkedOn": "2026-10-22T10:22:26.493Z",
+  "checkedOn": "2026-10-22T10:30:38.322Z",
   "deadline": "2026-10-22 Asia/Kolkata",
   "accountAuthenticated": true,
   "workersPaid": {
@@ -9,7 +9,9 @@
   "domain": {
     "name": "useaiblocks.com",
     "zoneActive": true,
-    "publicApexReachableBeforeLaunch": false
+    "publicApexReachableBeforeLaunch": false,
+    "publicApexReachable": true,
+    "canonicalURL": "https://useaiblocks.com/"
   },
   "staging": {
     "status": "Final R8 staging accepted: real widget/reload, API21, unchanged backend, targeted frontend fallback and exact synthetic cleanup verified",
@@ -61,7 +63,7 @@
     "verifiedOn": "2026-10-22T10:21:16.5818827Z"
   },
   "production": {
-    "status": "Final R8 release preloaded; staging accepted; final evidence Git push required before approved domain activation",
+    "status": "public R8; HTTPS,27 smoke checks,4 package downloads and actual owner Google login/reload pass; new owner-requested AI enablement pending",
     "database": "ai-blocks",
     "databaseId": "a886eeae-4014-4da2-842f-a5bebc4d7f71",
     "migrations": [
@@ -71,7 +73,7 @@
       "0005_composer_accounts.sql"
     ],
     "secretsGeneratedLocally": 5,
-    "customDomainChanged": false,
+    "customDomainChanged": true,
     "secretsConfigured": 8,
     "worker": "ai-building-blocks",
     "publicTurnstileConfigured": true,
@@ -98,7 +100,9 @@
     "deployedOn": "2026-10-22T09:50:31.901Z",
     "releaseRoot": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r8",
     "assetReleaseRoot": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r8",
-    "sourceCommit": "badde294"
+    "sourceCommit": "badde294",
+    "publicVerified": true,
+    "gitEvidenceBeforeActivation": "56269425"
   },
   "releaseScope": {
     "blocks": 4359,
@@ -150,9 +154,10 @@
     "routing": "R7 five routing groups pass",
     "api": "R8 all21 isolated staging API, privacy, sharing, authorization, link-rotation and synthetic cleanup checks pass",
     "rateLimit": "R6 bounded invalid-token AI probe pass; actual statuses403,403,403,403,403,429;0provider calls",
-    "remainingOwnerAction": "No further staging action; actual production Clerk sign-in follows domain activation",
-    "productionDomainChecks": "Await domain attachment after the real-write gate; DNS/TLS/redirects/downloads and actual Clerk login remain unverified",
-    "fixtureCleanup": "Two exact verified empty staging spaces deleted; both synthetic comments hidden; ignored synthetic credential files removed; production untouched"
+    "remainingOwnerAction": "None for website launch; newer request to enable free AI at USD10/day and test one workflow is being handled",
+    "productionDomainChecks": "PASS:27 production smoke checks,valid apex/www TLS,canonical www redirect preserving path/query,HTTP301 HTTPS,4 exact package downloads",
+    "fixtureCleanup": "Two exact verified empty staging spaces deleted; both synthetic comments hidden; ignored synthetic credential files removed; production untouched",
+    "actualClerkSignIn": "PASS:actual production owner Google OAuth returned to /compose and authenticated usage persisted after reload;not a universal multi-account test"
   },
   "deferredWork": {
     "initialPaintLoadingState": {

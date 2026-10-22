@@ -16,7 +16,8 @@ try {
  for(const path of ['/data/blocks.json','/skills/website-brand-brain-builder/SKILL.md']){
   const response=await get(path); assert.equal(response.status,200,path); assert.equal(sha(Buffer.from(await response.arrayBuffer())),sha(fs.readFileSync(stableDist+path)),path+' build hash'); checks.push(path+' stable bytes');
  }
- let response=await get('/api/compose'); assert.equal(response.status,200); assert.match(response.headers.get('cache-control')||'',/no-store/); assert.deepEqual(await response.json(),{enabled:false}); checks.push('AI disabled; private model metadata absent');
+ const expectedAI=process.env.CF_EXPECT_AI_ENABLED==='true';
+ let response=await get('/api/compose'); assert.equal(response.status,200); assert.match(response.headers.get('cache-control')||'',/no-store/); assert.deepEqual(await response.json(),{enabled:expectedAI}); checks.push('AI '+(expectedAI?'enabled':'disabled')+' as approved; private model metadata absent');
  response=await get('/api/security'); assert.equal(response.status,200); const security=await response.json(); assert.equal(security.required,true); assert.equal(typeof security.sitekey,'string'); assert(security.sitekey.length>10); checks.push('real Turnstile public configuration available');
  response=await get('/api/auth'); assert.equal(response.status,200); const auth=await response.json(); assert.equal(typeof auth.configured,'boolean'); assert.deepEqual(Object.keys(auth).sort(),['configured','publishableKey']); if(auth.configured)assert.match(auth.publishableKey,/^pk_live_/);else assert.equal(auth.publishableKey,null); checks.push('account configuration exposes only a live public key or safe disabled state');
  response=await get('/api/auth?usage'); assert([401,503].includes(response.status)); checks.push('account usage rejects anonymous access');

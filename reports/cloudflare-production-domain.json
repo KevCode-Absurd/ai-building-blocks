@@ -1,0 +1,24 @@
+{
+  "checkedOn": "2026-10-22T10:22:47.985Z",
+  "versionId": "87a8bdfb-ee9a-4341-9fa0-66214986b3f1",
+  "hostname": "useaiblocks.com",
+  "service": "ai-building-blocks",
+  "zoneId": "7cecfe8f7b9dae26dfa20e121b4dd43d",
+  "domains": [
+    {
+      "hostname": "useaiblocks.com",
+      "domainId": "05804031b44489fcdb1d5a83d779c8d2d7ed35e6",
+      "certificateId": "f62c0b97-5db1-4275-a3d7-34f87db81829",
+      "enabled": true
+    },
+    {
+      "hostname": "www.useaiblocks.com",
+      "domainId": "4fe8fe281ff972ed0292cc9e0cc326ea6d1470b0",
+      "certificateId": "bac70d31-4c56-47bc-b4ce-45364ff63b27",
+      "enabled": true
+    }
+  ],
+  "tlsVerified": true,
+  "tlsEvidence": "reports/cloudflare-production-smoke.json",
+  "httpsRedirectEvidence": "reports/cloudflare-production-https.json"
+}

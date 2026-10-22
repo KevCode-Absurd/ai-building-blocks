@@ -1,0 +1,21 @@
+{
+  "checkedOn": "2026-10-22T10:30:13.237Z",
+  "zone": "useaiblocks.com",
+  "setting": "always_use_https",
+  "enabledVia": "authenticated Cloudflare Edge Certificates UI; switch confirmed on",
+  "initialFinding": "HTTP apex returned200 before the setting was enabled",
+  "apiAttempt": "OAuth zone-settings read returned403; no API setting mutation",
+  "status": "pass",
+  "checks": [
+    {
+      "url": "http://useaiblocks.com/compose?security-check=1",
+      "status": 301,
+      "location": "https://useaiblocks.com/compose?security-check=1"
+    },
+    {
+      "url": "http://www.useaiblocks.com/compose?security-check=1",
+      "status": 301,
+      "location": "https://useaiblocks.com/compose?security-check=1"
+    }
+  ]
+}

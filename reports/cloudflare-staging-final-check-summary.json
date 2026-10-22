@@ -1,7 +1,7 @@
 {
   "checkedOn": "2026-10-22T10:16:31.697Z",
   "stagingVersion": "80bc2a97-5835-4936-bd81-8c994a9552b6",
-  "status": "staging-verified-and-cleaned-final-git-push-and-publication-pending",
+  "status": "staging-cleaned-and-production-launched",
   "browser": {
     "totalCovered": 211,
     "hosting": {
@@ -75,21 +75,20 @@
       "deleted the staging fixture item",
       "hid 2 verified staging fixture comments"
     ],
-    "emptySpacesPendingCleanup": [
-      "ba6b1cdf-16fc-4073-a9ef-df7d6954c98a",
-      "55669f7a-6a03-4a1d-b355-6a323e629c33"
-    ]
+    "emptySpacesPendingCleanup": []
   },
   "production": {
     "version": "87a8bdfb-ee9a-4341-9fa0-66214986b3f1",
-    "status": "R8 preloaded; activation follows bounded empty-space cleanup and final Git evidence push",
+    "status": "public;production checks and owner Google login pass",
     "domain": "useaiblocks.com",
     "paidAIEnabled": false,
-    "publicCutoverVerified": false
+    "publicCutoverVerified": true,
+    "smokeReport": "reports/cloudflare-production-smoke.json",
+    "artifactReport": "reports/cloudflare-production-artifact-downloads.json",
+    "googleLoginReport": "reports/cloudflare-production-google-login.json"
   },
   "next": [
-    "Find cheap UseAIBlocks mailbox audits, commits and pushes all final source and evidence before guarded domain activation, then verifies public TLS, redirects, APIs and downloads.",
-    "Explain site changes and auth verifies actual production Google sign-in after domain GO."
+    "Handle the subsequent owner-authorized free AI enablement at USD10/day and one real workflow test."
   ],
   "productionTouchedByThisCheck": false,
   "providerCalls": 0,
@@ -121,5 +120,6 @@
     "status": "pass",
     "emptySpacesDeleted": 2,
     "remainingExactTagSpaces": 0
-  }
+  },
+  "completedOn": "2026-10-22T10:30:38.322Z"
 }

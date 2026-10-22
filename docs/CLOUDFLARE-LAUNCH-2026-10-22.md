@@ -1,5 +1,11 @@
 # Workers Static Assets launch handoff — 22 October 2026
 
+## Public launch verified — 22 October
+
+The finalized source and staging evidence were pushed as `badde294` and `56269425` before domain activation. Both production domains are attached to Worker version `87a8bdfb-ee9a-4341-9fa0-66214986b3f1`. All 27 production smoke checks and four exact ZIP downloads pass. Apex and www have valid TLS; www redirects to the apex with paths/queries preserved. Always Use HTTPS was enabled in the authenticated Cloudflare dashboard after a final check found unencrypted apex HTTP200; both HTTP hosts now return301 to HTTPS. Cloudflare DNS shows All set with no recommendations. Actual owner Google login and authenticated usage survive a reload. See `reports/cloudflare-production-smoke.json`, `cloudflare-production-artifact-downloads.json`, `cloudflare-production-https.json` and `cloudflare-production-google-login.json`. The historical preparation sections below retain their original chronology.
+
+The launch checks made no model calls. Kevin subsequently requested free AI generation with a global USD10/day limit and one real workflow test; the narrowly scoped config update is tracked separately. The initial unstyled text flash remains explicitly deferred by Kevin. Google OAuth uses basic identity scopes; the console remains External/Testing, so only the observed owner callback is claimed here.
+
 Launch target: today, 22 October 2026 (Asia/Kolkata). The selected platform is **Workers Static Assets on Workers Paid Standard ($5/month minimum)**. Account authentication is working, and the account owner confirmed Paid is active. Separate staging/production databases have all three migrations. The release scope has expanded to include skill replacement/custom uploads and Turnstile/rate/preview protection; the deployment owner is building a complete immutable release before retrying upload. The prior upload's file disappearance came from a concurrent frontend-only rebuild removing prerendered pages. All source owners have now frozen writes. Live verification starts only after the confirmed deployed version. The current account/deployment record is `reports/cloudflare-live-release.json`; local reports alone do not certify a live release.
 
 ## Customer experience and capacity

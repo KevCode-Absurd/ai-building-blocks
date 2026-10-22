@@ -8,10 +8,11 @@ import type { Ordered } from "./lib/handoff";
 import { passLabel, passes } from "./lib/plan";
 import { GOAL_EXAMPLES } from "./lib/goal";
 import { type Flow, type Team, TEAM_MAX } from "./lib/store";
-import { type Lead, leadsOf, mindName, mindsIn, suggestMinds } from "./lib/crew";
+import { type Lead, leadsOf, mindName, mindsIn, suggestMinds, taskMinds } from "./lib/crew";
+import "./my-minds.css";
 import PixelFace from "./PixelFace";
 
-type NotesPatch = { role?: string; notes?: string; mind?: string };
+type NotesPatch = { role?: string; notes?: string; mind?: string; minds?: string[] };
 
 /** Pick a mind by typing their name. Once picked, it shows their face and name, with a way to change it. */
 export function MindPick({ c, value, onPick, label, placeholder, exclude = [], testid }: {
@@ -290,16 +291,22 @@ function StepMind({ c, flow, order, nodeId, onNotes }: { c: Catalogue; flow: Flo
   const b = c.bySlug[node.slug];
   const step = order?.find((o) => o.node.id === nodeId)?.step;
   const lead = step && order ? leadsOf(c, flow, order)[step] : undefined;
-  const ideas = useMemo(() => suggestMinds(c, b), [c, b]);
+  const ideas = useMemo(() => suggestMinds(c, b, 2), [c, b]);
+  const selected = taskMinds(c, node);
+  const set = (minds: string[]) => onNotes(node.id, { minds, mind: minds[0] });
+  const toggle = (slug: string) => set(selected.includes(slug) ? selected.filter(s => s !== slug) : [...selected, slug].slice(0, TEAM_MAX));
+  const personal = mindsIn(c).filter(m => m.version === "local");
   return (
     <div className="sp-crew" data-testid="step-mind">
-      <h4 className="sp-h">Done the way of</h4>
-      <p className="small">Optional. Pick a mind, and this step is done with their method and voice. Their skill goes in the download.</p>
-      <MindPick c={c} value={node.mind ?? null} onPick={(s) => onNotes(node.id, { mind: s ?? undefined })} label="Mind" placeholder="For example: Claude Hopkins" testid="step-mind-input" />
-      {!node.mind && lead?.from === "team" && <p className="small" data-testid="team-lead">Your team gives this step to <b>{mindName(c, lead.mind)}</b>. Pick someone here to change that.</p>}
-      {!node.mind && ideas.length > 0 && (
-        <div className="sp-seats">{ideas.map((m) => <button key={m.slug} type="button" className="chip" onClick={() => onNotes(node.id, { mind: m.slug })} data-testid="mind-idea">{mindName(c, m.slug)}</button>)}</div>
-      )}
+      <h4 className="sp-h">Minds for this task</h4>
+      <p className="small">Choose one mind for its method and voice, or up to {TEAM_MAX} for a council. The downloaded workflow asks each council member for a view, has them challenge one another, then combines their strongest ideas and records disagreement. For writing, the first selected mind sets the final voice.</p>
+      {selected.length > 0 && <div className="task-mind-selected" aria-label="Selected task minds">{selected.map(s => <button key={s} type="button" className="chip" aria-pressed="true" onClick={() => toggle(s)} aria-label={`Remove ${mindName(c, s)} from task`}>{mindName(c, s)} ×</button>)}</div>}
+      {selected.length > 1 && <p className="small" data-testid="task-council">Council of {selected.length} · Compare views → challenge → one answer with dissent</p>}
+      {ideas.length > 0 && <><p className="small"><b>Recommended for this task</b> · {b.minds?.some(s => ideas.some(m => m.slug === s)) ? "Based on the skill's source minds and subject areas" : "Based on matching subject areas"}</p><div className="sp-seats">{ideas.map(m => <button key={m.slug} type="button" className="chip task-mind-recommendation" aria-pressed={selected.includes(m.slug)} disabled={!selected.includes(m.slug) && selected.length >= TEAM_MAX} onClick={() => toggle(m.slug)} data-testid="mind-idea">{mindName(c, m.slug)}<small>{selected.includes(m.slug) ? "Selected" : "Add recommended mind"}</small></button>)}</div></>}
+      {personal.length > 0 && <><p className="small"><b>Your minds</b></p><div className="sp-seats">{personal.map(m => <button key={m.slug} type="button" className="chip" aria-pressed={selected.includes(m.slug)} disabled={!selected.includes(m.slug) && selected.length >= TEAM_MAX} onClick={() => toggle(m.slug)}>{m.name}</button>)}</div></>}
+      {selected.length < TEAM_MAX && <MindPick c={c} value={null} exclude={selected} onPick={s => s && toggle(s)} label="Add a mind" placeholder="Search minds by name" testid="step-mind-input" />}
+      {!selected.length && lead?.from === "team" && <p className="small" data-testid="team-lead">Your team gives this step to <b>{mindName(c, lead.mind)}</b>. Choose minds here to change that.</p>}
+      <p className="small">Create or import your own mind in Compose or the Minds library. Minds run when you give the downloaded pack to your AI.</p>
     </div>
   );
 }
@@ -345,7 +352,7 @@ export function StepList({ c, order, selectedId, leads = {}, run, live, samples,
               <span className="sl-n">{o.step}</span>
               <button className="sl-txt" aria-pressed={selectedId === o.node.id} onClick={() => onOpen(o.node.id)} data-testid="step-open">
                 <b>{b?.name ?? o.node.slug}</b>
-                <small>{leads[o.step] ? `Done like ${mindName(c, leads[o.step].mind)}${o.node.role ? `, as ${o.node.role}` : ""}` : o.node.role ? `Role: ${o.node.role}` : b ? `${taskOf(b).name}. Tap to see what it needs or add notes` : "No longer in the library"}</small>
+                <small>{(leads[o.step]?.minds?.length ?? 0) > 1 ? `Council: ${leads[o.step].minds!.map(s => mindName(c, s)).join(", ")}` : leads[o.step] ? `Done like ${mindName(c, leads[o.step].mind)}${o.node.role ? `, as ${o.node.role}` : ""}` : o.node.role ? `Role: ${o.node.role}` : b ? `${taskOf(b).name}. Tap to see what it needs or add notes` : "No longer in the library"}</small>
               </button>
               <span className="sl-ctl">
                 <button className="icon-btn" onClick={() => onMove(i, i - 1)} disabled={i === 0} aria-label={`Move ${b?.name ?? "step"} up`} data-testid="step-up">↑</button>

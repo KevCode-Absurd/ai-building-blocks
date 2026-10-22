@@ -1,0 +1,44 @@
+slug: check-a-clinic-service-information-page
+name: Check a clinic service information page
+summary: Share the source files. Get a source gap list and corrected administrative FAQ draft.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: copy_draft
+    required: false
+  - type: brand_brain
+    required: false
+outputs:
+  - type: audit_report
+  - type: copy_draft
+  - type: feedback_notes
+  - type: document
+uses:
+  - unsupported-claim-spotter
+  - plain-english-editor
+steps:
+  - uses: unsupported-claim-spotter
+    note: Check the FAQ against approved service information. Flag unsupported availability, eligibility, pricing, medical benefit or outcome claims for the responsible reviewer.
+  - uses: plain-english-editor
+    note: Edit the existing administrative FAQ for understandable booking and contact instructions, preserving eligibility limits and removing or marking unapproved claims.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/next-100-data.mjs
+example_pending: true
+credits:
+  - title: Unsupported claim spotter
+    by: Pro Skill Packs
+    url: https://github.com/proskillpacks/skills/tree/main/skills/writing/fact-claim-checker
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Plain English editor
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/plain-english-editor
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

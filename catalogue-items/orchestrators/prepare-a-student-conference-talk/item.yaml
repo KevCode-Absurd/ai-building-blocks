@@ -1,0 +1,43 @@
+slug: prepare-a-student-conference-talk
+name: Prepare a student conference talk
+summary: Share the source files. Get a talk outline, speaking notes and rehearsal checklist.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: document
+    required: false
+  - type: source_text
+    required: false
+outputs:
+  - type: slide_deck
+  - type: copy_draft
+  - type: document
+uses:
+  - presentation-builder
+  - proofreader
+steps:
+  - uses: presentation-builder
+    note: Build a timed outline around the real project question, method, evidence and limitations, with speaker notes and a practical rehearsal checklist.
+  - uses: proofreader
+    note: Check the actual outline and notes for exact names, numbers and accessible wording; preserve the student voice.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/next-100-data.mjs
+example_pending: true
+credits:
+  - title: Presentation builder
+    by: Burhan Sebin
+    url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/communication/presentation-creation
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Proofreader
+    by: Burhan Sebin
+    url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/writing-and-content/proofreading
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

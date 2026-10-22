@@ -1,0 +1,50 @@
+slug: prepare-a-grant-spending-evidence-pack
+name: Prepare a grant spending evidence pack
+summary: Share the source files. Get a reconciled grant spending table, variance brief and evidence gaps.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: spreadsheet
+    required: false
+  - type: question
+    required: false
+outputs:
+  - type: spreadsheet
+  - type: audit_report
+  - type: document
+uses:
+  - spreadsheet-checker
+  - budget-variance-explainer
+  - stakeholder-update-writer
+steps:
+  - uses: spreadsheet-checker
+    note: Reconcile transactions and receipts to the grant period, budget categories and restricted fund ledger without changing source records.
+  - uses: budget-variance-explainer
+    note: Bridge the actual grant spending to the approved phased budget, keeping timing differences and unapproved reallocations explicit.
+  - uses: stakeholder-update-writer
+    note: Draft the fund owner update with source totals, unresolved eligibility questions and requested decisions, without submitting a funder return.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/next-100-data.mjs
+example_pending: true
+credits:
+  - title: Spreadsheet checker
+    by: Burhan Sebin
+    url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/documents-and-files/spreadsheet-analysis
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Budget variance explainer
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/finance/skills/variance-analysis
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Stakeholder update writer
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/product-management/skills/stakeholder-update
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

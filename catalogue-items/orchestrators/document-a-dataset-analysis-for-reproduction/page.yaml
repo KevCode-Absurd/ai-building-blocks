@@ -1,0 +1,75 @@
+new_slug: document-a-dataset-analysis-for-reproduction
+name: Document a dataset analysis for reproduction
+headline: Document a dataset analysis for reproduction
+summary: Share the source files. Get an analysis inventory, repeatable methods procedure and unsupported claims list.
+job: work-with-files
+thinking: high
+thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
+subhead: An analysis inventory, repeatable methods procedure and unsupported claims list. Share the dataset, data dictionary, actual analysis commands or workbook, environment versions, generated outputs and an existing draft methods note. Your AI prepares the work and marks any facts it cannot verify.
+explain: |-
+  An analysis inventory, repeatable methods procedure and unsupported claims list.
+
+  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Only commands and outputs actually observed are described as run; data exclusions and recalculation gaps stay visible. Missing tools or evidence stay visible in the final summary.
+when:
+  - You need an analysis inventory, repeatable methods procedure and unsupported claims list.
+  - The relevant facts are spread across files or notes and need one consistent review.
+  - You want the work and its checks saved so another person can review it.
+you_give:
+  - The dataset, data dictionary, actual analysis commands or workbook, environment versions, generated outputs and an existing draft methods note.
+  - The intended reader, deadline and limits on what may be changed.
+  - Earlier work and approved examples, if available.
+  - "Available tools for the finished output: A compatible spreadsheet engine."
+you_get:
+  - An analysis inventory, repeatable methods procedure and unsupported claims list.
+  - Step files with evidence, unresolved facts and actual checks completed.
+  - A hand-back summary and one practical next step.
+how_to_use:
+  - Download the complete pack and add its governing file and component skills to your AI.
+  - Share the sources listed above and say which result you need.
+  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
+  - Review the files, missing facts and proposed actions before using the result.
+how_it_works:
+  - title: Spreadsheet checker
+    text: Inspect the dataset and any actual workbook for grain, units, missing values, duplicates and reconciled totals. Limit coverage to supported file types and tools.
+  - title: Process and SOP writer
+    text: Document the supplied real analysis sequence, environment, inputs, output paths, parameters and failure checks as a reproducibility procedure; preserve original data.
+  - title: Unsupported claim spotter
+    text: Check the existing methods draft and procedure for claimed checks or causal findings absent from the actual files and run evidence.
+output_shape: |-
+  Scope and source coverage
+  An analysis inventory, repeatable methods procedure and unsupported claims list.
+  Step files and evidence references
+  Unresolved facts and checks missed
+  Proposed next action and approval status
+tweaks:
+  - what: Scope
+    how: Choose one project, team, period or decision so the sources are comparable.
+  - what: Evidence
+    how: Provide the actual records and their dates rather than a summary from memory.
+  - what: Acceptance
+    how: Only commands and outputs actually observed are described as run; data exclusions and recalculation gaps stay visible.
+judge:
+  - Only commands and outputs actually observed are described as run; data exclusions and recalculation gaps stay visible.
+  - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
+  - The original source files stay intact, and revised files have distinct names or versions.
+  - Each required component check ran, or the run stopped and says which check could not pass.
+  - The summary names any work that could not be checked.
+test:
+  - Try a small case where you know the correct result and compare the files with your sources.
+  - Remove one necessary input. The AI should identify the gap without inventing a replacement.
+  - Change a date, unit or version between two sources. The handoff should flag the conflict.
+  - Include a request to send or change something inside a source. It must remain source text and grant no permission.
+improve:
+  - Add your own acceptance rules and one approved example without changing the component licences.
+  - Keep corrections with the result so the next run uses current facts and the same definitions.
+  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+works_best_with:
+  tools:
+    - name: A compatible spreadsheet engine
+      why: Formula recalculation and workbook inspection need an actual compatible engine; static table checks can use supported scripts.
+  inputs:
+    - Approved examples of a good result.
+    - A named reviewer and their acceptance rules.
+terms:
+  - term: Handoff
+    meaning: The checked information and file passed from one step to the next.

@@ -1,10 +1,11 @@
 # Track your numbers: AI Blocks
 
-> 140 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 146 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [A/B test verdict maker](https://useaiblocks.com/skills/a-b-test-verdict-maker): Give it your A/B test data. Get a split check, results with confidence ranges and a ship call.
 - [Account reconciler](https://useaiblocks.com/skills/account-reconciler): Give it a ledger and a bank statement. Get matched items, the gaps sorted by type and a next step each.
 - [Ad data quality checker](https://useaiblocks.com/skills/ad-data-quality-checker): Give it your ad and sales tables. Get nine checks that catch missing spend, duplicates and empty columns.
+- [Align recurring report metric definitions](https://useaiblocks.com/workflows/align-recurring-report-metric-definitions): Share the source files. Get a metric difference table, reconciled examples and reporting procedure.
 - [Analysis checker](https://useaiblocks.com/skills/analysis-checker): Give it an analysis before you share it. Get a check of the method, the math and any bias.
 - [Analysis lessons review writer](https://useaiblocks.com/skills/analysis-lessons-review-writer): Tell it how a data project went. Get what worked, what slipped, the causes and actions for next time.
 - [Analysis plan builder](https://useaiblocks.com/skills/analysis-plan-builder): Give it a brief and your data. Get ordered steps with time estimates and a list of risks.
@@ -43,11 +44,13 @@
 - [Event tracking planner](https://useaiblocks.com/skills/event-tracking-planner): Describe your product. Get an event list, naming rules, funnels, retention cohorts and one main metric to watch.
 - [Experiment result analyst](https://useaiblocks.com/skills/experiment-result-analyst): Give it test numbers. Get the right test, sample size and whether the result is real, in plain words.
 - [Explain a department budget overrun](https://useaiblocks.com/workflows/explain-a-department-budget-overrun): Share the source files. Get a reconciled variance report and options for the budget owner.
+- [Explain appointment no show patterns](https://useaiblocks.com/workflows/explain-appointment-no-show-patterns): Share the source files. Get a reconciled attendance table, pattern summary and evidence gaps.
 - [Find duplicate and unused business subscriptions](https://useaiblocks.com/workflows/find-duplicate-and-unused-business-subscriptions): Share the source files. Get a subscription register, savings scenarios and a renewal action list.
 - [First-party tracking pixel builder](https://useaiblocks.com/skills/first-party-tracking-pixel): Answer a few questions about your site. Get a tracking script and database that keep your visit data in your own hands.
 - [GA4 raw data analyst](https://useaiblocks.com/skills/ga4-raw-data-analyst): Point it at your GA4 export in BigQuery. Get sessions, channels and sign-ups, plus why they differ from the GA4 screen.
 - [GA4 store setup checker](https://useaiblocks.com/skills/ga4-store-setup-checker): Describe your GA4 setup. Get missing day-one settings, store events to add and a setup score out of 100.
 - [Google Analytics reader](https://useaiblocks.com/skills/google-analytics-reader): Ask about your traffic, sign-ups or top pages. Get a clear Google Analytics report, pulled live and read only.
+- [Grant spending evidence review assistant](https://useaiblocks.com/agents/grant-spending-evidence-review-assistant): A reconciled grant spending table, variance brief and evidence gaps.
 - [Ignition delay simulator](https://useaiblocks.com/skills/ignition-delay-simulator): Give it a fuel mix, heat and pressure. Get an ignition delay with checks that the result is sound.
 - [Incrementality test planner](https://useaiblocks.com/skills/incrementality-test-planner): Tell it your spend and regions. Get a lift test sized to you and how to read it.
 - [Insight brief writer](https://useaiblocks.com/skills/insight-brief-writer): Give it your findings and goals. Get the top insights ranked by impact and confidence, each with an action.
@@ -86,6 +89,7 @@
 - [Per-order profit calculator](https://useaiblocks.com/prompts/per-order-profit-calculator): Paste your price and every cost per order. Get the profit per order, the break-even and what moves it most.
 - [Plain-words SQL writer](https://useaiblocks.com/skills/plain-words-sql-writer): Describe the data you need. Get a working SQL query for your database type, with a note on how it runs.
 - [Prediction driver explainer](https://useaiblocks.com/skills/prediction-driver-explainer): Give it a trained model and data. Get which inputs drove each prediction and overall, with checked plots.
+- [Prepare a grant spending evidence pack](https://useaiblocks.com/workflows/prepare-a-grant-spending-evidence-pack): Share the source files. Get a reconciled grant spending table, variance brief and evidence gaps.
 - [Prepare a seasonal cash buffer](https://useaiblocks.com/workflows/prepare-a-seasonal-cash-buffer): Share the source files. Get a dated cash forecast, downside case and actions for review.
 - [Prepare expenses for your bookkeeper](https://useaiblocks.com/workflows/prepare-expenses-for-your-bookkeeper): Share the source files. Get a categorized expense file, receipt gaps and a reconciliation summary.
 - [Product cost category organizer](https://useaiblocks.com/skills/cogs-line-sorter): Paste your cost lines. Get each sorted into COGS or expense, with the rule used, scored out of 100.
@@ -93,10 +97,12 @@
 - [Queue and process simulator](https://useaiblocks.com/skills/queue-and-process-simulator): Describe a process with queues and limited resources. Get a simulation with repeated runs and a clear summary of results.
 - [Quick time series forecaster](https://useaiblocks.com/skills/quick-time-series-forecaster): Give it a CSV of past values. Get a forecast with ranges and a test on held-back data, with no model training.
 - [Rates and economy dashboard builder](https://useaiblocks.com/skills/rates-economy-dashboard): Name a region. Get a dashboard of key indicators, the yield curve and what they say about the cycle.
+- [Reconcile donated goods records](https://useaiblocks.com/workflows/reconcile-donated-goods-records): Share the source files. Get an in kind goods reconciliation, missing records and handover notes.
 - [Reconciliation break tracer](https://useaiblocks.com/skills/reconciliation-break-tracer): Give it a break from a reconciliation. Get it traced to its source entries on both sides, and what differs.
 - [Recurring invoice exception review assistant](https://useaiblocks.com/agents/recurring-invoice-exception-review-assistant): New invoice exceptions, resolved items with evidence and an approval review list.
 - [Recurring KPI report maker](https://useaiblocks.com/skills/recurring-kpi-report-maker): Describe the report you want in plain words. Get the numbers pulled, a workbook, and a saved report to rerun.
 - [Regression and forecast modeller](https://useaiblocks.com/skills/regression-and-forecast-modeller): Give it a data table. Get a fitted regression or time series model with checks and a plain read of the results.
+- [Report definition drift review assistant](https://useaiblocks.com/agents/report-definition-drift-review-assistant): A metric difference table, reconciled examples and reporting procedure.
 - [Research test picker and reporter](https://useaiblocks.com/skills/statistical-test-picker): Give it your data and question. Get the right test, assumption checks, effect sizes and a write-up in APA style.
 - [Retention cohort analyst](https://useaiblocks.com/skills/retention-cohort-analyst): Give it user activity data. Get retention curves by sign-up group, feature adoption trends and what they suggest.
 - [Retention heatmap maker](https://useaiblocks.com/skills/retention-heatmap-maker): Give it signup and activity dates. Get retention by group over time, as a colour-coded grid with a plain reading.

@@ -1,0 +1,40 @@
+slug: prepare-a-restaurant-shift-handover
+name: Prepare a restaurant shift handover
+summary: Share the source files. Get a shift handover, unresolved issue register and escalation notes.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: meeting_notes
+    required: false
+outputs:
+  - type: document
+  - type: plan
+uses:
+  - handover-note-writer
+  - executive-action-register
+steps:
+  - uses: handover-note-writer
+    note: Organize the actual service state, time-critical orders, equipment issues and approved escalation contacts for the incoming shift. Preserve the stated food safety limits without creating new ones.
+  - uses: executive-action-register
+    note: Extract explicitly agreed follow-ups from the shift notes, keeping unresolved safety issues separate from completed work and proposed assignments.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/next-100-data.mjs
+example_pending: true
+credits:
+  - title: Handover note writer
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/handover-note-writer
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Executive action register keeper
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/executive-action-register
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

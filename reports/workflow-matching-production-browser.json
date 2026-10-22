@@ -1,0 +1,22 @@
+{
+  "checkedOn": "2026-10-22T13:15:44.378Z",
+  "origin": "https://useaiblocks.com",
+  "status": "pass",
+  "checks": [
+    "width 1440: ad audit ZIP contains matched skills and original request",
+    "width 1440: i want to audit my ad of my ecommerce store",
+    "width 1440: Can you please help me write a product FAQ for my ecommerce store",
+    "width 1440: Write four welcome emails",
+    "width 1440: Review this video ad for my store",
+    "width 1440: fallback disclosed; AI option preserves request; no horizontal overflow",
+    "width 390: ad audit ZIP contains matched skills and original request",
+    "width 390: i want to audit my ad of my ecommerce store",
+    "width 390: Can you please help me write a product FAQ for my ecommerce store",
+    "width 390: Write four welcome emails",
+    "width 390: Review this video ad for my store",
+    "width 390: fallback disclosed; AI option preserves request; no horizontal overflow"
+  ],
+  "passed": 12,
+  "modelCalls": 0,
+  "browserErrors": []
+}

@@ -1,0 +1,53 @@
+slug: supplier-correction-evidence-review-assistant
+name: Supplier correction evidence review assistant
+summary: A sourced issue review, corrective procedure draft and follow up register.
+category: agent
+type: agent
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: false
+  - type: question
+    required: false
+  - type: meeting_notes
+    required: false
+outputs:
+  - type: document
+  - type: plan
+uses:
+  - prepare-a-supplier-corrective-action-review
+  - source-note-summariser
+steps:
+  - uses: prepare-a-supplier-corrective-action-review
+    note: "Run when: A supplier sends corrective action evidence or an effectiveness review becomes due."
+  - uses: source-note-summariser
+    note: Run prepare-a-supplier-corrective-action-review for changed evidence or a due review. If a corrective action is claimed complete, compare actual evidence to the owner-approved acceptance requirement. Unverified effectiveness remains open.
+schedule: At a requested supplier review checkpoint. Installation does not create a schedule.
+asks_before:
+  - Sending or submitting any message or form
+  - Changing a live account, calendar, task, permission or published document
+  - Spending money, releasing a payment or signing a contract
+  - Starting or changing any recurring schedule
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/next-100-data.mjs
+example_pending: true
+credits:
+  - title: Source note summariser
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/source-note-summariser
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Process and SOP writer
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/operations/skills/process-doc
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Executive action register keeper
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/executive-action-register
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

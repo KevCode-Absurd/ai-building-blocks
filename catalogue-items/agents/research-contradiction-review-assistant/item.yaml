@@ -1,0 +1,51 @@
+slug: research-contradiction-review-assistant
+name: Research contradiction review assistant
+summary: A paper comparison, disagreement map and evidence gaps.
+category: agent
+type: agent
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: false
+  - type: copy_draft
+    required: false
+outputs:
+  - type: document
+  - type: audit_report
+uses:
+  - compare-conflicting-research-findings
+  - source-note-summariser
+steps:
+  - uses: compare-conflicting-research-findings
+    note: "Run when: A supplied paper is added or corrected, or the user requests a comparison review."
+  - uses: source-note-summariser
+    note: Run compare-conflicting-research-findings for changed evidence or a due review. If a paper changes, extract the changed sections before updating only the affected comparisons. If the paper is missing, return a source request.
+schedule: On request or when the user supplies a changed paper. Installation does not create a schedule.
+asks_before:
+  - Sending or submitting any message or form
+  - Changing a live account, calendar, task, permission or published document
+  - Spending money, releasing a payment or signing a contract
+  - Starting or changing any recurring schedule
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/next-100-data.mjs
+example_pending: true
+credits:
+  - title: Research literature comparison
+    by: Jacquard Labs
+    url: https://github.com/jacquardlabs/study-skills/tree/main/skills/literature-map
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Unsupported claim spotter
+    by: Pro Skill Packs
+    url: https://github.com/proskillpacks/skills/tree/main/skills/writing/fact-claim-checker
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Source note summariser
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/source-note-summariser
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

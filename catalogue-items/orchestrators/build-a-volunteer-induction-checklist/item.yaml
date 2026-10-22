@@ -1,0 +1,40 @@
+slug: build-a-volunteer-induction-checklist
+name: Build a volunteer induction checklist
+summary: Share the source files. Get an induction procedure, practice plan and supervision gaps.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: question
+    required: false
+outputs:
+  - type: document
+  - type: plan
+uses:
+  - process-and-sop-writer
+  - training-program-builder
+steps:
+  - uses: process-and-sop-writer
+    note: Document the approved volunteer joining, role briefing, access, supervision, escalation and exit process; preserve organization safeguarding requirements.
+  - uses: training-program-builder
+    note: Plan role-specific demonstrations and supervised practice with evidence checks; keep unverified readiness and required clearance visible.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/next-100-data.mjs
+example_pending: true
+credits:
+  - title: Process and SOP writer
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/operations/skills/process-doc
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Training program builder
+    by: Tuan Duc Tran
+    url: https://github.com/tuanductran/hr-skills/tree/main/skills/hr-training-development
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

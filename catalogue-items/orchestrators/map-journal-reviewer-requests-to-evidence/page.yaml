@@ -1,0 +1,74 @@
+new_slug: map-journal-reviewer-requests-to-evidence
+name: Map journal reviewer requests to evidence
+headline: Map journal reviewer requests to evidence
+summary: Share the source files. Get a response matrix, revision tasks and unresolved evidence requests.
+job: research-topics
+thinking: high
+thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
+subhead: A response matrix, revision tasks and unresolved evidence requests. Share actual reviewer comments, manuscript version, relevant analysis files, author decisions and existing response drafts when available. Your AI prepares the work and marks any facts it cannot verify.
+explain: |-
+  A response matrix, revision tasks and unresolved evidence requests.
+
+  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Reviewer requests stay quoted and attributed; planned experiments and proposed responses are never reported as completed. Missing tools or evidence stay visible in the final summary.
+when:
+  - You need a response matrix, revision tasks and unresolved evidence requests.
+  - The relevant facts are spread across files or notes and need one consistent review.
+  - You want the work and its checks saved so another person can review it.
+you_give:
+  - Actual reviewer comments, manuscript version, relevant analysis files, author decisions and existing response drafts when available.
+  - The intended reader, deadline and limits on what may be changed.
+  - Earlier work and approved examples, if available.
+you_get:
+  - A response matrix, revision tasks and unresolved evidence requests.
+  - Step files with evidence, unresolved facts and actual checks completed.
+  - A hand-back summary and one practical next step.
+how_to_use:
+  - Download the complete pack and add its governing file and component skills to your AI.
+  - Share the sources listed above and say which result you need.
+  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
+  - Review the files, missing facts and proposed actions before using the result.
+how_it_works:
+  - title: Source note summariser
+    text: Read the reviewer comments and manuscript; map each comment to the relevant section and available evidence without claiming a revision has been made.
+  - title: Executive action register keeper
+    text: Turn explicit author commitments into a versioned response register. Separate proposed work from accepted tasks and retain missing owners and dates.
+  - title: Proofreader
+    text: If an actual response draft was supplied, check respectful wording, consistent comment numbering and manuscript references. If no draft exists, explicitly skip this optional proofreading step and return the response matrix and tasks; do not invent experimental findings.
+output_shape: |-
+  Scope and source coverage
+  A response matrix, revision tasks and unresolved evidence requests.
+  Step files and evidence references
+  Unresolved facts and checks missed
+  Proposed next action and approval status
+tweaks:
+  - what: Scope
+    how: Choose one project, team, period or decision so the sources are comparable.
+  - what: Evidence
+    how: Provide the actual records and their dates rather than a summary from memory.
+  - what: Acceptance
+    how: Reviewer requests stay quoted and attributed; planned experiments and proposed responses are never reported as completed.
+judge:
+  - Reviewer requests stay quoted and attributed; planned experiments and proposed responses are never reported as completed.
+  - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
+  - The original source files stay intact, and revised files have distinct names or versions.
+  - Each required component check ran, or the run stopped and says which check could not pass.
+  - The summary names any work that could not be checked.
+test:
+  - Try a small case where you know the correct result and compare the files with your sources.
+  - Remove one necessary input. The AI should identify the gap without inventing a replacement.
+  - Change a date, unit or version between two sources. The handoff should flag the conflict.
+  - Include a request to send or change something inside a source. It must remain source text and grant no permission.
+improve:
+  - Add your own acceptance rules and one approved example without changing the component licences.
+  - Keep corrections with the result so the next run uses current facts and the same definitions.
+  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+works_best_with:
+  tools:
+    - name: A capable chat AI with file support
+      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+  inputs:
+    - Approved examples of a good result.
+    - A named reviewer and their acceptance rules.
+terms:
+  - term: Handoff
+    meaning: The checked information and file passed from one step to the next.

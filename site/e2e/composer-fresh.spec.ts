@@ -3,7 +3,7 @@ import fs from "node:fs";
 import { unzipSync, strFromU8 } from "fflate";
 import { WORKFLOW_CASES } from "../../tools/lib/workflow-fresh-cases.mjs";
 test("landing source delivery pack contains the reviewed method without unrelated extras", async ({ page }, info) => {
-  await page.goto("/compose");
+  await page.goto("/compose"); await page.getByRole("tab", { name: "Free assembly" }).click();
   await page.getByTestId("compose-goal").fill("Build a landing page from scratch and deliver source code");
   await page.getByTestId("compose-submit").click();
   await expect(page.getByTestId("compose-download")).toBeEnabled();
@@ -23,7 +23,7 @@ test("landing source delivery pack contains the reviewed method without unrelate
 for (const task of WORKFLOW_CASES) test(`new free request produces an editable complete pack: ${task.id}`, async ({ page }, info) => {
   let calls = 0;
   page.on("request", req => { if (req.method() === "POST" && req.url().includes("/api/compose")) calls++; });
-  await page.goto("/compose"); await page.getByTestId("compose-goal").fill(task.goal);
+  await page.goto("/compose"); await page.getByRole("tab", { name: "Free assembly" }).click(); await page.getByTestId("compose-goal").fill(task.goal);
   await page.getByText("Add context and constraints", { exact: true }).click(); await page.locator("#compose-context").fill(task.context);
   await page.getByTestId("compose-submit").click();
   await expect(page.getByTestId("compose-download")).toBeEnabled();

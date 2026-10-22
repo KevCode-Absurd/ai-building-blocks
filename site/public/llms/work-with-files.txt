@@ -1,6 +1,6 @@
 # Make documents, sheets and slides: AI Blocks
 
-> 62 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 64 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Article draft editor](https://useaiblocks.com/prompts/rough-text-to-article-tidier): Paste rough text. Get a tidy article with a title, summary and headings, in your words.
 - [Article formatter](https://useaiblocks.com/skills/article-formatter): Give it plain text or rough markdown. Get a tidy article with title, summary, headings and lists, same words.
@@ -18,6 +18,7 @@
 - [Data story writer](https://useaiblocks.com/skills/data-story-writer): Give it your numbers. Get a clear story with the point, the proof and the next step for your readers.
 - [Deck number refresher](https://useaiblocks.com/skills/deck-number-refresher): Give it a deck and new figures. Get every number updated across the slides, with a change log.
 - [Doc typo and term checker](https://useaiblocks.com/prompts/doc-typo-and-term-checker): Paste a document. Get typos, grammar slips and term clashes listed, with no rewrites.
+- [Document a dataset analysis for reproduction](https://useaiblocks.com/workflows/document-a-dataset-analysis-for-reproduction): Share the source files. Get an analysis inventory, repeatable methods procedure and unsupported claims list.
 - [Document file generator](https://useaiblocks.com/skills/document-file-generator): Describe the slides, report, sheet or PDF. Get a new PPTX, DOCX, XLSX or PDF file built from a JSON spec.
 - [Editable slide deck builder](https://useaiblocks.com/skills/editable-slide-deck-builder): Give it your story and sources. Get a PowerPoint deck with real editable text, tables and charts, plus a quality check.
 - [Empty workbook builder](https://useaiblocks.com/skills/empty-workbook-builder): Give a confirmed field list. Get a formatted empty Excel or CSV file, with no invented rows.
@@ -43,6 +44,7 @@
 - [PDF converter](https://useaiblocks.com/skills/pdf-converter): Give it a PDF and the format you want. Get a faithful Markdown, HTML, Word or JSON copy with tables kept intact.
 - [PDF maker and reader](https://useaiblocks.com/skills/pdf-maker-and-reader): Give it a PDF or a brief. Get the text pulled out or a new PDF with its layout checked.
 - [PDF toolkit](https://useaiblocks.com/skills/pdf-toolkit): Give it a PDF. Get text pulled out, pages merged, split, filled, redacted or checked, with the original kept safe.
+- [Prepare research poster source notes](https://useaiblocks.com/workflows/prepare-research-poster-source-notes): Share the source files. Get a poster content hierarchy, figure source index and wording review.
 - [Presentation builder](https://useaiblocks.com/skills/presentation-builder): Give it an outline or document. Get a polished slide deck for your audience in Marp, reveal.js or PPTX.
 - [Python chart maker](https://useaiblocks.com/skills/python-chart-maker): Give it your data. Get a clean Matplotlib chart, static, animated or interactive, ready to save as an image.
 - [Repo slide deck builder](https://useaiblocks.com/skills/repo-slide-deck-builder): Point it at a repo. Get a slide deck with cited facts that warns you when the code changes.

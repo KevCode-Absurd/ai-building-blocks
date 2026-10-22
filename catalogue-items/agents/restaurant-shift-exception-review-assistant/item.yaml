@@ -1,0 +1,51 @@
+slug: restaurant-shift-exception-review-assistant
+name: Restaurant shift exception review assistant
+summary: A shift handover, unresolved issue register and escalation notes.
+category: agent
+type: agent
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: meeting_notes
+    required: false
+  - type: question
+    required: false
+outputs:
+  - type: document
+  - type: plan
+uses:
+  - prepare-a-restaurant-shift-handover
+  - process-and-sop-writer
+steps:
+  - uses: prepare-a-restaurant-shift-handover
+    note: "Run when: A new shift handover is supplied with unresolved orders, equipment or safety escalations."
+  - uses: process-and-sop-writer
+    note: Run prepare-a-restaurant-shift-handover for changed evidence or a due review. If an exception has no approved handling path, document the missing procedure and route a question to the responsible lead; do not invent safety instructions.
+schedule: At each user-requested shift change. Installation does not create a schedule.
+asks_before:
+  - Sending or submitting any message or form
+  - Changing a live account, calendar, task, permission or published document
+  - Spending money, releasing a payment or signing a contract
+  - Starting or changing any recurring schedule
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/next-100-data.mjs
+example_pending: true
+credits:
+  - title: Handover note writer
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/handover-note-writer
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Executive action register keeper
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/executive-action-register
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Process and SOP writer
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/operations/skills/process-doc
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

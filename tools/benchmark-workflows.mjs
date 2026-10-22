@@ -20,7 +20,7 @@ const c = decodeCatalogue(JSON.parse(fs.readFileSync(path.join(ROOT, "site/publi
 const chosenModels = MODELS.filter(m => !opt("models") || opt("models").split(",").includes(m.id));
 const cases = WORKFLOW_CASES.filter(t => !opt("cases") || opt("cases").split(",").includes(t.id));
 const writerIds = [...(opt("free", "true") === "false" ? [] : ["free"]), ...chosenModels.map(m => m.id)];
-const sources = Object.fromEntries(["composer-core.ts", "composer-models.ts", "composer-recipes.ts", "composer-methods.ts"].map(name => [name, fs.readFileSync(path.join(ROOT, "site/src/lib", name), "utf8")]));
+const sources = Object.fromEntries(["composer-core.ts", "composer-models.ts", "composer-recipes.ts", "composer-methods.ts", "composer-intent.ts"].map(name => [name, fs.readFileSync(path.join(ROOT, "site/src/lib", name), "utf8")]));
 const fp = crypto.createHash("sha256").update(JSON.stringify([c.built, WORKFLOW_CASES, sources])).digest("hex");
 const priorRun = fs.readdirSync(dir).find(f => /^run-.*\.json$/.test(f));
 if (priorRun && JSON.parse(fs.readFileSync(path.join(dir, priorRun), "utf8")).fp !== fp) throw Error("Planner changed. Use a fresh --label to preserve the existing results and spend ledger.");

@@ -1,0 +1,59 @@
+slug: ai-pilot-evaluation-review-assistant
+name: AI pilot evaluation review assistant
+summary: A pilot evidence brief, data quality gaps and go stop checklist result.
+category: agent
+type: agent
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: spreadsheet
+    required: false
+  - type: question
+    required: false
+  - type: source_text
+    required: false
+outputs:
+  - type: plan
+  - type: spreadsheet
+  - type: audit_report
+  - type: document
+uses:
+  - prepare-an-ai-pilot-go-decision
+  - source-note-summariser
+steps:
+  - uses: prepare-an-ai-pilot-go-decision
+    note: "Run when: A bounded pilot receives new representative test results or an approved gate becomes due."
+  - uses: source-note-summariser
+    note: Run prepare-an-ai-pilot-go-decision for changed evidence or a due review. If the baseline or success definition changes, establish a new labeled evaluation version rather than claiming an improvement on the old basis.
+schedule: At an explicitly requested pilot gate review. Installation does not create a schedule.
+asks_before:
+  - Sending or submitting any message or form
+  - Changing a live account, calendar, task, permission or published document
+  - Spending money, releasing a payment or signing a contract
+  - Starting or changing any recurring schedule
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/next-100-data.mjs
+example_pending: true
+credits:
+  - title: Hypothesis-first design planner
+    by: Wondel.ai
+    url: https://github.com/wondelai/skills/tree/main/lean-ux
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Spreadsheet checker
+    by: Burhan Sebin
+    url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/documents-and-files/spreadsheet-analysis
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Decision checklist runner
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/decision-checklist-runner
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Source note summariser
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/source-note-summariser
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

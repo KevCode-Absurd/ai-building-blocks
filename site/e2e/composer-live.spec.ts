@@ -12,7 +12,7 @@ test("live model request becomes an editable downloadable pack", async ({ page }
   await page.getByTestId("compose-submit").click();
   const response = await responseEvent; const result = await response.json();
   expect(response.status(), result.error).toBe(200); expect(result.model).toBe("gpt-6.1-sol"); expect(result.cost).toBeGreaterThan(0);
-  await expect(page.getByTestId("compose-steps").locator(":scope > li")).toHaveCount(result.plan.steps.length);
+  await expect(page.getByTestId("compose-steps").getByTestId("flow-node")).toHaveCount(result.plan.steps.length);
   const event = page.waitForEvent("download"); await page.getByTestId("compose-download").click(); const dl = await event;
   const file = info.outputPath(dl.suggestedFilename()); await dl.saveAs(file); const files = unzipSync(fs.readFileSync(file));
   const editable = JSON.parse(strFromU8(files["workflow.edit.json"])); expect(editable.model).toBe(result.model); expect(editable.cost).toBe(result.cost);

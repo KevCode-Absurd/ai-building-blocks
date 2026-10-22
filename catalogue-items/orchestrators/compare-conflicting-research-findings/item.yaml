@@ -1,0 +1,42 @@
+slug: compare-conflicting-research-findings
+name: Compare conflicting research findings
+summary: Share the source files. Get a paper comparison, disagreement map and evidence gaps.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: false
+  - type: copy_draft
+    required: false
+outputs:
+  - type: document
+  - type: audit_report
+uses:
+  - research-literature-comparison
+  - unsupported-claim-spotter
+steps:
+  - uses: research-literature-comparison
+    note: Read the full supplied papers and build the claims, comparability and contested-findings map with section or table locations.
+  - uses: unsupported-claim-spotter
+    note: Review the written synthesis against the supplied papers. Mark overgeneralization and causal language beyond the actual design; this pass is not an independent truth verdict.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/next-100-data.mjs
+example_pending: true
+credits:
+  - title: Research literature comparison
+    by: Jacquard Labs
+    url: https://github.com/jacquardlabs/study-skills/tree/main/skills/literature-map
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Unsupported claim spotter
+    by: Pro Skill Packs
+    url: https://github.com/proskillpacks/skills/tree/main/skills/writing/fact-claim-checker
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

@@ -1,0 +1,39 @@
+slug: prepare-a-due-diligence-document-index
+name: Prepare a due diligence document index
+summary: Share the source files. Get a versioned document index, request coverage map and access questions.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: document
+uses:
+  - source-note-summariser
+  - handover-note-writer
+steps:
+  - uses: source-note-summariser
+    note: Summarize each supplied document purpose, date and request relevance without copying unnecessary sensitive contents. Flag missing, stale or inconsistent versions.
+  - uses: handover-note-writer
+    note: Prepare the reviewer handover with authorized file locations, owner contacts, disclosure limits and unresolved requests; never include credentials or grant access.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/next-100-data.mjs
+example_pending: true
+credits:
+  - title: Source note summariser
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/source-note-summariser
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Handover note writer
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/handover-note-writer
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

@@ -1,0 +1,40 @@
+slug: review-staff-adoption-of-a-policy-change
+name: Review staff adoption of a policy change
+summary: Share the source files. Get an adoption evidence brief, barriers and follow up support plan.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: question
+    required: false
+outputs:
+  - type: document
+  - type: plan
+uses:
+  - employee-survey-designer
+  - change-rollout-planner
+steps:
+  - uses: employee-survey-designer
+    note: Use the employee listening analysis method on supplied feedback. Preserve sample scope and anonymity; distinguish actual feedback from assumptions about adoption.
+  - uses: change-rollout-planner
+    note: Use the actual barriers and approved policy to propose awareness, training, ability and reinforcement actions; no policy or live process is changed.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/next-100-data.mjs
+example_pending: true
+credits:
+  - title: Employee survey designer
+    by: Tuan Duc Tran
+    url: https://github.com/tuanductran/hr-skills/tree/main/skills/hr-employee-listening
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Change rollout planner
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/c-level-advisor/skills/change-management
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

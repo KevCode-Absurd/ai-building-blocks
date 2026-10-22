@@ -1,0 +1,51 @@
+slug: prepare-a-supplier-corrective-action-review
+name: Prepare a supplier corrective action review
+summary: Share the source files. Get a sourced issue review, corrective procedure draft and follow up register.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: false
+  - type: question
+    required: false
+  - type: meeting_notes
+    required: false
+outputs:
+  - type: document
+  - type: plan
+uses:
+  - source-note-summariser
+  - process-and-sop-writer
+  - executive-action-register
+steps:
+  - uses: source-note-summariser
+    note: Extract observed nonconformances, dates, affected lots and supporting evidence from the inspection records; separate the supplier explanation from verified findings.
+  - uses: process-and-sop-writer
+    note: Document the proposed containment, correction, evidence collection and effectiveness review steps against the owner approved acceptance process; do not prescribe technical safety decisions.
+  - uses: executive-action-register
+    note: Record explicit accepted supplier commitments separately from proposed actions, with source IDs and missing owners or dates.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/next-100-data.mjs
+example_pending: true
+credits:
+  - title: Source note summariser
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/source-note-summariser
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Process and SOP writer
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/operations/skills/process-doc
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Executive action register keeper
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/executive-action-register
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

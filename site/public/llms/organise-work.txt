@@ -1,6 +1,6 @@
 # Run meetings, notes and plans: AI Blocks
 
-> 94 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 115 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Action item tracker](https://useaiblocks.com/skills/executive-action-register): Share meeting notes or email threads. Get action items with owners, deadlines and unresolved commitments.
 - [Activity digest writer](https://useaiblocks.com/skills/activity-digest-writer): Ask what you missed. Get a daily or weekly digest of mentions, action items and decisions by project.
@@ -9,10 +9,16 @@
 - [Brain dump sorter](https://useaiblocks.com/prompts/brain-dump-sorter): Paste everything on your mind. Get tasks, ideas and notes sorted with nothing lost.
 - [Build a backup recovery rehearsal](https://useaiblocks.com/workflows/build-a-backup-recovery-rehearsal): Share the source files. Get a recovery plan, rehearsal checklist and evidence log template.
 - [Bullet note maker](https://useaiblocks.com/skills/bullet-note-maker): Paste messy notes or an article. Get tidy nested bullets that are quick to scan and revise.
+- [Capstone commitment review assistant](https://useaiblocks.com/agents/capstone-commitment-review-assistant): A team working agreement, task register and handover rules.
 - [Catch up on your week, close loops and plan tomorrow](https://useaiblocks.com/workflows/catch-up-on-your-week-close-loops-and-plan-tomorrow): Connect your chat, email and files. Get what you missed, open loops closed and a protected day planned.
+- [Catering order change review assistant](https://useaiblocks.com/agents/catering-order-change-review-assistant): An order discrepancy table, service checklist and owner questions.
+- [Check a catering order before service](https://useaiblocks.com/workflows/check-a-catering-order-before-service): Share the source files. Get an order discrepancy table, service checklist and owner questions.
 - [Check capacity before promising a delivery date](https://useaiblocks.com/workflows/check-capacity-before-promising-a-delivery-date): Share the source files. Get a capacity view, delivery options and a draft commitment to review.
+- [Check production shift staffing commitments](https://useaiblocks.com/workflows/check-production-shift-staffing-commitments): Share the source files. Get a shift staffing comparison, dependency gaps and handover options.
+- [Client scope decision review assistant](https://useaiblocks.com/agents/client-scope-decision-review-assistant): A scope comparison, delivery options and client decision draft.
 - [Company operating system setter](https://useaiblocks.com/skills/company-operating-system-setter): Describe your company. Get a way of running it: scorecard, accountability chart, meetings and 90-day goals.
 - [Confluence space builder](https://useaiblocks.com/skills/confluence-space-builder): Say what your team needs. Get a Confluence space set up with page templates, permissions and a clear layout.
+- [Construction variation review assistant](https://useaiblocks.com/agents/construction-variation-review-assistant): A variation comparison, arithmetic review and decision brief.
 - [Cross tool status briefing writer](https://useaiblocks.com/skills/copilot-roundup): Share your sources and audience. Get a dated status brief with progress, blockers and source links.
 - [Cross-tool search finder](https://useaiblocks.com/skills/cross-tool-search-finder): Ask where a decision or doc lives. Get one search across your chat, email and files, with sources.
 - [Daily executive briefing](https://useaiblocks.com/skills/executive-daily-digest): Share your calendar, action list and updates. Get a dated brief of priorities, decisions, conflicts and work waiting on others.
@@ -32,6 +38,7 @@
 - [Jira project setup helper](https://useaiblocks.com/skills/jira-project-setup-helper): Say how your team works. Get Jira projects, workflows, JQL queries and automations set up for it.
 - [Linear ticket manager](https://useaiblocks.com/skills/linear-ticket-manager): Tell it the work. Get Linear issues read, created or updated for you.
 - [Make a realistic plan for a busy week](https://useaiblocks.com/workflows/make-a-realistic-plan-for-a-busy-week): Share the source files. Get a capacity-aware week plan with trade-offs and a review point.
+- [Measure a clinic administrative queue](https://useaiblocks.com/workflows/measure-a-clinic-administrative-queue): Share the source files. Get an administrative delay map, capacity options and measurement gaps.
 - [Meeting agenda and cost planner](https://useaiblocks.com/skills/meeting-agenda-and-cost-planner): Give it a meeting idea. Get a call on whether to hold it, its cost in dollars and a timed agenda.
 - [Meeting coaching analyst](https://useaiblocks.com/skills/meeting-coaching-analyst): Give it a meeting transcript. Get speaking patterns, habits that hurt and coaching you can act on.
 - [Meeting minutes from rough notes](https://useaiblocks.com/prompts/rough-notes-to-minutes-writer): Paste rough meeting notes. Get short minutes with decisions, owners and dates.
@@ -54,18 +61,32 @@
 - [Personal email style drafter](https://useaiblocks.com/skills/copilot-email-drafter): Share your email goal and style samples. Get a professional draft and a check against your usual voice.
 - [Personal performance review drafter](https://useaiblocks.com/skills/copilot-performance-review-writer): Share your work history and writing samples. Get a self review or feedback draft grounded in evidence.
 - [Personal wiki keeper](https://useaiblocks.com/skills/personal-wiki-keeper): Feed it sources. Get an Obsidian wiki that updates pages, links ideas and flags where sources disagree.
+- [Plan a manual first customer delivery](https://useaiblocks.com/workflows/plan-a-manual-first-customer-delivery): Share the source files. Get a delivery procedure, capacity options and unresolved handoff checks.
 - [Plan a vendor change without losing work](https://useaiblocks.com/workflows/plan-a-vendor-change-without-losing-work): Share the source files. Get a vendor decision, migration plan and continuity checklist.
 - [Prepare a clear client project kickoff](https://useaiblocks.com/workflows/prepare-a-clear-client-project-kickoff): Share the source files. Get a kickoff brief, meeting agenda and action register.
+- [Prepare a client scope change brief](https://useaiblocks.com/workflows/prepare-a-client-scope-change-brief): Share the source files. Get a scope comparison, delivery options and client decision draft.
+- [Prepare a community event access plan](https://useaiblocks.com/workflows/prepare-a-community-event-access-plan): Share the source files. Get an event access run sheet, responsibility map and confirmation requests.
+- [Prepare a construction defects handover](https://useaiblocks.com/workflows/prepare-a-construction-defects-handover): Share the source files. Get a defect register, remedial handover and missing acceptance evidence.
+- [Prepare a construction variation decision](https://useaiblocks.com/workflows/prepare-a-construction-variation-decision): Share the source files. Get a variation comparison, arithmetic review and decision brief.
+- [Prepare a hotel group booking handover](https://useaiblocks.com/workflows/prepare-a-hotel-group-booking-handover): Share the source files. Get a booking handover, payment arithmetic check and outstanding requests.
+- [Prepare a property maintenance handover](https://useaiblocks.com/workflows/prepare-a-property-maintenance-handover): Share the source files. Get a maintenance handover, access constraints and overdue decisions.
+- [Prepare a referral administration handover](https://useaiblocks.com/workflows/prepare-a-referral-administration-handover): Share the source files. Get a referral status handover, missing confirmations and follow up drafts.
+- [Prepare a restaurant shift handover](https://useaiblocks.com/workflows/prepare-a-restaurant-shift-handover): Share the source files. Get a shift handover, unresolved issue register and escalation notes.
 - [Prepare a small team offsite](https://useaiblocks.com/workflows/prepare-a-small-team-offsite): Share the source files. Get an outcome-led agenda, pre-read request and follow-up plan.
 - [Prepare a team absence handover](https://useaiblocks.com/workflows/prepare-a-team-absence-handover): Share the source files. Get a coverage map, handover notes and an escalation list.
+- [Prepare questions for a property viewing](https://useaiblocks.com/workflows/prepare-questions-for-a-property-viewing): Share the source files. Get a source-linked viewing brief and questions to verify in person.
 - [Prepare your executive day](https://useaiblocks.com/workflows/prepare-your-executive-day): Share your calendar and open work. Get meeting briefs, an action register and a plan for the day.
 - [Prepare your weekly executive review](https://useaiblocks.com/workflows/prepare-your-weekly-executive-review): Share this week's notes and tasks. Get a commitment review, decisions due and priorities for next week.
 - [Process bottleneck finder](https://useaiblocks.com/skills/process-bottleneck-finder): Describe a business process. Get a swim-lane map, cycle times and the one stage holding everything up.
 - [Process waste walk planner](https://useaiblocks.com/prompts/process-waste-walk-planner): Paste a process step by step. Get every kind of waste in it named, with the first one to remove.
+- [Property maintenance evidence review assistant](https://useaiblocks.com/agents/property-maintenance-evidence-review-assistant): A maintenance handover, access constraints and overdue decisions.
 - [Questionnaire writer](https://useaiblocks.com/skills/questionnaire-writer): Tell it who you need answers from. Get a questionnaire aimed at what they know and you do not.
 - [Recovery rehearsal evidence assistant](https://useaiblocks.com/agents/recovery-rehearsal-evidence-assistant): A recovery evidence review, changed rehearsal plan and open remediation actions.
+- [Referral administration evidence review assistant](https://useaiblocks.com/agents/referral-administration-evidence-review-assistant): A referral status handover, missing confirmations and follow up drafts.
+- [Restaurant shift exception review assistant](https://useaiblocks.com/agents/restaurant-shift-exception-review-assistant): A shift handover, unresolved issue register and escalation notes.
 - [Run a meeting worth holding, from agenda to action items](https://useaiblocks.com/workflows/run-a-meeting-worth-holding-from-agenda-to-action-items): Name a meeting. Get a call on whether to hold it, a pre-read, then notes with owners and dates.
 - [Sales day briefing writer](https://useaiblocks.com/skills/sales-day-briefing-writer): Ask for your day. Get today's meetings with context, deals closing soon, waiting emails and your top actions.
+- [Set up a capstone team agreement](https://useaiblocks.com/workflows/set-up-a-capstone-team-agreement): Share the source files. Get a team working agreement, task register and handover rules.
 - [Setup walkthrough guide](https://useaiblocks.com/skills/setup-walkthrough-guide): Name what you want to set up. Get one small step at a time, with the steps left shown.
 - [Slack message finder](https://useaiblocks.com/skills/slack-message-finder): Ask what was said and where. Get the right messages, files and people from your Slack, found with smart searches. Needs Slack.
 - [Small team IT fixer](https://useaiblocks.com/skills/small-team-it-fixer): Name the IT problem, like a lockout or Wi-Fi drop. Get steps to fix it, ranked by how many people it hits.

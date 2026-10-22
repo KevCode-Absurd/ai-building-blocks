@@ -1,0 +1,63 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import assert from 'node:assert/strict';
+import { createRequire } from 'node:module';
+import { mockComposerAccount } from '../site/e2e/fixtures/composer-account.ts';
+const require = createRequire(path.resolve('site/package.json')), { chromium, expect } = require('@playwright/test');
+const { unzipSync, strFromU8 } = require('fflate');
+const origin = process.argv[2] || 'http://127.0.0.1:5184';
+assert(['http://127.0.0.1:5184', 'https://useaiblocks.com'].includes(origin));
+const browser = await chromium.launch({ channel: 'chrome', headless: true }), checks = [];
+const fixture = JSON.parse(await fs.readFile('site/test/fixtures/composer-plans.json', 'utf8')).cases[0];
+try {
+  for (const width of [320, 390, 768, 1024, 1440, 1920]) {
+    const context = await browser.newContext({ viewport: { width, height: 1000 }, reducedMotion: 'reduce' });
+    const page = await context.newPage();
+    await page.route('**/api/compose', route => route.fulfill({ json: { enabled: true } }));
+    await page.route('**/api/auth*', route => route.fulfill({ json: { configured: false } }));
+    await page.goto(origin + '/compose'); await page.getByTestId('compose-goal').waitFor();
+    const reject = page.getByRole('button', { name: 'Reject cookies', exact: true }); if (await reject.isVisible()) await reject.click();
+    await expect(page.getByRole('tab', { name: 'AI composition', exact: true })).toHaveAttribute('aria-selected', 'true');
+    assert.equal(await page.locator('.compose-request-box [data-testid=compose-voice]').count(), 1);
+    assert.equal(await page.getByText('Voice input is included', { exact: false }).count(), 0);
+    await page.getByRole('tab', { name: 'Free assembly', exact: true }).click();
+    await page.getByTestId('compose-goal').fill('Build a landing page from scratch and deliver source code');
+    const request = await page.locator('.compose-request-pane').boundingBox(), settings = await page.locator('.compose-settings-pane').boundingBox();
+    if (width >= 1024) assert(settings.x > request.x + request.width);
+    const submit = await page.getByTestId('compose-submit').boundingBox(), examples = await page.locator('.compose-examples').boundingBox(); assert(submit.y + submit.height <= examples.y);
+    assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
+    if ([390, 1440].includes(width)) await page.screenshot({ path: `reports/composer-release-${width}-request.png`, fullPage: true });
+    await page.getByTestId('compose-submit').click(); await page.getByTestId('builder').waitFor();
+    await expect(page.getByTestId('compose-steps')).toContainText('React landing page builder');
+    assert.equal(await page.getByText(/model cost|\$0 model/).count(), 0);
+    assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
+    await page.getByTestId('compose-download').scrollIntoViewIfNeeded();
+    if ([390, 1440].includes(width)) await page.screenshot({ path: `reports/composer-release-${width}-workflow.png`, fullPage: true });
+    const downloaded = page.waitForEvent('download'); await page.getByTestId('compose-download').click(); const file = await downloaded;
+    const files = unzipSync(await fs.readFile(await file.path()));
+    for (const name of ['workflow.json', 'workflow.edit.json', 'HANDOFF.md', 'README.md']) assert(files[name]);
+    assert.match(strFromU8(files['HANDOFF.md']), /Before asking questions, inspect the context/);
+    assert.match(strFromU8(files['HANDOFF.md']), /Skip redundant intake/);
+    assert(JSON.parse(strFromU8(files['workflow.edit.json'])).flowCode);
+    const restore = strFromU8(files['workflow.edit.json']);
+    await page.reload(); await page.getByTestId('builder').waitFor();
+    await page.getByLabel('Import workflow JSON').setInputFiles({ name: 'workflow.edit.json', mimeType: 'application/json', buffer: Buffer.from(restore) });
+    await page.getByTestId('builder').waitFor();
+    checks.push({ width, noOverflow: true, horizontalOnDesktop: width >= 1024, graphEditor: true, topDownload: true, downloadedAndRestored: true, contextFirstHandoff: true });
+    await context.close();
+  }
+  // The loading animation and API error UI are exercised with a fixture only.
+  const page = await browser.newPage({ viewport: { width: 1440, height: 1000 } });
+  await mockComposerAccount(page);
+  await page.route('**/api/security', route => route.fulfill({ json: { required: false } }));
+  let release;
+  await page.route('**/api/compose', async route => { if (route.request().method() === 'GET') return route.fulfill({ json: { enabled: true } }); await new Promise(resolve => release = resolve); return route.fulfill({ json: { plan: fixture.plan, model: 'fixture', cost: 0, latencyMs: 0 } }); });
+  await page.goto(origin + '/compose');
+  const reject = page.getByRole('button', { name: 'Reject cookies', exact: true }); if (await reject.isVisible()) await reject.click();
+  await page.getByTestId('compose-goal').fill(fixture.goal); await expect(page.getByTestId('compose-submit')).toBeEnabled(); await page.getByTestId('compose-submit').click();
+  await page.getByText('Connecting the dots…', { exact: true }).waitFor();
+  await page.locator('.compose-loading').scrollIntoViewIfNeeded(); await page.screenshot({ path: 'reports/composer-release-loading.png' });
+  release(); await page.getByTestId('builder').waitFor(); checks.push({ loadingAnimation: 'pass', fixtureOnly: true, modelCostHidden: true });
+} finally { await browser.close(); }
+await fs.writeFile('reports/composer-release-browser.json', JSON.stringify({ checkedOn: new Date().toISOString(), status: 'pass', origin, checks, providerCalls: 0 }, null, 2) + '\n');
+console.log(JSON.stringify({ status: 'pass', checks: checks.length, origin }));

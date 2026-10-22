@@ -1,0 +1,1542 @@
+{
+  "date": "2026-10-22",
+  "reviewer": "Independent industry/job gap and semantic audit",
+  "scope": "Read-only QA; only this report written. No source edits, shared build generation, external messages or deployments.",
+  "inventory": {
+    "published_source": "site/public/data/blocks.json",
+    "sha256": "a10e0eb52877f31a97323b083f1469811e9efc2286b71974cfdc5824125c8791",
+    "entries": 4438,
+    "workflows": 451,
+    "agents": 120,
+    "tool_count_note": "68 calculator definitions plus7 baseline browser tools observed. Parent release states76tools; do not silently reconcile an unverified eighth browser/count convention.",
+    "next_candidate_source": "tools/next-100-data.mjs",
+    "next_candidate_sha256": "b161b1e32c434786ce5a313de7beb846be3c51a6d91f716ac0a24871a6404d87",
+    "candidate_workflows": 55,
+    "candidate_agents": 20,
+    "industry_review_workflow_indices": [
+      17,
+      41
+    ],
+    "industry_review_workflows": 25,
+    "industry_review_agents": 9,
+    "unique_industry_leaf_components": 18
+  },
+  "conclusion": "25 industry workflows and9 governing agents are bounded administrative/document workflows using18 existing components, not new technical optimizers. None uses the unsafe hotel/food/hospital specialist scaffolds. Broader coverage is useful but several are sector templates over existing methods. Flow35 now explicitly covers staffing commitments and excludes machine throughput, resolving the scope finding.",
+  "specialist_method_evidence": [
+    {
+      "component": "hotel-room-pricing-planner",
+      "path": "catalogue-items/imported/hotel-room-pricing-planner/SKILL.md",
+      "sha256": "2aff15465a550a4554d432e0fc8548f831fb42cc7a991fc91635fdd26a9254df",
+      "review": "Full SKILL.md read; source examples were not executed",
+      "method": "Operator inventory/revenue management: occupancy, ADR, RevPAR, assumed elasticity pricing scenarios, length-of-stay/channel allocation, overbooking and historical demand scaffold. This is not Tourmind traveler booking/search.",
+      "prerequisites": "Actual property room-night availability, sold rooms, recognized room revenue, date boundaries, channel commissions, rate restrictions and explicitly supplied assumptions. Python numpy/pandas/scipy/PuLP/sklearn only for separately rewritten and checked models. Optional PMS/RMS exports; no API key required for supplied tables.",
+      "static_source_findings": [
+        "Wildcard import inside functions is invalid Python syntax.",
+        "Several capacities/rates/cost bounds are hardcoded illustrations.",
+        "Overbooking uses hardcoded100 rooms, unused cancellation input and inadequate expected-walk formula.",
+        "Demand rolling features include current target, and reported in-sample fit does not validate a future forecast.",
+        "Channel solver lacks robust status/infeasibility handling; mislabeled blended ADR uses available-room denominator."
+      ],
+      "safe_reuse": "Reconcile dated room-night/revenue/channel commission actuals and show user-assumption scenarios. Do not promise optimal prices, guaranteed RevPAR lift, safe overbooking or automatic live rate changes.",
+      "assembled_published_uses": [],
+      "candidate_uses": []
+    },
+    {
+      "component": "hotel-restaurant-buying",
+      "path": "catalogue-items/imported/hotel-restaurant-buying/SKILL.md",
+      "sha256": "93e25de0310013b5c2daa13f24e96a3d28bacdcdc3e4adba8ab143bc95a15639",
+      "review": "Full SKILL.md read; source examples were not executed",
+      "method": "Hospitality actual-spend/category/supplier analysis, price variance, receipt/service scorecards, GPO comparison and purchasing process scenarios.",
+      "prerequisites": "Actual POs, transactions, receipts, invoices, matching SKU/spec/pack units/currency/tax basis, reporting period and owner-approved evaluation criteria. pandas/numpy for rewritten checks; supplier portal/ERP optional exports.",
+      "static_source_findings": [
+        "Price variance lacks mandatory unit/spec/currency normalization; example data omits quantity and item_description.",
+        "Pareto cumulative<=80 excludes dominant/crossing supplier; first supplier above80% may yield empty top group.",
+        "Missing supplier invoice/response/market data defaults to favorable values; missing sustainability values become invented scores.",
+        "Savings percentages and efficiency gains are fixed illustrative assumptions; not demonstrated benefits.",
+        "Subset GPO categories can be compared against all direct spend; zero denominators and negative payback need explicit handling."
+      ],
+      "safe_reuse": "Normalize actual comparable purchasing lines; list price/receipt/invoice and missing-evidence exceptions for owner review. Do not claim verified supplier sustainability or guaranteed savings.",
+      "assembled_published_uses": [],
+      "candidate_uses": []
+    },
+    {
+      "component": "food-supply-chain-planner",
+      "path": "catalogue-items/imported/food-supply-chain-planner/SKILL.md",
+      "sha256": "6bea49e92d129a9cdebf95bcbc1ec9b6f357c414d6c38ec0eb9b0c02b56d8fe4",
+      "review": "Full SKILL.md read; source examples were not executed",
+      "method": "Perishable inventory remaining-life analysis, lot traceability, FEFO picking scaffold, distribution and promotional scenarios. Source also contains HACCP/allergen templates that are outside this admin-only proposal.",
+      "prerequisites": "Manufacturer/owner-supplied expiry dates, lots, locations, quantity units, quarantine/hold status, actual receipt/dispatch data and approved stock-handling/recipient requirements. pandas/numpy; optional optimizer requires a separately checked model and actual distance/cost/capacity basis.",
+      "static_source_findings": [
+        "FEFO picking does not exclude expired/quarantined lots or reserve lots across order lines; cannot produce safe executable picks.",
+        "Zero days remaining becomes unknown percentage due to truthiness check; missing dates/product masters require guards.",
+        "Mock recall example quantity key differs from expected quantity_shipped; timing measures CPU execution, not operational recall completion.",
+        "HACCP critical limits, allergen labels and food handling actions are unverified templates and must not be published as advice.",
+        "Promotional lift, channel shelf-life percentages, distance150mile constraint and product mix defaults are examples, not evidence; Euclidean coordinates are not route miles."
+      ],
+      "safe_reuse": "Administrative lot/date/quantity completeness and approaching-expiry exception register, compared solely to owner-approved policy. Exclude food release/disposal/consumption recommendations, allergen or HACCP compliance verdicts, and live picks/recalls.",
+      "assembled_published_uses": [],
+      "candidate_uses": []
+    },
+    {
+      "component": "hospital-supply-stock-planner",
+      "path": "catalogue-items/imported/hospital-supply-stock-planner/SKILL.md",
+      "sha256": "a086a78a0e6304aaaf1f5ae90061eb0aa8dc5374146e689263a8d40f9d56724a",
+      "review": "Full SKILL.md read; source examples were not executed",
+      "method": "Hospital materials administration includes approved PAR/usage comparisons, lot expiry lists, stockout cause records and supplied temperature-log checks. Source additionally contains clinical inventory recommendations excluded here.",
+      "prerequisites": "Minimal nonpatient stock data, SKU and location units, approved PAR/criticality/expiry definitions, source timestamps, actual counts/movements and accountable materials owner. Never supply patient records merely for stock arithmetic.",
+      "static_source_findings": [
+        "Crash-cart example recommends removing rarely used emergency supplies and reducing PAR without clinical governance; do not reuse.",
+        "Case-cart utilization treats unconsumed picks as waste and recommends item removal; does not distinguish returnable unopened stock or clinical contingency.",
+        "Standardization assumes top product is interchangeable plus10% discount; neither is demonstrated.",
+        "PAR targets/service levels and expiry windows are heuristics, not approved clinical policy; average inventory PAR/2 and current/recommended value labels are misleading.",
+        "ABC cumulative boundary can misclassify dominant first item; zero totals and empty usage arrays need guards.",
+        "Temperature reading-in-range is not a comprehensive cold-chain or regulatory compliance verdict."
+      ],
+      "safe_reuse": "Reconcile actual supply counts and approved PARs, expiry/record exceptions and supplied-log stockout summaries for materials-owner review. No clinical substitution, emergency stock-level decision, medication advice, care prioritization or compliance certification.",
+      "assembled_published_uses": [],
+      "candidate_uses": []
+    },
+    {
+      "component": "grant-and-bid-response-writer",
+      "path": "catalogue-items/imported/grant-and-bid-response-writer/SKILL.md",
+      "sha256": "b25c7ee65c5be0a3f32fa2a02c4b94ae93ad8486a1598c09bc0254cd63346977",
+      "review": "Full SKILL.md read; source examples were not executed",
+      "method": "Nonprofit grant and government bid response method: eligibility/go-no-go, mandatory compliance matrix, evidence-backed narrative/budget, review and submission preparation.",
+      "prerequisites": "Actual opportunity and application instructions, country/entity eligibility, registration/qualifications, deadline/timezone, required attachments, evaluation criteria and truthful program/financial evidence. Supplied documents plus public opportunity sources work; organizational searches require correct owner/account and scope.",
+      "static_source_findings": [
+        "Not equivalent to research-grant-proposal-coach, which is scientific funding focused.",
+        "Connector writes/submission/calendar/signature are optional separately authorized actions; no autonomous submission.",
+        "An application draft or reporting template is not evidence of grant eligibility or successful delivery."
+      ],
+      "safe_reuse": "Useful grant readiness/evidence workflow if a later batch adds it. Current restricted-spending and fund-handover candidates cover post-award administration, so do not relabel those as a new grant-writing capability.",
+      "assembled_published_uses": [],
+      "candidate_uses": []
+    }
+  ],
+  "priority_jobs": [
+    {
+      "priority": "P1",
+      "industry": "Hospitality",
+      "job": "Reconcile room-night and net channel revenue actuals",
+      "specialist_source": "hotel-room-pricing-planner",
+      "portable_components": [
+        "spreadsheet-checker",
+        "figures-to-plain-pictures-writer"
+      ],
+      "existing_nearest_match": "prepare-a-hotel-group-booking-handover",
+      "nearest_match_status": "next100 candidate",
+      "distinct_usefulness": "The candidate checks one booking handover; this reconciles period room inventory, sold nights, gross revenue and commissions. It does not optimize prices.",
+      "prerequisites": "Actual available/sold room nights and revenue per same date/property/currency; zero sold/available room guards; show ADR versus RevPAR denominator."
+    },
+    {
+      "priority": "P1",
+      "industry": "Food service and perishable retail",
+      "job": "Prepare a lot and expiry exception register",
+      "specialist_source": "food-supply-chain-planner",
+      "portable_components": [
+        "spreadsheet-checker",
+        "handover-note-writer"
+      ],
+      "existing_nearest_match": "explain-a-warehouse-stock-count-variance",
+      "nearest_match_status": "next100 candidate",
+      "distinct_usefulness": "Stock count variance does not inspect lot/date completeness, approved holds or recipient shelf-life requirements. Distinct administrative evidence, not executable FEFO picks.",
+      "prerequisites": "Only owner-approved expiry/hold/recipient rules; missing dates remain unknown. Qualified staff own all food handling and safety decisions."
+    },
+    {
+      "priority": "P1",
+      "industry": "Hospitality purchasing",
+      "job": "Review actual comparable purchasing price and receipt exceptions",
+      "specialist_source": "hotel-restaurant-buying",
+      "portable_components": [
+        "spreadsheet-checker",
+        "invoice-checker"
+      ],
+      "existing_nearest_match": "compare-supplier-prices-on-the-same-basis",
+      "nearest_match_status": "published baseline",
+      "distinct_usefulness": "Existing compares prospective supplier quotes; historical PO/receipt/invoice variance uses actual purchases, pack units and acceptance evidence.",
+      "prerequisites": "Normalize same SKU/spec/pack/currency/period, no default zero fees or favorable missing-data scores; owner reviews exceptions."
+    },
+    {
+      "priority": "P1",
+      "industry": "Property administration",
+      "job": "Reconcile rent and service-charge ledger records",
+      "specialist_source": null,
+      "portable_components": [
+        "spreadsheet-checker",
+        "invoice-totals-checker",
+        "plain-words-contract-summary"
+      ],
+      "existing_nearest_match": "prepare-a-property-maintenance-handover",
+      "nearest_match_status": "next100 candidate",
+      "distinct_usefulness": "Property candidate covers maintenance/access only. Contract-defined charges, receipts, allocations and carried balances form a different ledger job; lease-accounting-calculator handles IFRS16/ASC842 and is not a landlord rent ledger.",
+      "prerequisites": "Signed charge basis, actual receipts and period/currency; no legal arrears/enforcement advice, notice or tax determination."
+    },
+    {
+      "priority": "P1",
+      "industry": "Retail shop operations",
+      "job": "Reconcile a daily till close from actual tender records",
+      "specialist_source": null,
+      "portable_components": [
+        "spreadsheet-checker",
+        "handover-note-writer"
+      ],
+      "existing_nearest_match": "explain-a-warehouse-stock-count-variance",
+      "nearest_match_status": "next100 candidate",
+      "distinct_usefulness": "Cash/card/refund/tender reconciliation is distinct from physical SKU counts and quote calculators; prevent a cosmetic stock-count title variant by explicit opening float, cash movements and settlement cutoff.",
+      "prerequisites": "Actual till totals, cash counts, refunds, authorized paid-outs and processor settlements with time lag. No fraud accusation or missing cash reason inferred."
+    },
+    {
+      "priority": "P2",
+      "industry": "Construction administration",
+      "job": "Check a measured payment application against certified quantities",
+      "specialist_source": null,
+      "portable_components": [
+        "plain-words-contract-summary",
+        "invoice-totals-checker",
+        "spreadsheet-checker"
+      ],
+      "existing_nearest_match": "prepare-a-construction-variation-decision",
+      "nearest_match_status": "next100 candidate",
+      "distinct_usefulness": "Variation candidate covers proposed scope change; payment application uses existing measured/certified work, prior paid amounts and approved retention to show arithmetic.",
+      "prerequisites": "Owner-supplied BOQ/measurement/certificate, payment terms and approved retention; no inferred quantities, site inspection, engineering certification or statutory entitlement."
+    },
+    {
+      "priority": "P2",
+      "industry": "Healthcare administration",
+      "job": "Reconcile approved nonclinical supply count and expiry exceptions",
+      "specialist_source": "hospital-supply-stock-planner",
+      "portable_components": [
+        "spreadsheet-checker",
+        "handover-note-writer"
+      ],
+      "existing_nearest_match": "measure-a-clinic-administrative-queue",
+      "nearest_match_status": "next100 candidate",
+      "distinct_usefulness": "Current clinic workflows cover booking/referral/FAQ/queue, not stock records. Generic stock count exists, so only distinct healthcare records/approved PAR/lot/hold constraints justify the template.",
+      "prerequisites": "Nonpatient materials data, existing approved PAR and manufacturer expiry; no emergency carts, medical substitution, clinician criticality assignment or automatic restocking."
+    },
+    {
+      "priority": "P2",
+      "industry": "Logistics",
+      "job": "Compare billed freight accessorials with contract and delivery evidence",
+      "specialist_source": null,
+      "portable_components": [
+        "invoice-checker",
+        "invoice-totals-checker",
+        "plain-words-contract-summary"
+      ],
+      "existing_nearest_match": "compare-freight-quotes-with-all-charges",
+      "nearest_match_status": "next100 candidate",
+      "distinct_usefulness": "Candidate compares prospective quotes; billed accessorial and POD receipt review occurs after actual shipment. Strong supplier-invoice method overlap; keep as scoped template, not a novel engine.",
+      "prerequisites": "Same shipment ID, actual contracted fuel/handling/accessorial rates, timestamps and service evidence; no route/legal compliance claim or carrier dispute sent."
+    },
+    {
+      "priority": "P2",
+      "industry": "Professional services",
+      "job": "Reconcile retainer hours and approved charges",
+      "specialist_source": null,
+      "portable_components": [
+        "spreadsheet-checker",
+        "invoice-totals-checker",
+        "plain-words-contract-summary"
+      ],
+      "existing_nearest_match": "prepare-a-client-scope-change-brief",
+      "nearest_match_status": "next100 candidate",
+      "distinct_usefulness": "Scope-change candidate evaluates a new request; actual worked/approved billable hours against period retainer and rollover terms is a different recurring evidence job.",
+      "prerequisites": "Signed retainer, real time logs, approval status and period boundaries; no invented billability, scope acceptance or invoice release."
+    },
+    {
+      "priority": "P2",
+      "industry": "Nonprofits",
+      "job": "Check a grant application eligibility and evidence pack",
+      "specialist_source": "grant-and-bid-response-writer",
+      "portable_components": [
+        "source-note-summariser",
+        "unsupported-claim-spotter"
+      ],
+      "existing_nearest_match": "prepare-a-grant-spending-evidence-pack",
+      "nearest_match_status": "next100 candidate",
+      "distinct_usefulness": "Post-award spending and restricted-fund transfer candidates do not cover opportunity eligibility, mandatory attachments, evaluation matrix or application go/no-go. Specialist method directly covers these.",
+      "prerequisites": "Actual opportunity, entity eligibility and application instructions; mandatory missing evidence blocks readiness, no fictional achievements or submission."
+    },
+    {
+      "priority": "P3",
+      "industry": "Manufacturing",
+      "job": "Assess finite-machine production sequencing",
+      "specialist_source": null,
+      "portable_components": [],
+      "existing_nearest_match": "check-production-shift-staffing-commitments",
+      "nearest_match_status": "next100 candidate",
+      "distinct_usefulness": "This is a real remaining capability gap: current candidate can compare qualified labor hours, existing weekly production plan is MPS. Neither establishes machine precedence/changeover/material feasibility.",
+      "prerequisites": "Do not publish from title inventory. production-schedule-planner full method and actual constraints/solver-status handling still need independent full review and rewritten tests before recommendation."
+    },
+    {
+      "priority": "P3",
+      "industry": "Fleet and field services",
+      "job": "Plan evidence-based preventive maintenance and vehicle workload",
+      "specialist_source": null,
+      "portable_components": [],
+      "existing_nearest_match": "standardize-repair-work-order-intake",
+      "nearest_match_status": "next100 candidate",
+      "distinct_usefulness": "Repair intake is not preventive maintenance or fleet TCO. Existing specialist methods may help, but this audit only inventoried their headers and has not validated full technical maintenance instructions.",
+      "prerequisites": "Defer specialist use until full method review; manufacturer-approved intervals and qualified maintenance decisions required. Do not invent safety intervals or roadworthiness compliance."
+    }
+  ],
+  "component_method_evidence": [
+    {
+      "component": "budget-variance-explainer",
+      "path": "catalogue-items/imported/budget-variance-explainer/SKILL.md",
+      "sha256": "cfd3c25aae3cfe02daca30f08162a930ea9cc460ba887b0896a3240501554f95",
+      "review": "Full-method audit reused only after exact source hash match; each new intake/step/output reviewed separately",
+      "prior": [
+        {
+          "report": "reports/2026-10-22-workflow-audit-finance.json",
+          "sha256": "cfd3c25aae3cfe02daca30f08162a930ea9cc460ba887b0896a3240501554f95",
+          "method": "Decomposition, materiality and a reconciled bridge support budget-overrun explanations. Show any residual; source numerical thresholds and illustrative examples do not become owner rules."
+        }
+      ],
+      "used_by_indices": [
+        28
+      ],
+      "agent_extra_uses": []
+    },
+    {
+      "component": "executive-action-register",
+      "path": "catalogue-items/general/executive-action-register/SKILL.md",
+      "sha256": "8e53a013f94bb494d04eed6567b9bb9796fbcc7ff05ed8b56d3251f59091a0a8",
+      "review": "Full-method audit reused only after exact source hash match; each new intake/step/output reviewed separately",
+      "prior": [
+        {
+          "report": "reports/2026-10-22-workflow-audit-operations.json",
+          "sha256": "8e53a013f94bb494d04eed6567b9bb9796fbcc7ff05ed8b56d3251f59091a0a8",
+          "method": "Fits extracting real commitments from supplied notes/threads, stable IDs, owner/date/dependency/source/status and proposed task changes. New actions/owners may be proposed but are not accepted commitments; missing evidence stays unknown. No task-system writes without authorization and readback."
+        },
+        {
+          "report": "reports/2026-10-22-workflow-audit-finance.json",
+          "sha256": "8e53a013f94bb494d04eed6567b9bb9796fbcc7ff05ed8b56d3251f59091a0a8",
+          "method": "Extracts sourced commitments with stable IDs, owner/date/status gaps and proposed writes. Invoice/payroll/compliance results are supplied as source evidence; discussion is not accepted ownership or completion."
+        },
+        {
+          "report": "reports/2026-10-22-people-learning-component-audit.json",
+          "sha256": "8e53a013f94bb494d04eed6567b9bb9796fbcc7ff05ed8b56d3251f59091a0a8",
+          "method": "Extracts explicit commitments, preserves source IDs, leaves missing owners/dates unconfirmed and produces proposed task changes."
+        }
+      ],
+      "used_by_indices": [
+        17,
+        21,
+        23,
+        26,
+        34
+      ],
+      "agent_extra_uses": [
+        "Construction variation review assistant",
+        "Warehouse count discrepancy review assistant",
+        "Referral administration evidence review assistant"
+      ]
+    },
+    {
+      "component": "figures-to-plain-pictures-writer",
+      "path": "catalogue-items/general/figures-to-plain-pictures-writer/SKILL.md",
+      "sha256": "774a7492d49f53c8cf5ed025a58ee0a4bd35d8368f41fad1139fe98f1cd98289",
+      "review": "Full-method audit reused only after exact source hash match; each new intake/step/output reviewed separately",
+      "prior": [
+        {
+          "report": "reports/2026-10-22-workflow-audit-finance.json",
+          "sha256": "774a7492d49f53c8cf5ed025a58ee0a4bd35d8368f41fad1139fe98f1cd98289",
+          "method": "Turns verified figures into plain comparisons while retaining the actual amount. Spreadsheet handoff provides units/periods and forbids adding unsupported equivalences."
+        }
+      ],
+      "used_by_indices": [
+        22
+      ],
+      "agent_extra_uses": []
+    },
+    {
+      "component": "handover-note-writer",
+      "path": "catalogue-items/general/handover-note-writer/SKILL.md",
+      "sha256": "e16e31f084a8419a9a4e66737dad723ae95c288917712930f0c15f919885bd3e",
+      "review": "Full-method audit reused only after exact source hash match; each new intake/step/output reviewed separately",
+      "prior": [
+        {
+          "report": "reports/2026-10-22-workflow-audit-operations.json",
+          "sha256": "e16e31f084a8419a9a4e66737dad723ae95c288917712930f0c15f919885bd3e",
+          "method": "Fits real active-work dump to time bombs, due window, status/next action/source/access map, people, leave-alone and escalation notes. Needs taker-over and dates; never invent acceptance or passwords. Notes alone do not prove replacement owner has practiced or accepted cover."
+        },
+        {
+          "report": "reports/2026-10-22-people-learning-component-audit.json",
+          "sha256": "e16e31f084a8419a9a4e66737dad723ae95c288917712930f0c15f919885bd3e",
+          "method": "Actual work dump, successor/window, urgent dates, task state, locations and access process form a practical leave handover."
+        }
+      ],
+      "used_by_indices": [
+        17,
+        20,
+        23,
+        26,
+        31,
+        32,
+        33,
+        35,
+        39
+      ],
+      "agent_extra_uses": [
+        "Catering order change review assistant",
+        "Volunteer induction evidence review assistant"
+      ]
+    },
+    {
+      "component": "invoice-checker",
+      "path": "catalogue-items/imported/invoice-checker/SKILL.md",
+      "sha256": "437cfd4e8172ac6a5480ab46525da8e04a08426140f95de2796c51ad91a48075",
+      "review": "Full-method audit reused only after exact source hash match; each new intake/step/output reviewed separately",
+      "prior": [
+        {
+          "report": "reports/2026-10-22-workflow-audit-finance.json",
+          "sha256": "437cfd4e8172ac6a5480ab46525da8e04a08426140f95de2796c51ad91a48075",
+          "method": "Full invoice processing covers extraction, PO/receipt matches, flags and batch summary. Source GL examples and default tolerances do not replace user approval rules; never release payment."
+        }
+      ],
+      "used_by_indices": [
+        33
+      ],
+      "agent_extra_uses": []
+    },
+    {
+      "component": "invoice-totals-checker",
+      "path": "catalogue-items/imported/invoice-totals-checker/SKILL.md",
+      "sha256": "6d4b7bd87da8f09a659fbcca50b7382757d5b7bcb4e0a600868298c9ce7f25d0",
+      "review": "Full-method audit reused only after exact source hash match; each new intake/step/output reviewed separately",
+      "prior": [
+        {
+          "report": "reports/2026-10-22-workflow-audit-finance.json",
+          "sha256": "6d4b7bd87da8f09a659fbcca50b7382757d5b7bcb4e0a600868298c9ce7f25d0",
+          "method": "Exact recomputation script or shown arithmetic, common fields and date/currency/rounding checks match independent invoice arithmetic. Determines no applicable tax treatment."
+        }
+      ],
+      "used_by_indices": [
+        18,
+        20,
+        24,
+        36
+      ],
+      "agent_extra_uses": []
+    },
+    {
+      "component": "plain-english-editor",
+      "path": "catalogue-items/general/plain-english-editor/SKILL.md",
+      "sha256": "7cf9fbc967945a283b6b4f193ccaff8c0481577a53520e6f405dbb08964188ef",
+      "review": "Full-method audit reused only after exact source hash match; each new intake/step/output reviewed separately",
+      "prior": [
+        {
+          "report": "reports/2026-10-22-workflow-audit-operations.json",
+          "sha256": "7cf9fbc967945a283b6b4f193ccaff8c0481577a53520e6f405dbb08964188ef",
+          "method": "Fits supplied draft readability edit preserving meaning, voice, caveats and exact sourced facts. Outputs edited draft/change log/questions. Not a factual verification engine or a first-draft author from notes; when handed rough notes, ensure a coherent actual draft exists first or include explicit composing step."
+        },
+        {
+          "report": "reports/2026-10-22-workflow-audit-finance.json",
+          "sha256": "7cf9fbc967945a283b6b4f193ccaff8c0481577a53520e6f405dbb08964188ef",
+          "method": "Supported draft editing preserves meaning, uncertainty and facts. It is not a source of new controls, evidence or legal interpretation."
+        },
+        {
+          "report": "reports/2026-10-22-people-learning-component-audit.json",
+          "sha256": "7cf9fbc967945a283b6b4f193ccaff8c0481577a53520e6f405dbb08964188ef",
+          "method": "Edits an existing draft for meaning, actors, clarity and voice; cannot add facts."
+        }
+      ],
+      "used_by_indices": [
+        19,
+        38,
+        40
+      ],
+      "agent_extra_uses": []
+    },
+    {
+      "component": "plain-words-contract-summary",
+      "path": "catalogue-items/general/plain-words-contract-summary/SKILL.md",
+      "sha256": "45cea966d1d31433fc15d81e792bf0789fc9a8c20de8502f5e1a5e0da033361a",
+      "review": "Full-method audit reused only after exact source hash match; each new intake/step/output reviewed separately",
+      "prior": [
+        {
+          "report": "reports/2026-10-22-workflow-audit-finance.json",
+          "sha256": "45cea966d1d31433fc15d81e792bf0789fc9a8c20de8502f5e1a5e0da033361a",
+          "method": "Portable original prompt needs full contract and party perspective, returns duties, money/dates, exit and source sections. Replaces private lawyer-plugin summary/config assumptions; proposed/base versions stay distinct."
+        }
+      ],
+      "used_by_indices": [
+        19,
+        24,
+        27
+      ],
+      "agent_extra_uses": []
+    },
+    {
+      "component": "process-and-sop-writer",
+      "path": "catalogue-items/imported/process-and-sop-writer/SKILL.md",
+      "sha256": "8fbf1d56f287b10536b902963456944346411aaa0c5951aa2d1748bff4947a2f",
+      "review": "Full-method audit reused only after exact source hash match; each new intake/step/output reviewed separately",
+      "prior": [
+        {
+          "report": "reports/2026-10-22-workflow-audit-operations.json",
+          "sha256": "8fbf1d56f287b10536b902963456944346411aaa0c5951aa2d1748bff4947a2f",
+          "method": "Fits standalone process description to purpose/scope/RACI/steps/exceptions/metrics/source documents. Suitable for qualitative as-is handover without fabricated timing metrics. External wiki/task writes mentioned only when separately authorized."
+        }
+      ],
+      "used_by_indices": [
+        18,
+        21,
+        29,
+        30,
+        34,
+        38
+      ],
+      "agent_extra_uses": [
+        "Restaurant shift exception review assistant"
+      ]
+    },
+    {
+      "component": "process-bottleneck-finder",
+      "path": "catalogue-items/imported/process-bottleneck-finder/SKILL.md",
+      "sha256": "cf7181ef9f28fa2c163ef75d6fb90e278d78171583eb035c7cfbd7efdec5c308",
+      "review": "Full-method audit reused only after exact source hash match; each new intake/step/output reviewed separately",
+      "prior": [
+        {
+          "report": "reports/2026-10-22-workflow-audit-operations.json",
+          "sha256": "cf7181ef9f28fa2c163ef75d6fb90e278d78171583eb035c7cfbd7efdec5c308",
+          "method": "Material original mismatch: actual deterministic process-mapper requires repeatable internal business process with stage owners/types/P50/P90 times and scripts. Explicitly not one-off project tracking; without stage cycle-time data instrument first, not map. Single run or generic completion dates cannot substantiate P50/P90/bottleneck ranking. Author notified to add proper repeat-process inputs or replace documentation-only use."
+        }
+      ],
+      "used_by_indices": [
+        41
+      ],
+      "agent_extra_uses": []
+    },
+    {
+      "component": "source-note-summariser",
+      "path": "catalogue-items/general/source-note-summariser/SKILL.md",
+      "sha256": "89c4be06799e53b4cbb8ace298d8b3557397b4c975a45d681674ca030da7b60c",
+      "review": "Full-method audit reused only after exact source hash match; each new intake/step/output reviewed separately",
+      "prior": [
+        {
+          "report": "reports/2026-10-22-people-learning-component-audit.json",
+          "sha256": "89c4be06799e53b4cbb8ace298d8b3557397b4c975a45d681674ca030da7b60c",
+          "method": "Actual source text becomes located claims, evidence ratings, gaps, question relevance and a short qualified summary."
+        }
+      ],
+      "used_by_indices": [
+        25,
+        32,
+        34,
+        39
+      ],
+      "agent_extra_uses": [
+        "Property maintenance evidence review assistant",
+        "Grant spending evidence review assistant",
+        "Supplier correction evidence review assistant"
+      ]
+    },
+    {
+      "component": "spreadsheet-checker",
+      "path": "catalogue-items/imported/spreadsheet-checker/SKILL.md",
+      "sha256": "a6faa11bce093990e78e21dd3f27107aaf11309da598888bec8a4dd4fa7b71e0",
+      "review": "Full-method audit reused only after exact source hash match; each new intake/step/output reviewed separately",
+      "prior": [
+        {
+          "report": "reports/2026-10-22-workflow-audit-finance.json",
+          "sha256": "a6faa11bce093990e78e21dd3f27107aaf11309da598888bec8a4dd4fa7b71e0",
+          "method": "Full source covers inventory/grain, normalization, formula validation, reconciliation, auditable output, re-open and render. Its general method replaces India-only formula audit and tax-default category methods; preserve raw data and label unavailable recalculation."
+        }
+      ],
+      "used_by_indices": [
+        22,
+        28,
+        31,
+        37
+      ],
+      "agent_extra_uses": []
+    },
+    {
+      "component": "stakeholder-map-builder",
+      "path": "catalogue-items/imported/stakeholder-map-builder/SKILL.md",
+      "sha256": "2aa28863108e2e2fdff100034f85fd4ce0f48e295ee0dbace9a2401429d27cf5",
+      "review": "Full-method audit reused only after exact source hash match; each new intake/step/output reviewed separately",
+      "prior": [
+        {
+          "report": "reports/2026-10-22-workflow-audit-operations.json",
+          "sha256": "2aa28863108e2e2fdff100034f85fd4ce0f48e295ee0dbace9a2401429d27cf5",
+          "method": "Fits audience/approval communication map from supplied partnership/stakeholder facts. Source allows inferred likely groups, but they must remain proposed, not actual confirmed approvers or private personal traits. Communication plan does not send or schedule anything."
+        }
+      ],
+      "used_by_indices": [
+        30
+      ],
+      "agent_extra_uses": []
+    },
+    {
+      "component": "stakeholder-update-writer",
+      "path": "catalogue-items/imported/stakeholder-update-writer/SKILL.md",
+      "sha256": "359bcb8354fd59938068c15d7d982bbf803c74e566e77415db9328c5609642cb",
+      "review": "Full-method audit reused only after exact source hash match; each new intake/step/output reviewed separately",
+      "prior": [
+        {
+          "report": "reports/2026-10-22-workflow-audit-operations.json",
+          "sha256": "359bcb8354fd59938068c15d7d982bbf803c74e566e77415db9328c5609642cb",
+          "method": "Fits audience/cadence-specific staff/partner/customer/project/outage draft updates using supplied progress/decisions/risks. Can work without connectors from given facts. Preserve uncertainty and internal/external disclosure boundaries; template color/status and timelines require evidence. Sending is separately authorized."
+        },
+        {
+          "report": "reports/2026-10-22-workflow-audit-finance.json",
+          "sha256": "359bcb8354fd59938068c15d7d982bbf803c74e566e77415db9328c5609642cb",
+          "method": "Audience/cadence/source progress and decision updates match variance briefs. Proposed options are distinguished from approved budget changes."
+        },
+        {
+          "report": "reports/2026-10-22-people-learning-component-audit.json",
+          "sha256": "359bcb8354fd59938068c15d7d982bbf803c74e566e77415db9328c5609642cb",
+          "method": "Audience/cadence selection, source-based status/risk/decision updates and draft delivery fit the staff response."
+        }
+      ],
+      "used_by_indices": [
+        24,
+        28,
+        37
+      ],
+      "agent_extra_uses": []
+    },
+    {
+      "component": "team-capacity-planner",
+      "path": "catalogue-items/imported/team-capacity-planner/SKILL.md",
+      "sha256": "2ae470d9ff3f13425fd05f36c99182f16938ca824fbf54f4eb8410769f1b7957",
+      "review": "Full-method audit reused only after exact source hash match; each new intake/step/output reviewed separately",
+      "prior": [
+        {
+          "report": "reports/2026-10-22-workflow-audit-operations.json",
+          "sha256": "2ae470d9ff3f13425fd05f36c99182f16938ca824fbf54f4eb8410769f1b7957",
+          "method": "Fits actual staffing/skills/current commitments/leave and period capacity scenarios for absence and delivery commitments. Source utilization targets are heuristics, not actual staffing facts. Includes all work, uncertainty and dependency constraints; no automatic hire/reallocation approval."
+        },
+        {
+          "report": "reports/2026-10-22-people-learning-component-audit.json",
+          "sha256": "2ae470d9ff3f13425fd05f36c99182f16938ca824fbf54f4eb8410769f1b7957",
+          "method": "Available people/roles, actual workloads, leave and upcoming demand produce a capacity-gap/scenario view suitable for absence coverage."
+        }
+      ],
+      "used_by_indices": [
+        35,
+        41
+      ],
+      "agent_extra_uses": []
+    },
+    {
+      "component": "training-program-builder",
+      "path": "catalogue-items/imported/training-program-builder/SKILL.md",
+      "sha256": "d02eea22fbc22a30ea213fcf5d771782128e14300d19db96b3dc179b291edb26",
+      "review": "Full-method audit reused only after exact source hash match; each new intake/step/output reviewed separately",
+      "prior": [
+        {
+          "report": "reports/2026-10-22-people-learning-component-audit.json",
+          "sha256": "d02eea22fbc22a30ea213fcf5d771782128e14300d19db96b3dc179b291edb26",
+          "method": "Actual HR learning/development method supports manager sessions, learning assessments, transfer checks and successor development."
+        }
+      ],
+      "used_by_indices": [
+        29
+      ],
+      "agent_extra_uses": []
+    },
+    {
+      "component": "unsupported-claim-spotter",
+      "path": "catalogue-items/imported/unsupported-claim-spotter/SKILL.md",
+      "sha256": "740c57e7453de62a90540024d1f252d41f97447c43adc0608d810c66b6bcfb22",
+      "review": "Full SKILL read this audit; draft/source claim-support pass, never a truth verdict",
+      "prior": [],
+      "used_by_indices": [
+        25,
+        40
+      ],
+      "agent_extra_uses": []
+    },
+    {
+      "component": "vendor-comparison-writer",
+      "path": "catalogue-items/imported/vendor-comparison-writer/SKILL.md",
+      "sha256": "2233be4b53da05999bbf1f75e2be9287d5c1f3ed3e3530d845a9acdb3d1fb9d2",
+      "review": "Full-method audit reused only after exact source hash match; each new intake/step/output reviewed separately",
+      "prior": [
+        {
+          "report": "reports/2026-10-22-workflow-audit-operations.json",
+          "sha256": "2233be4b53da05999bbf1f75e2be9287d5c1f3ed3e3530d845a9acdb3d1fb9d2",
+          "method": "Fits broad supplied quote/contract/performance comparison with TCO, risks, lock-in, migration/training/exit costs and recommendation. Suitable for vendor replacement and sponsorship alternatives on same scope/currency/term. No assumed supplier financial/security evidence or authorization to buy/cancel."
+        },
+        {
+          "report": "reports/2026-10-22-workflow-audit-finance.json",
+          "sha256": "2233be4b53da05999bbf1f75e2be9287d5c1f3ed3e3530d845a9acdb3d1fb9d2",
+          "method": "TCO, implementation/training/exit costs, risk/performance and side-by-side options match supplier/service purchase comparisons and renewal briefs. Unsupported quality or savings remains unknown."
+        },
+        {
+          "report": "reports/2026-10-22-people-learning-component-audit.json",
+          "sha256": "2233be4b53da05999bbf1f75e2be9287d5c1f3ed3e3530d845a9acdb3d1fb9d2",
+          "method": "TCO, risk, performance and side-by-side vendor comparison match software procurement preparation."
+        }
+      ],
+      "used_by_indices": [
+        27,
+        36
+      ],
+      "agent_extra_uses": []
+    }
+  ],
+  "candidate_industry_reviews": [
+    {
+      "index": 17,
+      "name": "Prepare a restaurant shift handover",
+      "job": "organise-work",
+      "sector": "Hospitality and food service",
+      "need": "Actual shift notes, bookings, outstanding orders, equipment issues, approved food safety procedures and the incoming lead.",
+      "deliverable": "A shift handover, unresolved issue register and escalation notes.",
+      "acceptance": "Safety issues follow the approved procedure; no temperature, inspection result or resolution is invented.",
+      "steps": [
+        {
+          "uses": "handover-note-writer",
+          "note": "Organize the actual service state, time-critical orders, equipment issues and approved escalation contacts for the incoming shift. Preserve the stated food safety limits without creating new ones."
+        },
+        {
+          "uses": "executive-action-register",
+          "note": "Extract explicitly agreed follow-ups from the shift notes, keeping unresolved safety issues separate from completed work and proposed assignments."
+        }
+      ],
+      "existing_nearest_match": "prepare-a-team-absence-handover",
+      "existing_nearest_match_name": "Prepare a team absence handover",
+      "judgment": "Sector template, same handover/action methods. Per-shift open orders, booking cutoff and unresolved approved safety escalations are distinctive inputs. No invented temperatures or resolutions.",
+      "status": "applicable within stated boundaries",
+      "execution_evidence": "None: source-only semantic review; not a live user task or workflow execution test"
+    },
+    {
+      "index": 18,
+      "name": "Check a catering order before service",
+      "job": "organise-work",
+      "sector": "Hospitality and food service",
+      "need": "The confirmed catering order, customer-approved dietary requirements, event times, headcounts, quoted charges and approved preparation procedures.",
+      "deliverable": "An order discrepancy table, service checklist and owner questions.",
+      "acceptance": "Quantities and charges match the confirmed order; allergy and dietary details are never guessed or declared safe by AI.",
+      "steps": [
+        {
+          "uses": "invoice-totals-checker",
+          "note": "Recompute the supplied order and quote totals, including units, approved fees and rounding, and flag mismatches without deciding tax treatment."
+        },
+        {
+          "uses": "process-and-sop-writer",
+          "note": "Document an order-to-service checklist from the approved procedures and confirmed timings. Carry dietary requirements verbatim to the responsible qualified staff; stop on ambiguity."
+        }
+      ],
+      "existing_nearest_match": "check-supplier-invoices-before-approval",
+      "existing_nearest_match_name": "Check supplier invoices before approval",
+      "judgment": "Priced-order arithmetic is a bounded extension of invoice arithmetic using explicit quantity/rate/fees. SOP uses approved catering process only. Dietary information is transcribed, never inferred or cleared.",
+      "status": "applicable within stated boundaries",
+      "execution_evidence": "None: source-only semantic review; not a live user task or workflow execution test"
+    },
+    {
+      "index": 19,
+      "name": "Explain service booking terms to customers",
+      "job": "help-customers",
+      "sector": "Local and professional services",
+      "need": "The full approved booking terms, provider and customer perspectives, current price rules and an existing customer explanation draft.",
+      "deliverable": "A booking terms summary, revised explanation and unresolved questions.",
+      "acceptance": "Cancellation, deposit and refund wording preserves the actual contract; proposed wording never changes the terms.",
+      "steps": [
+        {
+          "uses": "plain-words-contract-summary",
+          "note": "Summarize the actual booking duties, payments, cancellation, refund and notice provisions with clause references. Leave unclear legal meaning for the responsible reviewer."
+        },
+        {
+          "uses": "plain-english-editor",
+          "note": "Edit the supplied customer explanation draft against the sourced summary, retaining exceptions, effective dates and uncertain terms."
+        }
+      ],
+      "existing_nearest_match": "prepare-a-contract-amendment-for-review",
+      "existing_nearest_match_name": "Prepare a contract amendment for review",
+      "judgment": "Booking-term customer explanation is narrower than legal amendment review. Full approved terms and existing customer draft meet both source-summary and editing prerequisites; clause exceptions retained.",
+      "status": "applicable within stated boundaries",
+      "execution_evidence": "None: source-only semantic review; not a live user task or workflow execution test"
+    },
+    {
+      "index": 20,
+      "name": "Prepare a hotel group booking handover",
+      "job": "organise-work",
+      "sector": "Hospitality",
+      "need": "The confirmed group booking, rooming list with minimized personal data, payment schedule, approved requests, contacts and handover window.",
+      "deliverable": "A booking handover, payment arithmetic check and outstanding requests.",
+      "acceptance": "Room counts, dates and deposits agree with the booking; special requests remain unconfirmed until accepted.",
+      "steps": [
+        {
+          "uses": "invoice-totals-checker",
+          "note": "Check the actual room-night counts, quoted rates, approved fees and deposits using the stated currency and dates. Do not infer local tax rules."
+        },
+        {
+          "uses": "handover-note-writer",
+          "note": "Prepare the incoming reservations or operations team handover with deadlines, accepted requests, open questions and authorized source locations, excluding credentials."
+        }
+      ],
+      "existing_nearest_match": "prepare-a-team-absence-handover",
+      "existing_nearest_match_name": "Prepare a team absence handover",
+      "judgment": "Sector handover variant. Explicit confirmed room-night counts, quote dates and deposits add arithmetic review, not occupancy or rate optimization. Script or shown arithmetic must actually compute nights/charges.",
+      "status": "applicable within stated boundaries",
+      "execution_evidence": "None: source-only semantic review; not a live user task or workflow execution test"
+    },
+    {
+      "index": 21,
+      "name": "Standardize repair work order intake",
+      "job": "document-work",
+      "sector": "Repair and field services",
+      "need": "Actual work order samples, approved diagnostic boundaries, customer authorization rules, required fields and existing intake steps.",
+      "deliverable": "An intake procedure, missing-field checks and unresolved work register.",
+      "acceptance": "Reported symptoms remain customer reports; no diagnosis, repair consent or safety clearance is inferred.",
+      "steps": [
+        {
+          "uses": "process-and-sop-writer",
+          "note": "Document intake, authorization evidence, asset identification, quote acceptance and escalation steps from the existing repair process; technical assessment stays with qualified staff."
+        },
+        {
+          "uses": "executive-action-register",
+          "note": "Build the follow-up register from actual open work orders and explicit commitments, leaving missing authorization or customer decisions unresolved."
+        }
+      ],
+      "existing_nearest_match": "make-a-recurring-process-easier-to-hand-over",
+      "existing_nearest_match_name": "Make a recurring process easier to hand over",
+      "judgment": "Sector SOP variant with repair authorization and reported-symptom boundaries. Actual intake steps are documented; technical diagnosis and customer consent are not inferred.",
+      "status": "applicable within stated boundaries",
+      "execution_evidence": "None: source-only semantic review; not a live user task or workflow execution test"
+    },
+    {
+      "index": 22,
+      "name": "Explain appointment no show patterns",
+      "job": "track-numbers",
+      "sector": "Appointment-based services",
+      "need": "Deidentified appointment records, booking and cancellation status definitions, reporting period and actual reminder records.",
+      "deliverable": "A reconciled attendance table, pattern summary and evidence gaps.",
+      "acceptance": "Cancellations and reschedules are separate from no shows; reminder correlation does not prove causation.",
+      "steps": [
+        {
+          "uses": "spreadsheet-checker",
+          "note": "Reconcile appointment IDs, statuses, dates, denominators and duplicate bookings; apply only the supplied no-show definition."
+        },
+        {
+          "uses": "figures-to-plain-pictures-writer",
+          "note": "Explain verified attendance patterns by supplied grouping without sensitive profiling or invented reasons for absence."
+        }
+      ],
+      "existing_nearest_match": "check-a-spreadsheet-before-sharing-the-results",
+      "existing_nearest_match_name": "Check a spreadsheet before sharing the results",
+      "judgment": "Same reconciliation/explanation pair as existing spreadsheet workflow, specialized status denominator. Useful template if cancellations, reschedules, no-shows and reporting cohorts stay distinct; no causal effect of reminders.",
+      "status": "applicable within stated boundaries",
+      "execution_evidence": "None: source-only semantic review; not a live user task or workflow execution test"
+    },
+    {
+      "index": 23,
+      "name": "Prepare a property maintenance handover",
+      "job": "organise-work",
+      "sector": "Property and facilities",
+      "need": "Open maintenance tickets, access permissions, appointment windows, responsible contractors and approved emergency escalation rules.",
+      "deliverable": "A maintenance handover, access constraints and overdue decisions.",
+      "acceptance": "Tenant details are minimized; no entry permission, repair completion or safety clearance is inferred.",
+      "steps": [
+        {
+          "uses": "handover-note-writer",
+          "note": "Organize actual ticket status, accepted appointments, access approval locations and urgent escalation contacts for the incoming property lead."
+        },
+        {
+          "uses": "executive-action-register",
+          "note": "Extract confirmed maintenance commitments and unresolved approvals with source IDs. Proposed scheduling or contractor changes stay drafts."
+        }
+      ],
+      "existing_nearest_match": "prepare-a-team-absence-handover",
+      "existing_nearest_match_name": "Prepare a team absence handover",
+      "judgment": "Same handover/action pair as restaurant and construction-defect candidate. Distinct property access consent, contractor windows, emergency escalation and actual closure evidence justify a sector template, not new capability.",
+      "status": "applicable within stated boundaries",
+      "execution_evidence": "None: source-only semantic review; not a live user task or workflow execution test"
+    },
+    {
+      "index": 24,
+      "name": "Prepare a construction variation decision",
+      "job": "organise-work",
+      "sector": "Construction administration",
+      "need": "The actual variation request, signed contract, priced scope, schedule impact evidence and delegated approval rules.",
+      "deliverable": "A variation comparison, arithmetic review and decision brief.",
+      "acceptance": "Proposed scope is separate from signed scope; cost and time claims trace to evidence and no variation is approved.",
+      "steps": [
+        {
+          "uses": "plain-words-contract-summary",
+          "note": "Locate the contract change procedure, notice, approval and pricing provisions with clause references; leave interpretation to the responsible professional."
+        },
+        {
+          "uses": "invoice-totals-checker",
+          "note": "Recompute the supplied variation quantities and rates against the priced request; expose excluded charges and unmatched units."
+        },
+        {
+          "uses": "stakeholder-update-writer",
+          "note": "Draft a decision brief showing baseline versus proposed change, approval status, cost and schedule evidence, and unresolved questions."
+        }
+      ],
+      "existing_nearest_match": "prepare-a-contract-amendment-for-review",
+      "existing_nearest_match_name": "Prepare a contract amendment for review",
+      "judgment": "Construction administration variant has genuine priced quantity/rate change comparison and delegated approval evidence. Contract clause summary is not legal interpretation; no engineering or schedule validation.",
+      "status": "applicable within stated boundaries",
+      "execution_evidence": "None: source-only semantic review; not a live user task or workflow execution test"
+    },
+    {
+      "index": 25,
+      "name": "Prepare questions for a property viewing",
+      "job": "organise-work",
+      "sector": "Property administration",
+      "need": "The listing, actual lease or sale information supplied, viewing goals, accessibility requirements and questions already answered.",
+      "deliverable": "A source-linked viewing brief and questions to verify in person.",
+      "acceptance": "Listing claims remain attributed; no ownership, legal status, condition or financial return is certified.",
+      "steps": [
+        {
+          "uses": "source-note-summariser",
+          "note": "Extract actual supplied price, area, access, condition statements and terms with their source and date; separate facts from listing assertions."
+        },
+        {
+          "uses": "unsupported-claim-spotter",
+          "note": "Check listing assertions and the existing viewing notes for unsupported guarantees, missing measurements and claims needing official or qualified evidence."
+        }
+      ],
+      "existing_nearest_match": "prepare-a-contract-amendment-for-review",
+      "existing_nearest_match_name": "Prepare a contract amendment for review",
+      "judgment": "Source extract plus claim-support editing fits supplied listing and actual terms. Output is viewing questions, not due diligence, ownership confirmation, property appraisal or safety inspection.",
+      "status": "applicable within stated boundaries",
+      "execution_evidence": "None: source-only semantic review; not a live user task or workflow execution test"
+    },
+    {
+      "index": 26,
+      "name": "Prepare a construction defects handover",
+      "job": "organise-work",
+      "sector": "Construction administration",
+      "need": "Actual inspection records, defect IDs, photos, approved priority definitions, accepted remedial commitments and handover dates.",
+      "deliverable": "A defect register, remedial handover and missing acceptance evidence.",
+      "acceptance": "A defect closes only with the required evidence and authorized signoff; AI provides no engineering or safety certification.",
+      "steps": [
+        {
+          "uses": "executive-action-register",
+          "note": "Extract the accepted defect actions with inspection source IDs, owners, dates and evidence needed for closure; missing acceptance remains open."
+        },
+        {
+          "uses": "handover-note-writer",
+          "note": "Prepare the responsible contractor or facilities handover with location, access rules, dependencies and unresolved signoffs; do not infer completion from a promised date."
+        }
+      ],
+      "existing_nearest_match": "prepare-a-team-absence-handover",
+      "existing_nearest_match_name": "Prepare a team absence handover",
+      "judgment": "Sector action/handover variant. Actual defect IDs, inspection evidence, approved priority and authorized signoff supply a distinct closure register. AI does not inspect structure or certify defects resolved.",
+      "status": "applicable within stated boundaries",
+      "execution_evidence": "None: source-only semantic review; not a live user task or workflow execution test"
+    },
+    {
+      "index": 27,
+      "name": "Compare facilities service contract options",
+      "job": "check-contracts",
+      "sector": "Property and facilities",
+      "need": "Comparable contractor proposals, full current terms, scope, service frequency, performance evidence and decision criteria.",
+      "deliverable": "A service comparison, contract differences and review questions.",
+      "acceptance": "Scope, term and frequency use the same basis; insurance, performance and savings remain unverified without records.",
+      "steps": [
+        {
+          "uses": "vendor-comparison-writer",
+          "note": "Compare supplied service coverage, total costs, mobilization, transition and exit effort using the same site list and contract period."
+        },
+        {
+          "uses": "plain-words-contract-summary",
+          "note": "Summarize the relevant notice, renewal, access, liability and service obligations from each actual contract for qualified review."
+        }
+      ],
+      "existing_nearest_match": "prepare-a-contract-renewal-negotiation",
+      "existing_nearest_match_name": "Prepare a contract renewal negotiation",
+      "judgment": "Same vendor comparison plus contract summary family. Same site list/frequency/service term/currency provide useful facilities specificity; insurance and contractor capability stay unverified absent documents.",
+      "status": "applicable within stated boundaries",
+      "execution_evidence": "None: source-only semantic review; not a live user task or workflow execution test"
+    },
+    {
+      "index": 28,
+      "name": "Prepare a grant spending evidence pack",
+      "job": "track-numbers",
+      "sector": "Nonprofits and research grants",
+      "need": "The award agreement, fund restrictions, approved budget, transaction records, reporting period and actual receipts.",
+      "deliverable": "A reconciled grant spending table, variance brief and evidence gaps.",
+      "acceptance": "Restricted spending follows the supplied award rules; unknown eligibility is a question for the fund owner.",
+      "steps": [
+        {
+          "uses": "spreadsheet-checker",
+          "note": "Reconcile transactions and receipts to the grant period, budget categories and restricted fund ledger without changing source records."
+        },
+        {
+          "uses": "budget-variance-explainer",
+          "note": "Bridge the actual grant spending to the approved phased budget, keeping timing differences and unapproved reallocations explicit."
+        },
+        {
+          "uses": "stakeholder-update-writer",
+          "note": "Draft the fund owner update with source totals, unresolved eligibility questions and requested decisions, without submitting a funder return."
+        }
+      ],
+      "existing_nearest_match": "explain-a-department-budget-overrun",
+      "existing_nearest_match_name": "Explain a department budget overrun",
+      "judgment": "Budget variance bridge applied to restricted award period/category ledger, supported by actual agreement and receipts. Distinct restricted-fund evidence pack; does not decide legal eligibility or file funder return.",
+      "status": "applicable within stated boundaries",
+      "execution_evidence": "None: source-only semantic review; not a live user task or workflow execution test"
+    },
+    {
+      "index": 29,
+      "name": "Build a volunteer induction checklist",
+      "job": "teach-and-train",
+      "sector": "Nonprofits and community organizations",
+      "need": "Actual volunteer roles, approved conduct and safeguarding rules, supervision arrangements, training needs and available time.",
+      "deliverable": "An induction procedure, practice plan and supervision gaps.",
+      "acceptance": "Access and responsibilities stay within approved roles; safeguarding clearance is never inferred from training attendance.",
+      "steps": [
+        {
+          "uses": "process-and-sop-writer",
+          "note": "Document the approved volunteer joining, role briefing, access, supervision, escalation and exit process; preserve organization safeguarding requirements."
+        },
+        {
+          "uses": "training-program-builder",
+          "note": "Plan role-specific demonstrations and supervised practice with evidence checks; keep unverified readiness and required clearance visible."
+        }
+      ],
+      "existing_nearest_match": "build-a-practical-manager-training-session",
+      "existing_nearest_match_name": "Build a practical manager training session",
+      "judgment": "Approved induction SOP plus role-specific supervised practice. Volunteer safeguarding/access clearance is separate from attendance and skill transfer. Training source general learning method is applicable; do not invent manager-only scenarios.",
+      "status": "applicable within stated boundaries",
+      "execution_evidence": "None: source-only semantic review; not a live user task or workflow execution test"
+    },
+    {
+      "index": 30,
+      "name": "Prepare a community event access plan",
+      "job": "organise-work",
+      "sector": "Nonprofits and community events",
+      "need": "Confirmed event format, venue information, participant access needs shared voluntarily, approved budget and actual organizer responsibilities.",
+      "deliverable": "An event access run sheet, responsibility map and confirmation requests.",
+      "acceptance": "Access arrangements are verified with the responsible provider; proposed adjustments are not described as booked.",
+      "steps": [
+        {
+          "uses": "stakeholder-map-builder",
+          "note": "Map organizers, venue contacts, access providers and affected participants using role information; mark proposed stakeholders and protect personal details."
+        },
+        {
+          "uses": "process-and-sop-writer",
+          "note": "Document arrival, wayfinding, communication, assistance and escalation steps from confirmed venue facts and participant preferences; flag unverified facilities."
+        }
+      ],
+      "existing_nearest_match": "prepare-a-small-team-offsite",
+      "existing_nearest_match_name": "Prepare a small team offsite",
+      "judgment": "Existing stakeholder map plus SOP can structure a confirmed access run sheet, with volunteered preferences and actual provider confirmations. It is not an accessibility audit or statutory compliance certification.",
+      "status": "applicable within stated boundaries",
+      "execution_evidence": "None: source-only semantic review; not a live user task or workflow execution test"
+    },
+    {
+      "index": 31,
+      "name": "Reconcile donated goods records",
+      "job": "track-numbers",
+      "sector": "Nonprofits and community services",
+      "need": "Donation intake and distribution records, item units, date range, opening and closing quantities and approved recording rules.",
+      "deliverable": "An in kind goods reconciliation, missing records and handover notes.",
+      "acceptance": "Quantity movements reconcile by item and unit; tax value and fair market value are not invented.",
+      "steps": [
+        {
+          "uses": "spreadsheet-checker",
+          "note": "Reconcile opening stock plus receipts minus recorded distributions to closing quantities, flagging duplicate IDs and mismatched units. Do not assign monetary values."
+        },
+        {
+          "uses": "handover-note-writer",
+          "note": "Prepare the store or program lead handover with actual shortages, source locations, unresolved custody records and accepted next actions."
+        }
+      ],
+      "existing_nearest_match": "check-a-spreadsheet-before-sharing-the-results",
+      "existing_nearest_match_name": "Check a spreadsheet before sharing the results",
+      "judgment": "Quantity reconciliation plus custody handover, distinct from grant monetary spending. Opening + receipts - distributions = closing by item and unit; missing records remain gaps, no tax valuation.",
+      "status": "applicable within stated boundaries",
+      "execution_evidence": "None: source-only semantic review; not a live user task or workflow execution test"
+    },
+    {
+      "index": 32,
+      "name": "Hand over a restricted fund program",
+      "job": "document-work",
+      "sector": "Nonprofits",
+      "need": "The actual fund agreement, reporting commitments, approved program activities, spending evidence, contacts and incoming program owner.",
+      "deliverable": "A restricted fund handover, obligations index and unresolved decisions.",
+      "acceptance": "Restrictions and reporting dates quote the actual agreement; a handover never authorizes a new use of funds.",
+      "steps": [
+        {
+          "uses": "source-note-summariser",
+          "note": "Extract the fund purpose, restrictions, reporting requirements and evidence gaps with agreement section references."
+        },
+        {
+          "uses": "handover-note-writer",
+          "note": "Prepare the incoming program owner brief with current activity status, deadlines, source access locations and decisions requiring fund owner review."
+        }
+      ],
+      "existing_nearest_match": "make-a-recurring-process-easier-to-hand-over",
+      "existing_nearest_match_name": "Make a recurring process easier to hand over",
+      "judgment": "Source-summary/handover template with actual award restrictions and reporting commitments. Distinct fund-owner transfer; same method as referral/due-diligence handover, not a new grant accounting capability.",
+      "status": "applicable within stated boundaries",
+      "execution_evidence": "None: source-only semantic review; not a live user task or workflow execution test"
+    },
+    {
+      "index": 33,
+      "name": "Prepare a goods receipt discrepancy brief",
+      "job": "plan-supply-chain",
+      "sector": "Manufacturing and logistics",
+      "need": "Purchase orders, actual delivery and receipt records, item units, supplier invoices and approved discrepancy handling rules.",
+      "deliverable": "A receipt mismatch table, supplier questions and receiving handover.",
+      "acceptance": "Ordered, delivered, accepted and invoiced quantities remain separate; no stock or payment record is changed.",
+      "steps": [
+        {
+          "uses": "invoice-checker",
+          "note": "Match actual PO, receipt and invoice lines, preserving item identity, unit conversions supplied by the owner and evidence of partial deliveries."
+        },
+        {
+          "uses": "handover-note-writer",
+          "note": "Brief the incoming receiving or purchasing lead on mismatches, approved holds, unresolved inspection evidence and supplier commitments; do not approve goods or payments."
+        }
+      ],
+      "existing_nearest_match": "check-supplier-invoices-before-approval",
+      "existing_nearest_match_name": "Check supplier invoices before approval",
+      "judgment": "Strong overlap with existing three-way invoice check. Receiving-stage handover and explicit ordered/delivered/accepted/invoiced quantities distinguish this bounded variant; no inventory/payment write or approval.",
+      "status": "applicable within stated boundaries",
+      "execution_evidence": "None: source-only semantic review; not a live user task or workflow execution test"
+    },
+    {
+      "index": 34,
+      "name": "Prepare a supplier corrective action review",
+      "job": "plan-supply-chain",
+      "sector": "Manufacturing and procurement",
+      "need": "Actual supplier defects or delivery failures, inspection evidence, the approved acceptance standard and supplier response draft.",
+      "deliverable": "A sourced issue review, corrective procedure draft and follow up register.",
+      "acceptance": "Root causes stay hypotheses until supported; no inspection, certification or corrective effectiveness is fabricated.",
+      "steps": [
+        {
+          "uses": "source-note-summariser",
+          "note": "Extract observed nonconformances, dates, affected lots and supporting evidence from the inspection records; separate the supplier explanation from verified findings."
+        },
+        {
+          "uses": "process-and-sop-writer",
+          "note": "Document the proposed containment, correction, evidence collection and effectiveness review steps against the owner approved acceptance process; do not prescribe technical safety decisions."
+        },
+        {
+          "uses": "executive-action-register",
+          "note": "Record explicit accepted supplier commitments separately from proposed actions, with source IDs and missing owners or dates."
+        }
+      ],
+      "existing_nearest_match": "get-a-product-made-right-from-tech-pack-to-inspected-shipment",
+      "existing_nearest_match_name": "Get a product made right, from tech pack to shipment",
+      "judgment": "Corrective-action admin stage differs from pre-shipment inspection. Supplied standards and actual inspection evidence support sourced nonconformance, proposed procedure and accepted follow-ups. No technical containment or effectiveness invented.",
+      "status": "applicable within stated boundaries",
+      "execution_evidence": "None: source-only semantic review; not a live user task or workflow execution test"
+    },
+    {
+      "index": 35,
+      "name": "Check production shift staffing commitments",
+      "job": "organise-work",
+      "sector": "Manufacturing",
+      "need": "Confirmed work orders, available qualified operators, approved equipment capacity, maintenance constraints, changeovers and planned shift hours.",
+      "deliverable": "A shift staffing comparison, dependency gaps and handover options.",
+      "acceptance": "Staffing capacity uses actual qualified roles and equipment constraints; machine throughput is not calculated, and proposed reassignment is not operating authorization.",
+      "steps": [
+        {
+          "uses": "team-capacity-planner",
+          "note": "Compare committed work and real available qualified hours, preserving maintenance, setup, leave and dependency constraints rather than treating every paid hour as production time."
+        },
+        {
+          "uses": "handover-note-writer",
+          "note": "Prepare the shift lead handover of supported delivery options, blockers, approved priorities and decisions needing the production owner."
+        }
+      ],
+      "existing_nearest_match": "check-capacity-before-promising-a-delivery-date",
+      "existing_nearest_match_name": "Check capacity before promising a delivery date",
+      "judgment": "Team-capacity method measures labor/project hours, skills and dependencies. Current title, deliverable and acceptance now explicitly narrow the job to staffing comparison and exclude machine throughput. Handover delivery options are bounded by those staffing assumptions and require the production owner to resolve technical schedule/material feasibility.",
+      "status": "applicable within stated boundaries; staffing-only revision verified",
+      "execution_evidence": "None: source-only semantic review; not a live user task or workflow execution test"
+    },
+    {
+      "index": 36,
+      "name": "Compare freight quotes with all charges",
+      "job": "plan-supply-chain",
+      "sector": "Logistics",
+      "need": "Freight quotes for the same lane, load, weight and volume, currency, delivery scope, exclusions and actual service requirements.",
+      "deliverable": "A normalized freight comparison, charge checks and open questions.",
+      "acceptance": "Included and excluded charges stay visible; transit estimates are not guaranteed arrival times.",
+      "steps": [
+        {
+          "uses": "vendor-comparison-writer",
+          "note": "Normalize the supplied lane, load basis, service scope, handling, insurance, delivery and exit charges. Keep missing surcharges unknown rather than zero."
+        },
+        {
+          "uses": "invoice-totals-checker",
+          "note": "Recompute the comparable quoted charges with explicit units and currencies; use only conversion rates and tax treatment supplied for this review."
+        }
+      ],
+      "existing_nearest_match": "compare-supplier-prices-on-the-same-basis",
+      "existing_nearest_match_name": "Compare supplier prices on the same basis",
+      "judgment": "Freight same-lane/load/service total-cost comparison is a useful scoped quote variant. Generic vendor TCO and explicit decimal arithmetic fit supplied quotes. No live carrier price search, transport license verification or route optimization.",
+      "status": "applicable within stated boundaries",
+      "execution_evidence": "None: source-only semantic review; not a live user task or workflow execution test"
+    },
+    {
+      "index": 37,
+      "name": "Explain a warehouse stock count variance",
+      "job": "plan-supply-chain",
+      "sector": "Warehousing and retail",
+      "need": "Actual count sheets, inventory snapshot time, recorded movements, item units, count scope and existing discrepancy explanations.",
+      "deliverable": "A reconciled stock variance table, evidence gaps and review brief.",
+      "acceptance": "Timing movements, unit differences and count errors stay separate; no loss, fraud or write off is inferred.",
+      "steps": [
+        {
+          "uses": "spreadsheet-checker",
+          "note": "Reconcile count quantities to the snapshot and supplied intervening movements; inspect duplicate locations, item IDs and unit mismatches. Preserve original counts."
+        },
+        {
+          "uses": "stakeholder-update-writer",
+          "note": "Draft a warehouse owner review brief of verified variances, alternative explanations and missing evidence; no inventory adjustment is performed."
+        }
+      ],
+      "existing_nearest_match": "check-a-spreadsheet-before-sharing-the-results",
+      "existing_nearest_match_name": "Check a spreadsheet before sharing the results",
+      "judgment": "Count reconciliation adds inventory cutoff, intervening movements, duplicate location and unit checks. Same generic spreadsheet method but a useful physical-stock job. No inferred shrinkage cause, fraud or automatic adjustment.",
+      "status": "applicable within stated boundaries",
+      "execution_evidence": "None: source-only semantic review; not a live user task or workflow execution test"
+    },
+    {
+      "index": 38,
+      "name": "Document a clinic appointment intake process",
+      "job": "document-work",
+      "sector": "Healthcare administration",
+      "need": "The clinic approved administrative intake procedure, minimum necessary fields, appointment types, access rules and escalation contacts.",
+      "deliverable": "An administrative intake procedure and unresolved process questions.",
+      "acceptance": "The procedure preserves clinician owned escalation rules; no symptom interpretation, triage or treatment advice is generated.",
+      "steps": [
+        {
+          "uses": "process-and-sop-writer",
+          "note": "Document administrative booking, identity checks, consent handling, approved information collection and escalation using only the clinic supplied process. Exclude diagnosis and clinical prioritization."
+        },
+        {
+          "uses": "plain-english-editor",
+          "note": "Edit the actual administrative procedure produced in the prior step for clear staff actions while preserving approved clinical boundaries and privacy instructions."
+        }
+      ],
+      "existing_nearest_match": "make-a-recurring-process-easier-to-hand-over",
+      "existing_nearest_match_name": "Make a recurring process easier to hand over",
+      "judgment": "Approved administrative SOP is composed first, then edited, satisfying editor draft prerequisite. Clinic defines identity/consent/escalation rules. No triage, clinical prioritization or retention-law invention.",
+      "status": "applicable within stated boundaries",
+      "execution_evidence": "None: source-only semantic review; not a live user task or workflow execution test"
+    },
+    {
+      "index": 39,
+      "name": "Prepare a referral administration handover",
+      "job": "organise-work",
+      "sector": "Healthcare administration",
+      "need": "Authorized minimal referral status records, receipt and dispatch evidence, clinic approved follow up rules and incoming administrator.",
+      "deliverable": "A referral status handover, missing confirmations and follow up drafts.",
+      "acceptance": "Sent, received, booked and completed remain distinct; no clinical urgency or patient outcome is inferred.",
+      "steps": [
+        {
+          "uses": "source-note-summariser",
+          "note": "Extract only the administrative status and confirmation evidence needed for the handover, minimizing patient identifiers and retaining record references."
+        },
+        {
+          "uses": "handover-note-writer",
+          "note": "Prepare the administrator handover with pending confirmations, authorized contacts, deadline evidence and clinician escalation points; never reprioritize clinical care."
+        }
+      ],
+      "existing_nearest_match": "prepare-a-team-absence-handover",
+      "existing_nearest_match_name": "Prepare a team absence handover",
+      "judgment": "Source-summary plus minimal referral-status handover fits administrative records. Sent/received/booked/completed require separate evidence. No patient urgency or outcome interpretation; qualified escalation preserved.",
+      "status": "applicable within stated boundaries",
+      "execution_evidence": "None: source-only semantic review; not a live user task or workflow execution test"
+    },
+    {
+      "index": 40,
+      "name": "Check a clinic service information page",
+      "job": "help-customers",
+      "sector": "Healthcare administration",
+      "need": "An existing clinic administrative FAQ draft, approved service and booking facts, contact details, eligibility rules and clinical reviewer boundaries.",
+      "deliverable": "A source gap list and corrected administrative FAQ draft.",
+      "acceptance": "Service and booking facts match approved records; medical claims remain for clinical review and are never invented.",
+      "steps": [
+        {
+          "uses": "unsupported-claim-spotter",
+          "note": "Check the FAQ against approved service information. Flag unsupported availability, eligibility, pricing, medical benefit or outcome claims for the responsible reviewer."
+        },
+        {
+          "uses": "plain-english-editor",
+          "note": "Edit the existing administrative FAQ for understandable booking and contact instructions, preserving eligibility limits and removing or marking unapproved claims."
+        }
+      ],
+      "existing_nearest_match": "make-a-new-policy-understandable-to-staff",
+      "existing_nearest_match_name": "Make a new policy understandable to staff",
+      "judgment": "Existing FAQ draft and approved service facts fit claim-support check and editing. Availability/eligibility/booking are administrative; clinical benefits or medical claims remain marked for qualified review.",
+      "status": "applicable within stated boundaries",
+      "execution_evidence": "None: source-only semantic review; not a live user task or workflow execution test"
+    },
+    {
+      "index": 41,
+      "name": "Measure a clinic administrative queue",
+      "job": "organise-work",
+      "sector": "Healthcare administration",
+      "need": "Deidentified repeated administrative task records, stage owners, active and waiting P50 and P90 times, available staff and approved service targets.",
+      "deliverable": "An administrative delay map, capacity options and measurement gaps.",
+      "acceptance": "Only administrative stages are analyzed; task timing never determines clinical urgency or care priority.",
+      "steps": [
+        {
+          "uses": "process-bottleneck-finder",
+          "note": "Use the bundled deterministic process methods on actual repeated administrative stages and timing evidence. If timing is absent, return an instrumentation plan rather than a measured bottleneck ranking."
+        },
+        {
+          "uses": "team-capacity-planner",
+          "note": "Compare administrative workload and actual qualified staff availability, retaining fixed duties and uncertainty; propose options for the clinic operations owner."
+        }
+      ],
+      "existing_nearest_match": "make-a-recurring-process-easier-to-hand-over",
+      "existing_nearest_match_name": "Make a recurring process easier to hand over",
+      "judgment": "Actual repeated stages, stage types/owners and P50/P90 timing are required by deterministic process mapper. Missing timing returns instrumentation plan. Staff capacity is separate; no clinical wait priority inferred.",
+      "status": "applicable within stated boundaries",
+      "execution_evidence": "None: source-only semantic review; not a live user task or workflow execution test"
+    }
+  ],
+  "candidate_agent_reviews": [
+    {
+      "name": "Restaurant shift exception review assistant",
+      "workflow_index": 17,
+      "trigger": "A new shift handover is supplied with unresolved orders, equipment or safety escalations.",
+      "extra": "process-and-sop-writer",
+      "branch": "If an exception has no approved handling path, document the missing procedure and route a question to the responsible lead; do not invent safety instructions.",
+      "memory": "shift ID, unresolved issue IDs, accepted owner, source time and closure evidence",
+      "schedule": "At each user-requested shift change.",
+      "governing_workflow": "Prepare a restaurant shift handover",
+      "status": "Applicable evidence-change branch; no schedule installed or external write authorized by installation",
+      "review": "Verified actual numeric governing index, trigger, conditional branch and minimal memory. Accepted status requires actual source evidence; missing clinical/access/approval facts remain blocked. Personal data remains minimized."
+    },
+    {
+      "name": "Catering order change review assistant",
+      "workflow_index": 18,
+      "trigger": "The customer-approved headcount, dietary requirements, timing or quoted charges change.",
+      "extra": "handover-note-writer",
+      "branch": "If a confirmed requirement changes, prepare a service lead handover highlighting exactly what changed; unresolved dietary facts stop the affected preparation path.",
+      "memory": "order ID, confirmed version, headcount, dated change evidence and open approvals",
+      "schedule": "When the user supplies an approved order change.",
+      "governing_workflow": "Check a catering order before service",
+      "status": "Applicable evidence-change branch; no schedule installed or external write authorized by installation",
+      "review": "Verified actual numeric governing index, trigger, conditional branch and minimal memory. Accepted status requires actual source evidence; missing clinical/access/approval facts remain blocked. Personal data remains minimized."
+    },
+    {
+      "name": "Property maintenance evidence review assistant",
+      "workflow_index": 23,
+      "trigger": "A maintenance status, accepted appointment or access approval changes.",
+      "extra": "source-note-summariser",
+      "branch": "If completion is claimed, check the actual ticket closure evidence before marking it complete. Missing access or safety approval remains a blocker for the responsible professional.",
+      "memory": "ticket ID, minimal location, approved window, accepted owner and closure reference",
+      "schedule": "At a user-requested maintenance review.",
+      "governing_workflow": "Prepare a property maintenance handover",
+      "status": "Applicable evidence-change branch; no schedule installed or external write authorized by installation",
+      "review": "Verified actual numeric governing index, trigger, conditional branch and minimal memory. Accepted status requires actual source evidence; missing clinical/access/approval facts remain blocked. Personal data remains minimized."
+    },
+    {
+      "name": "Construction variation review assistant",
+      "workflow_index": 24,
+      "trigger": "A priced variation or contract approval record changes.",
+      "extra": "executive-action-register",
+      "branch": "If approval is supplied, extract the actual accepted scope, authority, amount and date before updating the decision trace. Do not equate submission with approval.",
+      "memory": "variation ID, contract version, proposed and approved amounts, approval source and open questions",
+      "schedule": "When the user provides a revised variation or approval.",
+      "governing_workflow": "Prepare a construction variation decision",
+      "status": "Applicable evidence-change branch; no schedule installed or external write authorized by installation",
+      "review": "Verified actual numeric governing index, trigger, conditional branch and minimal memory. Accepted status requires actual source evidence; missing clinical/access/approval facts remain blocked. Personal data remains minimized."
+    },
+    {
+      "name": "Grant spending evidence review assistant",
+      "workflow_index": 28,
+      "trigger": "A grant reporting checkpoint is due or new eligible transaction evidence is supplied.",
+      "extra": "source-note-summariser",
+      "branch": "If an award restriction or budget version changes, extract the actual clause before reclassifying the review table. Missing eligibility returns to the fund owner.",
+      "memory": "award ID, budget version, transaction cutoff, restrictions source and unresolved costs",
+      "schedule": "At an explicitly requested grant reporting checkpoint.",
+      "governing_workflow": "Prepare a grant spending evidence pack",
+      "status": "Applicable evidence-change branch; no schedule installed or external write authorized by installation",
+      "review": "Verified actual numeric governing index, trigger, conditional branch and minimal memory. Accepted status requires actual source evidence; missing clinical/access/approval facts remain blocked. Personal data remains minimized."
+    },
+    {
+      "name": "Volunteer induction evidence review assistant",
+      "workflow_index": 29,
+      "trigger": "An approved volunteer role or required induction evidence changes.",
+      "extra": "handover-note-writer",
+      "branch": "If a supervisor changes, prepare a minimal handover of demonstrated practice and outstanding clearance; never label a volunteer cleared from attendance alone.",
+      "memory": "role version, induction requirement IDs, observed evidence and clearance status without sensitive details",
+      "schedule": "At each requested induction review.",
+      "governing_workflow": "Build a volunteer induction checklist",
+      "status": "Applicable evidence-change branch; no schedule installed or external write authorized by installation",
+      "review": "Verified actual numeric governing index, trigger, conditional branch and minimal memory. Accepted status requires actual source evidence; missing clinical/access/approval facts remain blocked. Personal data remains minimized."
+    },
+    {
+      "name": "Supplier correction evidence review assistant",
+      "workflow_index": 34,
+      "trigger": "A supplier sends corrective action evidence or an effectiveness review becomes due.",
+      "extra": "source-note-summariser",
+      "branch": "If a corrective action is claimed complete, compare actual evidence to the owner-approved acceptance requirement. Unverified effectiveness remains open.",
+      "memory": "issue ID, affected lot reference, accepted action, evidence version and effectiveness status",
+      "schedule": "At a requested supplier review checkpoint.",
+      "governing_workflow": "Prepare a supplier corrective action review",
+      "status": "Applicable evidence-change branch; no schedule installed or external write authorized by installation",
+      "review": "Verified actual numeric governing index, trigger, conditional branch and minimal memory. Accepted status requires actual source evidence; missing clinical/access/approval facts remain blocked. Personal data remains minimized."
+    },
+    {
+      "name": "Warehouse count discrepancy review assistant",
+      "workflow_index": 37,
+      "trigger": "A revised count or intervening movement record is supplied for the same snapshot.",
+      "extra": "executive-action-register",
+      "branch": "If a variance persists after reconciliation, prepare investigation actions from explicit owner commitments; never post a stock adjustment or infer fraud.",
+      "memory": "snapshot cutoff, count version, item-unit variance, movement sources and unresolved commitments",
+      "schedule": "When a warehouse owner requests a recount comparison.",
+      "governing_workflow": "Explain a warehouse stock count variance",
+      "status": "Applicable evidence-change branch; no schedule installed or external write authorized by installation",
+      "review": "Verified actual numeric governing index, trigger, conditional branch and minimal memory. Accepted status requires actual source evidence; missing clinical/access/approval facts remain blocked. Personal data remains minimized."
+    },
+    {
+      "name": "Referral administration evidence review assistant",
+      "workflow_index": 39,
+      "trigger": "A new referral receipt, booking or administrative follow-up confirmation is supplied.",
+      "extra": "executive-action-register",
+      "branch": "If an administrative follow-up is explicitly accepted, record its owner and date. Missing clinical urgency always goes to the qualified clinic contact.",
+      "memory": "minimal referral reference, administrative status, confirmation date and authorized follow-up evidence",
+      "schedule": "On request when referral administration records change.",
+      "governing_workflow": "Prepare a referral administration handover",
+      "status": "Applicable evidence-change branch; no schedule installed or external write authorized by installation",
+      "review": "Verified actual numeric governing index, trigger, conditional branch and minimal memory. Accepted status requires actual source evidence; missing clinical/access/approval facts remain blocked. Personal data remains minimized."
+    }
+  ],
+  "candidate_tools": {
+    "source": "site/src/tools/next-100-tools.mjs",
+    "sha256": "9472220013ddbc2664d31e06ad5a64f15ab7fc983a227c6e87d6bb1972de869d",
+    "count": 25,
+    "industry_coverage": "All25 are text/data/URL/Unicode/checklist/planning utilities; none adds a specialist industry calculator. Useful general utilities, but not evidence of new food/property/retail/logistics/manufacturing capability.",
+    "semantic_overlap": [
+      {
+        "items": [
+          "duplicate-line-remover",
+          "csv-duplicate-row-remover"
+        ],
+        "judgment": "Distinct plain-line versus quoted structured-row semantics, provided exact match and first-occurrence behavior remain explicit."
+      },
+      {
+        "items": [
+          "url-query-builder",
+          "utm-link-builder"
+        ],
+        "judgment": "Same query-string primitive with constrained campaign preset. Useful convenience variant, not two new domain capabilities."
+      },
+      {
+        "items": [
+          "json-formatter",
+          "json-lines-validator",
+          "json-array-to-json-lines"
+        ],
+        "judgment": "Existing formatter versus per-line JSON framing/conversion differ. No claimed schema validation."
+      },
+      {
+        "items": [
+          "csv-to-json",
+          "json-array-to-csv"
+        ],
+        "judgment": "Distinct conversion directions; flat record/cell and spreadsheet formula handling limits matter."
+      },
+      {
+        "items": [
+          "word-counter",
+          "reading-time",
+          "reading-session-scheduler",
+          "study-plan"
+        ],
+        "judgment": "Scheduler adds per-item session allocation; considerable personal-planning overlap, not new literacy or retention method."
+      },
+      {
+        "items": [
+          "meeting-action-register",
+          "executive-action-register"
+        ],
+        "judgment": "CSV field validation is deterministic and does not extract actions from prose; model-assisted commitment extraction is a separate existing capability."
+      }
+    ],
+    "tool_execution_tests": "Not run by this semantic reviewer. Independent tool QA owns correctness/accessibility/safety tests."
+  },
+  "duplicate_assessment": {
+    "exact_duplicate_claim": "No exact semantic duplicate requiring removal established in the25 assigned industry candidates. Several substantial method overlaps are disclosed per row.",
+    "families": [
+      {
+        "candidates": [
+          17,
+          23,
+          26
+        ],
+        "assessment": "Same handover/action-register primitive; keep restaurant orders, property access and construction acceptance evidence as clearly scoped sector templates."
+      },
+      {
+        "candidates": [
+          20,
+          32,
+          39
+        ],
+        "assessment": "Booking arithmetic handover versus source-based fund/referral handover are useful contexts; avoid promoting generic summaries as specialist operational decisions."
+      },
+      {
+        "candidates": [
+          22,
+          31,
+          37
+        ],
+        "assessment": "Shared spreadsheet reconciliation; status denominator, donated-goods custody and inventory cutoff materially distinguish the actual records."
+      },
+      {
+        "candidates": [
+          24,
+          27,
+          36
+        ],
+        "assessment": "Contract/quote arithmetic across variants; match actual scope/unit/period and document evidence rather than count title changes as new methods."
+      }
+    ]
+  },
+  "open_findings": [],
+  "limits": [
+    "This report is source semantic applicability and gap review, not evidence that any workflow executed successfully.",
+    "Full specialist SKILL methods were read; supplied example code was not run and remains read-only. Static defects do not imply a rewritten implementation contains the same defects.",
+    "Only source-path/hash-matching prior full method audits were reused for existing generic components.",
+    "Unreviewed technical specialist headers are flagged deferred, never accepted from title alone."
+  ],
+  "resolved_findings": [
+    {
+      "severity": "medium",
+      "workflow_index": 35,
+      "issue": "Team capacity is qualified labor capacity, not finite-machine production feasibility.",
+      "required_action": "Narrow name/intake/output/acceptance to staffing-hours comparison and explicit machine/material/scheduling gaps; no delivery feasibility claim.",
+      "sent_to": [
+        "root",
+        "workflows_agents"
+      ],
+      "status": "Resolved in inspected source hash",
+      "resolution": "Title changed to Check production shift staffing commitments; deliverable is shift staffing comparison; acceptance explicitly states machine throughput is not calculated and reassignment is not operating authorization."
+    }
+  ],
+  "validation": {
+    "json_records_checked": true,
+    "workflows": 25,
+    "agents": 9,
+    "unique_components": 18,
+    "source_hash_still_matches": true,
+    "open_semantic_findings": 0,
+    "tests_or_shared_builds_run": false
+  },
+  "final_reconciliation": {
+    "candidate_path": "tools/next-100-data.mjs",
+    "previous_candidate_sha256": "5bcb665526ac6a642f20c2e2cfcd11f7f59ada37b6cfc359053b17421acfb202",
+    "current_candidate_sha256": "b161b1e32c434786ce5a313de7beb846be3c51a6d91f716ac0a24871a6404d87",
+    "method": "Reparsed all25 assigned flow records and9 governing agent records from latest source and compared every name/job/sector/intake/deliverable/acceptance/step/trigger/branch/memory/schedule field against the reviewed records.",
+    "workflows_compared": 25,
+    "agents_compared": 9,
+    "changed_assigned_fields": 0,
+    "semantics": "Assigned sector scope unchanged; unrelated citation, feedback or adapter revisions do not alter this domain review.",
+    "staffing_fix": "Flow35 still named Check production shift staffing commitments, returns a shift staffing comparison and explicitly states machine throughput is not calculated.",
+    "specialist_evidence": "All specialist method records and source hashes preserved.",
+    "open_findings": 0
+  }
+}

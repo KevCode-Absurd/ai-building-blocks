@@ -86,7 +86,7 @@ export async function handleComposer(req: Request, library: Library | (() => Pro
     const plan = finalize(c, JSON.parse(result.text), "ai", new Set(candidates.map(b => b.slug)));
     // The application owns the question policy. Model suggestions cannot introduce unrelated fields.
     const { questionsFor } = await import("../lib/composer-core.ts");
-    plan.questionIds = questionsFor(body.goal, choices);
+    plan.questionIds = questionsFor(body.goal, choices, body.context);
     const out = { plan, model: model.id, cost: result.cost, usage: result.usage, latencyMs: result.latencyMs };
     await store.finish(id, result.cost, "done", JSON.stringify(out));
     return json(200, out);

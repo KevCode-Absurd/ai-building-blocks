@@ -1,6 +1,6 @@
 # Lead and manage people: AI Blocks
 
-> 80 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 82 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Ad creative team planner](https://useaiblocks.com/skills/creative-team-pod-designer): Give it your team and review process. Get a two-person pod design, review rules and a fast-trend budget.
 - [Announce a change of direction and keep the team](https://useaiblocks.com/workflows/announce-a-change-of-direction-and-bring-the-team-with-you): Give it the change and why. Get the memo, a rollout plan, the announcement script and listening talks.
@@ -26,6 +26,7 @@
 - [Get honest notes on rough work and a fix plan](https://useaiblocks.com/workflows/rough-work-feedback): Give it rough work and your reviewers. Get a safe review, sharp problem notes and a plan to fix it.
 - [Give criticism that changes behaviour without resentment](https://useaiblocks.com/workflows/give-criticism-well): Describe the person and the problem. Get a message with true praise, an easy fix and a plan to praise progress.
 - [Hand off work only you do and stop it returning](https://useaiblocks.com/workflows/hand-off-the-work-only-you-do-and-keep-it-handed-off): Describe your week. Get what to hand off, a one-page agreement and a meeting plan.
+- [Hand over founder dependent operations](https://useaiblocks.com/workflows/hand-over-founder-dependent-operations): Share the source files. Get a founder dependency map, readiness gaps and operating handover.
 - [Hard feedback message writer](https://useaiblocks.com/skills/hard-feedback-message-writer): Paste what went wrong and who needs to hear it. Get a message that changes the behaviour without making an enemy.
 - [Hire, pay and measure a sales team on what works](https://useaiblocks.com/workflows/sales-team-hiring-pay): Describe your sale and past hires. Get a hiring scorecard, a pay plan check and one early sign of customer success.
 - [HR partner](https://useaiblocks.com/skills/hr-partner): Describe the people task. Get job posts, interview kits, onboarding lists, review plans or policy drafts to check with counsel.
@@ -59,6 +60,7 @@
 - [Repeatable standards sheet writer](https://useaiblocks.com/skills/standards-sheet-writer): Describe your product or service. Get a one-page sheet of checkable standards so it feels the same every time.
 - [Request refusal planner](https://useaiblocks.com/skills/hard-no-planner): Paste the request you must turn down and why. Get a word-for-word no that keeps trust and points to another path.
 - [Review lists sorter](https://useaiblocks.com/skills/review-lists-sorter): Paste everyone's do-again and never-again lists. Get themes, who raised them and what your numbers show.
+- [Review staff adoption of a policy change](https://useaiblocks.com/workflows/review-staff-adoption-of-a-policy-change): Share the source files. Get an adoption evidence brief, barriers and follow up support plan.
 - [Revision headline planner](https://useaiblocks.com/skills/revision-headline-planner): Paste the causes behind your notes. Get three to five headlines, what to blow up and keep, and a next-version plan.
 - [Run a project review where people tell the truth](https://useaiblocks.com/workflows/honest-project-review): Name a finished project. Get prep, an agenda that keeps blame out, and the lessons turned into rules for next time.
 - [Sales hiring scorecard builder](https://useaiblocks.com/skills/sales-hiring-scorecard-builder): Describe your sale and past hires. Get a 1 to 10 scorecard with a test for each trait.

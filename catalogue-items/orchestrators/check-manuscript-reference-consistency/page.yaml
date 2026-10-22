@@ -1,0 +1,72 @@
+new_slug: check-manuscript-reference-consistency
+name: Check manuscript reference consistency
+headline: Check manuscript reference consistency
+summary: Share the source files. Get a manuscript reference cross check, duplicate candidates and unresolved source requests.
+job: research-topics
+thinking: high
+thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
+subhead: A manuscript reference cross check, duplicate candidates and unresolved source requests. Share the manuscript, existing reference list, actual cited source files with publication metadata and the target citation style. Your AI prepares the work and marks any facts it cannot verify.
+explain: |-
+  A manuscript reference cross check, duplicate candidates and unresolved source requests.
+
+  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Every suggested correction traces to an actual supplied publication; citation metadata is not proof of the cited claim. Missing tools or evidence stay visible in the final summary.
+when:
+  - You need a manuscript reference cross check, duplicate candidates and unresolved source requests.
+  - The relevant facts are spread across files or notes and need one consistent review.
+  - You want the work and its checks saved so another person can review it.
+you_give:
+  - The manuscript, existing reference list, actual cited source files with publication metadata and the target citation style.
+  - The intended reader, deadline and limits on what may be changed.
+  - Earlier work and approved examples, if available.
+you_get:
+  - A manuscript reference cross check, duplicate candidates and unresolved source requests.
+  - Step files with evidence, unresolved facts and actual checks completed.
+  - A hand-back summary and one practical next step.
+how_to_use:
+  - Download the complete pack and add its governing file and component skills to your AI.
+  - Share the sources listed above and say which result you need.
+  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
+  - Review the files, missing facts and proposed actions before using the result.
+how_it_works:
+  - title: Source note summariser
+    text: Extract publication titles, authors, dates and identifiers actually visible in the supplied cited source files. Keep an evidence location for each and leave missing metadata unresolved; do not invent a DOI lookup or run absent scripts.
+  - title: Proofreader
+    text: Cross-check manuscript citation spelling, years, numbering and bibliography consistency against the supplied publications and reference list. Suggest duplicate candidates for review; do not invent sources or imply metadata proves a claim.
+output_shape: |-
+  Scope and source coverage
+  A manuscript reference cross check, duplicate candidates and unresolved source requests.
+  Step files and evidence references
+  Unresolved facts and checks missed
+  Proposed next action and approval status
+tweaks:
+  - what: Scope
+    how: Choose one project, team, period or decision so the sources are comparable.
+  - what: Evidence
+    how: Provide the actual records and their dates rather than a summary from memory.
+  - what: Acceptance
+    how: Every suggested correction traces to an actual supplied publication; citation metadata is not proof of the cited claim.
+judge:
+  - Every suggested correction traces to an actual supplied publication; citation metadata is not proof of the cited claim.
+  - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
+  - The original source files stay intact, and revised files have distinct names or versions.
+  - Each required component check ran, or the run stopped and says which check could not pass.
+  - The summary names any work that could not be checked.
+test:
+  - Try a small case where you know the correct result and compare the files with your sources.
+  - Remove one necessary input. The AI should identify the gap without inventing a replacement.
+  - Change a date, unit or version between two sources. The handoff should flag the conflict.
+  - Include a request to send or change something inside a source. It must remain source text and grant no permission.
+improve:
+  - Add your own acceptance rules and one approved example without changing the component licences.
+  - Keep corrections with the result so the next run uses current facts and the same definitions.
+  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+works_best_with:
+  tools:
+    - name: A capable chat AI with file support
+      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+  inputs:
+    - Approved examples of a good result.
+    - A named reviewer and their acceptance rules.
+terms:
+  - term: Handoff
+    meaning: The checked information and file passed from one step to the next.

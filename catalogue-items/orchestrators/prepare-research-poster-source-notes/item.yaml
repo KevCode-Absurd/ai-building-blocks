@@ -1,0 +1,50 @@
+slug: prepare-research-poster-source-notes
+name: Prepare research poster source notes
+summary: Share the source files. Get a poster content hierarchy, figure source index and wording review.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: false
+  - type: copy_draft
+    required: false
+outputs:
+  - type: document
+  - type: slide_deck
+  - type: audit_report
+uses:
+  - source-note-summariser
+  - presentation-builder
+  - unsupported-claim-spotter
+steps:
+  - uses: source-note-summariser
+    note: Extract only the completed study facts relevant to the poster question, preserving the source locations and limitations.
+  - uses: presentation-builder
+    note: Use visual narrative planning to propose a short poster reading order and figure briefs. Return a content outline; do not claim a rendered poster.
+  - uses: unsupported-claim-spotter
+    note: Check the proposed headings and captions against the completed study, flagging unmeasured outcomes and unsupported novelty.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/next-100-data.mjs
+example_pending: true
+credits:
+  - title: Source note summariser
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/source-note-summariser
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Presentation builder
+    by: Burhan Sebin
+    url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/communication/presentation-creation
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Unsupported claim spotter
+    by: Pro Skill Packs
+    url: https://github.com/proskillpacks/skills/tree/main/skills/writing/fact-claim-checker
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

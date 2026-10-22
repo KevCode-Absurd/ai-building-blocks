@@ -1,0 +1,39 @@
+slug: hand-over-a-restricted-fund-program
+name: Hand over a restricted fund program
+summary: Share the source files. Get a restricted fund handover, obligations index and unresolved decisions.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: document
+uses:
+  - source-note-summariser
+  - handover-note-writer
+steps:
+  - uses: source-note-summariser
+    note: Extract the fund purpose, restrictions, reporting requirements and evidence gaps with agreement section references.
+  - uses: handover-note-writer
+    note: Prepare the incoming program owner brief with current activity status, deadlines, source access locations and decisions requiring fund owner review.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/next-100-data.mjs
+example_pending: true
+credits:
+  - title: Source note summariser
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/source-note-summariser
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Handover note writer
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/handover-note-writer
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

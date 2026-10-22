@@ -1,0 +1,40 @@
+slug: reconcile-donated-goods-records
+name: Reconcile donated goods records
+summary: Share the source files. Get an in kind goods reconciliation, missing records and handover notes.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: spreadsheet
+  - type: document
+uses:
+  - spreadsheet-checker
+  - handover-note-writer
+steps:
+  - uses: spreadsheet-checker
+    note: Reconcile opening stock plus receipts minus recorded distributions to closing quantities, flagging duplicate IDs and mismatched units. Do not assign monetary values.
+  - uses: handover-note-writer
+    note: Prepare the store or program lead handover with actual shortages, source locations, unresolved custody records and accepted next actions.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/next-100-data.mjs
+example_pending: true
+credits:
+  - title: Spreadsheet checker
+    by: Burhan Sebin
+    url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/documents-and-files/spreadsheet-analysis
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Handover note writer
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/handover-note-writer
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

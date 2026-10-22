@@ -57,6 +57,7 @@ def build(data, output):
         plot.series[0].invert_if_negative=False
     if len(prs.slides) != len(data['slides']):raise ValueError('Slide count mismatch')
     prs.save(output)
-    print(f'Wrote {output}: {len(prs.slides)} slides; four editable charts')
+    chart_count = sum(1 for slide in prs.slides for shape in slide.shapes if shape.has_chart)
+    print(f'Wrote {output}: {len(prs.slides)} slides; {chart_count} editable charts')
 
 if __name__=='__main__':build(json.loads(Path(sys.argv[1]).read_text(encoding='utf-8')),sys.argv[2])

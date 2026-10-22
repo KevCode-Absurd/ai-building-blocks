@@ -1,0 +1,49 @@
+slug: volunteer-induction-evidence-review-assistant
+name: Volunteer induction evidence review assistant
+summary: An induction procedure, practice plan and supervision gaps.
+category: agent
+type: agent
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: question
+    required: false
+outputs:
+  - type: document
+  - type: plan
+uses:
+  - build-a-volunteer-induction-checklist
+  - handover-note-writer
+steps:
+  - uses: build-a-volunteer-induction-checklist
+    note: "Run when: An approved volunteer role or required induction evidence changes."
+  - uses: handover-note-writer
+    note: Run build-a-volunteer-induction-checklist for changed evidence or a due review. If a supervisor changes, prepare a minimal handover of demonstrated practice and outstanding clearance; never label a volunteer cleared from attendance alone.
+schedule: At each requested induction review. Installation does not create a schedule.
+asks_before:
+  - Sending or submitting any message or form
+  - Changing a live account, calendar, task, permission or published document
+  - Spending money, releasing a payment or signing a contract
+  - Starting or changing any recurring schedule
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/next-100-data.mjs
+example_pending: true
+credits:
+  - title: Process and SOP writer
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/operations/skills/process-doc
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Training program builder
+    by: Tuan Duc Tran
+    url: https://github.com/tuanductran/hr-skills/tree/main/skills/hr-training-development
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Handover note writer
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/handover-note-writer
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

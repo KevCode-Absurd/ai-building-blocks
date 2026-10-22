@@ -1,0 +1,42 @@
+slug: align-recurring-report-metric-definitions
+name: Align recurring report metric definitions
+summary: Share the source files. Get a metric difference table, reconciled examples and reporting procedure.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: spreadsheet
+    required: false
+  - type: question
+    required: false
+outputs:
+  - type: spreadsheet
+  - type: document
+uses:
+  - spreadsheet-checker
+  - process-and-sop-writer
+steps:
+  - uses: spreadsheet-checker
+    note: Trace conflicting report totals to grain, formulas, time windows, exclusions and source versions. Show why the same named metric differs without silently rewriting either source.
+  - uses: process-and-sop-writer
+    note: Document the agreed or proposed extraction, transformation, reconciliation and review procedure with a versioned definition owner and unresolved conflicts.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/next-100-data.mjs
+example_pending: true
+credits:
+  - title: Spreadsheet checker
+    by: Burhan Sebin
+    url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/documents-and-files/spreadsheet-analysis
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Process and SOP writer
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/operations/skills/process-doc
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

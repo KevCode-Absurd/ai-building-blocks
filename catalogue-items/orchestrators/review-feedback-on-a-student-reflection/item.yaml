@@ -1,0 +1,50 @@
+slug: review-feedback-on-a-student-reflection
+name: Review feedback on a student reflection
+summary: Share the source files. Get a rubric-linked feedback review and reflection revision prompts.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: false
+  - type: feedback_notes
+    required: false
+outputs:
+  - type: document
+  - type: audit_report
+  - type: copy_draft
+uses:
+  - source-note-summariser
+  - written-feedback-checker
+  - proofreader
+steps:
+  - uses: source-note-summariser
+    note: Extract what the actual project record shows about decisions, outcomes and changes; retain locations and distinguish the learner interpretation.
+  - uses: written-feedback-checker
+    note: Review the supplied teacher or peer feedback and rewrite it into task, process and self-regulation prompts grounded in the rubric and real evidence.
+  - uses: proofreader
+    note: Check the learner own reflection draft for clarity and consistency without writing experiences the learner has not supplied.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/next-100-data.mjs
+example_pending: true
+credits:
+  - title: Source note summariser
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/source-note-summariser
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Written feedback checker
+    by: Gareth Manning
+    url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/memory-learning-science/feedback-quality-analyser
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Proofreader
+    by: Burhan Sebin
+    url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/writing-and-content/proofreading
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

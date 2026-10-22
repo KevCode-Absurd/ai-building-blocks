@@ -1,11 +1,12 @@
 # Speak and persuade: AI Blocks
 
-> 38 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 45 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Annual letter writer](https://useaiblocks.com/skills/annual-letter-writer): Paste your principles, metrics and results. Get a plain letter to your team or owners with the year's honest numbers.
 - [Bad news update writer](https://useaiblocks.com/skills/bad-news-update-writer): Paste the facts of a setback. Get a short update with the loss, the numbers, what went right and the next step.
 - [Board deck builder](https://useaiblocks.com/skills/board-deck-builder): Give it your quarter. Get a board or investor deck outline with the story, numbers and bad news placed right.
 - [Build a talk around one real case](https://useaiblocks.com/workflows/build-a-talk-around-one-real-case): Give it your topic and notes. Get one case, a pitch story and an order with stakes first.
+- [Case competition evidence review assistant](https://useaiblocks.com/agents/case-competition-evidence-review-assistant): A revised case deck, financial bridge and challenge register.
 - [Contact notes organizer](https://useaiblocks.com/skills/contact-memory-card-writer): Paste your notes from a first meeting. Get a one-page card with name, facts, promises and the next contact date.
 - [Conversation question planner](https://useaiblocks.com/skills/get-them-talking-plan): Paste your brief on the person. Get a warm start, questions they enjoy answering and where to stop and listen.
 - [Customer event experiment planner](https://useaiblocks.com/skills/traction-offline-events): Paste your product link. Get a focused growth test, its costs, measures and decision rules.
@@ -25,7 +26,12 @@
 - [Pitch arc planner](https://useaiblocks.com/skills/pitch-arc-planner): Give it your audience and your goal. Get a pitch or deck outline that builds belief, then asks for a clear decision.
 - [Pitch deck presentation review](https://useaiblocks.com/skills/pitch-deck-checker-10-20-30): Share your pitch deck. Get a scored review of slide count, timing, text size and opening, with fixes.
 - [Pitch revision log](https://useaiblocks.com/skills/pitch-revision-log): Paste your pitch and each no you heard. Get the doubts ranked, a revised pitch and the next advice questions to ask.
+- [Prepare a funding pitch evidence appendix](https://useaiblocks.com/workflows/prepare-a-funding-pitch-evidence-appendix): Share the source files. Get a pitch evidence ledger, unsupported claim list and appendix outline.
+- [Prepare a student conference talk](https://useaiblocks.com/workflows/prepare-a-student-conference-talk): Share the source files. Get a talk outline, speaking notes and rehearsal checklist.
+- [Prepare a survey findings briefing](https://useaiblocks.com/workflows/prepare-a-survey-findings-briefing): Share the source files. Get a checked findings table, sampling caveats and briefing outline.
+- [Prepare a thesis defence evidence brief](https://useaiblocks.com/workflows/prepare-a-thesis-defence-evidence-brief): Share the source files. Get a defence outline, evidence index and question preparation notes.
 - [Prepare a webinar people can follow](https://useaiblocks.com/workflows/prepare-a-webinar-people-can-follow): Share the source files. Get a webinar outline, slide brief and promotion draft.
+- [Prepare case competition judge questions](https://useaiblocks.com/workflows/prepare-case-competition-judge-questions): Share the source files. Get a judge question bank, sourced answer notes and backup slide briefs.
 - [Presenter fit planner](https://useaiblocks.com/skills/deliverer-fit-planner): Share your brief and presenter. Get an approach that suits their strengths, with pitfalls and a standout moment.
 - [Press outreach experiment planner](https://useaiblocks.com/skills/traction-public-relations): Paste your product link. Get a focused growth test, its costs, measures and decision rules.
 - [Read-aloud speech shaper](https://useaiblocks.com/skills/read-aloud-speech-shaper): Paste your notes and the room. Get a speech or poem shaped to be heard, with a refrain.
@@ -35,6 +41,7 @@
 - [Skeptical audience speech planner](https://useaiblocks.com/skills/hostile-room-speech-planner): Say who is in the room and what they believe. Get a speech that agrees first, then turns them step by step.
 - [Speaking channel experiment planner](https://useaiblocks.com/skills/traction-speaking-engagements): Paste your product link. Get a focused growth test, its costs, measures and decision rules.
 - [Speech tension planner](https://useaiblocks.com/skills/talk-tension-planner): Paste your talk or pitch outline. Get it reordered so the room knows the stakes early, with one saved twist.
+- [Stress test a case competition recommendation](https://useaiblocks.com/workflows/stress-test-a-case-competition-recommendation): Share the source files. Get a revised case deck, financial bridge and challenge register.
 - [Turn your lessons into funny stories and a short talk](https://useaiblocks.com/workflows/turn-your-lessons-into-funny-stories-and-a-short-talk): Give it two or three lessons you have learned. Get a funny story for each and a talk.
 - [Visual numbers explainer](https://useaiblocks.com/skills/number-to-picture-translator): Paste your key figures and audience. Get each number turned into a picture the room can feel.
 - [Why-first message writer](https://useaiblocks.com/skills/why-first-message-writer): Give your product or cause and who you want to reach. Get a short message: belief first, then how, then what.

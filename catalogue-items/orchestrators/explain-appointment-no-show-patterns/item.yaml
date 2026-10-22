@@ -1,0 +1,43 @@
+slug: explain-appointment-no-show-patterns
+name: Explain appointment no show patterns
+summary: Share the source files. Get a reconciled attendance table, pattern summary and evidence gaps.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: spreadsheet
+    required: false
+  - type: performance_sheet
+    required: false
+outputs:
+  - type: spreadsheet
+  - type: copy_draft
+  - type: document
+uses:
+  - spreadsheet-checker
+  - figures-to-plain-pictures-writer
+steps:
+  - uses: spreadsheet-checker
+    note: Reconcile appointment IDs, statuses, dates, denominators and duplicate bookings; apply only the supplied no-show definition.
+  - uses: figures-to-plain-pictures-writer
+    note: Explain verified attendance patterns by supplied grouping without sensitive profiling or invented reasons for absence.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/next-100-data.mjs
+example_pending: true
+credits:
+  - title: Spreadsheet checker
+    by: Burhan Sebin
+    url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/documents-and-files/spreadsheet-analysis
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Figures to plain pictures writer
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/figures-to-plain-pictures-writer
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

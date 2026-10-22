@@ -1,10 +1,11 @@
 # Help your customers: AI Blocks
 
-> 31 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 36 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Angry customer reply checker](https://useaiblocks.com/skills/angry-customer-reply-checker): Paste the complaint and your draft reply. Get promises, facts and tone checked, plus a repaired draft.
 - [Angry customer reply writer](https://useaiblocks.com/prompts/angry-customer-reply-writer): Paste an angry message. Get a reply that names the feeling, fixes what you can and promises nothing false.
 - [Chargeback evidence gatherer](https://useaiblocks.com/skills/chargeback-evidence-gatherer): Tell it the dispute reason. Get what proof to collect, where to find it in Shopify, and whether to accept instead.
+- [Check a clinic service information page](https://useaiblocks.com/workflows/check-a-clinic-service-information-page): Share the source files. Get a source gap list and corrected administrative FAQ draft.
 - [Clear your support inbox and turn fixes into help pages](https://useaiblocks.com/workflows/clear-your-support-inbox-and-turn-fixes-into-help-pages): Give it your open tickets. Get them sorted, checked replies to send and a help page per fix.
 - [Complaint to story planner](https://useaiblocks.com/prompts/complaint-to-story-planner): Paste a complaint and your fix. Get the one surprise that turns it into a story customers retell.
 - [Customer email reply assistant](https://useaiblocks.com/agents/customer-inbox-triage-and-reply-drafter): Share customer emails. Get priorities and checked reply drafts to approve. It does not send them.
@@ -13,11 +14,14 @@
 - [Customer reply commitment checker](https://useaiblocks.com/prompts/complaint-reply-promise-checker): Paste the complaint and your draft reply. Get each promise checked, tone flags and a repaired draft.
 - [Customer reply drafter](https://useaiblocks.com/skills/customer-reply-drafter): Describe the customer's situation. Get a reply in the right tone, plus notes on what to check before you send it.
 - [Customer review reply writer](https://useaiblocks.com/skills/customer-review-reply-writer): Give it your reviews and complaints. Get themes with quotes, a reply to each review, and customers at risk. Scrapes sites.
+- [Define a customer support escalation agreement](https://useaiblocks.com/workflows/define-a-customer-support-escalation-agreement): Share the source files. Get an escalation procedure, ownership gaps and communication drafts.
 - [Escalation brief writer](https://useaiblocks.com/skills/escalation-brief-writer): Give it a stuck customer issue. Get a clear escalation brief for engineering or leadership, with impact and what was tried.
+- [Explain service booking terms to customers](https://useaiblocks.com/workflows/explain-service-booking-terms-to-customers): Share the source files. Get a booking terms summary, revised explanation and unresolved questions.
 - [Feature request reply writer](https://useaiblocks.com/prompts/feature-request-no-writer): Share a feature request you will not build. Get a respectful reply explaining the real reason.
 - [Get a stuck customer issue unstuck and close the loop](https://useaiblocks.com/workflows/get-a-stuck-customer-issue-unstuck-and-close-the-loop): Give it the stuck issue. Get the facts, an escalation brief and a reply that keeps its promises.
 - [Help article writer from support tickets](https://useaiblocks.com/prompts/help-article-from-ticket-writer): Paste tickets about the same problem. Get a short help article in the customer's words, with its title.
 - [Monthly help centre review](https://useaiblocks.com/agents/monthly-help-centre-keeper): Share recent support tickets. Get drafts for missing help articles and updates for outdated ones.
+- [Pilot customer promise review assistant](https://useaiblocks.com/agents/pilot-customer-promise-review-assistant): A customer promise register, conflicting commitments and update drafts.
 - [Prepare a service outage communication pack](https://useaiblocks.com/workflows/prepare-a-service-outage-communication-pack): Share the source files. Get draft initial, progress and recovery messages with a fact ledger.
 - [Public review reply assistant](https://useaiblocks.com/agents/public-review-reply-desk): Give it each new batch of public reviews. Get a checked reply for each, with risky ones held and repeat complaints flagged.
 - [Public review reply drafter](https://useaiblocks.com/skills/public-review-reply-drafter): Paste your store reviews. Get a specific reply to each, with risky ones flagged and no refunds promised.
@@ -30,6 +34,7 @@
 - [Support desk automation builder](https://useaiblocks.com/skills/support-desk-automation-builder): Tell it your help desk and tools. Get scripts, reply templates and a triage routine that drafts replies.
 - [Support inbox priority sorter](https://useaiblocks.com/skills/support-inbox-priority-sorter): Paste a support ticket. Get its category, P1 to P4 priority, owning team and any known duplicate.
 - [Support ticket sorter](https://useaiblocks.com/skills/support-ticket-sorter): Give it incoming tickets. Get each one classified, ranked by severity, routed and given a first reply.
+- [Track promises made to pilot customers](https://useaiblocks.com/workflows/track-promises-made-to-pilot-customers): Share the source files. Get a customer promise register, conflicting commitments and update drafts.
 - [Turn repeat customer questions into help pages people understand](https://useaiblocks.com/workflows/turn-repeat-customer-questions-into-help-pages-people-understand): Give it the questions you answer every week. Get checked help pages a stranger can follow.
 - [Voice assistant builder](https://useaiblocks.com/skills/voice-assistant-builder): Say what your voice assistant should do. Get a working agent that talks with customers, with tools and a web embed.
 - [WhatsApp marketing planner](https://useaiblocks.com/skills/whatsapp-marketing-planner): Describe your business. Get a WhatsApp setup with broadcasts, automatic replies and support flows.

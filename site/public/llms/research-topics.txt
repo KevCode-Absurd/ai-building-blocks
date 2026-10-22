@@ -1,12 +1,13 @@
 # Research a topic properly: AI Blocks
 
-> 84 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 91 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [16S microbiome read processor](https://useaiblocks.com/skills/16s-microbiome-read-processor): Give it paired 16S reads and primers. Get a sequence variant table, species labels and a repeatable record.
 - [AI answer doubt check](https://useaiblocks.com/skills/ai-answer-doubt-check): After any AI explanation, you name one place it could be wrong, one thing to check and one source to try.
 - [AI claim fact-check lesson builder](https://useaiblocks.com/skills/ai-fact-check-lesson): Give it a topic. Get a step-by-step way for students to check AI claims and citations before they trust them.
 - [AI research paper writer](https://useaiblocks.com/skills/ai-research-paper-writer): Give it your research code and results. Get a paper draft for a top AI conference, with citations checked.
 - [Battery cycling simulator](https://useaiblocks.com/skills/battery-cycling-simulator): Describe a battery and a charge plan. Get simulated voltage curves, tested for solver error and compared with real data.
+- [Bibliography revision review assistant](https://useaiblocks.com/agents/bibliography-revision-review-assistant): A manuscript reference cross check, duplicate candidates and unresolved source requests.
 - [Biomedical link finder](https://useaiblocks.com/skills/biomedical-link-finder): Name a disease, gene or drug. Get linked facts from a biomedical knowledge graph, each with its source.
 - [Body signal analysis builder](https://useaiblocks.com/skills/body-signal-analysis-builder): Give it heart, skin or breathing signals. Get a cleaned, checked analysis of events and variability.
 - [Brain imaging dataset organizer](https://useaiblocks.com/skills/brain-imaging-dataset-organizer): Give it brain imaging files. Get them named, laid out and described to the BIDS standard, with problems flagged.
@@ -15,11 +16,14 @@
 - [Cancer imaging data finder](https://useaiblocks.com/skills/cancer-imaging-data-finder): Describe the scans you need. Get matching public cancer images, licence details and download commands.
 - [Carbon-13 flux estimator](https://useaiblocks.com/skills/carbon-13-flux-estimator): Give it carbon-13 tracing data. Get estimated metabolic fluxes, fit checks and a profile you can trust.
 - [Cell direction velocity analyst](https://useaiblocks.com/skills/cell-direction-velocity-analyst): Give it single-cell counts with spliced reads. Get cell direction arrows, timing and the genes that drive them.
+- [Check a conference abstract against results](https://useaiblocks.com/workflows/check-a-conference-abstract-against-results): Share the source files. Get a source-linked abstract revision and overclaim list.
 - [Check a paper's claims and write a fair peer review](https://useaiblocks.com/workflows/review-a-paper-and-write-a-fair-peer-review): Give it the manuscript. Get a claim check, a methods review and a fair, kind peer review.
+- [Check manuscript reference consistency](https://useaiblocks.com/workflows/check-manuscript-reference-consistency): Share the source files. Get a manuscript reference cross check, duplicate candidates and unresolved source requests.
 - [Cited research assistant](https://useaiblocks.com/agents/cited-research-assistant): Give it a question. Get a report where every claim has a source, or is marked unsourced after three rounds.
 - [Cited research report writer](https://useaiblocks.com/skills/cited-research-report-writer): Ask a question. Get a cited report with each claim checked against its source quote. Uses many tokens. Scrapes sites.
 - [Clinical research evidence packager](https://useaiblocks.com/skills/clinical-evidence-package): Give it study data that is safe to share. Get evidence profiles, cohort and survival summaries and privacy notes.
 - [Compare a list of options and get one checked report](https://useaiblocks.com/workflows/compare-a-list-of-options-and-get-one-checked-report): Name a topic. Get a list of items to compare, each one researched, and one report without unsure answers.
+- [Compare conflicting research findings](https://useaiblocks.com/workflows/compare-conflicting-research-findings): Share the source files. Get a paper comparison, disagreement map and evidence gaps.
 - [Conference talk slide maker](https://useaiblocks.com/skills/conference-talk-slide-maker): Give it your finished paper. Get talk slides, speaker notes and a script for a conference talk.
 - [CRISPR screen hit ranker](https://useaiblocks.com/skills/crispr-screen-hit-ranker): Give it guide read counts. Get quality checks and a ranked gene hit list with effect sizes.
 - [Draft a paper, review it and fit your journal's rules](https://useaiblocks.com/workflows/draft-a-paper-review-it-and-fit-your-journals-rules): Name your topic and bring your results. Get sources, a draft, a fair review and a paper fitted to the journal.
@@ -40,6 +44,7 @@
 - [Journal-ready figure maker](https://useaiblocks.com/skills/journal-ready-figure-maker): Give it your data. Get clear, honest, colour-safe figures with uncertainty shown, sized for journal export.
 - [Manuscript evidence gatherer](https://useaiblocks.com/skills/manuscript-evidence-gatherer): Name your paper topic. Get a packet of current sources, competing findings and background, each with its link.
 - [Manuscript peer review drafter](https://useaiblocks.com/skills/manuscript-peer-review-drafter): Give it a paper or proposal. Get a fair, evidence-based review with claim checks, method critique and revision steps.
+- [Map journal reviewer requests to evidence](https://useaiblocks.com/workflows/map-journal-reviewer-requests-to-evidence): Share the source files. Get a response matrix, revision tasks and unresolved evidence requests.
 - [Market research report writer](https://useaiblocks.com/skills/market-research-report-writer): Name a market. Get a sourced report where every claim has a source, and sizing shows its assumptions.
 - [Microscopy cell counter](https://useaiblocks.com/skills/microscopy-cell-counter): Give it microscope images. Get cell counts, outlines and per-cell brightness, run the same way every time.
 - [Model feature finder](https://useaiblocks.com/skills/model-feature-finder): Give it a language model. Get a small network trained to show which ideas its inner activity stands for.
@@ -54,6 +59,7 @@
 - [Public database fact finder](https://useaiblocks.com/skills/public-database-fact-finder): Name the fact you need and the database. Get it retrieved the same way every time, with source and date.
 - [Quantum system simulator](https://useaiblocks.com/skills/quantum-system-simulator): Describe a quantum system. Get a simulation with stated assumptions and checks that the numbers have settled.
 - [Research a question and write a fully cited report](https://useaiblocks.com/workflows/research-a-question-and-write-a-cited-report): Give it the question. Get an outline, the sources, a cited report and a check of every claim.
+- [Research contradiction review assistant](https://useaiblocks.com/agents/research-contradiction-review-assistant): A paper comparison, disagreement map and evidence gaps.
 - [Research grant proposal coach](https://useaiblocks.com/skills/research-grant-proposal-coach): Name the funder and your idea. Get aims, a compliance checklist, a budget outline and a critique of your draft.
 - [Research hypothesis builder](https://useaiblocks.com/skills/research-hypothesis-builder): Describe what you observed. Get testable hypotheses, rival explanations, predictions and a plan to test them.
 - [Research idea finder](https://useaiblocks.com/skills/research-idea-finder): Describe your field or stuck project. Get ten ways to find research ideas worth chasing, with the best ones ranked.
@@ -64,6 +70,7 @@
 - [Research question outliner](https://useaiblocks.com/prompts/research-question-outliner): Paste a research question. Get sub-questions, sources to find and what a good answer needs.
 - [Research results report builder](https://useaiblocks.com/skills/research-results-report-builder): Give it your research files. Get one report with a contents list and every checked answer. Unsure ones are left out.
 - [Research topic watcher](https://useaiblocks.com/agents/research-topic-watcher): Name a topic once. Each month get the new papers, which ones are strong, and whether they change what you believe.
+- [Reviewer response progress assistant](https://useaiblocks.com/agents/reviewer-response-progress-assistant): A response matrix, revision tasks and unresolved evidence requests.
 - [RNA-seq comparison preparer](https://useaiblocks.com/skills/rna-seq-comparison-preparer): Give it sequencing output. Get counts ready to compare gene activity between groups, with replicate and setup checks.
 - [RNA-seq group difference finder](https://useaiblocks.com/skills/rna-seq-group-difference-finder): Give it gene counts for two or more groups. Get which genes changed, with checks, corrected p-values and plots.
 - [Scholarly database searcher](https://useaiblocks.com/skills/scholarly-database-searcher): Ask a research question. Get papers, preprints, citations and open full text from 18 free sources, with the search shown.

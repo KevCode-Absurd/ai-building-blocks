@@ -1,0 +1,51 @@
+slug: pilot-customer-promise-review-assistant
+name: Pilot customer promise review assistant
+summary: A customer promise register, conflicting commitments and update drafts.
+category: agent
+type: agent
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: meeting_notes
+    required: false
+  - type: question
+    required: false
+outputs:
+  - type: plan
+  - type: document
+uses:
+  - track-promises-made-to-pilot-customers
+  - handover-note-writer
+steps:
+  - uses: track-promises-made-to-pilot-customers
+    note: "Run when: An accepted pilot commitment changes or actual delivery evidence arrives."
+  - uses: handover-note-writer
+    note: Run track-promises-made-to-pilot-customers for changed evidence or a due review. If responsibility transfers, prepare the new owner handover and preserve unaccepted assignments as proposals. Do not tell customers an unverified promise is delivered.
+schedule: At a user-requested pilot commitment review. Installation does not create a schedule.
+asks_before:
+  - Sending or submitting any message or form
+  - Changing a live account, calendar, task, permission or published document
+  - Spending money, releasing a payment or signing a contract
+  - Starting or changing any recurring schedule
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/next-100-data.mjs
+example_pending: true
+credits:
+  - title: Executive action register keeper
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/executive-action-register
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Stakeholder update writer
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/product-management/skills/stakeholder-update
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Handover note writer
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/handover-note-writer
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

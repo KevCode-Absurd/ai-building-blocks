@@ -1,0 +1,42 @@
+slug: prepare-questions-for-a-property-viewing
+name: Prepare questions for a property viewing
+summary: Share the source files. Get a source-linked viewing brief and questions to verify in person.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: false
+  - type: copy_draft
+    required: false
+outputs:
+  - type: document
+  - type: audit_report
+uses:
+  - source-note-summariser
+  - unsupported-claim-spotter
+steps:
+  - uses: source-note-summariser
+    note: Extract actual supplied price, area, access, condition statements and terms with their source and date; separate facts from listing assertions.
+  - uses: unsupported-claim-spotter
+    note: Check listing assertions and the existing viewing notes for unsupported guarantees, missing measurements and claims needing official or qualified evidence.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/next-100-data.mjs
+example_pending: true
+credits:
+  - title: Source note summariser
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/source-note-summariser
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Unsupported claim spotter
+    by: Pro Skill Packs
+    url: https://github.com/proskillpacks/skills/tree/main/skills/writing/fact-claim-checker
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

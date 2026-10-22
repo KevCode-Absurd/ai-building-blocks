@@ -1,0 +1,3 @@
+.next-tool-reading { min-width: 0; margin: 16px 0; padding: 16px; border: 1px solid var(--line); border-radius: 8px; }
+.next-tool-reading legend { padding: 0 6px; }
+.next-tool-reading-item + .next-tool-reading-item { border-top: 1px solid var(--line); margin-top: 20px; padding-top: 20px; }

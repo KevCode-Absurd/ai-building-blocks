@@ -1,0 +1,42 @@
+slug: compare-facilities-service-contract-options
+name: Compare facilities service contract options
+summary: Share the source files. Get a service comparison, contract differences and review questions.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: question
+    required: false
+  - type: document
+    required: false
+outputs:
+  - type: audit_report
+  - type: document
+uses:
+  - vendor-comparison-writer
+  - plain-words-contract-summary
+steps:
+  - uses: vendor-comparison-writer
+    note: Compare supplied service coverage, total costs, mobilization, transition and exit effort using the same site list and contract period.
+  - uses: plain-words-contract-summary
+    note: Summarize the relevant notice, renewal, access, liability and service obligations from each actual contract for qualified review.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/next-100-data.mjs
+example_pending: true
+credits:
+  - title: Vendor comparison writer
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/operations/skills/vendor-review
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Plain-words contract summary
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/plain-words-contract-summary
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

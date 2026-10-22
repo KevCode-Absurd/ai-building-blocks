@@ -1,0 +1,67 @@
+{
+  "checkedOn": "2026-10-22T13:27:11.434Z",
+  "status": "pass",
+  "origin": "http://127.0.0.1:5184",
+  "checks": [
+    {
+      "width": 320,
+      "noOverflow": true,
+      "horizontalOnDesktop": false,
+      "graphEditor": true,
+      "topDownload": true,
+      "downloadedAndRestored": true,
+      "contextFirstHandoff": true
+    },
+    {
+      "width": 390,
+      "noOverflow": true,
+      "horizontalOnDesktop": false,
+      "graphEditor": true,
+      "topDownload": true,
+      "downloadedAndRestored": true,
+      "contextFirstHandoff": true
+    },
+    {
+      "width": 768,
+      "noOverflow": true,
+      "horizontalOnDesktop": false,
+      "graphEditor": true,
+      "topDownload": true,
+      "downloadedAndRestored": true,
+      "contextFirstHandoff": true
+    },
+    {
+      "width": 1024,
+      "noOverflow": true,
+      "horizontalOnDesktop": true,
+      "graphEditor": true,
+      "topDownload": true,
+      "downloadedAndRestored": true,
+      "contextFirstHandoff": true
+    },
+    {
+      "width": 1440,
+      "noOverflow": true,
+      "horizontalOnDesktop": true,
+      "graphEditor": true,
+      "topDownload": true,
+      "downloadedAndRestored": true,
+      "contextFirstHandoff": true
+    },
+    {
+      "width": 1920,
+      "noOverflow": true,
+      "horizontalOnDesktop": true,
+      "graphEditor": true,
+      "topDownload": true,
+      "downloadedAndRestored": true,
+      "contextFirstHandoff": true
+    },
+    {
+      "loadingAnimation": "pass",
+      "fixtureOnly": true,
+      "modelCostHidden": true
+    }
+  ],
+  "providerCalls": 0
+}

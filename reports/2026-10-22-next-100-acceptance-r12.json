@@ -1,0 +1,43 @@
+{
+  "checkedOn": "2026-10-22T13:13:51.954Z",
+  "status": "verified-frozen-build-ready-for-publication",
+  "assets": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r12-voice-workflow\\assets",
+  "counts": {
+    "tools": 25,
+    "workflows": 55,
+    "agents": 20,
+    "total": 100
+  },
+  "unitChecks": 50,
+  "typeScript": "pass",
+  "browserCases": 104,
+  "actualDownloadedPacks": 75,
+  "independentDeterministicPackAssemblies": 75,
+  "phonePages": 50,
+  "visuallyInspectedScreenshots": 6,
+  "nativeAdapterFixtureChecks": 4,
+  "providerCallsForThisBatch": 0,
+  "reports": [
+    {
+      "file": "reports/2026-10-22-next-100-browser-qa.json",
+      "sha256": "2a8b59aaa0ea6ebf55b84e29bdf52ebd61209afd129b0fc60fde4c55a47db486"
+    },
+    {
+      "file": "reports/2026-10-22-next-100-packs-qa.json",
+      "sha256": "73e1cb7c90060e9e0168f7f4d2577f49f71df11b4ff6411a697b7af9c2b4369a"
+    },
+    {
+      "file": "reports/next-100-independent-method-review.json",
+      "sha256": "763104189f9a8d97ff55fd548a493f67602c5ccced757e28677f721132b3c353"
+    },
+    {
+      "file": "reports/next-100-independent-tools-review.json",
+      "sha256": "aa9ebe1274dbacc05e72aaa9d5400cdc6d9fa14aaeefca78a81400416b7bbef2"
+    },
+    {
+      "file": "reports/next-100-adapter-checks.json",
+      "sha256": "b9b2bb6f0d2d4329d8f50ec188b77c7c2730f9594056a03ec9186f4f578b2f3d"
+    }
+  ],
+  "limits": "Workflow methods, handoffs, downloads and source applicability were checked; execution of every business workflow through an AI model is not claimed. Production publication and live exact-file verification are tracked by the publishing chat."
+}

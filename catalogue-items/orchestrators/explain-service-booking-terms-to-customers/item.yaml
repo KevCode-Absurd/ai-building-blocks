@@ -1,0 +1,45 @@
+slug: explain-service-booking-terms-to-customers
+name: Explain service booking terms to customers
+summary: Share the source files. Get a booking terms summary, revised explanation and unresolved questions.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: document
+    required: false
+  - type: copy_draft
+    required: false
+  - type: brand_brain
+    required: false
+outputs:
+  - type: document
+  - type: copy_draft
+  - type: feedback_notes
+uses:
+  - plain-words-contract-summary
+  - plain-english-editor
+steps:
+  - uses: plain-words-contract-summary
+    note: Summarize the actual booking duties, payments, cancellation, refund and notice provisions with clause references. Leave unclear legal meaning for the responsible reviewer.
+  - uses: plain-english-editor
+    note: Edit the supplied customer explanation draft against the sourced summary, retaining exceptions, effective dates and uncertain terms.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/next-100-data.mjs
+example_pending: true
+credits:
+  - title: Plain-words contract summary
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/plain-words-contract-summary
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Plain English editor
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/plain-english-editor
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

@@ -1,0 +1,44 @@
+slug: review-equity-valuation-sensitivity-assumptions
+name: Review equity valuation sensitivity assumptions
+summary: Share the source files. Get a checked valuation scenario report and assumption challenge list.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: false
+  - type: spreadsheet
+    required: false
+  - type: copy_draft
+    required: false
+outputs:
+  - type: document
+  - type: audit_report
+uses:
+  - equity-research-valuation-report-builder
+  - unsupported-claim-spotter
+steps:
+  - uses: equity-research-valuation-report-builder
+    note: Use the real valuation engine and matching strict validator to check scenario inputs and arithmetic. Retain the source ledger and inspect the actual rendered report. Treat sensitivities as scenarios, never price predictions.
+  - uses: unsupported-claim-spotter
+    note: Check thesis and valuation commentary against the filings, dated prices and actual scenario results. Flag implied certainty and missing counter-evidence; give no personalized investment recommendation.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/next-100-data.mjs
+example_pending: true
+credits:
+  - title: Equity research and valuation report builder
+    by: evilhill
+    url: https://github.com/evilhill/equity-research-skill
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Unsupported claim spotter
+    by: Pro Skill Packs
+    url: https://github.com/proskillpacks/skills/tree/main/skills/writing/fact-claim-checker
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

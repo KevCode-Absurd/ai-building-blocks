@@ -1,0 +1,40 @@
+slug: prepare-a-property-maintenance-handover
+name: Prepare a property maintenance handover
+summary: Share the source files. Get a maintenance handover, access constraints and overdue decisions.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: meeting_notes
+    required: false
+outputs:
+  - type: document
+  - type: plan
+uses:
+  - handover-note-writer
+  - executive-action-register
+steps:
+  - uses: handover-note-writer
+    note: Organize actual ticket status, accepted appointments, access approval locations and urgent escalation contacts for the incoming property lead.
+  - uses: executive-action-register
+    note: Extract confirmed maintenance commitments and unresolved approvals with source IDs. Proposed scheduling or contractor changes stay drafts.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/next-100-data.mjs
+example_pending: true
+credits:
+  - title: Handover note writer
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/handover-note-writer
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Executive action register keeper
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/executive-action-register
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

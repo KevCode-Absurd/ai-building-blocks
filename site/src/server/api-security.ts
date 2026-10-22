@@ -12,7 +12,7 @@ export type SecurityEnv = {
   API_WRITE_LIMITER?: Limiter;
   AI_LIMITER?: Limiter;
 };
-export type SecurityAction = "compose" | "comment" | "create_space";
+export type SecurityAction = "compose" | "transcribe" | "comment" | "create_space";
 const localHosts = new Set(["localhost", "127.0.0.1", "[::1]"]);
 export const localSecurity = (req: Request, env: SecurityEnv) => env.SECURITY_LOCAL === "true" && localHosts.has(new URL(req.url).hostname);
 export const securityJson = (status: number, body: unknown, extra: Record<string, string> = {}) => Response.json(body, {
@@ -30,6 +30,7 @@ export function turnstileAction(req: Request): SecurityAction | null {
   if (req.method !== "POST") return null;
   const path = new URL(req.url).pathname.replace(/\/+$/, "");
   if (path === "/api/compose") return "compose";
+  if (path === "/api/transcribe") return "transcribe";
   if (path === "/api/comments") return "comment";
   if (path === "/api/spaces") return "create_space";
   return null;
@@ -51,10 +52,11 @@ export async function apiSecurity(req: Request, env: SecurityEnv, verify: typeof
   if (!ip) return securityJson(503, { error: "Security verification is unavailable. Please try later." });
   const action = turnstileAction(req);
   const limiter = write ? env.API_WRITE_LIMITER : env.API_READ_LIMITER;
-  if (!limiter || (action === "compose" && !env.AI_LIMITER)) return securityJson(503, { error: "Request protection is unavailable. Please try later." });
+  const paid = action === "compose" || action === "transcribe";
+  if (!limiter || (paid && !env.AI_LIMITER)) return securityJson(503, { error: "Request protection is unavailable. Please try later." });
   try {
     // One shared bucket per visitor and operation class; changing paths/queries cannot reset it.
-    if (!(await limiter.limit({ key: ip })).success || (action === "compose" && !(await env.AI_LIMITER!.limit({ key: ip })).success)) {
+    if (!(await limiter.limit({ key: ip })).success || (paid && !(await env.AI_LIMITER!.limit({ key: ip })).success)) {
       return securityJson(429, { error: "Too many requests. Please wait a minute and try again." }, { "retry-after": "60" });
     }
   } catch { return securityJson(503, { error: "Request protection is unavailable. Please try later." }); }

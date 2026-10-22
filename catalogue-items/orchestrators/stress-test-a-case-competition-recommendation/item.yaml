@@ -1,0 +1,43 @@
+slug: stress-test-a-case-competition-recommendation
+name: Stress test a case competition recommendation
+summary: Share the source files. Get a revised case deck, financial bridge and challenge register.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: false
+  - type: copy_draft
+    required: false
+outputs:
+  - type: slide_deck
+  - type: audit_report
+  - type: document
+uses:
+  - case-competition-slide-deck-builder
+  - unsupported-claim-spotter
+steps:
+  - uses: case-competition-slide-deck-builder
+    note: Follow the actual case framework and checked build adapter. Challenge alternatives, supply real chart data, reconcile the financial bridge and preserve assumptions and sources. Build the editable deck only with the required tools.
+  - uses: unsupported-claim-spotter
+    note: Read the final slide text and source exhibits. Flag unsupported market claims, fabricated customer evidence and scenarios presented as forecasts.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/next-100-data.mjs
+example_pending: true
+credits:
+  - title: Case competition slide deck builder
+    by: Calvinkub
+    url: https://github.com/Calvinkub/super_subagent_skill_Hackathon/tree/main/skills/case-competition-slides
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Unsupported claim spotter
+    by: Pro Skill Packs
+    url: https://github.com/proskillpacks/skills/tree/main/skills/writing/fact-claim-checker
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

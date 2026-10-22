@@ -6,6 +6,7 @@ import worker from '../src/worker.ts';
 import { onRequest as comments } from '../functions/api/comments.ts';
 import { onRequest as spaces } from '../functions/api/spaces/[[path]].ts';
 import { onRequest as compose } from '../functions/api/compose.ts';
+import { onRequest as transcribe } from '../functions/api/transcribe.ts';
 
 const allow = { async limit() { return { success: true }; } };
 const env = () => ({ API_ALLOWED_HOSTS: 'useaiblocks.com', TURNSTILE_SITE_KEY: 'real-site-key', TURNSTILE_SECRET_KEY: 'server-secret', API_READ_LIMITER: allow, API_WRITE_LIMITER: allow, AI_LIMITER: allow });
@@ -13,7 +14,7 @@ const request = (path = '/api/compose', { method = 'POST', host = 'useaiblocks.c
 const verified = (action = 'compose', hostname = 'useaiblocks.com') => async () => Response.json({ success: true, hostname, action });
 
 test('all anonymous actions reject direct calls without a Turnstile token, including trailing slashes', async () => {
-  for (const path of ['/api/compose', '/api/compose/', '/api/comments', '/api/comments/', '/api/spaces', '/api/spaces/']) {
+  for (const path of ['/api/compose', '/api/compose/', '/api/transcribe', '/api/transcribe/', '/api/comments', '/api/comments/', '/api/spaces', '/api/spaces/']) {
     let contacted = false;
     const response = await apiSecurity(request(path), env(), async () => { contacted = true; throw Error(); });
     assert.equal(response.status, 403, path); assert.equal(contacted, false);
@@ -21,7 +22,7 @@ test('all anonymous actions reject direct calls without a Turnstile token, inclu
 });
 test('every adapter and the Worker enforce security before touching D1 or assets', async () => {
   const db = { prepare() { throw Error('D1 must not be reached'); } };
-  for (const [adapter, path] of [[comments, '/api/comments'], [spaces, '/api/spaces'], [compose, '/api/compose']]) {
+  for (const [adapter, path] of [[comments, '/api/comments'], [spaces, '/api/spaces'], [compose, '/api/compose'], [transcribe, '/api/transcribe']]) {
     const e = { ...env(), COMMENTS: db, SPACES: db, COMPOSER: db, ASSETS: { fetch() { throw Error('Assets must not be reached'); } } };
     assert.equal((await adapter({ request: request(path), env: e })).status, 403);
     assert.equal((await worker.fetch(request(path), e)).status, 403);

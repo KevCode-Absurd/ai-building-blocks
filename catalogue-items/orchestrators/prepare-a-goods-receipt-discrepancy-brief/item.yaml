@@ -1,0 +1,42 @@
+slug: prepare-a-goods-receipt-discrepancy-brief
+name: Prepare a goods receipt discrepancy brief
+summary: Share the source files. Get a receipt mismatch table, supplier questions and receiving handover.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: document
+    required: false
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: spreadsheet
+  - type: document
+uses:
+  - invoice-checker
+  - handover-note-writer
+steps:
+  - uses: invoice-checker
+    note: Match actual PO, receipt and invoice lines, preserving item identity, unit conversions supplied by the owner and evidence of partial deliveries.
+  - uses: handover-note-writer
+    note: Brief the incoming receiving or purchasing lead on mismatches, approved holds, unresolved inspection evidence and supplier commitments; do not approve goods or payments.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/next-100-data.mjs
+example_pending: true
+credits:
+  - title: Invoice checker
+    by: Burhan Sebin
+    url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/finance-and-accounting/invoice-processing
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Handover note writer
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/handover-note-writer
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

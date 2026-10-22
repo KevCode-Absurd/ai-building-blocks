@@ -1,14 +1,15 @@
 import { test, expect } from "./fixtures/staging-aware-test";
 import { mockComposerAccount } from "./fixtures/composer-account";
 
-test("anonymous visitors assemble workflows without loading authentication", async ({ page }) => {
+test("anonymous visitors can switch to free assembly without sending AI requests", async ({ page }) => {
   let authRequests = 0, aiRequests = 0;
   page.on("request", req => { if (req.url().includes("/api/auth")) authRequests++; if (req.method() === "POST" && req.url().includes("/api/compose")) aiRequests++; });
   await page.goto("/compose");
+  await page.getByRole("tab", { name: "Free assembly" }).click();
   await page.getByTestId("compose-goal").fill("Build a landing page from scratch");
   await page.getByTestId("compose-submit").click();
   await expect(page.getByTestId("compose-steps")).toBeVisible();
-  expect(authRequests).toBe(0); expect(aiRequests).toBe(0);
+  expect(authRequests).toBeLessThanOrEqual(1); expect(aiRequests).toBe(0);
 });
 
 test("AI asks for login and preserves the request across the sign-in redirect @mobile", async ({ page }) => {

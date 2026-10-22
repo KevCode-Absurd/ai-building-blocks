@@ -1,6 +1,6 @@
 # Handle money and investing: AI Blocks
 
-> 166 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 169 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Accrual schedule drafter](https://useaiblocks.com/skills/accrual-schedule-drafter): Give it the period's expenses and accrual policy. Get a schedule with each entry, its support and a draft journal entry.
 - [Acquisition due diligence planner](https://useaiblocks.com/skills/acquisition-due-diligence): Describe the deal. Get a due diligence checklist, valuation checks, red flags and an integration plan.
@@ -17,6 +17,7 @@
 - [Bookings forecast builder](https://useaiblocks.com/skills/bookings-forecast-builder): Give it your pipeline and cohorts. Get a commit, best case and pipe-only forecast with the maths shown.
 - [Borrower credit memo writer](https://useaiblocks.com/skills/borrower-credit-memo-writer): Give it a borrower's accounts. Get a credit memo on repayment ability, debt capacity and covenant room.
 - [Budget and forecast builder](https://useaiblocks.com/skills/budget-and-forecast-builder): Give it your past numbers and plans. Get a budget, a forecast and a note on gaps against actuals.
+- [Build an equity thesis counterevidence brief](https://useaiblocks.com/workflows/build-an-equity-thesis-counterevidence-brief): Share the source files. Get a thesis claim ledger, contradictory evidence and open research questions.
 - [Business asset value estimator](https://useaiblocks.com/skills/asset-floor-estimator): Paste a balance sheet and share price. Get book value, net current assets, sale value and a cash strength rating.
 - [Business investment analyst](https://useaiblocks.com/skills/business-investment-analyst): Describe a purchase. Get payback, return and risk worked out, so you can decide whether to invest.
 - [Business investment scorecard](https://useaiblocks.com/skills/business-tenet-scorecard-writer): Paste your findings on a business. Get ten tests marked pass, fail or unknown, and whether a price check is worthwhile.
@@ -66,6 +67,7 @@
 - [Earnings update report writer](https://useaiblocks.com/skills/earnings-update-report-writer): Give it a company's quarterly results. Get an 8 to 12 page update on beats, misses and key numbers.
 - [Earnings value range builder](https://useaiblocks.com/skills/earnings-value-range-builder): Paste normal earnings and the share price. Get a low, middle and high value and how much of the price is hope.
 - [Earnings week briefing writer](https://useaiblocks.com/skills/earnings-week-briefing-writer): Name a company about to report. Get what to watch, scenario cases and the numbers that matter.
+- [Equity assumption review assistant](https://useaiblocks.com/agents/equity-assumption-review-assistant): A checked valuation scenario report and assumption challenge list.
 - [Equity research and valuation report builder](https://useaiblocks.com/skills/equity-research-valuation-report-builder): Share company reports and a dated share price. Get a stock research report with value ranges, source checks and clear assumptions.
 - [ESG report preparer](https://useaiblocks.com/skills/esg-report-preparer): Give it your environmental, social and governance data. Get a draft sustainability report or a check of an existing one.
 - [Expected credit loss calculator](https://useaiblocks.com/skills/expected-credit-loss-calculator): Give it loan data. Get expected credit losses worked out under IFRS 9 or CECL.
@@ -133,6 +135,7 @@
 - [Retirement savings projector](https://useaiblocks.com/skills/retirement-savings-projector): Give it your age, savings and goals. Get a projected nest egg and the gap to your target.
 - [Return on equity and margin checker](https://useaiblocks.com/skills/roe-margin-check): Paste several years of a company's accounts. Get return on equity, margins and a one-dollar test, each marked pass or fail.
 - [Revenue recognition checker](https://useaiblocks.com/skills/revenue-recognition-checker): Give it a customer contract. Get its promises, price split and timing of revenue under IFRS 15 or ASC 606.
+- [Review equity valuation sensitivity assumptions](https://useaiblocks.com/workflows/review-equity-valuation-sensitivity-assumptions): Share the source files. Get a checked valuation scenario report and assumption challenge list.
 - [Review your investments by business results, not price](https://useaiblocks.com/workflows/investment-results-review): Give it your holdings. Get each judged on business results, a short ranked list with sizes and rules for sitting still.
 - [Room for error plan checker](https://useaiblocks.com/skills/room-for-error-plan-checker): Paste a budget or business plan. Get a survival score out of 100, where it breaks in a bad year, and fixes.
 - [SaaS metrics coach](https://useaiblocks.com/skills/saas-metrics-coach): Share your revenue and customers. Get your ARR, churn, CAC and LTV read, with what to fix first.

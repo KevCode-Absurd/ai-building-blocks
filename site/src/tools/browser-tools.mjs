@@ -1,4 +1,7 @@
 // Small, private browser utilities. Shared metadata keeps routes, search and SEO aligned.
+import { NEXT_TOOLS } from './next-100-tools.mjs';
+import { parseCsv, csvToJson } from './csv-utils.mjs';
+export { parseCsv, csvToJson } from './csv-utils.mjs';
 export const BROWSER_TOOLS = [
   { slug: "word-counter", short: "Word and reading counter", category: "personal", summary: "Count words, characters and reading time before you send or publish your writing." },
   { slug: "text-cleaner", short: "Text cleaner", category: "personal", summary: "Remove extra spaces and empty lines, and change text case without losing your original." },
@@ -7,6 +10,7 @@ export const BROWSER_TOOLS = [
   { slug: "csv-to-json", short: "CSV to JSON converter", category: "operations", summary: "Turn a CSV table into JSON, including quoted commas, multiline cells and empty values." },
   { slug: "task-priority-planner", short: "Task priority planner", category: "personal", summary: "Rank tasks by impact, urgency and hours of effort so you can choose what to do next." },
   { slug: "weighted-decision-matrix", short: "Weighted decision matrix", category: "work", summary: "Compare options against criteria you choose, with visible weights and scores." },
+  ...NEXT_TOOLS,
 ].map(t => ({ ...t, name: t.short, headline: t.short, kind: "browser", question: t.summary }));
 
 export function countText(text, wordsPerMinute = 200) {
@@ -33,37 +37,6 @@ export function contrastRatio(a, b) {
   };
   const x = luminance(a), y = luminance(b);
   return (Math.max(x, y) + 0.05) / (Math.min(x, y) + 0.05);
-}
-export function parseCsv(text) {
-  const input = text.replace(/^\uFEFF/, "").replace(/\r\n?/g, "\n");
-  if (!input.trim()) return [];
-  const rows = []; let row = [], field = "", quoted = false, closed = false;
-  for (let i = 0; i < input.length; i++) {
-    const c = input[i];
-    if (quoted) {
-      if (c === '"' && input[i + 1] === '"') { field += '"'; i++; }
-      else if (c === '"') { quoted = false; closed = true; }
-      else field += c;
-    } else if (c === "," || c === "\n") {
-      row.push(field); field = ""; closed = false;
-      if (c === "\n") { rows.push(row); row = []; }
-    } else if (c === '"' && field === "" && !closed) quoted = true;
-    else if (closed || c === '"') throw Error("Check the quotation marks. Quote the entire cell and double any quote inside it.");
-    else field += c;
-  }
-  if (quoted) throw Error("A quoted cell has no closing quotation mark.");
-  if (field !== "" || row.length || closed) rows.push([...row, field]);
-  return rows;
-}
-export function csvToJson(text) {
-  const [headers, ...rows] = parseCsv(text);
-  if (!headers) return [];
-  const keys = headers.map(s => s.trim());
-  if (keys.some(s => !s) || new Set(keys).size !== keys.length) throw Error("Give every column a different, nonempty heading.");
-  return rows.map((row, i) => {
-    if (row.length !== keys.length) throw Error(`Row ${i + 2} has ${row.length} cells; expected ${keys.length}.`);
-    return Object.fromEntries(keys.map((key, col) => [key, row[col]]));
-  });
 }
 /** Validate with JSON.parse, but retain original tokens so numeric precision and duplicate keys survive formatting. */
 export function formatJson(text, compact = false) {

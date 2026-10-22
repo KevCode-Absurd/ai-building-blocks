@@ -1,0 +1,50 @@
+slug: map-journal-reviewer-requests-to-evidence
+name: Map journal reviewer requests to evidence
+summary: Share the source files. Get a response matrix, revision tasks and unresolved evidence requests.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: false
+  - type: meeting_notes
+    required: false
+outputs:
+  - type: document
+  - type: plan
+  - type: copy_draft
+uses:
+  - source-note-summariser
+  - executive-action-register
+  - proofreader
+steps:
+  - uses: source-note-summariser
+    note: Read the reviewer comments and manuscript; map each comment to the relevant section and available evidence without claiming a revision has been made.
+  - uses: executive-action-register
+    note: Turn explicit author commitments into a versioned response register. Separate proposed work from accepted tasks and retain missing owners and dates.
+  - uses: proofreader
+    note: If an actual response draft was supplied, check respectful wording, consistent comment numbering and manuscript references. If no draft exists, explicitly skip this optional proofreading step and return the response matrix and tasks; do not invent experimental findings.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/next-100-data.mjs
+example_pending: true
+credits:
+  - title: Source note summariser
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/source-note-summariser
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Executive action register keeper
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/executive-action-register
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Proofreader
+    by: Burhan Sebin
+    url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/writing-and-content/proofreading
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

@@ -1,0 +1,51 @@
+slug: property-maintenance-evidence-review-assistant
+name: Property maintenance evidence review assistant
+summary: A maintenance handover, access constraints and overdue decisions.
+category: agent
+type: agent
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: meeting_notes
+    required: false
+  - type: source_text
+    required: false
+outputs:
+  - type: document
+  - type: plan
+uses:
+  - prepare-a-property-maintenance-handover
+  - source-note-summariser
+steps:
+  - uses: prepare-a-property-maintenance-handover
+    note: "Run when: A maintenance status, accepted appointment or access approval changes."
+  - uses: source-note-summariser
+    note: Run prepare-a-property-maintenance-handover for changed evidence or a due review. If completion is claimed, check the actual ticket closure evidence before marking it complete. Missing access or safety approval remains a blocker for the responsible professional.
+schedule: At a user-requested maintenance review. Installation does not create a schedule.
+asks_before:
+  - Sending or submitting any message or form
+  - Changing a live account, calendar, task, permission or published document
+  - Spending money, releasing a payment or signing a contract
+  - Starting or changing any recurring schedule
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/next-100-data.mjs
+example_pending: true
+credits:
+  - title: Handover note writer
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/handover-note-writer
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Executive action register keeper
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/executive-action-register
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Source note summariser
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/source-note-summariser
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

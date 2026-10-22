@@ -1,0 +1,40 @@
+slug: check-production-shift-staffing-commitments
+name: Check production shift staffing commitments
+summary: Share the source files. Get a shift staffing comparison, dependency gaps and handover options.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: question
+    required: false
+outputs:
+  - type: plan
+  - type: document
+uses:
+  - team-capacity-planner
+  - handover-note-writer
+steps:
+  - uses: team-capacity-planner
+    note: Compare committed work and real available qualified hours, preserving maintenance, setup, leave and dependency constraints rather than treating every paid hour as production time.
+  - uses: handover-note-writer
+    note: Prepare the shift lead handover of supported delivery options, blockers, approved priorities and decisions needing the production owner.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/next-100-data.mjs
+example_pending: true
+credits:
+  - title: Team capacity planner
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/operations/skills/capacity-plan
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Handover note writer
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/handover-note-writer
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

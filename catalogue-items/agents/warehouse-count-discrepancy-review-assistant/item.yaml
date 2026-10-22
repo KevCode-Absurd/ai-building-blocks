@@ -1,0 +1,54 @@
+slug: warehouse-count-discrepancy-review-assistant
+name: Warehouse count discrepancy review assistant
+summary: A reconciled stock variance table, evidence gaps and review brief.
+category: agent
+type: agent
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: spreadsheet
+    required: false
+  - type: question
+    required: false
+  - type: meeting_notes
+    required: false
+outputs:
+  - type: spreadsheet
+  - type: document
+  - type: plan
+uses:
+  - explain-a-warehouse-stock-count-variance
+  - executive-action-register
+steps:
+  - uses: explain-a-warehouse-stock-count-variance
+    note: "Run when: A revised count or intervening movement record is supplied for the same snapshot."
+  - uses: executive-action-register
+    note: Run explain-a-warehouse-stock-count-variance for changed evidence or a due review. If a variance persists after reconciliation, prepare investigation actions from explicit owner commitments; never post a stock adjustment or infer fraud.
+schedule: When a warehouse owner requests a recount comparison. Installation does not create a schedule.
+asks_before:
+  - Sending or submitting any message or form
+  - Changing a live account, calendar, task, permission or published document
+  - Spending money, releasing a payment or signing a contract
+  - Starting or changing any recurring schedule
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/next-100-data.mjs
+example_pending: true
+credits:
+  - title: Spreadsheet checker
+    by: Burhan Sebin
+    url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/documents-and-files/spreadsheet-analysis
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Stakeholder update writer
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/product-management/skills/stakeholder-update
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Executive action register keeper
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/executive-action-register
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

@@ -7,6 +7,7 @@ import { handleSpaces, memorySpaces } from "./src/server/spaces";
 import { decodeCatalogue, handleComposer, memoryComposer } from "./src/server/composer";
 import { loadWorkflowEnv } from "../tools/lib/workflow-env.mjs";
 import { authenticateUser, authConfigured, handleAccount } from "./src/server/auth";
+import { handleTranscription, MAX_VOICE_BYTES } from "./src/server/transcription";
 
 function devSecurity(): Plugin {
   return { name: "dev-security", configureServer(server) {
@@ -24,6 +25,15 @@ function devComposer(): Plugin {
   const publicAuth = loadEnv("development", process.cwd(), "VITE_CLERK_");
   const env = { ...keys, ...auth, CLERK_PUBLISHABLE_KEY: auth.CLERK_PUBLISHABLE_KEY || publicAuth.VITE_CLERK_PUBLISHABLE_KEY || keys.CLERK_PUBLISHABLE_KEY, WORKFLOW_COMPOSER_ENABLED: keys.WORKFLOW_COMPOSER_ENABLED ?? "true", WORKFLOW_DAILY_CAP_USD: keys.WORKFLOW_DAILY_CAP_USD ?? "2" };
   return { name: "dev-composer", configureServer(server) {
+    server.middlewares.use("/api/transcribe", async (req, res) => {
+      try {
+        const chunks: Buffer[] = []; let bytes = 0;
+        for await (const chunk of req) { bytes += chunk.length; if (bytes > MAX_VOICE_BYTES) { res.statusCode = 413; res.end('{"error":"Recording too large"}'); return; } chunks.push(chunk as Buffer); }
+        const request = new Request(`http://${req.headers.host}/api/transcribe`, { method: req.method, headers: req.headers as Record<string, string>, body: req.method === "POST" ? Buffer.concat(chunks) : undefined });
+        const out = await handleTranscription(request, { ...env, WORKFLOW_SALT: env.WORKFLOW_SALT || "local-development" }, store, req.socket.remoteAddress ?? "");
+        res.statusCode = out.status; out.headers.forEach((v, k) => res.setHeader(k, v)); res.end(await out.text());
+      } catch { res.statusCode = 503; res.end('{"error":"Voice input is temporarily unavailable."}'); }
+    });
     server.middlewares.use("/api/auth", async (req, res) => {
       try {
         const request = new Request(`http://${req.headers.host}/api/auth${req.url === "/" ? "" : req.url}`, { method: req.method, headers: req.headers as Record<string, string> });

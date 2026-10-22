@@ -1,0 +1,45 @@
+slug: document-a-clinic-appointment-intake-process
+name: Document a clinic appointment intake process
+summary: Share the source files. Get an administrative intake procedure and unresolved process questions.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: question
+    required: false
+  - type: copy_draft
+    required: false
+  - type: brand_brain
+    required: false
+outputs:
+  - type: document
+  - type: copy_draft
+  - type: feedback_notes
+uses:
+  - process-and-sop-writer
+  - plain-english-editor
+steps:
+  - uses: process-and-sop-writer
+    note: Document administrative booking, identity checks, consent handling, approved information collection and escalation using only the clinic supplied process. Exclude diagnosis and clinical prioritization.
+  - uses: plain-english-editor
+    note: Edit the actual administrative procedure produced in the prior step for clear staff actions while preserving approved clinical boundaries and privacy instructions.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/next-100-data.mjs
+example_pending: true
+credits:
+  - title: Process and SOP writer
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/operations/skills/process-doc
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Plain English editor
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/plain-english-editor
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

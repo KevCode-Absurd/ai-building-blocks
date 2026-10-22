@@ -1,4 +1,6 @@
 import SkillReplace, { ReplaceMenu } from "./SkillReplace";
+import { assignedCustomMinds, withCustomMinds, type CustomMind } from "./lib/custom-minds";
+import { useMyMinds } from "./lib/mind-library";
 import { withCustomSkills, replaceFlowSkill, type CustomSkill } from "./lib/custom-skills";
 import { spaceKey, spaces } from "./lib/space";
 import { createContext, memo, useCallback, useContext, useDeferredValue, useEffect, useMemo, useRef, useState, type CSSProperties, type DragEvent } from "react";
@@ -25,7 +27,7 @@ import { setSearch } from "./lib/router";
 import { EndPanel, FlowEdge, type FlowEdgeT, GoalBox, STEP_S, Sample, StartPanel, type StartPatch, StepList, StepPanel, sampleOf } from "./BuilderParts";
 
 /** mind is the one you picked for the step; lead is who actually leads it (yours, or your team's pick), worked out each time. */
-type NodeData = { slug: string; ecommerce?: boolean; step?: number; run?: number; delay?: number; role?: string; notes?: string; mind?: string; lead?: string; leadTeam?: boolean; bindings?: FlowNode["bindings"] };
+type NodeData = { slug: string; ecommerce?: boolean; step?: number; run?: number; delay?: number; role?: string; notes?: string; mind?: string; minds?: string[]; lead?: string; leadTeam?: boolean; bindings?: FlowNode["bindings"] };
 type BlockNode = Node<NodeData, "block">;
 // Start and End aren't steps. They're drawn from the steps each time, so they can't be dragged off, deleted or saved wrong.
 const START = "__start", END = "__end";
@@ -56,7 +58,7 @@ const BlockNodeView = memo(function BlockNodeView({ id, data }: NodeProps<BlockN
       <div className="top">{b ? <span className="kind">{KINDS.find((k) => k.id === kindOf(b))!.name}</span> : <span className="small">Missing block</span>}<span className="step-n">{data.step ? `Step ${data.step}` : ""}</span></div>
       <div className="nm">{b?.type === "mind" && <PixelFace face={b.face} area={b.area} slug={b.slug} size={28} className="node-face" />}{b?.name ?? data.slug}</div>
       {data.lead && c?.bySlug[data.lead] && (
-        <div className="node-mind" data-testid="node-mind"><PixelFace face={c.bySlug[data.lead].face} area={c.bySlug[data.lead].area} slug={data.lead} size={16} />Done like {mindName(c, data.lead)}{data.leadTeam ? " (team)" : ""}</div>
+        <div className="node-mind" data-testid="node-mind"><PixelFace face={c.bySlug[data.lead].face} area={c.bySlug[data.lead].area} slug={data.lead} size={16} />{(data.minds?.length ?? 0) > 1 ? `Council of ${data.minds!.length}` : `Done like ${mindName(c, data.lead)}`}{data.leadTeam ? " (team)" : ""}</div>
       )}
       {(data.role || data.notes) && <div className="node-role" data-testid="node-role">{data.role ? `Role: ${data.role}` : "Has your notes"}</div>}
       {b && (
@@ -105,19 +107,19 @@ function ViewControls({ full, onFull, edit, onTidy }: { full: boolean; onFull: (
 }
 
 const fromFlow = (f: Pick<Flow, "nodes" | "edges">) => ({
-  nodes: f.nodes.map((n): BlockNode => ({ id: n.id, type: "block", position: { x: n.x, y: n.y }, data: { slug: n.slug, ecommerce: n.ecommerce, role: n.role, notes: n.notes, mind: n.mind, bindings: n.bindings } })),
+  nodes: f.nodes.map((n): BlockNode => ({ id: n.id, type: "block", position: { x: n.x, y: n.y }, data: { slug: n.slug, ecommerce: n.ecommerce, role: n.role, notes: n.notes, mind: n.mind, minds: n.minds, bindings: n.bindings } })),
   edges: f.edges.map((e): FlowEdgeT => ({ id: e.id, source: e.from, target: e.to, type: "flow" })),
 });
-type Ends = { customSkills?: CustomSkill[]; goal: string; notes: string; ended: boolean; overseer?: string; team?: Team };
-const endsOf = (f: Flow | null): Ends => ({ customSkills: f?.customSkills, goal: f?.goal ?? "", notes: f?.notes ?? "", ended: !!f?.ended, overseer: f?.overseer, team: f?.team });
+type Ends = { customMinds?: CustomMind[]; customSkills?: CustomSkill[]; goal: string; notes: string; ended: boolean; overseer?: string; team?: Team };
+const endsOf = (f: Flow | null): Ends => ({ customMinds: f?.customMinds, customSkills: f?.customSkills, goal: f?.goal ?? "", notes: f?.notes ?? "", ended: !!f?.ended, overseer: f?.overseer, team: f?.team });
 const toFlow = (id: string, name: string, nodes: BlockNode[], edges: FlowEdgeT[], ends: Ends): Flow => ({
-  id, name, updated: 0, customSkills: ends.customSkills,
-  nodes: nodes.map((n) => ({ id: n.id, slug: n.data.slug, x: Math.round(n.position.x), y: Math.round(n.position.y), ...(n.data.ecommerce ? { ecommerce: true } : {}), ...(n.data.role ? { role: n.data.role } : {}), ...(n.data.notes ? { notes: n.data.notes } : {}), ...(n.data.mind ? { mind: n.data.mind } : {}), ...(n.data.bindings?.length ? { bindings: n.data.bindings } : {}) })),
+  id, name, updated: 0, customSkills: ends.customSkills, customMinds: ends.customMinds,
+  nodes: nodes.map((n) => ({ id: n.id, slug: n.data.slug, x: Math.round(n.position.x), y: Math.round(n.position.y), ...(n.data.ecommerce ? { ecommerce: true } : {}), ...(n.data.role ? { role: n.data.role } : {}), ...(n.data.notes ? { notes: n.data.notes } : {}), ...(n.data.mind ? { mind: n.data.mind } : {}), ...(n.data.minds ? { minds: n.data.minds } : {}), ...(n.data.bindings?.length ? { bindings: n.data.bindings } : {}) })),
   edges: edges.map((e) => ({ id: e.id, from: e.source, to: e.target })),
   ...(ends.goal ? { goal: ends.goal } : {}), ...(ends.notes ? { notes: ends.notes } : {}), ...(ends.ended ? { ended: true } : {}),
   ...(ends.overseer ? { overseer: ends.overseer } : {}), ...(ends.team?.minds.length ? { team: ends.team } : {}),
 });
-const shape = (f: Flow) => JSON.stringify([f.name, f.goal ?? "", f.notes ?? "", f.overseer ?? "", f.team ?? null, f.nodes.map((n) => [n.id, n.slug, n.x, n.y, !!n.ecommerce, n.role ?? "", n.notes ?? "", n.mind ?? ""]), f.edges.map((e) => [e.from, e.to])]);
+const shape = (f: Flow) => JSON.stringify([f.name, f.goal ?? "", f.notes ?? "", f.overseer ?? "", f.team ?? null, f.customMinds ?? [], f.customSkills ?? [], f.nodes.map((n) => [n.id, n.slug, n.x, n.y, !!n.ecommerce, n.role ?? "", n.notes ?? "", n.mind ?? "", n.minds ?? []]), f.edges.map((e) => [e.from, e.to])]);
 const sameFlow = (a: Flow, b: Flow) => shape(a) === shape(b);
 function chain(c: Catalogue, slugs: string[], start = { x: 40, y: 110 }) {
   const nodes: BlockNode[] = slugs.map((slug, i) => ({ id: uid(), type: "block", position: { x: start.x + (i % 3) * 360, y: start.y + Math.floor(i / 3) * 190 }, data: { slug } }));
@@ -213,17 +215,20 @@ function Palette({ c, anchor, inFlow, onAdd, onTemplate, onPlan, showGoal }: {
 
 const typing = (t: EventTarget | null) => { const el = t as HTMLElement | null; return !!el && (/^(INPUT|TEXTAREA|SELECT)$/.test(el.tagName) || el.isContentEditable); };
 
-function Stage({ c: baseCatalogue, toast }: { c: Catalogue; toast: (m: string) => void }) {
+type BuilderProps = { c: Catalogue; toast: (m: string) => void; initialFlow?: Flow; onFlowChange?: (flow: Flow) => void };
+function Stage({ c: baseCatalogue, toast, initialFlow, onFlowChange }: BuilderProps) {
   const saved = useStore((s) => s.flows);
   const narrow = useMedia("(max-width: 760px)");
   // A shared link (/?flow=...) opens as a new workflow; otherwise the one left open last time.
   const shareCode = useMemo(() => new URLSearchParams(location.search).get("flow"), []);
   const shared = useMemo(() => (shareCode ? unpackFlow(baseCatalogue, shareCode) : null), [baseCatalogue, shareCode]);
-  const initial = useMemo(() => shared ?? flows.draft(), [shared]);
+  const initial = useMemo(() => initialFlow ?? shared ?? flows.draft(), [initialFlow, shared]);
   const [flowId, setFlowId] = useState(initial?.id ?? uid());
   const [name, setName] = useState(initial?.name ?? "Untitled workflow");
   const [ends, setEnds] = useState<Ends>(endsOf(initial));
-  const c = useMemo(() => withCustomSkills(baseCatalogue, ends.customSkills), [baseCatalogue, ends.customSkills]);
+  const myMinds = useMyMinds();
+  const mindProfiles = useMemo(() => [...(ends.customMinds ?? []), ...myMinds.filter(m => !ends.customMinds?.some(s => s.slug === m.slug))].slice(0, 12), [myMinds, ends.customMinds]);
+  const c = useMemo(() => withCustomMinds(withCustomSkills(baseCatalogue, ends.customSkills), mindProfiles), [baseCatalogue, ends.customSkills, mindProfiles]);
   const [replacing, setReplacing] = useState<string | null>(null);
   const [contextMenu, setContextMenu] = useState<{ id: string; x: number; y: number } | null>(null);
   const start = useMemo(() => (initial ? fromFlow(initial) : { nodes: [], edges: [] }), [initial]);
@@ -301,7 +306,8 @@ function Stage({ c: baseCatalogue, toast }: { c: Catalogue; toast: (m: string) =
     return () => window.removeEventListener(QUEUED, take);
   }, [c]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  const flow = useMemo(() => toFlow(flowId, name, nodes, edges, ends), [flowId, name, nodes, edges, ends]);
+  const flow = useMemo(() => { const next = toFlow(flowId, name, nodes, edges, ends); return { ...next, customMinds: assignedCustomMinds(next, mindProfiles) }; }, [flowId, name, nodes, edges, ends, mindProfiles]);
+  useEffect(() => { onFlowChange?.(flow); }, [flow, onFlowChange]);
   const order = useMemo(() => orderFlow(flow), [flow]);
   const mismatched = useMemo(() => new Set(typeMismatches(c, flow)), [c, flow]);
   const savedVersion = saved.find((f) => f.id === flowId);
@@ -482,7 +488,7 @@ function Stage({ c: baseCatalogue, toast }: { c: Catalogue; toast: (m: string) =
     setNodes(fromFlow(t).nodes.map((n) => ({ ...n, selected: nodes.find((x) => x.id === n.id)?.selected })));
     refit();
   };
-  const setNotes = useCallback((id: string, patch: { role?: string; notes?: string; mind?: string }) => {
+  const setNotes = useCallback((id: string, patch: { role?: string; notes?: string; mind?: string; minds?: string[] }) => {
     setNodes((ns) => ns.map((n) => (n.id === id ? { ...n, data: { ...n.data, ...patch } } : n)));
   }, [setNodes]);
   const actions = useMemo(() => ({
@@ -511,7 +517,7 @@ function Stage({ c: baseCatalogue, toast }: { c: Catalogue; toast: (m: string) =
   };
   // Saves this workflow into the person's space (src/lib/space.ts), so their team sees it through the space link.
   const toSpace = async () => {
-    if (flow.customSkills?.length) { toast("Custom skills are local to this workflow. Share a link or download its pack to include their source."); return; }
+    if (flow.customSkills?.length || flow.customMinds?.length) { toast("This workflow has custom skills or minds. Download its pack to share all their instructions."); return; }
     if (!spaceKey()) { toast("Make your space first. It's free and takes one click."); window.location.assign("/space"); return; }
     const title = name.trim() || "Untitled workflow";
     try {
@@ -630,10 +636,10 @@ function Stage({ c: baseCatalogue, toast }: { c: Catalogue; toast: (m: string) =
   );
 }
 
-export default function Builder({ c, toast }: { c: Catalogue; toast: (m: string) => void }) {
+export default function Builder({ c, toast, initialFlow, onFlowChange }: BuilderProps) {
   return (
     <CatalogueCtx.Provider value={c}>
-      <ReactFlowProvider><Stage c={c} toast={toast} /></ReactFlowProvider>
+      <ReactFlowProvider><Stage c={c} toast={toast} initialFlow={initialFlow} onFlowChange={onFlowChange} /></ReactFlowProvider>
     </CatalogueCtx.Provider>
   );
 }

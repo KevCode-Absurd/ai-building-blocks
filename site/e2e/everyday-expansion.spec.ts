@@ -8,7 +8,7 @@ test("browser utilities work with edited input and produce downloadable results"
     await expect(page.getByTestId("browser-output")).not.toBeEmpty();
     const download = page.waitForEvent("download");
     await page.getByRole("button", { name: "Download result" }).click();
-    expect((await download).suggestedFilename()).toMatch(/\.(txt|json)$/);
+    expect((await download).suggestedFilename()).toMatch(/\.(txt|json|csv|md|jsonl)$/);
   }
   await page.goto("/tools/csv-to-json");
   await page.getByTestId("browser-input").fill('name,note\nAlex,"Line 1\nLine 2"');

@@ -1,0 +1,51 @@
+slug: prepare-an-ai-pilot-go-decision
+name: Prepare an AI pilot go decision
+summary: Share the source files. Get a pilot evidence brief, data quality gaps and go stop checklist result.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: spreadsheet
+    required: false
+  - type: question
+    required: false
+outputs:
+  - type: plan
+  - type: spreadsheet
+  - type: audit_report
+  - type: document
+uses:
+  - hypothesis-first-design-planner
+  - spreadsheet-checker
+  - decision-checklist-runner
+steps:
+  - uses: hypothesis-first-design-planner
+    note: Review the pilot as a testable hypothesis with predeclared observable signals; preserve actual baseline and avoid retrofitting success criteria.
+  - uses: spreadsheet-checker
+    note: Inspect the actual evaluation case table, denominators, costs, failures and result calculations; distinguish measured performance from anecdotes.
+  - uses: decision-checklist-runner
+    note: Apply the existing ordered pilot approval checklist to the evidence. Retain unknown mandatory items and stop rules; no deployment or budget change occurs.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/next-100-data.mjs
+example_pending: true
+credits:
+  - title: Hypothesis-first design planner
+    by: Wondel.ai
+    url: https://github.com/wondelai/skills/tree/main/lean-ux
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Spreadsheet checker
+    by: Burhan Sebin
+    url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/documents-and-files/spreadsheet-analysis
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Decision checklist runner
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/decision-checklist-runner
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

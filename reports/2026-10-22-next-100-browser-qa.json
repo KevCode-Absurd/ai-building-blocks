@@ -1,0 +1,573 @@
+{
+  "schema": "ai-blocks-browser-qa/1",
+  "checkedOn": "2026-10-22T13:30:37.541Z",
+  "status": "pass",
+  "assets": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r14-final-workflows\\assets",
+  "catalogueSha256": "6757be7af672633794122d2fd0de16e78531fc461039b67209f35069dbab2351",
+  "stats": {
+    "expected": 104,
+    "unexpected": 0,
+    "skipped": 0,
+    "flaky": 0
+  },
+  "method": "One complete 104-case browser run passed against this exact final frozen artifact, including all 75 workflow and agent downloads. Screenshots wait for the actual loader transition. Earlier release reports remain preserved separately.",
+  "sourceRuns": [
+    {
+      "file": "reports/2026-10-22-next-100-browser-r14-full.json",
+      "sha256": "a0dcacff8a23146273f9409bdc3647370caed4d513184a22a0ba9bb85c62719f",
+      "stats": {
+        "startTime": "2026-10-22T13:28:41.566Z",
+        "duration": 70797.439,
+        "expected": 104,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      }
+    }
+  ],
+  "coverage": {
+    "editedToolsAndExactDownloadedResults": 25,
+    "actualWorkflowAndAgentZipDownloads": 75,
+    "phonePages": 50,
+    "phoneWidths": [
+      320,
+      390
+    ],
+    "invalidInputRecovery": 1,
+    "topicAndNameSearch": 1
+  },
+  "visualReview": {
+    "status": "pass",
+    "method": "Viewed all six actual settled screenshots; readable labels and results, usable controls, no horizontal clipping.",
+    "screenshots": [
+      "runs\\next-100-browser-r14\\next-100--mobile-next100-3-b2ba4-ls-and-structured-forms-fit-mobile\\320-csv-column-profiler.png",
+      "runs\\next-100-browser-r14\\next-100--mobile-next100-3-b2ba4-ls-and-structured-forms-fit-mobile\\320-reading-session-scheduler.png",
+      "runs\\next-100-browser-r14\\next-100--mobile-next100-3-b2ba4-ls-and-structured-forms-fit-mobile\\320-utm-link-builder.png",
+      "runs\\next-100-browser-r14\\next-100--mobile-next100-3-fdb74-ls-and-structured-forms-fit-mobile\\390-csv-column-profiler.png",
+      "runs\\next-100-browser-r14\\next-100--mobile-next100-3-fdb74-ls-and-structured-forms-fit-mobile\\390-reading-session-scheduler.png",
+      "runs\\next-100-browser-r14\\next-100--mobile-next100-3-fdb74-ls-and-structured-forms-fit-mobile\\390-utm-link-builder.png"
+    ]
+  },
+  "cases": [
+    {
+      "title": "next100 utility: duplicate-line-remover edits and downloads",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 utility: line-sorter edits and downloads",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 utility: text-line-comparer edits and downloads",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 utility: csv-markdown-table edits and downloads",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 utility: json-array-to-csv edits and downloads",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 utility: csv-column-profiler edits and downloads",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 utility: csv-transposer edits and downloads",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 utility: csv-duplicate-row-remover edits and downloads",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 utility: tsv-to-csv edits and downloads",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 utility: json-lines-validator edits and downloads",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 utility: json-array-to-json-lines edits and downloads",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 utility: json-path-inventory edits and downloads",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 utility: url-query-inspector edits and downloads",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 utility: url-query-builder edits and downloads",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 utility: utm-link-builder edits and downloads",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 utility: url-list-deduplicator edits and downloads",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 utility: unicode-character-inspector edits and downloads",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 utility: html-text-escaper edits and downloads",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 utility: markdown-heading-outline edits and downloads",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 utility: markdown-link-inventory edits and downloads",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 utility: plain-list-to-checklist edits and downloads",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 utility: reading-session-scheduler edits and downloads",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 utility: time-log-summarizer edits and downloads",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 utility: meeting-action-register edits and downloads",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 utility: csv-column-selector edits and downloads",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 workflow download: compare-conflicting-research-findings",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 workflow download: check-manuscript-reference-consistency",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 workflow download: check-a-conference-abstract-against-results",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 workflow download: prepare-a-thesis-defence-evidence-brief",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 workflow download: prepare-research-poster-source-notes",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 workflow download: map-journal-reviewer-requests-to-evidence",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 workflow download: document-a-dataset-analysis-for-reproduction",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 workflow download: prepare-a-survey-findings-briefing",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 workflow download: stress-test-a-case-competition-recommendation",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 workflow download: prepare-case-competition-judge-questions",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 workflow download: review-equity-valuation-sensitivity-assumptions",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 workflow download: build-an-equity-thesis-counterevidence-brief",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 workflow download: set-up-a-capstone-team-agreement",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 workflow download: check-scholarship-application-evidence",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 workflow download: plan-an-internship-learning-review",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 workflow download: review-feedback-on-a-student-reflection",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 workflow download: prepare-a-student-conference-talk",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 workflow download: prepare-a-restaurant-shift-handover",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 workflow download: check-a-catering-order-before-service",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 workflow download: explain-service-booking-terms-to-customers",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 workflow download: prepare-a-hotel-group-booking-handover",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 workflow download: standardize-repair-work-order-intake",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 workflow download: explain-appointment-no-show-patterns",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 workflow download: prepare-a-property-maintenance-handover",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 workflow download: prepare-a-construction-variation-decision",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 workflow download: prepare-questions-for-a-property-viewing",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 workflow download: prepare-a-construction-defects-handover",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 workflow download: compare-facilities-service-contract-options",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 workflow download: prepare-a-grant-spending-evidence-pack",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 workflow download: build-a-volunteer-induction-checklist",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 workflow download: prepare-a-community-event-access-plan",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 workflow download: reconcile-donated-goods-records",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 workflow download: hand-over-a-restricted-fund-program",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 workflow download: prepare-a-goods-receipt-discrepancy-brief",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 workflow download: prepare-a-supplier-corrective-action-review",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 workflow download: check-production-shift-staffing-commitments",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 workflow download: compare-freight-quotes-with-all-charges",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 workflow download: explain-a-warehouse-stock-count-variance",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 workflow download: document-a-clinic-appointment-intake-process",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 workflow download: prepare-a-referral-administration-handover",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 workflow download: check-a-clinic-service-information-page",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 workflow download: measure-a-clinic-administrative-queue",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 workflow download: prepare-a-client-scope-change-brief",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 workflow download: prepare-an-engagement-closeout-evidence-pack",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 workflow download: align-recurring-report-metric-definitions",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 workflow download: preserve-a-procurement-decision-audit-trail",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 workflow download: review-staff-adoption-of-a-policy-change",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 workflow download: prepare-a-due-diligence-document-index",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 workflow download: define-a-customer-support-escalation-agreement",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 workflow download: check-training-transfer-after-a-course",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 workflow download: prepare-an-ai-pilot-go-decision",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 workflow download: hand-over-founder-dependent-operations",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 workflow download: track-promises-made-to-pilot-customers",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 workflow download: prepare-a-funding-pitch-evidence-appendix",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 workflow download: plan-a-manual-first-customer-delivery",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 agent download: research-contradiction-review-assistant",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 agent download: bibliography-revision-review-assistant",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 agent download: reviewer-response-progress-assistant",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 agent download: case-competition-evidence-review-assistant",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 agent download: equity-assumption-review-assistant",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 agent download: capstone-commitment-review-assistant",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 agent download: restaurant-shift-exception-review-assistant",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 agent download: catering-order-change-review-assistant",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 agent download: property-maintenance-evidence-review-assistant",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 agent download: construction-variation-review-assistant",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 agent download: grant-spending-evidence-review-assistant",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 agent download: volunteer-induction-evidence-review-assistant",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 agent download: supplier-correction-evidence-review-assistant",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 agent download: warehouse-count-discrepancy-review-assistant",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 agent download: referral-administration-evidence-review-assistant",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 agent download: client-scope-decision-review-assistant",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 agent download: report-definition-drift-review-assistant",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 agent download: procurement-evidence-gap-review-assistant",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 agent download: ai-pilot-evaluation-review-assistant",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 agent download: pilot-customer-promise-review-assistant",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 invalid data blocks downloads and recovers after correction",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "next100 tools can be found by name and topic",
+      "project": "desktop",
+      "status": "passed"
+    },
+    {
+      "title": "@mobile next100 320px tools and structured forms fit",
+      "project": "mobile",
+      "status": "passed"
+    },
+    {
+      "title": "@mobile next100 390px tools and structured forms fit",
+      "project": "mobile",
+      "status": "passed"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+slug: hand-over-founder-dependent-operations
+name: Hand over founder dependent operations
+summary: Share the source files. Get a founder dependency map, readiness gaps and operating handover.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: question
+    required: false
+  - type: document
+    required: false
+outputs:
+  - type: plan
+  - type: document
+uses:
+  - succession-plan-builder
+  - handover-note-writer
+steps:
+  - uses: succession-plan-builder
+    note: Use critical role coverage and readiness evidence methods to map founder-held operations to available deputies, retaining training and capacity gaps.
+  - uses: handover-note-writer
+    note: Prepare the supported deputy handover with deadlines, source locations, escalation and leave-alone rules. Propose access requests without granting access.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/next-100-data.mjs
+example_pending: true
+credits:
+  - title: Succession plan builder
+    by: Tuan Duc Tran
+    url: https://github.com/tuanductran/hr-skills/tree/main/skills/hr-succession-planning
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Handover note writer
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/handover-note-writer
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

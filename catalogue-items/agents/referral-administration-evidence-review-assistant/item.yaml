@@ -1,0 +1,51 @@
+slug: referral-administration-evidence-review-assistant
+name: Referral administration evidence review assistant
+summary: A referral status handover, missing confirmations and follow up drafts.
+category: agent
+type: agent
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: false
+  - type: meeting_notes
+    required: false
+outputs:
+  - type: document
+  - type: plan
+uses:
+  - prepare-a-referral-administration-handover
+  - executive-action-register
+steps:
+  - uses: prepare-a-referral-administration-handover
+    note: "Run when: A new referral receipt, booking or administrative follow-up confirmation is supplied."
+  - uses: executive-action-register
+    note: Run prepare-a-referral-administration-handover for changed evidence or a due review. If an administrative follow-up is explicitly accepted, record its owner and date. Missing clinical urgency always goes to the qualified clinic contact.
+schedule: On request when referral administration records change. Installation does not create a schedule.
+asks_before:
+  - Sending or submitting any message or form
+  - Changing a live account, calendar, task, permission or published document
+  - Spending money, releasing a payment or signing a contract
+  - Starting or changing any recurring schedule
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/next-100-data.mjs
+example_pending: true
+credits:
+  - title: Source note summariser
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/source-note-summariser
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Handover note writer
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/handover-note-writer
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Executive action register keeper
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/executive-action-register
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

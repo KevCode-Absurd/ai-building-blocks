@@ -1,0 +1,48 @@
+slug: prepare-a-thesis-defence-evidence-brief
+name: Prepare a thesis defence evidence brief
+summary: Share the source files. Get a defence outline, evidence index and question preparation notes.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: document
+  - type: slide_deck
+  - type: copy_draft
+uses:
+  - source-note-summariser
+  - presentation-builder
+  - proofreader
+steps:
+  - uses: source-note-summariser
+    note: Extract the thesis contribution, methods, results, limitations and open questions with page references.
+  - uses: presentation-builder
+    note: Work in outline and speaker-notes mode to connect the actual contribution to evidence within the defence duration. Include method choices, counter-explanations and limits as practice questions.
+  - uses: proofreader
+    note: Check the prepared outline and notes for consistent terminology, exact figures and wording; record that no examination or rehearsal has happened.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/next-100-data.mjs
+example_pending: true
+credits:
+  - title: Source note summariser
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/source-note-summariser
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Presentation builder
+    by: Burhan Sebin
+    url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/communication/presentation-creation
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Proofreader
+    by: Burhan Sebin
+    url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/writing-and-content/proofreading
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

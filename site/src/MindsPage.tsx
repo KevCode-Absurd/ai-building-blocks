@@ -6,6 +6,7 @@ import { Link } from "./lib/router";
 import { ArrowIcon } from "./ui";
 import PixelFace from "./PixelFace";
 import { LabelBadges, LabelIcon } from "./MindLabel";
+import MyMinds from "./MyMinds";
 
 const MAX = 7;
 const COUNCIL = "advisory-council";
@@ -43,6 +44,7 @@ export default function MindsPage({ c, toBuilder }: { c: Catalogue; toBuilder: (
       </header>
 
       <section className="wrap minds-body">
+        <MyMinds />
         <section className="council-guide" aria-labelledby="council-guide-h" data-testid="council-guide">
           <h2 id="council-guide-h">Think through a decision with an advisory council</h2>
           <p>An advisory council puts different ways of thinking to work on the same question. One mind may focus on customers, another on money, another on design. You get their recommendations, the strongest disagreement, and three steps to take next.</p>

@@ -1,0 +1,50 @@
+slug: bibliography-revision-review-assistant
+name: Bibliography revision review assistant
+summary: A manuscript reference cross check, duplicate candidates and unresolved source requests.
+category: agent
+type: agent
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: document
+  - type: copy_draft
+  - type: audit_report
+uses:
+  - check-manuscript-reference-consistency
+  - unsupported-claim-spotter
+steps:
+  - uses: check-manuscript-reference-consistency
+    note: "Run when: The manuscript citation set, style requirement or reference metadata changes."
+  - uses: unsupported-claim-spotter
+    note: Run check-manuscript-reference-consistency for changed evidence or a due review. If a citation supports a changed substantive claim, review that claim against the supplied source after the reference consistency check. Do not treat a valid DOI as proof of the claim.
+schedule: At each user-requested manuscript revision. Installation does not create a schedule.
+asks_before:
+  - Sending or submitting any message or form
+  - Changing a live account, calendar, task, permission or published document
+  - Spending money, releasing a payment or signing a contract
+  - Starting or changing any recurring schedule
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/next-100-data.mjs
+example_pending: true
+credits:
+  - title: Source note summariser
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/source-note-summariser
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Proofreader
+    by: Burhan Sebin
+    url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/writing-and-content/proofreading
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Unsupported claim spotter
+    by: Pro Skill Packs
+    url: https://github.com/proskillpacks/skills/tree/main/skills/writing/fact-claim-checker
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

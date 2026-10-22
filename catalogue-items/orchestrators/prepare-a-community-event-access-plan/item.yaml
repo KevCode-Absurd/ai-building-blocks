@@ -1,0 +1,40 @@
+slug: prepare-a-community-event-access-plan
+name: Prepare a community event access plan
+summary: Share the source files. Get an event access run sheet, responsibility map and confirmation requests.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: question
+    required: false
+outputs:
+  - type: plan
+  - type: document
+uses:
+  - stakeholder-map-builder
+  - process-and-sop-writer
+steps:
+  - uses: stakeholder-map-builder
+    note: Map organizers, venue contacts, access providers and affected participants using role information; mark proposed stakeholders and protect personal details.
+  - uses: process-and-sop-writer
+    note: Document arrival, wayfinding, communication, assistance and escalation steps from confirmed venue facts and participant preferences; flag unverified facilities.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/next-100-data.mjs
+example_pending: true
+credits:
+  - title: Stakeholder map builder
+    by: Pawel Huryn
+    url: https://github.com/phuryn/pm-skills/tree/main/pm-execution/skills/stakeholder-map
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Process and SOP writer
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/operations/skills/process-doc
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

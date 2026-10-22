@@ -1,12 +1,13 @@
 # Plan stock, shipping and suppliers: AI Blocks
 
-> 91 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 97 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [3PL bid and agreement builder](https://useaiblocks.com/skills/3pl-bid-and-agreement-builder): Give it forecasts and product sizes. Get a request for pricing and agreement terms to demand.
 - [AI task scoper for supply chain](https://useaiblocks.com/skills/ai-task-scoper-for-supply-chain): Describe a messy planning problem. Get one clear decision, an AI fit check and a safe hand-off plan.
 - [Assembly line balancer](https://useaiblocks.com/skills/assembly-line-balancer): Give it your work steps and times. Get steps split across stations so none waits or overloads.
 - [Budget and space picker (knapsack)](https://useaiblocks.com/skills/budget-and-space-picker-knapsack): Give it items with values and costs. Get the best set to pick within your budget, weight or space limit.
 - [Co-packer picker](https://useaiblocks.com/skills/co-packer-picker): Tell it what you need made or packed. Get a way to pick a co-packer and a plan to manage the deal.
+- [Compare freight quotes with all charges](https://useaiblocks.com/workflows/compare-freight-quotes-with-all-charges): Share the source files. Get a normalized freight comparison, charge checks and open questions.
 - [Compare supplier prices on the same basis](https://useaiblocks.com/workflows/compare-supplier-prices-on-the-same-basis): Share the source files. Get a normalized quote table and a decision brief with cost and delivery risks.
 - [Cost per sellable unit finder](https://useaiblocks.com/prompts/cost-per-sellable-unit-finder): Paste a factory quote and your other costs. Get cost per sellable unit and a go or no-go.
 - [Cross-docking planner](https://useaiblocks.com/skills/cross-docking-planner): Describe your inbound and outbound loads. Get a plan to move goods truck to truck without storing them.
@@ -16,6 +17,7 @@
 - [Demand forecast planner](https://useaiblocks.com/skills/demand-forecast-planner): Give it your past sales. Get a forecast, the best-fit method and a way to track how far off it is.
 - [Electronics parts sourcing planner](https://useaiblocks.com/skills/electronics-parts-sourcing): Give it your parts list. Get a plan for scarce parts, long lead times and leftover stock.
 - [Equipment maintenance planner](https://useaiblocks.com/skills/equipment-maintenance-planner): Give it your machines and repair history. Get a service schedule and spare parts list that cut breakdowns.
+- [Explain a warehouse stock count variance](https://useaiblocks.com/workflows/explain-a-warehouse-stock-count-variance): Share the source files. Get a reconciled stock variance table, evidence gaps and review brief.
 - [Factory bottleneck finder](https://useaiblocks.com/skills/factory-bottleneck-finder): Describe your production steps and times. Get the slowest step found and ranked fixes with expected output gains.
 - [Factory price-break negotiator](https://useaiblocks.com/skills/factory-price-break-negotiator): Give it your bill of materials and volume plan. Get asks, give-backs and a fallback.
 - [Food supply chain planner](https://useaiblocks.com/skills/food-supply-chain-planner): Describe your food business. Get a plan for shelf life, safe handling, tracing and cold storage.
@@ -42,6 +44,8 @@
 - [Plan the cash for your next stock order](https://useaiblocks.com/workflows/plan-the-cash-for-your-next-stock-order): Give it your supplier invoices and lead times. Get true unit costs, the cash you need, better terms and a verdict.
 - [Plan what to make each week from your past sales](https://useaiblocks.com/workflows/plan-what-to-make-each-week-from-your-past-sales): Give it past sales and your capacity. Get a forecast, a weekly make plan and a meeting agenda.
 - [Pre-shipment inspection brief writer](https://useaiblocks.com/skills/pre-shipment-inspection-brief-writer): Give it your order and tech pack. Get an inspector's brief, a pass rule and payment release terms.
+- [Prepare a goods receipt discrepancy brief](https://useaiblocks.com/workflows/prepare-a-goods-receipt-discrepancy-brief): Share the source files. Get a receipt mismatch table, supplier questions and receiving handover.
+- [Prepare a supplier corrective action review](https://useaiblocks.com/workflows/prepare-a-supplier-corrective-action-review): Share the source files. Get a sourced issue review, corrective procedure draft and follow up register.
 - [Procurement agent architecture plan](https://useaiblocks.com/skills/procurement-agent-architecture-plan): Share your buying process and rules. Get a plan for AI roles, supplier checks and human approval of awards.
 - [Product bill of materials builder](https://useaiblocks.com/skills/product-bill-of-materials-builder): Give it your product and quote. Get a cost sheet by part, with each maker and price-break questions.
 - [Product sample review coordinator](https://useaiblocks.com/agents/product-sample-approval-loop): Give it your tech pack and each sample. Get go or hold, fixes for the factory, and a stop at three rounds.
@@ -67,6 +71,7 @@
 - [Stock count program planner](https://useaiblocks.com/skills/stock-count-program-planner): Give it your item list. Get a rolling count schedule, who counts what, and how to trace count mismatches.
 - [Store delivery route planner](https://useaiblocks.com/skills/store-delivery-route-planner): Give it your stores, order sizes and delivery windows. Get weekly truck routes that cover every store at less cost.
 - [Store stock allocator](https://useaiblocks.com/skills/store-stock-allocator): Give it a new buy and store sales. Get how many units of each size and style go to each store.
+- [Supplier correction evidence review assistant](https://useaiblocks.com/agents/supplier-correction-evidence-review-assistant): A sourced issue review, corrective procedure draft and follow up register.
 - [Supplier order splitter](https://useaiblocks.com/skills/supplier-order-splitter): Give it quotes, limits and demand. Get how much to order from each supplier for the lowest total cost.
 - [Supplier partnership planner](https://useaiblocks.com/skills/supplier-partnership-planner): Name a key supplier. Get what to share, a joint plan, meeting rhythm and measures that show it is working.
 - [Supplier payment terms planner](https://useaiblocks.com/skills/supplier-payment-terms-planner): Give it your order cycle and cash. Get your float, terms to ask for and a cost split.
@@ -84,6 +89,7 @@
 - [Van loading planner](https://useaiblocks.com/skills/van-loading-planner): Give it your parcels and van size. Get a load order that fits everything and puts the first stop last in.
 - [Vehicle fleet planner](https://useaiblocks.com/skills/vehicle-fleet-planner): Give it your vehicles and costs. Get how many you need and when to replace each one.
 - [Warehouse automation chooser](https://useaiblocks.com/skills/warehouse-automation-chooser): Give it your orders and space. Get which machines pay back, ranked, with cost, payback time and risks.
+- [Warehouse count discrepancy review assistant](https://useaiblocks.com/agents/warehouse-count-discrepancy-review-assistant): A reconciled stock variance table, evidence gaps and review brief.
 - [Warehouse layout planner](https://useaiblocks.com/skills/warehouse-layout-planner): Give it your products, volumes and building size. Get zones, aisle layout, storage type and space needed.
 - [Warehouse location planner](https://useaiblocks.com/skills/warehouse-location-planner): Give it your customers and demand. Get how many warehouses you need and where to put them.
 - [Warehouse order picking planner](https://useaiblocks.com/skills/picking-batch-planner): Give it a day of orders. Get groups to pick together so pickers walk less, with the expected distance saved.

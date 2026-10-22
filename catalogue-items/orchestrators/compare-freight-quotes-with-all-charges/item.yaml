@@ -1,0 +1,42 @@
+slug: compare-freight-quotes-with-all-charges
+name: Compare freight quotes with all charges
+summary: Share the source files. Get a normalized freight comparison, charge checks and open questions.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: question
+    required: false
+  - type: document
+    required: false
+outputs:
+  - type: audit_report
+  - type: document
+uses:
+  - vendor-comparison-writer
+  - invoice-totals-checker
+steps:
+  - uses: vendor-comparison-writer
+    note: Normalize the supplied lane, load basis, service scope, handling, insurance, delivery and exit charges. Keep missing surcharges unknown rather than zero.
+  - uses: invoice-totals-checker
+    note: Recompute the comparable quoted charges with explicit units and currencies; use only conversion rates and tax treatment supplied for this review.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/next-100-data.mjs
+example_pending: true
+credits:
+  - title: Vendor comparison writer
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/operations/skills/vendor-review
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Invoice totals checker
+    by: Pro Skill Packs
+    url: https://github.com/proskillpacks/skills/tree/main/skills/finance/invoice-checker
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

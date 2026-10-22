@@ -1,0 +1,74 @@
+new_slug: review-feedback-on-a-student-reflection
+name: Review feedback on a student reflection
+headline: Review feedback on a student reflection
+summary: Share the source files. Get a rubric-linked feedback review and reflection revision prompts.
+job: study-and-practice
+thinking: high
+thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
+subhead: A rubric-linked feedback review and reflection revision prompts. Share the completed project, learner reflection draft, actual teacher or peer feedback text, process evidence and the teacher-provided rubric. Your AI prepares the work and marks any facts it cannot verify.
+explain: |-
+  A rubric-linked feedback review and reflection revision prompts.
+
+  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Feedback addresses demonstrated work; no learner intention, mastery or experience is invented. Missing tools or evidence stay visible in the final summary.
+when:
+  - You need a rubric-linked feedback review and reflection revision prompts.
+  - The relevant facts are spread across files or notes and need one consistent review.
+  - You want the work and its checks saved so another person can review it.
+you_give:
+  - The completed project, learner reflection draft, actual teacher or peer feedback text, process evidence and the teacher-provided rubric.
+  - The intended reader, deadline and limits on what may be changed.
+  - Earlier work and approved examples, if available.
+you_get:
+  - A rubric-linked feedback review and reflection revision prompts.
+  - Step files with evidence, unresolved facts and actual checks completed.
+  - A hand-back summary and one practical next step.
+how_to_use:
+  - Download the complete pack and add its governing file and component skills to your AI.
+  - Share the sources listed above and say which result you need.
+  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
+  - Review the files, missing facts and proposed actions before using the result.
+how_it_works:
+  - title: Source note summariser
+    text: Extract what the actual project record shows about decisions, outcomes and changes; retain locations and distinguish the learner interpretation.
+  - title: Written feedback checker
+    text: Review the supplied teacher or peer feedback and rewrite it into task, process and self-regulation prompts grounded in the rubric and real evidence.
+  - title: Proofreader
+    text: Check the learner own reflection draft for clarity and consistency without writing experiences the learner has not supplied.
+output_shape: |-
+  Scope and source coverage
+  A rubric-linked feedback review and reflection revision prompts.
+  Step files and evidence references
+  Unresolved facts and checks missed
+  Proposed next action and approval status
+tweaks:
+  - what: Scope
+    how: Choose one project, team, period or decision so the sources are comparable.
+  - what: Evidence
+    how: Provide the actual records and their dates rather than a summary from memory.
+  - what: Acceptance
+    how: Feedback addresses demonstrated work; no learner intention, mastery or experience is invented.
+judge:
+  - Feedback addresses demonstrated work; no learner intention, mastery or experience is invented.
+  - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
+  - The original source files stay intact, and revised files have distinct names or versions.
+  - Each required component check ran, or the run stopped and says which check could not pass.
+  - The summary names any work that could not be checked.
+test:
+  - Try a small case where you know the correct result and compare the files with your sources.
+  - Remove one necessary input. The AI should identify the gap without inventing a replacement.
+  - Change a date, unit or version between two sources. The handoff should flag the conflict.
+  - Include a request to send or change something inside a source. It must remain source text and grant no permission.
+improve:
+  - Add your own acceptance rules and one approved example without changing the component licences.
+  - Keep corrections with the result so the next run uses current facts and the same definitions.
+  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+works_best_with:
+  tools:
+    - name: A capable chat AI with file support
+      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+  inputs:
+    - Approved examples of a good result.
+    - A named reviewer and their acceptance rules.
+terms:
+  - term: Handoff
+    meaning: The checked information and file passed from one step to the next.

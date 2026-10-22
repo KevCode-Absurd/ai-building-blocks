@@ -1,0 +1,50 @@
+slug: prepare-a-funding-pitch-evidence-appendix
+name: Prepare a funding pitch evidence appendix
+summary: Share the source files. Get a pitch evidence ledger, unsupported claim list and appendix outline.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: copy_draft
+    required: false
+  - type: source_text
+    required: false
+outputs:
+  - type: audit_report
+  - type: document
+  - type: slide_deck
+uses:
+  - unsupported-claim-spotter
+  - source-note-summariser
+  - presentation-builder
+steps:
+  - uses: unsupported-claim-spotter
+    note: Inventory the actual pitch claims and support required for metrics, market assertions, forecasts and superlatives.
+  - uses: source-note-summariser
+    note: Map each claim to supplied dated exhibits, retaining metric definitions, uncertainty, contradictory evidence and missing support.
+  - uses: presentation-builder
+    note: Build an appendix outline and sourced answer notes from the verified evidence; mark projections as assumptions and keep confidential exhibits within the allowed disclosure scope.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/next-100-data.mjs
+example_pending: true
+credits:
+  - title: Unsupported claim spotter
+    by: Pro Skill Packs
+    url: https://github.com/proskillpacks/skills/tree/main/skills/writing/fact-claim-checker
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Source note summariser
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/source-note-summariser
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Presentation builder
+    by: Burhan Sebin
+    url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/communication/presentation-creation
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

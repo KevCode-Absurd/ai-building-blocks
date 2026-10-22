@@ -1,5 +1,5 @@
 {
-  "checkedOn": "2026-10-22T12:19:30.795Z",
+  "checkedOn": "2026-10-22T13:16:25.493Z",
   "deadline": "2026-10-22 Asia/Kolkata",
   "accountAuthenticated": true,
   "workersPaid": {
@@ -62,7 +62,7 @@
     "verifiedOn": "2026-10-22T12:19:30.795Z"
   },
   "production": {
-    "status": "R10 public verified:27 smoke+23 exact asset/header+16 SPA metadata checks pass;20 bindings preserved; earlier real Google/AI workflow proof retained",
+    "status": "Workflow matching fix published and verified: 12 desktop/mobile browser checks and 27 production smoke checks pass",
     "database": "ai-blocks",
     "databaseId": "a886eeae-4014-4da2-842f-a5bebc4d7f71",
     "migrations": [
@@ -87,32 +87,38 @@
       "blockSeconds": 10,
       "includedRule": true
     },
-    "versionId": "ce40fda4-8705-421b-aff4-0522ac6c2550",
-    "workerSha256": "892f4aaae4cfd8dc723acc5ddf17f714c59416ee66b3d932057e590f76410d2c",
+    "versionId": "6b7d3b14-6b50-42a4-aa92-aa291eae405a",
+    "workerSha256": "7c80c58bf03aedde56b3950d2671194915f1d18929ecadf7d935423e92d50bc5",
     "uploadedAssets": 4500,
     "reusedAssets": 14110,
     "workerStartupMs": 4,
     "workersDevEnabled": false,
     "previewUrlsEnabled": false,
     "clerkConfigured": true,
-    "previousVersionId": "fcc0a974-2fce-4a16-8acb-0294a9ab6448",
-    "deployedOn": "2026-10-22T12:17:25.469Z",
-    "releaseRoot": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r10-candidate3",
-    "assetReleaseRoot": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r10-candidate3",
-    "sourceCommit": "0975db5a6374d072371480e421abee30763706d5",
+    "previousVersionId": "69f5d138-a966-47c1-b0d7-69e33356a151",
+    "deployedOn": "2026-10-22T13:15:16.004Z",
+    "releaseRoot": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r13-workflow-matching-candidate2",
+    "assetReleaseRoot": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r13-workflow-matching-candidate2",
+    "sourceCommit": "8fc1d3b2a00b25dc837770cbad3f25c58599fcba",
     "publicVerified": true,
     "gitEvidenceBeforeActivation": "56269425",
     "aiEnabled": true,
-    "dailyCapUSD": 10,
+    "dailyCapUSD": "10",
     "configurationCommitBeforeAIEnable": "0a6a3fd6",
     "defaultProviderKeyConfigured": true,
     "customerPriceUSD": 0,
     "pendingFrontendRelease": null,
-    "verifiedOn": "2026-10-22T12:19:30.795Z",
+    "verifiedOn": "2026-10-22T13:16:25.493Z",
     "manifestCache": {
       "entries": 23837,
       "algorithm": "Wrangler 4.151.3 BLAKE3/base64/extension"
-    }
+    },
+    "origin": "https://useaiblocks.com",
+    "root": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r13-workflow-matching-candidate2",
+    "bindingsPreserved": 20,
+    "AIEnabled": true,
+    "catalogueSha256": "a10e0eb52877f31a97323b083f1469811e9efc2286b71974cfdc5824125c8791",
+    "workflowMatchingReport": "reports/workflow-matching-production-deployment.json"
   },
   "releaseScope": {
     "blocks": 4438,
@@ -158,7 +164,7 @@
     "toolBrowserChecks": 83,
     "completeNewWorkflowAndAgentPacks": 79,
     "calculatorUnitTests": 483,
-    "frontendRelease": "R10 candidate3",
+    "frontendRelease": "R11 original hero and cookie controls",
     "runtimeBackendChanged": false
   },
   "accountOwnerActionPending": false,

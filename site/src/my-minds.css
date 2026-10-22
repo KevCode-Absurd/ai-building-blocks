@@ -1,0 +1,12 @@
+.my-minds { margin: 20px 0; padding: 18px; border: 1px solid var(--line-2); border-radius: 12px; background: var(--panel); min-width: 0; }
+.my-minds summary { cursor: pointer; font-weight: 600; line-height: 1.5; }
+.my-minds-actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.my-minds-list { list-style: none; padding: 0; display: grid; gap: 12px; }
+.my-minds-list li { border-top: 1px solid var(--line-2); padding-top: 14px; overflow-wrap: anywhere; }
+.my-mind-editor { display: grid; gap: 14px; padding-top: 18px; }
+.my-mind-editor label { display: grid; gap: 6px; font-size: 14px; }
+.my-mind-editor input, .my-mind-editor textarea { width: 100%; max-width: 100%; box-sizing: border-box; padding: 10px; color: var(--text); background: var(--bg); border: 1px solid var(--line-2); border-radius: 6px; font: inherit; }
+.my-mind-editor small { color: var(--muted); line-height: 1.5; }
+.task-mind-selected { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0; }
+.task-mind-selected .chip { white-space: normal; overflow-wrap: anywhere; }
+.task-mind-recommendation small { display: block; font-weight: normal; }

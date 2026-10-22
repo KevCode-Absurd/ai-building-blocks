@@ -1,0 +1,58 @@
+slug: construction-variation-review-assistant
+name: Construction variation review assistant
+summary: A variation comparison, arithmetic review and decision brief.
+category: agent
+type: agent
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: document
+    required: false
+  - type: question
+    required: false
+  - type: meeting_notes
+    required: false
+outputs:
+  - type: document
+  - type: audit_report
+  - type: plan
+uses:
+  - prepare-a-construction-variation-decision
+  - executive-action-register
+steps:
+  - uses: prepare-a-construction-variation-decision
+    note: "Run when: A priced variation or contract approval record changes."
+  - uses: executive-action-register
+    note: Run prepare-a-construction-variation-decision for changed evidence or a due review. If approval is supplied, extract the actual accepted scope, authority, amount and date before updating the decision trace. Do not equate submission with approval.
+schedule: When the user provides a revised variation or approval. Installation does not create a schedule.
+asks_before:
+  - Sending or submitting any message or form
+  - Changing a live account, calendar, task, permission or published document
+  - Spending money, releasing a payment or signing a contract
+  - Starting or changing any recurring schedule
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/next-100-data.mjs
+example_pending: true
+credits:
+  - title: Plain-words contract summary
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/plain-words-contract-summary
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Invoice totals checker
+    by: Pro Skill Packs
+    url: https://github.com/proskillpacks/skills/tree/main/skills/finance/invoice-checker
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Stakeholder update writer
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/product-management/skills/stakeholder-update
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Executive action register keeper
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/executive-action-register
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

@@ -2,7 +2,24 @@
 // same reviewed process every time, with their request carried in the instructions.
 export type RecipeStep = [slug: string, instruction: string];
 import { extendedMethod } from "./composer-methods.ts";
+import { isReviewRequest, taskFocus } from "./composer-intent.ts";
 export function recipeFor(goal: string): RecipeStep[] | null {
+  // Review an existing ad before considering the video-script creation method.
+  if (isReviewRequest(goal) && /\b(ads?|adverts?|advertisements?|advertising)\b/i.test(taskFocus(goal))) {
+    const account = /\b(accounts?|campaigns?|performance|spend|roas|ctr|cpc|cpa|results|exports?)\b/i.test(goal);
+    if (account) {
+      const auditor = /\bgoogle\b/i.test(goal) ? "google-ads-account-auditor" : /\btiktok\b/i.test(goal) ? "tiktok-ads-account-auditor" : /\blinkedin\b/i.test(goal) ? "linkedin-ads-account-auditor" : /\b(microsoft|bing)\b/i.test(goal) ? "microsoft-ads-account-auditor" : "ad-account-audit";
+      return [
+        ["ad-data-quality-checker", "Require the original ad-performance export, reporting dates, attribution settings and business goal. Check missing spend, duplicates and inconsistent columns before interpreting results. Save ad-data-quality.md; list missing fields instead of inventing figures."],
+        [auditor, "Read the original performance export alongside ad-data-quality.md. Audit the requested platform and account scope, separating verified findings from hypotheses. Save ad-account-audit.md and ranked-fixes.md with source rows, reporting dates and unresolved checks. Verify calculations against the export and recheck corrections at most twice. Deliver reports and a README; recommend changes for approval before changing campaigns or budgets."],
+      ];
+    }
+    return [
+      ["pre-launch-ad-checker", "Require the existing ad as an image, video, script or copy, plus the product, audience, offer and intended platform. Review that supplied creative for clarity, hook, offer, proof, CTA and applicable policy risks. Save ad-audit.md with evidence locations and ranked fixes. Mark unavailable visual or video checks not run; do not create a new campaign or infer account performance."],
+      ...( /\b(video|ugc)\b/i.test(goal) ? [["video-ad-bridge-checker", "Require the supplied ad's script or a verified transcript with scene timings. Review hook-to-body transitions and the move to the offer against the existing ad and ad-audit.md. Save video-ad-review.md and suggested script edits; do not replace the review with new script generation."] as RecipeStep] : []),
+      ["claim-and-proof-matcher", "Require the existing ad's written copy or verified transcript as the copy draft, plus approved product facts and offer evidence. Check every claim in the original ad and suggested fixes against those sources. Save claim-evidence.md and final-ad-fixes.md; remove unsupported proposed claims, recheck at most twice and deliver the audit reports plus a README. List unresolved evidence and do not publish or change live ads."],
+    ];
+  }
   const extended = extendedMethod(goal); if (extended) return extended;
   if (/\b(hir(e|ing)|recruit|interview|work sample)\b/i.test(goal)) return [
     ["problem-first-job-description-writer", "Write the role brief and job description for the requested role: business problem, outcomes, responsibilities, essential criteria and constraints. Save role-brief.md and ask for missing role facts."],

@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link } from "../lib/router";
 import { cleanText, contrastRatio, countText, csvToJson, formatJson, rankTasks, scoreOptions } from "./browser-tools.mjs";
+import { NEXT_TOOLS, runNextTool } from "./next-100-tools.mjs";
+import NextToolInputs, { FIELD_HELP, HAS_FIELDS } from "./NextToolInputs";
 import "./browser-tools.css";
 
 const EXAMPLES: Record<string, string> = {
@@ -12,14 +14,16 @@ const EXAMPLES: Record<string, string> = {
   "weighted-decision-matrix": "criterion,weight,Option A,Option B\nCost,3,8,5\nEase of use,4,6,9\nSupport,2,7,8",
 };
 export default function BrowserTool({ tool, toast }: { tool: { slug: string; short: string; summary: string }; toast: (s: string) => void }) {
-  const [input, setInput] = useState(EXAMPLES[tool.slug] ?? "");
+  const nextTool = NEXT_TOOLS.find(t => t.slug === tool.slug);
+  const [input, setInput] = useState(nextTool?.example ?? EXAMPLES[tool.slug] ?? "");
   const [mode, setMode] = useState("spacing");
   const [front, setFront] = useState("#222222"), [back, setBack] = useState("#ffffff");
   const [speed, setSpeed] = useState("200");
   useEffect(() => { document.title = `${tool.short} · AI Blocks`; }, [tool.short]);
   let output = "", error = "", ratio: number | null = null;
   try {
-    if (tool.slug === "word-counter") {
+    if (nextTool) output = runNextTool(tool.slug, input);
+    else if (tool.slug === "word-counter") {
       const wpm = Number(speed);
       if (!Number.isFinite(wpm) || wpm <= 0) throw Error("Reading speed must be greater than zero.");
       const c = countText(input, wpm);
@@ -35,14 +39,16 @@ export default function BrowserTool({ tool, toast }: { tool: { slug: string; sho
   } catch (e) { error = e instanceof Error ? e.message : "Check your input."; }
   const copy = async () => { try { await navigator.clipboard.writeText(output); toast("Result copied"); } catch { toast("Select the result and copy it with your keyboard."); } };
   const download = () => {
-    const json = ["json-formatter", "csv-to-json"].includes(tool.slug);
-    const url = URL.createObjectURL(new Blob([output], { type: json ? "application/json" : "text/plain;charset=utf-8" }));
-    const a = document.createElement("a"); a.href = url; a.download = `${tool.slug}.${json ? "json" : "txt"}`; a.click(); setTimeout(() => URL.revokeObjectURL(url), 1000);
+    const extension = nextTool?.extension ?? (["json-formatter", "csv-to-json"].includes(tool.slug) ? "json" : "txt");
+    const mime = extension === "json" ? "application/json" : extension === "csv" ? "text/csv;charset=utf-8" : "text/plain;charset=utf-8";
+    const url = URL.createObjectURL(new Blob([output], { type: mime }));
+    const a = document.createElement("a"); a.href = url; a.download = `${tool.slug}.${extension}`; a.click(); setTimeout(() => URL.revokeObjectURL(url), 1000);
   };
   return <main className="bp browser-tool" data-testid="browser-tool">
     <header className="wrap bp-hero"><Link to="/tools" className="back">← All tools</Link><p className="bp-kicker">Free browser tool · Your input stays on this device</p><h1 className="bp-h1">{tool.short}</h1><p className="bp-sub">{tool.summary}</p></header>
     <div className="wrap browser-tool-grid"><section>
-      {tool.slug === "contrast-checker" ? <><label>Text colour<input data-testid="contrast-front" value={front} onChange={e => setFront(e.target.value)} spellCheck={false} /></label><label>Background colour<input data-testid="contrast-back" value={back} onChange={e => setBack(e.target.value)} spellCheck={false} /></label>{ratio !== null && <div className="contrast-preview" style={{ color: `#${front.trim().replace(/^#/, "")}`, background: `#${back.trim().replace(/^#/, "")}` }}><b>Preview your text</b><p>Check how the colours look together.</p></div>}</> : <><label htmlFor="browser-input">Your {tool.slug.includes("json") ? "data" : "text"}</label><textarea id="browser-input" data-testid="browser-input" value={input} onChange={e => setInput(e.target.value)} spellCheck={false} /><p className="small">The starting text is an editable example.</p></>}
+      {nextTool && HAS_FIELDS.has(tool.slug) ? <NextToolInputs slug={tool.slug} example={nextTool.example} onChange={setInput} /> : tool.slug === "contrast-checker" ? <><label>Text colour<input data-testid="contrast-front" value={front} onChange={e => setFront(e.target.value)} spellCheck={false} /></label><label>Background colour<input data-testid="contrast-back" value={back} onChange={e => setBack(e.target.value)} spellCheck={false} /></label>{ratio !== null && <div className="contrast-preview" style={{ color: `#${front.trim().replace(/^#/, "")}`, background: `#${back.trim().replace(/^#/, "")}` }}><b>Preview your text</b><p>Check how the colours look together.</p></div>}</> : <><label htmlFor="browser-input">Your {tool.slug.includes("json") || nextTool ? "data" : "text"}</label><textarea id="browser-input" data-testid="browser-input" value={input} onChange={e => setInput(e.target.value)} spellCheck={false} /><p className="small">The starting text is an editable example.</p></>}
+      {nextTool && <p className="small">{FIELD_HELP[tool.slug] ?? nextTool.help}</p>}
       {tool.slug === "text-cleaner" && <label>Change to make<select value={mode} onChange={e => setMode(e.target.value)}><option value="spacing">Clean up spaces and blank lines</option><option value="lines">Trim lines and remove empty lines</option><option value="upper">UPPER CASE</option><option value="lower">lower case</option></select></label>}
       {tool.slug === "json-formatter" && <label>Output style<select value={mode} onChange={e => setMode(e.target.value)}><option value="spacing">Formatted</option><option value="compact">Compact</option></select></label>}
       {tool.slug === "json-formatter" && <p className="small">Formatting preserves number text and duplicate keys. Other apps may interpret repeated keys differently.</p>}

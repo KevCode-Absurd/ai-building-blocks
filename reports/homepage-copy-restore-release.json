@@ -1,0 +1,30 @@
+{
+  "checkedOn": "2026-10-22T12:46:23.489Z",
+  "status": "published-and-verified",
+  "origin": "https://useaiblocks.com",
+  "versionId": "69f5d138-a966-47c1-b0d7-69e33356a151",
+  "sourceCommitBeforeDeployment": "8fc1d3b2a00b25dc837770cbad3f25c58599fcba",
+  "headline": "Use AI like the top 1%",
+  "subheadline": "Turn hours of work into minutes. Spend the time you save on the work only you can do. Or at the beach (we won't tell).",
+  "cookiePopup": [
+    "Reject cookies",
+    "Accept cookies"
+  ],
+  "otherPopupInformation": false,
+  "floatingChoicesButton": false,
+  "seoImprovementsPreserved": true,
+  "publicPagesAudited": 4670,
+  "viewportWidths": [
+    320,
+    390,
+    768,
+    1440,
+    1920
+  ],
+  "bindingsPreserved": 20,
+  "privacyUnitsPassed": 9,
+  "privacyBrowserChecksPassed": 2,
+  "runtimeBackendChanged": false,
+  "workerSha256": "892f4aaae4cfd8dc723acc5ddf17f714c59416ee66b3d932057e590f76410d2c",
+  "providerCalls": 0
+}

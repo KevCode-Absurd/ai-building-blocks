@@ -1,0 +1,53 @@
+slug: procurement-evidence-gap-review-assistant
+name: Procurement evidence gap review assistant
+summary: A vendor evidence comparison, checklist result and decision trace.
+category: agent
+type: agent
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: question
+    required: false
+  - type: plan
+    required: false
+  - type: source_text
+    required: false
+outputs:
+  - type: audit_report
+  - type: document
+uses:
+  - preserve-a-procurement-decision-audit-trail
+  - source-note-summariser
+steps:
+  - uses: preserve-a-procurement-decision-audit-trail
+    note: "Run when: A vendor supplies new evidence or a mandatory procurement check becomes due."
+  - uses: source-note-summariser
+    note: Run preserve-a-procurement-decision-audit-trail for changed evidence or a due review. If a previously unknown mandatory item gets evidence, extract its actual scope and date, then rerun the existing checklist from the earliest affected stop rule.
+schedule: At a user-requested procurement checkpoint. Installation does not create a schedule.
+asks_before:
+  - Sending or submitting any message or form
+  - Changing a live account, calendar, task, permission or published document
+  - Spending money, releasing a payment or signing a contract
+  - Starting or changing any recurring schedule
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/next-100-data.mjs
+example_pending: true
+credits:
+  - title: Vendor comparison writer
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/operations/skills/vendor-review
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Decision checklist runner
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/decision-checklist-runner
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Source note summariser
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/source-note-summariser
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

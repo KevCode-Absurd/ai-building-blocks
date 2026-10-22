@@ -1,0 +1,42 @@
+slug: track-promises-made-to-pilot-customers
+name: Track promises made to pilot customers
+summary: Share the source files. Get a customer promise register, conflicting commitments and update drafts.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: meeting_notes
+    required: false
+  - type: question
+    required: false
+outputs:
+  - type: plan
+  - type: document
+uses:
+  - executive-action-register
+  - stakeholder-update-writer
+steps:
+  - uses: executive-action-register
+    note: Extract explicit accepted customer commitments with source IDs, owner and due-date gaps, dependencies and evidence needed for completion.
+  - uses: stakeholder-update-writer
+    note: Draft changed-only customer or internal updates using the actual commitment status and approved product scope; avoid promising unapproved features or dates.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/next-100-data.mjs
+example_pending: true
+credits:
+  - title: Executive action register keeper
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/executive-action-register
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Stakeholder update writer
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/product-management/skills/stakeholder-update
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

@@ -1,0 +1,40 @@
+slug: prepare-an-engagement-closeout-evidence-pack
+name: Prepare an engagement closeout evidence pack
+summary: Share the source files. Get a delivery acceptance register, closeout handover and unresolved obligations.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: meeting_notes
+    required: false
+outputs:
+  - type: plan
+  - type: document
+uses:
+  - executive-action-register
+  - handover-note-writer
+steps:
+  - uses: executive-action-register
+    note: Extract the remaining explicit commitments and accepted follow-ups, linking each deliverable to its actual delivery and acceptance evidence.
+  - uses: handover-note-writer
+    note: Prepare the client or support team handover with file locations, open issues, agreed support window and required signoffs. Do not infer engagement completion.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/next-100-data.mjs
+example_pending: true
+credits:
+  - title: Executive action register keeper
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/executive-action-register
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Handover note writer
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/handover-note-writer
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

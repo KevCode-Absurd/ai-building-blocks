@@ -1,0 +1,42 @@
+slug: set-up-a-capstone-team-agreement
+name: Set up a capstone team agreement
+summary: Share the source files. Get a team working agreement, task register and handover rules.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: question
+    required: false
+  - type: meeting_notes
+    required: false
+outputs:
+  - type: document
+  - type: plan
+uses:
+  - process-and-sop-writer
+  - executive-action-register
+steps:
+  - uses: process-and-sop-writer
+    note: Document how the team will version files, review contributions, resolve blockers and hand over work, using the actual assignment constraints.
+  - uses: executive-action-register
+    note: Extract accepted commitments from the team decisions, distinguish suggested owners from agreed owners and mark missing dates.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/next-100-data.mjs
+example_pending: true
+credits:
+  - title: Process and SOP writer
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/operations/skills/process-doc
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Executive action register keeper
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/executive-action-register
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

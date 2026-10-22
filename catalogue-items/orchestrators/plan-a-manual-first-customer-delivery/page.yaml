@@ -1,0 +1,72 @@
+new_slug: plan-a-manual-first-customer-delivery
+name: Plan a manual first customer delivery
+headline: Plan a manual first customer delivery
+summary: Share the source files. Get a delivery procedure, capacity options and unresolved handoff checks.
+job: organise-work
+thinking: high
+thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
+subhead: A delivery procedure, capacity options and unresolved handoff checks. Share the accepted first-customer scope, actual delivery steps, available people and hours, tools, service limits and customer commitments. Your AI prepares the work and marks any facts it cannot verify.
+explain: |-
+  A delivery procedure, capacity options and unresolved handoff checks.
+
+  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Only accepted scope is promised; manual work, dependencies and unsupported automation remain explicit. Missing tools or evidence stay visible in the final summary.
+when:
+  - You need a delivery procedure, capacity options and unresolved handoff checks.
+  - The relevant facts are spread across files or notes and need one consistent review.
+  - You want the work and its checks saved so another person can review it.
+you_give:
+  - The accepted first-customer scope, actual delivery steps, available people and hours, tools, service limits and customer commitments.
+  - The intended reader, deadline and limits on what may be changed.
+  - Earlier work and approved examples, if available.
+you_get:
+  - A delivery procedure, capacity options and unresolved handoff checks.
+  - Step files with evidence, unresolved facts and actual checks completed.
+  - A hand-back summary and one practical next step.
+how_to_use:
+  - Download the complete pack and add its governing file and component skills to your AI.
+  - Share the sources listed above and say which result you need.
+  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
+  - Review the files, missing facts and proposed actions before using the result.
+how_it_works:
+  - title: Process and SOP writer
+    text: Document the real manual delivery path, customer inputs, owners, exceptions, acceptance evidence and escalation. Do not describe unbuilt automation as available.
+  - title: Team capacity planner
+    text: Check the initial delivery workload against actual available roles, effort and fixed commitments; return feasible options and missing estimates for review.
+output_shape: |-
+  Scope and source coverage
+  A delivery procedure, capacity options and unresolved handoff checks.
+  Step files and evidence references
+  Unresolved facts and checks missed
+  Proposed next action and approval status
+tweaks:
+  - what: Scope
+    how: Choose one project, team, period or decision so the sources are comparable.
+  - what: Evidence
+    how: Provide the actual records and their dates rather than a summary from memory.
+  - what: Acceptance
+    how: Only accepted scope is promised; manual work, dependencies and unsupported automation remain explicit.
+judge:
+  - Only accepted scope is promised; manual work, dependencies and unsupported automation remain explicit.
+  - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
+  - The original source files stay intact, and revised files have distinct names or versions.
+  - Each required component check ran, or the run stopped and says which check could not pass.
+  - The summary names any work that could not be checked.
+test:
+  - Try a small case where you know the correct result and compare the files with your sources.
+  - Remove one necessary input. The AI should identify the gap without inventing a replacement.
+  - Change a date, unit or version between two sources. The handoff should flag the conflict.
+  - Include a request to send or change something inside a source. It must remain source text and grant no permission.
+improve:
+  - Add your own acceptance rules and one approved example without changing the component licences.
+  - Keep corrections with the result so the next run uses current facts and the same definitions.
+  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+works_best_with:
+  tools:
+    - name: A capable chat AI with file support
+      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+  inputs:
+    - Approved examples of a good result.
+    - A named reviewer and their acceptance rules.
+terms:
+  - term: Handoff
+    meaning: The checked information and file passed from one step to the next.

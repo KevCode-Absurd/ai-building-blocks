@@ -1,6 +1,6 @@
 # Check contracts and rules: AI Blocks
 
-> 96 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 99 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Accessibility standards checker](https://useaiblocks.com/skills/accessibility-standards-checker): Describe your site or app. Get WCAG gaps by level, fixes ranked first, and accessibility statement notes.
 - [Ad claim sorter](https://useaiblocks.com/prompts/ad-claim-sorter): Paste your ad or page copy. Get each claim sorted as fine, needs proof or cut, with safer wording.
@@ -18,6 +18,7 @@
 - [Card payment security checker](https://useaiblocks.com/skills/card-payment-security-checker): Describe how you take card payments. Get your PCI level, the right self-check form and gaps to fix.
 - [Cease-and-desist letter helper](https://useaiblocks.com/skills/cease-and-desist-letter-helper): Describe an infringement or paste a letter you got. Get a draft demand or options. Have a lawyer review.
 - [Company filing deadline tracker](https://useaiblocks.com/skills/company-filing-deadline-tracker): List your companies and where they are registered. Get annual filings and due dates. Not legal advice.
+- [Compare facilities service contract options](https://useaiblocks.com/workflows/compare-facilities-service-contract-options): Share the source files. Get a service comparison, contract differences and review questions.
 - [Compliance evidence request assistant](https://useaiblocks.com/agents/compliance-evidence-request-assistant): A changed evidence gap list and proposed requests for the responsible owners.
 - [Contract and proposal drafter](https://useaiblocks.com/skills/contract-and-proposal-drafter): Say the deal and where you work. Get a contract, proposal, SOW or NDA draft with the right clauses.
 - [Contract and term sheet reviewer](https://useaiblocks.com/skills/contract-and-term-sheet-reviewer): Paste a contract or term sheet. Get the risky terms flagged, plain-English meaning and when to call a lawyer.
@@ -72,10 +73,12 @@
 - [Prepare a contract renewal negotiation](https://useaiblocks.com/workflows/prepare-a-contract-renewal-negotiation): Share the source files. Get a renewal deadline plan, risk summary and negotiation brief.
 - [Prepare a vendor security questionnaire response](https://useaiblocks.com/workflows/prepare-a-vendor-security-questionnaire-response): Share the source files. Get a sourced response draft, evidence index and unanswered questions.
 - [Prepare evidence for a compliance review](https://useaiblocks.com/workflows/prepare-evidence-for-a-compliance-review): Share the source files. Get an evidence index, gap list and owner-based preparation plan.
+- [Preserve a procurement decision audit trail](https://useaiblocks.com/workflows/preserve-a-procurement-decision-audit-trail): Share the source files. Get a vendor evidence comparison, checklist result and decision trace.
 - [Privacy impact assessment writer](https://useaiblocks.com/skills/privacy-impact-assessment-writer): Describe a new feature that uses personal data. Get a privacy impact assessment with conditions and owners. First check, not legal advice.
 - [Privacy management audit planner](https://useaiblocks.com/skills/privacy-management-audit-planner): Describe how you handle personal data. Get gaps against ISO 27701, a privacy control list and an audit plan.
 - [Privacy policy drafter](https://useaiblocks.com/skills/privacy-policy-drafter): Describe your business and data use. Get privacy policy wording and a review checklist. Have a lawyer check it.
 - [Privacy policy drift checker](https://useaiblocks.com/skills/privacy-policy-drift-checker): Describe a data plan. Get where your privacy policy no longer matches, with fix wording. Not legal advice.
+- [Procurement evidence gap review assistant](https://useaiblocks.com/agents/procurement-evidence-gap-review-assistant): A vendor evidence comparison, checklist result and decision trace.
 - [Quick legal sanity checker](https://useaiblocks.com/skills/quick-legal-sanity-checker): Ask a quick question, like using customer logos. Get fine, needs a look or hold, with a reason. Not legal advice.
 - [Records preservation notice drafter](https://useaiblocks.com/skills/legal-hold-notice): Tell it about a dispute. Get a notice telling staff which records to keep. A first draft, not legal advice.
 - [Review a contract and get edits and a plain summary](https://useaiblocks.com/workflows/review-a-contract-and-get-edits-and-a-plain-summary): Give it a contract. Get risky clauses flagged, edits to ask for and a summary to take to a lawyer.

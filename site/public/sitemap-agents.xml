@@ -3,13 +3,20 @@
   <url><loc>https://useaiblocks.com/agents/ad-fatigue-watcher</loc></url>
   <url><loc>https://useaiblocks.com/agents/ad-test-sprint-runner</loc></url>
   <url><loc>https://useaiblocks.com/agents/ai-answer-visibility-tracker</loc></url>
+  <url><loc>https://useaiblocks.com/agents/ai-pilot-evaluation-review-assistant</loc></url>
   <url><loc>https://useaiblocks.com/agents/amazon-monthly-account-keeper</loc></url>
+  <url><loc>https://useaiblocks.com/agents/bibliography-revision-review-assistant</loc></url>
   <url><loc>https://useaiblocks.com/agents/blog-post-publish-check-loop</loc></url>
   <url><loc>https://useaiblocks.com/agents/brand-voice-reviewer</loc></url>
+  <url><loc>https://useaiblocks.com/agents/capstone-commitment-review-assistant</loc></url>
+  <url><loc>https://useaiblocks.com/agents/case-competition-evidence-review-assistant</loc></url>
+  <url><loc>https://useaiblocks.com/agents/catering-order-change-review-assistant</loc></url>
   <url><loc>https://useaiblocks.com/agents/cited-research-assistant</loc></url>
   <url><loc>https://useaiblocks.com/agents/class-quiz-reteach-keeper</loc></url>
+  <url><loc>https://useaiblocks.com/agents/client-scope-decision-review-assistant</loc></url>
   <url><loc>https://useaiblocks.com/agents/cold-outreach-batch-runner</loc></url>
   <url><loc>https://useaiblocks.com/agents/compliance-evidence-request-assistant</loc></url>
+  <url><loc>https://useaiblocks.com/agents/construction-variation-review-assistant</loc></url>
   <url><loc>https://useaiblocks.com/agents/contract-intake-reviewer</loc></url>
   <url><loc>https://useaiblocks.com/agents/customer-inbox-triage-and-reply-drafter</loc></url>
   <url><loc>https://useaiblocks.com/agents/customer-interview-program-keeper</loc></url>
@@ -22,9 +29,11 @@
   <url><loc>https://useaiblocks.com/agents/discount-and-price-change-checker</loc></url>
   <url><loc>https://useaiblocks.com/agents/employee-feedback-action-review-assistant</loc></url>
   <url><loc>https://useaiblocks.com/agents/engineering-evidence-keeper</loc></url>
+  <url><loc>https://useaiblocks.com/agents/equity-assumption-review-assistant</loc></url>
   <url><loc>https://useaiblocks.com/agents/executive-work-keeper</loc></url>
   <url><loc>https://useaiblocks.com/agents/experiment-readout-desk</loc></url>
   <url><loc>https://useaiblocks.com/agents/google-ads-weekly-account-keeper</loc></url>
+  <url><loc>https://useaiblocks.com/agents/grant-spending-evidence-review-assistant</loc></url>
   <url><loc>https://useaiblocks.com/agents/handbook-change-desk</loc></url>
   <url><loc>https://useaiblocks.com/agents/hiring-pipeline-runner</loc></url>
   <url><loc>https://useaiblocks.com/agents/idea-validation-analyst</loc></url>
@@ -67,13 +76,16 @@
   <url><loc>https://useaiblocks.com/agents/new-hire-onboarding-keeper</loc></url>
   <url><loc>https://useaiblocks.com/agents/new-screen-design-reviewer</loc></url>
   <url><loc>https://useaiblocks.com/agents/offer-refresh-keeper</loc></url>
+  <url><loc>https://useaiblocks.com/agents/pilot-customer-promise-review-assistant</loc></url>
   <url><loc>https://useaiblocks.com/agents/pre-launch-ad-check-and-fix-loop</loc></url>
   <url><loc>https://useaiblocks.com/agents/pre-launch-store-checker</loc></url>
   <url><loc>https://useaiblocks.com/agents/price-test-keeper</loc></url>
   <url><loc>https://useaiblocks.com/agents/process-doc-freshness-keeper</loc></url>
+  <url><loc>https://useaiblocks.com/agents/procurement-evidence-gap-review-assistant</loc></url>
   <url><loc>https://useaiblocks.com/agents/product-photo-set-maker</loc></url>
   <url><loc>https://useaiblocks.com/agents/product-sample-approval-loop</loc></url>
   <url><loc>https://useaiblocks.com/agents/prompt-and-skill-tuner</loc></url>
+  <url><loc>https://useaiblocks.com/agents/property-maintenance-evidence-review-assistant</loc></url>
   <url><loc>https://useaiblocks.com/agents/public-review-reply-desk</loc></url>
   <url><loc>https://useaiblocks.com/agents/pull-request-reviewer</loc></url>
   <url><loc>https://useaiblocks.com/agents/quarterly-accessibility-keeper</loc></url>
@@ -86,8 +98,13 @@
   <url><loc>https://useaiblocks.com/agents/quarterly-strategy-reviewer</loc></url>
   <url><loc>https://useaiblocks.com/agents/recovery-rehearsal-evidence-assistant</loc></url>
   <url><loc>https://useaiblocks.com/agents/recurring-invoice-exception-review-assistant</loc></url>
+  <url><loc>https://useaiblocks.com/agents/referral-administration-evidence-review-assistant</loc></url>
   <url><loc>https://useaiblocks.com/agents/release-manager</loc></url>
+  <url><loc>https://useaiblocks.com/agents/report-definition-drift-review-assistant</loc></url>
+  <url><loc>https://useaiblocks.com/agents/research-contradiction-review-assistant</loc></url>
   <url><loc>https://useaiblocks.com/agents/research-topic-watcher</loc></url>
+  <url><loc>https://useaiblocks.com/agents/restaurant-shift-exception-review-assistant</loc></url>
+  <url><loc>https://useaiblocks.com/agents/reviewer-response-progress-assistant</loc></url>
   <url><loc>https://useaiblocks.com/agents/rule-change-policy-keeper</loc></url>
   <url><loc>https://useaiblocks.com/agents/saas-launch-review-agent</loc></url>
   <url><loc>https://useaiblocks.com/agents/sales-call-prep-assistant</loc></url>
@@ -97,10 +114,13 @@
   <url><loc>https://useaiblocks.com/agents/student-work-marking-desk</loc></url>
   <url><loc>https://useaiblocks.com/agents/study-plan-progress-review-assistant</loc></url>
   <url><loc>https://useaiblocks.com/agents/subscription-churn-watcher</loc></url>
+  <url><loc>https://useaiblocks.com/agents/supplier-correction-evidence-review-assistant</loc></url>
   <url><loc>https://useaiblocks.com/agents/test-failure-repair-loop</loc></url>
   <url><loc>https://useaiblocks.com/agents/tiktok-ads-weekly-account-keeper</loc></url>
   <url><loc>https://useaiblocks.com/agents/traction-experiment-keeper</loc></url>
   <url><loc>https://useaiblocks.com/agents/traction-research-agent</loc></url>
+  <url><loc>https://useaiblocks.com/agents/volunteer-induction-evidence-review-assistant</loc></url>
+  <url><loc>https://useaiblocks.com/agents/warehouse-count-discrepancy-review-assistant</loc></url>
   <url><loc>https://useaiblocks.com/agents/website-quality-keeper</loc></url>
   <url><loc>https://useaiblocks.com/agents/weekly-community-keeper</loc></url>
   <url><loc>https://useaiblocks.com/agents/weekly-customer-health-watcher</loc></url>

@@ -1,0 +1,50 @@
+slug: check-scholarship-application-evidence
+name: Check scholarship application evidence
+summary: Share the source files. Get an eligibility evidence map, revised draft and missing documents list.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: false
+  - type: copy_draft
+    required: false
+outputs:
+  - type: document
+  - type: audit_report
+  - type: copy_draft
+uses:
+  - source-note-summariser
+  - unsupported-claim-spotter
+  - proofreader
+steps:
+  - uses: source-note-summariser
+    note: Map the supplied eligibility criteria and application claims to the actual records; label gaps and avoid retaining unnecessary identity data.
+  - uses: unsupported-claim-spotter
+    note: Check the application draft for achievements, rankings, dates and personal claims without supplied support.
+  - uses: proofreader
+    note: Polish the real draft within the published word limit while preserving the applicant voice and factual boundaries.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/next-100-data.mjs
+example_pending: true
+credits:
+  - title: Source note summariser
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/source-note-summariser
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Unsupported claim spotter
+    by: Pro Skill Packs
+    url: https://github.com/proskillpacks/skills/tree/main/skills/writing/fact-claim-checker
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Proofreader
+    by: Burhan Sebin
+    url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/writing-and-content/proofreading
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

@@ -1,0 +1,49 @@
+slug: prepare-a-client-scope-change-brief
+name: Prepare a client scope change brief
+summary: Share the source files. Get a scope comparison, delivery options and client decision draft.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: document
+    required: false
+  - type: question
+    required: false
+outputs:
+  - type: document
+  - type: plan
+uses:
+  - plain-words-contract-summary
+  - team-capacity-planner
+  - stakeholder-update-writer
+steps:
+  - uses: plain-words-contract-summary
+    note: Locate deliverables, exclusions, change procedure, fee and notice provisions in the signed engagement with clause references.
+  - uses: team-capacity-planner
+    note: Check the requested change against real commitments, skills, effort ranges and available hours. Expose consequences for existing work.
+  - uses: stakeholder-update-writer
+    note: Draft a client decision brief with options, supported cost and date implications, open questions and approval status.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/next-100-data.mjs
+example_pending: true
+credits:
+  - title: Plain-words contract summary
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/plain-words-contract-summary
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Team capacity planner
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/operations/skills/capacity-plan
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Stakeholder update writer
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/product-management/skills/stakeholder-update
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

@@ -1,0 +1,41 @@
+slug: measure-a-clinic-administrative-queue
+name: Measure a clinic administrative queue
+summary: Share the source files. Get an administrative delay map, capacity options and measurement gaps.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: question
+    required: false
+outputs:
+  - type: audit_report
+  - type: plan
+  - type: document
+uses:
+  - process-bottleneck-finder
+  - team-capacity-planner
+steps:
+  - uses: process-bottleneck-finder
+    note: Use the bundled deterministic process methods on actual repeated administrative stages and timing evidence. If timing is absent, return an instrumentation plan rather than a measured bottleneck ranking.
+  - uses: team-capacity-planner
+    note: Compare administrative workload and actual qualified staff availability, retaining fixed duties and uncertainty; propose options for the clinic operations owner.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/next-100-data.mjs
+example_pending: true
+credits:
+  - title: Process bottleneck finder
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/business-operations/skills/process-mapper
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Team capacity planner
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/operations/skills/capacity-plan
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

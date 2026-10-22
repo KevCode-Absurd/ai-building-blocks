@@ -1,0 +1,75 @@
+{
+  "checkedOn": "2026-10-22T13:30:54.922Z",
+  "status": "final-candidate-qa-pass",
+  "origin": "https://useaiblocks.com",
+  "artifact": {
+    "frozenOn": "2026-10-22T13:27:44.362Z",
+    "root": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r14-final-workflows",
+    "assets": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r14-final-workflows\\assets",
+    "worker": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r14-final-workflows\\worker\\worker.js",
+    "workerSha256": "7ef08a7fff1e7402559ab35cdb421bcc4e220ae2e77d2b60a5f601810d8eecd3",
+    "files": 24192,
+    "blocks": 4513,
+    "criticalAssets": {
+      "index.html": "03b7f6833cd3509c2d3a0d4b1cda4e760b0682f5944631f2e1fa0a4d054661ff",
+      "compose.html": "deea276ad7b42431d71911b78d75ce8814e710b5ec34a38c71f4af88136a08a0",
+      "skills/loss-framing-writer.html": "0ddf04e175dfaa5384e0ae48bf69dd84298fb7f3f804d17743323df0ae29de78",
+      "data/blocks.json": "6757be7af672633794122d2fd0de16e78531fc461039b67209f35069dbab2351",
+      "skills/storyboard-to-powerpoint-deck-builder.zip": "e42453c498209497795b4d5b1a96aabf885f75057e8682a625ebf8bccbc31d78",
+      "skills/case-competition-slide-deck-builder.zip": "40d440223125568eb1192b845b96ba6a758c2379b8da0501af09407962321bc4",
+      "skills/research-paper-writer.zip": "e33e0e564f333480b56d10d0d55e7e70a3b3279d390c83a25c58d048c1e541eb",
+      "skills/equity-research-valuation-report-builder.zip": "a36201b3c55348de7c81adcd135f1ea948c62cf864db0b212c1b84d667216b9e"
+    },
+    "configs": {
+      "staging": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r14-final-workflows\\wrangler.staging.jsonc",
+      "production": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r14-final-workflows\\wrangler.production.jsonc"
+    }
+  },
+  "defaultModel": "gpt-6.1-sol",
+  "voice": {
+    "model": "whisper-1",
+    "realProviderCanary": "pass",
+    "physicalMicrophoneTested": false,
+    "report": "reports/voice-transcription-browser.json",
+    "recordingLimitSeconds": 300,
+    "requestCharacterLimit": 10000,
+    "serverAudioOrTranscriptPersistence": false,
+    "security": "Turnstile, same-origin, API and AI rate limits, strict sample-count duration, atomic shared daily budget"
+  },
+  "composer": {
+    "defaultMode": "ai",
+    "freeAssembly": "secondary, only specialist matches downloadable",
+    "layout": "horizontal desktop request/settings, full-width interactive workflow graph",
+    "download": "top of result",
+    "modelCostAndLatencyVisible": false,
+    "contextFirstPlanningAndHandoff": true,
+    "testedWidths": [
+      320,
+      390,
+      768,
+      1024,
+      1440,
+      1920
+    ],
+    "browserChecks": 7
+  },
+  "unitTests": {
+    "passed": 170,
+    "failed": 0
+  },
+  "customMinds": {
+    "report": "reports/2026-10-22-custom-minds-qa.json",
+    "builtBrowserChecks": 25,
+    "status": "frozen-production-candidate-qa-pass"
+  },
+  "seo": {
+    "crawlablePages": 4770,
+    "status": "pass"
+  },
+  "next100": {
+    "items": 100,
+    "packAssemblies": 75,
+    "report": "reports/2026-10-22-next-100-acceptance.json"
+  },
+  "sourcePushBeforeProduction": "pending"
+}

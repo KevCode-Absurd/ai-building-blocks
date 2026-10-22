@@ -1,6 +1,6 @@
 # Write and tell stories: AI Blocks
 
-> 96 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 97 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [AI-written text detector](https://useaiblocks.com/skills/ai-written-text-detector): Paste a document. Get an honest estimate of whether AI wrote it, with the wording clues behind it.
 - [Antagonist behavior planner](https://useaiblocks.com/skills/volatile-antagonist-mood-mapper): Paste your setting plan and the person in power. Get a mood scale with warning signs, triggers and costs.
@@ -17,6 +17,7 @@
 - [Case study story planner](https://useaiblocks.com/skills/case-first-story-builder): Give it your topic and notes. Get the one case to build on, the surprise underneath and an outline.
 - [Character motivation scene editor](https://useaiblocks.com/skills/scene-want-and-tactic-rewriter): Paste a scene that only explains. Get it rebuilt so each person wants something and uses words to get it.
 - [Character thought scene writer](https://useaiblocks.com/skills/inside-the-mind-scene-writer): Paste a character and a small errand. Get a scene told from inside their head, with time marked.
+- [Check scholarship application evidence](https://useaiblocks.com/workflows/check-scholarship-application-evidence): Share the source files. Get an eligibility evidence map, revised draft and missing documents list.
 - [Closed setting planner](https://useaiblocks.com/skills/closed-setting-planner): Tell it who is stuck and where. Get a sealed world with every exit shut for a reason.
 - [Commit message humaniser](https://useaiblocks.com/skills/commit-message-humaniser): Give it a commit message. Get a plain version that sounds like a careful engineer, with no AI filler.
 - [Company story aligner](https://useaiblocks.com/skills/company-story-aligner): Give it what you tell each group. Find contradictions and get one story framed for each audience.

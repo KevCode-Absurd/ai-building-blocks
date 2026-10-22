@@ -1,0 +1,42 @@
+slug: standardize-repair-work-order-intake
+name: Standardize repair work order intake
+summary: Share the source files. Get an intake procedure, missing-field checks and unresolved work register.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: question
+    required: false
+  - type: meeting_notes
+    required: false
+outputs:
+  - type: document
+  - type: plan
+uses:
+  - process-and-sop-writer
+  - executive-action-register
+steps:
+  - uses: process-and-sop-writer
+    note: Document intake, authorization evidence, asset identification, quote acceptance and escalation steps from the existing repair process; technical assessment stays with qualified staff.
+  - uses: executive-action-register
+    note: Build the follow-up register from actual open work orders and explicit commitments, leaving missing authorization or customer decisions unresolved.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/next-100-data.mjs
+example_pending: true
+credits:
+  - title: Process and SOP writer
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/operations/skills/process-doc
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Executive action register keeper
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/executive-action-register
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

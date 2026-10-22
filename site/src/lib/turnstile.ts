@@ -1,6 +1,6 @@
 // Each protected action gets a fresh, single-use token; keys and configuration come from the server.
 import "../security.css";
-export type SecurityAction = "compose" | "comment" | "create_space";
+export type SecurityAction = "compose" | "transcribe" | "comment" | "create_space";
 type Turnstile = {
   render(element: HTMLElement, options: Record<string, unknown>): string;
   remove(id: string): void;

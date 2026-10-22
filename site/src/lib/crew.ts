@@ -2,7 +2,7 @@
 // council of up to six. Plain code, so the same workflow always gives the same assignments.
 import { type Block, type Catalogue, areasOf } from "./data";
 import type { Ordered } from "./handoff";
-import type { Flow } from "./store";
+import { TEAM_MAX, type Flow, type FlowNode } from "./store";
 
 export const isMind = (c: Catalogue, slug: string | undefined) => !!slug && c.bySlug[slug]?.type === "mind";
 export const mindName = (c: Catalogue, slug: string) => c.bySlug[slug]?.name.split(" (")[0] ?? slug;
@@ -15,10 +15,14 @@ export function suggestMinds(c: Catalogue, b: Block, n = 4): Block[] {
   const want = new Set(areasOf(b));
   const fit = (m: Block) => [m.area ?? "", ...(m.also ?? [])].reduce((s, a, i) => s + (want.has(a) ? (i === 0 ? 2 : 1) : 0), 0);
   const rest = mindsIn(c).filter((m) => !own.includes(m)).map((m) => ({ m, f: fit(m) })).filter((x) => x.f > 0).sort((a, b) => b.f - a.f || a.m.name.localeCompare(b.m.name)).map((x) => x.m);
-  return [...own, ...rest].slice(0, n);
+  const matches = [...own, ...rest];
+  // When there is no area match, offer a general critical-thinking perspective explicitly.
+  const fallback = ["charlie-munger", "richard-feynman"].map(s => c.bySlug[s]).filter((m): m is Block => m?.type === "mind" && !matches.includes(m));
+  return (matches.length ? matches : fallback).slice(0, n);
 }
 
-export type Lead = { mind: string; from: "you" | "team" };
+export const taskMinds = (c: Catalogue, node: Pick<FlowNode, "mind" | "minds">) => [...new Set(node.minds ?? (node.mind ? [node.mind] : []))].filter(s => isMind(c, s)).slice(0, TEAM_MAX);
+export type Lead = { mind: string; from: "you" | "team"; minds?: string[] };
 
 /** Who leads each step. A mind you picked for the step always wins. In a "split" team, every other step goes to the team
  *  member whose areas fit it best; ties go to whoever has fewer steps so far, then to the order you listed them.
@@ -30,7 +34,8 @@ export function leadsOf(c: Catalogue, flow: Flow, order: Ordered[]): Record<numb
   for (const o of order) {
     const b = c.bySlug[o.node.slug];
     if (!b || b.type === "mind") continue;
-    if (o.node.mind && isMind(c, o.node.mind)) { out[o.step] = { mind: o.node.mind, from: "you" }; continue; }
+    const selected = taskMinds(c, o.node);
+    if (selected.length) { out[o.step] = { mind: selected[0], minds: selected, from: "you" }; continue; }
     if (flow.team?.mode !== "split" || !team.length) continue;
     const want = new Set(areasOf(b));
     const fit = (s: string) => { const m = c.bySlug[s]; return [m.area ?? "", ...(m.also ?? [])].reduce((n, a, i) => n + (want.has(a) ? (i === 0 ? 2 : 1) : 0), 0); };
@@ -43,6 +48,6 @@ export function leadsOf(c: Catalogue, flow: Flow, order: Ordered[]): Record<numb
 
 /** Every mind the download has to carry, in a fixed order: step leads, the overseer, then the team. */
 export function crewSlugs(c: Catalogue, flow: Flow, order: Ordered[]): string[] {
-  const leads = Object.values(leadsOf(c, flow, order)).map((l) => l.mind);
+  const leads = Object.values(leadsOf(c, flow, order)).flatMap((l) => l.minds ?? [l.mind]);
   return [...new Set([...leads, ...(isMind(c, flow.overseer) ? [flow.overseer!] : []), ...(flow.team?.minds ?? []).filter((s) => isMind(c, s))])];
 }

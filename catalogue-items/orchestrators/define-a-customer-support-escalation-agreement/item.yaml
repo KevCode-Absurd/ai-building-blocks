@@ -1,0 +1,39 @@
+slug: define-a-customer-support-escalation-agreement
+name: Define a customer support escalation agreement
+summary: Share the source files. Get an escalation procedure, ownership gaps and communication drafts.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: question
+    required: false
+outputs:
+  - type: document
+uses:
+  - process-and-sop-writer
+  - stakeholder-update-writer
+steps:
+  - uses: process-and-sop-writer
+    note: Document triggers, evidence required, receiving roles, handoff acceptance, fallback and closure from the approved support process. Keep unknown service targets visible.
+  - uses: stakeholder-update-writer
+    note: Draft internal and customer update structures using actual service promises and disclosure rules, separating confirmed facts from estimates.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/next-100-data.mjs
+example_pending: true
+credits:
+  - title: Process and SOP writer
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/operations/skills/process-doc
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Stakeholder update writer
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/product-management/skills/stakeholder-update
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

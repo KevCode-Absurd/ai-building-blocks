@@ -28,8 +28,8 @@ LABELS={
  '投资评分卡':'Investment Scorecard','监控与决策闭环':'Decision and Monitoring Loop','结论与待验证事项':'Conclusion and Validation',
  '公司质量':'Company Quality','股票价值':'Stock Value','执行摘要':'Executive Summary','来源':'Sources',
  '指标变化直接回链 Thesis、估值与下一项研究行动。':'Metric changes link to the thesis, valuation and next research action.',
- '待验证事项：':'Validation items: ','。Action 是研究框架含义，不是个性化交易指令。':'. This sample is a research exercise, not a personalized trading instruction.',
- '研究截止：':'Research cutoff: ','。本报告为研究框架输出，不构成个性化投资建议。':'. Synthetic workflow sample; not an actual security analysis.',
+ '待验证事项：':'Validation items: ','。Action 是研究框架含义，不是个性化交易指令。':'. Action describes a research framework assessment, not a personalized trading instruction.',
+ '研究截止：':'Research cutoff: ','。本报告为研究框架输出，不构成个性化投资建议。':'. This report is a research framework output, not personalized investment advice.',
  '报告导航':'Report navigation','核心判断':'Summary','证据':'Evidence','商业与行业':'Business','财务':'Financials','估值':'Valuation','监控':'Monitoring',
  '投资研究':'Equity Research','（':' (','）':') ','｜':' | ','；':'; ','。':'.',
 }

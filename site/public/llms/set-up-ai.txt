@@ -1,6 +1,6 @@
 # Set up AI to work for you: AI Blocks
 
-> 72 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 74 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Ad prompt comparison review](https://useaiblocks.com/skills/old-vs-new-ad-prompt-scorer): Paste old and new prompt ads. Get a blind test, a decision and a score out of 100.
 - [Agent action approval reviewer](https://useaiblocks.com/skills/copilot-verify-agent-action): Share a proposed agent action. Get its scope, risks and missing evidence checked before execution.
@@ -22,6 +22,7 @@
 - [AI coding agent rules writer](https://useaiblocks.com/skills/ai-coding-agent-rules-writer): Describe your project. Get a plan file and agent rules for working one test at a time.
 - [AI memory habit setter](https://useaiblocks.com/skills/ai-memory-habit-setter): Connect any memory tool. Get clear rules for when your AI recalls and saves decisions, so it stops repeating itself.
 - [AI model training debugger](https://useaiblocks.com/skills/ai-model-training-debugger): Describe your model, data and what goes wrong. Get a check order that finds silent bugs before tuning.
+- [AI pilot evaluation review assistant](https://useaiblocks.com/agents/ai-pilot-evaluation-review-assistant): A pilot evidence brief, data quality gaps and go stop checklist result.
 - [AI prompt editor](https://useaiblocks.com/prompts/rough-prompt-rebuilder): Share your rough prompt. Get a clearer version with the task, facts and requested result stated plainly.
 - [AI task brief writer](https://useaiblocks.com/prompts/job-to-agent-goal-writer): Paste a vague job. Get a goal an AI agent can finish, with proof of done and stop rules.
 - [AI task handover writer](https://useaiblocks.com/skills/task-handoff-writer): Describe work to pass on. Get a clear handoff to another AI agent, with checks along the way.
@@ -54,6 +55,7 @@
 - [Metric-driven file improver](https://useaiblocks.com/skills/metric-driven-file-improver): Pick a file and a score. Get an agent that edits, measures and keeps only changes that raise the score.
 - [Multi-agent workflow planner](https://useaiblocks.com/skills/multi-agent-workflow-planner): Give it a big task. Get a plan that splits it among AI agents with clear owners, handoffs and checks.
 - [Parallel work coordinator](https://useaiblocks.com/skills/parallel-work-coordinator): Give it a large task. Get it split across helper agents with clear ownership, then merged into one checked result.
+- [Prepare an AI pilot go decision](https://useaiblocks.com/workflows/prepare-an-ai-pilot-go-decision): Share the source files. Get a pilot evidence brief, data quality gaps and go stop checklist result.
 - [Project memory builder](https://useaiblocks.com/skills/project-memory-builder): Give it a bloated project notes file. Get a lean version, plus a way for your AI to save lasting facts.
 - [Project memory organizer](https://useaiblocks.com/skills/project-memory-organizer): Point it at your project. Get small context files per folder so your AI reads less and costs less.
 - [Prompt and skill tuner](https://useaiblocks.com/agents/prompt-and-skill-tuner): Give it a prompt or skill and test cases. It tests, fixes and re-tests until the checks pass, within four rounds.

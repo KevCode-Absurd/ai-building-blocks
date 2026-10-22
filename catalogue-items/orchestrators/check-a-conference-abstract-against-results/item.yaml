@@ -1,0 +1,53 @@
+slug: check-a-conference-abstract-against-results
+name: Check a conference abstract against results
+summary: Share the source files. Get a source-linked abstract revision and overclaim list.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: false
+  - type: copy_draft
+    required: false
+  - type: brand_brain
+    required: false
+outputs:
+  - type: document
+  - type: audit_report
+  - type: copy_draft
+  - type: feedback_notes
+uses:
+  - source-note-summariser
+  - unsupported-claim-spotter
+  - plain-english-editor
+steps:
+  - uses: source-note-summariser
+    note: Extract located methods, population, outcomes and limitations from the supplied completed study; retain table and page references.
+  - uses: unsupported-claim-spotter
+    note: Check the existing abstract against that evidence and list unsupported numbers, causal assertions and claimed novelty.
+  - uses: plain-english-editor
+    note: Edit the supplied abstract for the stated audience and word limit, preserving verified results and retaining unresolved claims as marked gaps.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/next-100-data.mjs
+example_pending: true
+credits:
+  - title: Source note summariser
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/source-note-summariser
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Unsupported claim spotter
+    by: Pro Skill Packs
+    url: https://github.com/proskillpacks/skills/tree/main/skills/writing/fact-claim-checker
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Plain English editor
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/plain-english-editor
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

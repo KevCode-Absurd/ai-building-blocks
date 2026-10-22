@@ -1,0 +1,40 @@
+slug: plan-an-internship-learning-review
+name: Plan an internship learning review
+summary: Share the source files. Get a role evidence map, learning plan and supervisor review guide.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: question
+    required: false
+outputs:
+  - type: document
+  - type: plan
+uses:
+  - role-skills-framework-builder
+  - training-program-builder
+steps:
+  - uses: role-skills-framework-builder
+    note: Use role-specific behavioral evidence to define the internship skills and observable development milestones; do not infer aptitude from personal traits.
+  - uses: training-program-builder
+    note: Build a supervised learning plan with real work practice and evidence checks, using the host constraints and agreed development time.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/next-100-data.mjs
+example_pending: true
+credits:
+  - title: Role skills framework builder
+    by: Tuan Duc Tran
+    url: https://github.com/tuanductran/hr-skills/tree/main/skills/hr-competency-management
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Training program builder
+    by: Tuan Duc Tran
+    url: https://github.com/tuanductran/hr-skills/tree/main/skills/hr-training-development
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

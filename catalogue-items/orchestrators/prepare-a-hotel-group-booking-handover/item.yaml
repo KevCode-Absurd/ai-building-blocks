@@ -1,0 +1,40 @@
+slug: prepare-a-hotel-group-booking-handover
+name: Prepare a hotel group booking handover
+summary: Share the source files. Get a booking handover, payment arithmetic check and outstanding requests.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: document
+    required: false
+outputs:
+  - type: audit_report
+  - type: document
+uses:
+  - invoice-totals-checker
+  - handover-note-writer
+steps:
+  - uses: invoice-totals-checker
+    note: Check the actual room-night counts, quoted rates, approved fees and deposits using the stated currency and dates. Do not infer local tax rules.
+  - uses: handover-note-writer
+    note: Prepare the incoming reservations or operations team handover with deadlines, accepted requests, open questions and authorized source locations, excluding credentials.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/next-100-data.mjs
+example_pending: true
+credits:
+  - title: Invoice totals checker
+    by: Pro Skill Packs
+    url: https://github.com/proskillpacks/skills/tree/main/skills/finance/invoice-checker
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Handover note writer
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/handover-note-writer
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

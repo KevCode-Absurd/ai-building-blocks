@@ -1,0 +1,40 @@
+slug: prepare-a-construction-defects-handover
+name: Prepare a construction defects handover
+summary: Share the source files. Get a defect register, remedial handover and missing acceptance evidence.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: meeting_notes
+    required: false
+outputs:
+  - type: plan
+  - type: document
+uses:
+  - executive-action-register
+  - handover-note-writer
+steps:
+  - uses: executive-action-register
+    note: Extract the accepted defect actions with inspection source IDs, owners, dates and evidence needed for closure; missing acceptance remains open.
+  - uses: handover-note-writer
+    note: Prepare the responsible contractor or facilities handover with location, access rules, dependencies and unresolved signoffs; do not infer completion from a promised date.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/next-100-data.mjs
+example_pending: true
+credits:
+  - title: Executive action register keeper
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/executive-action-register
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Handover note writer
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/handover-note-writer
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

@@ -1,0 +1,40 @@
+slug: plan-a-manual-first-customer-delivery
+name: Plan a manual first customer delivery
+summary: Share the source files. Get a delivery procedure, capacity options and unresolved handoff checks.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: question
+    required: false
+outputs:
+  - type: document
+  - type: plan
+uses:
+  - process-and-sop-writer
+  - team-capacity-planner
+steps:
+  - uses: process-and-sop-writer
+    note: Document the real manual delivery path, customer inputs, owners, exceptions, acceptance evidence and escalation. Do not describe unbuilt automation as available.
+  - uses: team-capacity-planner
+    note: Check the initial delivery workload against actual available roles, effort and fixed commitments; return feasible options and missing estimates for review.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/next-100-data.mjs
+example_pending: true
+credits:
+  - title: Process and SOP writer
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/operations/skills/process-doc
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Team capacity planner
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/operations/skills/capacity-plan
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

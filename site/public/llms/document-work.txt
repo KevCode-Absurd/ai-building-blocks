@@ -1,6 +1,6 @@
 # Write down how work gets done: AI Blocks
 
-> 34 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 39 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Analysis assumptions logger](https://useaiblocks.com/skills/analysis-assumptions-logger): Tell it about your analysis. Get every assumption logged with its risk, so reviewers see what could change the answer.
 - [Analysis write-up builder](https://useaiblocks.com/skills/analysis-write-up-builder): Give it your finished analysis. Get a write-up with the question, data, method, results and steps to rerun it.
@@ -12,8 +12,10 @@
 - [Data catalog entry writer](https://useaiblocks.com/skills/data-catalog-entry-writer): Give it a table and its owner. Get a plain entry with column meanings, quality notes, sources and who may use it.
 - [Define your metrics once and write a weekly update](https://useaiblocks.com/workflows/define-your-metrics-once-and-write-a-weekly-update-anyone-gets): Give it your numbers. Get metric definitions, an assumptions log, the weekly update and plain pictures.
 - [Developer docs writer](https://useaiblocks.com/skills/developer-docs-writer): Give it your product or draft docs. Get clear developer documentation that follows Google's style guide.
+- [Document a clinic appointment intake process](https://useaiblocks.com/workflows/document-a-clinic-appointment-intake-process): Share the source files. Get an administrative intake procedure and unresolved process questions.
 - [Documentation system planner](https://useaiblocks.com/skills/documentation-system-planner): Describe your team and product. Get what to write down, where it lives and how to keep it fresh.
 - [Employee handbook update agent](https://useaiblocks.com/agents/handbook-change-desk): Give it each proposed rule change. Get where the rule came from, what it affects and a small test to approve.
+- [Hand over a restricted fund program](https://useaiblocks.com/workflows/hand-over-a-restricted-fund-program): Share the source files. Get a restricted fund handover, obligations index and unresolved decisions.
 - [Handover note writer](https://useaiblocks.com/prompts/handover-note-writer): Paste what you are handing over and to whom. Get a note the next person can run from on day one.
 - [Lab method validation planner](https://useaiblocks.com/skills/lab-method-validation-planner): Name the lab test method and rules. Get a validation plan, acceptance limits and a write-up ready for review.
 - [Lessons learned note writer](https://useaiblocks.com/prompts/lessons-learned-note-writer): Paste what happened on a finished project. Get a one-page note with what to repeat and what to change.
@@ -24,6 +26,8 @@
 - [Monthly developer documentation review](https://useaiblocks.com/agents/monthly-developer-docs-keeper): Share your docs and recent changes. Get stale pages fixed, broken steps flagged and a clearer start guide.
 - [On-call runbook writer](https://useaiblocks.com/skills/on-call-runbook-writer): Describe a service or process. Get a step-by-step runbook that anyone on call can follow under pressure.
 - [Plain-words SQL explainer](https://useaiblocks.com/skills/plain-words-sql-explainer): Paste a SQL query. Get what it counts, which rows it keeps and what each column means, in plain words.
+- [Prepare a due diligence document index](https://useaiblocks.com/workflows/prepare-a-due-diligence-document-index): Share the source files. Get a versioned document index, request coverage map and access questions.
+- [Prepare an engagement closeout evidence pack](https://useaiblocks.com/workflows/prepare-an-engagement-closeout-evidence-pack): Share the source files. Get a delivery acceptance register, closeout handover and unresolved obligations.
 - [Process and SOP writer](https://useaiblocks.com/skills/process-and-sop-writer): Describe how work gets done. Get a flowchart, who does what, and a written procedure with the edge cases.
 - [Process change note writer](https://useaiblocks.com/prompts/process-change-note-writer): Paste what is changing and why. Get the note that tells the team what to do differently, from when.
 - [Process documentation update agent](https://useaiblocks.com/agents/process-doc-freshness-keeper): Give it your process docs each month. Get stale or ownerless ones found, rewrite drafts checked and a fix list to approve.
@@ -32,6 +36,7 @@
 - [Set up a documentation system and write procedures that pass](https://useaiblocks.com/workflows/set-up-a-documentation-system-and-write-sops-that-pass-a-check): Give it how your team works. Get a documentation system, procedures, runbooks and a check of each.
 - [Ship-ready docs writer](https://useaiblocks.com/skills/ship-ready-docs-writer): Point it at an AI-built app. Get the short set of docs a reviewer needs: architecture, permissions, secrets and test map.
 - [SOP and runbook checker](https://useaiblocks.com/skills/sop-and-runbook-checker): Give it your SOPs or wiki export. Get missing owners, stale pages and gaps, plus new SOPs to fix them.
+- [Standardize repair work order intake](https://useaiblocks.com/workflows/standardize-repair-work-order-intake): Share the source files. Get an intake procedure, missing-field checks and unresolved work register.
 - [Status report writer](https://useaiblocks.com/skills/status-report-writer): Give it your project updates. Get a weekly or monthly report with status, risks and decisions needed.
 - [Weekly status update writer](https://useaiblocks.com/prompts/weekly-status-update-writer): Paste what got done, what is stuck and what you need. Get a one-page status update.
 - [Write a procedure, test it and build a training deck](https://useaiblocks.com/workflows/write-a-procedure-test-it-and-build-a-training-deck): Describe how a job gets done. Get a written procedure, a gap check and a deck to train new people.

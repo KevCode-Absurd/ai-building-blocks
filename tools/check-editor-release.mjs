@@ -4,7 +4,7 @@ import assert from 'node:assert/strict';
 import crypto from 'node:crypto';
 import { spawn } from 'node:child_process';
 const [environment, input, profile = 'workflow-editor'] = process.argv.slice(2);
-assert(['workflow-editor', 'audience'].includes(profile));
+assert(['workflow-editor', 'audience', 'footer'].includes(profile));
 assert(['staging', 'production'].includes(environment));
 const releaseRoot = path.resolve(input ?? ''), assets = path.join(releaseRoot, 'assets');
 assert(releaseRoot.startsWith(path.resolve('site/.wrangler/releases') + path.sep));

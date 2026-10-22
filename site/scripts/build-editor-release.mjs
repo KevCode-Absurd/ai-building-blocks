@@ -10,7 +10,7 @@ const repo = path.resolve(import.meta.dirname, '../..');
 const root = path.resolve(repo, process.argv[2] ?? '');
 const version = process.argv[3];
 const profile = process.argv[4] ?? 'workflow-editor';
-assert(['workflow-editor', 'audience'].includes(profile));
+assert(['workflow-editor', 'audience', 'footer'].includes(profile));
 assert(root.startsWith(path.join(repo, 'site/.wrangler/releases') + path.sep));
 await assert.rejects(fs.stat(root), { code: 'ENOENT' });
 const live = JSON.parse(await fs.readFile(path.join(repo, 'reports/cloudflare-live-release.json'), 'utf8'));
@@ -18,7 +18,7 @@ assert.equal(live.production.versionId, version, 'The verified production baseli
 const previous = path.resolve(live.production.assetReleaseRoot ?? live.production.releaseRoot);
 const sha = bytes => crypto.createHash('sha256').update(bytes).digest('hex');
 const git = args => execFileSync('git', ['-c', 'core.longpaths=true', ...args], { cwd: repo, windowsHide: true, maxBuffer: 64 * 1024 * 1024 });
-const overlays = profile === 'audience' ? ['site/src/lib/audience-starters.ts'] : ['site/src/Builder.tsx', 'site/src/SkillAdd.tsx', 'site/src/skill-add.css', 'site/src/lib/insert-flow-skill.ts', 'site/src/ExecutionPrompt.tsx', 'site/src/space/SpacePage.tsx', 'site/src/lib/space-workflow-export.ts', 'site/src/MindPack.tsx', 'site/src/lib/handoff.ts'];
+const overlays = profile === 'footer' ? ['site/src/SiteFooter.tsx', 'site/scripts/prerender.mjs'] : profile === 'audience' ? ['site/src/lib/audience-starters.ts'] : ['site/src/Builder.tsx', 'site/src/SkillAdd.tsx', 'site/src/skill-add.css', 'site/src/lib/insert-flow-skill.ts', 'site/src/ExecutionPrompt.tsx', 'site/src/space/SpacePage.tsx', 'site/src/lib/space-workflow-export.ts', 'site/src/MindPack.tsx', 'site/src/lib/handoff.ts'];
 const dirty = git(['status', '--porcelain', '--untracked-files=all', '--', 'site/src']).toString().trimEnd().split(/\r?\n/).filter(Boolean).map(line => line.slice(3).replaceAll('\\', '/'));
 for (const file of dirty) assert(overlays.includes(file), 'Unreviewed app change: ' + file);
 const sourceCommit = git(['rev-parse', 'HEAD']).toString().trim();
@@ -33,14 +33,23 @@ for (const file of overlays) {
   const bytes = await fs.readFile(path.join(repo, file)); sourceHashes[file] = sha(bytes);
   await fs.writeFile(path.join(source, file), bytes);
 }
-await fs.cp(path.join(previous, 'assets'), assets, { recursive: true });
+const previousAssets = path.join(previous, 'assets');
+const previousEntries = await fs.readdir(previousAssets, { recursive: true, withFileTypes: true });
+assert(!previousEntries.some(entry => entry.isSymbolicLink()), 'Review symlinks before freezing assets.');
+const previousFiles = previousEntries.filter(entry => entry.isFile());
+let nextCopy = 0;
+await Promise.all(Array.from({ length: 32 }, async () => { while (nextCopy < previousFiles.length) {
+  const entry = previousFiles[nextCopy++], from = path.join(entry.parentPath, entry.name);
+  const to = path.join(assets, path.relative(previousAssets, from));
+  await fs.mkdir(path.dirname(to), { recursive: true }); await fs.copyFile(from, to);
+} }));
 await build({ configFile: false, root: path.join(source, 'site'), publicDir: false, plugins: [preact()], build: { outDir: path.join(root, 'browser'), target: 'es2020', modulePreload: { polyfill: false }, cssCodeSplit: true, emptyOutDir: true } });
 const refs = html => [...html.matchAll(/<(?:script|link)\b[^>]*(?:src|href)="(\/assets\/[^" ]+)"[^>]*>/g)].map(m => m[1]);
 const oldRefs = refs(await fs.readFile(path.join(previous, 'assets/index.html'), 'utf8'));
 const newRefs = refs(await fs.readFile(path.join(root, 'browser/index.html'), 'utf8'));
 assert.equal(oldRefs.length, 2); assert.equal(newRefs.length, 2);
 await fs.cp(path.join(root, 'browser/assets'), path.join(assets, 'assets'), { recursive: true });
-let htmlFiles = 0;
+let htmlFiles = 0, footerRemovals = 0;
 const assetEntries = await fs.readdir(assets, { recursive: true, withFileTypes: true });
 let nextHtml = 0;
 await Promise.all(Array.from({ length: 16 }, async () => { while (nextHtml < assetEntries.length) {
@@ -49,6 +58,12 @@ await Promise.all(Array.from({ length: 16 }, async () => { while (nextHtml < ass
   const file = path.join(entry.parentPath, entry.name), old = await fs.readFile(file, 'utf8');
   let updated = old;
   for (let i = 0; i < oldRefs.length; i++) updated = updated.replaceAll(oldRefs[i], newRefs[i]);
+  if (profile === 'footer') updated = updated.replace(/<footer\b[^>]*>[\s\S]*?<\/footer>/g, footer => {
+    if (footer.includes(' · Kevin Mark, India')) footerRemovals++;
+    const cleaned = footer.replaceAll(' · Kevin Mark, India', '');
+    assert(!cleaned.includes('Kevin Mark') && !cleaned.includes('India'), 'Review unexpected footer identity: ' + file);
+    return cleaned;
+  });
   if (updated !== old) { await fs.writeFile(file, updated); htmlFiles++; }
 } }));
 await fs.mkdir(path.join(root, 'worker'), { recursive: true });
@@ -63,7 +78,8 @@ for (const environment of ['staging', 'production']) {
 }
 for (const file of ['data/blocks.json', 'sitemap-skills.xml', 'sitemap-workflows.xml', 'sitemap-agents.xml']) assert.equal(sha(await fs.readFile(path.join(assets, file))), sha(await fs.readFile(path.join(previous, 'assets', file))), 'Catalogue changed: ' + file);
 for (const [file, hash] of Object.entries(sourceHashes)) assert.equal(sha(await fs.readFile(path.join(repo, file))), hash, 'Source changed during build: ' + file);
-const report = { createdAt: new Date().toISOString(), profile, root, assets, files: assetEntries.filter(e => e.isFile()).length, previous, previousVersionId: version, sourceCommit, sourceHashes, oldRefs, newRefs, htmlFiles, workerUnchanged: true, workerSha256: live.production.workerSha256, catalogueSha256: sha(await fs.readFile(path.join(assets, 'data/blocks.json'))), scope: profile === 'audience' ? 'Four audience choices: Students, Professionals, Startups and Enterprise. Legacy links resolve to a current audience.' : 'Searchable Add skill insertion and verified Space workflow exports. Latest verified content and backend retained.' };
+if (profile === 'footer') assert(footerRemovals > 0, 'No static footers were updated.');
+const report = { createdAt: new Date().toISOString(), profile, root, assets, files: assetEntries.filter(e => e.isFile()).length, previous, previousVersionId: version, sourceCommit, sourceHashes, oldRefs, newRefs, htmlFiles, footerRemovals, workerUnchanged: true, workerSha256: live.production.workerSha256, catalogueSha256: sha(await fs.readFile(path.join(assets, 'data/blocks.json'))), scope: profile === 'footer' ? 'Remove the personal name and location from shared interactive and static footers.' : profile === 'audience' ? 'Four audience choices: Students, Professionals, Startups and Enterprise. Legacy links resolve to a current audience.' : 'Searchable Add skill insertion and verified Space workflow exports. Latest verified content and backend retained.' };
 await fs.writeFile(path.join(root, 'release-manifest.json'), JSON.stringify(report, null, 2) + '\n');
 await fs.writeFile(path.join(repo, `reports/2026-10-22-${profile}-release.json`), JSON.stringify(report, null, 2) + '\n');
 console.log(JSON.stringify(report));

@@ -71,7 +71,7 @@ const WEBSITE = { "@type": "WebSite", "@id": `${SITE}/#site`, name: "AI Blocks",
 // The same links on every plain page, so no page is more than a few clicks from the rest.
 const NAV = [["/jobs", "All skills by job"], ["/minds", "Minds"], ["/tools", "Mini tools"], ["/how-it-works", "How it works"], ["/from-a-source", "From a source"], ["/apps", "Apps"]];
 const header = `<header class="wrap small" data-prerendered-nav><a href="/"><b>AI Blocks</b></a> · ${NAV.map(([h, t]) => `<a href="${h}">${t}</a>`).join(" · ")}</header>`;
-const footer = `<footer class="wrap small"><p>Free AI skills, workflows, prompts, minds and mini tools.</p><p>${NAV.map(([h, t]) => `<a href="${h}">${t}</a>`).join(" · ")} · <a href="/llms.txt">llms.txt</a> · <a href="/sitemap.xml">Sitemap</a></p><p>${INFO_PAGES.map(page => `<a href="${page.path}">${esc(page.label)}</a>`).join(" · ")}</p><p><a href="${emailLink()}">${SUPPORT_EMAIL}</a> · ${OPERATOR}, India</p></footer>`;
+const footer = `<footer class="wrap small"><p>Free AI skills, workflows, prompts, minds and mini tools.</p><p>${NAV.map(([h, t]) => `<a href="${h}">${t}</a>`).join(" · ")} · <a href="/llms.txt">llms.txt</a> · <a href="/sitemap.xml">Sitemap</a></p><p>${INFO_PAGES.map(page => `<a href="${page.path}">${esc(page.label)}</a>`).join(" · ")}</p><p><a href="${emailLink()}">${SUPPORT_EMAIL}</a></p></footer>`;
 
 // Pages that aren't blocks: their title and the line a search result shows.
 const STATIC = {

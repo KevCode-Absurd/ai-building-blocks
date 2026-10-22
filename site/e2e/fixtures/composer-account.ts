@@ -7,7 +7,7 @@ export async function mockComposerAccount(page: Page, signedIn = true) {
     : { configured: true, publishableKey: "pk_test_browser-fixture" } }));
   const sdkFixture = `
     export class Clerk {
-      session = ${signedIn ? '{ id: "sess_browser_fixture", status: "active", getToken: async () => "browser-fixture-session" }' : "null"};
+      session = ${signedIn ? '{ id: "sess_browser_fixture", status: "active", getToken: async () => sessionStorage.getItem("fixture:session-token") || "browser-fixture-session" }' : "null"};
       async load() {}
       addListener(listener) { listener(); return () => {}; }
       async redirectToSignIn(options) { sessionStorage.setItem("fixture:redirect", JSON.stringify(options)); }

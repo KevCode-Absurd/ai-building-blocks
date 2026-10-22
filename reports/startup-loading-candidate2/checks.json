@@ -1,0 +1,59 @@
+{
+  "status": "FAIL",
+  "createdAt": "2026-10-22T10:42:22.220Z",
+  "assets": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r9-candidate2\\assets",
+  "browser": "installed Chrome, headless, serial isolated contexts",
+  "productionWrites": 0,
+  "blockedWrites": 0,
+  "results": [
+    {
+      "name": "Delayed entry JS: animated screen hides actual prerender, then reveals home",
+      "status": "FAIL",
+      "ms": 633,
+      "error": "Expected \"actual\" to be strictly unequal to:\n\n'matrix(0, -0.45, 0.45, 0, -16, -16)'"
+    },
+    {
+      "name": "Delayed Space route chunk cannot reveal the home HTML or route fallback",
+      "status": "FAIL",
+      "ms": 888,
+      "error": "The input did not match the regular expression /space/i. Input:\n\n'Keep your skills and workflows in one place, and share them with your team'\n"
+    },
+    {
+      "name": "Phone, saved light theme and reduced motion: static mark, then correct page",
+      "status": "FAIL",
+      "ms": 477,
+      "error": "The input did not match the regular expression /space/i. Input:\n\n'Keep your skills and workflows in one place, and share them with your team'\n"
+    },
+    {
+      "name": "Delayed catalogue: compose stays covered until its real route is ready",
+      "status": "FAIL",
+      "ms": 256,
+      "error": "The expression evaluated to a falsy value:\n\n  assert(gate.requested())\n"
+    },
+    {
+      "name": "No JavaScript: home and skill still expose readable HTML, headings and links",
+      "status": "PASS",
+      "ms": 311
+    },
+    {
+      "name": "Plain job hubs and real 404 have no boot gate or loader",
+      "status": "PASS",
+      "ms": 475
+    },
+    {
+      "name": "Failed entry JS: timed recovery offers keyboard-accessible plain library",
+      "status": "PASS",
+      "ms": 12277
+    },
+    {
+      "name": "Failed stylesheet: never reveals an unformatted interactive page",
+      "status": "PASS",
+      "ms": 885
+    },
+    {
+      "name": "Cold deep link, library anchor and internal navigation retain destination",
+      "status": "PASS",
+      "ms": 965
+    }
+  ]
+}

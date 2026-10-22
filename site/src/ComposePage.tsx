@@ -77,8 +77,9 @@ export default function ComposePage({ c: baseCatalogue, toast }: { c: Catalogue;
       if (combined.length > LIMITS.context) throw Error("Keep added context, including saved context, under 4,000 characters.");
       if (mode === "free") setResult({ plan: finalize(c, freeSelection(c, goal, choices, combined), "free"), model: "free", cost: 0, latencyMs: 0, context: combined });
       else {
-        const token = await account.token();
         const verification = await protectedHeaders("compose");
+        // Human verification can outlast a session JWT; acquire it immediately before sending.
+        const token = await account.token();
         const response = await fetch("/api/compose", { method: "POST", headers: { "content-type": "application/json", "idempotency-key": crypto.randomUUID(), authorization: `Bearer ${token}`, ...verification }, body: JSON.stringify({ goal, context: combined, choices }) });
         if (response.status === 401) account.expired();
         const out = await response.json(); if (!response.ok) throw Error(out.error || "The model could not finish. Try free assembly.");

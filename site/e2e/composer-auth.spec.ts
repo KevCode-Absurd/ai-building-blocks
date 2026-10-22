@@ -28,17 +28,22 @@ test("AI asks for login and preserves the request across the sign-in redirect @m
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
 });
 
-test("AI sends the session token, shows account usage and handles an expired session", async ({ page }) => {
+test("AI refreshes the token after human verification, shows usage and handles an expired session", async ({ page }) => {
   await mockComposerAccount(page);
   // This UI flow intercepts every protected POST and uses a synthetic challenge;
   // it does not create a Clerk session or validate a real Turnstile token.
   await page.route("**/api/security", route => route.fulfill({ json: { required: true, sitekey: "auth-ui-fixture" } }));
   await page.addInitScript(() => {
+    sessionStorage.setItem("fixture:session-token", "token-before-human-check");
     (window as any).turnstile = {
       render(element: HTMLElement, options: any) {
         const button = document.createElement("button");
         button.type = "button"; button.textContent = "Complete simulated verification";
-        button.onclick = () => options.callback("auth-ui-fixture-token");
+        button.onclick = () => {
+          // Simulate a short-lived session JWT expiring while a human verifies.
+          sessionStorage.setItem("fixture:session-token", "token-after-human-check");
+          options.callback("auth-ui-fixture-token");
+        };
         element.append(button); return "auth-ui-fixture";
       },
       remove() {},
@@ -59,7 +64,7 @@ test("AI sends the session token, shows account usage and handles an expired ses
   await page.getByTestId("compose-submit").click();
   await page.getByRole("button", { name: "Complete simulated verification" }).click();
   await expect(page.getByRole("alert")).toContainText("session expired");
-  expect(sent?.authorization).toBe("Bearer browser-fixture-session");
+  expect(sent?.authorization).toBe("Bearer token-after-human-check");
   expect(sent?.["x-turnstile-token"]).toBe("auth-ui-fixture-token");
   await expect(page.getByTestId("compose-submit")).toBeDisabled();
   await expect(page.getByRole("button", { name: "Sign in", exact: true })).toBeVisible();

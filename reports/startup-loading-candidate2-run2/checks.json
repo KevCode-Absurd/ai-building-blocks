@@ -1,0 +1,56 @@
+{
+  "status": "FAIL",
+  "createdAt": "2026-10-22T10:43:14.914Z",
+  "assets": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r9-candidate2\\assets",
+  "browser": "installed Chrome, headless, serial isolated contexts",
+  "productionWrites": 0,
+  "blockedWrites": 0,
+  "results": [
+    {
+      "name": "Delayed entry JS: animated screen hides actual prerender, then reveals home",
+      "status": "PASS",
+      "ms": 1273
+    },
+    {
+      "name": "Delayed Space route chunk cannot reveal the home HTML or route fallback",
+      "status": "PASS",
+      "ms": 848
+    },
+    {
+      "name": "Phone, saved light theme and reduced motion: static mark, then correct page",
+      "status": "PASS",
+      "ms": 578
+    },
+    {
+      "name": "Delayed catalogue: compose stays covered until its real route is ready",
+      "status": "PASS",
+      "ms": 571
+    },
+    {
+      "name": "No JavaScript: home and skill still expose readable HTML, headings and links",
+      "status": "PASS",
+      "ms": 409
+    },
+    {
+      "name": "Plain job hubs and real 404 have no boot gate or loader",
+      "status": "PASS",
+      "ms": 417
+    },
+    {
+      "name": "Failed entry JS: timed recovery offers keyboard-accessible plain library",
+      "status": "PASS",
+      "ms": 12367
+    },
+    {
+      "name": "Failed stylesheet: never reveals an unformatted interactive page",
+      "status": "PASS",
+      "ms": 968
+    },
+    {
+      "name": "Cold deep link, library anchor and internal navigation retain destination",
+      "status": "FAIL",
+      "ms": 1003,
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '/'\n- '/skills/website-brand-brain-builder'\n"
+    }
+  ]
+}

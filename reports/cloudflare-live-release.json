@@ -14,7 +14,7 @@
     "canonicalURL": "https://useaiblocks.com/"
   },
   "staging": {
-    "status": "Final R8 staging accepted: real widget/reload, API21, unchanged backend, targeted frontend fallback and exact synthetic cleanup verified",
+    "status": "R9 frontend candidate4;12localstartup+4authregressions and6currentremote stagingchecks pass;unchangedbackend;historicalpositiveproofretained",
     "worker": "ai-building-blocks-staging",
     "database": "ai-blocks-staging",
     "databaseId": "eeb9d0d4-cbed-4751-8df4-1aaf81fd6cb3",
@@ -38,13 +38,13 @@
     "turnstileConfigured": true,
     "assetsToUpload": 12252,
     "url": "https://ai-building-blocks-staging.kevinmark7498.workers.dev",
-    "versionId": "80bc2a97-5835-4936-bd81-8c994a9552b6",
+    "versionId": "6c556ca3-f730-4a30-b249-ac51328e342d",
     "deployedOn": "2026-10-22T09:48:54.676Z",
     "uploadedAssets": 4500,
     "reusedAssets": 14110,
     "workerStartupMs": 5,
     "verified": true,
-    "previousVersionId": "2ff0def4-30ae-41f6-abe6-0cbcadffdd10",
+    "previousVersionId": "80bc2a97-5835-4936-bd81-8c994a9552b6",
     "workerSha256": "892f4aaae4cfd8dc723acc5ddf17f714c59416ee66b3d932057e590f76410d2c",
     "previousFunctionalChecks": {
       "versionId": "723795d5-403c-461a-a910-4088612a0022",
@@ -58,9 +58,9 @@
       "generationMs": 10467
     },
     "clerkConfigured": true,
-    "releaseRoot": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r8",
-    "assetReleaseRoot": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r8",
-    "verifiedOn": "2026-10-22T10:21:16.5818827Z"
+    "releaseRoot": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r9-candidate4",
+    "assetReleaseRoot": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r9-candidate4",
+    "verifiedOn": "2026-10-22T10:54:03.975Z"
   },
   "production": {
     "status": "public;27 smoke and security checks pass; free AI enabled at USD10/day; one real workflow awaits owner Turnstile checkbox",
@@ -107,7 +107,8 @@
     "dailyCapUSD": 10,
     "configurationCommitBeforeAIEnable": "0a6a3fd6",
     "defaultProviderKeyConfigured": true,
-    "customerPriceUSD": 0
+    "customerPriceUSD": 0,
+    "pendingFrontendRelease": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r9-candidate4"
   },
   "releaseScope": {
     "blocks": 4359,
@@ -167,9 +168,10 @@
   },
   "deferredWork": {
     "initialPaintLoadingState": {
-      "status": "Explicitly requested later by user; outside current launch scope",
+      "status": "New direct owner request implemented in R9candidate4;12startupchecks and6stagingchecks pass;productionpublishpending",
       "description": "Replace initial unformatted/prerendered text flash with brief loading state while preserving SEO, no-JS content and deep links",
-      "includedInR8": false
+      "includedInR8": false,
+      "includedInR9": true
     }
   }
 }

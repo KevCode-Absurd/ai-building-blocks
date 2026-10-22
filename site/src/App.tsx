@@ -1,5 +1,5 @@
 import { spaceKey, spaces } from "./lib/space";
-import { Suspense, lazy, useCallback, useDeferredValue, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
+import { Suspense, createContext, lazy, useCallback, useContext, useDeferredValue, useEffect, useLayoutEffect, useMemo, useRef, useState, type ComponentType, type ReactNode } from "react";
 import { ArrowIcon, BlockCard, Drawer, Logo, SearchIcon, Select, ThemeToggle, Toast } from "./ui";
 import { type Block, type Catalogue, type Kind, AREAS, areasOf, FUNCTIONS, FUNCTION_MOVED, KINDS, LEVELS, TASKS, cap, functionsOf, kindOf, loadPage, pathOf, taskOf, useCatalogue } from "./lib/data";
 import { kits, queueForCanvas, useStore } from "./lib/store";
@@ -54,16 +54,25 @@ function sectionOf(to: string): keyof typeof PAGES | null {
   if (path === "/how-it-works") return "guide";
   return null;
 }
-const BlockPage = lazy(PAGES.block);
-const HowItWorks = lazy(PAGES.guide);
-const ToolsPage = lazy(PAGES.tools);
-const AiToolsPage = lazy(PAGES.aitools);
-const TractionPage = lazy(PAGES.traction);
-const AppsPage = lazy(PAGES.apps);
-const SpacePage = lazy(PAGES.space);
-const MindsPage = lazy(PAGES.minds);
-const IntakePage = lazy(PAGES.intake);
-const ComposePage = lazy(PAGES.compose);
+// The readiness marker lives inside the resolved lazy component: Preact can
+// commit a sibling effect while a Suspense fallback is still on screen.
+const StartupContext = createContext(false);
+function startupPage<P extends object>(load: () => Promise<{ default: ComponentType<P> }>) {
+  return lazy(async () => {
+    const { default: Page } = await load();
+    return { default: (props: P) => <><Page {...props} /><StartupReady /></> };
+  });
+}
+const BlockPage = startupPage(PAGES.block);
+const HowItWorks = startupPage(PAGES.guide);
+const ToolsPage = startupPage(PAGES.tools);
+const AiToolsPage = startupPage(PAGES.aitools);
+const TractionPage = startupPage(PAGES.traction);
+const AppsPage = startupPage(PAGES.apps);
+const SpacePage = startupPage(PAGES.space);
+const MindsPage = startupPage(PAGES.minds);
+const IntakePage = startupPage(PAGES.intake);
+const ComposePage = startupPage(PAGES.compose);
 /** Finish an anchor landing once. Any user scroll cancels the correction. */
 function useHashLanding() {
   useEffect(() => {
@@ -373,6 +382,7 @@ function Home({ c, toast }: { c: Catalogue | null; toast: (m: string) => void })
   }, [c]);
   return (
     <main id="top">
+      <StartupReady />
       <section className="hero">
         <Suspense fallback={null}><Globe /></Suspense>
         <div className="wrap hero-in">
@@ -399,6 +409,15 @@ function Home({ c, toast }: { c: Catalogue | null; toast: (m: string) => void })
   );
 }
 
+/** Runs only when the home screen or a resolved route has actually committed. */
+function StartupReady() {
+  const ready = useContext(StartupContext);
+  useLayoutEffect(() => {
+    if (ready) document.dispatchEvent(new Event("abb:ready"));
+  }, [ready]);
+  return null;
+}
+
 export default function App() {
   useIdlePrefetch();
   useHashLanding();
@@ -419,15 +438,17 @@ export default function App() {
   // Old links (/?block=slug) and a page opened under the wrong type go to the right address.
   const parts = path.split("/").filter(Boolean);
   const pageSlug = parts.length === 2 && KIND_PATHS[parts[0]] ? parts[1] : null;
+  // Resolve renamed and legacy addresses before revealing the first page.
+  const now = (s: string | null) => (c && s ? c.bySlug[s] ?? c.bySlug[c.renamed?.[s] ?? ""] : undefined);
+  const old = now(search.get("block"));
+  const here = now(pageSlug);
+  const redirectTo = old ? pathOf(old) : here && pathOf(here) !== path ? pathOf(here) : null;
+  // Optional library data must not delay the home hero or the space form.
+  const waitingForCatalogue = !c && (pageSlug !== null || ["/minds", "/compose", "/from-a-source"].includes(path)
+    || search.has("block") || (path === "/" && ["#library", "#build"].includes(location.hash)));
   useEffect(() => {
-    if (!c) return;
-    // Blocks were renamed to say what they get you; their old names still lead to them.
-    const now = (s: string | null) => (s ? c.bySlug[s] ?? c.bySlug[c.renamed?.[s] ?? ""] : undefined);
-    const old = now(search.get("block"));
-    const here = now(pageSlug);
-    if (old) navigate(pathOf(old), { replace: true });
-    else if (here && pathOf(here) !== path) navigate(pathOf(here), { replace: true });
-  }, [c, search, pageSlug, path]);
+    if (redirectTo) navigate(redirectTo, { replace: true });
+  }, [redirectTo]);
 
   // One address per page for search engines and shared links.
   useEffect(() => {
@@ -448,29 +469,33 @@ export default function App() {
   return (
     <>
       <Header onKits={() => setKitsOpen(true)} />
-      {path === "/traction" ? (
-        <Suspense fallback={<main className="wrap bp-hero"><p className="small">Loading…</p></main>}><TractionPage /></Suspense>
-      ) : path === "/tools" || path.startsWith("/tools/") ? (
-        <Suspense fallback={<main className="wrap bp-hero"><p className="small">Loading…</p></main>}><ToolsPage path={path} toast={setToast} /></Suspense>
-      ) : path === "/ai-tools" || path.startsWith("/ai-tools/") ? (
-        <Suspense fallback={<main className="wrap bp-hero"><p className="small">Loading…</p></main>}><AiToolsPage path={path} /></Suspense>
-      ) : path === "/apps" || path.startsWith("/apps/") ? (
-        <Suspense fallback={<main className="wrap bp-hero"><p className="small">Loading…</p></main>}><AppsPage path={path} toast={setToast} /></Suspense>
-      ) : path === "/space" || path === "/people" || path.startsWith("/s/") ? (
-        <Suspense fallback={<main className="wrap bp-hero"><p className="small">Loading…</p></main>}><SpacePage path={path} c={c} toast={setToast} /></Suspense>
-      ) : path === "/minds" ? (
-        c ? <Suspense fallback={<main className="wrap bp-hero"><p className="small">Loading…</p></main>}><MindsPage c={c} toBuilder={toBuilder} /></Suspense> : <main className="wrap bp-hero"><p className="small">Loading…</p></main>
-      ) : path === "/compose" ? (
-        c ? <Suspense fallback={<main className="wrap bp-hero"><p className="small">Loading…</p></main>}><ComposePage c={c} toast={setToast} /></Suspense> : <main className="wrap bp-hero"><p className="small">Loading…</p></main>
-      ) : path === "/from-a-source" ? (
-        c ? <Suspense fallback={<main className="wrap bp-hero"><p className="small">Loading…</p></main>}><IntakePage c={c} toast={setToast} /></Suspense> : <main className="wrap bp-hero"><p className="small">Loading…</p></main>
-      ) : path === "/how-it-works" ? (
-        <Suspense fallback={<main className="wrap bp-hero"><p className="small">Loading…</p></main>}><HowItWorks toast={setToast} /></Suspense>
-      ) : pageSlug ? (
-        c ? <Suspense fallback={<main className="wrap bp-hero"><p className="small">Loading…</p></main>}><BlockPage c={c} slug={pageSlug} toast={setToast} toBuilder={toBuilder} /></Suspense> : <main className="wrap bp-hero"><p className="small">Loading…</p></main>
-      ) : (
-        <Home c={c} toast={setToast} />
-      )}
+      <StartupContext.Provider value={!redirectTo && !waitingForCatalogue}>
+        <Suspense fallback={<main className="wrap bp-hero"><p className="small">Loading…</p></main>}>
+          {path === "/traction" ? (
+            <TractionPage />
+          ) : path === "/tools" || path.startsWith("/tools/") ? (
+            <ToolsPage path={path} toast={setToast} />
+          ) : path === "/ai-tools" || path.startsWith("/ai-tools/") ? (
+            <AiToolsPage path={path} />
+          ) : path === "/apps" || path.startsWith("/apps/") ? (
+            <AppsPage path={path} toast={setToast} />
+          ) : path === "/space" || path === "/people" || path.startsWith("/s/") ? (
+            <SpacePage path={path} c={c} toast={setToast} />
+          ) : path === "/minds" ? (
+            c ? <MindsPage c={c} toBuilder={toBuilder} /> : <main className="wrap bp-hero"><p className="small">Loading…</p></main>
+          ) : path === "/compose" ? (
+            c ? <ComposePage c={c} toast={setToast} /> : <main className="wrap bp-hero"><p className="small">Loading…</p></main>
+          ) : path === "/from-a-source" ? (
+            c ? <IntakePage c={c} toast={setToast} /> : <main className="wrap bp-hero"><p className="small">Loading…</p></main>
+          ) : path === "/how-it-works" ? (
+            <HowItWorks toast={setToast} />
+          ) : pageSlug ? (
+            c ? <BlockPage c={c} slug={pageSlug} toast={setToast} toBuilder={toBuilder} /> : <main className="wrap bp-hero"><p className="small">Loading…</p></main>
+          ) : (
+            <Home c={c} toast={setToast} />
+          )}
+        </Suspense>
+      </StartupContext.Provider>
       <footer className="footer">
         <div className="wrap footer-in">
           <span>© 2026 AI Blocks · useaiblocks.com</span>

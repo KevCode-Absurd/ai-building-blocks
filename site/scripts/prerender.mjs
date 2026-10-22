@@ -15,7 +15,12 @@ const shell = fs.readFileSync(path.join(DIST, "index.html"), "utf8")
   .replace(/<script type="application\/ld\+json">.*?<\/script>\n  /s, "")
   .replace(/<div id="root">.*?<\/main><\/div>/s, '<div id="root"></div>');
 // The same page without the app: for hubs and the 404 page, which are complete as plain HTML.
-const plainShell = shell.replace(/<script type="module"[^>]*><\/script>\s*/g, "").replace(/<link rel="modulepreload"[^>]*>\s*/g, "").replace(/<link rel="preload" href="\/data\/blocks.json"[^>]*>\s*/, "");
+const plainShell = shell
+  .replace(/<!-- APP_BOOT_START[\s\S]*?<!-- APP_BOOT_END -->\s*/g, "")
+  .replace(/<!-- APP_LOADER_START -->[\s\S]*?<!-- APP_LOADER_END -->\s*/g, "")
+  .replace(/<script type="module"[^>]*><\/script>\s*/g, "")
+  .replace(/<link rel="modulepreload"[^>]*>\s*/g, "")
+  .replace(/<link rel="preload" href="\/data\/blocks.json"[^>]*>\s*/, "");
 const cat = JSON.parse(fs.readFileSync("public/data/blocks.json", "utf8"));
 const aiTools = JSON.parse(fs.readFileSync("public/data/ai-tools.json", "utf8"));
 const { TRACTION_CHANNELS: tractionChannels, tractionSlug } = await import("../../tools/lib/traction-channels.mjs");

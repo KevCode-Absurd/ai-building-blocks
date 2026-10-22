@@ -29,6 +29,77 @@
       document.documentElement.dataset.theme = "dark";
       try { if (localStorage.getItem("abb:theme") === "light") delete document.documentElement.dataset.theme; } catch (e) {}
     </script>
+    <!-- APP_BOOT_START: only interactive pages use this first-paint screen. -->
+    <style>
+      html { background: #fafafa; }
+      html[data-theme="dark"] { background: #0a0a0a; }
+      #app-loader { display: none; }
+      html[data-boot="loading"] body, html[data-boot="error"] body { overflow: hidden; }
+      html[data-boot="loading"] #root, html[data-boot="error"] #root { visibility: hidden; }
+      html[data-boot] #app-loader {
+        position: fixed; inset: 0; z-index: 1000; display: grid; place-items: center;
+        background: #fafafa; color: #0a0a0a; text-align: center; padding: 24px;
+        font: 14px/1.5 "Space Grotesk", system-ui, sans-serif;
+        opacity: 1; visibility: visible; transition: opacity 180ms ease, visibility 180ms;
+      }
+      html[data-theme="dark"][data-boot] #app-loader { background: #0a0a0a; color: #fafafa; }
+      html[data-boot="ready"] #app-loader { opacity: 0; visibility: hidden; pointer-events: none; }
+      .boot-content { display: grid; justify-items: center; gap: 24px; }
+      .boot-mark { position: relative; display: grid; grid-template-columns: repeat(3, 12px); gap: 5px; padding: 25px; }
+      .boot-mark::before { content: ""; position: absolute; inset: 0; border: 1px solid currentColor; opacity: .14; border-radius: 22px; transform: rotate(-8deg); }
+      .boot-mark i { width: 12px; height: 12px; background: currentColor; border-radius: 2px; animation: boot-assemble 2.4s cubic-bezier(.22,1,.36,1) infinite; animation-delay: calc(var(--n) * -90ms); }
+      .boot-mark i:nth-child(3n + 1) { --x: -16px; }
+      .boot-mark i:nth-child(3n + 2) { --x: 0px; }
+      .boot-mark i:nth-child(3n) { --x: 16px; }
+      .boot-mark i:nth-child(-n + 3) { --y: -16px; }
+      .boot-mark i:nth-child(n + 4) { --y: 0px; }
+      .boot-mark i:nth-child(n + 7) { --y: 16px; }
+      .boot-brand { margin: 0; font: 500 15px/1.5 "JetBrains Mono", ui-monospace, monospace; letter-spacing: -.04em; }
+      .boot-caption { margin: 6px 0 0; font-size: 12px; opacity: .6; }
+      .boot-recovery { display: none; max-width: 280px; }
+      .boot-recovery p { margin: 0 0 16px; }
+      .boot-recovery a { display: inline-block; color: inherit; padding: 8px 12px; text-underline-offset: 4px; }
+      .boot-recovery a:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+      html[data-boot="error"] .boot-recovery { display: block; }
+      html[data-boot="error"] .boot-caption { display: none; }
+      html[data-boot="error"] .boot-mark i { animation: none; }
+      @keyframes boot-assemble {
+        0%, 12%, 100% { transform: translate(var(--x), var(--y)) rotate(-90deg) scale(.45); opacity: .2; }
+        42%, 72% { transform: translate(0, 0) rotate(0) scale(1); opacity: 1; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .boot-mark i { animation: none; }
+        html[data-boot] #app-loader { transition: none; }
+      }
+    </style>
+    <script>
+      // Run before the body can paint; JavaScript-free readers keep the HTML view.
+      document.documentElement.dataset.boot = "loading";
+      let bootStyleFailed = false;
+      function bootError() {
+        document.documentElement.dataset.boot = "error";
+        document.getElementById("app-loader")?.setAttribute("aria-label", "AI Blocks is taking longer than expected");
+      }
+      // A failed stylesheet must not reveal an unformatted interactive page.
+      function bootStyleError(event) {
+        if (event.target instanceof HTMLLinkElement && event.target.rel === "stylesheet") {
+          bootStyleFailed = true;
+          bootError();
+        }
+      }
+      window.addEventListener("error", bootStyleError, true);
+      window.__abbBootTimer = setTimeout(function () {
+        if (document.documentElement.dataset.boot === "loading") bootError();
+      }, 12000);
+      document.addEventListener("abb:ready", function () {
+        clearTimeout(window.__abbBootTimer);
+        if (bootStyleFailed) return;
+        window.removeEventListener("error", bootStyleError, true);
+        document.documentElement.dataset.boot = "ready";
+        setTimeout(function () { document.getElementById("app-loader")?.remove(); }, 200);
+      }, { once: true });
+    </script>
+    <!-- APP_BOOT_END -->
     <!-- Fonts are served from this site (Latin letters only), so text never waits on another server. -->
     <link rel="preload" href="/fonts/space-grotesk.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/jetbrains-mono.woff2" as="font" type="font/woff2" crossorigin />
@@ -48,6 +119,15 @@
     </style>
   </head>
   <body>
+    <!-- APP_LOADER_START -->
+    <div id="app-loader" role="status" aria-live="polite" aria-label="Loading AI Blocks">
+      <div class="boot-content">
+        <div class="boot-mark" aria-hidden="true"><i style="--n:0"></i><i style="--n:1"></i><i style="--n:2"></i><i style="--n:3"></i><i style="--n:4"></i><i style="--n:5"></i><i style="--n:6"></i><i style="--n:7"></i><i style="--n:8"></i></div>
+        <div><p class="boot-brand">AI Blocks</p><p class="boot-caption">Putting the blocks together</p></div>
+        <div class="boot-recovery"><p>This is taking longer than expected.</p><a href="">Try again</a><a href="/jobs">Browse the library</a></div>
+      </div>
+    </div>
+    <!-- APP_LOADER_END -->
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

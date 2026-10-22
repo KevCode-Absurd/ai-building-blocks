@@ -1,5 +1,5 @@
 {
-  "checkedOn": "2026-10-22T18:08:29.730Z",
+  "checkedOn": "2026-10-22T18:18:37.002Z",
   "deadline": "2026-10-22 Asia/Kolkata",
   "accountAuthenticated": true,
   "workersPaid": {
@@ -14,7 +14,7 @@
     "canonicalURL": "https://useaiblocks.com/"
   },
   "staging": {
-    "status": "R20 four audience choices verified: Students, Professionals, Startups and Enterprise",
+    "status": "R21 shared footer name and location removal verified",
     "worker": "ai-building-blocks-staging",
     "database": "ai-blocks-staging",
     "databaseId": "eeb9d0d4-cbed-4751-8df4-1aaf81fd6cb3",
@@ -39,13 +39,13 @@
     "turnstileConfigured": true,
     "assetsToUpload": 24270,
     "url": "https://ai-building-blocks-staging.kevinmark7498.workers.dev",
-    "versionId": "7f5c620d-8473-4be1-982b-76eaf600635c",
-    "deployedOn": "2026-10-22T18:04:26.751Z",
+    "versionId": "2008f2a4-6a5b-4112-80c5-81b65a6348c8",
+    "deployedOn": "2026-10-22T18:15:09.824Z",
     "uploadedAssets": 4938,
     "reusedAssets": 19332,
     "workerStartupMs": 5,
     "verified": true,
-    "previousVersionId": "8b9a047c-572b-4b12-a5bb-68384b862fbc",
+    "previousVersionId": "7f5c620d-8473-4be1-982b-76eaf600635c",
     "workerSha256": "e0eabe892d923971589729a486e791878aa6e5c74d1e4e38c4aee7bb10c54a00",
     "previousFunctionalChecks": {
       "versionId": "723795d5-403c-461a-a910-4088612a0022",
@@ -58,8 +58,8 @@
       "algorithm": "Wrangler 4.151.3 BLAKE3/base64/extension"
     },
     "clerkConfigured": true,
-    "releaseRoot": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r20-audience",
-    "assetReleaseRoot": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r20-audience",
+    "releaseRoot": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r21-footer",
+    "assetReleaseRoot": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r21-footer",
     "verifiedOn": "2026-10-22T17:20:58.510Z",
     "environment": "staging",
     "origin": "https://ai-building-blocks-staging.kevinmark7498.workers.dev",
@@ -76,10 +76,10 @@
       "sourceCommit": "272db23089cbebe99e1f7c8a29ebead4f6cdc959",
       "report": "reports/finance-release-qa.json"
     },
-    "verificationReport": "reports/2026-10-22-audience-staging.json"
+    "verificationReport": "reports/2026-10-22-footer-staging.json"
   },
   "production": {
-    "status": "R20 four audience choices verified: Students, Professionals, Startups and Enterprise",
+    "status": "R21 shared footer name and location removal verified",
     "database": "ai-blocks",
     "databaseId": "a886eeae-4014-4da2-842f-a5bebc4d7f71",
     "migrations": [
@@ -105,7 +105,7 @@
       "blockSeconds": 10,
       "includedRule": true
     },
-    "versionId": "1661cda4-2bc1-4e22-9f01-bf8e44b85393",
+    "versionId": "75950f49-7471-4f1b-abac-f4b3cd6b2350",
     "workerSha256": "e0eabe892d923971589729a486e791878aa6e5c74d1e4e38c4aee7bb10c54a00",
     "uploadedAssets": 4938,
     "reusedAssets": 19332,
@@ -113,10 +113,10 @@
     "workersDevEnabled": false,
     "previewUrlsEnabled": false,
     "clerkConfigured": true,
-    "previousVersionId": "d2494491-f4ca-4de9-a8d9-599a41a22773",
-    "deployedOn": "2026-10-22T18:06:52.283Z",
-    "releaseRoot": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r20-audience",
-    "assetReleaseRoot": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r20-audience",
+    "previousVersionId": "1661cda4-2bc1-4e22-9f01-bf8e44b85393",
+    "deployedOn": "2026-10-22T18:17:15.922Z",
+    "releaseRoot": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r21-footer",
+    "assetReleaseRoot": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r21-footer",
     "sourceCommit": "be214d29c2653467eefe389cf7a1689a6f72a99a",
     "publicVerified": true,
     "gitEvidenceBeforeActivation": "be214d29c2653467eefe389cf7a1689a6f72a99a",
@@ -152,7 +152,7 @@
       "sourceCommit": "272db23089cbebe99e1f7c8a29ebead4f6cdc959",
       "report": "reports/finance-release-qa.json"
     },
-    "verificationReport": "reports/2026-10-22-audience-production.json"
+    "verificationReport": "reports/2026-10-22-footer-production.json"
   },
   "releaseScope": {
     "blocks": 4438,

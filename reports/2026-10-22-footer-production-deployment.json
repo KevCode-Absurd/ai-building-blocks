@@ -1,0 +1,13 @@
+{
+  "deployedOn": "2026-10-22T18:17:15.922Z",
+  "environment": "production",
+  "previousVersionId": "1661cda4-2bc1-4e22-9f01-bf8e44b85393",
+  "versionId": "75950f49-7471-4f1b-abac-f4b3cd6b2350",
+  "releaseRoot": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r21-footer",
+  "assetReleaseRoot": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r21-footer",
+  "workerSha256": "e0eabe892d923971589729a486e791878aa6e5c74d1e4e38c4aee7bb10c54a00",
+  "catalogueSha256": "5c4afed89a5a43a4ffe8b173ae79cf9b8f4e4a555bf9319e23cb19bc86a6395d",
+  "bindingsPreserved": 20,
+  "cliExitCode": 0,
+  "status": "deployed-awaiting-verification"
+}

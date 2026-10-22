@@ -1,0 +1,54 @@
+{
+  "checkedAt": "2026-10-22T18:18:10.182Z",
+  "status": "pass",
+  "checks": [
+    {
+      "route": "/",
+      "width": 1440,
+      "personalInformationAbsent": true,
+      "footerText": "AI Blocks\n\nReusable AI skills and workflows for the work you do.\n\nhello@useaiblocks.com\nSupport, feedback and privacy requests\nEXPLORE\nBlock library\nMinds\nMini tools\nAI tools\nGrowth channels\nCREATE\nBuild a custom workflow\nCreate skills from content\nExample apps\nApp starter pack\nMy space\nFrom people\nHELP\nHow it works\nHelp & contact\nAbout AI Blocks\nGet a skill tailored for you\n© 2026 AI Blocks\nPrivacy policy\nTerms of service\nCookies & storage\nAI disclaimer"
+    },
+    {
+      "route": "/compose",
+      "width": 1440,
+      "personalInformationAbsent": true,
+      "footerText": "AI Blocks\n\nReusable AI skills and workflows for the work you do.\n\nhello@useaiblocks.com\nSupport, feedback and privacy requests\nEXPLORE\nBlock library\nMinds\nMini tools\nAI tools\nGrowth channels\nCREATE\nBuild a custom workflow\nCreate skills from content\nExample apps\nApp starter pack\nMy space\nFrom people\nHELP\nHow it works\nHelp & contact\nAbout AI Blocks\nGet a skill tailored for you\n© 2026 AI Blocks\nPrivacy policy\nTerms of service\nCookies & storage\nAI disclaimer"
+    },
+    {
+      "route": "/jobs",
+      "width": 1440,
+      "personalInformationAbsent": true,
+      "footerText": "Free AI skills, workflows, prompts, minds and mini tools.\n\nAll skills by job · Minds · Mini tools · How it works · From a source · Apps · llms.txt · Sitemap\n\nHelp & contact · About AI Blocks · Privacy policy · Terms of service · Cookies & storage · AI disclaimer\n\nhello@useaiblocks.com"
+    },
+    {
+      "route": "/skills/plain-english-editor",
+      "width": 1440,
+      "personalInformationAbsent": true,
+      "footerText": "AI Blocks\n\nReusable AI skills and workflows for the work you do.\n\nhello@useaiblocks.com\nSupport, feedback and privacy requests\nEXPLORE\nBlock library\nMinds\nMini tools\nAI tools\nGrowth channels\nCREATE\nBuild a custom workflow\nCreate skills from content\nExample apps\nApp starter pack\nMy space\nFrom people\nHELP\nHow it works\nHelp & contact\nAbout AI Blocks\nGet a skill tailored for you\n© 2026 AI Blocks\nPrivacy policy\nTerms of service\nCookies & storage\nAI disclaimer"
+    },
+    {
+      "route": "/",
+      "width": 320,
+      "personalInformationAbsent": true,
+      "footerText": "AI Blocks\n\nReusable AI skills and workflows for the work you do.\n\nhello@useaiblocks.com\nSupport, feedback and privacy requests\nEXPLORE\nBlock library\nMinds\nMini tools\nAI tools\nGrowth channels\nCREATE\nBuild a custom workflow\nCreate skills from content\nExample apps\nApp starter pack\nMy space\nFrom people\nHELP\nHow it works\nHelp & contact\nAbout AI Blocks\nGet a skill tailored for you\n© 2026 AI Blocks\nPrivacy policy\nTerms of service\nCookies & storage\nAI disclaimer"
+    },
+    {
+      "route": "/compose",
+      "width": 320,
+      "personalInformationAbsent": true,
+      "footerText": "AI Blocks\n\nReusable AI skills and workflows for the work you do.\n\nhello@useaiblocks.com\nSupport, feedback and privacy requests\nEXPLORE\nBlock library\nMinds\nMini tools\nAI tools\nGrowth channels\nCREATE\nBuild a custom workflow\nCreate skills from content\nExample apps\nApp starter pack\nMy space\nFrom people\nHELP\nHow it works\nHelp & contact\nAbout AI Blocks\nGet a skill tailored for you\n© 2026 AI Blocks\nPrivacy policy\nTerms of service\nCookies & storage\nAI disclaimer"
+    },
+    {
+      "route": "/jobs",
+      "width": 320,
+      "personalInformationAbsent": true,
+      "footerText": "Free AI skills, workflows, prompts, minds and mini tools.\n\nAll skills by job · Minds · Mini tools · How it works · From a source · Apps · llms.txt · Sitemap\n\nHelp & contact · About AI Blocks · Privacy policy · Terms of service · Cookies & storage · AI disclaimer\n\nhello@useaiblocks.com"
+    },
+    {
+      "route": "/skills/plain-english-editor",
+      "width": 320,
+      "personalInformationAbsent": true,
+      "footerText": "AI Blocks\n\nReusable AI skills and workflows for the work you do.\n\nhello@useaiblocks.com\nSupport, feedback and privacy requests\nEXPLORE\nBlock library\nMinds\nMini tools\nAI tools\nGrowth channels\nCREATE\nBuild a custom workflow\nCreate skills from content\nExample apps\nApp starter pack\nMy space\nFrom people\nHELP\nHow it works\nHelp & contact\nAbout AI Blocks\nGet a skill tailored for you\n© 2026 AI Blocks\nPrivacy policy\nTerms of service\nCookies & storage\nAI disclaimer"
+    }
+  ]
+}

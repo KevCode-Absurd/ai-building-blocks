@@ -1,0 +1,742 @@
+{
+  "schema_version": "1.2",
+  "meta": {
+    "mode": "standard",
+    "company_name": "Sample Systems | SYNTHETIC",
+    "ticker": "SAMPLE",
+    "exchange": "Not listed - simulation only",
+    "currency": "USD",
+    "as_of": "2026-10-22",
+    "investment_horizon": "5 years",
+    "language": "en"
+  },
+  "summary": {
+    "headline": "A $14 sample value leaves too little cushion at $12.",
+    "one_line_judgment": "Synthetic scenario only: $15m flat annual FCFF supports $14 per share at a 10% WACC; a 20% cushion requires $11.20.",
+    "investment_posture": "Sample decision: wait",
+    "posture_rationale": "The illustrative $12 price exceeds the $11.20 threshold. No real security or trade is evaluated.",
+    "overall_confidence": "low",
+    "maximum_unknown": "All operating and market inputs are assumed.",
+    "company_quality": "A fictional subscription service with flat $100m revenue and a 20% operating margin; no evidence of a durable moat.",
+    "stock_value": "Calculated enterprise value $150m plus $20m cash less $30m debt gives $140m equity, or $14 per diluted share."
+  },
+  "evidence_scope": {
+    "source_coverage": "Five local synthetic exhibits exercise source roles. They provide no external corroboration and are not real filings, interviews, surveys or prices.",
+    "primary_filing_status": "synthetic fixture",
+    "earnings_call_status": "synthetic fixture",
+    "industry_evidence_status": "synthetic fixture",
+    "research_confidence": "low",
+    "conflicts_and_gaps": "Every input is assumed for QA. Industry and peer statements are counterfactual sample exhibits, not independent research.",
+    "evidence_blocks": [
+      {
+        "kind": "fact",
+        "text": "Within the sample ledger, annual revenue is $100m; this is not an observed company fact.",
+        "source_ids": [
+          "S01"
+        ],
+        "confidence": "low"
+      },
+      {
+        "kind": "management-view",
+        "text": "The fictional management case assumes stable renewal demand.",
+        "source_ids": [
+          "S01"
+        ],
+        "confidence": "low"
+      },
+      {
+        "kind": "market-view",
+        "text": "The fictional peer case describes discount pressure.",
+        "source_ids": [
+          "S02"
+        ],
+        "confidence": "low"
+      },
+      {
+        "kind": "calculation",
+        "text": "FCFF = $100m x 20% x (1 - 25%) = $15m; D&A, capex and NWC changes are set to zero.",
+        "source_ids": [
+          "S01"
+        ],
+        "confidence": "low"
+      },
+      {
+        "kind": "inference",
+        "text": "Flat demand may be compatible with stable cash flow, but no real evidence establishes it.",
+        "source_ids": [
+          "S01",
+          "S05"
+        ],
+        "confidence": "low"
+      }
+    ]
+  },
+  "business": {
+    "model_and_demand": "The sample business sells workflow subscriptions. Revenue is held flat by design; no claim is made about an actual market.",
+    "value_creation": "The test assumes recurring cash receipts without growth investment.",
+    "industry_stage_and_drivers": "This fixture supplies a mature, flat-demand setting solely to isolate valuation arithmetic.",
+    "competitive_position": "The sample peer offers a similar product. Pricing pressure is a scenario risk.",
+    "moats": [
+      {
+        "title": "Workflow integration",
+        "text": "Potential switching friction is an unverified sample hypothesis.",
+        "source_ids": [
+          "S01"
+        ]
+      },
+      {
+        "title": "Recurring contracts",
+        "text": "Contract persistence is assumed, not measured.",
+        "source_ids": [
+          "S01"
+        ]
+      }
+    ],
+    "counter_evidence": {
+      "text": "A fictional competitor discounts its equivalent product.",
+      "source_ids": [
+        "S02",
+        "S05"
+      ]
+    },
+    "industry_validation": {
+      "claim": "The synthetic market is stable, with pricing pressure.",
+      "company": {
+        "text": "Fictional company case: flat demand.",
+        "source_ids": [
+          "S01"
+        ]
+      },
+      "competitors": [
+        {
+          "text": "Fictional peer case: flat demand with discounting.",
+          "source_ids": [
+            "S02"
+          ]
+        }
+      ],
+      "independent": {
+        "text": "Synthetic industry exhibit assumes flat demand; it is not independent external evidence.",
+        "source_ids": [
+          "S03"
+        ],
+        "status": "available",
+        "reason": "Local test exhibit only."
+      },
+      "agreement_or_conflict": "Demand assumptions agree; margin durability remains uncertain.",
+      "confidence": "low",
+      "gap": "No real company, peer or industry data were obtained."
+    }
+  },
+  "management": {
+    "overview": "Fictional management holds the cash-flow model flat. Capital allocation quality cannot be assessed from these synthetic exhibits.",
+    "mda_delta": [
+      {
+        "topic": "Revenue",
+        "previous_period": "$100m",
+        "current_period": "$100m",
+        "change": "0",
+        "interpretation": "Stable by construction.",
+        "source_ids": [
+          "S01"
+        ],
+        "alternative_explanation": "Synthetic inputs explain the stability.",
+        "validation_task": "Replace with audited period disclosures before real analysis."
+      },
+      {
+        "topic": "Operating margin",
+        "previous_period": "20%",
+        "current_period": "20%",
+        "change": "0",
+        "interpretation": "Stable by construction.",
+        "source_ids": [
+          "S01"
+        ],
+        "alternative_explanation": "Synthetic inputs explain the stability.",
+        "validation_task": "Replace with audited period disclosures before real analysis."
+      },
+      {
+        "topic": "Annual FCFF",
+        "previous_period": "$15m",
+        "current_period": "$15m",
+        "change": "0",
+        "interpretation": "Stable by construction.",
+        "source_ids": [
+          "S01"
+        ],
+        "alternative_explanation": "Synthetic inputs explain the stability.",
+        "validation_task": "Replace with audited period disclosures before real analysis."
+      }
+    ],
+    "promises": [
+      {
+        "id": "P01",
+        "promise": "Synthetic management goal: keep annual FCFF at $15m.",
+        "promise_date": "2026-02-20",
+        "original_wording_locator": "S01 / management_goal",
+        "due_date": "2026-12-31",
+        "actual_result": "Sample H1 FCFF is $7.5m; full year not yet observed.",
+        "source_ids": [
+          "S01"
+        ],
+        "status": "pending",
+        "assessment": "The future full-year outcome is not evidence of delivery."
+      }
+    ]
+  },
+  "financials": {
+    "overview": "Flat synthetic operating statements; all financial amounts are USD millions except per-share values.",
+    "metric_continuity": [
+      {
+        "metric": "Revenue",
+        "periods": "2023A-2026Q2",
+        "definition_scope_change": "None; synthetic same-scope ledger",
+        "comparability_status": "comparable",
+        "adjustment": "None",
+        "source_ids": [
+          "S01"
+        ]
+      },
+      {
+        "metric": "Operating margin",
+        "periods": "2023A-2026Q2",
+        "definition_scope_change": "None; synthetic same-scope ledger",
+        "comparability_status": "comparable",
+        "adjustment": "None",
+        "source_ids": [
+          "S01"
+        ]
+      },
+      {
+        "metric": "Operating cash flow",
+        "periods": "2023A-2026Q2",
+        "definition_scope_change": "None; synthetic same-scope ledger",
+        "comparability_status": "comparable",
+        "adjustment": "None",
+        "source_ids": [
+          "S01"
+        ]
+      },
+      {
+        "metric": "FCFF",
+        "periods": "2023A-2026Q2",
+        "definition_scope_change": "None; synthetic same-scope ledger",
+        "comparability_status": "comparable",
+        "adjustment": "None",
+        "source_ids": [
+          "S01"
+        ]
+      },
+      {
+        "metric": "ROIC",
+        "periods": "2023A-2026Q2",
+        "definition_scope_change": "None; synthetic same-scope ledger",
+        "comparability_status": "comparable",
+        "adjustment": "None",
+        "source_ids": [
+          "S01"
+        ]
+      }
+    ],
+    "annual_history": [
+      {
+        "period": "2023A",
+        "revenue": "100",
+        "growth": "0%",
+        "margin": "20%",
+        "ocf": "15",
+        "fcf": "15",
+        "roic": "15% assumed",
+        "earnings_quality_note": "Synthetic; FCFF equals NOPAT.",
+        "source_ids": [
+          "S01"
+        ]
+      },
+      {
+        "period": "2024A",
+        "revenue": "100",
+        "growth": "0%",
+        "margin": "20%",
+        "ocf": "15",
+        "fcf": "15",
+        "roic": "15% assumed",
+        "earnings_quality_note": "Synthetic; FCFF equals NOPAT.",
+        "source_ids": [
+          "S01"
+        ]
+      },
+      {
+        "period": "2025A",
+        "revenue": "100",
+        "growth": "0%",
+        "margin": "20%",
+        "ocf": "15",
+        "fcf": "15",
+        "roic": "15% assumed",
+        "earnings_quality_note": "Synthetic; FCFF equals NOPAT.",
+        "source_ids": [
+          "S01"
+        ]
+      }
+    ],
+    "quarterly_history": [
+      {
+        "period": "2025Q3",
+        "revenue": "25",
+        "growth": "0%",
+        "margin": "20%",
+        "ocf": "3.75",
+        "fcf": "3.75",
+        "roic": "15% assumed",
+        "earnings_quality_note": "Synthetic; FCFF equals NOPAT.",
+        "source_ids": [
+          "S01"
+        ]
+      },
+      {
+        "period": "2025Q4",
+        "revenue": "25",
+        "growth": "0%",
+        "margin": "20%",
+        "ocf": "3.75",
+        "fcf": "3.75",
+        "roic": "15% assumed",
+        "earnings_quality_note": "Synthetic; FCFF equals NOPAT.",
+        "source_ids": [
+          "S01"
+        ]
+      },
+      {
+        "period": "2026Q1",
+        "revenue": "25",
+        "growth": "0%",
+        "margin": "20%",
+        "ocf": "3.75",
+        "fcf": "3.75",
+        "roic": "15% assumed",
+        "earnings_quality_note": "Synthetic; FCFF equals NOPAT.",
+        "source_ids": [
+          "S01"
+        ]
+      },
+      {
+        "period": "2026Q2",
+        "revenue": "25",
+        "growth": "0%",
+        "margin": "20%",
+        "ocf": "3.75",
+        "fcf": "3.75",
+        "roic": "15% assumed",
+        "earnings_quality_note": "Synthetic; FCFF equals NOPAT.",
+        "source_ids": [
+          "S01"
+        ]
+      }
+    ],
+    "earnings_quality": "The model sets D&A and capex to zero to isolate FCFF arithmetic. This is a restrictive test assumption, not a normal operating-company claim.",
+    "kpi_inflections": "No measured inflection: all sample annual and quarterly operating values are flat.",
+    "sector_kpis": [
+      {
+        "metric": "Net retention",
+        "current": "100% assumed",
+        "direction": "flat",
+        "source_ids": [
+          "S01"
+        ]
+      }
+    ]
+  },
+  "valuation_context": {
+    "route": "dcf",
+    "method_rationale": "Five-year FCFF DCF at 10% WACC and zero terminal growth. Flat $15m cash flows give a hand-checkable perpetuity value. The relative cross-check is another assumed benchmark.",
+    "assumptions": [
+      {
+        "id": "A01",
+        "assumption": "WACC",
+        "value": "10% analyst assumption",
+        "source_ids": [
+          "S04"
+        ]
+      },
+      {
+        "id": "A02",
+        "assumption": "Terminal growth",
+        "value": "0% analyst assumption",
+        "source_ids": [
+          "S03"
+        ]
+      },
+      {
+        "id": "A03",
+        "assumption": "Terminal ROIC",
+        "value": "15% assumed; no growth reinvestment required",
+        "source_ids": [
+          "S01"
+        ]
+      }
+    ],
+    "scenario_rationales": {
+      "bear": {
+        "operating_assumptions": "Margin falls to 12%; other assumptions flat.",
+        "valuation_assumptions": "$9m FCFF / 10% less $10m net debt gives $8/share.",
+        "trigger_or_falsifier": "Replace base if sample operating margin falls to 12%."
+      },
+      "base": {
+        "operating_assumptions": "Margin stays at 20%; revenue remains $100m.",
+        "valuation_assumptions": "$15m FCFF / 10% less $10m net debt gives $14/share.",
+        "trigger_or_falsifier": "Flat demand and margin remain the assumed case."
+      },
+      "bull": {
+        "operating_assumptions": "Margin rises to 28%; other assumptions flat.",
+        "valuation_assumptions": "$21m FCFF / 10% less $10m net debt gives $20/share.",
+        "trigger_or_falsifier": "Requires sample operating margin at 28%."
+      }
+    },
+    "reverse_interpretation": "Reverse DCF holds the model structure fixed; any implied parameter is conditional and not a unique market forecast.",
+    "reconciliation_note": "Primary EV $150m + cash $20m - debt $30m = equity $140m; divided by 10m shares = $14. Relative EV $140m gives $13/share after the same bridge."
+  },
+  "theses": [
+    {
+      "id": "T01",
+      "statement": "The sample flat-demand case sustains $100m revenue.",
+      "supporting_source_ids": [
+        "S01",
+        "S03"
+      ],
+      "counter_source_ids": [
+        "S05"
+      ],
+      "evidence_types": [
+        "calculation",
+        "inference"
+      ],
+      "confidence": "low",
+      "needs_validation": "Real renewal and demand evidence."
+    },
+    {
+      "id": "T02",
+      "statement": "A 20% margin and 25% cash tax yield $15m FCFF under zero investment changes.",
+      "supporting_source_ids": [
+        "S01"
+      ],
+      "counter_source_ids": [
+        "S05"
+      ],
+      "evidence_types": [
+        "calculation",
+        "inference"
+      ],
+      "confidence": "low",
+      "needs_validation": "Real capex, working capital and tax disclosures."
+    },
+    {
+      "id": "T03",
+      "statement": "At $12, the sample price lacks the required 20% cushion to $14 value.",
+      "supporting_source_ids": [
+        "S04"
+      ],
+      "counter_source_ids": [
+        "S05"
+      ],
+      "evidence_types": [
+        "calculation",
+        "inference"
+      ],
+      "confidence": "low",
+      "needs_validation": "Replace the synthetic price, WACC and operating forecasts."
+    }
+  ],
+  "risks_and_breakers": {
+    "summary": "Unobserved inputs dominate confidence. The following rules link sample changes to model consequences.",
+    "breakers": [
+      {
+        "breaker": "Demand deterioration",
+        "trigger": "Revenue below $100m",
+        "confirmation_window": "Next sample model revision",
+        "thesis_ids": [
+          "T01"
+        ],
+        "scenario_probability_impact": "Re-estimate assumed probabilities; no automatic change.",
+        "valuation_impact": "Lower cash flows.",
+        "research_action": "Rebuild using verified source data."
+      },
+      {
+        "breaker": "Margin deterioration",
+        "trigger": "Operating margin at 12%",
+        "confirmation_window": "Next sample model revision",
+        "thesis_ids": [
+          "T02"
+        ],
+        "scenario_probability_impact": "Re-estimate assumed probabilities; no automatic change.",
+        "valuation_impact": "Bear value becomes $8/share.",
+        "research_action": "Rebuild using verified source data."
+      },
+      {
+        "breaker": "Price increase",
+        "trigger": "Price above $14",
+        "confirmation_window": "Next sample model revision",
+        "thesis_ids": [
+          "T03"
+        ],
+        "scenario_probability_impact": "Re-estimate assumed probabilities; no automatic change.",
+        "valuation_impact": "Discount to base value disappears.",
+        "research_action": "Rebuild using verified source data."
+      }
+    ]
+  },
+  "scorecard": {
+    "industry": {
+      "score": 2,
+      "evidence_ids": [
+        "S03"
+      ],
+      "counter_evidence_ids": [
+        "S02"
+      ],
+      "thesis_ids": [
+        "T01"
+      ],
+      "confidence": "low",
+      "rationale_or_gap": "Synthetic; no external corroboration."
+    },
+    "moat": {
+      "score": 2,
+      "evidence_ids": [
+        "S01"
+      ],
+      "counter_evidence_ids": [
+        "S02"
+      ],
+      "thesis_ids": [
+        "T01"
+      ],
+      "confidence": "low",
+      "rationale_or_gap": "Synthetic; no external corroboration."
+    },
+    "financials": {
+      "score": 2,
+      "evidence_ids": [
+        "S01"
+      ],
+      "counter_evidence_ids": [
+        "S05"
+      ],
+      "thesis_ids": [
+        "T02"
+      ],
+      "confidence": "low",
+      "rationale_or_gap": "Synthetic; no external corroboration."
+    },
+    "management": {
+      "score": 2,
+      "evidence_ids": [
+        "S01"
+      ],
+      "counter_evidence_ids": [
+        "S05"
+      ],
+      "thesis_ids": [
+        "T02"
+      ],
+      "confidence": "low",
+      "rationale_or_gap": "Synthetic; no external corroboration."
+    },
+    "trend": {
+      "score": 2,
+      "evidence_ids": [
+        "S01"
+      ],
+      "counter_evidence_ids": [
+        "S02"
+      ],
+      "thesis_ids": [
+        "T01",
+        "T02"
+      ],
+      "confidence": "low",
+      "rationale_or_gap": "Synthetic; no external corroboration."
+    },
+    "valuation": {
+      "score": 2,
+      "evidence_ids": [
+        "S04"
+      ],
+      "counter_evidence_ids": [
+        "S05"
+      ],
+      "thesis_ids": [
+        "T03"
+      ],
+      "confidence": "low",
+      "rationale_or_gap": "Synthetic; no external corroboration."
+    },
+    "monitoring": {
+      "score": 2,
+      "evidence_ids": [
+        "S01",
+        "S03"
+      ],
+      "counter_evidence_ids": [
+        "S05"
+      ],
+      "thesis_ids": [
+        "T01",
+        "T02",
+        "T03"
+      ],
+      "confidence": "low",
+      "rationale_or_gap": "Synthetic; no external corroboration."
+    }
+  },
+  "monitoring": [
+    {
+      "metric": "Revenue",
+      "current_value": "$100m assumed",
+      "as_of": "2026-10-22",
+      "source_ids": [
+        "S01"
+      ],
+      "next_update": "Next sample data revision",
+      "bull_threshold": "Above $100m",
+      "bear_threshold": "Below $100m",
+      "thesis_ids": [
+        "T01"
+      ],
+      "valuation_impact": "Changes forecast revenue.",
+      "research_action": "Replace assumed inputs with verified period data."
+    },
+    {
+      "metric": "Operating margin",
+      "current_value": "20% assumed",
+      "as_of": "2026-10-22",
+      "source_ids": [
+        "S01"
+      ],
+      "next_update": "Next sample data revision",
+      "bull_threshold": "28%",
+      "bear_threshold": "12%",
+      "thesis_ids": [
+        "T02"
+      ],
+      "valuation_impact": "Changes annual FCFF.",
+      "research_action": "Replace assumed inputs with verified period data."
+    },
+    {
+      "metric": "Industry demand",
+      "current_value": "Flat assumed",
+      "as_of": "2026-10-22",
+      "source_ids": [
+        "S03"
+      ],
+      "next_update": "Next sample data revision",
+      "bull_threshold": "Growing",
+      "bear_threshold": "Shrinking",
+      "thesis_ids": [
+        "T01"
+      ],
+      "valuation_impact": "Changes growth assumption.",
+      "research_action": "Replace assumed inputs with verified period data."
+    },
+    {
+      "metric": "Peer pricing",
+      "current_value": "Stable assumed",
+      "as_of": "2026-10-22",
+      "source_ids": [
+        "S02"
+      ],
+      "next_update": "Next sample data revision",
+      "bull_threshold": "Higher",
+      "bear_threshold": "Lower",
+      "thesis_ids": [
+        "T01"
+      ],
+      "valuation_impact": "Changes margin assumption.",
+      "research_action": "Replace assumed inputs with verified period data."
+    },
+    {
+      "metric": "Sample price",
+      "current_value": "$12, not a quote",
+      "as_of": "2026-10-22",
+      "source_ids": [
+        "S04"
+      ],
+      "next_update": "Next sample data revision",
+      "bull_threshold": "At or below $11.20",
+      "bear_threshold": "Above $14",
+      "thesis_ids": [
+        "T03"
+      ],
+      "valuation_impact": "Changes discount to value.",
+      "research_action": "Replace assumed inputs with verified period data."
+    }
+  ],
+  "conclusion": {
+    "decision": "Sample wait decision: $12 is above the $11.20 threshold. No actual security or investor is assessed.",
+    "company_quality": "Insufficient evidence: all company inputs are synthetic.",
+    "stock_value": "Base arithmetic gives $14/share, with a sample $8-$20 scenario range.",
+    "margin_of_safety_rationale": "20% discount to $14 is $11.20; 35% discount is $9.10. Current discount to value is 14.2857%; price upside is 16.6667%, a different denominator.",
+    "validation_items": [
+      "Verify operating statements",
+      "Verify cash and debt",
+      "Verify fully diluted shares",
+      "Verify current price and risk assumptions"
+    ],
+    "thesis_ids": [
+      "T01",
+      "T02",
+      "T03"
+    ]
+  },
+  "sources": [
+    {
+      "id": "S01",
+      "role": "company-primary",
+      "document": "SYNTHETIC: Company ledger and assumptions",
+      "publication_date": "2026-10-22",
+      "reporting_period": "Synthetic FY2023-2026Q2; forward assumptions 2027-2031",
+      "locator": "Section 1 / JSON root and named fields",
+      "url_or_path": "http://127.0.0.1:5197/sources/S01.json",
+      "access_date": "2026-10-22"
+    },
+    {
+      "id": "S02",
+      "role": "competitor-primary",
+      "document": "SYNTHETIC: Peer scenario exhibit",
+      "publication_date": "2026-10-22",
+      "reporting_period": "Synthetic FY2023-2026Q2; forward assumptions 2027-2031",
+      "locator": "Section 1 / JSON root and named fields",
+      "url_or_path": "http://127.0.0.1:5197/sources/S02.json",
+      "access_date": "2026-10-22"
+    },
+    {
+      "id": "S03",
+      "role": "independent-industry",
+      "document": "SYNTHETIC: Industry scenario exhibit",
+      "publication_date": "2026-10-22",
+      "reporting_period": "Synthetic FY2023-2026Q2; forward assumptions 2027-2031",
+      "locator": "Section 1 / JSON root and named fields",
+      "url_or_path": "http://127.0.0.1:5197/sources/S03.json",
+      "access_date": "2026-10-22"
+    },
+    {
+      "id": "S04",
+      "role": "market-data",
+      "document": "SYNTHETIC: Price and discount-rate assumptions",
+      "publication_date": "2026-10-22",
+      "reporting_period": "Synthetic FY2023-2026Q2; forward assumptions 2027-2031",
+      "locator": "Section 1 / JSON root and named fields",
+      "url_or_path": "http://127.0.0.1:5197/sources/S04.json",
+      "access_date": "2026-10-22"
+    },
+    {
+      "id": "S05",
+      "role": "secondary",
+      "document": "SYNTHETIC: Counter-evidence and limitations",
+      "publication_date": "2026-10-22",
+      "reporting_period": "Synthetic FY2023-2026Q2; forward assumptions 2027-2031",
+      "locator": "Section 1 / JSON root and named fields",
+      "url_or_path": "http://127.0.0.1:5197/sources/S05.json",
+      "access_date": "2026-10-22"
+    }
+  ]
+}

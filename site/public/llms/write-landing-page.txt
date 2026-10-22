@@ -1,6 +1,6 @@
 # Write and build a landing page: AI Blocks
 
-> 43 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 44 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [A landing page that matches your best ad](https://useaiblocks.com/workflows/ad-landing-page): Give it your website, offer and best ad. You get the page text, a design plan and a 30-point review.
 - [Ad-matched landing page writer](https://useaiblocks.com/skills/ad-matched-landing-page-writer): Paste your ad, facts and reviews. Get landing page copy that picks up where the ad left off.
@@ -36,6 +36,7 @@
 - [Sales letter outline planner](https://useaiblocks.com/skills/sales-letter-outline-planner): Paste your research and chosen theme. Get a full outline, with headline ideas and the proof each claim needs.
 - [Shopify landing page builder](https://useaiblocks.com/skills/shopify-landing-page-builder): Paste your page copy and theme. Get Shopify files with your copy loaded in, and install steps.
 - [Shopify theme code writer](https://useaiblocks.com/skills/shopify-theme-code-writer): Name the section you need and your theme. Get installable code and what to upload.
+- [Static HTML landing page builder](https://useaiblocks.com/skills/static-html-landing-page-builder): Turn checked page copy and layout into plain HTML and CSS, with accessible forms, local assets and hosting instructions.
 - [Store advertorial writer](https://useaiblocks.com/skills/store-advertorial-writer): Give it your angle, mechanism, product facts and ad. Get a full advertorial, labelled as an ad.
 - [Store hero section writer](https://useaiblocks.com/skills/store-hero-section-writer): Give it your offer and proof. Get five headlines, a subhead, button, proof and a test plan.
 - [Store quiz funnel builder](https://useaiblocks.com/skills/store-quiz-funnel-builder): Give it your customer research and offer. Get a quiz, info cards, summary page and a drop-off check.

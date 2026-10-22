@@ -1,0 +1,58 @@
+import fs from "node:fs";
+import path from "node:path";
+import assert from "node:assert/strict";
+import { createRequire } from "node:module";
+import { pathToFileURL } from "node:url";
+import http from "node:http";
+const require = createRequire(new URL("../site/package.json", import.meta.url));
+const { chromium } = require("@playwright/test");
+const browser = await chromium.launch({ channel: "chrome", headless: true });
+const checks = [];
+const sourceHeaders = fs.readFileSync("site/public/_headers", "utf8"), distHeaders = fs.readFileSync("site/dist/_headers", "utf8");
+assert.equal(sourceHeaders, distHeaders);
+const policy = distHeaders.match(/Permissions-Policy: (.+)/)[1].trim();
+const server = http.createServer((req, res) => { res.writeHead(200, { "Content-Type": "text/html", "Permissions-Policy": req.url === "/blocked" ? policy.replace("microphone=(self)", "microphone=()") : policy }); res.end("<!doctype html><title>Permission policy check</title>"); });
+await new Promise(resolve => server.listen(0, "127.0.0.1", resolve));
+try {
+  const policyPage = await browser.newPage();
+  await policyPage.goto(`http://127.0.0.1:${server.address().port}/`);
+  const permitted = await policyPage.evaluate(() => ({ microphone: document.featurePolicy.allowsFeature("microphone"), camera: document.featurePolicy.allowsFeature("camera"), geolocation: document.featurePolicy.allowsFeature("geolocation") }));
+  assert.deepEqual(permitted, { microphone: true, camera: false, geolocation: false });
+  await policyPage.goto(`http://127.0.0.1:${server.address().port}/blocked`);
+  assert.equal(await policyPage.evaluate(() => document.featurePolicy.allowsFeature("microphone")), false);
+  checks.push({ productionHeader: policy, permitted, realAudioCaptured: false }); await policyPage.close();
+  for (const theme of ["light", "dark"]) for (const width of [360, 736]) {
+    const page = await browser.newPage({ viewport: { width, height: 1000 }, colorScheme: theme });
+    const errors = []; page.on("pageerror", error => errors.push(error.message));
+    await page.goto(pathToFileURL("C:/Users/kevin/.codex/visualizations/2026/10/22/01a16162-e122-7731-93b8-9f4706f23938/free-paid-workflows-preview.html").href); const frame = page.frameLocator("iframe");
+    await frame.locator("#wf-request-oct22").selectOption("course-launch");
+    assert.match(await frame.locator("#wf-goal-oct22").textContent(), /pottery/);
+    assert.ok(await frame.locator("#wf-free-steps > li").count() > 8);
+    await frame.locator("#wf-request-oct22").selectOption("cashflow");
+    assert.match(await frame.locator("#wf-goal-oct22").textContent(), /cash-flow/);
+    assert.equal(await frame.locator("#wf-quality-oct22 > tr").count(), 5);
+    await frame.locator("#wf-free-steps summary").first().click();
+    assert.match(await frame.locator("#wf-free-steps details[open]").textContent(), /bank/);
+    const overflow = await frame.locator("#workflow-comparison-oct22").evaluate(el => el.scrollWidth > el.clientWidth + 1);
+    assert.equal(overflow, false); assert.deepEqual(errors, []);
+    await frame.locator("#wf-free-steps summary").first().click();
+    const height = await frame.locator("#workflow-comparison-oct22").evaluate(el => Math.ceil(el.getBoundingClientRect().height) + 32);
+    await page.locator("iframe").evaluate((el, height) => { el.style.height = height + "px"; }, height);
+    await page.screenshot({ path: `reports/workflow-visual-${theme}-${width}.png`, fullPage: true });
+    checks.push({ theme, width, errors, overflow, interaction: "request and step details changed" }); await page.close();
+  }
+  const page = await browser.newPage({ viewport: { width: 1200, height: 900 } });
+  const errors = []; page.on("pageerror", error => errors.push(error.message));
+  await page.goto(pathToFileURL(path.resolve("reports/2026-10-22-workflow-fresh20.html")).href);
+  assert.match(await page.locator("h1").textContent(), /Free workflow/);
+  assert.equal(await page.locator("tbody tr").count(), 5);
+  assert.equal(await page.locator("body > details").count(), 20);
+  await page.locator("body > details").first().locator("summary").click();
+  assert.ok(await page.locator("body > details").first().locator("article").count() === 5);
+  assert.deepEqual(errors, []);
+  await page.evaluate(() => scrollTo(0, 0));
+  await page.screenshot({ path: "reports/workflow-fresh20-report.png", fullPage: false });
+  checks.push({ report: true, errors });
+} finally { await browser.close(); server.closeAllConnections(); await new Promise(resolve => server.close(resolve)); }
+fs.writeFileSync("reports/2026-10-22-workflow-visual-check.json", JSON.stringify({ checked: new Date().toISOString(), checks }, null, 2));
+console.log(JSON.stringify(checks));

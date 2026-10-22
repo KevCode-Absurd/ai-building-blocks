@@ -1,11 +1,11 @@
 {
   "method": "Static pattern scan of all catalogue skill folders and supporting files, metadata checks, SHA-256 manifest. No imported scripts executed. Findings are candidates, not verdicts. Model behavior and remote dependencies require separate evaluation.",
   "counts": {
-    "blocks": 4349,
-    "files": 25664,
-    "bytes": 231929693,
-    "findings": 338,
-    "copyCandidates": 1
+    "blocks": 4360,
+    "files": 25840,
+    "bytes": 233114293,
+    "findings": 339,
+    "copyCandidates": 2
   },
   "structural": [],
   "findings": [
@@ -1826,6 +1826,14 @@
       "digest": "69ac86e833ae2f50f8d4fda64e82747a43b0a4a2326dd57136e1243f0180719a"
     },
     {
+      "slug": "resume-job-application-builder",
+      "file": "catalogue-items/imported/resume-job-application-builder/references/01-ats-and-formatting.md",
+      "line": 46,
+      "rule": "concealed-action",
+      "context": "review",
+      "digest": "afcbacfff6a13f04f7edc80c3c9a7a44ef0c0bd31ec1096c8a4d52c0d417e74e"
+    },
+    {
       "slug": "risky-design-reviewer",
       "file": "catalogue-items/imported/risky-design-reviewer/references/case-studies.md",
       "line": 186,
@@ -2715,6 +2723,19 @@
     }
   ],
   "copy": [
+    {
+      "slug": "static-html-landing-page-builder",
+      "category": "general",
+      "file": "catalogue-items/general/static-html-landing-page-builder/page.yaml",
+      "name": "Static HTML landing page builder",
+      "summary": "Turn checked page copy and layout into plain HTML and CSS, with accessible forms, local assets and hosting instructions.",
+      "subhead": "A page you can host as plain files, without React or a build service.",
+      "grade": 10.5,
+      "issues": [
+        "summary reading grade above 10",
+        "needs a fuller page introduction"
+      ]
+    },
     {
       "slug": "teaching-reflection-prompts",
       "category": "imported",
@@ -6874,6 +6895,12 @@
       "category": "general",
       "files": 3,
       "sha256": "b87a071cbb02edf7757851cdae138981a378c971e2f5ba984ed1e4c6a25de968"
+    },
+    {
+      "slug": "static-html-landing-page-builder",
+      "category": "general",
+      "files": 3,
+      "sha256": "72dae2c62f6e1e35ef5bc9889421d50f3366cc8b982c61795a1014ce2edef351"
     },
     {
       "slug": "staying-power-checker",
@@ -11934,6 +11961,12 @@
       "sha256": "446cc6aef2bddacf7aad9fc470e735d6eea1e182408d7aae08d14300ffc13a81"
     },
     {
+      "slug": "case-competition-slide-deck-builder",
+      "category": "imported",
+      "files": 15,
+      "sha256": "f26c13891dac8c218a44904aa1f7607873aee640186a571064b6e6f9f9ae13b3"
+    },
+    {
       "slug": "cash-and-currency-risk-planner",
       "category": "imported",
       "files": 10,
@@ -14794,6 +14827,12 @@
       "category": "imported",
       "files": 4,
       "sha256": "4592e1f9ea091f4455be63f01b17e8f5a919eee12a0ce22b341de7bcd0ae45c9"
+    },
+    {
+      "slug": "equity-research-valuation-report-builder",
+      "category": "imported",
+      "files": 49,
+      "sha256": "47bd63670a9eba2306d52a1d0be4b7eb04c5523776e6a94952231e390c988f6b"
     },
     {
       "slug": "error-and-log-debugger",
@@ -19602,6 +19641,12 @@
       "sha256": "9cb1b2700572ea8e69eab2fb59246c04f537bdebb758c6989a7804fda6107d06"
     },
     {
+      "slug": "procurement-agent-architecture-plan",
+      "category": "imported",
+      "files": 4,
+      "sha256": "a73b1e073c7a7f59d3a225835fe95574b5c6a572b3608026f84d6d355b95f0d1"
+    },
+    {
       "slug": "product-attribute-field-setter",
       "category": "imported",
       "files": 4,
@@ -20484,16 +20529,34 @@
       "sha256": "e88ab2c3dd7bbf62289680eeda6c4973188707d88fc0e25354c82d9d5e647157"
     },
     {
+      "slug": "research-literature-comparison",
+      "category": "imported",
+      "files": 4,
+      "sha256": "6e38c045ecbdc66e7ad318187643b572198423324709a7ce47302ecf61144a77"
+    },
+    {
       "slug": "research-outline-builder",
       "category": "imported",
       "files": 5,
       "sha256": "b011902547dab48b3dcc3140d030e969c1dfa50eb76c8befaeea79ec3ccb47ce"
     },
     {
+      "slug": "research-paper-evidence-review",
+      "category": "imported",
+      "files": 4,
+      "sha256": "b425a8c967126ccb4b414d44f08054d1ae081060ea77f522a9a3f9f71a1955ea"
+    },
+    {
       "slug": "research-paper-figure-maker",
       "category": "imported",
       "files": 7,
       "sha256": "b18fb1db15f6dc7bb02ce4d88d55d0511653037368f0bddd4aa00eb6619de442"
+    },
+    {
+      "slug": "research-paper-reading-guide",
+      "category": "imported",
+      "files": 4,
+      "sha256": "1820985bfada43a827b80209c633bb28255a6a448893a11362a20e8c7c875bd8"
     },
     {
       "slug": "research-paper-summarizer",
@@ -20504,8 +20567,8 @@
     {
       "slug": "research-paper-writer",
       "category": "imported",
-      "files": 5,
-      "sha256": "4201e718dd078236ce5862fd7bf79bb2f3f397c3564736d1a93d7caaa03ed244"
+      "files": 12,
+      "sha256": "b5c6ee2320e0c08872a621bc9ff4b20de2b070212a9dde01735842cbf86341fe"
     },
     {
       "slug": "research-poster-builder",
@@ -20578,6 +20641,12 @@
       "category": "imported",
       "files": 4,
       "sha256": "a5df1c57e17445e0b46df2e1d88b8917f795ad41be7e74a4ce1418a6bbe0b436"
+    },
+    {
+      "slug": "resume-job-application-builder",
+      "category": "imported",
+      "files": 22,
+      "sha256": "c4bad9046d25fcb4688ce4f61885461b4b6b3b88b2dbb427b58781f2267b6d11"
     },
     {
       "slug": "retention-cohort-analyst",
@@ -22200,6 +22269,12 @@
       "sha256": "3834d2515c36346ffe9bd40eca2382e09ed06b7c230601268deadfdbb46f3b46"
     },
     {
+      "slug": "storyboard-to-powerpoint-deck-builder",
+      "category": "imported",
+      "files": 56,
+      "sha256": "987fc4fc687f8847d7ed36d09b7f6f3c9681e69bae171a446b321dabe758f788"
+    },
+    {
       "slug": "strategy-doc-interviewer",
       "category": "imported",
       "files": 4,
@@ -22300,6 +22375,12 @@
       "category": "imported",
       "files": 4,
       "sha256": "372a9384728092c5eef48585639498302a436567d3605d9712e33ea1ac83d907"
+    },
+    {
+      "slug": "study-understanding-check",
+      "category": "imported",
+      "files": 4,
+      "sha256": "6644b92287c5eb21c56ec5f4c4715bfa276eee61013a4a6e8684ea13119e8f7f"
     },
     {
       "slug": "subject-line-writer",
@@ -22948,6 +23029,12 @@
       "category": "imported",
       "files": 4,
       "sha256": "14154360ad8228569d4d9f9ccaf6535eec3b5260457c73b5f9f7ac6f9e6de500"
+    },
+    {
+      "slug": "topic-learning-roadmap",
+      "category": "imported",
+      "files": 4,
+      "sha256": "cb859825d3f45e74040ee624c76e01680f1ef9d3949a234471869314f38f2fc9"
     },
     {
       "slug": "tracking-data-importer",

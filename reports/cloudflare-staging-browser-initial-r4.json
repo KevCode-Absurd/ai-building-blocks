@@ -1,0 +1,210 @@
+{
+  "checkedOn": "2026-10-22T07:23:30.672Z",
+  "environment": "https://ai-building-blocks-staging.kevinmark7498.workers.dev",
+  "deployedVersion": "19e5d5a2-8079-4143-9a09-8e5383dff21f",
+  "status": "fail",
+  "productionTouched": false,
+  "providerCalls": 0,
+  "scope": "Live hosting/customer flows. Seven security UI cases use mocked verification; real-widget persistence is reported separately.",
+  "snapshot": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a161bf-0b97-7cf2-97f3-74eb6d30d1e4\\release-2026-10-22-r4\\assets",
+  "assets": [
+    {
+      "asset": "index.html",
+      "sha256": "d6a9235e8c3000b3b2fbfe178e5ade015a1cb87446799fdb043e8e590f1c1e7d"
+    },
+    {
+      "asset": "data/blocks.json",
+      "sha256": "19674ea4e09bcf7e47d62714e4d2059644c228b7e4ca442df992095b728b2a97"
+    }
+  ],
+  "timings": [
+    {
+      "width": 1440,
+      "scope": "single client observations; no previous production baseline",
+      "timings": [
+        {
+          "path": "/",
+          "ttfbMs": 271,
+          "domContentLoadedMs": 1484,
+          "loadMs": 1502,
+          "firstContentfulPaintMs": 1308,
+          "transferBytes": 8592
+        },
+        {
+          "path": "/compose",
+          "ttfbMs": 279,
+          "domContentLoadedMs": 819,
+          "loadMs": 821,
+          "firstContentfulPaintMs": 812,
+          "transferBytes": 2603
+        },
+        {
+          "path": "/skills/website-brand-brain-builder",
+          "ttfbMs": 383,
+          "domContentLoadedMs": 791,
+          "loadMs": 794,
+          "firstContentfulPaintMs": 812,
+          "transferBytes": 4546
+        },
+        {
+          "path": "/people",
+          "ttfbMs": 276,
+          "domContentLoadedMs": 698,
+          "loadMs": 999,
+          "firstContentfulPaintMs": 688,
+          "transferBytes": 8592
+        },
+        {
+          "path": "/example-app/",
+          "ttfbMs": 450,
+          "domContentLoadedMs": 1769,
+          "loadMs": 2608,
+          "firstContentfulPaintMs": 1888,
+          "transferBytes": 19226
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "scope": "single client observations; no previous production baseline",
+      "timings": [
+        {
+          "path": "/",
+          "ttfbMs": 332,
+          "domContentLoadedMs": 1486,
+          "loadMs": 1489,
+          "firstContentfulPaintMs": 1328,
+          "transferBytes": 8592
+        },
+        {
+          "path": "/compose",
+          "ttfbMs": 260,
+          "domContentLoadedMs": 627,
+          "loadMs": 628,
+          "firstContentfulPaintMs": 620,
+          "transferBytes": 2603
+        },
+        {
+          "path": "/skills/website-brand-brain-builder",
+          "ttfbMs": 462,
+          "domContentLoadedMs": 843,
+          "loadMs": 862,
+          "firstContentfulPaintMs": 884,
+          "transferBytes": 4546
+        },
+        {
+          "path": "/people",
+          "ttfbMs": 324,
+          "domContentLoadedMs": 777,
+          "loadMs": 1834,
+          "firstContentfulPaintMs": 768,
+          "transferBytes": 8592
+        },
+        {
+          "path": "/example-app/",
+          "ttfbMs": 300,
+          "domContentLoadedMs": 1608,
+          "loadMs": 2857,
+          "firstContentfulPaintMs": 1636,
+          "transferBytes": 19226
+        }
+      ]
+    }
+  ],
+  "stats": {
+    "startTime": "2026-10-22T07:23:34.106Z",
+    "duration": 496234.433,
+    "expected": 133,
+    "skipped": 0,
+    "unexpected": 12,
+    "flaky": 0
+  },
+  "failures": [
+    {
+      "title": "old tour pages lead to the Apps page",
+      "status": "failed",
+      "errors": [
+        "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByTestId('apps-index')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByTestId('apps-index') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('apps-index')\u001b[22m\n\n\n  68 | test(\"old tour pages lead to the Apps page\", async ({ page }) => {\n  69 |   await page.goto(\"/apps/mercatura-ads\");\n> 70 |   await expect(page.getByTestId(\"apps-index\")).toBeVisible();\n     |                                                ^\n  71 | });\n  72 |\n  73 | test(\"no word that could name the private client is in the app pages or the saved example app\", async () => {\n    at C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\e2e\\apps.spec.ts:70:48",
+        "Error: no errors in the browser console\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Failed to load resource: the server responded with a status of 404 ()\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n\n  12 | });\n  13 | test.afterEach(async ({ page }) => {\n> 14 |   expect(errors.get(page), \"no errors in the browser console\").toEqual([]);\n     |                                                                ^\n  15 | });\n  16 |\n  17 | // The Next.js pages of the saved app fall back to loading the next saved page, and say so in the console.\n    at C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\e2e\\apps.spec.ts:14:64"
+      ]
+    },
+    {
+      "title": "all five audience starters are reachable, shareable and can return to the full library",
+      "status": "timedOut",
+      "errors": [
+        "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+        "Error: page.reload: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for navigation until \"load\"\u001b[22m\n\u001b[2m    - navigated to \"https://ai-building-blocks-staging.kevinmark7498.workers.dev/?audience=startups\"\u001b[22m\n\n\n  12 |     await expect(page).toHaveURL(new RegExp(`audience=${id}`));\n  13 |     await expect(page.getByTestId('audience-guide')).toContainText('Bring:');\n> 14 |     await page.reload();\n     |                ^\n  15 |     await expect(page.getByTestId('filter-audience')).toContainText(label);\n  16 |     await expect(page.getByTestId('block-card')).toHaveCount(8);\n  17 |   }\n    at C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\e2e\\audience-starters.spec.ts:14:16"
+      ]
+    },
+    {
+      "title": "requested presentation, case, research and valuation starting points open the right skills",
+      "status": "failed",
+      "errors": [
+        "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.bp-sub')\nExpected substring: \u001b[32m\"chart placeholders\"\u001b[39m\nReceived string:    \u001b[31m\"Bring the case brief, judging rubric, time limit and your analysis. Get a recommendation deck with source notes, financials and backup answers. The included compatibility helper builds editable charts with Python and python-pptx; render the slides to check the final layout.\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('.bp-sub') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.bp-sub')\u001b[22m\n\u001b[2m    5 × locator resolved to <p class=\"bp-sub\">Share your case, judging rules and analysis. Get …</p>\u001b[22m\n\u001b[2m      - unexpected value \"Share your case, judging rules and analysis. Get a recommendation deck with source notes, financials and backup slides for questions.\"\u001b[22m\n\u001b[2m    9 × locator resolved to <p class=\"bp-sub\">Bring the case brief, judging rubric, time limit …</p>\u001b[22m\n\u001b[2m      - unexpected value \"Bring the case brief, judging rubric, time limit and your analysis. Get a recommendation deck with source notes, financials and backup answers. The included compatibility helper builds editable charts with Python and python-pptx; render the slides to check the final layout.\"\u001b[22m\n\n\n  47 |     await expect(page.getByTestId('block-page')).toBeVisible();\n  48 |     if (id === 'equity-research') await expect(page.locator('.bp-sub')).toContainText('Chinese');\n> 49 |     if (id === 'case-competitions') await expect(page.locator('.bp-sub')).toContainText('chart placeholders');\n     |                                                                           ^\n  50 |   }\n  51 | });\n  52 |\n    at C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\e2e\\audience-starters.spec.ts:49:75"
+      ]
+    },
+    {
+      "title": "@mobile audience starters and intake template work at phone width",
+      "status": "failed",
+      "errors": [
+        "Error: download.saveAs: canceled\n\n  68 |   const [download] = await Promise.all([page.waitForEvent('download'), page.getByRole('link', { name: 'Download a context template', exact: true }).click()]);\n  69 |   const file = info.outputPath(download.suggestedFilename());\n> 70 |   await download.saveAs(file);\n     |                  ^\n  71 |   expect(fs.readFileSync(file, 'utf8')).toContain('Source date and version');\n  72 |   await page.screenshot({ path: info.outputPath('enterprise-starter-mobile.png'), fullPage: false });\n  73 | });\n    at C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\e2e\\audience-starters.spec.ts:70:18"
+      ]
+    },
+    {
+      "title": "an imported skill's page credits the maker and still reads clean with no page file",
+      "status": "failed",
+      "errors": [
+        "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByTestId('credit-line')\nExpected substring: \u001b[32m\"Made by Anthropic. We copied it as it is, with its licence, and gave it a plain name.\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByTestId('credit-line') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('credit-line')\u001b[22m\n\n\n  65 |   await page.goto(`/skills/${FAKE[0].slug}`);\n  66 |   const credit = page.getByTestId(\"credit-line\");\n> 67 |   await expect(credit).toContainText(\"Made by Anthropic. We copied it as it is, with its licence, and gave it a plain name.\");\n     |                        ^\n  68 |   await expect(credit.getByRole(\"link\", { name: /See the original on GitHub/ })).toHaveAttribute(\"href\", FAKE[0].source.url);\n  69 |   await expect(page.getByRole(\"heading\", { level: 1 })).toHaveText(\"Website builder\");\n  70 |   await expect(page.getByTestId(\"composer\")).toHaveCount(0);\n    at C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\e2e\\imported.spec.ts:67:24"
+      ]
+    },
+    {
+      "title": "an imported skill links to its GitHub folder and shows its first name",
+      "status": "failed",
+      "errors": [
+        "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByTestId('gh-pill')\nExpected: \u001b[32m\"https://github.com/anthropics/skills/tree/main/skills/frontend-design\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" getByTestId('gh-pill') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('gh-pill')\u001b[22m\n\n\n  85 |   await page.goto(`/skills/${FAKE[0].slug}`);\n  86 |   const pill = page.getByTestId(\"gh-pill\");\n> 87 |   await expect(pill).toHaveAttribute(\"href\", FAKE[0].source.url);\n     |                      ^\n  88 |   await expect(pill).toContainText(\"anthropics/skills\");\n  89 |   await expect(pill).toContainText(\"Apache 2.0\");\n  90 |   await expect(page.locator(\".gh-rename\")).toContainText(\"frontend-design\");\n    at C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\e2e\\imported.spec.ts:87:22"
+      ]
+    },
+    {
+      "title": "a skill that scrapes or needs a paid account says so on its card and its page",
+      "status": "failed",
+      "errors": [
+        "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByTestId('scrapes-note')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByTestId('scrapes-note') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('scrapes-note')\u001b[22m\n\n\n  104 |   await expect(card(page, FAKE[0].slug).getByTestId(\"paid-label\")).toHaveCount(0);\n  105 |   await page.goto(`/skills/${FAKE[2].slug}`);\n> 106 |   await expect(page.getByTestId(\"scrapes-note\")).toBeVisible();\n      |                                                  ^\n  107 |   await expect(page.getByTestId(\"paid-note\")).toContainText(\"paid Apify account\");\n  108 | });\n  109 |\n    at C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\e2e\\imported.spec.ts:106:50"
+      ]
+    },
+    {
+      "title": "hero is the headline, the mono subhead, and two buttons, How it works a plain nav link, over the globe",
+      "status": "failed",
+      "errors": [
+        "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByTestId('globe')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByTestId('globe') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('globe')\u001b[22m\n\n\n  34 |   await expect(page.getByTestId(\"home-goal\")).toHaveCount(0);\n  35 |   const globe = page.getByTestId(\"globe\");\n> 36 |   await expect(globe).toBeVisible();\n     |                       ^\n  37 |   expect(await globe.evaluate((c: HTMLCanvasElement) => c.width > 0 && c.height > 0)).toBe(true);\n  38 | });\n  39 |\n    at C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\e2e\\site.spec.ts:36:23"
+      ]
+    },
+    {
+      "title": "after the download: how to run it in your AI, the first message to paste, and what comes back",
+      "status": "failed",
+      "errors": [
+        "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByTestId('needs').getByTestId('next-steps').getByTestId('next-finals')\nExpected substring: \u001b[32m\"Landing page\"\u001b[39m\nReceived string:    \u001b[31m\"Code changeAudit report\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByTestId('needs').getByTestId('next-steps').getByTestId('next-finals') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('needs').getByTestId('next-steps').getByTestId('next-finals')\u001b[22m\n\u001b[2m    14 × locator resolved to <ul data-testid=\"next-finals\">…</ul>\u001b[22m\n\u001b[2m       - unexpected value \"Code changeAudit report\"\u001b[22m\n\n\n  678 |   expect(await page.evaluate(() => navigator.clipboard.readText())).toBe(\"Follow HANDOFF.md step by step. Start with “Before you start”, and ask me for anything that's missing.\");\n  679 |   // What comes back is the page and its designs, not only the check at the end.\n> 680 |   await expect(next.getByTestId(\"next-finals\")).toContainText(\"Landing page\");\n      |                                                 ^\n  681 |   await expect(next.getByTestId(\"next-finals\")).toContainText(\"Audit report\");\n  682 |   await next.getByTestId(\"next-done\").click();\n  683 |   await expect(dlg).toHaveCount(0);\n    at C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\e2e\\site.spec.ts:680:49"
+      ]
+    },
+    {
+      "title": "preview shows the first lines of what each step hands back, and the step panel shows more",
+      "status": "failed",
+      "errors": [
+        "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByTestId('builder').getByTestId('step-sample')\nTimeout: 6000ms\n\u001b[32m- Expected substring  - 1\u001b[39m\n\u001b[31m+ Received string     + 6\u001b[39m\n\n\u001b[32m- step \u001b[7m2\u001b[27m: what it hands back\u001b[39m\n\u001b[31m+ step \u001b[7m3\u001b[27m: what it hands back\u001b[7mDESIGN SYSTEM\u001b[27m\u001b[39m\n\u001b[31m+ Colours: <colour> <hex> = <job>  (4 to 6, all yours)\u001b[39m\n\u001b[31m+ Type: headings <font>, body <font>, buttons <font>\u001b[39m\n\u001b[31m+ Main visual move: <one>\u001b[39m\n\u001b[31m+ Layout rules: <2 to 5>   Line length: <45 to 75 characters>\u001b[39m\n\u001b[31m+\u001b[39m\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByTestId('builder').getByTestId('step-sample') with timeout 6000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('builder').getByTestId('step-sample')\u001b[22m\n\u001b[2m    - locator resolved to <figure class=\"node-out run-out\" data-testid=\"step-sample\" aria-label=\"What Ad-matched landing page writer hands back\">…</figure>\u001b[22m\n\u001b[2m    - unexpected value \"step 1: what it hands backPAGE BRIEF\u001b[22m\n\u001b[2mBuyer: <who>   Reason to buy: <one reason>   Offe\"\u001b[22m\n\u001b[2m    - locator resolved to <figure class=\"node-out run-out\" data-testid=\"step-sample\" aria-label=\"What Ad-matched landing page writer hands back\">…</figure>\u001b[22m\n\u001b[2m    - unexpected value \"step 1: what it hands backPAGE BRIEF\u001b[22m\n\u001b[2mBuyer: <who>   Reason to buy: <one reason>   Offer: <\"\u001b[22m\n\u001b[2m    - locator resolved to <figure class=\"node-out run-out\" data-testid=\"step-sample\" aria-label=\"What Ad-matched landing page writer hands back\">…</figure>\u001b[22m\n\u001b[2m    - unexpected value \"step 1: what it hands backPAGE BRIEF\u001b[22m\n\u001b[2mBuyer: <who>   Reason to buy: <one reason>   Offer: <name \"\u001b[22m\n\u001b[2m    - locator resolved to <figure class=\"node-out run-out\" data-testid=\"step-sample\" aria-label=\"What Ad-matched landing page writer hands back\">…</figure>\u001b[22m\n\u001b[2m    - unexpected value \"step 1: what it hands backPAGE BRIEF\u001b[22m\n\u001b[2mBuyer: <who>   Reason to buy: <one reason>   Offer: <name and price>\u001b[22m\n\u001b[2m\"\u001b[22m\n\u001b[2m    - locator resolved to <figure class=\"node-out run-out\" data-testid=\"step-sample\" aria-label=\"What Ad-matched landing page writer hands back\">…</figure>\u001b[22m\n\u001b[2m    - unexpected value \"step 1: what it hands backPAGE BRIEF\u001b[22m\n\u001b[2mBuyer: <who>   Reason to buy: <one reason>   Offer: <name and price>\u001b[22m\n\u001b[2mAd's openi\"\u001b[22m\n\u001b[2m    - locator resolved to <figure class=\"node-out run-out\" data-testid=\"step-sample\" aria-label=\"What Ad-matched landing page writer hands back\">…</figure>\u001b[22m\n\u001b[2m    - unexpected value \"step 1: what it hands backPAGE BRIEF\u001b[22m\n\u001b[2mBuyer: <who>   Reason to buy: <one reason>   Offer: <name and price>\u001b[22m\n\u001b[2mAd's opening line: \"<...>\"\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2mFIRST SCRE\"\u001b[22m\n\u001b[2m    - locator resolved to <figure class=\"node-out run-out\" data-testid=\"step-sample\" aria-label=\"What Ad-matched landing page writer hands back\">…</figure>\u001b[22m\n\u001b[2m    - unexpected value \"step 1: what it hands backPAGE BRIEF\u001b[22m\n\u001b[2mBuyer: <who>   Reason to buy: <one reason>   Offer: <name and price>\u001b[22m\n\u001b[2mAd's opening line: \"<...>\"\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2mFIRST SCREEN\u001b[22m\n\u001b[2m…\"\u001b[22m\n\u001b[2m    - locator resolved to <figure class=\"node-out run-out\" data-testid=\"step-sample\" aria-label=\"What Landing page design planner hands back\">…</figure>\u001b[22m\n\u001b[2m    - unexpected value \"step 3: what it hands backDESIGN SYSTEM\u001b[22m\n\u001b[2mColours: <colour> <hex> = <job>  (4 to 6, all yours)\u001b[22m\n\u001b[2mType: headings <fo\"\u001b[22m\n\u001b[2m    - locator resolved to <figure class=\"node-out run-out\" data-testid=\"step-sample\" aria-label=\"What Landing page design planner hands back\">…</figure>\u001b[22m\n\u001b[2m    - unexpected value \"step 3: what it hands backDESIGN SYSTEM\u001b[22m\n\u001b[2mColours: <colour> <hex> = <job>  (4 to 6, all yours)\u001b[22m\n\u001b[2mType: headings <font>, body <font>, buttons <font>\u001b[22m\n\u001b[2mMain visual move: <one>\u001b[22m\n\u001b[2mLayout rules: <2 t\"\u001b[22m\n\u001b[2m    - locator resolved to <figure class=\"node-out run-out\" data-testid=\"step-sample\" aria-label=\"What Landing page design planner hands back\">…</figure>\u001b[22m\n\u001b[2m    - unexpected value \"step 3: what it hands backDESIGN SYSTEM\u001b[22m\n\u001b[2mColours: <colour> <hex> = <job>  (4 to 6, all yours)\u001b[22m\n\u001b[2mType: headings <font>, body <font>, buttons <font>\u001b[22m\n\u001b[2mMain visual move: <one>\u001b[22m\n\u001b[2mLayout rules: <2 to 5>   Line length: <45 to 75 characters>\u001b[22m\n\u001b[2m\"\u001b[22m\n\n\n  693 |   await expect(sample).toContainText(\"step 1: what it hands back\");\n  694 |   await expect(sample).toContainText(\"<\");\n> 695 |   await expect(sample).toContainText(\"step 2: what it hands back\", { timeout: 6000 });\n      |                        ^\n  696 |   await expect(sample).toContainText(\"PAGE BRIEF\");\n  697 |   // Readable size: it sits outside the zoomed canvas.\n  698 |   expect(await sample.evaluate((el) => !el.closest(\".react-flow__viewport\") && parseFloat(getComputedStyle(el.querySelector(\"pre\")!).fontSize))).toBeGreaterThanOrEqual(12);\n    at C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\e2e\\site.spec.ts:695:24"
+      ]
+    },
+    {
+      "title": "start and end: every workflow begins at Start, saving adds End, and your notes on a step go into the pack",
+      "status": "failed",
+      "errors": [
+        "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByTestId('builder').getByTestId('flow-status')\nExpected substring: \u001b[32m\"\u001b[7msav\u001b[27med\"\u001b[39m\nReceived string:    \u001b[31m\"\u001b[7m10 blocks · 4 connections where the types don't match (dash\u001b[27med\u001b[7m)\u001b[27m\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByTestId('builder').getByTestId('flow-status') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('builder').getByTestId('flow-status')\u001b[22m\n\u001b[2m    14 × locator resolved to <div aria-live=\"polite\" data-testid=\"flow-status\" class=\"stage-status warn\">10 blocks · 4 connections where the types don't m…</div>\u001b[22m\n\u001b[2m       - unexpected value \"10 blocks · 4 connections where the types don't match (dashed)\"\u001b[22m\n\n\n  809 |   await builder.getByTestId(\"save-flow\").click();\n  810 |   await expect(builder.getByTestId(\"flow-end\")).toBeVisible();\n> 811 |   await expect(builder.getByTestId(\"flow-status\")).toContainText(\"saved\");\n      |                                                    ^\n  812 |\n  813 |   await builder.getByTestId(\"download-handoff\").click();\n  814 |   const [dl] = await Promise.all([page.waitForEvent(\"download\"), page.getByTestId(\"needs-download\").click()]);\n    at C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\e2e\\site.spec.ts:811:52"
+      ]
+    },
+    {
+      "title": "home shows a goal search above the fold and How it works remains reachable",
+      "status": "failed",
+      "errors": [
+        "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByTestId('open-business')\nExpected: \u001b[32m\"Your context\"\u001b[39m\nReceived: \u001b[31m\"Your context\u001b[7mContext\u001b[27m\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" getByTestId('open-business') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('open-business')\u001b[22m\n\u001b[2m    14 × locator resolved to <button data-testid=\"open-business\" class=\"btn btn-ghost btn-sm\">…</button>\u001b[22m\n\u001b[2m       - unexpected value \"Your contextContext\"\u001b[22m\n\n\n  91 |  const box=page.getByTestId('library-search');await expect(box).toBeVisible();\n  92 |  const bounds=await box.boundingBox();expect(bounds!.y+bounds!.height).toBeLessThan(900);\n> 93 |  await expect(page.getByTestId('open-business')).toHaveText('Your context');\n     |                                                  ^\n  94 |  await page.getByRole('link',{name:'How it works',exact:true}).first().click();\n  95 |  await expect(page.getByRole('heading',{level:1})).toBeVisible();\n  96 |  await expect(page).toHaveURL(/how-it-works/);\n    at C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\e2e\\work-expansion.spec.ts:93:50"
+      ]
+    }
+  ]
+}

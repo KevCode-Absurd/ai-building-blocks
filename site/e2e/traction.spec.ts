@@ -1,4 +1,4 @@
-import { expect, test } from "@playwright/test";
+import { expect, test } from "./fixtures/staging-aware-test";
 import { unzipSync, strFromU8 } from "fflate";
 import fs from "node:fs";
 // This independently checks the expected book taxonomy. Keep the browser test

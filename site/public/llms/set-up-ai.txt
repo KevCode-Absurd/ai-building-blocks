@@ -1,6 +1,6 @@
 # Set up AI to work for you: AI Blocks
 
-> 68 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 71 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Ad prompt comparison review](https://useaiblocks.com/skills/old-vs-new-ad-prompt-scorer): Paste old and new prompt ads. Get a blind test, a decision and a score out of 100.
 - [Agent action approval reviewer](https://useaiblocks.com/skills/copilot-verify-agent-action): Share a proposed agent action. Get its scope, risks and missing evidence checked before execution.
@@ -64,6 +64,9 @@
 - [Prove your new ad AI setup beats the old one](https://useaiblocks.com/workflows/ad-ai-setup-test): Give it a story ad test plan. Get handoff cards that keep facts whole, then a blind old-versus-new score.
 - [Recurring marketing routine builder](https://useaiblocks.com/skills/marketing-routine-builder): Pick an outcome. Get a loop that runs weekly or daily, checks itself and stops when it should.
 - [Repeatable AI loop designer](https://useaiblocks.com/skills/repeatable-ai-loop-designer): Describe a recurring job. Get a loop with triggers, checks, stop rules and handoffs.
+- [Request acceptance brief](https://useaiblocks.com/skills/request-acceptance-brief): Turn any concrete request into a scope, input list, named deliverables and acceptance checks.
+- [Request acceptance checker](https://useaiblocks.com/skills/request-acceptance-checker): Check generated files against every requirement, repair bounded failures and package an honest handoff.
+- [Request deliverable drafter](https://useaiblocks.com/skills/request-deliverable-drafter): Use an agreed request brief to create its named files, with source evidence and explicit gaps.
 - [Routine task automation planner](https://useaiblocks.com/skills/repeat-chore-automation-planner): List what your team does each week. Get the chores worth handing to a tool, with steps a new hire can run.
 - [Short reply mode](https://useaiblocks.com/skills/short-reply-mode): Switch it on. Get much shorter AI replies that drop filler but keep the facts, to save tokens.
 - [Task automation builder](https://useaiblocks.com/skills/task-automation-builder): Name a repetitive task. Get a script, schedule or trigger that does it for you.

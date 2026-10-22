@@ -1,4 +1,4 @@
-import { expect, test } from "@playwright/test";
+import { expect, test } from "./fixtures/staging-aware-test";
 
 test("AI products can be searched, opened, and followed to their skills", async ({ page }) => {
   const errors: string[] = [];
@@ -20,10 +20,11 @@ test("AI products can be searched, opened, and followed to their skills", async 
 test("AI tools handle empty results, unknown products, and loading failure", async ({ page }) => {
   await page.goto("/ai-tools?q=zzzz-no-product");
   await expect(page.getByTestId("ai-tools-empty")).toBeVisible();
-  await page.goto("/ai-tools/missing-product");
-  await expect(page.getByTestId("ai-tool-missing")).toBeVisible();
+  const missing = await page.goto("/ai-tools/missing-product");
+  if (missing?.status() === 404) await expect(page.getByRole('heading', { name: "This page doesn't exist", exact: true })).toBeVisible();
+  else await expect(page.getByTestId("ai-tool-missing")).toBeVisible();
   await page.route("**/data/ai-tools.json", (route) => route.fulfill({ status: 503, body: "unavailable" }));
-  await page.reload();
+  await page.goto('/ai-tools');
   await expect(page.getByTestId("ai-tools-failed")).toBeVisible();
 });
 

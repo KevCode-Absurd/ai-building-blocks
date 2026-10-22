@@ -1,0 +1,36 @@
+slug: storyboard-to-powerpoint-deck-builder
+name: Storyboard to PowerPoint deck builder
+summary: Share your content, sources and audience. Get a storyboard and PowerPoint deck for a business talk, lesson or report.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - source_text
+  - brief
+outputs:
+  - slide_deck
+uses: []
+origin: imported
+source:
+  by: Ved Raut
+  repo: vedraut/slidesage
+  path: .
+  url: https://github.com/vedraut/slidesage
+  licence: MIT
+  licence_file: LICENSE
+  commit: 2bbeebd
+  original_name: slidesage
+  imported: 2026-10-22
+version: 1.0.1
+credits:
+  - title: slidesage skill
+    by: Ved Raut
+    url: https://github.com/vedraut/slidesage
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+
+  - title: Launch compatibility additions
+    by: AI Blocks contributors
+    used: Added a portable entrypoint, reviewed helpers and labelled sample resources. Earlier imported entrypoint retained in SKILL.upstream.md.

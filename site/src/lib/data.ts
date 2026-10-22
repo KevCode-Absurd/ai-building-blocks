@@ -167,7 +167,16 @@ export function useCatalogue(enabled = true) {
 const textCache = new Map<string, Promise<string | null>>();
 export function loadSkillText(slug: string, file = "SKILL.md"): Promise<string | null> {
   const key = `${slug}/${file}`;
-  if (!textCache.has(key)) textCache.set(key, fetch(`/skills/${key}`).then((r) => (r.ok ? r.text() : null)).then((t) => (t && !t.trimStart().startsWith("<!doctype") ? t.replace(/\r\n?/g, "\n") : null)));
+  if (!textCache.has(key)) {
+    const pending = fetch(`/skills/${key}`).then((r) => (r.ok ? r.text() : null)).then((t) => (t && !t.trimStart().startsWith("<!doctype") ? t.replace(/\r\n?/g, "\n") : null));
+    textCache.set(key, pending.then(text => {
+      if (!text) textCache.delete(key);
+      return text;
+    }, error => {
+      textCache.delete(key);
+      throw error;
+    }));
+  }
   return textCache.get(key)!;
 }
 
@@ -235,6 +244,8 @@ export const pathOf = (b: Block) => `/${kindInfo(b).path}/${b.slug}`;
 
 /** The jobs people hire a block for. Every block is filed under one. */
 export const TASKS: { id: string; name: string }[] = [
+  { id: "study-and-practice", name: "Study and check your understanding" },
+  { id: "find-a-job", name: "Prepare job applications" },
   { id: "write-ad-copy", name: "Write ad copy" },
   { id: "make-image-ads", name: "Make image ads" },
   { id: "make-video-ads", name: "Make video ads" },
@@ -306,6 +317,8 @@ export function loadPage(slug: string): Promise<Page | null> {
 /** The kinds of work, named by what gets done: the first way into the library.
  *  Each one groups a few jobs; a job can sit under more than one. */
 export const FUNCTIONS: { id: string; name: string; line: string; tasks: string[] }[] = [
+  { id: "learner", name: "Study and practise", line: "Learning paths, papers and checks on what you understand", tasks: ["study-and-practice"] },
+  { id: "job-seeker", name: "Prepare a job application", line: "Your real experience, matched to a role", tasks: ["find-a-job"] },
   { id: "copywriter", name: "Write copy that sells", line: "Ads, landing pages and offers", tasks: ["write-ad-copy", "write-landing-page", "make-offer", "write-emails"] },
   { id: "media-buyer", name: "Run Meta ads", line: "Plan tests, get ads approved, read the results", tasks: ["plan-ad-tests", "launch-and-scale-ads", "check-ads", "read-ad-results", "study-competitors"] },
   { id: "google-ads", name: "Run Google Ads", line: "Shopping, Performance Max, Search and your product feed", tasks: ["run-google-ads"] },
@@ -342,6 +355,7 @@ export const FUNCTIONS: { id: string; name: string; line: string; tasks: string[
 
 /** The broad areas above the groups (docs/MINDS-PRD.md §3). A group can sit in more than one; a mind sits in its own areas. */
 export const AREAS: { id: string; name: string; fns: string[] }[] = [
+  { id: "learning-careers", name: "Learning and careers", fns: ["learner", "job-seeker"] },
   { id: "marketing", name: "Marketing", fns: ["copywriter", "media-buyer", "google-ads", "ads", "cro", "retention", "strategist", "social", "search"] },
   { id: "design", name: "Design", fns: ["ads", "photos", "maker", "product"] },
   { id: "business", name: "Business", fns: ["strategist", "founder", "validator", "strategy", "product", "minds", "files", "office", "store", "support", "legal", "analyst", "supply"] },

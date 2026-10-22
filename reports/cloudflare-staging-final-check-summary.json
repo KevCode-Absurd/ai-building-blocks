@@ -1,0 +1,113 @@
+{
+  "checkedOn": "2026-10-22T09:52:54.284Z",
+  "stagingVersion": "2ff0def4-30ae-41f6-abe6-0cbcadffdd10",
+  "status": "automated-checks-pass-normal-human-write-gate-pending",
+  "browser": {
+    "totalCovered": 211,
+    "hosting": {
+      "passed": 145,
+      "failed": 0,
+      "skipped": 0,
+      "flaky": 0,
+      "workers": 1,
+      "durationSeconds": 667.118303,
+      "report": "cloudflare-staging-browser-check.json"
+    },
+    "composer": {
+      "passed": 62,
+      "unresolved": 0,
+      "method": "53 initial passes plus all9 resource-affected cases passing serial rerun on same version",
+      "report": "2026-10-22-composer-staging-check.json"
+    },
+    "accountUI": {
+      "passed": 4,
+      "realProviderSignIn": false,
+      "report": "2026-10-22-auth-staging-check.json"
+    },
+    "evidenceVersion": "74ec9f2e-07e4-4512-89bb-cb4e3aa842d3",
+    "currentAssetsVerifiedIdentical": true,
+    "assetLineageReport": "cloudflare-staging-r7-asset-check.json"
+  },
+  "unit": {
+    "passed": 96,
+    "source": "cloudflare-live-release.json"
+  },
+  "routing": {
+    "version": "2ff0def4-30ae-41f6-abe6-0cbcadffdd10",
+    "status": "pass",
+    "groups": 5
+  },
+  "api": {
+    "version": "2ff0def4-30ae-41f6-abe6-0cbcadffdd10",
+    "status": "partial",
+    "passed": 14,
+    "positivePersistenceVerified": false
+  },
+  "rate": {
+    "status": "pass",
+    "statuses": [
+      403,
+      403,
+      403,
+      403,
+      403,
+      429
+    ],
+    "report": "cloudflare-staging-rate-check.json",
+    "evidenceVersion": "74ec9f2e-07e4-4512-89bb-cb4e3aa842d3",
+    "reusedReason": "Rate-limit implementation and bindings unchanged; avoid another burst during owner verification."
+  },
+  "realWrites": {
+    "status": "pending-normal-owner-browser",
+    "readbackCounts": {
+      "spaces": 0,
+      "comments": 0
+    },
+    "report": "cloudflare-staging-human-readback.json",
+    "automatedAttempt": "Turnstile600010; no success/POST/database writes",
+    "loginInvestigation": {
+      "status": "resolved-and-live-browser-verified",
+      "resolvedVersion": "2ff0def4-30ae-41f6-abe6-0cbcadffdd10",
+      "cause": "Native form under no-referrer generated Origin:null",
+      "fix": "Login document uses same-origin; null and foreign origins remain rejected",
+      "liveChecksPassed": 5
+    }
+  },
+  "production": {
+    "version": "88e788e1-5a72-4cac-9cab-3f11ad3b6d55",
+    "status": "reviewed Worker-only delta deployed; live delta checks pending",
+    "domain": "useaiblocks.com",
+    "paidAIEnabled": false,
+    "publicCutoverVerified": false
+  },
+  "next": [
+    "Owner creates exact synthetic space and comment in normal authenticated staging browser, then confirms reload persistence.",
+    "After owner explicitly copies synthetic private device link, capture it once in process with tools/capture-staging-owner-fixtures.mjs; never paste into chat.",
+    "Use verified ignored fixture for positive owner/private/public/shared-read-only/link-rotation API checks and cleanup; delete only the verified synthetic empty space afterward.",
+    "Release owner completes production domain/TLS cutover and final-domain smoke, including actual customer sign-in."
+  ],
+  "productionTouchedByThisCheck": false,
+  "providerCalls": 0,
+  "coordination": {
+    "releaseOwnerNotified": true,
+    "securityOwnerNotified": true,
+    "finalEvidenceSaved": true
+  },
+  "backendDelta": {
+    "version": "2ff0def4-30ae-41f6-abe6-0cbcadffdd10",
+    "workerSha256": "892f4aaae4cfd8dc723acc5ddf17f714c59416ee66b3d932057e590f76410d2c",
+    "scope": "Login-page Referrer-Policy correction plus synchronization of already R6-tested planner function in bundled namespace; paid AI remains disabled.",
+    "focusedUnitPassed": 27,
+    "typecheck": "pass",
+    "assetsAndBindingsRetained": true
+  },
+  "nativeBrowserLogin": {
+    "version": "2ff0def4-30ae-41f6-abe6-0cbcadffdd10",
+    "status": "pass",
+    "passed": 5,
+    "previewHeaderInjected": false,
+    "originOverridden": false,
+    "protectedWritesCreated": 0,
+    "report": "cloudflare-staging-browser-login.json"
+  }
+}

@@ -1,6 +1,6 @@
 # Plan stock, shipping and suppliers: AI Blocks
 
-> 89 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 90 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [3PL bid and agreement builder](https://useaiblocks.com/skills/3pl-bid-and-agreement-builder): Give it forecasts and product sizes. Get a request for pricing and agreement terms to demand.
 - [AI task scoper for supply chain](https://useaiblocks.com/skills/ai-task-scoper-for-supply-chain): Describe a messy planning problem. Get one clear decision, an AI fit check and a safe hand-off plan.
@@ -41,6 +41,7 @@
 - [Plan the cash for your next stock order](https://useaiblocks.com/workflows/plan-the-cash-for-your-next-stock-order): Give it your supplier invoices and lead times. Get true unit costs, the cash you need, better terms and a verdict.
 - [Plan what to make each week from your past sales](https://useaiblocks.com/workflows/plan-what-to-make-each-week-from-your-past-sales): Give it past sales and your capacity. Get a forecast, a weekly make plan and a meeting agenda.
 - [Pre-shipment inspection brief writer](https://useaiblocks.com/skills/pre-shipment-inspection-brief-writer): Give it your order and tech pack. Get an inspector's brief, a pass rule and payment release terms.
+- [Procurement agent architecture plan](https://useaiblocks.com/skills/procurement-agent-architecture-plan): Share your buying process and rules. Get a plan for AI roles, supplier checks and human approval of awards.
 - [Product bill of materials builder](https://useaiblocks.com/skills/product-bill-of-materials-builder): Give it your product and quote. Get a cost sheet by part, with each maker and price-break questions.
 - [Product sample review coordinator](https://useaiblocks.com/agents/product-sample-approval-loop): Give it your tech pack and each sample. Get go or hold, fixes for the factory, and a stop at three rounds.
 - [Product tech pack writer](https://useaiblocks.com/skills/product-tech-pack-writer): Give it your product photos and ideas. Get a factory-ready tech pack with exact measures.

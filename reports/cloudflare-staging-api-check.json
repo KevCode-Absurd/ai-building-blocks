@@ -1,0 +1,42 @@
+{
+  "checkedOn": "2026-10-22T10:05:33.821Z",
+  "environment": "https://ai-building-blocks-staging.kevinmark7498.workers.dev",
+  "deployedVersion": "80bc2a97-5835-4936-bd81-8c994a9552b6",
+  "scope": "verified isolated staging Worker and D1",
+  "status": "pass",
+  "productionTouched": false,
+  "providerCalls": 0,
+  "passed": 21,
+  "checks": [
+    "paid AI disabled and backend model details remain private",
+    "live security metadata requires browser verification",
+    "private staging root, asset and API refuse missing and incorrect preview access",
+    "comments, space creation and AI reject missing Turnstile tokens",
+    "forged verification token and cross-origin write are refused",
+    "live space API refuses absent and incorrect owner keys",
+    "deployed catalogue, skill and ZIP bytes match the stable build",
+    "comment persists through real staging D1",
+    "comment moderation rejects an unauthenticated request",
+    "space owner authorization rejects absent and incorrect keys",
+    "private space item persists through real staging D1",
+    "private staging fixture never appears in the public list",
+    "shared space reads work and writes are refused",
+    "share rotation invalidates the previous link",
+    "deep links and shared-space URLs keep their addresses",
+    "unknown pages retain real custom404 responses",
+    "legacy and wrong-type URLs permanently redirect without losing queries",
+    "HEAD, cache/security headers and microphone permission policy are preserved",
+    "saved example remains excluded from indexing",
+    "missing saved-tour screens retain the tour-specific404",
+    "unknown API returns a JSON404 rather than an HTML shell"
+  ],
+  "pending": [],
+  "cleanup": [
+    "deleted the staging fixture item",
+    "hid 2 verified staging fixture comments"
+  ],
+  "remainingFixture": {
+    "commentSlug": "website-brand-brain-builder",
+    "emptySpaceId": "ba6b1cdf-16fc-4073-a9ef-df7d6954c98a"
+  }
+}

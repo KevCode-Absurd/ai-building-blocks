@@ -1,0 +1,25 @@
+{
+  "slug": "request-acceptance-brief",
+  "name": "Request acceptance brief",
+  "summary": "Turn any concrete request into a scope, input list, named deliverables and acceptance checks.",
+  "category": "general",
+  "type": "skill",
+  "role": "make",
+  "job": "ops",
+  "level": "beginner",
+  "inputs": [
+    {
+      "type": "brief",
+      "required": true
+    }
+  ],
+  "outputs": [
+    {
+      "type": "plan"
+    }
+  ],
+  "uses": [],
+  "origin": "own",
+  "version": "1.0.0",
+  "example_pending": true
+}

@@ -1,0 +1,23 @@
+import { test, expect } from "@playwright/test";
+import fs from "node:fs";
+import { unzipSync, strFromU8 } from "fflate";
+test("live model request becomes an editable downloadable pack", async ({ page }, info) => {
+  test.skip(process.env.COMPOSER_LIVE_TEST !== "1", "Use playwright.composer.config.ts to explicitly enable the paid smoke test.");
+  test.setTimeout(150000);
+  const errors: string[] = []; page.on("pageerror", error => errors.push(error.message));
+  await page.goto("/compose"); await page.getByRole("tab", { name: "AI composition" }).click();
+  await expect(page.getByTestId("compose-model")).toHaveCount(0);
+  await page.getByTestId("compose-goal").fill("Create a five-email welcome sequence from a brand brief, check its claims and provide an editable workflow pack. Keep sending subject to human approval.");
+  const responseEvent = page.waitForResponse(r => r.url().endsWith("/api/compose") && r.request().method() === "POST", { timeout: 130000 });
+  await page.getByTestId("compose-submit").click();
+  const response = await responseEvent; const result = await response.json();
+  expect(response.status(), result.error).toBe(200); expect(result.model).toBe("gpt-6.1-sol"); expect(result.cost).toBeGreaterThan(0);
+  await expect(page.getByTestId("compose-steps").locator(":scope > li")).toHaveCount(result.plan.steps.length);
+  const event = page.waitForEvent("download"); await page.getByTestId("compose-download").click(); const dl = await event;
+  const file = info.outputPath(dl.suggestedFilename()); await dl.saveAs(file); const files = unzipSync(fs.readFileSync(file));
+  const editable = JSON.parse(strFromU8(files["workflow.edit.json"])); expect(editable.model).toBe(result.model); expect(editable.cost).toBe(result.cost);
+  expect(files["HANDOFF.md"]).toBeTruthy(); for (const s of result.plan.steps) expect(files[`skills/${s.slug}/SKILL.md`]).toBeTruthy();
+  expect(errors).toEqual([]);
+  await page.screenshot({ path: "test-results/composer-live-desktop.png", fullPage: true });
+  fs.writeFileSync("../reports/2026-10-22-composer-live-check.json", JSON.stringify({ checked: new Date().toISOString(), model: result.model, cost: result.cost, usage: result.usage, latencyMs: result.latencyMs, steps: result.plan.steps.map((s: any) => s.slug), zipFiles: Object.keys(files).length, browserErrors: errors, liveProviderCall: true, published: false }, null, 2));
+});

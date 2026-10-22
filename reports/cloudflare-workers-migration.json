@@ -1,0 +1,58 @@
+{
+  "checkedOn": "2026-10-22",
+  "timezone": "Asia/Kolkata",
+  "status": "prepared-local-migration-verified",
+  "deploymentTarget": "Workers Static Assets",
+  "paidPlanMinimumUSD": 5,
+  "assetFileLimit": 100000,
+  "buildGuard": 95000,
+  "files": 18600,
+  "directories": 4708,
+  "wranglerScanEntries": 23308,
+  "publishedEntries": 4355,
+  "productionDeploymentPerformed": false,
+  "subscriptionPurchased": false,
+  "productionAccountVerified": false,
+  "productionSubscriptionVerified": false,
+  "productionAndStagingDryRunsPassed": true,
+  "verification": {
+    "baselineCombinedUnitTestsPassed": 41,
+    "finalRouterTestsPassed": 5,
+    "localApiAndAssetChecksPassed": 16,
+    "paidProviderCalls": 0,
+    "mainBrowserRun": {
+      "startTime": "2026-10-22T04:41:52.592Z",
+      "duration": 29832.363,
+      "expected": 24,
+      "skipped": 0,
+      "unexpected": 1,
+      "flaky": 0
+    },
+    "canonicalBrowserRerun": {
+      "startTime": "2026-10-22T04:43:25.454Z",
+      "duration": 3388.14,
+      "expected": 1,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "resolvedFocusedBrowserCases": 25,
+    "unresolvedMigrationFailures": 0,
+    "audienceBrowserCasesPassed": 4,
+    "responsiveViewsPassed": 27,
+    "note": "The deliberate missing-document404 produces a Chrome console message. The assertion now excludes only that expected document; its canonical-link case passed on rerun. Other unexpected browser errors still fail."
+  },
+  "testedRuntime": {
+    "mode": "Frozen migration baseline APIs plus the same final canonical/custom404 fallback as src/worker.ts",
+    "sha256": "2a25f682b1972d7741625d26a31825a1be89f0bd9e1d5c65870d5f28f6dd9392",
+    "frontend": "Frozen4355-entry production build with final audience CSS",
+    "laterComposerChangesCovered": false
+  },
+  "remainingBeforeProduction": [
+    "Finish new composer feature work, rebuild once and repeat combined release checks",
+    "Authenticate intended Cloudflare account and verify Workers Paid",
+    "Populate separate production and staging D1 IDs; apply migrations and server secrets",
+    "Verify the real staging Worker URL, data continuity and performance",
+    "Attach existing domain, verify TLS and record rollback deployment"
+  ]
+}

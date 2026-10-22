@@ -7,6 +7,8 @@ import { markdown as md } from "./lib/safe-markdown.mjs";
 import { zipSync } from "fflate";
 import { quarantineClosure } from "../../tools/lib/quarantine.mjs";
 import { applyDisplayCopy } from "../../tools/lib/display-copy.mjs";
+import { acquireBuildLock } from "./lib/build-lock.mjs";
+await acquireBuildLock(".index-build.lock");
 
 // CATALOGUE_ROOT points the build at another folder (tools/make-fake-catalogue.mjs makes one for load tests).
 const ROOT = path.resolve(process.env.CATALOGUE_ROOT || "../catalogue-items");
@@ -311,7 +313,7 @@ fs.writeFileSync(path.join(OUT_DATA, "blocks.json"), JSON.stringify({ built: new
 const SITE = "https://useaiblocks.com";
 const kindPath = (b) => (b.type === "mind" ? "minds" : b.type === "agent" ? "agents" : b.category === "orchestrator" || b.type === "workflow" || b.type === "routine" ? "workflows" : b.type === "prompt" ? "prompts" : "skills");
 const { TOOLS } = await import("../../mini-tools/index.mjs");
-const urls = ["/", "/how-it-works", "/minds", "/from-a-source", "/tools", ...TOOLS.map((t) => `/tools/${t.slug}`), "/apps", "/apps/starter-pack", ...blocks.filter((b) => b.headline).map((b) => `/${kindPath(b)}/${b.slug}`)];
+const urls = ["/", "/compose", "/how-it-works", "/minds", "/from-a-source", "/tools", ...TOOLS.map((t) => `/tools/${t.slug}`), "/apps", "/apps/starter-pack", ...blocks.filter((b) => b.headline).map((b) => `/${kindPath(b)}/${b.slug}`)];
 // One sitemap per kind of page, under a sitemap index, so Search Console shows how each kind is indexed. No lastmod:
 // the only dates we have are file times, and a wrong date teaches search engines to ignore it.
 // sitemap-jobs.xml (the job hubs) is written by scripts/prerender.mjs.
@@ -377,7 +379,9 @@ fs.writeFileSync("public/llms-full.txt", [...intro, "## Every job", "", ...[...t
 // over. A rename never changes a block's kind, so one rule each. The app's own routes with no page file come last
 // (rewrites, status 200), because dist/404.html turns off Cloudflare's fall back to the app for unknown addresses.
 const redirects = Object.entries(renamed).map(([from, to]) => [from, bySlug[to]]).filter(([, b]) => b?.headline).map(([from, b]) => `/${kindPath(b)}/${from} /${kindPath(b)}/${b.slug} 301`);
-const appRoutes = ["/space /index.html 200", "/people /index.html 200", "/s/* /shared-space-shell.html 200"];
+// Rewrite to canonical asset URLs: .html targets trigger Workers' HTML redirects
+// and would erase /space, /people or the shared token from the address bar.
+const appRoutes = ["/space / 200", "/people / 200", "/s/* /shared-space-shell 200"];
 fs.writeFileSync("public/_redirects", `# Old block names, moved to shorter ones (catalogue-items/renamed.json). Made by scripts/build-index.mjs.\n${redirects.join("\n")}\n\n# App pages with no page file of their own.\n${appRoutes.join("\n")}\n`);
 if (redirects.length + appRoutes.length > 2000) problems.push(`_redirects has ${redirects.length + appRoutes.length} rules; Cloudflare Pages allows 2,000`);
 console.log(`sitemap: ${urls.length} pages`);

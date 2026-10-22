@@ -5,12 +5,17 @@ public/skills
 public/mini-tools
 tsconfig.tsbuildinfo
 test-results
+test-results-auth
+test-results-workers
+test-results-staging
 playwright-report
 public/sitemap.xml
 public/robots.txt
 .wrangler/
+.worker-bundle/
 .dev.vars
 .dev.vars.*
 wrangler.local.jsonc
 wrangler.production.jsonc
 wrangler.jsonc
+.index-build.lock

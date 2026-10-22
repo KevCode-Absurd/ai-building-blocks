@@ -1,9 +1,10 @@
-// Exercises real Pages Functions and D1, using an explicitly local emulator only.
+// Exercises the real Workers Static Assets router and D1, locally only; no provider calls.
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 const base=process.env.CF_LOCAL_URL || 'http://127.0.0.1:5183';
 assert(['127.0.0.1','localhost'].includes(new URL(base).hostname),'Local emulator only');
 const checks=[];
+const fetch=(input,options={})=>globalThis.fetch(input,{...options,signal:AbortSignal.timeout(30000)});
 async function call(url,method='GET',data,key){
  const response=await fetch(base+url,{method,headers:{...(data?{'content-type':'application/json'}:{}),...(key?{authorization:`Bearer ${key}`}:{})},...(data?{body:JSON.stringify(data)}:{})});
  const text=await response.text();let body;try{body=JSON.parse(text)}catch{body=text}
@@ -25,7 +26,20 @@ r=await call('/api/spaces/me/link','POST',{},ownerKey);assert.equal(r.status,200
 r=await call('/api/spaces/shared/'+shareToken);assert.equal(r.status,404);
 r=await call('/api/spaces/shared/'+newToken);assert.equal(r.status,200);checks.push('share rotation invalidates prior link');
 r=await call('/api/spaces/me/items/'+item.id,'DELETE',undefined,ownerKey);assert.equal(r.status,200);
-for(const url of ['/','/skills/website-brand-brain-builder','/example-app/','/s/'+newToken]){const page=await fetch(base+url);assert.equal(page.status,200,url);assert((await page.text()).includes('<html'),url)}checks.push('static, skill, example and shared deep links');
+for(const url of ['/','/how-it-works','/minds','/tools','/compose','/space','/people','/skills/website-brand-brain-builder','/example-app/','/s/'+newToken]){const page=await fetch(base+url,{redirect:'manual'});assert.equal(page.status,200,url);assert.equal(page.headers.get('location'),null,url);assert((await page.text()).includes('<html'),url)}checks.push('static, composer, space, example and shared deep links preserve their URLs');
 r=await fetch(base+'/this-page-does-not-exist-'+suffix);assert.equal(r.status,404);checks.push('unknown page returns 404');
-const report={checkedOn:'2026-10-22',environment:'local Pages emulator with migrated D1',productionTouched:false,passed:checks.length,checks};
+const redirect=fs.readFileSync('site/dist/_redirects','utf8').split(/\r?\n/).find(line=>line.endsWith(' 301')).split(/\s+/);
+r=await fetch(base+redirect[0],{redirect:'manual'});assert.equal(r.status,301);assert.equal(new URL(r.headers.get('location'),base).pathname,redirect[1]);checks.push('legacy skill URL keeps its permanent redirect');
+r=await fetch(base+'/skills/fact-based-ad-copy-writer?source=saved',{redirect:'manual'});assert.equal(r.status,301);assert.equal(new URL(r.headers.get('location'),base).pathname,'/prompts/fact-based-ad-copy-writer');assert.equal(new URL(r.headers.get('location'),base).search,'?source=saved');
+r=await fetch(base+'/skills/no-such-thing',{redirect:'manual'});assert.equal(r.status,404);checks.push('wrong block types repair canonical URLs while unknown slugs keep a real 404');
+const downloadable=JSON.parse(fs.readFileSync('site/dist/data/blocks.json','utf8')).blocks.find(b=>b.hasFiles);
+assert(downloadable,'A complete skill ZIP must be available');
+for(const asset of ['skills/website-brand-brain-builder/SKILL.md',`skills/${downloadable.slug}.zip`,'data/blocks.json']){
+  r=await fetch(base+'/'+asset);assert.equal(r.status,200,asset);assert.deepEqual(Buffer.from(await r.arrayBuffer()),fs.readFileSync('site/dist/'+asset),asset);
+}checks.push('skill source, ZIP download and catalogue bytes unchanged');
+r=await fetch(base+'/skills/website-brand-brain-builder/SKILL.md',{method:'HEAD'});assert.equal(r.status,200);assert.equal(await r.text(),'');assert.equal(r.headers.get('x-content-type-options'),'nosniff');assert.match(r.headers.get('cache-control'),/max-age=300/);checks.push('asset HEAD, security and cache headers preserved');
+r=await fetch(base+'/example-app/');assert((await r.text()).includes('noindex'));checks.push('saved example remains excluded from indexing');
+r=await call('/api/compose');assert.equal(r.status,200);assert.deepEqual(r.body,{enabled:false});checks.push('composer metadata available with paid AI disabled and no model details');
+r=await call('/api/unknown');assert.equal(r.status,404);assert.equal(typeof r.body.error,'string');checks.push('unknown API returns JSON 404 rather than an HTML shell');
+const report={checkedOn:'2026-10-22',environment:'local Workers Static Assets emulator with migrated D1',productionTouched:false,providerCalls:0,passed:checks.length,checks};
 fs.writeFileSync('reports/cloudflare-local-api-check.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report));

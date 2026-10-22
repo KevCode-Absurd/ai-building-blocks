@@ -26,9 +26,13 @@ source:
   commit: 0c10eb8
   original_name: scientific-writing
   imported: 2026-10-20
-version: 1.0.0
+version: 1.0.1
 credits:
   - title: scientific-writing skill
     by: sickn33
     url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/scientific-writing
     used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+
+  - title: Launch compatibility additions
+    by: AI Blocks contributors
+    used: Added a portable entrypoint, reviewed helpers and labelled sample resources. Earlier imported entrypoint retained in SKILL.upstream.md.

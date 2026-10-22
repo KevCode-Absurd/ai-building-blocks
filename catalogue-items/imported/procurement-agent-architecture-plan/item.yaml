@@ -1,0 +1,31 @@
+slug: procurement-agent-architecture-plan
+name: Procurement agent architecture plan
+summary: Share your buying process and rules. Get a plan for AI roles, supplier checks and human approval of awards.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - source_text
+outputs:
+  - plan
+uses: []
+origin: imported
+source:
+  by: Agent Blueprint
+  repo: agent-blueprint/agent-blueprint-skills
+  path: plugins/agent-blueprint-skills/skills/procurement-rfx-processing
+  url: https://github.com/agent-blueprint/agent-blueprint-skills/tree/main/plugins/agent-blueprint-skills/skills/procurement-rfx-processing
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: d755f38
+  original_name: procurement-rfx-processing
+  imported: 2026-10-22
+version: 1.0.0
+credits:
+  - title: procurement-rfx-processing skill
+    by: Agent Blueprint
+    url: https://github.com/agent-blueprint/agent-blueprint-skills/tree/main/plugins/agent-blueprint-skills/skills/procurement-rfx-processing
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

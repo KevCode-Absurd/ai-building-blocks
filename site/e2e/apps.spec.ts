@@ -1,4 +1,4 @@
-import { expect, test, type Page } from "@playwright/test";
+import { expect, test, protectedGet, type Page } from "./fixtures/staging-aware-test";
 import { unzipSync, strFromU8 } from "fflate";
 import fs from "node:fs";
 import { execFileSync } from "node:child_process";
@@ -31,14 +31,14 @@ test("the header leads to Apps: one finished example app, the starter pack and t
   await expect(index.getByTestId("repo-link")).toHaveAttribute("href", "https://github.com/KevCode-Absurd/mercatura-client-starter");
   await expect(page.locator(".footer").getByRole("link", { name: "App starter pack" })).toHaveAttribute("href", "/apps/starter-pack");
   // Every picture on the page is there.
-  for (const src of await index.locator("img").evaluateAll((im) => im.map((i) => i.getAttribute("src")))) expect((await page.request.get(src!)).status(), src!).toBe(200);
+  for (const src of await index.locator("img").evaluateAll((im) => im.map((i) => i.getAttribute("src")))) expect((await protectedGet(page, src!)).status(), src!).toBe(200);
 });
 
 test("every part of the app the page lists opens a saved screen", async ({ page }) => {
   await page.goto("/apps");
   const hrefs = await page.getByTestId("app-area").evaluateAll((as) => as.map((a) => a.getAttribute("href")!));
   for (const h of hrefs) {
-    const r = await page.request.get(h.replace(/\/$/, ""));
+    const r = await protectedGet(page, h.replace(/\/$/, ""));
     expect(r.status(), h).toBe(200);
     expect(await r.text(), h).toContain("/example-app/_tour/tour.js");
   }
@@ -59,7 +59,7 @@ test("the example app works with no server: screens open, links move between the
   expect(status).toBe(403);
   await expect(page.locator("#tour-toast")).toContainText("Nothing is made, changed or saved here");
   // A screen that isn't in the tour says so and links back.
-  const missing = await page.request.get("/example-app/not-a-screen");
+  const missing = await protectedGet(page, "/example-app/not-a-screen");
   expect(missing.status()).toBe(404);
   expect(await missing.text()).toContain("This screen isn't in the tour");
   errors.set(page, list.filter((e) => !EXPECTED.test(e)));

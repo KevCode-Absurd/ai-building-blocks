@@ -1,0 +1,33 @@
+{
+  "label": "SYNTHETIC launch fixture; no real business",
+  "revenue": 1200,
+  "baseline_cost": 960,
+  "annual_gross_saving": 90,
+  "annual_run_cost": 30,
+  "upfront_investment": 75,
+  "annual_net_saving": 60,
+  "baseline_profit": 240,
+  "steady_profit": 300,
+  "payback_years": 1.25,
+  "three_year_net_benefit": 105,
+  "cost_categories": [
+    "Intake",
+    "Fulfilment",
+    "Support"
+  ],
+  "costs": [
+    120,
+    660,
+    180
+  ],
+  "savings": [
+    30,
+    35,
+    25
+  ],
+  "risks": [
+    "Adoption",
+    "Quality",
+    "Costs"
+  ]
+}

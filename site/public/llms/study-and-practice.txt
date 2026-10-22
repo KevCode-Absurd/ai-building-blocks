@@ -1,0 +1,9 @@
+# Study and check your understanding: AI Blocks
+
+> 5 free AI skills and workflows for this job. Each page links its SKILL.md.
+
+- [Research literature comparison](https://useaiblocks.com/skills/research-literature-comparison): Share papers on one topic. Get a map of shared findings, conflicting claims and open questions with source references.
+- [Research paper evidence review](https://useaiblocks.com/skills/research-paper-evidence-review): Share a paper and its supporting material. Get a claims review with evidence gaps, limits and questions to investigate.
+- [Research paper reading guide](https://useaiblocks.com/skills/research-paper-reading-guide): Share a paper. Get its main idea, evidence and sections to read closely, with questions to test your understanding.
+- [Study understanding check](https://useaiblocks.com/skills/study-understanding-check): Share what you studied. Get questions, worked practice and feedback that shows what to review next.
+- [Topic learning roadmap](https://useaiblocks.com/skills/topic-learning-roadmap): Share a topic and what you know. Get a reading path with clear milestones and checks for each step.

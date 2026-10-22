@@ -1,0 +1,22 @@
+{
+  "checkedOn": "2026-10-22T09:51:34.596Z",
+  "deployedVersion": "2ff0def4-30ae-41f6-abe6-0cbcadffdd10",
+  "frontendEvidenceVersion": "74ec9f2e-07e4-4512-89bb-cb4e3aa842d3",
+  "status": "pass",
+  "assets": [
+    {
+      "asset": "index.html",
+      "sha256": "4a52d65f8390d7e6a01daae4799bebb6d0306f30f6fe051b8f7c23b4346665ba"
+    },
+    {
+      "asset": "compose.html",
+      "sha256": "89c2a5d807a3c1967c5adbaca4ad24a3a3c8244f4f0e80570bd5fa69bccad3b3"
+    },
+    {
+      "asset": "data/blocks.json",
+      "sha256": "19674ea4e09bcf7e47d62714e4d2059644c228b7e4ca442df992095b728b2a97"
+    }
+  ],
+  "providerCalls": 0,
+  "productionTouched": false
+}

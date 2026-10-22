@@ -1,0 +1,101 @@
+{
+  "meta": {
+    "case": "NorthStar Retail — Reversing the Margin Decline",
+    "team": "Team Aurora",
+    "date": "2026",
+    "primary": "#0F2A43",
+    "accent": "#C8892A"
+  },
+  "slides": [
+    {
+      "type": "title",
+      "title": "Reversing NorthStar Retail's Margin Decline",
+      "subtitle": "Team Aurora · Case Competition Final · 2026"
+    },
+    {
+      "type": "executive_summary",
+      "title": "NorthStar should reprice its premium tier and cut low-margin SKUs to recover 4.2 margin points within 18 months",
+      "recommendation": "Reprice the premium tier (+8%) and rationalize the bottom-quartile SKUs, funded by the freed working capital.",
+      "reasons": [
+        "The premium tier is underpriced vs willingness-to-pay, leaving 8% on the table",
+        "The bottom 22% of SKUs generate 3% of profit but 40% of complexity cost",
+        "The move pays back in 2.3 years at a 24% ROI with low execution risk"
+      ],
+      "impact": "+4.2 operating-margin points · +$96M annual operating profit · 2.3-yr payback"
+    },
+    {
+      "type": "context",
+      "title": "Operating margin has fallen 5.1 points in three years despite flat revenue — a pricing and mix problem, not a demand problem",
+      "body": "Revenue held at ~$2.1B while operating margin slid from 11.8% to 6.7%. The decision: where to intervene to restore margin without eroding the brand.",
+      "bullets": [
+        "Revenue flat at ~$2.1B (2023–2026)",
+        "Operating margin down 5.1 pts to 6.7%",
+        "Volume stable — the erosion is price and mix"
+      ],
+      "source": "Company financials; team analysis"
+    },
+    {
+      "type": "analysis",
+      "title": "The premium tier sells 12% below customer willingness-to-pay, the single largest recoverable margin pool",
+      "chart_note": "[chart] WTP vs current price by tier — premium gap = 12%",
+      "bullets": [
+        "Conjoint-style benchmark shows premium WTP 12% above list",
+        "Premium is 28% of revenue, 46% of gross profit",
+        "An 8% increase captures most of the gap with minimal churn"
+      ],
+      "source": "Customer survey (n=1,240); competitor price scrape"
+    },
+    {
+      "type": "analysis",
+      "title": "The bottom 22% of SKUs earn 3% of profit but drive 40% of supply-chain complexity cost",
+      "chart_note": "[chart] Profit vs complexity cost by SKU decile — long tail",
+      "bullets": [
+        "Long-tail SKUs: 3% of profit, 40% of complexity cost",
+        "Rationalizing frees $34M working capital",
+        "Freed capital funds the repricing rollout"
+      ],
+      "source": "SKU-level P&L; logistics cost model"
+    },
+    {
+      "type": "financials",
+      "title": "The combined move adds $96M in annual operating profit and pays back in 2.3 years at a 24% ROI",
+      "chart_note": "[chart] Margin bridge: 6.7% -> 10.9% (repricing +2.9, SKU cut +1.3)",
+      "bullets": [
+        "Repricing: +$66M · SKU rationalization: +$30M",
+        "One-time cost $54M (systems, transition)",
+        "ROI 24% · Payback 2.3 yrs · NPV(10%) $210M"
+      ],
+      "source": "Team financial model; assumptions in appendix A-3"
+    },
+    {
+      "type": "roadmap",
+      "title": "Execute in three phases over 18 months, front-loading the SKU cut to fund repricing",
+      "phases": [
+        { "label": "Months 0–3", "text": "SKU rationalization; free working capital" },
+        { "label": "Months 3–9", "text": "Premium repricing pilot in 2 regions" },
+        { "label": "Months 9–18", "text": "National rollout; monitor churn and mix" }
+      ]
+    },
+    {
+      "type": "risks",
+      "title": "The main risks are premium churn and channel pushback, both mitigable with a phased, monitored rollout",
+      "risks": [
+        { "risk": "Premium churn above 6%", "mitigation": "Regional pilot with churn tripwire before national rollout" },
+        { "risk": "Channel partner pushback on delisting SKUs", "mitigation": "Joint margin-share plan; phase out over two quarters" },
+        { "risk": "Input-cost swing erodes the bridge", "mitigation": "Sensitivity holds to -6% adoption; hedge key inputs" }
+      ]
+    },
+    { "type": "appendix_divider", "title": "Appendix" },
+    {
+      "type": "appendix",
+      "title": "A-3 · Financial model assumptions and sensitivity",
+      "chart_note": "[chart/table] Tornado: adoption, price elasticity, input cost",
+      "bullets": [
+        "Base adoption 82%; recommendation holds above 6%",
+        "Price elasticity -0.7 (premium); -1.3 (core)",
+        "Discount rate 10%; terminal at year 5"
+      ],
+      "source": "Team model v4"
+    }
+  ]
+}

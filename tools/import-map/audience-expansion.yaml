@@ -1,0 +1,108 @@
+jacquardlabs/study-skills:skills/topic-map:
+  name: Topic learning roadmap
+  slug: topic-learning-roadmap
+  summary: Share a topic and what you know. Get a reading path with clear milestones and checks for each step.
+  task: study-and-practice
+  level: beginner
+  inputs: [source_text]
+  outputs: [plan]
+  subhead: Bring a topic, your goal and any course notes. Get concepts in the order they build on each other, with readings and checkpoints. Suggested readings need web search to be verified.
+  needs: read your course material and search for readings, or mark readings it cannot verify
+  when: [You need to learn an unfamiliar topic for a course or work project.]
+jacquardlabs/study-skills:skills/understanding-check:
+  name: Study understanding check
+  slug: study-understanding-check
+  summary: Share what you studied. Get questions, worked practice and feedback that shows what to review next.
+  task: study-and-practice
+  level: beginner
+  inputs: [source_text]
+  outputs: [feedback_notes]
+  subhead: Bring your notes, a chapter or a paper you can share. Answer questions or try a practice problem, then get feedback tied to the material. It supports learning through your own answers.
+  when: [You want to check what you can explain or apply after studying.]
+jacquardlabs/study-skills:skills/paper-reader:
+  name: Research paper reading guide
+  slug: research-paper-reading-guide
+  summary: Share a paper. Get its main idea, evidence and sections to read closely, with questions to test your understanding.
+  task: study-and-practice
+  level: intermediate
+  inputs: [source_text]
+  outputs: [document]
+  subhead: Supply a paper you have permission to use and say what you need from it. Get a reading guide grounded in that paper, with the main claims and sections that deserve a closer read.
+  when: [You are reading a paper for a class, research project or work decision.]
+jacquardlabs/study-skills:skills/paper-critique:
+  name: Research paper evidence review
+  slug: research-paper-evidence-review
+  summary: Share a paper and its supporting material. Get a claims review with evidence gaps, limits and questions to investigate.
+  task: study-and-practice
+  level: intermediate
+  inputs: [source_text]
+  outputs: [audit_report]
+  subhead: Bring the full paper and any available supporting material. Get a review of what the results support, what remains uncertain and what could change the conclusion. Missing evidence stays visible.
+  when: [You need to assess how much weight to put on a paper's claims.]
+jacquardlabs/study-skills:skills/literature-map:
+  name: Research literature comparison
+  slug: research-literature-comparison
+  summary: Share papers on one topic. Get a map of shared findings, conflicting claims and open questions with source references.
+  task: study-and-practice
+  level: intermediate
+  inputs: [source_text]
+  outputs: [document]
+  subhead: Supply several papers and a research question. Get their relationships, disagreements and limits in one comparison. New reading suggestions need source verification; this does not replace your own reading or academic attribution.
+  needs: read the supplied papers and verify any extra readings through search
+  when: [You need to compare several papers rather than summarize them one by one.]
+artificialguybr/resume-ats-linkedin-optimizer:.:
+  name: Resume and job application builder
+  slug: resume-job-application-builder
+  summary: Share your real experience and a job description. Get a tailored resume, cover letter and a check for unsupported claims.
+  task: find-a-job
+  level: beginner
+  inputs: [source_text]
+  outputs: [document]
+  subhead: Start with your actual work, study or project history and the role you want. Get tailored application drafts and a reusable profile template. File rendering needs Python and the packages listed in the download; hiring results are not guaranteed.
+  needs: run Python with the listed packages to render files, or return a text draft when that is unavailable
+  when: [You are applying for a job or internship using your own experience.]
+agent-blueprint/agent-blueprint-skills:plugins/agent-blueprint-skills/skills/procurement-rfx-processing:
+  name: Procurement agent architecture plan
+  slug: procurement-agent-architecture-plan
+  summary: Share your buying process and rules. Get a plan for AI roles, supplier checks and human approval of awards.
+  task: plan-supply-chain
+  level: advanced
+  inputs: [source_text]
+  outputs: [plan]
+  subhead: Use this reference pattern to plan procurement automation around your own systems and approval rules. It describes agent roles and connections. It needs implementation, access controls and testing before it can run; the source links to an optional commercial blueprint service.
+  when: [You are designing procurement automation and need an architecture pattern to adapt.]
+Calvinkub/super_subagent_skill_Hackathon:skills/case-competition-slides:
+  name: Case competition slide deck builder
+  slug: case-competition-slide-deck-builder
+  summary: Share your case, judging rules and analysis. Get a recommendation deck with source notes, financials and backup slides for questions.
+  task: work-with-files
+  level: intermediate
+  inputs: [source_text, brief]
+  outputs: [slide_deck]
+  subhead: Bring the case brief, judging rubric, time limit and your analysis. Get a deck that leads with a recommendation and supports it with evidence. The PowerPoint script needs Python and python-pptx; its chart placeholders need real charts and a final layout check.
+  needs: run Python with python-pptx for editable PowerPoint output, or prepare the supplied HTML template
+  when: [You need a case competition or strategy recommendation presentation.]
+vedraut/slidesage:.:
+  name: Storyboard to PowerPoint deck builder
+  slug: storyboard-to-powerpoint-deck-builder
+  summary: Share your content, sources and audience. Get a storyboard and PowerPoint deck for a business talk, lesson or report.
+  task: work-with-files
+  level: intermediate
+  inputs: [source_text, brief]
+  outputs: [slide_deck]
+  subhead: Build the story before choosing a style. This package turns a structured storyboard into PowerPoint and includes checks for the outline and file. It needs Node and npm packages. Render every slide and check the layout before presenting.
+  needs: run Node and install the package dependencies on your own machine
+  when: [You need an editable PowerPoint deck from a story or lesson outline.]
+evilhill/equity-research-skill:.:
+  name: Equity research and valuation report builder
+  slug: equity-research-valuation-report-builder
+  summary: Share company reports and a dated share price. Get a stock research report with value ranges, source checks and clear assumptions.
+  task: money-and-investing
+  level: advanced
+  thinking: high
+  thinking_why: It must distinguish reported facts, estimates and valuation assumptions across several sources.
+  inputs: [source_text, spreadsheet]
+  outputs: [document]
+  subhead: Supply the company, exchange, currency, research date and permitted filings. Get a research report with traceable inputs and valuation scenarios. Source instructions and sample reports are mainly in Chinese. Python runs the calculations and report checks; source truth and investment conclusions still need human review.
+  needs: run Python 3.9 or later and read supplied filings or access permitted research sources; it includes no live market-data feed
+  when: [You are preparing company research and valuation with explicit assumptions and an as-of date.]

@@ -13,6 +13,9 @@ _codex_*.py
 # run outputs and traces stay local unless promoted into reports/
 runs/
 traces/
+# Raw browser traces may contain request headers; keep reviewed summaries and screenshots.
+reports/**/trace.zip
+reports/**/video.webm
 # intake engine: raw downloads and full transcripts stay private
 intake/*/raw/
 # mind source material (books, transcripts) stays local

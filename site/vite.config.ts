@@ -1,9 +1,48 @@
 import fs from "node:fs";
 import path from "node:path";
-import { defineConfig, type Plugin } from "vite";
+import { defineConfig, loadEnv, type Plugin } from "vite";
 import preact from "@preact/preset-vite";
 import { handleComments, memoryStore } from "./src/server/comments";
 import { handleSpaces, memorySpaces } from "./src/server/spaces";
+import { decodeCatalogue, handleComposer, memoryComposer } from "./src/server/composer";
+import { loadWorkflowEnv } from "../tools/lib/workflow-env.mjs";
+import { authenticateUser, authConfigured, handleAccount } from "./src/server/auth";
+
+function devSecurity(): Plugin {
+  return { name: "dev-security", configureServer(server) {
+    server.middlewares.use("/api/security", (_req, res) => {
+      res.setHeader("content-type", "application/json"); res.setHeader("cache-control", "no-store");
+      res.end('{"required":false}');
+    });
+  } };
+}
+
+function devComposer(): Plugin {
+  const store = memoryComposer();
+  const keys = loadWorkflowEnv(path.resolve(".."));
+  const auth = loadEnv("development", process.cwd(), "CLERK_");
+  const publicAuth = loadEnv("development", process.cwd(), "VITE_CLERK_");
+  const env = { ...keys, ...auth, CLERK_PUBLISHABLE_KEY: auth.CLERK_PUBLISHABLE_KEY || publicAuth.VITE_CLERK_PUBLISHABLE_KEY || keys.CLERK_PUBLISHABLE_KEY, WORKFLOW_COMPOSER_ENABLED: keys.WORKFLOW_COMPOSER_ENABLED ?? "true", WORKFLOW_DAILY_CAP_USD: keys.WORKFLOW_DAILY_CAP_USD ?? "2" };
+  return { name: "dev-composer", configureServer(server) {
+    server.middlewares.use("/api/auth", async (req, res) => {
+      try {
+        const request = new Request(`http://${req.headers.host}/api/auth${req.url === "/" ? "" : req.url}`, { method: req.method, headers: req.headers as Record<string, string> });
+        const out = await handleAccount(request, env, store);
+        res.statusCode = out.status; out.headers.forEach((v, k) => res.setHeader(k, v)); res.end(await out.text());
+      } catch { res.statusCode = 503; res.end('{"error":"Sign-in is temporarily unavailable."}'); }
+    });
+    server.middlewares.use("/api/compose", async (req, res) => {
+      try {
+        const chunks: Buffer[] = []; let bytes = 0;
+        for await (const chunk of req) { bytes += chunk.length; if (bytes > 64000) { res.statusCode = 413; res.end('{"error":"Request too large"}'); return; } chunks.push(chunk as Buffer); }
+        const request = new Request(`http://${req.headers.host}/api/compose`, { method: req.method, headers: req.headers as Record<string, string>, body: req.method === "POST" ? Buffer.concat(chunks) : undefined });
+        const userId = req.method === "POST" ? await authenticateUser(request, env) : null;
+        const out = userId instanceof Response ? userId : await handleComposer(request, async () => decodeCatalogue(JSON.parse(fs.readFileSync("public/data/blocks.json", "utf8"))), { ...env, WORKFLOW_COMPOSER_ENABLED: authConfigured(env) ? env.WORKFLOW_COMPOSER_ENABLED : "false" }, store, req.socket.remoteAddress ?? "", undefined, userId);
+        res.statusCode = out.status; out.headers.forEach((v, k) => res.setHeader(k, v)); res.end(await out.text());
+      } catch { res.statusCode = 503; res.end('{"error":"The composer is temporarily unavailable. Free assembly still works."}'); }
+    });
+  } };
+}
 
 /** /api/comments on the dev server: the live site's handler with an in-memory store (the live site uses D1). */
 function devComments(): Plugin {
@@ -71,8 +110,8 @@ function exampleApp(): Plugin {
 }
 
 // Preact runs the same React code at a fraction of the size: react and react-dom are aliased to preact/compat.
-export default defineConfig({
-  plugins: [preact(), devComments(), devSpaces(), exampleApp()],
-  server: { port: 5180, fs: { allow: [".."] } }, // the mini tools' formula files live in ../mini-tools
+export default defineConfig(({ mode }) => ({
+  plugins: [preact(), devSecurity(), devComments(), devSpaces(), devComposer(), exampleApp()],
+  server: { port: 5180, fs: { allow: [".."] }, ...(mode === "test" ? { hmr: false, watch: null } : {}) }, // tests use a stable snapshot while other tasks edit files
   build: { target: "es2020", modulePreload: { polyfill: false }, cssCodeSplit: true },
-});
+}));

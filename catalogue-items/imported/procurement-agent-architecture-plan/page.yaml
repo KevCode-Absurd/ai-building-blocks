@@ -1,0 +1,13 @@
+thinking: medium
+thinking_why: It follows a set method with a few checks.
+new_slug: procurement-agent-architecture-plan
+name: Procurement agent architecture plan
+summary: Share your buying process and rules. Get a plan for AI roles, supplier checks and human approval of awards.
+job: plan-supply-chain
+headline: Procurement agent architecture plan
+subhead: Use this reference pattern to plan procurement automation around your own systems and approval rules. It describes agent roles and connections. It needs implementation, access controls and testing before it can run; the source links to an optional commercial blueprint service.
+when:
+  - You are designing procurement automation and need an architecture pattern to adapt.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

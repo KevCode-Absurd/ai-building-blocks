@@ -1,0 +1,31 @@
+slug: research-paper-evidence-review
+name: Research paper evidence review
+summary: Share a paper and its supporting material. Get a claims review with evidence gaps, limits and questions to investigate.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - source_text
+outputs:
+  - audit_report
+uses: []
+origin: imported
+source:
+  by: Jacquard Labs
+  repo: jacquardlabs/study-skills
+  path: skills/paper-critique
+  url: https://github.com/jacquardlabs/study-skills/tree/main/skills/paper-critique
+  licence: MIT
+  licence_file: LICENSE
+  commit: a576399
+  original_name: paper-critique
+  imported: 2026-10-22
+version: 1.0.0
+credits:
+  - title: paper-critique skill
+    by: Jacquard Labs
+    url: https://github.com/jacquardlabs/study-skills/tree/main/skills/paper-critique
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

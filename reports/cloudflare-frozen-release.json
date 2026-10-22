@@ -1,0 +1,23 @@
+{
+  "frozenOn": "2026-10-22T10:02:29.215Z",
+  "root": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r8",
+  "assets": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r8\\assets",
+  "worker": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r8\\worker\\worker.js",
+  "workerSha256": "892f4aaae4cfd8dc723acc5ddf17f714c59416ee66b3d932057e590f76410d2c",
+  "files": 18614,
+  "blocks": 4359,
+  "criticalAssets": {
+    "index.html": "d6c22cd8404b6aa546fa09abc4b0d7211c9e2a116b75b751ee941c7dc7acafd7",
+    "compose.html": "ae9a480f961aa020e916a463e7009a9442e555137179582e7bb4d2257b160bf0",
+    "skills/loss-framing-writer.html": "7f4831c8ba327650bc074a89891fdf4e505edba71d132544070b436262b123ec",
+    "data/blocks.json": "19674ea4e09bcf7e47d62714e4d2059644c228b7e4ca442df992095b728b2a97",
+    "skills/storyboard-to-powerpoint-deck-builder.zip": "e42453c498209497795b4d5b1a96aabf885f75057e8682a625ebf8bccbc31d78",
+    "skills/case-competition-slide-deck-builder.zip": "4f0082408e6c73038076adec275105a06029db7d771eda8286e8afdc1333e4bb",
+    "skills/research-paper-writer.zip": "e33e0e564f333480b56d10d0d55e7e70a3b3279d390c83a25c58d048c1e541eb",
+    "skills/equity-research-valuation-report-builder.zip": "40a5601a67953d73331de3f4b5b9603c07771329a923d0f7ef084a1f9bc07f6c"
+  },
+  "configs": {
+    "staging": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r8\\wrangler.staging.jsonc",
+    "production": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r8\\wrangler.production.jsonc"
+  }
+}

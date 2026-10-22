@@ -1,9 +1,10 @@
 # Make documents, sheets and slides: AI Blocks
 
-> 55 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 57 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Article draft editor](https://useaiblocks.com/prompts/rough-text-to-article-tidier): Paste rough text. Get a tidy article with a title, summary and headings, in your words.
 - [Article formatter](https://useaiblocks.com/skills/article-formatter): Give it plain text or rough markdown. Get a tidy article with title, summary, headings and lists, same words.
+- [Case competition slide deck builder](https://useaiblocks.com/skills/case-competition-slide-deck-builder): Share your case, judging rules and analysis. Get a recommendation deck with source notes, financials and backup slides for questions.
 - [Chart maker](https://useaiblocks.com/skills/chart-maker): Give it your data. Get clear charts and dashboards made with matplotlib, seaborn or plotly.
 - [Citation and BibTeX fixer](https://useaiblocks.com/skills/citation-and-bibtex-fixer): Give it DOIs, paper titles or a messy bibliography. Get clean, checked BibTeX entries with duplicates removed.
 - [Class roster file checker](https://useaiblocks.com/skills/class-roster-file-checker): Give it a OneRoster CSV set. Get broken links, bad encodings and manifest errors found, with fixes.
@@ -21,7 +22,7 @@
 - [Empty workbook builder](https://useaiblocks.com/skills/empty-workbook-builder): Give a confirmed field list. Get a formatted empty Excel or CSV file, with no invented rows.
 - [Excel and MATLAB bridge writer](https://useaiblocks.com/skills/excel-and-matlab-bridge-writer): Say what to move between Excel and MATLAB. Get VBA macros that send data, run MATLAB and return results.
 - [Fast data table analyst](https://useaiblocks.com/skills/fast-data-table-analyst): Give it a large data file. Get fast cleaning, grouping and analysis with Polars code that you can rerun.
-- [Finance deck quality checker](https://useaiblocks.com/skills/finance-deck-quality-checker): Give it a client deck. Get number mismatches, weak wording and format slips found slide by slide.
+- [Finance deck review for India](https://useaiblocks.com/skills/finance-deck-quality-checker): Share a finance deck. Find mismatched numbers, unclear wording and layout issues, using Indian fiscal years and units.
 - [HTML slide deck maker](https://useaiblocks.com/skills/html-slide-deck-maker): Describe your talk or share a PowerPoint. Get an animated slide deck in one HTML file that opens in any browser.
 - [Interactive chart maker](https://useaiblocks.com/skills/interactive-chart-maker): Give it your data. Get an interactive Plotly chart with hover, zoom and pan that you can embed in a page.
 - [JSON query helper](https://useaiblocks.com/skills/json-query-helper): Describe the JSON data and what you need. Get a working jq command that filters, reshapes or sums it.
@@ -52,6 +53,7 @@
 - [Slide deck image maker](https://useaiblocks.com/skills/slide-deck-image-maker): Give it your content. Get a slide deck outline and one drawn image per slide, ready to share or read.
 - [Spreadsheet checker](https://useaiblocks.com/skills/spreadsheet-checker): Give it a spreadsheet. Get it cleaned, reconciled and analysed with formulas and formatting kept intact.
 - [Spreadsheet formula auditor](https://useaiblocks.com/skills/spreadsheet-formula-auditor): Give it a spreadsheet. Get formula errors, broken links and model checks such as balance sheet tie-out listed.
+- [Storyboard to PowerPoint deck builder](https://useaiblocks.com/skills/storyboard-to-powerpoint-deck-builder): Share your content, sources and audience. Get a storyboard and PowerPoint deck for a business talk, lesson or report.
 - [Technical doc proofreader](https://useaiblocks.com/skills/technical-doc-proofreader): Give it an English technical doc. Get a list of typos, grammar slips, term clashes and jargon, with no rewrites.
 - [Turn a messy spreadsheet into a clean slide deck](https://useaiblocks.com/workflows/turn-a-messy-spreadsheet-into-a-clean-slide-deck): Give it a messy data file. Get clean, checked data, a written story and slides built from it.
 - [Web page data extractor](https://useaiblocks.com/skills/web-page-data-extractor): Give it page links. Get tables, lists and prices as a CSV or JSON file. Collects data from websites.

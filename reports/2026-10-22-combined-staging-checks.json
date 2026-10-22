@@ -1,0 +1,87 @@
+{
+  "checkedOn": "2026-10-22T08:12:51.079Z",
+  "version": "74ec9f2e-07e4-4512-89bb-cb4e3aa842d3",
+  "origin": "https://ai-building-blocks-staging.kevinmark7498.workers.dev",
+  "status": "automated-checks-pass-human-protected-write-gate-pending",
+  "tests": {
+    "unit": {
+      "passed": 96,
+      "typecheck": "pass"
+    },
+    "hosting": {
+      "passed": 145,
+      "failed": 0,
+      "skipped": 0,
+      "workers": 1
+    },
+    "plannerReplacement": {
+      "total": 62,
+      "passed": 62,
+      "unresolved": 0,
+      "initial": {
+        "passed": 53,
+        "failed": 9
+      },
+      "serialRerun": {
+        "passed": 9,
+        "failed": 0,
+        "workers": 1
+      }
+    },
+    "accountUI": {
+      "passed": 4,
+      "realClerkSignIn": false
+    },
+    "previewSecurity": {
+      "passed": 10
+    },
+    "artifactZIPs": {
+      "passed": 4
+    },
+    "apiNegativeChecks": {
+      "passed": 14
+    },
+    "rateLimit": {
+      "status": "pass",
+      "observed": [
+        403,
+        403,
+        403,
+        403,
+        403,
+        429
+      ]
+    },
+    "visibleDemo": {
+      "passed": 3,
+      "providerCalls": 0,
+      "pageErrors": 0
+    }
+  },
+  "fixes": [
+    "Landing source-code delivery no longer adds RESX migration or redundant brand skills",
+    "Failed skill downloads can be retried without reloading",
+    "Legacy Apps route redirects correctly",
+    "Outdated Builder/UI test expectations corrected against actual contracts"
+  ],
+  "limitations": [
+    "Planner coverage is cumulative: 53 initial passes plus 9 serial rerun passes; original local-resource failures retained.",
+    "Authentication and several security UI paths use fixtures; this is not proof of real customer login or paid inference.",
+    "Real microphone audio was not captured; browser voice API behavior is simulated.",
+    "Real Turnstile-protected space/comment creation and positive D1/sharing verification remain pending the normal-browser owner action in the security chat.",
+    "Workflow packs contain editable instructions and skill sources. Downloading them does not execute skills or generate their eventual deliverables."
+  ],
+  "evidence": {
+    "hosting": "reports/cloudflare-staging-browser-check.json",
+    "planner": "reports/2026-10-22-composer-staging-check.json",
+    "account": "reports/2026-10-22-auth-staging-check.json",
+    "preview": "reports/cloudflare-staging-preview-session.json",
+    "artifacts": "reports/cloudflare-staging-artifact-downloads.json",
+    "api": "reports/cloudflare-staging-api-check.json",
+    "rate": "reports/cloudflare-staging-rate-check.json",
+    "demo": "C:/Users/kevin/.codex/visualizations/2026/10/22/01a16162-e122-7731-93b8-9f4706f23938/staging-demo-r6/staging-demo-check.json"
+  },
+  "pending": [
+    "Create one synthetic space and comment through their real Turnstile widgets, then supply the private fixture file to verify positive D1 and sharing flows."
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "checkedOn": "2026-10-22T09:50:23.688Z",
+  "deployedVersion": "2ff0def4-30ae-41f6-abe6-0cbcadffdd10",
+  "origin": "https://ai-building-blocks-staging.kevinmark7498.workers.dev",
+  "status": "pass",
+  "passed": 10,
+  "checks": [
+    "unauthenticated staging remains private",
+    "bounded login form has no credentials, caching or embedding",
+    "URL credentials refused",
+    "invalid credential refused",
+    "foreign origin refused",
+    "same-origin login creates signed fifteen-minute host-only session",
+    "cookie-only browser can read exact frozen frontend",
+    "tampered signed cookie refused",
+    "preview session still requires real Turnstile on both protected writes",
+    "logout clears browser session"
+  ],
+  "protectedWritesCreated": 0,
+  "providerCalls": 0,
+  "credentialsStored": false
+}

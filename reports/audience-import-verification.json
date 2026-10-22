@@ -1,0 +1,550 @@
+{
+  "checkedOn": "2026-10-22",
+  "method": "Byte comparison against pinned Git clones at explicit retained paths; license comparison; SHA-256 manifest. This verifier does not execute programs. Four artifact executions and compatibility overlays are recorded separately in reports/2026-10-22-artifact-e2e.md; this is not a model benchmark.",
+  "skills": 10,
+  "sourceFiles": 112,
+  "problems": [],
+  "entries": [
+    {
+      "slug": "topic-learning-roadmap",
+      "repo": "jacquardlabs/study-skills",
+      "path": "skills/topic-map",
+      "commit": "a576399e21e64651a4e7b0bffa5998d26f10301b",
+      "licence": "MIT",
+      "files": [
+        {
+          "file": "SKILL.md",
+          "sha256": "c826e2f2bd696275b20c3a7e6abfb7c5552fb9ca6d8099b8e8ad274f0d2cb25b"
+        }
+      ]
+    },
+    {
+      "slug": "study-understanding-check",
+      "repo": "jacquardlabs/study-skills",
+      "path": "skills/understanding-check",
+      "commit": "a576399e21e64651a4e7b0bffa5998d26f10301b",
+      "licence": "MIT",
+      "files": [
+        {
+          "file": "SKILL.md",
+          "sha256": "989e927c456d08e8dd40b2204beb6a579bda0bca070cfa40c912a5a341bd9529"
+        }
+      ]
+    },
+    {
+      "slug": "research-paper-reading-guide",
+      "repo": "jacquardlabs/study-skills",
+      "path": "skills/paper-reader",
+      "commit": "a576399e21e64651a4e7b0bffa5998d26f10301b",
+      "licence": "MIT",
+      "files": [
+        {
+          "file": "SKILL.md",
+          "sha256": "209a207a5a7e7279099c5a8bcf379c8de261be6005b8a86578e0e8f541f37be5"
+        }
+      ]
+    },
+    {
+      "slug": "research-paper-evidence-review",
+      "repo": "jacquardlabs/study-skills",
+      "path": "skills/paper-critique",
+      "commit": "a576399e21e64651a4e7b0bffa5998d26f10301b",
+      "licence": "MIT",
+      "files": [
+        {
+          "file": "SKILL.md",
+          "sha256": "b65ae51621f31586e8c662148f7a539ff0d65e789ed44523a6331c81db374f70"
+        }
+      ]
+    },
+    {
+      "slug": "research-literature-comparison",
+      "repo": "jacquardlabs/study-skills",
+      "path": "skills/literature-map",
+      "commit": "a576399e21e64651a4e7b0bffa5998d26f10301b",
+      "licence": "MIT",
+      "files": [
+        {
+          "file": "SKILL.md",
+          "sha256": "2111b4d8f4cddcbfdc043da32fd94c3789e1f528f554b97a931d3a99d802da55"
+        }
+      ]
+    },
+    {
+      "slug": "resume-job-application-builder",
+      "repo": "artificialguybr/resume-ats-linkedin-optimizer",
+      "path": ".",
+      "commit": "210486f1d14013f740a067ad24652a6dae51523f",
+      "licence": "MIT",
+      "files": [
+        {
+          "file": ".gitignore",
+          "sha256": "8c751e4263f860e3bf7d26f6fe602f03079fe2c28cce8c1a02e9be1a3f823c68"
+        },
+        {
+          "file": "assets/action-verbs.md",
+          "sha256": "9d4ac66d1cd723824f29d2402f0ea75dcde57055392322fbc63a31a9407432f5"
+        },
+        {
+          "file": "assets/ai-slop-blacklist.md",
+          "sha256": "29f734d460f0cf6cc796323ca0f8a6f77531628279e158a127bf0ceceb60f56a"
+        },
+        {
+          "file": "assets/example-resume.json",
+          "sha256": "1744eb9f551a340e00572555f9f5ecf1c21115629c4aa4a35a0fc68c96c392ac"
+        },
+        {
+          "file": "assets/master-profile-template.md",
+          "sha256": "1c1e68782a1b8ee35b0745878d5d2086657492b47d28108cf262ae8e8e7f3b07"
+        },
+        {
+          "file": "assets/metric-proxies.md",
+          "sha256": "898c47f6e3fa35886b796488586c600c5c152f21298e018ddb8b5632d6ab4a6b"
+        },
+        {
+          "file": "assets/resume.schema.json",
+          "sha256": "d7234d8616dc5d3c525b92658f9fcbd017280b46f15b4fc8ccdd6d9fa23786b6"
+        },
+        {
+          "file": "LICENSE",
+          "sha256": "7f0a70d88ae2c0ba8d4a0155a3f0387ad9387f12e1bcb28dc7aaded2a248e1a3"
+        },
+        {
+          "file": "README.md",
+          "sha256": "ab2c8b1a36f053585d1d222db85b779245be5b3fd659112ac3ddb24a6251f92d"
+        },
+        {
+          "file": "references/01-ats-and-formatting.md",
+          "sha256": "d612c26dc178cc6ccefe1cee4dab3e85888327569a4021bcbad0eda78f0da28b"
+        },
+        {
+          "file": "references/02-content-and-bullets.md",
+          "sha256": "6477ffc00765d84ac36ffeffd97f34a16ba675e2eb1f9c48c4967cccc918e326"
+        },
+        {
+          "file": "references/03-keywords-and-tailoring.md",
+          "sha256": "9f0d09df1def00b33cbf931739e9cdeaf70a3471649808a4e9bf8f9918f353a9"
+        },
+        {
+          "file": "references/04-linkedin.md",
+          "sha256": "60bab2153332cf7bc54fc2224b3ff61bc7f98a4799bc03d740d9af5e15f4b982"
+        },
+        {
+          "file": "references/05-master-profile.md",
+          "sha256": "2b33e825212645b344d164a1773157b1a30ce3d71bfc43f141ec20e9b8bc3490"
+        },
+        {
+          "file": "references/06-scoring-and-evaluation.md",
+          "sha256": "29effef9b29ec19a7e8408ac494590b5a052c31625cbeb89c0c6cd108249af62"
+        },
+        {
+          "file": "references/07-myths-and-truth.md",
+          "sha256": "a443e9cae4813d4ad40a07581a002ae49cf3d632836d4307cd056f4657be174c"
+        },
+        {
+          "file": "references/08-cover-letters.md",
+          "sha256": "351a3569ede39764a05794bbdb410e93b8b7910a8cbde47d3e644c2efe362d86"
+        },
+        {
+          "file": "scripts/requirements.txt",
+          "sha256": "166e5ebff09ae495ecad88efb4fe6a2e179be5168252a53e634ca019d46693a8"
+        },
+        {
+          "file": "scripts/resume_tools.py",
+          "sha256": "b96bfd83e6ab4aa823316671ba58eccab69041753d7131073b3d31a38219ebad"
+        },
+        {
+          "file": "SKILL.md",
+          "sha256": "0b2da52ed49de35a4c7f05c49799d6e4255750dca2c45b699fa3befe31577667"
+        }
+      ]
+    },
+    {
+      "slug": "procurement-agent-architecture-plan",
+      "repo": "agent-blueprint/agent-blueprint-skills",
+      "path": "plugins/agent-blueprint-skills/skills/procurement-rfx-processing",
+      "commit": "d755f380973227a88d9eb816f251ff66d1d99206",
+      "licence": "Apache-2.0",
+      "files": [
+        {
+          "file": "SKILL.md",
+          "sha256": "93aad0c4b71d96d938d50d099e30e628dace74b35548f7144351f5ae170f6416"
+        }
+      ]
+    },
+    {
+      "slug": "case-competition-slide-deck-builder",
+      "repo": "Calvinkub/super_subagent_skill_Hackathon",
+      "path": "skills/case-competition-slides",
+      "commit": "806164d1e4100ff3651688b3cd76ef15e55d6e8b",
+      "licence": "MIT",
+      "files": [
+        {
+          "file": "assets/template.html",
+          "sha256": "d16b4ea0fc41636048f90656568c0610d2568f011d88331bf1600074e974a353"
+        },
+        {
+          "file": "references/deck-anatomy.md",
+          "sha256": "ad1594489df6a0b2792bcd48a843241eabc971192475fc854d7b7fddea8b4d41"
+        },
+        {
+          "file": "scripts/build_pptx.py",
+          "sha256": "eec574ad8bb25a3e245ed5ff8b420dfbb6cbabc446d921bb9ff271ecafa8d0b1"
+        },
+        {
+          "file": "scripts/deck-spec.example.json",
+          "sha256": "9fcf60699e521fa72b4873d6231594fed7f84924b6a79f990f2bc757b90ec4e4"
+        },
+        {
+          "file": "SKILL.md",
+          "retainedPath": "SKILL.upstream.md",
+          "sha256": "515ab6b2a3548389d28b2c72f6910ab9efffeacdbf65962241259f12074a0e86"
+        }
+      ]
+    },
+    {
+      "slug": "storyboard-to-powerpoint-deck-builder",
+      "repo": "vedraut/slidesage",
+      "path": ".",
+      "commit": "2bbeebd9d31be79aad818938306f0bd4d615b515",
+      "licence": "MIT",
+      "files": [
+        {
+          "file": ".github/workflows/ci.yml",
+          "sha256": "85b47699844c0920d1a6b386d4ed3e76a40e9ba1bdb432ef22980e425f2eeb0a"
+        },
+        {
+          "file": ".gitignore",
+          "sha256": "ff57afc87a29a06e671c7f9e6b91148c10629ecffe447fba064f0c25665079a9"
+        },
+        {
+          "file": "assets/style-tokens/corporate-bright.json",
+          "sha256": "437baf31e230977c95af1e8c98b976f25a38577e0db909622c87871f397a0ba8"
+        },
+        {
+          "file": "assets/style-tokens/futuristic-tech.json",
+          "sha256": "7c89c0b5562ec60c385a2d040a2f5d02af23e01805d61d48ccae180e48c9ea25"
+        },
+        {
+          "file": "assets/style-tokens/hand-drawn-editorial.json",
+          "sha256": "4e912166322e0d7e10c7dfee0cb6a2d6b62e8ec74499f25e1a970ae3ff4b6a0a"
+        },
+        {
+          "file": "assets/style-tokens/japanese-editorial.json",
+          "sha256": "0eb7553ccb14952543598fd3e80456d3881b0fcfa07b45394f10f614ba56373a"
+        },
+        {
+          "file": "assets/style-tokens/minimalist-luxury.json",
+          "sha256": "200fbaf7ed17c9ff9e3d381943a3ef4d5683fd2857d4a055c83b83083dd1afa1"
+        },
+        {
+          "file": "assets/style-tokens/modern-illustration.json",
+          "sha256": "122307965e1d51086d45b84860ad777dc44e000cfcaea46b64517263b6e18959"
+        },
+        {
+          "file": "assets/style-tokens/soft-clay-3d.json",
+          "sha256": "f117a1c40350b9a06abdd4795516222e1592aa40a379fc6203c005d639730b2b"
+        },
+        {
+          "file": "examples/business-pitch/brief.md",
+          "sha256": "ec29c436b2bd3894b2d5c7b7e35c87e9e55e51e11afea0be34b5ba6e64bca37f"
+        },
+        {
+          "file": "examples/business-pitch/storyboard.json",
+          "sha256": "640a8547e67095059907de5eae9fd2ed5e266ff6c43fbf638f886114f56be946"
+        },
+        {
+          "file": "examples/education-lesson/brief.md",
+          "sha256": "c9773969360eaebcc7651fc18f4956f85018d83deb238977acf36880f6663493"
+        },
+        {
+          "file": "examples/education-lesson/storyboard.json",
+          "sha256": "4044530b8d77c39af97d00d977f3aa3c20f5a9ff1e05dd7229d099983544d88c"
+        },
+        {
+          "file": "LICENSE",
+          "sha256": "985a4f6617a3fd6fdaaf5e838c8022bde1b30e6c7bb766af8f3be7559fe1cfd2"
+        },
+        {
+          "file": "package-lock.json",
+          "sha256": "c31f547be10bbaa9e8cfa05238aa2a2e8c78d2abb653a7e093ae4ac664f690a1"
+        },
+        {
+          "file": "package.json",
+          "sha256": "284d971e9cfef507186fd0c9cde4cad5a7c2da5c6c1ffd1b14d3742860aed04c"
+        },
+        {
+          "file": "PLAN.md",
+          "sha256": "930262a81ed57a82c6f08eb3ff6f7dab845e53ab12912720adc1338aa96f45db"
+        },
+        {
+          "file": "README.md",
+          "sha256": "35f687471bbaf38bb805efab1607a230c58a6e7311248d3fa839de11f7022ed8"
+        },
+        {
+          "file": "references/chart-design.md",
+          "sha256": "8b46a9451180a76b3c7efaef24a095f4c903db02f763237b633b8b09010b7857"
+        },
+        {
+          "file": "references/concept-sequencing.md",
+          "sha256": "c7da0d7c4ded8a16db868844512226baac79980f49a910b8b0d0ac7d3b0a3acc"
+        },
+        {
+          "file": "references/deck-architecture.md",
+          "sha256": "278e4a7b53266e4f1ecf7cb513965f850b674e7d21fb37802ca68e8effe95c79"
+        },
+        {
+          "file": "references/instructional-design.md",
+          "sha256": "f1ad2843616d04b9c6c21affe9a90a357de056eb6f977de1510cf862cf335c21"
+        },
+        {
+          "file": "references/learning-science.md",
+          "sha256": "e7e3373404bd529bfc1854dd6ab6c46d9707dd82e39ce0a855a72afc4e4823ee"
+        },
+        {
+          "file": "references/narrative-frameworks.md",
+          "sha256": "3e15b83a956a367958b12cc478e645610c16e7fc8a9c8afd73831b811892046a"
+        },
+        {
+          "file": "references/qa-checklist.md",
+          "sha256": "65091da8e61f763788829b8027d8e65716956e6f9e057cf8105c9ef9ace423c9"
+        },
+        {
+          "file": "references/slide-patterns.md",
+          "sha256": "32f64c07b2a8cdb113f1bf133ba58f137eacdd3639ae5b48ab47da39558baf7b"
+        },
+        {
+          "file": "references/style-systems/corporate-bright.md",
+          "sha256": "312f1961bea37794408b804557183d7e8a3c914752969f10f05682f82a502565"
+        },
+        {
+          "file": "references/style-systems/futuristic-tech.md",
+          "sha256": "ba6c1b16a5f836b01d93e5d261684604165ec136f380173399724557ea0df51d"
+        },
+        {
+          "file": "references/style-systems/hand-drawn-editorial.md",
+          "sha256": "99823127aa5558e1e85f669f05a070905954477d4888fc93ccb08a5eda34871d"
+        },
+        {
+          "file": "references/style-systems/japanese-editorial.md",
+          "sha256": "1c12387ed385c2b1c2f1d05614f4fd40c35a931fbf30f6e74e0108d3d0703eea"
+        },
+        {
+          "file": "references/style-systems/minimalist-luxury.md",
+          "sha256": "ad5e900b25e367f5895376d2ae65ce9794f17e04b605a286987f555c52cc6c3b"
+        },
+        {
+          "file": "references/style-systems/modern-illustration.md",
+          "sha256": "473626c91c3e7675e21a44bbc7db5f6ec0f0fc81c5b8dd152f36d9fb1d3335f2"
+        },
+        {
+          "file": "references/style-systems/README.md",
+          "sha256": "f2cb65b1aa4f5251f690d0aff251d5af947303b2b4407eb3236f17a409594f7f"
+        },
+        {
+          "file": "references/style-systems/soft-clay-3d.md",
+          "sha256": "ce82c316fad6ca7a13c6c08becfaa09062a39d6ba13e5b65c2c410899db9c738"
+        },
+        {
+          "file": "schemas/storyboard.schema.json",
+          "sha256": "b7e10af34cc7227fd3b675fbbe309bfcba125bbaedab2d10de6650b65495e44f"
+        },
+        {
+          "file": "schemas/style-tokens.schema.json",
+          "sha256": "4889750d8f97bd6cc6c23679c8a1b8b9e66556d2b67e13caaf735404f583640a"
+        },
+        {
+          "file": "scripts/check-dag.mjs",
+          "sha256": "7c1281d9691269c79bf9d9bee88b4ee65b323e89ccca1e3fa0db6733d1b9560b"
+        },
+        {
+          "file": "scripts/generate.mjs",
+          "sha256": "baa04e57ffd534d9f0d9648a3a556571fa6348444c1a293d00449d44617c45b5"
+        },
+        {
+          "file": "scripts/inject-builds.mjs",
+          "sha256": "fb5172ad8027974debb31a39d06df4b80d0445cace8c377d721dd9edc450a385"
+        },
+        {
+          "file": "scripts/inject-transitions.mjs",
+          "sha256": "a7966d3812305bcca22a3c5585511225ee7fed461a5a6b3888e11987f3856f9f"
+        },
+        {
+          "file": "scripts/lib/archetypes.mjs",
+          "sha256": "9bd06c802626db67e908c454c3de7992fc5e2c688abbe3b5f98396ecde357504"
+        },
+        {
+          "file": "scripts/lib/charts.mjs",
+          "sha256": "6abb3de3150767d382b2b22d7f570349370d91ab8460fd88f09a0ba8583603da"
+        },
+        {
+          "file": "scripts/lib/layout.mjs",
+          "sha256": "a84d210f4ea4dbdc0548fb89081795533de3dd13262fb35286e4fc09b3872a03"
+        },
+        {
+          "file": "scripts/lib/style-loader.mjs",
+          "sha256": "2f55fb3d093bae7fe51bff3da89d7e00d902e2923227e9f818f276c563738bd8"
+        },
+        {
+          "file": "scripts/qa-report.mjs",
+          "sha256": "54fb0a671aeb68fcacd589848e42143c7bc89b2f3ece63cfd56c09646c8c87ff"
+        },
+        {
+          "file": "scripts/validate-storyboard.mjs",
+          "sha256": "2702aec098117e9a8cf2577c34d048a46e202634ba103afaf90427732bc9cbde"
+        },
+        {
+          "file": "SKILL.md",
+          "retainedPath": "SKILL.upstream.md",
+          "sha256": "65c693aa9a2af63ddcf400cf583e8075c1af6fb496b8ceaa38ef5251fe62eabc"
+        },
+        {
+          "file": "templates/brief.template.md",
+          "sha256": "b681149fa0af8dcd0b384757667000211c6026cb8768c82212dc7c2e31b18b34"
+        }
+      ]
+    },
+    {
+      "slug": "equity-research-valuation-report-builder",
+      "repo": "evilhill/equity-research-skill",
+      "path": ".",
+      "commit": "bf71c505309baa82e4390762a413d26d864bdc94",
+      "licence": "MIT",
+      "files": [
+        {
+          "file": ".gitignore",
+          "sha256": "96d268ac8d249cd5694043218b716d02b803bcb5d82e2aab69d142286671bfd3"
+        },
+        {
+          "file": "agents/openai.yaml",
+          "sha256": "40662030f3c52ae88a625876c1b97b4c3332a3767c103225edde1869fe419996"
+        },
+        {
+          "file": "assets/report-template.html",
+          "sha256": "4a17e0cd6abf276d08f22e6250f24bffd1f668b0e6904f77c02846f35fdda6d7"
+        },
+        {
+          "file": "CHANGELOG.md",
+          "sha256": "3b85c271f2074e9f657d1f3e56e4938d1cca3d46884332fd2312a19606cf7c90"
+        },
+        {
+          "file": "examples/README.md",
+          "sha256": "e11b73bad2c6aac393cd698066f25f9cf0ca277cd2aaea7d3b60031ac59e57d7"
+        },
+        {
+          "file": "LICENSE",
+          "sha256": "662d4af02195ecc55c6304c7878c867928af2d39352a7bbdd4699b2456b88e65"
+        },
+        {
+          "file": "README.md",
+          "sha256": "2f086463948fa542fa6af6f4ffd92c4a6ed9721b925978b62b9df62aff4a1ad4"
+        },
+        {
+          "file": "references/evidence-policy.md",
+          "sha256": "d2adb6046d6e87faee8d377d6bc2d3b0b1519b84e08ff75dc7900737da5d32ff"
+        },
+        {
+          "file": "references/financial-analysis.md",
+          "sha256": "929923f3c63787e2ba0b325dde6019ce349c7a772053e5b2777bdc59f8368f53"
+        },
+        {
+          "file": "references/investment-scorecard.md",
+          "sha256": "6b9775690f62afa7137faf2af72a275ae05de3fa73403998922844bb28148e71"
+        },
+        {
+          "file": "references/llm-fundamental-analysis.md",
+          "sha256": "ece2dce8790150720311cd196640885ba7194d7a9ca542f672184aa2e8a9601f"
+        },
+        {
+          "file": "references/report-schema.md",
+          "sha256": "c2d95cb75b9b0bccc6e84920c57e4aeba9434ed4e7465c791ebc761c2f0294cc"
+        },
+        {
+          "file": "references/report-template.md",
+          "sha256": "ef16e76b3ed63e08561a8f1c4e11ae91431259ac27f8a30090844bf80efc5ca4"
+        },
+        {
+          "file": "references/research-framework.md",
+          "sha256": "66cd6dc9a0ddf843297e1223b388244490ebf308c9b6394ced5116e9029316e0"
+        },
+        {
+          "file": "references/sector-kpis.md",
+          "sha256": "45391355c273201feabbb3d6091cf7623a973f32f58b4e272f478e64947e863c"
+        },
+        {
+          "file": "references/valuation-framework.md",
+          "sha256": "80bcbef570a73233ff2cca8cdeb466d10d27c4247e693aa13384cff58843b9e0"
+        },
+        {
+          "file": "scripts/financial_metrics.py",
+          "sha256": "5f76d61dffcbae707dfb335b1eb16fadcc991abd807a079b2f93d94abb192678"
+        },
+        {
+          "file": "scripts/render_report.py",
+          "sha256": "cf49b0a6ec7013054bdc2fc595fe54ad7810d46c67ac7d4d92f9dd7c223af44a"
+        },
+        {
+          "file": "scripts/validate_report.py",
+          "sha256": "914f14d2b2b6b3716c128e8f1636148174369f1bccd5f2ec3df63c222575b4b3"
+        },
+        {
+          "file": "scripts/valuation_model.py",
+          "sha256": "ee621390c113995618e88c226061d6c834007093d9c1e07f65908d20a9f9241f"
+        },
+        {
+          "file": "SKILL.md",
+          "retainedPath": "SKILL.upstream.md",
+          "sha256": "6aa63a8aed5ae5f0a8e503e6167209030128535fabafcd2973263331a0503053"
+        },
+        {
+          "file": "tests/behavior/scenarios.md",
+          "sha256": "5ba0798be8113d794bbf3676b3ead9fd3b1a8dbf38ebd0f8b8d727022b4dbc14"
+        },
+        {
+          "file": "tests/fixtures/audit-report.json",
+          "sha256": "85e20359fcb362048f12d89d43a95f1ceb8522ae54dba14f27a9c6b81b6d62c5"
+        },
+        {
+          "file": "tests/fixtures/audit-valuation-input.json",
+          "sha256": "dc6d5bb160f952ec277c58bb5d84aec87c5a0129a4a75762b93ce7cd587a0815"
+        },
+        {
+          "file": "tests/fixtures/audit-valuation.json",
+          "sha256": "96235dc92f9865dfde1504608157d8a0b7d6a80cb1379fbabeb60af35b595465"
+        },
+        {
+          "file": "tests/fixtures/sector-valuation-input.json",
+          "sha256": "726e2d6247f71cab378ddcd241491489c88eb08488b6eabd37be5b920afd18ad"
+        },
+        {
+          "file": "tests/fixtures/standard-report.json",
+          "sha256": "55a99d889450c75b4eaf56bec650998e633282fbb5dd3111bf50a0b3cad99589"
+        },
+        {
+          "file": "tests/fixtures/standard-valuation-input.json",
+          "sha256": "3d19e4018bddd33186a6c0d340e1e39214973525eaddb4dfbab3e9bfeae0716c"
+        },
+        {
+          "file": "tests/fixtures/standard-valuation.json",
+          "sha256": "c04f90fa8af21b5ce66e33f3be86370458fba908f0237ff86ffaf3662204f9f7"
+        },
+        {
+          "file": "tests/fixtures/v11-legacy-report-template.html",
+          "sha256": "d541ecfdf08e3296ed397492c45e17c6d981aa554e4e2aeed7110c7a74430656"
+        },
+        {
+          "file": "tests/test_render_report.py",
+          "sha256": "babcc5ed781446e16621e9bc40c7f135499d4f88ad65c72f5d58873254033205"
+        },
+        {
+          "file": "tests/test_validate_report.py",
+          "sha256": "b855e514a84b849bc691ee67e4db7bb6fbe5a00917d7db1f50d0e0fc3ffdf673"
+        },
+        {
+          "file": "tests/test_valuation_model.py",
+          "sha256": "296f5642632c588d439e152e41d74f7c6604b4fb04c3ea9a95af028260c867e6"
+        }
+      ]
+    }
+  ]
+}

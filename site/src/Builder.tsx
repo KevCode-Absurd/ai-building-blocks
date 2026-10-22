@@ -1,3 +1,5 @@
+import SkillReplace, { ReplaceMenu } from "./SkillReplace";
+import { withCustomSkills, replaceFlowSkill, type CustomSkill } from "./lib/custom-skills";
 import { spaceKey, spaces } from "./lib/space";
 import { createContext, memo, useCallback, useContext, useDeferredValue, useEffect, useMemo, useRef, useState, type CSSProperties, type DragEvent } from "react";
 import {
@@ -9,18 +11,20 @@ import { SearchIcon } from "./ui";
 import { type Block, type Catalogue, KINDS, TASKS, kindOf, loadPage, portLabel, taskOf, wireSteps, workflowEntries } from "./lib/data";
 import PixelFace from "./PixelFace";
 import { suggestNext } from "./lib/suggest";
-import { type Flow, type Team, QUEUED, flows, takeQueued, uid, useStore } from "./lib/store";
+import { type Flow, type FlowNode, type Team, QUEUED, flows, takeQueued, uid, useStore } from "./lib/store";
 import { leadsOf, mindName } from "./lib/crew";
 import { buildHandoffZip, download, finalOutputs, needsOf, orderFlow, typeMismatches, zipName } from "./lib/handoff";
 import { getBusiness } from "./lib/business";
 import { DownloadDialog } from "./DownloadDialog";
 import { flowFrom, passLabel, planFromGoal, shareUrl, tidy, unpackFlow } from "./lib/plan";
+import { compositionFlow } from "./lib/composer-flow";
+import { finalize, freeSelection } from "./lib/composer-core";
 import { applySteps } from "./lib/flowEdit";
 import { setSearch } from "./lib/router";
 import { EndPanel, FlowEdge, type FlowEdgeT, GoalBox, STEP_S, Sample, StartPanel, type StartPatch, StepList, StepPanel, sampleOf } from "./BuilderParts";
 
 /** mind is the one you picked for the step; lead is who actually leads it (yours, or your team's pick), worked out each time. */
-type NodeData = { slug: string; ecommerce?: boolean; step?: number; run?: number; delay?: number; role?: string; notes?: string; mind?: string; lead?: string; leadTeam?: boolean };
+type NodeData = { slug: string; ecommerce?: boolean; step?: number; run?: number; delay?: number; role?: string; notes?: string; mind?: string; lead?: string; leadTeam?: boolean; bindings?: FlowNode["bindings"] };
 type BlockNode = Node<NodeData, "block">;
 // Start and End aren't steps. They're drawn from the steps each time, so they can't be dragged off, deleted or saved wrong.
 const START = "__start", END = "__end";
@@ -100,14 +104,14 @@ function ViewControls({ full, onFull, edit, onTidy }: { full: boolean; onFull: (
 }
 
 const fromFlow = (f: Pick<Flow, "nodes" | "edges">) => ({
-  nodes: f.nodes.map((n): BlockNode => ({ id: n.id, type: "block", position: { x: n.x, y: n.y }, data: { slug: n.slug, ecommerce: n.ecommerce, role: n.role, notes: n.notes, mind: n.mind } })),
+  nodes: f.nodes.map((n): BlockNode => ({ id: n.id, type: "block", position: { x: n.x, y: n.y }, data: { slug: n.slug, ecommerce: n.ecommerce, role: n.role, notes: n.notes, mind: n.mind, bindings: n.bindings } })),
   edges: f.edges.map((e): FlowEdgeT => ({ id: e.id, source: e.from, target: e.to, type: "flow" })),
 });
-type Ends = { goal: string; notes: string; ended: boolean; overseer?: string; team?: Team };
-const endsOf = (f: Flow | null): Ends => ({ goal: f?.goal ?? "", notes: f?.notes ?? "", ended: !!f?.ended, overseer: f?.overseer, team: f?.team });
+type Ends = { customSkills?: CustomSkill[]; goal: string; notes: string; ended: boolean; overseer?: string; team?: Team };
+const endsOf = (f: Flow | null): Ends => ({ customSkills: f?.customSkills, goal: f?.goal ?? "", notes: f?.notes ?? "", ended: !!f?.ended, overseer: f?.overseer, team: f?.team });
 const toFlow = (id: string, name: string, nodes: BlockNode[], edges: FlowEdgeT[], ends: Ends): Flow => ({
-  id, name, updated: 0,
-  nodes: nodes.map((n) => ({ id: n.id, slug: n.data.slug, x: Math.round(n.position.x), y: Math.round(n.position.y), ...(n.data.ecommerce ? { ecommerce: true } : {}), ...(n.data.role ? { role: n.data.role } : {}), ...(n.data.notes ? { notes: n.data.notes } : {}), ...(n.data.mind ? { mind: n.data.mind } : {}) })),
+  id, name, updated: 0, customSkills: ends.customSkills,
+  nodes: nodes.map((n) => ({ id: n.id, slug: n.data.slug, x: Math.round(n.position.x), y: Math.round(n.position.y), ...(n.data.ecommerce ? { ecommerce: true } : {}), ...(n.data.role ? { role: n.data.role } : {}), ...(n.data.notes ? { notes: n.data.notes } : {}), ...(n.data.mind ? { mind: n.data.mind } : {}), ...(n.data.bindings?.length ? { bindings: n.data.bindings } : {}) })),
   edges: edges.map((e) => ({ id: e.id, from: e.source, to: e.target })),
   ...(ends.goal ? { goal: ends.goal } : {}), ...(ends.notes ? { notes: ends.notes } : {}), ...(ends.ended ? { ended: true } : {}),
   ...(ends.overseer ? { overseer: ends.overseer } : {}), ...(ends.team?.minds.length ? { team: ends.team } : {}),
@@ -208,16 +212,19 @@ function Palette({ c, anchor, inFlow, onAdd, onTemplate, onPlan, showGoal }: {
 
 const typing = (t: EventTarget | null) => { const el = t as HTMLElement | null; return !!el && (/^(INPUT|TEXTAREA|SELECT)$/.test(el.tagName) || el.isContentEditable); };
 
-function Stage({ c, toast }: { c: Catalogue; toast: (m: string) => void }) {
+function Stage({ c: baseCatalogue, toast }: { c: Catalogue; toast: (m: string) => void }) {
   const saved = useStore((s) => s.flows);
   const narrow = useMedia("(max-width: 760px)");
   // A shared link (/?flow=...) opens as a new workflow; otherwise the one left open last time.
   const shareCode = useMemo(() => new URLSearchParams(location.search).get("flow"), []);
-  const shared = useMemo(() => (shareCode ? unpackFlow(c, shareCode) : null), [c, shareCode]);
+  const shared = useMemo(() => (shareCode ? unpackFlow(baseCatalogue, shareCode) : null), [baseCatalogue, shareCode]);
   const initial = useMemo(() => shared ?? flows.draft(), [shared]);
   const [flowId, setFlowId] = useState(initial?.id ?? uid());
   const [name, setName] = useState(initial?.name ?? "Untitled workflow");
   const [ends, setEnds] = useState<Ends>(endsOf(initial));
+  const c = useMemo(() => withCustomSkills(baseCatalogue, ends.customSkills), [baseCatalogue, ends.customSkills]);
+  const [replacing, setReplacing] = useState<string | null>(null);
+  const [contextMenu, setContextMenu] = useState<{ id: string; x: number; y: number } | null>(null);
   const start = useMemo(() => (initial ? fromFlow(initial) : { nodes: [], edges: [] }), [initial]);
   const [nodes, setNodes, onNodesChange] = useNodesState<BlockNode>(start.nodes);
   const [edges, setEdges, onEdgesChange] = useEdgesState<FlowEdgeT>(start.edges);
@@ -453,6 +460,15 @@ function Stage({ c, toast }: { c: Catalogue; toast: (m: string) => void }) {
   };
   const loadTemplate = (t: Block) => load(flowFrom(c, t.name, workflowEntries(t).filter((s) => c.bySlug[s])));
   const planGoal = (goal: string) => {
+    // The reviewed free methods carry checks and handoff notes into the old canvas too.
+    if (/landing\s*page|homepage|\bn8n\b|\bhir(e|ing)\b|\bseo\b|\bdashboard\b|welcome.*email|support.*(backlog|ticket)/i.test(goal)) {
+      try {
+        const plan = finalize(c, freeSelection(c, goal), "free");
+        const composed = compositionFlow(c, plan, goal);
+        composed.name = goal.trim().replace(/^./, m => m.toUpperCase()).slice(0, 80);
+        load(composed); toast(`Laid out ${plan.steps.length} steps with checks and handoff instructions.`); return true;
+      } catch { return false; }
+    }
     const p = planFromGoal(c, goal);
     if (!p) return false;
     load(flowFrom(c, p.name, p.slugs));
@@ -482,7 +498,8 @@ function Stage({ c, toast }: { c: Catalogue; toast: (m: string) => void }) {
   const newFlow = () => { stopRun(); setFlowId(uid()); setName("Untitled workflow"); setEnds(endsOf(null)); setNodes([]); setEdges([]); setInspect(null); flows.open(null); };
   const openFlow = (id: string) => { const f = flows.get(id); if (!f) return; stopRun(); load(f); flows.open(f.id); };
   const share = async () => {
-    const url = shareUrl({ ...flow, name: name.trim() || "Shared workflow" });
+    let url: string;
+    try { url = shareUrl({ ...flow, name: name.trim() || "Shared workflow" }); if (url.length > 16000) throw Error("This workflow is too large for a link. Download its pack to share the custom skill files."); } catch (e) { toast((e as Error).message); return; }
     try {
       if (narrow && navigator.share) { await navigator.share({ title: name, url }); return; }
       await navigator.clipboard.writeText(url);
@@ -493,6 +510,7 @@ function Stage({ c, toast }: { c: Catalogue; toast: (m: string) => void }) {
   };
   // Saves this workflow into the person's space (src/lib/space.ts), so their team sees it through the space link.
   const toSpace = async () => {
+    if (flow.customSkills?.length) { toast("Custom skills are local to this workflow. Share a link or download its pack to include their source."); return; }
     if (!spaceKey()) { toast("Make your space first. It's free and takes one click."); window.location.assign("/space"); return; }
     const title = name.trim() || "Untitled workflow";
     try {
@@ -525,7 +543,7 @@ function Stage({ c, toast }: { c: Catalogue; toast: (m: string) => void }) {
   );
 
   return (
-    <NodeActions.Provider value={actions}>
+    <CatalogueCtx.Provider value={c}><NodeActions.Provider value={actions}>
       <div className={`builder${full ? " full" : ""}${narrow ? " list" : ""}${run ? " previewing" : ""}`} ref={box} data-testid="builder">
         <Palette c={c} anchor={anchor} inFlow={inFlow} onAdd={addNext} onTemplate={loadTemplate} onPlan={planGoal} showGoal={nodes.length > 0} />
         <div className="stage" onDragOver={(e) => { e.preventDefault(); e.dataTransfer.dropEffect = "move"; }} onDrop={onDrop}>
@@ -574,7 +592,7 @@ function Stage({ c, toast }: { c: Catalogue; toast: (m: string) => void }) {
                   for (const x of ch) if (x.type === "dimensions" && fixedId(x.id) && x.dimensions) { const d = x.dimensions; setTermSize((s) => (s[x.id]?.width === d.width && s[x.id]?.height === d.height ? s : { ...s, [x.id]: d })); }
                   onNodesChange(ch.filter((x) => !("id" in x) || !fixedId(x.id)) as Parameters<typeof onNodesChange>[0]);
                 }}
-                onEdgesChange={(ch) => onEdgesChange(ch.filter((x) => !("id" in x) || !fixedId(x.id)))} onConnect={onConnect} onNodeClick={(_, n) => setInspect(n.id)} onPaneClick={() => setInspect(null)}
+                onEdgesChange={(ch) => onEdgesChange(ch.filter((x) => !("id" in x) || !fixedId(x.id)))} onConnect={onConnect} onNodeContextMenu={(e, n) => { if (n.type === "block") { e.preventDefault(); setContextMenu({ id: n.id, x: e.clientX, y: e.clientY }); } }} onNodeClick={(_, n) => setInspect(n.id)} onPaneClick={() => setInspect(null)}
                 fitView fitViewOptions={{ padding: 0.3, maxZoom: 1 }} minZoom={0.3} maxZoom={1.6} preventScrolling={false}
                 defaultEdgeOptions={{ type: "flow" }} deleteKeyCode={["Backspace", "Delete"]} proOptions={{ hideAttribution: true }}
               >
@@ -597,11 +615,17 @@ function Stage({ c, toast }: { c: Catalogue; toast: (m: string) => void }) {
           )}
           {inspect === START ? <StartPanel c={c} goal={ends.goal} notes={ends.notes} overseer={ends.overseer ?? ""} team={ends.team} onChange={(p: StartPatch) => setEnds((e) => ({ ...e, ...p }))} onClose={() => setInspect(null)} />
             : inspect === END ? <EndPanel finals={finalsNow} onClose={() => setInspect(null)} />
-            : inspect && <StepPanel c={c} flow={flow} order={order} nodeId={inspect} onClose={() => setInspect(null)} onRemove={actions.remove} onNotes={setNotes} />}
+            : inspect && <StepPanel c={c} flow={flow} order={order} nodeId={inspect} onClose={() => setInspect(null)} onRemove={actions.remove} onReplace={setReplacing} onNotes={setNotes} />}
         </div>
       </div>
       {needsOpen && <DownloadDialog name={name} zip={zipName(name)} needs={needs} finals={finals} onDownload={exportPack} onClose={() => setNeedsOpen(false)} />}
-    </NodeActions.Provider>
+      {contextMenu && <ReplaceMenu x={contextMenu.x} y={contextMenu.y} onClose={() => setContextMenu(null)} onReplace={() => { setReplacing(contextMenu.id); setContextMenu(null); }} />}
+      {replacing && flow.nodes.some(n => n.id === replacing) && <SkillReplace c={c} slug={flow.nodes.find(n => n.id === replacing)!.slug} goal={flow.goal ?? flow.name} before={(order ?? []).filter(o => o.step < (order?.find(o => o.node.id === replacing)?.step ?? 0)).map(o => o.node.slug)} after={(order ?? []).filter(o => o.step > (order?.find(o => o.node.id === replacing)?.step ?? 0)).map(o => o.node.slug)} customSkills={ends.customSkills ?? []} onClose={() => setReplacing(null)} onChoose={(slug, customSkills) => {
+        setEnds(e => ({ ...e, customSkills }));
+        setNodes(fromFlow(replaceFlowSkill(c, flow, replacing, slug, customSkills)).nodes);
+        toast("Skill replaced. Review retained notes and the updated input/output connections.");
+      }} />}
+    </NodeActions.Provider></CatalogueCtx.Provider>
   );
 }
 

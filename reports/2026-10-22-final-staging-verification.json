@@ -1,0 +1,24 @@
+{
+  "checkedOn": "2026-10-22T10:06:28.162Z",
+  "version": "80bc2a97-5835-4936-bd81-8c994a9552b6",
+  "status": "pass",
+  "unitTests": 96,
+  "typecheck": "pass",
+  "frontendBuild": "pass",
+  "manualBrowser": [
+    "owner completed real create_space verification",
+    "space persisted through reload",
+    "comment persisted through reload",
+    "manual private-link fallback displayed and captured into ignored fixture only"
+  ],
+  "apiChecks": 21,
+  "cleanup": [
+    "deleted the staging fixture item",
+    "hid 2 verified staging fixture comments"
+  ],
+  "priorHostingBrowserCases": 145,
+  "priorHostingEvidence": "reports/cloudflare-staging-browser-check.json",
+  "staticCatalogueAndReviewedPackagesUnchanged": true,
+  "paidAIEnabled": false,
+  "productionPublic": false
+}

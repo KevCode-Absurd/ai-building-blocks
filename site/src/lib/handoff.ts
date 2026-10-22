@@ -1,3 +1,4 @@
+import { withCustomSkills } from "./custom-skills";
 // Builds the handoff pack from a saved workflow with plain code: same workflow in, same pack out.
 // PRD §6: HANDOFF.md, workflow.json, skills/<slug>/SKILL.md, README.txt.
 // The zip library loads only when someone downloads.
@@ -50,6 +51,7 @@ export function typeMismatches(c: Catalogue, flow: Flow) {
   return flow.edges.filter((e) => {
     const a = c.bySlug[byId[e.from]?.slug], b = c.bySlug[byId[e.to]?.slug];
     if (!a || !b) return false;
+    if (byId[e.to]?.bindings?.some(p => p.from === e.from && b.inputs.some(i => i.type === p.type))) return false;
     const outs = new Set(a.outputs.map((p) => p.type));
     return !b.inputs.some((p) => outs.has(p.type));
   }).map((e) => e.id);
@@ -68,6 +70,7 @@ export function needsOf(c: Catalogue, order: Ordered[]): Need[] {
     const b = blockOf(o);
     if (!b) continue;
     const fed = new Set(o.from.flatMap((s) => blockOf(order[s - 1])?.outputs.map((p) => p.type) ?? []));
+    for (const binding of o.node.bindings ?? []) if (o.from.some(s => order[s - 1].node.id === binding.from)) fed.add(binding.type);
     for (const p of b.inputs) {
       if (fed.has(p.type)) continue;
       const n = need.get(p.type) ?? { steps: [], required: false };
@@ -180,7 +183,7 @@ export function workflowJson(c: Catalogue, flow: Flow, order: Ordered[]) {
     steps: order.map((o) => {
       const b = c.bySlug[o.node.slug];
       const lead = leads[o.step];
-      return { step: o.step, id: o.node.id, skill: o.node.slug, version: b?.version ?? null, role: b?.role ?? null, reads_from: o.from, inputs: b?.inputs ?? [], outputs: b?.outputs ?? [], your_role: o.node.role?.trim() || null, your_notes: o.node.notes?.trim() || null, mind: lead?.mind ?? null, mind_from: lead?.from ?? null };
+      return { step: o.step, id: o.node.id, skill: o.node.slug, version: b?.version ?? null, role: b?.role ?? null, reads_from: o.from, inputs: b?.inputs ?? [], outputs: b?.outputs ?? [], input_bindings: o.node.bindings ?? [], your_role: o.node.role?.trim() || null, your_notes: o.node.notes?.trim() || null, mind: lead?.mind ?? null, mind_from: lead?.from ?? null };
     }),
     parallel: parallelGroups(flow, order),
     end: { hands_back: finalOutputs(c, flow, order) },
@@ -209,7 +212,8 @@ export function finalOutputs(c: Catalogue, flow: Flow, order: Ordered[]) {
   return [...new Set(types.map(portLabel))];
 }
 
-export async function buildHandoffZip(c: Catalogue, flow: Flow, business: Business = {}): Promise<{ blob: Blob; filename: string } | { error: string }> {
+export async function buildHandoffZip(c: Catalogue, flow: Flow, business: Business = {}, extras: Record<string, string> = {}): Promise<{ blob: Blob; filename: string } | { error: string }> {
+  c = withCustomSkills(c, flow.customSkills);
   const hasTeam = !!flow.team?.minds.some((s) => isMind(c, s));
   if (!flow.nodes.length && !hasTeam) return { error: "Add at least one block to the canvas first." };
   if (!flow.nodes.length && !flow.goal?.trim()) return { error: "Say what the team should work on: open Start and fill in what it's for." };
@@ -219,6 +223,10 @@ export async function buildHandoffZip(c: Catalogue, flow: Flow, business: Busine
   const files: Zippable = {};
   const put = (p: string, text: string) => { files[p] = [strToU8(text), { mtime: FIXED_TIME }]; };
   const about = businessText(business);
+  for (const [name, text] of Object.entries(extras)) {
+    if (!["workflow.edit.json", "README.md", "inputs.json"].includes(name)) return { error: "Unsupported additional pack file." };
+    put(name, text);
+  }
   put("HANDOFF.md", handoffMarkdown(c, flow, order, !!about));
   if (about) put("about-me.md", about);
   put("workflow.json", JSON.stringify(workflowJson(c, flow, order), null, 2) + "\n");
@@ -246,6 +254,8 @@ export async function buildHandoffZip(c: Catalogue, flow: Flow, business: Busine
     const assets = await Promise.all([...bundled].sort().map(async (slug) => {
       const b = c.bySlug[slug];
       if (!b) throw new Error(`The pack needs an unknown block: ${slug}.`);
+      const custom = flow.customSkills?.find(s => s.slug === slug);
+      if (custom) return { slug, skill: custom.markdown, zip: null };
       const [skill, zip] = await Promise.all([loadSkillText(slug), b.hasFiles ? loadSkillZip(slug) : Promise.resolve(null)]);
       if (!skill || (b.hasFiles && !zip)) throw new Error(`Couldn't load the complete files for ${b.name}. Check your connection and try again.`);
       return { slug, skill, zip };

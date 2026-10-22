@@ -1,0 +1,10 @@
+{
+  "label": "SYNTHETIC QA EXHIBIT; not an actual filing, survey, quotation or independent source",
+  "id": "S04",
+  "as_of": "2026-10-22",
+  "role": "market-data",
+  "price": 12,
+  "price_type": "fictional assumption, not market quote",
+  "wacc": 0.1,
+  "diluted_shares_million": 10
+}

@@ -1,0 +1,12 @@
+{
+  "label": "SYNTHETIC QA EXHIBIT; not an actual filing, survey, quotation or independent source",
+  "id": "S05",
+  "as_of": "2026-10-22",
+  "role": "secondary",
+  "limitations": [
+    "Every input is synthetic",
+    "Capex and NWC held at zero",
+    "No external verification or moat evidence",
+    "Probabilities are analyst sample assumptions"
+  ]
+}

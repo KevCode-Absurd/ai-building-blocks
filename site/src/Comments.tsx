@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import { Drawer } from "./ui";
 import type { Comment } from "./server/comments";
+import { protectedHeaders } from "./lib/turnstile";
 
 // Questions and comments for one skill, in a panel on the side of its page. They're kept per skill
 // (src/server/comments.ts) and stay on that skill's page, including comments left under an old name.
@@ -39,16 +40,17 @@ function Form({ slug, parent, team, onPosted, onCancel }: { slug: string; parent
     if (body.trim().length < 2 || busy) return;
     setBusy(true); setError("");
     try {
+      const verification = await protectedHeaders("comment");
       const r = await fetch("/api/comments", {
         method: "POST",
-        headers: { "content-type": "application/json", ...(team ? { authorization: `Bearer ${team}` } : {}) },
+        headers: { "content-type": "application/json", ...verification, ...(team ? { authorization: `Bearer ${team}` } : {}) },
         body: JSON.stringify({ slug, parent, name, body, website }),
       });
       const out = await r.json().catch(() => ({}));
       if (!r.ok) { setError(out.error ?? "That didn't post. Try again."); return; }
       store.set(NAME_KEY, name.trim());
       setBody(""); onPosted();
-    } catch { setError("That didn't post. Check your connection and try again."); }
+    } catch (e) { setError(e instanceof Error ? e.message : "That didn't post. Check your connection and try again."); }
     finally { setBusy(false); }
   };
   return (

@@ -29,8 +29,10 @@ export function applySteps(c: Catalogue, base: Flow | null, name: string, steps:
   const old = base ? Object.fromEntries(base.nodes.map((n) => [n.id, n])) : {};
   const rewire = !base || reordered || isAutoWired(c, base);
   if (rewire) {
-    const nodes: FlowNode[] = steps.map((s, i) => ({ id: s.id, slug: s.slug, ecommerce: old[s.id]?.ecommerce, role: old[s.id]?.role, notes: old[s.id]?.notes, mind: old[s.id]?.mind, ...grid(i) }));
-    return { id: base?.id ?? uid(), name, updated: Date.now(), nodes, edges: autoEdges(c, steps), goal: base?.goal, notes: base?.notes, ended: base?.ended, overseer: base?.overseer, team: base?.team };
+    const nodes: FlowNode[] = steps.map((s, i) => ({ id: s.id, slug: s.slug, ecommerce: old[s.id]?.ecommerce, role: old[s.id]?.role, notes: old[s.id]?.notes, mind: old[s.id]?.mind, bindings: old[s.id]?.bindings?.filter(b => steps.slice(0, i).some(s => s.id === b.from)), ...grid(i) }));
+    const edges = autoEdges(c, steps);
+    for (const node of nodes) for (const b of node.bindings ?? []) if (!edges.some(e => e.from === b.from && e.to === node.id)) edges.push({ id: uid(), from: b.from, to: node.id });
+    return { id: base?.id ?? uid(), name, updated: Date.now(), nodes, edges, goal: base?.goal, notes: base?.notes, ended: base?.ended, overseer: base?.overseer, team: base?.team, customSkills: base?.customSkills };
   }
   // Hand-made connections: keep them, close the gap where a step was removed, hang new steps after the one above.
   const keep = new Set(steps.filter((s) => old[s.id]).map((s) => s.id));
@@ -40,7 +42,7 @@ export function applySteps(c: Catalogue, base: Flow | null, name: string, steps:
     const outs = base.edges.filter((e) => e.from === gone.id && keep.has(e.to)).map((e) => e.to);
     for (const a of ins) for (const z of outs) if (!edges.some((e) => e.from === a && e.to === z)) edges.push({ id: uid(), from: a, to: z });
   }
-  const nodes: FlowNode[] = base.nodes.filter((n) => keep.has(n.id));
+  const nodes: FlowNode[] = base.nodes.filter((n) => keep.has(n.id)).map(n => ({ ...n, slug: steps.find(s => s.id === n.id)!.slug }));
   steps.forEach((s, i) => {
     if (old[s.id]) return;
     const prev = steps[i - 1] ? nodes.find((n) => n.id === steps[i - 1].id) : undefined;

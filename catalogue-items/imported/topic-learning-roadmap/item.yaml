@@ -1,0 +1,31 @@
+slug: topic-learning-roadmap
+name: Topic learning roadmap
+summary: Share a topic and what you know. Get a reading path with clear milestones and checks for each step.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - source_text
+outputs:
+  - plan
+uses: []
+origin: imported
+source:
+  by: Jacquard Labs
+  repo: jacquardlabs/study-skills
+  path: skills/topic-map
+  url: https://github.com/jacquardlabs/study-skills/tree/main/skills/topic-map
+  licence: MIT
+  licence_file: LICENSE
+  commit: a576399
+  original_name: topic-map
+  imported: 2026-10-22
+version: 1.0.0
+credits:
+  - title: topic-map skill
+    by: Jacquard Labs
+    url: https://github.com/jacquardlabs/study-skills/tree/main/skills/topic-map
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

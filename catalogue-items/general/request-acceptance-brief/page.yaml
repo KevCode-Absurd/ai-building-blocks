@@ -1,0 +1,51 @@
+{
+  "headline": "Request acceptance brief",
+  "subhead": "Turn any concrete request into a scope, input list, named deliverables and acceptance checks.",
+  "job": "set-up-ai",
+  "thinking": "medium",
+  "thinking_why": "Requires following the supplied scope and checking evidence; domain expertise is not assumed.",
+  "explain": "Turn any concrete request into a scope, input list, named deliverables and acceptance checks. This is a general method for tasks without a reliable specialist match. Planning is deterministic; executing these instructions requires your own compatible AI runner.",
+  "when": [
+    "You have a concrete deliverable without a matching specialist workflow."
+  ],
+  "you_give": [
+    "The original request, constraints and available evidence."
+  ],
+  "you_get": [
+    "Editable named files, requirements and honest check status."
+  ],
+  "how_to_use": [
+    "Include the full request and complete required inputs.",
+    "Run the workflow in a compatible AI runner.",
+    "Review unresolved checks before using the result."
+  ],
+  "how_it_works": [
+    {
+      "title": "Follow the brief",
+      "text": "Read the complete request and constraints. Create request-brief.md with: outcome, audience, exact deliverables and file formats, quantities, deadline, explicit exclusions, available evidence and acceptance criteria. Assign stable requirement IDs R1, R2, etc. Keep original wording beside each interpretation. Do not infer personal facts, budgets, dates, access or authorization. Record missing inputs and ask only questions whose answers change a deliverable or a required execution dependency, at most three at once. Use placeholders for optional details. Preserve negative constraints and every requested language, count and platform. For an unsupported domain state that this is a general method and identify the specialist review it still needs. Save the requirements as the plan for the next step. No external actions are authorized by this brief."
+    }
+  ],
+  "output_shape": "Requirement ID | Artifact path | Evidence | Status | Missing input",
+  "tweaks": [
+    {
+      "what": "Domain",
+      "how": "Supply your own standards and review rubric."
+    }
+  ],
+  "judge": [
+    "Every requested result is covered or explicitly unresolved.",
+    "No unsupported execution or specialist-validation claim."
+  ],
+  "test": [
+    "Try missing inputs and verify that no facts are invented."
+  ],
+  "improve": [
+    "Replace a general stage with a suitable specialist skill."
+  ],
+  "terms": [
+    {
+      "term": "Not run",
+      "meaning": "A check could not be executed with the available tools."
+    }
+  ]
+}

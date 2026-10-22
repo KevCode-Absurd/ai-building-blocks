@@ -1,0 +1,16 @@
+{
+  "schema_version": "valuation.v1",
+  "mode": "standard",
+  "route": "sector_adaptive",
+  "units": {"model_currency": "USD", "quote_currency": "USD", "amount_unit": "million", "fx_to_quote": 1.0},
+  "market": {"as_of": "2026-09-01", "price_as_of": "2026-09-01", "current_price": 100.0, "diluted_shares": 2.0},
+  "sector_dcf_unsuitable_reason": "Regulated capital generation is not represented by industrial FCFF.",
+  "primary_method_id": "GEV",
+  "methods": [
+    {"id": "GEV", "name": "Embedded value", "kind": "intrinsic", "value_basis": "equity_value", "value": 300.0, "note": "Primary intrinsic method"},
+    {"id": "PB", "name": "P/B cross-check", "kind": "relative", "value_basis": "per_share", "value": 140.0, "note": "Comparable check"}
+  ],
+  "reverse_multiple": {"metric_name": "GEV per share", "metric_per_share": 80.0},
+  "scenarios": {"horizon": 5, "items": {"bear": {"probability": 0.20, "exit_value": 80.0, "dividends": [0, 0, 0, 0, 0]}, "base": {"probability": 0.60, "exit_value": 150.0, "dividends": [0, 0, 0, 0, 0]}, "bull": {"probability": 0.20, "exit_value": 200.0, "dividends": [0, 0, 0, 0, 0]}}},
+  "margin_of_safety": {"required": 0.20, "high_conviction": 0.35}
+}

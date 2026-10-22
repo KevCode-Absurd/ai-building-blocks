@@ -1,0 +1,48 @@
+{
+  "checkedOn": "2026-10-22T09:55:48.060Z",
+  "deployedVersion": "2ff0def4-30ae-41f6-abe6-0cbcadffdd10",
+  "status": "pending-normal-owner-browser",
+  "realWidget": false,
+  "method": null,
+  "plannedMethod": "normal-owner-browser",
+  "productionTouched": false,
+  "providerCalls": 0,
+  "databaseWritesConfirmed": 0,
+  "ownerConfirmationReceived": false,
+  "readbackEvidence": {
+    "report": "reports/cloudflare-staging-human-readback.json",
+    "checkedOn": "2026-10-22T09:50:59.232Z",
+    "counts": {
+      "spaces": 0,
+      "comments": 0
+    }
+  },
+  "loginProbe": {
+    "passed": 5,
+    "protectedWritesCreated": 0,
+    "qualifiesAsRealWriteProof": false
+  },
+  "history": [
+    {
+      "checkedOn": "2026-10-22T07:25:25.178Z",
+      "deployedVersion": "19e5d5a2-8079-4143-9a09-8e5383dff21f",
+      "status": "incomplete",
+      "realWidget": true,
+      "productionTouched": false,
+      "providerCalls": 0,
+      "remainingFixture": {},
+      "evidence": "reports/cloudflare-staging-turnstile-live.json"
+    }
+  ],
+  "pending": [
+    "Owner creates and reloads the exact synthetic space and comment using real widgets in a normal browser.",
+    "After explicit owner/UI confirmation and copied synthetic private device link, capture/read back both records without exposing keys.",
+    "Only verified current-version positive proof and API pass can satisfy production cutover."
+  ],
+  "manualProgress": {
+    "status": "login-complete-space-creation-not-yet-confirmed",
+    "ownerConfirmedMakeSpaceVisible": true,
+    "source": "Kevin direct message in hosting walkthrough chat",
+    "note": "This confirms login and visible UI only; it does not establish either protected write."
+  }
+}

@@ -1,0 +1,745 @@
+{
+  "schema_version": "1.2",
+  "meta": {
+    "mode": "standard",
+    "company_name": "Example & Company 例证公司",
+    "ticker": "EXMPL",
+    "exchange": "NYSE",
+    "currency": "USD",
+    "as_of": "2026-09-01",
+    "investment_horizon": "5 years",
+    "language": "zh-CN"
+  },
+  "summary": {
+    "headline": "增长质量改善，但估值需要安全边际",
+    "one_line_judgment": "As of 2026-09-01，业务质量较高，当前价格的预期回报仍取决于兑现节奏。",
+    "investment_posture": "观察 / 分批验证",
+    "posture_rationale": "等待现金流与竞争证据继续验证。",
+    "overall_confidence": "medium",
+    "maximum_unknown": "新产品需求持续性",
+    "company_quality": "公司拥有可复用平台与稳健资产负债表。",
+    "stock_value": "股票价值取决于五年现金流与退出估值。"
+  },
+  "evidence_scope": {
+    "source_coverage": "As of 2026-09-01，覆盖公司、竞争对手、独立行业、市场数据与反证。",
+    "primary_filing_status": "obtained",
+    "earnings_call_status": "obtained",
+    "industry_evidence_status": "obtained",
+    "research_confidence": "medium",
+    "conflicts_and_gaps": "竞争对手对行业增速的判断较谨慎，尚无重大未解决口径冲突。",
+    "evidence_blocks": [
+      {
+        "kind": "fact",
+        "text": "2026H1 收入为 120。",
+        "source_ids": [
+          "S01"
+        ],
+        "confidence": "high"
+      },
+      {
+        "kind": "management-view",
+        "text": "管理层预计交付效率改善。",
+        "source_ids": [
+          "S01"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "kind": "market-view",
+        "text": "同行认为行业需求增长正在放缓。",
+        "source_ids": [
+          "S02"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "kind": "calculation",
+        "text": "FCFF = NOPAT + D&A - Capex - ΔNWC。",
+        "source_ids": [
+          "S01"
+        ],
+        "confidence": "high"
+      },
+      {
+        "kind": "inference",
+        "text": "现金转换改善可能提高估值下限。",
+        "source_ids": [
+          "S01",
+          "S05"
+        ],
+        "confidence": "medium"
+      }
+    ]
+  },
+  "business": {
+    "model_and_demand": "公司通过订阅与服务收入创造价值，需求来自客户数字化。",
+    "value_creation": "复购与规模效应共同推动单位经济改善。",
+    "industry_stage_and_drivers": "行业处于成熟增长阶段，预算与采用率是关键驱动。",
+    "competitive_position": "产品集成度较高，但价格竞争增强。",
+    "moats": [
+      {
+        "title": "客户工作流",
+        "text": "迁移成本带来留存。",
+        "source_ids": [
+          "S01"
+        ]
+      },
+      {
+        "title": "数据反馈",
+        "text": "使用数据改善产品。",
+        "source_ids": [
+          "S01",
+          "S03"
+        ]
+      }
+    ],
+    "counter_evidence": {
+      "text": "竞争对手正在缩小功能差距。",
+      "source_ids": [
+        "S02",
+        "S05"
+      ]
+    },
+    "industry_validation": {
+      "claim": "行业需求仍增长，但增速正常化。",
+      "company": {
+        "text": "公司披露订单同比增长。",
+        "source_ids": [
+          "S01"
+        ]
+      },
+      "competitors": [
+        {
+          "text": "同行预计增长趋缓。",
+          "source_ids": [
+            "S02"
+          ]
+        }
+      ],
+      "independent": {
+        "text": "独立行业数据确认采用率仍上升。",
+        "source_ids": [
+          "S03"
+        ],
+        "status": "available",
+        "reason": "同口径年度调查。"
+      },
+      "agreement_or_conflict": "方向一致，幅度存在分歧。",
+      "confidence": "medium",
+      "gap": "缺少下一季度独立数据。"
+    }
+  },
+  "management": {
+    "overview": "资本配置优先内部投资，其次回购。",
+    "mda_delta": [
+      {
+        "topic": "收入",
+        "previous_period": "增长 12%",
+        "current_period": "增长 15%",
+        "change": "+3ppt",
+        "interpretation": "交付加快。",
+        "source_ids": [
+          "S01"
+        ],
+        "alternative_explanation": "低基数。",
+        "validation_task": "核对下季订单。"
+      },
+      {
+        "topic": "毛利率",
+        "previous_period": "68%",
+        "current_period": "70%",
+        "change": "+2ppt",
+        "interpretation": "产品组合改善。",
+        "source_ids": [
+          "S01"
+        ],
+        "alternative_explanation": "一次性成本递延。",
+        "validation_task": "核对成本披露。"
+      },
+      {
+        "topic": "现金转换",
+        "previous_period": "82%",
+        "current_period": "91%",
+        "change": "+9ppt",
+        "interpretation": "回款改善。",
+        "source_ids": [
+          "S01"
+        ],
+        "alternative_explanation": "季节性。",
+        "validation_task": "追踪应收账款。"
+      }
+    ],
+    "promises": [
+      {
+        "id": "P01",
+        "promise": "2026 年改善自由现金流率。",
+        "promise_date": "2026-02-20",
+        "original_wording_locator": "Earnings call → prepared remarks",
+        "due_date": "2026-12-31",
+        "actual_result": "2026H1 已初步改善。",
+        "source_ids": [
+          "S01"
+        ],
+        "status": "partially-delivered",
+        "assessment": "方向兑现，全年仍待验证。"
+      }
+    ]
+  },
+  "financials": {
+    "overview": "收入、利润率与现金转换同步改善。",
+    "metric_continuity": [
+      {
+        "metric": "Revenue",
+        "periods": "2024A–2026H1",
+        "definition_scope_change": "None",
+        "comparability_status": "comparable",
+        "adjustment": "None",
+        "source_ids": [
+          "S01"
+        ]
+      },
+      {
+        "metric": "Gross margin",
+        "periods": "2024A–2026H1",
+        "definition_scope_change": "Reclassification",
+        "comparability_status": "partially-comparable",
+        "adjustment": "Use restated periods",
+        "source_ids": [
+          "S01"
+        ]
+      },
+      {
+        "metric": "Operating cash flow",
+        "periods": "2024A–2026H1",
+        "definition_scope_change": "None",
+        "comparability_status": "comparable",
+        "adjustment": "None",
+        "source_ids": [
+          "S01"
+        ]
+      },
+      {
+        "metric": "Free cash flow",
+        "periods": "2024A–2026H1",
+        "definition_scope_change": "Capex definition clarified",
+        "comparability_status": "partially-comparable",
+        "adjustment": "Recalculate consistently",
+        "source_ids": [
+          "S01"
+        ]
+      },
+      {
+        "metric": "ROIC",
+        "periods": "2024A–2026H1",
+        "definition_scope_change": "Not disclosed",
+        "comparability_status": "not-comparable",
+        "adjustment": "N/A pending invested-capital bridge",
+        "source_ids": [
+          "S01"
+        ]
+      }
+    ],
+    "annual_history": [
+      {
+        "period": "2023A",
+        "revenue": "90",
+        "growth": "9%",
+        "margin": "18%",
+        "ocf": "16",
+        "fcf": "12",
+        "roic": "13%",
+        "earnings_quality_note": "Cash conversion stable",
+        "source_ids": [
+          "S01"
+        ]
+      },
+      {
+        "period": "2024A",
+        "revenue": "105",
+        "growth": "17%",
+        "margin": "19%",
+        "ocf": "20",
+        "fcf": "15",
+        "roic": "14%",
+        "earnings_quality_note": "Receivables controlled",
+        "source_ids": [
+          "S01"
+        ]
+      },
+      {
+        "period": "2025A",
+        "revenue": "120",
+        "growth": "14%",
+        "margin": "20%",
+        "ocf": "24",
+        "fcf": "18",
+        "roic": "15%",
+        "earnings_quality_note": "Synthetic actual-period fixture; cash conversion stable",
+        "source_ids": [
+          "S01"
+        ]
+      }
+    ],
+    "quarterly_history": [
+      {
+        "period": "2025Q3",
+        "revenue": "27",
+        "growth": "12%",
+        "margin": "19%",
+        "ocf": "5",
+        "fcf": "4",
+        "roic": "N/A",
+        "earnings_quality_note": "Normal seasonality",
+        "source_ids": [
+          "S01"
+        ]
+      },
+      {
+        "period": "2025Q4",
+        "revenue": "30",
+        "growth": "14%",
+        "margin": "20%",
+        "ocf": "7",
+        "fcf": "5",
+        "roic": "N/A",
+        "earnings_quality_note": "Year-end collections",
+        "source_ids": [
+          "S01"
+        ]
+      },
+      {
+        "period": "2026Q1",
+        "revenue": "29",
+        "growth": "15%",
+        "margin": "20%",
+        "ocf": "6",
+        "fcf": "5",
+        "roic": "N/A",
+        "earnings_quality_note": "Deferred revenue grew",
+        "source_ids": [
+          "S01"
+        ]
+      },
+      {
+        "period": "2026Q2",
+        "revenue": "31",
+        "growth": "16%",
+        "margin": "21%",
+        "ocf": "7",
+        "fcf": "6",
+        "roic": "N/A",
+        "earnings_quality_note": "Cash conversion improved",
+        "source_ids": [
+          "S01"
+        ]
+      }
+    ],
+    "earnings_quality": "经营现金流支持利润，SBC 仍需关注。",
+    "kpi_inflections": "增长与利润率同向改善，现金转换是下一验证点。",
+    "sector_kpis": [
+      {
+        "metric": "Net retention",
+        "current": "112%",
+        "direction": "stable",
+        "source_ids": [
+          "S01"
+        ]
+      }
+    ]
+  },
+  "valuation_context": {
+    "route": "dcf",
+    "method_rationale": "非金融企业使用五年 FCFF DCF，并以相对估值交叉验证。",
+    "assumptions": [
+      {
+        "id": "A01",
+        "assumption": "WACC",
+        "value": "10%",
+        "source_ids": [
+          "S04"
+        ]
+      },
+      {
+        "id": "A02",
+        "assumption": "Terminal growth",
+        "value": "0%",
+        "source_ids": [
+          "S03"
+        ]
+      },
+      {
+        "id": "A03",
+        "assumption": "Terminal ROIC",
+        "value": "15%",
+        "source_ids": [
+          "S01"
+        ]
+      }
+    ],
+    "scenario_rationales": {
+      "bear": {
+        "operating_assumptions": "需求放缓且利润率回落。",
+        "valuation_assumptions": "终值现金流率低于基准。",
+        "trigger_or_falsifier": "净留存连续两季低于 100%。"
+      },
+      "base": {
+        "operating_assumptions": "增长正常化且现金转换稳定。",
+        "valuation_assumptions": "五年 FCFF 与基准终值假设。",
+        "trigger_or_falsifier": "FCF 率符合计划区间。"
+      },
+      "bull": {
+        "operating_assumptions": "采用率超预期且经营杠杆兑现。",
+        "valuation_assumptions": "终值现金流率高于基准。",
+        "trigger_or_falsifier": "净留存高于 115% 且 FCF 率扩张。"
+      }
+    },
+    "reverse_interpretation": "反向估值是条件性隐含预期，不是市场唯一预测。",
+    "reconciliation_note": "DCF 为主，相对估值用于范围检查。"
+  },
+  "theses": [
+    {
+      "id": "T01",
+      "statement": "客户工作流支持稳健复购。",
+      "supporting_source_ids": [
+        "S01",
+        "S03"
+      ],
+      "counter_source_ids": [
+        "S02"
+      ],
+      "evidence_types": [
+        "fact",
+        "inference"
+      ],
+      "confidence": "medium",
+      "needs_validation": "下季净留存率"
+    },
+    {
+      "id": "T02",
+      "statement": "经营效率改善可以扩大自由现金流。",
+      "supporting_source_ids": [
+        "S01"
+      ],
+      "counter_source_ids": [
+        "S05"
+      ],
+      "evidence_types": [
+        "fact",
+        "calculation"
+      ],
+      "confidence": "medium",
+      "needs_validation": "全年现金转换"
+    },
+    {
+      "id": "T03",
+      "statement": "当前价格尚未计入全部上行情景。",
+      "supporting_source_ids": [
+        "S04"
+      ],
+      "counter_source_ids": [
+        "S05"
+      ],
+      "evidence_types": [
+        "market-view",
+        "calculation",
+        "inference"
+      ],
+      "confidence": "low",
+      "needs_validation": "估值与市场预期",
+      "evidence_gap": "缺少更长周期价格样本"
+    }
+  ],
+  "risks_and_breakers": {
+    "summary": "主要风险是需求减速、价格竞争与现金转换反转。",
+    "breakers": [
+      {
+        "breaker": "净留存明显跌破计划",
+        "trigger": "低于 100%",
+        "confirmation_window": "连续两季",
+        "thesis_ids": [
+          "T01"
+        ],
+        "scenario_probability_impact": "Bear +20ppt",
+        "valuation_impact": "降低终值增长",
+        "research_action": "复核客户流失。"
+      },
+      {
+        "breaker": "自由现金流率回落",
+        "trigger": "低于 12%",
+        "confirmation_window": "两个半年期",
+        "thesis_ids": [
+          "T02"
+        ],
+        "scenario_probability_impact": "Base -15ppt",
+        "valuation_impact": "下调现金流率",
+        "research_action": "重建现金桥。"
+      },
+      {
+        "breaker": "估值溢价持续扩大",
+        "trigger": "价格高于 Bull 价值",
+        "confirmation_window": "20 个交易日",
+        "thesis_ids": [
+          "T03"
+        ],
+        "scenario_probability_impact": "不改变经营概率",
+        "valuation_impact": "安全边际消失",
+        "research_action": "更新反向估值。"
+      }
+    ]
+  },
+  "scorecard": {
+    "industry": {
+      "score": 4,
+      "evidence_ids": [
+        "S03"
+      ],
+      "counter_evidence_ids": [
+        "S02"
+      ],
+      "thesis_ids": [
+        "T01"
+      ],
+      "confidence": "medium",
+      "rationale_or_gap": "需求仍增长但增速放缓。"
+    },
+    "moat": {
+      "score": 4,
+      "evidence_ids": [
+        "S01"
+      ],
+      "counter_evidence_ids": [
+        "S02"
+      ],
+      "thesis_ids": [
+        "T01"
+      ],
+      "confidence": "medium",
+      "rationale_or_gap": "工作流粘性较强。"
+    },
+    "financials": {
+      "score": 4.5,
+      "evidence_ids": [
+        "S01"
+      ],
+      "counter_evidence_ids": [
+        "S05"
+      ],
+      "thesis_ids": [
+        "T02"
+      ],
+      "confidence": "high",
+      "rationale_or_gap": "现金流支持利润。"
+    },
+    "management": {
+      "score": 3,
+      "evidence_ids": [
+        "S01"
+      ],
+      "counter_evidence_ids": [
+        "S05"
+      ],
+      "thesis_ids": [
+        "T02"
+      ],
+      "confidence": "medium",
+      "rationale_or_gap": "承诺初步兑现。"
+    },
+    "trend": {
+      "score": 4,
+      "evidence_ids": [
+        "S01"
+      ],
+      "counter_evidence_ids": [
+        "S02"
+      ],
+      "thesis_ids": [
+        "T01",
+        "T02"
+      ],
+      "confidence": "medium",
+      "rationale_or_gap": "增长与利润率改善。"
+    },
+    "valuation": {
+      "score": 3,
+      "evidence_ids": [
+        "S04"
+      ],
+      "counter_evidence_ids": [
+        "S05"
+      ],
+      "thesis_ids": [
+        "T03"
+      ],
+      "confidence": "low",
+      "rationale_or_gap": "回报对终值敏感。"
+    },
+    "monitoring": {
+      "score": 4.5,
+      "evidence_ids": [
+        "S01",
+        "S03"
+      ],
+      "counter_evidence_ids": [
+        "S05"
+      ],
+      "thesis_ids": [
+        "T01",
+        "T02",
+        "T03"
+      ],
+      "confidence": "medium",
+      "rationale_or_gap": "关键指标可观察。"
+    }
+  },
+  "monitoring": [
+    {
+      "metric": "Net retention",
+      "current_value": "112%",
+      "as_of": "2026-09-01",
+      "source_ids": [
+        "S01"
+      ],
+      "next_update": "2026Q3 results",
+      "bull_threshold": ">115%",
+      "bear_threshold": "<100%",
+      "thesis_ids": [
+        "T01"
+      ],
+      "valuation_impact": "改变增长率",
+      "research_action": "核对客户分层。"
+    },
+    {
+      "metric": "FCF margin",
+      "current_value": "15%",
+      "as_of": "2026-09-01",
+      "source_ids": [
+        "S01"
+      ],
+      "next_update": "2026Q3 results",
+      "bull_threshold": ">17%",
+      "bear_threshold": "<12%",
+      "thesis_ids": [
+        "T02"
+      ],
+      "valuation_impact": "改变现金流率",
+      "research_action": "更新 DCF。"
+    },
+    {
+      "metric": "Industry adoption",
+      "current_value": "68%",
+      "as_of": "2026-09-01",
+      "source_ids": [
+        "S03"
+      ],
+      "next_update": "Annual survey",
+      "bull_threshold": ">72%",
+      "bear_threshold": "<64%",
+      "thesis_ids": [
+        "T01"
+      ],
+      "valuation_impact": "改变长期增长",
+      "research_action": "读取新调查。"
+    },
+    {
+      "metric": "Peer growth",
+      "current_value": "10%",
+      "as_of": "2026-09-01",
+      "source_ids": [
+        "S02"
+      ],
+      "next_update": "Peer earnings",
+      "bull_threshold": ">13%",
+      "bear_threshold": "<7%",
+      "thesis_ids": [
+        "T01",
+        "T03"
+      ],
+      "valuation_impact": "改变概率",
+      "research_action": "复核同行披露。"
+    },
+    {
+      "metric": "Market price",
+      "current_value": "$100",
+      "as_of": "2026-09-01",
+      "source_ids": [
+        "S04"
+      ],
+      "next_update": "Daily",
+      "bull_threshold": "<$90",
+      "bear_threshold": ">$150",
+      "thesis_ids": [
+        "T03"
+      ],
+      "valuation_impact": "改变安全边际",
+      "research_action": "更新预期回报。"
+    }
+  ],
+  "conclusion": {
+    "decision": "业务值得继续跟踪，股票需在安全边际内评估。",
+    "company_quality": "公司质量较高，但竞争强度需要继续验证。",
+    "stock_value": "当前价格对应正向但不宽裕的预期回报。",
+    "margin_of_safety_rationale": "以主估值折价 20% 作为普通安全边际。",
+    "validation_items": [
+      "下季净留存",
+      "全年现金转换",
+      "独立行业采用率"
+    ],
+    "thesis_ids": [
+      "T01",
+      "T02",
+      "T03"
+    ]
+  },
+  "sources": [
+    {
+      "id": "S01",
+      "role": "company-primary",
+      "document": "2026 Interim Report",
+      "publication_date": "2026-08-20",
+      "reporting_period": "2026H1",
+      "locator": "Section MD&A → p.34",
+      "url_or_path": "https://example.com/investors/reports/2026-interim?language=zh-CN&view=full",
+      "access_date": "2026-09-01"
+    },
+    {
+      "id": "S02",
+      "role": "competitor-primary",
+      "document": "Peer 2026 Q2 Results",
+      "publication_date": "2026-08-15",
+      "reporting_period": "2026Q2",
+      "locator": "Section demand",
+      "url_or_path": "https://peer.example.com/results/q2",
+      "access_date": "2026-09-01"
+    },
+    {
+      "id": "S03",
+      "role": "independent-industry",
+      "document": "Industry Adoption Survey",
+      "publication_date": "2026-07-31",
+      "reporting_period": "2026",
+      "locator": "Table 4",
+      "url_or_path": "https://industry.example.org/survey/2026",
+      "access_date": "2026-09-01"
+    },
+    {
+      "id": "S04",
+      "role": "market-data",
+      "document": "Exchange closing price",
+      "publication_date": "2026-09-01",
+      "reporting_period": "2026-09-01",
+      "locator": "Table EXMPL closing quote",
+      "url_or_path": "https://market.example.net/quotes/EXMPL",
+      "access_date": "2026-09-01"
+    },
+    {
+      "id": "S05",
+      "role": "secondary",
+      "document": "Counter-evidence review",
+      "publication_date": "2026-08-25",
+      "reporting_period": "2026",
+      "locator": "Section 2 — risks",
+      "url_or_path": "https://example.com/research/example-counter-evidence.pdf",
+      "access_date": "2026-09-01"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+slug: static-html-landing-page-builder
+name: Static HTML landing page builder
+summary: Turn checked page copy and layout into plain HTML and CSS, with accessible forms, local assets and hosting instructions.
+category: general
+type: skill
+role: make
+job: page
+task: write-landing-page
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+outputs:
+  - {type: code_change}
+uses: []
+origin: original
+version: 1.0.0

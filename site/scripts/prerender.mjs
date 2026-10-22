@@ -8,7 +8,7 @@
 import fs from "node:fs";
 import path from "node:path";
 
-const DIST = "dist";
+const DIST = process.env.PRERENDER_DIST || "dist";
 const SITE = "https://useaiblocks.com";
 // The built index.html, as vite left it (a second run first strips what the last one added to the home page).
 const shell = fs.readFileSync(path.join(DIST, "index.html"), "utf8")
@@ -60,6 +60,7 @@ const footer = `<footer class="wrap small"><p>Free AI skills, workflows, prompts
 
 // Pages that aren't blocks: their title and the line a search result shows.
 const STATIC = {
+  "/compose": ["Get a workflow for your request", "Describe a result and assemble connected skills, checks and an editable workflow pack. Choose free assembly or AI composition."],
   "/how-it-works": ["How AI Blocks works", "Start with one prompt, add skills, join them into a workflow and build up to your own AI app. Free, step by step."],
   "/minds": ["Minds: hire great thinkers to work on your problem", "Over 300 minds built from public sources. Bring a real problem and get their way of thinking, method and voice applied to it."],
   "/from-a-source": ["Turn any link or file into skills", "Paste a video, article or course. Get its method as reusable AI skills and a workflow you can run again."],
@@ -279,14 +280,11 @@ if (!fs.existsSync(path.join(exampleSource, "index.html"))) {
 }
 fs.cpSync(exampleSource, path.join(DIST, "example-app"), { recursive: true });
 console.log("example app: saved tour included at /example-app/ (excluded from search)");
-// Pages Free allows 20,000 files. Pages paid plans allow 100,000 with Wrangler v4.
-// Workers Paid is a different product; buying it alone does not upgrade a Pages project.
-// Default to the confirmed free capacity. Only set pages-paid after changing the Pages plan.
-const FREE = process.env.CF_PLAN !== "pages-paid";
-const MAX_FILES = FREE ? 19000 : 95000;
+// Launch target: Workers Static Assets on Workers Paid (100,000 files/version).
+// Leave 5,000 files of headroom. Verify the account subscription before deploying.
+const MAX_FILES = 95000;
 const count = (d) => fs.readdirSync(d, { withFileTypes: true }).reduce((n, e) => n + (e.isDirectory() ? count(path.join(d, e.name)) : 1), 0);
 const files = count(DIST);
-console.log(`dist: ${files.toLocaleString("en-US")} files (the limit here is ${MAX_FILES.toLocaleString("en-US")}, ${FREE ? "Pages Free with headroom" : "Pages paid with headroom"})`);
-if (!FREE && files > 19000) console.log("  beyond the free-plan buffer: verify the Pages plan and PAGES_WRANGLER_MAJOR_VERSION=4 before deploying");
+console.log(`dist: ${files.toLocaleString("en-US")} files (guard ${MAX_FILES.toLocaleString("en-US")}; Workers Paid required for more than 20,000 files)`);
 if (files > MAX_FILES) { console.error(`  dist has ${files} files, over ${MAX_FILES}: bundle more files, or move to a plan that takes more`); process.exitCode = 1; }
 if (problems.length) process.exitCode = 1;

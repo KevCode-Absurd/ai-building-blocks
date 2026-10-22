@@ -8,12 +8,19 @@
     "dev": "npm run index && vite",
     "build": "npm run index && tsc -b && vite build && node scripts/prerender.mjs",
     "preview": "vite preview",
+    "worker:local-config": "node scripts/worker-local-config.mjs",
+    "worker:dev": "wrangler dev --config wrangler.local.jsonc --port 5183",
+    "worker:dry-run": "wrangler deploy --env= --dry-run --config wrangler.example.jsonc --outdir .wrangler/workers-dry-run",
+    "worker:staging": "wrangler deploy --env staging",
+    "worker:deploy": "wrangler deploy --env=",
     "crawl": "node scripts/crawl.mjs",
     "seo": "node scripts/check-seo.mjs",
     "test:e2e": "playwright test",
-    "test:unit": "node --test test/comments.test.mjs test/spaces.test.mjs test/traction.test.mjs test/library-safety.test.mjs"
+    "test:unit": "node --test test/comments.test.mjs test/spaces.test.mjs test/traction.test.mjs test/library-safety.test.mjs test/composer.test.mjs test/composer-auth.test.mjs test/audience-starters.test.mjs test/worker.test.mjs test/api-security.test.mjs test/preview-session.test.mjs"
   },
   "dependencies": {
+    "@clerk/backend": "3.26.1",
+    "@clerk/clerk-js": "6.40.0",
     "@xyflow/react": "12.3.6",
     "fflate": "0.8.3",
     "preact": "10.29.7",

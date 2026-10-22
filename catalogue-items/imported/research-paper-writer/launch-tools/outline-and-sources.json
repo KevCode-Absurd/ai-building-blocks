@@ -1,0 +1,33 @@
+{
+  "introduction": [
+    "Define FIFO and shortest processing time; verified Bishop teaching reference.",
+    "Question: effect on mean waiting time for one fully available batch."
+  ],
+  "methods": [
+    "One seeded batch; 40 independent integer durations, 2-30 minutes.",
+    "All released at zero, one nonpreemptive server, exact durations known.",
+    "Same durations under both policies; no inference to a population."
+  ],
+  "results": [
+    "Mean wait 291.600 vs 180.525; reduction 38.09%.",
+    "Makespan equal: 571 minutes."
+  ],
+  "discussion": [
+    "Exchange argument explains mean result; no novelty claim.",
+    "Known-duration and simultaneous-arrival assumptions limit relevance; cite Azar et al."
+  ],
+  "sources": [
+    {
+      "id": 1,
+      "url": "https://nob.cs.ucdavis.edu/classes/ecs150-2022-02/handouts/sched1.html",
+      "verified": "2026-10-22",
+      "basis": "Definitions and worked scheduling example"
+    },
+    {
+      "id": 2,
+      "url": "https://arxiv.org/abs/2103.05604",
+      "verified": "2026-10-22",
+      "basis": "Authors, title, date and abstract; duration uncertainty limitation"
+    }
+  ]
+}

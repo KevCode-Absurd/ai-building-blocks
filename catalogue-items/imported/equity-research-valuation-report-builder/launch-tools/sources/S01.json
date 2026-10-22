@@ -1,0 +1,442 @@
+{
+  "label": "SYNTHETIC QA EXHIBIT; not an actual filing, survey, quotation or independent source",
+  "id": "S01",
+  "as_of": "2026-10-22",
+  "role": "company-primary",
+  "financials": {
+    "overview": "Flat synthetic operating statements; all financial amounts are USD millions except per-share values.",
+    "metric_continuity": [
+      {
+        "metric": "Revenue",
+        "periods": "2023A-2026Q2",
+        "definition_scope_change": "None; synthetic same-scope ledger",
+        "comparability_status": "comparable",
+        "adjustment": "None",
+        "source_ids": [
+          "S01"
+        ]
+      },
+      {
+        "metric": "Operating margin",
+        "periods": "2023A-2026Q2",
+        "definition_scope_change": "None; synthetic same-scope ledger",
+        "comparability_status": "comparable",
+        "adjustment": "None",
+        "source_ids": [
+          "S01"
+        ]
+      },
+      {
+        "metric": "Operating cash flow",
+        "periods": "2023A-2026Q2",
+        "definition_scope_change": "None; synthetic same-scope ledger",
+        "comparability_status": "comparable",
+        "adjustment": "None",
+        "source_ids": [
+          "S01"
+        ]
+      },
+      {
+        "metric": "FCFF",
+        "periods": "2023A-2026Q2",
+        "definition_scope_change": "None; synthetic same-scope ledger",
+        "comparability_status": "comparable",
+        "adjustment": "None",
+        "source_ids": [
+          "S01"
+        ]
+      },
+      {
+        "metric": "ROIC",
+        "periods": "2023A-2026Q2",
+        "definition_scope_change": "None; synthetic same-scope ledger",
+        "comparability_status": "comparable",
+        "adjustment": "None",
+        "source_ids": [
+          "S01"
+        ]
+      }
+    ],
+    "annual_history": [
+      {
+        "period": "2023A",
+        "revenue": "100",
+        "growth": "0%",
+        "margin": "20%",
+        "ocf": "15",
+        "fcf": "15",
+        "roic": "15% assumed",
+        "earnings_quality_note": "Synthetic; FCFF equals NOPAT.",
+        "source_ids": [
+          "S01"
+        ]
+      },
+      {
+        "period": "2024A",
+        "revenue": "100",
+        "growth": "0%",
+        "margin": "20%",
+        "ocf": "15",
+        "fcf": "15",
+        "roic": "15% assumed",
+        "earnings_quality_note": "Synthetic; FCFF equals NOPAT.",
+        "source_ids": [
+          "S01"
+        ]
+      },
+      {
+        "period": "2025A",
+        "revenue": "100",
+        "growth": "0%",
+        "margin": "20%",
+        "ocf": "15",
+        "fcf": "15",
+        "roic": "15% assumed",
+        "earnings_quality_note": "Synthetic; FCFF equals NOPAT.",
+        "source_ids": [
+          "S01"
+        ]
+      }
+    ],
+    "quarterly_history": [
+      {
+        "period": "2025Q3",
+        "revenue": "25",
+        "growth": "0%",
+        "margin": "20%",
+        "ocf": "3.75",
+        "fcf": "3.75",
+        "roic": "15% assumed",
+        "earnings_quality_note": "Synthetic; FCFF equals NOPAT.",
+        "source_ids": [
+          "S01"
+        ]
+      },
+      {
+        "period": "2025Q4",
+        "revenue": "25",
+        "growth": "0%",
+        "margin": "20%",
+        "ocf": "3.75",
+        "fcf": "3.75",
+        "roic": "15% assumed",
+        "earnings_quality_note": "Synthetic; FCFF equals NOPAT.",
+        "source_ids": [
+          "S01"
+        ]
+      },
+      {
+        "period": "2026Q1",
+        "revenue": "25",
+        "growth": "0%",
+        "margin": "20%",
+        "ocf": "3.75",
+        "fcf": "3.75",
+        "roic": "15% assumed",
+        "earnings_quality_note": "Synthetic; FCFF equals NOPAT.",
+        "source_ids": [
+          "S01"
+        ]
+      },
+      {
+        "period": "2026Q2",
+        "revenue": "25",
+        "growth": "0%",
+        "margin": "20%",
+        "ocf": "3.75",
+        "fcf": "3.75",
+        "roic": "15% assumed",
+        "earnings_quality_note": "Synthetic; FCFF equals NOPAT.",
+        "source_ids": [
+          "S01"
+        ]
+      }
+    ],
+    "earnings_quality": "The model sets D&A and capex to zero to isolate FCFF arithmetic. This is a restrictive test assumption, not a normal operating-company claim.",
+    "kpi_inflections": "No measured inflection: all sample annual and quarterly operating values are flat.",
+    "sector_kpis": [
+      {
+        "metric": "Net retention",
+        "current": "100% assumed",
+        "direction": "flat",
+        "source_ids": [
+          "S01"
+        ]
+      }
+    ]
+  },
+  "management": {
+    "overview": "Fictional management holds the cash-flow model flat. Capital allocation quality cannot be assessed from these synthetic exhibits.",
+    "mda_delta": [
+      {
+        "topic": "Revenue",
+        "previous_period": "$100m",
+        "current_period": "$100m",
+        "change": "0",
+        "interpretation": "Stable by construction.",
+        "source_ids": [
+          "S01"
+        ],
+        "alternative_explanation": "Synthetic inputs explain the stability.",
+        "validation_task": "Replace with audited period disclosures before real analysis."
+      },
+      {
+        "topic": "Operating margin",
+        "previous_period": "20%",
+        "current_period": "20%",
+        "change": "0",
+        "interpretation": "Stable by construction.",
+        "source_ids": [
+          "S01"
+        ],
+        "alternative_explanation": "Synthetic inputs explain the stability.",
+        "validation_task": "Replace with audited period disclosures before real analysis."
+      },
+      {
+        "topic": "Annual FCFF",
+        "previous_period": "$15m",
+        "current_period": "$15m",
+        "change": "0",
+        "interpretation": "Stable by construction.",
+        "source_ids": [
+          "S01"
+        ],
+        "alternative_explanation": "Synthetic inputs explain the stability.",
+        "validation_task": "Replace with audited period disclosures before real analysis."
+      }
+    ],
+    "promises": [
+      {
+        "id": "P01",
+        "promise": "Synthetic management goal: keep annual FCFF at $15m.",
+        "promise_date": "2026-02-20",
+        "original_wording_locator": "S01 / management_goal",
+        "due_date": "2026-12-31",
+        "actual_result": "Sample H1 FCFF is $7.5m; full year not yet observed.",
+        "source_ids": [
+          "S01"
+        ],
+        "status": "pending",
+        "assessment": "The future full-year outcome is not evidence of delivery."
+      }
+    ]
+  },
+  "business": {
+    "model_and_demand": "The sample business sells workflow subscriptions. Revenue is held flat by design; no claim is made about an actual market.",
+    "value_creation": "The test assumes recurring cash receipts without growth investment.",
+    "industry_stage_and_drivers": "This fixture supplies a mature, flat-demand setting solely to isolate valuation arithmetic.",
+    "competitive_position": "The sample peer offers a similar product. Pricing pressure is a scenario risk.",
+    "moats": [
+      {
+        "title": "Workflow integration",
+        "text": "Potential switching friction is an unverified sample hypothesis.",
+        "source_ids": [
+          "S01"
+        ]
+      },
+      {
+        "title": "Recurring contracts",
+        "text": "Contract persistence is assumed, not measured.",
+        "source_ids": [
+          "S01"
+        ]
+      }
+    ],
+    "counter_evidence": {
+      "text": "A fictional competitor discounts its equivalent product.",
+      "source_ids": [
+        "S02",
+        "S05"
+      ]
+    },
+    "industry_validation": {
+      "claim": "The synthetic market is stable, with pricing pressure.",
+      "company": {
+        "text": "Fictional company case: flat demand.",
+        "source_ids": [
+          "S01"
+        ]
+      },
+      "competitors": [
+        {
+          "text": "Fictional peer case: flat demand with discounting.",
+          "source_ids": [
+            "S02"
+          ]
+        }
+      ],
+      "independent": {
+        "text": "Synthetic industry exhibit assumes flat demand; it is not independent external evidence.",
+        "source_ids": [
+          "S03"
+        ],
+        "status": "available",
+        "reason": "Local test exhibit only."
+      },
+      "agreement_or_conflict": "Demand assumptions agree; margin durability remains uncertain.",
+      "confidence": "low",
+      "gap": "No real company, peer or industry data were obtained."
+    }
+  },
+  "valuation_assumptions": {
+    "schema_version": "valuation.v1",
+    "mode": "standard",
+    "route": "dcf",
+    "units": {
+      "model_currency": "USD",
+      "quote_currency": "USD",
+      "amount_unit": "million",
+      "fx_to_quote": 1.0
+    },
+    "market": {
+      "as_of": "2026-10-22",
+      "price_as_of": "2026-10-22",
+      "current_price": 12,
+      "diluted_shares": 10
+    },
+    "bridge": {
+      "excess_cash": 20,
+      "non_operating_investments": 0.0,
+      "debt": 30,
+      "minority_interest": 0.0,
+      "other_claims": 0.0,
+      "additional_equity_adjustments": [],
+      "dilution_treatment": "fully_diluted_shares"
+    },
+    "dcf": {
+      "basis": "FCFF",
+      "discount_rate_type": "WACC",
+      "discount_rate": 0.1,
+      "base_revenue": 100.0,
+      "forecast": [
+        {
+          "period": "2027E",
+          "discount_period": 1.0,
+          "growth": 0.0,
+          "operating_margin": 0.2,
+          "cash_tax_rate": 0.25,
+          "da_revenue": 0.0,
+          "capex_revenue": 0.0,
+          "delta_nwc_revenue": 0.0
+        },
+        {
+          "period": "2028E",
+          "discount_period": 2.0,
+          "growth": 0.0,
+          "operating_margin": 0.2,
+          "cash_tax_rate": 0.25,
+          "da_revenue": 0.0,
+          "capex_revenue": 0.0,
+          "delta_nwc_revenue": 0.0
+        },
+        {
+          "period": "2029E",
+          "discount_period": 3.0,
+          "growth": 0.0,
+          "operating_margin": 0.2,
+          "cash_tax_rate": 0.25,
+          "da_revenue": 0.0,
+          "capex_revenue": 0.0,
+          "delta_nwc_revenue": 0.0
+        },
+        {
+          "period": "2030E",
+          "discount_period": 4.0,
+          "growth": 0.0,
+          "operating_margin": 0.2,
+          "cash_tax_rate": 0.25,
+          "da_revenue": 0.0,
+          "capex_revenue": 0.0,
+          "delta_nwc_revenue": 0.0
+        },
+        {
+          "period": "2031E",
+          "discount_period": 5.0,
+          "growth": 0.0,
+          "operating_margin": 0.2,
+          "cash_tax_rate": 0.25,
+          "da_revenue": 0.0,
+          "capex_revenue": 0.0,
+          "delta_nwc_revenue": 0.0
+        }
+      ],
+      "terminal": {
+        "growth": 0.0,
+        "operating_margin": 0.2,
+        "cash_tax_rate": 0.25,
+        "da_revenue": 0.0,
+        "capex_revenue": 0.0,
+        "delta_nwc_revenue": 0.0,
+        "return_metric": "ROIC",
+        "return_rate": 0.15
+      },
+      "sensitivity": {
+        "discount_rates": [
+          0.09,
+          0.1,
+          0.11
+        ],
+        "terminal_growth_rates": [
+          -0.01,
+          0.0,
+          0.01
+        ]
+      }
+    },
+    "relative_cross_checks": [
+      {
+        "id": "M02",
+        "name": "EV/FCF",
+        "kind": "relative",
+        "value_basis": "enterprise_value",
+        "value": 140,
+        "note": "Synthetic EV/FCF cross-check: 9.3333 x $15m FCFF = $140m EV; $13/share after bridge."
+      }
+    ],
+    "scenarios": {
+      "horizon": 5,
+      "items": {
+        "bear": {
+          "probability": 0.2,
+          "exit_value": 8,
+          "dividends": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "base": {
+          "probability": 0.6,
+          "exit_value": 14,
+          "dividends": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "bull": {
+          "probability": 0.2,
+          "exit_value": 20,
+          "dividends": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "margin_of_safety": {
+      "required": 0.2,
+      "high_conviction": 0.35
+    },
+    "reverse_valuation": {
+      "forward_price": 14
+    }
+  }
+}

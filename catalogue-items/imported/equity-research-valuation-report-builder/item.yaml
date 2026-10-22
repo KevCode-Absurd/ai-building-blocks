@@ -1,0 +1,36 @@
+slug: equity-research-valuation-report-builder
+name: Equity research and valuation report builder
+summary: Share company reports and a dated share price. Get a stock research report with value ranges, source checks and clear assumptions.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - source_text
+  - spreadsheet
+outputs:
+  - document
+uses: []
+origin: imported
+source:
+  by: evilhill
+  repo: evilhill/equity-research-skill
+  path: .
+  url: https://github.com/evilhill/equity-research-skill
+  licence: MIT
+  licence_file: LICENSE
+  commit: bf71c50
+  original_name: equity-research-skill-v1-2
+  imported: 2026-10-22
+version: 1.0.1
+credits:
+  - title: equity-research-skill-v1-2 skill
+    by: evilhill
+    url: https://github.com/evilhill/equity-research-skill
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+
+  - title: Launch compatibility additions
+    by: AI Blocks contributors
+    used: Added a portable entrypoint, reviewed helpers and labelled sample resources. Earlier imported entrypoint retained in SKILL.upstream.md.

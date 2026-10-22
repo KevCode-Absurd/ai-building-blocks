@@ -1,0 +1,27 @@
+PRESENTATION BRIEF
+
+Audience and the decision or lesson:
+What the audience should remember:
+Presentation duration and slide limit:
+Required file format (editable PPTX / HTML / PDF):
+Brand or reference deck I may use:
+Language and accessibility needs:
+Sources, owners and dates:
+Verified data, units and reporting periods:
+Claims that need sources:
+Speaker notes required:
+Reviewer:
+
+For a case competition or case study:
+Case question and judging rubric:
+Competition rules for AI use and citation:
+Recommendation and supporting reasons:
+Options considered and rejected:
+Financial model and assumptions:
+Implementation steps, risks and owners:
+Questions to answer in backup slides:
+Permission to name the case company or participants:
+
+Keep example data labelled. Trace each material number to a source or an
+explicit assumption. Check every rendered slide for overflow, legibility,
+chart labels and consistency. Verify that editable output is truly editable.

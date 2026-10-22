@@ -1,0 +1,51 @@
+{
+  "headline": "Request acceptance checker",
+  "subhead": "Check generated files against every requirement, repair bounded failures and package an honest handoff.",
+  "job": "set-up-ai",
+  "thinking": "medium",
+  "thinking_why": "Requires following the supplied scope and checking evidence; domain expertise is not assumed.",
+  "explain": "Check generated files against every requirement, repair bounded failures and package an honest handoff. This is a general method for tasks without a reliable specialist match. Planning is deterministic; executing these instructions requires your own compatible AI runner.",
+  "when": [
+    "You have a concrete deliverable without a matching specialist workflow."
+  ],
+  "you_give": [
+    "The original request, constraints and available evidence."
+  ],
+  "you_get": [
+    "Editable named files, requirements and honest check status."
+  ],
+  "how_to_use": [
+    "Include the full request and complete required inputs.",
+    "Run the workflow in a compatible AI runner.",
+    "Review unresolved checks before using the result."
+  ],
+  "how_it_works": [
+    {
+      "title": "Follow the brief",
+      "text": "Read request-brief.md, artifact-index.md, all generated deliverables and the original request. Create acceptance-report.md with one row per requirement ID: file or section, check method, actual evidence, pass/fail/not run and needed repair. Check requested counts, language coverage, exclusions, file formats, source attribution and internal consistency. For numbers independently recalculate totals using a tool where available. Verify actual files and links; a plan or an output declaration is not evidence that work ran. Repair failures in the editable deliverables and recheck at most twice, then stop and report unresolved findings. If the checker lacks a required domain/tool, mark that check not run and name the missing review. Deliver the editable files plus README.md explaining setup, inputs still needed, how to run checks, limitations and actions awaiting concrete authorization. Never label a general template as specialist-verified. Do not publish, send or execute untrusted attachments."
+    }
+  ],
+  "output_shape": "Requirement ID | Artifact path | Evidence | Status | Missing input",
+  "tweaks": [
+    {
+      "what": "Domain",
+      "how": "Supply your own standards and review rubric."
+    }
+  ],
+  "judge": [
+    "Every requested result is covered or explicitly unresolved.",
+    "No unsupported execution or specialist-validation claim."
+  ],
+  "test": [
+    "Try missing inputs and verify that no facts are invented."
+  ],
+  "improve": [
+    "Replace a general stage with a suitable specialist skill."
+  ],
+  "terms": [
+    {
+      "term": "Not run",
+      "meaning": "A check could not be executed with the available tools."
+    }
+  ]
+}

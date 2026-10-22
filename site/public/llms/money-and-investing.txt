@@ -1,6 +1,6 @@
 # Handle money and investing: AI Blocks
 
-> 164 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 165 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Accrual schedule drafter](https://useaiblocks.com/skills/accrual-schedule-drafter): Give it the period's expenses and accrual policy. Get a schedule with each entry, its support and a draft journal entry.
 - [Acquisition due diligence planner](https://useaiblocks.com/skills/acquisition-due-diligence): Describe the deal. Get a due diligence checklist, valuation checks, red flags and an integration plan.
@@ -66,6 +66,7 @@
 - [Earnings update report writer](https://useaiblocks.com/skills/earnings-update-report-writer): Give it a company's quarterly results. Get an 8 to 12 page update on beats, misses and key numbers.
 - [Earnings value range builder](https://useaiblocks.com/skills/earnings-value-range-builder): Paste normal earnings and the share price. Get a low, middle and high value and how much of the price is hope.
 - [Earnings week briefing writer](https://useaiblocks.com/skills/earnings-week-briefing-writer): Name a company about to report. Get what to watch, scenario cases and the numbers that matter.
+- [Equity research and valuation report builder](https://useaiblocks.com/skills/equity-research-valuation-report-builder): Share company reports and a dated share price. Get a stock research report with value ranges, source checks and clear assumptions.
 - [ESG report preparer](https://useaiblocks.com/skills/esg-report-preparer): Give it your environmental, social and governance data. Get a draft sustainability report or a check of an existing one.
 - [Expected credit loss calculator](https://useaiblocks.com/skills/expected-credit-loss-calculator): Give it loan data. Get expected credit losses worked out under IFRS 9 or CECL.
 - [Expense sorter](https://useaiblocks.com/skills/expense-sorter): Give it transactions. Get each sorted by category, department and tax treatment.

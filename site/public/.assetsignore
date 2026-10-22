@@ -1,0 +1,3 @@
+# Legacy Pages routing metadata is not a public asset on Workers.
+_routes.json
+_worker.js

@@ -1,0 +1,159 @@
+{
+  "meta": {
+    "title": "Operations pilot | SYNTHETIC SAMPLE",
+    "mode": "business",
+    "style": "corporate-bright",
+    "author": "Launch QA",
+    "audience": "Workers and small businesses",
+    "governingThought": "Approve a gated pilot before committing the full rollout."
+  },
+  "slides": [
+    {
+      "archetype": "cover",
+      "actionTitle": "A measured pilot can improve operating profit.",
+      "notes": "Illustrative figures only; inputs/operations.json; USD thousands unless stated.",
+      "kicker": "SYNTHETIC SAMPLE",
+      "body": [
+        "A reproducible operations proposal | 22 October 2026"
+      ]
+    },
+    {
+      "archetype": "section",
+      "actionTitle": "Start with the operating baseline.",
+      "notes": "Illustrative figures only; inputs/operations.json; USD thousands unless stated.",
+      "kicker": "SYNTHETIC SAMPLE"
+    },
+    {
+      "archetype": "data",
+      "actionTitle": "Three workflows account for $960k in annual costs.",
+      "notes": "Illustrative figures only; inputs/operations.json; USD thousands unless stated.",
+      "visual": {
+        "type": "chart",
+        "chartType": "bar",
+        "data": [
+          {
+            "name": "Annual cost ($k)",
+            "labels": [
+              "Intake",
+              "Fulfilment",
+              "Support"
+            ],
+            "values": [
+              120,
+              660,
+              180
+            ]
+          }
+        ]
+      },
+      "body": [
+        "Revenue is $1.20m in this sample.",
+        "Operating profit is $240k.",
+        "Cost includes all three workflows."
+      ],
+      "citations": [
+        "Illustrative figures only; inputs/operations.json; USD thousands unless stated."
+      ]
+    },
+    {
+      "archetype": "comparison",
+      "actionTitle": "A gated pilot gives us a reversible first step.",
+      "notes": "Illustrative figures only; inputs/operations.json; USD thousands unless stated.",
+      "columns": [
+        {
+          "heading": "Approve the pilot",
+          "points": [
+            "Test one workflow for six weeks.",
+            "Measure cost, errors and adoption.",
+            "Release rollout funds only after review."
+          ]
+        },
+        {
+          "heading": "Commit the full rollout",
+          "points": [
+            "Spend before observing team adoption.",
+            "Expose all workflows at once.",
+            "Make course correction more expensive."
+          ]
+        }
+      ]
+    },
+    {
+      "archetype": "data",
+      "actionTitle": "Net annual savings could add $60k to profit.",
+      "notes": "Illustrative figures only; inputs/operations.json; USD thousands unless stated.",
+      "visual": {
+        "type": "chart",
+        "chartType": "bar",
+        "data": [
+          {
+            "name": "Annual savings ($k)",
+            "labels": [
+              "Gross savings",
+              "Run cost",
+              "Net savings"
+            ],
+            "values": [
+              90,
+              30,
+              60
+            ]
+          }
+        ]
+      },
+      "body": [
+        "$90k gross savings less $30k run cost.",
+        "$75k initial investment is separate.",
+        "Steady profit rises to $300k."
+      ],
+      "citations": [
+        "Illustrative figures only; inputs/operations.json; USD thousands unless stated."
+      ]
+    },
+    {
+      "archetype": "content",
+      "actionTitle": "Payback takes 15 months after steady savings begin.",
+      "notes": "Illustrative figures only; inputs/operations.json; USD thousands unless stated.",
+      "body": [
+        "$75k investment divided by $60k annual net savings.",
+        "Three-year net benefit is $105k before tax and discounting.",
+        "A six-week pilot delay is excluded from simple payback.",
+        "Use actual pilot results to rebuild the forecast."
+      ]
+    },
+    {
+      "archetype": "two-column",
+      "actionTitle": "Guardrails turn the assumptions into a decision.",
+      "notes": "Illustrative figures only; inputs/operations.json; USD thousands unless stated.",
+      "columns": [
+        {
+          "heading": "Go criteria",
+          "points": [
+            "At least 80% team adoption.",
+            "No increase in workflow error rate.",
+            "Run cost stays within $30k a year."
+          ]
+        },
+        {
+          "heading": "Stop criteria",
+          "points": [
+            "Pause if error rate rises.",
+            "Rework if adoption misses 80%.",
+            "Recalculate if savings fall below $60k."
+          ]
+        }
+      ]
+    },
+    {
+      "archetype": "summary",
+      "actionTitle": "Approve a six-week pilot with a funding gate.",
+      "notes": "Illustrative figures only; inputs/operations.json; USD thousands unless stated.",
+      "body": [
+        "Assign an operations owner.",
+        "Measure baseline cost and errors.",
+        "Review adoption and unit savings after six weeks.",
+        "Approve rollout only after the review."
+      ]
+    }
+  ]
+}

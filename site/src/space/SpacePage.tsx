@@ -16,7 +16,10 @@ const TITLE = "AI Blocks · Use AI like the top 1%";
 const useTitle = (t: string) => useEffect(() => { document.title = `${t} · AI Blocks`; return () => { document.title = TITLE; }; }, [t]);
 const KINDS: Kind[] = ["skill", "prompt", "workflow", "kit", "agent"];
 const errText = (e: unknown) => (e instanceof SpaceError ? e.message : "That didn't work. Try again.");
-const copy = async (text: string, toast: Toast, done: string) => { await navigator.clipboard.writeText(text).catch(() => {}); toast(done); };
+const copy = async (text: string, toast: Toast, done: string) => {
+  try { await navigator.clipboard.writeText(text); toast(done); }
+  catch { toast("Your browser couldn't copy it. Select the text and copy it manually."); }
+};
 const fileName = (i: Item) => `${i.title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || "item"}.md`;
 type FlowData = { name?: string; nodes: Flow["nodes"]; edges: Flow["edges"]; localId?: string };
 type KitData = { slugs: string[]; localId?: string };
@@ -262,6 +265,10 @@ function MySpace({ c, toast }: { c: Catalogue | null; toast: Toast }) {
 
             <Section id="device" title="Use it on another device" lead="This link opens your space to change it. Treat it like a password: keep it to yourself.">
               <p><button className="btn btn-dark btn-sm" onClick={() => copy(deviceLink(spaceKey()), toast, "Copied. Open it on your other device.")} data-testid="device-copy">Copy my private link</button></p>
+              <details>
+                <summary>Copy my private link manually</summary>
+                <label className="sp-field"><span>Private device link</span><input readOnly autoComplete="off" value={deviceLink(spaceKey())} onFocus={(e) => e.currentTarget.select()} data-testid="device-link" /></label>
+              </details>
               <p className="small"><button className="link-btn" onClick={() => { if (confirm("Forget this space on this browser? You'll need your private link to open it again.")) setSpaceKey(""); }}>Forget it on this browser</button></p>
             </Section>
           </>

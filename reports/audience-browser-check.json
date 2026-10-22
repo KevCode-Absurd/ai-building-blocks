@@ -1,0 +1,249 @@
+{
+  "checkedOn": "2026-10-22",
+  "environment": "http://127.0.0.1:5183",
+  "checks": [
+    {
+      "id": "students",
+      "width": 320,
+      "cards": 8,
+      "noHorizontalOverflow": true,
+      "noPageErrors": true,
+      "briefHTTP": 200,
+      "exactBriefContent": true
+    },
+    {
+      "id": "workers",
+      "width": 320,
+      "cards": 8,
+      "noHorizontalOverflow": true,
+      "noPageErrors": true,
+      "briefHTTP": 200,
+      "exactBriefContent": true
+    },
+    {
+      "id": "small-businesses",
+      "width": 320,
+      "cards": 8,
+      "noHorizontalOverflow": true,
+      "noPageErrors": true,
+      "briefHTTP": 200,
+      "exactBriefContent": true
+    },
+    {
+      "id": "enterprise",
+      "width": 320,
+      "cards": 8,
+      "noHorizontalOverflow": true,
+      "noPageErrors": true,
+      "briefHTTP": 200,
+      "exactBriefContent": true
+    },
+    {
+      "id": "startups",
+      "width": 320,
+      "cards": 8,
+      "noHorizontalOverflow": true,
+      "noPageErrors": true,
+      "briefHTTP": 200,
+      "exactBriefContent": true
+    },
+    {
+      "id": "presentations",
+      "width": 320,
+      "cards": 8,
+      "noHorizontalOverflow": true,
+      "noPageErrors": true,
+      "briefHTTP": 200,
+      "exactBriefContent": true
+    },
+    {
+      "id": "case-competitions",
+      "width": 320,
+      "cards": 8,
+      "noHorizontalOverflow": true,
+      "noPageErrors": true,
+      "briefHTTP": 200,
+      "exactBriefContent": true
+    },
+    {
+      "id": "research-documents",
+      "width": 320,
+      "cards": 8,
+      "noHorizontalOverflow": true,
+      "noPageErrors": true,
+      "briefHTTP": 200,
+      "exactBriefContent": true
+    },
+    {
+      "id": "equity-research",
+      "width": 320,
+      "cards": 8,
+      "noHorizontalOverflow": true,
+      "noPageErrors": true,
+      "briefHTTP": 200,
+      "exactBriefContent": true
+    },
+    {
+      "id": "students",
+      "width": 393,
+      "cards": 8,
+      "noHorizontalOverflow": true,
+      "noPageErrors": true,
+      "briefHTTP": 200,
+      "exactBriefContent": true
+    },
+    {
+      "id": "workers",
+      "width": 393,
+      "cards": 8,
+      "noHorizontalOverflow": true,
+      "noPageErrors": true,
+      "briefHTTP": 200,
+      "exactBriefContent": true
+    },
+    {
+      "id": "small-businesses",
+      "width": 393,
+      "cards": 8,
+      "noHorizontalOverflow": true,
+      "noPageErrors": true,
+      "briefHTTP": 200,
+      "exactBriefContent": true
+    },
+    {
+      "id": "enterprise",
+      "width": 393,
+      "cards": 8,
+      "noHorizontalOverflow": true,
+      "noPageErrors": true,
+      "briefHTTP": 200,
+      "exactBriefContent": true
+    },
+    {
+      "id": "startups",
+      "width": 393,
+      "cards": 8,
+      "noHorizontalOverflow": true,
+      "noPageErrors": true,
+      "briefHTTP": 200,
+      "exactBriefContent": true
+    },
+    {
+      "id": "presentations",
+      "width": 393,
+      "cards": 8,
+      "noHorizontalOverflow": true,
+      "noPageErrors": true,
+      "briefHTTP": 200,
+      "exactBriefContent": true
+    },
+    {
+      "id": "case-competitions",
+      "width": 393,
+      "cards": 8,
+      "noHorizontalOverflow": true,
+      "noPageErrors": true,
+      "briefHTTP": 200,
+      "exactBriefContent": true
+    },
+    {
+      "id": "research-documents",
+      "width": 393,
+      "cards": 8,
+      "noHorizontalOverflow": true,
+      "noPageErrors": true,
+      "briefHTTP": 200,
+      "exactBriefContent": true
+    },
+    {
+      "id": "equity-research",
+      "width": 393,
+      "cards": 8,
+      "noHorizontalOverflow": true,
+      "noPageErrors": true,
+      "briefHTTP": 200,
+      "exactBriefContent": true
+    },
+    {
+      "id": "students",
+      "width": 1440,
+      "cards": 8,
+      "noHorizontalOverflow": true,
+      "noPageErrors": true,
+      "briefHTTP": 200,
+      "exactBriefContent": true
+    },
+    {
+      "id": "workers",
+      "width": 1440,
+      "cards": 8,
+      "noHorizontalOverflow": true,
+      "noPageErrors": true,
+      "briefHTTP": 200,
+      "exactBriefContent": true
+    },
+    {
+      "id": "small-businesses",
+      "width": 1440,
+      "cards": 8,
+      "noHorizontalOverflow": true,
+      "noPageErrors": true,
+      "briefHTTP": 200,
+      "exactBriefContent": true
+    },
+    {
+      "id": "enterprise",
+      "width": 1440,
+      "cards": 8,
+      "noHorizontalOverflow": true,
+      "noPageErrors": true,
+      "briefHTTP": 200,
+      "exactBriefContent": true
+    },
+    {
+      "id": "startups",
+      "width": 1440,
+      "cards": 8,
+      "noHorizontalOverflow": true,
+      "noPageErrors": true,
+      "briefHTTP": 200,
+      "exactBriefContent": true
+    },
+    {
+      "id": "presentations",
+      "width": 1440,
+      "cards": 8,
+      "noHorizontalOverflow": true,
+      "noPageErrors": true,
+      "briefHTTP": 200,
+      "exactBriefContent": true
+    },
+    {
+      "id": "case-competitions",
+      "width": 1440,
+      "cards": 8,
+      "noHorizontalOverflow": true,
+      "noPageErrors": true,
+      "briefHTTP": 200,
+      "exactBriefContent": true
+    },
+    {
+      "id": "research-documents",
+      "width": 1440,
+      "cards": 8,
+      "noHorizontalOverflow": true,
+      "noPageErrors": true,
+      "briefHTTP": 200,
+      "exactBriefContent": true
+    },
+    {
+      "id": "equity-research",
+      "width": 1440,
+      "cards": 8,
+      "noHorizontalOverflow": true,
+      "noPageErrors": true,
+      "briefHTTP": 200,
+      "exactBriefContent": true
+    }
+  ]
+}

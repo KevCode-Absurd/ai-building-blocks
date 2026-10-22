@@ -1,0 +1,141 @@
+{
+  "schema_version": "valuation.v1",
+  "mode": "audit",
+  "route": "dcf",
+  "units": {
+    "model_currency": "USD",
+    "quote_currency": "USD",
+    "amount_unit": "million",
+    "fx_to_quote": 1
+  },
+  "market": {
+    "as_of": "2026-09-01",
+    "price_as_of": "2026-09-01",
+    "current_price": 100,
+    "diluted_shares": 1
+  },
+  "bridge": {
+    "excess_cash": 0,
+    "non_operating_investments": 0,
+    "debt": 0,
+    "minority_interest": 0,
+    "other_claims": 0,
+    "additional_equity_adjustments": [],
+    "dilution_treatment": "fully_diluted_shares"
+  },
+  "dcf": {
+    "basis": "FCFF",
+    "discount_rate_type": "WACC",
+    "discount_rate": 0.1,
+    "base_revenue": 100,
+    "forecast": [
+      {
+        "period": "2027E",
+        "discount_period": 1,
+        "growth": 0.1,
+        "operating_margin": 0.2,
+        "cash_tax_rate": 0.25,
+        "da_revenue": 0,
+        "capex_revenue": 0,
+        "delta_nwc_revenue": 0
+      },
+      {
+        "period": "2028E",
+        "discount_period": 2,
+        "growth": 0.1,
+        "operating_margin": 0.2,
+        "cash_tax_rate": 0.25,
+        "da_revenue": 0,
+        "capex_revenue": 0,
+        "delta_nwc_revenue": 0
+      },
+      {
+        "period": "2029E",
+        "discount_period": 3,
+        "growth": 0.1,
+        "operating_margin": 0.2,
+        "cash_tax_rate": 0.25,
+        "da_revenue": 0,
+        "capex_revenue": 0,
+        "delta_nwc_revenue": 0
+      }
+    ],
+    "terminal": {
+      "growth": 0.02,
+      "operating_margin": 0.2,
+      "cash_tax_rate": 0.25,
+      "da_revenue": 0,
+      "capex_revenue": 0,
+      "delta_nwc_revenue": 0,
+      "return_metric": "ROIC",
+      "return_rate": 0.15
+    },
+    "sensitivity": {
+      "discount_rates": [
+        0.09,
+        0.1,
+        0.11
+      ],
+      "terminal_growth_rates": [
+        0.01,
+        0.02,
+        0.03
+      ]
+    }
+  },
+  "relative_cross_checks": [
+    {
+      "id": "M02",
+      "name": "EV/FCF",
+      "kind": "relative",
+      "value_basis": "enterprise_value",
+      "value": 140,
+      "note": "Cross-check"
+    }
+  ],
+  "scenarios": {
+    "horizon": 5,
+    "items": {
+      "bear": {
+        "probability": 0.2,
+        "exit_value": 80,
+        "dividends": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "base": {
+        "probability": 0.6,
+        "exit_value": 150,
+        "dividends": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "bull": {
+        "probability": 0.2,
+        "exit_value": 200,
+        "dividends": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    }
+  },
+  "margin_of_safety": {
+    "required": 0.2,
+    "high_conviction": 0.35
+  },
+  "reverse_valuation": {
+    "forward_price": 150
+  }
+}

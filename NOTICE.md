@@ -2773,3 +2773,55 @@ Copied as they are from https://github.com/github/awesome-copilot (commit 613efc
 | `imported/copilot-unit-test-vue-pinia` | unit-test-vue-pinia, https://github.com/github/awesome-copilot/tree/main/skills/unit-test-vue-pinia | MIT |
 | `imported/copilot-upstash-redis` | upstash-redis, https://github.com/github/awesome-copilot/tree/main/skills/upstash-redis | MIT |
 | `imported/copilot-verify-agent-action` | verify-agent-action, https://github.com/github/awesome-copilot/tree/main/skills/verify-agent-action | MIT |
+
+## Imported from jacquardlabs/study-skills
+
+Copied as they are from https://github.com/jacquardlabs/study-skills (commit a576399), each with its own licence file. We changed nothing in the skill files; we gave each a plain name on our site.
+
+| Block | Original | Licence |
+|---|---|---|
+| `imported/research-literature-comparison` | literature-map, https://github.com/jacquardlabs/study-skills/tree/main/skills/literature-map | MIT |
+| `imported/research-paper-evidence-review` | paper-critique, https://github.com/jacquardlabs/study-skills/tree/main/skills/paper-critique | MIT |
+| `imported/research-paper-reading-guide` | paper-reader, https://github.com/jacquardlabs/study-skills/tree/main/skills/paper-reader | MIT |
+| `imported/study-understanding-check` | understanding-check, https://github.com/jacquardlabs/study-skills/tree/main/skills/understanding-check | MIT |
+| `imported/topic-learning-roadmap` | topic-map, https://github.com/jacquardlabs/study-skills/tree/main/skills/topic-map | MIT |
+
+## Imported from artificialguybr/resume-ats-linkedin-optimizer
+
+Copied as they are from https://github.com/artificialguybr/resume-ats-linkedin-optimizer (commit 210486f), each with its own licence file. We changed nothing in the skill files; we gave each a plain name on our site.
+
+| Block | Original | Licence |
+|---|---|---|
+| `imported/resume-job-application-builder` | resume-ats-linkedin-optimizer, https://github.com/artificialguybr/resume-ats-linkedin-optimizer | MIT |
+
+## Imported from agent-blueprint/agent-blueprint-skills
+
+Copied as they are from https://github.com/agent-blueprint/agent-blueprint-skills (commit d755f38), each with its own licence file. We changed nothing in the skill files; we gave each a plain name on our site.
+
+| Block | Original | Licence |
+|---|---|---|
+| `imported/procurement-agent-architecture-plan` | procurement-rfx-processing, https://github.com/agent-blueprint/agent-blueprint-skills/tree/main/plugins/agent-blueprint-skills/skills/procurement-rfx-processing | Apache-2.0 |
+
+## Imported from Calvinkub/super_subagent_skill_Hackathon
+
+Copied as they are from https://github.com/Calvinkub/super_subagent_skill_Hackathon (commit 806164d), each with its own licence file. We changed nothing in the skill files; we gave each a plain name on our site.
+
+| Block | Original | Licence |
+|---|---|---|
+| `imported/case-competition-slide-deck-builder` | case-competition-slides, https://github.com/Calvinkub/super_subagent_skill_Hackathon/tree/main/skills/case-competition-slides | MIT |
+
+## Imported from vedraut/slidesage
+
+Copied as they are from https://github.com/vedraut/slidesage (commit 2bbeebd), each with its own licence file. We changed nothing in the skill files; we gave each a plain name on our site.
+
+| Block | Original | Licence |
+|---|---|---|
+| `imported/storyboard-to-powerpoint-deck-builder` | slidesage, https://github.com/vedraut/slidesage | MIT |
+
+## Imported from evilhill/equity-research-skill
+
+Copied as they are from https://github.com/evilhill/equity-research-skill (commit bf71c50), each with its own licence file. We changed nothing in the skill files; we gave each a plain name on our site.
+
+| Block | Original | Licence |
+|---|---|---|
+| `imported/equity-research-valuation-report-builder` | equity-research-skill-v1-2, https://github.com/evilhill/equity-research-skill | MIT |

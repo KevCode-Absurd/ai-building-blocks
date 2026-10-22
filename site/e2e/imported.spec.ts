@@ -1,4 +1,4 @@
-import { expect, test, type Page } from "@playwright/test";
+import { expect, test, stagingHeaders, type Page } from "./fixtures/staging-aware-test";
 
 // These tests add three pretend imported skills to the library as it loads, so they work whatever has really been imported.
 const url = (repo: string, name: string) => `https://github.com/${repo}/tree/main/skills/${name}`;
@@ -9,8 +9,16 @@ const FAKE = [
 ];
 
 test.beforeEach(async ({ page }: { page: Page }) => {
+  // Fake catalogue entries have no deployed HTML; load the actual app shell for
+  // their document requests while keeping the requested fixture URL.
+  await page.route('**/skills/fake-*', async route => {
+    if (route.request().resourceType() !== 'document') return route.fallback();
+    const home = new URL('/', route.request().url()).toString();
+    const response = await route.fetch({ url: home, headers: stagingHeaders(home, route.request().headers()) });
+    return route.fulfill({ response });
+  });
   await page.route("**/data/blocks.json", async (route) => {
-    const res = await route.fetch();
+    const res = await route.fetch({ headers: stagingHeaders(route.request().url(), route.request().headers()) });
     const data = await res.json();
     const base = data.blocks.find((b: { origin: string; type: string }) => b.type === "skill" && b.origin !== "imported");
     for (const f of FAKE) {

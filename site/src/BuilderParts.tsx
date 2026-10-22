@@ -203,8 +203,8 @@ export function EndPanel({ finals, onClose }: { finals: string[]; onClose: () =>
   );
 }
 
-export function StepPanel({ c, flow, order, nodeId, onClose, onRemove, onNotes }: {
-  c: Catalogue; flow: Flow; order: Ordered[] | null; nodeId: string; onClose: () => void; onRemove: (id: string) => void;
+export function StepPanel({ c, flow, order, nodeId, onClose, onRemove, onReplace, onNotes }: {
+  c: Catalogue; flow: Flow; order: Ordered[] | null; nodeId: string; onClose: () => void; onRemove: (id: string) => void; onReplace: (id: string) => void;
   onNotes: (id: string, patch: NotesPatch) => void;
 }) {
   const node = flow.nodes.find((n) => n.id === nodeId);
@@ -212,7 +212,7 @@ export function StepPanel({ c, flow, order, nodeId, onClose, onRemove, onNotes }
   const ref = useRef<HTMLElement>(null);
   useEffect(() => { ref.current?.focus(); }, [nodeId]);
   const [page, setPage] = useState<Page | null>(null);
-  useEffect(() => { setPage(null); if (node) loadPage(node.slug).then(setPage); }, [node?.slug]); // eslint-disable-line react-hooks/exhaustive-deps
+  useEffect(() => { setPage(null); if (node && !node.slug.startsWith("custom-")) loadPage(node.slug).then(setPage); }, [node?.slug]); // eslint-disable-line react-hooks/exhaustive-deps
   useEffect(() => {
     const esc = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };
     window.addEventListener("keydown", esc);
@@ -240,11 +240,13 @@ export function StepPanel({ c, flow, order, nodeId, onClose, onRemove, onNotes }
           <ul className="sp-list">
             {b.inputs.length === 0 && <li><b>Your request</b><small>Tell it what you want when you start.</small></li>}
             {b.inputs.map((p) => {
-              const from = ins.find((n) => c.bySlug[n.slug]?.outputs.some((o) => o.type === p.type));
+              const binding = node.bindings?.find(binding => binding.type === p.type && ins.some(n => n.id === binding.from));
+              const from = binding ? ins.find(n => n.id === binding.from) : ins.find((n) => c.bySlug[n.slug]?.outputs.some((o) => o.type === p.type));
               return (
                 <li key={p.type}>
                   <b>{portLabel(p.type)}{p.required ? "" : <span className="opt"> optional</span>}</b>
                   <small>{from ? `Comes from ${stepName(from.id)}` : "You give it this"}{c.portTypes[p.type] ? `. ${c.portTypes[p.type]}` : ""}</small>
+                  {binding && <small>{binding.instruction}</small>}
                 </li>
               );
             })}
@@ -270,7 +272,8 @@ export function StepPanel({ c, flow, order, nodeId, onClose, onRemove, onNotes }
             </>
           )}
           <div className="sp-actions">
-            <a className="btn btn-ghost btn-sm" href={pathOf(b)} target="_blank" rel="noreferrer">Open its page</a>
+            {!b.slug.startsWith("custom-") && <a className="btn btn-ghost btn-sm" href={pathOf(b)} target="_blank" rel="noreferrer">Open its page</a>}
+            <button className="btn btn-ghost btn-sm" onClick={() => onReplace(node.id)}>Replace skill</button>
             <button className="btn btn-ghost btn-sm" onClick={() => { onRemove(node.id); onClose(); }}>Remove the step</button>
           </div>
           <p className="small sp-job">Job: {taskOf(b).name}</p>

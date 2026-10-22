@@ -1,35 +1,14 @@
 ---
-name: scientific-writing
-description: "This is the core skill for the deep research and writing tool—combining AI-driven deep research with well-formatted written outputs. Every document produced is backed by comprehensive literature search and verified citations through the research-lookup skill."
-license: MIT license
-metadata:
-    skill-author: K-Dense Inc.
-risk: critical
-source: community
-date_added: "2026-09-04"
+name: research-paper-writer
+description: Draft or revise a scientific manuscript from supplied findings and sources, using an appropriate structure, verified citations, clear limitations and rendered document checks.
 ---
 
-# Scientific Writing
+# Research paper writer
 
-## Detailed Guide
+Read [the portable workflow and dependency notes](launch-tools/USAGE.md), then the relevant parts of the [detailed scientific-writing guide](references/detailed-guide.md). Companion research/image skills and LaTeX assets named in that guide are not bundled; use available research, chart and document tools. Choose figures that explain the study and preserve the user's venue and scope.
 
-Read [the detailed guide](references/detailed-guide.md) before executing this skill. It retains the complete procedure and reference material. Treat its safety, prerequisites, and validation requirements as mandatory. For focused work, load the relevant sections; for end-to-end work, read the guide completely.
+Outline first, then write connected prose. Preserve actual methods and results, verify references against original sources and distinguish observations from interpretation. Apply reporting guidance that fits the study. For a synthetic sample, retain the data and calculation code and identify its narrow scope throughout.
 
-## When to Use This Skill
+Create the requested document, render its actual pages and inspect figures, captions, tables, citations and page breaks. Include uncertainty, limitations and relevant disclosure/availability statements. The retained 40-task simulation and reproduction script demonstrate one checked sample; they provide no evidence about a real organization.
 
-This skill should be used when:
-- Writing or revising any section of a scientific manuscript (abstract, introduction, methods, results, discussion)
-- Structuring a research paper using IMRAD or other standard formats
-- Formatting citations and references in specific styles (APA, AMA, Vancouver, Chicago, IEEE)
-- Creating, formatting, or improving figures, tables, and data visualizations
-- Applying study-specific reporting guidelines (CONSORT for trials, STROBE for observational studies, PRISMA for reviews)
-- Drafting abstracts that meet journal requirements (structured or unstructured)
-- Preparing manuscripts for submission to specific journals
-- Improving writing clarity, conciseness, and precision
-- Ensuring proper use of field-specific terminology and nomenclature
-- Addressing reviewer comments and revising manuscripts
-
-## Limitations
-- Use this skill only when the task clearly matches the scope described above.
-- Do not treat the output as a substitute for environment-specific validation, testing, or expert review.
-- Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.
+Detailed guide attribution: K-Dense scientific-writing via sickn33/agentic-awesome-skills; see the retained content license and source metadata. AI Blocks added the portable entrypoint and sample resources on 22 October 2026. The earlier imported entrypoint is retained in `SKILL.upstream.md`.

@@ -1,0 +1,26 @@
+{
+  "checkedOn": "2026-10-22T07:52:46.472Z",
+  "staging": {
+    "version": "74ec9f2e-07e4-4512-89bb-cb4e3aa842d3",
+    "workersDev": true,
+    "previewUrls": false,
+    "bindings": 21,
+    "encryptedSecrets": 9,
+    "aiGenerationEnabled": false,
+    "clerkConfigured": true,
+    "turnstileConfigured": true,
+    "privateGateVerified": true
+  },
+  "production": {
+    "version": "6cb7cf52-3c42-486a-a38c-dd3e2db32480",
+    "workersDev": false,
+    "previewUrls": false,
+    "bindings": 19,
+    "encryptedSecrets": 8,
+    "aiGenerationEnabled": false,
+    "clerkConfigured": true,
+    "turnstileConfigured": true,
+    "customDomains": 0,
+    "unrouted": true
+  }
+}

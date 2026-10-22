@@ -1,0 +1,4 @@
+interface:
+  display_name: "Equity Research V1.2"
+  short_description: "Efficient Standard and full Audit equity research"
+  default_prompt: "Use $equity-research-skill-v1-2 to research a listed company in Standard Mode and produce an auditable HTML investment report."

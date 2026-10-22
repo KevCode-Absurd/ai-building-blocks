@@ -1,0 +1,154 @@
+{
+  "checkedOn": "2026-10-22T10:06:28.162Z",
+  "deadline": "2026-10-22 Asia/Kolkata",
+  "accountAuthenticated": true,
+  "workersPaid": {
+    "status": "confirmed by account owner",
+    "confirmedOn": "2026-10-22"
+  },
+  "domain": {
+    "name": "useaiblocks.com",
+    "zoneActive": true,
+    "publicApexReachableBeforeLaunch": false
+  },
+  "staging": {
+    "status": "R8 private staging verified: human-created space/comment, manual link fallback, 21 API checks",
+    "worker": "ai-building-blocks-staging",
+    "database": "ai-blocks-staging",
+    "databaseId": "eeb9d0d4-cbed-4751-8df4-1aaf81fd6cb3",
+    "migrations": [
+      "0001_comments.sql",
+      "0002_spaces.sql",
+      "0004_composer.sql",
+      "0005_composer_accounts.sql"
+    ],
+    "isolated": true,
+    "secretsConfigured": 9,
+    "paidAIEnabled": false,
+    "attempts": 3,
+    "uploadProbe": {
+      "status": 200,
+      "success": true
+    },
+    "uploadedAssetsBeforeLocalFailure": 7000,
+    "privatePreviewPlanned": true,
+    "secretsGeneratedLocally": 6,
+    "turnstileConfigured": true,
+    "assetsToUpload": 12252,
+    "url": "https://ai-building-blocks-staging.kevinmark7498.workers.dev",
+    "versionId": "80bc2a97-5835-4936-bd81-8c994a9552b6",
+    "deployedOn": "2026-10-22T09:48:54.676Z",
+    "uploadedAssets": 4500,
+    "reusedAssets": 14110,
+    "workerStartupMs": 5,
+    "verified": true,
+    "previousVersionId": "2ff0def4-30ae-41f6-abe6-0cbcadffdd10",
+    "workerSha256": "892f4aaae4cfd8dc723acc5ddf17f714c59416ee66b3d932057e590f76410d2c",
+    "previousFunctionalChecks": {
+      "versionId": "723795d5-403c-461a-a910-4088612a0022",
+      "plannerReplacementPassed": 61,
+      "artifactDownloadsPassed": 4,
+      "routing": "pass"
+    },
+    "manifestCache": {
+      "entries": 18610,
+      "algorithm": "Wrangler 4.151.3 BLAKE3/base64/extension",
+      "generationMs": 10467
+    },
+    "clerkConfigured": true,
+    "releaseRoot": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r8",
+    "assetReleaseRoot": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a161bf-0b97-7cf2-97f3-74eb6d30d1e4\\release-2026-10-22-r6"
+  },
+  "production": {
+    "status": "same corrected Worker preloaded with retained R6 assets; public domains remain unattached",
+    "database": "ai-blocks",
+    "databaseId": "a886eeae-4014-4da2-842f-a5bebc4d7f71",
+    "migrations": [
+      "0001_comments.sql",
+      "0002_spaces.sql",
+      "0004_composer.sql",
+      "0005_composer_accounts.sql"
+    ],
+    "secretsGeneratedLocally": 5,
+    "customDomainChanged": false,
+    "secretsConfigured": 8,
+    "worker": "ai-building-blocks",
+    "publicTurnstileConfigured": true,
+    "turnstileConfigured": true,
+    "outerApiRateLimit": {
+      "status": "active",
+      "ruleId": "27f088a45c4a4e88808915c6825369f0",
+      "scope": "zone /api and /api/* only",
+      "requests": 60,
+      "periodSeconds": 10,
+      "action": "block",
+      "blockSeconds": 10,
+      "includedRule": true
+    },
+    "versionId": "88e788e1-5a72-4cac-9cab-3f11ad3b6d55",
+    "workerSha256": "892f4aaae4cfd8dc723acc5ddf17f714c59416ee66b3d932057e590f76410d2c",
+    "uploadedAssets": 4500,
+    "reusedAssets": 14110,
+    "workerStartupMs": 4,
+    "workersDevEnabled": false,
+    "previewUrlsEnabled": false,
+    "clerkConfigured": true,
+    "previousVersionId": "6cb7cf52-3c42-486a-a38c-dd3e2db32480",
+    "deployedOn": "2026-10-22T09:50:31.901Z",
+    "releaseRoot": "C:/Users/kevin/.codex/visualizations/2026/10/22/01a161bf-0b97-7cf2-97f3-74eb6d30d1e4/release-2026-10-22-r7",
+    "assetReleaseRoot": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a161bf-0b97-7cf2-97f3-74eb6d30d1e4\\release-2026-10-22-r6"
+  },
+  "releaseScope": {
+    "blocks": 4359,
+    "prerenderedPages": 4479,
+    "files": 18614,
+    "combinedBuild": "pass",
+    "unitTests": {
+      "passed": 96,
+      "failed": 0,
+      "skipped": 0
+    },
+    "clientCredentialScan": "pass;4 provider secrets,2 Clerk secrets and development public key absent across21JS bundles",
+    "workerSha256": "892f4aaae4cfd8dc723acc5ddf17f714c59416ee66b3d932057e590f76410d2c",
+    "frozenManifest": "reports/cloudflare-frozen-release.json",
+    "workerDryRun": "pass; Worker-only delta 462.90 KiB /101.41 KiB gzip",
+    "englishOnlyVoice": true,
+    "accountFrontend": true,
+    "turnstileCleanupSourceSha256": "8c206eadb5d7d46dc9f24795393d81ece0b59dda3d6568efa10700a0aeee1ad9",
+    "focusedSecurityBrowserPassed": 9,
+    "freePlannerRelevanceSourceSha256": "ae4a19edceea4dde9a00cab55f14032ce5c62ddfef46ee6d2d719dc0cc8b1207",
+    "runtimeDelta": {
+      "scope": "R7 native staging form referrer policy fix and compiled sync of reviewed R6 free planner",
+      "baselineBrowserVersion": "74ec9f2e-07e4-4512-89bb-cb4e3aa842d3",
+      "staticAssetsChanged": false,
+      "focusedUnitPassed": 27,
+      "syntheticNativeFormRegressionPassed": 1,
+      "liveNativeBrowserChecksPassed": 5,
+      "liveSessionSecurityChecksPassed": 10,
+      "sourcePreviewSha256": "eb47b3f579c8adfa36076684d3b62db2764839b0a76b582a091ac44b3e322355"
+    },
+    "finalFrontend": "R8 manual private-link fallback; TypeScript and immutable frontend build pass; catalogue and four reviewed skill ZIP hashes unchanged"
+  },
+  "accountOwnerActionPending": false,
+  "clerk": {
+    "productionConfigured": true,
+    "dns": "all five CNAMEs verified",
+    "ssl": "verified",
+    "googleOAuth": "configured",
+    "runtimeKeys": "separate development and live pairs configured as encrypted Worker secrets",
+    "aiGenerationEnabled": false
+  },
+  "liveChecks": {
+    "realTurnstileWrites": "Owner completed real space verification; space and comment created and persisted through reload on private staging",
+    "finalPlannerReplacement": "R6 all62 covered: initial53passed/9failed under local memory pressure, all9passed on serial rerun; failed run preserved; actual3pack demo pass",
+    "finalHosting": "R6 full145-case serial run pass,0failed/skipped/flaky; earlier local-memory failures preserved",
+    "finalAccountUI": "R6 4/4 pass with SDK and protected POST fixtures mocked; actual production customer login pending domain cutover",
+    "finalArtifacts": "R7 four actual ZIP downloads pass exact unchanged R6 hashes",
+    "previewBrowserSession": "R7 ten security checks and five actual native browser form checks pass; exact Origin generated by browser, no injected preview header, real Turnstile still required",
+    "routing": "R7 five routing groups pass",
+    "api": "R8 all21 isolated staging API, privacy, sharing, authorization, link-rotation and synthetic cleanup checks pass",
+    "rateLimit": "R6 bounded invalid-token AI probe pass; actual statuses403,403,403,403,403,429;0provider calls",
+    "remainingOwnerAction": "Actual production Clerk sign-in after Git push and domain connection",
+    "productionDomainChecks": "Await domain attachment after the real-write gate; DNS/TLS/redirects/downloads and actual Clerk login remain unverified"
+  }
+}

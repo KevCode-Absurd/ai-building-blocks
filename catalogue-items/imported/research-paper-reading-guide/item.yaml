@@ -1,0 +1,31 @@
+slug: research-paper-reading-guide
+name: Research paper reading guide
+summary: Share a paper. Get its main idea, evidence and sections to read closely, with questions to test your understanding.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - source_text
+outputs:
+  - document
+uses: []
+origin: imported
+source:
+  by: Jacquard Labs
+  repo: jacquardlabs/study-skills
+  path: skills/paper-reader
+  url: https://github.com/jacquardlabs/study-skills/tree/main/skills/paper-reader
+  licence: MIT
+  licence_file: LICENSE
+  commit: a576399
+  original_name: paper-reader
+  imported: 2026-10-22
+version: 1.0.0
+credits:
+  - title: paper-reader skill
+    by: Jacquard Labs
+    url: https://github.com/jacquardlabs/study-skills/tree/main/skills/paper-reader
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

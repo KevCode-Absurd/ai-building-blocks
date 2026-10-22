@@ -1,0 +1,265 @@
+{
+  "schema_version": "valuation.v1",
+  "engine_version": "1.2.0",
+  "status": "ok",
+  "mode": "audit",
+  "route": "dcf",
+  "units": {
+    "model_currency": "USD",
+    "quote_currency": "USD",
+    "amount_unit": "million",
+    "fx_to_quote": 1
+  },
+  "market": {
+    "as_of": "2026-09-01",
+    "price_as_of": "2026-09-01",
+    "current_price": 100,
+    "diluted_shares": 1
+  },
+  "results": {
+    "dcf": {
+      "status": "ok",
+      "basis": "FCFF",
+      "discount_rate_type": "WACC",
+      "discount_rate": 0.1,
+      "forecast": [
+        {
+          "period": "2027E",
+          "revenue": 110.00000000000001,
+          "growth": 0.1,
+          "operating_margin": 0.2,
+          "ebit": 22.000000000000004,
+          "nopat": 16.500000000000004,
+          "d_and_a": 0.0,
+          "capex": 0.0,
+          "delta_nwc": 0.0,
+          "net_borrowing": 0.0,
+          "fcff": 16.500000000000004,
+          "discount_factor": 0.9090909090909091,
+          "pv": 15.000000000000004
+        },
+        {
+          "period": "2028E",
+          "revenue": 121.00000000000003,
+          "growth": 0.1,
+          "operating_margin": 0.2,
+          "ebit": 24.200000000000006,
+          "nopat": 18.150000000000006,
+          "d_and_a": 0.0,
+          "capex": 0.0,
+          "delta_nwc": 0.0,
+          "net_borrowing": 0.0,
+          "fcff": 18.150000000000006,
+          "discount_factor": 0.8264462809917354,
+          "pv": 15.000000000000004
+        },
+        {
+          "period": "2029E",
+          "revenue": 133.10000000000005,
+          "growth": 0.1,
+          "operating_margin": 0.2,
+          "ebit": 26.62000000000001,
+          "nopat": 19.96500000000001,
+          "d_and_a": 0.0,
+          "capex": 0.0,
+          "delta_nwc": 0.0,
+          "net_borrowing": 0.0,
+          "fcff": 19.96500000000001,
+          "discount_factor": 0.7513148009015775,
+          "pv": 15.000000000000004
+        }
+      ],
+      "terminal": {
+        "revenue": 135.76200000000006,
+        "growth": 0.02,
+        "margin": 0.15000000000000002,
+        "cash_flow": 20.36430000000001,
+        "return_metric": "ROIC",
+        "return_rate": 0.15,
+        "implied_reinvestment_rate": 0.13333333333333333,
+        "value": 254.55375000000012,
+        "present_value": 191.25000000000003,
+        "value_share": 0.8095238095238094
+      },
+      "explicit_pv": 45.000000000000014,
+      "terminal_value": 254.55375000000012,
+      "terminal_pv": 191.25000000000003,
+      "terminal_value_share": 0.8095238095238094,
+      "implied_reinvestment_rate": 0.13333333333333333,
+      "equity_value": 236.25000000000006,
+      "per_share_value": 236.25000000000006,
+      "sensitivity": {
+        "discount_rates": [
+          0.09,
+          0.1,
+          0.11
+        ],
+        "terminal_growth_rates": [
+          0.01,
+          0.02,
+          0.03
+        ],
+        "values": [
+          [
+            240.4658698762731,
+            270.473264636214,
+            310.48312431613516
+          ],
+          [
+            213.33333333333337,
+            236.25000000000006,
+            265.7142857142858
+          ],
+          [
+            191.63623082542006,
+            209.64072180288403,
+            232.14633552471395
+          ]
+        ]
+      },
+      "enterprise_value": 236.25000000000006
+    },
+    "relative_cross_checks": [
+      {
+        "id": "M02",
+        "name": "EV/FCF",
+        "kind": "relative",
+        "value_basis": "enterprise_value",
+        "value": 140,
+        "note": "Cross-check",
+        "per_share_value": 140.0
+      }
+    ],
+    "reconciliation": {
+      "primary_method": "dcf",
+      "primary_per_share_value": 236.25000000000006,
+      "cross_check_per_share_values": [
+        140.0
+      ],
+      "value_basis": "enterprise_value",
+      "equity_value": 236.25000000000006,
+      "excess_cash": 0,
+      "non_operating_investments": 0,
+      "debt": 0,
+      "minority_interest": 0,
+      "other_claims": 0,
+      "additional_equity_adjustments_total": 0.0,
+      "dilution_treatment": "fully_diluted_shares",
+      "diluted_shares": 1,
+      "fx_to_quote": 1,
+      "enterprise_value": 236.25000000000006
+    },
+    "scenarios": {
+      "method": "Bisection IRR on scenario cash flows and probability-weighted cash flows",
+      "horizon_years": 5,
+      "scenarios": {
+        "bear": {
+          "probability": 0.2,
+          "dividends": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cash_flows": [
+            -100,
+            0,
+            0,
+            0,
+            0,
+            80
+          ],
+          "ending_value": 80,
+          "expected_return": -0.2,
+          "irr": -0.04364750020996305
+        },
+        "base": {
+          "probability": 0.6,
+          "dividends": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cash_flows": [
+            -100,
+            0,
+            0,
+            0,
+            0,
+            150
+          ],
+          "ending_value": 150,
+          "expected_return": 0.5,
+          "irr": 0.08447177119769866
+        },
+        "bull": {
+          "probability": 0.2,
+          "dividends": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cash_flows": [
+            -100,
+            0,
+            0,
+            0,
+            0,
+            200
+          ],
+          "ending_value": 200,
+          "expected_return": 1.0,
+          "irr": 0.148698354997035
+        }
+      },
+      "base_irr": 0.08447177119769866,
+      "probability_weighted_ending_value": 146.0,
+      "probability_weighted_dividends": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "probability_weighted_expected_return": 0.46,
+      "probability_weighted_cash_flows": [
+        -100,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        146.0
+      ],
+      "probability_weighted_irr": 0.07862522143927009
+    },
+    "margin_of_safety": {
+      "required": 0.2,
+      "high_conviction": 0.35,
+      "attractive_price": 189.00000000000006,
+      "high_conviction_price": 153.56250000000003
+    },
+    "reverse_valuation": {
+      "assumptions_held_constant": "Explicit forecast, discount rate, bridge, FX, diluted shares, and all non-terminal assumptions.",
+      "input_price": 150,
+      "input_price_source": "reverse_valuation.forward_price",
+      "growth_period_years": 3,
+      "required_terminal_value": 139.75500000000002,
+      "required_terminal_cash_flow": 11.180400000000002,
+      "implied_terminal_cash_flow_margin": 0.08235294117647057,
+      "implied_terminal_growth": -0.03750000000000003,
+      "return_metric": "ROIC",
+      "return_rate": 0.15,
+      "implied_reinvestment_rate": -0.2500000000000002,
+      "warnings": []
+    }
+  },
+  "warnings": [
+    "Terminal value share is high."
+  ],
+  "errors": []
+}

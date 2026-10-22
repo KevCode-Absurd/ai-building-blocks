@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Case Competition Deck</title>
+<style>
+  /* ===== Consulting deck tokens — edit these for your case ===== */
+  :root{
+    --primary:#0F2A43;      /* deep primary (navy/slate) */
+    --accent:#C8892A;       /* single accent for emphasis */
+    --ink:#1A1A1A;
+    --muted:#6B7280;
+    --light:#F3F4F6;
+    --line:#E5E7EB;
+    --bg:#FFFFFF;
+    --font:"Georgia","Times New Roman",serif;         /* credible, not AI-slop */
+    --sans:"Helvetica Neue",Arial,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:#222;color:var(--ink);font-family:var(--sans)}
+
+  /* Each slide is exactly one 16:9 viewport. No scrolling within a slide. */
+  .deck{width:100%}
+  .slide{
+    position:relative;width:100vw;height:100vh;max-height:100vh;
+    background:var(--bg);display:flex;flex-direction:column;
+    padding:4.5vh 4vw 5.5vh;overflow:hidden;
+    border-bottom:1px solid #000;
+  }
+  /* Action-title band: accent rule + full-sentence takeaway */
+  .title-band{display:flex;gap:1.2vw;align-items:flex-start;
+    border-bottom:2px solid var(--line);padding-bottom:2vh;margin-bottom:2.5vh}
+  .title-band::before{content:"";flex:0 0 auto;width:8px;align-self:stretch;
+    background:var(--accent)}
+  .action-title{font-family:var(--font);color:var(--primary);
+    font-size:2.5vh;line-height:1.25;font-weight:700}
+  .body{flex:1;min-height:0}
+  .footer{position:absolute;left:4vw;right:4vw;bottom:2vh;display:flex;
+    justify-content:space-between;font-size:1.3vh;color:var(--muted)}
+
+  /* ---- Title slide ---- */
+  .slide.cover{background:var(--primary);justify-content:center;color:#fff}
+  .cover .kicker{width:120px;height:8px;background:var(--accent);margin-bottom:3vh}
+  .cover h1{font-family:var(--font);font-size:5vh;line-height:1.15;max-width:80%}
+  .cover .sub{margin-top:3vh;color:#D6DEE7;font-size:2vh}
+
+  /* ---- Executive summary ---- */
+  .rec{background:var(--primary);color:#fff;padding:2.2vh 2vw;font-size:2vh;
+    font-weight:600;border-radius:2px}
+  .rec b{color:var(--accent)}
+  .reasons{display:grid;grid-template-columns:repeat(3,1fr);gap:2vw;margin-top:3vh}
+  .reason .n{font-family:var(--font);color:var(--accent);font-size:4vh;font-weight:700}
+  .reason p{font-size:1.9vh;line-height:1.35;margin-top:1vh}
+  .impact{margin-top:auto;background:var(--light);padding:1.8vh 2vw;text-align:center;
+    font-family:var(--font);color:var(--primary);font-weight:700;font-size:2vh;border-radius:2px}
+
+  /* ---- Two-column analysis (chart + points) ---- */
+  .cols{display:grid;grid-template-columns:1.4fr 1fr;gap:2.5vw;height:100%}
+  .chart{background:var(--light);border:1px dashed #C7CDD6;border-radius:3px;
+    display:flex;align-items:center;justify-content:center;color:var(--muted);
+    font-size:1.7vh;text-align:center;padding:2vw}
+  ul.points{list-style:none;align-self:center}
+  ul.points li{position:relative;padding-left:1.4vw;margin-bottom:1.8vh;
+    font-size:1.9vh;line-height:1.35}
+  ul.points li::before{content:"";position:absolute;left:0;top:0.9vh;width:8px;height:8px;
+    background:var(--accent)}
+  .context-body{font-size:2.1vh;line-height:1.5;max-width:60%}
+
+  /* ---- Roadmap ---- */
+  .phases{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:1.5vw;height:60%;align-content:center}
+  .phase .cap{background:var(--primary);color:#fff;padding:1.4vh;text-align:center;font-weight:700;font-size:1.7vh}
+  .phase .txt{background:var(--light);padding:2vh 1.2vw;font-size:1.8vh;line-height:1.4;height:70%}
+
+  /* ---- Risks ---- */
+  .risk{border-left:8px solid var(--accent);padding:0 0 0 1.4vw;margin-bottom:2.4vh}
+  .risk .r{color:var(--primary);font-weight:700;font-size:2vh}
+  .risk .m{font-size:1.8vh;margin-top:0.6vh;line-height:1.35}
+
+  /* ---- Appendix divider ---- */
+  .slide.divider{background:var(--primary);color:#fff;justify-content:center}
+  .divider .kicker{width:120px;height:8px;background:var(--accent);margin-bottom:2vh}
+  .divider h2{font-family:var(--font);font-size:4.5vh}
+
+  /* ---- Nav + print ---- */
+  #counter{position:fixed;right:14px;bottom:10px;background:rgba(0,0,0,.6);color:#fff;
+    font-size:12px;padding:3px 9px;border-radius:10px;font-family:var(--sans);z-index:50}
+  @media print{
+    html,body{background:#fff}
+    .slide{height:100vh;page-break-after:always;border-bottom:none}
+    #counter{display:none}
+    @page{size:landscape}
+  }
+</style>
+</head>
+<body>
+<div class="deck">
+
+  <!-- 1. TITLE -->
+  <section class="slide cover">
+    <div class="kicker"></div>
+    <h1>Reversing NorthStar Retail&rsquo;s Margin Decline</h1>
+    <div class="sub">Team Aurora &middot; Case Competition Final &middot; 2026</div>
+  </section>
+
+  <!-- 2. EXECUTIVE SUMMARY (the answer) -->
+  <section class="slide">
+    <div class="title-band"><h2 class="action-title">NorthStar should reprice its premium tier and cut low-margin SKUs to recover 4.2 margin points within 18 months</h2></div>
+    <div class="body" style="display:flex;flex-direction:column">
+      <div class="rec"><b>Recommendation:</b> Reprice the premium tier (+8%) and rationalize the bottom-quartile SKUs, funded by the freed working capital.</div>
+      <div class="reasons">
+        <div class="reason"><div class="n">1</div><p>The premium tier is underpriced vs willingness-to-pay, leaving 8% on the table</p></div>
+        <div class="reason"><div class="n">2</div><p>The bottom 22% of SKUs generate 3% of profit but 40% of complexity cost</p></div>
+        <div class="reason"><div class="n">3</div><p>The move pays back in 2.3 years at a 24% ROI with low execution risk</p></div>
+      </div>
+      <div class="impact">Impact: +4.2 operating-margin points &middot; +$96M annual operating profit &middot; 2.3-yr payback</div>
+    </div>
+    <div class="footer"><span>Team Aurora</span><span>2</span></div>
+  </section>
+
+  <!-- 3. CONTEXT -->
+  <section class="slide">
+    <div class="title-band"><h2 class="action-title">Operating margin has fallen 5.1 points in three years despite flat revenue &mdash; a pricing and mix problem, not a demand problem</h2></div>
+    <div class="body cols">
+      <div class="context-body">Revenue held at ~$2.1B while operating margin slid from 11.8% to 6.7%. The decision: where to intervene to restore margin without eroding the brand.</div>
+      <ul class="points">
+        <li>Revenue flat at ~$2.1B (2023&ndash;2026)</li>
+        <li>Operating margin down 5.1 pts to 6.7%</li>
+        <li>Volume stable &mdash; the erosion is price and mix</li>
+      </ul>
+    </div>
+    <div class="footer"><span>Source: Company financials; team analysis</span><span>3</span></div>
+  </section>
+
+  <!-- 4. ANALYSIS (chart + points) — duplicate this block per supporting reason -->
+  <section class="slide">
+    <div class="title-band"><h2 class="action-title">The premium tier sells 12% below customer willingness-to-pay, the single largest recoverable margin pool</h2></div>
+    <div class="body cols">
+      <div class="chart">[ chart ] WTP vs current price by tier &mdash; premium gap = 12%<br>(replace with inline SVG or a dataviz chart)</div>
+      <ul class="points">
+        <li>Conjoint-style benchmark shows premium WTP 12% above list</li>
+        <li>Premium is 28% of revenue, 46% of gross profit</li>
+        <li>An 8% increase captures most of the gap with minimal churn</li>
+      </ul>
+    </div>
+    <div class="footer"><span>Source: Customer survey (n=1,240); competitor price scrape</span><span>4</span></div>
+  </section>
+
+  <!-- 5. FINANCIALS -->
+  <section class="slide">
+    <div class="title-band"><h2 class="action-title">The combined move adds $96M in annual operating profit and pays back in 2.3 years at a 24% ROI</h2></div>
+    <div class="body cols">
+      <div class="chart">[ chart ] Margin bridge: 6.7% &rarr; 10.9%<br>(repricing +2.9, SKU cut +1.3)</div>
+      <ul class="points">
+        <li>Repricing: +$66M &middot; SKU rationalization: +$30M</li>
+        <li>One-time cost $54M (systems, transition)</li>
+        <li>ROI 24% &middot; Payback 2.3 yrs &middot; NPV(10%) $210M</li>
+      </ul>
+    </div>
+    <div class="footer"><span>Source: Team financial model; assumptions in appendix A-3</span><span>5</span></div>
+  </section>
+
+  <!-- 6. ROADMAP -->
+  <section class="slide">
+    <div class="title-band"><h2 class="action-title">Execute in three phases over 18 months, front-loading the SKU cut to fund repricing</h2></div>
+    <div class="body phases">
+      <div class="phase"><div class="cap">Months 0&ndash;3</div><div class="txt">SKU rationalization; free working capital</div></div>
+      <div class="phase"><div class="cap">Months 3&ndash;9</div><div class="txt">Premium repricing pilot in 2 regions</div></div>
+      <div class="phase"><div class="cap">Months 9&ndash;18</div><div class="txt">National rollout; monitor churn and mix</div></div>
+    </div>
+    <div class="footer"><span>Team Aurora</span><span>6</span></div>
+  </section>
+
+  <!-- 7. RISKS -->
+  <section class="slide">
+    <div class="title-band"><h2 class="action-title">The main risks are premium churn and channel pushback, both mitigable with a phased, monitored rollout</h2></div>
+    <div class="body" style="display:flex;flex-direction:column;justify-content:center">
+      <div class="risk"><div class="r">Risk: Premium churn above 6%</div><div class="m">Mitigation: Regional pilot with a churn tripwire before national rollout</div></div>
+      <div class="risk"><div class="r">Risk: Channel partner pushback on delisting SKUs</div><div class="m">Mitigation: Joint margin-share plan; phase out over two quarters</div></div>
+      <div class="risk"><div class="r">Risk: Input-cost swing erodes the bridge</div><div class="m">Mitigation: Sensitivity holds to &minus;6% adoption; hedge key inputs</div></div>
+    </div>
+    <div class="footer"><span>Team Aurora</span><span>7</span></div>
+  </section>
+
+  <!-- 8. APPENDIX DIVIDER -->
+  <section class="slide divider">
+    <div class="kicker"></div>
+    <h2>Appendix</h2>
+  </section>
+
+  <!-- 9. APPENDIX BACKUP (one per anticipated Q&A question) -->
+  <section class="slide">
+    <div class="title-band"><h2 class="action-title">A-3 &middot; Financial model assumptions and sensitivity</h2></div>
+    <div class="body cols">
+      <div class="chart">[ chart/table ] Tornado: adoption, price elasticity, input cost</div>
+      <ul class="points">
+        <li>Base adoption 82%; recommendation holds above 6%</li>
+        <li>Price elasticity &minus;0.7 (premium); &minus;1.3 (core)</li>
+        <li>Discount rate 10%; terminal at year 5</li>
+      </ul>
+    </div>
+    <div class="footer"><span>Source: Team model v4</span><span>A-3</span></div>
+  </section>
+
+</div>
+
+<div id="counter"></div>
+<script>
+  // Keyboard navigation: arrows / space / Home / End; snap-scroll between slides.
+  var slides = Array.prototype.slice.call(document.querySelectorAll('.slide'));
+  var i = 0;
+  var counter = document.getElementById('counter');
+  function show(n){
+    i = Math.max(0, Math.min(slides.length-1, n));
+    slides[i].scrollIntoView({behavior:'smooth'});
+    counter.textContent = (i+1)+' / '+slides.length;
+  }
+  document.addEventListener('keydown', function(e){
+    if(['ArrowRight','ArrowDown',' ','PageDown'].indexOf(e.key)>-1){e.preventDefault();show(i+1);}
+    else if(['ArrowLeft','ArrowUp','PageUp'].indexOf(e.key)>-1){e.preventDefault();show(i-1);}
+    else if(e.key==='Home'){show(0);} else if(e.key==='End'){show(slides.length-1);}
+  });
+  // Track slide on manual scroll
+  window.addEventListener('scroll', function(){
+    var idx = Math.round(window.scrollY / window.innerHeight);
+    if(idx!==i){i=idx;counter.textContent=(i+1)+' / '+slides.length;}
+  }, {passive:true});
+  counter.textContent = '1 / '+slides.length;
+</script>
+</body>
+</html>

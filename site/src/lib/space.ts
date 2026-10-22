@@ -3,6 +3,7 @@
 // or in a "use it on another device" link the owner copies, where it sits after # so it never reaches a server log.
 import { useSyncExternalStore } from "react";
 import type { Item, Kind, PublicItem, Space, Visibility } from "../server/spaces";
+import { protectedHeaders } from "./turnstile";
 
 export type { Item, Kind, PublicItem, Space, Visibility };
 export const KIND_NAMES: Record<Kind, string> = { skill: "Skill", prompt: "Prompt", workflow: "Workflow", kit: "Kit", agent: "Agent" };
@@ -30,9 +31,10 @@ export class SpaceError extends Error {
 async function call<T>(method: string, path: string, body?: unknown, auth = key): Promise<T> {
   let r: Response;
   try {
-    r = await fetch(`/api/spaces${path}`, { method, headers: { "content-type": "application/json", ...(auth ? { authorization: `Bearer ${auth}` } : {}) }, body: body === undefined ? undefined : JSON.stringify(body) });
-  } catch {
-    throw new SpaceError("Couldn't reach the site. Check your connection and try again.", 0);
+    const verification = method === "POST" && path === "" ? await protectedHeaders("create_space") : {};
+    r = await fetch(`/api/spaces${path}`, { method, headers: { "content-type": "application/json", ...verification, ...(auth ? { authorization: `Bearer ${auth}` } : {}) }, body: body === undefined ? undefined : JSON.stringify(body) });
+  } catch (e) {
+    throw new SpaceError(e instanceof Error ? e.message : "Couldn't reach the site. Check your connection and try again.", 0);
   }
   const out = await r.json().catch(() => ({}));
   if (!r.ok) throw new SpaceError(out.error ?? (r.status === 404 ? "Spaces aren't switched on for this copy of the site yet." : "That didn't work. Try again."), r.status);

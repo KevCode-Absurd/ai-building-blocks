@@ -1,4 +1,4 @@
-import {test,expect} from '@playwright/test';
+import {test,expect} from './fixtures/staging-aware-test';
 import fs from 'node:fs';
 import {unzipSync,strFromU8} from 'fflate';
 
@@ -90,7 +90,8 @@ test('home shows a goal search above the fold and How it works remains reachable
  await page.goto('/');
  const box=page.getByTestId('library-search');await expect(box).toBeVisible();
  const bounds=await box.boundingBox();expect(bounds!.y+bounds!.height).toBeLessThan(900);
- await expect(page.getByTestId('open-business')).toHaveText('Your context');
+ await expect(page.getByTestId('open-business').locator('.context-full')).toBeVisible();
+ await expect(page.getByTestId('open-business').locator('.context-full')).toHaveText('Your context');
  await page.getByRole('link',{name:'How it works',exact:true}).first().click();
  await expect(page.getByRole('heading',{level:1})).toBeVisible();
  await expect(page).toHaveURL(/how-it-works/);

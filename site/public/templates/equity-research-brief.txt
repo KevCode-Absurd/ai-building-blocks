@@ -1,0 +1,31 @@
+EQUITY RESEARCH AND VALUATION BRIEF
+
+Company, ticker and exchange:
+Research cutoff date:
+Share price, currency, price timestamp and source:
+Purpose and research question:
+Language (the imported equity report package is mainly in Chinese):
+
+SOURCE REGISTER
+Annual and quarterly filings, reporting dates and exact source locations:
+Consolidated or standalone figures:
+Currency and unit conventions:
+Peer filings and comparable periods:
+Known missing, stale or conflicting evidence:
+
+VALUATION INPUTS
+Historical revenue, margins, tax, cash flows and reporting periods:
+Forecast horizon and growth assumptions:
+Reinvestment, capital spending and working capital assumptions:
+Discount rate and its basis:
+Terminal growth or exit multiple and its basis:
+Cash, debt, other claims and the enterprise-to-equity bridge:
+Diluted share count, date and source:
+Bear, base and bull scenarios:
+Sensitivity ranges and valuation methods appropriate to the sector:
+Independent reviewer:
+
+Keep facts, management statements, calculations and assumptions separate.
+Reconcile units, dates and cash-flow/discount-rate conventions. Show a range
+and counter-evidence. Missing evidence stays missing. A structurally valid
+report does not establish that its sources or investment conclusions are true.

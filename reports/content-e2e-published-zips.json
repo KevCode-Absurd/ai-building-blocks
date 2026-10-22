@@ -1,0 +1,35 @@
+{
+  "status": "pass",
+  "kind": "actual combined-site ZIP payload verification",
+  "root_skill_newlines": "build-index normalizes only root SKILL.md to LF; all other payloads byte-identical",
+  "packages": [
+    {
+      "slug": "storyboard-to-powerpoint-deck-builder",
+      "files": 52,
+      "mismatches": [],
+      "dist_matches": true,
+      "sha256": "e42453c498209497795b4d5b1a96aabf885f75057e8682a625ebf8bccbc31d78"
+    },
+    {
+      "slug": "case-competition-slide-deck-builder",
+      "files": 12,
+      "mismatches": [],
+      "dist_matches": true,
+      "sha256": "4f0082408e6c73038076adec275105a06029db7d771eda8286e8afdc1333e4bb"
+    },
+    {
+      "slug": "research-paper-writer",
+      "files": 10,
+      "mismatches": [],
+      "dist_matches": true,
+      "sha256": "e33e0e564f333480b56d10d0d55e7e70a3b3279d390c83a25c58d048c1e541eb"
+    },
+    {
+      "slug": "equity-research-valuation-report-builder",
+      "files": 32,
+      "mismatches": [],
+      "dist_matches": true,
+      "sha256": "40a5601a67953d73331de3f4b5b9603c07771329a923d0f7ef084a1f9bc07f6c"
+    }
+  ]
+}

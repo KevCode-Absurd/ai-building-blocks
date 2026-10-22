@@ -1,0 +1,14 @@
+thinking: medium
+thinking_why: It follows a set method with a few checks.
+new_slug: research-paper-reading-guide
+name: Research paper reading guide
+summary: Share a paper. Get its main idea, evidence and sections to read closely, with questions to test your understanding.
+job: study-and-practice
+headline: Research paper reading guide
+subhead: Supply a paper you have permission to use and say what you need from it. Get a reading guide grounded in that paper, with the main claims and sections that deserve a closer read.
+when:
+  - You are reading a paper for a class
+  - research project or work decision.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -1,0 +1,44 @@
+# Credentials and local environment
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json
+secrets.json
+
+# Python caches and local tooling
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+.coverage
+htmlcov/
+*.log
+
+# OS and editor metadata
+.DS_Store
+._*
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*~
+
+# Local research inputs, generated reports, and development artifacts
+/inputs/
+/private/
+/outputs/
+/reports/
+/tmp/
+/work/
+/scratch/
+/report-content.json
+/valuation-input.json
+/valuation-result.json
+/report.html
+/report.md

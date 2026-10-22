@@ -1,0 +1,201 @@
+{
+  "meta": {
+    "case": "SYNTHETIC SAMPLE: Operations redesign",
+    "team": "Launch QA | Illustrative figures",
+    "date": "22 October 2026"
+  },
+  "slides": [
+    {
+      "type": "title",
+      "title": "Pilot one workflow before funding the rollout.",
+      "source": "Illustrative figures only; inputs/operations.json; USD thousands unless stated.",
+      "subtitle": "SYNTHETIC CASE | Sample data, no real client | 22 October 2026"
+    },
+    {
+      "type": "executive_summary",
+      "title": "A gated rollout can add $60k of annual profit.",
+      "source": "Illustrative figures only; inputs/operations.json; USD thousands unless stated.",
+      "recommendation": "Approve a six-week pilot, then release rollout funding if the guardrails pass.",
+      "reasons": [
+        "The $960k cost base gives us three measurable levers.",
+        "Net savings of $60k support a 15-month simple payback.",
+        "Adoption, quality and cost gates limit execution risk."
+      ],
+      "impact": "$105k three-year net benefit after $75k upfront investment; before tax and discounting."
+    },
+    {
+      "type": "context",
+      "title": "The decision is how to reduce cost without hurting quality.",
+      "source": "Illustrative figures only; inputs/operations.json; USD thousands unless stated.",
+      "body": "A fictional service business earns $1.20m revenue and spends $960k each year. The team must decide whether to redesign intake, fulfilment and support. We assume unchanged revenue and steady demand. All figures are illustrative.",
+      "bullets": [
+        "Baseline operating profit: $240k.",
+        "Constraint: maintain workflow quality.",
+        "Decision owner: operations lead."
+      ]
+    },
+    {
+      "type": "analysis",
+      "title": "Fulfilment accounts for 69% of the cost base.",
+      "source": "Illustrative figures only; inputs/operations.json; USD thousands unless stated.",
+      "chart": {
+        "categories": [
+          "Intake",
+          "Fulfilment",
+          "Support"
+        ],
+        "series": [
+          {
+            "name": "Annual cost ($k)",
+            "values": [
+              120,
+              660,
+              180
+            ]
+          }
+        ]
+      },
+      "bullets": [
+        "$660k / $960k = 68.75%.",
+        "Intake costs $120k; support costs $180k.",
+        "Cost concentration guides investigation, not an automatic cut."
+      ]
+    },
+    {
+      "type": "financials",
+      "title": "The savings bridge produces $60k of recurring benefit.",
+      "source": "Illustrative figures only; inputs/operations.json; USD thousands unless stated.",
+      "chart": {
+        "categories": [
+          "Gross saving",
+          "Run cost",
+          "Net saving"
+        ],
+        "series": [
+          {
+            "name": "Annual amount ($k)",
+            "values": [
+              90,
+              30,
+              60
+            ]
+          }
+        ]
+      },
+      "bullets": [
+        "Gross saving: $30k intake + $35k fulfilment + $25k support.",
+        "Recurring run cost: $30k.",
+        "Upfront investment: $75k.",
+        "Payback: $75k / $60k = 1.25 years."
+      ]
+    },
+    {
+      "type": "analysis",
+      "title": "The downside case still needs a pilot decision gate.",
+      "source": "Illustrative figures only; inputs/operations.json; USD thousands unless stated.",
+      "chart": {
+        "categories": [
+          "Downside",
+          "Base",
+          "Upside"
+        ],
+        "series": [
+          {
+            "name": "Annual net saving ($k)",
+            "values": [
+              30,
+              60,
+              90
+            ]
+          }
+        ]
+      },
+      "bullets": [
+        "Scenarios vary gross savings by $30k.",
+        "Run cost stays fixed at $30k.",
+        "Simple payback ranges from 30 to 10 months.",
+        "No probabilities are assigned to these scenarios."
+      ]
+    },
+    {
+      "type": "roadmap",
+      "title": "Six weeks of evidence should precede the funding decision.",
+      "source": "Illustrative figures only; inputs/operations.json; USD thousands unless stated.",
+      "phases": [
+        {
+          "label": "Weeks 1-2 | Baseline",
+          "text": "Owner: operations lead. Record cost per case, error rate and adoption."
+        },
+        {
+          "label": "Weeks 3-5 | Pilot",
+          "text": "Owner: workflow manager. Trial one team; review metrics weekly."
+        },
+        {
+          "label": "Week 6 | Gate",
+          "text": "Owner: sponsor. Review >=80% adoption, stable errors and verified savings."
+        }
+      ]
+    },
+    {
+      "type": "risks",
+      "title": "Three explicit stop rules protect service quality.",
+      "source": "Illustrative figures only; inputs/operations.json; USD thousands unless stated.",
+      "risks": [
+        {
+          "risk": "Team adoption falls below 80%.",
+          "mitigation": "Extend training and hold rollout funding."
+        },
+        {
+          "risk": "Errors exceed the measured baseline.",
+          "mitigation": "Pause the trial and review failed cases."
+        },
+        {
+          "risk": "Run cost exceeds $30k a year.",
+          "mitigation": "Reprice the plan and recalculate payback."
+        }
+      ]
+    },
+    {
+      "type": "appendix",
+      "title": "The cash-flow bridge is transparent and reproducible.",
+      "source": "Illustrative figures only; inputs/operations.json; USD thousands unless stated.",
+      "chart_note": "Replaced by editable chart",
+      "chart": {
+        "categories": [
+          "Initial",
+          "Year 1",
+          "Year 2",
+          "Year 3"
+        ],
+        "series": [
+          {
+            "name": "Cumulative cash benefit ($k)",
+            "values": [
+              -75,
+              -15,
+              45,
+              105
+            ]
+          }
+        ]
+      },
+      "bullets": [
+        "Annual cash benefit: $60k.",
+        "Initial cash outlay: $75k.",
+        "Year 3 total: 3 x $60k - $75k = $105k.",
+        "Excludes tax, discounting and pilot timing."
+      ]
+    },
+    {
+      "type": "appendix",
+      "title": "The panel can challenge each decision assumption.",
+      "source": "Illustrative figures only; inputs/operations.json; USD thousands unless stated.",
+      "bullets": [
+        "Why not cut fulfilment first? Cost concentration alone does not prove avoidable cost.",
+        "What if savings are half the base case? Simple payback extends to 30 months.",
+        "What if revenue changes? Rebuild the contribution and working-capital model.",
+        "What releases funding? Verified savings, >=80% adoption and stable quality."
+      ]
+    }
+  ]
+}

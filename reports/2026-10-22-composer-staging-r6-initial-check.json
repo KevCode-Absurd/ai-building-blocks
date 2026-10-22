@@ -1,0 +1,40 @@
+{
+  "checkedOn": "2026-10-22T07:49:23.711Z",
+  "staging": "https://ai-building-blocks-staging.kevinmark7498.workers.dev",
+  "version": "74ec9f2e-07e4-4512-89bb-cb4e3aa842d3",
+  "status": "fail",
+  "providerCalls": 0,
+  "productionTouched": false,
+  "snapshot": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a161bf-0b97-7cf2-97f3-74eb6d30d1e4\\release-2026-10-22-r6\\assets",
+  "assets": [
+    {
+      "asset": "data/blocks.json",
+      "sha256": "19674ea4e09bcf7e47d62714e4d2059644c228b7e4ca442df992095b728b2a97"
+    },
+    {
+      "asset": "compose.html",
+      "sha256": "89c2a5d807a3c1967c5adbaca4ad24a3a3c8244f4f0e80570bd5fa69bccad3b3"
+    },
+    {
+      "asset": "skills/request-acceptance-brief/SKILL.md",
+      "sha256": "cfa938ee6269ca2eed73ede1e4b375a2c3a7630726e9eab50eb367934ce728f6"
+    },
+    {
+      "asset": "skills/request-deliverable-drafter/SKILL.md",
+      "sha256": "bb7c36351f9832878ad57c64c418d064a45cc1ecfb2fd9265af5d36f59a84c21"
+    },
+    {
+      "asset": "skills/request-acceptance-checker/SKILL.md",
+      "sha256": "3032de53d467cf82f9a5e514620ce243e3968d9c8a2b2e9c9b557cf54969d752"
+    }
+  ],
+  "scope": "Deployed free planner, replacement, recorded paid-error fixtures, complete packs and voice simulations. No real microphone or paid inference.",
+  "stats": {
+    "startTime": "2026-10-22T07:49:37.199Z",
+    "duration": 333703.64,
+    "expected": 53,
+    "skipped": 0,
+    "unexpected": 9,
+    "flaky": 0
+  }
+}

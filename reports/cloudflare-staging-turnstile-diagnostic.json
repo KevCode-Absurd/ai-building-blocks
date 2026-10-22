@@ -1,0 +1,16 @@
+{
+  "checkedOn": "2026-10-22T07:02:38.918Z",
+  "deployedVersion": "723795d5-403c-461a-a910-4088612a0022",
+  "browser": "standard headless Chrome; no fingerprint changes",
+  "status": "diagnostic-only",
+  "productionTouched": false,
+  "databaseWrites": 0,
+  "providerCalls": 0,
+  "codes": [],
+  "messages": [],
+  "ui": {
+    "sdkLoaded": true,
+    "dialogOpen": true,
+    "toast": null
+  }
+}

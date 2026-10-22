@@ -1,0 +1,27 @@
+RESEARCH PAPER OR DOCUMENT BRIEF
+
+Research question or document purpose:
+Audience, course or target publication:
+Required format, sections and length:
+Citation style:
+Deadline and timezone:
+Authorship, disclosure and AI-use rules:
+
+SOURCE REGISTER (repeat for each source)
+Title, author and date:
+DOI or accessible link:
+Exact page, section, table or figure used:
+Claim supported and limitations:
+Permission to share with the chosen AI tool:
+
+Methods actually used:
+Results actually observed (with units and source data):
+What was not measured or remains uncertain:
+Figures, tables and underlying data:
+Draft or approved writing sample:
+Case-study participants and permission to identify them, if applicable:
+Reviewer and acceptance criteria:
+
+Do not invent experiments, findings, participants, quotations or citations.
+Separate reported evidence from interpretation. Verify references against the
+original sources. Apply the course or publisher's attribution and AI-use rules.

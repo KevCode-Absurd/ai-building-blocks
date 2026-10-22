@@ -1,0 +1,36 @@
+slug: case-competition-slide-deck-builder
+name: Case competition slide deck builder
+summary: Share your case, judging rules and analysis. Get a recommendation deck with source notes, financials and backup slides for questions.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - source_text
+  - brief
+outputs:
+  - slide_deck
+uses: []
+origin: imported
+source:
+  by: Calvinkub
+  repo: Calvinkub/super_subagent_skill_Hackathon
+  path: skills/case-competition-slides
+  url: https://github.com/Calvinkub/super_subagent_skill_Hackathon/tree/main/skills/case-competition-slides
+  licence: MIT
+  licence_file: LICENSE
+  commit: 806164d
+  original_name: case-competition-slides
+  imported: 2026-10-22
+version: 1.0.1
+credits:
+  - title: case-competition-slides skill
+    by: Calvinkub
+    url: https://github.com/Calvinkub/super_subagent_skill_Hackathon/tree/main/skills/case-competition-slides
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+
+  - title: Launch compatibility additions
+    by: AI Blocks contributors
+    used: Added a portable entrypoint, reviewed helpers and labelled sample resources. Earlier imported entrypoint retained in SKILL.upstream.md.

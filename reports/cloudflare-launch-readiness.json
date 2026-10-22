@@ -1,13 +1,28 @@
 {
   "preparedOn": "2026-10-22",
   "launchTarget": "2026-10-22",
-  "status": "local-build-ready-for-cloudflare-integration",
+  "status": "local-build-ready-for-workers-integration",
   "productionDeploymentPerformed": false,
-  "files": 18547,
+  "deploymentTarget": "Workers Static Assets",
+  "workersPlan": {
+    "recommended": "Workers Paid Standard",
+    "minimumMonthlyUSD": 5,
+    "subscriptionVerified": false,
+    "staticHosting": "Workers Static Assets",
+    "usageOveragesPossible": true
+  },
+  "migrations": [
+    "0001_comments.sql",
+    "0002_spaces.sql",
+    "0004_composer.sql",
+    "0005_composer_accounts.sql"
+  ],
+  "files": 18614,
+  "fileLimit": 100000,
   "freeFileLimit": 20000,
-  "buildBuffer": 19000,
-  "remainingBeforeBuffer": 453,
-  "totalBytes": 450917379,
+  "buildBuffer": 95000,
+  "remainingBeforeBuffer": 76386,
+  "totalBytes": 453259921,
   "largestFiles": [
     {
       "path": "example-app/costs/other/other.html",
@@ -30,27 +45,38 @@
       "bytes": 2965180
     }
   ],
-  "publishedEntries": 4345,
+  "publishedEntries": 4359,
   "checks": {
     "requiredFiles": true,
     "exampleSameOrigin": true,
     "exampleNoindex": true,
-    "apiOnlyFunctions": true,
+    "apiOnlyWorker": true,
+    "custom404": true,
     "maximumFileSize": true,
-    "editorialNames": true
+    "editorialNames": true,
+    "composerBindingTemplate": true,
+    "paidAIDisabledByDefault": true
   },
   "criticalAssets": [
     {
       "path": "index.html",
-      "sha256": "1484d7e2de539cf89e9f9632ff1374a9b5f5dc3572bc4a4c2f0e62632c944916"
+      "sha256": "d6c22cd8404b6aa546fa09abc4b0d7211c9e2a116b75b751ee941c7dc7acafd7"
     },
     {
-      "path": "_routes.json",
-      "sha256": "924efc005e6bb33358e33e8363a29bf7ca9ece23673b3b35045dc439ccd3eea6"
+      "path": "_redirects",
+      "sha256": "9da7b04268f59d9a9e6103f1f8a3b822d3c15353e4eb67313c41972c39a86ec6"
+    },
+    {
+      "path": "_headers",
+      "sha256": "b659bbb35b90a7c5024d1a968e3a068563b5642436f2f90eb75d3e8229a009be"
+    },
+    {
+      "path": ".assetsignore",
+      "sha256": "def0fd11fc9a10bebdc1c4f28abd29bc045818142cd0bbc9187579058c4443fa"
     },
     {
       "path": "data/blocks.json",
-      "sha256": "d25c976774516f67d6e8fac3eda8cc801e74f172e893e9a3fee564a6c741fa17"
+      "sha256": "19674ea4e09bcf7e47d62714e4d2059644c228b7e4ca442df992095b728b2a97"
     },
     {
       "path": "example-app/index.html",
@@ -58,10 +84,11 @@
     }
   ],
   "requiredAtIntegration": [
-    "Cloudflare account and Pages project",
-    "D1 database, both migrations and COMMENTS/SPACES bindings",
-    "Four separate server-side salts/team secrets",
-    "Custom domain association and DNS",
-    "Preview URL verification before production promotion"
+    "Authenticate the intended Cloudflare account and verify Workers Paid subscription",
+    "Replace production/staging D1 placeholders; keep staging separate",
+    "Apply all listed migrations; preserve COMMENTS/SPACES/COMPOSER bindings and existing salts",
+    "Copy comments/spaces secrets; add WORKFLOW_SALT and chosen provider API secret for AI",
+    "Verify staging Worker URL and measured performance before custom-domain cutover",
+    "Verify Cloudflare-managed DNS, domain/TLS and production data continuity"
   ]
 }

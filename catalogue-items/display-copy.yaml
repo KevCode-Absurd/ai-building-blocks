@@ -1,5 +1,11 @@
 # Customer-facing copy. Source skill files and stable slugs stay unchanged.
 {
+  "finance-deck-quality-checker": {
+    "name": "Finance deck review for India",
+    "summary": "Share a finance deck. Find mismatched numbers, unclear wording and layout issues, using Indian fiscal years and units.",
+    "subhead": "Review a finance deck slide by slide for number mismatches, unclear claims and formatting issues. This skill uses Indian fiscal years and lakh and crore units. Confirm those conventions fit your deck before using it.",
+    "reason": "Make the source skill's Indian market scope visible in cards and its introduction."
+  },
   "landing-page-30-point-checker": {
     "name": "Landing page audit",
     "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope.",

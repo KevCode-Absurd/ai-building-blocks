@@ -1,0 +1,40 @@
+import { createClerkClient } from "@clerk/backend";
+import { securityJson } from "./api-security.ts";
+import type { ComposerStore } from "./composer.ts";
+
+export type AuthEnv = { CLERK_PUBLISHABLE_KEY?: string; CLERK_SECRET_KEY?: string; CLERK_JWT_KEY?: string };
+export function authConfigured(env: AuthEnv) {
+  return /^pk_(test|live)_[A-Za-z0-9=]+$/.test(env.CLERK_PUBLISHABLE_KEY ?? "") && !!env.CLERK_SECRET_KEY;
+}
+
+export async function handleAccount(request: Request, env: AuthEnv, store: ComposerStore | null): Promise<Response> {
+  if (request.method !== "GET") return securityJson(405, { error: "Use GET." }, { allow: "GET" });
+  const configured = authConfigured(env);
+  if (!new URL(request.url).searchParams.has("usage")) return securityJson(200, { configured, publishableKey: configured ? env.CLERK_PUBLISHABLE_KEY : null });
+  const user = await authenticateUser(request, env); if (user instanceof Response) return user;
+  if (!store) return securityJson(503, { error: "Usage history is temporarily unavailable." });
+  const usage = await store.usage(user, new Date().toISOString().slice(0, 10));
+  return securityJson(200, { completed: usage.completed, attemptsToday: usage.attemptsToday, dailyAttemptLimit: 10 });
+}
+export async function authenticateUser(req: Request, env: AuthEnv): Promise<string | Response> {
+  if (!authConfigured(env)) return securityJson(503, { error: "Sign-in is being connected. Free assembly is ready to use." });
+  // Explicit bearer tokens keep owner-key authorization on existing spaces separate.
+  const token = req.headers.get("authorization") ?? "";
+  if (!/^Bearer \S+$/.test(token) || token.length > 16384) return securityJson(401, { error: "Sign in to generate a free AI workflow." });
+  try {
+    const client = createClerkClient({ publishableKey: env.CLERK_PUBLISHABLE_KEY!, secretKey: env.CLERK_SECRET_KEY });
+    const state = await client.authenticateRequest(req, {
+      acceptsToken: "session_token", authorizedParties: [new URL(req.url).origin],
+      issuer: `https://${atob(env.CLERK_PUBLISHABLE_KEY!.split("_")[2]).replace(/\$$/, "")}`,
+      ...(env.CLERK_JWT_KEY ? { jwtKey: env.CLERK_JWT_KEY.replace(/\\n/g, "\n") } : {}),
+    });
+    const auth = state.toAuth();
+    // Pending sessions (for example, an unfinished MFA task) cannot generate.
+    if (!state.isAuthenticated || !auth?.userId || auth.sessionStatus !== "active") {
+      return securityJson(401, { error: "Your session expired or needs verification. Sign in again." });
+    }
+    return auth.userId;
+  } catch {
+    return securityJson(401, { error: "Your session could not be verified. Sign in again." });
+  }
+}

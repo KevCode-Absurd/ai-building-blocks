@@ -1,0 +1,25 @@
+{
+  "slug": "request-deliverable-drafter",
+  "name": "Request deliverable drafter",
+  "summary": "Use an agreed request brief to create its named files, with source evidence and explicit gaps.",
+  "category": "general",
+  "type": "skill",
+  "role": "make",
+  "job": "ops",
+  "level": "beginner",
+  "inputs": [
+    {
+      "type": "plan",
+      "required": true
+    }
+  ],
+  "outputs": [
+    {
+      "type": "document"
+    }
+  ],
+  "uses": [],
+  "origin": "own",
+  "version": "1.0.0",
+  "example_pending": true
+}

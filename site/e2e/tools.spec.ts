@@ -1,4 +1,4 @@
-import { expect, test, type Page } from "@playwright/test";
+import { expect, test, protectedGet, type Page } from "./fixtures/staging-aware-test";
 import { unzipSync, strFromU8 } from "fflate";
 import fs from "node:fs";
 import { execFileSync } from "node:child_process";
@@ -25,7 +25,11 @@ test.beforeEach(async ({ page }) => {
   const list: string[] = [];
   errors.set(page, list);
   page.on("pageerror", (e) => list.push(e.message));
-  page.on("console", (m) => { if (m.type() === "error") list.push(m.text()); });
+  page.on("console", (m) => {
+    if (m.type() !== "error") return;
+    const expectedDocument404 = m.location().url.endsWith('/tools/not-a-tool') && m.text().includes('status of 404');
+    if (!expectedDocument404) list.push(m.text());
+  });
 });
 test.afterEach(async ({ page }) => {
   expect(errors.get(page), "no errors in the browser console").toEqual([]);
@@ -140,7 +144,7 @@ test("each input says where to find the real number, and the page lists the tool
 
 test("the download is one file that works offline and gives the same answer", async ({ page, context }) => {
   await page.goto("/tools/order-margin");
-  const res = await page.request.get("/mini-tools/order-margin/order-margin.html");
+  const res = await protectedGet(page, "/mini-tools/order-margin/order-margin.html");
   expect(res.ok()).toBe(true);
   const html = await res.text();
   expect(html).not.toMatch(/<script[^>]+src=|<link[^>]+stylesheet/);
@@ -178,7 +182,7 @@ test("in your AI: the skill, the prompt and the steps to keep it", async ({ page
   await context.grantPermissions(["clipboard-read", "clipboard-write"]);
   await page.goto("/tools/creative-volume-planner");
   const ai = page.getByTestId("way-ai");
-  const zip = await page.request.get(await ai.getByTestId("download-skill").getAttribute("href") as string);
+  const zip = await protectedGet(page, await ai.getByTestId("download-skill").getAttribute("href") as string);
   const files = unzipSync(new Uint8Array(await zip.body()));
   const skill = strFromU8(files["creative-volume-planner/SKILL.md"]);
   expect(skill).toMatch(/^---\nname: creative-volume-planner\ndescription: /);
@@ -227,9 +231,14 @@ test("tool pages read at grade 10 or below", async ({ page }, info) => {
 });
 
 test("a tool that doesn't exist says so and leads back to the list", async ({ page }) => {
-  await page.goto("/tools/not-a-tool");
-  await expect(page.getByTestId("tool-missing")).toContainText("That mini tool isn't here");
-  await page.getByRole("link", { name: "See all mini tools" }).click();
+  const response = await page.goto("/tools/not-a-tool");
+  if (response?.status() === 404) {
+    await expect(page.getByRole('heading', { name: "This page doesn't exist", exact: true })).toBeVisible();
+    await page.goto('/tools');
+  } else {
+    await expect(page.getByTestId("tool-missing")).toContainText("That mini tool isn't here");
+    await page.getByRole("link", { name: "See all mini tools" }).click();
+  }
   await expect(page.getByTestId("tools-index")).toBeVisible();
 });
 

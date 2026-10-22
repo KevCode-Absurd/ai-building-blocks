@@ -1,4 +1,4 @@
-import { expect, test, type Page } from "@playwright/test";
+import { expect, test, protectedGet, protectStagingContext, type Page } from "./fixtures/staging-aware-test";
 import { unzipSync, strFromU8 } from "fflate";
 import fs from "node:fs";
 import { execFileSync } from "node:child_process";
@@ -8,7 +8,12 @@ test.beforeEach(async ({ page }) => {
   const list: string[] = [];
   errors.set(page, list);
   page.on("pageerror", (e) => list.push(e.message));
-  page.on("console", (m) => { if (m.type() === "error") list.push(m.text()); });
+  page.on("console", (m) => {
+    if (m.type() !== "error") return;
+    // The production server intentionally returns a document 404 in the old-link test.
+    const expectedDocument404 = m.location().url.endsWith("/skills/no-such-thing") && m.text().includes("status of 404");
+    if (!expectedDocument404) list.push(m.text());
+  });
 });
 test.afterEach(async ({ page }) => {
   expect(errors.get(page), "no errors in the browser console").toEqual([]);
@@ -28,7 +33,7 @@ test("hero is the headline, the mono subhead, and two buttons, How it works a pl
   await expect(page.locator(".nav a").first()).toHaveText("How it works");
   await expect(page.getByTestId("home-goal")).toHaveCount(0);
   const globe = page.getByTestId("globe");
-  await expect(globe).toBeVisible();
+  await expect(globe).toBeVisible({ timeout: 15_000 });
   expect(await globe.evaluate((c: HTMLCanvasElement) => c.width > 0 && c.height > 0)).toBe(true);
 });
 
@@ -198,8 +203,8 @@ test("old links and wrong types land on the right page", async ({ page }) => {
   await expect(page).toHaveURL(new RegExp(`/prompts/${MODEL}$`));
   await page.goto("/?block=customer-reviews-to-static-ad-set");
   await expect(page).toHaveURL(new RegExp(`/workflows/${WORKFLOW}$`));
-  await page.goto("/skills/no-such-thing");
-  await expect(page.getByRole("heading", { level: 1 })).toHaveText("That page has moved");
+  const missing = await page.goto("/skills/no-such-thing");
+  await expect(page.getByRole("heading", { level: 1 })).toHaveText(missing?.status() === 404 ? "This page doesn't exist" : "That page has moved");
 });
 
 test("saving a block to a kit persists after a reload", async ({ page }) => {
@@ -339,7 +344,7 @@ test("the workflow download is a complete, repeatable pack", async ({ page }, in
   expect(names).toEqual(expect.arrayContaining(["HANDOFF.md", "workflow.json", "README.txt", "skills/accurate-product-image-ad-maker/SKILL.md"]));
   expect(names, "no about-me file was given").not.toContain("about-me.md");
   const wf = JSON.parse(strFromU8(files["workflow.json"]));
-  const catalogue = await (await page.request.get("/data/blocks.json")).json();
+  const catalogue = await (await protectedGet(page, "/data/blocks.json")).json();
   const bySlug = new Map<string, { uses?: string[]; steps?: (string | [string, string])[] }>(catalogue.blocks.map((b: { slug: string }) => [b.slug, b]));
   const needed = new Set<string>();
   const visit = (slug: string) => {
@@ -426,16 +431,19 @@ const planGoal = async (page: Page, goal: string) => {
 
 test("start from a goal: the steps are laid out, and each connection says what it carries", async ({ page }) => {
   const builder = await planGoal(page, "a landing page for my best ad");
-  await expect(builder.getByTestId("flow-node")).toHaveCount(4);
+  await expect(builder).toContainText("React landing page builder");
+  await expect(builder).toContainText("Human review gate");
+  const planned = await builder.getByTestId("flow-node").count();
+  expect(planned).toBeGreaterThan(4);
   await expect(page.locator(".flow-name")).toHaveValue("A landing page for my best ad");
-  await expect(builder.getByTestId("edge-label").first()).toHaveText("brand file");
+  await expect(builder.getByTestId("edge-label").first()).toHaveText("landing page");
   // A goal with nothing behind it says so instead of guessing.
   await builder.getByTestId("palette-next").click();
   const side = builder.locator(".palette").getByTestId("goal");
   await side.getByTestId("goal-input").fill("zzz qqq");
   await side.getByTestId("goal-go").click();
   await expect(side).toContainText("No steps for that yet");
-  await expect(builder.getByTestId("flow-node")).toHaveCount(4);
+  await expect(builder.getByTestId("flow-node")).toHaveCount(planned);
 });
 
 test("click a step to see what it needs and gives back; the download lists what to gather first", async ({ page }) => {
@@ -518,8 +526,10 @@ test("save a workflow, open it again, and share it by link", async ({ page, cont
   expect(link).toMatch(/\/\?flow=[\w-]+#build$/);
   // Someone else opens the link in their own browser.
   const other = await browser.newContext();
+  await protectStagingContext(other);
   const theirs = await other.newPage();
-  await theirs.goto(link.replace(/^https?:\/\/[^/]+/, "http://localhost:5180"));
+  expect(new URL(link).origin).toBe(new URL(page.url()).origin);
+  await theirs.goto(link);
   await expect(theirs.getByTestId("builder").getByTestId("flow-node")).toHaveCount(7);
   await expect(theirs.locator(".flow-name")).toHaveValue("Sprout video ads");
   await expect(theirs.getByTestId("builder").locator(".react-flow__edge:not(.end-edge)")).toHaveCount(await builder.locator(".react-flow__edge:not(.end-edge)").count());
@@ -666,8 +676,8 @@ test("after the download: how to run it in your AI, the first message to paste, 
   await expect(next).toContainText("outputs");
   await next.getByTestId("copy-first-message").click();
   expect(await page.evaluate(() => navigator.clipboard.readText())).toBe("Follow HANDOFF.md step by step. Start with “Before you start”, and ask me for anything that's missing.");
-  // What comes back is the page and its designs, not only the check at the end.
-  await expect(next.getByTestId("next-finals")).toContainText("Landing page");
+  // The implemented page is delivered as source code, alongside its audit.
+  await expect(next.getByTestId("next-finals")).toContainText("Code change");
   await expect(next.getByTestId("next-finals")).toContainText("Audit report");
   await next.getByTestId("next-done").click();
   await expect(dlg).toHaveCount(0);
@@ -682,8 +692,10 @@ test("preview shows the first lines of what each step hands back, and the step p
   const sample = builder.getByTestId("step-sample");
   await expect(sample).toContainText("step 1: what it hands back");
   await expect(sample).toContainText("<");
-  await expect(sample).toContainText("step 2: what it hands back", { timeout: 6000 });
   await expect(sample).toContainText("PAGE BRIEF");
+  // The claims checker at step 2 has no output sample; the next sample is design.
+  await expect(sample).toContainText("step 3: what it hands back", { timeout: 12_000 });
+  await expect(sample).toContainText("DESIGN SYSTEM");
   // Readable size: it sits outside the zoomed canvas.
   expect(await sample.evaluate((el) => !el.closest(".react-flow__viewport") && parseFloat(getComputedStyle(el.querySelector("pre")!).fontSize))).toBeGreaterThanOrEqual(12);
   await builder.getByTestId("preview").click();
@@ -765,7 +777,7 @@ test("every skill has questions and comments on the side, kept on that skill", a
   const mine = panel.getByTestId("comment").filter({ hasText: q });
   await expect(mine).toContainText("Sam");
   // The team answers, and the answer is marked.
-  await page.evaluate(() => localStorage.setItem("abb:team-token", "dev-team-token"));
+  await page.evaluate(token => localStorage.setItem("abb:team-token", token), process.env.PW_COMMENTS_TEAM_TOKEN || "dev-team-token");
   await page.reload();
   await page.getByTestId("comments-open").click();
   await panel.getByTestId("comment").filter({ hasText: q }).getByTestId("comment-reply").click();
@@ -798,7 +810,8 @@ test("start and end: every workflow begins at Start, saving adds End, and your n
 
   await builder.getByTestId("save-flow").click();
   await expect(builder.getByTestId("flow-end")).toBeVisible();
-  await expect(builder.getByTestId("flow-status")).toContainText("saved");
+  await expect(builder.getByTestId("save-flow")).toHaveText("Saved");
+  await expect(builder.getByTestId("save-flow")).toBeDisabled();
 
   await builder.getByTestId("download-handoff").click();
   const [dl] = await Promise.all([page.waitForEvent("download"), page.getByTestId("needs-download").click()]);

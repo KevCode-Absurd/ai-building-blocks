@@ -1,6 +1,7 @@
+import { validateCustomSkills, withCustomSkills, type CustomSkill } from "./custom-skills";
 // The builder's helpers that work on a whole workflow: what to gather, what passes along each connection,
 // a tidy layout, a plan from a goal, and a link that carries the workflow. Plain code, same input, same answer.
-import { deflateSync, inflateSync, strFromU8, strToU8 } from "fflate";
+import { deflateSync, Inflate, strFromU8, strToU8 } from "fflate";
 import { type Catalogue, portLabel, wireSteps } from "./data";
 import { orderFlow } from "./handoff";
 import { type Flow, type FlowEdge, type FlowNode, TEAM_MAX, uid } from "./store";
@@ -54,21 +55,40 @@ export { planFromGoal, type Plan } from "./goal";
 
 // r and o are each step's role and notes; g and gn the Start node's goal and notes; k each step's mind; ov the overseer;
 // t the team (tm its mode). All optional, so old links still open.
-type Packed = { v: 1; n: string; s: string[]; p: [number, number][]; e: [number, number][]; m: number[]; r?: string[]; o?: string[]; g?: string; gn?: string; k?: string[]; ov?: string; t?: string[]; tm?: "split" | "together" };
-const b64 = (u: Uint8Array) => btoa(String.fromCharCode(...u)).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+type Packed = { cs?: CustomSkill[]; v: 1; n: string; s: string[]; p: [number, number][]; e: [number, number][]; m: number[]; r?: string[]; o?: string[]; g?: string; gn?: string; k?: string[]; ov?: string; t?: string[]; tm?: "split" | "together"; b?: { t: string; f: number; i: string }[][] };
+const b64 = (u: Uint8Array) => {
+  let text = "";
+  for (let i = 0; i < u.length; i += 8192) text += String.fromCharCode(...u.subarray(i, i + 8192));
+  return btoa(text).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+};
 const unb64 = (s: string) => Uint8Array.from(atob(s.replace(/-/g, "+").replace(/_/g, "/")), (ch) => ch.charCodeAt(0));
+function readPacked(code: string): Packed {
+  if (code.length > 200000) throw Error("Workflow link is too large.");
+  const chunks: Uint8Array[] = []; let total = 0;
+  const stream = new Inflate(chunk => {
+    total += chunk.length;
+    if (total > 1048576) throw Error("Expanded workflow is too large.");
+    chunks.push(chunk);
+  });
+  const input = unb64(code);
+  for (let i = 0; i < input.length; i += 512) stream.push(input.subarray(i, i + 512), i + 512 >= input.length);
+  const bytes = new Uint8Array(total); let at = 0;
+  for (const chunk of chunks) { bytes.set(chunk, at); at += chunk.length; }
+  return JSON.parse(strFromU8(bytes));
+}
 
 /** The whole workflow (steps, connections, layout) packed small enough for a link. */
 export function packFlow(flow: Flow): string {
   const idx = Object.fromEntries(flow.nodes.map((n, i) => [n.id, i]));
   const data: Packed = {
-    v: 1, n: flow.name, s: flow.nodes.map((n) => n.slug),
+    v: 1, cs: flow.customSkills, n: flow.name, s: flow.nodes.map((n) => n.slug),
     p: flow.nodes.map((n) => [Math.round(n.x / 10), Math.round(n.y / 10)]),
     e: flow.edges.filter((e) => e.from in idx && e.to in idx).map((e) => [idx[e.from], idx[e.to]]),
     m: flow.nodes.flatMap((n, i) => (n.ecommerce ? [i] : [])),
   };
   if (flow.nodes.some((n) => n.role)) data.r = flow.nodes.map((n) => n.role ?? "");
   if (flow.nodes.some((n) => n.notes)) data.o = flow.nodes.map((n) => n.notes ?? "");
+  if (flow.nodes.some(n => n.bindings?.length)) data.b = flow.nodes.map(n => (n.bindings ?? []).filter(b => b.from in idx).map(b => ({ t: b.type, f: idx[b.from], i: b.instruction })));
   if (flow.goal) data.g = flow.goal;
   if (flow.notes) data.gn = flow.notes;
   if (flow.nodes.some((n) => n.mind)) data.k = flow.nodes.map((n) => n.mind ?? "");
@@ -83,15 +103,20 @@ const clip = (s: unknown, n: number) => (typeof s === "string" && s.trim() ? s.s
 export function unpackFlow(c: Catalogue, code: string): Flow | null {
   const mindOk = (s: unknown) => (typeof s === "string" && c.bySlug[s]?.type === "mind" ? s : undefined);
   try {
-    const d = JSON.parse(strFromU8(inflateSync(unb64(code)))) as Packed;
+    const d = readPacked(code);
     if (d.v !== 1 || !Array.isArray(d.s)) return null;
+    const customSkills = validateCustomSkills(d.cs); c = withCustomSkills(c, customSkills);
     const ids = d.s.slice(0, 40).map(() => uid());
     const nodes: FlowNode[] = d.s.slice(0, 40).flatMap((slug, i) => (c.bySlug[slug] ? [{ id: ids[i], slug, x: (d.p?.[i]?.[0] ?? i * 30) * 10, y: (d.p?.[i]?.[1] ?? 11) * 10, ecommerce: d.m?.includes(i) || undefined, role: clip(d.r?.[i], 120), notes: clip(d.o?.[i], 2000), mind: mindOk(d.k?.[i]) }] : []));
     const team = (d.t ?? []).filter((s) => mindOk(s)).slice(0, TEAM_MAX);
     if (!nodes.length && !team.length) return null;
     const kept = new Set(nodes.map((n) => n.id));
     const edges: FlowEdge[] = (d.e ?? []).filter(([a, b]) => kept.has(ids[a]) && kept.has(ids[b]) && a !== b).map(([a, b]) => ({ id: uid(), from: ids[a], to: ids[b] }));
-    return { id: uid(), name: String(d.n || "Shared workflow").slice(0, 80), nodes, edges, updated: Date.now(), goal: clip(d.g, 2000), notes: clip(d.gn, 2000), overseer: mindOk(d.ov), team: team.length ? { minds: team, mode: d.tm === "together" ? "together" : "split" } : undefined };
+    for (const node of nodes) {
+      const i = ids.indexOf(node.id);
+      if (Array.isArray(d.b?.[i])) node.bindings = d.b![i].slice(0, 20).flatMap(b => typeof b.t === "string" && typeof b.i === "string" && kept.has(ids[b.f]) && edges.some(e => e.from === ids[b.f] && e.to === node.id) ? [{ type: b.t.slice(0, 100), from: ids[b.f], instruction: b.i.slice(0, 2000) }] : []);
+    }
+    return { customSkills, id: uid(), name: String(d.n || "Shared workflow").slice(0, 80), nodes, edges, updated: Date.now(), goal: clip(d.g, 10000), notes: clip(d.gn, 10000), overseer: mindOk(d.ov), team: team.length ? { minds: team, mode: d.tm === "together" ? "together" : "split" } : undefined };
   } catch {
     return null;
   }

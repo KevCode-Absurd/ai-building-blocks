@@ -33,3 +33,4 @@ how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
     or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Start with launch-tools/USAGE.md for a portable workflow, available-tool fallbacks and a reproducible synthetic sample. Companion tools mentioned in the retained guide are not bundled.

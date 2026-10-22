@@ -7,6 +7,7 @@ import { Link, navigate, setPrefetch, setSearch, useLocation } from "./lib/route
 import { BusinessDrawer, openBusiness, useBusinessOpener } from "./Business";
 import { TailorDrawer, openTailor, useTailorOpener } from "./Tailor";
 import { hasBusiness, useBusiness } from "./lib/business";
+import { STARTER_PATHS, isAudienceStarter, starterFor, starterTemplate } from "./lib/audience-starters";
 
 const Builder = lazy(() => import("./Builder")); // the canvas loads only when someone scrolls near it
 const Globe = lazy(() => import("./Globe")); // drawn behind the hero, so the text never waits for it
@@ -37,6 +38,7 @@ const PAGES = {
   minds: () => import("./MindsPage"),
   builder: () => import("./Builder"),
   intake: () => import("./IntakePage"),
+  compose: () => import("./ComposePage"),
 };
 /** Which section's code a link opens, if it isn't the home page or a block. */
 function sectionOf(to: string): keyof typeof PAGES | null {
@@ -48,6 +50,7 @@ function sectionOf(to: string): keyof typeof PAGES | null {
   if (path === "/space" || path === "/people" || path.startsWith("/s/")) return "space";
   if (path === "/minds") return "minds";
   if (path === "/from-a-source") return "intake";
+  if (path === "/compose") return "compose";
   if (path === "/how-it-works") return "guide";
   return null;
 }
@@ -60,6 +63,7 @@ const AppsPage = lazy(PAGES.apps);
 const SpacePage = lazy(PAGES.space);
 const MindsPage = lazy(PAGES.minds);
 const IntakePage = lazy(PAGES.intake);
+const ComposePage = lazy(PAGES.compose);
 /** Finish an anchor landing once. Any user scroll cancels the correction. */
 function useHashLanding() {
   useEffect(() => {
@@ -146,6 +150,7 @@ function Header({ onKits }: { onKits: () => void }) {
           <Link to="/how-it-works">How it works</Link>
           <Link to="/#library">Library</Link>
           <Link to="/#build">Builder</Link>
+          <Link to="/compose" data-testid="nav-compose">From a request</Link>
           <Link to="/minds" data-testid="nav-minds">Minds</Link>
           <Link to="/tools">Tools</Link>
           <Link to="/apps">Apps</Link>
@@ -170,8 +175,8 @@ function Header({ onKits }: { onKits: () => void }) {
   );
 }
 
-type Filters = { q: string; area: string; fn: string; task: string; kind: Kind | "all"; level: string };
-const NONE: Filters = { q: "", area: "", fn: "", task: "", kind: "all", level: "" };
+type Filters = { q: string; audience: string; area: string; fn: string; task: string; kind: Kind | "all"; level: string };
+const NONE: Filters = { q: "", audience: "", area: "", fn: "", task: "", kind: "all", level: "" };
 
 function Library({ c }: { c: Catalogue }) {
   const { search } = useLocation();
@@ -181,7 +186,7 @@ function Library({ c }: { c: Catalogue }) {
     const fn = FUNCTIONS.find((x) => x.id === fnId)?.id ?? (task ? FUNCTIONS.find((x) => x.tasks.includes(task))!.id : "");
     const kind = KINDS.some((k) => k.id === search.get("kind")) ? (search.get("kind") as Kind) : "all";
     const area = AREAS.some((a) => a.id === search.get("area")) ? search.get("area")! : "";
-    return { ...NONE, q: search.get("q") ?? "", area, fn, task, kind, level: LEVELS.some((l) => l === search.get("level")) ? search.get("level")! : "" };
+    return { ...NONE, q: search.get("q") ?? "", audience: starterFor(search.get("audience") ?? "")?.id ?? "", area, fn, task, kind, level: LEVELS.some((l) => l === search.get("level")) ? search.get("level")! : "" };
   });
   const set = (patch: Partial<Filters>) => setF((x) => ({ ...x, ...patch }));
   const [limit, setLimit] = useState(PAGE);
@@ -198,7 +203,7 @@ function Library({ c }: { c: Catalogue }) {
     window.addEventListener("keydown", on);
     return () => window.removeEventListener("keydown", on);
   }, []);
-  useEffect(() => { setLimit(PAGE); setSearch({ q: f.q, area: f.area, fn: f.fn, job: f.task, kind: f.kind === "all" ? "" : f.kind, level: f.level, by: "" }); }, [f]);
+  useEffect(() => { setLimit(PAGE); setSearch({ q: f.q, audience: f.audience, area: f.area, fn: f.fn, job: f.task, kind: f.kind === "all" ? "" : f.kind, level: f.level, by: "" }); }, [f]);
 
   // Every count reflects all the other choices, so a zero is never a surprise.
   // The list and the counts follow the typing a beat behind, so the search box never waits on them.
@@ -211,6 +216,7 @@ function Library({ c }: { c: Catalogue }) {
   const fact = (b: Block) => facts.get(b.slug)!;
   const tests: Record<keyof Filters, (b: Block, v: string) => boolean> = {
     q: (b) => words.every((w) => hay(b).includes(w)),
+    audience: (b, v) => isAudienceStarter(b.slug, v),
     area: (b, v) => !v || fact(b).areas.has(v),
     fn: (b, v) => !v || fact(b).fns.has(v),
     task: (b, v) => !v || b.task === v,
@@ -235,6 +241,7 @@ function Library({ c }: { c: Catalogue }) {
   const fn = FUNCTIONS.find((x) => x.id === f.fn);
   const activeTask = TASKS.find((t) => t.id === f.task);
   const area = AREAS.find((a) => a.id === f.area);
+  const audience = starterFor(f.audience);
   // An area shows its own groups; areas that so far hold only minds show the minds group.
   const fnsShown = area ? FUNCTIONS.filter((x) => area.fns.includes(x.id) || x.id === f.fn || (x.id === "minds" && count({ area: area.id, fn: "minds", task: "" }) > 0)) : FUNCTIONS;
 
@@ -266,10 +273,18 @@ function Library({ c }: { c: Catalogue }) {
         </button>)}
       </div>
       <div className="library-filters">
+        <Select label="Start with" value={f.audience} onChange={(v) => setF({ ...NONE, audience: v })} testId="filter-audience"
+          options={[{ value: "", label: "Full library" }, ...STARTER_PATHS.map((a) => ({ value: a.id, label: a.name }))]} />
         <Select label="Domain" value={f.area} onChange={(v) => set({ area: v, fn: "", task: "" })} testId="filter-domain"
           options={[{ value: "", label: "All domains", count: count({ area: "", fn: "", task: "" }) }, ...AREAS.map((a) => ({ value: a.id, label: a.name, count: count({ area: a.id, fn: "", task: "" }) }))]} />
         <button type="button" className="more-filters-btn" aria-expanded={moreFilters} aria-controls="library-more-filters" onClick={() => setMoreFilters((v) => !v)} data-testid="more-filters">More filters{extraFilters > 0 && <span className="badge">{extraFilters}</span>} <span aria-hidden="true">{moreFilters ? "−" : "+"}</span></button>
       </div>
+      {audience && <div className="audience-guide small" data-testid="audience-guide">
+        <p><strong>{audience.goal}</strong> These are starter picks. Choose Full library to explore every block.</p>
+        <p>Bring: {audience.bring}</p>
+        <p><button className="link-btn" onClick={openBusiness}>Save your context</button> · <a href={starterTemplate(audience.id)} download>Download a context template</a></p>
+        {audience.id === "enterprise" && <p>These packs support your work in your chosen AI tool. Team access controls, company system connections and audit storage need your own implementation.</p>}
+      </div>}
       {moreFilters && <div className="library-more-filters" id="library-more-filters" role="group" aria-label="More filters">
         <Select label="Work" value={f.fn} onChange={(v) => set({ fn: v, task: "" })} testId="filter-work"
           options={[{ value: "", label: "All work", count: count({ fn: "", task: "" }) }, ...fnsShown.map((x) => ({ value: x.id, label: x.name, count: count({ fn: x.id, task: "" }) }))]} />
@@ -445,6 +460,8 @@ export default function App() {
         <Suspense fallback={<main className="wrap bp-hero"><p className="small">Loading…</p></main>}><SpacePage path={path} c={c} toast={setToast} /></Suspense>
       ) : path === "/minds" ? (
         c ? <Suspense fallback={<main className="wrap bp-hero"><p className="small">Loading…</p></main>}><MindsPage c={c} toBuilder={toBuilder} /></Suspense> : <main className="wrap bp-hero"><p className="small">Loading…</p></main>
+      ) : path === "/compose" ? (
+        c ? <Suspense fallback={<main className="wrap bp-hero"><p className="small">Loading…</p></main>}><ComposePage c={c} toast={setToast} /></Suspense> : <main className="wrap bp-hero"><p className="small">Loading…</p></main>
       ) : path === "/from-a-source" ? (
         c ? <Suspense fallback={<main className="wrap bp-hero"><p className="small">Loading…</p></main>}><IntakePage c={c} toast={setToast} /></Suspense> : <main className="wrap bp-hero"><p className="small">Loading…</p></main>
       ) : path === "/how-it-works" ? (
@@ -462,6 +479,7 @@ export default function App() {
             <Link to="/ai-tools">AI tools</Link>
             <Link to="/traction">Growth channels</Link>
             <Link to="/from-a-source">Create skills from content</Link>
+            <Link to="/compose">Workflow from a request</Link>
             <Link to="/apps">Apps</Link>
             <Link to="/apps/starter-pack">App starter pack</Link>
             <Link to="/space">My space</Link>

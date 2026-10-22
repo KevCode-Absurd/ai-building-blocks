@@ -1,0 +1,878 @@
+{
+  "generated": "2026-10-22T03:08:20.715Z",
+  "model": "claude-haiku-5-5",
+  "benchmarkFingerprint": "cb102ed5d887e75e2d588bb45b05ad1696b1c8bad517b3e7f04467d00802e719",
+  "cases": [
+    {
+      "id": "landing-new",
+      "goal": "Build a new landing page from scratch for a small business. Deliver source code, run the 30-point review, fix issues and check SEO before a publishing handoff.",
+      "model": "claude-haiku-5-5",
+      "cost": 0.0034019000000000002,
+      "plan": {
+        "title": "Build a small-business landing page from scratch, review it, fix it, check SEO and hand off for publ",
+        "summary": "A seven-step pack that turns a business brief into React landing page source code, runs the 30-point review, applies minimal fixes, rechecks once, handles metadata and SEO checks, then ends with a human sign-off gate before any publishing handoff. Nothing here has run, and publishing needs explicit user authorization at execution.",
+        "steps": [
+          {
+            "slug": "conversion-landing-page-designer",
+            "reason": "Creates the page plan and copy from the business brief before any code is written.",
+            "notes": "Use the supplied business brief as the brief input. Produce the section plan (hero, proof, offer, FAQ, contact or booking call to action) and the copy as landing-page-copy.md. Do not invent testimonials, prices, guarantees, awards or licences. Mark any missing fact as a placeholder and list it in the handoff. If no brand brain exists, use the brief alone and state that in the notes."
+          },
+          {
+            "slug": "react-landing-page-builder",
+            "reason": "Turns the approved plan and copy into the source code the user asked for.",
+            "notes": "Feed the copy and plan from the previous step as the brief. Deliver the source as a project folder named landing-page-source/ with a README listing install, run and build commands. Keep placeholder content visible in the code so it cannot ship unnoticed. Keep the hero, contact method and call to action in a single config file so the owner can edit them without touching layout code. No images are supplied, so use labelled placeholders and do not claim any visual was inspected."
+          },
+          {
+            "slug": "landing-page-30-point-checker",
+            "reason": "Runs the first 30-point review on the built page.",
+            "notes": "Review the code output and rendered text only. No screenshots were supplied, so state in the report that visual layout was not inspected. Save the result as audit-report-1.md with the score and the five highest-impact fixes. Note any failing points that depend on missing facts so they are not counted as code faults."
+          },
+          {
+            "slug": "small-change-keeper",
+            "reason": "Applies fixes from the first review while changing only what the report asks for.",
+            "notes": "Give it audit-report-1.md and the source folder. Fix only the failing points. Do not rewrite sections that passed, do not add claims, and do not change the copy meaning. Record each change in change-log.md with the report point it addresses. Where a fix needs a missing business fact, leave the placeholder and flag it rather than inventing content."
+          },
+          {
+            "slug": "landing-page-30-point-checker",
+            "reason": "Explicit recheck of the fixed page, so the fixes are proven rather than assumed.",
+            "notes": "This is the single recheck pass. Compare against audit-report-1.md and the change-log, and save the result as audit-report-2.md. List any point that still fails with the reason. Do not loop again automatically; anything still failing goes to the handoff."
+          },
+          {
+            "slug": "page-metadata-fixer",
+            "reason": "Adds or corrects titles, descriptions, share cards and canonical links in the source, which is the SEO baseline for a new page.",
+            "notes": "Point it at landing-page-source/. Write a unique title and meta description from the approved copy, a canonical URL set to a placeholder domain the user must confirm, and share-card tags using a placeholder image path. Record the edits in seo-metadata-changes.md. Do not invent a domain or business address."
+          },
+          {
+            "slug": "page-seo-optimizer",
+            "reason": "Checks the SEO result after metadata fixes and reports what still needs attention.",
+            "notes": "Run it on the built page. Save seo-report.md with on-page, speed and structured data findings. If the user asked for a particular search term, use it as the target; otherwise state that no target keyword was supplied and skip keyword-match scoring. Do not claim rankings or search volume."
+          },
+          {
+            "slug": "human-review-gate",
+            "reason": "Stops the pack at a human sign-off before anything counts as done or gets published.",
+            "notes": "Give it the source changes, audit-report-2.md and seo-report.md. Produce publish-handoff.md listing the open placeholders, the failing points that remain, the domain and hosting still to be confirmed, and the exact step the user must authorise. Publishing, sending or scheduling needs concrete user authorization at execution, so the handoff must end with a request for that authorization and not with a publish action."
+          }
+        ],
+        "questionIds": [
+          "delivery"
+        ],
+        "assumptions": [
+          "The business name, offer, audience, prices, contact details, location and any proof points were not supplied, so all remain placeholders.",
+          "No existing page, screenshots, brand brain or competitor material was supplied, so no existing-page audit or reference comparison is included.",
+          "Source code is delivered as a React project because the request asks for source code and the catalogue offers a React builder.",
+          "The hosting platform and final domain are not specified and must be confirmed before publishing.",
+          "No target search term was supplied; SEO checks use general on-page standards unless the user provides one.",
+          "No recurring schedule or automation is requested, so no recurring agent is included.",
+          "Nothing in this pack has been executed; all outputs are planned deliverables pending runner execution."
+        ],
+        "source": "ai",
+        "missing": [
+          {
+            "type": "brief",
+            "steps": [
+              1
+            ]
+          }
+        ],
+        "dependencies": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ]
+        ],
+        "bindings": [
+          {
+            "step": 2,
+            "from": 1,
+            "type": "brief",
+            "instruction": "Combine the earlier page copy, design direction and original brief into the implementation brief. Preserve offer facts and all constraints."
+          },
+          {
+            "step": 3,
+            "from": 2,
+            "type": "landing_page",
+            "instruction": "Render the latest generated source and review that built page, preserving its copy and layout. If a browser is unavailable, mark visual checks not run."
+          },
+          {
+            "step": 4,
+            "from": 2,
+            "type": "codebase",
+            "instruction": "Use the generated source project as the codebase. Confirm files exist before editing."
+          },
+          {
+            "step": 5,
+            "from": 4,
+            "type": "landing_page",
+            "instruction": "Render the latest generated source and review that built page, preserving its copy and layout. If a browser is unavailable, mark visual checks not run."
+          },
+          {
+            "step": 6,
+            "from": 4,
+            "type": "codebase",
+            "instruction": "Use the generated source project as the codebase. Confirm files exist before editing."
+          },
+          {
+            "step": 7,
+            "from": 6,
+            "type": "landing_page",
+            "instruction": "Render the latest generated source and review that built page, preserving its copy and layout. If a browser is unavailable, mark visual checks not run."
+          }
+        ],
+        "warnings": []
+      }
+    },
+    {
+      "id": "landing-existing",
+      "goal": "Improve my existing Shopify landing page using a competitor screenshot. Audit the current page first, rewrite and build Shopify files, check the result and prepare a publishing handoff.",
+      "model": "claude-haiku-5-5",
+      "cost": 0.002947,
+      "plan": {
+        "title": "Audit, rebuild and check an existing Shopify landing page from a competitor screenshot",
+        "summary": "Audits the current Shopify page first, ranks its fixes, then plans and writes an improved version using only the competitor screenshot's layout cues and your own facts. The result is built as Shopify theme files, checked against a 30-point audit, and closed with a human sign-off gate and publishing handoff. Nothing is published, sent or scheduled by this pack; publishing requires explicit user authorization at execution.",
+        "steps": [
+          {
+            "slug": "website-brand-brain-builder",
+            "reason": "Creates the reusable brand profile (products, customers, voice, approved claims) that the layout and copy steps require, grounded in the existing page.",
+            "notes": "Run against the current live Shopify landing page URL or capture. Record which claims come from the page itself and mark any unverified claim as unapproved. Save the profile as brand_brain for later steps; do not add facts the page does not show."
+          },
+          {
+            "slug": "product-page-screenshot-auditor",
+            "reason": "Audits the current page first, as requested, to establish the baseline of what blocks shoppers before any rewrite.",
+            "notes": "Use the full-page capture of the existing Shopify landing page as store_capture. Output the score out of 100, blockers and test candidates, saved as audit_report_baseline. Only report what is visible in the capture. Do not infer hidden sections or claim unseen content was inspected."
+          },
+          {
+            "slug": "page-issue-sorter",
+            "reason": "Sorts the baseline audit into fix now, investigate, test or tracking so the rewrite targets the highest-impact problems first.",
+            "notes": "Input is the baseline audit_report. Keep the order it produces. Mark anything tagged investigate or test as out of scope for the rewrite unless the user chooses otherwise, and pass the fix-now list to the layout step."
+          },
+          {
+            "slug": "competitor-landing-layout",
+            "reason": "Plans the improved page's section order and layout from the competitor screenshot, then fills it with your own words and facts.",
+            "notes": "Attach the competitor screenshot as reference_set. Use only the section structure and visual hierarchy it shows; do not copy any competitor text, images or claims. Fill each section from brand_brain and the fix-now list. If the screenshot is missing or unreadable, stop and request it rather than inventing a layout. Output page_layout_spec and landing_page, named landing_page_v2."
+          },
+          {
+            "slug": "shopify-landing-page-builder",
+            "reason": "Turns the approved landing_page copy and layout into Shopify files the store can load.",
+            "notes": "Use landing_page_v2 as input. Keep the existing theme and product data; produce a section or template file set and install steps. Name files for the new landing page template (for example landing-page-v2.liquid and a matching section file) and list every file to upload. Do not change live theme settings."
+          },
+          {
+            "slug": "landing-page-30-point-checker",
+            "reason": "Checks the rebuilt page against the same standard as the baseline so improvement is measured, not assumed.",
+            "notes": "Run on landing_page_v2 with brand_brain and the design_direction from the layout step. Compare the score and blockers with audit_report_baseline. Any failed point that is in fix-now should return to the builder once, and the recheck is limited to one more pass, with a hard stop after two."
+          },
+          {
+            "slug": "human-review-gate",
+            "reason": "Requires a named human to sign off the code and copy before anything counts as done and before any publishing.",
+            "notes": "Input is the Shopify file set from the builder. Produce a one-page review listing the files, the baseline-to-v2 score change, the open risks and the publishing steps. Publishing to the live store, sending or scheduling requires explicit user authorization at execution time; this gate does not grant it."
+          }
+        ],
+        "questionIds": [
+          "reference",
+          "delivery"
+        ],
+        "assumptions": [
+          "The current Shopify landing page can be captured in full and its URL or capture is supplied as the existing-page input.",
+          "The competitor screenshot is supplied as reference_set. Its content is treated as a layout cue only; no competitor text, images or claims are reused.",
+          "No competitor screenshot content has been seen or inspected by this pack; the runner must confirm the screenshot is attached before the layout step runs.",
+          "Store facts, product data and approved claims come only from the existing page and any user-provided brand file; missing facts are listed as open items rather than invented.",
+          "The Shopify theme name, access level and whether a new template or section is wanted are not known; the builder must list install steps for the user to apply.",
+          "Publishing, sending or scheduling is not authorized by this pack and needs concrete user approval at execution."
+        ],
+        "source": "ai",
+        "missing": [
+          {
+            "type": "web_page",
+            "steps": [
+              1
+            ]
+          },
+          {
+            "type": "store_capture",
+            "steps": [
+              2
+            ]
+          },
+          {
+            "type": "reference_set",
+            "steps": [
+              4
+            ]
+          },
+          {
+            "type": "code_change",
+            "steps": [
+              7
+            ]
+          }
+        ],
+        "dependencies": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            0,
+            5
+          ]
+        ],
+        "bindings": [],
+        "warnings": []
+      }
+    },
+    {
+      "id": "video-ads",
+      "goal": "Turn my customer reviews and product facts into three short video ad scripts, then check the claims and give my editor production directions.",
+      "model": "claude-haiku-5-5",
+      "cost": 0.0026478,
+      "plan": {
+        "title": "Three checked customer-review video ad scripts with editor directions",
+        "summary": "Build three short video ad scripts from the supplied customer reviews and product facts, then run line, read-aloud and claim checks, and convert the approved scripts into shot and edit directions for the editor. Nothing here has been run; the runner must supply the reviews and product facts, and the claims must be verified before any ad is published.",
+        "steps": [
+          {
+            "slug": "quote-video-ad-script",
+            "reason": "Writes the three short video ad scripts from real customer quotes and product facts, which is the core deliverable.",
+            "notes": "Run three times, one per script, each on a different buying reason from the reviews. Use only quotes and facts supplied in the inputs; do not add claims. Save as ad_script_01.md, ad_script_02.md and ad_script_03.md with a source note under each line that cites the review or fact it came from. Target roughly 15 to 30 seconds each."
+          },
+          {
+            "slug": "video-ad-script-line-checker",
+            "reason": "Scores each script for weak lines and gives a fix per line, so the scripts are tightened before the claim check.",
+            "notes": "Run on each of the three scripts separately. Save the output as line_check_01.md to line_check_03.md. Apply only the fixes that keep the sourced facts unchanged; flag any fix that would alter a fact back to the runner."
+          },
+          {
+            "slug": "ad-script-read-aloud-editor",
+            "reason": "Catches lines that trip when spoken aloud, which matters for voiceover and on-camera delivery.",
+            "notes": "Run on each revised script. Save as read_aloud_01.md to read_aloud_03.md. Keep every fact and quote wording intact; only change phrasing for speech rhythm and length."
+          },
+          {
+            "slug": "meta-ads-compliance-checker",
+            "reason": "Checks every product claim and quote against ad rules and flags anything that needs substantiation before launch.",
+            "notes": "Run on the three final scripts. Save as compliance_01.md to compliance_03.md. Any claim without a supplied source must be removed or marked as unverified; the runner must not publish until the user authorises publishing at execution. Note that no screenshots or pages were inspected unless provided."
+          },
+          {
+            "slug": "video-ad-shot-list-maker",
+            "reason": "Turns each approved script into timed shots and clip prompts that the editor can follow.",
+            "notes": "Run once per approved script. Save as shot_list_01.md to shot_list_03.md. Shots must show only what the script says; where footage is not supplied, mark the shot as needing filming or sourced footage rather than inventing it."
+          },
+          {
+            "slug": "video-ad-edit-planner",
+            "reason": "Gives the editor the cut list, caption windows, sound plan and export settings for each video.",
+            "notes": "Run once per script with its shot list. Save as edit_plan_01.md to edit_plan_03.md. Include a handoff note listing which claims must stay on screen with a source, and which shots are still missing footage."
+          }
+        ],
+        "questionIds": [
+          "delivery"
+        ],
+        "assumptions": [
+          "No customer reviews, product facts, footage or brand file were included in the request, so the runner must supply them before the steps run.",
+          "The requested deliverables are three short video ad scripts, claim checks and editor production directions; no VSL, long-form or image ads are needed.",
+          "Platform is assumed to be Meta-style short video ads, since the catalogue's compliance checker targets Meta ads; confirm if another platform is used.",
+          "The editor will receive scripts, shot lists and edit plans, but the final cut is not produced by this pack.",
+          "No publishing, sending or scheduling is authorised by this pack; that requires explicit user approval at execution."
+        ],
+        "source": "ai",
+        "missing": [
+          {
+            "type": "voc_reviews",
+            "steps": [
+              1
+            ]
+          },
+          {
+            "type": "product_data",
+            "steps": [
+              1,
+              5
+            ]
+          },
+          {
+            "type": "footage",
+            "steps": [
+              6
+            ]
+          }
+        ],
+        "dependencies": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ]
+        ],
+        "bindings": [],
+        "warnings": []
+      }
+    },
+    {
+      "id": "seo",
+      "goal": "Audit my business website for technical SEO, prioritize fixes and prepare titles, descriptions and structured markup. Give me a checked implementation handoff.",
+      "model": "claude-haiku-5-5",
+      "cost": 0.0024905,
+      "plan": {
+        "title": "Technical SEO audit, prioritized fixes, titles, descriptions and checked implementation handoff",
+        "summary": "Audit the business website for technical SEO, sort the findings into fix-now and test items, draft page titles, meta descriptions and structured markup for the pages that need them, then hand off a scoped implementation brief with checks and stop rules. Nothing has been run yet; the runner must complete each step against the live site.",
+        "steps": [
+          {
+            "slug": "technical-seo-auditor",
+            "reason": "Covers crawling, indexing, site structure, structured data, page experience and security, which matches the requested technical SEO audit.",
+            "notes": "Run against the business website URL supplied by the user. Produce an audit report, saved as technical-seo-audit.md, listing each finding with the page URL and the evidence seen (status codes, robots rules, canonical tags, sitemap status, schema presence, Core Web Vitals if available). Do not state any finding as confirmed unless the runner actually observed it on the site. Flag pages where access was blocked so they are not assumed clean."
+          },
+          {
+            "slug": "fix-now-or-test-sorter",
+            "reason": "Turns the raw audit findings into a ranked priority list so the most important technical fixes come first.",
+            "notes": "Take the technical-seo-audit.md findings and sort each one into fix now, look into, or test. Save the ranked output as seo-fix-priorities.md. Put indexing blockers, broken canonicals and missing or wrong titles at the top. Keep an explicit ignore or low-priority list so the user can see what was deliberately left out."
+          },
+          {
+            "slug": "title-and-meta-tag-writer",
+            "reason": "Prepares the new title tags and meta descriptions requested by the user for each page flagged in the priority list.",
+            "notes": "Write drafts only for pages in seo-fix-priorities.md that have missing, duplicate or weak titles and descriptions. Save as page-titles-and-descriptions.md with one row per URL showing the current value (if observed), the proposed title, the proposed description and the page aim. Keep titles and descriptions unique per page and do not copy competitor wording. Mark any claim that the user has not confirmed as needing approval before publishing."
+          },
+          {
+            "slug": "schema-markup-writer",
+            "reason": "Creates the structured markup deliverable for the business pages, such as Organization, LocalBusiness, WebSite or Service where they apply.",
+            "notes": "Use only schema types that match the actual page content found in the audit. Output JSON-LD snippets per page, saved as structured-data-snippets.json or one file per template, with the target URL noted beside each block. Do not invent addresses, phone numbers, ratings or reviews; leave placeholders marked as required inputs for the user to fill. The runner must validate each block in an official structured data testing tool and record the result in the handoff, and must not claim validation without that record."
+          },
+          {
+            "slug": "coding-agent-handoff-writer",
+            "reason": "Produces the checked implementation handoff so a developer or coding agent can apply the fixes with clear scope, checks and stop rules.",
+            "notes": "Combine seo-fix-priorities.md, page-titles-and-descriptions.md and structured-data-snippets.json into one handoff brief saved as seo-implementation-handoff.md. Scope it to the approved items only. Include a check list: re-crawl after changes, confirm titles and canonicals render, re-run the structured data test, confirm sitemap and robots status. Add stop rules: halt before any live publishing or site change until the user explicitly authorizes it, and halt if any placeholder data is still unresolved."
+          }
+        ],
+        "questionIds": [
+          "reference",
+          "delivery"
+        ],
+        "assumptions": [
+          "The user has not supplied the website URL or a list of key pages; the runner needs these before the audit can start.",
+          "No live site changes, publishing or scheduling are authorized; each change needs explicit user approval at execution.",
+          "No Search Console, analytics or crawl export was provided, so indexing and traffic claims are unverified until the runner gathers evidence.",
+          "Business facts such as address, phone, opening hours and reviews are not available and must be supplied by the user rather than invented.",
+          "No codebase or theme files were supplied, so the handoff will describe changes to be applied by the site owner or developer rather than code edits made directly."
+        ],
+        "source": "ai",
+        "missing": [
+          {
+            "type": "web_page",
+            "steps": [
+              1,
+              3,
+              4
+            ]
+          },
+          {
+            "type": "brief",
+            "steps": [
+              5
+            ]
+          }
+        ],
+        "dependencies": [
+          [
+            0,
+            1
+          ]
+        ],
+        "bindings": [],
+        "warnings": []
+      }
+    },
+    {
+      "id": "email",
+      "goal": "Create a five-email welcome sequence for new customers from my brand brief, then edit it for clarity and check its claims before I load it into my email tool.",
+      "model": "claude-haiku-5-5",
+      "cost": 0.002658,
+      "plan": {
+        "title": "Five-email welcome sequence: write, clarity edit, claim check, fix, launch check",
+        "summary": "Writes a five-email welcome sequence from the supplied brand brief, edits it for plain-language clarity, tests its product claims against the product facts, fixes the errors found, and runs a final pre-load check. Nothing is sent or scheduled; the user loads the approved copy into their own email tool by hand.",
+        "steps": [
+          {
+            "slug": "email-sequence-writer",
+            "reason": "Creates the five-email welcome sequence, which is the core deliverable.",
+            "notes": "Use the brand brief as the main input and add the brand profile if one exists. Ask for exactly five emails with send timing, subject lines, preview text and full body copy. Label the output as the welcome sequence draft so later steps can refer to each email by number."
+          },
+          {
+            "slug": "clear-before-clever-copy-checker",
+            "reason": "Delivers the requested clarity edit before any claim or send checks.",
+            "notes": "Run on all five emails. Keep the brand voice where it is clear and simplify confusing lines. Return a clarity score out of 100 for each email and the rewritten lines, so the runner can see what changed. Do not add new claims while simplifying."
+          },
+          {
+            "slug": "usp-claim-checker",
+            "reason": "Checks whether the sequence's product claims are real, unique and supported by the product facts.",
+            "notes": "Requires the product facts from the brief or a product sheet; if none are supplied, mark every factual claim as unverified rather than passing it. This skill tests one claim at a time, so run it on each product or benefit claim across the five emails, starting with the claims in email 1 and any price, shipping, guarantee or result claims. Output a pass or fail for each claim and list any claim that has no matching fact."
+          },
+          {
+            "slug": "email-mistake-fixer",
+            "reason": "Fixes small errors after the claim check, so the copy is clean before the final checks.",
+            "notes": "Apply fixes to the edited sequence only. Keep every claim the claim checker passed unchanged. Remove or soften any claim that failed the checker, and flag it for the user to approve. If the user wants tracking parameters removed from links, do it only when they ask."
+          },
+          {
+            "slug": "email-send-readiness-scorer",
+            "reason": "Gives the final ship or fix verdict before the user loads the sequence into their email tool.",
+            "notes": "Run on each of the five emails. Check word counts, subject lines, unresolved claim flags and CTA clarity. Give a ship or fix verdict for each email. Any email marked fix goes back to the mistake fixer. The verdict is advice only; the user decides what to load and does not schedule or send from this pack."
+          }
+        ],
+        "questionIds": [],
+        "assumptions": [
+          "The brand brief was named in the request but not attached. The runner must supply the brand brief as the required input before step 1 runs.",
+          "No brand profile was supplied, so brand voice and approved claims are unknown; the runner should use only what the brief states.",
+          "No product facts sheet was supplied; claims without support in the brief must be marked unverified.",
+          "The email tool, list size and send schedule were not named, so this pack does not set them up and does not assume any integration.",
+          "No performance data exists yet for a new welcome sequence, so no audit of results is included.",
+          "The user will load the approved emails into their tool manually; no sending, scheduling or publishing is authorised by this pack."
+        ],
+        "source": "ai",
+        "missing": [
+          {
+            "type": "brief",
+            "steps": [
+              1
+            ]
+          },
+          {
+            "type": "product_data",
+            "steps": [
+              3
+            ]
+          }
+        ],
+        "dependencies": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "bindings": [],
+        "warnings": []
+      }
+    },
+    {
+      "id": "report",
+      "goal": "Build a weekly KPI report from a sales spreadsheet, include a forecast and dashboard, check the calculations and give my team reusable files.",
+      "model": "claude-haiku-5-5",
+      "cost": 0.0025,
+      "plan": {
+        "title": "Weekly KPI report with forecast, dashboard and formula check",
+        "summary": "A four-step pack for a rerunnable weekly sales KPI report: build the report from the sales spreadsheet, audit its formulas, add the trend and forecast, then produce a shareable dashboard. Nothing has been run. The sales spreadsheet is not attached in this request, so the runner needs it before any step can execute.",
+        "steps": [
+          {
+            "slug": "recurring-kpi-report-maker",
+            "reason": "Creates the core weekly KPI workbook and the saved report that the team can rerun each week.",
+            "notes": "Use the sales spreadsheet as the source and pull the weekly KPIs the user names (for example revenue, orders, units, average order value, new versus repeat sales, and pipeline if present). Save the workbook as weekly_kpi_report.xlsx and the rerunnable report definition as weekly_kpi_report_template. Record the source file name, date range and column mapping so a teammate can rerun it without help. If the KPI list is not given, log that as an assumption and do not invent targets."
+          },
+          {
+            "slug": "spreadsheet-formula-auditor",
+            "reason": "Checks the calculations in the report before any forecast or dashboard is built on them.",
+            "notes": "Audit every formula in weekly_kpi_report.xlsx: broken references, wrong ranges, double counting, date-window errors, division by zero and totals that do not tie to the source rows. Output a fix list with cell locations. Apply only the fixes the runner can make from the source data, then record which fixes were made and which need the user's decision. Save the audit as kpi_formula_audit.md."
+          },
+          {
+            "slug": "trend-and-forecast-analyst",
+            "reason": "Adds the trend, seasonal read and forecast table that the report requires.",
+            "notes": "Run on the corrected weekly series from the audited workbook. Produce a forecast table for the next period with the method stated and the uncertainty range shown. Flag unusual spikes and state them as observations, not causes. Save the forecast as kpi_forecast.xlsx and the plain-language insights as kpi_trend_notes.md. If the history is too short for a seasonal read, say so and do not force a season."
+          },
+          {
+            "slug": "dashboard-builder",
+            "reason": "Turns the corrected numbers and forecast into one shareable dashboard for the team.",
+            "notes": "Build a single HTML dashboard from weekly_kpi_report.xlsx and kpi_forecast.xlsx, with charts, filters and tables that the team can open without the spreadsheet. Save it as weekly_kpi_dashboard.html. Show the audit status on the dashboard so readers know which figures were checked. Do not publish or share it outside the team without explicit user authorization at execution."
+          }
+        ],
+        "questionIds": [
+          "automation",
+          "delivery"
+        ],
+        "assumptions": [
+          "The sales spreadsheet is not attached to this request and must be supplied before the runner starts.",
+          "The specific KPIs, date range and any targets are not given and must be confirmed by the user.",
+          "The report is treated as recurring each week, but no runner or schedule has been set up; a recurring run needs both.",
+          "The dashboard is for internal team use only; sharing beyond the team needs explicit user authorization at execution.",
+          "Forecast method and error range will be chosen from the data at run time and stated in the output."
+        ],
+        "source": "ai",
+        "missing": [
+          {
+            "type": "brief",
+            "steps": [
+              1
+            ]
+          }
+        ],
+        "dependencies": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "bindings": [],
+        "warnings": []
+      }
+    },
+    {
+      "id": "hiring",
+      "goal": "Help me hire a customer support lead: write the role brief, create a scorecard and structured interview, design a work sample and check the assessment for fairness.",
+      "model": "claude-haiku-5-5",
+      "cost": 0.0019413000000000002,
+      "plan": {
+        "title": "Customer support lead hiring workflow pack",
+        "summary": "Assembles a sequenced process to write the role brief, build a scorecard and structured interview, design a work sample, and check the assessment for fairness. Uses catalogue slugs only; no run has occurred and no authorization to publish or send is implied.",
+        "steps": [
+          {
+            "slug": "ideal-candidate-profiler",
+            "reason": "Turns the role brief into a candidate profile to anchor the role brief content.",
+            "notes": "Use the customer support lead job description as the brief input. Output a profile of motives and fit for the support lead role; note that the profile informs the role brief but does not replace the written brief. Save as role-brief-input.md for the runner."
+          },
+          {
+            "slug": "role-skills-framework-builder",
+            "reason": "Defines key skills and what good looks like at each level for a support lead, which the scorecard needs.",
+            "notes": "Name the single role (customer support lead) and levels if known; if levels are unknown, record as an assumption and use one level. Output feeds the scorecard and interview questions. Save as support-lead-skills-framework.md."
+          },
+          {
+            "slug": "interview-process-planner",
+            "reason": "Sets the interview stages, who runs each stage, and what each checks.",
+            "notes": "Use the role brief. Produce stages with interviewer roles; do not name people unless the user supplies them. Save as interview-process-plan.md."
+          },
+          {
+            "slug": "interview-scorecard-builder",
+            "reason": "Creates scorecards, question bank and rating guide from the stage plan.",
+            "notes": "Input is the interview process plan. Produce scorecards tied to the skills framework with a rating guide and structured questions for each stage. Save as support-lead-scorecard-and-questions.md."
+          },
+          {
+            "slug": "work-sample-test-designer",
+            "reason": "Designs the work sample with a scoring guide and fairness checks, as requested.",
+            "notes": "Use the role brief. The sample should mirror real support lead tasks such as triaging a sample escalation or coaching a sample agent reply; use fictional scenarios only. Save as support-lead-work-sample.md with its scoring guide."
+          },
+          {
+            "slug": "assessment-fairness-check",
+            "reason": "Checks the work sample and interview assessment for fit and fair marking before use.",
+            "notes": "Input is the work sample document with its scoring guide and the scorecard. Output an audit report listing fixes; the runner applies only bounded fixes and records them. Save as assessment-fairness-audit.md."
+          }
+        ],
+        "questionIds": [],
+        "assumptions": [
+          "The role brief content (responsibilities, team size, reporting line, pay range, location) is not supplied and must be provided by the user before the brief is final.",
+          "No candidates, resumes or interview notes are included, so comparison and shortlisting steps are not part of this pack.",
+          "No publishing, sending or scheduling is authorized; the outputs are drafts for the hiring manager to review.",
+          "The hiring decision remains with the user; the catalogue skills are used only to draft and check materials.",
+          "Legal review of hiring practices and pay ranges is outside this pack and is not provided."
+        ],
+        "source": "ai",
+        "missing": [
+          {
+            "type": "brief",
+            "steps": [
+              1,
+              2,
+              3,
+              5
+            ]
+          }
+        ],
+        "dependencies": [
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "bindings": [],
+        "warnings": []
+      }
+    },
+    {
+      "id": "support",
+      "goal": "Clear a support backlog by grouping tickets, drafting replies and turning repeated problems into help articles. Check the drafts before a human sends them.",
+      "model": "claude-haiku-5-5",
+      "cost": 0.002508,
+      "plan": {
+        "title": "Support backlog clearing pack: group tickets, draft checked replies, publish repeat fixes as help ar",
+        "summary": "Runs the catalogue workflow in order: sort and group open tickets, draft replies, check each draft for promises, facts and tone before a human sends it, then turn repeated solved problems into help article drafts. Nothing is sent or published by this pack; a person approves every reply and article.",
+        "steps": [
+          {
+            "slug": "support-ticket-sorter",
+            "reason": "Groups the backlog into problem clusters, ranks severity and routes each group, so the rest of the run works on repeated problems rather than single tickets.",
+            "notes": "Input is the exported open-ticket text pasted as source text. Output a spreadsheet named backlog-groups.xlsx with one row per ticket: ticket ID, group label, severity, owner or route, and whether it is a repeat of an existing group. Keep ticket IDs so every later draft can be traced back to its source ticket. Flag any ticket with missing details instead of guessing them."
+          },
+          {
+            "slug": "customer-reply-drafter",
+            "reason": "Drafts a reply for each ticket group or ticket that needs one, using the situation in the ticket text.",
+            "notes": "Use the groups from backlog-groups.xlsx. Write one draft per ticket or per shared group, labelled with the ticket IDs it covers. Do not promise refunds, dates, credits or fixes that the ticket text does not confirm; mark those as open items for the human to decide. Output file: reply-drafts.md. Drafts are not ready to send until step 3 has checked them."
+          },
+          {
+            "slug": "angry-customer-reply-checker",
+            "reason": "Checks each draft against the original complaint for unsupported promises, factual errors and tone problems, and returns a repaired draft. This is the pre-send check before a human sends anything.",
+            "notes": "Compare every draft with its source ticket text. Any commitment not in the ticket or in the user's supplied policy is removed or turned into a flagged question. Output checked-reply-drafts.md with each draft marked pass, repaired or hold, plus feedback-notes listing what changed and why. Drafts marked hold must not be sent until a human resolves them. The checker does not send anything."
+          },
+          {
+            "slug": "solved-ticket-help-page-writer",
+            "reason": "Turns problems that recur across solved tickets into help articles, so future tickets on the same issue can be answered by a page.",
+            "notes": "Use only groups marked as repeats in backlog-groups.xlsx and tickets that were actually solved, as shown in the ticket text. Each article gets steps, what the customer should see, and a fix for next time. Output help-article-drafts.md, one article per repeated problem, with the source ticket IDs listed at the bottom of each article. Articles are drafts for human review and publishing; do not publish them from this pack."
+          }
+        ],
+        "questionIds": [],
+        "assumptions": [
+          "The user will supply the open and solved ticket text as pasted source text; no tickets were provided in the request, so the pack cannot draft or check anything until they are supplied.",
+          "No ticket system, help desk or publishing tool connection is available, so the pack works on exported text only and does not read or write live tickets.",
+          "Refund, credit, compensation and policy details are not known; drafts must flag them for a human rather than state them.",
+          "A human reviews and sends every reply and publishes every help article; no step in this pack sends, publishes or schedules anything.",
+          "Repeat problems are identified from the supplied tickets only; a larger history may reveal more repeats.",
+          "No competitor text, screenshots or external sources are used or assumed to have been inspected."
+        ],
+        "source": "ai",
+        "missing": [
+          {
+            "type": "source_text",
+            "steps": [
+              1
+            ]
+          },
+          {
+            "type": "question",
+            "steps": [
+              2,
+              4
+            ]
+          },
+          {
+            "type": "voc_reviews",
+            "steps": [
+              3
+            ]
+          }
+        ],
+        "dependencies": [
+          [
+            1,
+            2
+          ]
+        ],
+        "bindings": [],
+        "warnings": []
+      }
+    },
+    {
+      "id": "automation",
+      "goal": "Design an n8n automation that turns form submissions into checked CRM records, prevents duplicates, retries safely and reports failures. Include reusable setup files.",
+      "model": "claude-haiku-5-5",
+      "cost": 0.0028909,
+      "plan": {
+        "title": "n8n form-to-CRM intake pack with duplicate prevention, safe retries and failure reporting",
+        "summary": "A four-step pack: design the n8n flow from form submission to checked CRM record, split reusable sub-workflows, add a failure handler with alerts and bounded retries, then audit the CRM for duplicates and missing fields without changing data. Nothing here has been run, and no CRM, form tool, credentials or alert channel have been confirmed.",
+        "steps": [
+          {
+            "slug": "n8n-workflow-designer",
+            "reason": "Lays out the main pattern: form webhook trigger, validation, normalised email/company keys, duplicate lookup, create-or-update, then confirmation.",
+            "notes": "Produce the main workflow file, for example form-to-crm-main.json, and a node map in form-to-crm-design.md. Include a Webhook or Form trigger, an idempotency key built from the normalised email plus the form submission ID, a search-before-create branch so duplicates update the existing contact instead of creating one, and a Set node that rejects records missing required fields before any CRM write. Name the CRM and form tool only if the user states them; otherwise leave placeholders and mark them as required inputs."
+          },
+          {
+            "slug": "n8n-sub-workflow-builder",
+            "reason": "Splits the long flow into reusable parts with clear inputs, so other workflows and agents can call the same validation and upsert logic.",
+            "notes": "Create three sub-workflows with explicit input and output schemas: crm-validate-normalise.json (accepts raw form fields, returns cleaned record or validation errors), crm-dedupe-upsert.json (accepts the cleaned record and a CRM connection reference, returns action taken: created, updated or skipped), and crm-alert-failure.json (accepts workflow name, execution ID, error message and record key). Document each input in a setup-inputs.md file so the parent workflow can call it without knowing internals. Do not put credentials inside the files; reference n8n credential names only."
+          },
+          {
+            "slug": "n8n-failure-handler",
+            "reason": "Adds the error workflow, retry settings and failure alerts so breakage is visible and fixable instead of silent.",
+            "notes": "Configure the main workflow's error workflow setting to point at the failure reporter. Use n8n node-level retry on the CRM create and update nodes with a small capped retry count and increasing wait, and retry only on transient HTTP codes such as 429 and 5xx; do not retry validation failures or 4xx errors, since retrying those can create duplicates or repeat bad data. Write the error payload with execution ID, node name, input key and timestamp to a failure log, and send an alert only through a channel the user confirms. Output files: failure-handler-settings.md and failure-log-schema.md."
+          },
+          {
+            "slug": "crm-hygiene-auditor",
+            "reason": "Checks the CRM after the flow has run, looking for duplicate contacts, missing fields and stale stages. It is read-only, so it confirms the intake is correct without changing live data.",
+            "notes": "Run it against the CRM connection after a test batch of submissions. Ask it to report duplicate email matches, records created by the intake flow that lack required fields, and any mismatch between form fields and CRM fields. Save the output as crm-hygiene-report.md. Any merge or fix it suggests needs a separate, explicit user approval before anything is changed, and the customer-record-merger skill should not be used unless the user authorises live changes."
+          }
+        ],
+        "questionIds": [
+          "reference",
+          "delivery"
+        ],
+        "assumptions": [
+          "The CRM and form tool are not named; the designer will use placeholders until the user supplies them.",
+          "No credentials, API keys or live CRM access have been provided, so no connection has been tested.",
+          "Alerts will go to a channel the user confirms (for example email or chat); none has been chosen.",
+          "The workflow is triggered by form submissions, not a schedule, so no recurring agent or runner is needed.",
+          "No workflow has been executed; all files are design outputs for the user to review and import.",
+          "Duplicate matching uses email as the primary key; the user's CRM may need a different key."
+        ],
+        "source": "ai",
+        "missing": [
+          {
+            "type": "brief",
+            "steps": [
+              1
+            ]
+          }
+        ],
+        "dependencies": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "bindings": [],
+        "warnings": []
+      }
+    },
+    {
+      "id": "recurring",
+      "goal": "Create a recurring agent that checks my landing page each week, tracks changed evidence and recommends fixes. Keep a run history and wait for approval before publishing changes.",
+      "model": "claude-haiku-5-5",
+      "cost": 0.0027665,
+      "plan": {
+        "title": "Weekly landing page check with approval-gated fixes",
+        "summary": "A small, approval-gated loop: define the recurring routine and stop rules, set the publish gate, audit the live landing page against its last saved baseline, score it, rank fixes by impact, and require a human sign-off before any change is published. Nothing here has been run; the weekly runner, schedule, page location and run-history storage are not yet confirmed.",
+        "steps": [
+          {
+            "slug": "marketing-routine-builder",
+            "reason": "The request asks for a recurring agent, so the weekly loop, its checks and its stop conditions must be defined first.",
+            "notes": "Define one weekly run for the landing page: fetch the page, compare with the last saved baseline, record changed evidence, produce ranked fix recommendations, then stop. Specify that each run writes a dated history entry (run date, page version, evidence changed, scores, fixes proposed, approval status). Do not schedule anything until the user confirms the runner and schedule."
+          },
+          {
+            "slug": "ai-approval-gate-designer",
+            "reason": "The user requires approval before publishing, so the action rules and escalation points must be fixed before any run can recommend or prepare a change.",
+            "notes": "Gate rules: the agent may observe, audit, compare and recommend freely; it may not publish, deploy or edit the live page without explicit approval recorded for that specific change set and run. Each recommendation is queued with its evidence and the approval decision is logged in the run history. Escalate if the page content or offer changes materially between runs, if a claim lacks support, or if a fix touches checkout or pricing."
+          },
+          {
+            "slug": "landing-page-auditor",
+            "reason": "Establishes the conversion review of the current landing page, which is the core evidence source each week.",
+            "notes": "Run against the landing page as it appears at the reference URL or capture supplied by the user. Save the output as the weekly audit report, and mark every finding as new, unchanged or resolved versus the previous run's report. If no earlier report exists, treat this run as the baseline and say so. Do not state anything about screenshots that were not supplied."
+          },
+          {
+            "slug": "landing-page-30-point-checker",
+            "reason": "Provides a consistent 30-point score so week-over-week changes can be compared on the same scale.",
+            "notes": "Use the same 30 points every week so scores are comparable. Record the score and each failed point in the run history. Where the page or brand profile is missing, mark points as not assessed rather than passing them."
+          },
+          {
+            "slug": "page-issue-sorter",
+            "reason": "Turns the combined findings into a ranked, approvable fix list with clear fix-now, investigate and test categories.",
+            "notes": "Sort only the findings that changed or remain open. Output a fix list the user can approve item by item, each with its evidence reference and the run it first appeared in. Items marked investigate or test do not become publish candidates until a person has reviewed them."
+          },
+          {
+            "slug": "human-review-gate",
+            "reason": "Provides the final sign-off step so no recommended change counts as done or goes live without a person approving it.",
+            "notes": "Present the one-page review with the week's changed evidence, score movement and the approved and rejected fixes. Record the approver, date and decision in the run history. Only changes with an explicit approval entry may be passed to publishing, and publishing itself needs concrete user authorization at execution time."
+          }
+        ],
+        "questionIds": [
+          "automation",
+          "reference"
+        ],
+        "assumptions": [
+          "The landing page URL or a saved capture is supplied by the user; it is not in the request and must be provided before the first audit.",
+          "The weekly runner, schedule time and timezone are not defined; the agent must not be scheduled until the user confirms them.",
+          "The run history storage location is not specified; the user must choose where dated entries are kept.",
+          "No brand profile, ad copy or customer reviews were supplied, so brand-fit and claim-support points may be marked not assessed.",
+          "No earlier audit baseline exists; the first run establishes it.",
+          "Publishing tools and platform access are not described in the request and must not be assumed; any publish step needs explicit approval and authorization at execution."
+        ],
+        "source": "ai",
+        "missing": [
+          {
+            "type": "brief",
+            "steps": [
+              1,
+              2
+            ]
+          },
+          {
+            "type": "landing_page",
+            "steps": [
+              3,
+              4
+            ]
+          },
+          {
+            "type": "code_change",
+            "steps": [
+              6
+            ]
+          }
+        ],
+        "dependencies": [
+          [
+            3,
+            4
+          ]
+        ],
+        "bindings": [],
+        "warnings": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "checked": "2026-10-22T05:28:32.916Z",
+  "build": {
+    "status": "pass",
+    "blocks": 4356,
+    "editorialPages": 4356,
+    "prerenderedPages": 4476,
+    "distFiles": 18603
+  },
+  "tests": {
+    "unit": 45,
+    "composerBrowser": 17,
+    "freshFreeBrowser": 20,
+    "visualChecks": 6
+  },
+  "fixedBackend": "gpt-6.1-sol",
+  "requestCharacters": 10000,
+  "contextCharacters": 4000,
+  "voiceMinutesPerVisit": 5,
+  "voiceValidation": "Synthetic recognition/timer/permission-denial tests and real Chrome policy inspection; no real microphone audio captured",
+  "workerPackaging": "dry-run passed; no deployment",
+  "clientCredentialScan": {
+    "knownKeysChecked": 4,
+    "leaks": []
+  },
+  "downloadPayloads": "pass",
+  "publicDeployment": false,
+  "productionMicrophonePolicy": "same-origin microphone allowed; browser user permission still required",
+  "privacyCopy": "Planning runs in browser; browser speech-service disclosure retained"
+}

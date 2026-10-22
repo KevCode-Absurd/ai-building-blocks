@@ -21,7 +21,8 @@ export function BusinessDrawer({ onClose, toast }: { onClose: () => void; toast:
     <Drawer label="Your context" top={<span className="mono">saved in this browser only</span>} onClose={close}>
       <form className="biz" onSubmit={(e) => { e.preventDefault(); close(); toast(filled ? "Saved. Your copies and downloads now include your context." : "Nothing saved yet."); }} data-testid="business-form">
         <h2 className="title" style={{ marginTop: 0 }}>Tell your AI once</h2>
-        <p className="small biz-lead">Save the facts you want your AI to use. They are added to your copied prompts and downloaded packs. Fill in what matters for your work and leave the rest blank.</p>
+        <p className="small biz-lead">Save the facts you want your AI to use. They are added to your copied prompts and downloaded packs. Fill in what matters for your studies or work and leave the rest blank.</p>
+        <p className="small"><a href="/templates/work-context.txt" download>Download a context template</a> for your goals, sources and checks. Keep full source files on your device and share them with your chosen AI tool when needed.</p>
         {FIELDS.map((f) => (
           <label key={f.id} className="biz-field">
             <span>{f.label}</span>

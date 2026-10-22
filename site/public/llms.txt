@@ -5,11 +5,11 @@
 ## Key facts
 
 - Free to use, no account needed.
-- 4040 skills, workflows and prompts in 58 jobs, 305 minds and 36 mini tools.
+- 4054 skills, workflows and prompts in 60 jobs, 305 minds and 36 mini tools.
 - Imported skills are copied as they are from open-licence GitHub repos (MIT, Apache 2.0, BSD, CC BY, CC BY-SA), credited on their page with a link to the original.
 - Minds are AIs built from a person's public work, with their sources listed. They are not the person. Minds that invest teach frameworks only, never buy or sell advice.
 - Skills that scrape websites or need a paid outside account say so on their page.
-- Last built 2026-10-21.
+- Last built 2026-10-22.
 
 ## How to use a skill
 
@@ -29,7 +29,7 @@
 
 - [Build and ship software](https://useaiblocks.com/llms/build-software.txt): 331 skills and workflows, such as Breaking change reviewer and Code explainer for beginners
 - [Plan your strategy](https://useaiblocks.com/llms/plan-strategy.txt): 199 skills and workflows, such as Decision priority planner and Big problem splitter
-- [Handle money and investing](https://useaiblocks.com/llms/money-and-investing.txt): 164 skills and workflows, such as Business asset value estimator and Debt payment coverage checker
+- [Handle money and investing](https://useaiblocks.com/llms/money-and-investing.txt): 165 skills and workflows, such as Business asset value estimator and Debt payment coverage checker
 - [Teach and train people](https://useaiblocks.com/llms/teach-and-train.txt): 148 skills and workflows, such as Lesson opener planner and Timed practice session planner
 - [Test and fix code](https://useaiblocks.com/llms/test-and-fix-code.txt): 142 skills and workflows, such as Bug investigation planner and Fragile code spotter
 - [Track your numbers](https://useaiblocks.com/llms/track-numbers.txt): 132 skills and workflows, such as Numbers drop explainer and Per-order profit calculator
@@ -43,7 +43,7 @@
 - [Get found in search and AI answers](https://useaiblocks.com/llms/get-found-in-search.txt): 95 skills and workflows, such as Customer question keyword finder and Customer FAQ writer
 - [Ship and host your app](https://useaiblocks.com/llms/ship-and-host.txt): 92 skills and workflows, such as Domain and redirect layout planner and Release day rollback planner
 - [Check contracts and rules](https://useaiblocks.com/llms/check-contracts.txt): 90 skills and workflows, such as Ad claim sorter and NDA risk review
-- [Plan stock, shipping and suppliers](https://useaiblocks.com/llms/plan-supply-chain.txt): 89 skills and workflows, such as Supplier quote table builder and 3PL bid and agreement builder
+- [Plan stock, shipping and suppliers](https://useaiblocks.com/llms/plan-supply-chain.txt): 90 skills and workflows, such as Supplier quote table builder and 3PL bid and agreement builder
 - [Design things people love](https://useaiblocks.com/llms/design-work.txt): 88 skills and workflows, such as Brand mark system planner and Design brief rules writer
 - [Research a topic properly](https://useaiblocks.com/llms/research-topics.txt): 84 skills and workflows, such as Fact and opinion sorter and Research question outliner
 - [Keep your code secure](https://useaiblocks.com/llms/secure-code.txt): 83 skills and workflows, such as Code change security review and Threat list maker
@@ -51,17 +51,17 @@
 - [Make video ads](https://useaiblocks.com/llms/make-video-ads.txt): 78 skills and workflows, such as 3D how-it-works video clip prompt writer and 3D how-it-works video ad script writer
 - [Make an offer people want](https://useaiblocks.com/llms/make-offer.txt): 75 skills and workflows, such as After-sale offer planner and Offer bonus planner
 - [Lead and manage people](https://useaiblocks.com/llms/lead-people.txt): 75 skills and workflows, such as Difficult conversation repair planner and Employee feedback writer
-- [Set up AI to work for you](https://useaiblocks.com/llms/set-up-ai.txt): 68 skills and workflows, such as AI coding agent rules writer and AI model training debugger
+- [Set up AI to work for you](https://useaiblocks.com/llms/set-up-ai.txt): 71 skills and workflows, such as AI coding agent rules writer and AI model training debugger
 - [Write ad copy](https://useaiblocks.com/llms/write-ad-copy.txt): 65 skills and workflows, such as Ad angle planner and Ad call to action writer
 - [Test an idea before you build it](https://useaiblocks.com/llms/test-an-idea.txt): 65 skills and workflows, such as AI-fit problem checker and Business model assumption tester
 - [Write emails that get read](https://useaiblocks.com/llms/write-emails.txt): 65 skills and workflows, such as Cold email claim checker and Dull update email rewriter
 - [Build websites and web apps](https://useaiblocks.com/llms/build-websites.txt): 62 skills and workflows, such as Font pair shortlist maker and Website page structure planner
 - [Build a product people want](https://useaiblocks.com/llms/build-product.txt): 59 skills and workflows, such as Feature request screener and Launch scope cutter
+- [Make documents, sheets and slides](https://useaiblocks.com/llms/work-with-files.txt): 57 skills and workflows, such as Doc typo and term checker and Article draft editor
 - [Read your ad results](https://useaiblocks.com/llms/read-ad-results.txt): 55 skills and workflows, such as Ad survey results calculator and Ad results brief writer
-- [Make documents, sheets and slides](https://useaiblocks.com/llms/work-with-files.txt): 55 skills and workflows, such as Doc typo and term checker and Article draft editor
 - [Make image ads](https://useaiblocks.com/llms/make-image-ads.txt): 54 skills and workflows, such as 3D cutaway image ad maker and Accurate product image ad maker
 - [Set up your brand file](https://useaiblocks.com/llms/brand-file.txt): 46 skills and workflows, such as Brand guide builder and Brand voice one-pager writer
-- [Write and build a landing page](https://useaiblocks.com/llms/write-landing-page.txt): 43 skills and workflows, such as Ad-matched landing page writer and Article-style landing page writer
+- [Write and build a landing page](https://useaiblocks.com/llms/write-landing-page.txt): 44 skills and workflows, such as Ad-matched landing page writer and Article-style landing page writer
 - [Plan what ads to test](https://useaiblocks.com/llms/plan-ad-tests.txt): 42 skills and workflows, such as Ad test brief writer and Ad test budget setter
 - [Study competitor ads](https://useaiblocks.com/llms/study-competitors.txt): 41 skills and workflows, such as Competitor ad opportunity finder and Competitor ad swipe file builder
 - [Run Google Ads](https://useaiblocks.com/llms/run-google-ads.txt): 40 skills and workflows, such as Search ads experiment planner and Bestseller Shopping campaign builder
@@ -84,7 +84,9 @@
 - [Turn speech into text and back](https://useaiblocks.com/llms/work-with-audio.txt): 14 skills and workflows, such as Cut a raw recording and get chapters and short clips and Make a voiceover and ship it in other languages
 - [Keep your store safe](https://useaiblocks.com/llms/protect-your-store.txt): 13 skills and workflows, such as Bot and AI agent access planner and Domain and certificate watch checker
 - [Test changes to your store](https://useaiblocks.com/llms/test-store-changes.txt): 12 skills and workflows, such as High-impact experiment planner and Heatmap and recording reader
+- [Study and check your understanding](https://useaiblocks.com/llms/study-and-practice.txt): 5 skills and workflows, such as Research literature comparison and Research paper evidence review
 - [Talk it through with great minds](https://useaiblocks.com/llms/think-with-minds.txt): 3 skills and workflows, such as Advisory council and Three-viewpoint decision brief
+- [Prepare job applications](https://useaiblocks.com/llms/find-a-job.txt): 1 skills and workflows, such as Resume and job application builder
 - [Minds](https://useaiblocks.com/llms/minds.txt): 305 minds, from founders and investors to writers and scientists
 
 ## Optional

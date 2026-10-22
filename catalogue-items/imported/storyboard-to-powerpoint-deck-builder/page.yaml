@@ -1,0 +1,15 @@
+thinking: medium
+thinking_why: It follows a set method with a few checks.
+new_slug: storyboard-to-powerpoint-deck-builder
+name: Storyboard to PowerPoint deck builder
+summary: Share your content, sources and audience. Get a storyboard and PowerPoint deck for a business talk, lesson or report.
+job: work-with-files
+headline: Storyboard to PowerPoint deck builder
+subhead: Build the story before choosing a style. This package turns a structured storyboard into PowerPoint and includes checks for the outline and file. It needs Node and npm packages. Render every slide and check the layout before presenting.
+when:
+  - You need an editable PowerPoint deck from a story or lesson outline.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Use launch-tools/USAGE.md for the complete sample storyboard and visible source-note finalizer. The finalizer is checked for the corporate-bright style.
+  - It works best when your AI can run Node and install the package dependencies on your own machine.

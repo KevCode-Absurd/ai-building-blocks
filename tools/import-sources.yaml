@@ -65,3 +65,10 @@
 - {clone: K-Dense-AI_scientific-agent-skills, by: K-Dense, repo: K-Dense-AI/scientific-agent-skills, path: skills}
 - {clone: awesome-copilot, by: GitHub Copilot community, repo: github/awesome-copilot, path: skills}
 # mgonto/executive-assistant-skills has no redistribution license. Its jobs are rebuilt by build-work-expansion.mjs.
+# Added 22 Oct for the five-audience launch. Only the reviewed procurement pattern is selected from Agent Blueprint.
+- {clone: jacquardlabs_study-skills, by: Jacquard Labs, repo: jacquardlabs/study-skills, path: skills}
+- {clone: artificialguybr_resume-ats-linkedin-optimizer, by: João Vitor Amaral, repo: artificialguybr/resume-ats-linkedin-optimizer}
+- {clone: agent-blueprint_agent-blueprint-skills, by: Agent Blueprint, repo: agent-blueprint/agent-blueprint-skills, path: plugins/agent-blueprint-skills/skills, only: procurement-rfx-processing}
+- {clone: Calvinkub_super_subagent_skill_Hackathon, by: Calvinkub, repo: Calvinkub/super_subagent_skill_Hackathon, path: skills, only: case-competition-slides}
+- {clone: vedraut_slidesage, by: Ved Raut, repo: vedraut/slidesage}
+- {clone: evilhill_equity-research-skill, by: evilhill, repo: evilhill/equity-research-skill}

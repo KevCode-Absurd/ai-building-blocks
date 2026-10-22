@@ -1,0 +1,2455 @@
+{
+  "status": "pass",
+  "checked_on": "2026-10-22",
+  "checks": 476,
+  "failures": [],
+  "packages": [
+    {
+      "slug": "storyboard-to-powerpoint-deck-builder",
+      "files": 52,
+      "sha256": "8ec2606920ba31159781778d50af7b4ff709ef3654988d1a907996d8a8797937"
+    },
+    {
+      "slug": "case-competition-slide-deck-builder",
+      "files": 12,
+      "sha256": "b58a7550915a94f28fa60d8963aad014c8cdb5f44dd6d8eb5a027410fcfefda0"
+    },
+    {
+      "slug": "research-paper-writer",
+      "files": 10,
+      "sha256": "96e6806004a126558788f9e82165f8c869e3e868fd421e08468933d8a6305dc2"
+    },
+    {
+      "slug": "equity-research-valuation-report-builder",
+      "files": 32,
+      "sha256": "c8e140c4c5ad7d7848cb1f8b942d75a4429d8ffe810b2de67fbad04813eb308a"
+    }
+  ],
+  "preserved_upstream_files": 112,
+  "artifact_sha256": {
+    "artifacts\\case-competition.pdf": "ff7507f41f996903b8da5217fbe43032e8a6d7e5aa53b888d78c1b8fc62788d6",
+    "artifacts\\case-competition.pptx": "074cc3cdbc0c30924c07ab2c24100520b38e396627ab45d9448112a1d76d66fc",
+    "artifacts\\equity-research.html": "ed4029fc07963d7b1665d1246cf0ab209fd1d19cda76009435496c098f2f9606",
+    "artifacts\\equity-research.pdf": "534aca19ef262b1cb0057b0b5c305398d34eaae5d5932a8b2ee53d195969a7c3",
+    "artifacts\\presentation.pdf": "fb93daa4ba873db1f794f421c90101de54a3e483c1d017648fe27611c66a6ede",
+    "artifacts\\presentation.pptx": "e4279d3f57d89bfe8e2711557d188d49c2f4450c2a53d388432b76d2e8956305",
+    "artifacts\\research-paper.docx": "3fff4f5185df6d204f0752d9a5e9caf4cc872dd89dc67ffcdc930c5519ac1b77",
+    "artifacts\\research-paper.pdf": "05790afa9ed8b486a5fcfaad7efa969625262ea5e9b5d5d553eb9b34a48f2cb4",
+    "artifacts\\sources\\S01.json": "fedfb9a0725ddbae955b37013ad7c4dfd6fbc8948f996a40d08fe249d3412bc5",
+    "artifacts\\sources\\S02.json": "ab01faf9cefff0fe0d5a592dae0806b5146151ff1f2393de63d94e6274b332d4",
+    "artifacts\\sources\\S03.json": "f900c3c21527df57e000ede1d08839c4b65ac503decffabd86544303fe3ec385",
+    "artifacts\\sources\\S04.json": "077a21aa990af50083877dc493c9c3005820fd7d4610723ab61537b17396ded1",
+    "artifacts\\sources\\S05.json": "4737f311ace1ea783296d55fad7710102a1dfc073101dc21d37f31f761492f51",
+    "artifacts\\valuation-result.json": "df581e7c705fdc3b59feb79d60f8299a55a3acaa560b35292916c8cfeaac2287"
+  },
+  "details": [
+    {
+      "name": "presentation slide count",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "presentation editable chart count",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "presentation slide 1 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "presentation slide 1 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "presentation slide 1 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "presentation slide 1 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "presentation slide 2 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "presentation slide 2 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "presentation slide 2 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "presentation slide 3 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "presentation slide 3 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "presentation slide 3 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "presentation slide 3 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "presentation slide 3 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "presentation slide 4 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "presentation slide 4 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "presentation slide 4 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "presentation slide 4 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "presentation slide 4 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "presentation slide 4 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "presentation slide 4 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "presentation slide 4 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "presentation slide 4 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "presentation slide 5 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "presentation slide 5 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "presentation slide 5 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "presentation slide 5 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "presentation slide 5 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "presentation slide 6 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "presentation slide 6 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "presentation slide 6 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "presentation slide 6 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "presentation slide 7 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "presentation slide 7 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "presentation slide 7 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "presentation slide 7 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "presentation slide 7 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "presentation slide 7 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "presentation slide 7 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "presentation slide 8 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "presentation slide 8 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "presentation slide 8 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "presentation slide 8 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "presentation slide 8 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "presentation slide bounds",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "presentation PDF count",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide count",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition editable chart count",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 1 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 1 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 1 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 1 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 2 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 2 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 2 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 2 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 2 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 2 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 2 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 2 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 2 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 2 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 2 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 2 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 2 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 2 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 2 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 3 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 3 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 3 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 3 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 3 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 3 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 3 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 4 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 4 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 4 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 4 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 4 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 4 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 5 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 5 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 5 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 5 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 5 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 5 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 6 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 6 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 6 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 6 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 6 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 6 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 7 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 7 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 7 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 7 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 7 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 7 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 7 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 7 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 7 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 7 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 7 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 7 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 7 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 7 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 7 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 7 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 7 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 8 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 8 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 8 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 8 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 8 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 8 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 8 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 8 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 8 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 8 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 8 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 8 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 8 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 8 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 9 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 9 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 9 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 9 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 9 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 9 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 10 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 10 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 10 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 10 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 10 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide 10 no unresolved chart placeholder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition slide bounds",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "case-competition PDF count",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case chart values match cash-flow model",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "presentation slide 3 visible sources",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "presentation slide 5 visible sources",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "research paper page count",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "paper retained content Abstract",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "paper retained content Introduction",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "paper retained content Methods",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "paper retained content Results",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "paper retained content Discussion",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "paper retained content References",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "paper retained content 291.600",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "paper retained content 180.525",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "paper retained content 38.09%",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "paper retained content 571",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "paper retained content Bishop",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "paper retained content Azar",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "FIFO conserves tasks",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "FIFO waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "FIFO waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "FIFO waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "FIFO waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "FIFO waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "FIFO waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "FIFO waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "FIFO waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "FIFO waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "FIFO waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "FIFO waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "FIFO waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "FIFO waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "FIFO waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "FIFO waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "FIFO waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "FIFO waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "FIFO waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "FIFO waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "FIFO waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "FIFO waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "FIFO waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "FIFO waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "FIFO waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "FIFO waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "FIFO waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "FIFO waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "FIFO waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "FIFO waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "FIFO waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "FIFO waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "FIFO waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "FIFO waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "FIFO waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "FIFO waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "FIFO waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "FIFO waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "FIFO waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "FIFO waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "FIFO waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "FIFO independent mean",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "FIFO independent makespan",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "SPT conserves tasks",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "SPT waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "SPT waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "SPT waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "SPT waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "SPT waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "SPT waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "SPT waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "SPT waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "SPT waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "SPT waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "SPT waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "SPT waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "SPT waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "SPT waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "SPT waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "SPT waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "SPT waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "SPT waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "SPT waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "SPT waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "SPT waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "SPT waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "SPT waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "SPT waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "SPT waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "SPT waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "SPT waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "SPT waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "SPT waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "SPT waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "SPT waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "SPT waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "SPT waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "SPT waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "SPT waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "SPT waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "SPT waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "SPT waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "SPT waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "SPT waiting recurrence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "SPT independent mean",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "SPT independent makespan",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "DCF perpetuity EV",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "DCF equity bridge",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "DCF per share",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "attractive price",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "high-conviction price",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent sensitivity 0.09/-0.01",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent sensitivity 0.09/0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent sensitivity 0.09/0.01",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent sensitivity 0.1/-0.01",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent sensitivity 0.1/0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent sensitivity 0.1/0.01",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent sensitivity 0.11/-0.01",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent sensitivity 0.11/0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent sensitivity 0.11/0.01",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "bear independent IRR",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "bear independent holding return",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "base independent IRR",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "base independent holding return",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "bull independent IRR",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "bull independent holding return",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probability-weighted exit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "weighted cash-flow IRR",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "equity strict audit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "equity PDF 16 pages",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition.pdf page 1 content",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition.pdf page 1 no unresolved placeholders",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition.pdf page 2 content",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition.pdf page 2 no unresolved placeholders",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition.pdf page 3 content",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition.pdf page 3 no unresolved placeholders",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition.pdf page 4 content",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition.pdf page 4 no unresolved placeholders",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition.pdf page 5 content",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition.pdf page 5 no unresolved placeholders",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition.pdf page 6 content",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition.pdf page 6 no unresolved placeholders",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition.pdf page 7 content",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition.pdf page 7 no unresolved placeholders",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition.pdf page 8 content",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition.pdf page 8 no unresolved placeholders",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition.pdf page 9 content",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition.pdf page 9 no unresolved placeholders",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition.pdf page 10 content",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition.pdf page 10 no unresolved placeholders",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "equity-research.pdf page 1 content",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "equity-research.pdf page 1 no unresolved placeholders",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "equity-research.pdf page 2 content",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "equity-research.pdf page 2 no unresolved placeholders",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "equity-research.pdf page 3 content",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "equity-research.pdf page 3 no unresolved placeholders",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "equity-research.pdf page 4 content",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "equity-research.pdf page 4 no unresolved placeholders",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "equity-research.pdf page 5 content",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "equity-research.pdf page 5 no unresolved placeholders",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "equity-research.pdf page 6 content",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "equity-research.pdf page 6 no unresolved placeholders",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "equity-research.pdf page 7 content",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "equity-research.pdf page 7 no unresolved placeholders",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "equity-research.pdf page 8 content",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "equity-research.pdf page 8 no unresolved placeholders",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "equity-research.pdf page 9 content",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "equity-research.pdf page 9 no unresolved placeholders",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "equity-research.pdf page 10 content",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "equity-research.pdf page 10 no unresolved placeholders",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "equity-research.pdf page 11 content",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "equity-research.pdf page 11 no unresolved placeholders",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "equity-research.pdf page 12 content",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "equity-research.pdf page 12 no unresolved placeholders",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "equity-research.pdf page 13 content",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "equity-research.pdf page 13 no unresolved placeholders",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "equity-research.pdf page 14 content",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "equity-research.pdf page 14 no unresolved placeholders",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "equity-research.pdf page 15 content",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "equity-research.pdf page 15 no unresolved placeholders",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "equity-research.pdf page 16 content",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "equity-research.pdf page 16 no unresolved placeholders",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "presentation.pdf page 1 content",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "presentation.pdf page 1 no unresolved placeholders",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "presentation.pdf page 2 content",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "presentation.pdf page 2 no unresolved placeholders",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "presentation.pdf page 3 content",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "presentation.pdf page 3 no unresolved placeholders",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "presentation.pdf page 4 content",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "presentation.pdf page 4 no unresolved placeholders",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "presentation.pdf page 5 content",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "presentation.pdf page 5 no unresolved placeholders",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "presentation.pdf page 6 content",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "presentation.pdf page 6 no unresolved placeholders",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "presentation.pdf page 7 content",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "presentation.pdf page 7 no unresolved placeholders",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "presentation.pdf page 8 content",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "presentation.pdf page 8 no unresolved placeholders",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "research-paper.pdf page 1 content",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "research-paper.pdf page 1 no unresolved placeholders",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "research-paper.pdf page 2 content",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "research-paper.pdf page 2 no unresolved placeholders",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "research-paper.pdf page 3 content",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "research-paper.pdf page 3 no unresolved placeholders",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "research-paper.pdf page 4 content",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "research-paper.pdf page 4 no unresolved placeholders",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "storyboard-to-powerpoint-deck-builder helper route",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "storyboard-to-powerpoint-deck-builder upstream instructions retained",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition-slide-deck-builder helper route",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "case-competition-slide-deck-builder upstream instructions retained",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "research-paper-writer helper route",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "research-paper-writer upstream instructions retained",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "equity-research-valuation-report-builder helper route",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "equity-research-valuation-report-builder upstream instructions retained",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "extracted presentation generated",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "extracted presentation matches reviewed slide content and geometry",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "package command build_case.py",
+      "passed": true,
+      "detail": {
+        "exit_code": 0,
+        "stdout": "Wrote C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a161bf-0b97-7cf2-97f3-74eb6d30d1e4\\e2e\\package-check\\case.pptx: 10 slides; four editable charts\n",
+        "stderr": ""
+      }
+    },
+    {
+      "name": "extracted case chart values",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "package command build_case.py",
+      "passed": true,
+      "detail": {
+        "exit_code": 1,
+        "stdout": "",
+        "stderr": "age-check\\extracted\\case-competition-slide-deck-builder\\launch-tools\\build_case.py\", line 62, in <module>\n    if __name__=='__main__':build(json.loads(Path(sys.argv[1]).read_text(encoding='utf-8')),sys.argv[2])\n                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\22\\01a161bf-0b97-7cf2-97f3-74eb6d30d1e4\\e2e\\package-check\\extracted\\case-competition-slide-deck-builder\\launch-tools\\build_case.py\", line 26, in build\n    if not chart or not chart.get('categories') or not chart.get('series'):raise ValueError(f'Missing chart data at {i}')\n                                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: Missing chart data at 3\n"
+      }
+    },
+    {
+      "name": "bad case produces no artifact",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "package command reproduce_simulation.py",
+      "passed": true,
+      "detail": {
+        "exit_code": 0,
+        "stdout": "{\n  \"FIFO\": {\n    \"mean_wait\": 291.6,\n    \"max_wait\": 565,\n    \"mean_completion\": 305.875,\n    \"makespan\": 571\n  },\n  \"SPT\": {\n    \"mean_wait\": 180.525,\n    \"max_wait\": 542,\n    \"mean_completion\": 194.8,\n    \"makespan\": 571\n  }\n}\n",
+        "stderr": ""
+      }
+    },
+    {
+      "name": "package command valuation_model.py",
+      "passed": true,
+      "detail": {
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "name": "package command render_equity.py",
+      "passed": true,
+      "detail": {
+        "exit_code": 0,
+        "stdout": "Rendered English report with upstream input validation and source hashes.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "name": "extracted report byte-identical to reviewed HTML",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "package command validate_equity.py",
+      "passed": true,
+      "detail": {
+        "exit_code": 0,
+        "stdout": "{\n  \"status\": \"pass_with_manual_review_warnings\",\n  \"strict\": true,\n  \"canonical_renderer\": \"tools/content-e2e/render_equity.py\",\n  \"errors\": [],\n  \"warnings\": [\n    {\n      \"severity\": \"warning\",\n      \"code\": \"SOURCE_INDEPENDENCE_MANUAL_REVIEW\",\n      \"message\": \"仅检查声明的来源角色；真实独立性、质量与证据充分性需要人工复核。\",\n      \"blocking\": false\n    },\n    {\n      \"severity\": \"warning\",\n      \"code\": \"RESEARCH_LOGIC_MANUAL_REVIEW\",\n      \"message\": \"结构通过不代表论证正确；假设合理性、重大冲突、停止条件和投资判断仍需人工复核。\",\n      \"blocking\": false\n    }\n  ]\n}\n",
+        "stderr": ""
+      }
+    },
+    {
+      "name": "package command validate_equity.py",
+      "passed": true,
+      "detail": {
+        "exit_code": 1,
+        "stdout": "{\n  \"status\": \"fail\",\n  \"strict\": true,\n  \"canonical_renderer\": \"tools/content-e2e/render_equity.py\",\n  \"errors\": [\n    {\n      \"severity\": \"error\",\n      \"code\": \"RENDERER_ARTIFACT_MISMATCH\",\n      \"message\": \"HTML 与相同 JSON 的确定性重渲染结果不一致。\",\n      \"blocking\": true\n    }\n  ],\n  \"warnings\": [\n    {\n      \"severity\": \"warning\",\n      \"code\": \"SOURCE_INDEPENDENCE_MANUAL_REVIEW\",\n      \"message\": \"仅检查声明的来源角色；真实独立性、质量与证据充分性需要人工复核。\",\n      \"blocking\": false\n    },\n    {\n      \"severity\": \"warning\",\n      \"code\": \"RESEARCH_LOGIC_MANUAL_REVIEW\",\n      \"message\": \"结构通过不代表论证正确；假设合理性、重大冲突、停止条件和投资判断仍需人工复核。\",\n      \"blocking\": false\n    }\n  ]\n}\n",
+        "stderr": ""
+      }
+    },
+    {
+      "name": "S01.json synthetic exhibit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "S02.json synthetic exhibit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "S03.json synthetic exhibit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "S04.json synthetic exhibit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "S05.json synthetic exhibit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream topic-learning-roadmap/SKILL.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream study-understanding-check/SKILL.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream research-paper-reading-guide/SKILL.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream research-paper-evidence-review/SKILL.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream research-literature-comparison/SKILL.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream resume-job-application-builder/.gitignore",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream resume-job-application-builder/assets/action-verbs.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream resume-job-application-builder/assets/ai-slop-blacklist.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream resume-job-application-builder/assets/example-resume.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream resume-job-application-builder/assets/master-profile-template.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream resume-job-application-builder/assets/metric-proxies.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream resume-job-application-builder/assets/resume.schema.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream resume-job-application-builder/LICENSE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream resume-job-application-builder/README.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream resume-job-application-builder/references/01-ats-and-formatting.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream resume-job-application-builder/references/02-content-and-bullets.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream resume-job-application-builder/references/03-keywords-and-tailoring.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream resume-job-application-builder/references/04-linkedin.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream resume-job-application-builder/references/05-master-profile.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream resume-job-application-builder/references/06-scoring-and-evaluation.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream resume-job-application-builder/references/07-myths-and-truth.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream resume-job-application-builder/references/08-cover-letters.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream resume-job-application-builder/scripts/requirements.txt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream resume-job-application-builder/scripts/resume_tools.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream resume-job-application-builder/SKILL.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream procurement-agent-architecture-plan/SKILL.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream case-competition-slide-deck-builder/assets/template.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream case-competition-slide-deck-builder/references/deck-anatomy.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream case-competition-slide-deck-builder/scripts/build_pptx.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream case-competition-slide-deck-builder/scripts/deck-spec.example.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream case-competition-slide-deck-builder/SKILL.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream storyboard-to-powerpoint-deck-builder/.github/workflows/ci.yml",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream storyboard-to-powerpoint-deck-builder/.gitignore",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream storyboard-to-powerpoint-deck-builder/assets/style-tokens/corporate-bright.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream storyboard-to-powerpoint-deck-builder/assets/style-tokens/futuristic-tech.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream storyboard-to-powerpoint-deck-builder/assets/style-tokens/hand-drawn-editorial.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream storyboard-to-powerpoint-deck-builder/assets/style-tokens/japanese-editorial.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream storyboard-to-powerpoint-deck-builder/assets/style-tokens/minimalist-luxury.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream storyboard-to-powerpoint-deck-builder/assets/style-tokens/modern-illustration.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream storyboard-to-powerpoint-deck-builder/assets/style-tokens/soft-clay-3d.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream storyboard-to-powerpoint-deck-builder/examples/business-pitch/brief.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream storyboard-to-powerpoint-deck-builder/examples/business-pitch/storyboard.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream storyboard-to-powerpoint-deck-builder/examples/education-lesson/brief.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream storyboard-to-powerpoint-deck-builder/examples/education-lesson/storyboard.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream storyboard-to-powerpoint-deck-builder/LICENSE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream storyboard-to-powerpoint-deck-builder/package-lock.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream storyboard-to-powerpoint-deck-builder/package.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream storyboard-to-powerpoint-deck-builder/PLAN.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream storyboard-to-powerpoint-deck-builder/README.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream storyboard-to-powerpoint-deck-builder/references/chart-design.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream storyboard-to-powerpoint-deck-builder/references/concept-sequencing.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream storyboard-to-powerpoint-deck-builder/references/deck-architecture.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream storyboard-to-powerpoint-deck-builder/references/instructional-design.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream storyboard-to-powerpoint-deck-builder/references/learning-science.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream storyboard-to-powerpoint-deck-builder/references/narrative-frameworks.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream storyboard-to-powerpoint-deck-builder/references/qa-checklist.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream storyboard-to-powerpoint-deck-builder/references/slide-patterns.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream storyboard-to-powerpoint-deck-builder/references/style-systems/corporate-bright.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream storyboard-to-powerpoint-deck-builder/references/style-systems/futuristic-tech.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream storyboard-to-powerpoint-deck-builder/references/style-systems/hand-drawn-editorial.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream storyboard-to-powerpoint-deck-builder/references/style-systems/japanese-editorial.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream storyboard-to-powerpoint-deck-builder/references/style-systems/minimalist-luxury.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream storyboard-to-powerpoint-deck-builder/references/style-systems/modern-illustration.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream storyboard-to-powerpoint-deck-builder/references/style-systems/README.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream storyboard-to-powerpoint-deck-builder/references/style-systems/soft-clay-3d.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream storyboard-to-powerpoint-deck-builder/schemas/storyboard.schema.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream storyboard-to-powerpoint-deck-builder/schemas/style-tokens.schema.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream storyboard-to-powerpoint-deck-builder/scripts/check-dag.mjs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream storyboard-to-powerpoint-deck-builder/scripts/generate.mjs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream storyboard-to-powerpoint-deck-builder/scripts/inject-builds.mjs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream storyboard-to-powerpoint-deck-builder/scripts/inject-transitions.mjs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream storyboard-to-powerpoint-deck-builder/scripts/lib/archetypes.mjs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream storyboard-to-powerpoint-deck-builder/scripts/lib/charts.mjs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream storyboard-to-powerpoint-deck-builder/scripts/lib/layout.mjs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream storyboard-to-powerpoint-deck-builder/scripts/lib/style-loader.mjs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream storyboard-to-powerpoint-deck-builder/scripts/qa-report.mjs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream storyboard-to-powerpoint-deck-builder/scripts/validate-storyboard.mjs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream storyboard-to-powerpoint-deck-builder/SKILL.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream storyboard-to-powerpoint-deck-builder/templates/brief.template.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream equity-research-valuation-report-builder/.gitignore",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream equity-research-valuation-report-builder/agents/openai.yaml",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream equity-research-valuation-report-builder/assets/report-template.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream equity-research-valuation-report-builder/CHANGELOG.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream equity-research-valuation-report-builder/examples/README.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream equity-research-valuation-report-builder/LICENSE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream equity-research-valuation-report-builder/README.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream equity-research-valuation-report-builder/references/evidence-policy.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream equity-research-valuation-report-builder/references/financial-analysis.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream equity-research-valuation-report-builder/references/investment-scorecard.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream equity-research-valuation-report-builder/references/llm-fundamental-analysis.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream equity-research-valuation-report-builder/references/report-schema.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream equity-research-valuation-report-builder/references/report-template.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream equity-research-valuation-report-builder/references/research-framework.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream equity-research-valuation-report-builder/references/sector-kpis.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream equity-research-valuation-report-builder/references/valuation-framework.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream equity-research-valuation-report-builder/scripts/financial_metrics.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream equity-research-valuation-report-builder/scripts/render_report.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream equity-research-valuation-report-builder/scripts/validate_report.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream equity-research-valuation-report-builder/scripts/valuation_model.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream equity-research-valuation-report-builder/SKILL.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream equity-research-valuation-report-builder/tests/behavior/scenarios.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream equity-research-valuation-report-builder/tests/fixtures/audit-report.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream equity-research-valuation-report-builder/tests/fixtures/audit-valuation-input.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream equity-research-valuation-report-builder/tests/fixtures/audit-valuation.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream equity-research-valuation-report-builder/tests/fixtures/sector-valuation-input.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream equity-research-valuation-report-builder/tests/fixtures/standard-report.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream equity-research-valuation-report-builder/tests/fixtures/standard-valuation-input.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream equity-research-valuation-report-builder/tests/fixtures/standard-valuation.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream equity-research-valuation-report-builder/tests/fixtures/v11-legacy-report-template.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream equity-research-valuation-report-builder/tests/test_render_report.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream equity-research-valuation-report-builder/tests/test_validate_report.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved upstream equity-research-valuation-report-builder/tests/test_valuation_model.py",
+      "passed": true,
+      "detail": null
+    }
+  ]
+}

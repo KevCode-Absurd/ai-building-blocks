@@ -1,0 +1,25 @@
+new_slug: static-html-landing-page-builder
+name: Static HTML landing page builder
+summary: Turn checked page copy and layout into plain HTML and CSS, with accessible forms, local assets and hosting instructions.
+job: write-landing-page
+headline: Static HTML landing page builder
+subhead: A page you can host as plain files, without React or a build service.
+explain: |
+  Use your approved copy, page layout and business facts to create index.html, styles.css and local assets. The skill checks mobile layout, keyboard access, labels, links and factual SEO tags in a compatible preview.
+
+  It explains what a static contact form can do. Without an approved submission endpoint, it provides a clearly non-sending form and setup instructions. Missing facts and unavailable browser checks are reported. Publishing requires your approval.
+when:
+  - You need a landing page for static hosting.
+  - You want HTML and CSS without React or npm.
+you_give:
+  - Approved copy, layout and the full brief
+  - Business facts and local assets
+  - Form endpoint if submissions are needed
+you_get:
+  - Plain HTML and CSS source
+  - Browser check evidence or checks marked not run
+  - README for preview, hosting and form setup
+how_to_use:
+  - Download the skill and add it to a coding environment.
+  - Supply your brief, copy, layout and assets.
+  - Review the source and checks before authorizing publication.

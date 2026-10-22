@@ -1,0 +1,70 @@
+import { test, expect } from "@playwright/test";
+import fs from "node:fs";
+import { createHash } from "node:crypto";
+import { unzipSync, strFromU8, strToU8, deflateSync } from "fflate";
+
+test("custom workflow offers top instructions and downloads a verified, unexecuted contract", async ({ page, context }, info) => {
+  await context.grantPermissions(["clipboard-read", "clipboard-write"]);
+  await page.goto("/compose"); await page.getByRole("tab", { name: "Free assembly" }).click();
+  const goal = "Build a landing page from scratch and deliver source code";
+  await page.getByTestId("compose-goal").fill(goal); await page.getByTestId("compose-submit").click();
+  const prompt = page.getByTestId("execution-prompt").first();
+  await expect(prompt).toBeVisible(); await prompt.getByTestId("copy-execution-prompt").click();
+  expect(await page.evaluate(() => navigator.clipboard.readText())).toContain(`for this goal: ${goal}`);
+  const [download] = await Promise.all([page.waitForEvent("download"), page.getByTestId("compose-download").click()]);
+  const file = info.outputPath("workflow.zip"); await download.saveAs(file); const files = unzipSync(fs.readFileSync(file));
+  const contract = JSON.parse(strFromU8(files["workflow.json"]));
+  const manifest = JSON.parse(strFromU8(files["manifest.json"]));
+  for (const item of manifest.files) expect(createHash("sha256").update(files[item.path]).digest("hex"), item.path).toBe(item.sha256);
+  expect(contract.execution.mode).toBe("portable"); expect(contract.execution.scheduling.reuse_skips_step).toBe(false);
+  expect(JSON.parse(strFromU8(files["templates/execution-report.json"])).run_status).toBe("NOT_STARTED");
+  expect(strFromU8(files["START_HERE.txt"])).toContain("Never invent accepted inputs");
+  for (const s of contract.steps) expect(s.skill_sha256).toBe(createHash("sha256").update(files[s.skill_path]).digest("hex"));
+  await page.screenshot({ path: "../reports/workflow-execution-desktop.png", fullPage: true });
+  await page.setViewportSize({ width: 390, height: 844 }); await expect(prompt).toBeVisible();
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+  await page.screenshot({ path: "../reports/workflow-execution-mobile.png", fullPage: true });
+  const edited = JSON.parse(strFromU8(files["workflow.edit.json"]));
+  edited.flowCode = Buffer.from(deflateSync(strToU8(JSON.stringify({ v: 1, n: "Incomplete", s: [contract.steps[0].skill, "missing-required-skill"], p: [[0, 0], [1, 0]], e: [[0, 1]], m: [] })))).toString("base64url");
+  await page.getByLabel("Import workflow JSON").setInputFiles({ name: "workflow.edit.json", mimeType: "application/json", buffer: Buffer.from(JSON.stringify(edited)) });
+  await expect(page.getByRole("alert")).toContainText("This workflow is incomplete or invalid. No steps were imported.");
+});
+
+test("clipboard failure provides manual instructions and never says copied", async ({ page }) => {
+  await page.addInitScript(() => Object.defineProperty(navigator, "clipboard", { value: { writeText: async () => { throw Error("denied"); } }, configurable: true }));
+  await page.goto("/from-a-source");
+  const prompt = page.getByTestId("execution-prompt").first(); await prompt.getByTestId("copy-execution-prompt").click();
+  await expect(prompt.getByRole("alert")).toHaveText("Copy did not work. Select and copy the instructions above.");
+  await expect(prompt.getByLabel("AI execution instructions")).toBeVisible();
+  await expect(prompt.getByTestId("copy-execution-prompt")).toHaveText("Copy AI instructions");
+});
+
+test("source-authoring download uses the shared contract and preserves its real approval gate", async ({ page }, info) => {
+  await page.goto("/from-a-source"); await page.getByTestId("intake-title").fill("Checked source workflow"); await page.getByTestId("intake-text").fill("Read the current material. Compare its facts and list missing evidence. Ask the user to review the method before writing.");
+  const [download] = await Promise.all([page.waitForEvent("download"), page.getByTestId("intake-download-top").click()]);
+  const file = info.outputPath("source.zip"); await download.saveAs(file); const raw = unzipSync(fs.readFileSync(file));
+  const files = Object.fromEntries(Object.entries(raw).map(([p, b]) => [p.split("/").slice(1).join("/"), b]));
+  expect(strFromU8(files["AUTHORING.md"])).toContain("A generic earlier");
+  expect(strFromU8(files["AUTHORING.md"])).toContain("Bundle every selected SKILL.md");
+  expect(strFromU8(files["HANDOFF.md"])).toContain("AUTHORING.md");
+  expect(files["framework/execution-contract.md"]).toBeTruthy();
+  for (const item of JSON.parse(strFromU8(files["manifest.json"])).files) expect(createHash("sha256").update(files[item.path]).digest("hex")).toBe(item.sha256);
+});
+
+test("standalone builder separates its prompt from the toolbar and rejects incomplete shared plans", async ({ page }) => {
+  const packed = (slugs: string[]) => Buffer.from(deflateSync(strToU8(JSON.stringify({ v: 1, n: "Checked workflow", g: "Draft a clear reply", s: slugs, p: slugs.map((_, i) => [4 + i * 36, 11]), e: [], m: [] })))).toString("base64url");
+  await page.goto(`/?flow=${packed(["executive-email-draft"])}#build`);
+  const builder = page.getByTestId("builder"); await expect(builder.getByLabel("Workflow name")).toHaveValue("Checked workflow");
+  // Capture all rectangles in one frame: #build uses smooth scrolling, so separate calls can drift.
+  const layout = await builder.evaluate(el => {
+    const toolbar = el.querySelector(".stage-bar")!.getBoundingClientRect();
+    const prompt = el.querySelector(".stage > .workflow-launch")!.getBoundingClientRect();
+    const canvas = el.querySelector(".react-flow")!.getBoundingClientRect();
+    return { promptGap: prompt.top - toolbar.bottom, canvasGap: canvas.top - prompt.bottom };
+  });
+  expect(layout.promptGap).toBeGreaterThanOrEqual(-1);
+  expect(layout.canvasGap).toBeGreaterThanOrEqual(-1);
+  await page.goto(`/?flow=${packed(["executive-email-draft", "missing-required-skill"])}#build`);
+  await expect(page.getByTestId("builder").getByLabel("Workflow name")).toHaveValue("Untitled workflow");
+  await expect(page.getByText("This shared workflow is incomplete or invalid. No steps were imported. Ask for a complete workflow.")).toBeVisible();
+});

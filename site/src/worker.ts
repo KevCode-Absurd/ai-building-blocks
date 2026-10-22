@@ -5,6 +5,7 @@ import { onRequest as spaces } from "../functions/api/spaces/[[path]].ts";
 import { onRequest as compose } from "../functions/api/compose.ts";
 import { onRequest as transcribe } from "../functions/api/transcribe.ts";
 import { onRequest as auth } from "../functions/api/auth.ts";
+import { onRequest as minds } from "../functions/api/minds.ts";
 import { securityConfig, apiSecurity, previewSecurity } from "./server/api-security.ts";
 import { previewSessionRoute } from "./server/preview-session.ts";
 
@@ -25,6 +26,7 @@ export default {
     if (path === "/api/security") return securityConfig(request, env);
     if (path === "/api/transcribe") return transcribe({ request, env });
     if (path === "/api/auth") return auth({ request, env });
+    if (path === "/api/minds") return minds({ request, env });
     if (path === "/api/comments") return comments({ request, env });
     if (path === "/api/spaces" || path.startsWith("/api/spaces/")) return spaces({ request, env });
     if (path === "/api/compose") return compose({ request, env });

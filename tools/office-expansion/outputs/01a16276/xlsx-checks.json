@@ -1,0 +1,13 @@
+{
+  "status": "pass",
+  "engine": "Artifact Tool calculation and OOXML round trip",
+  "desktopExcelRun": false,
+  "appendCheckPassed": false,
+  "illustrativeData": true,
+  "checks": [
+    "January20/12,February10/3,total30/15,aggregate50%",
+    "input mutation recalculates totals",
+    "native XLSX export/import retains formulas and correct aggregate",
+    "LIMITATION: appended row calculation returned a Date-typed count in this engine; native Excel append check is still required"
+  ]
+}

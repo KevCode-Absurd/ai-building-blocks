@@ -1,0 +1,253 @@
+{
+  "status": "pass",
+  "createdAt": "2026-10-22T16:38:00.898Z",
+  "counts": {
+    "skills": 16,
+    "workflows": 4,
+    "methodCases": 32,
+    "workflowSteps": 13,
+    "sourcePacks": 20
+  },
+  "checks": [
+    "All catalogue slugs unique across categories",
+    "76generated source file hashes match",
+    "Every full skill method present",
+    "All 32 illustrative method cases packaged",
+    "Workflow component closure complete",
+    "20 source ZIP round trips preserve every file byte",
+    "Both native examples rendered and visually reviewed"
+  ],
+  "packs": [
+    {
+      "slug": "excel-input-form-builder",
+      "files": 2,
+      "sha256": "d544308caea97ff62f1e4b3c2ac21150f50493ae501e48cca2585ac7a3d89310"
+    },
+    {
+      "slug": "excel-table-join-reconciler",
+      "files": 2,
+      "sha256": "fa1278457e1ae39cc5a6e3c880168f022c47decba7207c68154a50b2168b3772"
+    },
+    {
+      "slug": "excel-monthly-rollup-builder",
+      "files": 2,
+      "sha256": "a2df2fecde31fa28a80f536893cd889d2af5e8833d3712cc97354b0d615d9c21"
+    },
+    {
+      "slug": "excel-workbook-change-reviewer",
+      "files": 2,
+      "sha256": "b1cb313a7fe44ac20b3325656ef4faa0bbb3c1a871c5bd7f9fc14d14a099a44c"
+    },
+    {
+      "slug": "excel-print-layout-fixer",
+      "files": 2,
+      "sha256": "f2bd042569898cef6f01eec3a5b0461fec9ecd08c4f7f5ab4e2926c6a9ee1e5a"
+    },
+    {
+      "slug": "excel-handover-guide-writer",
+      "files": 2,
+      "sha256": "99f854e75bf700531eeedc37df0cf882bd845716878314fd9d274ca66769846e"
+    },
+    {
+      "slug": "excel-pivot-refresh-planner",
+      "files": 2,
+      "sha256": "89d8882a676a51e2335d645c6ec28800828ca75e69ab2eff2edd95a14994beab"
+    },
+    {
+      "slug": "excel-powerpoint-number-checker",
+      "files": 2,
+      "sha256": "f43b5ec2d4ce1d42f790eefd009d2e29350b734af96c58e9aeab53a423be5a90"
+    },
+    {
+      "slug": "powerpoint-template-populator",
+      "files": 2,
+      "sha256": "4be9a5b5b32177992a08083930c36880373ec874938f03c32155f4d010f56fed"
+    },
+    {
+      "slug": "powerpoint-speaker-note-builder",
+      "files": 2,
+      "sha256": "ad15e03ad7cd731599d9808aec1afff9dd3d0350f1f64e6e4e4261e5cfcdd015"
+    },
+    {
+      "slug": "powerpoint-appendix-navigator",
+      "files": 2,
+      "sha256": "264c6285e8f52b30bb6928731c19ade7c6f6d06a000c81b46e65700bd0452e47"
+    },
+    {
+      "slug": "powerpoint-slide-size-converter",
+      "files": 2,
+      "sha256": "945cca19adff505536ee3ce14d62fb3dca5a5c14793a3ef311b96c144f58f5fa"
+    },
+    {
+      "slug": "powerpoint-chart-data-rebuilder",
+      "files": 2,
+      "sha256": "1df4a709cf06f23901cdc2778e77086025707f7484e06ab354a7ba331971d8d2"
+    },
+    {
+      "slug": "powerpoint-deck-change-reviewer",
+      "files": 2,
+      "sha256": "5bf544dbb0d8e6a708c205dee93f7e61d59970c4eea270089c933f1b3f5c4f3e"
+    },
+    {
+      "slug": "powerpoint-accessibility-reviewer",
+      "files": 2,
+      "sha256": "7290eeaf78323118b10f6ac6de4b45dec6d743a03ae9e58e160a8b0d188f5b0a"
+    },
+    {
+      "slug": "powerpoint-audience-handout-builder",
+      "files": 2,
+      "sha256": "d5de24d6c1d993757d537f7d12e4b6cfe8471023ae0c7edb1a3cde93cc2558ce"
+    },
+    {
+      "slug": "prepare-an-excel-input-workbook-for-handover",
+      "files": 5,
+      "sha256": "c0d981c097e4fe9247f00a459303d1d8e69127775492f1297ff0f6b498a5e8a5"
+    },
+    {
+      "slug": "build-a-monthly-excel-and-powerpoint-update",
+      "files": 9,
+      "sha256": "54780d61abd334f2ffe9e0b2b3eaf27ac00795e4d0de19f792f42f5871c75f69"
+    },
+    {
+      "slug": "prepare-a-powerpoint-deck-for-presenting-and-sharing",
+      "files": 9,
+      "sha256": "d4236b78e854c55f738d97171c3c0ca3f2334a95fbe9f19267093cb6a2ddde0e"
+    },
+    {
+      "slug": "review-revised-excel-and-powerpoint-files",
+      "files": 7,
+      "sha256": "03b3a4c52a5f3264a5a64b7ee04c76ce5643a4f1941335f5b3f25d0cfdf8b24f"
+    }
+  ],
+  "native": {
+    "xlsx": {
+      "status": "pass",
+      "engine": "Artifact Tool calculation and OOXML round trip",
+      "desktopExcelRun": false,
+      "appendCheckPassed": false,
+      "illustrativeData": true,
+      "checks": [
+        "January20/12,February10/3,total30/15,aggregate50%",
+        "input mutation recalculates totals",
+        "native XLSX export/import retains formulas and correct aggregate",
+        "LIMITATION: appended row calculation returned a Date-typed count in this engine; native Excel append check is still required"
+      ]
+    },
+    "pptx": {
+      "status": "pass",
+      "slides": 3,
+      "editableChartSlide": 2,
+      "notesPresent": true,
+      "desktopPowerPointRun": false,
+      "illustrativeData": true,
+      "validationReceipt": "tools/office-expansion/outputs/01a16276/pptx-validation.json"
+    }
+  },
+  "nativePackage": {
+    "status": "pass",
+    "xlsx": [
+      "text identifiers",
+      "table",
+      "validation",
+      "formulas"
+    ],
+    "pptx": [
+      "3slides",
+      "3notes",
+      "native chart",
+      "embedded chart workbook",
+      "all chart series values match source population"
+    ]
+  },
+  "limitations": [
+    "Source pack checks are independent of the in-progress application export compiler. Publisher must check built app pages and downloads.",
+    "Only illustrative monthly calculations/chart/notes generated; not all16methods executed in native applications.",
+    "Desktop Excel/PowerPoint not run. Appended-row engine check remains unverified in native Excel."
+  ],
+  "sourcePaths": [
+    "catalogue-items/general/excel-input-form-builder/SKILL.md",
+    "catalogue-items/general/excel-input-form-builder/item.yaml",
+    "catalogue-items/general/excel-input-form-builder/page.yaml",
+    "catalogue-items/general/excel-input-form-builder/tests/cases.json",
+    "catalogue-items/general/excel-table-join-reconciler/SKILL.md",
+    "catalogue-items/general/excel-table-join-reconciler/item.yaml",
+    "catalogue-items/general/excel-table-join-reconciler/page.yaml",
+    "catalogue-items/general/excel-table-join-reconciler/tests/cases.json",
+    "catalogue-items/general/excel-monthly-rollup-builder/SKILL.md",
+    "catalogue-items/general/excel-monthly-rollup-builder/item.yaml",
+    "catalogue-items/general/excel-monthly-rollup-builder/page.yaml",
+    "catalogue-items/general/excel-monthly-rollup-builder/tests/cases.json",
+    "catalogue-items/general/excel-workbook-change-reviewer/SKILL.md",
+    "catalogue-items/general/excel-workbook-change-reviewer/item.yaml",
+    "catalogue-items/general/excel-workbook-change-reviewer/page.yaml",
+    "catalogue-items/general/excel-workbook-change-reviewer/tests/cases.json",
+    "catalogue-items/general/excel-print-layout-fixer/SKILL.md",
+    "catalogue-items/general/excel-print-layout-fixer/item.yaml",
+    "catalogue-items/general/excel-print-layout-fixer/page.yaml",
+    "catalogue-items/general/excel-print-layout-fixer/tests/cases.json",
+    "catalogue-items/general/excel-handover-guide-writer/SKILL.md",
+    "catalogue-items/general/excel-handover-guide-writer/item.yaml",
+    "catalogue-items/general/excel-handover-guide-writer/page.yaml",
+    "catalogue-items/general/excel-handover-guide-writer/tests/cases.json",
+    "catalogue-items/general/excel-pivot-refresh-planner/SKILL.md",
+    "catalogue-items/general/excel-pivot-refresh-planner/item.yaml",
+    "catalogue-items/general/excel-pivot-refresh-planner/page.yaml",
+    "catalogue-items/general/excel-pivot-refresh-planner/tests/cases.json",
+    "catalogue-items/general/excel-powerpoint-number-checker/SKILL.md",
+    "catalogue-items/general/excel-powerpoint-number-checker/item.yaml",
+    "catalogue-items/general/excel-powerpoint-number-checker/page.yaml",
+    "catalogue-items/general/excel-powerpoint-number-checker/tests/cases.json",
+    "catalogue-items/general/powerpoint-template-populator/SKILL.md",
+    "catalogue-items/general/powerpoint-template-populator/item.yaml",
+    "catalogue-items/general/powerpoint-template-populator/page.yaml",
+    "catalogue-items/general/powerpoint-template-populator/tests/cases.json",
+    "catalogue-items/general/powerpoint-speaker-note-builder/SKILL.md",
+    "catalogue-items/general/powerpoint-speaker-note-builder/item.yaml",
+    "catalogue-items/general/powerpoint-speaker-note-builder/page.yaml",
+    "catalogue-items/general/powerpoint-speaker-note-builder/tests/cases.json",
+    "catalogue-items/general/powerpoint-appendix-navigator/SKILL.md",
+    "catalogue-items/general/powerpoint-appendix-navigator/item.yaml",
+    "catalogue-items/general/powerpoint-appendix-navigator/page.yaml",
+    "catalogue-items/general/powerpoint-appendix-navigator/tests/cases.json",
+    "catalogue-items/general/powerpoint-slide-size-converter/SKILL.md",
+    "catalogue-items/general/powerpoint-slide-size-converter/item.yaml",
+    "catalogue-items/general/powerpoint-slide-size-converter/page.yaml",
+    "catalogue-items/general/powerpoint-slide-size-converter/tests/cases.json",
+    "catalogue-items/general/powerpoint-chart-data-rebuilder/SKILL.md",
+    "catalogue-items/general/powerpoint-chart-data-rebuilder/item.yaml",
+    "catalogue-items/general/powerpoint-chart-data-rebuilder/page.yaml",
+    "catalogue-items/general/powerpoint-chart-data-rebuilder/tests/cases.json",
+    "catalogue-items/general/powerpoint-deck-change-reviewer/SKILL.md",
+    "catalogue-items/general/powerpoint-deck-change-reviewer/item.yaml",
+    "catalogue-items/general/powerpoint-deck-change-reviewer/page.yaml",
+    "catalogue-items/general/powerpoint-deck-change-reviewer/tests/cases.json",
+    "catalogue-items/general/powerpoint-accessibility-reviewer/SKILL.md",
+    "catalogue-items/general/powerpoint-accessibility-reviewer/item.yaml",
+    "catalogue-items/general/powerpoint-accessibility-reviewer/page.yaml",
+    "catalogue-items/general/powerpoint-accessibility-reviewer/tests/cases.json",
+    "catalogue-items/general/powerpoint-audience-handout-builder/SKILL.md",
+    "catalogue-items/general/powerpoint-audience-handout-builder/item.yaml",
+    "catalogue-items/general/powerpoint-audience-handout-builder/page.yaml",
+    "catalogue-items/general/powerpoint-audience-handout-builder/tests/cases.json",
+    "catalogue-items/orchestrators/prepare-an-excel-input-workbook-for-handover/SKILL.md",
+    "catalogue-items/orchestrators/prepare-an-excel-input-workbook-for-handover/item.yaml",
+    "catalogue-items/orchestrators/prepare-an-excel-input-workbook-for-handover/page.yaml",
+    "catalogue-items/orchestrators/build-a-monthly-excel-and-powerpoint-update/SKILL.md",
+    "catalogue-items/orchestrators/build-a-monthly-excel-and-powerpoint-update/item.yaml",
+    "catalogue-items/orchestrators/build-a-monthly-excel-and-powerpoint-update/page.yaml",
+    "catalogue-items/orchestrators/prepare-a-powerpoint-deck-for-presenting-and-sharing/SKILL.md",
+    "catalogue-items/orchestrators/prepare-a-powerpoint-deck-for-presenting-and-sharing/item.yaml",
+    "catalogue-items/orchestrators/prepare-a-powerpoint-deck-for-presenting-and-sharing/page.yaml",
+    "catalogue-items/orchestrators/review-revised-excel-and-powerpoint-files/SKILL.md",
+    "catalogue-items/orchestrators/review-revised-excel-and-powerpoint-files/item.yaml",
+    "catalogue-items/orchestrators/review-revised-excel-and-powerpoint-files/page.yaml",
+    "tools/office-expansion/catalogue.mjs",
+    "tools/office-expansion/generate.mjs",
+    "tools/office-expansion/check.mjs",
+    "tools/office-expansion/build-fixtures.mjs",
+    "tools/office-expansion/.gitignore",
+    "tools/office-expansion/check-native.py",
+    "tools/office-expansion/check-built.mjs"
+  ],
+  "published": false
+}

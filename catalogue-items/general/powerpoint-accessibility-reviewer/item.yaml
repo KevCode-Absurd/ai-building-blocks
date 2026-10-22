@@ -1,0 +1,38 @@
+slug: powerpoint-accessibility-reviewer
+name: PowerPoint accessibility reviewer
+summary: Share your deck. Get specific fixes for slide titles, reading order,
+  alternative text and readable visual content.
+category: general
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: slide_deck
+    required: true
+outputs:
+  - type: audit_report
+    required: true
+  - type: slide_deck
+    required: false
+uses: []
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/office-expansion/catalogue.mjs
+example_pending: true
+credits:
+  - title: Original Excel and PowerPoint workflow methods
+    by: AI Blocks
+    used: Original intake, file-preservation, execution and acceptance rules written
+      for this task.
+  - title: PowerPoint reading order
+    by: Microsoft
+    url: https://support.microsoft.com/en-us/powerpoint/make-slides-easier-to-read-by-using-the-reading-order-pane
+    used: Reference for the native reading-order check; no compliance claim is
+      inferred.
+warnings:
+  - Requires tools for the requested native file format. Checks requiring an
+    unavailable native application must remain marked not run.

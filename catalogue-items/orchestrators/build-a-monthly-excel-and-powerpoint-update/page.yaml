@@ -1,0 +1,117 @@
+new_slug: build-a-monthly-excel-and-powerpoint-update
+name: Build a monthly Excel and PowerPoint update
+summary: Share dated records and a template. Get a monthly workbook, editable
+  deck and checks linking their numbers.
+job: work-with-files
+thinking: high
+thinking_why: Native file features, source meaning and check evidence must
+  survive the workflow.
+headline: Build a monthly Excel and PowerPoint update
+subhead: Share dated records and a slide template. Get a monthly workbook,
+  editable update deck and source-number checks. Work on a copy of your file.
+  Get a clear record of what passed and what still needs checking.
+explain: >-
+  Share dated records and a slide template. Get a monthly workbook, editable
+  update deck and source-number checks.
+
+
+  This workflow runs the full component methods in order and checks each handoff
+  before continuing. Your source files stay intact. The method starts by
+  checking what your AI already knows and which files it can read. It asks only
+  for missing facts that change the work.
+
+
+  You get the requested files plus a short record of the sources and checks. A
+  saved file alone does not prove that its formulas, links or layout work. Any
+  check that needs an app your AI cannot use stays marked as not run. Review
+  those limits before you share the result.
+when:
+  - You need the connected deliverables described above.
+  - You want the sources and checks carried through the handover.
+  - You need to see which steps still need your input.
+you_give:
+  - Dated operational records, grain and metric definitions, reporting
+    period/timezone, actual slide template and approved audience/talk
+    requirements.
+  - The app and file tools your AI can use for the requested work
+you_get:
+  - The native files and reports produced by the component methods, plus a run
+    register and unresolved-input list.
+  - A record of source files, changes and check results
+  - Missing facts and any checks that could not run
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it
+    and paste it in.
+  - Supply your actual files and describe the result. The AI checks existing
+    context before asking for missing information.
+  - Review the native output and its real check evidence before sharing it.
+how_it_works:
+  - title: Step 1
+    text: 1. Read `skills/excel-monthly-rollup-builder/SKILL.md` completely and run
+      its full method. Create monthly summaries from the actual reporting
+      population and preserve record IDs, month boundaries and rate definitions.
+  - title: Step 2
+    text: 2. Read `skills/powerpoint-template-populator/SKILL.md` completely and run
+      its full method. Populate the actual supplied template with the checked
+      monthly outputs, keeping charts and tables editable.
+  - title: Step 3
+    text: 3. Read `skills/excel-powerpoint-number-checker/SKILL.md` completely and
+      run its full method. Match every displayed monthly metric to the delivered
+      workbook and fail stale periods, swapped categories or inconsistent units.
+  - title: Step 4
+    text: 4. Read `skills/powerpoint-speaker-note-builder/SKILL.md` completely and
+      run its full method. Add source-linked speaking notes and an estimated
+      timing budget without altering verified figures.
+output_shape: >-
+  FILES
+
+  The native files and reports produced by the component methods, plus a run
+  register and unresolved-input list.
+
+
+  SOURCE MAP
+
+  <file and version> | <sheet, cell or slide> | <what it supports>
+
+
+  CHECKS
+
+  <check> | <passed, failed or not run> | <evidence>
+
+
+  OPEN ITEMS
+
+  <missing fact or unsupported check> | <next action>
+tweaks:
+  - what: Your source files
+    how: Dated operational records, grain and metric definitions, reporting
+      period/timezone, actual slide template and approved audience/talk
+      requirements.
+  - what: The result you need
+    how: Name the file format, audience and parts that must stay editable. State any
+      page or slide limit.
+  - what: The app used to check it
+    how: Say which Excel or PowerPoint version you will use. Your AI must name any
+      check it cannot run.
+judge:
+  - All required source versions and their meanings are identified.
+  - Every component method ran, or the workflow stopped with its exact missing
+    prerequisite.
+  - Workbook results, slide evidence, periods and units agree where they connect.
+  - The result names its sources and keeps unrun checks visible.
+test:
+  - Try the workflow on copies of files where you know the right result.
+  - Check each step against its full skill file and keep the source map with the
+    result.
+  - Reopen the saved files and check the reported figures, links and layout
+    before relying on them.
+improve:
+  - Add your confirmed field names, file rules and target app version to the
+    required-input section.
+  - Add a small test case with a known answer to the acceptance checks. Keep
+    made-up records separate from real work.
+  - Save the working rules with the file guide so the next run uses the same
+    meanings and checks.
+warnings:
+  - Requires tools for the requested native file format. Checks requiring an
+    unavailable native application must remain marked not run.

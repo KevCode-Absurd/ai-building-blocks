@@ -1,0 +1,14 @@
+{
+  "fixtureType": "illustrative-method-cases",
+  "nativeExecutionClaim": false,
+  "cases": [
+    {
+      "input": "Record ID 0012, quantity 0 allowed, status Open or Closed",
+      "expected": "Keep 0012 as text and 0 as a valid number; restrict the status list."
+    },
+    {
+      "input": "Two pasted records share the same required ID",
+      "expected": "Flag both as duplicate candidates; do not silently delete either."
+    }
+  ]
+}

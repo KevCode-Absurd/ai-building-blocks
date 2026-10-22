@@ -1,0 +1,169 @@
+{
+  "date": "2026-10-22",
+  "scope": "Portable workflow package export and execution instructions",
+  "contract": "abb-execution/1",
+  "implementation_status": "PRIMARY_PATHS_VERIFIED_SPACE_FOLLOWUP_PENDING",
+  "release_status": "R17_DEPLOYING_SPACE_FOLLOWUP_PENDING",
+  "assurance": "Portable execution is assistant-reported. No backend execution enforcement or cross-model reliability guarantee.",
+  "checks": [
+    {
+      "id": "typescript",
+      "status": "PASS",
+      "command": "npx tsc -b",
+      "exit_code": 0
+    },
+    {
+      "id": "full-unit-suite",
+      "status": "PASS",
+      "command": "npm run test:unit",
+      "tests": 222,
+      "passed": 222,
+      "failed": 0
+    },
+    {
+      "id": "focused-portable-export",
+      "status": "PASS",
+      "command": "node --test test/workflow-execution.test.mjs",
+      "tests": 8,
+      "passed": 8,
+      "failed": 0
+    },
+    {
+      "id": "browser-workflow",
+      "status": "PASS",
+      "command": "Workflow execution E2E cases within the coordinated immutable R17 preview suite",
+      "tests": 4,
+      "passed": 4,
+      "failed": 0,
+      "prior_revision": "Earlier mutable-preview runs invalidated by asset regeneration, stale transforms and concurrent artifact cleanup; final immutable preview passed.",
+      "evidence": "Release owner reports 38/38 frozen-preview browser cases passed, including all four workflow execution cases and the persistent invalid-share warning."
+    },
+    {
+      "id": "new-user-facing-guidance-reading-level",
+      "status": "PASS",
+      "grade": 4.8,
+      "scope": "New prompt control guidance, not technical contract text"
+    },
+    {
+      "id": "provider-attachment-only-outcome-evaluation",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "full-prose-requirement-extraction",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "backend-runner-enforcement",
+      "status": "NOT_IMPLEMENTED"
+    },
+    {
+      "id": "catalogue-page-lint",
+      "status": "FAIL",
+      "pages": 1764,
+      "clean": 1742,
+      "issues": 22,
+      "scope": "Existing catalogue fields and job taxonomy outside the new execution UI. No catalogue files were changed for this task."
+    }
+  ],
+  "browser_evidence": [
+    "reports/workflow-execution-desktop.png",
+    "reports/workflow-execution-mobile.png"
+  ],
+  "additional_review": {
+    "owner_chat": "01a161bf-0b97-7cf2-97f3-74eb6d30d1e4",
+    "source": "Independent reviewer tool messages; separate evidence, not added to primary test totals",
+    "export_checks_reported": 29,
+    "browser_checks_reported": 32,
+    "results": "PASS",
+    "reports": [
+      "C:/Users/kevin/.codex/visualizations/2026/10/22/01a161bf-0b97-7cf2-97f3-74eb6d30d1e4/execution-review-results.json",
+      "C:/Users/kevin/.codex/visualizations/2026/10/22/01a161bf-0b97-7cf2-97f3-74eb6d30d1e4/execution-browser-review-results.json"
+    ],
+    "import_checks_reported": 4,
+    "final_frozen_preview_execution_cases": 4
+  },
+  "corrected_findings": [
+    "Missing per-consumer upstream input records",
+    "Dropped parent workflow instructions on expanded library flows",
+    "Old handoff permitted silent skips and advancement after required failed review",
+    "Preserved original skill text instead of mutating it with step configuration",
+    "Missing local directory-reference handling",
+    "Resource support cycles wrongly classified as execution cycles",
+    "Duplicate embedded prompt overlapped canvas toolbar",
+    "Shared and editable imports silently omitted unavailable skills or truncated over-limit plans; now rejected atomically with a visible error"
+  ],
+  "unresolved": [
+    "Full source requirement classification and conflict analysis remain execution preflight obligations",
+    "No provider adapter conformance or measured 99.95% reliability",
+    "No backend input-acceptance or durable execution-state enforcement",
+    "Production release and live checks owned by coordinated release chat",
+    "Catalogue page lint reports 22 pages with field/taxonomy issues outside this change; routed to coordinated release owners.",
+    "My Space structured workflow download and context round-trip still bypass the central package exporter; narrow coordinated fix pending after frozen release snapshot."
+  ],
+  "source_hashes": [
+    {
+      "path": "site/src/lib/workflow-execution.ts",
+      "sha256": "0ea31468aa334266f9b5c193ba9047d86cc468f672185cc17f85f9d1c5aa7b1a"
+    },
+    {
+      "path": "site/src/lib/handoff.ts",
+      "sha256": "b10515c32bc37adc8ead34db04365d4530305a5408d524fb277ffe2310b543fa"
+    },
+    {
+      "path": "site/src/lib/intake.ts",
+      "sha256": "534eac92d9fe25aa0d2120123f68fb864619e49c655ba3687962517e61e07b50"
+    },
+    {
+      "path": "site/src/lib/plan.ts",
+      "sha256": "2488c9b4ae8a4680915b83b925899b45284febddb1e5205317d933f7326ad262"
+    },
+    {
+      "path": "site/src/lib/store.ts",
+      "sha256": "1537037d11f25b88d761ded077545ed6b0e3b96b139e958ae36cb230c254ee3f"
+    },
+    {
+      "path": "site/src/ExecutionPrompt.tsx",
+      "sha256": "a294c938ab4cb75b8279c754d7f11a54bf4d9e0c62e64081905b5ce0f657fd88"
+    },
+    {
+      "path": "site/src/execution-prompt.css",
+      "sha256": "c147021e8bce027d254080a47a317e9e3b720cd2d1fa70be12ab8c64a3eb0098"
+    },
+    {
+      "path": "site/src/DownloadDialog.tsx",
+      "sha256": "8a9e181730540383fbd3f0556a0b0e1b9fdd86532b6dc589c6e3157f4b1b8a67"
+    },
+    {
+      "path": "site/src/Builder.tsx",
+      "sha256": "74b443587f5e23b10d098b22eafeb0efc0117fc39ac405f70c775decc61369dd"
+    },
+    {
+      "path": "site/src/BlockPage.tsx",
+      "sha256": "aad95b433efc13efc4ee34684326ec027b5b571bc6839f5666da6c2de0d5a5f0"
+    },
+    {
+      "path": "site/src/ComposePage.tsx",
+      "sha256": "cb85f7ba74ef79631180e551d6f0a4e4d71306c277bd3c9ec603e27d6dfeb91e"
+    },
+    {
+      "path": "site/src/IntakePage.tsx",
+      "sha256": "0cf317b41819d68ce253bcc05dc421a16f7287f6d94afbe689b39a97b8baf6f2"
+    },
+    {
+      "path": "site/src/TractionPage.tsx",
+      "sha256": "391338e6606ef814933fcfe8d4bc627d88eacb7667bb6975a045d828cecaeebb"
+    },
+    {
+      "path": "site/test/workflow-execution.test.mjs",
+      "sha256": "32130ade6c891aa2a37f19835f82f13085d497f63e875e6a496bae960160cbfc"
+    },
+    {
+      "path": "site/e2e/workflow-execution.spec.ts",
+      "sha256": "1513444f1500c1b055c8eb35f0308d49b6250445843618d800eaf01f40b52ec4"
+    },
+    {
+      "path": "docs/WORKFLOW-EXECUTION-CONTRACT.md",
+      "sha256": "b19baf700ff8f783354ce03b41f18e290073cbb52ddab54e3cce6b0ec08d69f7"
+    }
+  ]
+}

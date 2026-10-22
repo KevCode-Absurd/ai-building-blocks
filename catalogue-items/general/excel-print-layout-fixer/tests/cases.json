@@ -1,0 +1,14 @@
+{
+  "fixtureType": "illustrative-method-cases",
+  "nativeExecutionClaim": false,
+  "cases": [
+    {
+      "input": "A wide 400-row table is requested on A4 landscape",
+      "expected": "Fit the width and retain multiple pages vertically; verify header repetition."
+    },
+    {
+      "input": "Two nonadjacent print areas were set accidentally",
+      "expected": "Flag separate-page output and confirm the intended continuous area."
+    }
+  ]
+}

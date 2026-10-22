@@ -16,7 +16,7 @@ export type Team = { minds: string[]; mode: TeamMode };
 export const TEAM_MAX = 6;
 /** The Start node holds the goal and notes for every step, plus the overseer (one mind who checks every step) and the team.
  *  The End node shows once the workflow is saved (ended). */
-export type Flow = { customMinds?: CustomMind[]; customSkills?: CustomSkill[]; id: string; name: string; nodes: FlowNode[]; edges: FlowEdge[]; updated: number; goal?: string; notes?: string; ended?: boolean; overseer?: string; team?: Team };
+export type Flow = { governingSkills?: string[]; customMinds?: CustomMind[]; customSkills?: CustomSkill[]; id: string; name: string; nodes: FlowNode[]; edges: FlowEdge[]; updated: number; goal?: string; notes?: string; ended?: boolean; overseer?: string; team?: Team };
 /** `flows` are the workflows the person saved; `draft` is what the builder has open right now, kept as they work. */
 type State = { kits: Kit[]; flows: Flow[]; recent: string[]; currentFlow: string | null; draft: Flow | null };
 

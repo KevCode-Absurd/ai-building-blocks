@@ -1,0 +1,14 @@
+{
+  "fixtureType": "illustrative-method-cases",
+  "nativeExecutionClaim": false,
+  "cases": [
+    {
+      "input": "A row moved but its ID, value and relative formula meaning are unchanged",
+      "expected": "Record a reorder, not a fabricated business change."
+    },
+    {
+      "input": "A formula cell is replaced with its current numeric result",
+      "expected": "Flag a formula-to-constant change even if the displayed number is unchanged."
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "fixtureType": "illustrative-method-cases",
+  "nativeExecutionClaim": false,
+  "cases": [
+    {
+      "input": "The owner says Refresh All updates a query, but no refresh engine is available",
+      "expected": "Describe the observed connection and required refresh sequence; mark execution not run."
+    },
+    {
+      "input": "An output depends on a missing external workbook",
+      "expected": "List the exact unresolved dependency and affected outputs."
+    }
+  ]
+}

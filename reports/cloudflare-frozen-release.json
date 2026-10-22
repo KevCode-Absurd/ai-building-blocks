@@ -1,23 +1,23 @@
 {
-  "frozenOn": "2026-10-22T13:27:44.362Z",
-  "root": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r14-final-workflows",
-  "assets": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r14-final-workflows\\assets",
-  "worker": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r14-final-workflows\\worker\\worker.js",
-  "workerSha256": "7ef08a7fff1e7402559ab35cdb421bcc4e220ae2e77d2b60a5f601810d8eecd3",
-  "files": 24192,
-  "blocks": 4513,
+  "frozenOn": "2026-10-22T16:42:25.900Z",
+  "root": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r17-account-minds",
+  "assets": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r17-account-minds\\assets",
+  "worker": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r17-account-minds\\worker\\worker.js",
+  "workerSha256": "e0eabe892d923971589729a486e791878aa6e5c74d1e4e38c4aee7bb10c54a00",
+  "files": 24274,
+  "blocks": 4533,
   "criticalAssets": {
-    "index.html": "03b7f6833cd3509c2d3a0d4b1cda4e760b0682f5944631f2e1fa0a4d054661ff",
-    "compose.html": "deea276ad7b42431d71911b78d75ce8814e710b5ec34a38c71f4af88136a08a0",
-    "skills/loss-framing-writer.html": "0ddf04e175dfaa5384e0ae48bf69dd84298fb7f3f804d17743323df0ae29de78",
-    "data/blocks.json": "6757be7af672633794122d2fd0de16e78531fc461039b67209f35069dbab2351",
+    "index.html": "c217012472861f5ef6c62750554b1bbdb708445a140ff747822bee2db4e5446a",
+    "compose.html": "23fe83dbe8c8c2054d8c18ad6a1d035c68ed76af776795da4b01a1406d482d83",
+    "skills/loss-framing-writer.html": "ba40d9aea2603fc48d5b8d5d93d8a0aacf23e45f04cd239c041040c69f26d28f",
+    "data/blocks.json": "019e0f84f2ce1c5809562de7d0c9b12bd7c2322be9c87be7f4b798a16d143edd",
     "skills/storyboard-to-powerpoint-deck-builder.zip": "e42453c498209497795b4d5b1a96aabf885f75057e8682a625ebf8bccbc31d78",
     "skills/case-competition-slide-deck-builder.zip": "40d440223125568eb1192b845b96ba6a758c2379b8da0501af09407962321bc4",
     "skills/research-paper-writer.zip": "e33e0e564f333480b56d10d0d55e7e70a3b3279d390c83a25c58d048c1e541eb",
     "skills/equity-research-valuation-report-builder.zip": "a36201b3c55348de7c81adcd135f1ea948c62cf864db0b212c1b84d667216b9e"
   },
   "configs": {
-    "staging": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r14-final-workflows\\wrangler.staging.jsonc",
-    "production": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r14-final-workflows\\wrangler.production.jsonc"
+    "staging": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r17-account-minds\\wrangler.staging.jsonc",
+    "production": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r17-account-minds\\wrangler.production.jsonc"
   }
 }

@@ -1,0 +1,14 @@
+{
+  "fixtureType": "illustrative-method-cases",
+  "nativeExecutionClaim": false,
+  "cases": [
+    {
+      "input": "A template has title/content and section layouts with a fixed 16:9 size",
+      "expected": "Map the outline to those layouts and retain dimensions."
+    },
+    {
+      "input": "Approved text overflows a placeholder",
+      "expected": "Revise within scope or ask about the slide limit; do not silently cut text."
+    }
+  ]
+}

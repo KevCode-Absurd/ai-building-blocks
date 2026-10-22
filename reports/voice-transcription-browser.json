@@ -1,5 +1,5 @@
 {
-  "checkedOn": "2026-10-22T13:28:25.534Z",
+  "checkedOn": "2026-10-22T16:04:01.718Z",
   "status": "pass",
   "browser": "installed Chrome",
   "realMicrophoneCapturePipeline": true,
@@ -10,7 +10,7 @@
   "providerCalls": 1,
   "duration": 6.9973125,
   "bytes": 223958,
-  "transcript": "Please Build a landing page for my coffee shop and check it before publishing Build a landing page for my coffee shop",
+  "transcript": "Please Build a landing page for my coffee shop and check it before publishing. Build a landing page for my coffee shop and check it before publishing.",
   "maximumEstimatedCostUSD": 0.000875,
   "keepsExistingText": true,
   "editableAfterTranscription": true,

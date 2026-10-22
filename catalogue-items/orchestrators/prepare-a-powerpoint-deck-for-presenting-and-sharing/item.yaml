@@ -1,0 +1,52 @@
+slug: prepare-a-powerpoint-deck-for-presenting-and-sharing
+name: Prepare a PowerPoint deck for presenting and sharing
+summary: Share your deck and sharing rules. Get appendix navigation, speaker
+  notes, accessibility findings and an audience handout.
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: slide_deck
+    required: true
+outputs:
+  - type: slide_deck
+    required: true
+  - type: document
+    required: true
+  - type: audit_report
+    required: true
+uses:
+  - powerpoint-appendix-navigator
+  - powerpoint-speaker-note-builder
+  - powerpoint-accessibility-reviewer
+  - powerpoint-audience-handout-builder
+execution: coordinator
+steps:
+  - uses: powerpoint-appendix-navigator
+    note: Index actual backup evidence and test internal and return links in the
+      intended presentation environment.
+  - uses: powerpoint-speaker-note-builder
+    note: Add concise source-linked presenter notes with an estimated timing budget.
+  - uses: powerpoint-accessibility-reviewer
+    note: Inspect logical reading order, titles, labels, contrast and alternative
+      text; state native checks that could not run.
+  - uses: powerpoint-audience-handout-builder
+    note: Export the authorized audience copy under the explicit notes,
+      hidden-content and confidentiality rules; preserve the presenter source.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/office-expansion/catalogue.mjs
+example_pending: true
+credits:
+  - title: Original Excel and PowerPoint workflow methods
+    by: AI Blocks
+    used: Original intake, file-preservation, execution and acceptance rules written
+      for this task.
+warnings:
+  - Requires tools for the requested native file format. Checks requiring an
+    unavailable native application must remain marked not run.

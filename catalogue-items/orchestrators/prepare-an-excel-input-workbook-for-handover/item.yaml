@@ -1,0 +1,42 @@
+slug: prepare-an-excel-input-workbook-for-handover
+name: Prepare an Excel input workbook for handover
+summary: Share your field rules. Get a checked input workbook and a guide for
+  the next person who will maintain it.
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: spreadsheet
+    required: true
+  - type: document
+    required: true
+uses:
+  - excel-input-form-builder
+  - excel-handover-guide-writer
+execution: coordinator
+steps:
+  - uses: excel-input-form-builder
+    note: Build and validate the empty native input table from confirmed field
+      rules; keep valid, missing and duplicate test records in a separate
+      illustrative copy.
+  - uses: excel-handover-guide-writer
+    note: Document the actual delivered form, allowed entries, calculated fields,
+      validation limits and update steps.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/office-expansion/catalogue.mjs
+example_pending: true
+credits:
+  - title: Original Excel and PowerPoint workflow methods
+    by: AI Blocks
+    used: Original intake, file-preservation, execution and acceptance rules written
+      for this task.
+warnings:
+  - Requires tools for the requested native file format. Checks requiring an
+    unavailable native application must remain marked not run.

@@ -1,0 +1,14 @@
+{
+  "fixtureType": "illustrative-method-cases",
+  "nativeExecutionClaim": false,
+  "cases": [
+    {
+      "input": "January records total 12 completed of 20 eligible; February 3 of 10",
+      "expected": "Show 60% and 30%; the combined completion rate is 15/30, not 45%."
+    },
+    {
+      "input": "A record falls exactly at 1 February 00:00 in the chosen timezone",
+      "expected": "Count it in February only."
+    }
+  ]
+}

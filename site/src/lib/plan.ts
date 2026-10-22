@@ -3,7 +3,7 @@ import { assignedCustomMinds, validateCustomMinds, withCustomMinds, type CustomM
 // The builder's helpers that work on a whole workflow: what to gather, what passes along each connection,
 // a tidy layout, a plan from a goal, and a link that carries the workflow. Plain code, same input, same answer.
 import { deflateSync, Inflate, strFromU8, strToU8 } from "fflate";
-import { type Catalogue, portLabel, wireSteps } from "./data";
+import { type Catalogue, portLabel, wireSteps, workflowEntries } from "./data";
 import { orderFlow } from "./handoff";
 import { type Flow, type FlowEdge, type FlowNode, TEAM_MAX, uid } from "./store";
 
@@ -46,7 +46,8 @@ export function tidy(flow: Flow): Flow | null {
 export function flowFrom(c: Catalogue, name: string, slugs: string[]): Flow {
   const nodes: FlowNode[] = slugs.map((slug) => ({ id: uid(), slug, x: 0, y: 0 }));
   const edges: FlowEdge[] = wireSteps(c, slugs).map(([a, b]) => ({ id: uid(), from: nodes[a].id, to: nodes[b].id }));
-  const f: Flow = { id: uid(), name, nodes, edges, updated: Date.now() };
+  const parent = c.blocks.find(b => b.name === name && ["workflow", "agent"].includes(b.type) && JSON.stringify(workflowEntries(b)) === JSON.stringify(slugs));
+  const f: Flow = { id: uid(), name, nodes, edges, updated: Date.now(), ...(parent && !slugs.includes(parent.slug) ? { governingSkills: [parent.slug] } : {}) };
   return tidy(f) ?? f;
 }
 
@@ -56,7 +57,7 @@ export { planFromGoal, type Plan } from "./goal";
 
 // r and o are each step's role and notes; g and gn the Start node's goal and notes; k each step's mind; ov the overseer;
 // t the team (tm its mode). All optional, so old links still open.
-type Packed = { cm?: CustomMind[]; ks?: string[][]; cs?: CustomSkill[]; v: 1; n: string; s: string[]; p: [number, number][]; e: [number, number][]; m: number[]; r?: string[]; o?: string[]; g?: string; gn?: string; k?: string[]; ov?: string; t?: string[]; tm?: "split" | "together"; b?: { t: string; f: number; i: string }[][] };
+type Packed = { gs?: string[]; cm?: CustomMind[]; ks?: string[][]; cs?: CustomSkill[]; v: 1; n: string; s: string[]; p: [number, number][]; e: [number, number][]; m: number[]; r?: string[]; o?: string[]; g?: string; gn?: string; k?: string[]; ov?: string; t?: string[]; tm?: "split" | "together"; b?: { t: string; f: number; i: string }[][] };
 const b64 = (u: Uint8Array) => {
   let text = "";
   for (let i = 0; i < u.length; i += 8192) text += String.fromCharCode(...u.subarray(i, i + 8192));
@@ -82,7 +83,7 @@ function readPacked(code: string): Packed {
 export function packFlow(flow: Flow): string {
   const idx = Object.fromEntries(flow.nodes.map((n, i) => [n.id, i]));
   const data: Packed = {
-    v: 1, cm: assignedCustomMinds(flow, flow.customMinds ?? []), cs: flow.customSkills, n: flow.name, s: flow.nodes.map((n) => n.slug),
+    v: 1, gs: flow.governingSkills, cm: assignedCustomMinds(flow, flow.customMinds ?? []), cs: flow.customSkills, n: flow.name, s: flow.nodes.map((n) => n.slug),
     p: flow.nodes.map((n) => [Math.round(n.x / 10), Math.round(n.y / 10)]),
     e: flow.edges.filter((e) => e.from in idx && e.to in idx).map((e) => [idx[e.from], idx[e.to]]),
     m: flow.nodes.flatMap((n, i) => (n.ecommerce ? [i] : [])),
@@ -101,25 +102,34 @@ export function packFlow(flow: Flow): string {
 
 const clip = (s: unknown, n: number) => (typeof s === "string" && s.trim() ? s.slice(0, n) : undefined);
 
-/** Opens a packed workflow as a new one. Steps no longer in the library are dropped. Null if the link is broken. */
+/** Import is all-or-nothing. Missing skills and malformed plans must never become shorter workflows. */
 export function unpackFlow(c: Catalogue, code: string): Flow | null {
   const mindOk = (s: unknown) => (typeof s === "string" && c.bySlug[s]?.type === "mind" ? s : undefined);
   try {
     const d = readPacked(code);
     if (d.v !== 1 || !Array.isArray(d.s)) return null;
     const customSkills = validateCustomSkills(d.cs), customMinds = validateCustomMinds(d.cm); c = withCustomMinds(withCustomSkills(c, customSkills), customMinds);
-    const ids = d.s.slice(0, 40).map(() => uid());
-    const nodes: FlowNode[] = d.s.slice(0, 40).flatMap((slug, i) => (c.bySlug[slug] ? [{ id: ids[i], slug, x: (d.p?.[i]?.[0] ?? i * 30) * 10, y: (d.p?.[i]?.[1] ?? 11) * 10, ecommerce: d.m?.includes(i) || undefined, role: clip(d.r?.[i], 120), notes: clip(d.o?.[i], 2000), mind: mindOk(d.k?.[i]) }] : []));
-    const team = (d.t ?? []).filter((s) => mindOk(s)).slice(0, TEAM_MAX);
+    if (d.s.length > 40 || d.s.some(s => typeof s !== "string" || !c.bySlug[s])) return null;
+    for (const [values, limit] of [[d.r, 120], [d.o, 2000]] as const) if (values !== undefined && (!Array.isArray(values) || values.some(s => typeof s !== "string" || s.length > limit))) return null;
+    if ((d.g !== undefined && (typeof d.g !== "string" || d.g.length > 10000)) || (d.gn !== undefined && (typeof d.gn !== "string" || d.gn.length > 10000))) return null;
+    if (d.t !== undefined && (!Array.isArray(d.t) || d.t.length > TEAM_MAX || d.t.some(s => !mindOk(s)))) return null;
+    if ((d.ov && !mindOk(d.ov)) || (d.k !== undefined && (!Array.isArray(d.k) || d.k.some(s => s && !mindOk(s))))) return null;
+    if (d.ks !== undefined && (!Array.isArray(d.ks) || d.ks.some(list => !Array.isArray(list) || list.length > TEAM_MAX || list.some(s => !mindOk(s))))) return null;
+    const ids = d.s.map(() => uid());
+    const nodes: FlowNode[] = d.s.map((slug, i) => ({ id: ids[i], slug, x: (d.p?.[i]?.[0] ?? i * 30) * 10, y: (d.p?.[i]?.[1] ?? 11) * 10, ecommerce: d.m?.includes(i) || undefined, role: clip(d.r?.[i], 120), notes: clip(d.o?.[i], 2000), mind: mindOk(d.k?.[i]) }));
+    const team = d.t ?? [];
     if (!nodes.length && !team.length) return null;
-    const kept = new Set(nodes.map((n) => n.id));
-    const edges: FlowEdge[] = (d.e ?? []).filter(([a, b]) => kept.has(ids[a]) && kept.has(ids[b]) && a !== b).map(([a, b]) => ({ id: uid(), from: ids[a], to: ids[b] }));
+    if (!Array.isArray(d.e) || d.e.some(pair => !Array.isArray(pair) || pair.length !== 2 || pair.some(n => !Number.isInteger(n) || n < 0 || n >= ids.length) || pair[0] === pair[1]) || new Set(d.e.map(pair => pair.join(","))).size !== d.e.length) return null;
+    const edges: FlowEdge[] = d.e.map(([a, b]) => ({ id: uid(), from: ids[a], to: ids[b] }));
+    if (!orderFlow({ nodes, edges } as Flow)) return null;
+    if (d.b !== undefined && (!Array.isArray(d.b) || d.b.length > nodes.length || d.b.some((list, i) => !Array.isArray(list) || list.length > 20 || list.some(b => !b || typeof b.t !== "string" || b.t.length > 100 || typeof b.i !== "string" || b.i.length > 2000 || !Number.isInteger(b.f) || !edges.some(e => e.from === ids[b.f] && e.to === nodes[i]?.id) || !c.bySlug[nodes[i]?.slug]?.inputs.some(p => p.type === b.t))))) return null;
     for (const node of nodes) {
       const i = ids.indexOf(node.id);
-      if (Array.isArray(d.ks?.[i])) node.minds = [...new Set(d.ks![i].filter(s => mindOk(s)))].slice(0, TEAM_MAX);
-      if (Array.isArray(d.b?.[i])) node.bindings = d.b![i].slice(0, 20).flatMap(b => typeof b.t === "string" && typeof b.i === "string" && kept.has(ids[b.f]) && edges.some(e => e.from === ids[b.f] && e.to === node.id) ? [{ type: b.t.slice(0, 100), from: ids[b.f], instruction: b.i.slice(0, 2000) }] : []);
+      if (Array.isArray(d.ks?.[i])) node.minds = [...new Set(d.ks![i])];
+      if (Array.isArray(d.b?.[i])) node.bindings = d.b![i].map(b => ({ type: b.t, from: ids[b.f], instruction: b.i }));
     }
-    return { customMinds, customSkills, id: uid(), name: String(d.n || "Shared workflow").slice(0, 80), nodes, edges, updated: Date.now(), goal: clip(d.g, 10000), notes: clip(d.gn, 10000), overseer: mindOk(d.ov), team: team.length ? { minds: team, mode: d.tm === "together" ? "together" : "split" } : undefined };
+    if (d.gs !== undefined && (!Array.isArray(d.gs) || d.gs.length > 20 || d.gs.some(s => typeof s !== "string" || !/^[a-z0-9][a-z0-9-]*$/.test(s)))) return null;
+    return { governingSkills: d.gs, customMinds, customSkills, id: uid(), name: String(d.n || "Shared workflow").slice(0, 80), nodes, edges, updated: Date.now(), goal: clip(d.g, 10000), notes: clip(d.gn, 10000), overseer: mindOk(d.ov), team: team.length ? { minds: team, mode: d.tm === "together" ? "together" : "split" } : undefined };
   } catch {
     return null;
   }

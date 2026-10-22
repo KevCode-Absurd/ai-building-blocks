@@ -1,0 +1,57 @@
+slug: build-a-monthly-excel-and-powerpoint-update
+name: Build a monthly Excel and PowerPoint update
+summary: Share dated records and a slide template. Get a monthly workbook,
+  editable update deck and source-number checks.
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: spreadsheet
+    required: true
+  - type: slide_deck
+    required: true
+outputs:
+  - type: spreadsheet
+    required: true
+  - type: slide_deck
+    required: true
+  - type: document
+    required: true
+  - type: audit_report
+    required: true
+uses:
+  - excel-monthly-rollup-builder
+  - powerpoint-template-populator
+  - excel-powerpoint-number-checker
+  - powerpoint-speaker-note-builder
+execution: coordinator
+steps:
+  - uses: excel-monthly-rollup-builder
+    note: Create monthly summaries from the actual reporting population and preserve
+      record IDs, month boundaries and rate definitions.
+  - uses: powerpoint-template-populator
+    note: Populate the actual supplied template with the checked monthly outputs,
+      keeping charts and tables editable.
+  - uses: excel-powerpoint-number-checker
+    note: Match every displayed monthly metric to the delivered workbook and fail
+      stale periods, swapped categories or inconsistent units.
+  - uses: powerpoint-speaker-note-builder
+    note: Add source-linked speaking notes and an estimated timing budget without
+      altering verified figures.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/office-expansion/catalogue.mjs
+example_pending: true
+credits:
+  - title: Original Excel and PowerPoint workflow methods
+    by: AI Blocks
+    used: Original intake, file-preservation, execution and acceptance rules written
+      for this task.
+warnings:
+  - Requires tools for the requested native file format. Checks requiring an
+    unavailable native application must remain marked not run.

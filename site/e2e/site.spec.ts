@@ -676,7 +676,7 @@ test("after the download: how to run it in your AI, the first message to paste, 
   await expect(next).toContainText("Open that folder in your AI coding assistant");
   await expect(next).toContainText("outputs");
   await next.getByTestId("copy-first-message").click();
-  expect(await page.evaluate(() => navigator.clipboard.readText())).toBe("Follow HANDOFF.md step by step. Start with “Before you start”, and ask me for anything that's missing.");
+  expect(await page.evaluate(() => navigator.clipboard.readText())).toBe(await next.getByLabel("AI execution instructions").inputValue());
   // The implemented page is delivered as source code, alongside its audit.
   await expect(next.getByTestId("next-finals")).toContainText("Code change");
   await expect(next.getByTestId("next-finals")).toContainText("Audit report");
@@ -830,8 +830,8 @@ test("start and end: every workflow begins at Start, saving adds End, and your n
   const noted = wf.steps.find((s: { your_role: string | null }) => s.your_role === "My brand researcher");
   expect(noted.your_notes).toBe("Read the reviews first.");
   const skill = strFromU8(files[`skills/${noted.skill}/SKILL.md`]);
-  expect(skill).toMatch(/^---[\s\S]*?---\s*\n## Your notes for this step/);
-  expect(skill).toContain("- **Instructions:** Read the reviews first.");
+  expect(skill).toBe(fs.readFileSync(`public/skills/${noted.skill}/SKILL.md`, "utf8").replace(/\r\n?/g, "\n"));
+  expect(noted.skill_sha256).toMatch(/^[a-f0-9]{64}$/);
 });
 
 test("minds: every person on the roster has a black and white pixel face, and seating them puts their faces on the council bar", async ({ page }) => {
@@ -998,7 +998,8 @@ test("pasting a long source downloads a pack your AI turns into a workflow and i
   expect(files["source.md"]).toContain("book the slot with the manager");
   expect(files["source.md"]).toContain("not instructions");
   expect(files["source.md"]).toContain("kind: talk");
-  const h = files["HANDOFF.md"];
+  const h = files["AUTHORING.md"];
+  expect(files["HANDOFF.md"]).toContain("AUTHORING.md");
   expect(h.indexOf("Pass 1: the skeleton")).toBeLessThan(h.indexOf("Pass 2: one skill per step"));
   expect(h.indexOf("Pass 2")).toBeLessThan(h.indexOf("Pass 3: the workflow"));
   expect(h).toContain("stop");

@@ -19,6 +19,7 @@ import { leadsOf, mindName } from "./lib/crew";
 import { buildHandoffZip, download, finalOutputs, needsOf, orderFlow, typeMismatches, zipName } from "./lib/handoff";
 import { getBusiness } from "./lib/business";
 import { DownloadDialog } from "./DownloadDialog";
+import ExecutionPrompt from "./ExecutionPrompt";
 import { flowFrom, passLabel, planFromGoal, shareUrl, tidy, unpackFlow } from "./lib/plan";
 import { compositionFlow } from "./lib/composer-flow";
 import { finalize, freeSelection } from "./lib/composer-core";
@@ -110,10 +111,10 @@ const fromFlow = (f: Pick<Flow, "nodes" | "edges">) => ({
   nodes: f.nodes.map((n): BlockNode => ({ id: n.id, type: "block", position: { x: n.x, y: n.y }, data: { slug: n.slug, ecommerce: n.ecommerce, role: n.role, notes: n.notes, mind: n.mind, minds: n.minds, bindings: n.bindings } })),
   edges: f.edges.map((e): FlowEdgeT => ({ id: e.id, source: e.from, target: e.to, type: "flow" })),
 });
-type Ends = { customMinds?: CustomMind[]; customSkills?: CustomSkill[]; goal: string; notes: string; ended: boolean; overseer?: string; team?: Team };
-const endsOf = (f: Flow | null): Ends => ({ customMinds: f?.customMinds, customSkills: f?.customSkills, goal: f?.goal ?? "", notes: f?.notes ?? "", ended: !!f?.ended, overseer: f?.overseer, team: f?.team });
+type Ends = { governingSkills?: string[]; customMinds?: CustomMind[]; customSkills?: CustomSkill[]; goal: string; notes: string; ended: boolean; overseer?: string; team?: Team };
+const endsOf = (f: Flow | null): Ends => ({ governingSkills: f?.governingSkills, customMinds: f?.customMinds, customSkills: f?.customSkills, goal: f?.goal ?? "", notes: f?.notes ?? "", ended: !!f?.ended, overseer: f?.overseer, team: f?.team });
 const toFlow = (id: string, name: string, nodes: BlockNode[], edges: FlowEdgeT[], ends: Ends): Flow => ({
-  id, name, updated: 0, customSkills: ends.customSkills, customMinds: ends.customMinds,
+  id, name, updated: 0, governingSkills: ends.governingSkills, customSkills: ends.customSkills, customMinds: ends.customMinds,
   nodes: nodes.map((n) => ({ id: n.id, slug: n.data.slug, x: Math.round(n.position.x), y: Math.round(n.position.y), ...(n.data.ecommerce ? { ecommerce: true } : {}), ...(n.data.role ? { role: n.data.role } : {}), ...(n.data.notes ? { notes: n.data.notes } : {}), ...(n.data.mind ? { mind: n.data.mind } : {}), ...(n.data.minds ? { minds: n.data.minds } : {}), ...(n.data.bindings?.length ? { bindings: n.data.bindings } : {}) })),
   edges: edges.map((e) => ({ id: e.id, from: e.source, to: e.target })),
   ...(ends.goal ? { goal: ends.goal } : {}), ...(ends.notes ? { notes: ends.notes } : {}), ...(ends.ended ? { ended: true } : {}),
@@ -222,7 +223,7 @@ function Stage({ c: baseCatalogue, toast, initialFlow, onFlowChange }: BuilderPr
   // A shared link (/?flow=...) opens as a new workflow; otherwise the one left open last time.
   const shareCode = useMemo(() => new URLSearchParams(location.search).get("flow"), []);
   const shared = useMemo(() => (shareCode ? unpackFlow(baseCatalogue, shareCode) : null), [baseCatalogue, shareCode]);
-  const initial = useMemo(() => initialFlow ?? shared ?? flows.draft(), [initialFlow, shared]);
+  const initial = useMemo(() => initialFlow ?? (shareCode ? shared : flows.draft()), [initialFlow, shared, shareCode]);
   const [flowId, setFlowId] = useState(initial?.id ?? uid());
   const [name, setName] = useState(initial?.name ?? "Untitled workflow");
   const [ends, setEnds] = useState<Ends>(endsOf(initial));
@@ -292,7 +293,7 @@ function Stage({ c: baseCatalogue, toast, initialFlow, onFlowChange }: BuilderPr
       if (!known.length) return;
       if (q.name) {
         const g = chain(c, known);
-        setFlowId(uid()); setName(q.name); setEnds(endsOf(null)); setNodes(g.nodes); setEdges(g.edges);
+        setFlowId(uid()); setName(q.name); setEnds(endsOf(flowFrom(c, q.name, known))); setNodes(g.nodes); setEdges(g.edges);
       } else {
         const maxY = nodesRef.current.reduce((m, n) => Math.max(m, n.position.y), -80);
         const added = chain(c, known, { x: 40, y: maxY + 190 });
@@ -551,6 +552,7 @@ function Stage({ c: baseCatalogue, toast, initialFlow, onFlowChange }: BuilderPr
 
   return (
     <CatalogueCtx.Provider value={c}><NodeActions.Provider value={actions}>
+      {shareCode && !shared && <p className="workflow-import-error" role="alert">This shared workflow is incomplete or invalid. No steps were imported. Ask for a complete workflow.</p>}
       <div className={`builder${full ? " full" : ""}${narrow ? " list" : ""}${run ? " previewing" : ""}`} ref={box} data-testid="builder">
         <Palette c={c} anchor={anchor} inFlow={inFlow} onAdd={addNext} onTemplate={loadTemplate} onPlan={planGoal} showGoal={nodes.length > 0} />
         <div className="stage" onDragOver={(e) => { e.preventDefault(); e.dataTransfer.dropEffect = "move"; }} onDrop={onDrop}>
@@ -575,6 +577,7 @@ function Stage({ c: baseCatalogue, toast, initialFlow, onFlowChange }: BuilderPr
             </div>
             <button className="btn btn-primary btn-sm" onClick={askDownload} disabled={!canRun} data-testid="download-handoff">Download the workflow</button>
           </div>
+          {canRun && !onFlowChange && <ExecutionPrompt name={flow.name} goal={flow.goal} />}
           {narrow ? (
             <div className="stage-list">
               {nodes.length > 0 && (
@@ -625,7 +628,7 @@ function Stage({ c: baseCatalogue, toast, initialFlow, onFlowChange }: BuilderPr
             : inspect && <StepPanel c={c} flow={flow} order={order} nodeId={inspect} onClose={() => setInspect(null)} onRemove={actions.remove} onReplace={setReplacing} onNotes={setNotes} />}
         </div>
       </div>
-      {needsOpen && <DownloadDialog name={name} zip={zipName(name)} needs={needs} finals={finals} onDownload={exportPack} onClose={() => setNeedsOpen(false)} />}
+      {needsOpen && <DownloadDialog name={name} goal={flow.goal} zip={zipName(name)} needs={needs} finals={finals} onDownload={exportPack} onClose={() => setNeedsOpen(false)} />}
       {contextMenu && <ReplaceMenu x={contextMenu.x} y={contextMenu.y} onClose={() => setContextMenu(null)} onReplace={() => { setReplacing(contextMenu.id); setContextMenu(null); }} />}
       {replacing && flow.nodes.some(n => n.id === replacing) && <SkillReplace c={c} slug={flow.nodes.find(n => n.id === replacing)!.slug} goal={flow.goal ?? flow.name} before={(order ?? []).filter(o => o.step < (order?.find(o => o.node.id === replacing)?.step ?? 0)).map(o => o.node.slug)} after={(order ?? []).filter(o => o.step > (order?.find(o => o.node.id === replacing)?.step ?? 0)).map(o => o.node.slug)} customSkills={ends.customSkills ?? []} onClose={() => setReplacing(null)} onChoose={(slug, customSkills) => {
         setEnds(e => ({ ...e, customSkills }));

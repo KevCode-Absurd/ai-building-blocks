@@ -1,0 +1,49 @@
+slug: review-revised-excel-and-powerpoint-files
+name: Review revised Excel and PowerPoint files
+summary: Share old and new workbooks and decks. Get a version-change register
+  and checks that the new slides match the new workbook.
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: spreadsheet
+    required: true
+  - type: slide_deck
+    required: true
+outputs:
+  - type: document
+    required: true
+  - type: audit_report
+    required: true
+uses:
+  - excel-workbook-change-reviewer
+  - powerpoint-deck-change-reviewer
+  - excel-powerpoint-number-checker
+execution: coordinator
+steps:
+  - uses: excel-workbook-change-reviewer
+    note: Compare baseline and revised workbook using stable record keys and the
+      intended change list; retain formula and feature differences.
+  - uses: powerpoint-deck-change-reviewer
+    note: Compare baseline and revised deck by slide identity, including visible
+      content, notes, hidden slides and embedded data.
+  - uses: excel-powerpoint-number-checker
+    note: Check the revised deck against the revised workbook, preserving the
+      prior-version review as a separate source of evidence.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/office-expansion/catalogue.mjs
+example_pending: true
+credits:
+  - title: Original Excel and PowerPoint workflow methods
+    by: AI Blocks
+    used: Original intake, file-preservation, execution and acceptance rules written
+      for this task.
+warnings:
+  - Requires tools for the requested native file format. Checks requiring an
+    unavailable native application must remain marked not run.

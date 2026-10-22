@@ -1,0 +1,14 @@
+{
+  "fixtureType": "illustrative-method-cases",
+  "nativeExecutionClaim": false,
+  "cases": [
+    {
+      "input": "Orders have one row per order; lines have three rows for one order",
+      "expected": "Allow an explicit one-to-many join; do not triple-count the order total."
+    },
+    {
+      "input": "A required customer key maps to two distinct customers",
+      "expected": "Stop the ambiguous match and return both source locations."
+    }
+  ]
+}

@@ -1,5 +1,6 @@
-import { candidatesFor, decodeCatalogue, finalize, LIMITS, plannerPrompt, requestError, selectionSchema, validateChoices, type Choices, type Library } from "../lib/composer-core.ts";
-import { callModel, KEY_NAMES, MODELS, planOutputLimit, type ModelResult } from "../lib/composer-models.ts";
+import { decodeCatalogue, finalize, LIMITS, requestError, validateChoices, type Choices, type Library } from "../lib/composer-core.ts";
+import { callModel, KEY_NAMES, MODELS, type ModelResult } from "../lib/composer-models.ts";
+import { semanticReservation, semanticWorkflow } from "../lib/composer-semantic.ts";
 export type ComposerEnv = { OPENAI_API_KEY?: string; GEMINI_API_KEY?: string; ANTHROPIC_API_KEY?: string; DEEPSEEK_API_KEY?: string; WORKFLOW_COMPOSER_ENABLED?: string; WORKFLOW_DAILY_CAP_USD?: string; WORKFLOW_DEFAULT_MODEL?: string; WORKFLOW_SALT?: string };
 type Job = { id: string; fingerprint: string; day: string; ip: string; user_id: string; charge: number; status: string; result: string | null };
 export type ComposerUsage = { completed: number; attemptsToday: number; estimatedCost: number };
@@ -73,16 +74,14 @@ export async function handleComposer(req: Request, library: Library | (() => Pro
     return json(409, { error: "That request has already started. Use free assembly or start a new request after it finishes." });
   }
   const c = typeof library === "function" ? await library() : library;
-  const candidates = candidatesFor(c, body.goal, choices);
-  if (!candidates.length) return json(400, { error: "No relevant library blocks were found. Try a more specific result." });
-  const prompt = plannerPrompt(body.goal, body.context, choices, candidates);
-  const outputLimit = planOutputLimit(model);
-  const reserve = (new TextEncoder().encode(JSON.stringify(prompt)).length * model.input + outputLimit * model.output) / 1e6 * 1.25;
+  const reserve = semanticReservation(c, body.goal, body.context, choices, model);
   const cap = Math.min(25, Number(env.WORKFLOW_DAILY_CAP_USD || 2));
   if (!Number.isFinite(cap) || cap <= 0 || !await store.claim({ id, fingerprint, ip: ipHash, user_id: userId, day: new Date().toISOString().slice(0, 10), charge: reserve, status: "pending", result: null }, cap)) return json(429, { error: "The daily allowance is reached. Free assembly is still available." });
   let result: ModelResult | undefined;
   try {
-    result = await runner(model, env[KEY_NAMES[model.provider]]!, prompt, selectionSchema(candidates), outputLimit);
+    const planned = await semanticWorkflow(c, body.goal, body.context, choices, model, env[KEY_NAMES[model.provider]]!, runner);
+    result = planned.result;
+    const candidates = planned.candidates;
     const plan = finalize(c, JSON.parse(result.text), "ai", new Set(candidates.map(b => b.slug)));
     // The application owns the question policy. Model suggestions cannot introduce unrelated fields.
     const { questionsFor } = await import("../lib/composer-core.ts");
@@ -92,7 +91,8 @@ export async function handleComposer(req: Request, library: Library | (() => Pro
     return json(200, out);
   } catch (e: any) {
     // Retain the reservation for transport errors with unknown billing; known usage is always charged.
-    await store.finish(id, result?.cost ?? e.billable?.cost ?? reserve, "failed", null);
+    await store.finish(id, result?.cost ?? e.billable?.cost ?? (e.unbilled ? 0 : reserve), "failed", null);
+    if (["credit_balance_exhausted", "insufficient_quota"].includes(e.providerCode)) return json(503, { error: "AI composition is temporarily unavailable because the provider allowance is exhausted. You can still use free assembly." });
     return json(502, { error: result ? "The service returned a workflow we could not validate. Try free assembly." : "AI composition could not finish this request. Try free assembly." });
   }
 }

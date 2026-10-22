@@ -19,11 +19,11 @@ test("ten-thousand-character requests and server-owned model selection", async (
   const metadata = await (await handleComposer(new Request("https://example.test/api/compose"), c, env, memoryComposer(), "ip")).json();
   assert.deepEqual(metadata, { enabled: true });
   let selected;
-  const run = async model => { selected = model.id; return runner(); };
+  const run = async (model, ...args) => { selected = model.id; return runner(model, ...args); };
   const response = await handleComposer(request(), c, { ...env, OPENAI_API_KEY: "test", WORKFLOW_DEFAULT_MODEL: "gpt-6.1-sol" }, memoryComposer(), "ip", run);
   assert.equal(response.status, 200); assert.equal(selected, "gpt-6.1-sol");
   const longGoal = "Build a landing page. ".padEnd(10000, "क"); let received;
-  const longResponse = await handleComposer(request({ goal: longGoal, context: "क".repeat(4000) }), c, env, memoryComposer(), "ip", async (_m, _k, prompt) => { received = JSON.parse(prompt.user); return runner(); });
+  const longResponse = await handleComposer(request({ goal: longGoal, context: "क".repeat(4000) }), c, env, memoryComposer(), "ip", async (m, k, prompt, ...args) => { received = JSON.parse(prompt.user); return runner(m, k, prompt, ...args); });
   assert.equal(longResponse.status, 200); assert.equal(received.request, longGoal); assert.equal(received.context.length, 4000);
   assert.equal((await handleComposer(request({ model: "claude-opus-5-5" }), c, env, memoryComposer(), "ip", run)).status, 400);
 });
@@ -125,20 +125,22 @@ test("validation rejects invented blocks, unsupported questions and runaway revi
 const env = { ANTHROPIC_API_KEY: "test-key-not-real", WORKFLOW_COMPOSER_ENABLED: "true", WORKFLOW_DAILY_CAP_USD: "2", WORKFLOW_DEFAULT_MODEL: "claude-haiku-5-5" };
 const body = { goal: "Build a landing page from scratch", context: "", choices: {} };
 const request = (patch = {}, id = crypto.randomUUID(), headers = {}) => new Request("https://example.test/api/compose", { method: "POST", headers: { "content-type": "application/json", "idempotency-key": id, ...headers }, body: JSON.stringify({ ...body, ...patch }) });
-const runner = async () => ({ text: JSON.stringify(freeSelection(c, body.goal)), usage: { input: 100, output: 500, cached: 0, cacheWrite: 0 }, cost: .00026, latencyMs: 10, finish: "completed", actualModel: "claude-haiku-5-5" });
+const runner = async (_m, _k, _prompt, schema) => ({ text: JSON.stringify(schema?.properties?.intents ? { intents: [{ query: body.goal, kind: "create" }] } : freeSelection(c, body.goal)), usage: { input: 100, output: 500, cached: 0, cacheWrite: 0 }, cost: .00026, latencyMs: 10, finish: "completed", actualModel: "claude-haiku-5-5" });
 test("API rejects greetings, foreign origins, oversized inputs and unsupported models before spending", async () => {
   let calls = 0; const run = async (...args) => { calls++; return runner(...args); };
   for (const req of [request({ goal: "How are you?" }), request({ goal: "x".repeat(10001) }), request({ context: "x".repeat(4001) }), request({ model: "unknown" }), request({}, crypto.randomUUID(), { origin: "https://evil.test" })]) assert.ok((await handleComposer(req, c, env, memoryComposer(), "ip", run)).status >= 400);
   assert.equal(calls, 0);
   const disabled = await handleComposer(request(), c, {}, null, "ip", run); assert.equal(disabled.status, 503); assert.equal(calls, 0);
 });
-test("idempotency returns the completed result without a second model call", async () => {
+test("idempotency reuses both interpretation and planning without extra model calls", async () => {
   const store = memoryComposer(), id = crypto.randomUUID(); let calls = 0;
-  const run = async () => { calls++; return runner(); };
+  const run = async (...args) => { calls++; return runner(...args); };
   const first = await handleComposer(request({}, id), c, env, store, "ip", run);
   assert.equal(first.status, 200); const out = await first.json(); assert.ok(out.plan.steps.length); assert.equal(out.model, "claude-haiku-5-5");
   const second = await handleComposer(request({}, id), c, env, store, "ip", run);
-  assert.equal(second.status, 200); assert.equal(calls, 1);
+  assert.equal(second.status, 200); assert.equal(calls, 2);
+  assert.equal(out.cost, .00052);
+  assert.equal(out.usage.input, 200);
   assert.equal((await handleComposer(request({ goal: "Different goal" }, id), c, env, store, "ip", run)).status, 409);
   assert.equal((await handleComposer(request({}, id), c, env, store, "other-ip", run)).status, 200, "The same verified account can retry after changing networks");
 });

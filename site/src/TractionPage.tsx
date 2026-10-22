@@ -6,6 +6,7 @@ import { loadCatalogue } from "./lib/data";
 import { buildHandoffZip, download } from "./lib/handoff";
 import { BUSINESS_TYPES, growthPlan, tractionBrief, type TractionBrief } from "./lib/traction";
 import "./traction.css";
+import ExecutionPrompt from "./ExecutionPrompt";
 
 type Channel = { id: string; channel: string; name: string; decision: string };
 type Prepared = ReturnType<typeof growthPlan> & { brief: string; channel: string };
@@ -105,8 +106,10 @@ export default function TractionPage() {
     </section>
     {prepared && <section className="traction-result" aria-labelledby="traction-result-title" ref={resultRef} tabIndex={-1} data-testid="traction-result">
       <div className="traction-result-heading"><span className="mono small">READY TO USE</span><h2 id="traction-result-title">Your growth planning brief</h2><p>Review your details, then copy the brief or download the complete skill pack.</p></div>
+      <div className="bp-actions"><button className="btn btn-primary" onClick={pack} disabled={busy} data-testid="traction-download">{busy ? "Building your pack…" : "Download the workflow"}<ArrowIcon /></button><button className="btn btn-dark" onClick={copy} disabled={busy} data-testid="traction-copy">Copy the AI brief</button></div>
+      <ExecutionPrompt name="Business growth planning pack" goal={`Plan growth for this business: ${prepared.business}`} />
       <dl className="traction-summary">{[["Business", prepared.business], ["Type", prepared.type], ["Customers", prepared.buyer], ["Market", prepared.market], ["Goal", prepared.goal], ["Success measures", prepared.success], ["Cash and time", prepared.limits], ["Scope", prepared.scope]].map(([label, text]) => <div key={label}><dt>{label}</dt><dd>{text}</dd></div>)}</dl>
-      <div className="traction-delivery"><div className="bp-actions"><button className="btn btn-primary" onClick={pack} disabled={busy} data-testid="traction-download">{busy ? "Building your pack…" : "Download the skill pack"}<ArrowIcon /></button><button className="btn btn-dark" onClick={copy} disabled={busy} data-testid="traction-copy">Copy the AI brief</button></div><p>Open HANDOFF.md in an AI tool that can read files to compare channels and plan tests.</p></div>
+      <p>Open START_HERE.txt in an AI tool that can read the whole folder to compare channels and plan tests.</p>
       {error && <p className="traction-feedback" role="alert" data-testid="traction-error">{error}</p>}
       {message && <p className="traction-feedback" role="status" data-testid="traction-status">{message}</p>}
       <details className="traction-brief"><summary>Read or copy the full brief</summary><pre>{prepared.brief}</pre></details>

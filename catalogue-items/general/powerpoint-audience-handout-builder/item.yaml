@@ -1,0 +1,31 @@
+slug: powerpoint-audience-handout-builder
+name: PowerPoint audience handout builder
+summary: Share a deck and sharing rules. Get a readable audience handout with
+  the right notes and private material excluded.
+category: general
+type: skill
+role: build
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: slide_deck
+    required: true
+outputs:
+  - type: document
+    required: true
+uses: []
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/office-expansion/catalogue.mjs
+example_pending: true
+credits:
+  - title: Original Excel and PowerPoint workflow methods
+    by: AI Blocks
+    used: Original intake, file-preservation, execution and acceptance rules written
+      for this task.
+warnings:
+  - Requires tools for the requested native file format. Checks requiring an
+    unavailable native application must remain marked not run.

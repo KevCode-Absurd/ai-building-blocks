@@ -1,5 +1,5 @@
 {
-  "checkedOn": "2026-10-22T13:38:44.968Z",
+  "checkedOn": "2026-10-22T16:10:27.777Z",
   "deadline": "2026-10-22 Asia/Kolkata",
   "accountAuthenticated": true,
   "workersPaid": {
@@ -62,7 +62,7 @@
     "verifiedOn": "2026-10-22T13:30:12.565Z"
   },
   "production": {
-    "status": "R14 final workflow release published and verified: Whisper voice, horizontal composer, editable graph, personal minds and councils, 100 new library items",
+    "status": "R15 verified: microphone icon, OpenAI Whisper, semantic multi-goal routing; 30 real-model cases, 32 live browser and 27 smoke checks pass",
     "database": "ai-blocks",
     "databaseId": "a886eeae-4014-4da2-842f-a5bebc4d7f71",
     "migrations": [
@@ -87,18 +87,18 @@
       "blockSeconds": 10,
       "includedRule": true
     },
-    "versionId": "be7e9b44-c528-4748-a7ff-a910370c9925",
-    "workerSha256": "7c80c58bf03aedde56b3950d2671194915f1d18929ecadf7d935423e92d50bc5",
+    "versionId": "35aac4fd-b930-4a24-9731-bc0dcdc68b6e",
+    "workerSha256": "a16ebb0076eff1c01fc0eb189843972a99374252c65a38b871646f2706ea1809",
     "uploadedAssets": 4500,
     "reusedAssets": 14110,
     "workerStartupMs": 4,
     "workersDevEnabled": false,
     "previewUrlsEnabled": false,
     "clerkConfigured": true,
-    "previousVersionId": "6b7d3b14-6b50-42a4-aa92-aa291eae405a",
-    "deployedOn": "2026-10-22T13:34:18.251Z",
-    "releaseRoot": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r14-final-workflows",
-    "assetReleaseRoot": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r14-final-workflows",
+    "previousVersionId": "be7e9b44-c528-4748-a7ff-a910370c9925",
+    "deployedOn": "2026-10-22T16:08:07.176Z",
+    "releaseRoot": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r15-semantic-voice",
+    "assetReleaseRoot": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r15-semantic-voice",
     "sourceCommit": "47069311d5299e1171ed95added2afd1642fdb83",
     "publicVerified": true,
     "gitEvidenceBeforeActivation": "56269425",
@@ -108,17 +108,18 @@
     "defaultProviderKeyConfigured": true,
     "customerPriceUSD": 0,
     "pendingFrontendRelease": null,
-    "verifiedOn": "2026-10-22T13:38:44.968Z",
+    "verifiedOn": "2026-10-22T16:10:27.777Z",
     "manifestCache": {
       "entries": 23837,
       "algorithm": "Wrangler 4.151.3 BLAKE3/base64/extension"
     },
     "origin": "https://useaiblocks.com",
-    "root": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r13-workflow-matching-candidate2",
+    "root": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r15-semantic-voice",
     "bindingsPreserved": 20,
     "AIEnabled": true,
-    "catalogueSha256": "a10e0eb52877f31a97323b083f1469811e9efc2286b71974cfdc5824125c8791",
-    "workflowMatchingReport": "reports/workflow-matching-production-deployment.json"
+    "catalogueSha256": "6757be7af672633794122d2fd0de16e78531fc461039b67209f35069dbab2351",
+    "workflowMatchingReport": "reports/workflow-matching-production-deployment.json",
+    "semanticReleaseReport": "reports/composer-semantic-production-deployment.json"
   },
   "releaseScope": {
     "blocks": 4438,

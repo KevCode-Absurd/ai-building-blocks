@@ -1,0 +1,33 @@
+slug: excel-table-join-reconciler
+name: Excel table join reconciler
+summary: Share two Excel tables and their matching keys. Get a reconciled join
+  with unmatched rows and duplicate keys explained.
+category: general
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: spreadsheet
+    required: true
+  - type: audit_report
+    required: true
+uses: []
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/office-expansion/catalogue.mjs
+example_pending: true
+credits:
+  - title: Original Excel and PowerPoint workflow methods
+    by: AI Blocks
+    used: Original intake, file-preservation, execution and acceptance rules written
+      for this task.
+warnings:
+  - Requires tools for the requested native file format. Checks requiring an
+    unavailable native application must remain marked not run.

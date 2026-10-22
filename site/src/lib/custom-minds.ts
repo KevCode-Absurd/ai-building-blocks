@@ -5,7 +5,7 @@ export type CustomMind = { slug: string; name: string; specialty: string; voice:
 export const MIND_LIMIT = 12;
 export function validateCustomMinds(raw: unknown): CustomMind[] {
   if (raw === undefined) return [];
-  if (!Array.isArray(raw) || raw.length > MIND_LIMIT || JSON.stringify(raw).length > 220000) throw Error("Keep up to 12 minds, under 220 KB in total.");
+  if (!Array.isArray(raw) || raw.length > MIND_LIMIT || JSON.stringify(raw).length > 220000) throw Error("Keep up to 12 minds within the profile text limits.");
   const seen = new Set<string>();
   return raw.map(m => {
     if (!m || typeof m.slug !== "string" || !/^my-mind-[a-z0-9-]{1,60}$/.test(m.slug) || seen.has(m.slug)) throw Error("Choose a valid AI Blocks mind file.");

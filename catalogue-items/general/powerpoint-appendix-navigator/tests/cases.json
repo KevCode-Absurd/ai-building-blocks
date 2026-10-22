@@ -1,0 +1,14 @@
+{
+  "fixtureType": "illustrative-method-cases",
+  "nativeExecutionClaim": false,
+  "cases": [
+    {
+      "input": "A new slide was inserted ahead of appendix slide 12",
+      "expected": "Preserve the link to the same backup slide identity."
+    },
+    {
+      "input": "A target backup slide was removed",
+      "expected": "Flag or repair the broken target instead of linking to the next ordinal."
+    }
+  ]
+}

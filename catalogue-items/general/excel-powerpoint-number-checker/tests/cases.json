@@ -1,0 +1,14 @@
+{
+  "fixtureType": "illustrative-method-cases",
+  "nativeExecutionClaim": false,
+  "cases": [
+    {
+      "input": "Workbook completion is 15/30; slide shows 45%",
+      "expected": "Report a mismatch: expected 50% for the same population."
+    },
+    {
+      "input": "Workbook values are in thousands but the slide label says units",
+      "expected": "Flag a unit mismatch even when digits are identical."
+    }
+  ]
+}

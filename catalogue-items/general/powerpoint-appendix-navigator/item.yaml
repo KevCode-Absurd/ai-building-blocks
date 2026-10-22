@@ -1,0 +1,33 @@
+slug: powerpoint-appendix-navigator
+name: PowerPoint appendix navigator
+summary: Share a deck with backup slides. Get an appendix index and tested links
+  back to the relevant main slides.
+category: general
+type: skill
+role: build
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: slide_deck
+    required: true
+outputs:
+  - type: slide_deck
+    required: true
+  - type: audit_report
+    required: true
+uses: []
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/office-expansion/catalogue.mjs
+example_pending: true
+credits:
+  - title: Original Excel and PowerPoint workflow methods
+    by: AI Blocks
+    used: Original intake, file-preservation, execution and acceptance rules written
+      for this task.
+warnings:
+  - Requires tools for the requested native file format. Checks requiring an
+    unavailable native application must remain marked not run.

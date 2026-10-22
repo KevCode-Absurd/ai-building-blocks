@@ -10,3 +10,9 @@
 .task-mind-selected { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0; }
 .task-mind-selected .chip { white-space: normal; overflow-wrap: anywhere; }
 .task-mind-recommendation small { display: block; font-weight: normal; }
+.mind-account-status { margin: 14px 0; padding: 12px; border: 1px solid var(--line-2); border-radius: 8px; }
+.mind-conflict { padding: 12px; border: 1px solid var(--line-2); }
+.mind-conflict pre { max-height: 200px; overflow: auto; white-space: pre-wrap; overflow-wrap: anywhere; font-size: 12px; }
+.mind-migration { margin: 12px 0; padding: 10px; border: 1px solid var(--line-2); }
+.mind-migration label { display: flex; align-items: center; gap: 8px; font-size: 14px; margin: 8px 0; }
+.mind-migration input[type=checkbox] { width: auto; }

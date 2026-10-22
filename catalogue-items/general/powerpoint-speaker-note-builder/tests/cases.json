@@ -1,0 +1,14 @@
+{
+  "fixtureType": "illustrative-method-cases",
+  "nativeExecutionClaim": false,
+  "cases": [
+    {
+      "input": "Eight-minute talk with six content slides and two minutes for questions",
+      "expected": "Budget six minutes for the content and label the draft timing estimate."
+    },
+    {
+      "input": "A slide number changed during reordering",
+      "expected": "Attach the note to the actual slide identity, not the old ordinal alone."
+    }
+  ]
+}

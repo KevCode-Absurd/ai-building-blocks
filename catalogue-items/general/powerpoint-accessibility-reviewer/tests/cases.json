@@ -1,0 +1,14 @@
+{
+  "fixtureType": "illustrative-method-cases",
+  "nativeExecutionClaim": false,
+  "cases": [
+    {
+      "input": "The first object in reading order is a decorative background",
+      "expected": "Inspect the actual accessibility order and mark the decoration appropriately."
+    },
+    {
+      "input": "The chart only distinguishes series by red and green",
+      "expected": "Require an additional readable distinction such as labels or patterns."
+    }
+  ]
+}

@@ -8,6 +8,7 @@ import { decodeCatalogue, handleComposer, memoryComposer } from "./src/server/co
 import { loadWorkflowEnv } from "../tools/lib/workflow-env.mjs";
 import { authenticateUser, authConfigured, handleAccount } from "./src/server/auth";
 import { handleTranscription, MAX_VOICE_BYTES } from "./src/server/transcription";
+import { handleAccountMinds, memoryMinds } from "./src/server/account-minds";
 
 function devSecurity(): Plugin {
   return { name: "dev-security", configureServer(server) {
@@ -20,11 +21,21 @@ function devSecurity(): Plugin {
 
 function devComposer(): Plugin {
   const store = memoryComposer();
+  const minds = memoryMinds();
   const keys = loadWorkflowEnv(path.resolve(".."));
   const auth = loadEnv("development", process.cwd(), "CLERK_");
   const publicAuth = loadEnv("development", process.cwd(), "VITE_CLERK_");
   const env = { ...keys, ...auth, CLERK_PUBLISHABLE_KEY: auth.CLERK_PUBLISHABLE_KEY || publicAuth.VITE_CLERK_PUBLISHABLE_KEY || keys.CLERK_PUBLISHABLE_KEY, WORKFLOW_COMPOSER_ENABLED: keys.WORKFLOW_COMPOSER_ENABLED ?? "true", WORKFLOW_DAILY_CAP_USD: keys.WORKFLOW_DAILY_CAP_USD ?? "2" };
   return { name: "dev-composer", configureServer(server) {
+    server.middlewares.use("/api/minds", async (req, res) => {
+      try {
+        const chunks: Buffer[] = []; let bytes = 0;
+        for await (const chunk of req) { bytes += chunk.length; if (bytes > 900000) { res.statusCode = 413; res.end('{"error":"Mind library is too large."}'); return; } chunks.push(chunk as Buffer); }
+        const request = new Request(`http://${req.headers.host}/api/minds`, { method: req.method, headers: req.headers as Record<string, string>, body: !["GET", "HEAD"].includes(req.method ?? "GET") ? Buffer.concat(chunks) : undefined });
+        const out = await handleAccountMinds(request, env, minds);
+        res.statusCode = out.status; out.headers.forEach((v, k) => res.setHeader(k, v)); res.end(await out.text());
+      } catch { res.statusCode = 503; res.end('{"error":"Your account minds are temporarily unavailable."}'); }
+    });
     server.middlewares.use("/api/transcribe", async (req, res) => {
       try {
         const chunks: Buffer[] = []; let bytes = 0;

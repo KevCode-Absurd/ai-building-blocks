@@ -5,7 +5,7 @@
 ## Key facts
 
 - Free to use, no account needed.
-- 4208 skills, workflows and prompts in 60 jobs, 305 minds and 68 mini tools.
+- 4228 skills, workflows and prompts in 60 jobs, 305 minds and 68 mini tools.
 - Imported skills are copied as they are from open-licence GitHub repos (MIT, Apache 2.0, BSD, CC BY, CC BY-SA), credited on their page with a link to the original.
 - Minds are AIs built from a person's public work, with their sources listed. They are not the person. Minds that invest teach frameworks only, never buy or sell advice.
 - Skills that scrape websites or need a paid outside account say so on their page.
@@ -47,6 +47,7 @@
 - [Get found in search and AI answers](https://useaiblocks.com/llms/get-found-in-search.txt): 95 skills and workflows, such as Customer question keyword finder and Customer FAQ writer
 - [Ship and host your app](https://useaiblocks.com/llms/ship-and-host.txt): 92 skills and workflows, such as Domain and redirect layout planner and Release day rollback planner
 - [Research a topic properly](https://useaiblocks.com/llms/research-topics.txt): 91 skills and workflows, such as Fact and opinion sorter and Research question outliner
+- [Make documents, sheets and slides](https://useaiblocks.com/llms/work-with-files.txt): 84 skills and workflows, such as Doc typo and term checker and Excel workbook handover writer
 - [Keep your code secure](https://useaiblocks.com/llms/secure-code.txt): 83 skills and workflows, such as Code change security review and Threat list maker
 - [Lead and manage people](https://useaiblocks.com/llms/lead-people.txt): 82 skills and workflows, such as Difficult conversation repair planner and Employee feedback writer
 - [Make video ads](https://useaiblocks.com/llms/make-video-ads.txt): 78 skills and workflows, such as 3D how-it-works video clip prompt writer and 3D how-it-works video ad script writer
@@ -55,7 +56,6 @@
 - [Write emails that get read](https://useaiblocks.com/llms/write-emails.txt): 68 skills and workflows, such as Cold email claim checker and Dull update email rewriter
 - [Write ad copy](https://useaiblocks.com/llms/write-ad-copy.txt): 65 skills and workflows, such as Ad angle planner and Ad call to action writer
 - [Test an idea before you build it](https://useaiblocks.com/llms/test-an-idea.txt): 65 skills and workflows, such as AI-fit problem checker and Business model assumption tester
-- [Make documents, sheets and slides](https://useaiblocks.com/llms/work-with-files.txt): 64 skills and workflows, such as Doc typo and term checker and Article draft editor
 - [Build websites and web apps](https://useaiblocks.com/llms/build-websites.txt): 62 skills and workflows, such as Font pair shortlist maker and Website page structure planner
 - [Build a product people want](https://useaiblocks.com/llms/build-product.txt): 59 skills and workflows, such as Feature request screener and Launch scope cutter
 - [Read your ad results](https://useaiblocks.com/llms/read-ad-results.txt): 55 skills and workflows, such as Ad survey results calculator and Ad results brief writer

@@ -44,7 +44,7 @@ const catalogue = decodeCatalogue(JSON.parse(fs.readFileSync("public/data/blocks
 const goal = "Build a landing page from scratch";
 const modelEnv = { ANTHROPIC_API_KEY: "unit-test-only", WORKFLOW_COMPOSER_ENABLED: "true", WORKFLOW_DEFAULT_MODEL: "claude-haiku-5-5", WORKFLOW_DAILY_CAP_USD: "2" };
 function request(id = crypto.randomUUID(), patch = {}) { return new Request("https://example.test/api/compose", { method: "POST", headers: { "content-type": "application/json", "idempotency-key": id }, body: JSON.stringify({ goal, context: "", ...patch }) }); }
-const run = async () => ({ text: JSON.stringify(freeSelection(catalogue, goal)), usage: { input: 100, output: 500, cached: 0, cacheWrite: 0 }, cost: .003, latencyMs: 10 });
+const run = async (_m, _k, _prompt, schema) => ({ text: JSON.stringify(schema?.properties?.intents ? { intents: [{ query: goal, kind: "create" }] } : freeSelection(catalogue, goal)), usage: { input: 100, output: 500, cached: 0, cacheWrite: 0 }, cost: .003, latencyMs: 10 });
 
 test("generation denies anonymous callers before loading the catalogue or contacting a model", async () => {
   let spent = false;
@@ -56,12 +56,12 @@ test("generation denies anonymous callers before loading the catalogue or contac
 
 test("idempotency is scoped to accounts, survives network changes, and counts each generation once", async () => {
   const store = memoryComposer(), id = crypto.randomUUID(); let calls = 0;
-  const runner = async () => { calls++; return run(); };
+  const runner = async (...args) => { calls++; return run(...args); };
   assert.equal((await handleComposer(request(id), catalogue, modelEnv, store, "ip-a", runner, "user_alice")).status, 200);
   assert.equal((await handleComposer(request(id), catalogue, modelEnv, store, "ip-b", runner, "user_alice")).status, 200);
-  assert.equal(calls, 1);
-  assert.equal((await handleComposer(request(id), catalogue, modelEnv, store, "ip-b", runner, "user_bob")).status, 200);
   assert.equal(calls, 2);
+  assert.equal((await handleComposer(request(id), catalogue, modelEnv, store, "ip-b", runner, "user_bob")).status, 200);
+  assert.equal(calls, 4);
   assert.equal((await store.usage("user_alice", new Date().toISOString().slice(0, 10))).completed, 1);
 });
 

@@ -1,0 +1,14 @@
+{
+  "fixtureType": "illustrative-method-cases",
+  "nativeExecutionClaim": false,
+  "cases": [
+    {
+      "input": "A 4:3 deck must become 16:9",
+      "expected": "Reflow content and preserve proportions, not a horizontal stretch."
+    },
+    {
+      "input": "A chart legend falls beyond the new slide boundary",
+      "expected": "Reposition or relayout it and render again."
+    }
+  ]
+}

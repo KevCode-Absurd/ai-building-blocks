@@ -1,0 +1,128 @@
+new_slug: excel-input-form-builder
+name: Excel input form builder
+summary: Share field rules. Get an Excel form with dropdowns, clear entry cells
+  and checks.
+job: work-with-files
+thinking: high
+thinking_why: Native file features, source meaning and check evidence must
+  survive the workflow.
+headline: Excel input form builder
+subhead: Share your fields and allowed values. Get an Excel input form with
+  dropdowns, clear entry cells and validation checks. Work on a copy of your
+  file. Get a clear record of what passed and what still needs checking.
+explain: >-
+  Share your fields and allowed values. Get an Excel input form with dropdowns,
+  clear entry cells and validation checks.
+
+
+  It works with the actual Excel files and follows a specific method for this
+  task. Your source files stay intact. The method starts by checking what your
+  AI already knows and which files it can read. It asks only for missing facts
+  that change the work.
+
+
+  You get the requested files plus a short record of the sources and checks. A
+  saved file alone does not prove that its formulas, links or layout work. Any
+  check that needs an app your AI cannot use stays marked as not run. Review
+  those limits before you share the result.
+when:
+  - Share your fields and allowed values. Get an Excel input form with
+    dropdowns, clear entry cells and validation checks.
+  - Field names, data types, allowed values, required fields, record key and
+    intended Excel version.
+  - You need a checked copy while keeping your original files intact.
+you_give:
+  - Field names, data types, allowed values, required fields, record key and
+    intended Excel version.
+  - The app and file tools your AI can use for the requested work
+you_get:
+  - input-form.xlsx and field-rules.md, with an empty production table and a
+    separate illustrative test copy.
+  - A record of source files, changes and check results
+  - Missing facts and any checks that could not run
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it
+    and paste it in.
+  - Supply your actual files and describe the result. The AI checks existing
+    context before asking for missing information.
+  - Review the native output and its real check evidence before sharing it.
+how_it_works:
+  - title: Step 1
+    text: 1. Reuse confirmed field definitions. Distinguish text identifiers, dates,
+      quantities, blanks and valid zero values. Ask only for unresolved rules
+      that change validation.
+  - title: Step 2
+    text: 2. Create one record per row in a native Excel table. Store IDs as text,
+      keep dates typed and reserve separate columns for inputs and calculated
+      results.
+  - title: Step 3
+    text: 3. Add bounded dropdowns or named-list validation and understandable error
+      messages. Check required fields and duplicate keys with visible
+      diagnostics; pasted data can bypass validation.
+  - title: Step 4
+    text: 4. Use a restrained input fill, freeze the table header and preserve
+      existing formulas. Lock calculation cells only if requested, explaining
+      that worksheet protection is not encryption.
+  - title: Step 5
+    text: 5. Test valid, missing, duplicate and pasted-invalid records in a
+      disposable copy. Reopen the saved workbook and deliver the empty form with
+      its rules and unresolved limitations.
+output_shape: >-
+  FILES
+
+  input-form.xlsx and field-rules.md, with an empty production table and a
+  separate illustrative test copy.
+
+
+  SOURCE MAP
+
+  <file and version> | <sheet, cell or slide> | <what it supports>
+
+
+  CHECKS
+
+  <check> | <passed, failed or not run> | <evidence>
+
+
+  OPEN ITEMS
+
+  <missing fact or unsupported check> | <next action>
+tweaks:
+  - what: Your source files
+    how: Field names, data types, allowed values, required fields, record key and
+      intended Excel version.
+  - what: The result you need
+    how: Name the file format, audience and parts that must stay editable. State any
+      page or slide limit.
+  - what: The app used to check it
+    how: Say which Excel or PowerPoint version you will use. Your AI must name any
+      check it cannot run.
+judge:
+  - No invented production records.
+  - Blank and zero obey the supplied rules.
+  - Validation survives save/reopen or its unverified status is stated.
+  - The result names its sources and keeps unrun checks visible.
+test:
+  - "Try this case: Record ID 0012, quantity 0 allowed, status Open or Closed.
+    Check that it does this: Keep 0012 as text and 0 as a valid number; restrict
+    the status list."
+  - "Try this case: Two pasted records share the same required ID. Check that it
+    does this: Flag both as duplicate candidates; do not silently delete
+    either."
+  - Reopen the saved result and compare it with the source. Keep any failed or
+    unrun check in the report.
+improve:
+  - Add your confirmed field names, file rules and target app version to the
+    required-input section.
+  - Add a small test case with a known answer to the acceptance checks. Keep
+    made-up records separate from real work.
+  - Save the working rules with the file guide so the next run uses the same
+    meanings and checks.
+warnings:
+  - Requires tools for the requested native file format. Checks requiring an
+    unavailable native application must remain marked not run.
+tests:
+  - input: Record ID 0012, quantity 0 allowed, status Open or Closed
+    expected: Keep 0012 as text and 0 as a valid number; restrict the status list.
+  - input: Two pasted records share the same required ID
+    expected: Flag both as duplicate candidates; do not silently delete either.

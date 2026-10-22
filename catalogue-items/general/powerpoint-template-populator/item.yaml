@@ -1,0 +1,35 @@
+slug: powerpoint-template-populator
+name: PowerPoint template populator
+summary: Share your PowerPoint template and approved content. Get an editable
+  deck that follows its layouts and placeholder rules.
+category: general
+type: skill
+role: build
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: slide_deck
+    required: true
+  - type: source_text
+    required: false
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: slide_deck
+    required: true
+uses: []
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/office-expansion/catalogue.mjs
+example_pending: true
+credits:
+  - title: Original Excel and PowerPoint workflow methods
+    by: AI Blocks
+    used: Original intake, file-preservation, execution and acceptance rules written
+      for this task.
+warnings:
+  - Requires tools for the requested native file format. Checks requiring an
+    unavailable native application must remain marked not run.

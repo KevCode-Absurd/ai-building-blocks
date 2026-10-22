@@ -1,0 +1,14 @@
+{
+  "fixtureType": "illustrative-method-cases",
+  "nativeExecutionClaim": false,
+  "cases": [
+    {
+      "input": "The same slide moved from position 3 to 8",
+      "expected": "Record a move without inventing changed content."
+    },
+    {
+      "input": "Visible slides match but a hidden slide contains an outdated private forecast",
+      "expected": "Flag the hidden-content difference for review."
+    }
+  ]
+}

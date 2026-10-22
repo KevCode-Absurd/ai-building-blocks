@@ -1,0 +1,14 @@
+{
+  "fixtureType": "illustrative-method-cases",
+  "nativeExecutionClaim": false,
+  "cases": [
+    {
+      "input": "Presenter notes contain private negotiation limits, and the audience copy excludes notes",
+      "expected": "Keep them in the presenter source and verify they are absent from the audience PDF."
+    },
+    {
+      "input": "A six-slides-per-page export makes chart labels unreadable",
+      "expected": "Use fewer slides per page or an approved alternative layout."
+    }
+  ]
+}

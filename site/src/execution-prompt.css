@@ -1,0 +1,13 @@
+.workflow-launch{padding:12px 16px;border:1px solid var(--line);margin:12px 0;min-width:0;text-align:left;color:var(--text);font-weight:400}
+.workflow-launch-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.workflow-launch details{margin-top:10px;font-size:13px}
+.workflow-launch summary{cursor:pointer;line-height:1.6}
+.workflow-launch textarea{display:block;box-sizing:border-box;width:100%;max-width:100%;min-height:180px;resize:vertical;background:var(--panel);color:var(--text);border:1px solid var(--line);padding:12px;font:inherit;line-height:1.6}
+.workflow-launch .small{margin:0;max-width:75ch;line-height:1.6}
+.workflow-launch details p{margin:10px 0}
+.stage>.workflow-launch{flex-shrink:0;margin:0;border-width:0 0 1px}
+.stage:has(>.workflow-launch){display:flex;flex-direction:column}
+.stage:has(>.workflow-launch)>.stage-bar{position:static;padding:12px;flex-shrink:0}
+.stage:has(>.workflow-launch)>.react-flow{flex:1;min-height:160px;height:auto}
+.workflow-import-error{margin:12px 0;padding:12px;border:1px solid var(--warn);color:var(--text);font-size:14px;line-height:1.5}
+@media(max-width:600px){.workflow-launch{padding:12px}.workflow-launch-actions{align-items:flex-start}.workflow-launch button{min-height:44px}}

@@ -1,0 +1,14 @@
+{
+  "fixtureType": "illustrative-method-cases",
+  "nativeExecutionClaim": false,
+  "cases": [
+    {
+      "input": "Only a PNG of a bar chart is provided",
+      "expected": "Request the data or offer a clearly labeled approximate transcription for approval; never claim exact reconstruction."
+    },
+    {
+      "input": "Two categories are swapped while the total remains the same",
+      "expected": "Fail the data comparison."
+    }
+  ]
+}

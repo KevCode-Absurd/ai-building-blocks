@@ -26,7 +26,7 @@ try {
   const page = await context.newPage(); await page.goto(origin + '/compose');
   const reject = page.getByRole('button', { name: 'Reject cookies', exact: true }); if (await reject.isVisible()) await reject.click();
   const goal = page.getByTestId('compose-goal'), voice = page.getByTestId('compose-voice');
-  await goal.fill('Please'); await voice.click(); await voice.filter({ hasText: 'Stop recording' }).waitFor();
+  await goal.fill('Please'); await voice.click(); await page.getByRole('button', { name: 'Stop recording', exact: true }).waitFor();
   assert(await goal.isDisabled());
   await page.waitForTimeout(6500); await voice.click();
   await page.waitForFunction(() => document.querySelector('[data-testid="compose-goal"]').value.length > 12, { timeout: 80000 });

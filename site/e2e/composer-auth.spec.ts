@@ -2,6 +2,7 @@ import { test, expect } from "./fixtures/staging-aware-test";
 import { mockComposerAccount } from "./fixtures/composer-account";
 
 test("anonymous visitors can switch to free assembly without sending AI requests", async ({ page }) => {
+  await page.route("**/api/auth", route => route.fulfill({ json: { configured: false, publishableKey: null } }));
   let authRequests = 0, aiRequests = 0;
   page.on("request", req => { if (req.url().includes("/api/auth")) authRequests++; if (req.method() === "POST" && req.url().includes("/api/compose")) aiRequests++; });
   await page.goto("/compose");

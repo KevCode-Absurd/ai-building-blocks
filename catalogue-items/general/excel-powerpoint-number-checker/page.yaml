@@ -1,0 +1,127 @@
+new_slug: excel-powerpoint-number-checker
+name: Excel to PowerPoint number checker
+summary: Share Excel and PowerPoint files. Get checks that slide figures match
+  their workbook sources.
+job: work-with-files
+thinking: high
+thinking_why: Native file features, source meaning and check evidence must
+  survive the workflow.
+headline: Excel to PowerPoint number checker
+subhead: Share a workbook and its slides. Get a source map showing which slide
+  numbers, charts and labels agree with Excel. Work on a copy of your file. Get
+  a clear record of what passed and what still needs checking.
+explain: >-
+  Share a workbook and its slides. Get a source map showing which slide numbers,
+  charts and labels agree with Excel.
+
+
+  It works with the actual Excel and PowerPoint files and follows a specific
+  method for this task. Your source files stay intact. The method starts by
+  checking what your AI already knows and which files it can read. It asks only
+  for missing facts that change the work.
+
+
+  You get the requested files plus a short record of the sources and checks. A
+  saved file alone does not prove that its formulas, links or layout work. Any
+  check that needs an app your AI cannot use stays marked as not run. Review
+  those limits before you share the result.
+when:
+  - Share a workbook and its slides. Get a source map showing which slide
+    numbers, charts and labels agree with Excel.
+  - The actual workbook, PPTX deck, approved cell-to-slide mapping or enough
+    source context to establish it, period and rounding rules.
+  - You need a checked copy while keeping your original files intact.
+you_give:
+  - The actual workbook, PPTX deck, approved cell-to-slide mapping or enough
+    source context to establish it, period and rounding rules.
+  - The app and file tools your AI can use for the requested work
+you_get:
+  - slide-number-checks.csv and number-review.md; revised files only if repair
+    is requested.
+  - A record of source files, changes and check results
+  - Missing facts and any checks that could not run
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it
+    and paste it in.
+  - Supply your actual files and describe the result. The AI checks existing
+    context before asking for missing information.
+  - Review the native output and its real check evidence before sharing it.
+how_it_works:
+  - title: Step 1
+    text: 1. Preserve both source files and identify the workbook version used by
+      the deck. Inspect formulas, saved values and actual chart data without
+      silently refreshing external links.
+  - title: Step 2
+    text: 2. Map each displayed metric to a workbook sheet/range and eligible
+      population. Distinguish counts, rates, currency, units, actuals and
+      forecasts.
+  - title: Step 3
+    text: 3. Compare slide text, table values and native chart categories/series to
+      matching workbook results. Respect stated scaling and rounding; a matching
+      total does not prove matching categories.
+  - title: Step 4
+    text: 4. Flag changed periods, swapped labels, stale embedded chart data and
+      inconsistent units. Classify screenshot-only charts as visually
+      inspectable but not editable or data-verified without source data.
+  - title: Step 5
+    text: 5. Return exact slide/object and workbook/cell evidence, tolerance and
+      mismatch reasons. If repairing, update editable objects, render affected
+      slides and check the saved PPTX again.
+output_shape: >-
+  FILES
+
+  slide-number-checks.csv and number-review.md; revised files only if repair is
+  requested.
+
+
+  SOURCE MAP
+
+  <file and version> | <sheet, cell or slide> | <what it supports>
+
+
+  CHECKS
+
+  <check> | <passed, failed or not run> | <evidence>
+
+
+  OPEN ITEMS
+
+  <missing fact or unsupported check> | <next action>
+tweaks:
+  - what: Your source files
+    how: The actual workbook, PPTX deck, approved cell-to-slide mapping or enough
+      source context to establish it, period and rounding rules.
+  - what: The result you need
+    how: Name the file format, audience and parts that must stay editable. State any
+      page or slide limit.
+  - what: The app used to check it
+    how: Say which Excel or PowerPoint version you will use. Your AI must name any
+      check it cannot run.
+judge:
+  - Every checked metric has a source mapping.
+  - Rounding is separated from a real discrepancy.
+  - Screenshot charts are not treated as verified native data.
+  - The result names its sources and keeps unrun checks visible.
+test:
+  - "Try this case: Workbook completion is 15/30; slide shows 45%. Check that it
+    does this: Report a mismatch: expected 50% for the same population."
+  - "Try this case: Workbook values are in thousands but the slide label says
+    units. Check that it does this: Flag a unit mismatch even when digits are
+    identical."
+  - Reopen the saved result and compare it with the source. Keep any failed or
+    unrun check in the report.
+improve:
+  - Add your confirmed field names, file rules and target app version to the
+    required-input section.
+  - Add a small test case with a known answer to the acceptance checks. Keep
+    made-up records separate from real work.
+  - Save the working rules with the file guide so the next run uses the same
+    meanings and checks.
+warnings:
+  - Requires tools for the requested native file format. Checks requiring an
+    unavailable native application must remain marked not run.
+tests:
+  - input: Workbook completion is 15/30; slide shows 45%
+    expected: "Report a mismatch: expected 50% for the same population."
+  - input: Workbook values are in thousands but the slide label says units
+    expected: Flag a unit mismatch even when digits are identical.

@@ -1,0 +1,120 @@
+new_slug: excel-workbook-change-reviewer
+name: Excel workbook change reviewer
+summary: Share old and new workbooks. Get changed values, formulas and file
+  features explained.
+job: work-with-files
+thinking: high
+thinking_why: Native file features, source meaning and check evidence must
+  survive the workflow.
+headline: Excel workbook change reviewer
+subhead: Share the old and revised workbook. Get a review of changed values,
+  formulas, names and workbook features. Work on a copy of your file. Get a
+  clear record of what passed and what still needs checking.
+explain: >-
+  Share the old and revised workbook. Get a review of changed values, formulas,
+  names and workbook features.
+
+
+  It works with the actual Excel files and follows a specific method for this
+  task. Your source files stay intact. The method starts by checking what your
+  AI already knows and which files it can read. It asks only for missing facts
+  that change the work.
+
+
+  You get the requested files plus a short record of the sources and checks. A
+  saved file alone does not prove that its formulas, links or layout work. Any
+  check that needs an app your AI cannot use stays marked as not run. Review
+  those limits before you share the result.
+when:
+  - Share the old and revised workbook. Get a review of changed values,
+    formulas, names and workbook features.
+  - Baseline and revised workbook, intended changes, sheet/key mapping and
+    materiality or tolerance rules.
+  - You need a checked copy while keeping your original files intact.
+you_give:
+  - Baseline and revised workbook, intended changes, sheet/key mapping and
+    materiality or tolerance rules.
+  - The app and file tools your AI can use for the requested work
+you_get:
+  - workbook-change-review.xlsx and change-register.md.
+  - A record of source files, changes and check results
+  - Missing facts and any checks that could not run
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it
+    and paste it in.
+  - Supply your actual files and describe the result. The AI checks existing
+    context before asking for missing information.
+  - Review the native output and its real check evidence before sharing it.
+how_it_works:
+  - title: Step 1
+    text: 1. Hash and preserve both files. Inventory sheets, hidden states, tables,
+      defined names, formulas, links, validations, charts, pivots and macro
+      presence without executing macros or refreshing connections.
+  - title: Step 2
+    text: 2. Match records by confirmed stable keys, not by row position alone.
+      Align changed sheet names and separate added, removed and reordered
+      records.
+  - title: Step 3
+    text: 3. Compare input values and formula text separately. Distinguish a formula
+      edit, a formula replaced with a constant, a changed reference and a result
+      changed by upstream inputs.
+  - title: Step 4
+    text: 4. Review changed names, validation ranges, hidden sheets, print settings,
+      external links and data connections. State features the inspection tool
+      cannot preserve or compare.
+  - title: Step 5
+    text: 5. Recalculate supported copies and investigate material differences using
+      the agreed tolerance. Report file, sheet and cell or object locations with
+      before/after evidence; make no repairs unless requested.
+output_shape: |-
+  FILES
+  workbook-change-review.xlsx and change-register.md.
+
+  SOURCE MAP
+  <file and version> | <sheet, cell or slide> | <what it supports>
+
+  CHECKS
+  <check> | <passed, failed or not run> | <evidence>
+
+  OPEN ITEMS
+  <missing fact or unsupported check> | <next action>
+tweaks:
+  - what: Your source files
+    how: Baseline and revised workbook, intended changes, sheet/key mapping and
+      materiality or tolerance rules.
+  - what: The result you need
+    how: Name the file format, audience and parts that must stay editable. State any
+      page or slide limit.
+  - what: The app used to check it
+    how: Say which Excel or PowerPoint version you will use. Your AI must name any
+      check it cannot run.
+judge:
+  - Reordering is not reported as every record changing.
+  - Formulas and cached values are distinguished.
+  - Uninspected native features stay explicit.
+  - The result names its sources and keeps unrun checks visible.
+test:
+  - "Try this case: A row moved but its ID, value and relative formula meaning
+    are unchanged. Check that it does this: Record a reorder, not a fabricated
+    business change."
+  - "Try this case: A formula cell is replaced with its current numeric result.
+    Check that it does this: Flag a formula-to-constant change even if the
+    displayed number is unchanged."
+  - Reopen the saved result and compare it with the source. Keep any failed or
+    unrun check in the report.
+improve:
+  - Add your confirmed field names, file rules and target app version to the
+    required-input section.
+  - Add a small test case with a known answer to the acceptance checks. Keep
+    made-up records separate from real work.
+  - Save the working rules with the file guide so the next run uses the same
+    meanings and checks.
+warnings:
+  - Requires tools for the requested native file format. Checks requiring an
+    unavailable native application must remain marked not run.
+tests:
+  - input: A row moved but its ID, value and relative formula meaning are unchanged
+    expected: Record a reorder, not a fabricated business change.
+  - input: A formula cell is replaced with its current numeric result
+    expected: Flag a formula-to-constant change even if the displayed number is
+      unchanged.

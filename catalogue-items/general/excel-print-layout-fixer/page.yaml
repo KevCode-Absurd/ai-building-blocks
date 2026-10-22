@@ -1,0 +1,127 @@
+new_slug: excel-print-layout-fixer
+name: Excel print layout fixer
+summary: Share a workbook and paper size. Get readable print settings and page checks.
+job: work-with-files
+thinking: high
+thinking_why: Native file features, source meaning and check evidence must
+  survive the workflow.
+headline: Excel print layout fixer
+subhead: Share a workbook and paper size. Get printable sheets with readable
+  columns, repeated headers and checked page breaks. Work on a copy of your
+  file. Get a clear record of what passed and what still needs checking.
+explain: >-
+  Share a workbook and paper size. Get printable sheets with readable columns,
+  repeated headers and checked page breaks.
+
+
+  It works with the actual Excel files and follows a specific method for this
+  task. Your source files stay intact. The method starts by checking what your
+  AI already knows and which files it can read. It asks only for missing facts
+  that change the work.
+
+
+  You get the requested files plus a short record of the sources and checks. A
+  saved file alone does not prove that its formulas, links or layout work. Any
+  check that needs an app your AI cannot use stays marked as not run. Review
+  those limits before you share the result.
+when:
+  - Share a workbook and paper size. Get printable sheets with readable columns,
+    repeated headers and checked page breaks.
+  - Workbook, sheets to print, paper size, orientation, required columns and any
+    existing print requirements.
+  - You need a checked copy while keeping your original files intact.
+you_give:
+  - Workbook, sheets to print, paper size, orientation, required columns and any
+    existing print requirements.
+  - The app and file tools your AI can use for the requested work
+you_get:
+  - print-ready.xlsx, a PDF review copy when a renderer is available, and
+    print-checks.md.
+  - A record of source files, changes and check results
+  - Missing facts and any checks that could not run
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it
+    and paste it in.
+  - Supply your actual files and describe the result. The AI checks existing
+    context before asking for missing information.
+  - Review the native output and its real check evidence before sharing it.
+how_it_works:
+  - title: Step 1
+    text: 1. Inspect existing print areas, titles, page setup, hidden rows and
+      columns, manual breaks, headers and footers. Keep original data and
+      formulas unchanged.
+  - title: Step 2
+    text: 2. Choose bounded print areas containing all requested records and
+      columns. Disjoint print areas can create separate pages; document
+      intentional exclusions.
+  - title: Step 3
+    text: 3. Set paper size, orientation, margins and repeated table-header rows.
+      Prefer fitting width while allowing multiple pages in height instead of
+      shrinking everything onto one unreadable page.
+  - title: Step 4
+    text: 4. Check wrapped labels, numeric formats, subtotals, footnotes and page
+      breaks. Avoid cutting a record or chart at an unintended boundary.
+  - title: Step 5
+    text: 5. Render or inspect print preview in the intended application and check
+      first, middle and final pages. If no print renderer is available, deliver
+      the workbook settings with the preview check marked not run.
+output_shape: >-
+  FILES
+
+  print-ready.xlsx, a PDF review copy when a renderer is available, and
+  print-checks.md.
+
+
+  SOURCE MAP
+
+  <file and version> | <sheet, cell or slide> | <what it supports>
+
+
+  CHECKS
+
+  <check> | <passed, failed or not run> | <evidence>
+
+
+  OPEN ITEMS
+
+  <missing fact or unsupported check> | <next action>
+tweaks:
+  - what: Your source files
+    how: Workbook, sheets to print, paper size, orientation, required columns and
+      any existing print requirements.
+  - what: The result you need
+    how: Name the file format, audience and parts that must stay editable. State any
+      page or slide limit.
+  - what: The app used to check it
+    how: Say which Excel or PowerPoint version you will use. Your AI must name any
+      check it cannot run.
+judge:
+  - All requested records are inside the print area.
+  - Headers repeat where needed.
+  - A PDF or preview is never claimed when not generated.
+  - The result names its sources and keeps unrun checks visible.
+test:
+  - "Try this case: A wide 400-row table is requested on A4 landscape. Check
+    that it does this: Fit the width and retain multiple pages vertically;
+    verify header repetition."
+  - "Try this case: Two nonadjacent print areas were set accidentally. Check
+    that it does this: Flag separate-page output and confirm the intended
+    continuous area."
+  - Reopen the saved result and compare it with the source. Keep any failed or
+    unrun check in the report.
+improve:
+  - Add your confirmed field names, file rules and target app version to the
+    required-input section.
+  - Add a small test case with a known answer to the acceptance checks. Keep
+    made-up records separate from real work.
+  - Save the working rules with the file guide so the next run uses the same
+    meanings and checks.
+warnings:
+  - Requires tools for the requested native file format. Checks requiring an
+    unavailable native application must remain marked not run.
+tests:
+  - input: A wide 400-row table is requested on A4 landscape
+    expected: Fit the width and retain multiple pages vertically; verify header
+      repetition.
+  - input: Two nonadjacent print areas were set accidentally
+    expected: Flag separate-page output and confirm the intended continuous area.

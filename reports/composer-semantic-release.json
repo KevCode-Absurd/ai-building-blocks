@@ -1,0 +1,47 @@
+{
+  "createdAt": "2026-10-22T15:58:33.142Z",
+  "sourceCommit": "dfdfa0c89ad5df375e904e7da0d2ecf1e4eaa2b7",
+  "previous": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r14-final-workflows",
+  "release": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r15-semantic-voice",
+  "assets": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r15-semantic-voice\\assets",
+  "changedHTML": 4707,
+  "oldRefs": [
+    "/assets/index-DbJU-UNH.js",
+    "/assets/index-BMzLFYlh.css"
+  ],
+  "newRefs": [
+    "/assets/index-B4opzqPn.js",
+    "/assets/index-BMzLFYlh.css"
+  ],
+  "workerSha256": "a16ebb0076eff1c01fc0eb189843972a99374252c65a38b871646f2706ea1809",
+  "catalogueSha256": "6757be7af672633794122d2fd0de16e78531fc461039b67209f35069dbab2351",
+  "overlays": [
+    {
+      "file": "site/src/lib/composer-core.ts",
+      "sha256": "957e038a31fe0b8b62902724e0c22342d54d5fc109a812899c970f954ba3beb4"
+    },
+    {
+      "file": "site/src/lib/composer-semantic.ts",
+      "sha256": "992e4cec2a662d598921dd8ddbba6a8810b14e867f6cb344d129b901c9701c73"
+    },
+    {
+      "file": "site/src/lib/composer-models.ts",
+      "sha256": "62f8aa4c8a4c35bd45360d02b610ba129959c573841823a4b50cd410fc30395c"
+    },
+    {
+      "file": "site/src/server/composer.ts",
+      "sha256": "8db95a8a23079443f819d6ef138222a6e5c3f06d12103e51ff140f3dddd66f52"
+    },
+    {
+      "file": "site/src/server/transcription.ts",
+      "sha256": "ad642e16baa6cc54606ea41fd69ab4b345989806d3f00d35e6c4c5e349949e55"
+    },
+    {
+      "file": "site/src/VoiceRequest.tsx",
+      "sha256": "47cdd312788e6a0b55fc5a1653680edb0b0a2d0e4d970b7931b4d2053672dcf1"
+    }
+  ],
+  "scope": "Semantic request interpretation, balanced multi-goal retrieval and accessible microphone icon using existing OpenAI Whisper endpoint.",
+  "htmlParityVerified": true,
+  "htmlFilesChecked": 5163
+}

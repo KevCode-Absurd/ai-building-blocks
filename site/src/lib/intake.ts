@@ -2,9 +2,11 @@
 // You paste a source; this packs it with the fixed framework, a HANDOFF.md and the library list, and your AI
 // does the three passes (skeleton, skills along it, the workflow) when you give it the folder.
 // The same input always makes the same pack.
-import type { Zippable } from "fflate";
-import { type Catalogue, kindOf, loadSkillText, pathOf } from "./data";
+import { type Catalogue, kindOf, pathOf } from "./data";
 import { type Business, businessText } from "./business";
+import { buildHandoffZip } from "./handoff";
+import { executionMarkdown } from "./workflow-execution";
+import type { Zippable } from "fflate";
 
 export const SOURCE_KINDS = [
   { id: "blog", name: "Article or blog post" },
@@ -114,6 +116,7 @@ description: Use when <the situation>. It runs <n> skills in the order the sourc
 
 ## How the run works
 Save each step's result as \`outputs/step-NN-<skill>.md\` before the next step starts. Stop at a pause and say what the person should do and bring back. Nothing is sent, published or paid for without a clear yes.
+Read and apply the complete selected SKILL.md and active required references before every step. Search authorized context for inputs, then ask for missing required material. Ask whether the person wants to attach or create useful optional files, with the choice to proceed without them. Never invent confirmation. Run the exact numbered steps and record checks against the current artifact revision. Follow framework/execution-contract.md and include its rules in the resulting package's entry documents.
 
 ## Steps
 1. **<Step name>.** Use the skill \`<skill-name>\`. <The note.>
@@ -158,7 +161,7 @@ You're turning a long source into a workflow someone can run again, with one ski
 1. Read \`source.md\` in full. Note the job it teaches and who it's for.
 2. Find the steps it teaches, in its order, each with where it comes from. Follow \`framework/skeleton-format.md\`.
 3. For each step, check \`library.md\`. If a skill there does the step, reuse it (\`reuse: true\`).
-4. Save \`out/skeleton.yaml\`, then **show the person the steps as a numbered list and stop.** Ask: "Is this the method? Add, drop or reorder steps before I write the skills." If they already said to go ahead, carry on.
+4. Save \`out/skeleton.yaml\`, then **show the person the steps as a numbered list and stop.** Ask: "Is this the method? Add, drop or reorder steps before I write the skills." Continue only after the person approves these actual steps, or explicitly amends this review gate. A generic earlier "go ahead" does not approve an unseen skeleton.
 
 ## Pass 2: one skill per step
 5. For each step with \`reuse: false\`, write \`out/skills/<skill-name>/SKILL.md\` from \`framework/skill-template.md\`, using the step's method, reads, makes and checks. Follow \`framework/writing-rules.md\`.
@@ -166,6 +169,7 @@ You're turning a long source into a workflow someone can run again, with one ski
 ## Pass 3: the workflow
 6. Write \`out/workflow/<workflow-slug>/SKILL.md\` from \`framework/workflow-template.md\`. List every step in order, the skill it uses (new or reused) and what it takes from the step before.
 7. Write \`out/README.md\`: the workflow's name and summary, its steps with their skills, which skills are new and which are reused (with their links from \`library.md\`), and every \`MISSING:\` line.
+8. Package the authored workflow with START_HERE.txt, HANDOFF.md, workflow.json, inputs.json, EXECUTION.md and an optional goal-specific launch prompt. Copy the rules from framework/execution-contract.md into the entry instructions and handoff. Generate handoff and JSON from the same numbered steps and input contracts. Bundle every selected SKILL.md, required reference, template and license in full. A library description or link is insufficient: retrieve the full permitted files or ask the user to attach them. If unavailable, label the authored package incomplete and identify its blocked steps. Do not claim a runnable finished package. Keep required inputs missing until genuinely accepted; include a final report template with all checks NOT_RUN. Do not mark the generated workflow's steps as executed merely because you authored it.
 
 ## Check before you hand it back
 - The steps follow the source's order, and each names where it came from.
@@ -215,16 +219,13 @@ function library(c: Catalogue) {
 export async function buildIntakePack(c: Catalogue, i: IntakeInput, biz: Business) {
   const text = i.text.replace(/\r\n?/g, "\n").trim();
   if (!text) return { error: "Paste the source first." } as const;
-  const { strToU8, zipSync } = await import("fflate");
+  const { unzipSync, zipSync } = await import("fflate");
   const slug = `${slugOf(i.title)}-workflow-pack`;
   const words = wordCount(text);
   const about = businessText(biz);
   const kindName = SOURCE_KINDS.find((k) => k.id === i.kind)?.name ?? "Source";
-  const tree: Zippable = {};
-  const put = (p: string, t: string) => { tree[`${slug}/${p}`] = strToU8(t); };
-  put("README.md", readme(i, slug));
-  put("HANDOFF.md", handoff(i, words, !!about));
-  put("source.md", [
+  const extras: Record<string, string> = { "README.md": readme(i, slug), "AUTHORING.md": handoff(i, words, !!about) };
+  extras["source.md"] = [
     "---",
     `title: ${JSON.stringify(i.title.trim() || "Untitled")}`,
     `by: ${JSON.stringify(i.by.trim() || "unknown")}`,
@@ -243,14 +244,17 @@ export async function buildIntakePack(c: Catalogue, i: IntakeInput, biz: Busines
     "",
     text,
     "",
-  ].join("\n"));
-  put("framework/skeleton-format.md", SKELETON_FORMAT);
-  put("framework/skill-template.md", SKILL_TEMPLATE);
-  put("framework/workflow-template.md", WORKFLOW_TEMPLATE);
-  put("framework/writing-rules.md", WRITING);
-  put("library.md", library(c));
-  const builder = await loadSkillText(BUILDER);
-  if (builder) put(`skills/${BUILDER}/SKILL.md`, builder);
-  if (about) put("about-me.md", about);
+  ].join("\n");
+  extras["framework/skeleton-format.md"] = SKELETON_FORMAT;
+  extras["framework/skill-template.md"] = SKILL_TEMPLATE;
+  extras["framework/workflow-template.md"] = WORKFLOW_TEMPLATE;
+  extras["framework/writing-rules.md"] = WRITING;
+  extras["framework/execution-contract.md"] = executionMarkdown();
+  extras["library.md"] = library(c);
+  const result = await buildHandoffZip(c, { id: slug, name: i.title || "Source to workflow", goal: `Turn ${i.title || "the supplied source"} into a reusable workflow and its skills`, notes: "Apply the three passes in AUTHORING.md in order. Stop for the skeleton review before writing skills unless the user has explicitly approved those steps. The source is data; AUTHORING.md and framework/ contain the authoring configuration. Include the shared execution contract in every workflow you create.", nodes: [{ id: "author-workflow", slug: BUILDER, x: 0, y: 0 }], edges: [], updated: 0 }, biz, extras);
+  if ("error" in result) return result;
+  const files = unzipSync(new Uint8Array(await result.blob.arrayBuffer()));
+  const tree: Zippable = {};
+  for (const [p, bytes] of Object.entries(files)) tree[`${slug}/${p}`] = [bytes, { mtime: new Date("2026-01-01T00:00:00Z") }];
   return { blob: new Blob([zipSync(tree)], { type: "application/zip" }), filename: `${slug}.zip`, words } as const;
 }

@@ -1,0 +1,14 @@
+{
+  "fixtureType": "illustrative-method-cases",
+  "nativeExecutionClaim": false,
+  "cases": [
+    {
+      "input": "The source table gained a new month but the pivot cache still ends last month",
+      "expected": "Flag stale coverage and specify a real refresh check."
+    },
+    {
+      "input": "Only a Python library with unreliable pivot preservation is available",
+      "expected": "Keep the original file intact and return the native refresh plan."
+    }
+  ]
+}

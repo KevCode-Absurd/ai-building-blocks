@@ -1,0 +1,9 @@
+{
+  "status": "pass",
+  "slides": 3,
+  "editableChartSlide": 2,
+  "notesPresent": true,
+  "desktopPowerPointRun": false,
+  "illustrativeData": true,
+  "validationReceipt": "pptx-validation.json"
+}

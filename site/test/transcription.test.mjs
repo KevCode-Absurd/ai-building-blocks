@@ -63,3 +63,9 @@ test('paid voice route requires both rate limiters and a matching Turnstile acti
   assert.equal((await apiSecurity(request(), security, async () => Response.json({ success: true, hostname: 'useaiblocks.com', action: 'compose' }))).status, 403);
   assert.equal(await apiSecurity(request(), security, async () => Response.json({ success: true, hostname: 'useaiblocks.com', action: 'transcribe' })), null);
 });
+test('a rejected Whisper request does not consume the reserved transcription budget', async () => {
+  const store = memoryComposer(); let settled;
+  const wrapper = { ...store, async finish(...args) { settled = args; return store.finish(...args); } };
+  const response = await handleTranscription(req(await wav()), env, wrapper, 'ip', async () => Response.json({ error: { code: 'insufficient_quota' } }, { status: 429 }));
+  assert.equal(response.status, 502); assert.equal(settled[1], 0); assert.equal(settled[2], 'failed');
+});

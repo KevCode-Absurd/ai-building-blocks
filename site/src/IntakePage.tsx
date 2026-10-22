@@ -6,6 +6,7 @@ import { getBusiness, hasBusiness, useBusiness } from "./lib/business";
 import { download } from "./lib/handoff";
 import { type IntakeInput, type SourceKind, SHORT, SOURCE_KINDS, buildIntakePack, wordCount } from "./lib/intake";
 import { Link } from "./lib/router";
+import ExecutionPrompt from "./ExecutionPrompt";
 
 const DRAFT = "aib-intake-draft";
 const empty: IntakeInput = { title: "", by: "", link: "", kind: "blog", text: "" };
@@ -31,6 +32,8 @@ export default function IntakePage({ c, toast }: { c: Catalogue; toast: (m: stri
       <p className="bp-kicker"><span className="kind">Intake</span><Link to="/skills/long-source-to-workflow">How it works</Link></p>
       <h1 className="bp-h1">Turn a long article, video or book into a workflow you can run</h1>
       <p className="bp-sub">Paste the full text. You get a pack with your source, the steps to follow and the library's skills. Give it to your AI and it finds the method, checks the order with you, writes a skill for every step, then the workflow that runs them in order.</p>
+      <button type="button" className="btn btn-primary" disabled={!words || busy} onClick={() => void get()} data-testid="intake-download-top">{busy ? "Making the pack…" : "Download the workflow"}</button>
+      <ExecutionPrompt name={v.title || "Source to workflow"} goal={`Turn ${v.title || "the supplied source"} into a reusable workflow and its skills`} />
 
       <ol className="intake-steps" aria-label="What happens">
         <li><b>Map the skeleton.</b> The steps the source teaches, in its order, each with where it came from.</li>
@@ -63,6 +66,7 @@ export default function IntakePage({ c, toast }: { c: Catalogue; toast: (m: stri
           <button type="submit" className="btn btn-primary" disabled={!words || busy} data-testid="intake-download">{busy ? "Making the pack…" : "Download the pack"}</button>
           {words > 0 && <button type="button" className="btn btn-dark" onClick={() => setV(empty)}>Clear</button>}
         </div>
+        <ExecutionPrompt name={v.title || "Source to workflow"} goal={`Turn ${v.title || "the supplied source"} into a reusable workflow and its skills`} />
         <p className="small">Your text stays in your browser and goes only into the zip. Open the folder in your AI coding assistant and say "Follow HANDOFF.md". In a chat, upload the files and say the same.</p>
       </form>
     </main>

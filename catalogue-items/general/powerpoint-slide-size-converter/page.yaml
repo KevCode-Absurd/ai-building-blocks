@@ -1,0 +1,116 @@
+new_slug: powerpoint-slide-size-converter
+name: PowerPoint slide size converter
+summary: Share your deck and target size. Get a reflowed PowerPoint copy with
+  layout checks.
+job: work-with-files
+thinking: high
+thinking_why: Native file features, source meaning and check evidence must
+  survive the workflow.
+headline: PowerPoint slide size converter
+subhead: Share a deck and target slide size. Get a reflowed PowerPoint copy with
+  checked text, charts and image crops. Work on a copy of your file. Get a clear
+  record of what passed and what still needs checking.
+explain: >-
+  Share a deck and target slide size. Get a reflowed PowerPoint copy with
+  checked text, charts and image crops.
+
+
+  It works with the actual PowerPoint files and follows a specific method for
+  this task. Your source files stay intact. The method starts by checking what
+  your AI already knows and which files it can read. It asks only for missing
+  facts that change the work.
+
+
+  You get the requested files plus a short record of the sources and checks. A
+  saved file alone does not prove that its formulas, links or layout work. Any
+  check that needs an app your AI cannot use stays marked as not run. Review
+  those limits before you share the result.
+when:
+  - Share a deck and target slide size. Get a reflowed PowerPoint copy with
+    checked text, charts and image crops.
+  - Actual PPTX, target dimensions, fixed branding requirements, images and the
+    original layout or template.
+  - You need a checked copy while keeping your original files intact.
+you_give:
+  - Actual PPTX, target dimensions, fixed branding requirements, images and the
+    original layout or template.
+  - The app and file tools your AI can use for the requested work
+you_get:
+  - resized-deck.pptx, before/after previews and a layout-change register.
+  - A record of source files, changes and check results
+  - Missing facts and any checks that could not run
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it
+    and paste it in.
+  - Supply your actual files and describe the result. The AI checks existing
+    context before asking for missing information.
+  - Review the native output and its real check evidence before sharing it.
+how_it_works:
+  - title: Step 1
+    text: 1. Record original slide dimensions, masters, safe margins, object bounds,
+      image crops and editable chart/table requirements.
+  - title: Step 2
+    text: 2. Set the intended new canvas in a copy and choose a layout rule for each
+      slide. Reflow text and related objects rather than uniformly stretching
+      the whole slide.
+  - title: Step 3
+    text: 3. Preserve image aspect ratios and inspect crops. Reposition native
+      charts and tables while preserving values, labels, legends and font sizes
+      appropriate to the new canvas.
+  - title: Step 4
+    text: 4. Review every slide for overlaps, out-of-bounds elements, clipped text,
+      orphaned labels and inconsistent headers or footers. Use the template
+      rules where they exist.
+  - title: Step 5
+    text: 5. Render every changed slide and compare it with the original. Verify
+      saved dimensions and editable objects after reopening; report layouts that
+      need a human decision.
+output_shape: |-
+  FILES
+  resized-deck.pptx, before/after previews and a layout-change register.
+
+  SOURCE MAP
+  <file and version> | <sheet, cell or slide> | <what it supports>
+
+  CHECKS
+  <check> | <passed, failed or not run> | <evidence>
+
+  OPEN ITEMS
+  <missing fact or unsupported check> | <next action>
+tweaks:
+  - what: Your source files
+    how: Actual PPTX, target dimensions, fixed branding requirements, images and the
+      original layout or template.
+  - what: The result you need
+    how: Name the file format, audience and parts that must stay editable. State any
+      page or slide limit.
+  - what: The app used to check it
+    how: Say which Excel or PowerPoint version you will use. Your AI must name any
+      check it cannot run.
+judge:
+  - Dimensions match the requested canvas.
+  - Images are not stretched.
+  - Each slide is inspected after reflow.
+  - The result names its sources and keeps unrun checks visible.
+test:
+  - "Try this case: A 4:3 deck must become 16:9. Check that it does this: Reflow
+    content and preserve proportions, not a horizontal stretch."
+  - "Try this case: A chart legend falls beyond the new slide boundary. Check
+    that it does this: Reposition or relayout it and render again."
+  - Reopen the saved result and compare it with the source. Keep any failed or
+    unrun check in the report.
+improve:
+  - Add your confirmed field names, file rules and target app version to the
+    required-input section.
+  - Add a small test case with a known answer to the acceptance checks. Keep
+    made-up records separate from real work.
+  - Save the working rules with the file guide so the next run uses the same
+    meanings and checks.
+warnings:
+  - Requires tools for the requested native file format. Checks requiring an
+    unavailable native application must remain marked not run.
+tests:
+  - input: A 4:3 deck must become 16:9
+    expected: Reflow content and preserve proportions, not a horizontal stretch.
+  - input: A chart legend falls beyond the new slide boundary
+    expected: Reposition or relayout it and render again.

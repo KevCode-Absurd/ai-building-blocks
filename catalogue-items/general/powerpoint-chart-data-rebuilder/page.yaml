@@ -1,0 +1,128 @@
+new_slug: powerpoint-chart-data-rebuilder
+name: PowerPoint editable chart rebuilder
+summary: Share chart data and your deck. Get editable PowerPoint charts with
+  checked labels and values.
+job: work-with-files
+thinking: high
+thinking_why: Native file features, source meaning and check evidence must
+  survive the workflow.
+headline: PowerPoint editable chart rebuilder
+subhead: Share chart source data and your deck. Get native editable PowerPoint
+  charts with matched labels and numbers. Work on a copy of your file. Get a
+  clear record of what passed and what still needs checking.
+explain: >-
+  Share chart source data and your deck. Get native editable PowerPoint charts
+  with matched labels and numbers.
+
+
+  It works with the actual PowerPoint files and follows a specific method for
+  this task. Your source files stay intact. The method starts by checking what
+  your AI already knows and which files it can read. It asks only for missing
+  facts that change the work.
+
+
+  You get the requested files plus a short record of the sources and checks. A
+  saved file alone does not prove that its formulas, links or layout work. Any
+  check that needs an app your AI cannot use stays marked as not run. Review
+  those limits before you share the result.
+when:
+  - Share chart source data and your deck. Get native editable PowerPoint charts
+    with matched labels and numbers.
+  - Actual deck, complete approved chart data, categories, series, units, chart
+    type and source citations.
+  - You need a checked copy while keeping your original files intact.
+you_give:
+  - Actual deck, complete approved chart data, categories, series, units, chart
+    type and source citations.
+  - The app and file tools your AI can use for the requested work
+you_get:
+  - editable-charts.pptx, embedded chart workbooks where required, and a
+    chart-data comparison.
+  - A record of source files, changes and check results
+  - Missing facts and any checks that could not run
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it
+    and paste it in.
+  - Supply your actual files and describe the result. The AI checks existing
+    context before asking for missing information.
+  - Review the native output and its real check evidence before sharing it.
+how_it_works:
+  - title: Step 1
+    text: 1. Inspect the original chart or image and obtain its actual source data.
+      Pixels alone are insufficient for exact values; stop or request data
+      instead of inventing a series.
+  - title: Step 2
+    text: 2. Define categories, series order, missing values, axis units and
+      intended comparison. Preserve zeros and gaps according to the source
+      meaning.
+  - title: Step 3
+    text: 3. Create a native chart and its editable data using supported PPTX
+      tooling. Use a literal data snapshot only when that is the approved
+      requirement; do not imply a live Excel connection.
+  - title: Step 4
+    text: 4. Compare every category and series value with the source, including
+      sign, scale, rounding and totals. Check any embedded workbook and formulas
+      required by the task.
+  - title: Step 5
+    text: 5. Render the slide to inspect axes, legends and data labels. Reopen the
+      deck and verify the chart is editable; retain the source map and state any
+      unsupported native feature.
+output_shape: >-
+  FILES
+
+  editable-charts.pptx, embedded chart workbooks where required, and a
+  chart-data comparison.
+
+
+  SOURCE MAP
+
+  <file and version> | <sheet, cell or slide> | <what it supports>
+
+
+  CHECKS
+
+  <check> | <passed, failed or not run> | <evidence>
+
+
+  OPEN ITEMS
+
+  <missing fact or unsupported check> | <next action>
+tweaks:
+  - what: Your source files
+    how: Actual deck, complete approved chart data, categories, series, units, chart
+      type and source citations.
+  - what: The result you need
+    how: Name the file format, audience and parts that must stay editable. State any
+      page or slide limit.
+  - what: The app used to check it
+    how: Say which Excel or PowerPoint version you will use. Your AI must name any
+      check it cannot run.
+judge:
+  - No invented values from a screenshot.
+  - Chart data agrees at category and series level.
+  - Snapshots and live links are distinguished.
+  - The result names its sources and keeps unrun checks visible.
+test:
+  - "Try this case: Only a PNG of a bar chart is provided. Check that it does
+    this: Request the data or offer a clearly labeled approximate transcription
+    for approval; never claim exact reconstruction."
+  - "Try this case: Two categories are swapped while the total remains the same.
+    Check that it does this: Fail the data comparison."
+  - Reopen the saved result and compare it with the source. Keep any failed or
+    unrun check in the report.
+improve:
+  - Add your confirmed field names, file rules and target app version to the
+    required-input section.
+  - Add a small test case with a known answer to the acceptance checks. Keep
+    made-up records separate from real work.
+  - Save the working rules with the file guide so the next run uses the same
+    meanings and checks.
+warnings:
+  - Requires tools for the requested native file format. Checks requiring an
+    unavailable native application must remain marked not run.
+tests:
+  - input: Only a PNG of a bar chart is provided
+    expected: Request the data or offer a clearly labeled approximate transcription
+      for approval; never claim exact reconstruction.
+  - input: Two categories are swapped while the total remains the same
+    expected: Fail the data comparison.

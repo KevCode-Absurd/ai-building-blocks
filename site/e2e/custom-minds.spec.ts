@@ -41,7 +41,8 @@ test("custom mind plus recommended council survives reload, complete ZIP and imp
   expect(machine.steps[0].your_notes).toContain("strongest question");
   expect(strFromU8(files["TASK-COUNCIL.md"])).toContain("one challenge round");
   expect(strFromU8(files["HANDOFF.md"])).toContain("Task council");
-  expect(strFromU8(files[`skills/${machine.steps[0].skill}/SKILL.md`])).toContain("Task council");
+  expect(strFromU8(files[`skills/${machine.steps[0].skill}/SKILL.md`])).toBe(fs.readFileSync(`public/skills/${machine.steps[0].skill}/SKILL.md`, "utf8").replace(/\r\n?/g, "\n"));
+  expect(machine.steps[0].skill_sha256).toMatch(/^[a-f0-9]{64}$/);
   for(const mind of machine.steps[0].minds) expect(files[`skills/${mind}/SKILL.md`]).toBeTruthy();
   expect(Object.keys(files).filter(s=>s.startsWith("minds/"))).toHaveLength(1);
   expect(Object.values(files).some(bytes=>strFromU8(bytes).includes("DO-NOT-EXPORT-THIS-SAMPLE"))).toBe(false);

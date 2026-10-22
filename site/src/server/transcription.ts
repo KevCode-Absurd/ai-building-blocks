@@ -38,18 +38,19 @@ export async function handleTranscription(request: Request, env: ComposerEnv, st
   const reserve = Math.ceil(duration) * .006 / 60 * 1.25;
   const cap = Math.min(25, Number(env.WORKFLOW_DAILY_CAP_USD || 2));
   if (!Number.isFinite(cap) || cap <= 0 || !await store.claim({ id, fingerprint: await hash(audio), day: new Date().toISOString().slice(0, 10), ip: ipHash, user_id: "voice:" + ipHash, charge: reserve, status: "pending", result: null }, cap)) return json(429, { error: "The voice allowance is reached. You can still type your request." });
+  let rejectedBeforeTranscription = false;
   try {
     const form = new FormData(); form.set("model", "whisper-1"); form.set("response_format", "json");
     form.set("file", new Blob([audio], { type: "audio/wav" }), "request.wav");
     const response = await provider("https://api.openai.com/v1/audio/transcriptions", { method: "POST", headers: { authorization: `Bearer ${env.OPENAI_API_KEY}` }, body: form, signal: AbortSignal.timeout(60000) });
-    if (!response.ok) throw Error("Transcription unavailable");
+    if (!response.ok) { rejectedBeforeTranscription = [400, 401, 403, 404, 413, 422, 429].includes(response.status); throw Error("Transcription unavailable"); }
     const data = await response.json() as { text?: unknown };
     if (typeof data.text !== "string") throw Error("Invalid transcription");
     await store.finish(id, Math.ceil(duration) * .006 / 60, "done", null);
     return json(200, { text: data.text.trim().slice(0, 10000) });
   } catch {
     // Billing may be unknown after a transport failure: retain the reservation.
-    await store.finish(id, reserve, "failed", null);
+    await store.finish(id, rejectedBeforeTranscription ? 0 : reserve, "failed", null);
     return json(502, { error: "The recording could not be transcribed. Please try again or type your request." });
   }
 }

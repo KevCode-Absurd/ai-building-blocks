@@ -19,6 +19,11 @@
 .compose-request-footer .compose-voice-controls { gap: 10px; }
 .compose-request-footer .compose-voice-controls .btn { min-height: 40px; }
 .compose-request-footer .compose-voice-controls [role=timer] { font-size: 12px; }
+.compose-voice-controls .btn.compose-voice-icon { display: inline-flex; align-items: center; justify-content: center; flex: 0 0 44px; width: 44px; height: 44px; min-height: 44px; padding: 0; border-radius: 50%; }
+.compose-voice-icon[aria-pressed="true"] { color: var(--bg); background: var(--text); }
+.compose-voice-spinner { animation: compose-voice-spin 1s linear infinite; }
+@keyframes compose-voice-spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .compose-voice-spinner { animation: none; } }
 .compose-request-footer .compose-voice p { margin-bottom: 0; }
 .compose-page .small { overflow-wrap: anywhere; }
 .compose-examples { display: flex; flex-wrap: wrap; gap: 7px; margin: 12px 0 24px; }

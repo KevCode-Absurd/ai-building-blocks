@@ -1,0 +1,168 @@
+{
+  "checkedAt": "2026-10-22T16:42:12.643Z",
+  "assets": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks/site/.wrangler/releases/release-2026-10-22-r17-account-minds/assets",
+  "passed": 20,
+  "total": 20,
+  "pages": [
+    {
+      "slug": "excel-input-form-builder",
+      "route": "/skills/excel-input-form-builder",
+      "title": "Excel input form builder: free AI skill · AI Blocks",
+      "canonical": "https://useaiblocks.com/skills/excel-input-form-builder",
+      "missing": [],
+      "pass": true
+    },
+    {
+      "slug": "excel-table-join-reconciler",
+      "route": "/skills/excel-table-join-reconciler",
+      "title": "Excel table join reconciler: free AI skill · AI Blocks",
+      "canonical": "https://useaiblocks.com/skills/excel-table-join-reconciler",
+      "missing": [],
+      "pass": true
+    },
+    {
+      "slug": "excel-monthly-rollup-builder",
+      "route": "/skills/excel-monthly-rollup-builder",
+      "title": "Excel monthly rollup builder: free AI skill · AI Blocks",
+      "canonical": "https://useaiblocks.com/skills/excel-monthly-rollup-builder",
+      "missing": [],
+      "pass": true
+    },
+    {
+      "slug": "excel-workbook-change-reviewer",
+      "route": "/skills/excel-workbook-change-reviewer",
+      "title": "Excel workbook change reviewer: free AI skill · AI Blocks",
+      "canonical": "https://useaiblocks.com/skills/excel-workbook-change-reviewer",
+      "missing": [],
+      "pass": true
+    },
+    {
+      "slug": "excel-print-layout-fixer",
+      "route": "/skills/excel-print-layout-fixer",
+      "title": "Excel print layout fixer: free AI skill · AI Blocks",
+      "canonical": "https://useaiblocks.com/skills/excel-print-layout-fixer",
+      "missing": [],
+      "pass": true
+    },
+    {
+      "slug": "excel-handover-guide-writer",
+      "route": "/skills/excel-handover-guide-writer",
+      "title": "Excel workbook handover writer: free AI skill · AI Blocks",
+      "canonical": "https://useaiblocks.com/skills/excel-handover-guide-writer",
+      "missing": [],
+      "pass": true
+    },
+    {
+      "slug": "excel-pivot-refresh-planner",
+      "route": "/skills/excel-pivot-refresh-planner",
+      "title": "Excel PivotTable refresh planner: free AI skill · AI Blocks",
+      "canonical": "https://useaiblocks.com/skills/excel-pivot-refresh-planner",
+      "missing": [],
+      "pass": true
+    },
+    {
+      "slug": "excel-powerpoint-number-checker",
+      "route": "/skills/excel-powerpoint-number-checker",
+      "title": "Excel to PowerPoint number checker: free AI skill · AI Blocks",
+      "canonical": "https://useaiblocks.com/skills/excel-powerpoint-number-checker",
+      "missing": [],
+      "pass": true
+    },
+    {
+      "slug": "powerpoint-template-populator",
+      "route": "/skills/powerpoint-template-populator",
+      "title": "PowerPoint template populator: free AI skill · AI Blocks",
+      "canonical": "https://useaiblocks.com/skills/powerpoint-template-populator",
+      "missing": [],
+      "pass": true
+    },
+    {
+      "slug": "powerpoint-speaker-note-builder",
+      "route": "/skills/powerpoint-speaker-note-builder",
+      "title": "PowerPoint speaker notes builder: free AI skill · AI Blocks",
+      "canonical": "https://useaiblocks.com/skills/powerpoint-speaker-note-builder",
+      "missing": [],
+      "pass": true
+    },
+    {
+      "slug": "powerpoint-appendix-navigator",
+      "route": "/skills/powerpoint-appendix-navigator",
+      "title": "PowerPoint appendix navigator: free AI skill · AI Blocks",
+      "canonical": "https://useaiblocks.com/skills/powerpoint-appendix-navigator",
+      "missing": [],
+      "pass": true
+    },
+    {
+      "slug": "powerpoint-slide-size-converter",
+      "route": "/skills/powerpoint-slide-size-converter",
+      "title": "PowerPoint slide size converter: free AI skill · AI Blocks",
+      "canonical": "https://useaiblocks.com/skills/powerpoint-slide-size-converter",
+      "missing": [],
+      "pass": true
+    },
+    {
+      "slug": "powerpoint-chart-data-rebuilder",
+      "route": "/skills/powerpoint-chart-data-rebuilder",
+      "title": "PowerPoint editable chart rebuilder: free AI skill · AI Blocks",
+      "canonical": "https://useaiblocks.com/skills/powerpoint-chart-data-rebuilder",
+      "missing": [],
+      "pass": true
+    },
+    {
+      "slug": "powerpoint-deck-change-reviewer",
+      "route": "/skills/powerpoint-deck-change-reviewer",
+      "title": "PowerPoint deck change reviewer: free AI skill · AI Blocks",
+      "canonical": "https://useaiblocks.com/skills/powerpoint-deck-change-reviewer",
+      "missing": [],
+      "pass": true
+    },
+    {
+      "slug": "powerpoint-accessibility-reviewer",
+      "route": "/skills/powerpoint-accessibility-reviewer",
+      "title": "PowerPoint accessibility reviewer: free AI skill · AI Blocks",
+      "canonical": "https://useaiblocks.com/skills/powerpoint-accessibility-reviewer",
+      "missing": [],
+      "pass": true
+    },
+    {
+      "slug": "powerpoint-audience-handout-builder",
+      "route": "/skills/powerpoint-audience-handout-builder",
+      "title": "PowerPoint audience handout builder: free AI skill · AI Blocks",
+      "canonical": "https://useaiblocks.com/skills/powerpoint-audience-handout-builder",
+      "missing": [],
+      "pass": true
+    },
+    {
+      "slug": "prepare-an-excel-input-workbook-for-handover",
+      "route": "/workflows/prepare-an-excel-input-workbook-for-handover",
+      "title": "Prepare an Excel input workbook for handover · AI workflow",
+      "canonical": "https://useaiblocks.com/workflows/prepare-an-excel-input-workbook-for-handover",
+      "missing": [],
+      "pass": true
+    },
+    {
+      "slug": "build-a-monthly-excel-and-powerpoint-update",
+      "route": "/workflows/build-a-monthly-excel-and-powerpoint-update",
+      "title": "Build a monthly Excel and PowerPoint update · AI workflow",
+      "canonical": "https://useaiblocks.com/workflows/build-a-monthly-excel-and-powerpoint-update",
+      "missing": [],
+      "pass": true
+    },
+    {
+      "slug": "prepare-a-powerpoint-deck-for-presenting-and-sharing",
+      "route": "/workflows/prepare-a-powerpoint-deck-for-presenting-and-sharing",
+      "title": "Prepare a PowerPoint deck for presenting and sharing · AI Blocks",
+      "canonical": "https://useaiblocks.com/workflows/prepare-a-powerpoint-deck-for-presenting-and-sharing",
+      "missing": [],
+      "pass": true
+    },
+    {
+      "slug": "review-revised-excel-and-powerpoint-files",
+      "route": "/workflows/review-revised-excel-and-powerpoint-files",
+      "title": "Review revised Excel and PowerPoint files · AI workflow",
+      "canonical": "https://useaiblocks.com/workflows/review-revised-excel-and-powerpoint-files",
+      "missing": [],
+      "pass": true
+    }
+  ]
+}

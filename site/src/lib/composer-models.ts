@@ -27,7 +27,7 @@ export function usageCost(model: Model, u: Usage, at = new Date()): number {
 }
 export type ModelResult = { text: string; usage: Usage; cost: number; latencyMs: number; finish: string; actualModel: string };
 export class ProviderError extends Error {
-  status: number; billable: ModelResult | null;
+  status: number; billable: ModelResult | null; unbilled = false; providerCode?: string;
   constructor(message: string, status = 502, billable: ModelResult | null = null) { super(message); this.status = status; this.billable = billable; }
 }
 export async function callModel(model: Model, key: string, prompt: { system: string; user: string }, schema: unknown, maxOutput = 5000, fetcher: typeof fetch = fetch): Promise<ModelResult> {
@@ -50,7 +50,14 @@ export async function callModel(model: Model, key: string, prompt: { system: str
   try { response = await fetcher(url, { method: "POST", headers, body: JSON.stringify(body), signal: AbortSignal.timeout(120000) }); }
   catch { throw new ProviderError("The model connection timed out or could not be reached. Try again later."); }
   // Do not return provider bodies: some errors can echo request content or credentials.
-  if (!response.ok) throw new ProviderError(`The model provider returned HTTP ${response.status}.`, response.status);
+  if (!response.ok) {
+    const rejected = new ProviderError(`The model provider returned HTTP ${response.status}.`, response.status);
+    rejected.unbilled = [400, 401, 403, 404, 413, 422, 429].includes(response.status);
+    const error = await response.json().catch(() => null) as any;
+    const code = error?.error?.code ?? error?.error?.type;
+    if (["rate_limit_exceeded", "insufficient_quota", "credit_balance_exhausted"].includes(code)) rejected.providerCode = code;
+    throw rejected;
+  }
   const d = await response.json() as any;
   let text = "", usage: Usage = { input: 0, output: 0, cached: 0, cacheWrite: 0 }, finish = "", actualModel = d.model ?? d.modelVersion ?? model.id;
   if (model.provider === "openai") {

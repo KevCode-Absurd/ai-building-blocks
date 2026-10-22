@@ -1,0 +1,31 @@
+slug: powerpoint-slide-size-converter
+name: PowerPoint slide size converter
+summary: Share a deck and target slide size. Get a reflowed PowerPoint copy with
+  checked text, charts and image crops.
+category: general
+type: skill
+role: build
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: slide_deck
+    required: true
+outputs:
+  - type: slide_deck
+    required: true
+uses: []
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/office-expansion/catalogue.mjs
+example_pending: true
+credits:
+  - title: Original Excel and PowerPoint workflow methods
+    by: AI Blocks
+    used: Original intake, file-preservation, execution and acceptance rules written
+      for this task.
+warnings:
+  - Requires tools for the requested native file format. Checks requiring an
+    unavailable native application must remain marked not run.

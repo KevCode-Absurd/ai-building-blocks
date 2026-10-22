@@ -5,7 +5,7 @@
 ## Key facts
 
 - Free to use, no account needed.
-- 4208 skills, workflows and prompts in 60 jobs, 305 minds and 68 mini tools.
+- 4228 skills, workflows and prompts in 60 jobs, 305 minds and 68 mini tools.
 - Imported skills are copied as they are from open-licence GitHub repos (MIT, Apache 2.0, BSD, CC BY, CC BY-SA), credited on their page with a link to the original.
 - Minds are AIs built from a person's public work, with their sources listed. They are not the person. Minds that invest teach frameworks only, never buy or sell advice.
 - Skills that scrape websites or need a paid outside account say so on their page.
@@ -47,7 +47,7 @@
 - [Launch and scale Meta and TikTok ads](https://useaiblocks.com/llms/launch-and-scale-ads.txt): 20 skills and workflows, such as Tired ad hook refresher and Social ads experiment planner
 - [Lead and manage people](https://useaiblocks.com/llms/lead-people.txt): 82 skills and workflows, such as Difficult conversation repair planner and Employee feedback writer
 - [Make an offer people want](https://useaiblocks.com/llms/make-offer.txt): 75 skills and workflows, such as After-sale offer planner and Offer bonus planner
-- [Make documents, sheets and slides](https://useaiblocks.com/llms/work-with-files.txt): 64 skills and workflows, such as Doc typo and term checker and Article draft editor
+- [Make documents, sheets and slides](https://useaiblocks.com/llms/work-with-files.txt): 84 skills and workflows, such as Doc typo and term checker and Excel workbook handover writer
 - [Make image ads](https://useaiblocks.com/llms/make-image-ads.txt): 54 skills and workflows, such as 3D cutaway image ad maker and Accurate product image ad maker
 - [Make images and art](https://useaiblocks.com/llms/make-images.txt): 19 skills and workflows, such as Marketing image prompt writer and Make a marketing image and shrink it for the web
 - [Make product photos](https://useaiblocks.com/llms/product-photos.txt): 34 skills and workflows, such as Eight-picture product page planner and Flash snapshot product photo maker

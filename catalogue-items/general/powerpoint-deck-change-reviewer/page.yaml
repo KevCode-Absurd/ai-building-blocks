@@ -1,0 +1,118 @@
+new_slug: powerpoint-deck-change-reviewer
+name: PowerPoint deck change reviewer
+summary: Share old and new decks. Get changes to slides, charts, notes and links
+  explained.
+job: work-with-files
+thinking: high
+thinking_why: Native file features, source meaning and check evidence must
+  survive the workflow.
+headline: PowerPoint deck change reviewer
+subhead: Share old and revised decks. Get a review of changed messages, charts,
+  notes, links and slide order. Work on a copy of your file. Get a clear record
+  of what passed and what still needs checking.
+explain: >-
+  Share old and revised decks. Get a review of changed messages, charts, notes,
+  links and slide order.
+
+
+  It works with the actual PowerPoint files and follows a specific method for
+  this task. Your source files stay intact. The method starts by checking what
+  your AI already knows and which files it can read. It asks only for missing
+  facts that change the work.
+
+
+  You get the requested files plus a short record of the sources and checks. A
+  saved file alone does not prove that its formulas, links or layout work. Any
+  check that needs an app your AI cannot use stays marked as not run. Review
+  those limits before you share the result.
+when:
+  - Share old and revised decks. Get a review of changed messages, charts,
+    notes, links and slide order.
+  - Baseline and revised PPTX files, intended changes and source evidence for
+    revised facts.
+  - You need a checked copy while keeping your original files intact.
+you_give:
+  - Baseline and revised PPTX files, intended changes and source evidence for
+    revised facts.
+  - The app and file tools your AI can use for the requested work
+you_get:
+  - deck-change-register.md, comparison previews and unresolved issues.
+  - A record of source files, changes and check results
+  - Missing facts and any checks that could not run
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it
+    and paste it in.
+  - Supply your actual files and describe the result. The AI checks existing
+    context before asking for missing information.
+  - Review the native output and its real check evidence before sharing it.
+how_it_works:
+  - title: Step 1
+    text: 1. Preserve and inventory both decks, including slide IDs, titles,
+      dimensions, notes, comments, hidden slides, links and embedded data.
+  - title: Step 2
+    text: 2. Match slides by stable identity and content evidence, with explicit
+      confidence for rebuilt decks. Distinguish slide moves from additions,
+      deletions and meaningful revisions.
+  - title: Step 3
+    text: 3. Compare visible text, native chart/table data and source labels. Review
+      whether a changed title alters the claim or an apparent style edit hides a
+      changed number.
+  - title: Step 4
+    text: 4. Inspect speaker notes, comments, hidden slides and external links for
+      unintended changes or sensitive content. Do not delete these objects
+      without permission.
+  - title: Step 5
+    text: 5. Render changed slides and examine visual differences. Return
+      before/after evidence and exact locations, separating automated findings
+      from manual or unrun native checks.
+output_shape: |-
+  FILES
+  deck-change-register.md, comparison previews and unresolved issues.
+
+  SOURCE MAP
+  <file and version> | <sheet, cell or slide> | <what it supports>
+
+  CHECKS
+  <check> | <passed, failed or not run> | <evidence>
+
+  OPEN ITEMS
+  <missing fact or unsupported check> | <next action>
+tweaks:
+  - what: Your source files
+    how: Baseline and revised PPTX files, intended changes and source evidence for
+      revised facts.
+  - what: The result you need
+    how: Name the file format, audience and parts that must stay editable. State any
+      page or slide limit.
+  - what: The app used to check it
+    how: Say which Excel or PowerPoint version you will use. Your AI must name any
+      check it cannot run.
+judge:
+  - Reordered slides are matched correctly.
+  - Notes and hidden content are included in the review scope.
+  - Visual and data changes are distinguished.
+  - The result names its sources and keeps unrun checks visible.
+test:
+  - "Try this case: The same slide moved from position 3 to 8. Check that it
+    does this: Record a move without inventing changed content."
+  - "Try this case: Visible slides match but a hidden slide contains an outdated
+    private forecast. Check that it does this: Flag the hidden-content
+    difference for review."
+  - Reopen the saved result and compare it with the source. Keep any failed or
+    unrun check in the report.
+improve:
+  - Add your confirmed field names, file rules and target app version to the
+    required-input section.
+  - Add a small test case with a known answer to the acceptance checks. Keep
+    made-up records separate from real work.
+  - Save the working rules with the file guide so the next run uses the same
+    meanings and checks.
+warnings:
+  - Requires tools for the requested native file format. Checks requiring an
+    unavailable native application must remain marked not run.
+tests:
+  - input: The same slide moved from position 3 to 8
+    expected: Record a move without inventing changed content.
+  - input: Visible slides match but a hidden slide contains an outdated private
+      forecast
+    expected: Flag the hidden-content difference for review.

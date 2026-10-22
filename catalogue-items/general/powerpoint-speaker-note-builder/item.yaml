@@ -1,0 +1,33 @@
+slug: powerpoint-speaker-note-builder
+name: PowerPoint speaker notes builder
+summary: Share your deck and talk length. Get slide notes with source
+  references, transitions and a realistic rehearsal plan.
+category: general
+type: skill
+role: write
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: slide_deck
+    required: true
+outputs:
+  - type: slide_deck
+    required: true
+  - type: document
+    required: true
+uses: []
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/office-expansion/catalogue.mjs
+example_pending: true
+credits:
+  - title: Original Excel and PowerPoint workflow methods
+    by: AI Blocks
+    used: Original intake, file-preservation, execution and acceptance rules written
+      for this task.
+warnings:
+  - Requires tools for the requested native file format. Checks requiring an
+    unavailable native application must remain marked not run.

@@ -1,0 +1,33 @@
+slug: excel-pivot-refresh-planner
+name: Excel PivotTable refresh planner
+summary: Share a workbook with PivotTables. Get a refresh sequence, source
+  checks and a list of stale or unsupported outputs.
+category: general
+type: skill
+role: plan
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: document
+    required: true
+  - type: audit_report
+    required: true
+uses: []
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/office-expansion/catalogue.mjs
+example_pending: true
+credits:
+  - title: Original Excel and PowerPoint workflow methods
+    by: AI Blocks
+    used: Original intake, file-preservation, execution and acceptance rules written
+      for this task.
+warnings:
+  - Requires tools for the requested native file format. Checks requiring an
+    unavailable native application must remain marked not run.

@@ -58,8 +58,14 @@ export default function VoiceRequest({ value, onChange, disabled, onListeningCha
       timer.current = setInterval(() => setSeconds(Math.max(0, Math.ceil((MAX_MS - elapsed.current - (performance.now() - started.current)) / 1000))), 250);
     } catch (error) { release(); setMessage((error as Error).name === "NotAllowedError" ? "Microphone permission was denied. Allow microphone access in your browser and try again." : "Your microphone could not start. Check that it is connected and try again."); finish(); }
   };
+  const label = phase === "recording" ? "Stop recording" : phase === "transcribing" ? "Transcribing recording" : phase === "starting" ? "Opening microphone" : "Record voice request";
+  const processing = phase === "starting" || phase === "transcribing";
   return <div className="compose-voice">
-    <div className="compose-voice-controls"><button type="button" className="btn btn-dark" data-testid="compose-voice" onClick={() => phase === "recording" ? void stop() : void start()} disabled={disabled || !supported || phase === "starting" || phase === "transcribing" || phase === "idle" && (seconds === 0 || value.length >= LIMITS.request)}>{phase === "recording" ? "Stop recording" : phase === "transcribing" ? "Transcribing…" : phase === "starting" ? "Opening microphone…" : "Speak your request"}</button><span className="small" role="timer" aria-label="Voice time remaining">{Math.floor(seconds / 60)}:{String(seconds % 60).padStart(2, "0")} remaining</span></div>
+    <div className="compose-voice-controls"><button type="button" className="btn btn-dark compose-voice-icon" data-testid="compose-voice" aria-label={label} title={phase === "idle" ? "Record with OpenAI Whisper" : label} aria-pressed={phase === "recording"} aria-busy={processing} onClick={() => phase === "recording" ? void stop() : void start()} disabled={disabled || !supported || processing || phase === "idle" && (seconds === 0 || value.length >= LIMITS.request)}>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className={processing ? "compose-voice-spinner" : undefined}>
+        {processing ? <path d="M20 12a8 8 0 1 1-8-8" /> : phase === "recording" ? <rect x="6" y="6" width="12" height="12" rx="2" fill="currentColor" stroke="none" /> : <><rect x="9" y="2" width="6" height="12" rx="3" /><path d="M5 10v2a7 7 0 0 0 14 0v-2M12 19v3M8 22h8" /></>}
+      </svg>
+    </button><span className="small" role="timer" aria-label="Voice time remaining">{Math.floor(seconds / 60)}:{String(seconds % 60).padStart(2, "0")} remaining</span></div>
     {(!supported || message) && <p role="status" className="small">{message || "This browser cannot access a microphone. You can type your request."}</p>}
   </div>;
 }

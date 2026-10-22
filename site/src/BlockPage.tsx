@@ -9,6 +9,7 @@ import { businessText, getBusiness, hasBusiness, useBusiness, withBusiness } fro
 import { openTailor } from "./Tailor";
 import { BusinessNote, openBusiness } from "./Business";
 import { DownloadDialog } from "./DownloadDialog";
+import ExecutionPrompt from "./ExecutionPrompt";
 import type { Flow } from "./lib/store";
 import { Link } from "./lib/router";
 import AddToFlow from "./AddToFlow";
@@ -166,10 +167,10 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
   const twin = b.twin ? c.bySlug[b.twin] : null;
   // An agent runs workflows and skills in order like a workflow, and is added to your AI like a skill.
   const isAgent = kindOf(b) === "agent";
-  const isFlow = (kindOf(b) === "workflow" || isAgent) && b.steps.length > 0;
+  const isFlow = kindOf(b) === "workflow" || isAgent;
   // These coordinators choose branches and resume from saved state. Preserve
   // their governing skill when exporting or opening them in the canvas.
-  const keepCoordinator = b.type === "agent" || b.execution === "coordinator";
+  const keepCoordinator = b.type === "agent" || b.execution === "coordinator" || !b.steps.length;
   const p = page ?? null;
   const give = p?.you_give?.length ? p.you_give : b.inputs.map((x) => x.type.replace(/_/g, " "));
   const get = p?.you_get?.length ? p.you_get : b.outputs.map((x) => x.type.replace(/_/g, " "));
@@ -177,7 +178,7 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
     const slugs = keepCoordinator ? [b.slug] : b.steps.map((s) => s.uses);
     const nodes = slugs.map((slug, i) => ({ id: `s${i + 1}`, slug, x: i * 300, y: 0 }));
     const edges = wireSteps(c, slugs).map(([a, z], i) => ({ id: `e${i}`, from: nodes[a].id, to: nodes[z].id }));
-    setDl({ id: b.slug, name: b.name, updated: 0, nodes, edges });
+    setDl({ id: b.slug, name: b.name, updated: 0, nodes, edges, governingSkills: keepCoordinator ? [] : [b.slug] });
   };
   const dlOrder = dl ? orderFlow(dl) : null;
   const getPack = async () => {
@@ -224,7 +225,7 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
     <main className="bp" data-testid="block-page" data-slug={b.slug}>
       <Comments key={b.slug} slug={b.slug} name={b.name} also={oldNames} toast={toast} />
       {adding && <AddToFlow c={c} slug={b.slug} onClose={() => setAdding(false)} toast={toast} />}
-      {dl && dlOrder && <DownloadDialog name={dl.name} zip={zipName(dl.name)} needs={needsOf(c, dlOrder)} finals={finalOutputs(c, dl, dlOrder)} onDownload={getPack} onClose={() => setDl(null)} kind={isAgent ? "agent" : "workflow"} />}
+      {dl && dlOrder && <DownloadDialog name={dl.name} goal={dl.goal} zip={zipName(dl.name)} needs={needsOf(c, dlOrder)} finals={finalOutputs(c, dl, dlOrder)} onDownload={getPack} onClose={() => setDl(null)} kind={isAgent ? "agent" : "workflow"} />}
       <header className="wrap bp-hero">
         <div className="bp-top">
           <Link to="/#library" className="back"><span aria-hidden="true">←</span> Library</Link>
@@ -271,6 +272,7 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
             </>
           )}
         </div>
+        {isFlow && <ExecutionPrompt name={b.name} />}
         <BusinessNote />
         {b.thinking && <Gauge level={b.thinking} why={p?.thinkingWhy ?? b.thinkingWhy ?? ""} />}
         <p className="bp-file"><span>{b.name}</span><code>{b.slug}</code><span>{cap(b.level)}</span>{b.tested?.result === "pass" && <span data-testid="tested" title="Run on a real business's files and graded by a second AI against this page's checks">Tested</span>}</p>
@@ -400,7 +402,7 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
 
           {(!isFlow || isAgent) && (
             <Section id="install" title="Add it to your AI once, then start it by name" lead="It takes about two minutes, once. Pick the AI you use.">
-              {isAgent && isFlow ? <><p>The pack includes the agent, the skills it calls and your saved context. Unzip it, give the files to your AI and ask it to follow HANDOFF.md. It chooses the work needed for this run and keeps a record for the next one.</p><button className="btn btn-primary" onClick={handoff}>Get the complete agent pack</button></> : <Install b={b} skill={skill} toast={toast} />}
+              {isFlow ? <><p>The pack includes the complete selected skills, their supporting files and the execution rules. Give the whole folder to your AI and start with START_HERE.txt.</p><button className="btn btn-primary" onClick={handoff}>{isAgent ? "Get the complete agent pack" : "Download the workflow"}</button></> : <Install b={b} skill={skill} toast={toast} />}
             </Section>
           )}
 

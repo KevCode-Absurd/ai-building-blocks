@@ -28,4 +28,3 @@ test("recorded transcript obeys the character cap and denied permission keeps ty
   await expect(page.getByText("Microphone permission was denied.", { exact: false })).toBeVisible();
   await expect(goal).toBeEnabled(); await expect(page.getByTestId("compose-submit")).toBeEnabled();
 });
-

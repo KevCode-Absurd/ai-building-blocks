@@ -3,7 +3,7 @@
   "scope": "Portable workflow package export and execution instructions",
   "contract": "abb-execution/1",
   "implementation_status": "PRIMARY_PATHS_VERIFIED_SPACE_FOLLOWUP_PENDING",
-  "release_status": "R17_DEPLOYING_SPACE_FOLLOWUP_PENDING",
+  "release_status": "R17_STAGING_VERIFIED_PRODUCTION_PENDING_SPACE_FOLLOWUP_PENDING",
   "assurance": "Portable execution is assistant-reported. No backend execution enforcement or cross-model reliability guarantee.",
   "checks": [
     {
@@ -165,5 +165,20 @@
       "path": "docs/WORKFLOW-EXECUTION-CONTRACT.md",
       "sha256": "b19baf700ff8f783354ce03b41f18e290073cbb52ddab54e3cce6b0ec08d69f7"
     }
-  ]
+  ],
+  "staging": {
+    "version": "13610a91-1509-48c3-8f7a-d6b7aab775ce",
+    "status": "VERIFIED_BY_RELEASE_OWNER",
+    "preserved_settings": 21
+  },
+  "coordinated_release_validation": {
+    "frozen_preview": "R17",
+    "browser_tests": 38,
+    "browser_passed": 38,
+    "workflow_execution_cases": 4,
+    "unit_tests": 222,
+    "typescript": "PASS",
+    "evidence_owner": "Release chat 01a1635b-4fd9-7692-a3f4-e47f76ebd586",
+    "attribution": "Publisher-verified, not an additional independent rerun by this chat"
+  }
 }

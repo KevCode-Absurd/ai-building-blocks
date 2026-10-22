@@ -1,6 +1,6 @@
 {
-  "checkedOn": "2026-10-22T16:45:05.417Z",
-  "status": "staging-pass-pending-production",
+  "checkedOn": "2026-10-22T16:55:01.384Z",
+  "status": "production-verified",
   "scope": "Private account-backed minds across devices and workflows",
   "source": [
     {
@@ -102,7 +102,7 @@
       "sha256": "a7cf8a737da24776ed5864cb72eb2ad84645b7e5f9fab8db99dc5066ce8fd38f",
       "rowDataExported": false
     },
-    "productionApplied": false,
+    "productionApplied": true,
     "productionSchemaOnlyBackup": {
       "sha256": "a7cf8a737da24776ed5864cb72eb2ad84645b7e5f9fab8db99dc5066ce8fd38f",
       "rowDataExported": false
@@ -129,12 +129,21 @@
     "workerSha256": "e0eabe892d923971589729a486e791878aa6e5c74d1e4e38c4aee7bb10c54a00",
     "sourceFilesFrozen": 118,
     "sourceInputsUnchanged": true,
-    "liveAccountVerification": "pending"
+    "liveAccountVerification": "pass",
+    "productionVersion": "359e91b6-8ce9-4e0f-8a4b-030c9a6c302e",
+    "sourceCommit": "be214d29c2653467eefe389cf7a1689a6f72a99a"
   },
   "staging": {
     "version": "13610a91-1509-48c3-8f7a-d6b7aab775ce",
     "exactAssetAndRuntimeChecks": 24,
     "accountPublicChecks": 6,
     "bindingsPreserved": 21
+  },
+  "production": {
+    "exactAssetAndRuntimeChecks": 24,
+    "publicAccountChecks": 6,
+    "smokeChecks": 27,
+    "bindingsPreserved": 20,
+    "liveUIReport": "reports/2026-10-22-account-minds-production-ui.json"
   }
 }

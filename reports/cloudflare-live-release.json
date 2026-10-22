@@ -1,5 +1,5 @@
 {
-  "checkedOn": "2026-10-22T16:10:27.777Z",
+  "checkedOn": "2026-10-22T16:55:01.384Z",
   "deadline": "2026-10-22 Asia/Kolkata",
   "accountAuthenticated": true,
   "workersPaid": {
@@ -14,7 +14,7 @@
     "canonicalURL": "https://useaiblocks.com/"
   },
   "staging": {
-    "status": "R14 final artifact verified:24 exact remote checks and all21 bindings preserved",
+    "status": "R17 verified: 24 exact asset/runtime checks, 6 account API checks, all 21 bindings preserved",
     "worker": "ai-building-blocks-staging",
     "database": "ai-blocks-staging",
     "databaseId": "eeb9d0d4-cbed-4751-8df4-1aaf81fd6cb3",
@@ -22,7 +22,8 @@
       "0001_comments.sql",
       "0002_spaces.sql",
       "0004_composer.sql",
-      "0005_composer_accounts.sql"
+      "0005_composer_accounts.sql",
+      "0006_account_minds.sql"
     ],
     "isolated": true,
     "secretsConfigured": 9,
@@ -36,16 +37,16 @@
     "privatePreviewPlanned": true,
     "secretsGeneratedLocally": 6,
     "turnstileConfigured": true,
-    "assetsToUpload": 12252,
+    "assetsToUpload": 24270,
     "url": "https://ai-building-blocks-staging.kevinmark7498.workers.dev",
-    "versionId": "b1581693-6ede-485d-9a93-4752dfe94ee3",
-    "deployedOn": "2026-10-22T12:08:12.467Z",
-    "uploadedAssets": 4500,
-    "reusedAssets": 14110,
+    "versionId": "13610a91-1509-48c3-8f7a-d6b7aab775ce",
+    "deployedOn": "2026-10-22T16:45:21.707Z",
+    "uploadedAssets": 4938,
+    "reusedAssets": 19332,
     "workerStartupMs": 5,
     "verified": true,
-    "previousVersionId": "436e30dd-6517-4e77-a10e-69edba5d325c",
-    "workerSha256": "892f4aaae4cfd8dc723acc5ddf17f714c59416ee66b3d932057e590f76410d2c",
+    "previousVersionId": "b1581693-6ede-485d-9a93-4752dfe94ee3",
+    "workerSha256": "e0eabe892d923971589729a486e791878aa6e5c74d1e4e38c4aee7bb10c54a00",
     "previousFunctionalChecks": {
       "versionId": "723795d5-403c-461a-a910-4088612a0022",
       "plannerReplacementPassed": 61,
@@ -53,23 +54,24 @@
       "routing": "pass"
     },
     "manifestCache": {
-      "entries": 23837,
+      "entries": 24270,
       "algorithm": "Wrangler 4.151.3 BLAKE3/base64/extension"
     },
     "clerkConfigured": true,
-    "releaseRoot": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r14-final-workflows",
-    "assetReleaseRoot": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r14-final-workflows",
-    "verifiedOn": "2026-10-22T13:30:12.565Z"
+    "releaseRoot": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r17-account-minds",
+    "assetReleaseRoot": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r17-account-minds",
+    "verifiedOn": "2026-10-22T16:55:01.384Z"
   },
   "production": {
-    "status": "R15 verified: microphone icon, OpenAI Whisper, semantic multi-goal routing; 30 real-model cases, 32 live browser and 27 smoke checks pass",
+    "status": "R17 verified: private account minds, portable workflow export improvements and 20 Office additions; preserves R15 semantic and Whisper behavior",
     "database": "ai-blocks",
     "databaseId": "a886eeae-4014-4da2-842f-a5bebc4d7f71",
     "migrations": [
       "0001_comments.sql",
       "0002_spaces.sql",
       "0004_composer.sql",
-      "0005_composer_accounts.sql"
+      "0005_composer_accounts.sql",
+      "0006_account_minds.sql"
     ],
     "secretsGeneratedLocally": 5,
     "customDomainChanged": true,
@@ -87,39 +89,40 @@
       "blockSeconds": 10,
       "includedRule": true
     },
-    "versionId": "35aac4fd-b930-4a24-9731-bc0dcdc68b6e",
-    "workerSha256": "a16ebb0076eff1c01fc0eb189843972a99374252c65a38b871646f2706ea1809",
-    "uploadedAssets": 4500,
-    "reusedAssets": 14110,
-    "workerStartupMs": 4,
+    "versionId": "359e91b6-8ce9-4e0f-8a4b-030c9a6c302e",
+    "workerSha256": "e0eabe892d923971589729a486e791878aa6e5c74d1e4e38c4aee7bb10c54a00",
+    "uploadedAssets": 4938,
+    "reusedAssets": 19332,
+    "workerStartupMs": 5,
     "workersDevEnabled": false,
     "previewUrlsEnabled": false,
     "clerkConfigured": true,
-    "previousVersionId": "be7e9b44-c528-4748-a7ff-a910370c9925",
-    "deployedOn": "2026-10-22T16:08:07.176Z",
-    "releaseRoot": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r15-semantic-voice",
-    "assetReleaseRoot": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r15-semantic-voice",
-    "sourceCommit": "47069311d5299e1171ed95added2afd1642fdb83",
+    "previousVersionId": "35aac4fd-b930-4a24-9731-bc0dcdc68b6e",
+    "deployedOn": "2026-10-22T16:49:09.425Z",
+    "releaseRoot": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r17-account-minds",
+    "assetReleaseRoot": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r17-account-minds",
+    "sourceCommit": "be214d29c2653467eefe389cf7a1689a6f72a99a",
     "publicVerified": true,
-    "gitEvidenceBeforeActivation": "56269425",
+    "gitEvidenceBeforeActivation": "be214d29c2653467eefe389cf7a1689a6f72a99a",
     "aiEnabled": true,
     "dailyCapUSD": "10",
     "configurationCommitBeforeAIEnable": "0a6a3fd6",
     "defaultProviderKeyConfigured": true,
     "customerPriceUSD": 0,
     "pendingFrontendRelease": null,
-    "verifiedOn": "2026-10-22T16:10:27.777Z",
+    "verifiedOn": "2026-10-22T16:55:01.384Z",
     "manifestCache": {
-      "entries": 23837,
+      "entries": 24270,
       "algorithm": "Wrangler 4.151.3 BLAKE3/base64/extension"
     },
     "origin": "https://useaiblocks.com",
-    "root": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r15-semantic-voice",
+    "root": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r17-account-minds",
     "bindingsPreserved": 20,
     "AIEnabled": true,
-    "catalogueSha256": "6757be7af672633794122d2fd0de16e78531fc461039b67209f35069dbab2351",
+    "catalogueSha256": "019e0f84f2ce1c5809562de7d0c9b12bd7c2322be9c87be7f4b798a16d143edd",
     "workflowMatchingReport": "reports/workflow-matching-production-deployment.json",
-    "semanticReleaseReport": "reports/composer-semantic-production-deployment.json"
+    "semanticReleaseReport": "reports/composer-semantic-production-deployment.json",
+    "accountMindsReport": "reports/2026-10-22-account-minds-qa.json"
   },
   "releaseScope": {
     "blocks": 4438,
@@ -192,7 +195,33 @@
     "fixtureCleanup": "Two exact verified empty staging spaces deleted; both synthetic comments hidden; ignored synthetic credential files removed; production untouched",
     "actualClerkSignIn": "PASS:actual production owner Google OAuth returned to /compose and authenticated usage persisted after reload;not a universal multi-account test",
     "productionAI": "PASS:one real authenticated human-verified workflow;9steps;26fileZIP and editableJSON valid;D1exactlyone donejob calculatedUSD0.031828;globaldailyreservationcapUSD10/customerfree",
-    "startupLoading": "R9 actualbuilt12/12 and production12/12 pass;noJS,slowdownloads,lazysections,mobile,reducedmotion,deep links,redirects and failure recovery"
+    "startupLoading": "R9 actualbuilt12/12 and production12/12 pass;noJS,slowdownloads,lazysections,mobile,reducedmotion,deep links,redirects and failure recovery",
+    "accountMinds": {
+      "checkedOn": "2026-10-22T16:55:01.384Z",
+      "origin": "https://useaiblocks.com",
+      "version": "359e91b6-8ce9-4e0f-8a4b-030c9a6c302e",
+      "sourceCommit": "be214d29c2653467eefe389cf7a1689a6f72a99a",
+      "status": "pass",
+      "browser": "Signed-in in-app browser, actual production Clerk session and D1 API",
+      "providerCalls": 0,
+      "checks": [
+        "Private account library loaded",
+        "Synthetic profile save confirmed by server response",
+        "Profile retained after full page reload",
+        "Same account profile loaded independently in Compose in a second tab",
+        "Edit saved in Compose and loaded after refreshing Minds",
+        "An editor opened before refresh displayed the latest-profile conflict review",
+        "Synthetic profile removed with Undo available",
+        "Removal appeared in the second tab after refresh"
+      ],
+      "syntheticDataOnly": true,
+      "profileCleanup": "Removed; no genuine user profiles modified",
+      "coverageBoundary": "Production verification used two tabs in one real account. Separate independent browser contexts and cross-account isolation are covered by the fixture browser tests and real authentication/SQL unit tests; no second physical device is claimed.",
+      "screenshots": [
+        "reports/account-minds-production.png",
+        "reports/account-minds-production-ready.png"
+      ]
+    }
   },
   "deferredWork": {
     "initialPaintLoadingState": {
@@ -201,6 +230,16 @@
       "includedInR8": false,
       "includedInR9": true,
       "report": "reports/startup-loading-production/checks.json"
+    },
+    "workflowExecutionSpaces": {
+      "status": "Pending separately coordinated follow-up",
+      "description": "Unify legacy Spaces download and transfer paths with the new portable execution contract; R17 does not claim complete runner or all-surface enforcement."
     }
-  }
+  },
+  "currentReleaseScope": [
+    "Private signed-in mind libraries across devices with explicit local migration",
+    "Portable execution contracts on the verified creation/download paths",
+    "20 Office catalogue additions with complete pages and packages",
+    "Preserved R15 semantic routing and Whisper transcription"
+  ]
 }

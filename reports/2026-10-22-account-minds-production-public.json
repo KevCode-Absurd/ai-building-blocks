@@ -1,0 +1,16 @@
+{
+  "checkedOn": "2026-10-22T16:49:36.678Z",
+  "environment": "production",
+  "origin": "https://useaiblocks.com",
+  "status": "pass",
+  "checks": [
+    "/minds matches frozen release",
+    "/compose matches frozen release",
+    "/privacy matches frozen release",
+    "GET anonymous denied without private profiles",
+    "PUT anonymous denied without private profiles",
+    "GET forged credential denied without private profiles"
+  ],
+  "providerCalls": 0,
+  "authenticatedUI": "Reported separately; these checks do not access user records."
+}

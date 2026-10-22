@@ -4,7 +4,7 @@ import { assignedCustomMinds, customMindMarkdown, mindFile, withCustomMinds } fr
 // PRD §6: HANDOFF.md, workflow.json, skills/<slug>/SKILL.md, README.txt.
 // The zip library loads only when someone downloads.
 import type { Zippable } from "fflate";
-import { type Catalogue, loadSkillText, loadSkillZip, portLabel, taskOf, workflowEntries } from "./data";
+import { type Catalogue, kindOf, loadSkillText, loadSkillZip, portLabel, taskOf, workflowEntries } from "./data";
 import type { Flow, FlowNode } from "./store";
 import { type Business, businessText, withBusiness as addBusiness } from "./business";
 import { crewSlugs, isMind, leadsOf, mindName } from "./crew";
@@ -407,6 +407,7 @@ export async function buildSkillZip(slug: string, skill: string, hasFiles = fals
 export async function buildMindPack(c: Catalogue, mindSlug: string, skillSlugs: string[], business: Business = {}) {
   const m = c.bySlug[mindSlug];
   if (!m) return { error: "That mind isn't in the library." } as const;
+  if (skillSlugs.some(s => c.bySlug[s] && ["workflow", "agent"].includes(kindOf(c.bySlug[s])))) return { error: "Workflows need their complete workflow pack. Open the workflow's page to download its full instructions and skills." } as const;
   const mindSkill = await loadSkillText(mindSlug);
   if (!mindSkill) return { error: `Couldn't load ${m.name}. Check your connection and try again.` } as const;
   const { strToU8, unzipSync, zipSync } = await import("fflate");

@@ -2,7 +2,7 @@
 // On a mind's page you tick the skills from their work and download them with the mind as one pack.
 // On a skill's page you see who can help with it.
 import { useEffect, useState } from "react";
-import { type Block, type Catalogue, pathOf } from "./lib/data";
+import { type Block, type Catalogue, kindOf, pathOf } from "./lib/data";
 import { buildMindPack, download } from "./lib/handoff";
 import { Link } from "./lib/router";
 import PixelFace from "./PixelFace";
@@ -10,10 +10,12 @@ import { LabelBadges } from "./MindLabel";
 import { getBusiness } from "./lib/business";
 
 export function MindSkills({ c, mind, toast }: { c: Catalogue; mind: Block; toast: (m: string) => void }) {
-  const skills = (mind.skills ?? []).map((s) => c.bySlug[s]).filter(Boolean);
+  const related = (mind.skills ?? []).map(s => c.bySlug[s]).filter(Boolean);
+  const workflows = related.filter(s => ["workflow", "agent"].includes(kindOf(s)));
+  const skills = related.filter(s => !["workflow", "agent"].includes(kindOf(s)));
   const [picked, setPicked] = useState<Set<string>>(() => new Set(skills.map((s) => s.slug)));
   const [busy, setBusy] = useState(false);
-  useEffect(() => setPicked(new Set((mind.skills ?? []).filter((s) => c.bySlug[s]))), [mind.slug]);
+  useEffect(() => setPicked(new Set((mind.skills ?? []).filter(s => c.bySlug[s] && !["workflow", "agent"].includes(kindOf(c.bySlug[s]))))), [mind.slug]);
   const first = mind.name.split(" (")[0];
   const flip = (slug: string) => setPicked((p) => { const n = new Set(p); n.has(slug) ? n.delete(slug) : n.add(slug); return n; });
   const all = picked.size === skills.length;
@@ -56,6 +58,7 @@ export function MindSkills({ c, mind, toast }: { c: Catalogue; mind: Block; toas
         </button>
       </div>
       <p className="small">One zip: a README, {first}'s folder (the mind, playbook, personality, knowledge and sources) and a folder for each skill you picked.</p>
+      {workflows.length > 0 && <div data-testid="mind-workflow-downloads"><h4>Workflows from this mind</h4><p className="small">Each workflow has its own complete pack. Open one to download its instructions and the skills it runs.</p><WorkflowList c={c} flows={workflows} testid="mind-workflow-packs" /></div>}
     </div>
   );
 }

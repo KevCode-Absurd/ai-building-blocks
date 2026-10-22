@@ -1,0 +1,15 @@
+.skill-add{width:min(660px,calc(100vw - 24px));max-height:88dvh;box-sizing:border-box;overflow:auto;padding:24px;background:var(--panel);color:var(--text);border:1px solid var(--line);box-shadow:0 16px 80px #0004;overflow-wrap:anywhere}
+.skill-add::backdrop{background:#0008}
+.skill-add header,.skill-add footer{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.skill-add h2{font-size:22px;margin:0}
+.skill-add label{display:grid;gap:8px;margin:18px 0;font-size:14px}
+.skill-add input,.skill-add select{width:100%;min-width:0;box-sizing:border-box;padding:12px;background:var(--bg);color:var(--text);border:1px solid var(--line);font:inherit}
+.skill-add-results{display:grid;gap:10px;margin:16px 0;max-height:32dvh;overflow:auto;padding:3px}
+.skill-add-results button{display:grid;gap:6px;min-width:0;text-align:left;padding:14px;background:var(--bg);color:var(--text);border:1px solid var(--line);cursor:pointer}
+.skill-add-results button[aria-pressed=true]{outline:2px solid var(--text);outline-offset:-3px}
+.skill-add-results span{font-size:13px;color:var(--muted);line-height:1.6}
+.skill-add-selection{border-top:1px solid var(--line);padding-top:16px;margin:16px 0}
+.skill-add footer{position:sticky;bottom:-24px;background:var(--panel);padding:16px 0 0;border-top:1px solid var(--line);margin-top:20px}
+.skill-add :focus-visible{outline:2px solid var(--text);outline-offset:2px}
+.skill-add button{min-height:44px;cursor:pointer}.skill-add button:disabled{cursor:default}
+@media(max-width:480px){.skill-add{padding:18px;max-height:92dvh}.skill-add footer{bottom:-18px}.skill-add h2{font-size:20px}}

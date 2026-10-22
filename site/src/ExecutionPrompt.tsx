@@ -2,8 +2,8 @@ import { useEffect, useRef, useState } from "react";
 import { executionPrompt } from "./lib/workflow-execution";
 import "./execution-prompt.css";
 
-export default function ExecutionPrompt({ goal, name, copyTestId = "copy-execution-prompt" }: { goal?: string | null; name?: string; copyTestId?: string }) {
-  const prompt = executionPrompt(goal, name);
+export default function ExecutionPrompt({ goal, name, instructions, copyTestId = "copy-execution-prompt" }: { goal?: string | null; name?: string; instructions?: string; copyTestId?: string }) {
+  const prompt = instructions ?? executionPrompt(goal, name);
   const [copied, setCopied] = useState(false);
   const [failed, setFailed] = useState(false);
   const [open, setOpen] = useState(false);

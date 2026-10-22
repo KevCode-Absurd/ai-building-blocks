@@ -1,4 +1,6 @@
 import SkillReplace, { ReplaceMenu } from "./SkillReplace";
+import SkillAdd from "./SkillAdd";
+import { insertFlowSkill } from "./lib/insert-flow-skill";
 import { assignedCustomMinds, withCustomMinds, type CustomMind } from "./lib/custom-minds";
 import { useMyMinds } from "./lib/mind-library";
 import { withCustomSkills, replaceFlowSkill, type CustomSkill } from "./lib/custom-skills";
@@ -231,6 +233,7 @@ function Stage({ c: baseCatalogue, toast, initialFlow, onFlowChange }: BuilderPr
   const mindProfiles = useMemo(() => [...(ends.customMinds ?? []), ...myMinds.filter(m => !ends.customMinds?.some(s => s.slug === m.slug))].slice(0, 12), [myMinds, ends.customMinds]);
   const c = useMemo(() => withCustomMinds(withCustomSkills(baseCatalogue, ends.customSkills), mindProfiles), [baseCatalogue, ends.customSkills, mindProfiles]);
   const [replacing, setReplacing] = useState<string | null>(null);
+  const [adding, setAdding] = useState(false);
   const [contextMenu, setContextMenu] = useState<{ id: string; x: number; y: number } | null>(null);
   const start = useMemo(() => (initial ? fromFlow(initial) : { nodes: [], edges: [] }), [initial]);
   const [nodes, setNodes, onNodesChange] = useNodesState<BlockNode>(start.nodes);
@@ -522,7 +525,7 @@ function Stage({ c: baseCatalogue, toast, initialFlow, onFlowChange }: BuilderPr
     if (!spaceKey()) { toast("Make your space first. It's free and takes one click."); window.location.assign("/space"); return; }
     const title = name.trim() || "Untitled workflow";
     try {
-      await spaces.add({ kind: "workflow", title, summary: `${nodes.length} steps`, data: { name: title, nodes: flow.nodes, edges: flow.edges, goal: flow.goal, notes: flow.notes, localId: flowId } });
+      await spaces.add({ kind: "workflow", title, summary: `${nodes.length} steps`, data: { name: title, nodes: flow.nodes, edges: flow.edges, goal: flow.goal, notes: flow.notes, governingSkills: flow.governingSkills, team: flow.team, overseer: flow.overseer, ended: flow.ended, localId: flowId } });
       toast(`Saved “${title}” to your space`);
     } catch (e) { toast(e instanceof Error ? e.message : "That didn't save. Try again."); }
   };
@@ -559,6 +562,7 @@ function Stage({ c: baseCatalogue, toast, initialFlow, onFlowChange }: BuilderPr
           <div className="stage-bar">
             <input className="flow-name" value={name} onChange={(e) => setName(e.target.value)} aria-label="Workflow name" />
             <span className="spacer" />
+            <button className="btn btn-ghost btn-sm" onClick={() => setAdding(true)} disabled={!order || nodes.length >= 40} title={nodes.length >= 40 ? "Remove a step before adding another" : "Choose a skill and where to insert it"} data-testid="add-workflow-skill">+ Add skill</button>
             <button className="btn btn-ghost btn-sm" onClick={save} disabled={!canRun || isSaved} data-testid="save-flow">{isSaved ? "Saved" : "Save"}</button>
             <div className="bar-more" ref={moreRef}>
               <button className="btn btn-ghost btn-sm bar-more-btn" aria-expanded={more} aria-haspopup="true" onClick={() => setMore(!more)} data-testid="bar-more">More</button>
@@ -629,6 +633,14 @@ function Stage({ c: baseCatalogue, toast, initialFlow, onFlowChange }: BuilderPr
         </div>
       </div>
       {needsOpen && <DownloadDialog name={name} goal={flow.goal} zip={zipName(name)} needs={needs} finals={finals} onDownload={exportPack} onClose={() => setNeedsOpen(false)} />}
+      {adding && order && <SkillAdd c={c} order={order} initialPosition={inspect === START ? 0 : inspect && order.some(o => o.node.id === inspect) ? order.findIndex(o => o.node.id === inspect) + 1 : order.length} onClose={() => setAdding(false)} onAdd={(slug, at) => {
+        const updated = insertFlowSkill(c, flow, slug, at);
+        const graph = fromFlow(updated);
+        setNodes(graph.nodes); setEdges(graph.edges);
+        setInspect(updated.nodes.find(n => !flow.nodes.some(old => old.id === n.id))!.id);
+        toast(`${c.bySlug[slug].name} added as step ${at + 1}. Review its inputs and connections.`);
+        refit();
+      }} />}
       {contextMenu && <ReplaceMenu x={contextMenu.x} y={contextMenu.y} onClose={() => setContextMenu(null)} onReplace={() => { setReplacing(contextMenu.id); setContextMenu(null); }} />}
       {replacing && flow.nodes.some(n => n.id === replacing) && <SkillReplace c={c} slug={flow.nodes.find(n => n.id === replacing)!.slug} goal={flow.goal ?? flow.name} before={(order ?? []).filter(o => o.step < (order?.find(o => o.node.id === replacing)?.step ?? 0)).map(o => o.node.slug)} after={(order ?? []).filter(o => o.step > (order?.find(o => o.node.id === replacing)?.step ?? 0)).map(o => o.node.slug)} customSkills={ends.customSkills ?? []} onClose={() => setReplacing(null)} onChoose={(slug, customSkills) => {
         setEnds(e => ({ ...e, customSkills }));

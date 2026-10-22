@@ -6,7 +6,7 @@ This application composes and downloads workflows. It does not execute the downl
 
 ## What users receive
 
-Manual canvas workflows, free and AI compositions, library workflows, agents, growth plans and source-authoring packs use `buildHandoffZip`. Each includes:
+Manual canvas workflows, free and AI compositions, library workflows, agents, growth plans, source-authoring packs and structured workflows saved in My Space use `buildHandoffZip`. Each includes:
 
 - `START_HERE.txt`, `HANDOFF.md`, `EXECUTION.md` and a goal-specific `OPTIONAL_USER_PROMPT.txt`. Essential input, order and evidence rules are in the entry documents even when no prompt is pasted.
 - `workflow.json` with an additive `abb-execution/1` contract, stable step IDs, dependencies, input policies, output/check obligations, unknown capabilities, and portable assurance.
@@ -36,12 +36,18 @@ Expanded library workflows retain `governingSkills` through the canvas, saved st
 
 Source-authoring uses the same exporter. `AUTHORING.md` preserves the three authoring passes and requires approval of the actual numbered skeleton. Its framework tells the host to carry these execution rules into the resulting workflow and to obtain full reused skills and references. Writing a new workflow is distinct from executing it. A library description is not a bundled skill.
 
+My Space and shared/public Space item cards now offer the same workflow download and copy controls. Saving or moving a structured workflow preserves its goal, notes, governing skills, assigned team, overseer and step configuration. Opening it in the builder validates the original graph before link serialization; unavailable steps or invalid edges produce a persistent error. A valid workflow too large for a builder link can still download as a complete package. Unrelated private profiles are excluded. Older items cannot recover fields that were never stored; absent information remains unresolved.
+
+A Space item containing only text downloads as an unverified source bundle. Its entry documents, shared rules, original `source.md`, optional prompt, manifest and `SOURCE_STATUS.json` identify execution as BLOCKED. It does not invent a workflow definition, skill files, confirmations or execution evidence. The host must obtain and verify the actual workflow and required resources before execution. Source privacy and semantic review remain NOT_RUN. The Space tests use mocked account/Space APIs with actual browser interactions and downloaded ZIPs; deployment verification is recorded separately.
+
+Mind collections distinguish standalone skills from workflows, routines and agents. Workflow entries remain visible as links to their complete workflow pages and download through the central exporter. The standalone mind-and-skills bundler rejects workflow entries before loading files; it cannot quietly ship a workflow as one incomplete skill. This closes 33 workflow links found in the catalogue's mind skill lists without inventing an execution sequence for a collection of separate jobs.
+
 ## Specification coverage and acceptance mapping
 
 | Specification sections | Implementation and verification | Remaining limits |
 | --- | --- | --- |
 | 1–4: promise, invariants, authority, modes | Shared policy, portable assurance, entry/handoff prompt parity; unit tests for no invented acceptance | No enforced execution mode or cross-model success measurement |
-| 5: layout and export | Shared exporter, inventory, archive inspection, round-trip hashes; export and browser tests | No general package ZIP importer, trusted signatures or comprehensive secret scan |
+| 5: layout and export | Shared exporter, Space workflow/source wrappers, inventory, archive inspection, round-trip hashes; export and browser tests | No general package ZIP importer, trusted signatures or comprehensive secret scan |
 | 6: composition and registry | Full selected resources, support closure, parent governance, original source hashes | Legacy capability/license semantics are not inferred or certified |
 | 7: requirement extraction | Stable global rule IDs, source inventory and explicit pending coverage | Full skill/reference obligation extraction and semantic classification are NOT_RUN |
 | 8–9: inputs and intake | Required/optional definitions, per-consumer records, producer candidates, unvalidated saved context, search/ask policies | No authoritative acceptance service or field-level human decision store |
@@ -51,7 +57,7 @@ Source-authoring uses the same exporter. `AUTHORING.md` preserves the three auth
 | 17: context | Complete bundled instructions/resources and truncation rules | No model-invocation read receipts, token-budget enforcement or complete source classification |
 | 18–20: capabilities, permission, recovery | Unknown capabilities, scoped action rules, stale-review rules and interrupted-action reconciliation instructions | No capability adapters, durable checkpoints or external action retries are executed by this app |
 | 21–22: identity and providers | File-byte hashes, fixed ZIP timestamps/order, common provider-neutral prompt | No artifact replay service or provider behavior certification |
-| 23–24: UX and optional prompt | Top downloads/prompt, selectable fallback, input reminders, entry documents; desktop/mobile browser tests | Reminder checkboxes do not accept inputs; file access depends on the host |
+| 23–24: UX and optional prompt | Top downloads/prompt including Space item cards, selectable fallback, input reminders, persistent import errors, entry documents; desktop/mobile browser tests | Reminder checkboxes do not accept inputs; file access depends on the host |
 | 25: safety | Archive path/count/size/ratio/attribute checks, secret-pattern check, source/data boundaries | This is not a complete hostile-package security assessment |
 | 26: tests | Actual exporter contract tests, malformed input/archive tests, real browser ZIP/copy/mobile tests | No live ChatGPT/Claude/Gemini attachment-only outcome study |
 | 27–28: rollout and acceptance | Additive migration, portable phase only, explicit pending checks | Runner-dependent acceptance items remain unimplemented rather than marked passed |
@@ -64,6 +70,8 @@ The specification's INV-01–03, 05–09, 11–16 are expressed as portable inst
 
 Run the unit suite from `site/` with `npm run test:unit`, and TypeScript with `npx tsc -b`. The focused browser suite uses `playwright.execution.config.ts`; set `EXECUTION_TEST_URL` to a running local preview. This configuration does not regenerate assets or deploy. Browser connectivity may require running both preview and browser outside the localhost-restricted sandbox.
 
-The focused tests cover original skill bytes and hashes, deterministic ZIPs, missing/optional/upstream inputs, graph and binding failures, unsafe ZIP paths/attributes, missing concrete references, source-injection text remaining unapproved data, reciprocal support links, exact prompt copying, denied clipboard, mobile overflow and source-authoring approval. They do not simulate a real user's confirmation or run the downloaded skills.
+The focused tests cover original skill bytes and hashes, deterministic ZIPs, missing/optional/upstream inputs, graph and binding failures, unsafe ZIP paths/attributes, missing concrete references, source-injection text remaining unapproved data, reciprocal support links, exact prompt copying, denied clipboard, mobile overflow and source-authoring approval. Space-specific tests also cover context retention, complete workflow and agent archives, blocked source-only bundles, privacy scope, large workflows, and persistent missing-skill errors. They do not simulate a real user's confirmation or run the downloaded skills.
 
 Future enforcement requires a real execution backend: trusted input acceptance, persistent step state, immutable revisions, tool authorization, validator evidence and human decision events. Full semantic source coverage and repeated cross-provider evaluation are separate required work before making stronger assurance claims.
+
+A known content blocker was exposed by the new guard: `event-tracking-planner/SKILL.md` links to `references/retention-measurement-patterns.md`, which is absent from the supplied catalogue files. Workflows depending on it, including `weekly-product-funnel-watcher`, stop at export with the missing path. The reference was not invented and the guard was not relaxed. Resume those exports only after recovering the actual permitted reference or explicitly amending the affected workflow. This is an unresolved source-material issue, not a passing compatibility check.

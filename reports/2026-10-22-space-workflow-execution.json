@@ -1,0 +1,89 @@
+{
+  "checkedOn": "2026-10-22T17:09:49.108Z",
+  "status": "FROZEN_BUILD_VERIFIED_PENDING_PRODUCTION",
+  "scope": "Spaces workflow and agent downloads plus context-preserving round trips",
+  "source": [
+    {
+      "path": "site/src/space/SpacePage.tsx",
+      "sha256": "bf99e432eda03f35a4ff31ff0dbbb286cee147b2ca5f354d88786ae9dbb704b7"
+    },
+    {
+      "path": "site/src/lib/space-workflow-export.ts",
+      "sha256": "45491fb064e9dcd2a7ec73dff5d5e17814ad4cdd337e2647645e5feb72585a27"
+    },
+    {
+      "path": "site/test/space-workflow-export.test.mjs",
+      "sha256": "08124aaf330b22c2a1d5b4cb56deb3024001fea7ca67ff291231236c0b9da23b"
+    },
+    {
+      "path": "site/e2e/space-workflow-execution.spec.ts",
+      "sha256": "50a65295c2ab2edd2ebc81e66a67ae490231805a42e5fcd5a47745ced8448b41"
+    },
+    {
+      "path": "site/playwright.space-execution.config.ts",
+      "sha256": "c03e7da56c6518308ce7b8f22356f23b15cbf644af0a7c7cec521d035aa645d4"
+    },
+    {
+      "path": "site/src/ExecutionPrompt.tsx",
+      "sha256": "07a27d54b4d1bf968eeebfd9e91788f97f35c402bc76dd89b4c47122ff6f44e2"
+    }
+  ],
+  "checks": [
+    {
+      "id": "focused-unit",
+      "status": "PASS",
+      "tests": 5
+    },
+    {
+      "id": "focused-browser",
+      "status": "PASS",
+      "tests": 3,
+      "baseURL": "http://127.0.0.1:5207",
+      "durationSeconds": 8,
+      "fixtures": "Public/sample workflow sources and custom profiles; mocked Space/account APIs. Actual browser UI and downloaded ZIPs."
+    },
+    {
+      "id": "typescript",
+      "status": "PASS"
+    },
+    {
+      "id": "mobile-visual-inspection",
+      "status": "PASS",
+      "viewport": "390x844",
+      "evidence": "runs/space-workflow-browser/space-workflow-execution---04cf9-uctions-and-fits-the-screen/space-workflow-mobile.png"
+    },
+    {
+      "id": "production-spaces-checks",
+      "status": "NOT_RUN"
+    }
+  ],
+  "behavior": [
+    "Structured workflows and agents reuse the central exporter with complete skill resources, original source, manifest and NOT_RUN execution checks.",
+    "Saved goal, notes, governing instructions, team, overseer and step configuration survive Space storage and builder reopening.",
+    "Text-only items remain explicitly unverified source bundles with BLOCKED execution and no invented SKILL.md or workflow definition.",
+    "Malformed or missing selected steps block downloads with persistent feedback.",
+    "Unrelated private mind samples do not hitchhike into copied workflows."
+  ],
+  "limits": [
+    "Portable files cannot force an external AI host to comply.",
+    "Source-only bundles require verification and missing workflow/resources before execution; source privacy and semantic review remain NOT_RUN.",
+    "No backend workflow runner or provider compliance evaluation was added.",
+    "Finance content release and the combined UI release remain owned by the coordinated publisher; no Git/build/deploy operations were run by this author."
+  ],
+  "coordinatedRelease": {
+    "candidate": "R19",
+    "verificationOwner": "01a16276-6e77-7c51-bd36-a283b29f6c47",
+    "unitTests": {
+      "status": "PASS",
+      "count": 235
+    },
+    "typescript": "PASS",
+    "immutableBrowserSuite": {
+      "status": "PASS",
+      "count": 48,
+      "includesSpaceCases": 3,
+      "durationSeconds": 78
+    },
+    "production": "PENDING"
+  }
+}

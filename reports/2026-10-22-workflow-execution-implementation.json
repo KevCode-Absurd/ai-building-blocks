@@ -2,8 +2,8 @@
   "date": "2026-10-22",
   "scope": "Portable workflow package export and execution instructions",
   "contract": "abb-execution/1",
-  "implementation_status": "PRIMARY_PATHS_VERIFIED_SPACE_FOLLOWUP_PENDING",
-  "release_status": "R17_STAGING_VERIFIED_PRODUCTION_PENDING_SPACE_FOLLOWUP_PENDING",
+  "implementation_status": "ALL_SUPPORTED_EXPORT_ROUTES_IMPLEMENTED_FINAL_INTEGRATED_CHECKS_PASSED",
+  "release_status": "R19_FINAL_BUILD_VERIFIED_STAGING_DEPLOYING_PRODUCTION_PENDING",
   "assurance": "Portable execution is assistant-reported. No backend execution enforcement or cross-model reliability guarantee.",
   "checks": [
     {
@@ -16,27 +16,29 @@
       "id": "full-unit-suite",
       "status": "PASS",
       "command": "npm run test:unit",
-      "tests": 222,
-      "passed": 222,
-      "failed": 0
+      "tests": 235,
+      "passed": 235,
+      "failed": 0,
+      "tested_snapshot": "Final R19 source frozen build, verified by coordinated release owner",
+      "evidence_owner": "01a16276-6e77-7c51-bd36-a283b29f6c47"
     },
     {
       "id": "focused-portable-export",
       "status": "PASS",
       "command": "node --test test/workflow-execution.test.mjs",
-      "tests": 8,
-      "passed": 8,
+      "tests": 9,
+      "passed": 9,
       "failed": 0
     },
     {
       "id": "browser-workflow",
       "status": "PASS",
-      "command": "Workflow execution E2E cases within the coordinated immutable R17 preview suite",
-      "tests": 4,
-      "passed": 4,
+      "command": "Six workflow execution cases in the coordinated immutable R19 48-test browser suite",
+      "tests": 6,
+      "passed": 6,
       "failed": 0,
       "prior_revision": "Earlier mutable-preview runs invalidated by asset regeneration, stale transforms and concurrent artifact cleanup; final immutable preview passed.",
-      "evidence": "Release owner reports 38/38 frozen-preview browser cases passed, including all four workflow execution cases and the persistent invalid-share warning."
+      "evidence": "Release owner verified all 48 cases passed, including the six core workflow cases, three Space cases and positive/expected-block Mind workflow routes."
     },
     {
       "id": "new-user-facing-guidance-reading-level",
@@ -62,7 +64,15 @@
       "pages": 1764,
       "clean": 1742,
       "issues": 22,
-      "scope": "Existing catalogue fields and job taxonomy outside the new execution UI. No catalogue files were changed for this task."
+      "scope": "Existing catalogue fields and job taxonomy outside the new execution UI. No catalogue files were changed for this task.",
+      "tested_snapshot": "Initial source audit before the coordinated R17/R19 catalogue updates",
+      "current_snapshot_status": "NOT_RUN_BY_THIS_CHAT"
+    },
+    {
+      "id": "space-and-mind-download-guidance-reading-level",
+      "status": "PASS",
+      "grade": 4.9,
+      "scope": "New source-review and complete-workflow link guidance"
     }
   ],
   "browser_evidence": [
@@ -90,15 +100,17 @@
     "Missing local directory-reference handling",
     "Resource support cycles wrongly classified as execution cycles",
     "Duplicate embedded prompt overlapped canvas toolbar",
-    "Shared and editable imports silently omitted unavailable skills or truncated over-limit plans; now rejected atomically with a visible error"
+    "Shared and editable imports silently omitted unavailable skills or truncated over-limit plans; now rejected atomically with a visible error",
+    "My Space exports bypassed the shared contract and discarded saved workflow context; structured items now use central export, source-only items carry a blocked review wrapper, metadata is preserved",
+    "Thirty-three workflow, routine or agent links appeared in raw mind-and-skills bundles; they now route visibly to their complete workflow pages and the raw bundler rejects them"
   ],
   "unresolved": [
     "Full source requirement classification and conflict analysis remain execution preflight obligations",
     "No provider adapter conformance or measured 99.95% reliability",
     "No backend input-acceptance or durable execution-state enforcement",
-    "Production release and live checks owned by coordinated release chat",
     "Catalogue page lint reports 22 pages with field/taxonomy issues outside this change; routed to coordinated release owners.",
-    "My Space structured workflow download and context round-trip still bypass the central package exporter; narrow coordinated fix pending after frozen release snapshot."
+    "Known source blocker: event-tracking-planner lacks references/retention-measurement-patterns.md; dependent exports including weekly-product-funnel-watcher remain blocked.",
+    "Final R19 staging/production deployment and live verification are pending the sole publisher; all integrated source/build tests have passed."
   ],
   "source_hashes": [
     {
@@ -107,7 +119,7 @@
     },
     {
       "path": "site/src/lib/handoff.ts",
-      "sha256": "b10515c32bc37adc8ead34db04365d4530305a5408d524fb277ffe2310b543fa"
+      "sha256": "0406b9a3f3a343d35e93efe77116332940b6a96c189c6c39d57d37e425667742"
     },
     {
       "path": "site/src/lib/intake.ts",
@@ -123,7 +135,7 @@
     },
     {
       "path": "site/src/ExecutionPrompt.tsx",
-      "sha256": "a294c938ab4cb75b8279c754d7f11a54bf4d9e0c62e64081905b5ce0f657fd88"
+      "sha256": "07a27d54b4d1bf968eeebfd9e91788f97f35c402bc76dd89b4c47122ff6f44e2"
     },
     {
       "path": "site/src/execution-prompt.css",
@@ -135,7 +147,7 @@
     },
     {
       "path": "site/src/Builder.tsx",
-      "sha256": "74b443587f5e23b10d098b22eafeb0efc0117fc39ac405f70c775decc61369dd"
+      "sha256": "6fa6f5fcd57f26b3e980de384f1779d23871dcd0fd906453b647125105272365"
     },
     {
       "path": "site/src/BlockPage.tsx",
@@ -155,15 +167,35 @@
     },
     {
       "path": "site/test/workflow-execution.test.mjs",
-      "sha256": "32130ade6c891aa2a37f19835f82f13085d497f63e875e6a496bae960160cbfc"
+      "sha256": "190f3bc060ce49f6466475f498d21ec848091a5d9d32b185b52c5c02d4b05b9d"
     },
     {
       "path": "site/e2e/workflow-execution.spec.ts",
-      "sha256": "1513444f1500c1b055c8eb35f0308d49b6250445843618d800eaf01f40b52ec4"
+      "sha256": "553e28ced516c8fae70ed285c5994ceecbd5e0d174b44f31a5d05fef2d415510"
     },
     {
       "path": "docs/WORKFLOW-EXECUTION-CONTRACT.md",
-      "sha256": "b19baf700ff8f783354ce03b41f18e290073cbb52ddab54e3cce6b0ec08d69f7"
+      "sha256": "2fcbe3ffce0a59a802b2b9ef91e12437fe50eaf1d3ffae20fef460369133b213"
+    },
+    {
+      "path": "site/src/MindPack.tsx",
+      "sha256": "12f4bbf83e0c4b3c54be5077bdbbb1893385286c63c9b68629265e753e9e79b4"
+    },
+    {
+      "path": "site/src/lib/space-workflow-export.ts",
+      "sha256": "45491fb064e9dcd2a7ec73dff5d5e17814ad4cdd337e2647645e5feb72585a27"
+    },
+    {
+      "path": "site/src/space/SpacePage.tsx",
+      "sha256": "bf99e432eda03f35a4ff31ff0dbbb286cee147b2ca5f354d88786ae9dbb704b7"
+    },
+    {
+      "path": "site/test/space-workflow-export.test.mjs",
+      "sha256": "08124aaf330b22c2a1d5b4cb56deb3024001fea7ca67ff291231236c0b9da23b"
+    },
+    {
+      "path": "site/e2e/space-workflow-execution.spec.ts",
+      "sha256": "50a65295c2ab2edd2ebc81e66a67ae490231805a42e5fcd5a47745ced8448b41"
     }
   ],
   "staging": {
@@ -172,13 +204,59 @@
     "preserved_settings": 21
   },
   "coordinated_release_validation": {
-    "frozen_preview": "R17",
-    "browser_tests": 38,
-    "browser_passed": 38,
-    "workflow_execution_cases": 4,
-    "unit_tests": 222,
+    "frozen_preview": "R19",
+    "browser_tests": 48,
+    "browser_passed": 48,
+    "workflow_execution_cases": 6,
+    "space_execution_cases": 3,
+    "unit_tests": 235,
     "typescript": "PASS",
-    "evidence_owner": "Release chat 01a1635b-4fd9-7692-a3f4-e47f76ebd586",
-    "attribution": "Publisher-verified, not an additional independent rerun by this chat"
-  }
+    "evidence_owner": "Release chat 01a16276-6e77-7c51-bd36-a283b29f6c47",
+    "attribution": "Release-owner-verified, not an additional independent rerun by this chat",
+    "existing_non_html_files_preserved": 19929,
+    "catalogue_items_preserved": 4743
+  },
+  "space_followup": {
+    "status": "FINAL_INTEGRATED_BUILD_VERIFIED_PRODUCTION_PENDING",
+    "report": "reports/2026-10-22-space-workflow-execution.json",
+    "focused_unit_tests": 5,
+    "focused_browser_tests": 3,
+    "typescript": "PASS",
+    "independent_primary_review": "PASS_CODE_AND_VISUAL_REVIEW",
+    "API_scope": "Mocked account and Space APIs; actual Chrome UI and downloaded archives",
+    "production_checks": "NOT_RUN",
+    "source_only_status": "BLOCKED_UNVERIFIED_SOURCE",
+    "source_privacy_review": "NOT_RUN",
+    "integrated_browser_status": "PASS_R19_RELEASE_OWNER_VERIFIED"
+  },
+  "mind_collection_followup": {
+    "status": "FINAL_INTEGRATED_BUILD_VERIFIED_PRODUCTION_PENDING",
+    "catalogue_workflow_links": 33,
+    "routing": "Visible links to complete workflow pages; standalone collection exporter rejects workflow/routine/agent selections before fetch",
+    "focused_export_tests": 9,
+    "browser_case": "mind collections route workflow entries to complete workflow downloads",
+    "production_checks": "NOT_RUN",
+    "browser_positive": {
+      "workflow": "daily-shutdown-planner",
+      "mind": "cal-newport",
+      "status": "PASS",
+      "observed": "Actual complete workflow ZIP downloaded from visible workflow link"
+    },
+    "browser_negative": {
+      "workflow": "weekly-product-funnel-watcher",
+      "mind": "jeff-bezos",
+      "status": "PASS_EXPECTED_BLOCK",
+      "observed": "Missing required reference reported with zero download events"
+    }
+  },
+  "known_content_blockers": [
+    {
+      "skill": "event-tracking-planner",
+      "missing": "references/retention-measurement-patterns.md",
+      "confirmed_affected_workflow": "weekly-product-funnel-watcher",
+      "status": "BLOCKED_MISSING_SOURCE",
+      "observed_behavior": "Exporter reports the missing reference and releases no incomplete pack",
+      "next_action": "Recover the actual permitted reference, or explicitly amend the affected workflow. Do not invent a reference or claim compatibility."
+    }
+  ]
 }

@@ -1,0 +1,33 @@
+{
+  "createdAt": "2026-10-22T17:32:57.403Z",
+  "root": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r19-workflow-editor",
+  "assets": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r19-workflow-editor\\assets",
+  "files": 25351,
+  "previous": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r18-finance",
+  "previousVersionId": "90fb5ed7-4bf1-4432-91a4-704451fcd577",
+  "sourceCommit": "cca1d14ac3c5047c50b0266d7b919d1a4696f1f6",
+  "sourceHashes": {
+    "site/src/Builder.tsx": "6fa6f5fcd57f26b3e980de384f1779d23871dcd0fd906453b647125105272365",
+    "site/src/SkillAdd.tsx": "50eb2bb130aa5c1340df876b8abc6f92ef3ea4893b08fdb89f2bf215a5acbbe1",
+    "site/src/skill-add.css": "6950142185dbad35f3007db0ba0ed223af4593002f59e565bd7947b9534c1132",
+    "site/src/lib/insert-flow-skill.ts": "2c6b08032e11df0cd98ee7cf816857ba0e03933f772968f8be9f03d01e883d02",
+    "site/src/ExecutionPrompt.tsx": "07a27d54b4d1bf968eeebfd9e91788f97f35c402bc76dd89b4c47122ff6f44e2",
+    "site/src/space/SpacePage.tsx": "bf99e432eda03f35a4ff31ff0dbbb286cee147b2ca5f354d88786ae9dbb704b7",
+    "site/src/lib/space-workflow-export.ts": "45491fb064e9dcd2a7ec73dff5d5e17814ad4cdd337e2647645e5feb72585a27",
+    "site/src/MindPack.tsx": "12f4bbf83e0c4b3c54be5077bdbbb1893385286c63c9b68629265e753e9e79b4",
+    "site/src/lib/handoff.ts": "0406b9a3f3a343d35e93efe77116332940b6a96c189c6c39d57d37e425667742"
+  },
+  "oldRefs": [
+    "/assets/index-9GEhUdrM.js",
+    "/assets/index-BMzLFYlh.css"
+  ],
+  "newRefs": [
+    "/assets/index-DTbdziKd.js",
+    "/assets/index-BMzLFYlh.css"
+  ],
+  "htmlFiles": 4937,
+  "workerUnchanged": true,
+  "workerSha256": "e0eabe892d923971589729a486e791878aa6e5c74d1e4e38c4aee7bb10c54a00",
+  "catalogueSha256": "5c4afed89a5a43a4ffe8b173ae79cf9b8f4e4a555bf9319e23cb19bc86a6395d",
+  "scope": "Searchable Add skill insertion and verified Space workflow exports. Latest verified content and backend retained."
+}

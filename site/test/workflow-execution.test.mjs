@@ -7,7 +7,7 @@ import { EXECUTION_RULES, executionPrompt, executionMarkdown, entryDocument, saf
 
 // Bundle the actual browser exporter for Node; no provider calls or execution claims are simulated.
 const built = await build({ entryPoints: [fileURLToPath(new URL("../src/lib/handoff.ts", import.meta.url))], bundle: true, write: false, format: "esm", platform: "browser" });
-const { buildHandoffZip } = await import(`data:text/javascript;base64,${Buffer.from(built.outputFiles[0].text).toString("base64")}`);
+const { buildHandoffZip, buildMindPack } = await import(`data:text/javascript;base64,${Buffer.from(built.outputFiles[0].text).toString("base64")}`);
 const planBuilt = await build({ entryPoints: [fileURLToPath(new URL("../src/lib/plan.ts", import.meta.url))], bundle: true, write: false, format: "esm", platform: "browser" });
 const { unpackFlow } = await import(`data:text/javascript;base64,${Buffer.from(planBuilt.outputFiles[0].text).toString("base64")}`);
 const skill = (slug, inputs = [], outputs = []) => ({ slug, name: slug, summary: "Apply the supplied material.", markdown: "---\nname: " + slug + "\n---\n# Method\nRead the source.\n## Checks\nCheck source evidence.\n", role: "make", inputs, outputs });
@@ -115,4 +115,17 @@ test("editable workflow imports reject unavailable steps, truncation, invalid ed
     { ...valid, b: [[{ t: "draft", f: 1, i: "Use it" }]] },
     { ...valid, t: ["missing-mind"] },
   ]) assert.equal(unpackFlow(library, code(data)), null);
+});
+
+test("mind collections cannot export a workflow as an incomplete standalone skill", async () => {
+  let reads = 0; const previous = globalThis.fetch;
+  globalThis.fetch = async () => { reads++; throw Error("No fetch should occur before this gate."); };
+  try {
+    for (const type of ["workflow", "routine", "agent"]) {
+      const library = { ...c, bySlug: { mind: { slug: "mind", type: "mind", name: "A mind" }, flow: { slug: "flow", type } } };
+      const result = await buildMindPack(library, "mind", ["flow"]);
+      assert.match(result.error, /complete workflow pack/);
+    }
+    assert.equal(reads, 0);
+  } finally { globalThis.fetch = previous; }
 });

@@ -1,5 +1,5 @@
 {
-  "checkedOn": "2026-10-22T17:25:55.607Z",
+  "checkedOn": "2026-10-22T17:40:31.233Z",
   "deadline": "2026-10-22 Asia/Kolkata",
   "accountAuthenticated": true,
   "workersPaid": {
@@ -14,7 +14,7 @@
     "canonicalURL": "https://useaiblocks.com/"
   },
   "staging": {
-    "status": "R18 finance210 verified:120 skills,60 workflows,30 agents; all631 finance files match tested build",
+    "status": "deployed-awaiting-verification",
     "worker": "ai-building-blocks-staging",
     "database": "ai-blocks-staging",
     "databaseId": "eeb9d0d4-cbed-4751-8df4-1aaf81fd6cb3",
@@ -39,13 +39,13 @@
     "turnstileConfigured": true,
     "assetsToUpload": 24270,
     "url": "https://ai-building-blocks-staging.kevinmark7498.workers.dev",
-    "versionId": "410605dc-57af-4e26-8b85-dc83a0125d7f",
-    "deployedOn": "2026-10-22T17:19:27.238Z",
+    "versionId": "8b9a047c-572b-4b12-a5bb-68384b862fbc",
+    "deployedOn": "2026-10-22T17:40:31.233Z",
     "uploadedAssets": 4938,
     "reusedAssets": 19332,
     "workerStartupMs": 5,
     "verified": true,
-    "previousVersionId": "13610a91-1509-48c3-8f7a-d6b7aab775ce",
+    "previousVersionId": "410605dc-57af-4e26-8b85-dc83a0125d7f",
     "workerSha256": "e0eabe892d923971589729a486e791878aa6e5c74d1e4e38c4aee7bb10c54a00",
     "previousFunctionalChecks": {
       "versionId": "723795d5-403c-461a-a910-4088612a0022",
@@ -58,8 +58,8 @@
       "algorithm": "Wrangler 4.151.3 BLAKE3/base64/extension"
     },
     "clerkConfigured": true,
-    "releaseRoot": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r18-finance",
-    "assetReleaseRoot": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r18-finance",
+    "releaseRoot": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r19-workflow-editor",
+    "assetReleaseRoot": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r19-workflow-editor",
     "verifiedOn": "2026-10-22T17:20:58.510Z",
     "environment": "staging",
     "origin": "https://ai-building-blocks-staging.kevinmark7498.workers.dev",

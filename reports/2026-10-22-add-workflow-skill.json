@@ -1,0 +1,76 @@
+{
+  "checkedAt": "2026-10-22T17:13:38.914Z",
+  "status": "FROZEN_BUILD_TESTED_STAGING_DEPLOYED_PENDING_PRODUCTION",
+  "request": "Add an option to add skills to the workflow editor",
+  "scope": "Visible Add skill action in embedded composer and standalone Builder. Search library skills and insert at start, middle or end while preserving original nodes, edges, bindings, notes and governance.",
+  "source": [
+    {
+      "path": "site/src/Builder.tsx",
+      "sha256": "6fa6f5fcd57f26b3e980de384f1779d23871dcd0fd906453b647125105272365"
+    },
+    {
+      "path": "site/src/SkillAdd.tsx",
+      "sha256": "50eb2bb130aa5c1340df876b8abc6f92ef3ea4893b08fdb89f2bf215a5acbbe1"
+    },
+    {
+      "path": "site/src/skill-add.css",
+      "sha256": "6950142185dbad35f3007db0ba0ed223af4593002f59e565bd7947b9534c1132"
+    },
+    {
+      "path": "site/src/lib/insert-flow-skill.ts",
+      "sha256": "2c6b08032e11df0cd98ee7cf816857ba0e03933f772968f8be9f03d01e883d02"
+    },
+    {
+      "path": "site/test/insert-flow-skill.test.mjs",
+      "sha256": "095bafc7e4cb734ea8ca97b9e6eafcad7631c79da00d162eaff8f9360d66bc7e"
+    },
+    {
+      "path": "site/e2e/add-skill.spec.ts",
+      "sha256": "d4c056f0ff139b5abcf9045061067b71ed21ecd9d85d566c3bbf7444cb41aff0"
+    },
+    {
+      "path": "site/playwright.add-skill.config.ts",
+      "sha256": "67ddf21041cffd892edfa00c0af72cbb193450f3547ad0df5945a6cd019abf48"
+    },
+    {
+      "path": "site/scripts/build-editor-release.mjs",
+      "sha256": "4cd064636bc602db890acc51528ccb56783090aa693729355e2b4394434861b4"
+    }
+  ],
+  "checks": {
+    "focusedUnits": {
+      "passed": 7
+    },
+    "allUnits": {
+      "passed": 235,
+      "failed": 0
+    },
+    "sourceBrowser": {
+      "passed": 5,
+      "viewports": [
+        1440,
+        390,
+        320
+      ],
+      "baseURL": "http://127.0.0.1:5199",
+      "includes": [
+        "actual downloaded skill instructions and execution contract",
+        "reload preserves added step",
+        "cancel/Escape leave steps unchanged and restore focus",
+        "first skill in an empty Builder",
+        "middle and end insertion on320pxphone"
+      ]
+    },
+    "typeScript": {
+      "status": "PASS"
+    },
+    "frozenBrowser": {
+      "passed": 48,
+      "report": "reports/2026-10-22-workflow-editor-built-browser.json"
+    }
+  },
+  "production": {
+    "status": "NOT_RUN"
+  },
+  "providerCalls": 0
+}

@@ -8,6 +8,9 @@ import { type Catalogue, pathOf } from "../lib/data";
 import { download } from "../lib/handoff";
 import { shareUrl } from "../lib/plan";
 import { type Flow, useStore, uid } from "../lib/store";
+import { getBusiness } from "../lib/business";
+import ExecutionPrompt from "../ExecutionPrompt";
+import { buildSpaceWorkflowExport, hasWorkflowData, isWorkflowItem, sourceGoal, spaceExecutionPrompt, spaceWorkflowUrl, workflowDataForSpace } from "../lib/space-workflow-export";
 import { KIND_NAMES, type Item, type Kind, type NewItem, type PublicItem, SpaceError, deviceLink, fromText, itemsFromFile, setSpaceKey, shareLink, spaceKey, spaces, useSpaceKey } from "../lib/space";
 import "./space.css";
 
@@ -21,7 +24,7 @@ const copy = async (text: string, toast: Toast, done: string) => {
   catch { toast("Your browser couldn't copy it. Select the text and copy it manually."); }
 };
 const fileName = (i: Item) => `${i.title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || "item"}.md`;
-type FlowData = { name?: string; nodes: Flow["nodes"]; edges: Flow["edges"]; localId?: string };
+type FlowData = Partial<Flow> & { localId?: string };
 type KitData = { slugs: string[]; localId?: string };
 
 /** One item: what it is, what's in it, and what you can do with it here. */
@@ -30,13 +33,26 @@ function ItemCard({ item, c, toast, owner, onChange, onDelete, onSave }: {
   onChange?: (patch: Partial<NewItem>) => void; onDelete?: () => void; onSave?: () => void;
 }) {
   const [open, setOpen] = useState(false);
-  const flow = item.kind === "workflow" ? (item.data as FlowData | null) : null;
+  const [busy, setBusy] = useState(false);
+  const [exportError, setExportError] = useState("");
+  const workflow = isWorkflowItem(item), structured = workflow && hasWorkflowData(item);
+  const flow = workflow ? (item.data as FlowData | null) : null;
   const kit = item.kind === "kit" ? (item.data as KitData | null) : null;
-  const slugs = flow?.nodes?.map((n) => n.slug) ?? kit?.slugs ?? [];
-  const blocks = c ? slugs.map((s) => c.bySlug[s]).filter(Boolean) : [];
+  const slugs = Array.isArray(flow?.nodes) ? flow.nodes.map(n => n?.slug).filter(s => typeof s === "string") : Array.isArray(kit?.slugs) ? kit.slugs.filter(s => typeof s === "string") : [];
+  const blocks = c ? slugs.map((s) => Object.hasOwn(c.bySlug, s) ? c.bySlug[s] : null).filter(Boolean) : [];
+  const getWorkflow = async () => {
+    if (busy) return;
+    setBusy(true); setExportError("");
+    try { const result = await buildSpaceWorkflowExport(c, item, getBusiness()); download(result.blob, result.filename); toast(result.mode === "workflow" ? "Workflow pack downloaded" : "Source files downloaded. Your AI must verify the workflow before running it."); }
+    catch (e) { setExportError(e instanceof Error ? e.message : "The complete workflow could not be downloaded."); }
+    finally { setBusy(false); }
+  };
   const toBuilder = () => {
-    if (flow?.nodes?.length) { window.location.href = shareUrl({ id: uid(), name: item.title, nodes: flow.nodes, edges: flow.edges ?? [], updated: Date.now() }); return; }
-    if (kit?.slugs?.length) window.location.href = shareUrl({ id: uid(), name: item.title, nodes: kit.slugs.map((slug, i) => ({ id: uid(), slug, x: 40 + i * 300, y: 110 })), edges: [], updated: Date.now() });
+    setExportError("");
+    try {
+      if (structured) { if (!c) throw Error("The skill library is still loading. Try again when it is ready."); window.location.href = spaceWorkflowUrl(c, item); return; }
+      if (Array.isArray(kit?.slugs) && kit.slugs.length) window.location.href = shareUrl({ id: uid(), name: item.title, nodes: kit.slugs.map((slug, i) => ({ id: uid(), slug, x: 40 + i * 300, y: 110 })), edges: [], updated: Date.now() });
+    } catch (e) { setExportError(e instanceof Error ? e.message : "The complete workflow could not be opened."); }
   };
   return (
     <article className="sp-item" data-testid="space-item" data-kind={item.kind}>
@@ -52,15 +68,18 @@ function ItemCard({ item, c, toast, owner, onChange, onDelete, onSave }: {
       </header>
       <h3 className="sp-item-h">{item.title}</h3>
       {item.summary && <p className="sp-item-p">{item.summary}</p>}
-      {blocks.length > 0 && <p className="small sp-steps">{blocks.map((b, n) => <span key={`${b.slug}-${n}`}>{n ? (flow ? " → " : ", ") : ""}<Link to={pathOf(b)}>{b.name}</Link></span>)}</p>}
+      {blocks.length > 0 && <p className="small sp-steps">{blocks.map((b, n) => b && <span key={`${b.slug}-${n}`}>{n ? (flow ? " → " : ", ") : ""}<Link to={pathOf(b)}>{b.name}</Link></span>)}</p>}
+      {workflow && !structured && <p className="small" data-testid="space-source-status">Source awaiting review. Your AI must find the full workflow, skills and required files before it starts. The download marks execution as blocked until that review is complete.</p>}
       <div className="sp-acts">
         {item.body && <button className="btn btn-ghost btn-sm" onClick={() => setOpen(!open)} aria-expanded={open} data-testid="item-open">{open ? "Close" : "Open"}</button>}
-        {item.body && <button className="btn btn-ghost btn-sm" onClick={() => copy(item.body, toast, "Copied. Paste it into your AI.")}>Copy</button>}
-        {item.body && <button className="btn btn-ghost btn-sm" onClick={() => download(new Blob([item.body], { type: "text/markdown" }), fileName(item))}>Download</button>}
-        {slugs.length > 0 && <button className="btn btn-ghost btn-sm" onClick={toBuilder} data-testid="item-builder">Open in the builder</button>}
+        {item.body && <button className="btn btn-ghost btn-sm" onClick={() => copy(item.body, toast, "Source text copied.")}>{workflow ? "Copy source text" : "Copy"}</button>}
+        {workflow ? <button className="btn btn-primary btn-sm" onClick={() => void getWorkflow()} disabled={busy} data-testid="space-workflow-download">{busy ? "Preparing the files…" : structured ? item.kind === "agent" ? "Download the agent pack" : "Download the workflow" : "Download source files"}</button> : item.body && <button className="btn btn-ghost btn-sm" onClick={() => download(new Blob([item.body], { type: "text/markdown" }), fileName(item))}>Download</button>}
+        {(structured || slugs.length > 0) && <button className="btn btn-ghost btn-sm" onClick={toBuilder} data-testid="item-builder">Open in the builder</button>}
         {onSave && <button className="btn btn-ghost btn-sm" onClick={onSave} data-testid="item-save">Save to my space</button>}
         {owner && onDelete && <button className="btn btn-ghost btn-sm sp-del" onClick={() => { if (confirm(`Delete "${item.title}" from your space? This can't be undone.`)) onDelete(); }} data-testid="item-delete">Delete</button>}
       </div>
+      {workflow && <ExecutionPrompt name={item.title} goal={sourceGoal(item)} instructions={spaceExecutionPrompt(item)} copyTestId="space-copy-execution-prompt" />}
+      {exportError && <p role="alert" className="small" data-testid="space-workflow-error">{exportError}</p>}
       {open && item.body && <div className="sp-body"><Code name={fileName(item)} text={item.body} toast={toast} /></div>}
     </article>
   );
@@ -170,7 +189,7 @@ function BringIn({ items, onAdd }: { items: Item[]; onAdd: (items: NewItem[]) =>
   if (!newKits.length && !newFlows.length) return null;
   const bring = () => onAdd([
     ...newKits.map((k): NewItem => ({ kind: "kit", title: k.name, summary: `${k.slugs.length} blocks`, data: { slugs: k.slugs, localId: k.id } })),
-    ...newFlows.map((f): NewItem => ({ kind: "workflow", title: f.name, summary: `${f.nodes.length} steps`, data: { name: f.name, nodes: f.nodes, edges: f.edges, localId: f.id } })),
+    ...newFlows.map((f): NewItem => ({ kind: "workflow", title: f.name, summary: `${f.nodes.length} steps`, data: workflowDataForSpace(f) })),
   ]);
   return (
     <div className="sp-bring" data-testid="bring-in">

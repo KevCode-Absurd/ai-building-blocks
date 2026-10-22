@@ -68,3 +68,28 @@ test("standalone builder separates its prompt from the toolbar and rejects incom
   await expect(page.getByTestId("builder").getByLabel("Workflow name")).toHaveValue("Untitled workflow");
   await expect(page.getByText("This shared workflow is incomplete or invalid. No steps were imported. Ask for a complete workflow.")).toBeVisible();
 });
+
+test("mind collections route workflow entries to complete workflow downloads", async ({ page }, info) => {
+  await page.goto("/minds/cal-newport");
+  const workflows = page.getByTestId("mind-workflow-downloads");
+  await expect(workflows).toContainText("Each workflow has its own complete pack");
+  const slug = "daily-shutdown-planner";
+  expect(await page.getByTestId("mind-skill-pick").evaluateAll(els => els.map(el => (el as HTMLElement).dataset.slug))).not.toContain(slug);
+  await workflows.locator(`a[data-slug="${slug}"]`).click();
+  await page.getByTestId("download-handoff").click();
+  const [download] = await Promise.all([page.waitForEvent("download"), page.getByTestId("needs-download").click()]);
+  const file = info.outputPath("mind-workflow.zip"); await download.saveAs(file); const files = unzipSync(fs.readFileSync(file));
+  expect(files["START_HERE.txt"]).toBeTruthy(); expect(files["workflow.json"]).toBeTruthy(); expect(files[`skills/${slug}/SKILL.md`]).toBeTruthy();
+  expect(JSON.parse(strFromU8(files["templates/execution-report.json"])).run_status).toBe("NOT_STARTED");
+});
+
+test("incomplete legacy workflows stop at the missing reference without producing a partial pack", async ({ page }) => {
+  let downloads = 0; page.on("download", () => downloads++);
+  await page.goto("/minds/jeff-bezos");
+  await page.getByTestId("mind-workflow-downloads").locator('a[data-slug="weekly-product-funnel-watcher"]').click();
+  await page.getByTestId("download-handoff").click();
+  await page.getByTestId("needs-download").click();
+  await expect(page.getByText(/Missing local reference references\/retention-measurement-patterns\.md/)).toBeVisible();
+  expect(downloads).toBe(0);
+  await expect(page.getByTestId("needs")).toBeVisible();
+});

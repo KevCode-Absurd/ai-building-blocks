@@ -1,8 +1,8 @@
 {
-  "checkedOn": "2026-10-22T10:58:17.195Z",
+  "checkedOn": "2026-10-22T11:02:11.787Z",
   "scope": "modified and untracked release files eligible for Git",
-  "candidateFiles": 13,
-  "textFilesScanned": 9,
+  "candidateFiles": 10,
+  "textFilesScanned": 10,
   "knownPrivateValuesChecked": 19,
   "leaks": [],
   "forbidden": [],

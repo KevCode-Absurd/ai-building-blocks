@@ -1,7 +1,7 @@
 {
   "checkedOn": "2026-10-22T10:16:31.697Z",
   "stagingVersion": "80bc2a97-5835-4936-bd81-8c994a9552b6",
-  "status": "staging-cleaned-and-production-launched",
+  "status": "staging-cleaned-and-production-verified",
   "browser": {
     "totalCovered": 211,
     "hosting": {
@@ -78,8 +78,8 @@
     "emptySpacesPendingCleanup": []
   },
   "production": {
-    "version": "d24c827d-ba6f-4fc8-b22f-b0dacdb4478e",
-    "status": "public;27 smoke and security checks pass; free AI enabled at USD10/day; one real workflow awaits owner Turnstile checkbox",
+    "version": "fcc0a974-2fce-4a16-8acb-0294a9ab6448",
+    "status": "R9live verified:12productionstartup+27productionchecks+oneactualAIworkflowanddownloads pass",
     "domain": "useaiblocks.com",
     "paidAIEnabled": true,
     "publicCutoverVerified": true,
@@ -87,11 +87,12 @@
     "artifactReport": "reports/cloudflare-production-artifact-downloads.json",
     "googleLoginReport": "reports/cloudflare-production-google-login.json",
     "dailyReservationCapUSD": 10,
-    "customerPriceUSD": 0
+    "customerPriceUSD": 0,
+    "startupBrowserPassed": 12,
+    "smokePassed": 27,
+    "aiWorkflowReport": "reports/cloudflare-production-ai-workflow-test.json"
   },
-  "next": [
-    "Complete the real compose Turnstile checkbox already presented in Explain site changes and auth; do not resubmit Create"
-  ],
+  "next": [],
   "productionTouchedByThisCheck": false,
   "providerCalls": 0,
   "coordination": {

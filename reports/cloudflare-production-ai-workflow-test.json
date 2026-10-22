@@ -1,0 +1,44 @@
+{
+  "checkedOn": "2026-10-22T11:00:57.412Z",
+  "status": "PASS",
+  "method": "actual-production-Clerk-Google-session-and-owner-completed-real-Turnstile",
+  "productionVersion": "fcc0a974-2fce-4a16-8acb-0294a9ab6448",
+  "sourceRevisionBeforeDeployment": "9d93068a",
+  "site": "https://useaiblocks.com/compose",
+  "title": "ClearDay landing page: editable source, checks and human sign-off",
+  "model": "gpt-6.1-sol",
+  "estimatedModelCostUsd": 0.031828,
+  "latencyMs": 28556,
+  "stepCount": 9,
+  "steps": [
+    "request-acceptance-brief",
+    "conversion-landing-page-designer",
+    "static-html-landing-page-builder",
+    "accessibility-checker",
+    "page-seo-optimizer",
+    "small-change-keeper",
+    "accessibility-checker",
+    "page-seo-optimizer",
+    "human-review-gate"
+  ],
+  "accountUi": {
+    "completed": 1,
+    "attemptsLeftToday": 9,
+    "freeAccess": true
+  },
+  "globalDailyLimitUsd": 10,
+  "budgetDay": "UTC",
+  "paidPlans": false,
+  "completedGenerationRequests": 1,
+  "automaticProviderRetries": 0,
+  "downloads": {
+    "editableJsonValid": true,
+    "zipValid": true,
+    "zipEntryCount": 26,
+    "embeddedWorkflowMatches": true,
+    "requiredReadmeAndHandoffPresent": true
+  },
+  "ledgerReadback": "Publisher independently confirmed exactly one done job, USD0.031828, no other rows in reports/cloudflare-production-ai-ledger-after.json.",
+  "earlierAttempt": "HTTP401 before provider; earlier ledger independently verified empty. Token-after-human-check fix passed red/green regression and was deployed before this success.",
+  "downloadArtifactLocation": "Retained in the auth chat output; synthetic ClearDay workflow ZIP and editable JSON"
+}

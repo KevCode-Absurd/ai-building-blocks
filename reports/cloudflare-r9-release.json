@@ -1,6 +1,6 @@
 {
-  "checkedOn": "2026-10-22T10:58:16.002Z",
-  "status": "live-and-verified",
+  "checkedOn": "2026-10-22T11:02:10.330Z",
+  "status": "complete",
   "releaseRoot": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r9-candidate4",
   "workerSha256": "892f4aaae4cfd8dc723acc5ddf17f714c59416ee66b3d932057e590f76410d2c",
   "sourceHashes": {
@@ -57,5 +57,12 @@
     "startupReport": "reports/startup-loading-production/checks.json",
     "providerCallsByTheseChecks": 0
   },
-  "actualWorkflow": "Separateonecanarypendingauth;earlier401recordedwithnoledgerjobs"
+  "actualWorkflow": {
+    "status": "pass",
+    "report": "reports/cloudflare-production-ai-workflow-test.json",
+    "stepCount": 9,
+    "zipEntries": 26,
+    "calculatedUsageCostUSD": 0.031828,
+    "completedJobs": 1
+  }
 }

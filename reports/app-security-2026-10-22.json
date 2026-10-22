@@ -260,8 +260,9 @@
     "productionD1WritesBySecurityChecks": 0,
     "aiEnabledBySubsequentOwnerRequest": true,
     "dailyReservationCapUSD": 10,
-    "aiGenerationFunctionalTest": "ActualcanarypendingauthafterliveJWTtimingfix",
+    "aiGenerationFunctionalTest": "PASS:oneactualGoogle-session/realTurnstileworkflow;noautoProviderRetries",
     "bindingsPreserved": 20,
-    "startupBrowserPassed": 12
+    "startupBrowserPassed": 12,
+    "calculatedTestUsageCostUSD": 0.031828
   }
 }

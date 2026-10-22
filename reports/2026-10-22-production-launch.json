@@ -1,6 +1,6 @@
 {
-  "checkedOn": "2026-10-22T10:58:16.002Z",
-  "status": "website-live-and-verified;AI-functional-canary-in-progress",
+  "checkedOn": "2026-10-22T11:02:10.330Z",
+  "status": "complete",
   "url": "https://useaiblocks.com/",
   "versionId": "fcc0a974-2fce-4a16-8acb-0294a9ab6448",
   "sourceCommit": "9d93068a",
@@ -25,14 +25,16 @@
     "globalDailyReservationCapUSD": 10,
     "budgetWindow": "UTC day",
     "perAccountAndIPDailyAttempts": 10,
-    "realWorkflow": "Earlier realhumanverifiedR8attempt returned401 beforeprovider;emptyledgerconfirmed;token-timingfixnowlive,onecanarypending",
-    "baselineLedgerRows": 0
+    "realWorkflow": "PASS:realGoogle-session/Turnstile,9stepplan,valid26fileZIPandmatchingeditableJSON",
+    "baselineLedgerRows": 0,
+    "completedGenerationJobs": 1,
+    "calculatedUsageCostUSD": 0.031828
   },
   "limitations": [
     "DMARC starts in monitoring mode;no rejection policy claimed",
     "Actual Google sign-in tested with owner account;not a universal account compatibility test",
     "Application budget uses calculated provider usage;not a provider-account billing limit"
   ],
-  "remainingAction": "Auth chat runs one actual workflow with real Turnstile after session-timing fix;no further website launch action",
+  "remainingAction": "None for website launch/startup fix/requested AI test",
   "gitSourceBeforeR9Publication": "9d93068a"
 }

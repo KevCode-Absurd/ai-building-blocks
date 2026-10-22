@@ -1,12 +1,24 @@
 {
   "date": "2026-10-22",
   "timezone": "Asia/Kolkata",
-  "status": "staging-security-checks-passed-production-verification-pending",
+  "status": "production-security-checks-passed",
   "controls": {
-    "turnstileActions": ["compose", "comment", "create_space"],
-    "serverChecks": ["success", "exact hostname", "action"],
+    "turnstileActions": [
+      "compose",
+      "comment",
+      "create_space"
+    ],
+    "serverChecks": [
+      "success",
+      "exact hostname",
+      "action"
+    ],
     "verificationOutagesFailClosed": true,
-    "rateLimitsPerIPPerLocationPerMinute": { "reads": 120, "writes": 30, "composition": 3 },
+    "rateLimitsPerIPPerLocationPerMinute": {
+      "reads": 120,
+      "writes": 30,
+      "composition": 3
+    },
     "existingGlobalAIAllowancePreserved": true,
     "productionWorkersDevDisabled": true,
     "versionPreviewsDisabled": true,
@@ -41,7 +53,12 @@
       "testsPassed": 6,
       "lifetimeSeconds": 900,
       "hostBoundSignature": "HMAC-SHA256",
-      "cookieFlags": ["Secure", "HttpOnly", "SameSite=Strict", "host-only"],
+      "cookieFlags": [
+        "Secure",
+        "HttpOnly",
+        "SameSite=Strict",
+        "host-only"
+      ],
       "productionEnabled": false,
       "turnstileBypassed": false,
       "credentialInCookieOrURL": false,
@@ -100,7 +117,11 @@
       "strictDMARCEnforced": false
     },
     "secretValuesRecordedInThisReport": false,
-    "stubRoutingBeforeCombinedDeployment": { "productionWorkersDev": false, "stagingWorkersDev": false, "versionPreviews": false }
+    "stubRoutingBeforeCombinedDeployment": {
+      "productionWorkersDev": false,
+      "stagingWorkersDev": false,
+      "versionPreviews": false
+    }
   },
   "liveVerification": {
     "status": "R8-real-human-writes-and-21-live-API-checks-passed",
@@ -113,14 +134,25 @@
     "privateRootWithoutHeader": 403,
     "privateCatalogueWithoutHeader": 403,
     "privateAPIWithoutHeader": 403,
-    "authorizedSecurityMetadata": { "status": 200, "required": true, "realSitekeyPresent": true },
+    "authorizedSecurityMetadata": {
+      "status": 200,
+      "required": true,
+      "realSitekeyPresent": true
+    },
     "paidAIEnabled": false,
     "providerCalls": 0,
     "evidenceOwner": "hosting chat",
     "R4IndependentAPIChecks": {
       "passed": 14,
       "status": "partial only because real widget-created fixtures remain absent",
-      "checks": ["private root/assets/API reject absent or incorrect access", "all three protected actions reject missing Turnstile tokens", "forged token and cross-origin write rejected", "absent or wrong space owner key rejected", "frozen catalogue, skill and ZIP match", "routing, headers and real 404 behavior preserved"],
+      "checks": [
+        "private root/assets/API reject absent or incorrect access",
+        "all three protected actions reject missing Turnstile tokens",
+        "forged token and cross-origin write rejected",
+        "absent or wrong space owner key rejected",
+        "frozen catalogue, skill and ZIP match",
+        "routing, headers and real 404 behavior preserved"
+      ],
       "report": "reports/cloudflare-staging-api-check.json"
     },
     "hostingBrowserChecks": {
@@ -156,7 +188,14 @@
     "boundedRateProbe": {
       "status": "pass",
       "stagingVersion": "74ec9f2e-07e4-4512-89bb-cb4e3aa842d3",
-      "statuses": [403, 403, 403, 403, 403, 429],
+      "statuses": [
+        403,
+        403,
+        403,
+        403,
+        403,
+        429
+      ],
       "requests": 6,
       "providerCalls": 0,
       "productionTouched": false,
@@ -183,7 +222,7 @@
       "automatedBrowserRetriesStopped": true,
       "reference": "https://developers.cloudflare.com/turnstile/troubleshooting/client-side-errors/error-codes/"
     },
-    "pending": ["Bounded cleanup of two verified empty synthetic staging spaces by deployment owner", "Final Git evidence push and production domain/TLS/API smoke by publication owner"],
+    "pending": [],
     "humanVerificationInstructions": {
       "status": "owner-normal-browser-real-writes-and-reload-confirmed-no-more-human-challenges-needed",
       "normalBrowserLoginConfirmedByOwner": true,
@@ -202,5 +241,25 @@
     "Checks execute in the Worker and do not eliminate Worker request charges; zone WAF rules are separate.",
     "IP quotas can affect users on shared networks.",
     "Configuration and source changes must be deployed before they protect live application traffic."
-  ]
+  ],
+  "productionVerification": {
+    "checkedOn": "2026-10-22T10:33:39.993Z",
+    "versionId": "d24c827d-ba6f-4fc8-b22f-b0dacdb4478e",
+    "sourceWorkerUnchanged": true,
+    "smokePassed": 27,
+    "httpsRedirects": "pass;HTTPapex/www301 to HTTPSapex preservingpathquery",
+    "alwaysUseHTTPS": "enabled via authenticated Cloudflare UI",
+    "productionWorkersDevDisabled": true,
+    "versionPreviewsDisabled": true,
+    "productionPreviewLogin404": true,
+    "stagingUnauthenticated403": true,
+    "turnstileRequired": true,
+    "missingTokenCompose403": true,
+    "actualOwnerGoogleLoginAndReload": "pass",
+    "providerCallsBySecurityChecks": 0,
+    "productionD1WritesBySecurityChecks": 0,
+    "aiEnabledBySubsequentOwnerRequest": true,
+    "dailyReservationCapUSD": 10,
+    "aiGenerationFunctionalTest": "pending in auth chat"
+  }
 }

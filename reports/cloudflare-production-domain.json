@@ -20,5 +20,6 @@
   ],
   "tlsVerified": true,
   "tlsEvidence": "reports/cloudflare-production-smoke.json",
-  "httpsRedirectEvidence": "reports/cloudflare-production-https.json"
+  "httpsRedirectEvidence": "reports/cloudflare-production-https.json",
+  "currentWorkerVersion": "d24c827d-ba6f-4fc8-b22f-b0dacdb4478e"
 }

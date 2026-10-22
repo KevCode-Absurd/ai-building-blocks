@@ -1,0 +1,13 @@
+{
+  "checkedOn": "2026-10-22T10:33:06.963Z",
+  "deployedVersion": "d24c827d-ba6f-4fc8-b22f-b0dacdb4478e",
+  "status": "pass",
+  "checks": [
+    {
+      "name": "tokenless compose POST rejected before provider/ledger access",
+      "http": 403,
+      "error": "Complete the security check and try again."
+    }
+  ],
+  "providerCalls": 0
+}

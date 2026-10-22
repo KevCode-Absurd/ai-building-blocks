@@ -1,5 +1,5 @@
 {
-  "checkedOn": "2026-10-22T10:02:42.607Z",
+  "checkedOn": "2026-10-22T10:09:05.694Z",
   "readbackVersion": "2ff0def4-30ae-41f6-abe6-0cbcadffdd10",
   "environment": "https://ai-building-blocks-staging.kevinmark7498.workers.dev",
   "readOnly": true,
@@ -18,23 +18,11 @@
       "id": "55669f7a-6a03-4a1d-b355-6a323e629c33",
       "label": "Staging launch verification owner-20261022",
       "at": "2026-10-22T10:00:39.739Z"
-    },
-    {
-      "kind": "comment",
-      "id": "0ea164e7-64ff-452c-8d65-c294dcb87832",
-      "label": "Staging launch verification owner-20261022",
-      "at": "2026-10-22T09:56:46.994Z"
-    },
-    {
-      "kind": "comment",
-      "id": "d08854bb-210a-4b0c-97a4-1f527357fff0",
-      "label": "Staging launch verification owner-20261022",
-      "at": "2026-10-22T10:01:26.193Z"
     }
   ],
   "counts": {
     "spaces": 2,
-    "comments": 2
+    "comments": 0
   },
   "note": "Readback confirms record existence only. Owner-key sharing, link rotation and cleanup require the verified private fixture capture."
 }

@@ -1,7 +1,7 @@
 {
-  "checkedOn": "2026-10-22T09:52:54.284Z",
-  "stagingVersion": "2ff0def4-30ae-41f6-abe6-0cbcadffdd10",
-  "status": "automated-checks-pass-normal-human-write-gate-pending",
+  "checkedOn": "2026-10-22T10:16:31.697Z",
+  "stagingVersion": "80bc2a97-5835-4936-bd81-8c994a9552b6",
+  "status": "staging-verified-and-cleaned-final-git-push-and-publication-pending",
   "browser": {
     "totalCovered": 211,
     "hosting": {
@@ -25,8 +25,10 @@
       "report": "2026-10-22-auth-staging-check.json"
     },
     "evidenceVersion": "74ec9f2e-07e4-4512-89bb-cb4e3aa842d3",
-    "currentAssetsVerifiedIdentical": true,
-    "assetLineageReport": "cloudflare-staging-r7-asset-check.json"
+    "currentAssetsVerifiedIdentical": false,
+    "assetLineageReport": "cloudflare-staging-r7-asset-check.json",
+    "method": "211 R6 baseline browser cases retained as historical regression evidence. R8 has a narrow SpacePage manual-copy fallback verified in the actual browser, plus current 21 API and four exact ZIP checks; no full211 R8 rerun claimed.",
+    "r8FocusedEvidence": "reports/2026-10-22-final-staging-verification.json"
   },
   "unit": {
     "passed": 96,
@@ -38,10 +40,10 @@
     "groups": 5
   },
   "api": {
-    "version": "2ff0def4-30ae-41f6-abe6-0cbcadffdd10",
-    "status": "partial",
-    "passed": 14,
-    "positivePersistenceVerified": false
+    "version": "80bc2a97-5835-4936-bd81-8c994a9552b6",
+    "status": "pass",
+    "passed": 21,
+    "positivePersistenceVerified": true
   },
   "rate": {
     "status": "pass",
@@ -58,48 +60,52 @@
     "reusedReason": "Rate-limit implementation and bindings unchanged; avoid another burst during owner verification."
   },
   "realWrites": {
-    "status": "pending-normal-owner-browser",
-    "readbackCounts": {
-      "spaces": 0,
-      "comments": 0
+    "status": "pass",
+    "creationVersion": "2ff0def4-30ae-41f6-abe6-0cbcadffdd10",
+    "verificationVersion": "80bc2a97-5835-4936-bd81-8c994a9552b6",
+    "counts": {
+      "spaces": 2,
+      "comments": 2
     },
-    "report": "cloudflare-staging-human-readback.json",
-    "automatedAttempt": "Turnstile600010; no success/POST/database writes",
-    "loginInvestigation": {
-      "status": "resolved-and-live-browser-verified",
-      "resolvedVersion": "2ff0def4-30ae-41f6-abe6-0cbcadffdd10",
-      "cause": "Native form under no-referrer generated Origin:null",
-      "fix": "Login document uses same-origin; null and foreign origins remain rejected",
-      "liveChecksPassed": 5
-    }
+    "realWidget": true,
+    "ownerReloadConfirmed": true,
+    "report": "reports/cloudflare-staging-real-writes.json",
+    "reconciliation": "reports/cloudflare-staging-fixture-reconciliation.json",
+    "cleanup": [
+      "deleted the staging fixture item",
+      "hid 2 verified staging fixture comments"
+    ],
+    "emptySpacesPendingCleanup": [
+      "ba6b1cdf-16fc-4073-a9ef-df7d6954c98a",
+      "55669f7a-6a03-4a1d-b355-6a323e629c33"
+    ]
   },
   "production": {
-    "version": "88e788e1-5a72-4cac-9cab-3f11ad3b6d55",
-    "status": "reviewed Worker-only delta deployed; live delta checks pending",
+    "version": "87a8bdfb-ee9a-4341-9fa0-66214986b3f1",
+    "status": "R8 preloaded; activation follows bounded empty-space cleanup and final Git evidence push",
     "domain": "useaiblocks.com",
     "paidAIEnabled": false,
     "publicCutoverVerified": false
   },
   "next": [
-    "Owner creates exact synthetic space and comment in normal authenticated staging browser, then confirms reload persistence.",
-    "After owner explicitly copies synthetic private device link, capture it once in process with tools/capture-staging-owner-fixtures.mjs; never paste into chat.",
-    "Use verified ignored fixture for positive owner/private/public/shared-read-only/link-rotation API checks and cleanup; delete only the verified synthetic empty space afterward.",
-    "Release owner completes production domain/TLS cutover and final-domain smoke, including actual customer sign-in."
+    "Find cheap UseAIBlocks mailbox audits, commits and pushes all final source and evidence before guarded domain activation, then verifies public TLS, redirects, APIs and downloads.",
+    "Explain site changes and auth verifies actual production Google sign-in after domain GO."
   ],
   "productionTouchedByThisCheck": false,
   "providerCalls": 0,
   "coordination": {
-    "releaseOwnerNotified": true,
-    "securityOwnerNotified": true,
-    "finalEvidenceSaved": true
+    "realProofOwner": "Prepare Cloudflare Workers plan",
+    "cleanupOwner": "Find skill gaps and repos",
+    "gitAndPublicationOwner": "Find cheap UseAIBlocks mailbox",
+    "ownershipVersion": "V3",
+    "sourceAndDeployFrozen": true
   },
   "backendDelta": {
-    "version": "2ff0def4-30ae-41f6-abe6-0cbcadffdd10",
+    "version": "80bc2a97-5835-4936-bd81-8c994a9552b6",
     "workerSha256": "892f4aaae4cfd8dc723acc5ddf17f714c59416ee66b3d932057e590f76410d2c",
-    "scope": "Login-page Referrer-Policy correction plus synchronization of already R6-tested planner function in bundled namespace; paid AI remains disabled.",
-    "focusedUnitPassed": 27,
-    "typecheck": "pass",
-    "assetsAndBindingsRetained": true
+    "scope": "R8 frontend copy fallback; reviewed R7 backend unchanged",
+    "unitPassed": 96,
+    "typecheck": "pass"
   },
   "nativeBrowserLogin": {
     "version": "2ff0def4-30ae-41f6-abe6-0cbcadffdd10",
@@ -109,5 +115,11 @@
     "originOverridden": false,
     "protectedWritesCreated": 0,
     "report": "cloudflare-staging-browser-login.json"
+  },
+  "fixtureCleanup": {
+    "report": "reports/cloudflare-staging-fixture-cleanup.json",
+    "status": "pass",
+    "emptySpacesDeleted": 2,
+    "remainingExactTagSpaces": 0
   }
 }

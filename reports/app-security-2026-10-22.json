@@ -244,7 +244,7 @@
   ],
   "productionVerification": {
     "checkedOn": "2026-10-22T10:33:39.993Z",
-    "versionId": "d24c827d-ba6f-4fc8-b22f-b0dacdb4478e",
+    "versionId": "fcc0a974-2fce-4a16-8acb-0294a9ab6448",
     "sourceWorkerUnchanged": true,
     "smokePassed": 27,
     "httpsRedirects": "pass;HTTPapex/www301 to HTTPSapex preservingpathquery",
@@ -260,6 +260,8 @@
     "productionD1WritesBySecurityChecks": 0,
     "aiEnabledBySubsequentOwnerRequest": true,
     "dailyReservationCapUSD": 10,
-    "aiGenerationFunctionalTest": "pending in auth chat"
+    "aiGenerationFunctionalTest": "ActualcanarypendingauthafterliveJWTtimingfix",
+    "bindingsPreserved": 20,
+    "startupBrowserPassed": 12
   }
 }

@@ -1,5 +1,5 @@
 {
-  "checkedOn": "2026-10-22T10:34:58.432Z",
+  "checkedOn": "2026-10-22T10:58:16.002Z",
   "deadline": "2026-10-22 Asia/Kolkata",
   "accountAuthenticated": true,
   "workersPaid": {
@@ -63,7 +63,7 @@
     "verifiedOn": "2026-10-22T10:54:03.975Z"
   },
   "production": {
-    "status": "public;27 smoke and security checks pass; free AI enabled at USD10/day; one real workflow awaits owner Turnstile checkbox",
+    "status": "R9live verified:12productionstartup+27productionchecks;AIcanarypending",
     "database": "ai-blocks",
     "databaseId": "a886eeae-4014-4da2-842f-a5bebc4d7f71",
     "migrations": [
@@ -88,7 +88,7 @@
       "blockSeconds": 10,
       "includedRule": true
     },
-    "versionId": "d24c827d-ba6f-4fc8-b22f-b0dacdb4478e",
+    "versionId": "fcc0a974-2fce-4a16-8acb-0294a9ab6448",
     "workerSha256": "892f4aaae4cfd8dc723acc5ddf17f714c59416ee66b3d932057e590f76410d2c",
     "uploadedAssets": 4500,
     "reusedAssets": 14110,
@@ -96,11 +96,11 @@
     "workersDevEnabled": false,
     "previewUrlsEnabled": false,
     "clerkConfigured": true,
-    "previousVersionId": "87a8bdfb-ee9a-4341-9fa0-66214986b3f1",
-    "deployedOn": "2026-10-22T09:50:31.901Z",
-    "releaseRoot": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r8",
-    "assetReleaseRoot": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r8",
-    "sourceCommit": "badde294",
+    "previousVersionId": "d24c827d-ba6f-4fc8-b22f-b0dacdb4478e",
+    "deployedOn": "2026-10-22T10:56:21.328Z",
+    "releaseRoot": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r9-candidate4",
+    "assetReleaseRoot": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r9-candidate4",
+    "sourceCommit": "9d93068a",
     "publicVerified": true,
     "gitEvidenceBeforeActivation": "56269425",
     "aiEnabled": true,
@@ -108,7 +108,7 @@
     "configurationCommitBeforeAIEnable": "0a6a3fd6",
     "defaultProviderKeyConfigured": true,
     "customerPriceUSD": 0,
-    "pendingFrontendRelease": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r9-candidate4"
+    "pendingFrontendRelease": null
   },
   "releaseScope": {
     "blocks": 4359,
@@ -139,7 +139,7 @@
       "liveSessionSecurityChecksPassed": 10,
       "sourcePreviewSha256": "eb47b3f579c8adfa36076684d3b62db2764839b0a76b582a091ac44b3e322355"
     },
-    "finalFrontend": "R8 manual private-link fallback; TypeScript and immutable frontend build pass; catalogue and four reviewed skill ZIP hashes unchanged"
+    "finalFrontend": "R9 assembling-block startup screen + session token acquired after human verification;4authregressions and12local+12productionstartupchecks pass"
   },
   "accountOwnerActionPending": false,
   "clerk": {
@@ -160,18 +160,20 @@
     "routing": "R7 five routing groups pass",
     "api": "R8 all21 isolated staging API, privacy, sharing, authorization, link-rotation and synthetic cleanup checks pass",
     "rateLimit": "R6 bounded invalid-token AI probe pass; actual statuses403,403,403,403,403,429;0provider calls",
-    "remainingOwnerAction": "Complete the real compose Turnstile checkbox already presented in Explain site changes and auth; do not resubmit Create",
+    "remainingOwnerAction": "Auth chat runs one actual workflow with real Turnstile after session-timing fix;no further website launch action",
     "productionDomainChecks": "PASS:27 production smoke checks,valid apex/www TLS,canonical www redirect preserving path/query,HTTP301 HTTPS,4 exact package downloads",
     "fixtureCleanup": "Two exact verified empty staging spaces deleted; both synthetic comments hidden; ignored synthetic credential files removed; production untouched",
     "actualClerkSignIn": "PASS:actual production owner Google OAuth returned to /compose and authenticated usage persisted after reload;not a universal multi-account test",
-    "productionAI": "Enabled with atomic D1 global UTC-day USD10 reservation cap and existing10/account+10/IP attempt limits;one synthetic real workflow submitted once and awaiting human widget completion;no provider call yet"
+    "productionAI": "Enabled with atomic D1 global UTC-day USD10 reservation cap and existing10/account+10/IP attempt limits;one synthetic real workflow submitted once and awaiting human widget completion;no provider call yet",
+    "startupLoading": "R9 actualbuilt12/12 and production12/12 pass;noJS,slowdownloads,lazysections,mobile,reducedmotion,deep links,redirects and failure recovery"
   },
   "deferredWork": {
     "initialPaintLoadingState": {
-      "status": "New direct owner request implemented in R9candidate4;12startupchecks and6stagingchecks pass;productionpublishpending",
+      "status": "Resolved in R9 on later explicit owner request;12productionbrowserchecks pass",
       "description": "Replace initial unformatted/prerendered text flash with brief loading state while preserving SEO, no-JS content and deep links",
       "includedInR8": false,
-      "includedInR9": true
+      "includedInR9": true,
+      "report": "reports/startup-loading-production/checks.json"
     }
   }
 }

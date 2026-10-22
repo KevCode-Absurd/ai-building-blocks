@@ -1,9 +1,9 @@
 {
-  "checkedOn": "2026-10-22T10:34:58.432Z",
-  "status": "website-live-and-verified;requested-AI-functional-test-awaiting-human",
+  "checkedOn": "2026-10-22T10:58:16.002Z",
+  "status": "website-live-and-verified;AI-functional-canary-in-progress",
   "url": "https://useaiblocks.com/",
-  "versionId": "d24c827d-ba6f-4fc8-b22f-b0dacdb4478e",
-  "sourceCommit": "badde294",
+  "versionId": "fcc0a974-2fce-4a16-8acb-0294a9ab6448",
+  "sourceCommit": "9d93068a",
   "gitEvidenceBeforeDomainActivation": "56269425",
   "gitConfigBeforeAIEnable": "0a6a3fd6",
   "codeAndAssetsUnchangedByAIEnable": true,
@@ -16,7 +16,8 @@
     "httpToHttpsAndWwwCanonical": "pass",
     "cloudflareDNS": "All set;no recommendations",
     "fixtureCleanup": "pass;2exactemptyspacesremoved,2syntheticcommentshidden,credentialsremoved",
-    "missingComposeTurnstile403": "pass"
+    "missingComposeTurnstile403": "pass",
+    "currentStartupBrowserPassed": 12
   },
   "ai": {
     "enabled": true,
@@ -24,14 +25,14 @@
     "globalDailyReservationCapUSD": 10,
     "budgetWindow": "UTC day",
     "perAccountAndIPDailyAttempts": 10,
-    "realWorkflow": "submittedonce;awaitingownercheckbox;no paidrequestyet",
+    "realWorkflow": "Earlier realhumanverifiedR8attempt returned401 beforeprovider;emptyledgerconfirmed;token-timingfixnowlive,onecanarypending",
     "baselineLedgerRows": 0
   },
   "limitations": [
-    "Initial unstyled text flash explicitly deferred by Kevin",
     "DMARC starts in monitoring mode;no rejection policy claimed",
     "Actual Google sign-in tested with owner account;not a universal account compatibility test",
     "Application budget uses calculated provider usage;not a provider-account billing limit"
   ],
-  "remainingAction": "Complete the real compose Turnstile checkbox already presented in Explain site changes and auth; do not resubmit Create"
+  "remainingAction": "Auth chat runs one actual workflow with real Turnstile after session-timing fix;no further website launch action",
+  "gitSourceBeforeR9Publication": "9d93068a"
 }

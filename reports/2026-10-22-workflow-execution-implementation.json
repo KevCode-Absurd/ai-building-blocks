@@ -3,7 +3,7 @@
   "scope": "Portable workflow package export and execution instructions",
   "contract": "abb-execution/1",
   "implementation_status": "ALL_SUPPORTED_EXPORT_ROUTES_IMPLEMENTED_FINAL_INTEGRATED_CHECKS_PASSED",
-  "release_status": "R19_FINAL_BUILD_VERIFIED_STAGING_DEPLOYING_PRODUCTION_PENDING",
+  "release_status": "R19_PRODUCTION_VERIFIED",
   "assurance": "Portable execution is assistant-reported. No backend execution enforcement or cross-model reliability guarantee.",
   "checks": [
     {
@@ -214,28 +214,47 @@
     "evidence_owner": "Release chat 01a16276-6e77-7c51-bd36-a283b29f6c47",
     "attribution": "Release-owner-verified, not an additional independent rerun by this chat",
     "existing_non_html_files_preserved": 19929,
-    "catalogue_items_preserved": 4743
+    "catalogue_items_preserved": 4743,
+    "staging_checks": 66,
+    "staging_status": "PASS_RELEASE_OWNER_VERIFIED",
+    "production_version": "d2494491-f4ca-4de9-a8d9-599a41a22773",
+    "staging_version": "8b9a047c-572b-4b12-a5bb-68384b862fbc",
+    "source_commit": "17f9f8574edf623b8e410f8be458e1c192a4d4f1",
+    "production_checks": 65,
+    "live_client_browser_cases": 10,
+    "production_status": "PASS_RELEASE_OWNER_VERIFIED",
+    "scope": "Real production assets/UI/downloads; controlled Space/account API fixtures in client tests. No real private Space mutation or provider calls."
   },
   "space_followup": {
-    "status": "FINAL_INTEGRATED_BUILD_VERIFIED_PRODUCTION_PENDING",
+    "status": "PRODUCTION_CLIENT_VERIFIED",
     "report": "reports/2026-10-22-space-workflow-execution.json",
     "focused_unit_tests": 5,
     "focused_browser_tests": 3,
     "typescript": "PASS",
     "independent_primary_review": "PASS_CODE_AND_VISUAL_REVIEW",
     "API_scope": "Mocked account and Space APIs; actual Chrome UI and downloaded archives",
-    "production_checks": "NOT_RUN",
+    "production_checks": {
+      "status": "PASS",
+      "cases": 3,
+      "evidence_owner": "Release owner",
+      "scope": "Live production UI/archive downloads with controlled account/Space API fixtures; no real private Space writes."
+    },
     "source_only_status": "BLOCKED_UNVERIFIED_SOURCE",
     "source_privacy_review": "NOT_RUN",
     "integrated_browser_status": "PASS_R19_RELEASE_OWNER_VERIFIED"
   },
   "mind_collection_followup": {
-    "status": "FINAL_INTEGRATED_BUILD_VERIFIED_PRODUCTION_PENDING",
+    "status": "PRODUCTION_CLIENT_VERIFIED",
     "catalogue_workflow_links": 33,
     "routing": "Visible links to complete workflow pages; standalone collection exporter rejects workflow/routine/agent selections before fetch",
     "focused_export_tests": 9,
     "browser_case": "mind collections route workflow entries to complete workflow downloads",
-    "production_checks": "NOT_RUN",
+    "production_checks": {
+      "status": "PASS",
+      "cases": 2,
+      "evidence_owner": "Release owner",
+      "scope": "Live public Mind workflow routing and complete ZIP; existing missing-reference workflow correctly blocked with no ZIP."
+    },
     "browser_positive": {
       "workflow": "daily-shutdown-planner",
       "mind": "cal-newport",

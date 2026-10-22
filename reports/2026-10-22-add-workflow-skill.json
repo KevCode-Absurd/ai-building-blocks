@@ -1,6 +1,6 @@
 {
   "checkedAt": "2026-10-22T17:13:38.914Z",
-  "status": "FROZEN_BUILD_TESTED_STAGING_DEPLOYED_PENDING_PRODUCTION",
+  "status": "LIVE_VERIFIED",
   "request": "Add an option to add skills to the workflow editor",
   "scope": "Visible Add skill action in embedded composer and standalone Builder. Search library skills and insert at start, middle or end while preserving original nodes, edges, bindings, notes and governance.",
   "source": [
@@ -70,7 +70,11 @@
     }
   },
   "production": {
-    "status": "NOT_RUN"
+    "status": "PASS",
+    "versionId": "d2494491-f4ca-4de9-a8d9-599a41a22773",
+    "sourceCommit": "17f9f857",
+    "browserCases": 5,
+    "scope": "Actual public production client and real downloads in fresh browser contexts, with controlled sign-in/service fixtures. No real account or provider writes."
   },
   "providerCalls": 0
 }

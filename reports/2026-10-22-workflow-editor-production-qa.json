@@ -1,0 +1,36 @@
+{
+  "checkedAt": "2026-10-22T17:47:43.688Z",
+  "status": "PASS",
+  "sourceCommit": "17f9f8574edf623b8e410f8be458e1c192a4d4f1",
+  "productionVersion": "d2494491-f4ca-4de9-a8d9-599a41a22773",
+  "stagingVersion": "8b9a047c-572b-4b12-a5bb-68384b862fbc",
+  "releaseRoot": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks/site/.wrangler/releases/release-2026-10-22-r19-workflow-editor",
+  "counts": {
+    "catalogue": 4743,
+    "units": 235,
+    "frozenBrowser": 48,
+    "stagingChecks": 66,
+    "productionChecks": 65,
+    "liveClientBrowser": 10,
+    "retainedNonHTMLFiles": 19929
+  },
+  "bindingsPreserved": {
+    "production": 20,
+    "staging": 21
+  },
+  "workerSha256": "e0eabe892d923971589729a486e791878aa6e5c74d1e4e38c4aee7bb10c54a00",
+  "catalogueSha256": "5c4afed89a5a43a4ffe8b173ae79cf9b8f4e4a555bf9319e23cb19bc86a6395d",
+  "providerCalls": 0,
+  "checks": [
+    "Add skill visible in embedded composer and standalone editor",
+    "Search and insert at beginning/middle/end",
+    "Original steps, notes, data bindings and branches retained",
+    "Reload and complete downloaded instructions verified at1440/390/320px",
+    "Space workflow contracts and Mind workflow routing verified"
+  ],
+  "limits": [
+    "Space/account APIs in live browser checks use controlled fixtures; no real private Space records changed.",
+    "Portable instructions do not provide a backend execution engine or guarantee host-model compliance.",
+    "An existing event-tracking-planner reference is missing; the affected workflow is correctly blocked and no incomplete ZIP is released."
+  ]
+}

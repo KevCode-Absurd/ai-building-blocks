@@ -56,5 +56,16 @@
     "versionId": "8b9a047c-572b-4b12-a5bb-68384b862fbc",
     "checks": 66,
     "status": "pass"
+  },
+  "production": {
+    "status": "pass",
+    "versionId": "d2494491-f4ca-4de9-a8d9-599a41a22773",
+    "byteAndAPIChecks": 65,
+    "browserCases": {
+      "addSkill": 5,
+      "space": 3,
+      "mindWorkflowRouting": 2
+    },
+    "scope": "Real production UI/assets/downloads; sample Space/account APIs mocked; no real private Space mutation."
   }
 }

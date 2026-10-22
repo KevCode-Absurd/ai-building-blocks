@@ -1,5 +1,5 @@
 {
-  "checkedOn": "2026-10-22T17:40:31.233Z",
+  "checkedOn": "2026-10-22T17:47:43.685Z",
   "deadline": "2026-10-22 Asia/Kolkata",
   "accountAuthenticated": true,
   "workersPaid": {
@@ -14,7 +14,7 @@
     "canonicalURL": "https://useaiblocks.com/"
   },
   "staging": {
-    "status": "deployed-awaiting-verification",
+    "status": "R19 workflow editor verified: Add skill and complete workflow exports; existing catalogue and backend preserved",
     "worker": "ai-building-blocks-staging",
     "database": "ai-blocks-staging",
     "databaseId": "eeb9d0d4-cbed-4751-8df4-1aaf81fd6cb3",
@@ -78,7 +78,7 @@
     }
   },
   "production": {
-    "status": "R18 finance210 verified:120 skills,60 workflows,30 agents; all631 finance files match tested build",
+    "status": "R19 workflow editor verified: Add skill and complete workflow exports; existing catalogue and backend preserved",
     "database": "ai-blocks",
     "databaseId": "a886eeae-4014-4da2-842f-a5bebc4d7f71",
     "migrations": [
@@ -104,7 +104,7 @@
       "blockSeconds": 10,
       "includedRule": true
     },
-    "versionId": "90fb5ed7-4bf1-4432-91a4-704451fcd577",
+    "versionId": "d2494491-f4ca-4de9-a8d9-599a41a22773",
     "workerSha256": "e0eabe892d923971589729a486e791878aa6e5c74d1e4e38c4aee7bb10c54a00",
     "uploadedAssets": 4938,
     "reusedAssets": 19332,
@@ -112,10 +112,10 @@
     "workersDevEnabled": false,
     "previewUrlsEnabled": false,
     "clerkConfigured": true,
-    "previousVersionId": "359e91b6-8ce9-4e0f-8a4b-030c9a6c302e",
-    "deployedOn": "2026-10-22T17:23:30.649Z",
-    "releaseRoot": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r18-finance",
-    "assetReleaseRoot": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r18-finance",
+    "previousVersionId": "90fb5ed7-4bf1-4432-91a4-704451fcd577",
+    "deployedOn": "2026-10-22T17:44:40.918Z",
+    "releaseRoot": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r19-workflow-editor",
+    "assetReleaseRoot": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r19-workflow-editor",
     "sourceCommit": "be214d29c2653467eefe389cf7a1689a6f72a99a",
     "publicVerified": true,
     "gitEvidenceBeforeActivation": "be214d29c2653467eefe389cf7a1689a6f72a99a",

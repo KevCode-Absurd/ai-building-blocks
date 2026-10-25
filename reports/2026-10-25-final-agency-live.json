@@ -1,0 +1,1713 @@
+{
+  "status": "pass",
+  "origin": "https://useaiblocks.com",
+  "startedOn": "2026-10-25T10:59:42.202Z",
+  "expectedAssets": "C:\\Users\\kevin\\.codex\\worktrees\\mobile-psi-followup\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-25-final-combined\\assets",
+  "sourceCommit": "b37b5bb33b78f2c1d6567d98e25ca818e3259219",
+  "requests": 1135,
+  "checks": [
+    {
+      "slug": "agency-academic-anthropologist",
+      "status": "pass",
+      "sourceSha256": "2668602164abf574cb4e432a0cd40727a943de0b59864abb5b73956a0eb26146",
+      "archiveSha256": "3e4004d178bc312021039ee3f930ec821355a6060f4264022c676dad77d58753"
+    },
+    {
+      "slug": "agency-academic-geographer",
+      "status": "pass",
+      "sourceSha256": "4acf4a6ee6ae96ce562323c8ce508db9f2eb0ece016fc754214be9587c071c0d",
+      "archiveSha256": "aacb8358ef0b006a25fa6ba1595ed95c72d8c4576749d21f7269b36a7bb19f37"
+    },
+    {
+      "slug": "agency-academic-historian",
+      "status": "pass",
+      "sourceSha256": "2c59c10dceec033d9e92990b6156553471b7b94dd8e0c64fe27148f612be8955",
+      "archiveSha256": "ddf97bdd69119a7eeaba11199c97a595267be77aeb1df98cf8f519fceb319661"
+    },
+    {
+      "slug": "agency-academic-narratologist",
+      "status": "pass",
+      "sourceSha256": "12d7a6fa6134c014e3734f8203f0b8634e627cffe5985fa1b69d25c4a69094b5",
+      "archiveSha256": "9df3bb2e1727c866820215fb51e369dfe721452d1b9aed09361081fa100e5dd9"
+    },
+    {
+      "slug": "agency-academic-psychologist",
+      "status": "pass",
+      "sourceSha256": "193b7dba6d04346d15ee21753fd1cdb69dc1a21a5ac30d5d62726654820a5633",
+      "archiveSha256": "f7cca753f859116c35ed59269176df1e136dbfcf5843f362f041d2124e2da7b8"
+    },
+    {
+      "slug": "agency-academic-statistician",
+      "status": "pass",
+      "sourceSha256": "4b023595c59becec2026cab38807f835e48e280885f9cd381bab7845cbf4280c",
+      "archiveSha256": "dd1b562091fd3a9295e0153ece400d85f19af44ee2d3ce072b5f0f5acba61332"
+    },
+    {
+      "slug": "agency-accounts-payable-agent",
+      "status": "pass",
+      "sourceSha256": "f0f401daf0b61441eedb41a077e4bef13e0ff626483652d3c8a6eaae08b09a6e",
+      "archiveSha256": "f9be75c5ba3225994b107deef95ae33533abdb866320448bdd6fd5f1670400ba"
+    },
+    {
+      "slug": "agency-agentic-identity-trust",
+      "status": "pass",
+      "sourceSha256": "99d79e4d57e55d44151b770d89efea4ea3bc6647af27bfd4a6b256ebc5a1a63e",
+      "archiveSha256": "8e7b8baa9795737b2cd775c38ff04120a9117b93c2b1fe17a84c0648f28f70b9"
+    },
+    {
+      "slug": "agency-agents-orchestrator",
+      "status": "pass",
+      "sourceSha256": "3f900ee286eba5a809388ecc22ad860c4a3ef9ed7ff25488e80eac18f3a0f317",
+      "archiveSha256": "90798bb341333a87495b40f3bbcc5ffa749b175636d1ce26053039f3cf448188"
+    },
+    {
+      "slug": "agency-automation-governance-architect",
+      "status": "pass",
+      "sourceSha256": "8aab89104fec352f1f601ec5e6db11c9628d0b2072e6324484fd7e4c8462f55e",
+      "archiveSha256": "24341b77d9a77062fa7a08d681eed74b90a377a9c435a0e3129fe0964182bfe3"
+    },
+    {
+      "slug": "agency-blender-addon-engineer",
+      "status": "pass",
+      "sourceSha256": "e9a778fb9a78c31b6c2e2d8a0912cccd32652c1627be4794ae70f5ceb0021076",
+      "archiveSha256": "ec7a06c8884236ff3a5defb1b7d24e4dd756277b96198a9b4585633d0ac61fb5"
+    },
+    {
+      "slug": "agency-business-strategist",
+      "status": "pass",
+      "sourceSha256": "9314906805d8dee81c3e2d10cb93513a391731d9fceb2e4c936257005a144b92",
+      "archiveSha256": "d8ab290d0758192912bc00e0d8b9249e63f7c7f299851bcabdb6dd1e111a0f34"
+    },
+    {
+      "slug": "agency-change-management-consultant",
+      "status": "pass",
+      "sourceSha256": "1feb05dfd0bb4d0942a24a8abb409090ffbc252623e15daa09f5bc8c838b0e5a",
+      "archiveSha256": "934d5c23505be201ff3f4fe04f67522f0a6b4e3e0b9fedaad677502d1f9e3be7"
+    },
+    {
+      "slug": "agency-chief-financial-officer",
+      "status": "pass",
+      "sourceSha256": "05efa4015fc7feac9bb41942fa6e9eb2b79e2219bf1280b290c754fd16e15a08",
+      "archiveSha256": "0d47ab800f5f657cca9c3c34084fe5c7b7e54aafef4227b4eadec39e61238cf5"
+    },
+    {
+      "slug": "agency-corporate-training-designer",
+      "status": "pass",
+      "sourceSha256": "e70733229e87dde01bd404f502d2f5b491821f681d7230b314b18d98111b898c",
+      "archiveSha256": "b419174c9a29cfed5e966ae8efb3da26a95eb95bc1a793612f8bf5788d9f59dd"
+    },
+    {
+      "slug": "agency-customer-service",
+      "status": "pass",
+      "sourceSha256": "71d5b8ccd6fb6c5861230169a708ec5d8c0af628de44fc293ae256181573424f",
+      "archiveSha256": "0e0dee7693e9fab5cbeb5b13414673e33533e05dd07c31f3854ade0aad97782d"
+    },
+    {
+      "slug": "agency-customer-success-manager",
+      "status": "pass",
+      "sourceSha256": "2fc5ebc10734a621d65d1bfe0a253158f0a7418ee39b7c93a18efe6b26661cfe",
+      "archiveSha256": "2c9b2f86484062bceac340ae27538b42f59a801c99ed541c4c62671679b3e14d"
+    },
+    {
+      "slug": "agency-data-consolidation-agent",
+      "status": "pass",
+      "sourceSha256": "7e7de097ff27e3aa2732a9f1ab0bd7acaaef73dabf53fc7be6c90c8ab6afab11",
+      "archiveSha256": "5f7ec083088883bb9ea0faac662b0ca59642960593c93a50eb0c47d24131d815"
+    },
+    {
+      "slug": "agency-data-privacy-officer",
+      "status": "pass",
+      "sourceSha256": "77e495853a6ef839c8a2f87dae1c8de7b41e11d5e187828fa42c1d9a1e1ae00f",
+      "archiveSha256": "a40019c31ad90a02416986237b45dd423c1aa52c705eb5d08a73ef6c16f77938"
+    },
+    {
+      "slug": "agency-design-brand-guardian",
+      "status": "pass",
+      "sourceSha256": "d1d5c78af85d4d35be94b93d5c011d17e3cf5dcb69b2037a3ebf3059803b893e",
+      "archiveSha256": "7b4c3ce61b306ff784996490225a9cebf9e256e9600b284b74aa6f81678458f2"
+    },
+    {
+      "slug": "agency-design-image-prompt-engineer",
+      "status": "pass",
+      "sourceSha256": "63a564d01dc5812c494cd8aa034ce1217031d8fe8b3eca1323316879769ff13f",
+      "archiveSha256": "25ab69cdd212b28b039d23316ca0466d64b1327197a818c5e2c8a8fd13177e8f"
+    },
+    {
+      "slug": "agency-design-inclusive-visuals-specialist",
+      "status": "pass",
+      "sourceSha256": "6529724ca198344f31209c0e685a7460c087483b5a4b3a965798e09df70dde07",
+      "archiveSha256": "3f0f6ed5fa17bb242a3770513a774724e6e0f76e5e03078c32b794a8dee6e20b"
+    },
+    {
+      "slug": "agency-design-persona-walkthrough",
+      "status": "pass",
+      "sourceSha256": "8def8c73df7f79a61704e7353b85b915afa31c4a9fa1100fbb9220c50d6a1c55",
+      "archiveSha256": "c7579ab5f2f3c1c4e221326196b1933b4134e69628d80192916d202b5496509d"
+    },
+    {
+      "slug": "agency-design-ui-designer",
+      "status": "pass",
+      "sourceSha256": "4dc51255ffcb47e2bf4289a7d49a7cc224238af759f9e6e3c56771c698575d6d",
+      "archiveSha256": "dc70044c60a81854397eb4519b88c023ed63db70d4e0409b6ead464a08accec1"
+    },
+    {
+      "slug": "agency-design-ui-finish-gate-reviewer",
+      "status": "pass",
+      "sourceSha256": "cc2cc803782a791797b63530bfd46ee676148f05bc1db7c614c8860f9798bc86",
+      "archiveSha256": "ee4c7ddc520ceb67e178b05a6b6b2b9498fb94795952ba6592ec2e218e144729"
+    },
+    {
+      "slug": "agency-design-ux-architect",
+      "status": "pass",
+      "sourceSha256": "7d373da3fd204db3c830f28e03cdf85bcacd3858e38fbdad58489953f811c296",
+      "archiveSha256": "980da92127c717335282388dc4b42c85e8c2e7e4ba501ca573840bace647cab7"
+    },
+    {
+      "slug": "agency-design-ux-researcher",
+      "status": "pass",
+      "sourceSha256": "25f59c4333df2d0f1170ff7a1b11ea8415fd3d0ef80c3e0985209aeb4018680f",
+      "archiveSha256": "a1dec2402f5599ac2aaab5f91eecf4d2097f001b63d41e75b9688775fc4e244a"
+    },
+    {
+      "slug": "agency-design-visual-storyteller",
+      "status": "pass",
+      "sourceSha256": "f4950c9d65b5d105ec48ebce4b7621154e3bf89871dbbf07af245476930eb4dd",
+      "archiveSha256": "8d10c6a9b0f933fdb4ebb6bbe2a7944afcf029e39fdd8dabd8fe0c204aea33f9"
+    },
+    {
+      "slug": "agency-design-whimsy-injector",
+      "status": "pass",
+      "sourceSha256": "b1cc9abd37723ff12b508717e4f7f9621aafd8c20014894d93a8d6e2bc5657a4",
+      "archiveSha256": "f9aa9a31a6d59146a55587951f8cfda9ddb8e8ad2ebccda6fb1200458b0a3a0f"
+    },
+    {
+      "slug": "agency-economy-designer",
+      "status": "pass",
+      "sourceSha256": "a6767b808ef0c155d85f5569e9e53285c97dce4c9df25aa24a09a65246967998",
+      "archiveSha256": "acf1969d0bb547a94b293c71749b264cb9eed3bfafc87ecf5f3b1904f2cfe1f2"
+    },
+    {
+      "slug": "agency-engineering-ai-data-remediation-engineer",
+      "status": "pass",
+      "sourceSha256": "5aa193052f15283493eeb9749bc346d09c02407f26760fe0d08f8bd9242ede79",
+      "archiveSha256": "0a7308cfb7069e5fd1d6fe766280ec60a175c65042e4e2fbbe30aa841ac46bc8"
+    },
+    {
+      "slug": "agency-engineering-ai-engineer",
+      "status": "pass",
+      "sourceSha256": "f25a69aad25acd35dd1d62e33d5a814f4a26b075d90f968b4d778452e53924d8",
+      "archiveSha256": "063f7ad06d6114f356e2c0775f8dffef86ad61ab38097ef6374ac63581eacded"
+    },
+    {
+      "slug": "agency-engineering-api-platform-engineer",
+      "status": "pass",
+      "sourceSha256": "21076c3abab2c93f459ff7e2becc83287a200d966c40fc1db868fcbcf36067dd",
+      "archiveSha256": "f215ad601eb4f630700db3c914bf6e9c2f77e7eaccc61ece033ff6ab44f6db30"
+    },
+    {
+      "slug": "agency-engineering-ats-validator-architect",
+      "status": "pass",
+      "sourceSha256": "742c17d1885f4345c366a4050e12e3b61711f38dc576a24fe365ed3ee7f266d5",
+      "archiveSha256": "c401d062ab6b9f20b2991fb3e224fd93a69e5e9f79761c5eb685f0bfbb92208b"
+    },
+    {
+      "slug": "agency-engineering-autonomous-optimization-architect",
+      "status": "pass",
+      "sourceSha256": "76a8df3dfd4af54d0830daef736873209bd62cb155b9ed0f3c3a6aec369a9519",
+      "archiveSha256": "600df4ee89a70dcdce7733ccb5fe26d3888c0ac04d2976594a024906b0000709"
+    },
+    {
+      "slug": "agency-engineering-backend-architect",
+      "status": "pass",
+      "sourceSha256": "45d94306c8f0f4c51efb76066008297fa4e87ce5b69f509cfede224084b74dfb",
+      "archiveSha256": "f3656ba532d0239aabc5142dc893638082dd4de8f815c5acfff9e7c1a98a4f7c"
+    },
+    {
+      "slug": "agency-engineering-china-network-engineer",
+      "status": "pass",
+      "sourceSha256": "d375db645d1192fb8be3dd4e40de005d55edd33557abf909a4a4135257e03788",
+      "archiveSha256": "6873fd469d0c72db45754f174c40caf3717bc70ad0d870e9cecdfdc733dd45bd"
+    },
+    {
+      "slug": "agency-engineering-cms-developer",
+      "status": "pass",
+      "sourceSha256": "e072ac6e3d485483818880846b145c85b5224045a68c45dddc4e087940d57ba4",
+      "archiveSha256": "562c09754365ec01fef585aed7ad70be8e4399e528ebd72c617d48b1178552d9"
+    },
+    {
+      "slug": "agency-engineering-code-reviewer",
+      "status": "pass",
+      "sourceSha256": "7509fcc3ea1dda46511b2801996305bf3d4a125576f9655ff0b63df25602f446",
+      "archiveSha256": "345747a28676ca8997d65604646d75a22ee2ff75dbce24a63c316b2d10158718"
+    },
+    {
+      "slug": "agency-engineering-codebase-onboarding-engineer",
+      "status": "pass",
+      "sourceSha256": "07aa548b45887c3ad768efad5fdbf6e57bea639df4f1b74c7e383142f454e2a1",
+      "archiveSha256": "deccce8d17ffd188564eb3a2cef9e59d9871cc542cec1eecf9631cf00e733774"
+    },
+    {
+      "slug": "agency-engineering-data-engineer",
+      "status": "pass",
+      "sourceSha256": "3f6f629f0e4e00a0010bcd98675cb5183cca89b29b6d3fe2f6db2db474c2d800",
+      "archiveSha256": "b7e7f1fd11d8e2f245d590d4ff5fcf6fff75a39689e6d6dab49b8fa0a8b22917"
+    },
+    {
+      "slug": "agency-engineering-data-visualization-engineer",
+      "status": "pass",
+      "sourceSha256": "0f5b5391f82aa98ca489768d31024f7a5f840a8ee5fe968fe1499ed538948ce5",
+      "archiveSha256": "5283552c6b4038ec8bfff8b9efff429c70931f31996f04a0a5df24a4749ead6a"
+    },
+    {
+      "slug": "agency-engineering-database-optimizer",
+      "status": "pass",
+      "sourceSha256": "6d773003e3b9251068ab537be94d6827c118201e0e17c11d789cb29dc245bf99",
+      "archiveSha256": "59e4cc771b4987b2fc489240dbf981e765d2945c596dd42d26ec5dff000a5248"
+    },
+    {
+      "slug": "agency-engineering-database-reliability-engineer",
+      "status": "pass",
+      "sourceSha256": "0096dc3c1b31e33814c509fda43853cc77cef6252bb94da527b833be13b53a5a",
+      "archiveSha256": "6aa06d86d4e318f5b74505aa9c85d2d95801bac5d96625e83b5669cdb00dc169"
+    },
+    {
+      "slug": "agency-engineering-desktop-app-engineer",
+      "status": "pass",
+      "sourceSha256": "aadae54475480341ee9db1017bc19778596f80ff25092970dabc7fba75b1d951",
+      "archiveSha256": "2a234ce4ddb8a8480e8b305eb45f96ab45d4e1786af2e094ddb304c2ddc930a1"
+    },
+    {
+      "slug": "agency-engineering-developer-tooling-engineer",
+      "status": "pass",
+      "sourceSha256": "948d44fddfa47e2363236de150f9dc948edd79599609a92af8bf6b72b5b9b609",
+      "archiveSha256": "975dcc65d843397e481852d6827d61153512dce0e5bd4b97c46e8d83096c4deb"
+    },
+    {
+      "slug": "agency-engineering-devops-automator",
+      "status": "pass",
+      "sourceSha256": "1b67b3bdc6a076d42281e38bb811250eb04415bb241cdd4c3a7df38ecd20e88b",
+      "archiveSha256": "54b41ad2b7f1ea9a6d9cc0a4b66b772054a0587583e0c1f016d72d1f28231e35"
+    },
+    {
+      "slug": "agency-engineering-drupal-performance",
+      "status": "pass",
+      "sourceSha256": "544942f460b76e15c2cd6e9a820b4048e3344186db3a7123d99adfbdf6c41d09",
+      "archiveSha256": "e496c5bbee9d2364d1cc1bcacac7f5448347ab1b39c921df0bfa6c379c3020c6"
+    },
+    {
+      "slug": "agency-engineering-drupal-shopping-cart",
+      "status": "pass",
+      "sourceSha256": "cbd06e6d27363029dbbc6638297d47608c78d3b93b3e4a6ff52d16757199ee50",
+      "archiveSha256": "d70667cb0f10162f1c9aed08092be6629ed4ced9bbc84d8cb75aebafb1740906"
+    },
+    {
+      "slug": "agency-engineering-electrical-engineer",
+      "status": "pass",
+      "sourceSha256": "e62de4808d0209db518f4bde393af88dd5e3d0d74b053d14de91c2b80d2638c0",
+      "archiveSha256": "8e9f62631cc8ca40be673081dae9c5677927d8f24e6320562106133bb1cb4f94"
+    },
+    {
+      "slug": "agency-engineering-email-intelligence-engineer",
+      "status": "pass",
+      "sourceSha256": "70955ab959caccfd769963e9151a645a425e31d40777d00bf31e20fa0d7f8d03",
+      "archiveSha256": "3d7c398cee896fb2b6713ea398b0db14d0e6bcdc26400d6bc59465bdfbda95de"
+    },
+    {
+      "slug": "agency-engineering-embedded-firmware-engineer",
+      "status": "pass",
+      "sourceSha256": "f01fc2e817071c4ae10f14b49f0c4866a802f5bf3d8901d3ad0ab68cf61f2743",
+      "archiveSha256": "235b5785d31b82dc4eac848dc3f3bd49e234bf56ed73d954e5b224394b9901ef"
+    },
+    {
+      "slug": "agency-engineering-feishu-integration-developer",
+      "status": "pass",
+      "sourceSha256": "22f4c40c0d2681918b1bd5884edfca2a3556325054d1b8e912f6524111e2e4fb",
+      "archiveSha256": "5048869d8130039ef7ee0bcb3cf7c4529be8f3097691d8461ff6d5afcc9028c6"
+    },
+    {
+      "slug": "agency-engineering-filament-optimization-specialist",
+      "status": "pass",
+      "sourceSha256": "428f6a6be2318a123678b2838600e33c5e193afecbe8f828fa97c779eaf85fbf",
+      "archiveSha256": "58ebc9e7bfded05097a6abf75269d9c9049db0c6c3b6e68fb6500529b52da1c6"
+    },
+    {
+      "slug": "agency-engineering-finops-engineer",
+      "status": "pass",
+      "sourceSha256": "2971ce273c45e96002127fd8456cfcb3dce761595aab5b6428cd1f5036dc9cd1",
+      "archiveSha256": "7369ab6e82a02aa30c59cad7952a2af18ce8db5f6ffa821f842c316b5062cd3c"
+    },
+    {
+      "slug": "agency-engineering-frontend-developer",
+      "status": "pass",
+      "sourceSha256": "71eeb60cbeedd94b41b2e5852d8986c909e8d150c324b4bb99e3b184ae202094",
+      "archiveSha256": "60319aacdc03fd5bc5e70004406fe99c9de1b7d6f5c2ffcbc071cf5db7848754"
+    },
+    {
+      "slug": "agency-engineering-gaussdb-expert",
+      "status": "pass",
+      "sourceSha256": "db3e2fbd178e4df20885c5d5f27b0a552061c7736374f9977807fc374ff99e07",
+      "archiveSha256": "63dc1d13d6b6f6bf12d34f925cb034f3ce3eaba8bee71258419cec17dcbd9ba5"
+    },
+    {
+      "slug": "agency-engineering-git-workflow-master",
+      "status": "pass",
+      "sourceSha256": "d3f7718f852e03d5cd83a97340550a5b82694547c4b9b22c9e77bb40c1467ba3",
+      "archiveSha256": "eb5b59117e7833d65a2c991e032bd1706ae25cc884889eb788b5289bb196b4a1"
+    },
+    {
+      "slug": "agency-engineering-i18n-engineer",
+      "status": "pass",
+      "sourceSha256": "4239debe839a7ba60ad1339bb5527e816dda87a6ff3e1fa4caddd838b56917fc",
+      "archiveSha256": "f2a139016877bf7c2b9f7c006c3018f4ba721df7b3754b5ca52a908323335ed4"
+    },
+    {
+      "slug": "agency-engineering-identity-access-engineer",
+      "status": "pass",
+      "sourceSha256": "803b047d1b838fba2687a95bf2b8528cee86cf744130037f8380b1cc172c3f8e",
+      "archiveSha256": "2494fd6add610f8cf23a1e3ab210ea440a5c7be193469d52179ce078361af28d"
+    },
+    {
+      "slug": "agency-engineering-incident-response-commander",
+      "status": "pass",
+      "sourceSha256": "89b9c1294879dd24804c8b6d7805fde193e868a3c930a1ac515a36d527b8522a",
+      "archiveSha256": "1948f68cd4f7ace0a0187b7ee5cd78f1d81385f095c9ca571559b407f09eabfc"
+    },
+    {
+      "slug": "agency-engineering-iot-fleet-engineer",
+      "status": "pass",
+      "sourceSha256": "90cfb3b713d0cd11e9529f6158ed72ac99fe1d945a838d9d740009a51e9d3421",
+      "archiveSha256": "228cc712a2166cc9b05f239185c6d4e27245f1073967ded7321b3023b52028e9"
+    },
+    {
+      "slug": "agency-engineering-it-service-manager",
+      "status": "pass",
+      "sourceSha256": "26c23ef51726da346dcdf5b9eb004e7c03cfae4ad6a995ed46a26ec6cd5520e6",
+      "archiveSha256": "c1d43032e66f1666d6b5cea460f7c8ba3b3ee82031f9edda6c40630ada4b5005"
+    },
+    {
+      "slug": "agency-engineering-knowledge-graph-engineer",
+      "status": "pass",
+      "sourceSha256": "5c01d27d814425a6f72e55bbf14011e8bbdbd088ec2e7854675d8c39dd3f8185",
+      "archiveSha256": "eb1bfdccee04d4dbca0e18461568a2339928d0e2f390bb90a9d4b43926ceaf50"
+    },
+    {
+      "slug": "agency-engineering-llm-post-training-engineer",
+      "status": "pass",
+      "sourceSha256": "aa697dc1c0eb402551b9f6764a89938c8787c9628760b74065d3e383299a980a",
+      "archiveSha256": "986880a3af6b2199e1afa332a8b6893052ef69fa912b108e3ac92111d85a2599"
+    },
+    {
+      "slug": "agency-engineering-minimal-change-engineer",
+      "status": "pass",
+      "sourceSha256": "9999cc74e7b3936af892ef2c2793d105bb92f6c47789aa23db6df92bf68b45e5",
+      "archiveSha256": "ba6115fb223960ed405a96e20778b3be5875cc6917ab0aa521da20024f991906"
+    },
+    {
+      "slug": "agency-engineering-mobile-app-builder",
+      "status": "pass",
+      "sourceSha256": "1a3e043f806b0b7c071d58b2ee3ab3c58c8342e2727c1ca9e6e5175f86986caf",
+      "archiveSha256": "7ccb4d3ffe5c22542d49f5e6169df2abf789ccf8b0de5d8fd3a22a2ecac7a028"
+    },
+    {
+      "slug": "agency-engineering-mobile-release-engineer",
+      "status": "pass",
+      "sourceSha256": "3fae6975de4c2038a7fb0c4a8e366b8f87e8f3bb89e0a64ce4d4bcfdead15617",
+      "archiveSha256": "275b7afc16d1e16ae8da73777248d646f78b23ee7ede3754e748a6b08579e49a"
+    },
+    {
+      "slug": "agency-engineering-multi-agent-systems-architect",
+      "status": "pass",
+      "sourceSha256": "d93dd20fef67bf85a537ba0f869fad1a17d0e589f20899d1bbe1f095a7bcb91b",
+      "archiveSha256": "a81860d997f25d121fd561b18f354b4e3ce08c84eea00c0ac001994b69152e6f"
+    },
+    {
+      "slug": "agency-engineering-network-engineer",
+      "status": "pass",
+      "sourceSha256": "1400d7393e47b05c629d2902b2114911d6e55f34a703c2b77da24bd5f2b31576",
+      "archiveSha256": "fba8b77ae6d4b27d7d7b167d8fcbd43c7797809f5129e3d78b64129602f7a935"
+    },
+    {
+      "slug": "agency-engineering-orgscript-engineer",
+      "status": "pass",
+      "sourceSha256": "f8426369743ff0086e32cb9facfc3935488d99a1c2de92961917f9b27d401427",
+      "archiveSha256": "55c23d08a3dd8baa06c27839cd6850e028aff6518d397bce189666e3098e0297"
+    },
+    {
+      "slug": "agency-engineering-payments-billing-engineer",
+      "status": "pass",
+      "sourceSha256": "ce47609b6805087e2f731ea62f69edffaf61e1968049042e2ca3d225d4392b40",
+      "archiveSha256": "7854a5799caf1afd04cfe77b7226cd5e5c7f2a8ef404d076f02f434342301377"
+    },
+    {
+      "slug": "agency-engineering-pdf-engine-architect",
+      "status": "pass",
+      "sourceSha256": "367dd859aeda52d2a3de6ffd33b8c38eac625e884a2f71574a73d38350f8f457",
+      "archiveSha256": "fc6b03e26923854149599a9fbac305ca2eccd748f4bdae16432837ffcfa4e67a"
+    },
+    {
+      "slug": "agency-engineering-platform-engineer",
+      "status": "pass",
+      "sourceSha256": "0736a0c476ff46e16e33b36ec143352107b82d69b3501bcdaefe22feee252652",
+      "archiveSha256": "574477963af766776cd6bca5b39a03aed4d4274cd08a050da1cc926d6780d7d0"
+    },
+    {
+      "slug": "agency-engineering-privacy-engineer",
+      "status": "pass",
+      "sourceSha256": "0d00d2f0d3008a55000eb01f13adac54f40daf471d240a7c073477efe92376a6",
+      "archiveSha256": "b05c2edca40a71a27a6c6be37e4012646972d1486fd5c0ff5252f9304c2f5352"
+    },
+    {
+      "slug": "agency-engineering-prompt-engineer",
+      "status": "pass",
+      "sourceSha256": "e94ccdc64a6a4fe064550dee7242778632696813d98dc1d6053f64d3794794d3",
+      "archiveSha256": "b5271d188223c96066ca11b055407675a63e521585d18e915fa9cfbf437c6189"
+    },
+    {
+      "slug": "agency-engineering-rag-pipeline-engineer",
+      "status": "pass",
+      "sourceSha256": "d9b75715fc6eb5712054658727a6f9082d4be2579766d2b42a6060595caa9a96",
+      "archiveSha256": "4e2c6fb2cc2d3f9db1cc3f8fc0642ba26624db74a0846eedbd871c1a1955b16e"
+    },
+    {
+      "slug": "agency-engineering-rapid-prototyper",
+      "status": "pass",
+      "sourceSha256": "247ea109c45d9ed372b85b5a436c52a801fee234740e3caa114d72d0e1f05f80",
+      "archiveSha256": "1ef429bbf7bc28790c6d808845cc755934de5685d3f2e700f7bbbb1d2b5f5e07"
+    },
+    {
+      "slug": "agency-engineering-realtime-collaboration-engineer",
+      "status": "pass",
+      "sourceSha256": "79b1fa3544a7f768ca3702b8b41f2969c9ea14ddb73c7fe349fc652219f91a75",
+      "archiveSha256": "cfc3a7bfa58d4d0edb5984ddb1ed0dae94cd2507b982089311736415b260c28f"
+    },
+    {
+      "slug": "agency-engineering-rust-refactoring-specialist",
+      "status": "pass",
+      "sourceSha256": "06ca53dbd12694560bf01feb94cbbd8c428e4abe6ac92c8a72eeb277ce179a78",
+      "archiveSha256": "3b23676bee1c81a98774b863a01b22260ab720f04578e75d14b80a9709577108"
+    },
+    {
+      "slug": "agency-engineering-search-relevance-engineer",
+      "status": "pass",
+      "sourceSha256": "5562f37cbb561dce6dac47b1dd4e75cb7bde6c0c48045198db346ba7d6d790af",
+      "archiveSha256": "64d3882f01ede7d26668407b9dbbe0d5db3682f829d144a168524870fa31d50e"
+    },
+    {
+      "slug": "agency-engineering-section-508-specialist",
+      "status": "pass",
+      "sourceSha256": "d4fb7139c69e270fd626cfc1410b7412bd864d010903b459f9eb90c8359809f9",
+      "archiveSha256": "8320735bc6ed26012738d3bead44b3893b47e2299ddead8c38febfb45188779a"
+    },
+    {
+      "slug": "agency-engineering-senior-developer",
+      "status": "pass",
+      "sourceSha256": "63b8da6c12b95f54bbdbcd0666abeb9519a98b35395233e1b1d8e5c102c82599",
+      "archiveSha256": "46275e24ced8a10059c6eaeeb2ae52ec79af111d8d4cc428e8373ffb24ac8074"
+    },
+    {
+      "slug": "agency-engineering-servicenow-developer-mentor",
+      "status": "pass",
+      "sourceSha256": "0a35abb24b63834dc910f7813e7a657cfb06c93f6760f0204da75aabd6b722bd",
+      "archiveSha256": "bfaf3b75aba4f931696c80c9b1096bd6f33fb9b359ba5086049b31356c637826"
+    },
+    {
+      "slug": "agency-engineering-software-architect",
+      "status": "pass",
+      "sourceSha256": "b85121691776147bacde26673e68fbbacd6a7f0816d1ca8e203c264d25ce1d30",
+      "archiveSha256": "7684b2ad4875c5da5fa83bc757b0380616fa3104ffda9ef613e5b0b9e969b458"
+    },
+    {
+      "slug": "agency-engineering-solidity-smart-contract-engineer",
+      "status": "pass",
+      "sourceSha256": "9e6f96fb29cc71faf2638bce3a5aa06ff15b4c674ca4ec039e5e4515a7844839",
+      "archiveSha256": "0cac069705124a9b0ea1477e2c79939ca6e1c8be2e8c00647e9df510179aeabb"
+    },
+    {
+      "slug": "agency-engineering-sre",
+      "status": "pass",
+      "sourceSha256": "85b305e495506913f50c7cb28de42444a85fbc4898cd3ad4e1dc9b358b4ab5e8",
+      "archiveSha256": "765574e4d0810aa21cb0d11d9aacb0e6a590c299e1747b374ed7ff5faf85a83e"
+    },
+    {
+      "slug": "agency-engineering-technical-writer",
+      "status": "pass",
+      "sourceSha256": "bf5c809977e10904b988ab8b218853ce8dfa38b2cbd89a7d2cfadba44ac25761",
+      "archiveSha256": "bc8ab6d97c2cd50a86d9038bbf3cd7276f421d88af1592efc03e2f57345dbc53"
+    },
+    {
+      "slug": "agency-engineering-universal-document-compiler",
+      "status": "pass",
+      "sourceSha256": "70c47b2a1edfa10dd3b3206d22516565a4d3e134f6ca92e086770e2d088ea6f0",
+      "archiveSha256": "cb8472c322a5aacdf7327a2efe97834e21cca4aaff208d9c06eb00ae62a168b3"
+    },
+    {
+      "slug": "agency-engineering-uswds-developer",
+      "status": "pass",
+      "sourceSha256": "d3c46e2340d50a97cec536edd985abd2fe6b5f012c3c02e5e9187cd061b27ca7",
+      "archiveSha256": "a8497e392ed5d93d571c8c71268c7e0e7333c08ee889052b32020b564f9677b8"
+    },
+    {
+      "slug": "agency-engineering-video-streaming-engineer",
+      "status": "pass",
+      "sourceSha256": "7abdbe217f43c41c7d0563d28683d44855a0e8c8871e7874ecd3deb31a543df0",
+      "archiveSha256": "6c5efb5b2fd76c0259972bee9ae467033110bdfcccbf51c5d30486cc49433f62"
+    },
+    {
+      "slug": "agency-engineering-voice-ai-integration-engineer",
+      "status": "pass",
+      "sourceSha256": "c6f3cc0829fc2b6c989f2aed10929e59365ec3bae89089205e27acbc57c17c7c",
+      "archiveSha256": "e8e6feb0deef4c744521e33c070740cd7fa9cadc67fd554c6953cd65bbcaf14c"
+    },
+    {
+      "slug": "agency-engineering-webassembly-engineer",
+      "status": "pass",
+      "sourceSha256": "746f387160d62d9d13a78c75c20a7f14607fe45cec1fd20f48848e89c5429ed4",
+      "archiveSha256": "062094736cae31cb3ef5e51d3da27315bad7c64b1828c2f450944829ae5213ee"
+    },
+    {
+      "slug": "agency-engineering-wechat-mini-program-developer",
+      "status": "pass",
+      "sourceSha256": "322e068fb168e5ce95b1f66c132de4c1e5c794a114b342d01d997d785e865f43",
+      "archiveSha256": "455e2319456f2bdb03dff2d40093378851908ba2c21f2bfca4263cf9e73e9101"
+    },
+    {
+      "slug": "agency-engineering-wordpress-performance",
+      "status": "pass",
+      "sourceSha256": "58ed429ace903aac3a2c9e190ecae5b61966b7330e9e51ea66aa03eb4112854f",
+      "archiveSha256": "29f9eb24903bb50bda5dfd9fbdccf8bb2baa288dcabcc778b5ada9086eac15fe"
+    },
+    {
+      "slug": "agency-engineering-wordpress-shopping-cart",
+      "status": "pass",
+      "sourceSha256": "a2ef45cebe1cf03175b16ef48a2a01acdd2b7e8eda289114f568ebe0f1ae4112",
+      "archiveSha256": "dd774ca480ebb5fcbdbb497f0852870b6cc551a44355fda2d9f29c46829a8dee"
+    },
+    {
+      "slug": "agency-esg-sustainability-officer",
+      "status": "pass",
+      "sourceSha256": "a8feee4c7b9687ee89ec5ea0879ff98b4cc4451431052369bf00f90d9382b7dd",
+      "archiveSha256": "f7626f0468e53bfbc63a7536fadfcf02825f63eab2890d683abf302024a70b37"
+    },
+    {
+      "slug": "agency-finance-bookkeeper-controller",
+      "status": "pass",
+      "sourceSha256": "5510a24274d8f7897ca3f4df2c3318262138a2c82827b37dd2489dcfca8de75a",
+      "archiveSha256": "70668d15cc1e623d1a097b9d8cd7d7a68d96d2049d05edd5897c4a482d06c554"
+    },
+    {
+      "slug": "agency-finance-financial-analyst",
+      "status": "pass",
+      "sourceSha256": "3547907cd52e6108a4c666fd576d5e42715ac337586a3958a722deee4c1f77bb",
+      "archiveSha256": "019bca7f1bc43ab8a7afa3adc61fee1d3cc5b153564d34bf9559e6a796279b1d"
+    },
+    {
+      "slug": "agency-finance-fpa-analyst",
+      "status": "pass",
+      "sourceSha256": "5fa9137c80e0b91fbe62815e7981d7b6a2ca5bafe43013c56d1b847a3c963141",
+      "archiveSha256": "3f617ccef26ace421d016ab5ad7f4e4df82b82904d8ce8a4a58ff3dab066a4a6"
+    },
+    {
+      "slug": "agency-finance-investment-researcher",
+      "status": "pass",
+      "sourceSha256": "4851318dcd82fdfd68403656450761b439a01c6071b8755e49dbd215149bc2c1",
+      "archiveSha256": "7f2a1262980c59905d557e7d0083bab09831b5501511149cf52d6e91b3c29f00"
+    },
+    {
+      "slug": "agency-finance-tax-strategist",
+      "status": "pass",
+      "sourceSha256": "37ea1a246e1290f473ef59abe1bba9ecc4f346c9867522fefcc11d37cd0265ab",
+      "archiveSha256": "0c9f47a8853426f02484a3a81826fba5dd063d99eab2a75d1e7d74356d2f8cac"
+    },
+    {
+      "slug": "agency-game-audio-engineer",
+      "status": "pass",
+      "sourceSha256": "d7a2eebd8c20021e543222bc962cb5a111924c5438e9f771a6db42d74cd19232",
+      "archiveSha256": "19eeaa8c2c3e6db8adf5fdac2bc8a5b378e3de5d685bfcfae27e9869d0294731"
+    },
+    {
+      "slug": "agency-game-designer",
+      "status": "pass",
+      "sourceSha256": "203c4d7f0358a628ea21e3b9c16980f28003bd035b5cfd41a2daec04f6b84e5a",
+      "archiveSha256": "4a4fdbddddcdbc0b006bb82a552b6e93e6707a6b9cfe3ce814e3bf1df289d5ae"
+    },
+    {
+      "slug": "agency-gis-3d-scene-developer",
+      "status": "pass",
+      "sourceSha256": "56f753732d35e54f0527a2cbdc60c73c9215463d4704cc66242e3bbaa1c744e7",
+      "archiveSha256": "cf3c42954cfcb5fc8b2a4cdcdcfc427d73628ac598a9437f6b940d7ba3118dd5"
+    },
+    {
+      "slug": "agency-gis-analyst",
+      "status": "pass",
+      "sourceSha256": "db86d14315eb0ee9fc4cc4699c3844b40f2004a988370f32fe55dadfac2c40a7",
+      "archiveSha256": "f9f3df1a63f7947be03d40ec55a04800af81e9498e6edbc642e782d53fae487f"
+    },
+    {
+      "slug": "agency-gis-bim-specialist",
+      "status": "pass",
+      "sourceSha256": "724609ec55d1b83c88672ada351763ac6c219adca2d36faea0790bdda953e567",
+      "archiveSha256": "d223670571af1187d1cc11c609ddd9686d3ad1f2974dcdb81cfa60bb7bf581af"
+    },
+    {
+      "slug": "agency-gis-cartography-designer",
+      "status": "pass",
+      "sourceSha256": "2223d403dfdd863d42c0aa29c912cba0c91ffdc9ad8192630f7b08e4b4c7e804",
+      "archiveSha256": "ae2966cd9c5b662d6b1e278a085ea13395bb23c3a217dba3e7094c44443851eb"
+    },
+    {
+      "slug": "agency-gis-drone-reality-mapping",
+      "status": "pass",
+      "sourceSha256": "2e670d99f491e1b4b76d4a5a91e33eb7a5a9ddfd9e67dda1d3c24cd57faea1f2",
+      "archiveSha256": "360c66c9986f2f3eda96b9c2dc9c8ee278e4f85bae57bc00732f03c07ca37bc1"
+    },
+    {
+      "slug": "agency-gis-geoai-ml-engineer",
+      "status": "pass",
+      "sourceSha256": "6323600aecb9a1867a90158b10fa066280d1ffc77411c2b453248d125a505448",
+      "archiveSha256": "90637c5223d8344d174c37ed2b2cd84b487565d5b0063f7f63b698e7d8364c91"
+    },
+    {
+      "slug": "agency-gis-geoprocessing-specialist",
+      "status": "pass",
+      "sourceSha256": "28efb48c3c4312ac7a662c8f2da69cc013d74e5d59880a04a71a40783e0ba424",
+      "archiveSha256": "7333a4f46c84d338f548665270e2fcde50674eb5a6d3fa22fa84440f47661cca"
+    },
+    {
+      "slug": "agency-gis-qa-engineer",
+      "status": "pass",
+      "sourceSha256": "f7247c7df478d963db720562af361394454c20b6af3fc78a02791ec6624bfc38",
+      "archiveSha256": "ec1ab0651c1c7d13c49c4a4409e4376ee5e4254b6e543127fae5a924e057f17d"
+    },
+    {
+      "slug": "agency-gis-solution-engineer",
+      "status": "pass",
+      "sourceSha256": "a871691ed7e305047281238eb225f64df4b03274fe82278879788de3c839f054",
+      "archiveSha256": "9dd61851885cf872e4a9fd755e607d66da5c6b30afc2f5d9ecf8b8011a6ac397"
+    },
+    {
+      "slug": "agency-gis-spatial-data-engineer",
+      "status": "pass",
+      "sourceSha256": "b8f0e43cee6538aa7880168335ceac8e1a4700965b49f3b6c227b0f13d399e5f",
+      "archiveSha256": "cc7c86cbfbf194d9e83e10e2d0d4ebb9b39228000e7be59f6989e106d0ae9317"
+    },
+    {
+      "slug": "agency-gis-spatial-data-scientist",
+      "status": "pass",
+      "sourceSha256": "03254a9fa2a9522800eddf743b8305bc2d4b2093e233e6c9b593da6f0746c657",
+      "archiveSha256": "8bd0b577ee3f6402557c27e9116cc03c43760613f4c7ca7b9afdc7c0fa2188c4"
+    },
+    {
+      "slug": "agency-gis-technical-consultant",
+      "status": "pass",
+      "sourceSha256": "f0228896fc57ea0b8fcf3c3fab188a6d4063ba6bf704aa93b0e46e27ba096736",
+      "archiveSha256": "39307b972c0dd5d18f0572f96c0b57ae5784a942c1a47fdffeceb83b1d59c43b"
+    },
+    {
+      "slug": "agency-gis-web-gis-developer",
+      "status": "pass",
+      "sourceSha256": "dbf3ceea4bb8fdc2f2fc61bf96806adeb89f725c8d67a01cd103d256e56909a7",
+      "archiveSha256": "6ac6a2d4c650128003829e7fd920dc91fd735573a6e5cfab9e6ae9f37e5b0b98"
+    },
+    {
+      "slug": "agency-godot-gameplay-scripter",
+      "status": "pass",
+      "sourceSha256": "20cc00332db9cbf19f9a86dd87bd4b514d348ab0c4c0536b151c936b38be4392",
+      "archiveSha256": "afdd4f431c0972b40fce9485d06f51d1e87a28edef9537a968bf6b88c54064ac"
+    },
+    {
+      "slug": "agency-godot-multiplayer-engineer",
+      "status": "pass",
+      "sourceSha256": "7e86e269a98652c4e41c2f5d26b594c99e176d724b11f505550ab51cc21dfbb8",
+      "archiveSha256": "c0be44191b78a92eb0b934a8b6bcb8b16e52668863f23926ad8a02b7904bc7e1"
+    },
+    {
+      "slug": "agency-godot-shader-developer",
+      "status": "pass",
+      "sourceSha256": "947e775e411cd11ea0ed92419737801e602f6aa450037313433ab11aa7681bb4",
+      "archiveSha256": "e881d98a0861bfc1caec6e1bd465756a2ec81abf1c20dd2846c0c726a77ebc5d"
+    },
+    {
+      "slug": "agency-government-digital-presales-consultant",
+      "status": "pass",
+      "sourceSha256": "0676fd83a462828901c64df516034b0912468c85abb751d3e484038d3288b848",
+      "archiveSha256": "804da1faaefed85d94898e902344d32b267fccb4fa185fbe2356861fc2e07273"
+    },
+    {
+      "slug": "agency-grant-writer",
+      "status": "pass",
+      "sourceSha256": "6be5a68dc7628c8292253b60a2bfbc7f76053e9c32aae4d40ff341594534e67b",
+      "archiveSha256": "5a77826fe34103fa7d7b8cc46aa7fbe2493f56e4c6b9e665aafb5dc2186171bb"
+    },
+    {
+      "slug": "agency-healthcare-aging-parent-care-companion",
+      "status": "pass",
+      "sourceSha256": "fca0725bc30a447d6666df5060333eac2a4f81083cc02670118045678c79a035",
+      "archiveSha256": "b71e355b84e096f45e3b7ed65840f7d89d68c3329abc484ac2229e90d5190fc6"
+    },
+    {
+      "slug": "agency-healthcare-clinical-evidence-agent",
+      "status": "pass",
+      "sourceSha256": "5fd6223b0fb17c7625b2ca8ba9f1f6fb649560c074a39b0d72e22e984487a688",
+      "archiveSha256": "f20f51fbf74159cfff6a22348a6ca60b57070a013ecc98a775143189ac440342"
+    },
+    {
+      "slug": "agency-healthcare-customer-service",
+      "status": "pass",
+      "sourceSha256": "b2e4117a8b449a94409235f74315b52909716985dd94b82b87413a54ca471d73",
+      "archiveSha256": "c1e01e96d17ce69dc6ecac4ff03ff98b3ef5e4bdd3c649908edfc535bf5b61ae"
+    },
+    {
+      "slug": "agency-healthcare-innovation-strategist",
+      "status": "pass",
+      "sourceSha256": "e1bd8f9f8c5ac7db333632d482e017c6086519eee310da6879db5c121129fbbd",
+      "archiveSha256": "a8ec285f568f119ff27b8faee80cff64bde54d54513fc93fdc68388ee1b0764c"
+    },
+    {
+      "slug": "agency-healthcare-marketing-compliance",
+      "status": "pass",
+      "sourceSha256": "942cc3b43da5f0e6103b7e5087941df4247c602228b2c4b0c6487140e89b176e",
+      "archiveSha256": "52af35af0ad3bbe751bf50f711f46dd056231c728f2b002f9a326e15bc0976a6"
+    },
+    {
+      "slug": "agency-healthcare-sovereign-health-systems-agent",
+      "status": "pass",
+      "sourceSha256": "8e846a8643def597e351719853da63b4b6d9f0bf41978ac25e896750427989fa",
+      "archiveSha256": "c245f506fe0953b1d30b6a98b0481c34dc82c8c869c8487437dcc75c5d2513d8"
+    },
+    {
+      "slug": "agency-hospitality-guest-services",
+      "status": "pass",
+      "sourceSha256": "1c5819c560d3902eca44a4fb372bae9e882e5b9e8455e51aa3e8d9662a5d184a",
+      "archiveSha256": "df07775cc807b87e03d17ffbb07508cd687b1e3ae6102304f5c9c5eb31afc2d9"
+    },
+    {
+      "slug": "agency-hr-onboarding",
+      "status": "pass",
+      "sourceSha256": "28a52c26f27ab24d7fe11f5e48cfe712f6d27da142ec97911683b4a3ad92332c",
+      "archiveSha256": "117b642f84fec762a629280f702678450d1d4fbd64bb6ecff032bb99f9042f81"
+    },
+    {
+      "slug": "agency-identity-graph-operator",
+      "status": "pass",
+      "sourceSha256": "52226261212716d28d0c50771f0293bb42f3ccbf25fb15323c3e45fa36ac0594",
+      "archiveSha256": "bdc21b292994af6c560161170fcf4b2d17c96d7578af27164b254e352ca31c9e"
+    },
+    {
+      "slug": "agency-language-translator",
+      "status": "pass",
+      "sourceSha256": "afd1e4b5fb1bb8fa9b8b5770774e0d7b003722681f664147ce7b9dddbcd52a4c",
+      "archiveSha256": "4744bd4b2f62f5971ba8380cb738769626fbc7a90b3fbc87e82b0e37882550bd"
+    },
+    {
+      "slug": "agency-legal-billing-time-tracking",
+      "status": "pass",
+      "sourceSha256": "27f84055643150459f4de3102ba05c17696e5967a0efc64426fb600ab3c5d12c",
+      "archiveSha256": "5b36298921117d26d77d3def82ba6c1431f32a1dd8810dcbd656d080b8ffccfb"
+    },
+    {
+      "slug": "agency-legal-client-intake",
+      "status": "pass",
+      "sourceSha256": "b0b1cce8a30f08ada6d630b010b1af99f765f5eca667436af6592545667f4c79",
+      "archiveSha256": "073d8bb15429f17921467e4bc59843b93974c1fa5ad2d9a0acc43de07a9fc0f0"
+    },
+    {
+      "slug": "agency-legal-document-review",
+      "status": "pass",
+      "sourceSha256": "02bf51dbc9d8ffc93a8b053a09ec61ee2a3a9905e395fbd24389a532d20d1dba",
+      "archiveSha256": "4bc8937cfc6e55b7f95ba5cbc10c9e9c39bc8296f3a2e3cc48af09af4d6d70aa"
+    },
+    {
+      "slug": "agency-level-designer",
+      "status": "pass",
+      "sourceSha256": "79c1d41b7dfc477f6f364ba8b6dec02dc0c081235fe8f8b61c8b062b5dc3b344",
+      "archiveSha256": "a181e3fbf946239283f4d1f532a4d16546c36402bc08747d7b2d441a0c3134fa"
+    },
+    {
+      "slug": "agency-loan-officer-assistant",
+      "status": "pass",
+      "sourceSha256": "3d6bfdb598187fb19fba6ab4b50ff357870cda04ea846aa975649d04788df84b",
+      "archiveSha256": "cf8b8ef9515dd95186aa11f1189c050025275dd0ec2cc71f2c7c89be48a92498"
+    },
+    {
+      "slug": "agency-lsp-index-engineer",
+      "status": "pass",
+      "sourceSha256": "305f647acd4f666b8ad44a253ae9dba74891a50725bd13a55e16c652c5200613",
+      "archiveSha256": "e1d2ba23beff39bbab4d2862fdd16313b104e3c66c8588457c12d28eb953400d"
+    },
+    {
+      "slug": "agency-ma-integration-manager",
+      "status": "pass",
+      "sourceSha256": "007dcfaee61d45e852a95c37a4529b1d162a178551f1a7f963ee558f1ace6fb5",
+      "archiveSha256": "b43642226aee656c6161201af50bef87ed0bb0d92818a5131121e1d50ca3ba61"
+    },
+    {
+      "slug": "agency-macos-spatial-metal-engineer",
+      "status": "pass",
+      "sourceSha256": "b0bdd78da0cdbd1ee0055401ddaba4d7cb750e3107d219b6f12794c1a023e69f",
+      "archiveSha256": "13cfefbf75cfebfea1c6b1a10c42c494496083f9a874cf4679a168e3ae00b9f8"
+    },
+    {
+      "slug": "agency-marketing-aeo-foundations",
+      "status": "pass",
+      "sourceSha256": "b7ef7e1188c924833974bab5cc57f166a7eb6b681d63ccd22eb05c91c25a3c8b",
+      "archiveSha256": "5c29a046ce27af695f2ae1869f807849323d0a6e43d3872796f6db8be7364b94"
+    },
+    {
+      "slug": "agency-marketing-agentic-search-optimizer",
+      "status": "pass",
+      "sourceSha256": "de143d3db98f6532dcd9d21ae363d1c2fb508dc806c1f7325bba59e8fbd24184",
+      "archiveSha256": "fb36b710c9b846b46fbf4f4e5ed4852b0fe394205fece96110679e529517b86a"
+    },
+    {
+      "slug": "agency-marketing-ai-citation-strategist",
+      "status": "pass",
+      "sourceSha256": "1d23c94aced61beb0e7a3151ad4c14ccb8205a95e48d4bc6c0fda6739c2e356d",
+      "archiveSha256": "73831379e572b36cc5ae86c4b7b187c9d88c4b59ba5c53f0036528580243744c"
+    },
+    {
+      "slug": "agency-marketing-app-store-optimizer",
+      "status": "pass",
+      "sourceSha256": "1987be72f8fd43ca694f9145cb0dbe37eabc5b1f04439425d7b59185db9263c9",
+      "archiveSha256": "ff9b70dc589c603aa1dc927fe0a738ee249d4a32c03d5392213db8fc935c9952"
+    },
+    {
+      "slug": "agency-marketing-baidu-seo-specialist",
+      "status": "pass",
+      "sourceSha256": "895a5e8440066ad0b8fa6fe79a91c7750d246a233b01bf7932584b74e9c5becb",
+      "archiveSha256": "439e4259e86909ff5d59cf835debf9bdc9606387ed535458c3a57843d72e8c1e"
+    },
+    {
+      "slug": "agency-marketing-bilibili-content-strategist",
+      "status": "pass",
+      "sourceSha256": "4268a7b51025967fbb4a80c0aeb5e4a80abaad9344f5dec164a8d1fb6ea62d06",
+      "archiveSha256": "66e14811a3f8b013bdf3167feef4f9afd89d5b021047938452eea0feec4e5509"
+    },
+    {
+      "slug": "agency-marketing-book-co-author",
+      "status": "pass",
+      "sourceSha256": "09ea2fb4770180b072c92100be84b808367c40ef8a3f2119cfd059206aa4c717",
+      "archiveSha256": "58cb196611392afaabfc7be85fa58ddb81c1b18cd93dbb6c682b784f5f5e04e0"
+    },
+    {
+      "slug": "agency-marketing-carousel-growth-engine",
+      "status": "pass",
+      "sourceSha256": "42a36a3ca0a11b6adc57eb3277dda7628a4db80169b5ea69c5262b7e85d7c06f",
+      "archiveSha256": "b23c7bdd2d934fbe0544a801d67f44dee8fc239dc4b02d2a78a64cc666e5a4d8"
+    },
+    {
+      "slug": "agency-marketing-china-ecommerce-operator",
+      "status": "pass",
+      "sourceSha256": "aa6743c68cce9dd00fd31751e9e3c2bea3987857cad332c68c7f68e683e98ba7",
+      "archiveSha256": "ae999498f471614d9a08b4ca51af077e72c5c5995603ae8a43f23378a6a41220"
+    },
+    {
+      "slug": "agency-marketing-china-market-localization-strategist",
+      "status": "pass",
+      "sourceSha256": "7f6351003b0d6525c7f44870078252d4616287953e33dcace3c8b7da2e9e4325",
+      "archiveSha256": "a83a76d3a0c6d95d158aaf6a1312477db4ad81c1958a237f8006994a766781f7"
+    },
+    {
+      "slug": "agency-marketing-content-creator",
+      "status": "pass",
+      "sourceSha256": "26ddce44f057068a3935c13d53becd3c57385fb47fcdcfdd891b80269070b3d5",
+      "archiveSha256": "70296132f45d6388c5651656aefc2e499cd452821ea4d2bb04c8e8836b9e5039"
+    },
+    {
+      "slug": "agency-marketing-cross-border-ecommerce",
+      "status": "pass",
+      "sourceSha256": "073dba84e8159c763c073fcf16f14d57685611c50555a7cde346df85a25c6293",
+      "archiveSha256": "df4f6b31554e341d8421116ad2727a5cb3ead2da05c02a8c82bac07c98083101"
+    },
+    {
+      "slug": "agency-marketing-developer-community-builder",
+      "status": "pass",
+      "sourceSha256": "f1d87ae21d21ee90f73cd94754b2a99e4af7fec64b23290fea59fb2b4637db11",
+      "archiveSha256": "405ea1d42e3be50daf54b48a8c92cc8484ebde147a6ebde05413fa3765cccfb5"
+    },
+    {
+      "slug": "agency-marketing-douyin-strategist",
+      "status": "pass",
+      "sourceSha256": "87e3b91287fc97ad0dedb2f407a49d551b52b8513c8c61d06c1a93d837a7ae46",
+      "archiveSha256": "95a75862fadddf0ee6ea0b2f32d1951eaa5cd460cebdd6e4e6ed8f41c7fb5455"
+    },
+    {
+      "slug": "agency-marketing-email-strategist",
+      "status": "pass",
+      "sourceSha256": "605c98066a4a1b5538d76476a11316247316ecb8da88beda68a21f2c8918f19b",
+      "archiveSha256": "1f343f91f68dc17c7063ac3f07960966b0d786ac543d5174bfae79ef7a73814b"
+    },
+    {
+      "slug": "agency-marketing-global-podcast-strategist",
+      "status": "pass",
+      "sourceSha256": "98416e338db666c5cc1d6bfd37c35daffa00532010623fdb4a92ed7dce76a7aa",
+      "archiveSha256": "516f26eebe21f8a6d928b09e832f407c67aadb5fc92ee5fbc4b793566e4a7ec2"
+    },
+    {
+      "slug": "agency-marketing-growth-hacker",
+      "status": "pass",
+      "sourceSha256": "6938b4fccaf4447e8c4b8fd071ce383a484cd3fb72583d87ac9835fa9741a7c7",
+      "archiveSha256": "15a62660503207aa9cd7a6e616848eece4f762c9b976332584772fe59475f958"
+    },
+    {
+      "slug": "agency-marketing-instagram-curator",
+      "status": "pass",
+      "sourceSha256": "bab95910975a95409eca10e28c44cf762cd46f9d8b7d551bcb347ef0f39e68fd",
+      "archiveSha256": "7aeec174180fe99fd3a3eaf7822acd351646265f68ab3878cc8d83416a75a094"
+    },
+    {
+      "slug": "agency-marketing-kuaishou-strategist",
+      "status": "pass",
+      "sourceSha256": "d28742e505fa7bf6b39a88ccb6c2052ee5b4f569d17cebb81401fa8810a5ad49",
+      "archiveSha256": "6820d33454248879bc4163779001f87530944b7ba862df7382525cd2ac6eb9ec"
+    },
+    {
+      "slug": "agency-marketing-linkedin-content-creator",
+      "status": "pass",
+      "sourceSha256": "344896bff33acf0b5107bbba3c84ee1fb310f3652b44c7e53553c934c735ed4f",
+      "archiveSha256": "f19a7205dafc4a1829334fc57408cea3f2c7345257ddc23ae5c28b9aa1c39d73"
+    },
+    {
+      "slug": "agency-marketing-livestream-commerce-coach",
+      "status": "pass",
+      "sourceSha256": "2d53e67cd70d825aeeddc9fd8b3b4a496887893b64df85c19903a2e7dbcb101f",
+      "archiveSha256": "bfb2d9b31e054a53ba92307cf4bbcf0ba5504a4d1a2039c229eb554d57c990eb"
+    },
+    {
+      "slug": "agency-marketing-multi-platform-publisher",
+      "status": "pass",
+      "sourceSha256": "adfc6c481c0c1e1c03df21a17ccb5fb4d4c56a84193249abb27cb3d44e4f1f5e",
+      "archiveSha256": "1a9ddadfb226eb95f62fdbed2f85f534b8127e693346fd8faf3bfb335a842737"
+    },
+    {
+      "slug": "agency-marketing-podcast-strategist",
+      "status": "pass",
+      "sourceSha256": "37fb126529afb4aa6f4409ca02307330d26b01f695dfbaade017d569169d936b",
+      "archiveSha256": "852ae826f0a7d4f296e74a8f6a338800c46f327da9d8d05d6f3f4b9e8bb5d359"
+    },
+    {
+      "slug": "agency-marketing-pr-communications-manager",
+      "status": "pass",
+      "sourceSha256": "e255a9ebf00a0db0dc12e72fe2a647195ceacf3c0e63f38788e077966d69b800",
+      "archiveSha256": "c7f26739ab15f50b8e1d982dadda9bbac3c678d799cfa5ea41a884cb3e909ec0"
+    },
+    {
+      "slug": "agency-marketing-private-domain-operator",
+      "status": "pass",
+      "sourceSha256": "1170edb4c9534149b77cf9c3279c347b0136a578e44e70320f16f784e7fe5f3c",
+      "archiveSha256": "b1be86ffef17ab6c259d7a94e960d5179540aa869952a7ec20aee504bbe822de"
+    },
+    {
+      "slug": "agency-marketing-reddit-community-builder",
+      "status": "pass",
+      "sourceSha256": "03bb723420800754bcbf23994cba707c45123f7eefe3e1964188cf92ecc2b7d7",
+      "archiveSha256": "6d3d6b18ad6652eb6f40d7d71288816fd425ea93a9bb740ee4fc99c595738b6f"
+    },
+    {
+      "slug": "agency-marketing-seo-specialist",
+      "status": "pass",
+      "sourceSha256": "cfa35eb3626230e1bc96ab3d434b42005b092fd4de8f517efe4a4b3f8fca60d0",
+      "archiveSha256": "85919d7cac9740858f529cd23565de8d1526116263af235166d453aa70b4ed18"
+    },
+    {
+      "slug": "agency-marketing-short-video-editing-coach",
+      "status": "pass",
+      "sourceSha256": "4634520ab5e84b26bb6658f4f8c0f737ed7dd0b5c631b9211482a4cf4037ccbf",
+      "archiveSha256": "c096249ef3fa2c39e33dfca42a1acfa7cf6ae5a137869bb5c7874176555033b4"
+    },
+    {
+      "slug": "agency-marketing-social-media-strategist",
+      "status": "pass",
+      "sourceSha256": "7c698a9280872666b2726b7ca305c6d4890fcb95a098c7c316beb9bf5fdb4274",
+      "archiveSha256": "938a422b4b1244f96a6a2d4cc8710404d75aeace82790a6518da3b9dc7785ad3"
+    },
+    {
+      "slug": "agency-marketing-tiktok-strategist",
+      "status": "pass",
+      "sourceSha256": "980ca09138f63ec2d934e111af4fa59d76a483bb23220a5f862aa4e9f0c9124a",
+      "archiveSha256": "7551d2e234a27c09000bbfd69c0d637e68ed1dc086732f3efbf5c6bb66e9eaaf"
+    },
+    {
+      "slug": "agency-marketing-twitter-engager",
+      "status": "pass",
+      "sourceSha256": "df58c7df04fb808d282d7a551c84e039bebdf4a17318a09b84fa285a118f54ab",
+      "archiveSha256": "c831b7bfb68dc202315e9ffdfeb03b7b5432a4fec30dc384eb034e7b451e0cd8"
+    },
+    {
+      "slug": "agency-marketing-video-optimization-specialist",
+      "status": "pass",
+      "sourceSha256": "9cf82969be8898c96192617becf5e38e8de6b79650c362d840c53d2c10f2e8b9",
+      "archiveSha256": "1ebb3b437a725151175efb21596275d38fe3ec8f9e5a727f21d5f673b25c8ae8"
+    },
+    {
+      "slug": "agency-marketing-wechat-official-account",
+      "status": "pass",
+      "sourceSha256": "b74a42aff9b960cb2a221e362d2006865924ffece9e3514df81f1116322d2dce",
+      "archiveSha256": "5c58d167df4c7646e29474ba0132e1084886b703965864d602b0ff49602bff16"
+    },
+    {
+      "slug": "agency-marketing-weibo-strategist",
+      "status": "pass",
+      "sourceSha256": "7a79f1ec3894ab2e32cb0b0b729b77fda176defaffdb59f4feae29e56a767917",
+      "archiveSha256": "3de2e8506d08d24d4ce0d6c4a3a91b51103f9f28bed73753338367aab0d1edca"
+    },
+    {
+      "slug": "agency-marketing-x-twitter-intelligence-analyst",
+      "status": "pass",
+      "sourceSha256": "e3dd504765e720f0dce0c5b68254ab65c440798edccfe6af6aafd0d3925d6dcb",
+      "archiveSha256": "ea6bf8972be33ce0807c1dfb383b18e59faf946e6cf4205272c08e8b887d7a73"
+    },
+    {
+      "slug": "agency-marketing-xiaohongshu-specialist",
+      "status": "pass",
+      "sourceSha256": "c0afe07b77d7795ff6c5ea928360f0e545d51a6df231d42d6282168ace027154",
+      "archiveSha256": "fc4e4a1369a15f09592089b97905c64bd5667a967c6b73ab8d1c0a793750e6d1"
+    },
+    {
+      "slug": "agency-marketing-zhihu-strategist",
+      "status": "pass",
+      "sourceSha256": "35f6fd759a67860f92d1ae5245bdf45f5eb524277453a28011899aeb450f5c4c",
+      "archiveSha256": "9a6f75d78210037b1585801eee31d8f5d6859ad2942971132970a1461dc261d9"
+    },
+    {
+      "slug": "agency-medical-billing-coding-specialist",
+      "status": "pass",
+      "sourceSha256": "e9f597ef3a214d886a2b861347183c3674b6e24278c9308ed998a02972e7007c",
+      "archiveSha256": "bdfa8a371f3db7bd842cc9eafeb91c05a4c41c7c6d1beb30f4e0b91a6dac8d15"
+    },
+    {
+      "slug": "agency-narrative-designer",
+      "status": "pass",
+      "sourceSha256": "7a5489c7b0502aa167030018137e3f349d2c32505c0ad7b9ec1de066a9a93f0d",
+      "archiveSha256": "b282a7ff60c22d35de8ddbcb6b980cf4ee6155927fe6181830b5891d5eef05ce"
+    },
+    {
+      "slug": "agency-operations-manager",
+      "status": "pass",
+      "sourceSha256": "3c133a31ae1542922444d77d7c8f9964127704ba94638dde12e37a9ad0fd35bd",
+      "archiveSha256": "a62ce023e09c8f289843dd519895a9a892096a249845aed2645be63962773e6f"
+    },
+    {
+      "slug": "agency-organizational-psychologist",
+      "status": "pass",
+      "sourceSha256": "b7e523e1557ef9e98d5a0b515809996c6bbc0de6a49b1dc355d803e3bae09be2",
+      "archiveSha256": "a428efeb891a71d023ead2d410d3bcc50f2ca2193210e316c54ee0fa846de9dc"
+    },
+    {
+      "slug": "agency-paid-media-auditor",
+      "status": "pass",
+      "sourceSha256": "ce0346ba6a1b1652e350733cd3c124ab200e869c116fd85bcd0225d9764b0c56",
+      "archiveSha256": "ded6a77365da12e48c428e901897159d15334ed12b6b0aa5000043b3ba6a185c"
+    },
+    {
+      "slug": "agency-paid-media-creative-strategist",
+      "status": "pass",
+      "sourceSha256": "a24a303228178eb23d514fee63831cf7e1a3d7e5276c54ce5b58dce566700c41",
+      "archiveSha256": "f0aaeba58e5909f8e1bdb0d37bee82396d09c4d637670670bb7877ed5081e986"
+    },
+    {
+      "slug": "agency-paid-media-paid-social-strategist",
+      "status": "pass",
+      "sourceSha256": "c8004c7f640dfef9c7c698f69c4c3712d063df06c8d391c809df92ba420af3db",
+      "archiveSha256": "5aee4e73539b5e59e002e7c2c00deabe7d05783cf1c0bb74a11ab0742d77a781"
+    },
+    {
+      "slug": "agency-paid-media-ppc-strategist",
+      "status": "pass",
+      "sourceSha256": "3e172aa58ad7f9ea3bad947def69dfe26d66134c0aa88dca60e5aea4b8e25f67",
+      "archiveSha256": "0ac5acd420eed71295e3f6474b29ff6e3669b29da101287fccdc744186f80191"
+    },
+    {
+      "slug": "agency-paid-media-programmatic-buyer",
+      "status": "pass",
+      "sourceSha256": "c2a54b847823906485bed6e704fc7a013e3d9cf1340045354aae9a9e0c96e7e1",
+      "archiveSha256": "f169b24ad1522a2634a4f606a0324b4369ac3e766d271c9604a090144a26c19e"
+    },
+    {
+      "slug": "agency-paid-media-search-query-analyst",
+      "status": "pass",
+      "sourceSha256": "bfd792539f93515118429f20c528fdaee320a172ca861fbc7ffb0209dffb723e",
+      "archiveSha256": "ed2c02a64e2855623d9b83d32518a58407d365a38b80cacf9ae00e8a4ea74ab9"
+    },
+    {
+      "slug": "agency-paid-media-tracking-specialist",
+      "status": "pass",
+      "sourceSha256": "8caa9bbc8f5a8aaeb5ac156dbb27818f27e79512472053b824484496b0ca5b96",
+      "archiveSha256": "3fbf60e00cb314a99ea425ebfc98b4c2a930c3031e8d0230ac311e576aad249d"
+    },
+    {
+      "slug": "agency-personal-growth-mentor",
+      "status": "pass",
+      "sourceSha256": "623c1ef061d98fedbb941245a39fa5b8c5236ef94194724bfe5c54b8050143d4",
+      "archiveSha256": "a0e7842799298313e58ebebd7847f3bac77bbffc64b0c789930c96d97d5f2173"
+    },
+    {
+      "slug": "agency-product-behavioral-nudge-engine",
+      "status": "pass",
+      "sourceSha256": "058868fb1a86e78859471dfa4285b1d62c23b2f83edbb345a227fc4beff39562",
+      "archiveSha256": "135b58acef92b995297314b63deb72fa766f66567334b7b50b2643bed0dcb60b"
+    },
+    {
+      "slug": "agency-product-dx-engineer",
+      "status": "pass",
+      "sourceSha256": "af7f005d51cd5d74885c1850c3570c2aee67a2a655d6fa9a695e895ff986a448",
+      "archiveSha256": "39a2865ca8fbfea6f021f76be2d86ba8bd5de2fc2429d0321de59644a8a8d5c8"
+    },
+    {
+      "slug": "agency-product-feedback-synthesizer",
+      "status": "pass",
+      "sourceSha256": "9f7bc1474bf8bf95c0573c20df5e3d8ae70c3b9659ec5ea7958cc4692b958270",
+      "archiveSha256": "dba1864db00e869757a85e363c9bd709759f333628ca39b722f0a5a72defb9fa"
+    },
+    {
+      "slug": "agency-product-manager",
+      "status": "pass",
+      "sourceSha256": "4a3fe4661e72e5173877bcba7c362392181774b20efc27ac1789171e98676c9d",
+      "archiveSha256": "bccb636b28df46a0760676182e806a154003bd0b799f0403c8d5744507732a6f"
+    },
+    {
+      "slug": "agency-product-sprint-prioritizer",
+      "status": "pass",
+      "sourceSha256": "da5233770ca85a3931b72d80b37dd09616a54fd24075c607667853acf65b000a",
+      "archiveSha256": "c4a07843cf58ddd857cabc39f33a8b54c5485f2d9efe8406e1fdea7ab7ebd4cb"
+    },
+    {
+      "slug": "agency-product-trend-researcher",
+      "status": "pass",
+      "sourceSha256": "69c8e54a9413ba411195e8d5274ee3cd88fa8cda18486db70c0f19ce374550a2",
+      "archiveSha256": "d8c9c06b3eebcc08f272154179328b8693af8d3974a27c3f42a4b5b4a58f3d2d"
+    },
+    {
+      "slug": "agency-project-management-experiment-tracker",
+      "status": "pass",
+      "sourceSha256": "8f1410bfa054c8ac2eee3084b9bfdb3adb1e8a2f3e015c2876d0ecf07136c22f",
+      "archiveSha256": "b449006ca33d7683b1dcabbb09103662ec39f00afa7a9537d84700ba55744455"
+    },
+    {
+      "slug": "agency-project-management-jira-workflow-steward",
+      "status": "pass",
+      "sourceSha256": "1e63812bd80317f4f69403701b6e1ff28d2fcf61862288f93fa4e4676bf46e17",
+      "archiveSha256": "98d8b9fdc27c47ad653c2d43cc6798c67de82a37ba1f05cc1c78a426e1eacc8e"
+    },
+    {
+      "slug": "agency-project-management-meeting-notes-specialist",
+      "status": "pass",
+      "sourceSha256": "53a6efaa379b70cbc3276b44544ecf569789fffe892ba82eb68e8672407de91f",
+      "archiveSha256": "3b97e3013cecaac616d8171219efb104fc1803b300608565c1cc31da19b81b5b"
+    },
+    {
+      "slug": "agency-project-management-project-shepherd",
+      "status": "pass",
+      "sourceSha256": "0feb647366d78b61c1633b12e370ffb1dea52facb9d750ef6c952de1e996031c",
+      "archiveSha256": "19724304a718be53d8fe82338b00710573f8234d1fc2cd5a59053117fb272c5f"
+    },
+    {
+      "slug": "agency-project-management-studio-operations",
+      "status": "pass",
+      "sourceSha256": "8a2e5098d94688d191a128b6b2fdbbf3724bfcd2f4944766de6e25a0709f1517",
+      "archiveSha256": "b024c817b36cd69edc21d032287c2db2bd009e0268f0496e4ffb0dfe949fb7d1"
+    },
+    {
+      "slug": "agency-project-management-studio-producer",
+      "status": "pass",
+      "sourceSha256": "d942feab0f50ea7b8e98cb73bdaf05226d2a6c53c6359c7380149f7545bb199d",
+      "archiveSha256": "450f30b456a24b2b1cee911ec76146df22cec6c57cdb635b3a4ddd3bcbbf42e4"
+    },
+    {
+      "slug": "agency-project-manager-senior",
+      "status": "pass",
+      "sourceSha256": "70fb27cab174c97375293311211d5563c5ac257fba274450d1ca9c05b540ef2d",
+      "archiveSha256": "3f5e1134eaa497222aea6047cd88776e5f0813c744e66e33706000f61dfb50b5"
+    },
+    {
+      "slug": "agency-real-estate-buyer-seller",
+      "status": "pass",
+      "sourceSha256": "00e2f54e76be38c85c4eb406135a0944a3f610d287e6747fbfac37a12c82920a",
+      "archiveSha256": "2fc769d17bbb851dc38ed12e21e6a8bf8fcf9852791f022c64e54b21870c0dcb"
+    },
+    {
+      "slug": "agency-recruitment-specialist",
+      "status": "pass",
+      "sourceSha256": "cf3d73aae046a12538f64bd67bc5def7946de070485c388ce467251ac8d1e892",
+      "archiveSha256": "9a98849d2b37481bd8b2adaa381088fdcc074f5727043bff8d02b1e6480c1729"
+    },
+    {
+      "slug": "agency-report-distribution-agent",
+      "status": "pass",
+      "sourceSha256": "f5796b3cb693123e6c59f7058c100fe817b744f819d3e281442964714f72bac5",
+      "archiveSha256": "5f45f0e9acc034c9ee36327c7cb3dea69469269aeddfa626391b1eb821d28df0"
+    },
+    {
+      "slug": "agency-research-synthesist",
+      "status": "pass",
+      "sourceSha256": "3618b4a2a73523147731ae38ac4096cea0e83a7de930f55ea9ea6c69e3c77f30",
+      "archiveSha256": "a255ba5a51939dcc621fe0702866e5d2a524f2d6564a1c620db69f405a61135f"
+    },
+    {
+      "slug": "agency-resume-tailor",
+      "status": "pass",
+      "sourceSha256": "be3d173ce4807d49671c7956f107029a4cb4061651882a0a3ea8c4f20738273f",
+      "archiveSha256": "3f80a7051d83f3e3d9fc3afd06f30a0c6445423d4e559d16963cca60e50c70a9"
+    },
+    {
+      "slug": "agency-retail-customer-returns",
+      "status": "pass",
+      "sourceSha256": "5cd60860a6ea57a95ec6d14246d6b0032e0e13ba0220ec4a79527fdc0ccd0f9c",
+      "archiveSha256": "7f4a8332e1c1c2550c872513fb0eb68ac406692e24036db04a662dd8471b01b8"
+    },
+    {
+      "slug": "agency-roblox-avatar-creator",
+      "status": "pass",
+      "sourceSha256": "6bdb5af6fe5c390da43f7bdcc4d73b6fbdef2a8b19bd6d30bf1fef6b4258f16a",
+      "archiveSha256": "d6dba43175bc4d7a648ce7e3e90182a6a530ca1954bcdbf98d90c84ef3f72155"
+    },
+    {
+      "slug": "agency-roblox-experience-designer",
+      "status": "pass",
+      "sourceSha256": "36fb12b8b76ba666e8e9e2830328f63e713556b8f503fe12ab883902a77b308a",
+      "archiveSha256": "e37d934710e70241db07ef51b3f70584758987b72a5c6fd935db67e4aad94755"
+    },
+    {
+      "slug": "agency-roblox-systems-scripter",
+      "status": "pass",
+      "sourceSha256": "6eb8875978afb987563afa5fb0ee5a7789387348c362cf9a44cba6c2098821db",
+      "archiveSha256": "88a6111db92d572c05ad836de2bd225c62c9db86c1695bc0267739cf53144dde"
+    },
+    {
+      "slug": "agency-sales-account-strategist",
+      "status": "pass",
+      "sourceSha256": "dd9b2c37c41827286ef91d64057a5b0ff4795c2e57bd44695436feeb5a3f0423",
+      "archiveSha256": "835991a85fa2e50089731d5a25ebf994d3f54e0dde8a58b4e93d0cd7f8c5ef4c"
+    },
+    {
+      "slug": "agency-sales-coach",
+      "status": "pass",
+      "sourceSha256": "83f0be3daa7e78b24bfb41c7514d5f2936e9690c42ab7a0d8b5bc66a8b829f62",
+      "archiveSha256": "c26fd66172d2690fdb17be449ba1176bc9f04e8448fc0dcf8756bb1f7c75058e"
+    },
+    {
+      "slug": "agency-sales-data-extraction-agent",
+      "status": "pass",
+      "sourceSha256": "202a6f04df452385fd1185a6bb23a0c9a47e624088eac14179bed4975f0b268a",
+      "archiveSha256": "b60f9a8c616c898fb3e19f44204d32296bfd1222aadc552c42bd1db935900a3f"
+    },
+    {
+      "slug": "agency-sales-deal-strategist",
+      "status": "pass",
+      "sourceSha256": "fdd92f2ced04ad842e25fd9ebcc341372ce2630d4ec152a29c53f7b8535b855e",
+      "archiveSha256": "6e0181a4b42735a202e8393f889d2febffa0b82649715496c57f2535339fd883"
+    },
+    {
+      "slug": "agency-sales-discovery-coach",
+      "status": "pass",
+      "sourceSha256": "8244a25e5b8785058b19ef92dca9e543a2c990e4dde1166d194f14514e3ae278",
+      "archiveSha256": "850b431621aa181ccfb760b97a0a2fa9099310d0fc698a82d87da254f7523e2f"
+    },
+    {
+      "slug": "agency-sales-engineer",
+      "status": "pass",
+      "sourceSha256": "355014b3ecf52aaa1209a5d7b089e5e65c3aad7874eef513e60b6da79fec572e",
+      "archiveSha256": "c18253e5275a9223d2fe8933735aaf9a87cc8ec47c1ab82f3398842611e591aa"
+    },
+    {
+      "slug": "agency-sales-offer-lead-gen-strategist",
+      "status": "pass",
+      "sourceSha256": "75a12987fb2a205ac029c2ebf43d1ae1a1502d1707ab4921923928489ff3778c",
+      "archiveSha256": "e14a8cd18823eebb3348b96ae1713ee0843e17ed2db72cfb5f48f23c2a44e401"
+    },
+    {
+      "slug": "agency-sales-outbound-strategist",
+      "status": "pass",
+      "sourceSha256": "4f6c8abf9c936fbe5f4b66fc8044096e3dd5199f8f8ae9d0309ad92bc0653174",
+      "archiveSha256": "5b53a5907b151a5872164841ce0b807d0d2ada4d5da477d93e98802fcfe53123"
+    },
+    {
+      "slug": "agency-sales-outreach",
+      "status": "pass",
+      "sourceSha256": "84d4ca90d4bed4649904c8f239f8e13f373274c8bceb6fd7eb2479e6f9e28c90",
+      "archiveSha256": "783022842ed4290f328dc82ecfb7b0984eb47ea214bb945756ae72fe61bba5d4"
+    },
+    {
+      "slug": "agency-sales-pipeline-analyst",
+      "status": "pass",
+      "sourceSha256": "d105ed717423298d754e58300566003ef464d79268183a43b5853cf67d11f61c",
+      "archiveSha256": "27fe61fc384b69583beddcf3337f579d131d2291f31ca7d1da259e4140cd9629"
+    },
+    {
+      "slug": "agency-sales-proposal-strategist",
+      "status": "pass",
+      "sourceSha256": "84c42e0ae7e11e6b239b7f921bdb0c33398102f94998c2eaa41114a3a46dc4c9",
+      "archiveSha256": "e0047f68e02cd0e10691fb626cd0adf02dcbbecf2665c0bb714509b06d1e76b0"
+    },
+    {
+      "slug": "agency-security-ai-generated-code-auditor",
+      "status": "pass",
+      "sourceSha256": "ac2196a914bfb00dddfef93edb9eef1860f924f9582d814cd303ab45e4fc71bc",
+      "archiveSha256": "1008bc9eea487dc15966d92b80eeef99f75f7fe71eca50b15298ab3fd9b1b36d"
+    },
+    {
+      "slug": "agency-security-appsec-engineer",
+      "status": "pass",
+      "sourceSha256": "a19f0bda46f4adca5737365dbc3c7ed93e9d93b71349536d92ff055dcf4e3b83",
+      "archiveSha256": "1c70fe2ab0a41c89453e34407892f6759919520e80cae9bef6f303063f2dbf36"
+    },
+    {
+      "slug": "agency-security-architect",
+      "status": "pass",
+      "sourceSha256": "0f7cd89d723764da98f399a71378ec3dd26e2245f095f43421137db8267b8d93",
+      "archiveSha256": "d3fbdc6b86b8c9e701ec8f6bd98393686fab50ac28f410825b879731b997324a"
+    },
+    {
+      "slug": "agency-security-blockchain-security-auditor",
+      "status": "pass",
+      "sourceSha256": "35bcc88d3b4b2016d0057cfc5f823d9c2326db2f412e89c2fc3796c4f226210b",
+      "archiveSha256": "a9cedf522c3b3b633aa12bfa8875164b8020d05dd42dc90b7be5dedcdc4b8e03"
+    },
+    {
+      "slug": "agency-security-cloud-security-architect",
+      "status": "pass",
+      "sourceSha256": "fa18b1e1ed59534c1126f4b44ef06419f3975d98675b37d54ee11a9e3f970d1b",
+      "archiveSha256": "f704e385547fd8d8f09b84a94e8a0cd5b2cfd99279cfa94d27d21403d7169ca2"
+    },
+    {
+      "slug": "agency-security-compliance-auditor",
+      "status": "pass",
+      "sourceSha256": "ebb550ceef8011be23fe5a6fab0a7b3f77c2433f4d6aa22617a7eb87db97274f",
+      "archiveSha256": "507ab93dd41e0672fc1b9702f3ba7c50a454e129b83924ea34b18022c518a8b0"
+    },
+    {
+      "slug": "agency-security-incident-responder",
+      "status": "pass",
+      "sourceSha256": "be8d0eedd37ddc79767e8fcff518b1d7c565a4e388624a7d62c099270bc0b9e3",
+      "archiveSha256": "26c9122707d391b4446d1bc0d649848e52ee62e32ee134d090a939805eca5ce0"
+    },
+    {
+      "slug": "agency-security-penetration-tester",
+      "status": "pass",
+      "sourceSha256": "f52c2524309fb048250b412daa6a2ad0a906b5daff01f64f195052d024b9e1a0",
+      "archiveSha256": "9554d75211642d2be29a36c16c4241211c652d20faa9a6507760b1a7403030d8"
+    },
+    {
+      "slug": "agency-security-secrets-credential-engineer",
+      "status": "pass",
+      "sourceSha256": "356c73f5feb867b3e0d3c58d463a98f5f1b241709ff9dc9e64a5bd6d91457484",
+      "archiveSha256": "3645ac3d5fee0466ea344254f814d0a91d58ae27405b0d659b2d27d85b0b12f7"
+    },
+    {
+      "slug": "agency-security-senior-secops",
+      "status": "pass",
+      "sourceSha256": "80f83d40f631134ab458247433b616e8fbdfdc0c7bdc568e356d4e6902385359",
+      "archiveSha256": "3a382f1da23ed5778b5b59ac283ded2ed284942fa6a57a24d8726b1a24fe58c4"
+    },
+    {
+      "slug": "agency-security-threat-detection-engineer",
+      "status": "pass",
+      "sourceSha256": "b15c0d8be90232a64471d0947dd30cfcd9efeeb2dab2579bb415ca8beb7db7f1",
+      "archiveSha256": "3cad11beeb8984c6cb909aa1b7a4238c59c6a0cb8ceeabdd509b5a9cffbffdc5"
+    },
+    {
+      "slug": "agency-security-threat-intelligence-analyst",
+      "status": "pass",
+      "sourceSha256": "9298ca898264ab38d3f9d57adf743e7e168a8c5fb47af5abc81d57a1f66d73c2",
+      "archiveSha256": "b42462c84de60640a9b69aa679114f61d111a9887d110401c6cfc1aac45e7f3f"
+    },
+    {
+      "slug": "agency-specialized-chief-of-staff",
+      "status": "pass",
+      "sourceSha256": "c0d053f19f32d369b6e9a4ded3a3b93efd792648b88b28f0ecd37a899b91b7b3",
+      "archiveSha256": "48078e3f941f6e53883a438c0ab50543814aafe2d3625695e3e773ddbde4370f"
+    },
+    {
+      "slug": "agency-specialized-civil-engineer",
+      "status": "pass",
+      "sourceSha256": "37c9c37511345799235dcb41a4bd92c5577614c392b9a1fa3a1afee112e5de3b",
+      "archiveSha256": "2093d4e101e168603482d3205371bb57b1f8b626b9d7f235a7dd8eb4d237284a"
+    },
+    {
+      "slug": "agency-specialized-codebase-archaeologist",
+      "status": "pass",
+      "sourceSha256": "c1b2c22711cb6e74dd834f831d6a8b3f10c93cd462722073b01acae9d0a40700",
+      "archiveSha256": "2abfac950245a16c233ae94f13c0d562dbe9ea7423ffa34a3f5839340e66507e"
+    },
+    {
+      "slug": "agency-specialized-cultural-intelligence-strategist",
+      "status": "pass",
+      "sourceSha256": "91f1d2ef19bcf05f8d3b2758049d2dee909939a18ec2d086f192358179455abc",
+      "archiveSha256": "6b9d2e86596db3794c7469a217f00865579d055a0915c10ac9558c44116cd750"
+    },
+    {
+      "slug": "agency-specialized-developer-advocate",
+      "status": "pass",
+      "sourceSha256": "106d007f1dfa3ccc10e327b8fd1b74723fa01da1e444c61d1499cb8ac214d528",
+      "archiveSha256": "879a21c6396c11bc80365242ae628f6113e45d3e9c4f13a3f342009c85cb1b33"
+    },
+    {
+      "slug": "agency-specialized-document-generator",
+      "status": "pass",
+      "sourceSha256": "cd2ca961e0f7baa18942aaaa315e333ea4315604bbb6a182d7daa31b76dfc3a3",
+      "archiveSha256": "2104e7bd75f919fbfe5b08848113677c9e32ac203e47ad1d10e8a71be68de85e"
+    },
+    {
+      "slug": "agency-specialized-fedramp-rmf-compliance",
+      "status": "pass",
+      "sourceSha256": "3269ca423abba6405b074ddff80da26ff1d73ae01787cc34bc7a1d45732936b0",
+      "archiveSha256": "798e4980673478b5c3419914aa5035b3dd9cfdea9c3ede5a3205bb23d22d1d70"
+    },
+    {
+      "slug": "agency-specialized-focus-music-architect",
+      "status": "pass",
+      "sourceSha256": "9dd1e29f12a4a8acd8872aa263e01f40a766a3b2752517916fe0273fd265bd27",
+      "archiveSha256": "06d9cc7c037e5c014832db0eab6cd9ee47b10b495972e795242a1f1483696f9b"
+    },
+    {
+      "slug": "agency-specialized-french-consulting-market",
+      "status": "pass",
+      "sourceSha256": "68ebd164a0b3e0493d8deec43f4122e24b293c0a8f77786b2c3a4c8f3924c045",
+      "archiveSha256": "ecc6a8af21bdbf3ebabd418024ec0425271d54363446920c8e3ae1ef84f0ae0c"
+    },
+    {
+      "slug": "agency-specialized-korean-business-navigator",
+      "status": "pass",
+      "sourceSha256": "71eb41ef3705fe155eee87d99e0ec7a52a237af442dd66e3421e225b76580f21",
+      "archiveSha256": "6762edbd2741c57aa8543d3b6feb58cc4ab898751045eb9b0d48102bb1c3e868"
+    },
+    {
+      "slug": "agency-specialized-master-plan-architect",
+      "status": "pass",
+      "sourceSha256": "0a9187c15055d76e5867d930eae43daccacd67fa213963ebdc91302044fc354d",
+      "archiveSha256": "f3d58252d3741fe769f281cb70af5248426c881eebd55dc3e89b00b06030fb5e"
+    },
+    {
+      "slug": "agency-specialized-mcp-builder",
+      "status": "pass",
+      "sourceSha256": "f1a9bbde3c5672408a5e0d71d3d888fd635e517ad8b1c5db210aa87e62c39dd4",
+      "archiveSha256": "119c6ecebcf93214b7dcfd54a355e019db639b484371915fe19b95c6d585588b"
+    },
+    {
+      "slug": "agency-specialized-model-qa",
+      "status": "pass",
+      "sourceSha256": "effef0d607e8955ff846e1c264237d6d14dd573bcfd02c191e126868c3cbffde",
+      "archiveSha256": "15f29a37fba673a7e4f2ac1cb65e2ac28f50074bf7414fcb0c34ce5a61fff861"
+    },
+    {
+      "slug": "agency-specialized-pricing-analyst",
+      "status": "pass",
+      "sourceSha256": "fb8a63681615666bb2efe45b7fd2d9ad8a072ab9066efae6b61d454a58039f85",
+      "archiveSha256": "a81191c46b73d5d654cbf05547c7cc14d549440950123572e462c167faee8d2b"
+    },
+    {
+      "slug": "agency-specialized-salesforce-architect",
+      "status": "pass",
+      "sourceSha256": "756fd2dc09f76422dfecb8104e2334f8876f8b95cb6734f8f044c36c641b22e1",
+      "archiveSha256": "8459c0a7b9cac6c30bb9160cb2fadd9acff436714d37acca98caf12840145354"
+    },
+    {
+      "slug": "agency-specialized-strategy-duel-agent",
+      "status": "pass",
+      "sourceSha256": "3012369325bd06ec6e73f980d4e28947fe1f3dd0121e8ccd5ffb5834b50f3911",
+      "archiveSha256": "07c8ffff9e250eb5c6514e290344c4b335c16d21eaf480ce469143e708db17ee"
+    },
+    {
+      "slug": "agency-specialized-workflow-architect",
+      "status": "pass",
+      "sourceSha256": "a7a73de5d9d3d748f4b30a2d632511304a97d42feb9fbf2a3e7cac27e7386e52",
+      "archiveSha256": "fd80e07090896d11b2411dd9be3891020a857e4c9ef25faf0f047fe7692b9b8d"
+    },
+    {
+      "slug": "agency-study-abroad-advisor",
+      "status": "pass",
+      "sourceSha256": "afd4b1033e76671b4d7a17a74329d7d81f491351004c77876a2615137140b84f",
+      "archiveSha256": "e5da916296bd4ac18166347b93fa045ec48f6d8d69b04dcbd2be4e377a093b40"
+    },
+    {
+      "slug": "agency-supply-chain-strategist",
+      "status": "pass",
+      "sourceSha256": "aa6c0f0e7bfc7948a9ac5c76d3a0c140c54a59393eac54bdf15b12a9555662da",
+      "archiveSha256": "49a3658691da1be8a68262d59a5b21f21574344539dc9c7123c9ffee6b6f2d7a"
+    },
+    {
+      "slug": "agency-support-analytics-reporter",
+      "status": "pass",
+      "sourceSha256": "eec3a4afdb04cc6617c452e3c67fbfc8eea070e96055b6a39dae62be5c07a452",
+      "archiveSha256": "425e15488e2346063b3e22d6fe357ae6ce27d809fb1cd6a2224bc62ec3abbf8b"
+    },
+    {
+      "slug": "agency-support-executive-summary-generator",
+      "status": "pass",
+      "sourceSha256": "298891fcf297de5d9b343e9ab9b63864317de63256b15c0c72e6cec172f8f0ff",
+      "archiveSha256": "f8aa0f4b4bb793f087d92181b2181b4503a4d1fa2a5657e905068669a7246946"
+    },
+    {
+      "slug": "agency-support-finance-tracker",
+      "status": "pass",
+      "sourceSha256": "3a024aff6e2f348fbe48d5b59b4d2128596c9372867f322274f27e8112464b64",
+      "archiveSha256": "4a23c95631293bbba4c6cee0b4e2aa5f09f7327add0aab11641794ea092acbce"
+    },
+    {
+      "slug": "agency-support-infrastructure-maintainer",
+      "status": "pass",
+      "sourceSha256": "982365c821220e6b47f08d54013af20d0ff2b58fc8d38a7639e2eb8b18d0872b",
+      "archiveSha256": "788e3f86ea0ac01af29d5dead767ebdb0f6f3a54dd2df34457ac1e7916d48e1a"
+    },
+    {
+      "slug": "agency-support-legal-compliance-checker",
+      "status": "pass",
+      "sourceSha256": "08d938c5666e41b3cf197c2f7b37070d7f39aca62b7147d157200eb6dbeeced6",
+      "archiveSha256": "88ffaf561a83a3a3a73e82487a94181e7bbf29f9c8339c254abf7b3dd540b18a"
+    },
+    {
+      "slug": "agency-support-support-responder",
+      "status": "pass",
+      "sourceSha256": "26b4c8706d88ea30358254dd5ac1a2886766015918300130dff070230e05794b",
+      "archiveSha256": "3d4b1ece0f19c4d3ef08a7fe32c47602e97cdccc49bebacce7586f859b24ad8e"
+    },
+    {
+      "slug": "agency-technical-artist",
+      "status": "pass",
+      "sourceSha256": "9b7e75b629b7b1c87a0bc37e6abaec91e0ad7ae02e8a091c5a876e2bea817742",
+      "archiveSha256": "deab3a231cb36271ac0eab93ff75d3c8c5f83d97c2ab25452d1de2b16d04d003"
+    },
+    {
+      "slug": "agency-terminal-integration-specialist",
+      "status": "pass",
+      "sourceSha256": "3082737f766821cf1c5372b9067ff67c873916de8c30b173478fe8bbc9a10087",
+      "archiveSha256": "a7a56000a5faecfe5796f95b9a18894ec3a76eaf036ffc4146bce0bf8e27845d"
+    },
+    {
+      "slug": "agency-testing-accessibility-auditor",
+      "status": "pass",
+      "sourceSha256": "362935907af23839775b9c6162f38c0c5a740542ab4350cb5c5b5a0d9f9a4268",
+      "archiveSha256": "fb309a7c8a1cbf8c7816ac2434e5ccff43f3cb5e564c5a1aeb602f5dc829edbe"
+    },
+    {
+      "slug": "agency-testing-api-tester",
+      "status": "pass",
+      "sourceSha256": "c9e0f993e32242e564900bc7fbf7eb994d18295a92c499762459a15bbec59cb3",
+      "archiveSha256": "9cb979befec01f8de8cd2938d6589bdcdc1cee6146c2a9e2c4e13e02643e43a3"
+    },
+    {
+      "slug": "agency-testing-evidence-collector",
+      "status": "pass",
+      "sourceSha256": "ff1868ae89f3be62f6f0da1fc8693582f18578c77751b8a65a53169ef15ececd",
+      "archiveSha256": "55ad350068343f8593eb34fa9725a8788484f0d842ded983bd4b5a4133b1f4b6"
+    },
+    {
+      "slug": "agency-testing-performance-benchmarker",
+      "status": "pass",
+      "sourceSha256": "736fd1538678af699220803c0f6a84e1626eaf9346c5af88a2290c075cd55fd5",
+      "archiveSha256": "73f4e90eac44bba6f0d77dd3e70a53d1ff17a5b5a4bce26dcb51bb09e87cc564"
+    },
+    {
+      "slug": "agency-testing-reality-checker",
+      "status": "pass",
+      "sourceSha256": "6d32fcdb114233e13902ec6372d50293b120e85d490b5e81d372c29808f988a1",
+      "archiveSha256": "383a0084d1d46983a90c839d2c911f2bb75372ddf5cb90e0d584e4790b6e2dc6"
+    },
+    {
+      "slug": "agency-testing-test-automation-engineer",
+      "status": "pass",
+      "sourceSha256": "4299d038e88387546d645ccbe767b1dfdb7de10da55eba1ab103149972cd2b9b",
+      "archiveSha256": "4b91108cc0347b978df1275ed3d9dae082f6061de385993ceb909d3699f4f735"
+    },
+    {
+      "slug": "agency-testing-test-results-analyzer",
+      "status": "pass",
+      "sourceSha256": "d33114b519ba657fc9f29db12495d3c31097a8282d170cfd57cbcb029f61f2de",
+      "archiveSha256": "6635b68612c53eabfa3960e053b03c6dfdb72754c35895962dcf22785085e8bd"
+    },
+    {
+      "slug": "agency-testing-tool-evaluator",
+      "status": "pass",
+      "sourceSha256": "01c8aecd0121dd7dde2696282a288aeb7b14c5381b1f8087db540312ed6ea684",
+      "archiveSha256": "1683d85b7cfe36648390563a3bb9a897c1d44b03e15620645cbdec9a88e77390"
+    },
+    {
+      "slug": "agency-testing-workflow-optimizer",
+      "status": "pass",
+      "sourceSha256": "f0e4558147a6114fdcd1b523153b02212b4e2cc6900b6197d19db78e9be3d375",
+      "archiveSha256": "d6f33276f5fef8b5204f119474850ad60bd7fb0be3b6be12105475a1caba2592"
+    },
+    {
+      "slug": "agency-unity-architect",
+      "status": "pass",
+      "sourceSha256": "15502fbcd46fcd7559bcd85d15b512317ceed27ffb90fc54e79f3c32bf682c1a",
+      "archiveSha256": "ccfed3c6232ff4eabe8ecc053b85cdfed3cb12085c648710dc4bc3a764f9836d"
+    },
+    {
+      "slug": "agency-unity-editor-tool-developer",
+      "status": "pass",
+      "sourceSha256": "8b368fe6ee0a4c0c71d10324cd8de4378c7bdaae9bc871a5561199b4a802b5dc",
+      "archiveSha256": "cb491bcd5caa7a37599a102b30c48a697502ec115707bf500317b2154d707291"
+    },
+    {
+      "slug": "agency-unity-multiplayer-engineer",
+      "status": "pass",
+      "sourceSha256": "e7d47ee13ad113a03cbc4605ec3583c272105aa305e8a64be77464a3bb9bee92",
+      "archiveSha256": "53eec9974bbbcb1fb0393db346f8a4d765dae47f53c8ab24b9c1cbf4a5439129"
+    },
+    {
+      "slug": "agency-unity-shader-graph-artist",
+      "status": "pass",
+      "sourceSha256": "3e2033f179a95da207627d1d7521395d434ac76c30a3b20f08f90a05b7405c52",
+      "archiveSha256": "db7b8eba89e09b74a2a1b968f7b84aaa099653842126753d43ae0827513e1c3e"
+    },
+    {
+      "slug": "agency-unreal-multiplayer-architect",
+      "status": "pass",
+      "sourceSha256": "c31c693ad7e34f9baa5b626565ac763f9fdfdb7f3e2d42f9e0bdddba9cd98b73",
+      "archiveSha256": "b2e520d6f1b4c012b059ed9ebff9ae2bf72fa119df075719a72675085252b1b6"
+    },
+    {
+      "slug": "agency-unreal-systems-engineer",
+      "status": "pass",
+      "sourceSha256": "a4a6b98e7387c96f01bb0e9e971c27003ea30bce6d57b09e3ab7e34331746042",
+      "archiveSha256": "f4dae84a2f1ebfbec0429cbe31b20f87dd00e856e1945769fb4807792323d3a9"
+    },
+    {
+      "slug": "agency-unreal-technical-artist",
+      "status": "pass",
+      "sourceSha256": "54bdd46bc872ba21fbcf7e02492c9f5bef82a6d3a35ee3de757d3b678edd6b82",
+      "archiveSha256": "42addb89cac5a368b7be187a6584a7ca0859de2241dc26e05a91f98e46a9b821"
+    },
+    {
+      "slug": "agency-unreal-world-builder",
+      "status": "pass",
+      "sourceSha256": "7d2bf21ac77089b99f1fa36f6102fa938c9014c3107e9dcb9069b896e2b4001e",
+      "archiveSha256": "3e9f7eba1ba5b08535a8fad8fd6bc2d7d2b62fd5b3db38700e638dec2a06c143"
+    },
+    {
+      "slug": "agency-visionos-spatial-engineer",
+      "status": "pass",
+      "sourceSha256": "8d154bb42d6952056b0eb3fd0d030e6e22a638f11c16c04b59326973ee08b20d",
+      "archiveSha256": "70067ad5c6c336f71e2f28ad3c9a0232bd2d7136e050d59a28c3831698467fc4"
+    },
+    {
+      "slug": "agency-xr-cockpit-interaction-specialist",
+      "status": "pass",
+      "sourceSha256": "c8473bd555ad22da7d4978e94a3aec07ae9519b2080572b409639deb9a8e7110",
+      "archiveSha256": "aa0aa321224fe16b70e99236b5126a0ad02241ad2d064788ed5c6e1aa2163e07"
+    },
+    {
+      "slug": "agency-xr-immersive-developer",
+      "status": "pass",
+      "sourceSha256": "a9aa13187bfb774f3eb734ae9869ef249ec3290674f0bb3c1368b69bfa25a2b0",
+      "archiveSha256": "19911d3dc4176c6edd413bc912df2b1cba4fc384777741877856d213b9d27b5e"
+    },
+    {
+      "slug": "agency-xr-interface-architect",
+      "status": "pass",
+      "sourceSha256": "995b459992ab42162269a3bc607131371206742df9c55a4ef614e0171f34e92b",
+      "archiveSha256": "62280a8a337e87f4fbac6bc7ff1ace14735f97f467c83fbf94ef740ec7c53572"
+    },
+    {
+      "slug": "agency-zk-steward",
+      "status": "pass",
+      "sourceSha256": "01fdb11cc8df0ada78aa31007c1565a3d118d64e9e97ff86b8dd838782a44082",
+      "archiveSha256": "fbea5e457a5e20840f51caab9300f84f51043652f54fdafdae52ed3f04916ed8"
+    }
+  ],
+  "productionWrites": 0,
+  "providerCalls": 0,
+  "catalogueEntries": 5278,
+  "agents": 283,
+  "finishedOn": "2026-10-25T11:01:21.055Z"
+}

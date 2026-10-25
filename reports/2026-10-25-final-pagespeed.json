@@ -1,0 +1,27 @@
+{
+  "status": "pass",
+  "url": "https://useaiblocks.com",
+  "reportUrl": "https://pagespeed.web.dev/analysis/https-useaiblocks-com/gva14qosqw?form_factor=mobile",
+  "strategy": "mobile",
+  "capturedAt": "2026-10-25T11:14:15Z",
+  "capturedAtLocal": "2026-10-25T16:44:15+05:30",
+  "productionVersion": "00f60059-1944-4a08-8234-ab5f6dbc2124",
+  "source": "Public PageSpeed Insights web UI; Lighthouse lab data, not field/user data",
+  "performanceScore": 94,
+  "metrics": {
+    "firstContentfulPaintMs": 1810,
+    "largestContentfulPaintMs": 2414,
+    "totalBlockingTimeMs": 71,
+    "cumulativeLayoutShift": 0,
+    "speedIndexMs": 4160
+  },
+  "audit": {
+    "unusedCssAsset": "/assets/index-CPdJKy8W.css",
+    "transferKiB": 21.4,
+    "estimatedSavingsKiB": 18.3
+  },
+  "limitations": [
+    "These are Lighthouse lab measurements, not field Core Web Vitals.",
+    "The direct unauthenticated PSI API request returned HTTP 429 because its project quota is zero; the public web UI report succeeded."
+  ]
+}

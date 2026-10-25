@@ -20,8 +20,8 @@
 
 - The complete unit suite is **225 passed / 11 failed of 236**. Failures include route-count and Composer request-size/provider/idempotency expectations. The full legacy end-to-end suite is **496 passed / 6 skipped / 308 failed of 810**; the broad failures include stale content/initial-card and old UI-label/selector expectations as well as other legacy account/navigation/persistence/workflow checks. These suites are not green and need separate triage. Targeted exact-release checks above passed; no claim is made that all account/API workflows have been end-to-end verified by this release.
 - The production build succeeded before freezing the static candidate. Its working build included 5,288 local catalogue records; the frozen release was assembled from the live 4,995-record baseline and exactly 283 additions (5,278 total), rather than deploying unrelated local generated catalogue drift.
-- No PageSpeed Insights field result is available. Local emulation is not a field Core Web Vitals result.
-- A fresh public mobile PSI request was attempted after the final correction, but Google’s API returned HTTP 429 because the project’s daily PSI quota is zero; the web reader also could not access the PSI interface. No public PSI score or timings are claimed.
+- Fresh public mobile PageSpeed Insights lab run after the corrected deployment: [report](https://pagespeed.web.dev/analysis/https-useaiblocks-com/gva14qosqw?form_factor=mobile), captured 2026-10-25 16:44:15 Asia/Kolkata for version `00f60059-1944-4a08-8234-ab5f6dbc2124`. Performance **94**; FCP **1.8 s** (1,810 ms), LCP **2.4 s** (2,414 ms), TBT **70 ms** (71 ms), CLS **0**, Speed Index **4.16 s**. This is a Lighthouse lab run, not field/user data. The captured audit also identifies 18.3 KiB estimated unused CSS in the deployed 21.4 KiB main stylesheet; no CSS change was made after the measurement.
+- The unauthenticated PSI API call separately returned HTTP 429 because its project quota is zero, but the public PageSpeed web UI produced the linked report. The UI screenshot and capture are retained in the companion task’s evidence folder.
 
 ## Rollback
 

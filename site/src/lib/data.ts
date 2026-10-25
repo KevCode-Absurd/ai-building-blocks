@@ -193,19 +193,22 @@ export function useCatalogueState(enabled = true, { starterFirst = false }: { st
   const [loading, setLoading] = useState(enabled);
   const retry = useCallback(() => { trackUxEvent("task_retried"); setAttempt(value => value + 1); }, []);
   useEffect(() => {
+    if (!starterFirst || resolvedCatalogue) return;
+    let live = true;
+    // The small starter set is independent of the full catalogue. It can paint
+    // useful work before the large public index is requested.
+    void loadStarterCatalogue().then(value => { if (live) setStarterCatalogue(value); }).catch(() => {});
+    return () => { live = false; };
+  }, [attempt, starterFirst]);
+  useEffect(() => {
     if (!enabled) { setLoading(false); return; }
     let live = true;
     setLoading(true); setError("");
-    // The starter is optional. A stalled starter must not hold the full library
-    // behind its timeout; both public downloads can make progress independently.
-    if (starterFirst && !resolvedCatalogue) {
-      void loadStarterCatalogue().then(value => { if (live) setStarterCatalogue(value); }).catch(() => {});
-    }
     loadCatalogue().then(value => { if (live) setCatalogue(value); }).catch(() => {
       if (live) setError("The task library could not load. Check your connection and try again.");
     }).finally(() => { if (live) setLoading(false); });
     return () => { live = false; };
-  }, [enabled, attempt, starterFirst]);
+  }, [enabled, attempt]);
   return { catalogue, starterCatalogue: starterFirst ? starterCatalogue : null, complete: catalogue !== null, loading, error, retry };
 }
 export function useCatalogue(enabled = true) { return useCatalogueState(enabled).catalogue; }

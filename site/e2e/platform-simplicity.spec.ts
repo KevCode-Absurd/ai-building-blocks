@@ -27,15 +27,18 @@ test("signed-in home shows its public first screen while private saved work is s
   await page.screenshot({ path: test.info().outputPath("signed-in-library-ready.png") });
 });
 
-test("a failed catalogue can be retried without a reload", async ({ page }) => {
+test("a failed full catalogue keeps starter picks visible and can be retried without a reload", async ({ page }) => {
   await page.route("**/api/auth*", route => route.fulfill({ json: { configured: false } }));
   let blocked = true;
   await page.route("**/data/blocks.json", route => blocked ? route.fulfill({ status: 503, body: "Unavailable" }) : route.continue());
   await page.goto("/", { waitUntil: "domcontentloaded" });
-  await expect(page.getByText("The task library could not load. Check your connection and try again.", { exact: true })).toBeVisible();
+  await expect(page.locator("#library [data-testid=block-card]")).toHaveCount(4);
+  await page.getByRole("link", { name: /Start with a task/ }).click();
+  await expect(page.getByRole("alert")).toContainText("The task library could not load. Check your connection and try again.");
+  await expect(page.locator("#library [data-testid=block-card]")).toHaveCount(4);
   const pageStarted = await page.evaluate(() => performance.timeOrigin);
   blocked = false;
-  await page.getByRole("button", { name: /^Try (again|the full library again)$/ }).click();
+  await page.getByRole("button", { name: "Try the full library again" }).click();
   await expect(page.getByTestId("library-search")).toBeVisible();
   expect(await page.evaluate(() => performance.timeOrigin)).toBe(pageStarted);
 });
@@ -54,18 +57,24 @@ test("route navigation and same-page anchors place keyboard focus at the destina
   await expect(page.locator("main h1")).toBeFocused();
 });
 
-test("home shows every format while search waits for the complete library", async ({ page }) => {
+test("home formats and starter picks render before search opens the complete library", async ({ page }) => {
   await page.route("**/api/auth*", route => route.fulfill({ json: { configured: false } }));
+  let libraryRequested = false;
   let release!: () => void;
   const held = new Promise<void>(resolve => { release = resolve; });
-  await page.route("**/data/blocks.json", async route => { await held; await route.continue(); });
+  await page.route("**/data/blocks.json", async route => { libraryRequested = true; await held; await route.continue(); });
   try {
     await page.goto("/", { waitUntil: "domcontentloaded" });
-    await expect(page.locator('.library-formats-loading a[href="/?kind=skill#library"]')).toBeVisible();
+    await expect(page.locator("#library [data-testid=block-card]")).toHaveCount(4);
+    await expect(page.getByRole("tab", { name: /Skills/ })).toBeVisible();
     const search = page.getByTestId("library-search");
-    await expect(search).toBeDisabled();
-    await expect(page.locator('.library-formats-loading a')).toHaveCount(6);
+    await expect(page.getByText("Showing starter picks while the full library opens.")).toBeVisible();
+    await expect.poll(() => libraryRequested).toBe(false);
+    await search.focus();
+    await expect.poll(() => libraryRequested).toBe(true);
+    await expect(search).toBeEnabled();
     release(); await expect(search).toBeEnabled();
+    await expect(page.locator("#library [data-testid=block-card]").first()).toBeVisible();
   } finally { release(); }
 });
 

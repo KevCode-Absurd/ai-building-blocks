@@ -3,7 +3,7 @@ import FeaturedTools from "./tools/FeaturedTools";
 import { HomeMinds, HomeWorkflows, HomeAgents } from "./HomeSections";
 import { useLibrarySearch } from "./lib/library-search";
 import { syncPageMetadata } from "./lib/page-metadata";
-import { Suspense, createContext, lazy, useCallback, useContext, useDeferredValue, useEffect, useLayoutEffect, useMemo, useState, type ComponentType } from "react";
+import { Component, Suspense, createContext, lazy, useCallback, useContext, useDeferredValue, useEffect, useLayoutEffect, useMemo, useState, type ComponentType, type ErrorInfo, type ReactNode } from "react";
 import { ArrowIcon, BlockCard, Drawer, SearchIcon, Select, Toast } from "./ui";
 import { type Block, type Catalogue, type Kind, AREAS, areasOf, FUNCTIONS, FUNCTION_MOVED, KINDS, TASKS, functionsOf, kindOf, loadPage, pathOf, taskOf, useCatalogueState, workflowEntries } from "./lib/data";
 import { kits, queueForCanvas, useStore } from "./lib/store";
@@ -24,6 +24,15 @@ import { useCommunityStars } from "./CommunityStars";
 
 const Builder = lazy(() => import("./Builder")); // the canvas loads only when someone scrolls near it
 const Globe = lazy(() => import("./Globe")); // drawn behind the hero, so the text never waits for it
+
+// The globe is decorative and loads after the home content. A failed chunk or
+// canvas render must not replace the usable page with the app-wide recovery UI.
+class OptionalGlobeBoundary extends Component<{ children: ReactNode }, { failed: boolean }> {
+  state = { failed: false };
+  static getDerivedStateFromError() { return { failed: true }; }
+  componentDidCatch(_error: Error, _info: ErrorInfo) {}
+  render() { return this.state.failed ? null : this.props.children; }
+}
 
 // The other pages load after the home page has drawn, while the browser is idle, so a click opens them at once.
 const PAGES = {
@@ -178,7 +187,7 @@ function libraryFilters(search: URLSearchParams): Filters {
   return { ...NONE, q: search.get("q") ?? "", starred: search.get("starred") === "1" ? "1" : "", audience: starterFor(search.get("audience") ?? "")?.id ?? "", area: AREAS.some(a => a.id === search.get("area")) ? search.get("area")! : "", fn, task, kind: KINDS.some(k => k.id === search.get("kind")) ? search.get("kind") as Kind : "all" };
 }
 
-function Library({ c }: { c: Catalogue }) {
+function Library({ c, complete = true, error, retry, onNeedFull }: { c: Catalogue; complete?: boolean; error: string; retry: () => void; onNeedFull: () => void }) {
   const { ranked, starred, loading: starsLoading, loadError, reload } = useCommunityStars();
   const { account } = usePersistence();
   const popularity = useMemo(() => new Map(ranked.map((target, index) => [target, index])), [ranked]);
@@ -195,6 +204,7 @@ function Library({ c }: { c: Catalogue }) {
     return () => { window.removeEventListener("popstate", syncNavigation); window.removeEventListener("abb:navigate", syncNavigation); };
   }, []);
   const applyFilters = (next: Filters) => {
+    if (!complete) onNeedFull();
     setSearch({ q: next.q, audience: next.audience, area: next.area, fn: next.fn, job: next.task, kind: next.kind === "all" ? "" : next.kind, level: "", by: "", starred: next.starred });
     setF(next);
   };
@@ -219,7 +229,7 @@ function Library({ c }: { c: Catalogue }) {
   // The list and the counts follow the typing a beat behind, so the search box never waits on them.
   const df = useDeferredValue(f);
   const suggestion = reviewedTask(df.q);
-  const searchState = useLibrarySearch(c, df.q, { extraText: librarySearchContext });
+  const searchState = useLibrarySearch(c, complete ? df.q : "", { extraText: librarySearchContext });
   const hasQuery = !!df.q.trim();
   // Each block's areas, groups and kind, worked out once, so a few thousand blocks still count fast.
   const facts = useMemo(() => new Map(c.blocks.map((b) => [b.slug, { areas: new Set(areasOf(b)), fns: new Set(functionsOf(b).map((x) => x.id)), kind: kindOf(b) }])), [c]);
@@ -277,7 +287,10 @@ function Library({ c }: { c: Catalogue }) {
           <span>{k.name}</span><small>{k.line}</small>
         </button>)}
       </div>
-      <div className="search big library-search-field"><SearchIcon /><label className="visually-hidden" htmlFor="task-search">What do you want to get done?</label><input id="task-search" value={f.q} onChange={e => set({ q: e.target.value })} placeholder="What do you want to get done?" title="Try SEO, AEO, meeting notes or a product launch" data-testid="library-search" />{f.q ? <button type="button" className="library-search-clear" aria-label="Clear search" onClick={() => { set({ q: "" }); document.getElementById("task-search")?.focus(); }}><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="m5 5 8 8M13 5l-8 8" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" /></svg></button> : <kbd className="kbd" aria-hidden="true">/</kbd>}</div>
+      <div className="search big library-search-field"><SearchIcon /><label className="visually-hidden" htmlFor="task-search">What do you want to get done?</label><input id="task-search" value={f.q} onFocus={() => { if (!complete) onNeedFull(); }} onChange={e => set({ q: e.target.value })} placeholder="What do you want to get done?" title="Try SEO, AEO, meeting notes or a product launch" data-testid="library-search" />{f.q ? <button type="button" className="library-search-clear" aria-label="Clear search" onClick={() => { set({ q: "" }); document.getElementById("task-search")?.focus(); }}><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="m5 5 8 8M13 5l-8 8" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" /></svg></button> : <kbd className="kbd" aria-hidden="true">/</kbd>}</div>
+      {!complete && (error
+        ? <p className="small" role="alert">{error} <button type="button" className="library-retry" onClick={retry}>Try the full library again</button></p>
+        : <p className="small" role="status">Showing starter picks while the full library opens.</p>)}
       <fieldset className="library-job-functions"><legend>Job function</legend><div className="library-job-options" role="group" aria-label="Common job functions">{quickJobs.map(job => <button type="button" key={job.id} aria-pressed={f.area === job.id} onClick={() => set({ area: job.id, fn: "", task: "" })} data-testid={`job-${job.id || "all"}`}>{job.name}</button>)}</div></fieldset>
       <div className="library-use-case">
         <Select label="Use case" value={f.task} onChange={value => set({ task: value })} testId="filter-task" options={[{ value: "", label: "All use cases" }, ...useCases.map(task => ({ value: task.id, label: task.name, count: count({ task: task.id }) }))]} />
@@ -311,7 +324,7 @@ function Library({ c }: { c: Catalogue }) {
           {!!shownResults.length && <div className="grid">{shownResults.map((b) => <BlockCard key={b.slug} b={b} workflowBuilder />)}</div>}
           {results.length > limit && <div className="more library-more"><button type="button" className="btn btn-dark" onClick={() => setLimit(n => n + PAGE)} data-testid="show-more">Show {Math.min(PAGE, results.length - limit)} more</button></div>}
         </>
-      ) : f.starred && starred.size === 0 ? <div className="empty"><h3 className="h3">Keep your next good find</h3><p>Open a skill or workflow and select Star. It will appear here.</p><button className="btn btn-dark" onClick={() => set({ starred: "" })}>Explore the library</button></div> : !searchState.loading && (
+      ) : f.starred && starred.size === 0 ? <div className="empty"><h3 className="h3">Keep your next good find</h3><p>Open a skill or workflow and select Star. It will appear here.</p><button className="btn btn-dark" onClick={() => set({ starred: "" })}>Explore the library</button></div> : !complete ? <p className="small" role="status">Checking the full library…</p> : !searchState.loading && (
         <div className="empty"><h3 className="h3">We couldn't find that task</h3><p>Your search is still here. Try the job name, such as “meeting notes” or “email reply”.</p>{hasFilters && <p><button className="link-btn" onClick={clear}>Search again without filters</button></p>}<button className="btn btn-dark" onClick={() => document.querySelector<HTMLInputElement>('[data-testid="library-search"]')?.focus()}>Edit my search</button></div>
       )}
       </div>
@@ -359,7 +372,7 @@ function LibraryLoading({ error, retry }: { error: string | null; retry: () => v
   return <section className="section wrap library-recovery" id="library" aria-label="Task library"><h2 className="visually-hidden">Find a task</h2><div className="library-formats library-formats-loading">{LIBRARY_FORMATS.map(format => <Link key={format.id} to={`/?kind=${format.id === "all" ? "" : format.id}#library`}><span>{format.name}</span><small>{format.line}</small></Link>)}</div><label className="search big"><SearchIcon /><span className="visually-hidden">What do you want to get done?</span><input disabled placeholder="What do you want to get done?" data-testid="library-search" /></label>{error ? <><p role="alert">{error}</p><button className="btn btn-primary" onClick={retry}>Try again</button><p className="small">You can still use the public guides and browser tools.</p><Link to="/tools">Open browser tools →</Link></> : <p role="status" className="small">Opening the task library…</p>}</section>;
 }
 
-function Home({ c, toast, error, retry, complete }: { c: Catalogue | null; toast: (m: string) => void; error: string | null; retry: () => void; complete: boolean }) {
+function Home({ c, toast, error, retry, complete, onNeedFull }: { c: Catalogue | null; toast: (m: string) => void; error: string | null; retry: () => void; complete: boolean; onNeedFull: () => void }) {
   const { search } = useLocation();
   const selectedWorkflow = search.get("workflow") ?? "";
   const [buildOpen, setBuildOpen] = useState(() => location.hash === "#build");
@@ -382,6 +395,20 @@ function Home({ c, toast, error, retry, complete }: { c: Catalogue | null; toast
       else if (idleId) window.clearTimeout(idleId);
     };
   }, []);
+  useEffect(() => {
+    // The starter picks are enough for a first visit. Load the full catalogue
+    // when the visitor starts browsing, not while the hero is painting.
+    const onScroll = () => {
+      if (window.scrollY < 1) return;
+      const section = document.getElementById("library");
+      if (!section || section.getBoundingClientRect().top > window.innerHeight * 1.35) return;
+      window.removeEventListener("scroll", onScroll);
+      onNeedFull();
+    };
+    if (window.scrollY > 0) onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [onNeedFull]);
   useEffect(() => { const hash = () => setBuildOpen(location.hash === "#build"); addEventListener("hashchange", hash); return () => removeEventListener("hashchange", hash); }, []);
   useEffect(() => {
     if (!c || !complete || !selectedWorkflow) return;
@@ -407,18 +434,18 @@ function Home({ c, toast, error, retry, complete }: { c: Catalogue | null; toast
     <main id="top">
       <StartupReady />
       <section className="hero">
-        {showGlobe && <Suspense fallback={null}><Globe /></Suspense>}
+        {showGlobe && <OptionalGlobeBoundary><Suspense fallback={null}><Globe /></Suspense></OptionalGlobeBoundary>}
         <div className="wrap hero-in">
           <h1 className="h1">Use AI like the top 1%</h1>
           <p className="lede typed" data-done="true">Turn hours of work into minutes. Spend the time you save on the work only you can do. Or at the beach (we won't tell).</p>
           <div className="hero-actions">
-            <Link to="/#library" className="btn btn-primary" onClick={e => { e.preventDefault(); trackUxEvent("task_started"); navigate("/#library"); requestAnimationFrame(() => document.querySelector<HTMLInputElement>('[data-testid="library-search"]')?.focus()); }}>Start with a task <ArrowIcon /></Link>
-            <Link to="/#build" className="btn btn-line" data-testid="hero-build-workflow">Build a workflow <ArrowIcon /></Link>
+            <Link to="/#library" className="btn btn-primary" onClick={e => { e.preventDefault(); onNeedFull(); trackUxEvent("task_started"); navigate("/#library"); requestAnimationFrame(() => document.querySelector<HTMLInputElement>('[data-testid="library-search"]')?.focus()); }}>Start with a task <ArrowIcon /></Link>
+            <Link to="/#build" className="btn btn-line" data-testid="hero-build-workflow" onClick={onNeedFull}>Build a workflow <ArrowIcon /></Link>
           </div>
         </div>
       </section>
 
-      {c && complete ? <Library c={c} /> : <LibraryLoading error={error} retry={retry} />}
+      {c ? <Library c={c} complete={complete} error={error ?? ""} retry={retry} onNeedFull={onNeedFull} /> : <LibraryLoading error={error} retry={retry} />}
 
       {c && complete && <HomeMinds c={c} />}
       {c && complete && <HomeWorkflows c={c}>{buildOpen && <section className="home-builder" id="build" aria-labelledby="build-h">
@@ -450,7 +477,15 @@ export default function App() {
   const { path, search } = useLocation();
   const [kitsOpen, setKitsOpen] = useState(false);
   const needsCatalogue = !infoPage(path) && !["/ai-tools", "/tools", "/apps", "/how-it-works", "/traction", "/api-and-mcp", "/api-and-mcp.html"].some((p) => path === p || path.startsWith(`${p}/`));
-  const catalogueState = useCatalogueState(needsCatalogue || kitsOpen, { starterFirst: path === "/" && !search.has("block") && !search.has("workflow") });
+  const starterFirst = path === "/" && !search.has("block") && !search.has("workflow");
+  const hasHomeLibraryIntent = starterFirst && (location.hash === "#library" || location.hash === "#build" || ["q", "kind", "area", "fn", "job", "audience", "starred"].some(key => search.has(key)));
+  const [homeCatalogueRequested, setHomeCatalogueRequested] = useState(hasHomeLibraryIntent);
+  const requestHomeCatalogue = useCallback(() => setHomeCatalogueRequested(true), []);
+  useEffect(() => {
+    if (path !== "/") setHomeCatalogueRequested(false);
+    else if (hasHomeLibraryIntent) setHomeCatalogueRequested(true);
+  }, [path, hasHomeLibraryIntent]);
+  const catalogueState = useCatalogueState((needsCatalogue && (!starterFirst || homeCatalogueRequested)) || kitsOpen, { starterFirst });
   const c = catalogueState.catalogue;
   const [bizOpen, setBizOpen] = useState(false);
   const closeBiz = useCallback(() => setBizOpen(false), []);
@@ -471,8 +506,7 @@ export default function App() {
   const here = now(pageSlug);
   const redirectTo = path === "/traction" ? "/tools/growth-channel-planner" : old ? pathOf(old) : here && pathOf(here) !== path ? pathOf(here) : null;
   // Optional library data must not delay the home hero or the space form.
-  const waitingForCatalogue = !c && !catalogueState.error && (pageSlug !== null || ["/minds", "/compose", "/from-a-source"].includes(path)
-    || search.has("block") || (path === "/" && ["#library", "#build"].includes(location.hash)));
+  const waitingForCatalogue = !c && !catalogueState.error && (pageSlug !== null || ["/minds", "/compose", "/from-a-source"].includes(path));
   useEffect(() => {
     if (redirectTo) navigate(redirectTo, { replace: true });
   }, [redirectTo]);
@@ -522,7 +556,7 @@ export default function App() {
           ) : pageSlug ? (
             c ? <BlockPage c={c} slug={pageSlug} toast={setToast} toBuilder={toBuilder} /> : <main className="wrap bp-hero"><p className="small">Loading…</p></main>
           ) : path === "/" ? (
-            <Home c={c ?? catalogueState.starterCatalogue} complete={catalogueState.complete} toast={setToast} error={catalogueState.error} retry={catalogueState.retry} />
+            <Home c={c ?? catalogueState.starterCatalogue} complete={catalogueState.complete} toast={setToast} error={catalogueState.error} retry={catalogueState.retry} onNeedFull={requestHomeCatalogue} />
           ) : (
             <main className="wrap bp-hero"><StartupReady /><h1 className="bp-h1">This page doesn't exist</h1><p className="lede">The address may have changed. Find a block in the library or ask us for help.</p><div className="hero-actions"><Link to="/#library" className="btn btn-primary">Browse the library</Link><Link to="/support" className="btn btn-dark">Get help</Link></div></main>
           )}

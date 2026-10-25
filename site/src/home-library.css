@@ -1,4 +1,6 @@
 .library-formats { margin: 0 0 18px; }
+.pface-eyes { animation: none; }
+.library-retry { margin-inline-start: 8px; padding: 2px 0; border: 0; background: transparent; color: var(--link); font: inherit; font-weight: 650; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
 .library-formats-loading a { display: flex; flex-direction: column; gap: 5px; min-height: 82px; padding: 14px; border: 1px solid var(--line-2); border-radius: 10px; background: var(--panel); text-decoration: none; }
 .library-formats-loading a > span { font: 600 17px/1.2 var(--display); }
 .library-formats-loading small { font: 400 12px/1.4 var(--sans); color: var(--muted); }

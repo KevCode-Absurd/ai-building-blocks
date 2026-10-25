@@ -6,7 +6,8 @@ async function publicShell(page: Page) {
   await page.route(url => url.pathname === "/", async route => {
     const response = await route.fetch();
     let html = await response.text();
-    if (!html.includes("data-prerendered")) html = html.replace('<div id="root"></div>', '<div id="root"><main data-prerendered><h1>Public task library</h1><a href="/jobs">Browse tasks by job</a></main></div>');
+    const rootHtml = html.match(/<div id="root">([\s\S]*?)<\/div>/)?.[1] ?? "";
+    if (!rootHtml.includes("data-prerendered")) html = html.replace('<div id="root"></div>', '<div id="root"><main data-prerendered><h1>Public task library</h1><a href="/jobs">Browse tasks by job</a></main></div>');
     await route.fulfill({ response, body: html });
   });
 }
@@ -25,7 +26,7 @@ test("compact home loader has no text wall and yields to the real first-screen d
   await publicShell(page);
   let release!: () => void;
   const held = new Promise<void>(resolve => { release = resolve; });
-  await page.route(url => url.pathname === "/src/main.tsx" || /^\/assets\/main-[^/]+\.js$/.test(url.pathname), async route => { await held; await route.continue(); });
+  await page.route(url => url.pathname === "/src/main.tsx" || /^\/assets\/(?:main|index)-[^/]+\.js$/.test(url.pathname), async route => { await held; await route.continue(); });
   try {
     await page.goto("/", { waitUntil: "commit" });
     await expect(page.locator("html")).toHaveAttribute("data-boot", "loading");
@@ -49,10 +50,10 @@ test("compact home loader has no text wall and yields to the real first-screen d
 test("home headline and actions render while the decorative globe chunk is delayed", async ({ page }) => {
   let release!: () => void;
   const held = new Promise<void>(resolve => { release = resolve; });
-  await page.route(/\/assets\/Globe-[^/]+\.js$/, async route => { await held; await route.continue(); });
+  await page.route(url => /\/src\/Globe\.tsx$/.test(url.pathname) || /\/assets\/Globe-[^/]+\.js$/.test(url.pathname), async route => { await held; await route.continue(); });
   try {
     await page.goto("/", { waitUntil: "commit" });
-    const globeRequest = page.waitForRequest(/\/assets\/Globe-[^/]+\.js$/);
+    const globeRequest = page.waitForRequest(url => /\/src\/Globe\.tsx$/.test(new URL(url.url()).pathname) || /\/assets\/Globe-[^/]+\.js$/.test(new URL(url.url()).pathname));
     await expect(page.getByRole("heading", { name: "Use AI like the top 1%" })).toBeVisible();
     await expect(page.getByRole("link", { name: /Start with a task/ })).toBeEnabled();
     await expect(page.getByTestId("globe")).toHaveCount(0);
@@ -68,7 +69,7 @@ test("@mobile compact loader has no text wall while the app bundle is delayed", 
   await publicShell(page);
   let release!: () => void;
   const held = new Promise<void>(resolve => { release = resolve; });
-  await page.route(url => url.pathname === "/src/main.tsx" || /^\/assets\/main-[^/]+\.js$/.test(url.pathname), async route => { await held; await route.continue(); });
+  await page.route(url => url.pathname === "/src/main.tsx" || /^\/assets\/(?:main|index)-[^/]+\.js$/.test(url.pathname), async route => { await held; await route.continue(); });
   try {
     await page.goto("/", { waitUntil: "commit" });
     await expect(page.locator("#app-loader")).toBeVisible();

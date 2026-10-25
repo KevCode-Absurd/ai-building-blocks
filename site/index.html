@@ -106,7 +106,11 @@
         const home = location.pathname === "/";
         const params = new URLSearchParams(location.search);
         const starter = home && !params.has("block") && !params.has("workflow");
-        for (const href of starter ? ["/data/blocks.json", "/data/starter-blocks.json"] : ["/data/blocks.json"]) {
+        const hasLibraryIntent = location.hash === "#library" || location.hash === "#build" || ["q", "kind", "area", "fn", "job", "audience", "starred"].some(key => params.has(key));
+        // The regular home visit needs only four small starter picks. Do not
+        // preload the full catalogue until the visitor opens or browses it.
+        const files = starter ? (hasLibraryIntent ? ["/data/blocks.json", "/data/starter-blocks.json"] : ["/data/starter-blocks.json"]) : ["/data/blocks.json"];
+        for (const href of files) {
           const catalogue = document.createElement("link");
           catalogue.rel = "preload"; catalogue.href = href;
           catalogue.as = "fetch"; catalogue.crossOrigin = "anonymous";

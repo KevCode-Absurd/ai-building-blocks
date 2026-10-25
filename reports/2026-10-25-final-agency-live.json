@@ -1,7 +1,7 @@
 {
   "status": "pass",
   "origin": "https://useaiblocks.com",
-  "startedOn": "2026-10-25T10:59:42.202Z",
+  "startedOn": "2026-10-25T11:10:05.845Z",
   "expectedAssets": "C:\\Users\\kevin\\.codex\\worktrees\\mobile-psi-followup\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-25-final-combined\\assets",
   "sourceCommit": "b37b5bb33b78f2c1d6567d98e25ca818e3259219",
   "requests": 1135,
@@ -1709,5 +1709,8 @@
   "providerCalls": 0,
   "catalogueEntries": 5278,
   "agents": 283,
-  "finishedOn": "2026-10-25T11:01:21.055Z"
+  "finishedOn": "2026-10-25T11:10:47.114Z",
+  "productionVersion": "00f60059-1944-4a08-8234-ab5f6dbc2124",
+  "productionHostname": "https://useaiblocks.com",
+  "finalCorrectedDeployment": true
 }

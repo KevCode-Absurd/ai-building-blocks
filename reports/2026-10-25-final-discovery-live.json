@@ -1,0 +1,523 @@
+{
+  "checkedAt": "2026-10-25T11:09:30.537Z",
+  "versionId": "00f60059-1944-4a08-8234-ab5f6dbc2124",
+  "origin": "https://useaiblocks.com",
+  "baseline": "release-2026-10-25-discovery-final",
+  "files": 73,
+  "passed": 73,
+  "failed": 0,
+  "status": "pass",
+  "checks": [
+    {
+      "path": "llms-full.txt",
+      "status": 200,
+      "expected": "be210747cd0f66a17a367a0f6e139710fac185b3dae8020908cbdc22cd43046b",
+      "actual": "be210747cd0f66a17a367a0f6e139710fac185b3dae8020908cbdc22cd43046b",
+      "pass": true
+    },
+    {
+      "path": "llms.txt",
+      "status": 200,
+      "expected": "227c1b8b86fc3402cc955f6b7f8e0a4d282a8c2d5c10cc7a0bd9366f3aaf418c",
+      "actual": "227c1b8b86fc3402cc955f6b7f8e0a4d282a8c2d5c10cc7a0bd9366f3aaf418c",
+      "pass": true
+    },
+    {
+      "path": "llms/audit-landing-page.txt",
+      "status": 200,
+      "expected": "b5d40dbe85dc80dd06cc18f2c084e0e7bec49e971262e5fee45f32f8acf32eac",
+      "actual": "b5d40dbe85dc80dd06cc18f2c084e0e7bec49e971262e5fee45f32f8acf32eac",
+      "pass": true
+    },
+    {
+      "path": "llms/brand-file.txt",
+      "status": 200,
+      "expected": "7bdcf3c3256ff8df7a4cae74be5cb99e16b3616d4b95fe09791deeae43149701",
+      "actual": "7bdcf3c3256ff8df7a4cae74be5cb99e16b3616d4b95fe09791deeae43149701",
+      "pass": true
+    },
+    {
+      "path": "llms/build-product.txt",
+      "status": 200,
+      "expected": "acc49be9e66840f38d834c449f6fb76a1b98d23bc128b7ab42df99a797805803",
+      "actual": "acc49be9e66840f38d834c449f6fb76a1b98d23bc128b7ab42df99a797805803",
+      "pass": true
+    },
+    {
+      "path": "llms/build-software.txt",
+      "status": 200,
+      "expected": "1012deb962862f4ae017fb99e25aae75bb402fbf0759693332e18fa10b4a5f41",
+      "actual": "1012deb962862f4ae017fb99e25aae75bb402fbf0759693332e18fa10b4a5f41",
+      "pass": true
+    },
+    {
+      "path": "llms/build-websites.txt",
+      "status": 200,
+      "expected": "188cad0f6228a2254672a39e2f5f0ad38755919b814b7a189938a22d7c6c9059",
+      "actual": "188cad0f6228a2254672a39e2f5f0ad38755919b814b7a189938a22d7c6c9059",
+      "pass": true
+    },
+    {
+      "path": "llms/check-ads.txt",
+      "status": 200,
+      "expected": "0b20c7c232e76c9ce68e16ba362640166841118bd51a97ce8e1226f6c734b54c",
+      "actual": "0b20c7c232e76c9ce68e16ba362640166841118bd51a97ce8e1226f6c734b54c",
+      "pass": true
+    },
+    {
+      "path": "llms/check-contracts.txt",
+      "status": 200,
+      "expected": "084b2ec85a7077828d2ece5fbf393c2aa33a281b9eb0808d9708f62d550cfc9b",
+      "actual": "084b2ec85a7077828d2ece5fbf393c2aa33a281b9eb0808d9708f62d550cfc9b",
+      "pass": true
+    },
+    {
+      "path": "llms/connect-tools.txt",
+      "status": 200,
+      "expected": "9e3274c4c56afd18dbe30935377588a6327a51b88ea4cdc7a52cb16ed3615089",
+      "actual": "9e3274c4c56afd18dbe30935377588a6327a51b88ea4cdc7a52cb16ed3615089",
+      "pass": true
+    },
+    {
+      "path": "llms/design-work.txt",
+      "status": 200,
+      "expected": "5f3905e4dc7fe466a8502cb2641451e43e4e8cba81ff2b886734ee76037595ed",
+      "actual": "5f3905e4dc7fe466a8502cb2641451e43e4e8cba81ff2b886734ee76037595ed",
+      "pass": true
+    },
+    {
+      "path": "llms/document-work.txt",
+      "status": 200,
+      "expected": "31e52ccac25753cf167d5c2446d33502dd35b3c3dd00c007f31a9074b5a7a1a1",
+      "actual": "31e52ccac25753cf167d5c2446d33502dd35b3c3dd00c007f31a9074b5a7a1a1",
+      "pass": true
+    },
+    {
+      "path": "llms/find-a-job.txt",
+      "status": 200,
+      "expected": "9b86ab1e1e8b8a70a168580bc02790b35fba56485944571202251c4d286eb0b6",
+      "actual": "9b86ab1e1e8b8a70a168580bc02790b35fba56485944571202251c4d286eb0b6",
+      "pass": true
+    },
+    {
+      "path": "llms/find-products.txt",
+      "status": 200,
+      "expected": "4bc02d0aed4f68efa463daa4552e3c0653ae9a4b171c04dcbbf5806000e7912e",
+      "actual": "4bc02d0aed4f68efa463daa4552e3c0653ae9a4b171c04dcbbf5806000e7912e",
+      "pass": true
+    },
+    {
+      "path": "llms/get-found-in-search.txt",
+      "status": 200,
+      "expected": "47e09d3839a51f3a480c1436dc1831808f18f87610d759b0630598bb68d08995",
+      "actual": "47e09d3839a51f3a480c1436dc1831808f18f87610d759b0630598bb68d08995",
+      "pass": true
+    },
+    {
+      "path": "llms/grow-social.txt",
+      "status": 200,
+      "expected": "7eb154f31388a008ea4c0bf61d9951f970269cd6b529b4e3a81415ef63e0c7fc",
+      "actual": "7eb154f31388a008ea4c0bf61d9951f970269cd6b529b4e3a81415ef63e0c7fc",
+      "pass": true
+    },
+    {
+      "path": "llms/help-customers.txt",
+      "status": 200,
+      "expected": "deefb813b3a382055b8a39cf9fb4d75b275219c9e900b9df06039371e714b89f",
+      "actual": "deefb813b3a382055b8a39cf9fb4d75b275219c9e900b9df06039371e714b89f",
+      "pass": true
+    },
+    {
+      "path": "llms/hire-people.txt",
+      "status": 200,
+      "expected": "4b6951d1752ef2215c93aa3aafbd8dfdc9d00b813478215682bea2265ae57379",
+      "actual": "4b6951d1752ef2215c93aa3aafbd8dfdc9d00b813478215682bea2265ae57379",
+      "pass": true
+    },
+    {
+      "path": "llms/keep-customers.txt",
+      "status": 200,
+      "expected": "974cba155f2a30cd9ab3aa60d08f1dcf692a554085ec03cf7231da4e12c08555",
+      "actual": "974cba155f2a30cd9ab3aa60d08f1dcf692a554085ec03cf7231da4e12c08555",
+      "pass": true
+    },
+    {
+      "path": "llms/launch-and-scale-ads.txt",
+      "status": 200,
+      "expected": "a268cf07d777a0ed4ba7df45116b6dc42dbcefb43dd6fb611ff30f5957cf9e32",
+      "actual": "a268cf07d777a0ed4ba7df45116b6dc42dbcefb43dd6fb611ff30f5957cf9e32",
+      "pass": true
+    },
+    {
+      "path": "llms/lead-people.txt",
+      "status": 200,
+      "expected": "7e89002cc741e7c76b5d472d6904b963b248dd32f18203682213856d4b190146",
+      "actual": "7e89002cc741e7c76b5d472d6904b963b248dd32f18203682213856d4b190146",
+      "pass": true
+    },
+    {
+      "path": "llms/make-image-ads.txt",
+      "status": 200,
+      "expected": "1ac2701dc2c57257265a39b86c9f83fb13fb4450da1b4e4b143f513229b27ed7",
+      "actual": "1ac2701dc2c57257265a39b86c9f83fb13fb4450da1b4e4b143f513229b27ed7",
+      "pass": true
+    },
+    {
+      "path": "llms/make-images.txt",
+      "status": 200,
+      "expected": "bb5d96ad69b5e72ce24168e61c1f80b624a2cc8c4a37779e6b3e39acb274f9a3",
+      "actual": "bb5d96ad69b5e72ce24168e61c1f80b624a2cc8c4a37779e6b3e39acb274f9a3",
+      "pass": true
+    },
+    {
+      "path": "llms/make-offer.txt",
+      "status": 200,
+      "expected": "a0d1b163cdc1097a416656f558f961ee8c0b8db0a60c552c8eea1725ce3d3e3d",
+      "actual": "a0d1b163cdc1097a416656f558f961ee8c0b8db0a60c552c8eea1725ce3d3e3d",
+      "pass": true
+    },
+    {
+      "path": "llms/make-skills.txt",
+      "status": 200,
+      "expected": "9ccea1f2bbd686e1f0efe06ccf6afcf7d16f3f562dca1c8f524774f665cfc838",
+      "actual": "9ccea1f2bbd686e1f0efe06ccf6afcf7d16f3f562dca1c8f524774f665cfc838",
+      "pass": true
+    },
+    {
+      "path": "llms/make-video-ads.txt",
+      "status": 200,
+      "expected": "daf294f909fb0b7769fbf9e7772eb259a913ac1e12246c02f7af6fa11e706add",
+      "actual": "daf294f909fb0b7769fbf9e7772eb259a913ac1e12246c02f7af6fa11e706add",
+      "pass": true
+    },
+    {
+      "path": "llms/minds.txt",
+      "status": 200,
+      "expected": "37557f147c149c951bf04773bb68b1b5c636de329b2c9813bb7e86f947115a07",
+      "actual": "37557f147c149c951bf04773bb68b1b5c636de329b2c9813bb7e86f947115a07",
+      "pass": true
+    },
+    {
+      "path": "llms/money-and-investing.txt",
+      "status": 200,
+      "expected": "ddbc1f61b9b68fa32d436101d91b4a81bee56b6346c2d9e0b4dee4d95b3bd404",
+      "actual": "ddbc1f61b9b68fa32d436101d91b4a81bee56b6346c2d9e0b4dee4d95b3bd404",
+      "pass": true
+    },
+    {
+      "path": "llms/organise-work.txt",
+      "status": 200,
+      "expected": "8cb38d0a5434e6abeedf138f1cd3c915b9390af1ee2561d0e20d9b8b09db1c99",
+      "actual": "8cb38d0a5434e6abeedf138f1cd3c915b9390af1ee2561d0e20d9b8b09db1c99",
+      "pass": true
+    },
+    {
+      "path": "llms/plan-ad-tests.txt",
+      "status": 200,
+      "expected": "4a99b92fc0388d3db65f86871a719fcd58acea9b7748d5109882196750219725",
+      "actual": "4a99b92fc0388d3db65f86871a719fcd58acea9b7748d5109882196750219725",
+      "pass": true
+    },
+    {
+      "path": "llms/plan-strategy.txt",
+      "status": 200,
+      "expected": "bf46a9c64a96056dd20ed025f4143e9e3e3cfb3d148f842f1f312de80ac0e0bc",
+      "actual": "bf46a9c64a96056dd20ed025f4143e9e3e3cfb3d148f842f1f312de80ac0e0bc",
+      "pass": true
+    },
+    {
+      "path": "llms/plan-supply-chain.txt",
+      "status": 200,
+      "expected": "197875ab51772937d8b165d4a8d7815efbf740f9ea36bf8ee6da7f6caef88560",
+      "actual": "197875ab51772937d8b165d4a8d7815efbf740f9ea36bf8ee6da7f6caef88560",
+      "pass": true
+    },
+    {
+      "path": "llms/product-photos.txt",
+      "status": 200,
+      "expected": "d33e6d5c1b56d1e0c4418d00116f921fd88e0b005faef95dfd7bcdbcae6a629b",
+      "actual": "d33e6d5c1b56d1e0c4418d00116f921fd88e0b005faef95dfd7bcdbcae6a629b",
+      "pass": true
+    },
+    {
+      "path": "llms/protect-your-store.txt",
+      "status": 200,
+      "expected": "fe441527490e447cf6c50557f69e958d5edb8384d67a686f5fdd3491d71f852a",
+      "actual": "fe441527490e447cf6c50557f69e958d5edb8384d67a686f5fdd3491d71f852a",
+      "pass": true
+    },
+    {
+      "path": "llms/read-ad-results.txt",
+      "status": 200,
+      "expected": "770d66253afa3962cfc14a7456476de0cfa6d9ff84ac4c8d2ce099805e7ef625",
+      "actual": "770d66253afa3962cfc14a7456476de0cfa6d9ff84ac4c8d2ce099805e7ef625",
+      "pass": true
+    },
+    {
+      "path": "llms/research-topics.txt",
+      "status": 200,
+      "expected": "bf9af6a1200d94a6142e2f05e7e4b55fef745d71888807ba0471e4a8d39bb117",
+      "actual": "bf9af6a1200d94a6142e2f05e7e4b55fef745d71888807ba0471e4a8d39bb117",
+      "pass": true
+    },
+    {
+      "path": "llms/run-google-ads.txt",
+      "status": 200,
+      "expected": "aa996ca0b20bd8ba8c327dc1beeb0200b5c2be7e1129ffe1ab1ae5a043134839",
+      "actual": "aa996ca0b20bd8ba8c327dc1beeb0200b5c2be7e1129ffe1ab1ae5a043134839",
+      "pass": true
+    },
+    {
+      "path": "llms/run-your-store.txt",
+      "status": 200,
+      "expected": "6dfb81c97377a445c8ff3ed718f321162694b7234b57d5e6cce7fbc0dac1f3f0",
+      "actual": "6dfb81c97377a445c8ff3ed718f321162694b7234b57d5e6cce7fbc0dac1f3f0",
+      "pass": true
+    },
+    {
+      "path": "llms/secure-code.txt",
+      "status": 200,
+      "expected": "c35780d16b3f8d091f3174b626507154eb846ecdfc11b3ccc82a082d467cf9d4",
+      "actual": "c35780d16b3f8d091f3174b626507154eb846ecdfc11b3ccc82a082d467cf9d4",
+      "pass": true
+    },
+    {
+      "path": "llms/sell-and-negotiate.txt",
+      "status": 200,
+      "expected": "4bba1479e0dfbc93311f1b210786173d3dce61e8133111b190974101d405907a",
+      "actual": "4bba1479e0dfbc93311f1b210786173d3dce61e8133111b190974101d405907a",
+      "pass": true
+    },
+    {
+      "path": "llms/sell-on-amazon.txt",
+      "status": 200,
+      "expected": "0071966ee3783be8adcaf57db56332f3458f3fbc44ffed794db2c7004cdff29a",
+      "actual": "0071966ee3783be8adcaf57db56332f3458f3fbc44ffed794db2c7004cdff29a",
+      "pass": true
+    },
+    {
+      "path": "llms/set-prices.txt",
+      "status": 200,
+      "expected": "9bf6683400505b84d15ffdde5c579e681065d4ca4301ed8add2d31c36f5de2ba",
+      "actual": "9bf6683400505b84d15ffdde5c579e681065d4ca4301ed8add2d31c36f5de2ba",
+      "pass": true
+    },
+    {
+      "path": "llms/set-up-ai.txt",
+      "status": 200,
+      "expected": "fa23a1152d5120695a6387175fd11887e4beaf6c06d7db2fe75541c6916b1e1b",
+      "actual": "fa23a1152d5120695a6387175fd11887e4beaf6c06d7db2fe75541c6916b1e1b",
+      "pass": true
+    },
+    {
+      "path": "llms/set-up-store.txt",
+      "status": 200,
+      "expected": "590d153feab68a41c90f0972e7eb2b93b05a6d1e2ecb63b4714564c38d67dd42",
+      "actual": "590d153feab68a41c90f0972e7eb2b93b05a6d1e2ecb63b4714564c38d67dd42",
+      "pass": true
+    },
+    {
+      "path": "llms/ship-and-host.txt",
+      "status": 200,
+      "expected": "5d6cb1011343d06677fd17749cb5cc6c87f216acee78a983c51d828d27fad6a4",
+      "actual": "5d6cb1011343d06677fd17749cb5cc6c87f216acee78a983c51d828d27fad6a4",
+      "pass": true
+    },
+    {
+      "path": "llms/speak-and-persuade.txt",
+      "status": 200,
+      "expected": "aa3256b9e2745cfae448aedb1f246daab3388bfae8d1144b3290b522e95a8263",
+      "actual": "aa3256b9e2745cfae448aedb1f246daab3388bfae8d1144b3290b522e95a8263",
+      "pass": true
+    },
+    {
+      "path": "llms/speed-up-store.txt",
+      "status": 200,
+      "expected": "72ab2f1f5ddfc060eb22cb057cf7e2c577cb6e0f653e238d4db3fa467d20c1d4",
+      "actual": "72ab2f1f5ddfc060eb22cb057cf7e2c577cb6e0f653e238d4db3fa467d20c1d4",
+      "pass": true
+    },
+    {
+      "path": "llms/study-and-practice.txt",
+      "status": 200,
+      "expected": "330aec79947cad1d7b7d0df24c310a2668ee9a760c2ff55c28ab205649dc4f0a",
+      "actual": "330aec79947cad1d7b7d0df24c310a2668ee9a760c2ff55c28ab205649dc4f0a",
+      "pass": true
+    },
+    {
+      "path": "llms/study-competitors.txt",
+      "status": 200,
+      "expected": "422467c547cc5576c6607c60963725784bb9d1611d2596ebe3f7d10a7cd1a5fb",
+      "actual": "422467c547cc5576c6607c60963725784bb9d1611d2596ebe3f7d10a7cd1a5fb",
+      "pass": true
+    },
+    {
+      "path": "llms/teach-and-train.txt",
+      "status": 200,
+      "expected": "37cf0ca1e8fcaf4ea7387079e1027f2e25f1eecb63ecbb61c51a521f5a1e6471",
+      "actual": "37cf0ca1e8fcaf4ea7387079e1027f2e25f1eecb63ecbb61c51a521f5a1e6471",
+      "pass": true
+    },
+    {
+      "path": "llms/test-an-idea.txt",
+      "status": 200,
+      "expected": "81556376edb88c5c7ff995d5c29964ce26d41d69d616c539a590426f2a29d299",
+      "actual": "81556376edb88c5c7ff995d5c29964ce26d41d69d616c539a590426f2a29d299",
+      "pass": true
+    },
+    {
+      "path": "llms/test-and-fix-code.txt",
+      "status": 200,
+      "expected": "1e25defb7f426d391f956d70ff2b57c93c77cc7c862e92b3032a1691801595be",
+      "actual": "1e25defb7f426d391f956d70ff2b57c93c77cc7c862e92b3032a1691801595be",
+      "pass": true
+    },
+    {
+      "path": "llms/test-store-changes.txt",
+      "status": 200,
+      "expected": "9cf8d165f3fdb0797f0f1c5f20f11db1b40449c8801776636155a5625cb37201",
+      "actual": "9cf8d165f3fdb0797f0f1c5f20f11db1b40449c8801776636155a5625cb37201",
+      "pass": true
+    },
+    {
+      "path": "llms/think-and-decide.txt",
+      "status": 200,
+      "expected": "d9fae061ecae6348ad57de285cee7021d92dfcbcd2000dcc34d371d7683b85fc",
+      "actual": "d9fae061ecae6348ad57de285cee7021d92dfcbcd2000dcc34d371d7683b85fc",
+      "pass": true
+    },
+    {
+      "path": "llms/think-with-minds.txt",
+      "status": 200,
+      "expected": "f9d4f63511f5e18b29859a262e38b6076ab8d4a32676ea38b6b445a1b5b02adc",
+      "actual": "f9d4f63511f5e18b29859a262e38b6076ab8d4a32676ea38b6b445a1b5b02adc",
+      "pass": true
+    },
+    {
+      "path": "llms/track-numbers.txt",
+      "status": 200,
+      "expected": "6d1d6fffb901843def227bed26d98464955a6ac919f3dee4acfd48e9ce8e5844",
+      "actual": "6d1d6fffb901843def227bed26d98464955a6ac919f3dee4acfd48e9ce8e5844",
+      "pass": true
+    },
+    {
+      "path": "llms/understand-customers.txt",
+      "status": 200,
+      "expected": "3639799f04226982c22f411068a542399918b4c064b980506c780ae0427f4858",
+      "actual": "3639799f04226982c22f411068a542399918b4c064b980506c780ae0427f4858",
+      "pass": true
+    },
+    {
+      "path": "llms/work-with-audio.txt",
+      "status": 200,
+      "expected": "4f3c24572d23d45c537fc95021c8fd79d73d6fe7b2f9214ab5bbf7233a07f36f",
+      "actual": "4f3c24572d23d45c537fc95021c8fd79d73d6fe7b2f9214ab5bbf7233a07f36f",
+      "pass": true
+    },
+    {
+      "path": "llms/work-with-files.txt",
+      "status": 200,
+      "expected": "27c026cffce14f13a0279fc999fb9cf3cb5a39e194d2dc9bb703e05c8d02ce8d",
+      "actual": "27c026cffce14f13a0279fc999fb9cf3cb5a39e194d2dc9bb703e05c8d02ce8d",
+      "pass": true
+    },
+    {
+      "path": "llms/write-ad-copy.txt",
+      "status": 200,
+      "expected": "a5dd64b27caad23daf7a68b66d49dc4f5ddf8d33f6559369b7d9196284362d83",
+      "actual": "a5dd64b27caad23daf7a68b66d49dc4f5ddf8d33f6559369b7d9196284362d83",
+      "pass": true
+    },
+    {
+      "path": "llms/write-and-tell-stories.txt",
+      "status": 200,
+      "expected": "d0e0e3f5e0afaa1f2f3abed012bab7fc3e7d962a2bfe3b74d2a7e6ba308cef59",
+      "actual": "d0e0e3f5e0afaa1f2f3abed012bab7fc3e7d962a2bfe3b74d2a7e6ba308cef59",
+      "pass": true
+    },
+    {
+      "path": "llms/write-emails.txt",
+      "status": 200,
+      "expected": "2d1864491589558b9ee6c2baccab8cf48510088434f2819c8a5aa7c0ae63b201",
+      "actual": "2d1864491589558b9ee6c2baccab8cf48510088434f2819c8a5aa7c0ae63b201",
+      "pass": true
+    },
+    {
+      "path": "llms/write-landing-page.txt",
+      "status": 200,
+      "expected": "bea599d7e80efa7cb56a268b639b9fe9d17d204f83f1cf09e4fa4e58f5edc440",
+      "actual": "bea599d7e80efa7cb56a268b639b9fe9d17d204f83f1cf09e4fa4e58f5edc440",
+      "pass": true
+    },
+    {
+      "path": "robots.txt",
+      "status": 200,
+      "expected": "ce857bf67f7da981468dae73d88107c50f7930a72a5abefbaa7f47701281c86c",
+      "actual": "ce857bf67f7da981468dae73d88107c50f7930a72a5abefbaa7f47701281c86c",
+      "pass": true
+    },
+    {
+      "path": "sitemap-agents.xml",
+      "status": 200,
+      "expected": "92c7a129799f8372eacad23afadf3f547aeb2127325f23d06c12b8600accd2ae",
+      "actual": "92c7a129799f8372eacad23afadf3f547aeb2127325f23d06c12b8600accd2ae",
+      "pass": true
+    },
+    {
+      "path": "sitemap-ai-tools.xml",
+      "status": 200,
+      "expected": "ad5f9912324eb1f3cf547030ddd22a21a70614a9909a6af34044a51894519750",
+      "actual": "ad5f9912324eb1f3cf547030ddd22a21a70614a9909a6af34044a51894519750",
+      "pass": true
+    },
+    {
+      "path": "sitemap-jobs.xml",
+      "status": 200,
+      "expected": "e4460127e2d6b6641dddf7138d311c5b038fc375c1fbf57cf9bd63ecca44ad26",
+      "actual": "e4460127e2d6b6641dddf7138d311c5b038fc375c1fbf57cf9bd63ecca44ad26",
+      "pass": true
+    },
+    {
+      "path": "sitemap-minds.xml",
+      "status": 200,
+      "expected": "96a354e2805130dd2a2f08940761dd2f1ccd52a6a4e79a6dd683caaea6c60d45",
+      "actual": "96a354e2805130dd2a2f08940761dd2f1ccd52a6a4e79a6dd683caaea6c60d45",
+      "pass": true
+    },
+    {
+      "path": "sitemap-pages.xml",
+      "status": 200,
+      "expected": "5dec5683e18029b84ba220f6b459c9603a4d43728cf45436d599f8652e69836d",
+      "actual": "5dec5683e18029b84ba220f6b459c9603a4d43728cf45436d599f8652e69836d",
+      "pass": true
+    },
+    {
+      "path": "sitemap-prompts.xml",
+      "status": 200,
+      "expected": "ff48240689f2bdc5f383eedeb2ac8404b14a94fa86c5a2095a29f7ce901e803a",
+      "actual": "ff48240689f2bdc5f383eedeb2ac8404b14a94fa86c5a2095a29f7ce901e803a",
+      "pass": true
+    },
+    {
+      "path": "sitemap-skills.xml",
+      "status": 200,
+      "expected": "ce88b73ca5bf63620492bdf97fabb74b19ca038095f84a40d2d377cfb472dcb1",
+      "actual": "ce88b73ca5bf63620492bdf97fabb74b19ca038095f84a40d2d377cfb472dcb1",
+      "pass": true
+    },
+    {
+      "path": "sitemap-workflows.xml",
+      "status": 200,
+      "expected": "d0844384d9f926b65be5a12c15de2ecc9e56389ef161419cb32ea4ba620d59f6",
+      "actual": "d0844384d9f926b65be5a12c15de2ecc9e56389ef161419cb32ea4ba620d59f6",
+      "pass": true
+    },
+    {
+      "path": "sitemap.xml",
+      "status": 200,
+      "expected": "75985808eb5260c290e7d6fe4b8dffe46d24d183ea53c74be2fd3b7e5a380598",
+      "actual": "75985808eb5260c290e7d6fe4b8dffe46d24d183ea53c74be2fd3b7e5a380598",
+      "pass": true
+    }
+  ]
+}

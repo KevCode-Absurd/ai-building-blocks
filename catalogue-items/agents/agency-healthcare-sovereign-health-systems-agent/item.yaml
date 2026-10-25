@@ -1,0 +1,43 @@
+slug: agency-healthcare-sovereign-health-systems-agent
+name: Sovereign Health Systems agent
+summary: Get a health systems strategy brief with governance and delivery
+  checks. Bring your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: healthcare/healthcare-sovereign-health-systems-agent.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/healthcare/healthcare-sovereign-health-systems-agent.md
+  licence: MIT
+  original_name: Sovereign Health Systems Agent
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 8e846a8643def597e351719853da63b4b6d9f0bf41978ac25e896750427989fa
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Sovereign Health Systems Agent
+  - Agency Agents
+  - Healthcare
+credits:
+  - title: Sovereign Health Systems Agent
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/healthcare/healthcare-sovereign-health-systems-agent.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

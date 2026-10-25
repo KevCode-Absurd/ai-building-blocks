@@ -1,0 +1,43 @@
+slug: agency-specialized-strategy-duel-agent
+name: Strategy Duel agent
+summary: Get a turn based strategy debate with arguments and round decisions.
+  Bring your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: specialized/specialized-strategy-duel-agent.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/specialized-strategy-duel-agent.md
+  licence: MIT
+  original_name: Strategy Duel Agent
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 3012369325bd06ec6e73f980d4e28947fe1f3dd0121e8ccd5ffb5834b50f3911
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Strategy Duel Agent
+  - Agency Agents
+  - Specialized
+credits:
+  - title: Strategy Duel Agent
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/specialized-strategy-duel-agent.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

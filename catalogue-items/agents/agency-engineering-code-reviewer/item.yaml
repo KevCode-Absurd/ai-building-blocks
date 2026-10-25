@@ -1,0 +1,42 @@
+slug: agency-engineering-code-reviewer
+name: Code Reviewer agent
+summary: Get a code review with specific defects and proposed fixes. Bring your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: engineering/engineering-code-reviewer.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-code-reviewer.md
+  licence: MIT
+  original_name: Code Reviewer
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 7509fcc3ea1dda46511b2801996305bf3d4a125576f9655ff0b63df25602f446
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Code Reviewer
+  - Agency Agents
+  - Engineering
+credits:
+  - title: Code Reviewer
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-code-reviewer.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

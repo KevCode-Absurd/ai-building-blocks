@@ -1,0 +1,42 @@
+slug: agency-grant-writer
+name: Grant Writer agent
+summary: Get a grant proposal draft matched to funder requirements. Bring your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: specialized/grant-writer.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/grant-writer.md
+  licence: MIT
+  original_name: Grant Writer
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 6be5a68dc7628c8292253b60a2bfbc7f76053e9c32aae4d40ff341594534e67b
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Grant Writer
+  - Agency Agents
+  - Specialized
+credits:
+  - title: Grant Writer
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/grant-writer.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

@@ -1,0 +1,42 @@
+slug: agency-engineering-universal-document-compiler
+name: Universal Document Compiler agent
+summary: Get a document generation plan with data and layout checks. Bring your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: engineering/engineering-universal-document-compiler.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-universal-document-compiler.md
+  licence: MIT
+  original_name: Universal Document Compiler
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 70c47b2a1edfa10dd3b3206d22516565a4d3e134f6ca92e086770e2d088ea6f0
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Universal Document Compiler
+  - Agency Agents
+  - Engineering
+credits:
+  - title: Universal Document Compiler
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-universal-document-compiler.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

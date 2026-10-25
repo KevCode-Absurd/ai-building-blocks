@@ -1,0 +1,43 @@
+slug: agency-unreal-systems-engineer
+name: Unreal Systems Engineer agent
+summary: Get an Unreal gameplay systems plan with implementation checks. Bring
+  your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: game-development/unreal-engine/unreal-systems-engineer.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/game-development/unreal-engine/unreal-systems-engineer.md
+  licence: MIT
+  original_name: Unreal Systems Engineer
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: a4a6b98e7387c96f01bb0e9e971c27003ea30bce6d57b09e3ab7e34331746042
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Unreal Systems Engineer
+  - Agency Agents
+  - Game Development
+credits:
+  - title: Unreal Systems Engineer
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/game-development/unreal-engine/unreal-systems-engineer.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

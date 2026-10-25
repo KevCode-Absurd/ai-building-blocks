@@ -1,0 +1,43 @@
+slug: agency-visionos-spatial-engineer
+name: visionOS Spatial Engineer agent
+summary: Get a visionOS interface plan with spatial and usability checks. Bring
+  your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: spatial-computing/visionos-spatial-engineer.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/spatial-computing/visionos-spatial-engineer.md
+  licence: MIT
+  original_name: visionOS Spatial Engineer
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 8d154bb42d6952056b0eb3fd0d030e6e22a638f11c16c04b59326973ee08b20d
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - visionOS Spatial Engineer
+  - Agency Agents
+  - Spatial Computing
+credits:
+  - title: visionOS Spatial Engineer
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/spatial-computing/visionos-spatial-engineer.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

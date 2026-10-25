@@ -1,0 +1,62 @@
+{
+  "status": "pass",
+  "startedOn": "2026-10-25T09:43:49.106Z",
+  "origin": "http://127.0.0.1:57261",
+  "builtAssets": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-25-agency-agents\\assets",
+  "profiles": [
+    {
+      "profile": "desktop",
+      "checks": [
+        {
+          "slug": "agency-engineering-frontend-developer",
+          "discovery": true,
+          "sourceCredit": true,
+          "copy": true,
+          "completeDownload": true,
+          "archiveFiles": 18,
+          "archiveSha256": "2164f70b9668e868a813ea13562811831430c9057473d15f43d8a71f95ae49df",
+          "horizontalOverflow": false
+        },
+        {
+          "slug": "agency-agentic-identity-trust",
+          "discovery": true,
+          "sourceCredit": true,
+          "copy": true,
+          "completeDownload": true,
+          "archiveFiles": 19,
+          "archiveSha256": "b8fc2cef8b7ff1e367fd2aed8e73a79173bd3664105bb85974763b1c52f4f573",
+          "horizontalOverflow": false
+        }
+      ],
+      "pageErrors": []
+    },
+    {
+      "profile": "mobile",
+      "checks": [
+        {
+          "slug": "agency-security-penetration-tester",
+          "discovery": true,
+          "sourceCredit": true,
+          "copy": true,
+          "completeDownload": true,
+          "archiveFiles": 18,
+          "archiveSha256": "f93fae3a9a2ae198d83289c4ea742c331affd8cbd6b409dd8a30149e9a6e18f5",
+          "horizontalOverflow": false
+        },
+        {
+          "slug": "agency-finance-bookkeeper-controller",
+          "discovery": true,
+          "sourceCredit": true,
+          "copy": true,
+          "completeDownload": true,
+          "archiveFiles": 18,
+          "archiveSha256": "996ec6942604fc9a5b8754f9ea71afeb7ad99cf43e0f5acc799b7e94a1fb2c4c",
+          "horizontalOverflow": false
+        }
+      ],
+      "pageErrors": []
+    }
+  ],
+  "liveDeployment": false,
+  "finishedOn": "2026-10-25T09:43:54.621Z"
+}

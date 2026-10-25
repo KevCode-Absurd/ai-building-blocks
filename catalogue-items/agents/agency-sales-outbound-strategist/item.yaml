@@ -1,0 +1,43 @@
+slug: agency-sales-outbound-strategist
+name: Outbound Strategist agent
+summary: Get an outbound sales plan with target signals and message drafts.
+  Bring your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: copy
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: sales/sales-outbound-strategist.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/sales/sales-outbound-strategist.md
+  licence: MIT
+  original_name: Outbound Strategist
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 4f6c8abf9c936fbe5f4b66fc8044096e3dd5199f8f8ae9d0309ad92bc0653174
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Outbound Strategist
+  - Agency Agents
+  - Sales
+credits:
+  - title: Outbound Strategist
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/sales/sales-outbound-strategist.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

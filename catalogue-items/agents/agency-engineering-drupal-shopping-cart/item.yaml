@@ -1,0 +1,42 @@
+slug: agency-engineering-drupal-shopping-cart
+name: Drupal Shopping Cart Engineer agent
+summary: Get a Drupal Commerce plan with order and payment checks. Bring your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: engineering/engineering-drupal-shopping-cart.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-drupal-shopping-cart.md
+  licence: MIT
+  original_name: Drupal Shopping Cart Engineer
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: cbd06e6d27363029dbbc6638297d47608c78d3b93b3e4a6ff52d16757199ee50
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Drupal Shopping Cart Engineer
+  - Agency Agents
+  - Engineering
+credits:
+  - title: Drupal Shopping Cart Engineer
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-drupal-shopping-cart.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

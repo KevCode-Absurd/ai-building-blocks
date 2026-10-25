@@ -1,0 +1,43 @@
+slug: agency-paid-media-ppc-strategist
+name: PPC Campaign Strategist agent
+summary: Get a paid search campaign proposal with structure and budget checks.
+  Bring your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: ads
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: paid-media/paid-media-ppc-strategist.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/paid-media/paid-media-ppc-strategist.md
+  licence: MIT
+  original_name: PPC Campaign Strategist
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 3e172aa58ad7f9ea3bad947def69dfe26d66134c0aa88dca60e5aea4b8e25f67
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - PPC Campaign Strategist
+  - Agency Agents
+  - Paid Media
+credits:
+  - title: PPC Campaign Strategist
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/paid-media/paid-media-ppc-strategist.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

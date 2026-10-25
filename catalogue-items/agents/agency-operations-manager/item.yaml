@@ -1,0 +1,43 @@
+slug: agency-operations-manager
+name: Operations Manager agent
+summary: Get an operating process review with bottlenecks and improvement
+  measures. Bring your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: specialized/operations-manager.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/operations-manager.md
+  licence: MIT
+  original_name: Operations Manager
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 3c133a31ae1542922444d77d7c8f9964127704ba94638dde12e37a9ad0fd35bd
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Operations Manager
+  - Agency Agents
+  - Specialized
+credits:
+  - title: Operations Manager
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/operations-manager.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

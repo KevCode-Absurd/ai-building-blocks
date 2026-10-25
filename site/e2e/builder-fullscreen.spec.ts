@@ -46,7 +46,6 @@ for (const tag of ["", "@mobile "]) {
     await page.getByTestId("workflow-diagram-view").click();
     await expect(page.getByTestId("workflow-diagram-view")).toHaveAttribute("aria-pressed", "true");
     await checkWorkspace();
-    await page.getByTestId("diagram-pan").click();
     await builder.locator(".react-flow").scrollIntoViewIfNeeded();
     await expect(builder.locator(".react-flow")).toBeInViewport();
     const point = await builder.locator(".react-flow__pane").evaluate(el => {
@@ -58,8 +57,9 @@ for (const tag of ["", "@mobile "]) {
     });
     expect(point).not.toBeNull();
     const canvas = builder.locator(".react-flow__viewport"), before = await canvas.getAttribute("style");
-    await page.mouse.move(point!.x, point!.y); await page.mouse.down();
+    await page.keyboard.down("Space"); await page.mouse.move(point!.x, point!.y); await page.mouse.down();
     await page.mouse.move(point!.x + 35, point!.y + 35, { steps: 8 }); await page.mouse.up();
+    await page.keyboard.up("Space");
     await expect.poll(() => canvas.getAttribute("style")).not.toBe(before);
     await page.getByTestId("view-exit-full-screen").click();
     await expect(builder).not.toHaveClass(/\bfull\b/);

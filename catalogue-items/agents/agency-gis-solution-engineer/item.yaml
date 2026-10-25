@@ -1,0 +1,43 @@
+slug: agency-gis-solution-engineer
+name: Solution Engineer agent
+summary: Get a GIS solution proposal with requirements and implementation
+  choices. Bring your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: research
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: gis/gis-solution-engineer.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/gis/gis-solution-engineer.md
+  licence: MIT
+  original_name: Solution Engineer
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: a871691ed7e305047281238eb225f64df4b03274fe82278879788de3c839f054
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Solution Engineer
+  - Agency Agents
+  - GIS
+credits:
+  - title: Solution Engineer
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/gis/gis-solution-engineer.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

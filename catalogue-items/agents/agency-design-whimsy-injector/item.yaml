@@ -1,0 +1,42 @@
+slug: agency-design-whimsy-injector
+name: Playful design agent
+summary: Get small playful design ideas with usability checks. Bring your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: brand
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: design/design-whimsy-injector.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/design/design-whimsy-injector.md
+  licence: MIT
+  original_name: Whimsy Injector
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: b1cc9abd37723ff12b508717e4f7f9621aafd8c20014894d93a8d6e2bc5657a4
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Whimsy Injector
+  - Agency Agents
+  - Design
+credits:
+  - title: Whimsy Injector
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/design/design-whimsy-injector.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

@@ -80,9 +80,7 @@ test("workflow help separates files from the first message and explains required
   await expect(panel.locator(".sp-list").first()).toContainText("Use an existing file, link or earlier result");
   await panel.getByRole("button", { name: "Close", exact: true }).click();
   await builder.getByTestId("workflow-diagram-view").click();
-  await expect(builder.locator(".diagram-tools .workflow-view-help")).toHaveCount(0);
-  await expect(builder.getByTestId("diagram-select")).toBeVisible();
-  await expect(builder.getByTestId("diagram-pan")).toBeVisible();
+  await expect(builder.locator(".diagram-tools")).toHaveCount(0);
   await expect(builder.getByTestId("flow-node")).toHaveCount(fixture.plan.steps.length);
   await builder.getByTestId("workflow-list-view").click(); await expect(builder.getByTestId("step-open")).toHaveCount(fixture.plan.steps.length);
 });
@@ -98,17 +96,14 @@ test("@mobile help opens the right guide while keeping the task draft", async ({
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true); await guide.close();
 });
 
-for (const tag of ["desktop", "@mobile"]) test(`context help leaves the diagram controls and canvas usable ${tag}`, async ({ page }) => {
+for (const tag of ["desktop", "@mobile"]) test(`context help leaves the diagram canvas usable without a toolbar ${tag}`, async ({ page }) => {
   if (tag === "@mobile") await page.setViewportSize({ width: 320, height: 780 });
   await importPlan(page); const builder = page.getByTestId("builder");
   await builder.getByTestId("workflow-diagram-view").click();
-  const toolbar = await builder.locator(".stage-bar").boundingBox(), tools = await builder.locator(".diagram-tools").boundingBox(), canvas = await builder.locator(".react-flow").boundingBox();
-  expect(toolbar).toBeTruthy(); expect(tools).toBeTruthy(); expect(canvas).toBeTruthy();
-  expect(await builder.locator(".diagram-tools .workflow-view-help").count()).toBe(0);
-  expect(await builder.getByTestId("diagram-select").isVisible()).toBe(true);
-  expect(await builder.getByTestId("diagram-pan").isVisible()).toBe(true);
-  expect(tools!.y).toBeGreaterThanOrEqual(toolbar!.y + toolbar!.height - 1);
-  expect(canvas!.y).toBeGreaterThanOrEqual(tools!.y + tools!.height - 1); expect(canvas!.height).toBeGreaterThanOrEqual(320);
+  const toolbar = await builder.locator(".stage-bar").boundingBox(), canvas = await builder.locator(".react-flow").boundingBox();
+  expect(toolbar).toBeTruthy(); expect(canvas).toBeTruthy();
+  await expect(builder.locator(".diagram-tools")).toHaveCount(0);
+  expect(canvas!.y).toBeGreaterThanOrEqual(toolbar!.y + toolbar!.height - 1); expect(canvas!.height).toBeGreaterThanOrEqual(320);
   const footer = await builder.locator(".stage-foot").boundingBox(), stage = await builder.locator(".stage").boundingBox();
   expect(footer).toBeTruthy(); expect(stage).toBeTruthy();
   expect(footer!.x).toBeGreaterThanOrEqual(stage!.x - 1);

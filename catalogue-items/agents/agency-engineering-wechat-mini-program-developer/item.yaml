@@ -1,0 +1,43 @@
+slug: agency-engineering-wechat-mini-program-developer
+name: WeChat Mini Program Developer agent
+summary: Get a WeChat Mini Program plan with platform integration checks. Bring
+  your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: engineering/engineering-wechat-mini-program-developer.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-wechat-mini-program-developer.md
+  licence: MIT
+  original_name: WeChat Mini Program Developer
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 322e068fb168e5ce95b1f66c132de4c1e5c794a114b342d01d997d785e865f43
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - WeChat Mini Program Developer
+  - Agency Agents
+  - Engineering
+credits:
+  - title: WeChat Mini Program Developer
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-wechat-mini-program-developer.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

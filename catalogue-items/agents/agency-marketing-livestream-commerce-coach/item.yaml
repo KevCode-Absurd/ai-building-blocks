@@ -1,0 +1,42 @@
+slug: agency-marketing-livestream-commerce-coach
+name: Livestream Commerce Coach agent
+summary: Get a live selling plan with run order and host practice. Bring your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: organic
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: marketing/marketing-livestream-commerce-coach.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-livestream-commerce-coach.md
+  licence: MIT
+  original_name: Livestream Commerce Coach
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 2d53e67cd70d825aeeddc9fd8b3b4a496887893b64df85c19903a2e7dbcb101f
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Livestream Commerce Coach
+  - Agency Agents
+  - Marketing
+credits:
+  - title: Livestream Commerce Coach
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-livestream-commerce-coach.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

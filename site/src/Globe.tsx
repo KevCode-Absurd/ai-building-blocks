@@ -7,7 +7,8 @@ import "./globe.css";
 // hover over the globe and the whole map takes on colour. Drag it to spin it.
 // It holds still for people who ask for reduced motion (pointing and dragging still work),
 // and pauses when it is off screen or the tab is hidden.
-const N = 5000;
+const N = 12000;
+const MOBILE_N = 4200;
 const SPEED = 0.045; // radians per second: one gentle turn in about 140 seconds
 const REACH = 150; // px around the cursor that light up
 const REGION_COUNT = 3;
@@ -38,7 +39,9 @@ export default function Globe({ calm = false }: { calm?: boolean }) {
     const pts: Pt[] = [];
     // This is decorative art, so keep the mobile canvas light enough to leave
     // the main thread free for the page and its controls.
-    const pointCount = touch ? 900 : N;
+    // Keep the binary pattern dense enough to read as a globe on small screens;
+    // the deferred canvas can spend its budget on decoration after the hero paints.
+    const pointCount = touch ? MOBILE_N : N;
     for (let i = 0; i < pointCount; i++) {
       const y = 1 - (2 * (i + 0.5)) / pointCount;
       const r = Math.sqrt(1 - y * y);
@@ -117,7 +120,7 @@ export default function Globe({ calm = false }: { calm?: boolean }) {
       const f = Math.max(0.55, Math.min(0.9, (geom().R / 430) * 0.9 + 0.2));
       if (Math.abs(f - fs) > 0.01) { fs = f; sprites.clear(); }
     };
-    const geom = () => ({ R: Math.min(w * 0.46, h * 0.56, 430), cx: w / 2, cy: h * 0.54 });
+    const geom = () => ({ R: Math.min(w * 0.46, h * 0.46, 430), cx: w / 2, cy: h * 0.5 });
 
     const draw = (dt: number) => {
       ctx.clearRect(0, 0, w, h);
@@ -156,7 +159,9 @@ export default function Globe({ calm = false }: { calm?: boolean }) {
         const hueStep = Math.floor(((p.hue + shift) % 360) / 15);
         const s = sprite(p.c, band, colour ? hueStep : -1);
         const scale = 1 + 0.7 * k + 0.12 * regionGlow;
-        const alpha = Math.min(0.95, 0.06 + 0.46 * z * z + p.glow * 0.45 + k * 0.6 + (colour ? hov * 0.12 : 0));
+        // Keep the land silhouette visible at a glance; the previous low baseline
+        // opacity made the binary continents disappear into the hero on phones.
+        const alpha = Math.min(0.92, 0.2 + 0.66 * z * z + p.glow * 0.45 + k * 0.6 + (colour ? hov * 0.12 : 0));
         ctx.globalAlpha = alpha;
         const sw = (s.width / dpr) * scale;
         ctx.drawImage(s, sx - sw / 2, sy - sw / 2, sw, sw);

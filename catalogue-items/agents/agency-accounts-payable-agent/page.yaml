@@ -1,0 +1,71 @@
+name: Accounts Payable agent
+summary: Get a payment proposal with invoice, approval and reconciliation
+  checks. Bring your brief.
+headline: Accounts Payable agent
+subhead: Use this agent for accounts payable agent tasks. Get a payment proposal
+  with invoice, approval and reconciliation checks. Bring your brief. Share the
+  goal, relevant files and limits. It uses the source profile to propose work
+  and checks. You review the result before using it.
+job: money-and-investing
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: >-
+  Get a payment proposal with invoice, approval and reconciliation checks. Bring
+  your brief.
+
+
+  A payment proposal with invoice, approval and reconciliation checks.
+
+
+  This is a role profile from Agency Agents, shared under MIT. The download
+  includes the original profile, its licence and a setup guide. Its examples and
+  success targets describe the intended work; they are not measured results from
+  AI Blocks.
+when:
+  - You need the accounts payable agent role for a defined task.
+  - You have relevant facts or files and want a proposal you can check.
+you_give:
+  - The task you want a accounts payable agent to handle, and what a useful
+    result looks like.
+  - Relevant files, evidence and constraints, including tools the AI can
+    actually use.
+you_get:
+  - A payment proposal with invoice, approval and reconciliation checks.
+  - Assumptions, missing evidence and checks to run before accepting the work.
+how_to_use:
+  - Download the complete pack and open SETUP.md.
+  - Add the pack as a skill in an AI that supports skills, or paste SKILL.md
+    followed by references/source-agent.md into a chat.
+  - For a Claude Code agent, copy references/source-agent.md into
+    .claude/agents/ and supply the scope and review rules from SKILL.md.
+  - Ask it to handle your accounts payable agent task. Share the goal, relevant
+    material and limits.
+  - Review the proposal and the checks. Authorize any external action separately.
+how_it_works:
+  - title: Set the task
+    text: Confirm the intended result, available evidence and allowed actions.
+  - title: Use the role profile
+    text: Read the supplied Accounts Payable Agent profile and apply the methods
+      that fit the task.
+  - title: Review the result
+    text: Separate facts from assumptions, show evidence and list checks still
+      needed.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Task scope
+    how: Name the one result you need and the limits on time, cost and tools.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.
+terms: []
+works_best_with:
+  inputs:
+    - A clear brief and the source files needed to check the result.

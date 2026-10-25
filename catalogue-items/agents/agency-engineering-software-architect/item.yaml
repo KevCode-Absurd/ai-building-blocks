@@ -1,0 +1,43 @@
+slug: agency-engineering-software-architect
+name: Software Architect agent
+summary: Get a software design with tradeoffs, boundaries and decision records.
+  Bring your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: engineering/engineering-software-architect.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-software-architect.md
+  licence: MIT
+  original_name: Software Architect
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: b85121691776147bacde26673e68fbbacd6a7f0816d1ca8e203c264d25ce1d30
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Software Architect
+  - Agency Agents
+  - Engineering
+credits:
+  - title: Software Architect
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-software-architect.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

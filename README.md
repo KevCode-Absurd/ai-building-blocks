@@ -1,5 +1,9 @@
 # AI Blocks (useaiblocks.com)
 
+**Agency Agents (25 Oct):** 283 source agent profiles across 18 divisions, packaged as agents with skill adapters, setup guides, MIT licences and pinned source hashes. Originals stay unchanged in each download. Intake and package checks: `reports/2026-10-25-agency-agents-import.json` and `reports/2026-10-25-agency-agents-checks.json`. These entries have not had model behavior tests.
+
+**Minds (23 Oct):** 505 ready minds, including 200 new profiles for everyday tasks across cooking, home, learning, relationships, work, money, wellbeing, communities, technology and creative practice. Search by task or name, use a mind on its own, or seat an advisory council. Portrait motion plays once per visit and then rests. Source review: `reports/2026-10-23-minds-editorial-audit.json`.
+
 **Apps (19 Oct):** `/apps` shows example apps as click-through tours (one client app with every detail replaced by Sprout, and Mercatura's three standalone apps plus the combined one), and the **app starter pack** in `app-starter/` turns skills and workflows into an app with sign-in and teams. PRD: `docs/APPS-PRD.md`. `node tools/check-masking.mjs` keeps the client app anonymous and runs with every build.
 
 A **free, evergreen library** of tested AI building blocks for any business. It isn't only skills: it has prompts, skills, routines, workflows, applications, and people's own agents and bots. Each comes ready-made and with a plain how-to guide for setting it up yourself. Every listing comes with:

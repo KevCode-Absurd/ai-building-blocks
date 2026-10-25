@@ -1,0 +1,42 @@
+slug: agency-gis-spatial-data-scientist
+name: Spatial Data Scientist agent
+summary: Get a spatial study plan with methods and uncertainty checks. Bring your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: research
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: gis/gis-spatial-data-scientist.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/gis/gis-spatial-data-scientist.md
+  licence: MIT
+  original_name: Spatial Data Scientist
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 03254a9fa2a9522800eddf743b8305bc2d4b2093e233e6c9b593da6f0746c657
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Spatial Data Scientist
+  - Agency Agents
+  - GIS
+credits:
+  - title: Spatial Data Scientist
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/gis/gis-spatial-data-scientist.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

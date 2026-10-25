@@ -1,0 +1,43 @@
+slug: agency-healthcare-clinical-evidence-agent
+name: Clinical Evidence agent
+summary: Get a clinical evidence brief with source quality and uncertainty.
+  Bring your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: healthcare/healthcare-clinical-evidence-agent.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/healthcare/healthcare-clinical-evidence-agent.md
+  licence: MIT
+  original_name: Clinical Evidence Agent
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 5fd6223b0fb17c7625b2ca8ba9f1f6fb649560c074a39b0d72e22e984487a688
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Clinical Evidence Agent
+  - Agency Agents
+  - Healthcare
+credits:
+  - title: Clinical Evidence Agent
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/healthcare/healthcare-clinical-evidence-agent.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

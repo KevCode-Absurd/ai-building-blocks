@@ -1,0 +1,43 @@
+slug: agency-government-digital-presales-consultant
+name: Government Digital Presales Consultant agent
+summary: Get a Chinese government procurement brief with bid and compliance
+  checks. Bring your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: specialized/government-digital-presales-consultant.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/government-digital-presales-consultant.md
+  licence: MIT
+  original_name: Government Digital Presales Consultant
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 0676fd83a462828901c64df516034b0912468c85abb751d3e484038d3288b848
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Government Digital Presales Consultant
+  - Agency Agents
+  - Specialized
+credits:
+  - title: Government Digital Presales Consultant
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/government-digital-presales-consultant.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

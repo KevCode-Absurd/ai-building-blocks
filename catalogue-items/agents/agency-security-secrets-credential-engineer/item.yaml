@@ -1,0 +1,43 @@
+slug: agency-security-secrets-credential-engineer
+name: Secrets & Credential Hygiene Engineer agent
+summary: Get a credential hygiene review with rotation and storage proposals.
+  Bring your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: security/security-secrets-credential-engineer.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/security/security-secrets-credential-engineer.md
+  licence: MIT
+  original_name: Secrets & Credential Hygiene Engineer
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 356c73f5feb867b3e0d3c58d463a98f5f1b241709ff9dc9e64a5bd6d91457484
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Secrets & Credential Hygiene Engineer
+  - Agency Agents
+  - Security
+credits:
+  - title: Secrets & Credential Hygiene Engineer
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/security/security-secrets-credential-engineer.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

@@ -1,0 +1,43 @@
+slug: agency-specialized-master-plan-architect
+name: Master Plan Architect agent
+summary: Get an implementation brief with assumptions and acceptance checks.
+  Bring your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: specialized/specialized-master-plan-architect.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/specialized-master-plan-architect.md
+  licence: MIT
+  original_name: Master Plan Architect
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 0a9187c15055d76e5867d930eae43daccacd67fa213963ebdc91302044fc354d
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Master Plan Architect
+  - Agency Agents
+  - Specialized
+credits:
+  - title: Master Plan Architect
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/specialized-master-plan-architect.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

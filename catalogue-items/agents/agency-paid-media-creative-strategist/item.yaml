@@ -1,0 +1,42 @@
+slug: agency-paid-media-creative-strategist
+name: Ad Creative Strategist agent
+summary: Get an ad creative plan with copy drafts and test hypotheses. Bring your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: ads
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: paid-media/paid-media-creative-strategist.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/paid-media/paid-media-creative-strategist.md
+  licence: MIT
+  original_name: Ad Creative Strategist
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: a24a303228178eb23d514fee63831cf7e1a3d7e5276c54ce5b58dce566700c41
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Ad Creative Strategist
+  - Agency Agents
+  - Paid Media
+credits:
+  - title: Ad Creative Strategist
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/paid-media/paid-media-creative-strategist.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

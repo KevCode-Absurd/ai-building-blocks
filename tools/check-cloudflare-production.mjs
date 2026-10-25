@@ -17,7 +17,13 @@ try {
   const response=await get(path); assert.equal(response.status,200,path); assert.equal(sha(Buffer.from(await response.arrayBuffer())),sha(fs.readFileSync(stableDist+path)),path+' build hash'); checks.push(path+' stable bytes');
  }
  const expectedAI=process.env.CF_EXPECT_AI_ENABLED==='true';
- let response=await get('/api/compose'); assert.equal(response.status,200); assert.match(response.headers.get('cache-control')||'',/no-store/); assert.deepEqual(await response.json(),{enabled:expectedAI}); checks.push('AI '+(expectedAI?'enabled':'disabled')+' as approved; private model metadata absent');
+ let response=await get('/api/compose'); assert.equal(response.status,200); assert.match(response.headers.get('cache-control')||'',/no-store/); const compose=await response.json();
+ assert.deepEqual(Object.keys(compose).sort(),['defaultModel','enabled','models']);
+ const approvedModels=[['gpt-6-luna','GPT-6 Luna'],['gpt-6.1-sol','GPT-6.1 Sol'],['claude-haiku-5-5','Claude Haiku']];
+ assert(approvedModels.some(([id])=>id===compose.defaultModel)); assert(Array.isArray(compose.models)); assert.equal(compose.models.length,approvedModels.length);
+ compose.models.forEach((model,i)=>{assert.deepEqual(Object.keys(model).sort(),['available','id','label']);assert.equal(model.id,approvedModels[i][0]);assert.equal(model.label,approvedModels[i][1]);assert.equal(typeof model.available,'boolean');});
+ assert.equal(compose.enabled,expectedAI);assert.equal(compose.enabled,compose.models.some(model=>model.available));
+ checks.push('AI '+(expectedAI?'enabled':'disabled')+' as approved; only the allowlisted public model picker is exposed');
  response=await get('/api/security'); assert.equal(response.status,200); const security=await response.json(); assert.equal(security.required,true); assert.equal(typeof security.sitekey,'string'); assert(security.sitekey.length>10); checks.push('real Turnstile public configuration available');
  response=await get('/api/auth'); assert.equal(response.status,200); const auth=await response.json(); assert.equal(typeof auth.configured,'boolean'); assert.deepEqual(Object.keys(auth).sort(),['configured','publishableKey']); if(auth.configured)assert.match(auth.publishableKey,/^pk_live_/);else assert.equal(auth.publishableKey,null); checks.push('account configuration exposes only a live public key or safe disabled state');
  response=await get('/api/auth?usage'); assert([401,503].includes(response.status)); checks.push('account usage rejects anonymous access');

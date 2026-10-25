@@ -1,0 +1,43 @@
+slug: agency-blender-addon-engineer
+name: Blender Add-on Engineer agent
+summary: Get a Blender add-on plan with artist workflow and compatibility
+  checks. Bring your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: game-development/blender/blender-addon-engineer.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/game-development/blender/blender-addon-engineer.md
+  licence: MIT
+  original_name: Blender Add-on Engineer
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: e9a778fb9a78c31b6c2e2d8a0912cccd32652c1627be4794ae70f5ceb0021076
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Blender Add-on Engineer
+  - Agency Agents
+  - Game Development
+credits:
+  - title: Blender Add-on Engineer
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/game-development/blender/blender-addon-engineer.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

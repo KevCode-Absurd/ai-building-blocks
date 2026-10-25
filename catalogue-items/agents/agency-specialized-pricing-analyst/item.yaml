@@ -1,0 +1,43 @@
+slug: agency-specialized-pricing-analyst
+name: Pricing Analyst agent
+summary: Get a pricing analysis with value assumptions and test proposals. Bring
+  your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: specialized/specialized-pricing-analyst.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/specialized-pricing-analyst.md
+  licence: MIT
+  original_name: Pricing Analyst
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: fb8a63681615666bb2efe45b7fd2d9ad8a072ab9066efae6b61d454a58039f85
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Pricing Analyst
+  - Agency Agents
+  - Specialized
+credits:
+  - title: Pricing Analyst
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/specialized-pricing-analyst.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

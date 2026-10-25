@@ -1,0 +1,43 @@
+slug: agency-godot-multiplayer-engineer
+name: Godot Multiplayer Engineer agent
+summary: Get a Godot networking design with synchronization and authority
+  checks. Bring your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: game-development/godot/godot-multiplayer-engineer.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/game-development/godot/godot-multiplayer-engineer.md
+  licence: MIT
+  original_name: Godot Multiplayer Engineer
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 7e86e269a98652c4e41c2f5d26b594c99e176d724b11f505550ab51cc21dfbb8
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Godot Multiplayer Engineer
+  - Agency Agents
+  - Game Development
+credits:
+  - title: Godot Multiplayer Engineer
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/game-development/godot/godot-multiplayer-engineer.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

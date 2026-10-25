@@ -1,0 +1,43 @@
+slug: agency-specialized-workflow-architect
+name: Workflow Architect agent
+summary: Get a workflow specification with paths, states and acceptance checks.
+  Bring your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: specialized/specialized-workflow-architect.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/specialized-workflow-architect.md
+  licence: MIT
+  original_name: Workflow Architect
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: a7a73de5d9d3d748f4b30a2d632511304a97d42feb9fbf2a3e7cac27e7386e52
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Workflow Architect
+  - Agency Agents
+  - Specialized
+credits:
+  - title: Workflow Architect
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/specialized-workflow-architect.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

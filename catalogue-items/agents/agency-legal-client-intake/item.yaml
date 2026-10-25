@@ -1,0 +1,43 @@
+slug: agency-legal-client-intake
+name: Legal Client Intake agent
+summary: Get a legal intake summary with conflicts and attorney follow-up
+  questions. Bring your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: specialized/legal-client-intake.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/legal-client-intake.md
+  licence: MIT
+  original_name: Legal Client Intake
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: b0b1cce8a30f08ada6d630b010b1af99f765f5eca667436af6592545667f4c79
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Legal Client Intake
+  - Agency Agents
+  - Specialized
+credits:
+  - title: Legal Client Intake
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/legal-client-intake.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

@@ -1,0 +1,42 @@
+slug: agency-engineering-api-platform-engineer
+name: API Platform Engineer agent
+summary: Get an API contract with versioning and integration checks. Bring your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: engineering/engineering-api-platform-engineer.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-api-platform-engineer.md
+  licence: MIT
+  original_name: API Platform Engineer
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 21076c3abab2c93f459ff7e2becc83287a200d966c40fc1db868fcbcf36067dd
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - API Platform Engineer
+  - Agency Agents
+  - Engineering
+credits:
+  - title: API Platform Engineer
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-api-platform-engineer.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

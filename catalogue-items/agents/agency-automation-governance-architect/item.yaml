@@ -1,0 +1,43 @@
+slug: agency-automation-governance-architect
+name: Automation Governance Architect agent
+summary: Get an automation governance plan with owners and operating limits.
+  Bring your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: specialized/automation-governance-architect.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/automation-governance-architect.md
+  licence: MIT
+  original_name: Automation Governance Architect
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 8aab89104fec352f1f601ec5e6db11c9628d0b2072e6324484fd7e4c8462f55e
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Automation Governance Architect
+  - Agency Agents
+  - Specialized
+credits:
+  - title: Automation Governance Architect
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/automation-governance-architect.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

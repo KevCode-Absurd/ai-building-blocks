@@ -1,0 +1,43 @@
+slug: agency-unreal-technical-artist
+name: Unreal Technical Artist agent
+summary: Get an Unreal material and effects plan with performance checks. Bring
+  your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: game-development/unreal-engine/unreal-technical-artist.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/game-development/unreal-engine/unreal-technical-artist.md
+  licence: MIT
+  original_name: Unreal Technical Artist
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 54bdd46bc872ba21fbcf7e02492c9f5bef82a6d3a35ee3de757d3b678edd6b82
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Unreal Technical Artist
+  - Agency Agents
+  - Game Development
+credits:
+  - title: Unreal Technical Artist
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/game-development/unreal-engine/unreal-technical-artist.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

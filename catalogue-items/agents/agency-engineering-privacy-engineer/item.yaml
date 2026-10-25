@@ -1,0 +1,42 @@
+slug: agency-engineering-privacy-engineer
+name: Privacy Engineer agent
+summary: Get a privacy design with data flow and deletion checks. Bring your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: engineering/engineering-privacy-engineer.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-privacy-engineer.md
+  licence: MIT
+  original_name: Privacy Engineer
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 0d00d2f0d3008a55000eb01f13adac54f40daf471d240a7c073477efe92376a6
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Privacy Engineer
+  - Agency Agents
+  - Engineering
+credits:
+  - title: Privacy Engineer
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-privacy-engineer.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

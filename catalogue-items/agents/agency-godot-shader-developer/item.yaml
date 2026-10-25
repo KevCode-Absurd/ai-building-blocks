@@ -1,0 +1,43 @@
+slug: agency-godot-shader-developer
+name: Godot Shader Developer agent
+summary: Get a Godot shader plan with rendering and performance checks. Bring
+  your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: game-development/godot/godot-shader-developer.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/game-development/godot/godot-shader-developer.md
+  licence: MIT
+  original_name: Godot Shader Developer
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 947e775e411cd11ea0ed92419737801e602f6aa450037313433ab11aa7681bb4
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Godot Shader Developer
+  - Agency Agents
+  - Game Development
+credits:
+  - title: Godot Shader Developer
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/game-development/godot/godot-shader-developer.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

@@ -1,0 +1,43 @@
+slug: agency-marketing-twitter-engager
+name: Twitter Engager agent
+summary: Get X post and reply drafts with audience and conversation goals. Bring
+  your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: organic
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: marketing/marketing-twitter-engager.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-twitter-engager.md
+  licence: MIT
+  original_name: Twitter Engager
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: df58c7df04fb808d282d7a551c84e039bebdf4a17318a09b84fa285a118f54ab
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Twitter Engager
+  - Agency Agents
+  - Marketing
+credits:
+  - title: Twitter Engager
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-twitter-engager.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

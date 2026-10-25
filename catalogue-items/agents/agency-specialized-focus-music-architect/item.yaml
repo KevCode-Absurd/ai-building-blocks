@@ -1,0 +1,43 @@
+slug: agency-specialized-focus-music-architect
+name: Focus Music Architect agent
+summary: Get a focus music brief with acoustic choices and generation prompts.
+  Bring your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: specialized/specialized-focus-music-architect.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/specialized-focus-music-architect.md
+  licence: MIT
+  original_name: Focus Music Architect
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 9dd1e29f12a4a8acd8872aa263e01f40a766a3b2752517916fe0273fd265bd27
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Focus Music Architect
+  - Agency Agents
+  - Specialized
+credits:
+  - title: Focus Music Architect
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/specialized-focus-music-architect.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

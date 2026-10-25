@@ -1,0 +1,21 @@
+{
+  "engineering/engineering-desktop-app-engineer.md:166:automatic-spend": "Staged application rollout gate, not advertising spend. Adapter requires authorization for live changes.",
+  "engineering/engineering-payments-billing-engineer.md:56:automatic-spend": "Stripe example option enables automatic payment method selection; it is not an instruction to transfer funds. Example code is never executed during intake.",
+  "engineering/engineering-platform-engineer.md:65:concealed-action": "Explicit prohibition on silently changing behavior.",
+  "engineering/engineering-prompt-engineer.md:176:instruction-override": "Quoted adversarial test input in an evaluation checklist, not a directive to ignore instructions.",
+  "engineering/engineering-servicenow-developer-mentor.md:36:approval-bypass": "Explicit prohibition on bypassing security.",
+  "game-development/technical-artist.md:203:automatic-spend": "LOD asset performance budget, not financial spend.",
+  "game-development/unity/unity-architect.md:270:automatic-spend": "Frame time performance budget, not financial spend.",
+  "marketing/marketing-cross-border-ecommerce.md:103:identity-concealment": "Explicit prohibition on fake reviews and review manipulation.",
+  "marketing/marketing-podcast-strategist.md:144:identity-concealment": "Explicit prohibition on fabricated metrics and fake reviews.",
+  "paid-media/paid-media-creative-strategist.md:15:automatic-spend": "Description of advertising platform bidding. All spend and live account changes remain proposals under the adapter rules.",
+  "paid-media/paid-media-ppc-strategist.md:15:automatic-spend": "Description of automated bidding expertise. Adapter requires authorization before structural changes, budget changes and publication; direct-execution language elsewhere in the source does not grant authority.",
+  "security/security-appsec-engineer.md:494:approval-bypass": "Observation about developers bypassing controls, used to diagnose tooling usability. Not an instruction to bypass them.",
+  "security/security-threat-detection-engineer.md:215:approval-bypass": "MITRE ATT&CK threat table describing an adversary technique for detection.",
+  "security/security-threat-intelligence-analyst.md:217:remote-shell": "Adversary behavior described for defensive analysis. No command is executed.",
+  "security/security-threat-intelligence-analyst.md:249:remote-shell": "Detection string in a Sigma rule example, not executable shell.",
+  "security/security-threat-intelligence-analyst.md:251:remote-shell": "Detection string in a Sigma rule example, not executable shell.",
+  "specialized/medical-billing-coding-specialist.md:342:automatic-spend": "Repayment review field in a billing template, not an automatic payment instruction. Adapter requires authorization to move funds.",
+  "specialized/specialized-developer-advocate.md:48:identity-concealment": "Explicit prohibition on astroturfing and fake engagement.",
+  "testing/testing-performance-benchmarker.md:266:automatic-spend": "Software performance budgets and CI gates, not financial budgets."
+}

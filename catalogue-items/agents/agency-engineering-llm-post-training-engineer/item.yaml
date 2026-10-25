@@ -1,0 +1,43 @@
+slug: agency-engineering-llm-post-training-engineer
+name: LLM Post-Training Engineer agent
+summary: Get a model training plan with controlled evaluations and acceptance
+  checks. Bring your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: engineering/engineering-llm-post-training-engineer.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-llm-post-training-engineer.md
+  licence: MIT
+  original_name: LLM Post-Training Engineer
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: aa697dc1c0eb402551b9f6764a89938c8787c9628760b74065d3e383299a980a
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - LLM Post-Training Engineer
+  - Agency Agents
+  - Engineering
+credits:
+  - title: LLM Post-Training Engineer
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-llm-post-training-engineer.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

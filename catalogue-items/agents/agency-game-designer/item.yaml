@@ -1,0 +1,43 @@
+slug: agency-game-designer
+name: Game Designer agent
+summary: Get a gameplay loop proposal with player goals and playtest questions.
+  Bring your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: game-development/game-designer.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/game-development/game-designer.md
+  licence: MIT
+  original_name: Game Designer
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 203c4d7f0358a628ea21e3b9c16980f28003bd035b5cfd41a2daec04f6b84e5a
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Game Designer
+  - Agency Agents
+  - Game Development
+credits:
+  - title: Game Designer
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/game-development/game-designer.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

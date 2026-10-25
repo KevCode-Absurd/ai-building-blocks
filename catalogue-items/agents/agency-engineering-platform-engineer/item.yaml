@@ -1,0 +1,43 @@
+slug: agency-engineering-platform-engineer
+name: Platform Engineer agent
+summary: Get a developer platform plan with service templates and operating
+  rules. Bring your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: engineering/engineering-platform-engineer.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-platform-engineer.md
+  licence: MIT
+  original_name: Platform Engineer
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 0736a0c476ff46e16e33b36ec143352107b82d69b3501bcdaefe22feee252652
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Platform Engineer
+  - Agency Agents
+  - Engineering
+credits:
+  - title: Platform Engineer
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-platform-engineer.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

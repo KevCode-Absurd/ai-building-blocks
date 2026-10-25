@@ -1,0 +1,43 @@
+slug: agency-recruitment-specialist
+name: Recruitment Specialist agent
+summary: Get a China recruiting plan with sourcing and compliance checks. Bring
+  your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: specialized/recruitment-specialist.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/recruitment-specialist.md
+  licence: MIT
+  original_name: Recruitment Specialist
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: cf3d73aae046a12538f64bd67bc5def7946de070485c388ce467251ac8d1e892
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Recruitment Specialist
+  - Agency Agents
+  - Specialized
+credits:
+  - title: Recruitment Specialist
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/recruitment-specialist.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

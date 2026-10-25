@@ -1,0 +1,37 @@
+{
+  "status": "pass",
+  "checkedOn": "2026-10-25T09:05:30.469Z",
+  "sourceCommit": "b37b5bb33b78f2c1d6567d98e25ca818e3259219",
+  "counts": {
+    "profiles": 283,
+    "archives": 283,
+    "sourceHashes": 283,
+    "licences": 283,
+    "pages": 283,
+    "searchDocuments": 283,
+    "apiResources": 283
+  },
+  "catalogueBlocks": 5288,
+  "catalogueAgents": 445,
+  "limitations": "Static source, package and publication checks. Agent behavior has not been evaluated in model runs. No live deployment performed.",
+  "productionBuild": {
+    "status": "pass",
+    "command": "npm run build",
+    "prerenderedPages": 5483,
+    "files": 30392
+  },
+  "regressionTests": {
+    "status": "pass",
+    "tests": 22
+  },
+  "browserChecks": {
+    "status": "pass",
+    "report": "reports/2026-10-25-agency-agents-browser/report.json",
+    "profiles": [
+      "desktop",
+      "mobile"
+    ],
+    "agentDownloads": 4
+  },
+  "builtAssetsMatchPublic": true
+}

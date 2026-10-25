@@ -1,0 +1,43 @@
+slug: agency-xr-cockpit-interaction-specialist
+name: XR Cockpit Interaction Specialist agent
+summary: Get an XR cockpit interaction plan with control and usability checks.
+  Bring your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: spatial-computing/xr-cockpit-interaction-specialist.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/spatial-computing/xr-cockpit-interaction-specialist.md
+  licence: MIT
+  original_name: XR Cockpit Interaction Specialist
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: c8473bd555ad22da7d4978e94a3aec07ae9519b2080572b409639deb9a8e7110
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - XR Cockpit Interaction Specialist
+  - Agency Agents
+  - Spatial Computing
+credits:
+  - title: XR Cockpit Interaction Specialist
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/spatial-computing/xr-cockpit-interaction-specialist.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

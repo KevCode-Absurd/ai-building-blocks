@@ -1,0 +1,42 @@
+slug: agency-sales-offer-lead-gen-strategist
+name: Offer & Lead Gen Strategist agent
+summary: Get an offer and lead generation plan with channel tests. Bring your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: copy
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: sales/sales-offer-lead-gen-strategist.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/sales/sales-offer-lead-gen-strategist.md
+  licence: MIT
+  original_name: Offer & Lead Gen Strategist
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 75a12987fb2a205ac029c2ebf43d1ae1a1502d1707ab4921923928489ff3778c
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Offer & Lead Gen Strategist
+  - Agency Agents
+  - Sales
+credits:
+  - title: Offer & Lead Gen Strategist
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/sales/sales-offer-lead-gen-strategist.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

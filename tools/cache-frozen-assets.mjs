@@ -9,7 +9,7 @@ const require=createRequire(new URL('../site/package.json',import.meta.url));
 const {hash}=require('blake3-wasm');
 const root=path.resolve(process.argv[2]||'');
 const allowed=[path.resolve('site/.wrangler/releases'),path.resolve('C:/Users/kevin/.codex/visualizations/2026/10/22/01a161bf-0b97-7cf2-97f3-74eb6d30d1e4')];
-assert(allowed.some(parent=>root.startsWith(parent+path.sep))&&path.basename(root).startsWith('release-2026-10-22'));
+assert(allowed.some(parent=>root.startsWith(parent+path.sep))&&/^release-2026-10-(22|25)-/.test(path.basename(root)),'Only reviewed frozen release directories are accepted.');
 const frozen=JSON.parse(await fs.readFile(path.join(root,'release-manifest.json'),'utf8'));
 const directory=path.resolve(frozen.assets);
 assert.equal(directory,path.join(root,'assets'));

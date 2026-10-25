@@ -1,0 +1,43 @@
+slug: agency-paid-media-programmatic-buyer
+name: Programmatic & Display Buyer agent
+summary: Get a display buying proposal with inventory and brand safety checks.
+  Bring your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: ads
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: paid-media/paid-media-programmatic-buyer.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/paid-media/paid-media-programmatic-buyer.md
+  licence: MIT
+  original_name: Programmatic & Display Buyer
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: c2a54b847823906485bed6e704fc7a013e3d9cf1340045354aae9a9e0c96e7e1
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Programmatic & Display Buyer
+  - Agency Agents
+  - Paid Media
+credits:
+  - title: Programmatic & Display Buyer
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/paid-media/paid-media-programmatic-buyer.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

@@ -1,0 +1,42 @@
+slug: agency-gis-bim-specialist
+name: BIM/GIS Specialist agent
+summary: Get a BIM and GIS integration plan with coordinate checks. Bring your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: research
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: gis/gis-bim-specialist.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/gis/gis-bim-specialist.md
+  licence: MIT
+  original_name: BIM/GIS Specialist
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 724609ec55d1b83c88672ada351763ac6c219adca2d36faea0790bdda953e567
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - BIM/GIS Specialist
+  - Agency Agents
+  - GIS
+credits:
+  - title: BIM/GIS Specialist
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/gis/gis-bim-specialist.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

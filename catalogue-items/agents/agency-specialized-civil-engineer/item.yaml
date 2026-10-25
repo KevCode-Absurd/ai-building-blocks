@@ -1,0 +1,43 @@
+slug: agency-specialized-civil-engineer
+name: Civil Engineer agent
+summary: Get a civil design review with code and constructability questions.
+  Bring your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: specialized/specialized-civil-engineer.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/specialized-civil-engineer.md
+  licence: MIT
+  original_name: Civil Engineer
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 37c9c37511345799235dcb41a4bd92c5577614c392b9a1fa3a1afee112e5de3b
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Civil Engineer
+  - Agency Agents
+  - Specialized
+credits:
+  - title: Civil Engineer
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/specialized-civil-engineer.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

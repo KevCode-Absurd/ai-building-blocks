@@ -123,29 +123,30 @@ test("dragging before and after recommendations adds one correctly connected ste
   }
 });
 
-test("mouse selection moves a group, deletes and undoes it while pan and typing preserve steps", async ({ page }) => {
+test("mouse selection, delete, undo and space-pan work without diagram toolbar controls", async ({ page }) => {
   await open(page);
   await page.getByTestId("workflow-customize").click();
   await page.getByTestId("view-fit-to-screen").click();
   const pane = page.locator(".react-flow__pane"); await pane.scrollIntoViewIfNeeded();
-  await expect(page.getByTestId("diagram-select")).toHaveAttribute("aria-pressed", "true");
+  await expect(page.locator(".diagram-tools")).toHaveCount(0);
   const boxes = await Promise.all([node(page, "a").boundingBox(), node(page, "b").boundingBox()]);
   expect(boxes.every(Boolean)).toBe(true);
   const left = Math.min(...boxes.map(b => b!.x)) - 12, top = Math.min(...boxes.map(b => b!.y)) - 12;
   const right = Math.max(...boxes.map(b => b!.x + b!.width)) + 12, bottom = Math.max(...boxes.map(b => b!.y + b!.height)) + 12;
   await page.mouse.move(left, top); await page.mouse.down(); await page.mouse.move(right, bottom, { steps: 14 }); await page.mouse.up();
-  await expect(page.getByTestId("delete-selected")).toHaveText("Delete selected (2)");
+  await expect(page.locator(".react-flow__node.selected")).toHaveCount(2);
   const prior = await readDraft(page), box = await node(page, "a").boundingBox();
   await page.mouse.move(box!.x + 30, box!.y + 35); await page.mouse.down(); await page.mouse.move(box!.x + 65, box!.y + 85, { steps: 12 }); await page.mouse.up();
   await expect.poll(async () => (await readDraft(page)).nodes.find((n: any) => n.id === "a").x).not.toBe(prior.nodes[0].x);
   const moved = await readDraft(page), deltas = ["a", "b"].map(id => { const p = prior.nodes.find((n: any) => n.id === id), n = moved.nodes.find((n: any) => n.id === id); return [n.x - p.x, n.y - p.y]; });
   expect(deltas[0]).toEqual(deltas[1]); expect(moved.nodes.find((n: any) => n.id === "c")).toEqual(prior.nodes[2]);
-  await page.getByTestId("delete-selected").click(); await expect(page.getByTestId("flow-node")).toHaveCount(1);
+  await page.keyboard.press("Delete"); await expect(page.getByTestId("flow-node")).toHaveCount(1);
   await expect(page.getByTestId("view-undo")).toBeEnabled(); await page.getByTestId("view-undo").click(); await expect(page.getByTestId("flow-node")).toHaveCount(3);
   await expect.poll(async () => (await readDraft(page)).edges.length).toBe(3);
-  await page.getByTestId("diagram-pan").click();
   const viewport = page.locator(".react-flow__viewport"), beforePan = await viewport.getAttribute("style"), area = await pane.boundingBox();
+  await page.keyboard.down("Space");
   await page.mouse.move(area!.x + area!.width - 30, area!.y + 30); await page.mouse.down(); await page.mouse.move(area!.x + area!.width - 75, area!.y + 75, { steps: 10 }); await page.mouse.up();
+  await page.keyboard.up("Space");
   await expect.poll(() => viewport.getAttribute("style")).not.toBe(beforePan);
   expect((await readDraft(page)).nodes).toHaveLength(3);
   await page.getByTestId("workflow-customize").click(); await page.getByTestId("chain-goal").fill("Keep all stepsX"); await page.getByTestId("chain-goal").press("Backspace");

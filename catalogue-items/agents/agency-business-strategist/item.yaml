@@ -1,0 +1,43 @@
+slug: agency-business-strategist
+name: Business Strategist agent
+summary: Get a business strategy brief with choices and execution priorities.
+  Bring your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: specialized/business-strategist.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/business-strategist.md
+  licence: MIT
+  original_name: Business Strategist
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 9314906805d8dee81c3e2d10cb93513a391731d9fceb2e4c936257005a144b92
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Business Strategist
+  - Agency Agents
+  - Specialized
+credits:
+  - title: Business Strategist
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/business-strategist.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

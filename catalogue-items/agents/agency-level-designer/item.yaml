@@ -1,0 +1,42 @@
+slug: agency-level-designer
+name: Level Designer agent
+summary: Get a game level brief with pacing and navigation checks. Bring your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: game-development/level-designer.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/game-development/level-designer.md
+  licence: MIT
+  original_name: Level Designer
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 79c1d41b7dfc477f6f364ba8b6dec02dc0c081235fe8f8b61c8b062b5dc3b344
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Level Designer
+  - Agency Agents
+  - Game Development
+credits:
+  - title: Level Designer
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/game-development/level-designer.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

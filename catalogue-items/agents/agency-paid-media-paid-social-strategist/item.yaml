@@ -1,0 +1,43 @@
+slug: agency-paid-media-paid-social-strategist
+name: Paid Social Strategist agent
+summary: Get a paid social proposal with audience, budget and creative tests.
+  Bring your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: ads
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: paid-media/paid-media-paid-social-strategist.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/paid-media/paid-media-paid-social-strategist.md
+  licence: MIT
+  original_name: Paid Social Strategist
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: c8004c7f640dfef9c7c698f69c4c3712d063df06c8d391c809df92ba420af3db
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Paid Social Strategist
+  - Agency Agents
+  - Paid Media
+credits:
+  - title: Paid Social Strategist
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/paid-media/paid-media-paid-social-strategist.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

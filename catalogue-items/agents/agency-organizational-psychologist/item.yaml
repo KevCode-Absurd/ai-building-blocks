@@ -1,0 +1,43 @@
+slug: agency-organizational-psychologist
+name: Organizational Psychologist agent
+summary: Get a team behavior review with evidence and intervention proposals.
+  Bring your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: specialized/organizational-psychologist.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/organizational-psychologist.md
+  licence: MIT
+  original_name: Organizational Psychologist
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: b7e523e1557ef9e98d5a0b515809996c6bbc0de6a49b1dc355d803e3bae09be2
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Organizational Psychologist
+  - Agency Agents
+  - Specialized
+credits:
+  - title: Organizational Psychologist
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/organizational-psychologist.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

@@ -1,0 +1,43 @@
+slug: agency-testing-accessibility-auditor
+name: Accessibility Auditor agent
+summary: Get an accessibility audit plan with manual and automated checks. Bring
+  your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: testing/testing-accessibility-auditor.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/testing/testing-accessibility-auditor.md
+  licence: MIT
+  original_name: Accessibility Auditor
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 362935907af23839775b9c6162f38c0c5a740542ab4350cb5c5b5a0d9f9a4268
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Accessibility Auditor
+  - Agency Agents
+  - Testing
+credits:
+  - title: Accessibility Auditor
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/testing/testing-accessibility-auditor.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

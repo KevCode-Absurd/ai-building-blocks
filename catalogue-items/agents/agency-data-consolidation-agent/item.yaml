@@ -1,0 +1,43 @@
+slug: agency-data-consolidation-agent
+name: Data Consolidation agent
+summary: Get a sales data consolidation plan with reconciliation and reporting
+  checks. Bring your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: specialized/data-consolidation-agent.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/data-consolidation-agent.md
+  licence: MIT
+  original_name: Data Consolidation Agent
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 7e7de097ff27e3aa2732a9f1ab0bd7acaaef73dabf53fc7be6c90c8ab6afab11
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Data Consolidation Agent
+  - Agency Agents
+  - Specialized
+credits:
+  - title: Data Consolidation Agent
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/data-consolidation-agent.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

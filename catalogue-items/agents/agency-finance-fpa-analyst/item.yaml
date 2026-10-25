@@ -1,0 +1,42 @@
+slug: agency-finance-fpa-analyst
+name: FP&A Analyst agent
+summary: Get a budget and forecast plan with variance explanations. Bring your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: analysis
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: finance/finance-fpa-analyst.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/finance/finance-fpa-analyst.md
+  licence: MIT
+  original_name: FP&A Analyst
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 5fa9137c80e0b91fbe62815e7981d7b6a2ca5bafe43013c56d1b847a3c963141
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - FP&A Analyst
+  - Agency Agents
+  - Finance
+credits:
+  - title: FP&A Analyst
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/finance/finance-fpa-analyst.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

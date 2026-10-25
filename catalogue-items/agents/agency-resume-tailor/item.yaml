@@ -1,0 +1,43 @@
+slug: agency-resume-tailor
+name: Resume Tailor agent
+summary: Get a resume revision matched to the role and real experience. Bring
+  your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: specialized/resume-tailor.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/resume-tailor.md
+  licence: MIT
+  original_name: Resume Tailor
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: be3d173ce4807d49671c7956f107029a4cb4061651882a0a3ea8c4f20738273f
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Resume Tailor
+  - Agency Agents
+  - Specialized
+credits:
+  - title: Resume Tailor
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/resume-tailor.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

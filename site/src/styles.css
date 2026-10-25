@@ -626,7 +626,7 @@ body.globe-dragging, body.globe-dragging * { user-select: none !important; -webk
 .decode { white-space: pre; }
 
 /* A band of dither where the hero meets the library */
-.hero::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 64px; z-index: -1; pointer-events: none; background: var(--line-2);
+.hero::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 64px; z-index: -2; pointer-events: none; background: var(--line-2);
   -webkit-mask: var(--dither-y) left bottom / 8px 64px repeat-x; mask: var(--dither-y) left bottom / 8px 64px repeat-x; opacity: 0.7; }
 
 /* Outputs that write themselves */

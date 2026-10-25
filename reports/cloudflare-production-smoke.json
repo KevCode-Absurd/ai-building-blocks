@@ -1,7 +1,7 @@
 {
-  "checkedOn": "2026-10-22T16:49:47.123Z",
+  "checkedOn": "2026-10-25T10:49:37.611Z",
   "origin": "https://useaiblocks.com",
-  "deployedVersion": "359e91b6-8ce9-4e0f-8a4b-030c9a6c302e",
+  "deployedVersion": "1e38049b-4107-4d93-95ff-d27ba1ec4e76",
   "readOnly": true,
   "providerCalls": 0,
   "status": "pass",
@@ -18,7 +18,7 @@
     "/example-app/ HTML200",
     "/data/blocks.json stable bytes",
     "/skills/website-brand-brain-builder/SKILL.md stable bytes",
-    "AI enabled as approved; private model metadata absent",
+    "AI enabled as approved; only the allowlisted public model picker is exposed",
     "real Turnstile public configuration available",
     "account configuration exposes only a live public key or safe disabled state",
     "account usage rejects anonymous access",

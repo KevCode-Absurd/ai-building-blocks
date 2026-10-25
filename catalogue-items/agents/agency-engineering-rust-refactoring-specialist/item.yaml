@@ -1,0 +1,43 @@
+slug: agency-engineering-rust-refactoring-specialist
+name: Rust Refactoring Specialist agent
+summary: Get a Rust refactor proposal with migration and behavior checks. Bring
+  your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: engineering/engineering-rust-refactoring-specialist.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-rust-refactoring-specialist.md
+  licence: MIT
+  original_name: Rust Refactoring Specialist
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 06ca53dbd12694560bf01feb94cbbd8c428e4abe6ac92c8a72eeb277ce179a78
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Rust Refactoring Specialist
+  - Agency Agents
+  - Engineering
+credits:
+  - title: Rust Refactoring Specialist
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-rust-refactoring-specialist.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

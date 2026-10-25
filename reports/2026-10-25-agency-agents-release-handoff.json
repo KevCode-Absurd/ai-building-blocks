@@ -1,0 +1,54 @@
+{
+  "status": "prepared-not-deployed",
+  "root": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-25-agency-agents",
+  "manifestFile": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-25-agency-agents\\release-manifest.json",
+  "manifestSha256": "524e1b944e46cbc9710fe655e749ea99050bf05dffbab4570b9e93e12d8d37a7",
+  "staticVerificationFile": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-25-agency-agents\\verification-static.json",
+  "staticVerificationSha256": "5722a802b55967a9aa4e5548b2da4e2335310e23206bd9142905b7cd3316376f",
+  "baseline": {
+    "root": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-25-discovery-final",
+    "versionId": "1e38049b-4107-4d93-95ff-d27ba1ec4e76",
+    "manifestSha256": "4508961bd5c82ad55bbf32d4e44d3eb99df9370f5ef5617264c6a3b335615602",
+    "assetFingerprint": "e855f23ede93d8c73fb06fe8fd90a1277fc3d478e6f47f189eff82efe88d3cea",
+    "workerSha256": "bc749ed3169c246afe3303bb85e5c1882ed93c5ca5beaf64f0be4daaad5e9fd5"
+  },
+  "candidate": {
+    "assetFingerprint": "1f3685849464568dfc051b3ac23f55bf41b8882cb5e66fe1ac078f2643c7f033",
+    "sourceDeltaFingerprint": "2b8493d95bbb871ec28417c3cdbea39c97a94745d83c222ae3ceeda096308606",
+    "records": 5278,
+    "added": 283,
+    "assetFiles": 29396,
+    "changedAssets": 1818,
+    "agents": 442
+  },
+  "evidence": [
+    {
+      "file": "reports/2026-10-25-agency-agents-import.json",
+      "sha256": "b4a713b62cdddc05b30215f33b23506a28413dfc026f00700f52b5e5e829783c"
+    },
+    {
+      "file": "reports/2026-10-25-agency-agents-inventory.json",
+      "sha256": "701e2a67b321dc14bd59e4cf06d7e385e152935407c8e930750c01ba35ede568"
+    },
+    {
+      "file": "reports/2026-10-25-agency-agents-checks.json",
+      "sha256": "a84e2e0a83ac777c476ea21e40affe89291f6fdce0641e3b7ff8536927508866"
+    },
+    {
+      "file": "reports/2026-10-25-agency-agents-browser/report.json",
+      "sha256": "84b890ec3d97ed10d766ed086e48c7e7c2f921c148a524462d0c4feea4b3d2e3"
+    }
+  ],
+  "scope": "Preserve the verified production application, Worker, settings, every existing catalogue record and every unrelated asset. Add only 283 Agency Agents packs/pages and necessary derived search/API/starter/sitemap/LLM discovery indexes. Frozen source is a delta inherited from the previous release.",
+  "networkRequests": 0,
+  "productionMutations": 0,
+  "deploymentOwner": "01a168e9-e165-73d0-8cc5-97b2d1830328",
+  "generatorDependencies": {
+    "file": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-25-agency-agents\\generator-dependency-hashes.json",
+    "sha256": "67a9b5922527b6d96c834cd7148a2a9ca8359d8de6864d0d82305aa5a6187e14"
+  },
+  "excludedApiMetadataChanges": {
+    "file": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-25-agency-agents\\excluded-api-metadata-changes.json",
+    "sha256": "dc9bde7081f0490c09a134ad8b50bd53b60447db8493ce97fdbe4e6282b13362"
+  }
+}

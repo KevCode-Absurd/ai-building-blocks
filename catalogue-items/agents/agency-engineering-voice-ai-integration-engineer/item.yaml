@@ -1,0 +1,43 @@
+slug: agency-engineering-voice-ai-integration-engineer
+name: Voice AI Integration Engineer agent
+summary: Get a speech pipeline plan with transcription and speaker checks. Bring
+  your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: engineering/engineering-voice-ai-integration-engineer.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-voice-ai-integration-engineer.md
+  licence: MIT
+  original_name: Voice AI Integration Engineer
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: c6f3cc0829fc2b6c989f2aed10929e59365ec3bae89089205e27acbc57c17c7c
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Voice AI Integration Engineer
+  - Agency Agents
+  - Engineering
+credits:
+  - title: Voice AI Integration Engineer
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-voice-ai-integration-engineer.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

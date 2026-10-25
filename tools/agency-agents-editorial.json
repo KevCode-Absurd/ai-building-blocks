@@ -1,0 +1,1582 @@
+{
+  "academic/academic-anthropologist.md": {
+    "name": "Anthropologist agent",
+    "summary": "Get a cultural research brief grounded in observed practices. Bring your brief.",
+    "outcome": "A cultural research brief grounded in observed practices."
+  },
+  "academic/academic-geographer.md": {
+    "name": "Geographer agent",
+    "summary": "Get an analysis of how place shapes people and markets. Bring your brief.",
+    "outcome": "An analysis of how place shapes people and markets."
+  },
+  "academic/academic-historian.md": {
+    "name": "Historian agent",
+    "summary": "Get a historical explanation with sources and competing accounts. Bring your brief.",
+    "outcome": "A historical explanation with sources and competing accounts."
+  },
+  "academic/academic-narratologist.md": {
+    "name": "Narratologist agent",
+    "summary": "Get an analysis of narrative structure and meaning. Bring your brief.",
+    "outcome": "An analysis of narrative structure and meaning.",
+    "task": "write-and-tell-stories"
+  },
+  "academic/academic-psychologist.md": {
+    "name": "Psychologist agent",
+    "summary": "Get an evidence review of behavior and possible explanations. Bring your brief.",
+    "outcome": "An evidence review of behavior and possible explanations."
+  },
+  "academic/academic-statistician.md": {
+    "name": "Statistician agent",
+    "summary": "Get a statistical study plan with assumptions and validity checks. Bring your brief.",
+    "outcome": "A statistical study plan with assumptions and validity checks.",
+    "task": "track-numbers"
+  },
+  "design/design-brand-guardian.md": {
+    "name": "Brand Guardian agent",
+    "summary": "Get a review of brand consistency with proposed fixes. Bring your brief.",
+    "outcome": "A review of brand consistency with proposed fixes.",
+    "task": "brand-file"
+  },
+  "design/design-image-prompt-engineer.md": {
+    "name": "Image Prompt Engineer agent",
+    "summary": "Get image prompts with subject, lighting and composition choices. Bring your brief.",
+    "outcome": "Image prompts with subject, lighting and composition choices.",
+    "task": "make-images"
+  },
+  "design/design-inclusive-visuals-specialist.md": {
+    "name": "Inclusive Visuals Specialist agent",
+    "summary": "Get an image brief that checks representation and cultural context. Bring your brief.",
+    "outcome": "An image brief that checks representation and cultural context.",
+    "task": "make-images"
+  },
+  "design/design-persona-walkthrough.md": {
+    "name": "Persona Walkthrough Specialist agent",
+    "summary": "Get a simulated user walkthrough with friction points to test. Bring your brief.",
+    "outcome": "A simulated user walkthrough with friction points to test.",
+    "task": "audit-landing-page"
+  },
+  "design/design-ui-designer.md": {
+    "name": "UI Designer agent",
+    "summary": "Get an interface design with reusable components and accessibility checks. Bring your brief.",
+    "outcome": "An interface design with reusable components and accessibility checks."
+  },
+  "design/design-ui-finish-gate-reviewer.md": {
+    "name": "UI Finish-Gate Reviewer agent",
+    "summary": "Get an interface review with visual gaps and release checks. Bring your brief.",
+    "outcome": "An interface review with visual gaps and release checks."
+  },
+  "design/design-ux-architect.md": {
+    "name": "UX Architect agent",
+    "summary": "Get a page structure and CSS plan developers can implement. Bring your brief.",
+    "outcome": "A page structure and CSS plan developers can implement."
+  },
+  "design/design-ux-researcher.md": {
+    "name": "UX Researcher agent",
+    "summary": "Get a user research plan with findings tied to evidence. Bring your brief.",
+    "outcome": "A user research plan with findings tied to evidence.",
+    "task": "understand-customers"
+  },
+  "design/design-visual-storyteller.md": {
+    "name": "Visual Storyteller agent",
+    "summary": "Get a visual narrative plan with a clear message and sequence. Bring your brief.",
+    "outcome": "A visual narrative plan with a clear message and sequence."
+  },
+  "design/design-whimsy-injector.md": {
+    "name": "Playful design agent",
+    "summary": "Get small playful design ideas with usability checks. Bring your brief.",
+    "outcome": "Small playful design ideas with usability checks."
+  },
+  "engineering/engineering-ai-data-remediation-engineer.md": {
+    "name": "AI Data Remediation Engineer agent",
+    "summary": "Get a data repair plan with traceable changes and validation. Bring your brief.",
+    "outcome": "A data repair plan with traceable changes and validation.",
+    "task": "track-numbers"
+  },
+  "engineering/engineering-ai-engineer.md": {
+    "name": "AI Engineer agent",
+    "summary": "Get an AI feature plan with deployment and quality checks. Bring your brief.",
+    "outcome": "An AI feature plan with deployment and quality checks."
+  },
+  "engineering/engineering-api-platform-engineer.md": {
+    "name": "API Platform Engineer agent",
+    "summary": "Get an API contract with versioning and integration checks. Bring your brief.",
+    "outcome": "An API contract with versioning and integration checks."
+  },
+  "engineering/engineering-ats-validator-architect.md": {
+    "name": "ATS Validator Architect agent",
+    "summary": "Get a resume parsing review with layout and extraction checks. Bring your brief.",
+    "outcome": "A resume parsing review with layout and extraction checks.",
+    "task": "find-a-job"
+  },
+  "engineering/engineering-autonomous-optimization-architect.md": {
+    "name": "Autonomous Optimization Architect agent",
+    "summary": "Get a model routing plan with cost limits and trial checks. Bring your brief.",
+    "outcome": "A model routing plan with cost limits and trial checks.",
+    "task": "set-up-ai"
+  },
+  "engineering/engineering-backend-architect.md": {
+    "name": "Backend Architect agent",
+    "summary": "Get a backend design with data, API and scaling choices. Bring your brief.",
+    "outcome": "A backend design with data, API and scaling choices."
+  },
+  "engineering/engineering-china-network-engineer.md": {
+    "name": "China Network Engineer agent",
+    "summary": "Get a network change plan for Chinese equipment with rollback checks. Bring your brief.",
+    "outcome": "A network change plan for Chinese equipment with rollback checks."
+  },
+  "engineering/engineering-cms-developer.md": {
+    "name": "CMS Developer agent",
+    "summary": "Get a WordPress or Drupal implementation plan with code checks. Bring your brief.",
+    "outcome": "A WordPress or Drupal implementation plan with code checks.",
+    "task": "build-websites"
+  },
+  "engineering/engineering-code-reviewer.md": {
+    "name": "Code Reviewer agent",
+    "summary": "Get a code review with specific defects and proposed fixes. Bring your brief.",
+    "outcome": "A code review with specific defects and proposed fixes.",
+    "task": "test-and-fix-code"
+  },
+  "engineering/engineering-codebase-onboarding-engineer.md": {
+    "name": "Codebase Onboarding Engineer agent",
+    "summary": "Get a codebase map with file references and learning steps. Bring your brief.",
+    "outcome": "A codebase map with file references and learning steps.",
+    "task": "document-work"
+  },
+  "engineering/engineering-data-engineer.md": {
+    "name": "Data Engineer agent",
+    "summary": "Get a data pipeline design with quality and recovery checks. Bring your brief.",
+    "outcome": "A data pipeline design with quality and recovery checks."
+  },
+  "engineering/engineering-data-visualization-engineer.md": {
+    "name": "Data Visualization Engineer agent",
+    "summary": "Get a chart plan that matches the data and comparison. Bring your brief.",
+    "outcome": "A chart plan that matches the data and comparison.",
+    "task": "track-numbers"
+  },
+  "engineering/engineering-database-optimizer.md": {
+    "name": "Database Optimizer agent",
+    "summary": "Get a query and schema review with measurable tuning proposals. Bring your brief.",
+    "outcome": "A query and schema review with measurable tuning proposals."
+  },
+  "engineering/engineering-database-reliability-engineer.md": {
+    "name": "Database Reliability Engineer agent",
+    "summary": "Get a database recovery plan with restore and failover tests. Bring your brief.",
+    "outcome": "A database recovery plan with restore and failover tests.",
+    "task": "ship-and-host"
+  },
+  "engineering/engineering-desktop-app-engineer.md": {
+    "name": "Desktop App Engineer agent",
+    "summary": "Get a desktop app plan with packaging and update checks. Bring your brief.",
+    "outcome": "A desktop app plan with packaging and update checks."
+  },
+  "engineering/engineering-developer-tooling-engineer.md": {
+    "name": "Developer Tooling Engineer agent",
+    "summary": "Get a developer tool plan with clear commands and failure handling. Bring your brief.",
+    "outcome": "A developer tool plan with clear commands and failure handling."
+  },
+  "engineering/engineering-devops-automator.md": {
+    "name": "DevOps Automator agent",
+    "summary": "Get a deployment pipeline proposal with rollback and monitoring checks. Bring your brief.",
+    "outcome": "A deployment pipeline proposal with rollback and monitoring checks.",
+    "task": "ship-and-host"
+  },
+  "engineering/engineering-drupal-performance.md": {
+    "name": "Drupal Performance Engineer agent",
+    "summary": "Get a Drupal speed review with profiling evidence and fixes. Bring your brief.",
+    "outcome": "A Drupal speed review with profiling evidence and fixes.",
+    "task": "speed-up-store"
+  },
+  "engineering/engineering-drupal-shopping-cart.md": {
+    "name": "Drupal Shopping Cart Engineer agent",
+    "summary": "Get a Drupal Commerce plan with order and payment checks. Bring your brief.",
+    "outcome": "A Drupal Commerce plan with order and payment checks.",
+    "task": "set-up-store"
+  },
+  "engineering/engineering-electrical-engineer.md": {
+    "name": "Electrical Engineer agent",
+    "summary": "Get an electrical design review with units, standards and open risks. Bring your brief.",
+    "outcome": "An electrical design review with units, standards and open risks."
+  },
+  "engineering/engineering-email-intelligence-engineer.md": {
+    "name": "Email Intelligence Engineer agent",
+    "summary": "Get an email parsing plan with structured fields and validation. Bring your brief.",
+    "outcome": "An email parsing plan with structured fields and validation.",
+    "task": "connect-tools"
+  },
+  "engineering/engineering-embedded-firmware-engineer.md": {
+    "name": "Embedded Firmware Engineer agent",
+    "summary": "Get a firmware design with hardware limits and reliability checks. Bring your brief.",
+    "outcome": "A firmware design with hardware limits and reliability checks."
+  },
+  "engineering/engineering-feishu-integration-developer.md": {
+    "name": "Feishu Integration Developer agent",
+    "summary": "Get a Feishu integration plan for bots, approvals and data. Bring your brief.",
+    "outcome": "A Feishu integration plan for bots, approvals and data.",
+    "task": "connect-tools"
+  },
+  "engineering/engineering-filament-optimization-specialist.md": {
+    "name": "Filament Optimization Specialist agent",
+    "summary": "Get a Filament admin review with clearer forms and navigation. Bring your brief.",
+    "outcome": "A Filament admin review with clearer forms and navigation."
+  },
+  "engineering/engineering-finops-engineer.md": {
+    "name": "FinOps Engineer agent",
+    "summary": "Get a cloud cost review with savings proposals and reliability checks. Bring your brief.",
+    "outcome": "A cloud cost review with savings proposals and reliability checks.",
+    "task": "ship-and-host"
+  },
+  "engineering/engineering-frontend-developer.md": {
+    "name": "Frontend Developer agent",
+    "summary": "Get a responsive web interface plan with code and usability checks. Bring your brief.",
+    "outcome": "A responsive web interface plan with code and usability checks.",
+    "task": "build-websites"
+  },
+  "engineering/engineering-gaussdb-expert.md": {
+    "name": "GaussDB Expert Engineer agent",
+    "summary": "Get a GaussDB query and schema review with tuning checks. Bring your brief.",
+    "outcome": "A GaussDB query and schema review with tuning checks."
+  },
+  "engineering/engineering-git-workflow-master.md": {
+    "name": "Git workflow agent",
+    "summary": "Get a Git workflow plan with branch and review rules. Bring your brief.",
+    "outcome": "A Git workflow plan with branch and review rules."
+  },
+  "engineering/engineering-i18n-engineer.md": {
+    "name": "Internationalization Engineer agent",
+    "summary": "Get a translation readiness review with locale and layout checks. Bring your brief.",
+    "outcome": "A translation readiness review with locale and layout checks."
+  },
+  "engineering/engineering-identity-access-engineer.md": {
+    "name": "Identity & Access Engineer agent",
+    "summary": "Get an authentication design with access rules and session checks. Bring your brief.",
+    "outcome": "An authentication design with access rules and session checks.",
+    "task": "secure-code"
+  },
+  "engineering/engineering-incident-response-commander.md": {
+    "name": "Incident Response Commander agent",
+    "summary": "Get an incident response plan with evidence, owners and recovery checks. Bring your brief.",
+    "outcome": "An incident response plan with evidence, owners and recovery checks.",
+    "task": "ship-and-host"
+  },
+  "engineering/engineering-iot-fleet-engineer.md": {
+    "name": "IoT Fleet Engineer agent",
+    "summary": "Get an IoT fleet plan with rollout and recovery checks. Bring your brief.",
+    "outcome": "An IoT fleet plan with rollout and recovery checks."
+  },
+  "engineering/engineering-it-service-manager.md": {
+    "name": "IT Service Manager agent",
+    "summary": "Get an IT service plan with incident and change procedures. Bring your brief.",
+    "outcome": "An IT service plan with incident and change procedures.",
+    "task": "organise-work"
+  },
+  "engineering/engineering-knowledge-graph-engineer.md": {
+    "name": "Knowledge Graph Engineer agent",
+    "summary": "Get a knowledge graph design with entities, relations and query checks. Bring your brief.",
+    "outcome": "A knowledge graph design with entities, relations and query checks."
+  },
+  "engineering/engineering-llm-post-training-engineer.md": {
+    "name": "LLM Post-Training Engineer agent",
+    "summary": "Get a model training plan with controlled evaluations and acceptance checks. Bring your brief.",
+    "outcome": "A model training plan with controlled evaluations and acceptance checks."
+  },
+  "engineering/engineering-minimal-change-engineer.md": {
+    "name": "Minimal Change Engineer agent",
+    "summary": "Get a focused code fix with a small diff and verification. Bring your brief.",
+    "outcome": "A focused code fix with a small diff and verification.",
+    "task": "test-and-fix-code"
+  },
+  "engineering/engineering-mobile-app-builder.md": {
+    "name": "Mobile App Builder agent",
+    "summary": "Get a mobile app implementation plan with device and usability checks. Bring your brief.",
+    "outcome": "A mobile app implementation plan with device and usability checks."
+  },
+  "engineering/engineering-mobile-release-engineer.md": {
+    "name": "Mobile Release Engineer agent",
+    "summary": "Get a mobile release plan with signing, rollout and recovery checks. Bring your brief.",
+    "outcome": "A mobile release plan with signing, rollout and recovery checks.",
+    "task": "ship-and-host"
+  },
+  "engineering/engineering-multi-agent-systems-architect.md": {
+    "name": "Multi-Agent Systems Architect agent",
+    "summary": "Get an agent system design with trust boundaries and failure handling. Bring your brief.",
+    "outcome": "An agent system design with trust boundaries and failure handling.",
+    "task": "set-up-ai"
+  },
+  "engineering/engineering-network-engineer.md": {
+    "name": "Network Engineer agent",
+    "summary": "Get a network diagnosis with path evidence and proposed changes. Bring your brief.",
+    "outcome": "A network diagnosis with path evidence and proposed changes."
+  },
+  "engineering/engineering-orgscript-engineer.md": {
+    "name": "OrgScript Engineer agent",
+    "summary": "Get an OrgScript model with grammar and meaning checks. Bring your brief.",
+    "outcome": "An OrgScript model with grammar and meaning checks."
+  },
+  "engineering/engineering-payments-billing-engineer.md": {
+    "name": "Payments & Billing Engineer agent",
+    "summary": "Get a billing integration plan with webhook and reconciliation checks. Bring your brief.",
+    "outcome": "A billing integration plan with webhook and reconciliation checks."
+  },
+  "engineering/engineering-pdf-engine-architect.md": {
+    "name": "PDF Engine Architect agent",
+    "summary": "Get a PDF layout design with page geometry and rendering checks. Bring your brief.",
+    "outcome": "A PDF layout design with page geometry and rendering checks.",
+    "task": "work-with-files"
+  },
+  "engineering/engineering-platform-engineer.md": {
+    "name": "Platform Engineer agent",
+    "summary": "Get a developer platform plan with service templates and operating rules. Bring your brief.",
+    "outcome": "A developer platform plan with service templates and operating rules."
+  },
+  "engineering/engineering-privacy-engineer.md": {
+    "name": "Privacy Engineer agent",
+    "summary": "Get a privacy design with data flow and deletion checks. Bring your brief.",
+    "outcome": "A privacy design with data flow and deletion checks.",
+    "task": "secure-code"
+  },
+  "engineering/engineering-prompt-engineer.md": {
+    "name": "Prompt Engineer agent",
+    "summary": "Get a prompt draft with task constraints and evaluation cases. Bring your brief.",
+    "outcome": "A prompt draft with task constraints and evaluation cases.",
+    "task": "make-skills"
+  },
+  "engineering/engineering-rag-pipeline-engineer.md": {
+    "name": "RAG Pipeline Engineer agent",
+    "summary": "Get a retrieval pipeline plan with source and answer quality checks. Bring your brief.",
+    "outcome": "A retrieval pipeline plan with source and answer quality checks."
+  },
+  "engineering/engineering-rapid-prototyper.md": {
+    "name": "Rapid Prototyper agent",
+    "summary": "Get a small prototype plan with clear scope and acceptance checks. Bring your brief.",
+    "outcome": "A small prototype plan with clear scope and acceptance checks."
+  },
+  "engineering/engineering-realtime-collaboration-engineer.md": {
+    "name": "Realtime Collaboration Engineer agent",
+    "summary": "Get a collaboration design with synchronization and conflict checks. Bring your brief.",
+    "outcome": "A collaboration design with synchronization and conflict checks."
+  },
+  "engineering/engineering-rust-refactoring-specialist.md": {
+    "name": "Rust Refactoring Specialist agent",
+    "summary": "Get a Rust refactor proposal with migration and behavior checks. Bring your brief.",
+    "outcome": "A Rust refactor proposal with migration and behavior checks.",
+    "task": "test-and-fix-code"
+  },
+  "engineering/engineering-search-relevance-engineer.md": {
+    "name": "Search Relevance Engineer agent",
+    "summary": "Get a search ranking proposal with queries and relevance evaluations. Bring your brief.",
+    "outcome": "A search ranking proposal with queries and relevance evaluations."
+  },
+  "engineering/engineering-section-508-specialist.md": {
+    "name": "Section 508 Accessibility Specialist agent",
+    "summary": "Get an accessibility review with barriers, evidence and remediation checks. Bring your brief.",
+    "outcome": "An accessibility review with barriers, evidence and remediation checks.",
+    "task": "test-and-fix-code"
+  },
+  "engineering/engineering-senior-developer.md": {
+    "name": "Senior Developer agent",
+    "summary": "Get a full stack implementation plan with code and performance checks. Bring your brief.",
+    "outcome": "A full stack implementation plan with code and performance checks."
+  },
+  "engineering/engineering-servicenow-developer-mentor.md": {
+    "name": "ServiceNow Developer & Mentor agent",
+    "summary": "Get a ServiceNow diagnosis with log evidence and proposed fixes. Bring your brief.",
+    "outcome": "A ServiceNow diagnosis with log evidence and proposed fixes.",
+    "task": "test-and-fix-code"
+  },
+  "engineering/engineering-software-architect.md": {
+    "name": "Software Architect agent",
+    "summary": "Get a software design with tradeoffs, boundaries and decision records. Bring your brief.",
+    "outcome": "A software design with tradeoffs, boundaries and decision records."
+  },
+  "engineering/engineering-solidity-smart-contract-engineer.md": {
+    "name": "Solidity Smart Contract Engineer agent",
+    "summary": "Get a Solidity contract plan with gas and security checks. Bring your brief.",
+    "outcome": "A Solidity contract plan with gas and security checks."
+  },
+  "engineering/engineering-sre.md": {
+    "name": "SRE (Site Reliability Engineer) agent",
+    "summary": "Get a reliability plan with service goals, alerts and recovery checks. Bring your brief.",
+    "outcome": "A reliability plan with service goals, alerts and recovery checks.",
+    "task": "ship-and-host"
+  },
+  "engineering/engineering-technical-writer.md": {
+    "name": "Technical Writer agent",
+    "summary": "Get technical documentation drafts with examples and accuracy checks. Bring your brief.",
+    "outcome": "Technical documentation drafts with examples and accuracy checks.",
+    "task": "document-work",
+    "linksReviewed": "Links occur in example documentation templates, not package dependencies.",
+    "overlapReviewed": "Keep the broader source agent role alongside the existing task skill; distinct agent type, name and source."
+  },
+  "engineering/engineering-universal-document-compiler.md": {
+    "name": "Universal Document Compiler agent",
+    "summary": "Get a document generation plan with data and layout checks. Bring your brief.",
+    "outcome": "A document generation plan with data and layout checks.",
+    "task": "work-with-files"
+  },
+  "engineering/engineering-uswds-developer.md": {
+    "name": "USWDS Developer agent",
+    "summary": "Get a USWDS website plan with components and accessibility checks. Bring your brief.",
+    "outcome": "A USWDS website plan with components and accessibility checks.",
+    "task": "build-websites"
+  },
+  "engineering/engineering-video-streaming-engineer.md": {
+    "name": "Video Streaming Engineer agent",
+    "summary": "Get a video streaming design with encoding and playback checks. Bring your brief.",
+    "outcome": "A video streaming design with encoding and playback checks."
+  },
+  "engineering/engineering-voice-ai-integration-engineer.md": {
+    "name": "Voice AI Integration Engineer agent",
+    "summary": "Get a speech pipeline plan with transcription and speaker checks. Bring your brief.",
+    "outcome": "A speech pipeline plan with transcription and speaker checks.",
+    "task": "work-with-audio"
+  },
+  "engineering/engineering-webassembly-engineer.md": {
+    "name": "WebAssembly Engineer agent",
+    "summary": "Get a WebAssembly integration plan with performance and boundary checks. Bring your brief.",
+    "outcome": "A WebAssembly integration plan with performance and boundary checks."
+  },
+  "engineering/engineering-wechat-mini-program-developer.md": {
+    "name": "WeChat Mini Program Developer agent",
+    "summary": "Get a WeChat Mini Program plan with platform integration checks. Bring your brief.",
+    "outcome": "A WeChat Mini Program plan with platform integration checks."
+  },
+  "engineering/engineering-wordpress-performance.md": {
+    "name": "WordPress Performance Engineer agent",
+    "summary": "Get a WordPress speed review with profiling evidence and proposed fixes. Bring your brief.",
+    "outcome": "A WordPress speed review with profiling evidence and proposed fixes.",
+    "task": "speed-up-store"
+  },
+  "engineering/engineering-wordpress-shopping-cart.md": {
+    "name": "WordPress Shopping Cart Engineer agent",
+    "summary": "Get a WooCommerce implementation plan with checkout and payment checks. Bring your brief.",
+    "outcome": "A WooCommerce implementation plan with checkout and payment checks.",
+    "task": "set-up-store"
+  },
+  "finance/finance-bookkeeper-controller.md": {
+    "name": "Bookkeeper & Controller agent",
+    "summary": "Get a bookkeeping and month close review with reconciliation checks. Bring your brief.",
+    "outcome": "A bookkeeping and month close review with reconciliation checks."
+  },
+  "finance/finance-financial-analyst.md": {
+    "name": "Financial Analyst agent",
+    "summary": "Get a financial model review with calculations and decision tradeoffs. Bring your brief.",
+    "outcome": "A financial model review with calculations and decision tradeoffs."
+  },
+  "finance/finance-fpa-analyst.md": {
+    "name": "FP&A Analyst agent",
+    "summary": "Get a budget and forecast plan with variance explanations. Bring your brief.",
+    "outcome": "A budget and forecast plan with variance explanations."
+  },
+  "finance/finance-investment-researcher.md": {
+    "name": "Investment Researcher agent",
+    "summary": "Get an investment research brief with evidence and downside risks. Bring your brief.",
+    "outcome": "An investment research brief with evidence and downside risks."
+  },
+  "finance/finance-tax-strategist.md": {
+    "name": "Tax Strategist agent",
+    "summary": "Get a tax planning brief with jurisdiction questions and review points. Bring your brief.",
+    "outcome": "A tax planning brief with jurisdiction questions and review points."
+  },
+  "game-development/blender/blender-addon-engineer.md": {
+    "name": "Blender Add-on Engineer agent",
+    "summary": "Get a Blender add-on plan with artist workflow and compatibility checks. Bring your brief.",
+    "outcome": "A Blender add-on plan with artist workflow and compatibility checks."
+  },
+  "game-development/economy-designer.md": {
+    "name": "Economy Designer agent",
+    "summary": "Get a game economy model with currency flows and balance checks. Bring your brief.",
+    "outcome": "A game economy model with currency flows and balance checks."
+  },
+  "game-development/game-audio-engineer.md": {
+    "name": "Game Audio Engineer agent",
+    "summary": "Get a game audio plan with sound events and integration checks. Bring your brief.",
+    "outcome": "A game audio plan with sound events and integration checks.",
+    "task": "work-with-audio"
+  },
+  "game-development/game-designer.md": {
+    "name": "Game Designer agent",
+    "summary": "Get a gameplay loop proposal with player goals and playtest questions. Bring your brief.",
+    "outcome": "A gameplay loop proposal with player goals and playtest questions.",
+    "task": "build-product"
+  },
+  "game-development/godot/godot-gameplay-scripter.md": {
+    "name": "Godot Gameplay Scripter agent",
+    "summary": "Get a Godot gameplay implementation plan with scene and script checks. Bring your brief.",
+    "outcome": "A Godot gameplay implementation plan with scene and script checks."
+  },
+  "game-development/godot/godot-multiplayer-engineer.md": {
+    "name": "Godot Multiplayer Engineer agent",
+    "summary": "Get a Godot networking design with synchronization and authority checks. Bring your brief.",
+    "outcome": "A Godot networking design with synchronization and authority checks."
+  },
+  "game-development/godot/godot-shader-developer.md": {
+    "name": "Godot Shader Developer agent",
+    "summary": "Get a Godot shader plan with rendering and performance checks. Bring your brief.",
+    "outcome": "A Godot shader plan with rendering and performance checks."
+  },
+  "game-development/level-designer.md": {
+    "name": "Level Designer agent",
+    "summary": "Get a game level brief with pacing and navigation checks. Bring your brief.",
+    "outcome": "A game level brief with pacing and navigation checks.",
+    "task": "design-work"
+  },
+  "game-development/narrative-designer.md": {
+    "name": "Narrative Designer agent",
+    "summary": "Get a game narrative plan with story and player choice paths. Bring your brief.",
+    "outcome": "A game narrative plan with story and player choice paths.",
+    "task": "write-and-tell-stories"
+  },
+  "game-development/roblox-studio/roblox-avatar-creator.md": {
+    "name": "Roblox Avatar Creator agent",
+    "summary": "Get a Roblox avatar plan with rigging and submission checks. Bring your brief.",
+    "outcome": "A Roblox avatar plan with rigging and submission checks."
+  },
+  "game-development/roblox-studio/roblox-experience-designer.md": {
+    "name": "Roblox Experience Designer agent",
+    "summary": "Get a Roblox experience plan with progression and playtest questions. Bring your brief.",
+    "outcome": "A Roblox experience plan with progression and playtest questions.",
+    "task": "build-product"
+  },
+  "game-development/roblox-studio/roblox-systems-scripter.md": {
+    "name": "Roblox Systems Scripter agent",
+    "summary": "Get a Roblox systems plan with Luau and server authority checks. Bring your brief.",
+    "outcome": "A Roblox systems plan with Luau and server authority checks."
+  },
+  "game-development/technical-artist.md": {
+    "name": "Technical Artist agent",
+    "summary": "Get an art pipeline plan with asset and rendering checks. Bring your brief.",
+    "outcome": "An art pipeline plan with asset and rendering checks.",
+    "task": "design-work"
+  },
+  "game-development/unity/unity-architect.md": {
+    "name": "Unity Architect agent",
+    "summary": "Get a Unity architecture proposal with data and component boundaries. Bring your brief.",
+    "outcome": "A Unity architecture proposal with data and component boundaries."
+  },
+  "game-development/unity/unity-editor-tool-developer.md": {
+    "name": "Unity Editor Tool Developer agent",
+    "summary": "Get a Unity editor tool plan with workflow and usability checks. Bring your brief.",
+    "outcome": "A Unity editor tool plan with workflow and usability checks."
+  },
+  "game-development/unity/unity-multiplayer-engineer.md": {
+    "name": "Unity Multiplayer Engineer agent",
+    "summary": "Get a Unity multiplayer design with replication and prediction checks. Bring your brief.",
+    "outcome": "A Unity multiplayer design with replication and prediction checks."
+  },
+  "game-development/unity/unity-shader-graph-artist.md": {
+    "name": "Unity Shader Graph Artist agent",
+    "summary": "Get a Unity shader design with render and performance checks. Bring your brief.",
+    "outcome": "A Unity shader design with render and performance checks.",
+    "task": "design-work"
+  },
+  "game-development/unreal-engine/unreal-multiplayer-architect.md": {
+    "name": "Unreal Multiplayer Architect agent",
+    "summary": "Get an Unreal multiplayer design with server authority and replication checks. Bring your brief.",
+    "outcome": "An Unreal multiplayer design with server authority and replication checks."
+  },
+  "game-development/unreal-engine/unreal-systems-engineer.md": {
+    "name": "Unreal Systems Engineer agent",
+    "summary": "Get an Unreal gameplay systems plan with implementation checks. Bring your brief.",
+    "outcome": "An Unreal gameplay systems plan with implementation checks."
+  },
+  "game-development/unreal-engine/unreal-technical-artist.md": {
+    "name": "Unreal Technical Artist agent",
+    "summary": "Get an Unreal material and effects plan with performance checks. Bring your brief.",
+    "outcome": "An Unreal material and effects plan with performance checks.",
+    "task": "design-work"
+  },
+  "game-development/unreal-engine/unreal-world-builder.md": {
+    "name": "Unreal World Builder agent",
+    "summary": "Get an Unreal world plan with streaming and environment checks. Bring your brief.",
+    "outcome": "An Unreal world plan with streaming and environment checks.",
+    "task": "design-work"
+  },
+  "gis/gis-3d-scene-developer.md": {
+    "name": "3D & Scene Developer agent",
+    "summary": "Get a 3D map scene plan with terrain and rendering checks. Bring your brief.",
+    "outcome": "A 3D map scene plan with terrain and rendering checks."
+  },
+  "gis/gis-analyst.md": {
+    "name": "GIS Analyst agent",
+    "summary": "Get a spatial analysis brief with source data and map checks. Bring your brief.",
+    "outcome": "A spatial analysis brief with source data and map checks."
+  },
+  "gis/gis-bim-specialist.md": {
+    "name": "BIM/GIS Specialist agent",
+    "summary": "Get a BIM and GIS integration plan with coordinate checks. Bring your brief.",
+    "outcome": "A BIM and GIS integration plan with coordinate checks.",
+    "task": "connect-tools"
+  },
+  "gis/gis-cartography-designer.md": {
+    "name": "Cartography Designer agent",
+    "summary": "Get a map design with symbols, labels and readability checks. Bring your brief.",
+    "outcome": "A map design with symbols, labels and readability checks.",
+    "task": "design-work"
+  },
+  "gis/gis-drone-reality-mapping.md": {
+    "name": "Drone/Reality Mapping Specialist agent",
+    "summary": "Get a drone mapping plan with capture and accuracy checks. Bring your brief.",
+    "outcome": "A drone mapping plan with capture and accuracy checks."
+  },
+  "gis/gis-geoai-ml-engineer.md": {
+    "name": "GeoAI/ML Engineer agent",
+    "summary": "Get a geospatial model plan with training data and validation checks. Bring your brief.",
+    "outcome": "A geospatial model plan with training data and validation checks.",
+    "task": "build-software"
+  },
+  "gis/gis-geoprocessing-specialist.md": {
+    "name": "Geoprocessing Specialist agent",
+    "summary": "Get a geoprocessing workflow with data transformations and validation checks. Bring your brief.",
+    "outcome": "A geoprocessing workflow with data transformations and validation checks."
+  },
+  "gis/gis-qa-engineer.md": {
+    "name": "GIS QA Engineer agent",
+    "summary": "Get a GIS test plan with spatial accuracy and data checks. Bring your brief.",
+    "outcome": "A GIS test plan with spatial accuracy and data checks.",
+    "task": "test-and-fix-code"
+  },
+  "gis/gis-solution-engineer.md": {
+    "name": "Solution Engineer agent",
+    "summary": "Get a GIS solution proposal with requirements and implementation choices. Bring your brief.",
+    "outcome": "A GIS solution proposal with requirements and implementation choices."
+  },
+  "gis/gis-spatial-data-engineer.md": {
+    "name": "Spatial Data Engineer agent",
+    "summary": "Get a spatial data pipeline plan with storage and quality checks. Bring your brief.",
+    "outcome": "A spatial data pipeline plan with storage and quality checks.",
+    "task": "build-software"
+  },
+  "gis/gis-spatial-data-scientist.md": {
+    "name": "Spatial Data Scientist agent",
+    "summary": "Get a spatial study plan with methods and uncertainty checks. Bring your brief.",
+    "outcome": "A spatial study plan with methods and uncertainty checks."
+  },
+  "gis/gis-technical-consultant.md": {
+    "name": "Technical Consultant agent",
+    "summary": "Get a GIS implementation brief with risks and handoff steps. Bring your brief.",
+    "outcome": "A GIS implementation brief with risks and handoff steps."
+  },
+  "gis/gis-web-gis-developer.md": {
+    "name": "Web GIS Developer agent",
+    "summary": "Get a web mapping app plan with interaction and performance checks. Bring your brief.",
+    "outcome": "A web mapping app plan with interaction and performance checks.",
+    "task": "build-websites"
+  },
+  "healthcare/healthcare-clinical-evidence-agent.md": {
+    "name": "Clinical Evidence agent",
+    "summary": "Get a clinical evidence brief with source quality and uncertainty. Bring your brief.",
+    "outcome": "A clinical evidence brief with source quality and uncertainty.",
+    "task": "research-topics"
+  },
+  "healthcare/healthcare-innovation-strategist.md": {
+    "name": "Healthcare Innovation Strategist agent",
+    "summary": "Get a healthcare innovation proposal with evidence gaps and feasibility checks. Bring your brief.",
+    "outcome": "A healthcare innovation proposal with evidence gaps and feasibility checks.",
+    "task": "plan-strategy"
+  },
+  "healthcare/healthcare-sovereign-health-systems-agent.md": {
+    "name": "Sovereign Health Systems agent",
+    "summary": "Get a health systems strategy brief with governance and delivery checks. Bring your brief.",
+    "outcome": "A health systems strategy brief with governance and delivery checks.",
+    "task": "plan-strategy"
+  },
+  "marketing/marketing-aeo-foundations.md": {
+    "name": "AEO Foundations Architect agent",
+    "summary": "Get a website structure plan for answer engines and source citations. Bring your brief.",
+    "outcome": "A website structure plan for answer engines and source citations.",
+    "task": "get-found-in-search",
+    "linksReviewed": "Site-relative links in example page markup, not package dependencies."
+  },
+  "marketing/marketing-agentic-search-optimizer.md": {
+    "name": "Agentic Search Optimizer agent",
+    "summary": "Get a search visibility review for AI discovery and action paths. Bring your brief.",
+    "outcome": "A search visibility review for AI discovery and action paths.",
+    "task": "get-found-in-search"
+  },
+  "marketing/marketing-ai-citation-strategist.md": {
+    "name": "AI Citation Strategist agent",
+    "summary": "Get an AI citation plan with source gaps and visibility checks. Bring your brief.",
+    "outcome": "An AI citation plan with source gaps and visibility checks.",
+    "task": "get-found-in-search"
+  },
+  "marketing/marketing-app-store-optimizer.md": {
+    "name": "App Store Optimizer agent",
+    "summary": "Get an app store listing review with keyword and conversion proposals. Bring your brief.",
+    "outcome": "An app store listing review with keyword and conversion proposals.",
+    "task": "get-found-in-search"
+  },
+  "marketing/marketing-baidu-seo-specialist.md": {
+    "name": "Baidu SEO Specialist agent",
+    "summary": "Get a Baidu search plan with site and content checks. Bring your brief.",
+    "outcome": "A Baidu search plan with site and content checks.",
+    "task": "get-found-in-search"
+  },
+  "marketing/marketing-bilibili-content-strategist.md": {
+    "name": "Bilibili Content Strategist agent",
+    "summary": "Get a Bilibili content plan with audience and format choices. Bring your brief.",
+    "outcome": "A Bilibili content plan with audience and format choices."
+  },
+  "marketing/marketing-book-co-author.md": {
+    "name": "Book Co-Author agent",
+    "summary": "Get a book outline and drafting plan with chapter goals. Bring your brief.",
+    "outcome": "A book outline and drafting plan with chapter goals.",
+    "task": "write-and-tell-stories"
+  },
+  "marketing/marketing-carousel-growth-engine.md": {
+    "name": "Carousel content agent",
+    "summary": "Get a carousel content plan with hooks and slide sequence. Bring your brief.",
+    "outcome": "A carousel content plan with hooks and slide sequence."
+  },
+  "marketing/marketing-china-ecommerce-operator.md": {
+    "name": "China E-Commerce Operator agent",
+    "summary": "Get a China ecommerce operating plan with platform and fulfilment checks. Bring your brief.",
+    "outcome": "A China ecommerce operating plan with platform and fulfilment checks.",
+    "task": "run-your-store"
+  },
+  "marketing/marketing-china-market-localization-strategist.md": {
+    "name": "China Market Localization Strategist agent",
+    "summary": "Get a China market entry brief with localization and channel choices. Bring your brief.",
+    "outcome": "A China market entry brief with localization and channel choices.",
+    "task": "plan-strategy"
+  },
+  "marketing/marketing-content-creator.md": {
+    "name": "Content Creator agent",
+    "summary": "Get content drafts with audience goals and channel choices. Bring your brief.",
+    "outcome": "Content drafts with audience goals and channel choices."
+  },
+  "marketing/marketing-cross-border-ecommerce.md": {
+    "name": "Cross-Border E-Commerce Specialist agent",
+    "summary": "Get a cross border ecommerce plan with market and compliance checks. Bring your brief.",
+    "outcome": "A cross border ecommerce plan with market and compliance checks.",
+    "task": "run-your-store"
+  },
+  "marketing/marketing-developer-community-builder.md": {
+    "name": "Developer Community Builder agent",
+    "summary": "Get a developer community plan with participation and trust measures. Bring your brief.",
+    "outcome": "A developer community plan with participation and trust measures.",
+    "overlapReviewed": "Keep the broader source agent role alongside the existing task skill; distinct agent type, name and source."
+  },
+  "marketing/marketing-douyin-strategist.md": {
+    "name": "Douyin Strategist agent",
+    "summary": "Get a Douyin content plan with video and commerce choices. Bring your brief.",
+    "outcome": "A Douyin content plan with video and commerce choices."
+  },
+  "marketing/marketing-email-strategist.md": {
+    "name": "Email Marketing Strategist agent",
+    "summary": "Get an email plan with segments, deliverability and measurement checks. Bring your brief.",
+    "outcome": "An email plan with segments, deliverability and measurement checks.",
+    "task": "write-emails"
+  },
+  "marketing/marketing-global-podcast-strategist.md": {
+    "name": "Global Podcast Strategist agent",
+    "summary": "Get a podcast expansion plan with language and market choices. Bring your brief.",
+    "outcome": "A podcast expansion plan with language and market choices.",
+    "task": "work-with-audio"
+  },
+  "marketing/marketing-growth-hacker.md": {
+    "name": "Growth experiment agent",
+    "summary": "Get a growth experiment plan with hypotheses and measurement checks. Bring your brief.",
+    "outcome": "A growth experiment plan with hypotheses and measurement checks."
+  },
+  "marketing/marketing-instagram-curator.md": {
+    "name": "Instagram Curator agent",
+    "summary": "Get an Instagram content plan with visual themes and posting choices. Bring your brief.",
+    "outcome": "An Instagram content plan with visual themes and posting choices."
+  },
+  "marketing/marketing-kuaishou-strategist.md": {
+    "name": "Kuaishou Strategist agent",
+    "summary": "Get a Kuaishou content plan with community and commerce choices. Bring your brief.",
+    "outcome": "A Kuaishou content plan with community and commerce choices."
+  },
+  "marketing/marketing-linkedin-content-creator.md": {
+    "name": "LinkedIn Content Creator agent",
+    "summary": "Get LinkedIn post drafts with audience and topic choices. Bring your brief.",
+    "outcome": "LinkedIn post drafts with audience and topic choices."
+  },
+  "marketing/marketing-livestream-commerce-coach.md": {
+    "name": "Livestream Commerce Coach agent",
+    "summary": "Get a live selling plan with run order and host practice. Bring your brief.",
+    "outcome": "A live selling plan with run order and host practice.",
+    "task": "sell-and-negotiate"
+  },
+  "marketing/marketing-multi-platform-publisher.md": {
+    "name": "Multi-Platform Publisher agent",
+    "summary": "Get channel specific content drafts and a publishing proposal. Bring your brief.",
+    "outcome": "Channel specific content drafts and a publishing proposal."
+  },
+  "marketing/marketing-podcast-strategist.md": {
+    "name": "Podcast Strategist agent",
+    "summary": "Get a podcast plan with episode, guest and distribution choices. Bring your brief.",
+    "outcome": "A podcast plan with episode, guest and distribution choices.",
+    "task": "work-with-audio"
+  },
+  "marketing/marketing-pr-communications-manager.md": {
+    "name": "PR & Communications Manager agent",
+    "summary": "Get a communications plan with key messages and media angles. Bring your brief.",
+    "outcome": "A communications plan with key messages and media angles.",
+    "task": "speak-and-persuade"
+  },
+  "marketing/marketing-private-domain-operator.md": {
+    "name": "Private Domain Operator agent",
+    "summary": "Get a customer community plan with retention and engagement measures. Bring your brief.",
+    "outcome": "A customer community plan with retention and engagement measures.",
+    "task": "keep-customers"
+  },
+  "marketing/marketing-reddit-community-builder.md": {
+    "name": "Reddit Community Builder agent",
+    "summary": "Get a Reddit plan with community rules and useful post ideas. Bring your brief.",
+    "outcome": "A Reddit plan with community rules and useful post ideas."
+  },
+  "marketing/marketing-seo-specialist.md": {
+    "name": "SEO Specialist agent",
+    "summary": "Get a search review with keyword, content and technical fixes. Bring your brief.",
+    "outcome": "A search review with keyword, content and technical fixes.",
+    "task": "get-found-in-search"
+  },
+  "marketing/marketing-short-video-editing-coach.md": {
+    "name": "Short-Video Editing Coach agent",
+    "summary": "Get a short video editing plan with pacing and caption checks. Bring your brief.",
+    "outcome": "A short video editing plan with pacing and caption checks.",
+    "task": "make-video-ads"
+  },
+  "marketing/marketing-social-media-strategist.md": {
+    "name": "Social Media Strategist agent",
+    "summary": "Get a social content strategy with audience and measurement choices. Bring your brief.",
+    "outcome": "A social content strategy with audience and measurement choices."
+  },
+  "marketing/marketing-tiktok-strategist.md": {
+    "name": "TikTok Strategist agent",
+    "summary": "Get a TikTok content plan with hooks, formats and test ideas. Bring your brief.",
+    "outcome": "A TikTok content plan with hooks, formats and test ideas."
+  },
+  "marketing/marketing-twitter-engager.md": {
+    "name": "Twitter Engager agent",
+    "summary": "Get X post and reply drafts with audience and conversation goals. Bring your brief.",
+    "outcome": "X post and reply drafts with audience and conversation goals."
+  },
+  "marketing/marketing-video-optimization-specialist.md": {
+    "name": "Video Optimization Specialist agent",
+    "summary": "Get a video packaging review with title, thumbnail and retention proposals. Bring your brief.",
+    "outcome": "A video packaging review with title, thumbnail and retention proposals.",
+    "task": "grow-social"
+  },
+  "marketing/marketing-wechat-official-account.md": {
+    "name": "WeChat Official Account Manager agent",
+    "summary": "Get a WeChat account content plan with audience and channel checks. Bring your brief.",
+    "outcome": "A WeChat account content plan with audience and channel checks."
+  },
+  "marketing/marketing-weibo-strategist.md": {
+    "name": "Weibo Strategist agent",
+    "summary": "Get a Weibo content plan with topics and community engagement choices. Bring your brief.",
+    "outcome": "A Weibo content plan with topics and community engagement choices."
+  },
+  "marketing/marketing-x-twitter-intelligence-analyst.md": {
+    "name": "X/Twitter Intelligence Analyst agent",
+    "summary": "Get an X research brief with source posts and signal checks. Bring your brief.",
+    "outcome": "An X research brief with source posts and signal checks.",
+    "task": "research-topics"
+  },
+  "marketing/marketing-xiaohongshu-specialist.md": {
+    "name": "Xiaohongshu Specialist agent",
+    "summary": "Get a Xiaohongshu content plan with search and community choices. Bring your brief.",
+    "outcome": "A Xiaohongshu content plan with search and community choices."
+  },
+  "marketing/marketing-zhihu-strategist.md": {
+    "name": "Zhihu Strategist agent",
+    "summary": "Get a Zhihu answer plan with topic choices and evidence. Bring your brief.",
+    "outcome": "A Zhihu answer plan with topic choices and evidence."
+  },
+  "paid-media/paid-media-auditor.md": {
+    "name": "Paid Media Auditor agent",
+    "summary": "Get an ad account audit with findings and ranked repair proposals. Bring your brief.",
+    "outcome": "An ad account audit with findings and ranked repair proposals.",
+    "task": "read-ad-results"
+  },
+  "paid-media/paid-media-creative-strategist.md": {
+    "name": "Ad Creative Strategist agent",
+    "summary": "Get an ad creative plan with copy drafts and test hypotheses. Bring your brief.",
+    "outcome": "An ad creative plan with copy drafts and test hypotheses.",
+    "task": "write-ad-copy"
+  },
+  "paid-media/paid-media-paid-social-strategist.md": {
+    "name": "Paid Social Strategist agent",
+    "summary": "Get a paid social proposal with audience, budget and creative tests. Bring your brief.",
+    "outcome": "A paid social proposal with audience, budget and creative tests."
+  },
+  "paid-media/paid-media-ppc-strategist.md": {
+    "name": "PPC Campaign Strategist agent",
+    "summary": "Get a paid search campaign proposal with structure and budget checks. Bring your brief.",
+    "outcome": "A paid search campaign proposal with structure and budget checks.",
+    "task": "run-google-ads"
+  },
+  "paid-media/paid-media-programmatic-buyer.md": {
+    "name": "Programmatic & Display Buyer agent",
+    "summary": "Get a display buying proposal with inventory and brand safety checks. Bring your brief.",
+    "outcome": "A display buying proposal with inventory and brand safety checks."
+  },
+  "paid-media/paid-media-search-query-analyst.md": {
+    "name": "Search Query Analyst agent",
+    "summary": "Get a search term review with waste and keyword proposals. Bring your brief.",
+    "outcome": "A search term review with waste and keyword proposals.",
+    "task": "run-google-ads"
+  },
+  "paid-media/paid-media-tracking-specialist.md": {
+    "name": "Tracking & Measurement Specialist agent",
+    "summary": "Get a conversion tracking plan with event and attribution checks. Bring your brief.",
+    "outcome": "A conversion tracking plan with event and attribution checks.",
+    "task": "track-numbers"
+  },
+  "product/product-behavioral-nudge-engine.md": {
+    "name": "Product behavior agent",
+    "summary": "Get a behavior change proposal with ethical checks and test measures. Bring your brief.",
+    "outcome": "A behavior change proposal with ethical checks and test measures."
+  },
+  "product/product-dx-engineer.md": {
+    "name": "DX Engineer agent",
+    "summary": "Get a developer experience review with onboarding and tooling fixes. Bring your brief.",
+    "outcome": "A developer experience review with onboarding and tooling fixes."
+  },
+  "product/product-feedback-synthesizer.md": {
+    "name": "Feedback Synthesizer agent",
+    "summary": "Get a feedback summary with themes, evidence and product implications. Bring your brief.",
+    "outcome": "A feedback summary with themes, evidence and product implications.",
+    "task": "understand-customers"
+  },
+  "product/product-manager.md": {
+    "name": "Product Manager agent",
+    "summary": "Get a product plan with user needs, scope and success measures. Bring your brief.",
+    "outcome": "A product plan with user needs, scope and success measures."
+  },
+  "product/product-sprint-prioritizer.md": {
+    "name": "Sprint Prioritizer agent",
+    "summary": "Get a ranked sprint proposal with effort and value tradeoffs. Bring your brief.",
+    "outcome": "A ranked sprint proposal with effort and value tradeoffs.",
+    "task": "organise-work"
+  },
+  "product/product-trend-researcher.md": {
+    "name": "Trend Researcher agent",
+    "summary": "Get a trend research brief with source evidence and adoption risks. Bring your brief.",
+    "outcome": "A trend research brief with source evidence and adoption risks.",
+    "task": "research-topics"
+  },
+  "project-management/project-management-experiment-tracker.md": {
+    "name": "Experiment Tracker agent",
+    "summary": "Get an experiment record with hypotheses, results and next decisions. Bring your brief.",
+    "outcome": "An experiment record with hypotheses, results and next decisions.",
+    "task": "track-numbers"
+  },
+  "project-management/project-management-jira-workflow-steward.md": {
+    "name": "Jira Workflow Steward agent",
+    "summary": "Get a Jira workflow proposal with issue and release traceability. Bring your brief.",
+    "outcome": "A Jira workflow proposal with issue and release traceability."
+  },
+  "project-management/project-management-meeting-notes-specialist.md": {
+    "name": "Meeting Notes Specialist agent",
+    "summary": "Get meeting notes with decisions, owners and open questions. Bring your brief.",
+    "outcome": "Meeting notes with decisions, owners and open questions."
+  },
+  "project-management/project-management-project-shepherd.md": {
+    "name": "Project delivery agent",
+    "summary": "Get a delivery plan with dependencies, risks and next actions. Bring your brief.",
+    "outcome": "A delivery plan with dependencies, risks and next actions."
+  },
+  "project-management/project-management-studio-operations.md": {
+    "name": "Studio Operations agent",
+    "summary": "Get a studio operating plan with processes and responsibilities. Bring your brief.",
+    "outcome": "A studio operating plan with processes and responsibilities."
+  },
+  "project-management/project-management-studio-producer.md": {
+    "name": "Studio Producer agent",
+    "summary": "Get a creative production plan with scope, resources and milestones. Bring your brief.",
+    "outcome": "A creative production plan with scope, resources and milestones."
+  },
+  "project-management/project-manager-senior.md": {
+    "name": "Senior Project Manager agent",
+    "summary": "Get a scoped project plan with tasks and acceptance checks. Bring your brief.",
+    "outcome": "A scoped project plan with tasks and acceptance checks."
+  },
+  "research/research-synthesist.md": {
+    "name": "Research Synthesist agent",
+    "summary": "Get a research synthesis with independent evidence and source limitations. Bring your brief.",
+    "outcome": "A research synthesis with independent evidence and source limitations."
+  },
+  "sales/sales-account-strategist.md": {
+    "name": "Account Strategist agent",
+    "summary": "Get an account growth plan with stakeholder and opportunity maps. Bring your brief.",
+    "outcome": "An account growth plan with stakeholder and opportunity maps."
+  },
+  "sales/sales-coach.md": {
+    "name": "Sales Coach agent",
+    "summary": "Get a sales coaching review with deal questions and practice steps. Bring your brief.",
+    "outcome": "A sales coaching review with deal questions and practice steps."
+  },
+  "sales/sales-deal-strategist.md": {
+    "name": "Deal Strategist agent",
+    "summary": "Get a deal review with qualification gaps and next actions. Bring your brief.",
+    "outcome": "A deal review with qualification gaps and next actions."
+  },
+  "sales/sales-discovery-coach.md": {
+    "name": "Discovery Coach agent",
+    "summary": "Get a discovery call plan with buyer questions and follow-ups. Bring your brief.",
+    "outcome": "A discovery call plan with buyer questions and follow-ups."
+  },
+  "sales/sales-engineer.md": {
+    "name": "Sales Engineer agent",
+    "summary": "Get a technical sales plan with demo and evaluation checks. Bring your brief.",
+    "outcome": "A technical sales plan with demo and evaluation checks."
+  },
+  "sales/sales-offer-lead-gen-strategist.md": {
+    "name": "Offer & Lead Gen Strategist agent",
+    "summary": "Get an offer and lead generation plan with channel tests. Bring your brief.",
+    "outcome": "An offer and lead generation plan with channel tests.",
+    "task": "make-offer"
+  },
+  "sales/sales-outbound-strategist.md": {
+    "name": "Outbound Strategist agent",
+    "summary": "Get an outbound sales plan with target signals and message drafts. Bring your brief.",
+    "outcome": "An outbound sales plan with target signals and message drafts."
+  },
+  "sales/sales-pipeline-analyst.md": {
+    "name": "Pipeline Analyst agent",
+    "summary": "Get a pipeline review with forecast assumptions and deal risks. Bring your brief.",
+    "outcome": "A pipeline review with forecast assumptions and deal risks.",
+    "task": "track-numbers"
+  },
+  "sales/sales-proposal-strategist.md": {
+    "name": "Proposal Strategist agent",
+    "summary": "Get a sales proposal draft tied to buyer requirements. Bring your brief.",
+    "outcome": "A sales proposal draft tied to buyer requirements."
+  },
+  "security/security-ai-generated-code-auditor.md": {
+    "name": "AI-Generated Code Security Auditor agent",
+    "summary": "Get an AI code security review with findings and verification checks. Bring your brief.",
+    "outcome": "An AI code security review with findings and verification checks."
+  },
+  "security/security-appsec-engineer.md": {
+    "name": "Application Security Engineer agent",
+    "summary": "Get an application security review with risk evidence and fixes. Bring your brief.",
+    "outcome": "An application security review with risk evidence and fixes."
+  },
+  "security/security-architect.md": {
+    "name": "Security Architect agent",
+    "summary": "Get a threat model with trust boundaries and control proposals. Bring your brief.",
+    "outcome": "A threat model with trust boundaries and control proposals."
+  },
+  "security/security-blockchain-security-auditor.md": {
+    "name": "Blockchain Security Auditor agent",
+    "summary": "Get a smart contract audit plan with exploit and invariant checks. Bring your brief.",
+    "outcome": "A smart contract audit plan with exploit and invariant checks."
+  },
+  "security/security-cloud-security-architect.md": {
+    "name": "Cloud Security Architect agent",
+    "summary": "Get a cloud security design with identity and infrastructure checks. Bring your brief.",
+    "outcome": "A cloud security design with identity and infrastructure checks."
+  },
+  "security/security-compliance-auditor.md": {
+    "name": "Compliance Auditor agent",
+    "summary": "Get a compliance readiness review with evidence gaps and control checks. Bring your brief.",
+    "outcome": "A compliance readiness review with evidence gaps and control checks.",
+    "task": "check-contracts"
+  },
+  "security/security-incident-responder.md": {
+    "name": "Incident Responder agent",
+    "summary": "Get an incident review plan with steps to contain and recover. Bring your brief.",
+    "outcome": "An incident review plan with steps to contain and recover."
+  },
+  "security/security-penetration-tester.md": {
+    "name": "Penetration Tester agent",
+    "summary": "Get an authorized penetration test plan with scope and evidence rules. Bring your brief.",
+    "outcome": "An authorized penetration test plan with scope and evidence rules."
+  },
+  "security/security-secrets-credential-engineer.md": {
+    "name": "Secrets & Credential Hygiene Engineer agent",
+    "summary": "Get a credential hygiene review with rotation and storage proposals. Bring your brief.",
+    "outcome": "A credential hygiene review with rotation and storage proposals."
+  },
+  "security/security-senior-secops.md": {
+    "name": "Senior SecOps Engineer agent",
+    "summary": "Get a security operations review with threat and control checks. Bring your brief.",
+    "outcome": "A security operations review with threat and control checks."
+  },
+  "security/security-threat-detection-engineer.md": {
+    "name": "Threat Detection Engineer agent",
+    "summary": "Get a threat detection plan with rules and validation cases. Bring your brief.",
+    "outcome": "A threat detection plan with rules and validation cases."
+  },
+  "security/security-threat-intelligence-analyst.md": {
+    "name": "Threat Intelligence Analyst agent",
+    "summary": "Get a threat intelligence brief with indicators and source confidence. Bring your brief.",
+    "outcome": "A threat intelligence brief with indicators and source confidence.",
+    "linksReviewed": "Regex capture syntax, not a file dependency."
+  },
+  "spatial-computing/macos-spatial-metal-engineer.md": {
+    "name": "macOS Spatial/Metal Engineer agent",
+    "summary": "Get a Metal rendering plan with GPU and performance checks. Bring your brief.",
+    "outcome": "A Metal rendering plan with GPU and performance checks."
+  },
+  "spatial-computing/terminal-integration-specialist.md": {
+    "name": "Terminal Integration Specialist agent",
+    "summary": "Get a terminal integration design with text and interaction checks. Bring your brief.",
+    "outcome": "A terminal integration design with text and interaction checks."
+  },
+  "spatial-computing/visionos-spatial-engineer.md": {
+    "name": "visionOS Spatial Engineer agent",
+    "summary": "Get a visionOS interface plan with spatial and usability checks. Bring your brief.",
+    "outcome": "A visionOS interface plan with spatial and usability checks."
+  },
+  "spatial-computing/xr-cockpit-interaction-specialist.md": {
+    "name": "XR Cockpit Interaction Specialist agent",
+    "summary": "Get an XR cockpit interaction plan with control and usability checks. Bring your brief.",
+    "outcome": "An XR cockpit interaction plan with control and usability checks.",
+    "task": "design-work"
+  },
+  "spatial-computing/xr-immersive-developer.md": {
+    "name": "XR Immersive Developer agent",
+    "summary": "Get a WebXR experience plan with device and rendering checks. Bring your brief.",
+    "outcome": "A WebXR experience plan with device and rendering checks."
+  },
+  "spatial-computing/xr-interface-architect.md": {
+    "name": "XR Interface Architect agent",
+    "summary": "Get a spatial interface design with interaction and comfort checks. Bring your brief.",
+    "outcome": "A spatial interface design with interaction and comfort checks.",
+    "task": "design-work"
+  },
+  "specialized/accounts-payable-agent.md": {
+    "name": "Accounts Payable agent",
+    "summary": "Get a payment proposal with invoice, approval and reconciliation checks. Bring your brief.",
+    "outcome": "A payment proposal with invoice, approval and reconciliation checks.",
+    "task": "money-and-investing"
+  },
+  "specialized/agentic-identity-trust.md": {
+    "name": "Agentic Identity & Trust Architect agent",
+    "summary": "Get an agent identity design with authority and audit checks. Bring your brief.",
+    "outcome": "An agent identity design with authority and audit checks.",
+    "task": "secure-code",
+    "linksReviewed": "The companion identity graph operator is bundled in references/identity-graph-operator.md."
+  },
+  "specialized/agents-orchestrator.md": {
+    "name": "Agents Orchestrator agent",
+    "summary": "Get an agent team plan with handoffs and quality gates. Bring your brief.",
+    "outcome": "An agent team plan with handoffs and quality gates.",
+    "task": "set-up-ai"
+  },
+  "specialized/automation-governance-architect.md": {
+    "name": "Automation Governance Architect agent",
+    "summary": "Get an automation governance plan with owners and operating limits. Bring your brief.",
+    "outcome": "An automation governance plan with owners and operating limits.",
+    "task": "set-up-ai"
+  },
+  "specialized/business-strategist.md": {
+    "name": "Business Strategist agent",
+    "summary": "Get a business strategy brief with choices and execution priorities. Bring your brief.",
+    "outcome": "A business strategy brief with choices and execution priorities.",
+    "task": "plan-strategy"
+  },
+  "specialized/change-management-consultant.md": {
+    "name": "Change Management Consultant agent",
+    "summary": "Get a change adoption plan with stakeholders and progress checks. Bring your brief.",
+    "outcome": "A change adoption plan with stakeholders and progress checks.",
+    "task": "lead-people"
+  },
+  "specialized/chief-financial-officer.md": {
+    "name": "Chief Financial Officer agent",
+    "summary": "Get a finance decision brief with tradeoffs and control checks. Bring your brief.",
+    "outcome": "A finance decision brief with tradeoffs and control checks.",
+    "task": "money-and-investing"
+  },
+  "specialized/corporate-training-designer.md": {
+    "name": "Corporate Training Designer agent",
+    "summary": "Get a workplace training plan with behavior and evaluation measures. Bring your brief.",
+    "outcome": "A workplace training plan with behavior and evaluation measures.",
+    "task": "teach-and-train"
+  },
+  "specialized/customer-service.md": {
+    "name": "Customer Service agent",
+    "summary": "Get customer response drafts with issue resolution and escalation steps. Bring your brief.",
+    "outcome": "Customer response drafts with issue resolution and escalation steps.",
+    "task": "help-customers"
+  },
+  "specialized/customer-success-manager.md": {
+    "name": "Customer Success Manager agent",
+    "summary": "Get a customer success plan with goals and retention risks. Bring your brief.",
+    "outcome": "A customer success plan with goals and retention risks.",
+    "task": "keep-customers"
+  },
+  "specialized/data-consolidation-agent.md": {
+    "name": "Data Consolidation agent",
+    "summary": "Get a sales data consolidation plan with reconciliation and reporting checks. Bring your brief.",
+    "outcome": "A sales data consolidation plan with reconciliation and reporting checks.",
+    "task": "track-numbers"
+  },
+  "specialized/data-privacy-officer.md": {
+    "name": "Data Privacy Officer agent",
+    "summary": "Get a data protection review with obligations and evidence gaps. Bring your brief.",
+    "outcome": "A data protection review with obligations and evidence gaps.",
+    "task": "check-contracts"
+  },
+  "specialized/esg-sustainability-officer.md": {
+    "name": "ESG & Sustainability Officer agent",
+    "summary": "Get a sustainability reporting plan with evidence and disclosure checks. Bring your brief.",
+    "outcome": "A sustainability reporting plan with evidence and disclosure checks.",
+    "task": "document-work"
+  },
+  "specialized/government-digital-presales-consultant.md": {
+    "name": "Government Digital Presales Consultant agent",
+    "summary": "Get a Chinese government procurement brief with bid and compliance checks. Bring your brief.",
+    "outcome": "A Chinese government procurement brief with bid and compliance checks.",
+    "task": "sell-and-negotiate"
+  },
+  "specialized/grant-writer.md": {
+    "name": "Grant Writer agent",
+    "summary": "Get a grant proposal draft matched to funder requirements. Bring your brief.",
+    "outcome": "A grant proposal draft matched to funder requirements.",
+    "task": "write-and-tell-stories"
+  },
+  "specialized/healthcare-aging-parent-care-companion.md": {
+    "name": "Aging Parent Care Companion agent",
+    "summary": "Get a care coordination plan with appointments and clinician questions. Bring your brief.",
+    "outcome": "A care coordination plan with appointments and clinician questions.",
+    "task": "organise-work"
+  },
+  "specialized/healthcare-customer-service.md": {
+    "name": "Healthcare Customer Service agent",
+    "summary": "Get patient service response drafts with privacy and escalation checks. Bring your brief.",
+    "outcome": "Patient service response drafts with privacy and escalation checks.",
+    "task": "help-customers"
+  },
+  "specialized/healthcare-marketing-compliance.md": {
+    "name": "Healthcare Marketing Compliance Specialist agent",
+    "summary": "Get a China healthcare marketing review with claims and compliance questions. Bring your brief.",
+    "outcome": "A China healthcare marketing review with claims and compliance questions.",
+    "task": "check-ads"
+  },
+  "specialized/hospitality-guest-services.md": {
+    "name": "Hospitality Guest Services agent",
+    "summary": "Get guest service response drafts with requests and escalation steps. Bring your brief.",
+    "outcome": "Guest service response drafts with requests and escalation steps.",
+    "task": "help-customers"
+  },
+  "specialized/hr-onboarding.md": {
+    "name": "HR Onboarding agent",
+    "summary": "Get a new hire onboarding plan with milestones and responsibilities. Bring your brief.",
+    "outcome": "A new hire onboarding plan with milestones and responsibilities.",
+    "task": "hire-people"
+  },
+  "specialized/identity-graph-operator.md": {
+    "name": "Identity Graph Operator agent",
+    "summary": "Get an identity graph plan with matching and consistency checks. Bring your brief.",
+    "outcome": "An identity graph plan with matching and consistency checks.",
+    "task": "secure-code"
+  },
+  "specialized/language-translator.md": {
+    "name": "Language Translator agent",
+    "summary": "Get a translation draft with terminology and cultural context checks. Bring your brief.",
+    "outcome": "A translation draft with terminology and cultural context checks.",
+    "task": "write-and-tell-stories"
+  },
+  "specialized/legal-billing-time-tracking.md": {
+    "name": "Legal Billing & Time Tracking agent",
+    "summary": "Get a legal time and billing review with narrative checks. Bring your brief.",
+    "outcome": "A legal time and billing review with narrative checks.",
+    "task": "track-numbers"
+  },
+  "specialized/legal-client-intake.md": {
+    "name": "Legal Client Intake agent",
+    "summary": "Get a legal intake summary with conflicts and attorney follow-up questions. Bring your brief.",
+    "outcome": "A legal intake summary with conflicts and attorney follow-up questions.",
+    "task": "document-work"
+  },
+  "specialized/legal-document-review.md": {
+    "name": "Legal Document Review agent",
+    "summary": "Get a document review draft with clause risks and attorney questions. Bring your brief.",
+    "outcome": "A document review draft with clause risks and attorney questions.",
+    "task": "check-contracts"
+  },
+  "specialized/loan-officer-assistant.md": {
+    "name": "Loan Officer Assistant agent",
+    "summary": "Get a loan application checklist with document gaps and reviewer questions. Bring your brief.",
+    "outcome": "A loan application checklist with document gaps and reviewer questions.",
+    "task": "money-and-investing"
+  },
+  "specialized/lsp-index-engineer.md": {
+    "name": "LSP/Index Engineer agent",
+    "summary": "Get a code intelligence design with indexing and language server checks. Bring your brief.",
+    "outcome": "A code intelligence design with indexing and language server checks.",
+    "task": "build-software"
+  },
+  "specialized/ma-integration-manager.md": {
+    "name": "M&A Integration Manager agent",
+    "summary": "Get a merger integration plan with owners, dependencies and readiness checks. Bring your brief.",
+    "outcome": "A merger integration plan with owners, dependencies and readiness checks.",
+    "task": "organise-work"
+  },
+  "specialized/medical-billing-coding-specialist.md": {
+    "name": "Medical Billing & Coding Specialist agent",
+    "summary": "Get a medical billing review with coding and claim checks. Bring your brief.",
+    "outcome": "A medical billing review with coding and claim checks.",
+    "task": "document-work"
+  },
+  "specialized/operations-manager.md": {
+    "name": "Operations Manager agent",
+    "summary": "Get an operating process review with bottlenecks and improvement measures. Bring your brief.",
+    "outcome": "An operating process review with bottlenecks and improvement measures.",
+    "task": "document-work"
+  },
+  "specialized/organizational-psychologist.md": {
+    "name": "Organizational Psychologist agent",
+    "summary": "Get a team behavior review with evidence and intervention proposals. Bring your brief.",
+    "outcome": "A team behavior review with evidence and intervention proposals.",
+    "task": "lead-people"
+  },
+  "specialized/personal-growth-mentor.md": {
+    "name": "Personal Growth Mentor agent",
+    "summary": "Get a personal action plan with priorities and progress checks. Bring your brief.",
+    "outcome": "A personal action plan with priorities and progress checks.",
+    "task": "think-and-decide"
+  },
+  "specialized/real-estate-buyer-seller.md": {
+    "name": "Real Estate Buyer & Seller agent",
+    "summary": "Get a property transaction checklist with documents and decision points. Bring your brief.",
+    "outcome": "A property transaction checklist with documents and decision points.",
+    "task": "organise-work"
+  },
+  "specialized/recruitment-specialist.md": {
+    "name": "Recruitment Specialist agent",
+    "summary": "Get a China recruiting plan with sourcing and compliance checks. Bring your brief.",
+    "outcome": "A China recruiting plan with sourcing and compliance checks.",
+    "task": "hire-people"
+  },
+  "specialized/report-distribution-agent.md": {
+    "name": "Report Distribution agent",
+    "summary": "Get a report distribution proposal with recipients and delivery checks. Bring your brief.",
+    "outcome": "A report distribution proposal with recipients and delivery checks.",
+    "task": "organise-work"
+  },
+  "specialized/resume-tailor.md": {
+    "name": "Resume Tailor agent",
+    "summary": "Get a resume revision matched to the role and real experience. Bring your brief.",
+    "outcome": "A resume revision matched to the role and real experience.",
+    "task": "find-a-job"
+  },
+  "specialized/retail-customer-returns.md": {
+    "name": "Retail Customer Returns agent",
+    "summary": "Get a returns response draft with policy and refund review checks. Bring your brief.",
+    "outcome": "A returns response draft with policy and refund review checks.",
+    "task": "help-customers"
+  },
+  "specialized/sales-data-extraction-agent.md": {
+    "name": "Sales Data Extraction agent",
+    "summary": "Get a sales spreadsheet extraction plan with metric and source checks. Bring your brief.",
+    "outcome": "A sales spreadsheet extraction plan with metric and source checks.",
+    "task": "track-numbers"
+  },
+  "specialized/sales-outreach.md": {
+    "name": "Sales Outreach agent",
+    "summary": "Get sales outreach drafts tied to buyer needs and evidence. Bring your brief.",
+    "outcome": "Sales outreach drafts tied to buyer needs and evidence.",
+    "task": "sell-and-negotiate"
+  },
+  "specialized/specialized-chief-of-staff.md": {
+    "name": "Chief of Staff agent",
+    "summary": "Get a leadership coordination plan with decisions and open dependencies. Bring your brief.",
+    "outcome": "A leadership coordination plan with decisions and open dependencies.",
+    "task": "lead-people"
+  },
+  "specialized/specialized-civil-engineer.md": {
+    "name": "Civil Engineer agent",
+    "summary": "Get a civil design review with code and constructability questions. Bring your brief.",
+    "outcome": "A civil design review with code and constructability questions.",
+    "task": "research-topics"
+  },
+  "specialized/specialized-codebase-archaeologist.md": {
+    "name": "Codebase Archaeologist agent",
+    "summary": "Get a codebase history review with architecture and ownership evidence. Bring your brief.",
+    "outcome": "A codebase history review with architecture and ownership evidence.",
+    "task": "document-work"
+  },
+  "specialized/specialized-cultural-intelligence-strategist.md": {
+    "name": "Cultural Intelligence Strategist agent",
+    "summary": "Get a cultural fit review with exclusion risks and design proposals. Bring your brief.",
+    "outcome": "A cultural fit review with exclusion risks and design proposals.",
+    "task": "design-work"
+  },
+  "specialized/specialized-developer-advocate.md": {
+    "name": "Developer Advocate agent",
+    "summary": "Get a developer outreach plan with useful content and community work. Bring your brief.",
+    "outcome": "A developer outreach plan with useful content and community work.",
+    "task": "grow-social",
+    "linksReviewed": "Example content template links, not package dependencies."
+  },
+  "specialized/specialized-document-generator.md": {
+    "name": "Document Generator agent",
+    "summary": "Get a document generation plan for PDFs, slides or spreadsheets. Bring your brief.",
+    "outcome": "A document generation plan for PDFs, slides or spreadsheets.",
+    "task": "work-with-files"
+  },
+  "specialized/specialized-fedramp-rmf-compliance.md": {
+    "name": "FedRAMP & RMF Compliance Engineer agent",
+    "summary": "Get a federal security compliance plan with evidence and authorization gaps. Bring your brief.",
+    "outcome": "A federal security compliance plan with evidence and authorization gaps.",
+    "task": "check-contracts"
+  },
+  "specialized/specialized-focus-music-architect.md": {
+    "name": "Focus Music Architect agent",
+    "summary": "Get a focus music brief with acoustic choices and generation prompts. Bring your brief.",
+    "outcome": "A focus music brief with acoustic choices and generation prompts.",
+    "task": "work-with-audio"
+  },
+  "specialized/specialized-french-consulting-market.md": {
+    "name": "French Consulting Market Navigator agent",
+    "summary": "Get a French consulting market brief with positioning and negotiation choices. Bring your brief.",
+    "outcome": "A French consulting market brief with positioning and negotiation choices.",
+    "task": "sell-and-negotiate"
+  },
+  "specialized/specialized-korean-business-navigator.md": {
+    "name": "Korean Business Navigator agent",
+    "summary": "Get a Korean business meeting plan with context and relationship considerations. Bring your brief.",
+    "outcome": "A Korean business meeting plan with context and relationship considerations.",
+    "task": "sell-and-negotiate"
+  },
+  "specialized/specialized-master-plan-architect.md": {
+    "name": "Master Plan Architect agent",
+    "summary": "Get an implementation brief with assumptions and acceptance checks. Bring your brief.",
+    "outcome": "An implementation brief with assumptions and acceptance checks.",
+    "task": "build-software"
+  },
+  "specialized/specialized-mcp-builder.md": {
+    "name": "MCP Builder agent",
+    "summary": "Get an MCP server plan with tool contracts and integration checks. Bring your brief.",
+    "outcome": "An MCP server plan with tool contracts and integration checks.",
+    "task": "connect-tools"
+  },
+  "specialized/specialized-model-qa.md": {
+    "name": "Model QA Specialist agent",
+    "summary": "Get a machine learning audit plan with data and calibration checks. Bring your brief.",
+    "outcome": "A machine learning audit plan with data and calibration checks.",
+    "task": "test-and-fix-code"
+  },
+  "specialized/specialized-pricing-analyst.md": {
+    "name": "Pricing Analyst agent",
+    "summary": "Get a pricing analysis with value assumptions and test proposals. Bring your brief.",
+    "outcome": "A pricing analysis with value assumptions and test proposals.",
+    "task": "set-prices"
+  },
+  "specialized/specialized-salesforce-architect.md": {
+    "name": "Salesforce Architect agent",
+    "summary": "Get a Salesforce architecture proposal with data and platform limits. Bring your brief.",
+    "outcome": "A Salesforce architecture proposal with data and platform limits.",
+    "task": "connect-tools"
+  },
+  "specialized/specialized-strategy-duel-agent.md": {
+    "name": "Strategy Duel agent",
+    "summary": "Get a turn based strategy debate with arguments and round decisions. Bring your brief.",
+    "outcome": "A turn based strategy debate with arguments and round decisions.",
+    "task": "think-and-decide"
+  },
+  "specialized/specialized-workflow-architect.md": {
+    "name": "Workflow Architect agent",
+    "summary": "Get a workflow specification with paths, states and acceptance checks. Bring your brief.",
+    "outcome": "A workflow specification with paths, states and acceptance checks.",
+    "task": "document-work"
+  },
+  "specialized/study-abroad-advisor.md": {
+    "name": "Study Abroad Advisor agent",
+    "summary": "Get a study abroad plan with school, application and visa questions. Bring your brief.",
+    "outcome": "A study abroad plan with school, application and visa questions.",
+    "task": "organise-work"
+  },
+  "specialized/supply-chain-strategist.md": {
+    "name": "Supply Chain Strategist agent",
+    "summary": "Get a China supply chain plan with supplier and continuity checks. Bring your brief.",
+    "outcome": "A China supply chain plan with supplier and continuity checks.",
+    "task": "plan-supply-chain"
+  },
+  "specialized/zk-steward.md": {
+    "name": "ZK Steward agent",
+    "summary": "Get a connected notes plan with links and knowledge checks. Bring your brief.",
+    "outcome": "A connected notes plan with links and knowledge checks.",
+    "task": "document-work"
+  },
+  "support/support-analytics-reporter.md": {
+    "name": "Analytics Reporter agent",
+    "summary": "Get an analytics report with trends, evidence and next questions. Bring your brief.",
+    "outcome": "An analytics report with trends, evidence and next questions.",
+    "task": "track-numbers"
+  },
+  "support/support-executive-summary-generator.md": {
+    "name": "Executive Summary Generator agent",
+    "summary": "Get an executive summary with decisions, evidence and next steps. Bring your brief.",
+    "outcome": "An executive summary with decisions, evidence and next steps.",
+    "task": "document-work"
+  },
+  "support/support-finance-tracker.md": {
+    "name": "Finance Tracker agent",
+    "summary": "Get a cash and expense review with forecast assumptions. Bring your brief.",
+    "outcome": "A cash and expense review with forecast assumptions.",
+    "task": "money-and-investing"
+  },
+  "support/support-infrastructure-maintainer.md": {
+    "name": "Infrastructure Maintainer agent",
+    "summary": "Get an infrastructure maintenance plan with alerts and recovery checks. Bring your brief.",
+    "outcome": "An infrastructure maintenance plan with alerts and recovery checks.",
+    "task": "ship-and-host"
+  },
+  "support/support-legal-compliance-checker.md": {
+    "name": "Legal Compliance Checker agent",
+    "summary": "Get a legal compliance review with obligations and reviewer questions. Bring your brief.",
+    "outcome": "A legal compliance review with obligations and reviewer questions.",
+    "task": "check-contracts"
+  },
+  "support/support-support-responder.md": {
+    "name": "Support Responder agent",
+    "summary": "Get support response drafts with issue diagnosis and escalation steps. Bring your brief.",
+    "outcome": "Support response drafts with issue diagnosis and escalation steps."
+  },
+  "testing/testing-accessibility-auditor.md": {
+    "name": "Accessibility Auditor agent",
+    "summary": "Get an accessibility audit plan with manual and automated checks. Bring your brief.",
+    "outcome": "An accessibility audit plan with manual and automated checks."
+  },
+  "testing/testing-api-tester.md": {
+    "name": "API Tester agent",
+    "summary": "Get an API test plan with edge cases and failure checks. Bring your brief.",
+    "outcome": "An API test plan with edge cases and failure checks."
+  },
+  "testing/testing-evidence-collector.md": {
+    "name": "Evidence Collector agent",
+    "summary": "Get a visual QA record with screenshots and reproducible findings. Bring your brief.",
+    "outcome": "A visual QA record with screenshots and reproducible findings."
+  },
+  "testing/testing-performance-benchmarker.md": {
+    "name": "Performance Benchmarker agent",
+    "summary": "Get a performance benchmark plan with baselines and repeatable measurements. Bring your brief.",
+    "outcome": "A performance benchmark plan with baselines and repeatable measurements."
+  },
+  "testing/testing-reality-checker.md": {
+    "name": "Reality Checker agent",
+    "summary": "Get a release readiness review with evidence gaps and acceptance checks. Bring your brief.",
+    "outcome": "A release readiness review with evidence gaps and acceptance checks."
+  },
+  "testing/testing-test-automation-engineer.md": {
+    "name": "Test Automation Engineer agent",
+    "summary": "Get a test automation plan with isolation and reliability checks. Bring your brief.",
+    "outcome": "A test automation plan with isolation and reliability checks."
+  },
+  "testing/testing-test-results-analyzer.md": {
+    "name": "Test Results Analyzer agent",
+    "summary": "Get a test results review with failure patterns and next checks. Bring your brief.",
+    "outcome": "A test results review with failure patterns and next checks."
+  },
+  "testing/testing-tool-evaluator.md": {
+    "name": "Tool Evaluator agent",
+    "summary": "Get a tool comparison plan with criteria and trial checks. Bring your brief.",
+    "outcome": "A tool comparison plan with criteria and trial checks.",
+    "task": "research-topics"
+  },
+  "testing/testing-workflow-optimizer.md": {
+    "name": "Workflow Optimizer agent",
+    "summary": "Get a workflow review with bottlenecks and improvement experiments. Bring your brief.",
+    "outcome": "A workflow review with bottlenecks and improvement experiments.",
+    "task": "organise-work"
+  }
+}

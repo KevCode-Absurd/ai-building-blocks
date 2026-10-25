@@ -1,0 +1,43 @@
+slug: agency-marketing-social-media-strategist
+name: Social Media Strategist agent
+summary: Get a social content strategy with audience and measurement choices.
+  Bring your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: organic
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: marketing/marketing-social-media-strategist.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-social-media-strategist.md
+  licence: MIT
+  original_name: Social Media Strategist
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 7c698a9280872666b2726b7ca305c6d4890fcb95a098c7c316beb9bf5fdb4274
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Social Media Strategist
+  - Agency Agents
+  - Marketing
+credits:
+  - title: Social Media Strategist
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-social-media-strategist.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

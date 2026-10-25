@@ -1,0 +1,42 @@
+slug: agency-engineering-ai-data-remediation-engineer
+name: AI Data Remediation Engineer agent
+summary: Get a data repair plan with traceable changes and validation. Bring your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: engineering/engineering-ai-data-remediation-engineer.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-ai-data-remediation-engineer.md
+  licence: MIT
+  original_name: AI Data Remediation Engineer
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 5aa193052f15283493eeb9749bc346d09c02407f26760fe0d08f8bd9242ede79
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - AI Data Remediation Engineer
+  - Agency Agents
+  - Engineering
+credits:
+  - title: AI Data Remediation Engineer
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-ai-data-remediation-engineer.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

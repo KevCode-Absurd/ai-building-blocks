@@ -1,8 +1,6 @@
 .builder-assist-options { flex-shrink: 0; padding: 12px 18px; border-bottom: 1px solid var(--line); }
 .builder-assist-options > .seg { width: fit-content; max-width: 100%; flex-wrap: wrap; }
 .builder-assist-options > .builder-ai-assist { margin: 16px 0 0; }
-.diagram-tools { flex-shrink: 0; display: flex; align-items: center; flex-wrap: wrap; gap: 10px; padding: 12px 18px; border-bottom: 1px solid var(--line); }
-.diagram-tools .seg { flex-wrap: wrap; }
 .builder .node-assign { margin-top: 10px; min-height: 36px; padding: 6px 10px; border: 1px solid var(--line-2); border-radius: 6px; background: var(--bg); color: var(--text); font: inherit; font-size: 12px; cursor: pointer; }
 .builder .node-assign:hover { border-color: var(--text); }
 .builder .node-assign:focus-visible { outline: 2px solid var(--text); outline-offset: 3px; }
@@ -19,7 +17,7 @@
  .builder.workflow-customizing .chain-palette { max-height: 580px; border-right: 0; border-bottom: 1px solid var(--line); }
  .builder.full, .builder:fullscreen { grid-template-rows: minmax(180px, 38dvh) minmax(0, 1fr); }
  .builder.full .chain-palette, .builder:fullscreen .chain-palette { max-height: none; }
- .builder-assist-options, .diagram-tools { padding: 12px; }
+ .builder-assist-options { padding: 12px; }
  .builder .node-assign { min-height: 44px; }
 }
 

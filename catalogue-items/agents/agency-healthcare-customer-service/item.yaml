@@ -1,0 +1,43 @@
+slug: agency-healthcare-customer-service
+name: Healthcare Customer Service agent
+summary: Get patient service response drafts with privacy and escalation checks.
+  Bring your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: specialized/healthcare-customer-service.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/healthcare-customer-service.md
+  licence: MIT
+  original_name: Healthcare Customer Service
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: b2e4117a8b449a94409235f74315b52909716985dd94b82b87413a54ca471d73
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Healthcare Customer Service
+  - Agency Agents
+  - Specialized
+credits:
+  - title: Healthcare Customer Service
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/healthcare-customer-service.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

@@ -1,0 +1,18 @@
+{
+  "status": "pass",
+  "checkedOn": "2026-10-25T09:43:44.095Z",
+  "sourceCommit": "b37b5bb33b78f2c1d6567d98e25ca818e3259219",
+  "counts": {
+    "profiles": 283,
+    "archives": 283,
+    "sourceHashes": 283,
+    "licences": 283,
+    "pages": 283,
+    "searchDocuments": 283,
+    "apiResources": 283
+  },
+  "catalogueBlocks": 5278,
+  "catalogueAgents": 442,
+  "limitations": "Static source, package and publication checks. Agent behavior has not been evaluated in model runs. No live deployment performed.",
+  "assetsRoot": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-25-agency-agents\\assets"
+}

@@ -1,0 +1,43 @@
+slug: agency-marketing-global-podcast-strategist
+name: Global Podcast Strategist agent
+summary: Get a podcast expansion plan with language and market choices. Bring
+  your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: organic
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: marketing/marketing-global-podcast-strategist.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-global-podcast-strategist.md
+  licence: MIT
+  original_name: Global Podcast Strategist
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 98416e338db666c5cc1d6bfd37c35daffa00532010623fdb4a92ed7dce76a7aa
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Global Podcast Strategist
+  - Agency Agents
+  - Marketing
+credits:
+  - title: Global Podcast Strategist
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-global-podcast-strategist.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

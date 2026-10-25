@@ -1,0 +1,42 @@
+slug: agency-agentic-identity-trust
+name: Agentic Identity & Trust Architect agent
+summary: Get an agent identity design with authority and audit checks. Bring your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: specialized/agentic-identity-trust.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/agentic-identity-trust.md
+  licence: MIT
+  original_name: Agentic Identity & Trust Architect
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 99d79e4d57e55d44151b770d89efea4ea3bc6647af27bfd4a6b256ebc5a1a63e
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Agentic Identity & Trust Architect
+  - Agency Agents
+  - Specialized
+credits:
+  - title: Agentic Identity & Trust Architect
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/agentic-identity-trust.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

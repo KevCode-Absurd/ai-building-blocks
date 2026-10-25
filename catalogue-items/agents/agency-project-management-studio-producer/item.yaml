@@ -1,0 +1,43 @@
+slug: agency-project-management-studio-producer
+name: Studio Producer agent
+summary: Get a creative production plan with scope, resources and milestones.
+  Bring your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: project-management/project-management-studio-producer.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/project-management/project-management-studio-producer.md
+  licence: MIT
+  original_name: Studio Producer
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: d942feab0f50ea7b8e98cb73bdaf05226d2a6c53c6359c7380149f7545bb199d
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Studio Producer
+  - Agency Agents
+  - Project Management
+credits:
+  - title: Studio Producer
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/project-management/project-management-studio-producer.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

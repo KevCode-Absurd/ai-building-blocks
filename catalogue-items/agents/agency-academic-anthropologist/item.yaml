@@ -1,0 +1,42 @@
+slug: agency-academic-anthropologist
+name: Anthropologist agent
+summary: Get a cultural research brief grounded in observed practices. Bring your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: research
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: academic/academic-anthropologist.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/academic/academic-anthropologist.md
+  licence: MIT
+  original_name: Anthropologist
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 2668602164abf574cb4e432a0cd40727a943de0b59864abb5b73956a0eb26146
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Anthropologist
+  - Agency Agents
+  - Academic
+credits:
+  - title: Anthropologist
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/academic/academic-anthropologist.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

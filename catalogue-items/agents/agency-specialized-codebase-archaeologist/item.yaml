@@ -1,0 +1,43 @@
+slug: agency-specialized-codebase-archaeologist
+name: Codebase Archaeologist agent
+summary: Get a codebase history review with architecture and ownership evidence.
+  Bring your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: specialized/specialized-codebase-archaeologist.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/specialized-codebase-archaeologist.md
+  licence: MIT
+  original_name: Codebase Archaeologist
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: c1b2c22711cb6e74dd834f831d6a8b3f10c93cd462722073b01acae9d0a40700
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Codebase Archaeologist
+  - Agency Agents
+  - Specialized
+credits:
+  - title: Codebase Archaeologist
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/specialized-codebase-archaeologist.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

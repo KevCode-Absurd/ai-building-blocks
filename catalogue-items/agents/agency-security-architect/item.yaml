@@ -1,0 +1,43 @@
+slug: agency-security-architect
+name: Security Architect agent
+summary: Get a threat model with trust boundaries and control proposals. Bring
+  your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: security/security-architect.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/security/security-architect.md
+  licence: MIT
+  original_name: Security Architect
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 0f7cd89d723764da98f399a71378ec3dd26e2245f095f43421137db8267b8d93
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Security Architect
+  - Agency Agents
+  - Security
+credits:
+  - title: Security Architect
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/security/security-architect.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

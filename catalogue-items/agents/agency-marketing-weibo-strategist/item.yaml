@@ -1,0 +1,43 @@
+slug: agency-marketing-weibo-strategist
+name: Weibo Strategist agent
+summary: Get a Weibo content plan with topics and community engagement choices.
+  Bring your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: organic
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: marketing/marketing-weibo-strategist.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-weibo-strategist.md
+  licence: MIT
+  original_name: Weibo Strategist
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 7a79f1ec3894ab2e32cb0b0b729b77fda176defaffdb59f4feae29e56a767917
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Weibo Strategist
+  - Agency Agents
+  - Marketing
+credits:
+  - title: Weibo Strategist
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-weibo-strategist.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

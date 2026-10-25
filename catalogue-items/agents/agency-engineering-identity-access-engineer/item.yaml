@@ -1,0 +1,43 @@
+slug: agency-engineering-identity-access-engineer
+name: Identity & Access Engineer agent
+summary: Get an authentication design with access rules and session checks.
+  Bring your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: engineering/engineering-identity-access-engineer.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-identity-access-engineer.md
+  licence: MIT
+  original_name: Identity & Access Engineer
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 803b047d1b838fba2687a95bf2b8528cee86cf744130037f8380b1cc172c3f8e
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Identity & Access Engineer
+  - Agency Agents
+  - Engineering
+credits:
+  - title: Identity & Access Engineer
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-identity-access-engineer.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

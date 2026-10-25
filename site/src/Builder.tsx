@@ -159,7 +159,6 @@ function Stage({ c: baseCatalogue, toast, initialFlow, onFlowChange, onDelete }:
   const listView = view === "list";
   const [customize, setCustomize] = useState(true);
   const [assist, setAssist] = useState<"steps" | "ai">("steps");
-  const [diagramTool, setDiagramTool] = useState<"select" | "pan">("select");
   // A shared link (/?flow=...) opens as a new workflow; otherwise the one left open last time.
   const shareCode = useMemo(() => new URLSearchParams(location.search).get("flow"), []);
   const shared = useMemo(() => (shareCode ? unpackFlow(baseCatalogue, shareCode) : null), [baseCatalogue, shareCode]);
@@ -354,7 +353,6 @@ function Stage({ c: baseCatalogue, toast, initialFlow, onFlowChange, onDelete }:
   };
 
   const anchorNode = nodes.find((n) => n.id === inspect) ?? nodes.find((n) => n.selected) ?? nodes[nodes.length - 1];
-  const selectedIds = new Set(nodes.filter(n => n.selected).map(n => n.id));
   const inFlow = useMemo(() => new Set(nodes.map((n) => n.data.slug)), [nodes]);
   const stepOf = useMemo(() => Object.fromEntries((order ?? []).map((o) => [o.node.id, o.step])), [order]);
   const leads = useMemo(() => (order ? leadsOf(c, flow, order) : {}), [c, flow, order]);
@@ -432,13 +430,6 @@ function Stage({ c: baseCatalogue, toast, initialFlow, onFlowChange, onDelete }:
     if (!anchorNode || !c.bySlug[slug]) return;
     setNodes(fromFlow(replaceFlowSkill(c, flow, anchorNode.id, slug, ends.customSkills ?? [])).nodes.map(n => ({ ...n, selected: n.id === anchorNode.id })));
     toast("Skill replaced. Your connections and notes are kept. Review its inputs.");
-  };
-  const removeSelected = () => {
-    if (!selectedIds.size) return;
-    setNodes(ns => ns.filter(n => !selectedIds.has(n.id)));
-    setEdges(es => es.filter(e => !selectedIds.has(e.source) && !selectedIds.has(e.target)));
-    if (inspect && selectedIds.has(inspect)) setInspect(null);
-    toast(`${selectedIds.size} step${selectedIds.size === 1 ? "" : "s"} removed. Undo brings them back.`);
   };
   const tidyUp = () => {
     const t = tidy(flow);
@@ -552,10 +543,6 @@ function Stage({ c: baseCatalogue, toast, initialFlow, onFlowChange, onDelete }:
             <div className="seg" role="group" aria-label="Build your workflow"><button type="button" aria-pressed={assist === "steps"} onClick={() => setAssist("steps")}>Choose steps</button><button type="button" aria-pressed={assist === "ai"} onClick={() => setAssist("ai")} data-testid="builder-use-ai">Build with AI</button></div>
             {assist === "ai" && <BuilderAiAssist c={c} initialGoal={ends.goal} toast={toast} onPlan={next => { const latest = flowRef.current; if (latest.nodes.length || latest.team?.minds.length) flows.save(latest); stopRun(); load(next); setCustomize(true); }} />}
           </div>}
-          {!listView && nodes.length > 0 && <div className="diagram-tools">
-            <div className="seg" role="group" aria-label="Diagram tools"><button type="button" aria-pressed={diagramTool === "select"} onClick={() => setDiagramTool("select")} data-testid="diagram-select">Select steps</button><button type="button" aria-pressed={diagramTool === "pan"} onClick={() => setDiagramTool("pan")} data-testid="diagram-pan">Move diagram</button></div>
-            {selectedIds.size > 0 && <button type="button" className="btn btn-ghost btn-sm" onClick={removeSelected} data-testid="delete-selected">Delete selected ({selectedIds.size})</button>}
-          </div>}
           {canRun && !onFlowChange && <details className="workflow-options workflow-run-help" data-testid="builder-run-help"><summary>How do I get my result?</summary><ol><li>Review the steps, then download the workflow.</li><li>Unzip it and give the complete files to your AI.</li><li>Ask your AI to read START_HERE.txt and follow HANDOFF.md. Add the material it asks for.</li></ol><p className="small">Copy AI instructions gives you a first message to send with the files. Your AI makes the result in your chat or workspace.</p><a href="/how-it-works#use-in-ai" target="_blank" rel="noopener noreferrer">Read the steps in a new tab</a></details>}
           {canRun && !onFlowChange && <><ExecutionPrompt name={flow.name} goal={flow.goal} />{prepared && !needsOpen && <TransferGuide {...prepared} />}</>}
           {listView ? (
@@ -584,8 +571,8 @@ function Stage({ c: baseCatalogue, toast, initialFlow, onFlowChange, onDelete }:
                 }}
                 onEdgesChange={(ch) => onEdgesChange(ch.filter((x) => !("id" in x) || !fixedId(x.id)))} onConnect={onConnect} onNodeContextMenu={(e, n) => { if (n.type === "block") { e.preventDefault(); setContextMenu({ id: n.id, x: e.clientX, y: e.clientY }); } }} onNodeClick={(_, n) => setInspect(n.id)} onPaneClick={() => setInspect(null)}
                 fitView fitViewOptions={{ padding: 0.3, maxZoom: 1 }} minZoom={0.3} maxZoom={1.6} preventScrolling={false}
-                selectionOnDrag={diagramTool === "select"} selectionKeyCode={diagramTool === "select" ? null : "Shift"} selectionMode={SelectionMode.Partial}
-                panOnDrag={diagramTool === "pan" ? true : [1, 2]} panActivationKeyCode="Space"
+                selectionOnDrag selectionKeyCode={null} selectionMode={SelectionMode.Partial}
+                panOnDrag={[1, 2]} panActivationKeyCode="Space"
                 defaultEdgeOptions={{ type: "flow" }} deleteKeyCode={["Backspace", "Delete"]} proOptions={{ hideAttribution: true }}
               >
                 <Background variant={BackgroundVariant.Dots} gap={22} size={1.2} />

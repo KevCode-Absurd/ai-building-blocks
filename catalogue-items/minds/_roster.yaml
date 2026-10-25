@@ -1,4 +1,4 @@
-# The 305 minds, by broad area. The first 151 cover every field, the next 100 are business builders, the next 52 are copywriters, marketers, designers and authors, and Aswath Damodaran was added after. Spec: docs/MINDS-PRD.md.
+# The 505 minds: 305 original minds plus 200 practical additions across ten reviewed batches.
 # seat = the role we suggest when someone puts this person on a council. People can pick their own.
 # living: true means extra care (no invented quotes, no endorsement, no private life). See the PRD §5.
 # Folder per mind: catalogue-items/minds/<slug>/ with mind.yaml, knowledge.md, personality.md.
@@ -353,3 +353,205 @@ minds:
   - {slug: virginia-woolf, name: "Virginia Woolf", area: writing, living: false, seat: "Inner life on the page"}
   - {slug: leo-tolstoy, name: "Leo Tolstoy", area: writing, living: false, seat: "The big human story"}
   - {slug: ursula-k-le-guin, name: "Ursula K. Le Guin", area: writing, living: false, seat: "Worlds with rules"}
+
+  # Everyday-use expansion, 23 October 2026 (200)
+  - { slug: julia-child, name: Julia Child, area: arts, living: false, seat: Kitchen technique and confidence }
+  - { slug: jacques-pepin, name: Jacques Pépin, area: arts, living: true, seat: Everyday technique and resourceful cooking }
+  - { slug: samin-nosrat, name: Samin Nosrat, area: arts, living: true, seat: Flavor balance and intuitive cooking }
+  - { slug: madhur-jaffrey, name: Madhur Jaffrey, area: arts, living: true, seat: Indian home cooking and spice sequence }
+  - { slug: marcella-hazan, name: Marcella Hazan, area: arts, living: false, seat: Simple Italian food and ingredient judgment }
+  - { slug: edna-lewis, name: Edna Lewis, area: arts, living: false, seat: Seasonal food and remembered community }
+  - { slug: m-f-k-fisher, name: M. F. K. Fisher, area: writing, living: false, seat: Eating well with limited resources }
+  - { slug: harold-mcgee, name: Harold McGee, area: science, living: true, seat: Kitchen science and troubleshooting }
+  - { slug: kenji-lopez-alt, name: J. Kenji López-Alt, area: science, living: true, seat: Tested home cooking and useful experiments }
+  - { slug: deb-perelman, name: Deb Perelman, area: writing, living: true, seat: Reliable meals from a small kitchen }
+  - { slug: yotam-ottolenghi, name: Yotam Ottolenghi, area: arts, living: true, seat: Vegetable meals and bold flavor combinations }
+  - { slug: diana-kennedy, name: Diana Kennedy, area: arts, living: false, seat: Regional recipes and careful documentation }
+  - { slug: alice-waters, name: Alice Waters, area: arts, living: true, seat: Seasonal meals and edible education }
+  - { slug: james-beard, name: James Beard, area: arts, living: false, seat: American home cooking and hospitality }
+  - { slug: mary-berry, name: Mary Berry, area: arts, living: true, seat: Dependable baking and practical family meals }
+  - { slug: marie-kondo, name: Marie Kondo, area: design, living: true, seat: Intentional belongings and home organisation }
+  - { slug: dana-k-white, name: Dana K. White, area: design, living: true, seat: Clutter limits and progress without piles }
+  - { slug: kc-davis, name: KC Davis, area: thinking, living: true, seat: Functional home care without shame }
+  - { slug: monty-don, name: Monty Don, area: arts, living: true, seat: Seasonal gardening and soil care }
+  - { slug: ruth-stout, name: Ruth Stout, area: arts, living: false, seat: Low-labor gardening with permanent mulch }
+  - { slug: barbara-oakley, name: Barbara Oakley, area: thinking, living: true, seat: Learning difficult subjects }
+  - { slug: john-dunlosky, name: John Dunlosky, area: science, living: true, seat: Study methods that last }
+  - { slug: henry-roediger, name: Henry Roediger, area: science, living: true, seat: Retrieval and durable memory }
+  - { slug: peter-c-brown, name: Peter C. Brown, area: thinking, living: true, seat: Remembering what you learn }
+  - { slug: pooja-agarwal, name: Pooja Agarwal, area: science, living: true, seat: Simple teaching that sticks }
+  - { slug: benedict-carey, name: Benedict Carey, area: thinking, living: true, seat: Flexible everyday learning }
+  - { slug: daniel-willingham, name: Daniel Willingham, area: thinking, living: true, seat: Thinking and clear instruction }
+  - { slug: stanislas-dehaene, name: Stanislas Dehaene, area: science, living: true, seat: The mechanisms of learning }
+  - { slug: carol-dweck, name: Carol Dweck, area: thinking, living: true, seat: Growth through better strategies }
+  - { slug: angela-duckworth, name: Angela Duckworth, area: thinking, living: true, seat: Purposeful persistence }
+  - { slug: anders-ericsson, name: Anders Ericsson, area: science, living: false, seat: Practice with useful feedback }
+  - { slug: scott-young, name: Scott Young, area: thinking, living: true, seat: Learning projects you finish }
+  - { slug: josh-waitzkin, name: Josh Waitzkin, area: thinking, living: true, seat: Calm skill under pressure }
+  - { slug: maria-montessori, name: Maria Montessori, area: thinking, living: false, seat: Independence through environment }
+  - { slug: john-dewey, name: John Dewey, area: thinking, living: false, seat: Learning through inquiry }
+  - { slug: paulo-freire, name: Paulo Freire, area: thinking, living: false, seat: Dialogue and learner agency }
+  - { slug: seymour-papert, name: Seymour Papert, area: thinking, living: false, seat: Learn by making something }
+  - { slug: sugata-mitra, name: Sugata Mitra, area: thinking, living: true, seat: Curious group inquiry }
+  - { slug: sal-khan, name: Sal Khan, area: thinking, living: true, seat: Master the missing basics }
+  - { slug: richard-hamming, name: Richard Hamming, area: thinking, living: false, seat: Choose work that matters }
+  - { slug: john-gottman, name: John Gottman, area: thinking, living: true, seat: Everyday connection and repair }
+  - { slug: julie-schwartz-gottman, name: Julie Schwartz Gottman, area: thinking, living: true, seat: Conflict repair and shared meaning }
+  - { slug: esther-perel, name: Esther Perel, area: thinking, living: true, seat: "Closeness, autonomy and curiosity" }
+  - { slug: sue-johnson, name: Sue Johnson, area: thinking, living: false, seat: Connection beneath the argument }
+  - { slug: marshall-rosenberg, name: Marshall Rosenberg, area: thinking, living: false, seat: Needs and clear requests }
+  - { slug: harriet-lerner, name: Harriet Lerner, area: thinking, living: true, seat: "Anger, apologies and self-definition" }
+  - { slug: virginia-satir, name: Virginia Satir, area: thinking, living: false, seat: Congruent family communication }
+  - { slug: carl-rogers, name: Carl Rogers, area: thinking, living: false, seat: Listening and self-directed growth }
+  - { slug: thomas-gordon, name: Thomas Gordon, area: leadership, living: false, seat: Problem ownership and no-lose agreements }
+  - { slug: haim-ginott, name: Haim Ginott, area: thinking, living: false, seat: Respectful words and firm limits }
+  - { slug: adele-faber, name: Adele Faber, area: thinking, living: false, seat: Cooperation without repeated nagging }
+  - { slug: elaine-mazlish, name: Elaine Mazlish, area: thinking, living: false, seat: Sibling fairness and family cooperation }
+  - { slug: alfie-kohn, name: Alfie Kohn, area: thinking, living: true, seat: Motivation beyond rewards }
+  - { slug: ross-greene, name: Ross Greene, area: thinking, living: true, seat: Proactive solutions with children }
+  - { slug: daniel-siegel, name: Daniel Siegel, area: thinking, living: true, seat: Reflection and emotional integration }
+  - { slug: tina-payne-bryson, name: Tina Payne Bryson, area: thinking, living: true, seat: Connection before parenting correction }
+  - { slug: janet-lansbury, name: Janet Lansbury, area: thinking, living: true, seat: Calm toddler limits and independent play }
+  - { slug: becky-kennedy, name: Becky Kennedy, area: thinking, living: true, seat: Sturdy parenting and repair }
+  - { slug: nedra-glover-tawwab, name: Nedra Glover Tawwab, area: thinking, living: true, seat: Boundaries without over-explaining }
+  - { slug: terrence-real, name: Terrence Real, area: thinking, living: true, seat: Accountability and relational repair }
+  - { slug: david-allen, name: David Allen, area: thinking, living: true, seat: Clear commitments and next actions }
+  - { slug: bj-fogg, name: BJ Fogg, area: science, living: true, seat: Habits that fit ordinary days }
+  - { slug: julie-morgenstern, name: Julie Morgenstern, area: thinking, living: true, seat: Schedules that fit your life }
+  - { slug: laura-vanderkam, name: Laura Vanderkam, area: thinking, living: true, seat: A week with room for what matters }
+  - { slug: oliver-burkeman, name: Oliver Burkeman, area: thinking, living: true, seat: Meaningful work within real limits }
+  - { slug: greg-mckeown, name: Greg McKeown, area: thinking, living: true, seat: Choose the few commitments that matter }
+  - { slug: jake-knapp, name: Jake Knapp, area: design, living: true, seat: Test an idea before building it }
+  - { slug: john-zeratsky, name: John Zeratsky, area: design, living: true, seat: Design a day with protected attention }
+  - { slug: david-marquet, name: David Marquet, area: leadership, living: true, seat: Delegate decisions with clarity }
+  - { slug: amy-edmondson, name: Amy Edmondson, area: leadership, living: true, seat: Speak up and learn from work }
+  - { slug: liz-wiseman, name: Liz Wiseman, area: leadership, living: true, seat: Make room for other people’s judgment }
+  - { slug: michael-bungay-stanier, name: Michael Bungay Stanier, area: leadership, living: true, seat: Ask useful questions before giving advice }
+  - { slug: nancy-kline, name: Nancy Kline, area: leadership, living: true, seat: Listen so people can think }
+  - { slug: patrick-lencioni, name: Patrick Lencioni, area: leadership, living: true, seat: Clear commitments and team accountability }
+  - { slug: susan-scott, name: Susan Scott, area: leadership, living: true, seat: Have the conversation you are avoiding }
+  - { slug: kerry-patterson, name: Kerry Patterson, area: leadership, living: false, seat: Discuss hard issues without blame }
+  - { slug: joseph-grenny, name: Joseph Grenny, area: leadership, living: true, seat: Change behavior by fixing its conditions }
+  - { slug: douglas-stone, name: Douglas Stone, area: thinking, living: true, seat: Understand both stories in a difficult talk }
+  - { slug: sheila-heen, name: Sheila Heen, area: thinking, living: true, seat: Find useful learning in difficult feedback }
+  - { slug: roger-fisher, name: Roger Fisher, area: thinking, living: false, seat: Negotiate around interests and fair standards }
+  - { slug: ramit-sethi, name: Ramit Sethi, area: thinking, living: true, seat: Conscious spending and household systems }
+  - { slug: vicki-robin, name: Vicki Robin, area: thinking, living: true, seat: Life energy and enough }
+  - { slug: jl-collins, name: JL Collins, area: thinking, living: true, seat: Simple money decisions and room to choose }
+  - { slug: carl-richards, name: Carl Richards, area: thinking, living: true, seat: Financial behaviour and clear planning }
+  - { slug: john-c-bogle, name: John C Bogle, area: business, living: false, seat: "Costs, stewardship and the client" }
+  - { slug: burton-malkiel, name: Burton Malkiel, area: thinking, living: true, seat: Financial evidence and limits of prediction }
+  - { slug: william-bernstein, name: William Bernstein, area: thinking, living: true, seat: Financial education and hidden prerequisites }
+  - { slug: thomas-j-stanley, name: Thomas J Stanley, area: business, living: false, seat: "Wealth, income and useful relationships" }
+  - { slug: jenny-blake, name: Jenny Blake, area: leadership, living: true, seat: Career pivots and practical pilots }
+  - { slug: bill-burnett, name: Bill Burnett, area: design, living: true, seat: Life-design reframing and prototypes }
+  - { slug: dave-evans, name: Dave Evans, area: design, living: true, seat: Possible lives and meaningful participation }
+  - { slug: herminia-ibarra, name: Herminia Ibarra, area: leadership, living: true, seat: Working identity and career transitions }
+  - { slug: richard-nelson-bolles, name: Richard Nelson Bolles, area: leadership, living: false, seat: Transferable skills and purposeful job search }
+  - { slug: beth-kobliner, name: Beth Kobliner, area: thinking, living: true, seat: Everyday family money lessons }
+  - { slug: helaine-olen, name: Helaine Olen, area: thinking, living: true, seat: "Financial advice, incentives and household reality" }
+  - { slug: tiffany-aliche, name: Tiffany Aliche, area: thinking, living: true, seat: Financial wholeness and teachable steps }
+  - { slug: michelle-singletary, name: Michelle Singletary, area: thinking, living: true, seat: "Household spending, priorities and generosity" }
+  - { slug: joe-dominguez, name: Joe Dominguez, area: thinking, living: false, seat: Life-energy accounting and visible money records }
+  - { slug: elizabeth-warren, name: Elizabeth Warren, area: thinking, living: true, seat: Household resilience and fixed commitments }
+  - { slug: amelia-warren-tyagi, name: Amelia Warren Tyagi, area: thinking, living: true, seat: Household balance and practical tradeoffs }
+  - { slug: kelly-mcgonigal, name: Kelly McGonigal, area: thinking, living: true, seat: Joyful movement and connection }
+  - { slug: judson-brewer, name: Judson Brewer, area: science, living: true, seat: Curiosity about everyday habits }
+  - { slug: wendy-suzuki, name: Wendy Suzuki, area: science, living: true, seat: Movement and everyday attention }
+  - { slug: katy-bowman, name: Katy Bowman, area: science, living: true, seat: Movement in ordinary life }
+  - { slug: stuart-mcgill, name: Stuart McGill, area: science, living: true, seat: Practical movement task analysis }
+  - { slug: kelly-starrett, name: Kelly Starrett, area: science, living: true, seat: Movement habits that fit real life }
+  - { slug: joan-vernikos, name: Joan Vernikos, area: science, living: true, seat: Movement across the working day }
+  - { slug: gretchen-rubin, name: Gretchen Rubin, area: thinking, living: true, seat: Habits that fit your preferences }
+  - { slug: sonja-lyubomirsky, name: Sonja Lyubomirsky, area: science, living: true, seat: Positive activities that fit }
+  - { slug: kristin-neff, name: Kristin Neff, area: science, living: true, seat: Self-compassion with accountability }
+  - { slug: christopher-germer, name: Christopher Germer, area: thinking, living: true, seat: Believable everyday self-support }
+  - { slug: jon-kabat-zinn, name: Jon Kabat-Zinn, area: thinking, living: true, seat: Attention in ordinary moments }
+  - { slug: tara-brach, name: Tara Brach, area: thinking, living: true, seat: Compassionate pauses in daily life }
+  - { slug: sharon-salzberg, name: Sharon Salzberg, area: thinking, living: true, seat: Beginning again with goodwill }
+  - { slug: jack-kornfield, name: Jack Kornfield, area: thinking, living: true, seat: Wise intention before action }
+  - { slug: pema-chodron, name: Pema Chödrön, area: thinking, living: true, seat: Interrupting everyday reactivity }
+  - { slug: rick-hanson, name: Rick Hanson, area: thinking, living: true, seat: Noticing useful positive experiences }
+  - { slug: russ-harris, name: Russ Harris, area: thinking, living: true, seat: Values and practical choice points }
+  - { slug: steven-hayes, name: Steven Hayes, area: science, living: true, seat: Psychological flexibility in everyday choices }
+  - { slug: susan-david, name: Susan David, area: thinking, living: true, seat: Emotional agility in daily choices }
+  - { slug: jane-jacobs, name: Jane Jacobs, area: thinking, living: false, seat: Street life and local knowledge }
+  - { slug: jan-gehl, name: Jan Gehl, area: design, living: true, seat: Life between buildings }
+  - { slug: william-h-whyte, name: William H. Whyte, area: design, living: false, seat: Observed public-space behaviour }
+  - { slug: christopher-alexander, name: Christopher Alexander, area: design, living: false, seat: Patterns and living places }
+  - { slug: stewart-brand, name: Stewart Brand, area: thinking, living: true, seat: Maintenance and long-term adaptability }
+  - { slug: victor-papanek, name: Victor Papanek, area: design, living: false, seat: Useful design and real needs }
+  - { slug: ronald-mace, name: Ronald Mace, area: design, living: false, seat: Universal use and adaptable places }
+  - { slug: patricia-moore, name: Patricia Moore, area: design, living: true, seat: Dignity in everyday use }
+  - { slug: kat-holmes, name: Kat Holmes, area: design, living: true, seat: Mismatches and missing expertise }
+  - { slug: sara-hendren, name: Sara Hendren, area: design, living: true, seat: Assistance and adaptive imagination }
+  - { slug: sasha-costanza-chock, name: Sasha Costanza-Chock, area: design, living: true, seat: Community power and design accountability }
+  - { slug: liz-jackson, name: Liz Jackson, area: design, living: true, seat: Disabled expertise and unwanted solutions }
+  - { slug: kate-raworth, name: Kate Raworth, area: thinking, living: true, seat: Thriving within social and ecological limits }
+  - { slug: elinor-ostrom, name: Elinor Ostrom, area: thinking, living: false, seat: Workable rules for shared resources }
+  - { slug: donella-meadows, name: Donella Meadows, area: thinking, living: false, seat: "Feedback, delays and leverage" }
+  - { slug: rachel-carson, name: Rachel Carson, area: science, living: false, seat: "Wonder, evidence and ecological relationships" }
+  - { slug: wangari-maathai, name: Wangari Maathai, area: leadership, living: false, seat: Local action and continuing stewardship }
+  - { slug: vandana-shiva, name: Vandana Shiva, area: thinking, living: true, seat: "Diversity, local knowledge and resource control" }
+  - { slug: david-holmgren, name: David Holmgren, area: design, living: true, seat: Household adaptation and manageable design }
+  - { slug: bill-mollison, name: Bill Mollison, area: design, living: false, seat: Placement and functional connections }
+  - { slug: martin-fowler, name: Martin Fowler, area: coding, living: true, seat: Evolutionary software design }
+  - { slug: robert-c-martin, name: Robert C Martin, area: coding, living: true, seat: Readable and testable code }
+  - { slug: michael-feathers, name: Michael Feathers, area: coding, living: true, seat: Changing legacy code safely }
+  - { slug: sandi-metz, name: Sandi Metz, area: coding, living: true, seat: Objects that stay easy to change }
+  - { slug: julia-evans, name: Julia Evans, area: coding, living: true, seat: Debugging and learning computer systems }
+  - { slug: kelsey-hightower, name: Kelsey Hightower, area: coding, living: true, seat: Simple and operable infrastructure }
+  - { slug: brendan-gregg, name: Brendan Gregg, area: coding, living: true, seat: Finding performance bottlenecks }
+  - { slug: troy-hunt, name: Troy Hunt, area: coding, living: true, seat: Account exposure and clear next steps }
+  - { slug: bruce-schneier, name: Bruce Schneier, area: thinking, living: true, seat: Security tradeoffs for the actual situation }
+  - { slug: cory-doctorow, name: Cory Doctorow, area: thinking, living: true, seat: Digital ownership and a workable exit }
+  - { slug: mike-monteiro, name: Mike Monteiro, area: design, living: true, seat: Design responsibility and client boundaries }
+  - { slug: ethan-marcotte, name: Ethan Marcotte, area: design, living: true, seat: Responsive layouts and humane web work }
+  - { slug: rachel-andrew, name: Rachel Andrew, area: coding, living: true, seat: Practical CSS layout decisions }
+  - { slug: sara-soueidan, name: Sara Soueidan, area: design, living: true, seat: Accessible interface implementation }
+  - { slug: lea-verou, name: Lea Verou, area: coding, living: true, seat: Understandable CSS and web interfaces }
+  - { slug: addy-osmani, name: Addy Osmani, area: coding, living: true, seat: Fast pages and focused engineering }
+  - { slug: harry-roberts, name: Harry Roberts, area: coding, living: true, seat: Web performance and CSS architecture }
+  - { slug: nicole-forsgren, name: Nicole Forsgren, area: leadership, living: true, seat: Developer productivity without harmful rankings }
+  - { slug: charity-majors, name: Charity Majors, area: coding, living: true, seat: Observability and sustainable on-call work }
+  - { slug: mitchell-hashimoto, name: Mitchell Hashimoto, area: coding, living: true, seat: Practical tools and dependable development }
+  - { slug: annette-simmons, name: Annette Simmons, area: writing, living: true, seat: Truthful stories for everyday understanding }
+  - { slug: nancy-duarte, name: Nancy Duarte, area: design, living: true, seat: Story structure for your audience }
+  - { slug: garr-reynolds, name: Garr Reynolds, area: design, living: true, seat: Simple visuals and natural explanation }
+  - { slug: cole-nussbaumer-knaflic, name: Cole Nussbaumer Knaflic, area: design, living: true, seat: Charts that serve a specific audience }
+  - { slug: edward-tufte, name: Edward Tufte, area: design, living: true, seat: Evidence you can compare }
+  - { slug: alberto-cairo, name: Alberto Cairo, area: design, living: true, seat: Read and design honest charts }
+  - { slug: hans-rosling, name: Hans Rosling, area: science, living: false, seat: Distributions before generalizations }
+  - { slug: florence-nightingale, name: Florence Nightingale, area: thinking, living: false, seat: Observation and reliable everyday arrangements }
+  - { slug: david-spiegelhalter, name: David Spiegelhalter, area: thinking, living: true, seat: Clear numbers and honest uncertainty }
+  - { slug: carl-bergstrom, name: Carl Bergstrom, area: thinking, living: true, seat: Selection }
+  - { slug: jevin-west, name: Jevin West, area: thinking, living: true, seat: Everyday verification and informed sharing }
+  - { slug: tim-harford, name: Tim Harford, area: thinking, living: true, seat: Everyday statistics with context }
+  - { slug: julia-galef, name: Julia Galef, area: thinking, living: true, seat: Curiosity before defending an answer }
+  - { slug: philip-tetlock, name: Philip Tetlock, area: thinking, living: true, seat: Forecasts you can check and improve }
+  - { slug: gerd-gigerenzer, name: Gerd Gigerenzer, area: thinking, living: true, seat: Simple rules that fit the situation }
+  - { slug: annie-duke, name: Annie Duke, area: thinking, living: true, seat: Decision quality and a sensible exit }
+  - { slug: barbara-minto, name: Barbara Minto, area: writing, living: true, seat: Clear answers and supporting logic }
+  - { slug: roy-peter-clark, name: Roy Peter Clark, area: writing, living: true, seat: Clear honest sentences and useful drafts }
+  - { slug: ann-patchett, name: Ann Patchett, area: writing, living: true, seat: "Shape, revision and the reader" }
+  - { slug: natalie-goldberg, name: Natalie Goldberg, area: writing, living: true, seat: Writing practice before self-judgment }
+  - { slug: austin-kleon, name: Austin Kleon, area: arts, living: true, seat: Everyday creative practice }
+  - { slug: kimon-nicolaides, name: Kimon Nicolaïdes, area: arts, living: false, seat: Observation through drawing }
+  - { slug: james-gurney, name: James Gurney, area: arts, living: true, seat: Color and light in ordinary scenes }
+  - { slug: twyla-tharp, name: Twyla Tharp, area: arts, living: true, seat: Creative work through preparation }
+  - { slug: betty-edwards, name: Betty Edwards, area: arts, living: true, seat: Learning to see through drawing }
+  - { slug: scott-mccloud, name: Scott McCloud, area: arts, living: true, seat: Clear visual storytelling }
+  - { slug: lynda-barry, name: Lynda Barry, area: arts, living: true, seat: Everyday images and creative play }
+  - { slug: mary-oliver, name: Mary Oliver, area: writing, living: false, seat: Attention and poetic craft }
+  - { slug: billy-collins, name: Billy Collins, area: writing, living: true, seat: Inviting and surprising the reader }
+  - { slug: ira-glass, name: Ira Glass, area: writing, living: true, seat: Ordinary stories with meaning }
+  - { slug: roman-mars, name: Roman Mars, area: arts, living: true, seat: Stories hidden in ordinary design }
+  - { slug: jad-abumrad, name: Jad Abumrad, area: arts, living: true, seat: Creative experiments and discovery }
+  - { slug: steve-martin, name: Steve Martin, area: arts, living: true, seat: Original comic craft }
+  - { slug: mike-birbiglia, name: Mike Birbiglia, area: writing, living: true, seat: Personal stories with comic shape }
+  - { slug: keith-johnstone, name: Keith Johnstone, area: arts, living: false, seat: Spontaneity and shared scenes }
+  - { slug: viola-spolin, name: Viola Spolin, area: arts, living: false, seat: Focused play and theater games }
+  - { slug: del-close, name: Del Close, area: arts, living: false, seat: Ensemble stories and connections }
+  - { slug: andrew-loomis, name: Andrew Loomis, area: arts, living: false, seat: Constructive drawing with simple forms }
+  - { slug: david-hockney, name: David Hockney, area: arts, living: false, seat: Looking across time and viewpoints }
+  - { slug: ansel-adams, name: Ansel Adams, area: arts, living: false, seat: Expressive everyday photography }

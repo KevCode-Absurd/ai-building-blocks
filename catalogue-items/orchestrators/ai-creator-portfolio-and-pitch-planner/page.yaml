@@ -1,0 +1,33 @@
+new_slug: ai-creator-portfolio-and-pitch-planner
+name: AI creator portfolio and pitch planner
+summary: Describe your creative service. Get a spec portfolio plan, draft pitch, scope fields and staged actions to find clients.
+job: sell-and-negotiate
+headline: AI creator portfolio and pitch planner
+subhead: Describe your creative service. Get a spec portfolio plan, draft pitch, scope fields and staged actions to find clients. Bring the brief and any files you want it to use.
+explain: |-
+  Use this when you need a focused creative-service offer, portfolio and delivery plan. Choose one deliverable family and one customer type: product images, ad visuals, creator-style content or short video, for example. Keep production capability distinct from unsupported outcome promises.
+
+  Inventory existing proof and gaps. Plan a small set of labeled speculative projects that resemble real deliverables; do not represent spec work as a paid client or invent performance statistics.
+when:
+  - You need a focused creative-service offer, portfolio and delivery plan.
+  - You want a clear draft and checks from the material you already have.
+you_give:
+  - brief
+  - "Optional: reference set"
+you_get:
+  - plan
+  - document
+  - Missing inputs and steps that still need to run
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Read the brief
+    text: "Choose one deliverable family and one customer type: product images, ad visuals, creator-style content or short video, for example. Keep production capability distinct from unsupported outcome promises."
+  - title: Build the result
+    text: For product portfolios show product accuracy, use context, varied composition and cohesive craft. Build a readable portfolio document with a short offer, strong examples, process, scope and contact method.
+  - title: Check and hand off
+    text: For a 90-day plan stage offer→proof→outreach→delivery→repeat with modest weekly actions and evidence gates. A forecast is a planning assumption, not a guaranteed revenue result.
+thinking: high
+thinking_why: It compares supplied evidence and follows a specific method.

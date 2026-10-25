@@ -1,0 +1,43 @@
+new_slug: product-page-brand-profile-extractor
+name: Product page brand profile extractor
+summary: Read a product page and build a sourced brand profile with product facts, claim limits, colors and visual rules.
+job: brand-file
+headline: Product page brand profile extractor
+subhead: Share product page or pasted page text, brand assets and approved facts. Get a source-linked product and brand profile with six color roles.
+explain: |-
+  Read a product page and build a sourced brand profile with product facts, claim limits, colors and visual rules.
+
+  Share product page or pasted page text, brand assets and approved facts. Get a source-linked product and brand profile with six color roles.
+when:
+  - You need a source-linked product and brand profile with six color roles.
+  - You need product page brand profile extractor for a specific task.
+  - You want the method's decisions and assumptions written down before acting.
+you_give:
+  - Product page or pasted page text
+  - Brand assets and approved facts
+you_get:
+  - A source-linked product and brand profile with six color roles
+  - The sources used, missing inputs and assumptions
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Check the inputs
+    text: Confirm product page or pasted page text, brand assets and approved facts. Mark facts that are missing.
+  - title: How This Works
+    text: Follow the how this works section in the full method and keep its required fields and decision rules.
+  - title: Collect Input
+    text: Follow the collect input section in the full method and keep its required fields and decision rules.
+  - title: Product Data Extraction
+    text: Follow the product data extraction section in the full method and keep its required fields and decision rules.
+  - title: Color Palette Extraction
+    text: Follow the color palette extraction section in the full method and keep its required fields and decision rules.
+  - title: Visual Vocabulary
+    text: Follow the visual vocabulary section in the full method and keep its required fields and decision rules.
+  - title: Deliver Brand DNA Profile
+    text: Follow the deliver brand dna profile section in the full method and keep its required fields and decision rules.
+  - title: Review the result
+    text: Return a source-linked product and brand profile with six color roles. Check facts, math and the decisions before any action.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

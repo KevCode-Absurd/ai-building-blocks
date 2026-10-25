@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It asks questions, picks a layout, then builds it.
 new_slug: matlab-app-builder
 name: MATLAB app builder
-summary: Describe the app you need. Get a working MATLAB app, built from a chosen layout.
+summary: Describe the app you need. Get a working MATLAB app, built from a
+  chosen layout.
 job: build-software
 headline: MATLAB app builder
-subhead: Describe what the app should do, who will use it, how polished it must look and who will maintain it. It picks the build route that fits how long the app must last, then builds it. You get a working MATLAB app and the route choice with reasons.
+subhead: Describe what the app should do, who will use it, how polished it must
+  look and who will maintain it. It picks the build route that fits how long the
+  app must last, then builds it. You get a working MATLAB app and the route
+  choice with reasons.
 explain: |
   A working MATLAB app built from your description, with the right build route chosen for how long it must last and who will keep it up. You skip the question of where to start.
 
@@ -27,6 +31,8 @@ you_get:
   - Background handling for long tasks
   - Files saved in your chosen format
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
   - It works best when your AI can run MATLAB.

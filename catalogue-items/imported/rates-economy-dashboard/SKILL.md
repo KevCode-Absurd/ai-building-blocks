@@ -1,115 +1,79 @@
 ---
 name: macro-rates-monitor
-description: Build a macro and rates dashboard from economic indicators, the government yield curve, and real-rate decomposition. Use when assessing cycle position, curve shape or slope, policy outlook, inflation, or financial conditions — for the US (Treasury/FRED) or Europe (ECB).
+description: Build an India macro and government-rates dashboard from dated official data. Track growth, prices, jobs, policy rates, and sovereign yields when the needed inputs are available. Show source dates, units, gaps, and limits. Do not make investment recommendations.
 ---
 
-# Macroeconomic and Rates Monitor
+# India macro and government-rates dashboard
 
-## India
+> Modified by AI Blocks on 2026-10-24: method/copy repair.
 
-This skill operates on **Indian markets**. Load **`india-market-conventions`**
-before building anything, and **`india-market-data`** for sources. Two rules cause
-most Indian errors:
+## Purpose and limits
 
-- **Fiscal year is April–March.** `FY2025` = year ending **31 Mar 2025**; `Q1 FY26` =
-  Apr–Jun 2025. Label periods `Q3 FY26 (Oct–Dec 25)`, never a bare calendar year.
-  Never annualise a quarter without stating the fiscal offset.
-- **Units are lakh (10⁵) and crore (10⁷).** Never use the Excel format
-  `#,##0,," Cr"` — each trailing comma divides by 1,000, so that format displays
-  **lakh under a crore label: a 100× error**. Divide by `10000000` in a live
-  formula and label the column `Total Revenue (₹ Cr)`.
+Prepare a dated summary of Indian macroeconomic indicators and government rates from inputs supplied by the user or from the official Indian sources listed below. Use India as the sole region. This method does not make market forecasts, investment recommendations, return estimates, or policy decisions. It does not declare a business-cycle phase when the evidence is incomplete. Every number must be traceable to a dated source value or a calculation shown from source values.
 
-What has no Indian equivalent is listed in `NOT-ADAPTABLE.md`. Name the gap —
-never substitute a proxy and present it as the real thing.
+The original imported method mixes India-specific instructions with US and euro-area sources, conflicting definitions of real yields, and a swap-spread table without a reliable Indian input. This India-only method removes those items. It does not claim to preserve the original method unchanged. Keep the imported source, its Apache-2.0 license, and provenance records alongside any local adaptation.
 
-You are an expert macro strategist and rates analyst. Combine macroeconomic data, the government yield curve, and real rates from free sources into a comprehensive dashboard. Swap rates and standalone breakeven curves are connector-gated — derive real rates from nominal minus TIPS, and assess financial conditions from spreads and the real-rate level.
+## Inputs
 
-## Core Principles
+Ask for or identify:
 
-Macro analysis synthesizes multiple indicators into a narrative. Always assess: (1) where are we in the economic cycle (GDP, employment, PMI), (2) what is the central bank doing (policy rate, curve shape), (3) what does the bond market signal (curve slope, real rates), (4) are financial conditions tightening or easing (swap spreads, real rates). Start broad, drill down.
+- The reference period and the latest acceptable release date.
+- The Indian indicators requested: national accounts, CPI, labour statistics, RBI survey results, the policy rate, or government yields.
+- Source files or official source pages and their as-of/release dates.
+- Any requested yield tenors and the exact meaning of each yield series (for example, fitted zero-coupon yield or security-level traded yield).
+- For a real-rate calculation, a nominal yield and an expected-inflation measure with the same horizon, annualization, period, and as-of context.
+- Confirmation that the intended use is permitted by the data provider for any restricted source. In particular, do not use CCIL curve data commercially without written permission from CCIL.
 
-## Data sources (free)
+If an input or permission is missing, mark the affected output unavailable and state what is missing. Do not infer a missing value, source permission, survey definition, maturity, or period.
 
-> **⚠️ Partially connector-gated.** This skill's core analysis needs swap rates and inflation breakeven curves, neither of which has a free programmatic source. The free
-> stack below covers the macro series, the government curve, and real-rate decomposition from breakevens, but the gap does not. If the missing input is
-> unavailable, **stop and say so** — do not substitute an approximation silently
-> and present it as the real thing.
-- **Macro series** — FRED keyless CSV `https://fred.stlouisfed.org/graph/fredgraph.csv?id=<SERIES>`
-  (`CPIAUCSL`, `UNRATE`, `GDPC1`, `PCEPILFE`, `SAAR`, `NAPM`, `DFF`, `T10Y2Y`). Non-US: IMF
-  DataMapper, World Bank v2, DBnomics.
-- **US government curve** — US Treasury daily par yield CSV, 1M–30Y, no key (see
-  `market-data-sources` for the exact URL). Also `_real_yield_curve` for TIPS.
-- **European curve** — ECB `YC` SDMX, no key.
-- **Historical yields** — the same FRED series with a `cosd=` start date.
+## Source and date rules
 
-Not covered: **swap rates** (`ir_swap` equivalent) and **inflation breakeven curves**. Use the
-Treasury real yield curve for real-rate decomposition instead of nominal-minus-breakeven, and drop
-the swap-spread table entirely rather than approximating it with the par curve.
-## Workflow
+Use official Indian source releases and retain a source ledger for every input. Record the series/table name, source URL or supplied filename, reference period, release or publication date, retrieval date, unit, geography, population or instrument definition, base year where applicable, and revision/estimate status. Distinguish the date a value describes from the date it was published. Use the latest valid release no later than the user's cutoff; do not call a value “current” without an explicit as-of date.
 
-1. **Pull Macro Indicators:** Pull macro series from FRED (or IMF/World Bank for non-US) for GDP, CPI/PCE, unemployment, and PMI for the target country. Retrieve latest values and recent series.
-2. **Yield curve snapshot.** US Treasury daily par yields (or ECB `YC`) at standard tenors. Compute 2s10s and 3M-10Y slopes and classify the shape.
-3. **Real-rate decomposition.** Treasury real yield curve; real rate = nominal − breakeven per tenor. Assess accommodative vs restrictive. **This is the free substitute for the upstream inflation-curve connector step.**
-4. **Financial conditions.** There is no free swap-spread source, so assess conditions from what *is* available — the real-rate level, the curve slope and its change, and the ICE BofA OAS series (FRED keyless: `BAMLC0A0CM` IG, `BAMLC0A4CBBB`, `BAMLH0A0HYM2` HY). **Do not present a par-curve-minus-par-curve figure labelled as a swap spread**; drop the swap-spread table and say why.
-5. **Historical Context:** Pull historical yields from the FRED series for the benchmark yield (e.g., 10Y). Assess where current yields sit vs recent history.
-6. **Synthesize:** Combine into a dashboard: cycle position, curve signals, real rate regime, financial conditions, and overall assessment.
+- **National accounts:** Use current MoSPI National Accounts Statistics/eSankhyiki releases. Keep current-price and constant-price series separate. Record the applicable base year (the current new series uses 2022-23), unit, period, and estimate/revision status exactly as shown in the release. Compare growth only within a consistent series, base, and frequency. Do not splice series across a base-year break unless MoSPI publishes a compatible back series.
+- **Prices:** Use MoSPI CPI series and state whether it is All India Combined, Rural, or Urban. For the current CPI series, record base 2024=100. Compare the same geography and series. Compute year-over-year inflation only when both monthly index values are available from the same series and base: `(current_index / index_12_months_earlier - 1) * 100`. Do not use an archived 2012-base series as if it were the current series.
+- **Labour:** Use the MoSPI Periodic Labour Force Survey release and name its measure, reference period, population, geography, and unit. The monthly bulletin reports current-weekly-status measures; preserve the age coverage and whether the value is LFPR, WPR, or unemployment rate. Note the PLFS method change from January 2025 when comparing across that break. Do not silently treat different survey measures as interchangeable.
+- **RBI surveys:** Use only the measure and survey period stated in the RBI release. Describe survey responses as survey evidence, not as realized GDP, inflation, or employment. Household inflation expectations are expectations from surveyed households; they are not market-implied inflation or a matched-maturity breakeven. Use an expectation in a real-rate calculation only if its horizon and reference context match the nominal yield input.
+- **Policy rate:** Use a dated RBI policy statement or RBI rates page. Record the rate name, percentage unit, effective/announcement date, and retrieval date. Do not infer a future rate path.
+- **Government yields:** CCIL's Zero Coupon Sovereign Rupee Yield Curve (ZCYC) is a fitted zero-coupon curve built from eligible Government of India security and Treasury-bill trade data, not an executable quote or a par-yield curve. Use the dated CCIL downloadable curve only when the user's supplied file or permitted access establishes the observation date and use rights. CCIL states that commercial use of website data requires written permission. Without verified permission, omit the curve values and write “unavailable: CCIL commercial-use permission not verified.” A CCIL Market Watch security quote is a security-level bid/offer observation and must not be presented as the fitted ZCYC. Do not invent curve points or fill absent tenors.
 
-## Macro Series Reference
+Do not use FRED, US Treasury, TIPS, ECB, or euro-area series in this India-only dashboard. Do not produce swap rates or a swap-spread table unless the user supplies a dated, licensed Indian swap-rate series with instrument, tenor, quote convention, unit, and a comparable government-yield observation. If any of those are absent, say “not calculated: comparable licensed swap input unavailable.”
 
-Common free series ids, all reachable keyless via
-`https://fred.stlouisfed.org/graph/fredgraph.csv?id=<SERIES>`:
+## Periods and units
 
-| Concept | US (FRED) | Eurozone (FRED / ECB) |
-|---|---|---|
-| GDP | `GDPC1` | `EZGDPS` / ECB `YC` domain |
-| CPI | `CPIAUCSL` | `EZCPI` / ECB HICP |
-| PCE core | `PCEPILFE` | — |
-| Unemployment | `UNRATE` | `EZUEMACT` |
-| Policy rate | `DFF`, `SOFR` | ECB main refi / `ESTER` |
-| Industrial production | `INDPRO` | `EZPRINTOI` |
+Use Indian fiscal-year notation with calendar dates, such as `Q1 FY2025-26 (Apr-Jun 2025)` or `FY2025-26 (Apr 2025-Mar 2026)`. Never use an ambiguous label such as `FY26` by itself. Preserve the source's units. If converting, state the original unit, conversion factor, and result unit. One crore rupees is ₹10,000,000; one lakh crore rupees is ₹1,000,000,000,000. Show rates and inflation in percent; show a difference in percentage points or basis points (100 basis points = 1 percentage point). Do not mix percent with percentage points.
 
-Verify an id resolves before using it — a wrong id returns a CSV of `,` rather than an error.
-- UK: "UK\*GDP\*", "UK\*CPI\*"
-- Prefer seasonally adjusted series. Monthly for most indicators; GDP is quarterly.
+## Calculations
 
-## Data integrity (non-negotiable)
+Show each formula and its input values. Calculate only when all inputs match the required series and periods.
 
-**Never fabricate a market datum.** A plausible-looking yield, spread, or option
-vol is worse than no number, because it is indistinguishable from a real one to
-whoever reads the output. If a field cannot be sourced:
+- Growth: `(current_value / comparison_value - 1) * 100`, using the same series, unit, base, and comparable period.
+- Yield-curve slope: `long-tenor zero-coupon yield - short-tenor zero-coupon yield`, from the same curve and observation date. Report the result in percentage points and, if useful, basis points.
+- Expected real yield: use the exact Fisher relation only when the nominal yield and expected inflation are both annualized percentages for the same horizon and context: `((1 + nominal_yield_pct / 100) / (1 + expected_inflation_pct / 100) - 1) * 100`. Name the nominal instrument/source and the expectation source, period, and horizon. This is a derived expected real yield, not a realized return or an investment return forecast. If the horizons do not match or an input is missing, report `n/a` with the specific reason. Never substitute a US TIPS breakeven or simply label a nominal-minus-inflation difference as an exact real rate.
 
-1. State that it is unavailable and name the blocker (no free source / rate limit / needs a key).
-2. Ask the user for it, or mark the cell `n/a — <reason>`.
-3. Carry the provenance (source + retrieval date) on every figure, per `market-data-sources`.
+## Interpretation
 
-All free sources here are EOD or delayed — none are real-time. Say so in the output rather than
-letting the tables imply live pricing.
+Separate reported facts, calculations, and interpretation. Describe only the signals present in the supplied, comparable data. Do not label the cycle as expansion, slowdown, recession, or recovery based on one series, missing values, incomparable periods, or unreconciled revisions. When evidence is insufficient, state `cycle assessment not made: [specific missing or conflicting evidence]`. Do not turn a survey response, one yield move, or a policy rate into a causal conclusion. Do not state expected portfolio returns or recommend a trade.
 
-## Output Format
+## Output
 
-### Macro Summary
-| Indicator | Current | Prior | Direction | Signal |
-|-----------|---------|-------|-----------|--------|
-| GDP Growth | ...% | ...% | ... | Expansion/Contraction |
-| Core Inflation (YoY) | ...% | ...% | ... | Above/At/Below target |
-| Unemployment | ...% | ...% | ... | Tight/Balanced/Slack |
-| PMI Manufacturing | ... | ... | ... | Expansion/Contraction |
+Use a compact dashboard with:
 
-### Yield Curve Snapshot
-Present yields at key tenors (3M, 2Y, 5Y, 10Y, 30Y). Highlight 2s10s and 3M-10Y slopes. Note curve shape: normal / flat / inverted / humped.
+1. **As of:** the data cutoff and retrieval date.
+2. **Source ledger:** indicator, source and series, value, unit, reference period, release date, base/definition, and revision status.
+3. **Macro indicators:** only supported values and calculations, with formulas where calculated.
+4. **Government yields:** dated ZCYC tenors and zero rates only when source, observation date, and permitted use are established; otherwise state why unavailable. Do not substitute security quotes for curve points.
+5. **Expected real yield:** only matched-horizon calculations; otherwise `n/a` and the missing match.
+6. **Interpretation and gaps:** cautious observations, unresolved revisions, missing inputs, and any omitted measures.
 
-### Real Rate Decomposition
-| Tenor | Nominal | Breakeven | Real Rate | Signal |
-|-------|---------|-----------|-----------|--------|
-| 5Y | ...% | ...% | ...% | Accommodative/Restrictive |
-| 10Y | ...% | ...% | ...% | Accommodative/Restrictive |
+Do not output a fabricated number, an invented table row, an unverified data-use permission, a swap spread without both comparable inputs, or a cycle verdict without adequate evidence. Label any synthetic example “fictional illustration—not observed data.”
 
-### Swap Spread Table
-| Tenor | Swap Rate | Govt Yield | Swap Spread (bp) | Signal |
-|-------|-----------|------------|-------------------|--------|
-| 2Y | ... | ... | ... | Normal/Elevated/Stressed |
-| 5Y | ... | ... | ... | Normal/Elevated/Stressed |
-| 10Y | ... | ... | ... | Normal/Elevated/Stressed |
+## Fictional worked example and checks
 
-### Overall Assessment
-2-3 sentences on the macro-rates regime: cycle position, policy outlook, financial conditions, and key risks.
+All values in this example are invented solely to demonstrate arithmetic. They are not Indian official data and must never be copied into a live dashboard.
+
+Supplied fictional inputs for `Q1 FY2025-26 (Apr-Jun 2025)`: constant-price output is ₹100 crore; the comparable prior-year quarter is ₹95 crore, with the same series and base. Growth is `(100 / 95 - 1) * 100 = 5.263%`, rounded to 5.26%. Check 1: the calculation uses two supplied same-series values and has a percent unit. Check 2: the output period is labeled as a fiscal quarter with calendar months.
+
+Supplied fictional CPI Combined 2024=100 index values are 110.0 for Sep 2026 and 106.8 for Sep 2025. Inflation is `(110.0 / 106.8 - 1) * 100 = 2.996%`, rounded to 3.00%. Check 1: the two values have the same geography, series, and base. Check 2: the calculation compares the same month one year apart.
+
+Supplied fictional annual yields on one observation date: one-year zero yield 6.20% and ten-year zero yield 7.00%; fictional matched one-year expected inflation is 4.50%. The slope is `7.00% - 6.20% = 0.80 percentage points = 80 basis points`. The one-year expected real yield is `((1.062 / 1.045) - 1) * 100 = 1.63%`. Check 1: slope inputs are from the same date and curve. Check 2: the real-yield inputs have matching one-year horizons and annualized percent units. These are fictional calculations, not a claim that a real CCIL curve or forecast was available. No swap input is supplied, so no swap spread is calculated. No cycle label is made because the example does not provide a sufficient set of comparable macro series.

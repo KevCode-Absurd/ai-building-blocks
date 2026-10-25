@@ -1,0 +1,36 @@
+slug: study-revision-coach
+name: Study revision coach
+summary: Share covered topics, mistakes and your deadline. Get a focused review session that starts with your weakest topics.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: source_text
+    required: true
+  - type: brief
+    required: false
+outputs:
+  - type: document
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: edu-agent-skills contributors
+  repo: yugash007/edu-agent-skills
+  path: skills/productivity/revision-mode
+  url: https://github.com/yugash007/edu-agent-skills/tree/e75f44303570bb2eae37a8f7536c0358be2502ee/skills/productivity/revision-mode
+  licence: MIT
+  licence_file: LICENSE
+  commit: e75f44303570bb2eae37a8f7536c0358be2502ee
+  original_name: revision-mode
+  imported: 2026-10-23
+  skill_sha256: e2c08328ea018656a2acd263d4a3d61c9abf7a2efbf9e5a72f3e60e45d6f4f41
+version: 1.0.0
+credits:
+  - title: revision-mode skill
+    by: edu-agent-skills contributors
+    url: https://github.com/yugash007/edu-agent-skills/tree/e75f44303570bb2eae37a8f7536c0358be2502ee/skills/productivity/revision-mode
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

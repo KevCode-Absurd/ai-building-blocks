@@ -1,23 +1,19 @@
+# Modified by AI Blocks on 2026-10-24: method/copy repair.
 thinking: medium
 thinking_why: It computes slopes and interprets the shape.
 new_slug: yield-curve-explainer
 name: Yield curve explainer
-summary: Name a government. Get its curve shape, key slopes and real rate split
-  explained in plain words.
+summary: Explain a government bond curve using dated, comparable yields. Show slope formulas, the sign convention and missing points.
 job: money-and-investing
 headline: Yield curve explainer
-subhead: "Pick a government and get its bond yield curve explained in plain
-  words: its shape, its key slopes, and how much of each rate is real versus
-  inflation."
+subhead: Pick a market and date. Get sourced curve slopes and plain-language context from comparable government yields.
 explain: |
-  Pick a government and get its bond yield curve explained in plain words: its shape, its key slopes, and how much of each rate is real versus inflation.
-
-  The skill builds the curve from free public sources such as the US Treasury and FRED. It lays the real-rate curve over the nominal one, then names the shape and reads slopes like 2s10s and 5s30s. It always states which sign it uses for a slope, so "inverted" and "steep" never get mixed up. It checks where today's reading sits against recent years before drawing any view. Missing yields stay blank. It does not cover swap curves.
+  Choose the government market and date. The method uses comparable observations from an identified official source. It states tenor gaps and slope signs, and it avoids mixing par, zero and real-yield series. A nominal-minus-real difference is called a breakeven only for matched Treasury and TIPS tenors and dates; it is not a pure inflation forecast. Missing data stays missing, and the explanation remains descriptive rather than a trade recommendation.
 when:
-  - You want to know if the US curve is inverted and what that means.
+  - You want to understand a named government curve with sourced points.
   - You are writing a market note and need clean slopes and real rates.
   - You need to compare today's curve with the last few years.
-  - You want a plain explanation of what the curve says about rate expectations.
+  - You want a neutral explanation of reported slope and rate data.
 you_give:
   - The government or market, such as US or euro area
   - The date or period you care about
@@ -30,7 +26,8 @@ you_get:
   - Historical context for today's levels
   - A source and date on every table
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
-    or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
   - It works best when your AI can run code and reach the web.

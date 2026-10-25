@@ -1,0 +1,24 @@
+slug: specialist-findings-brief-agent
+name: Specialist findings brief agent
+summary: Turn specialist findings into one clear brief. Resolve clashes, rank next steps and save a checkpoint with owners and open questions.
+category: agent
+type: agent
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: document
+    required: false
+outputs:
+  - type: document
+    required: true
+  - type: document
+    required: true
+uses: []
+execution: coordinator
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

@@ -1,0 +1,27 @@
+thinking: medium
+thinking_why: It follows a set method and adapts its questions or draft to your evidence.
+new_slug: academic-cv-builder
+name: Academic CV builder
+summary: Share your research and teaching record. Get a CV draft ordered for the academic role you want.
+job: find-a-job
+headline: Academic CV builder
+subhead: Share your degrees, publications, research, grants and teaching record. It orders the sections for your target academic role and formats each part. You get a CV draft, field-specific layout notes and a checklist of missing details to confirm.
+explain: Share your degrees, publications, research, grants and teaching record. It orders the sections for your target academic role and formats each part. You get a CV draft, field-specific layout notes and a checklist of missing details to confirm.
+you_give:
+  - Your degrees, publications, grants and teaching history.
+  - The academic role and field you are applying to.
+you_get:
+  - A structured academic CV draft.
+  - Notes on section order and field conventions.
+  - A list of missing or unconfirmed details.
+how_it_works:
+  - title: Step 1
+    text: Choose section order for a research, teaching or other academic role.
+  - title: Step 2
+    text: Format the supplied academic record into consistent sections.
+  - title: Step 3
+    text: Check dates, publication status and missing details.
+how_to_use:
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.
+  - It works best when your AI can read your supplied notes and ask follow-up questions.

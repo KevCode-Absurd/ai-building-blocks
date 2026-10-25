@@ -1,0 +1,19 @@
+slug: build-the-shopping-feed-auditor-builder-prompt
+name: Shopping feed audit coding prompt
+summary: Get a coding brief to check a Shopping feed for missing fields, product issues and gaps in the evidence.
+category: general
+type: prompt
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+    required: true
+uses: []
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

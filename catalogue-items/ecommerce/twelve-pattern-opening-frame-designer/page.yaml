@@ -1,0 +1,45 @@
+new_slug: twelve-pattern-opening-frame-designer
+name: Twelve-pattern opening frame designer
+summary: Choose opening frames from twelve visual patterns. Get a clear design brief for each first-frame test.
+job: make-image-ads
+headline: Twelve-pattern opening frame designer
+subhead: Share product photos, buyer, ad angle, brand rules and placement. Get three to five opening frame specs with layout and light notes.
+explain: |-
+  Choose opening frames from twelve visual patterns. Get a clear design brief for each first-frame test.
+
+  Share product photos, buyer, ad angle, brand rules and placement. Get three to five opening frame specs with layout and light notes.
+when:
+  - You need three to five opening frame specs with layout and light notes.
+  - You need twelve-pattern opening frame designer for a specific task.
+  - You want the method's decisions and assumptions written down before acting.
+you_give:
+  - Product photos
+  - Buyer
+  - Ad angle
+  - Brand rules and placement
+you_get:
+  - Three to five opening frame specs with layout and light notes
+  - The sources used, missing inputs and assumptions
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Check the inputs
+    text: Confirm product photos, buyer, ad angle, brand rules and placement. Mark facts that are missing.
+  - title: The 12 Visual Hook Patterns
+    text: Follow the the 12 visual hook patterns section in the full method and keep its required fields and decision rules.
+  - title: Collect Inputs
+    text: Follow the collect inputs section in the full method and keep its required fields and decision rules.
+  - title: Pick 3-5 Visual Hook Patterns
+    text: Follow the pick 3-5 visual hook patterns section in the full method and keep its required fields and decision rules.
+  - title: Design Each Frame
+    text: Follow the design each frame section in the full method and keep its required fields and decision rules.
+  - title: Production Notes
+    text: Follow the production notes section in the full method and keep its required fields and decision rules.
+  - title: Rules
+    text: Follow the rules section in the full method and keep its required fields and decision rules.
+  - title: Review the result
+    text: Return three to five opening frame specs with layout and light notes. Check facts, math and the decisions before any action.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

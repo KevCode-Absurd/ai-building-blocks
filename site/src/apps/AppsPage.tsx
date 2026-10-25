@@ -1,6 +1,6 @@
 // Apps: the top of the ladder. One finished example app to click through (a saved copy at /example-app/, where
 // nothing runs), and the app starter pack that turns skills and workflows into an app. Loads only when someone opens /apps.
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { ArrowIcon } from "../ui";
 import { Code, Section } from "../BlockPage";
 import { Link } from "../lib/router";
@@ -30,9 +30,9 @@ function AppsIndex() {
         <Link to="/" className="back"><span aria-hidden="true">←</span> Home</Link>
         <p className="bp-kicker"><span className="kind">Apps</span>The top of the ladder</p>
         <h1 className="bp-h1">See a finished AI app, then build your own</h1>
-        <p className="bp-sub">Mercatura is the app we built from these skills to make ads, landing pages and SEO for one brand. Click through all of it with its saved study data: customer research, scripts, image ads, avatars, reference ads and pages. Then build yours with the starter pack.</p>
+        <p className="bp-sub">See how these skills work together in an app for ads, landing pages and SEO. Try its screens with saved example data, then build your own with the starter pack.</p>
         <div className="bp-actions">
-          <a href={TOUR} target="_blank" rel="noopener" className="btn btn-primary" data-testid="tour-open">Open the example app <ArrowIcon /></a>
+          <a href={TOUR} target="_blank" rel="noopener" className="btn btn-primary" data-testid="tour-open">See an example <ArrowIcon /></a>
           <Link to="/apps/starter-pack" className="btn btn-dark">Get the app starter pack</Link>
         </div>
       </header>
@@ -49,7 +49,7 @@ function AppsIndex() {
             ["Save and run the steps.", "The app stores your inputs, runs the skills on its server and shows each result. Failed steps can be retried; actions that need approval wait."],
             ["Connect one data source.", "Start with an uploaded file. Later, connect an account through the service's supported API. The app reads the data it needs and records when it was refreshed."],
           ].map(([title, text], n) => <li key={title}><span className="n">{n + 1}</span><span><b>{title}</b> {text}</span></li>)}</ol>
-          <p className="bp-note">Mercatura shows what this can look like for marketing. Its example is a saved tour. Your own app needs a running server and your own connections before it can make work or read live data.</p>
+          <p className="bp-note">The example shows an app for marketing. It is a saved tour. Your own app needs a running server and your own connections before it can make work or read live data.</p>
           <div className="bp-actions"><Link to="/#build" className="btn btn-dark">Choose a workflow</Link><Link to="/apps/starter-pack" className="btn btn-primary">Build your app</Link></div>
         </Section>
 
@@ -62,7 +62,7 @@ function AppsIndex() {
           <p><Link to="/apps/starter-pack" className="btn btn-primary" data-testid="starter-link">Get the starter pack <ArrowIcon /></Link></p>
         </Section>
 
-        <Section id="install" title="Or start from our open-source app" lead="The Mercatura starter is the same kind of app with no brand in it. It runs for one person on your own computer, in mock mode, so nothing costs money until you say so." wide>
+        <Section id="install" title="Or start from our open-source app" lead="The open-source starter runs for one person on your own computer. It starts with sample data, so nothing costs money until you connect your own services." wide>
           <ol className="num-list">{SETUP_STEPS.map((r, n) => <li key={r.step}><span className="n">{n + 1}</span><span><b>{r.step}.</b> {r.what}</span></li>)}</ol>
           <p><a className="btn btn-dark" href={REPO} target="_blank" rel="noopener" data-testid="repo-link">Get it on GitHub <ArrowIcon /></a></p>
         </Section>
@@ -81,7 +81,18 @@ function StageList() {
 
 function StarterPage({ toast }: { toast: (m: string) => void }) {
   useTitle("App starter pack");
-  const get = async () => { download(await starterZip(), "app-starter.zip"); toast("Downloaded app-starter.zip"); };
+  const [busy, setBusy] = useState(false), [copied, setCopied] = useState(false), [copyFailed, setCopyFailed] = useState(false), [error, setError] = useState("");
+  const get = async () => {
+    if (busy) return;
+    setBusy(true); setError("");
+    try { download(await starterZip(), "app-starter.zip"); toast("Downloaded app-starter.zip"); }
+    catch { const message = "The pack could not be downloaded. Please try again."; setError(message); toast(message); }
+    finally { setBusy(false); }
+  };
+  const copy = async () => {
+    try { await navigator.clipboard.writeText(START_PROMPT); setCopied(true); setCopyFailed(false); toast("Prompt copied. Paste it into your AI with the starter files."); }
+    catch { setCopied(false); setCopyFailed(true); }
+  };
   return (
     <main className="bp ap" data-testid="starter-page">
       <header className="wrap bp-hero">
@@ -90,9 +101,11 @@ function StarterPage({ toast }: { toast: (m: string) => void }) {
         <h1 className="bp-h1">Turn your skills and workflows into an app your team signs in to</h1>
         <p className="bp-sub">Open this folder in an AI coding assistant that can read and edit files. It asks you ten questions, writes a one-page brief, and waits for your OK. Then it builds one small stage at a time and stops after each, so you can try it. Sign-in, teams and roles come when you need them. Agents only if the job needs one.</p>
         <div className="bp-actions">
-          <button className="btn btn-primary" onClick={get} data-testid="starter-download">Download the starter pack <ArrowIcon /></button>
-          <a href="#prompt" className="btn btn-dark">Copy the prompt</a>
+          <button className="btn btn-primary" onClick={() => void get()} disabled={busy} data-testid="starter-download">{busy ? "Preparing download…" : "Download the starter pack"} <ArrowIcon /></button>
+          <button className="btn btn-dark" onClick={() => void copy()} data-testid="starter-copy">{copied ? "Prompt copied" : "Copy the prompt"}</button>
         </div>
+        {error && <p role="alert">{error}</p>}
+        {copyFailed && <div className="task-copy-fallback"><p role="alert">Copy did not work. Select and copy the prompt below.</p><textarea aria-label="Copy the app starter prompt manually" value={START_PROMPT} readOnly rows={6} onFocus={e => e.currentTarget.select()} /></div>}
       </header>
       <div className="wrap bp-body">
         <nav className="bp-toc" aria-label="On this page"><p>On this page</p>{[["how", "How to use it"], ["stages", "The stages"], ["prompt", "The prompt"], ["rules", "Why it stays small"], ["files", "What's in the folder"]].map(([id, l]) => <a key={id} href={`#${id}`}>{l}</a>)}</nav>
@@ -121,7 +134,7 @@ function StarterPage({ toast }: { toast: (m: string) => void }) {
           <section className="bp-sec terms" id="files" aria-labelledby="files-h">
             <h2 className="bp-h2" id="files-h">What's in the folder</h2>
             <dl>{FILES.map(([k, v]) => <div key={k}><dt><code>{k}</code></dt><dd>{firstLine(v)}</dd></div>)}</dl>
-            <p className="hiw-end"><button className="btn btn-primary" onClick={get}>Download the starter pack <ArrowIcon /></button></p>
+            <p className="hiw-end"><button className="btn btn-primary" onClick={() => void get()} disabled={busy} data-testid="starter-download-bottom">{busy ? "Preparing download…" : "Download the starter pack"} <ArrowIcon /></button></p>
           </section>
         </div>
       </div>

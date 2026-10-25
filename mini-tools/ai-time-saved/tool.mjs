@@ -8,12 +8,12 @@
 
 export default {
   slug: "ai-time-saved",
-  name: "See how many hours and how much money an AI workflow saves you a month",
+  name: "AI workflow time and cost savings",
   /** The plain name, used where the tool talks about itself. */
-  short: "AI time saved",
-  headline: "See how many hours and how much money an AI workflow saves you a month, after the tool and the checking",
-  summary: "Type how long a task takes by hand and with AI, how often you do it, what your hour is worth and what the tool costs. You get the hours and money saved a month, the payback on setup and the days back a year.",
-  question: "How many hours and how much money does an AI workflow save me a month, once I count the tool's cost, the time to check its work and the runs I redo by hand?",
+  short: "AI workflow time and cost savings",
+  headline: "AI workflow time and cost savings",
+  summary: "Enter manual and AI task times, review and redo rates, usage and costs. Estimate time saved, its value and setup payback.",
+  question: "Does this AI workflow save time after checking, redos and setup are counted?",
   shelf: ["general"],
   version: "1.0.0",
   updated: "2026-10-21",
@@ -74,7 +74,7 @@ export default {
   ],
   notes: [
     "The example numbers are practice numbers, not a measured saving. Time your own task three times each way before you trust the answer.",
-    "Checking is part of every AI run. If you skip it, the redo share goes up later, when the mistakes surface.",
+    "Include review and fixes in every AI time estimate. Unchecked errors can make the apparent saving too high.",
     "Time valued at a rate is not cash. The saving is real only if the hours go to work that earns or saves money.",
   ],
 };

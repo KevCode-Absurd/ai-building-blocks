@@ -1,44 +1,44 @@
 new_slug: price-against-value-checker
 name: Price against value checker
-summary: Paste what you would get and what it costs. Get a value range, a walk-away price and the best alternative to beat.
+summary: Share dated cash flows, costs and a rate. Get value scenarios, missing assumptions and a maximum-price rule where the inputs support one.
 job: money-and-investing
 thinking: high
 thinking_why: It builds a value range from thin facts and compares it with alternatives, which needs careful reasoning.
 headline: Price against value checker
-subhead: Paste what the choice would give you over the years and what it costs. It builds a low, middle and high value, sets a walk-away price with room for error, compares it with your best alternative use of the same money or time, and adds the fees and friction that eat the gain.
-explain: |-
-  Price is what you pay and value is what you get, and they are rarely the same. A cheap price on a weak thing can lose to a fair price on a strong one, because time works for the strong one and against the weak one. The cost of any choice is also the best thing you gave up for it.
+subhead: Share cash amounts, receipt dates, costs and your chosen rate. It discounts each dated payment, checks the order of three cases and compares alternatives. Get the sums, a supported range or unresolved candidates, and a maximum-price scenario where valid. A discount from estimated value does not prove safety or tell you to transact.
+explain: |
+  The price asked and the value estimated from future cash flows can differ. That estimate depends on the amounts, dates, costs and rate you supply. A finite two-year stream is not worth the same as the same amount paid forever.
 
-  This skill estimates what the choice is worth in three cases, picks a price you will not go above, and compares the result with your next best option. It adds the fees, taxes and switching costs that quietly reduce the return. It is a method of analysis and is not personal financial advice.
+  This skill shows dated sums for three cases. It gives an ordered range only when the supported bad, ordinary and good values fit that order. Missing or crossed cases stay separate. A maximum-price rule is applied only after those checks pass. It also compares the stated alternative and fees. These are scenarios for analysis, not guarantees or personal financial advice.
 when:
   - You are about to buy a business, equipment, a contract or a stake and must set a price.
   - A seller says it is a bargain and you cannot tell.
   - You want to compare a new opportunity with what you already have.
 you_give:
-  - "What you would get over time: income, savings or benefits, by year"
-  - The price and terms being asked
+  - Dated cash amounts and currency, start or end timing, finite horizon or explicit perpetual assumption, and your chosen rate with its period
+  - The price, terms and all stated fees, with any maximum-price rule you want to compare
   - Your next best alternative for the same money or time (optional)
 you_get:
-  - A low, middle and high value with the sums shown
-  - A walk-away price with a margin of safety
-  - The best alternative and whether this beats it
-  - A short before-you-commit list
+  - Three supported value scenarios with dated sums, or the gaps that block them
+  - An ordered range only when all supported cases fit their original order
+  - A maximum-price scenario after the value and order checks, with its rule and limits
+  - The stated alternative, friction costs and a before-you-commit list
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste what you would get, the price and any fees. Name your best alternative.
+  - Paste dated cash flows, their currency, timing and horizon, your chosen rate and period, the asking price and fees. Name the alternative.
   - Check each assumption it writes down and correct any you know are wrong.
-  - Use the walk-away price as a limit before you talk to the seller. This is not financial advice.
+  - Review any supported maximum-price scenario and its assumptions before using it. Missing or crossed cases give no manufactured limit. This is not financial advice.
 how_it_works:
   - title: List what you get
-    text: Lists the yearly benefit in three cases.
+    text: Lists supplied dated cash flows in bad, ordinary and good cases. Unknown amounts or dates stay missing.
   - title: Turn it into a value
-    text: Reduces the three cases to a value today.
+    text: Discounts each dated payment with a matching rate period. At zero rate it sums finite flows. A perpetuity shortcut requires an explicit constant forever stream and a positive rate.
   - title: Set the range
-    text: Gives a low, middle and high value.
+    text: Gives a range only when all cases are supported and bad is no greater than ordinary, which is no greater than good. Crossed candidates keep their labels.
   - title: Set the walk-away price
-    text: Sets a price with room for error.
+    text: After the value and order gates pass, applies your stated rule or a labelled illustration. A lower price alone does not establish safety.
   - title: Check the long run
-    text: Tests whether quality outweighs a bargain over time.
+    text: Shows the method’s illustrative long-run sum. It does not establish a real holding’s future return.
   - title: Name the best alternative
     text: Compares with the next best use of the same money or time.
   - title: Count the friction
@@ -46,55 +46,40 @@ how_it_works:
   - title: Write the before-you-commit list
     text: Lists timing, funding, exits and alternatives.
   - title: Write the plan
-    text: Writes the value range, walk-away price, alternative and next action.
+    text: Records supported scenarios or unresolved candidates, any valid maximum-price rule, the alternative and remaining checks.
   - title: Checks its own work
     text: Runs its own checks and names any it missed.
-output_shape: |-
-  WHAT YOU GET
-  Bad: <by year> | Ordinary: <by year> | Good: <by year>
-
-  VALUE
-  rate used: <x> | bad: <v> | ordinary: <v> | good: <v> | sum shown
-
-  WALK-AWAY PRICE
-  <price> | rule | price asked: <p> | gap
-
-  QUALITY OVER TIME
-  <sum comparing two returns>
-
-  BEST ALTERNATIVE
-  <alternative> | return | this beats it, equals it or loses
-
-  FRICTION
-  <fee> | per year | over the holding period
-
-  BEFORE YOU COMMIT
-  timing | funding | exit | better use | approvals
-
-  VERDICT AND NEXT ACTION
-  <text> | Not personal financial advice.
-
-  MISSING
-  <gaps>
-
-  CHECKS MISSED
-  <one line each, or none>
+output_shape: |
+  CASH FLOWS <currency, amounts, dates, start/end timing, horizon and explicit assumptions>
+  RATE <chosen rate and matching period, or missing/invalid>
+  CASE VALUES <bad, ordinary, good with original labels and each dated sum>
+  RANGE <supported bad <= ordinary <= good, or NO VALID ORDERED RANGE / missing cases; never sort or clamp>
+  MAXIMUM PRICE <only after value and order checks pass: stated or labelled illustrative rule, arithmetic, asking price and gap; otherwise unresolved>
+  QUALITY OVER TIME <illustration, not a forecast>
+  ALTERNATIVE <stated choice and supported comparison, or missing>
+  FRICTION <fees, taxes and switching costs over the stated period>
+  BEFORE YOU COMMIT <timing, funding, exit, alternatives, approvals>
+  LIMITS <assumptions and unresolved checks; not proof of safety or an instruction to transact>
+  MISSING / CHECKS MISSED <list or none>
 tweaks:
   - what: The rate you choose
-    how: Use the return of your best alternative. A higher rate gives a lower value and a stricter walk-away price.
+    how: Supply the rate and its period. Do not invent a rate or silently change timing. With nonnegative future receipts, a higher valid rate lowers present value; mixed cash flows need their own sums.
   - what: How many years you count
-    how: Use a stretch you can defend, not the best-case story. Long forecasts hide the weak part.
+    how: State a finite horizon you can defend. Do not turn a staying-power grade into an assumed forever stream.
   - what: The share you use for room for error
-    how: Tell it how much of the middle value you will pay at most, such as two-thirds. A stricter share leaves more room.
+    how: State the share or rule to compare after the value and case-order checks pass. Two-thirds of the middle case is an illustration, not proof of safety.
 judge:
-  - The sums can be redone by hand.
-  - The walk-away price follows from a stated rule.
-  - The alternative is real and you would actually take it.
-  - The fees are counted over the full period.
+  - Each dated term can be redone by hand, with matching rate period and finite valid inputs.
+  - Finite zero-rate streams use their sum; C/r is reserved for the explicitly defined positive-rate perpetuity.
+  - Ranges and maximum-price conclusions require supported cases in their original order. Missing or crossed candidates stay unresolved.
+  - The maximum-price rule and assumptions are stated without a guarantee of safety.
+  - The alternative and costs use supplied evidence over the same stated period.
 test:
-  - Run it on a past purchase and see what the walk-away price would have been.
-  - Give it only a good-case forecast. It should flag the wide range.
-  - Run it twice. The range should match.
+  - For 10 received at each of two year ends and rate 10%, show the finite discounted sum rather than 10/0.10.
+  - Move those receipts to the start of each year and recalculate using their actual dates.
+  - At zero rate, sum a finite stream without dividing by zero.
+  - "Give only the good case, or crossed case values: show the gaps or labelled candidates, not an invented range or price limit."
+  - Use identical complete inputs twice and compare the arithmetic and stated assumptions.
 improve:
   - Keep a record of walk-away prices and what you paid.
   - Add your own typical fees to step seven.
@@ -111,6 +96,6 @@ works_best_with:
     - The return on your best alternative
 terms:
   - term: Margin of safety
-    meaning: Paying well below your low estimate of value, so errors do not hurt you.
+    meaning: A chosen gap between estimated value and price, intended to leave room for error. It does not prevent loss or prove the estimates are sound.
   - term: Best alternative
     meaning: The next best use of the same money or time, which is the real cost of any choice.

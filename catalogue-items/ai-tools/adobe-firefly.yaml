@@ -2,7 +2,7 @@ slug: adobe-firefly
 name: Adobe Firefly
 maker: Adobe
 url: https://www.adobe.com/products/firefly.html
-promise: Images, video and audio from text, with Adobe's editing apps beside it.
+promise: "Create images, video and audio from prompts, or edit and extend existing photos."
 use_cases: [make-images, make-video, design]
 categories: [image, video, design]
 what_it_does:
@@ -10,11 +10,11 @@ what_it_does:
   - Makes video clips and audio from a prompt or a still image.
   - Lets you choose between Adobe's own model and partner models.
   - Fills in or expands a photo from a written request.
-  - Works with Photoshop, Illustrator and Adobe Express.
+  - "Works with Photoshop and Illustrator. Also works with Adobe Express."
 benefits:
-  - Fix and extend photos without leaving the Adobe apps you use.
+  - "Fix and extend photos using the Adobe apps you already work in."
   - Pick the model that suits each job from one account.
-  - Try it free each day before you pay.
+  - "Try ideas within the listed free allowance before choosing a paid plan."
 best_for:
   - Designers and marketers who already use Adobe apps.
   - Editing and extending existing photos.

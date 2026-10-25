@@ -2,7 +2,7 @@ slug: hex
 name: Hex
 maker: Hex Technologies
 url: https://hex.tech
-promise: A shared workspace where your team asks questions of company data and builds reports.
+promise: "Ask about company data, check the steps and build reports your team can use."
 use_cases: [analyse-data]
 categories: [data]
 what_it_does:
@@ -12,8 +12,8 @@ what_it_does:
   - Turns an analysis into an app others can use.
   - Runs analyses on a schedule and sends alerts.
 benefits:
-  - Get answers from company data without waiting on an analyst.
-  - Share a live report instead of a stale spreadsheet.
+  - "Ask plain questions and inspect the queries and charts it creates."
+  - "Share a report that can refresh from connected data."
   - Let analysts and non-analysts work in the same place.
   - Rerun the same analysis each week with no copying.
 best_for:

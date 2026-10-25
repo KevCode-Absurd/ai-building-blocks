@@ -1,0 +1,37 @@
+new_slug: creative-evidence-review-agent
+name: Creative evidence review agent
+summary: Share your brief, creative assets and product facts. Get ranked issues, evidence and a checkpoint for the next revision.
+job: set-up-ai
+headline: Creative evidence review agent
+subhead: Share your brief, creative assets and product facts. Get ranked issues, evidence and a checkpoint for the next revision.
+explain: |-
+  Share brief, supplied creative assets, product truth and approved brand rules. Get a severity-ranked creative qa report and revision checkpoint.
+
+  This is a portable agent procedure for one bounded run. It can be reused with a checkpoint, but it does not claim an installed worker or continuous autonomous runtime.
+when:
+  - You need a severity-ranked creative qa report and revision checkpoint.
+you_give:
+  - Brief, supplied creative assets, product truth and approved brand rules
+  - Authorized tools, owner, limits and any prior checkpoint
+you_get:
+  - A severity-ranked creative QA report and revision checkpoint
+  - Evidence gaps, proposed actions and checks not run
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Step 1
+    text: "On first use configure the role from the brief and optional editable template: scope, owner, allowed tools, evidence sources, output contract, review limits and stop conditions. Resolve only material missing fields. A role file does not deploy a background process or grant access to another agent."
+  - title: Step 2
+    text: Run only the current bounded request or an explicitly authorized repeat. Load the last supplied checkpoint if present, compare its scope and evidence dates, then use the current request as authority. Set a maximum work/time/cost boundary before any paid or external operation.
+  - title: Step 3
+    text: Map the brief to its required message, viewer, format, product identity and proof. Inspect only assets actually accessible and label prompt-only or copy-only review when visual media is absent.
+  - title: Step 4
+    text: Check brief fit, hierarchy, opening, legibility, product fidelity, claim support, voice and placement-specific constraints. Quote the exact observed issue or missing evidence; do not invent an image defect from a filename.
+  - title: Step 5
+    text: Rank blocking product/claim errors above optional taste changes. Give a concrete revision per issue and an acceptance check, preserving already-approved parts. Return PASS, FIX or NOT CHECKED per required gate.
+  - title: Step 6
+    text: End the run with a checkpoint containing scope, evidence dates/IDs, completed deliverables, proposed actions, unresolved facts, approvals and the next review trigger. Store it only in the destination the user requested; otherwise return it in the answer. A later run must revalidate stale facts and approvals. No promise of continuous monitoring or sending is implied.
+thinking: high
+thinking_why: It compares supplied evidence and follows a specific method.

@@ -1,0 +1,28 @@
+new_slug: nonprofit-donation-page-writer
+name: Write a nonprofit donation page
+summary: Write a clear giving page. Use real gift patterns, checked impact claims and clear choices for repeat gifts.
+job: write-landing-page
+headline: Write a nonprofit donation page
+subhead: Bring your page, gift history and checked cost facts. Find form friction and draft the ask, payment choices and thank-you screen.
+explain: Bring your page, gift history and checked cost facts. Find form friction and draft the ask, payment choices and thank-you screen.
+when:
+  - You want to write a nonprofit donation page.
+you_give:
+  - Current page or form, traffic source and available funnel data
+  - Recent gift patterns and finance-approved impact translations
+you_get:
+  - Headline, ask amounts, field and trust-signal recommendations
+  - Confirmation copy that states amount and payment schedule
+how_to_use:
+  - Download the complete skill folder and add it to your AI tool, or copy the instructions into a chat.
+  - Provide the inputs listed here and ask your AI to follow the skill.
+  - Review the result and any missing facts before using it.
+how_it_works:
+  - title: Find the leak
+    text: Separate page views, form starts and completed gifts; flag unobserved mobile or payment behavior.
+  - title: Write the giving flow
+    text: Use campaign-specific impact and actual gift patterns; keep payment choices clear and avoid unsupported badges or tax claims.
+  - title: Complete and check
+    text: Match confirmation and thank-you wording, obtain program and finance review of impact ratios and define a bounded test.
+thinking: medium
+thinking_why: It weighs your evidence and follows a specific method.

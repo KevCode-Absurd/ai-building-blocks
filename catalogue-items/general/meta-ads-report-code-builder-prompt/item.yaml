@@ -1,0 +1,19 @@
+slug: meta-ads-report-code-builder-prompt
+name: Meta Ads report coding prompt
+summary: Get a coding brief for a Meta Ads report that compares dated results, shows source data and flags missing evidence.
+category: general
+type: prompt
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+    required: true
+uses: []
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

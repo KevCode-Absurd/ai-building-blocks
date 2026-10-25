@@ -1,0 +1,27 @@
+thinking: medium
+thinking_why: It follows a process checklist and ties each step to your records.
+new_slug: project-requirement-tracker
+name: Project requirement tracker
+summary: Share project requirements. Get a table that links each need to its owner, build, test and approval.
+job: document-work
+headline: Project requirement tracker
+subhead: Share your project requirements, priorities and progress notes. It links each need to an owner, a build choice and a specific test. You get a compact tracking table, an approval log and a clear list of work that remains open.
+explain: Share your project requirements, priorities and progress notes. It links each need to an owner, a build choice and a specific test. You get a compact tracking table, an approval log and a clear list of work that remains open.
+you_give:
+  - Business requirements and their priorities.
+  - Owners, build choices, test evidence and approval records.
+you_get:
+  - A requirement-to-build-and-test table.
+  - An approval log with names and dates where known.
+  - Open requirements and a completion summary.
+how_it_works:
+  - title: Step 1
+    text: Write one clear requirement per row and assign an owner.
+  - title: Step 2
+    text: Link each row to how it will be built and tested.
+  - title: Step 3
+    text: Track built, tested and approved states separately.
+how_to_use:
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.
+  - It works best when your AI can read your supplied records; changing live systems needs separate access and approval.

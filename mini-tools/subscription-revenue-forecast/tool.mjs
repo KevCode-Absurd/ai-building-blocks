@@ -8,12 +8,12 @@
 
 export default {
   slug: "subscription-revenue-forecast",
-  name: "See your monthly recurring revenue in a year",
+  name: "Subscription revenue forecast",
   /** The plain name, used where the tool talks about itself. */
   short: "Subscription revenue forecast",
-  headline: "See your monthly recurring revenue in a year, and where it levels off",
-  summary: "Type your subscribers, new sign-ups a month, price and how many leave. You get your monthly recurring revenue ahead and where it stops growing.",
-  question: "What will my monthly recurring revenue be in 12 months, and how high can it go with the sign-ups and cancellations I have today?",
+  headline: "Subscription revenue forecast",
+  summary: "Enter paying users, new sign-ups, price and the share who leave. Estimate future monthly sales and where growth would level off.",
+  question: "How would recurring revenue change if sign-ups and cancellations stayed at these rates?",
   shelf: ["general", "ecommerce"],
   version: "1.0.0",
   updated: "2026-10-21",
@@ -21,7 +21,7 @@ export default {
   inputs: [
     { id: "subs", label: "Paying subscribers today", unit: "count", example: 500, min: 0, max: 1e9, step: 10, integer: true, help: "People who pay you every month right now. Leave out free trials.", where: "The count of active paying subscriptions in your billing tool today.", tools: ["Stripe", "Shopify subscriptions", "Recharge", "Your billing tool"] },
     { id: "newSubs", label: "New subscribers a month", unit: "count", example: 50, min: 0, max: 1e9, step: 5, help: "How many new paying subscribers you add in a normal month.", where: "Your new subscriptions for the last 3 months, added up and divided by 3.", tools: ["Stripe", "Recharge", "Your billing tool"] },
-    { id: "price", label: "Price per subscriber each month", unit: "money", example: 20, min: 0.01, max: 1e9, step: 1, help: "What a subscriber pays each month, on average. For yearly plans, divide the price by 12.", where: "Your monthly recurring revenue divided by your paying subscribers.", tools: ["Stripe", "Your billing tool"] },
+    { id: "price", label: "Price per subscriber each month", unit: "money", example: 20, min: 0.01, max: 1e9, step: 1, help: "What a subscriber pays each month, on average. For yearly plans, divide the price by 12.", where: "Divide monthly subscription sales by the number of people paying.", tools: ["Stripe", "Your billing tool"] },
     { id: "churn", label: "Subscribers who leave each month", unit: "percent", example: 5, min: 0, max: 100, step: 0.5, help: "The share of subscribers who cancel or stop paying in a month. 5 means 5 in every 100.", where: "Last month: subscribers who left divided by subscribers at the start of the month. Average the last 3 months.", tools: ["Stripe", "Recharge", "Your billing tool"] },
     { id: "months", label: "Months to look ahead", unit: "count", example: 12, min: 1, max: 120, step: 1, integer: true, help: "How far ahead you want to see. 12 gives you a year.", where: "Your own choice.", tools: [] },
     { id: "goal", label: "Monthly recurring revenue you want", unit: "money", example: 15000, min: 0, max: 1e10, step: 500, help: "A target for monthly recurring revenue. We tell you which month you reach it, if you do. Use 0 to skip.", where: "Your own goal, for example the monthly pay and costs you need to cover.", tools: ["A spreadsheet"] },
@@ -65,7 +65,7 @@ export default {
     { what: "Where it levels off", how: "New subscribers a month ÷ monthly churn. The standard steady-state count for a subscription." },
   ],
   notes: [
-    "New sign-ups, price and churn are held steady. Real churn is higher in the first months of a subscription, and sign-ups move with your ads and seasons.",
+    "New sign-ups, price and cancellation rates stay fixed in this estimate. Try other rates to see how much the forecast changes.",
     "New subscribers are counted at the end of each month, so they pay from the month after they join.",
     "Monthly recurring revenue is not profit, and it is not cash in the bank. It leaves out costs, refunds and tax.",
   ],

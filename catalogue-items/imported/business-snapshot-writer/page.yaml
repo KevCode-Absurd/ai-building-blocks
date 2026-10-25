@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It pulls from several sources and picks what matters most.
 new_slug: business-snapshot-writer
 name: Business snapshot writer
-summary: Connect your tools. Get a one-page view of cash, sales and open leads, plus today's one priority.
+summary: Connect your tools. Get a one-page view of cash, sales and open leads,
+  plus today's one priority.
 job: plan-strategy
 headline: Business snapshot writer
-subhead: Connect the tools you already use, such as accounting, payments and ad spend. It reads them all at once and lines the numbers up on one page. You get cash, sales and money owed at a glance, a watch list of failed payments and disputes, and today's one priority.
+subhead: Connect the tools you already use, such as accounting, payments and ad
+  spend. It reads them all at once and lines the numbers up on one page. You get
+  cash, sales and money owed at a glance, a watch list of failed payments and
+  disputes, and today's one priority.
 explain: |
   One page tells you how the business stands today: cash in the bank, sales this month, money owed to you, and open leads. At the top sits the single thing most worth your attention now.
 
@@ -25,7 +29,10 @@ you_get:
   - A watch list of failed payments and disputes
   - One named priority for today
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
   - It works best when your AI can read your accounts and files.
-  - Where the skill points to ../../shared/, use the shared folder inside it. We copied it in so the skill works on its own.
+  - Where the skill points to ../../shared/, use the shared folder inside it. We
+    copied it in so the skill works on its own.

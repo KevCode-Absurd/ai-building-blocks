@@ -1,120 +1,109 @@
 new_slug: post-purchase-survey-reader
-name: "Post-purchase survey reader"
-summary: "Give survey answers and channel spend. Get over-credited channels, budget moves and a trust score out of 100."
+name: Post-purchase survey reader
+summary: Share buyer survey answers, ad spend and reported sales. Get channel comparisons, evidence gaps and ideas for further checks.
 job: read-ad-results
 thinking: medium
-thinking_why: "It sorts free-text answers into channels and compares several shares, so a mid-size model is enough."
-
-headline: "Post-purchase survey reader"
-subhead: Give it the answers buyers gave to "how did you hear about us" and your ad spend by channel. It compares each channel's share of answers with its share of spend and platform sales, and scores how far you can trust your numbers out of 100.
-
+thinking_why: It sorts free-text answers into channels and compares several shares, so a mid-size model is enough.
+headline: Post-purchase survey reader
+subhead: Share dated answers with personal details removed, plus matching spend and reported sales. It groups replies by channel and compares counts and shares on a stated basis. Get a gap table, word-of-mouth trends and next checks. Recalled discovery and platform attribution differ; disagreement alone does not prove which channel caused sales.
 explain: |
-  Ad platforms mark their own homework. Meta may say it drove half your sales while your profit says otherwise. A post-purchase survey, the short questions on your checkout success page, asks buyers directly where they heard of you. The answers are a second view of the same sales.
+  A buyer may remember where they first heard of a store. An ad platform may report a later click or another kind of credit. These measures can disagree without showing that either channel caused or failed to cause a sale. The period, question, customer group and missing responses matter.
 
-  This skill sorts the answers into channels, then lines up three shares for each channel: its share of your ad spend, its share of survey answers and its share of sales the platform reports. Where they disagree, it flags the channel as over-credited or under-credited and suggests a small budget move to test. It also tracks word of mouth, reads hard-to-track spend like podcasts, and flags unusually big orders. Buyers remember the most memorable ad, so use the survey beside the platform data and not in place of it.
-
+  This skill groups replies and compares supported counts and shares. It shows gaps in the evidence, tracks word-of-mouth counts beside their denominators and suggests further checks. Its custom checklist points are a review aid, not proof of accurate attribution or safe budget moves. Any spend experiment needs an appropriate comparison, duration, risk limit and authorization.
 when:
-  - Your ad platform reports more sales than your store shows, and you can't tell which channel is padding its numbers.
+  - Your platform and survey reports differ, and you want to understand their definitions and coverage.
   - You spend on podcasts, events or creators and can't see their effect in your ad reports.
   - You're about to move budget between channels and want a second view first.
-
 you_give:
   - Survey answers to "how did you hear about us", with order dates (names and emails removed)
   - Ad spend by channel for the same dates
   - Sales each platform reports, by channel (optional)
   - Your profit or P&L for the period (optional)
 you_get:
-  - A table of spend share, answer share and platform share for each channel
-  - A read on which channels are over- or under-credited
-  - Small budget moves to test for one week
-  - A trust score out of 100 with the sum shown
-
+  - A table of supported channel counts and shares, with definitions and missing coverage
+  - Descriptive mismatches to investigate, without assigning causal sales credit
+  - Word-of-mouth counts, denominators and share trends
+  - Evidence-led next checks or proposed experiments with stated limits
+  - Custom checklist parts and a supported total or known subtotal
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your survey answers with order dates, after removing names and emails.
   - Paste your ad spend by channel and, if you have it, the sales each platform reports for the same dates.
-  - Try one small budget move for a week, then watch the survey shares and your profit, not the daily ROAS.
-
+  - Review differences in dates, questions, coverage and channel groups first. Agree on the evidence, risk, comparison and duration before authorizing any spend experiment.
 how_it_works:
   - title: Counts the answers
-    text: It states how many replies you have and what share of orders answered. Under about 200, the read is called rough.
+    text: Shows valid replies and eligible orders with their denominators. The rough 200-reply guide is not proof of a representative sample.
   - title: Sorts into channels
     text: Free text is grouped into Meta, TikTok, search, YouTube, podcast, email, word of mouth and other.
   - title: Compares the shares
-    text: Each channel's share of spend against its share of answers, once over all answers and once over paid channels only.
+    text: Compares defined spend and answer shares, including all-answer and paid-only views. A missing or zero denominator leaves the affected ratio undefined.
   - title: Adds the platform view
-    text: Platform-reported sales share goes beside the other two. A big gap marks a channel as over- or under-credited.
-  - title: Decides what to trust
-    text: The survey for where buyers first heard, the platform for comparing ads inside one channel.
-  - title: Picks a small test
-    text: A small slice of budget moves for one week. You watch the survey shares and profit, not daily ROAS.
+    text: Shows platform-reported shares with their attribution basis. A large gap is a descriptive mismatch, not proven over-credit or under-credit.
+  - title: States the evidence limits
+    text: Survey answers show recall, not verified first discovery. Platform reports show attribution, not automatic causal truth. Keep both limits visible.
+  - title: Plans the next check
+    text: A mismatch prompts investigation. Any proposed experiment states its comparison, amount at risk, duration, outcome, owner, stop rule and authorization boundary.
   - title: Tracks word of mouth
-    text: A rising share of answers means organic reach is carrying part of what paid ads get credit for.
+    text: Shows counts and denominators as well as shares. A rising share can result from other replies falling; it does not prove rising organic reach.
   - title: Flags big orders
     text: Unusually large orders go to a person to ask why, since they may be an event or a reseller.
-  - title: Scores trust
-    text: Survey against spend 40, number of replies 30, platform against survey 30. The weights are a starting point.
-
+  - title: Shows custom points
+    text: The three planning parts have limits of 40, 30 and 30 points. Missing parts stay missing. Agreement does not prove accurate causal credit or a safe budget choice.
 output_shape: |
-  SURVEY READ  <date range> | orders <n> | replies <n> (<% of orders>)
-
-  CHANNEL   SPEND SHARE   ANSWER SHARE (all)   ANSWER SHARE (paid only)   PLATFORM SALES SHARE   READ
-  <channel> <%>           <%>                  <%>                        <%>                    <over-credited | fair | under-credited>
-
-  WORD OF MOUTH  <% of answers> | trend: <up | flat | down by week>
-  HARD-TO-TRACK SPEND  <event or episode>: <seen in answers | not seen>
-  BIG-QUANTITY BUYERS  <order, quantity, send to a person to ask why>
-
-  MOVES TO TEST
-  1 <from channel> to <to channel>: <amount> for <one week> | watch: <survey share, P&L>
-
-  TRUST SCORE  <n>/100 (survey vs spend + volume + platform vs survey). Weights are a starting point.
-
-  MISSING: <survey answers | spend by channel | platform sales | P&L>
-
+  SURVEY READ  <date range> | eligible orders <n> | valid replies <n> | response rate <supported ratio or undefined>
+  DATA BASIS  <question, attribution windows, customer groups, channel mapping, single or multiple mentions, missing coverage>
+  CHANNEL  <channel> | spend share <n or undefined> | answer share all <n or undefined> | paid-only share <n or undefined> | platform share <n or undefined> | descriptive mismatch or unresolved basis
+  WORD OF MOUTH  <count> / <valid response denominator> = <share or undefined> | count and share trends | recall limits
+  HARD-TO-TRACK SPEND  <mentions and response window> | absence is not proof of failure
+  BIG-QUANTITY BUYERS  <de-identified observation for a person to review>
+  NEXT CHECK  <hypothesis or data check> | comparison <design> | amount at risk <if supported> | duration <volume and lag rationale> | outcomes <definitions> | owner and stop rule <stated or missing> | authorization <pending or given>
+  CUSTOM CHECKLIST  <bounded parts, supported total or known subtotal> | evidence coverage <known and missing>
+  These planning points are not causal confidence or proof of safe spending.
+  MISSING / CHECKS MISSED  <list>
 tweaks:
   - what: Number of replies
-    how: More replies make a firmer read. Paste the full set for the period, and say how many orders it covers.
+    how: Give the full set for the period and the number of eligible orders. More replies may reduce noise but do not remove recall or nonresponse bias.
   - what: Date range
-    how: Use the same dates for spend, platform sales and answers. A mismatch makes the shares meaningless.
+    how: Match dates and state the question, attribution window and customer group. Different definitions may prevent direct comparison even on the same dates.
   - what: Channel groups
     how: Say how to group channels, such as Instagram and Facebook together as Meta, so the shares match your spend report.
   - what: Budget move size
-    how: The default is a small slice, about a tenth of a channel's spend, for one week. Say if you want a smaller test.
-
+    how: Choose the amount at risk and duration from the hypothesis, order volume, conversion lag and comparison design. A tenth of spend for one week is an illustration, not a validated default.
 judge:
-  - It states the number of replies and the share of orders that answered.
-  - Spend, answer and platform shares use the same channel groups.
-  - A channel is called over-credited only when its platform share is well above its survey share.
-  - The budget move is small and has a watch list for one week.
-  - No buyer's name or email appears in the output.
-
+  - Counts, eligible orders, response coverage and denominators are shown.
+  - Dates, channel groups, populations and attribution definitions are matched or their differences are explicit.
+  - Share gaps remain descriptive and word-of-mouth counts accompany shares.
+  - Any proposed spend experiment states risk, comparison, duration rationale, outcome, owner, stop rule and authorization.
+  - No buyer name or email appears in the output.
+  - Custom points show bounded parts and missing coverage; they do not establish causal credit or safe spending.
 test:
-  - Paste answers where Meta gets 50 percent of answers and 50 percent of spend. It should call Meta fair.
-  - Paste only 30 replies. It should call the read rough.
-  - Remove the platform sales. It should skip that part and still score the rest.
-  - Run it twice on the same data. The channel shares should match.
-
+  - "Use Meta at 50% of spend and answers: report matching shares, not fair or optimal allocation."
+  - "Use 30 replies: call the pattern rough without treating hundreds as proof of representativeness."
+  - "Remove platform sales: show the missing part and known subtotal, not a fabricated full score."
+  - "Use word-of-mouth counts 20/100 then 20/50: share rises 20% to 40%, count remains 20; do not claim rising organic reach."
+  - "Compare recalled first discovery with seven-day click credit: show different bases, not proven over-credit."
+  - "Use zero valid replies: the answer share is undefined. Missing event mentions do not prove the event failed."
 improve:
   - Add your own channel list and groupings to the skill file, so free-text replies always sort the same way.
   - Add the names of your podcasts, events and creators, so it can look for them in the answers.
-  - Change the score weights if one part matters more, such as response volume for a small store.
+  - Keep agreed score weights as custom planning choices. Changing weights does not calibrate attribution accuracy or causal confidence.
   - Pair it with the platform ROAS reality check and the post-purchase survey builder.
-
 works_best_with:
   tools:
-    - {name: "Any good chat AI", why: "It can sort free-text answers into channels and compare the shares for you."}
-    - {name: "Shopify", why: "Checkout survey apps run on the order status page and give you the answers with order dates."}
-    - {name: "Slack", why: "A simple connection can post each new survey answer to a team channel."}
+    - name: Any good chat AI
+      why: It can sort free-text answers into channels and compare the shares for you.
+    - name: Shopify
+      why: Checkout survey apps run on the order status page and give you the answers with order dates.
+    - name: Slack
+      why: A simple connection can post each new survey answer to a team channel.
   inputs:
-    - "Your ad spend by channel for the same weeks"
-    - "Sales each ad platform reports, by channel"
-    - "Your profit and loss by week, to check what a budget move did"
-
+    - Your ad spend by channel for the same weeks
+    - Sales each ad platform reports, by channel
+    - Your profit and loss by week, as one outcome measure with its comparison and causal limits
 terms:
   - term: Over-credited channel
-    meaning: A channel whose platform reports far more sales than buyers say it earned.
+    meaning: A possible interpretation to investigate when platform and survey shares differ. The gap alone does not prove that the platform took excess causal credit.
   - term: Share of answers
-    meaning: The part of all survey replies that name one channel.
+    meaning: A channel’s share of valid answers under the stated single-response or multiple-mention rule, with its denominator shown.
   - term: Word of mouth
     meaning: Buyers who say they heard from a friend or another person, not an ad.

@@ -1,0 +1,36 @@
+slug: portfolio-case-study-writer
+name: Portfolio case study writer
+summary: Share project notes and results. Get a case study that explains your role, choices, work and lessons.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: source_text
+    required: true
+  - type: brief
+    required: false
+outputs:
+  - type: document
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Daniel (San) Ávila
+  repo: davila7/claude-code-templates
+  path: cli-tool/components/skills/career/portfolio-case-study-writer
+  url: https://github.com/davila7/claude-code-templates/tree/7d85535533914ff0880945570a94fcbec4adc042/cli-tool/components/skills/career/portfolio-case-study-writer
+  licence: MIT
+  licence_file: LICENSE
+  commit: 7d85535533914ff0880945570a94fcbec4adc042
+  original_name: portfolio-case-study-writer
+  imported: 2026-10-23
+  skill_sha256: abe2aba32904044b107459ecfa690e52e758b98aa6aff1391007bb5ac54d5bbd
+version: 1.0.0
+credits:
+  - title: portfolio-case-study-writer skill
+    by: Daniel (San) Ávila
+    url: https://github.com/davila7/claude-code-templates/tree/7d85535533914ff0880945570a94fcbec4adc042/cli-tool/components/skills/career/portfolio-case-study-writer
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

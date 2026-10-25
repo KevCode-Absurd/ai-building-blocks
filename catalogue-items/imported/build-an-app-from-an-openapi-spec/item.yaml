@@ -1,0 +1,39 @@
+slug: build-an-app-from-an-openapi-spec
+name: Build an app from an OpenAPI spec
+summary: Turn an OpenAPI spec into an app. Add routes, data types, checks and setup steps.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: document
+    required: true
+  - type: brief
+    required: true
+outputs:
+  - type: codebase
+    required: true
+  - type: test_report
+    required: true
+  - type: document
+    required: true
+uses: []
+origin: imported
+source:
+  by: github
+  repo: github/awesome-copilot
+  path: skills/openapi-to-application-code
+  url: https://github.com/github/awesome-copilot/tree/613efc8c21d9b3ce642dff361d17006cd9967e28/skills/openapi-to-application-code
+  licence: MIT
+  licence_file: LICENSE
+  commit: 613efc8c21d9b3ce642dff361d17006cd9967e28
+  original_name: openapi-to-application-code
+  imported: 2026-10-24
+version: 1.0.0
+credits:
+  - title: openapi-to-application-code skill
+    by: github
+    url: https://github.com/github/awesome-copilot/tree/613efc8c21d9b3ce642dff361d17006cd9967e28/skills/openapi-to-application-code
+    used: Original instructions and supporting files, with attribution and the MIT licence. Display copy describes the task.

@@ -8,12 +8,12 @@
 
 export default {
   slug: "discount-calculator",
-  name: "See what a discount does to your profit",
+  name: "Discount profit calculator",
   /** The plain name, used where the tool talks about itself. */
-  short: "Discount calculator",
-  headline: "See what a discount does to your profit before you run it",
-  summary: "Type your price, costs and discount. You get your profit per order, and how many more sales you need to make up for it.",
-  question: "What does 10%, 20% or 30% off do to my profit per order, and how much more must I sell to come out even?",
+  short: "Discount profit calculator",
+  headline: "Discount profit calculator",
+  summary: "Enter your price, costs and discount. Compare profit per order and the extra sales needed to keep the same total profit.",
+  question: "How does this discount change order profit and the sales needed to match it?",
   shelf: ["general", "ecommerce"],
   version: "1.0.0",
   updated: "2026-10-19",
@@ -25,7 +25,7 @@ export default {
     {
       id: "price", label: "Full price of one order", unit: "money", example: 60, min: 0.01, max: 1e9, step: 1,
       help: "What a customer pays for an average order, or one sale or booking, with no discount.",
-      where: "Your average order value at full price: revenue divided by orders for the last 90 days, at a time with no sale running.",
+      where: "Use sales from the last 90 days with no sale running. Divide that revenue by the number of orders.",
       tools: ["Shopify analytics", "Google Analytics", "Your accounts software", "A spreadsheet of your sales"],
     },
     {

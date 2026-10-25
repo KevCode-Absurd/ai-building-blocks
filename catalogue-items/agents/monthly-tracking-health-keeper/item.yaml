@@ -7,23 +7,23 @@ role: orchestrate
 job: analysis
 level: intermediate
 inputs:
-  - {type: question, required: true}
-  - {type: performance_sheet, required: true}
-  - {type: spreadsheet, required: false}
+  - { type: question, required: true }
+  - { type: performance_sheet, required: true }
+  - { type: spreadsheet, required: false }
 outputs:
-  - {type: audit_report}
-  - {type: spreadsheet}
-  - {type: plan}
-uses: [event-tracking-planner, ga4-store-setup-checker, meta-server-tracking-checker, campaign-link-tracker, platform-roas-reality-check, ai-traffic-tracking-setup]
+  - { type: audit_report }
+  - { type: spreadsheet }
+  - { type: plan }
+uses: [ event-tracking-planner, ga4-store-setup-checker, meta-server-tracking-checker, campaign-link-tracker, platform-roas-reality-check, ai-traffic-tracking-setup ]
 steps:
-  - {uses: event-tracking-planner, note: "Once: the event list, naming rules and the one main metric that every month is checked against. Skipped if the plan exists."}
-  - {uses: ga4-store-setup-checker, note: "Every month: missing settings, events not firing or renamed, and a setup score out of 100, compared with last month."}
-  - {uses: meta-server-tracking-checker, note: "Every month, if you run paid social: the server route, proof each event counts once, and a score out of 100."}
-  - {uses: campaign-link-tracker, note: "Only when new campaigns or channels launched this month: the tagged links checked and the link register updated."}
-  - {uses: platform-roas-reality-check, note: "Every month: platform-reported results against store totals, a truer return and a trust level, scored out of 100."}
-  - {uses: ai-traffic-tracking-setup, note: "Once, and again when a new AI assistant sends visits: the AI traffic channel, the post-purchase question and the redirect list."}
+  - { uses: event-tracking-planner, note: "Once: the event list, naming rules and the one main metric that every month is checked against. Skipped if the plan exists." }
+  - { uses: ga4-store-setup-checker, note: "Every month: missing settings, events not firing or renamed, and a setup score out of 100, compared with last month." }
+  - { uses: meta-server-tracking-checker, note: "Every month, if you run paid social: the server route, proof each event counts once, and a score out of 100." }
+  - { uses: campaign-link-tracker, note: "Only when new campaigns or channels launched this month: the tagged links checked and the link register updated." }
+  - { uses: platform-roas-reality-check, note: "Every month: platform-reported results against store totals, a truer return and a trust level, scored out of 100." }
+  - { uses: ai-traffic-tracking-setup, note: "Once, and again when a new AI assistant sends visits: the AI traffic channel, the post-purchase question and the redirect list." }
 schedule: "On the first working day of each month, once last month's platform reports are final"
-asks_before: [changing any tag, pixel, event or setting, adding or removing a tracking tool, changing a definition of a conversion, changing ad budgets on the back of the numbers, sending the numbers to anyone]
+asks_before: [ changing any tag, pixel, event or setting, adding or removing a tracking tool, changing a definition of a conversion, changing ad budgets on the back of the numbers, sending the numbers to anyone ]
 origin: own
-version: 1.0.0
+version: 1.0.1
 example_pending: true

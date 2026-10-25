@@ -777,3 +777,7 @@ If you need more context:
 - **control-tower-design**: For real-time visibility and monitoring
 - **network-design**: For optimizing fulfillment network
 - **route-optimization**: For logistics constraints in matching
+
+## Repaired allocation timing and constraints
+
+Use one explicit allocation timestamp and inventory snapshot. Supply is eligible only if available by the demand’s required ship date after lead time, holds, quality status, safety stock and existing commitments. Do not allocate forecast or inbound stock before its confirmed availability date. Apply a single user-selected policy (for example, FIFO, pro rata, contract priority or stated customer ranking); do not mix policies mid-run. Break ties with a declared stable rule. Reserve each unit once, then recompute remaining supply and demand after every allocation. Respect pack sizes, minimums, shelf life, location and transport capacity when supplied. Show the input cut-off, dated supply, allocation sequence, unfilled quantity and reason. This is a planning calculation, not an order release or ERP write.

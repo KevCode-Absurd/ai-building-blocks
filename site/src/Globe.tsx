@@ -7,9 +7,10 @@ import "./globe.css";
 // hover over the globe and the whole map takes on colour. Drag it to spin it.
 // It holds still for people who ask for reduced motion (pointing and dragging still work),
 // and pauses when it is off screen or the tab is hidden.
-const N = 9000;
-const SPEED = 0.09; // radians per second: one turn in a little over a minute
+const N = 5000;
+const SPEED = 0.045; // radians per second: one gentle turn in about 140 seconds
 const REACH = 150; // px around the cursor that light up
+const REGION_COUNT = 3;
 
 const land = (() => {
   const bin = atob(LAND);
@@ -22,19 +23,22 @@ const land = (() => {
 })();
 
 type Pt = { x: number; y: number; z: number; land: boolean; hue: number; c: "0" | "1"; glow: number };
+type Region = { x: number; y: number; z: number; edge: number; age: number; duration: number };
 
-export default function Globe() {
+export default function Globe({ calm = false }: { calm?: boolean }) {
   const ref = useRef<HTMLCanvasElement>(null);
   useEffect(() => {
     const canvas = ref.current!;
     const host = canvas.parentElement!;
     const ctx = canvas.getContext("2d")!;
-    const still = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const still = calm || matchMedia("(prefers-reduced-motion: reduce)").matches;
     const touch = matchMedia("(hover: none)").matches;
 
     // Even points on a sphere; east is to the right when longitude 0 faces you.
     const pts: Pt[] = [];
-    const pointCount = touch ? 3600 : N;
+    // This is decorative art, so keep the mobile canvas light enough to leave
+    // the main thread free for the page and its controls.
+    const pointCount = touch ? 900 : N;
     for (let i = 0; i < pointCount; i++) {
       const y = 1 - (2 * (i + 0.5)) / pointCount;
       const r = Math.sqrt(1 - y * y);
@@ -43,7 +47,7 @@ export default function Globe() {
       const lat = (Math.asin(y) * 180) / Math.PI, lon = (Math.atan2(x, z) * 180) / Math.PI;
       const isLand = land(lat, lon);
       if (!isLand && i % 2) continue; // half the sea is enough to show the outline
-      pts.push({ x, y, z, land: isLand, hue: (lon + 180 + lat * 0.8 + 360) % 360, c: Math.random() < 0.5 ? "0" : "1", glow: !still && isLand && Math.random() < 0.04 ? 0.4 + Math.random() * 0.6 : 0 });
+      pts.push({ x, y, z, land: isLand, hue: (lon + 180 + lat * 0.8 + 360) % 360, c: Math.random() < 0.5 ? "0" : "1", glow: 0 });
     }
 
     let w = 0, h = 0, dpr = 1, angle = -1.4, tilt = 0.42, spin = 0, last = performance.now(), raf = 0, visible = true;
@@ -51,6 +55,28 @@ export default function Globe() {
     let px = -9999, py = -9999, hov = 0, hovTarget = 0, tapFade = 0;
     let drag: { x: number; y: number; t: number; pointerId: number; touch: boolean } | null = null;
     const sprites = new Map<string, HTMLCanvasElement>();
+
+    // Patches live on the sphere, so they turn with the continents. Start each
+    // new pulse on visible land and keep just a few separated areas lit at once.
+    const landPoints = pts.filter(p => p.land);
+    const regions: Region[] = [];
+    const newRegion = (replacing?: Region): Region => {
+      const ca = Math.cos(angle), sa = Math.sin(angle), ct = Math.cos(tilt), st = Math.sin(tilt);
+      const candidates = landPoints.filter(p => {
+        const depth = p.y * st + (-p.x * sa + p.z * ca) * ct;
+        return depth > 0.35 && regions.every(r => r === replacing || p.x * r.x + p.y * r.y + p.z * r.z < 0.85);
+      });
+      const pool = candidates.length ? candidates : landPoints;
+      const p = pool[Math.floor(Math.random() * pool.length)];
+      return { x: p.x, y: p.y, z: p.z, edge: Math.cos(0.26 + Math.random() * 0.12), age: 0, duration: 3.6 + Math.random() * 2 };
+    };
+    if (!still) {
+      for (let i = 0; i < REGION_COUNT; i++) {
+        const region = newRegion();
+        region.age = region.duration * (0.2 + i * 0.2);
+        regions.push(region);
+      }
+    }
 
     const SIZES = [8, 10.5, 13, 15.5];
     // Digits shrink with the globe, so a small screen doesn't pile them on top of each other.
@@ -83,7 +109,7 @@ export default function Globe() {
     };
     const resize = () => {
       const box = canvas.getBoundingClientRect();
-      const next = Math.min(window.devicePixelRatio || 1, 2);
+      const next = Math.min(window.devicePixelRatio || 1, touch ? 1.5 : 2);
       if (next !== dpr) sprites.clear();
       dpr = next; w = box.width; h = box.height;
       canvas.width = Math.round(w * dpr); canvas.height = Math.round(h * dpr);
@@ -99,6 +125,7 @@ export default function Globe() {
       const ca = Math.cos(angle), sa = Math.sin(angle), ct = Math.cos(tilt), st = Math.sin(tilt);
       const shift = (performance.now() / 1000) * 24; // colours drift slowly round the map
       const near = Math.max(tapFade, px > -9000 ? 1 : 0);
+      const pulses = regions.map(r => Math.sin(Math.PI * r.age / r.duration) ** 2);
       ctx.fillStyle = `rgba(${rgb},${dark ? 0.16 : 0.12})`;
       for (const p of pts) {
         const x = p.x * ca + p.z * sa, z0 = -p.x * sa + p.z * ca;
@@ -117,20 +144,34 @@ export default function Globe() {
           if (d2 < REACH * REACH) { const f = 1 - Math.sqrt(d2) / REACH; k = f * f * near; }
         }
         if (k > 0.02 && Math.random() < k * 0.12 * dt * 60) { p.c = p.c === "0" ? "1" : "0"; p.glow = Math.max(p.glow, 0.6); }
+        let regionGlow = 0;
+        for (let i = 0; i < regions.length; i++) {
+          const r = regions[i];
+          const dot = p.x * r.x + p.y * r.y + p.z * r.z;
+          const falloff = Math.max(0, (dot - r.edge) / (1 - r.edge));
+          regionGlow = Math.max(regionGlow, falloff * falloff * pulses[i]);
+        }
         const band = Math.min(3, Math.floor(z * 4));
         const colour = hov * 0.7 + k > 0.18 || (!still && p.glow > 0.2);
-        const s = sprite(p.c, band, colour ? Math.floor(((p.hue + shift) % 360) / 15) : -1);
-        const scale = 1 + 0.7 * k;
-        ctx.globalAlpha = Math.min(0.95, 0.06 + 0.46 * z * z + p.glow * 0.45 + k * 0.6 + (colour ? hov * 0.12 : 0));
+        const hueStep = Math.floor(((p.hue + shift) % 360) / 15);
+        const s = sprite(p.c, band, colour ? hueStep : -1);
+        const scale = 1 + 0.7 * k + 0.12 * regionGlow;
+        const alpha = Math.min(0.95, 0.06 + 0.46 * z * z + p.glow * 0.45 + k * 0.6 + (colour ? hov * 0.12 : 0));
+        ctx.globalAlpha = alpha;
         const sw = (s.width / dpr) * scale;
         ctx.drawImage(s, sx - sw / 2, sy - sw / 2, sw, sw);
+        // Blend the coloured digits in continuously, including at patch edges.
+        if (regionGlow > 0.005) {
+          ctx.globalAlpha = regionGlow * 0.85;
+          ctx.drawImage(sprite(p.c, band, hueStep), sx - sw / 2, sy - sw / 2, sw, sw);
+        }
       }
       ctx.globalAlpha = 1;
     };
 
     const tick = (now: number) => {
       // Idle decoration needs fewer frames than active pointer feedback, especially on phones.
-      if (!still && !drag && !hovTarget && !tapFade && now - last < (touch ? 1000 / 24 : 1000 / 30) - 1) {
+      if (!still && !drag && !hovTarget && !tapFade && now - last < (touch ? 1000 / 15 : 1000 / 24) - 1) {
         raf = visible && !document.hidden ? requestAnimationFrame(tick) : 0;
         return;
       }
@@ -143,10 +184,13 @@ export default function Globe() {
       }
       hov += (hovTarget - hov) * Math.min(1, dt * 5);
       tapFade = Math.max(0, tapFade - dt * 0.8);
+      for (let i = 0; i < regions.length; i++) {
+        regions[i].age += dt;
+        if (regions[i].age >= regions[i].duration) regions[i] = newRegion(regions[i]);
+      }
       for (const p of pts) {
         if (!p.land) continue;
         if (p.glow > 0) p.glow = Math.max(0, p.glow - dt * 0.9);
-        else if (!still && Math.random() < 1 - Math.exp(-dt * 0.2)) { p.c = p.c === "0" ? "1" : "0"; p.glow = 1; }
       }
       draw(dt);
       const busy = !still || drag || spin || Math.abs(hovTarget - hov) > 0.01 || px > -9000 || tapFade > 0;
@@ -227,6 +271,6 @@ export default function Globe() {
       window.removeEventListener("pointercancel", up); host.removeEventListener("lostpointercapture", up);
       document.removeEventListener("selectstart", noSelect); document.body.classList.remove("globe-dragging");
     };
-  }, []);
+  }, [calm]);
   return <canvas ref={ref} className="globe" aria-hidden="true" data-testid="globe" />;
 }

@@ -1,0 +1,35 @@
+thinking: medium
+thinking_why: It follows a set method and adapts its questions or draft to your evidence.
+new_slug: coding-project-coach
+name: Coding project coach
+summary: Describe a learning project. Get small build milestones, hints and
+  checks while you write the code.
+job: study-and-practice
+headline: Coding project coach
+subhead: Describe the project you want to learn by building, your level and your
+  tools. It breaks the work into small milestones and explains the choices. You
+  write the code, get hints and feedback, and pass each check before moving on.
+explain: Describe the project you want to learn by building, your level and your
+  tools. It breaks the work into small milestones and explains the choices. You
+  write the code, get hints and feedback, and pass each check before moving on.
+you_give:
+  - Your project goal, technical tools and current level.
+  - The existing code and your time or resource limits.
+you_get:
+  - A small milestone plan with clear checks.
+  - Hints and design explanations for the current step.
+  - Feedback on the code you wrote.
+how_it_works:
+  - title: Step 1
+    text: Agree on a small project scope and three to five milestones.
+  - title: Step 2
+    text: Explain the basic design and coach one milestone at a time.
+  - title: Step 3
+    text: Review your code against each milestone check before continuing.
+how_to_use:
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
+  - It works best when your AI can read your supplied notes and ask follow-up
+    questions.

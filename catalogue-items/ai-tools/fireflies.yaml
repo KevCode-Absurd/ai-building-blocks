@@ -2,7 +2,7 @@ slug: fireflies
 name: Fireflies
 maker: Fireflies.ai
 url: https://fireflies.ai
-promise: A transcript, summary and action list for every call, saved and searchable.
+promise: "Turn recorded calls into searchable transcripts, summaries and action lists."
 use_cases: [meeting-notes]
 categories: [productivity]
 what_it_does:
@@ -12,14 +12,14 @@ what_it_does:
   - Tracks talk time, topics and sentiment across conversations.
   - Sends notes to your CRM, Slack and task apps.
 benefits:
-  - Stop taking notes and pay attention to the person you are talking to.
-  - Find what a customer said three months ago in a few seconds.
+  - "Keep a draft record of the call while you focus on the conversation."
+  - "Search saved calls for an earlier customer comment."
   - Get follow-up tasks into your CRM without typing them in.
   - Review how calls go across a whole sales team.
 best_for:
   - Sales and customer teams that live on calls.
   - Recruiters who need notes sent to their hiring system.
-  - Teams that want every meeting stored in one searchable place.
+  - "Teams that want recorded meetings in one searchable place."
 not_for:
   - People who dislike a note-taker bot joining the call.
   - Heavy use on the free plan, which has limited transcription credits.

@@ -9,12 +9,12 @@
 
 export default {
   slug: "early-payment-discount",
-  name: "Know if paying early for a discount is worth it",
+  name: "Early payment discount comparison",
   /** The plain name, used where the tool talks about itself. */
-  short: "Early payment",
-  headline: "Know if paying an invoice early for a discount is worth it, and what that discount costs as a yearly rate",
-  summary: "Type the invoice, the discount, how many days early you would pay and what your money costs you a year. You get the saving, the discount as a yearly rate, the cost of paying early and the net.",
-  question: "Is it worth paying a supplier early for a discount, or offering one to a client, and what is that discount worth as a yearly rate?",
+  short: "Early payment discount comparison",
+  headline: "Early payment discount comparison",
+  summary: "Enter the invoice, discount, days paid early and yearly interest cost. Compare the discount saving with the cost of paying sooner.",
+  question: "Does the invoice discount exceed the interest cost of paying early?",
   shelf: ["general"],
   version: "1.0.0",
   updated: "2026-10-21",
@@ -34,8 +34,8 @@ export default {
     ] },
     { id: "costOfMoney", label: "What paying early costs you in interest", unit: "money", formula: "paid * borrowRate / 100 * daysEarly / 365", sum: "{paid} × {borrowRate} × {daysEarly} ÷ 365 = {=}", means: "Interest on the early amount for those days, at your yearly cost of money." },
     { id: "netGain", label: "Net gain from paying early", unit: "money", formula: "saving - costOfMoney", sum: "{saving} − {costOfMoney} = {=}", means: [
-      { if: "netGain > 0", text: "Above zero: the discount is worth more than the interest. Take it." },
-      { if: "netGain < 0", text: "Below zero: the interest costs more than the discount saves. Pay on the due date." },
+      { if: "netGain > 0", text: "Above zero: the discount exceeds the interest cost you entered." },
+      { if: "netGain < 0", text: "Below zero: interest costs more than the discount saves at your figures." },
       { text: "A wash." },
     ] },
     { id: "breakEvenDiscount", label: "Smallest discount worth taking for these days", unit: "percent", formula: "(borrowRate / 100 * daysEarly / 365) / (1 + borrowRate / 100 * daysEarly / 365) * 100", sum: "r ÷ (1 + r), where r = {borrowRate} × {daysEarly} ÷ 365 = {=}", means: "Any discount above this beats your cost of money for paying this many days early." },
@@ -68,7 +68,7 @@ export default {
     { what: "Cost of paying early", how: "Amount paid × yearly cost of money × days ÷ 365. Simple interest for the days." },
   ],
   notes: [
-    "Simple interest, not compound, so the yearly rate is a little under the true one. The verdict does not change.",
+    "Uses simple interest. The saving is scaled to one year without adding interest on interest.",
     "If paying early would leave you unable to pay something else, the cash matters more than the sum.",
     "This is a sum on the numbers given, not financial advice. Check tax and accounting treatment with your accountant.",
   ],

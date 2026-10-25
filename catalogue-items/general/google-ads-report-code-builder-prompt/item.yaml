@@ -1,0 +1,19 @@
+slug: google-ads-report-code-builder-prompt
+name: Google Ads report coding prompt
+summary: Get a coding brief for a Google Ads report with matched dates, clear metrics, evidence and owned next steps.
+category: general
+type: prompt
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+    required: true
+uses: []
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

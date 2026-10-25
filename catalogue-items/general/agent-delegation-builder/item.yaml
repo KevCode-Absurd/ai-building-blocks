@@ -1,0 +1,19 @@
+slug: agent-delegation-builder
+name: Agent delegation and dependency planner
+summary: Plan which agent owns each task, what it may do and which inputs it must wait for. Get handoff and failure rules.
+category: general
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+    required: true
+uses: []
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

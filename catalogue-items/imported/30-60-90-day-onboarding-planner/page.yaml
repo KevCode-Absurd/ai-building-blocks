@@ -5,7 +5,10 @@ name: 30-60-90 day onboarding planner
 summary: Tell it the role and team. Get a 30, 60 and 90 day plan for a new hire.
 job: hire-people
 headline: 30-60-90 day onboarding planner
-subhead: "Tell it the role, who will mentor, and what good looks like at 90 days. It builds the first three months in four layers: belonging, context, contribution, mastery. You get the day 30, 60 and 90 plan, a first-week checklist, a mentor schedule and check-in questions."
+subhead: "Tell it the role, who will mentor, and what good looks like at 90
+  days. It builds the first three months in four layers: belonging, context,
+  contribution, mastery. You get the day 30, 60 and 90 plan, a first-week
+  checklist, a mentor schedule and check-in questions."
 explain: |
   A written plan for a new hire's first three months, with clear goals for day 30, day 60 and day 90, is ready to hand over.
 
@@ -28,5 +31,7 @@ you_get:
   - Check-in questions for each stage
   - A list of knowledge gaps to document
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.

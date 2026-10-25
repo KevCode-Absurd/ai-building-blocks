@@ -126,8 +126,17 @@ pipe = DiffusionPipeline.from_pretrained(
 
 **Solutions**:
 ```python
-# Solution 1: Disable safety checker
-pipe.safety_checker = None
+# Keep safety checks enabled. Where the pipeline exposes a safety flag, inspect
+# it without suppressing the check:
+result = pipe(prompt)
+image = result.images[0]
+flags = getattr(result, "nsfw_content_detected", None)
+print("Safety flag:", flags[0] if flags else "not exposed by this pipeline")
+# If flagged, review the prompt and follow the model/service policy. Do not
+# disable safety controls to recover an image.
+
+# If no image was flagged, inspect the returned image and continue with the
+# VAE, dtype, model compatibility, and prompt/output checks below.
 
 # Solution 2: Check VAE scaling
 # The issue might be with VAE encoding/decoding

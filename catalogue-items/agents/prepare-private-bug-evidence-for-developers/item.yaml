@@ -1,0 +1,34 @@
+slug: prepare-private-bug-evidence-for-developers
+name: Private bug evidence assistant
+summary: Give a redacted screenshot and rough notes. Get a developer-ready draft issue, privacy review checklist and evidence manifest.
+category: agent
+type: agent
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: image
+    required: true
+  - type: document
+    required: true
+  - type: question
+    required: true
+outputs:
+  - type: document
+  - type: audit_report
+uses:
+  - screenshot-privacy-masker
+  - bug-report-writer
+  - technical-doc-proofreader
+steps:
+  - uses: screenshot-privacy-masker
+    note: Process originals locally against declared sensitivity. Detect candidate regions, mask a separate copy and inspect output pixels. Pass only reviewed copies and an abstract redaction log to issue drafting.
+  - uses: bug-report-writer
+    note: Use safe evidence and bug notes for environment, steps, expected/actual behavior, impact and reproducibility limits. Separate reported from reproduced actions. Remove personal or secret data from quoted logs.
+  - uses: technical-doc-proofreader
+    note: Proofread the English issue draft for spelling, grammar, terminology, filenames, numbered steps and jargon. Return an Original -> Suggestion -> Reason checklist. Flag factual uncertainty [verify] rather than silently changing it. The coordinator returns the existing draft issue, checklist and unresolved privacy/reproduction checks.
+execution: coordinator
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

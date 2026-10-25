@@ -1,5 +1,7 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { BEFORE_LIBRARY_SYNC, REMOTE_LIBRARY_UPDATE } from "./lib/library-storage";
 import { Drawer } from "./ui";
+import { SaveHint } from "./AccountPersistence";
 import { FIELDS, type Business, businessText, getBusiness, hasBusiness, setBusiness, useBusiness } from "./lib/business";
 
 const OPEN = "abb:business-open";
@@ -12,15 +14,27 @@ export function useBusinessOpener(open: () => void) {
 /** Type a short file about you and your work once. Every skill you copy and every workflow you download carries them. */
 export function BusinessDrawer({ onClose, toast }: { onClose: () => void; toast: (m: string) => void }) {
   const [form, setForm] = useState<Business>(() => getBusiness());
-  // Saved as you type, a moment after you stop.
-  useEffect(() => { const t = setTimeout(() => setBusiness(form), 250); return () => clearTimeout(t); }, [form]);
+  const pending = useRef<Business | null>(null), remoteApplying = useRef(false);
+  useEffect(() => {
+    if (remoteApplying.current) { remoteApplying.current = false; pending.current = null; return; }
+    pending.current = form;
+    const timer = setTimeout(() => { if (pending.current === form) { setBusiness(form); pending.current = null; } }, 250);
+    return () => clearTimeout(timer);
+  }, [form]);
+  useEffect(() => {
+    const flush = () => { if (pending.current) { setBusiness(pending.current); pending.current = null; } };
+    const received = (event: Event) => { if ((event as CustomEvent<string[]>).detail.includes("abb:business")) { remoteApplying.current = true; pending.current = null; setForm(getBusiness()); } };
+    window.addEventListener(BEFORE_LIBRARY_SYNC, flush); window.addEventListener(REMOTE_LIBRARY_UPDATE, received);
+    return () => { window.removeEventListener(BEFORE_LIBRARY_SYNC, flush); window.removeEventListener(REMOTE_LIBRARY_UPDATE, received); flush(); };
+  }, []);
   const close = () => { setBusiness(form); onClose(); };
   const text = businessText(form);
   const filled = FIELDS.filter((f) => form[f.id]?.trim()).length;
   return (
-    <Drawer label="Your context" top={<span className="mono">saved in this browser only</span>} onClose={close}>
+    <Drawer label="Your context" top={<span className="mono">Your details</span>} onClose={close}>
       <form className="biz" onSubmit={(e) => { e.preventDefault(); close(); toast(filled ? "Saved. Your copies and downloads now include your context." : "Nothing saved yet."); }} data-testid="business-form">
         <h2 className="title" style={{ marginTop: 0 }}>Tell your AI once</h2>
+        <SaveHint subject="details" onNavigate={close} />
         <p className="small biz-lead">Save the facts you want your AI to use. They are added to your copied prompts and downloaded packs. Fill in what matters for your studies or work and leave the rest blank.</p>
         <p className="small"><a href="/templates/work-context.txt" download>Download a context template</a> for your goals, sources and checks. Keep full source files on your device and share them with your chosen AI tool when needed.</p>
         {FIELDS.map((f) => (

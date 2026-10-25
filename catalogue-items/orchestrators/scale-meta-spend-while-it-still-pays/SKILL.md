@@ -5,7 +5,7 @@ description: Use when your Meta ads are profitable and you want to spend more wi
 
 # Scale Meta spend while it still pays
 
-Give it your ad results and costs. Get your real return, a scaling ladder, a budget split and a delivery fix.
+Give it dated ad results, store totals and costs. Get reported-return checks, staged budget options, a proposed split and later delivery findings.
 
 This workflow chains skills from the library. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
@@ -43,14 +43,14 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Platform ROAS reality check.** Use the skill `platform-roas-reality-check`. Starts by finding the return that is real, so scaling is judged on the right number.
+1. **Platform ROAS reality check.** Use the skill `platform-roas-reality-check`. Compare reported metrics with the matching store-wide measure and record evidence and limits. Neither store totals, small spend nor a house trust score establishes causal channel return. Keep unsupported channel factors unknown and carry those limits into every later budget recommendation.
 
 Pause here: Write down the return you need to break even. Pick the campaign to scale.
 
 2. **Meta scaling campaign planner.** Use the skill `meta-scaling-campaign-planner`. Sets the scaling steps against the break-even you wrote down.
 3. **Next-dollar budget allocator.** Use the skill `next-dollar-budget-allocator`. Give it the plan from the steps before. Uses the scaling plan to decide how the extra budget is split.
 
-Pause here: Scale in the steps of the ladder for one to two weeks. Export the results.
+Pause here: After the owner authorizes the bounded budget plan, implement only the approved steps using the required account checks. Collect actual results for the predeclared observation window and sufficient evidence for the chosen review; one to two weeks alone does not guarantee a conclusion. Preserve stop and rollback rules. Without actual execution evidence and exports, return the plan and mark later delivery review not run.
 
 4. **Meta delivery troubleshooter.** Use the skill `meta-delivery-troubleshooter`. Finds why spend stalled or cost rose once the budget went up.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.

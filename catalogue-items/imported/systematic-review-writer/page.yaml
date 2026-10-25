@@ -2,10 +2,14 @@ thinking: high
 thinking_why: It must plan, screen and synthesise many sources with checked citations.
 new_slug: systematic-review-writer
 name: Systematic review writer
-summary: Name a research question. Get a reproducible search, screened papers, a PRISMA flow and a cited review.
+summary: Name a research question. Get a reproducible search, screened papers, a
+  PRISMA flow and a cited review.
 job: research-topics
 headline: Systematic review writer
-subhead: Give it a research question and your inclusion rules. It builds search strings, runs them across sources such as PubMed and arXiv, logs every query and screens the papers. You get a repeatable search, a screened paper list, a PRISMA flow diagram and a themed review with checked citations.
+subhead: Give it a research question and your inclusion rules. It builds search
+  strings, runs them across sources such as PubMed and arXiv, logs every query
+  and screens the papers. You get a repeatable search, a screened paper list, a
+  PRISMA flow diagram and a themed review with checked citations.
 explain: |
   A literature review you can defend: a recorded search, papers screened with clear rules, a PRISMA flow diagram, and a written synthesis whose citations have been checked. Reviewers can repeat your steps and get the same papers.
 
@@ -27,6 +31,8 @@ you_get:
   - A PRISMA flow diagram
   - A themed review with verified citations
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
   - It works best when your AI can search public paper databases.

@@ -1,0 +1,32 @@
+new_slug: suno-song-and-music-bed-prompt-writer
+name: Suno song and music bed prompt writer
+summary: Describe the music you need. Get a compact Suno style prompt with tempo, instruments, structure and mix.
+job: work-with-audio
+headline: Suno song and music bed prompt writer
+subhead: Describe the music you need. Get a compact Suno style prompt with tempo, instruments, structure and mix. Bring the brief and any files you want it to use.
+explain: |-
+  Use this when you need compact music style prompts and optional lyric structure. Choose song, instrumental, score or voice-over bed from the request. Identify intended mood, length and visual/audio role before selecting an arrangement.
+
+  Use one primary genre and one secondary genre, with an explicit BPM. These are creative starting points, not facts about permitted tool settings.
+when:
+  - You need compact music style prompts and optional lyric structure.
+  - You want a clear draft and checks from the material you already have.
+you_give:
+  - brief
+  - "Optional: script"
+you_get:
+  - document
+  - Missing inputs and steps that still need to run
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Read the brief
+    text: Choose song, instrumental, score or voice-over bed from the request. Identify intended mood, length and visual/audio role before selecting an arrangement.
+  - title: Build the result
+    text: "Write Style fields in order: GENRE, VOCALS, INSTRUMENTATION, STRUCTURE, MIX, MOOD/ATMOSPHERE, STYLE NOTES, optional effects."
+  - title: Check and hand off
+    text: Iteration changes only the requested musical dimension and necessary dependencies. Do not claim a track exists, guarantees timing or has licensed commercial rights without the relevant service evidence.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

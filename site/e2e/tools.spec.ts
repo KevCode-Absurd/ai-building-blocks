@@ -9,7 +9,8 @@ import { execFileSync } from "node:child_process";
 type Item = { id: string; unit: string; boards?: string[]; none?: string; row?: string; helper?: boolean };
 type AnyTool = { slug: string; headline: string; presets: { id: string; label: string }[]; sections?: { id: string; label: string; closed?: boolean }[]; inputs: Item[]; outputs: Item[] };
 type Example = { name: string; preset?: string; inputs: Record<string, number>; expect: Record<string, number | null>; says?: string };
-const DATA = JSON.parse(fs.readFileSync("public/mini-tools/tools.json", "utf8")) as { tools: AnyTool[]; examples: Record<string, Example[]> };
+// A frozen release must be tested against its own examples, not parallel source edits.
+const DATA = JSON.parse(fs.readFileSync(`${process.env.PW_ASSET_ROOT || "public"}/mini-tools/tools.json`, "utf8")) as { tools: AnyTool[]; examples: Record<string, Example[]> };
 const tools = DATA.tools;
 const EXAMPLES = DATA.examples;
 const presetOf = (t: AnyTool, id?: string) => t.presets.find((p) => p.id === id) ?? t.presets[0];
@@ -40,7 +41,8 @@ const fill = async (page: Page, id: string, v: string | number) => page.getByTes
 
 test("the Tools page lists every mini tool, and the header and footer lead to it", async ({ page }) => {
   await page.goto("/");
-  await page.locator(".nav").getByRole("link", { name: "Tools" }).click();
+  await page.getByTestId("menu-btn").click();
+  await page.getByRole("navigation", { name: "Sections", exact: true }).getByRole("link", { name: "Browser tools", exact: true }).click();
   await expect(page).toHaveURL(/\/tools$/);
   const index = page.getByTestId("tools-index");
   await expect(index.getByRole("heading", { level: 1 })).toHaveText("Work out the numbers. Get the small jobs done.");

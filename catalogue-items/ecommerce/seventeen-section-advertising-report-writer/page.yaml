@@ -1,0 +1,44 @@
+new_slug: seventeen-section-advertising-report-writer
+name: Seventeen-section advertising report writer
+summary: Build a seventeen-section ad report from dated results. Explain changes, supported wins, open issues and who owns the next steps.
+job: read-ad-results
+headline: Seventeen-section advertising report writer
+subhead: Share current and prior period ad exports, store results, targets and client context. Get a seventeen-section client report with owned next actions.
+explain: |-
+  Build a seventeen-section ad report from dated results. Explain changes, supported wins, open issues and who owns the next steps.
+
+  Share current and prior period ad exports, store results, targets and client context. Get a seventeen-section client report with owned next actions.
+when:
+  - You need a seventeen-section client report with owned next actions.
+  - You need seventeen-section advertising report writer for a specific task.
+  - You want the method's decisions and assumptions written down before acting.
+you_give:
+  - Current and prior period ad exports
+  - Store results
+  - Targets and client context
+you_get:
+  - A seventeen-section client report with owned next actions
+  - The sources used, missing inputs and assumptions
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Check the inputs
+    text: Confirm current and prior period ad exports, store results, targets and client context. Mark facts that are missing.
+  - title: How This Works
+    text: Follow the how this works section in the full method and keep its required fields and decision rules.
+  - title: Collect Data
+    text: Follow the collect data section in the full method and keep its required fields and decision rules.
+  - title: Calculate KPIs
+    text: Follow the calculate kpis section in the full method and keep its required fields and decision rules.
+  - title: The 17 Sections
+    text: Follow the the 17 sections section in the full method and keep its required fields and decision rules.
+  - title: Narrative Voice
+    text: Follow the narrative voice section in the full method and keep its required fields and decision rules.
+  - title: Executive Summary Template
+    text: Follow the executive summary template section in the full method and keep its required fields and decision rules.
+  - title: Review the result
+    text: Return a seventeen-section client report with owned next actions. Check facts, math and the decisions before any action.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

@@ -1,11 +1,11 @@
 // Original tool. All numbers shown are illustrative figures, not a real person’s results.
 export default {
   "slug": "training-budget",
-  "name": "Budget for training with staff time included",
-  "short": "Training budget",
-  "headline": "Budget for training with staff time included",
+  "name": "Training cost planner",
+  "short": "Training cost planner",
+  "headline": "Training cost planner",
   "summary": "Enter learners, course fees and study hours. See cash spending and the value of paid learning time.",
-  "question": "Budget for training with staff time included?",
+  "question": "What will this training cost in fees and paid staff time?",
   "category": "hr",
   "shelf": [
     "general"
@@ -41,7 +41,7 @@ export default {
       "max": 1000000,
       "step": 0.1,
       "integer": false,
-      "help": "Use the final fee including non-recoverable taxes.",
+      "help": "Add any taxes you cannot claim back to the fee.",
       "where": "The training provider quote.",
       "tools": []
     },

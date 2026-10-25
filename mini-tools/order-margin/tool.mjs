@@ -6,12 +6,12 @@
 
 export default {
   slug: "order-margin",
-  name: "Know what each order really leaves you",
+  name: "Order profit and ad cost limits",
   /** The plain name, used where the tool talks about itself. */
-  short: "Order margin and break-even",
-  headline: "Know what each order leaves you, and the most you can pay for it",
-  summary: "Type what an order brings in and what it costs. You get your profit per order and your break-even ad cost.",
-  question: "What's left from one order after goods, shipping and fees, and what can I pay to win a customer and still break even?",
+  short: "Order profit and ad cost limits",
+  headline: "Order profit and ad cost limits",
+  summary: "Enter order value, costs, fees, returns and ad spend. See profit per order and the most to spend before an order loses money.",
+  question: "What does one order leave, and what ad cost would make it lose money?",
   shelf: ["general", "ecommerce"],
   version: "1.0.0",
   updated: "2026-10-19",

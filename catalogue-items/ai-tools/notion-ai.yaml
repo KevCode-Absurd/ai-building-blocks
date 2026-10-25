@@ -2,7 +2,7 @@ slug: notion-ai
 name: Notion AI
 maker: Notion
 url: https://www.notion.com/product/ai
-promise: AI inside your notes, docs and tasks that finds answers and does the busywork.
+promise: "Find answers, draft pages and update records inside your Notion workspace."
 use_cases: [organise-work, research, meeting-notes]
 categories: [productivity, writing]
 what_it_does:
@@ -13,7 +13,7 @@ what_it_does:
   - Fills in database columns and writes formulas for you.
 benefits:
   - Find answers in your own notes, with links to the source.
-  - Turn a meeting into a page of next steps without typing it up.
+  - "Turn a recorded meeting into draft notes and next steps to check."
   - Keep notes, tasks and AI in one place instead of five apps.
   - Draft a first version of a doc from material you already have.
 best_for:

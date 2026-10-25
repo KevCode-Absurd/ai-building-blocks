@@ -7,12 +7,12 @@
 
 export default {
   slug: "agency-or-in-house",
-  name: "Know whether an agency or an in-house hire costs less for your marketing",
+  name: "Agency or employee cost comparison",
   /** The plain name, used where the tool talks about itself. */
-  short: "Agency or hire",
-  headline: "Know whether an agency or an in-house hire costs less for your marketing, and at what ad spend that flips",
-  summary: "Type the agency's retainer and share of ad spend, your ad spend, and the salary, tools and hiring cost of a hire. You get both totals, the gap and the ad spend where the answer flips.",
-  question: "Does an agency or an in-house hire cost less to run my marketing, and at what monthly ad spend does the agency become the dearer choice?",
+  short: "Agency or employee cost comparison",
+  headline: "Agency or employee cost comparison",
+  summary: "Enter agency fees, ad spend and hiring costs. Compare marketing costs over your chosen period and where the cheaper option changes.",
+  question: "At our ad spend, does an agency or an employee cost less?",
   shelf: ["general", "ecommerce"],
   version: "1.0.0",
   updated: "2026-10-21",

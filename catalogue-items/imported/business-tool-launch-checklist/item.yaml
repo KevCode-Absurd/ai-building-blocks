@@ -1,0 +1,36 @@
+slug: business-tool-launch-checklist
+name: Business tool launch checklist
+summary: Share your rollout plan. Get launch checks, open blockers and a clear decision record for your team.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: source_text
+    required: true
+  - type: brief
+    required: true
+outputs:
+  - type: document
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: erphq
+  repo: erphq/skills
+  path: templates/01-org-under-100/go-live-checklist
+  url: https://github.com/erphq/skills/tree/eaa34a70a3bcd8a82aad118d10fbb084cdc1363a/templates/01-org-under-100/go-live-checklist
+  licence: MIT
+  licence_file: LICENSE
+  commit: eaa34a70a3bcd8a82aad118d10fbb084cdc1363a
+  original_name: go-live-checklist
+  imported: 2026-10-23
+  skill_sha256: 221bc734c6547ec1d784dd4f062dd46ad7e5db6cac4153c24fed4d4ba2fe4ba8
+version: 1.0.0
+credits:
+  - title: go-live-checklist skill
+    by: erphq
+    url: https://github.com/erphq/skills/tree/eaa34a70a3bcd8a82aad118d10fbb084cdc1363a/templates/01-org-under-100/go-live-checklist
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

@@ -1,23 +1,19 @@
-name: "Website brand brain builder"
+name: Brand profile builder
 new_slug: website-brand-brain-builder
-summary: "Give it your website. Get eight brand files, with every fact sourced and every gap listed."
+summary: Share your website. Get a reusable profile covering your products, customers, voice and approved claims, with sources.
 job: brand-file
-thinking: high
-thinking_why: "It reads a lot of data or many customer words, and the numbers and quotes must be right."
-
-headline: "Website brand brain builder"
-subhead: Give it your website address, plus any brand material, reviews and results you have. It checks the basics with you once and asks only what's missing. You get eight files where every fact names its source, a list of gaps, and a slice for your next step.
-
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.
+headline: Brand profile builder
+subhead: Share your website and any product, customer or brand documents you already have. It builds eight reusable files covering what you sell, who buys, your voice and the claims you can support. Every fact has a source, and unanswered questions stay visible.
 explain: |
   Every time you ask an AI to write an ad, a page or an email, it starts from nothing. You paste the same facts again, it guesses the rest, and the guesses creep into your copy as prices you don't charge and claims you can't make.
 
   This skill builds your brand file once, for any online business. It reads your website, then sorts in what you already have, like product sheets, a style guide or old ads. You get one folder of eight files. They cover what you sell, who buys and why, what you can claim, how you sound and look, your market, and a log. Every fact carries a tag (confirmed, inferred, disputed or unknown). A claim with no proof on file is marked pending, even on your own site. Paste the start file into a Claude project, a ChatGPT project or a Gemini Gem, and add the other seven as files.
-
 when:
   - You use AI for marketing and keep pasting the same background into every chat.
   - You're briefing a new writer, designer or AI tool and want them working from facts you can stand behind.
   - Your facts are spread across your site, product sheets and old ads, and you can't tell which claims are proven.
-
 you_give:
   - Your website address, or your pages pasted in if it can't be read
   - Brand material you already have, like product sheets, a style guide or past ads, each with a label and date (optional)
@@ -29,15 +25,10 @@ you_get:
   - A tag on every fact, and every claim marked approved, pending or banned
   - A two-sentence diagnosis of your biggest gap, and a list of what's missing and who can answer it
   - A short slice for your next step, if you name one
-
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in. A tool that can read websites works best.
-  - Give it your website address. Add any brand material you have, each piece with a short label and when you got it, like "product page, read this week".
-  - Check the fact sheet it shows you and correct anything wrong. Then answer the questions you can and skip the rest.
-  - Say what comes next, for example "a designer is making image ads", to get a slice with only what that step needs.
-  - Read the MISSING lines and pending claims first. Nobody should use those in an ad until you find proof.
-  - Paste 00-start-here.md into your AI project's instructions and add the other files. When something changes, edit the file, add a line to log.md and upload it again.
-
+  - Supply the relevant brief and material, or name files in the authorized project.
+  - Ask for the stated result. Keep supplied facts, assumptions and missing evidence distinct.
+  - Review the result before authorizing repairs or external changes. Save the returned packet or authorize a file destination.
 how_it_works:
   - title: Reads the site and your material
     text: Reads the pages every business has, then the ones your kind of business has, then each labelled piece you gave it. If the site can't be read, it builds from your material.
@@ -55,7 +46,8 @@ how_it_works:
     text: Makes sure prices match across files and every claim sits in the claims list. Colours and fonts never share a line with a claim.
   - title: Cuts a slice
     text: Planning gets buyers and approved claims. Writing gets offer facts, claims and quotes. Image work gets the product's look, colours, fonts and the words allowed on the picture.
-
+  - title: Keeps one source of truth
+    text: Returns eight named sections in chat or verifies saved files. It logs sourced changes, keeps conflicts visible and selects only the context needed for the next task.
 output_shape: |
   brand-file/
     00-start-here.md     <the business in five lines, diagnosis,
@@ -79,7 +71,6 @@ output_shape: |
   MISSING: <what>, <who can answer>
 
   CHECKS MISSED: <one line each, or none>
-
 example:
   business: sprout
   input: |
@@ -171,7 +162,6 @@ example:
     MISSING: ad results with real numbers (whoever runs the ad account)
     (cut for length: the full run also had business.md, customers.md,
     voice-and-look.md, market.md, log.md, and how to load the folder)
-
 tweaks:
   - what: Your material and reviews
     how: Every labelled piece fills blanks the site leaves. Pasting 20 or more real reviews is the biggest upgrade, because it turns inferred buyer profiles into ones built on real words.
@@ -183,7 +173,6 @@ tweaks:
     how: Name the competitors you care about instead of letting it search. You'll get a sharper market file and fewer irrelevant names.
   - what: Results
     how: Paste an export with real numbers. Without numbers, every result in the log is graded "seen running" or "reported", which is honest but less useful.
-
 judge:
   - Every price in the files matches your price list exactly.
   - Every fact carries a tag, and every confirmed fact names its page, label or person.
@@ -191,31 +180,30 @@ judge:
   - Every customer quote is something a real customer wrote, with where it came from. Profiles without quotes say inferred.
   - Two sources that disagree are both recorded and tagged disputed, never quietly picked.
   - The slice holds only what the next step needs. An image slice has no review quotes and no pending claims.
-
 test:
   - Check the prices first. Compare three offers line by line with your price list; any rounding or a missing offer means it read an old or wrong page.
   - Give it a product sheet that disagrees with your site, such as an old price. Both versions should be there, tagged disputed.
   - Leave out your logo file. It should come back as a MISSING line, with no stand-in logo or font.
   - Start a fresh project, load only the folder, and ask for one ad. If your AI asks for something the folder should hold, fill that blank.
-
 improve:
   - Edit the page list in step 1 to name the pages that matter on your site, so it never skips them.
   - Add your banned claims and house rules to the 00-start-here.md row, so every tool that loads the folder follows them.
   - Keep log.md current. Add a dated line every time a price, offer or product changes, so later tasks don't use old facts.
   - Rerun it with new material when a product, price or offer changes, then rerun step 8 to catch facts that no longer match.
   - Pair it with a skill that interviews the founder to fill the gaps only they can answer. Then add one that turns the folder into a printable guide for designers.
-
 works_best_with:
   tools:
-    - {name: "Claude", why: "A project keeps the start file as its instructions and the other files as knowledge, even on a free account."}
-    - {name: "Gemini", why: "A Gem keeps the start file as instructions that Gemini follows every time you use it."}
-    - {name: "Shopify", why: "If you sell on Shopify, it exports your products and variants as a spreadsheet, so offers.md matches every variant."}
+    - name: Claude
+      why: A project keeps the start file as its instructions and the other files as knowledge, even on a free account.
+    - name: Gemini
+      why: A Gem keeps the start file as instructions that Gemini follows every time you use it.
+    - name: Shopify
+      why: If you sell on Shopify, it exports your products and variants as a spreadsheet, so offers.md matches every variant.
   inputs:
-    - "Names of 3 to 5 competitors you already watch, so the market map starts from real ones"
-    - "Your logo and font files by name, so the look file has no gaps"
-    - "Lab reports or test certificates, so more claims can be approved instead of pending"
-    - "Who on your team can answer questions about proof and offers, so each gap names a real person"
-
+    - Names of 3 to 5 competitors you already watch, so the market map starts from real ones
+    - Your logo and font files by name, so the look file has no gaps
+    - Lab reports or test certificates, so more claims can be approved instead of pending
+    - Who on your team can answer questions about proof and offers, so each gap names a real person
 terms:
   - term: Brand file
     meaning: One folder with your facts, offers, buyers, claims, voice and history, which any AI or person can read before working for you.

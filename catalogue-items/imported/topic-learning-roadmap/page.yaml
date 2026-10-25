@@ -2,13 +2,19 @@ thinking: medium
 thinking_why: It follows a set method with a few checks.
 new_slug: topic-learning-roadmap
 name: Topic learning roadmap
-summary: Share a topic and what you know. Get a reading path with clear milestones and checks for each step.
+summary: Share a topic and what you know. Get a reading path with clear
+  milestones and checks for each step.
 job: study-and-practice
 headline: Topic learning roadmap
-subhead: Bring a topic, your goal and any course notes. Get concepts in the order they build on each other, with readings and checkpoints. Suggested readings need web search to be verified.
+subhead: Bring a topic, your goal and any course notes. Get concepts in the
+  order they build on each other, with readings and checkpoints. Suggested
+  readings need web search to be verified.
 when:
   - You need to learn an unfamiliar topic for a course or work project.
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
-  - It works best when your AI can read your course material and search for readings, or mark readings it cannot verify.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
+  - It works best when your AI can read your course material and search for
+    readings, or mark readings it cannot verify.

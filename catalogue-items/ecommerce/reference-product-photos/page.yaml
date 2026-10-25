@@ -1,23 +1,19 @@
 new_slug: reference-product-photos
-name: "Reference-style product photo maker"
-summary: "Attach your product and a photo you like. Get a matching prompt and ranked pictures."
+name: Reference-style product photo maker
+summary: Attach your product and a photo you like. Get a matching prompt and ranked pictures.
 job: product-photos
-thinking: high
-thinking_why: "It has to keep the product, its label and every word on the picture exact."
-
-headline: "Reference-style product photo maker"
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.
+headline: Reference-style product photo maker
 subhead: Attach your product photos and one photo whose look you like. It reads that photo's light, camera and set, and moves them onto your real product. You get an image prompt, and pictures ranked for where they'll go if your chat makes them.
-
 explain: |
   Most small brands have three or four pack shots and need dozens of pictures. Asking an AI for "a nice lifestyle photo" gets a generic scene and often a redrawn label. Copying the look of a photo you like works much better, as long as you take its light and camera and never its product, brand or people.
 
   The skill reads your reference (the photo you're copying) the way a photographer would rebuild it: where each light sits, where the camera stands, the surfaces and props, how the frame is laid out, and the finish. Each line is kept, swapped for something from your product's real use, or dropped. The prompt names the role of every attached image, so the reference sets the look and your photo sets the product. Finished pictures are ranked with weights that change by use: a feed ad rewards stopping the scroll, a product page rewards room for words.
-
 when:
   - You have a few pack shots and need more photos for ads, emails or your product page.
   - You've seen a photo whose light and mood you want on your own product.
   - You want a bold camera look, such as blind shadows or tilt-shift, for a feed ad.
-
 you_give:
   - Real photos of the exact product and variant
   - One photo whose look you want to copy (your own, a past ad, or any photo you like), or the name of a camera look
@@ -30,14 +26,12 @@ you_get:
   - The finished image prompt, ready to paste
   - If your chat can make images, the pictures ranked with a score out of 100, and a reject list
   - If it can't, any of the four checks the prompt still missed
-
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Attach your real product photos and say which variant they show.
   - Attach the photo whose look you want, and say what the new picture is for, such as "email header, words added later".
   - Read the reading. If a line is wrong (the sun comes from the right, not the left), correct it before you use the prompt.
-  - "Make one picture first (ChatGPT and Gemini can make images; with Claude, paste the prompt into your image tool). Compare it with your real photo at full size before making more."
-
+  - Make one picture first (ChatGPT and Gemini can make images; with Claude, paste the prompt into your image tool). Compare it with your real photo at full size before making more.
 how_it_works:
   - title: Writes down your product
     text: Records exactly how your product looks, so it knows the shape, colours, printed words and how the product is used.
@@ -53,7 +47,6 @@ how_it_works:
     text: You check it at full size beside the real photo. A prompt that failed is rewritten, never resent unchanged.
   - title: Ranks the keepers
     text: Three gates first (right product, light that agrees, nothing added). Then five scores, weighted for a feed ad or for a page or email.
-
 output_shape: |
   READING
   Light:  <each source: clock position, height, size, hard or soft,
@@ -76,7 +69,6 @@ output_shape: |
   REJECTS: <file, gate failed>
   CHECKS MISSED (prompt only): <one line each, or none>
   MISSING: <...>
-
 example:
   business: sprout
   input: |
@@ -145,7 +137,6 @@ example:
     NEXT
     Make one 3:2 picture. Check the wordmark, the bear face, "28 Daily
     Packs" and the shadow direction at full size, then make the 4:5.
-
 tweaks:
   - what: The reference photo
     how: Choose by the problem the shot solves (a small object on a sunny windowsill), not by product category. A jar of sweets can suit a supplement pouch.
@@ -157,36 +148,33 @@ tweaks:
     how: Say "feed ad" or "product page". The ranking weights change, so a scroll-stopper wins in the feed and a picture with room for words wins on the page.
   - what: Fabric or room products
     how: For a blanket, rug or lamp, ask for the four room set-ups (in use, folded with a hand, pattern close-up, lifted from the box).
-
 judge:
   - All five parts of the reading are filled in. None says "unclear".
   - The prompt never mentions the reference's product, brand or words.
   - In the picture, the printed words match your real photo letter for letter.
   - The product's shadow falls the same way as the rest of the scene.
   - There's real empty space where words will go, and it survives in every size you asked for.
-
 test:
   - Use a photo of your own product that you already like as the reference. The reading should describe its light, camera height and lens the way you would. If it gets the light side wrong here, it will on new photos too.
   - Run the same reference twice. The two readings should agree line for line. If they don't, add one plain note with the reference, such as "sun from the left window, phone at table height".
   - Make one picture and put it beside your real pack shot at full size. Read the printed words letter for letter and check the shadow direction.
   - Rank the same pictures for a feed ad and for a product page. The order should change. If it doesn't, the pictures are too alike to need ranking.
-
 improve:
   - Add your brand's rules for showing the product to step 3 of the skill file. For Sprout that's "the daily pack is torn straight across the top; the big pouch is never shown torn".
   - Write your brand colours and the things you never show into "What you need" as fixed lines.
   - Change the weights in step 8 to suit your use. For email headers with long headlines, raise "room to build on" and lower "feels photographed" by the same amount.
   - Strike camera looks you'll never use from the table in step 6, and add the ones that worked for you.
   - Pair it with the skill that writes down exactly how your product looks (step 1 already calls it), and the one that makes an approved image bigger without changing anything.
-
 works_best_with:
   tools:
-    - {name: "Nano Banana", why: "Takes up to 3 style reference images apart from the product photos, so the look and the product stay separate."}
-    - {name: "GPT Image", why: "Keeps the product close to your photo while it takes the light from a second image."}
+    - name: Nano Banana
+      why: Takes up to 3 style reference images apart from the product photos, so the look and the product stay separate.
+    - name: GPT Image
+      why: Keeps the product close to your photo while it takes the light from a second image.
   inputs:
-    - "Two or three photos with the same look, so the reading picks what they share"
-    - "Your brand's past photos, so the finish stays in your colours"
-    - "A note of the looks you used lately, so this run picks a new one"
-
+    - Two or three photos with the same look, so the reading picks what they share
+    - Your brand's past photos, so the finish stays in your colours
+    - A note of the looks you used lately, so this run picks a new one
 terms:
   - term: Reference photo
     meaning: The photo you copy the look from (light, camera, colour). Its contents are never copied.

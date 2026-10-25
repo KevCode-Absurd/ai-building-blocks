@@ -1,0 +1,37 @@
+new_slug: meta-results-review-agent
+name: Meta results review agent
+summary: Share dated Meta results and business targets. Get ranked findings, evidence gaps, proposed next steps and a checkpoint for follow-up.
+job: set-up-ai
+headline: Meta results review agent
+subhead: Share dated Meta results and business targets. Get ranked findings, evidence gaps, proposed next steps and a checkpoint for follow-up.
+explain: |-
+  Share the inputs listed below. Get an evidence-backed meta findings report and follow-up checkpoint. Check the gaps before you act.
+
+  This is a portable agent procedure for one bounded run. It can be reused with a checkpoint, but it does not claim an installed worker or continuous autonomous runtime.
+when:
+  - You need an evidence-backed meta findings report and follow-up checkpoint.
+you_give:
+  - Scoped dated Meta exports, tracking evidence and approved contribution targets
+  - Authorized tools, owner, limits and any prior checkpoint
+you_get:
+  - An evidence-backed Meta findings report and follow-up checkpoint
+  - Evidence gaps, proposed actions and checks not run
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Step 1
+    text: "On first use configure the role from the brief and optional editable template: scope, owner, allowed tools, evidence sources, output contract, review limits and stop conditions. Resolve only material missing fields. A role file does not deploy a background process or grant access to another agent."
+  - title: Step 2
+    text: Run only the current bounded request or an explicitly authorized repeat. Load the last supplied checkpoint if present, compare its scope and evidence dates, then use the current request as authority. Set a maximum work/time/cost boundary before any paid or external operation.
+  - title: Step 3
+    text: Confirm the exact account, dates, timezone, currency, attribution and current objective. Read only authorized data or supplied exports. Validate raw and derived metric definitions before drawing conclusions.
+  - title: Step 4
+    text: Review tracking, campaign/ad-set/ad results, creative mix, delivery and change history against local baselines and approved contribution economics. Separate low sample, missing tracking and plausible explanations from confirmed faults.
+  - title: Step 5
+    text: Return prioritized findings with source IDs, calculations, uncertainty, recommended checks and proposed actions. A budget change, pause, new ad or client message remains a proposal unless the current user authorized that exact action.
+  - title: Step 6
+    text: End the run with a checkpoint containing scope, evidence dates/IDs, completed deliverables, proposed actions, unresolved facts, approvals and the next review trigger. Store it only in the destination the user requested; otherwise return it in the answer. A later run must revalidate stale facts and approvals. No promise of continuous monitoring or sending is implied.
+thinking: high
+thinking_why: It compares supplied evidence and follows a specific method.

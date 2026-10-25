@@ -8,12 +8,12 @@
 
 export default {
   slug: "returns-cost-calculator",
-  name: "See what returns really cost you",
+  name: "Product return cost calculator",
   /** The plain name, used where the tool talks about itself. */
-  short: "Returns cost calculator",
-  headline: "See what returns really cost you each month and on every order",
-  summary: "Type your orders, return rate and what a return costs to handle. You get the monthly cost, the cost per return and per order.",
-  question: "What do returns cost me a month and on every order, once I count return shipping, handling time and stock I can't resell?",
+  short: "Product return cost calculator",
+  headline: "Product return cost calculator",
+  summary: "Enter orders, return rate and handling costs. Estimate monthly return costs, cost per order and refunds shown separately.",
+  question: "What do product returns cost before refunds are shown separately?",
   shelf: ["ecommerce"],
   version: "1.0.0",
   updated: "2026-10-21",

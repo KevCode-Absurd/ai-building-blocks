@@ -1,0 +1,19 @@
+slug: meta-concept-diversity-test-planner
+name: Meta concept diversity test planner
+summary: Sort ads into thirteen concepts, find format and fatigue gaps, and plan three clear creative tests.
+category: ecommerce
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+    required: true
+uses: []
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

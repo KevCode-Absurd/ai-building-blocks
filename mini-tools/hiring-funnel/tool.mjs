@@ -1,11 +1,11 @@
 // Original tool. All numbers shown are illustrative figures, not a real person’s results.
 export default {
   "slug": "hiring-funnel",
-  "name": "Work backwards from hires to applicants needed",
-  "short": "Hiring funnel",
-  "headline": "Work backwards from hires to applicants needed",
-  "summary": "Set hires and your own stage conversion rates. Estimate offers, interviews and applications needed.",
-  "question": "Work backwards from hires to applicants needed?",
+  "name": "Hiring volume planner",
+  "short": "Hiring volume planner",
+  "headline": "Hiring volume planner",
+  "summary": "Set your hiring goal and the share passing each stage. Estimate applications, interviews and offers needed.",
+  "question": "How many applications, interviews and offers might our hiring goal need?",
   "category": "hr",
   "shelf": [
     "general"
@@ -97,7 +97,7 @@ export default {
       "unit": "count",
       "formula": "IF(hires = 0, 0, IF(AND(HAS(interviews), interview > 0), ROUNDUP(interviews / (interview / 100), 0), NA()))",
       "sum": "{interviews} ÷ interview share, rounded up = {=}",
-      "means": "A planning volume, rather than a guarantee of enough suitable people.",
+      "means": "A planning count. It cannot promise enough people with the skills you need.",
       "none": "Not enough data"
     }
   ],

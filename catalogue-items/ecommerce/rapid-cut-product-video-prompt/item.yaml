@@ -1,0 +1,23 @@
+slug: rapid-cut-product-video-prompt
+name: Rapid-cut product video prompt
+summary: Share a product and short spot idea. Get a timed product-only or surreal comedy prompt with a clear final hero shot.
+category: ecommerce
+type: skill
+role: make
+job: video
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: product_photos
+    required: false
+outputs:
+  - type: video_prompt
+    required: true
+  - type: shot_list
+    required: true
+uses: []
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

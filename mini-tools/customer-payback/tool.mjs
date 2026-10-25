@@ -10,12 +10,12 @@
 
 export default {
   slug: "customer-payback",
-  name: "Know how many months a new customer takes to pay back",
+  name: "New customer payback estimate",
   /** The plain name, used where the tool talks about itself. */
-  short: "Customer payback",
-  headline: "Know how many months a new customer takes to pay back what they cost to win",
-  summary: "Type what a customer costs to win, their order value, your margin and how often they buy. You get the months to pay back, and the most you can spend.",
-  question: "How many months until a new customer has paid back what it cost to win them, and what is the most I can spend to win one?",
+  short: "New customer payback estimate",
+  headline: "New customer payback estimate",
+  summary: "Enter customer cost, order value, margin and purchase rate. Estimate payback time and a spending limit for your chosen payback window.",
+  question: "When might a new customer cover the cost of gaining them?",
   shelf: ["general", "ecommerce"],
   version: "1.0.0",
   updated: "2026-10-21",
@@ -47,7 +47,7 @@ export default {
     },
     {
       id: "target", label: "Months you want to pay back within", unit: "count", example: 6, min: 0, max: 120, step: 1,
-      help: "How long you can wait to get your ad money back. Many small shops use 3 to 6 months.",
+      help: "Choose a payback window that fits your cash plan. This tool does not choose one for you.",
       where: "Your own limit: how long your cash can stay tied up.",
       tools: ["Your cash flow forecast", "Your accountant"],
     },

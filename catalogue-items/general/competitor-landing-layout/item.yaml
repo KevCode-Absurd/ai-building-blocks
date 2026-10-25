@@ -1,30 +1,40 @@
 slug: competitor-landing-layout
 renamed_from: competitor-landing-page-layout-planner
-name: "Competitor landing page layout planner"
-summary: "Attach a page screenshot and facts. Get its layout filled with your own words and facts."
+name: Competitor landing page layout planner
+summary: Attach a page screenshot and facts. Get its layout filled with your own words and facts.
 category: general
-boards: [ecommerce]
+boards:
+  - ecommerce
 type: skill
 role: make
 job: page
 level: advanced
 inputs:
-  - {type: reference_set, required: true}
-  - {type: brand_brain, required: true}
-  - {type: offer, required: false}
+  - type: reference_set
+    required: true
+  - type: brand_brain
+    required: true
+  - type: offer
+    required: false
 outputs:
-  - {type: page_layout_spec}
-  - {type: landing_page}
-uses: [ad-matched-landing-page-writer]
+  - type: page_layout_spec
+    required: true
+  - type: landing_page
+    required: true
+uses:
+  - ad-matched-landing-page-writer
 origin: rebuilt
-source_ids: [CES-020]
-version: 1.1.0
+source_ids:
+  - CES-020
+version: 1.2.0
 credits:
-  - {title: "Works Not Protected by Copyright (Circular 33)", by: "US Copyright Office", url: "https://www.copyright.gov/circs/circ33.pdf", used: "Why a section order can be borrowed but words and images can't"}
-  - {title: "Understanding Success Criterion 2.5.8: Target Size (Minimum)", by: "W3C", url: "https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html", used: "Tap sizes for the phone-first skeleton"}
-tested:
-  on: 2026-10-20
-  business: sprout
-  model: claude-opus-5-5
-  judge: claude-fable-5-1
-  result: pass
+  - title: Works Not Protected by Copyright (Circular 33)
+    by: US Copyright Office
+    url: https://www.copyright.gov/circs/circ33.pdf
+    used: Why a section order can be borrowed but words and images can't
+  - title: "Understanding Success Criterion 2.5.8: Target Size (Minimum)"
+    by: W3C
+    url: https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html
+    used: Tap sizes for the phone-first skeleton
+package_files: all
+example_pending: true

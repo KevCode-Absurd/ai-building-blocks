@@ -2,10 +2,14 @@ thinking: high
 thinking_why: It must spot subtle patterns and weigh evidence.
 new_slug: suspicious-money-trail-reviewer
 name: Suspicious money trail reviewer
-summary: Give it records that do not add up. Get red flags, money flow traces and what to check next.
+summary: Give it records that do not add up. Get red flags, money flow traces
+  and what to check next.
 job: money-and-investing
 headline: Suspicious money trail reviewer
-subhead: Give it the financial records and say what looks wrong. It runs a Benford's Law digit test, looks for vendor and staff links, round-trip payments and money flow traces. You get the red flags and a report outline with next steps. It does not prove fraud.
+subhead: Give it the financial records and say what looks wrong. It runs a
+  Benford's Law digit test, looks for vendor and staff links, round-trip
+  payments and money flow traces. You get the red flags and a report outline
+  with next steps. It does not prove fraud.
 explain: |
   A structured look at financial records that do not add up, with the red flags listed and the evidence worth following up. It points where to dig. It does not prove fraud.
 
@@ -27,5 +31,7 @@ you_get:
   - Money flow traces
   - A forensic report outline with next steps
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.

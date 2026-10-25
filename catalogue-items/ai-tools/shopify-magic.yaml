@@ -2,17 +2,17 @@ slug: shopify-magic
 name: Shopify Magic
 maker: Shopify
 url: https://www.shopify.com/magic
-promise: Product copy, photos and store tasks done inside your Shopify admin
+promise: "Draft product copy, edit photos and handle store tasks inside Shopify."
 use_cases: [write-copy, make-images, sell-and-support]
 categories: [marketing]
 what_it_does:
   - Writes product descriptions from a few details you give it.
-  - Upgrades phone photos into studio-style product shots.
+  - "Turns phone photos into drafts with a studio-style look."
   - Suggests themes and layouts, and edits your store design.
   - Writes ShopifyQL queries so you can ask questions of your sales data.
-  - Sets up discounts, collections, email campaigns and low-stock alerts through Sidekick.
+  - "Uses Sidekick to set up offers, product groups, emails and low-stock alerts."
 benefits:
-  - Fill a catalogue with product descriptions in one sitting.
+  - "Draft product descriptions for a catalogue, then check each product’s facts."
   - Get cleaner product photos without booking a shoot.
   - Ask your store a question and get an answer without learning a query language.
   - Finish routine admin jobs by typing what you want done.

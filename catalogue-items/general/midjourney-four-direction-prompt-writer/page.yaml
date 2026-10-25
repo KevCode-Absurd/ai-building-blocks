@@ -1,0 +1,32 @@
+new_slug: midjourney-four-direction-prompt-writer
+name: Midjourney image prompt writer
+summary: Share an image idea or reference. Get four distinct Midjourney prompts and optional directions to try next.
+job: make-images
+headline: Midjourney image prompt writer
+subhead: Share an image idea or reference. Get four distinct Midjourney prompts and optional directions to try next. Bring the brief and any files you want it to use.
+explain: |-
+  Use this when you need four distinct Midjourney visual directions. Read the actual idea and any visible references. State a concise interpretation, separating user-required details from chosen creative assumptions.
+
+  Write four prompts by default, honoring a different requested count. Preserve required subject, identity, product, setting and exclusions across all versions.
+when:
+  - You need four distinct Midjourney visual directions.
+  - You want a clear draft and checks from the material you already have.
+you_give:
+  - brief
+  - "Optional: reference set"
+you_get:
+  - image prompt
+  - Missing inputs and steps that still need to run
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Read the brief
+    text: Read the actual idea and any visible references. State a concise interpretation, separating user-required details from chosen creative assumptions.
+  - title: Build the result
+    text: Put the visually dominant subject/medium first, followed by literal action, physical context, camera/composition, lighting, material detail and finish.
+  - title: Check and hand off
+    text: For an existing prompt or image edit, change the requested dimension and preserve the rest. Offer four optional next directions without forcing a canned closing line.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

@@ -1,11 +1,11 @@
 // Original tool. All numbers shown are illustrative figures, not a real person’s results.
 export default {
   "slug": "layout-grid-calculator",
-  "name": "Get column widths that fit your layout",
-  "short": "Layout grid calculator",
-  "headline": "Get column widths that fit your layout",
+  "name": "Layout column calculator",
+  "short": "Layout column calculator",
+  "headline": "Layout column calculator",
   "summary": "Set the page width, margins, gaps and columns. See each column width and whether the grid fits.",
-  "question": "Get column widths that fit your layout?",
+  "question": "How wide can each column be within my page?",
   "category": "design",
   "shelf": [
     "general"

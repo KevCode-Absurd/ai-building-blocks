@@ -1,0 +1,28 @@
+new_slug: nonprofit-change-rollout-planner
+name: Plan a nonprofit change rollout
+summary: Plan a nonprofit change with care. Map who it affects, tell the truth and track what happens next.
+job: lead-people
+headline: Plan a nonprofit change rollout
+subhead: Bring an approved change and known gaps. Map staff, funders and clients, draft the message sequence and build a plan to follow through.
+explain: Bring an approved change and known gaps. Map staff, funders and clients, draft the message sequence and build a plan to follow through.
+when:
+  - You want to plan a nonprofit change rollout.
+you_give:
+  - Approved change, known decisions, remaining uncertainties and constraints
+  - Stakeholder groups, affected roles and existing promises
+you_get:
+  - Stakeholder impact map and message sequence
+  - Core narrative, FAQ and a 90-day follow-through plan
+how_to_use:
+  - Download the complete skill folder and add it to your AI tool, or copy the instructions into a chat.
+  - Provide the inputs listed here and ask your AI to follow the skill.
+  - Review the result and any missing facts before using it.
+how_it_works:
+  - title: Map the impact
+    text: Identify directly affected staff, board, funders, participants, partners and volunteers and plan appropriate advance notice.
+  - title: Build and sequence messages
+    text: State why the change is happening, what stays true and what remains unknown; give directly affected people personal notice first.
+  - title: Make the change stick
+    text: Track reversible early wins, training and policy updates, then schedule a debrief and measure what actually changed.
+thinking: medium
+thinking_why: It weighs your evidence and follows a specific method.

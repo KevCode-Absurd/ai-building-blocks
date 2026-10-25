@@ -7,27 +7,27 @@ role: orchestrate
 job: email
 level: intermediate
 inputs:
-  - {type: spreadsheet, required: true}
-  - {type: performance_sheet, required: true}
-  - {type: voc_reviews, required: false}
-  - {type: store_capture, required: false}
-  - {type: product_data, required: false}
-  - {type: brand_brain, required: false}
-  - {type: offer, required: false}
+  - { type: spreadsheet, required: true }
+  - { type: performance_sheet, required: true }
+  - { type: voc_reviews, required: false }
+  - { type: store_capture, required: false }
+  - { type: product_data, required: false }
+  - { type: brand_brain, required: false }
+  - { type: offer, required: false }
 outputs:
-  - {type: audit_report}
-  - {type: plan}
-  - {type: email_flow}
-uses: [subscription-churn-audit, billing-reminder-and-confirmation-writer, subscriber-retention-calendar, subscription-cancel-flow-builder, new-customer-onboarding-sequence-writer, subscription-page-take-rate-checker]
+  - { type: audit_report }
+  - { type: plan }
+  - { type: email_flow }
+uses: [ subscription-churn-audit, billing-reminder-and-confirmation-writer, subscriber-retention-calendar, subscription-cancel-flow-builder, new-customer-onboarding-sequence-writer, subscription-page-take-rate-checker ]
 steps:
-  - {uses: subscription-churn-audit, note: "Every month: charts cancels by days since the first order and scores four parts out of 100. Compared with last month's saved score."}
-  - {uses: billing-reminder-and-confirmation-writer, note: "Only when the reminder and receipt part scores lowest, or cancels spike around the billing reminder or first rebill: rewrites those emails."}
-  - {uses: subscriber-retention-calendar, note: "Only when the campaign cancels part scores lowest, meaning sends where cancels beat starts: sets send rules and a subscriber calendar."}
-  - {uses: subscription-cancel-flow-builder, note: "Only when the save rate part scores lowest or there is no cancel flow: builds one save per cancel reason and a failed-payment plan."}
-  - {uses: new-customer-onboarding-sequence-writer, note: "Only when most cancels fall in the first 14 days: writes the 14-day onboarding plan."}
-  - {uses: subscription-page-take-rate-checker, note: "Only when the value gap part scores lowest and the gap is large enough to chase: checks how well the page sells the subscription."}
+  - { uses: subscription-churn-audit, note: "Every month: charts cancels by days since the first order and scores four parts out of 100. Compared with last month's saved score." }
+  - { uses: billing-reminder-and-confirmation-writer, note: "Only when the reminder and receipt part scores lowest, or cancels spike around the billing reminder or first rebill: rewrites those emails." }
+  - { uses: subscriber-retention-calendar, note: "Only when the campaign cancels part scores lowest, meaning sends where cancels beat starts: sets send rules and a subscriber calendar." }
+  - { uses: subscription-cancel-flow-builder, note: "Only when the save rate part scores lowest or there is no cancel flow: builds one save per cancel reason and a failed-payment plan." }
+  - { uses: new-customer-onboarding-sequence-writer, note: "Only when most cancels fall in the first 14 days: writes the 14-day onboarding plan." }
+  - { uses: subscription-page-take-rate-checker, note: "Only when the value gap part scores lowest and the gap is large enough to chase: checks how well the page sells the subscription." }
 schedule: "On the second working day of each month, after last month's cancels are exported"
-asks_before: [sending any email or text to subscribers, turning a flow or reminder on or off, changing subscription settings or the cancel portal, changing prices, discounts or offers, refunding, pausing or cancelling any subscriber]
+asks_before: [ sending any email or text to subscribers, turning a flow or reminder on or off, changing subscription settings or the cancel portal, changing prices, discounts or offers, refunding, pausing or cancelling any subscriber ]
 origin: own
-version: 1.0.0
+version: 1.0.1
 example_pending: true

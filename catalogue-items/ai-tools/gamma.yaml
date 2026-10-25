@@ -2,7 +2,7 @@ slug: gamma
 name: Gamma
 maker: Gamma
 url: https://gamma.app
-promise: A finished deck, document or web page from a prompt or an outline.
+promise: "Turn a prompt, outline or file into a deck, document or web page draft."
 use_cases: [slides-and-docs]
 categories: [productivity, design]
 what_it_does:
@@ -12,7 +12,7 @@ what_it_does:
   - Adds AI images and rewrites text when you ask.
   - Exports your work and shares it through a link.
 benefits:
-  - Go from a rough outline to a full deck in one sitting.
+  - "Turn a rough outline into a deck draft to review."
   - Reuse one set of notes as a deck, a document and a page.
   - Change the look of a whole deck without moving boxes by hand.
   - Share a link people can open without installing anything.

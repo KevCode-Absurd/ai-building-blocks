@@ -1,11 +1,11 @@
 // Original tool. All numbers shown are illustrative figures, not a real person’s results.
 export default {
   "slug": "commute-cost",
-  "name": "See what your commute adds up to each month",
+  "name": "Commute time and cost",
   "short": "Commute time and cost",
-  "headline": "See what your commute adds up to each month",
-  "summary": "Enter office days, return travel time and daily cost. Compare the total with fewer office days.",
-  "question": "See what your commute adds up to each month?",
+  "headline": "Commute time and cost",
+  "summary": "Enter office days, return travel time and daily cost. Compare the monthly total with fewer office days.",
+  "question": "How much time and travel cost would fewer office days save?",
   "category": "personal",
   "shelf": [
     "general"

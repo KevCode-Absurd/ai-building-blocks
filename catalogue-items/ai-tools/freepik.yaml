@@ -2,18 +2,18 @@ slug: freepik
 name: Freepik
 maker: Freepik
 url: https://www.freepik.com
-promise: Stock graphics and AI image, video and upscaling in one account.
+promise: "Find stock graphics and create, edit or enlarge AI images and video clips."
 use_cases: [make-images, design, make-video]
 categories: [image, design, video]
 what_it_does:
   - Makes images from a written description, with many models to pick from.
   - Makes video clips from text or a still image.
-  - Makes small images bigger and sharper with its upscaler.
+  - "Enlarges images and adds apparent detail with its upscaler."
   - Edits images, including background and object changes.
   - Offers stock photos, vectors and templates alongside the AI.
 benefits:
   - Find a stock image, or make one, without switching accounts.
-  - Sharpen a low-quality image before it goes into an ad.
+  - "Enlarge an image for a draft, then check its details before using it."
   - Compare several models on the same idea.
 best_for:
   - Marketers and designers who already use stock graphics.

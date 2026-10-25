@@ -1,0 +1,45 @@
+new_slug: trigger-to-payoff-ad-structure-planner
+name: Trigger-to-payoff ad structure planner
+summary: Build an ad around trigger, emotion, evidence and payoff. Place each part in a video timeline or image layout.
+job: plan-ad-tests
+headline: Trigger-to-payoff ad structure planner
+subhead: Share buyer trigger, product facts, approved proof, format and length. Get a four-part ad structure with timing or layout notes.
+explain: |-
+  Build an ad around trigger, emotion, evidence and payoff. Place each part in a video timeline or image layout.
+
+  Share buyer trigger, product facts, approved proof, format and length. Get a four-part ad structure with timing or layout notes.
+when:
+  - You need a four-part ad structure with timing or layout notes.
+  - You need trigger-to-payoff ad structure planner for a specific task.
+  - You want the method's decisions and assumptions written down before acting.
+you_give:
+  - Buyer trigger
+  - Product facts
+  - Approved proof
+  - Format and length
+you_get:
+  - A four-part ad structure with timing or layout notes
+  - The sources used, missing inputs and assumptions
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Check the inputs
+    text: Confirm buyer trigger, product facts, approved proof, format and length. Mark facts that are missing.
+  - title: Collect Inputs
+    text: Follow the collect inputs section in the full method and keep its required fields and decision rules.
+  - title: Work Through Each Element
+    text: Follow the work through each element section in the full method and keep its required fields and decision rules.
+  - title: Ad Structure By TEEP Element
+    text: Follow the ad structure by teep element section in the full method and keep its required fields and decision rules.
+  - title: Deliver the Brief
+    text: Follow the deliver the brief section in the full method and keep its required fields and decision rules.
+  - title: "TEEP Ad Brief: [concept]"
+    text: "Follow the teep ad brief: [concept] section in the full method and keep its required fields and decision rules."
+  - title: Rules
+    text: Follow the rules section in the full method and keep its required fields and decision rules.
+  - title: Review the result
+    text: Return a four-part ad structure with timing or layout notes. Check facts, math and the decisions before any action.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

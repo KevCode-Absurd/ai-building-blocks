@@ -1,0 +1,28 @@
+new_slug: industrial-crt-image-direction
+name: Plan an archival CRT image
+summary: Write an image prompt with dark light, soft CRT texture and clear subject details.
+job: make-images
+headline: Plan an archival CRT image
+subhead: Bring a subject and reference image. Choose the capture view, then get a prompt and checks.
+explain: Bring a subject and reference image. Choose the capture view, then get a prompt and checks.
+when:
+  - You want to plan an archival CRT image.
+you_give:
+  - The subject, essential identity details and intended image use.
+  - Any reference pixels and the chosen CRT-display or physical-camera view.
+you_get:
+  - A specific still-image prompt with composition, practical light and analog signal treatment.
+  - A subject-identity and visual-quality checklist; generation remains dependent on an available image tool.
+how_to_use:
+  - Download the complete skill folder and add it to your AI tool, or copy the instructions into a chat.
+  - Provide the inputs listed here and ask your AI to follow the skill.
+  - Review the result and any missing facts before using it.
+how_it_works:
+  - title: Choose the capture layer
+    text: Distinguish an image shown on a CRT from a real scene recorded by an analog camera.
+  - title: Build the frame
+    text: Name the subject, geometry, dominant practical light, negative space and recording defects.
+  - title: Review identity and clarity
+    text: Check anatomy, object geometry and necessary labels before assessing the archival treatment.
+thinking: medium
+thinking_why: It weighs your evidence and follows a specific method.

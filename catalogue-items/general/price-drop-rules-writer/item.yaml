@@ -7,13 +7,13 @@ role: make
 job: ops
 level: intermediate
 inputs:
-  - {type: plan, required: true}
-  - {type: audit_report, required: false}
-  - {type: question, required: false}
+  - { type: plan, required: true }
+  - { type: audit_report, required: false }
+  - { type: question, required: false }
 outputs:
-  - {type: plan}
+  - { type: plan }
 origin: rebuilt
-version: 1.0.0
-minds: [warren-buffett, charlie-munger, benjamin-graham]
+version: 1.0.1
+minds: [ warren-buffett, charlie-munger, benjamin-graham ]
 credits:
-  - {title: "The Warren Buffett Way, Second Edition (2005)", by: "Robert G. Hagstrom", used: "The temperament test of whether you could watch holdings fall by half without panic, Mr. Market as a partner whose mood you may ignore, looking at prices less often, and the common mind traps of loss pain, overreaction to recent news, overconfidence and mental accounts"}
+  - { title: "The Warren Buffett Way, Second Edition (2005)", by: "Robert G. Hagstrom", used: "The temperament test of whether you could watch holdings fall by half without panic, Mr. Market as a partner whose mood you may ignore, looking at prices less often, and the common mind traps of loss pain, overreaction to recent news, overconfidence and mental accounts" }

@@ -2,10 +2,14 @@ thinking: low
 thinking_why: It spins a set list of angles from one idea.
 new_slug: ad-angle-multiplier
 name: Ad angle multiplier
-summary: Give it one winning ad idea. Get 10 to 15 different angles with hooks and a test order.
+summary: Give it one winning ad idea. Get 10 to 15 different angles with hooks
+  and a test order.
 job: plan-ad-tests
 headline: Ad angle multiplier
-subhead: "Give it your best ad or core idea, the product, the offer and the audience. It works from six directions: pain, desire, proof, identity, contrarian and urgency. You get 10 to 15 clearly different angles, a hook for each, the type of angle it is and a suggested order to test them."
+subhead: "Give it your best ad or core idea, the product, the offer and the
+  audience. It works from six directions: pain, desire, proof, identity,
+  contrarian and urgency. You get 10 to 15 clearly different angles, a hook for
+  each, the type of angle it is and a suggested order to test them."
 explain: |
   One ad idea that already works turns into 10 to 15 clearly different angles, each with a hook, so you can test them side by side instead of running small edits of the same ad.
 
@@ -26,5 +30,7 @@ you_get:
   - The type of angle each one is
   - A suggested order to test
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.

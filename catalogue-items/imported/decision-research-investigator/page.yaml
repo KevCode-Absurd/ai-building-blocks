@@ -2,10 +2,15 @@ thinking: high
 thinking_why: It runs many searches and weighs conflicting sources.
 new_slug: decision-research-investigator
 name: Decision research investigator
-summary: Ask a high-stakes question. Get a sourced report, scored sources and the counter-arguments.
+summary: Ask a high-stakes question. Get a sourced report, scored sources and
+  the counter-arguments.
 job: think-and-decide
 headline: Decision research investigator
-subhead: Ask the question, say what decision hangs on it and how deep to go. It restates the question as hypotheses that could be proven wrong, searches many channels and rates every source for credibility, recency and bias. You get a report with counter-arguments, scored source files, a citation check and a refresh list.
+subhead: Ask the question, say what decision hangs on it and how deep to go. It
+  restates the question as hypotheses that could be proven wrong, searches many
+  channels and rates every source for credibility, recency and bias. You get a
+  report with counter-arguments, scored source files, a citation check and a
+  refresh list.
 explain: |
   For questions where a wrong answer costs more than the extra hours. You get a research folder you can reopen next month: a plan, scored sources, a report, and a list of what to refresh.
 
@@ -27,6 +32,8 @@ you_get:
   - Citation check
   - Refresh list for later
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
   - It works best when your AI can search the web and run helper agents.

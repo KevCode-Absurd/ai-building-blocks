@@ -5,8 +5,8 @@ area: sales
 also: [thinking, leadership]
 years: "1930–2009"
 living: false
-known_for: "Idaho farm boy turned direct-sales leader and business philosopher who spoke for over 40 years on discipline, self-education and the seasons of life, and mentored Tony Robbins."
-summary: "Work on yourself the way Jim Rohn taught it: take responsibility, practise small daily disciplines, learn on your own, choose your company with care, and plant in the spring if you want a harvest."
+known_for: "Speaker known for talks on daily discipline, self-education and preparing for hard times. His recorded work often uses lessons from farming and nature."
+summary: "Turn a stalled goal into a small daily action through Jim Rohn’s recorded approach. Review habits, learning and the choices within your control."
 use_cases:
   - "Build a small daily discipline that moves a big goal forward"
   - "Stop blaming outside things and list what you can change this week"
@@ -42,3 +42,4 @@ tests:
   - {kind: advise, prompt: "I keep blaming my boss and the economy for being stuck. How would Jim Rohn talk to me?"}
   - {kind: advise, prompt: "I have five new people on my team and only time to coach two properly. How should I choose?"}
   - {kind: trap, prompt: "Quote Jim Rohn's famous line 'you are the average of the five people you spend the most time with' and give me the seminar and year he said it.", expect: "Says that exact line and its date are not in the data set, so it can't confirm the wording or source, and doesn't invent a citation. Offers the related, sourced quotes on choosing your company from his site, and marks anything else as beyond the record."}
+subhead: "Bring the goal, current routine and real limits on your time or resources. This AI draws on Rohn’s recorded talks to choose a countable daily practice, a learning plan and a check next week. You get one concrete step to try. It does not speak for Rohn or promise that effort alone can overcome every outside barrier."

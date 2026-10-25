@@ -2,10 +2,15 @@ thinking: medium
 thinking_why: It scores many accounts against a set of rules.
 new_slug: account-tier-ranker
 name: Account tier ranker
-summary: Give it your accounts. Get a fit score, an activity score and a tier for each, with reasons.
+summary: Give it your accounts. Get a fit score, an activity score and a tier
+  for each, with reasons.
 job: sell-and-negotiate
 headline: Account tier ranker
-subhead: Give it a list of accounts or your whole book, your ideal customer profile and a connected CRM. It scores each account for fit from 0 to 10 using size, industry and tools, then scores recent activity. You get both scores, a tier for each account, the reason behind each score and a suggested move per tier.
+subhead: Give it a list of accounts or your whole book, your ideal customer
+  profile and a connected CRM. It scores each account for fit from 0 to 10 using
+  size, industry and tools, then scores recent activity. You get both scores, a
+  tier for each account, the reason behind each score and a suggested move per
+  tier.
 explain: |
   A long list of accounts becomes a short list of where your time pays off most. Each account is scored for fit and for activity, with a plain reason.
 
@@ -26,6 +31,8 @@ you_get:
   - A reason behind each score
   - A suggested move per tier
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
   - It works best when your AI can read your CRM, email and calendar.

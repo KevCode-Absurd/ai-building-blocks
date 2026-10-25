@@ -1,0 +1,7 @@
+[
+  {"id":"P-01","thread":"U-1","date":"2026-06-10","text":"The new dashboard loads faster for my team.","kind":"user-reported experience","theme":"performance benefit"},
+  {"id":"P-02","thread":"U-1","date":"2026-06-11","text":"Our export script broke after the change.","kind":"user-reported experience","theme":"migration compatibility"},
+  {"id":"P-03","thread":"U-1","date":"2026-06-12","text":"Same here; we had to update the script.","kind":"user-reported experience","theme":"migration compatibility"},
+  {"id":"P-04","thread":"U-2","date":"2026-06-16","text":"The release note says the old endpoint retires in September.","kind":"commenter's unverified statement about a release note","theme":"claimed September retirement; unverified"},
+  {"id":"P-05","thread":"U-2","date":"2026-06-18","text":"I hope support keeps the old format for a while.","kind":"opinion / expectation","theme":"compatibility concern"}
+]

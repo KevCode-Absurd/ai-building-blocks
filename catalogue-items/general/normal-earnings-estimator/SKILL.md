@@ -1,11 +1,11 @@
 ---
 name: normal-earnings-estimator
-description: Use when you have a company's cleaned earnings and a view of how reliable the record is, and need one figure for what the business earns in an ordinary year before you value it. Averages five to ten years, shows loss years both ways, refuses to use the latest year alone unless three conditions hold, caps the result at what a normal year has already produced, and returns low, normal and high earnings per share. A method of analysis, not financial advice; never says buy or sell. Ends with any checks it missed.
+description: Use when you have a company's cleaned earnings and a view of how reliable the record is, and need one figure for what the business earns in an ordinary year before you value it. Averages five to ten years, shows loss years both ways, refuses to use the latest year alone unless three conditions hold, caps the result at what a normal year has already produced, and returns candidate estimates with a range only when the source and order checks pass. A method of analysis, not financial advice; never says buy or sell. Ends with any checks it missed.
 ---
 
 # Normal earnings estimator
 
-A value built on last year's profit moves with the weather. A value built on the profit of an ordinary year moves with the business. This skill finds that ordinary-year figure, and shows it as a range, because the honest answer is a range. It is a method of analysis, not personal financial advice, and it never tells you to buy or sell a named security.
+A value built on last year's profit moves with the weather. A value built on the profit of an ordinary year moves with the business. This skill calculates candidate ordinary-year earnings estimates. It returns a range only when the source checks and LOW <= NORMAL <= HIGH order test pass; contradictory candidates remain unresolved. It is a method of analysis, not personal financial advice, and it never tells you to buy or sell a named security.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -41,16 +41,18 @@ How to start:
    - **LOW:** the lower of the all-in average and the worst run of three years in a row.
    - **NORMAL:** the average with loss years at zero, or the all-in average if there were no loss years. If the rating was PARTIAL GUIDE, use the all-in average.
    - **HIGH:** the best run of three years in a row that were not boom years, never above the best normal year.
-   Give each as earnings per share and in total. Give one sentence of reason for each.
-8. **Say how sure you are.** For a GUIDE record, the range may be narrow. For a PARTIAL GUIDE, state that the range is wide and the next step should treat it that way.
-9. **Hand off.** Pass the range, the share count and every caveat to the next step, "Earnings value range builder".
+   Give each candidate as earnings per share and in total, with its calculation and one sentence of reason.
+
+   **Platform validation guard (an adaptation, not a claim about the credited book):** Check LOW <= NORMAL <= HIGH before calling the figures a range. If they cross, write NO VALID ORDERED RANGE. Report each candidate statistic and the conflict separately, then stop the range conclusion and valuation handoff. Do not sort, swap labels, clamp one estimate to another or silently change the window to force agreement. Request revised evidence or explicitly reviewed assumptions about losses, ordinary years, the window and reliability. Recalculate only after that basis is resolved.
+8. **Describe the limits.** Give a range only after its source and order checks pass. A GUIDE rating does not repair contradictory candidates. State how loss treatment, year selection and reliability affect the estimate; these labels are not statistical confidence bands. If order failed, say no valid range is available.
+9. **Hand off.** Pass a validated range, its share count and caveats to "Earnings value range builder" only after the source and order checks pass. Otherwise hand back the candidate statistics and failed-check evidence as unresolved analysis. Do not feed inconsistent candidates into valuation as low, normal and high cases.
 10. **Check it.** Go through "Check before you hand it back" and fix what fails. Under CHECKS MISSED write one line per check missed, or "none".
 
 **Worked sum (made-up numbers).** A packaging firm earned per share over seven years: 1.2, 1.5, 0.4, -0.3, 1.1, 1.4, 1.6. Straight average 0.99. Loss year at zero: 1.03. The worst run of three years in a row averages 0.40. The best run averages 1.37. The latest year, 1.6, is not used alone because nothing shows it was an ordinary year for business or that the industry supports more growth. Range: LOW 0.40, NORMAL 1.03, HIGH 1.37.
 
 ## What you hand back
 
-The window and the share count used. Both averages. Whether the latest year was used and why not. The low, normal and high earnings per share and in total, each with its reason. A line on how sure the range is. `MISSING:` lines. A line saying this is a method, not advice. Last, CHECKS MISSED.
+The window and the share count used. Both averages. Whether the latest year was used and why not. The candidate earnings per share and in total, each with its reason. RANGE ORDER: PASS or FAIL with the actual inequality. A validated range and its limits only after the source and order checks pass; otherwise NO VALID ORDERED RANGE with no valuation conclusion. `MISSING:` lines. A line saying this is a method, not advice. Last, CHECKS MISSED.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
@@ -67,13 +69,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The reliability rating was applied first.
 - Per-share figures use one stated share count.
 - Both averages are shown.
+- RANGE ORDER shows the actual inequality. A failed order remains a failed check with no approved range, confidence band or valuation handoff.
 - The latest year was used alone only when all three conditions held.
 - No trend was projected past what a normal year has produced.
 - Nothing was invented and no security was named as one to buy or sell.
 
 ## If something is missing
 
-Write `MISSING: <what> for <step>`. With fewer than five years, say the range is weak and widen it. Never fill a missing year.
+Write `MISSING: <what> for <step>`. With fewer than five required years, mark the historical input incomplete and do not invent a wider range. Return supported descriptive figures and the missing years without an approved range. Never fill a missing year.
 
 ## Avoid
 

@@ -57,7 +57,7 @@ code { font: 400 0.88em var(--mono); background: var(--raise); border-radius: 4p
 .btn:hover:not(:disabled) { transform: translateY(-2px); }
 .btn:hover:not(:disabled) svg { transform: translateX(3px); }
 .btn:active { transform: scale(0.98); }
-.btn-primary { background: var(--btn); color: var(--btn-text); }
+.btn-primary { background: var(--btn); color: var(--btn-text); transition: box-shadow .15s, opacity .15s, transform .15s; }
 .btn-primary:hover:not(:disabled) { background: var(--bg); color: var(--text); box-shadow: inset 0 0 0 1.5px var(--text), 3px 3px 0 var(--text); }
 .btn-dark { background: var(--btn-2); color: var(--text); }
 .btn-dark:hover:not(:disabled) { background: var(--text); color: var(--bg); box-shadow: 3px 3px 0 var(--line-2); }
@@ -164,7 +164,7 @@ code { font: 400 0.88em var(--mono); background: var(--raise); border-radius: 4p
 .kind-tabs .count { margin-left: 7px; font: 400 12px var(--mono); color: var(--faint); }
 .filter-row .select { flex: none; }
 .kind { font: 600 11.5px var(--mono); color: var(--text); text-transform: lowercase; }
-.result-line { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 14px; font-size: 13.5px; color: var(--faint); }
+.result-line { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px 16px; margin: 16px 0; font-size: 13.5px; color: var(--faint); }
 .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 270px), 1fr)); gap: 18px; }
 .card { min-width: 0; overflow-wrap: anywhere; display: flex; flex-direction: column; text-align: left; background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: clamp(18px, 2vw, 24px); min-height: 196px; transition: transform 0.12s, box-shadow 0.12s, border-color 0.12s; color: var(--text); }
 .card:hover { transform: translate(-3px, -3px); box-shadow: var(--hard); border-color: var(--text); }
@@ -179,15 +179,14 @@ code { font: 400 0.88em var(--mono); background: var(--raise); border-radius: 4p
 .card .peek { display: block; margin: 0 0 18px; padding: 12px 14px; border: 1px dashed var(--line-2); border-radius: 6px; background: var(--bg-2); font: 400 14px/1.6 var(--sans); color: var(--text-2); }
 .card .view { margin-top: auto; display: inline-flex; align-items: center; gap: 6px; font: 500 12.5px var(--mono); color: var(--text); }
 .card:hover .view { text-decoration: underline; text-underline-offset: 3px; }
-/* Line cards up across a row: titles take two lines' room, and the description box fills the rest of the card. */
-.card .peek { flex: 1 0 auto; }
-@media (min-width: 600px) { .card .nm { min-height: 2.6em; } }
-/* Share each row's header, title, summary and action tracks without clipping text. */
-@supports (grid-template-rows: subgrid) {
-  .grid > .card[data-testid="block-card"] { display: grid; grid-template-rows: subgrid; grid-row: span 4; row-gap: 0; }
-  .grid > .card[data-testid="block-card"] .nm { min-height: 0; }
-  .grid > .card[data-testid="block-card"] .view { align-self: end; }
-}
+/* Cards use their own content height. Optional requirements never create implicit grid rows. */
+.card[data-testid="block-card"] { display: flex; flex-direction: column; gap: 14px; }
+.card[data-testid="block-card"] > .nm { margin: 0; min-height: 0; }
+.card[data-testid="block-card"] > .peek { flex: none; margin: 0; }
+.card[data-testid="block-card"] .card-footer { display: flex; flex-direction: column; gap: 10px; margin-top: auto; padding-top: 2px; }
+.card[data-testid="block-card"] .card-footer > .meta { margin: 0; row-gap: 6px; }
+.card[data-testid="block-card"] .card-footer > .requirement { display: block; margin: 0; line-height: 1.5; }
+.card[data-testid="block-card"] .card-footer > .view { margin: 0; line-height: 1.5; }
 @media (prefers-reduced-motion: reduce) { .card:hover, .job:hover:not(:disabled), .btn:hover:not(:disabled), .btn:hover:not(:disabled) svg { transform: none; } }
 .more { display: flex; justify-content: center; margin-top: 28px; }
 .empty { padding: 56px 24px; text-align: center; color: var(--muted); border: 1px dashed var(--line-2); border-radius: 10px; }
@@ -274,7 +273,7 @@ code { font: 400 0.88em var(--mono); background: var(--raise); border-radius: 4p
 .sub-h { font-size: 16px; font-weight: 600; letter-spacing: -0.01em; margin: 32px 0 12px; }
 .bp-sec .sub-h:first-of-type { margin-top: 8px; }
 .composer { margin-top: 28px; border: 1px solid var(--text); border-radius: 8px; background: var(--panel); box-shadow: var(--hard); overflow: hidden; }
-.composer label { display: block; padding: 10px 14px; font: 500 12px var(--mono); border-bottom: 1px solid var(--text); background: repeating-linear-gradient(180deg, var(--panel) 0 2px, var(--line-2) 2px 3px); }
+.composer > label { display: block; padding: 10px 14px; font: 500 12px var(--mono); border-bottom: 1px solid var(--text); background: repeating-linear-gradient(180deg, var(--panel) 0 2px, var(--line-2) 2px 3px); }
 .composer textarea { display: block; width: 100%; min-height: 150px; resize: vertical; border: 0; outline: 0; padding: 14px 16px; background: var(--panel); color: var(--text); font: 400 13px/1.65 var(--mono); }
 .composer textarea::placeholder { color: var(--faint); }
 .composer-bar { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding: 10px 12px 10px 16px; border-top: 1px solid var(--line); background: var(--bg-2); }
@@ -371,6 +370,7 @@ code { font: 400 0.88em var(--mono); background: var(--raise); border-radius: 4p
 .tpl:hover { border-color: var(--text); }
 .tpl small { display: block; color: var(--faint); font: 400 11px var(--mono); }
 .stage { position: relative; min-height: 0; background: var(--bg); }
+.builder .stage > .task-file-transfer { padding: 20px; margin-top: 0; }
 .stage-bar { position: absolute; z-index: 5; top: 12px; left: 12px; right: 12px; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; pointer-events: none; }
 .stage-bar > * { pointer-events: auto; }
 .stage-bar .spacer { flex: 1; }
@@ -467,6 +467,7 @@ input[type="checkbox"] { accent-color: var(--text); width: 15px; height: 15px; }
 
 /* Toast */
 .toast { position: fixed; z-index: 90; left: 50%; bottom: 24px; transform: translateX(-50%); background: var(--btn); color: var(--btn-text); padding: 11px 18px; border-radius: 999px; font: 400 13px var(--mono); box-shadow: var(--shadow); animation: fade 0.2s ease; max-width: calc(100vw - 32px); text-align: center; }
+@media (max-width: 640px) { .toast[role="status"] { left: 16px; right: 76px; bottom: max(16px, env(safe-area-inset-bottom)); transform: none; width: auto; max-width: calc(100vw - 92px); border-radius: 12px; overflow-wrap: anywhere; } }
 
 /* Add to a workflow: a pop-up over the skill page */
 .atf { width: min(620px, calc(100vw - 32px)); max-height: min(86vh, 860px); padding: 0; border: 1.5px solid var(--text); border-radius: 14px; background: var(--panel); color: var(--text); box-shadow: var(--hard), var(--shadow); overflow: hidden; }
@@ -594,16 +595,6 @@ body.globe-dragging, body.globe-dragging * { user-select: none !important; -webk
 .sel-name { flex: 1; white-space: nowrap; }
 .sel-count { font: 500 12px var(--mono); color: var(--faint); }
 @media (max-width: 640px) { .filters { width: 100%; } .sel-list { left: 0; right: auto; } .filters .sel:last-child .sel-list { left: auto; right: 0; } }
-/* The logo's bits flip when you point at it */
-.logo rect { transition: opacity 0.18s; }
-.brand:hover .logo:not(.building) rect { opacity: 0.32; }
-.brand:hover .logo:not(.building) rect[opacity] { opacity: 1; }
-/* Each block drops into place; the finished build fades before the next one starts */
-.logo .drop { animation: block-drop 0.16s ease-out; }
-.logo.clearing .drop { opacity: 0; transition: opacity 0.32s; }
-@keyframes block-drop { from { transform: translateY(-6px); opacity: 0; } to { transform: none; opacity: 1; } }
-@media (prefers-reduced-motion: reduce) { .logo rect { transition: none; } }
-
 /* Pixel art and dithering. The masks (--dither-x, --dither-y, --dither-corner) are drawn in lib/pixel.ts
    with an ordered dither, so shading is lit cells, not gradients. Each fades in with a few hard steps. */
 .px { width: 24px; height: 24px; display: block; }
@@ -626,6 +617,11 @@ body.globe-dragging, body.globe-dragging * { user-select: none !important; -webk
   -webkit-mask: var(--pat, var(--dither-corner)) right bottom / 160px 160px no-repeat; mask: var(--pat, var(--dither-corner)) right bottom / 160px 160px no-repeat;
   opacity: 0; transition: opacity 0.24s steps(4); }
 .card:hover::after, .card:focus-visible::after { opacity: 0.13; }
+/* Keep decorative pixels away from the words on shared task cards. */
+.card[data-testid="block-card"]::after { display: none; }
+.card[data-testid="block-card"]:is([data-kind="prompt"], [data-kind="skill"], [data-kind="workflow"])::after { display: block; width: 100px; height: 100px; mask-size: 100px 100px; -webkit-mask-size: 100px 100px; opacity: .10; }
+.card[data-testid="block-card"]:is([data-kind="prompt"], [data-kind="skill"], [data-kind="workflow"]):hover::after, .card[data-testid="block-card"]:is([data-kind="prompt"], [data-kind="skill"], [data-kind="workflow"]):focus-visible::after { opacity: .20; }
+.card[data-testid="block-card"]:is([data-kind="prompt"], [data-kind="skill"], [data-kind="workflow"]) .card-footer { padding-right: 84px; min-height: 76px; }
 .card .peek .cursor { width: 0.55em; height: 1.1em; margin-left: 1px; }
 .decode { white-space: pre; }
 
@@ -873,7 +869,13 @@ body.globe-dragging, body.globe-dragging * { user-select: none !important; -webk
   padding: 14px 9px; border: 1px solid var(--line-2); border-right: 0; border-radius: 8px 0 0 8px; background: var(--panel); color: var(--text); font: 600 14px var(--sans); cursor: pointer; box-shadow: var(--shadow); }
 .cm-tab:hover { background: var(--panel-2); }
 .cm-tab b { writing-mode: horizontal-tb; min-width: 22px; padding: 2px 6px; border-radius: 999px; background: var(--btn); color: var(--btn-text); font: 600 12px var(--mono); text-align: center; }
-@media (max-width: 640px) { .cm-tab { top: auto; bottom: 16px; right: 16px; transform: none; writing-mode: horizontal-tb; border: 1px solid var(--line-2); border-radius: 999px; padding: 10px 16px; } }
+@media (max-width: 640px) {
+  .cm-tab { top: auto; bottom: 16px; right: 16px; transform: none; writing-mode: horizontal-tb; border: 1px solid var(--line-2); border-radius: 999px; padding: 10px 16px; }
+  /* Questions belong in the back row, never over a task input or its main action. */
+  .bp[data-testid="block-page"] { position: relative; }
+  .bp[data-testid="block-page"] .bp-top { min-height: 44px; padding-right: 132px; }
+  .bp[data-testid="block-page"] > .cm-tab { position: absolute; top: 24px; bottom: auto; right: 20px; }
+}
 .cm .small { color: var(--muted); }
 .cm-form { display: grid; gap: 8px; margin: 18px 0 8px; }
 .cm-form.reply { margin: 6px 0 4px 18px; }
@@ -971,6 +973,11 @@ body.globe-dragging, body.globe-dragging * { user-select: none !important; -webk
 
 /* Minds (MindsPage.tsx): a grid of people, seat up to seven, open the council in the builder. */
 .minds-body { padding-bottom: 120px; }
+.mind-search { margin: 28px 0 20px; max-width: 640px; }
+.mind-search label { display: block; font-weight: 600; margin-bottom: 8px; }
+.mind-search input { width: 100%; min-height: 44px; padding: 12px; border: 1px solid var(--line); border-radius: 8px; background: var(--panel); color: var(--text); font: inherit; }
+.mind-search .small { margin: 8px 0; }
+.mind-use { font-size: 13px; line-height: 1.45; margin: 0; color: var(--muted); }
 .mind-grid { list-style: none; margin: 24px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; }
 .mind { display: flex; flex-direction: column; gap: 6px; padding: 16px; border: 1px solid var(--line); border-radius: 10px; background: var(--panel); min-height: 150px; }
 .mind.on { border-color: var(--text); box-shadow: var(--hard); }
@@ -1016,15 +1023,15 @@ a.mind-name:hover { text-decoration: underline; text-underline-offset: 3px; }
 .flow-chain li { counter-increment: fc; padding: 3px 8px; border: 1px solid var(--line); border-radius: 999px; }
 .flow-chain li::before { content: counter(fc) ". "; color: var(--muted); }
 
-/* Pixel portraits for minds (PixelFace.tsx): black and white, hard edges, and a blink now and then. */
+/* Pixel portraits blink once, then remain still. */
 .pface { display: block; flex: none; image-rendering: pixelated; outline: 1px solid var(--text); outline-offset: -1px; }
-.pface-eyes { transform-box: fill-box; transform-origin: center; animation: pf-blink 7s steps(1) infinite; animation-delay: var(--blink-delay, 0s); }
-@keyframes pf-blink { 0%, 95% { transform: none; } 96% { transform: scaleY(0); } 98% { transform: none; } }
+.pface-eyes { transform-box: fill-box; transform-origin: center; }
+.pface-blink { animation: pf-blink 1.4s steps(1) 1; animation-delay: var(--blink-delay, 0s); }
+@keyframes pf-blink { 0%, 40%, 56%, 100% { transform: none; } 48% { transform: scaleY(0); } }
 .card-face, .node-face { display: inline-block; vertical-align: middle; margin: -4px 8px 0 0; }
 .bp-face { margin: 0 0 18px; box-shadow: var(--hard); }
 .mind-top { align-items: flex-start; }
 .mind-meta { display: flex; flex-direction: column; align-items: flex-end; gap: 2px; }
-.mind:hover .pface-eyes { animation-duration: 1.4s; }
 .face-wall { display: flex; flex-wrap: wrap; gap: 0; margin-top: 28px; max-width: 100%; }
 .face-wall > span { animation: pf-in 0.5s steps(4) both; animation-delay: calc(var(--w, 0s) * 1.4); }
 .face-wall > span.soon { opacity: 0.4; }
@@ -1084,7 +1091,7 @@ a.mind-name:hover { text-decoration: underline; text-underline-offset: 3px; }
 }
 @media (prefers-reduced-motion: reduce) { .lchip { transition: none; } .lchip:hover:not(:disabled) { transform: none; } }
 /* Long grids skip drawing the cards that are off screen. */
-.mind-grid > .mind { content-visibility: auto; contain-intrinsic-size: auto 180px; }
+.mind-grid > .mind { content-visibility: auto; contain-intrinsic-size: auto 240px; }
 
 /* Clear card text, manual library pages, and councils. */
 .library-more { flex-wrap: wrap; align-items: center; gap: 16px; }
@@ -1114,3 +1121,5 @@ a.mind-name:hover { text-decoration: underline; text-underline-offset: 3px; }
 .mind-grid .mind-seat { overflow-wrap: anywhere; }
 .council-bar .council-in { max-height: 45vh; overflow-y: auto; }
 @media (prefers-reduced-motion: reduce) { .mind-grid .mind, .mind-grid .mind::before { transition: none; transform: none; } }
+ .persistence-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; padding: 12px max(20px, calc((100vw - 1320px) / 2)); font-size: 12px; line-height: 1.5; border-bottom: 1px solid var(--line, #8884); }
+ .persistence-bar > span:first-child { flex: 1 1 340px; }

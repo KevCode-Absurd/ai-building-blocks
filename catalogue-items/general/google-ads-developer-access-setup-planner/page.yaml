@@ -1,0 +1,37 @@
+new_slug: google-ads-developer-access-setup-planner
+name: Google Ads token and access check planner
+summary: Plan the final Google Ads access check. Keep tokens private and verify the selected manager and target account with a read probe.
+job: connect-tools
+headline: Google Ads token and access check planner
+subhead: Plan the final Google Ads access check. Keep tokens private and verify the selected manager and target account with a read probe.
+explain: |-
+  Share the selected codebase, schemas and service setup. Get a concrete setup or code-change plan with required files.
+
+  Follow the actual current account/project structure rather than source screenshots or fixed historical settings.
+when:
+  - You need a concrete setup or code-change plan with required files.
+you_give:
+  - The selected codebase, schemas and service setup
+  - The exact change you want and actions you authorize
+you_get:
+  - A concrete setup or code-change plan with required files
+  - Missing inputs and a bounded verification plan
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Step 1
+    text: Use this after the Cloud project, consent configuration, OAuth client and manager/account relationship are already established. Confirm the exact manager and target account and the intended read-only diagnostic use. The separate Cloud/client setup planner covers the earlier setup phase.
+  - title: Step 2
+    text: Check the current developer-token application and access level required for the intended test or production accounts. Distinguish token eligibility, account linkage and OAuth authorization. A developer token does not by itself grant access to every managed account.
+  - title: Step 3
+    text: Generate or refresh user authorization through the current official supported OAuth flow for the client type. Store client secret, refresh token and developer token only in the selected secure settings. Never paste token values into chat, screenshots or a public report.
+  - title: Step 4
+    text: Verify required configuration is present without printing secret contents. Treat numeric account IDs and the manager login context separately. If a source mentions a helper script, inspect the selected repository and confirm that script exists before proposing its use; otherwise give a self-contained read-only verification plan.
+  - title: Step 5
+    text: Plan or run only an authorized minimal account-information query. Validate returned identity and scope before any broad collection. Diagnose token, OAuth, manager-login, access-level and missing-account errors separately. Never request write authority merely to make a read-only probe succeed.
+  - title: Step 6
+    text: Return configuration-field names, missing setup, a redacted verification result or exact not-run reason, and next steps. No campaign settings are changed. An OAuth credential existing is not proof that a production account query succeeded.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

@@ -1,0 +1,32 @@
+thinking: medium
+thinking_why: It follows a set method with a few checks.
+new_slug: gorgias-weekly-support-report
+name: Gorgias weekly support report
+summary: Connect Gorgias. Get the week’s ticket trends, repeated problems, notable cases, and recommended fixes.
+job: help-customers
+headline: Gorgias weekly support report
+subhead: Connect Gorgias and ask for the weekly support report. It gathers the week's tickets and reads a sample of detailed threads. You get volume, timing measures, recurring problems, notable cases, and proposed fixes, with an optional approved Slack post.
+when:
+  - You use this tool for customer support and need help with this task.
+you_give:
+  - The week's Gorgias ticket records and full-thread sample.
+  - Earlier comparable records if you want a change-over-time comparison.
+you_get:
+  - Show trends and proposed fixes. Review the report before posting it to a Slack channel.
+how_it_works:
+  - title: Read the week's work
+    text: Gather tickets from the past week and read a sample of detailed conversations.
+  - title: Find recurring issues
+    text: Compare issue groups, response times, unresolved work, and notable cases. State the sample scope.
+  - title: Prepare the weekly report
+    text: Show trends and proposed fixes. Review the report before posting it to a Slack channel.
+works_best_with:
+  tools:
+    - name: Gorgias; Slack for optional sharing
+      why: Live lookups need Composio CLI access and connected accounts for these services.
+how_to_use:
+  - Add the downloaded folder to an AI that can read skill files.
+  - Ask for gorgias weekly support report by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
+  - Provide the week's Gorgias ticket records and full-thread sample.
+  - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
+  - Review the result. Approve any proposed sending or account changes before they happen.

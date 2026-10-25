@@ -1,0 +1,15 @@
+.site-header .header-in { justify-content: space-between; }
+.site-menu { position: relative; margin-left: auto; }
+.site-menu-trigger { min-width: 100px; gap: 16px; }
+.site-menu-links { position: absolute; z-index: 60; top: calc(100% + 10px); right: 0; width: min(380px, calc(100vw - 40px)); max-height: calc(100dvh - 84px); overflow-y: auto; overscroll-behavior: contain; padding: 8px 16px; border: 1px solid var(--line-2); border-radius: 12px; background: var(--panel); box-shadow: var(--shadow); }
+.site-menu-links section { padding: 8px 0; border-bottom: 1px solid var(--line); }
+.site-menu-links section:last-child { border-bottom: 0; }
+.site-menu-links a, .site-menu-links section > button { display: flex; align-items: center; gap: 10px; min-height: 44px; padding: 10px 8px; border: 0; border-radius: 6px; font: inherit; font-size: 14px; line-height: 1.5; color: var(--text); background: transparent; text-align: left; white-space: normal; overflow-wrap: anywhere; }
+.site-menu-links a:hover, .site-menu-links section > button:hover { background: var(--btn-2); }
+.site-menu-links .site-menu-account-link { font-weight: 600; font-size: 16px; }
+.site-menu-account > p { margin: 0 8px 4px; }
+.site-menu-links .account-session-actions { padding: 4px 8px; }
+.site-menu-links .account-session-actions .btn { border: 1px solid var(--line-2); }
+.site-menu-types { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.site-menu-appearance { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 8px 4px; font-size: 14px; }
+@media (max-width: 640px) { .site-menu-links { position: fixed; top: 72px; right: 12px; left: 12px; width: auto; max-height: calc(100dvh - 84px); padding-bottom: max(12px, env(safe-area-inset-bottom)); } }

@@ -1,0 +1,35 @@
+thinking: medium
+thinking_why: It follows a set method and adapts its questions or draft to your evidence.
+new_slug: learning-session-handoff
+name: Learning session handoff
+summary: Share session notes. Get an updated learner profile and a clear place
+  to resume next time.
+job: study-and-practice
+headline: Learning session handoff
+subhead: Share your last learner profile and notes from the current session. It
+  checks what is still current, records what you showed and updates open gaps.
+  You get a compact profile and a handoff that says where to resume.
+explain: Share your last learner profile and notes from the current session. It
+  checks what is still current, records what you showed and updates open gaps.
+  You get a compact profile and a handoff that says where to resume.
+you_give:
+  - Your previous learner profile, if one exists.
+  - Topics covered, answers checked and current learning goal.
+you_get:
+  - An updated learner profile.
+  - A record of covered topics and open gaps.
+  - A short handoff for the next session.
+how_it_works:
+  - title: Step 1
+    text: Restore the prior profile and check old or changed details.
+  - title: Step 2
+    text: Record learning outcomes from observed answers.
+  - title: Step 3
+    text: Write the resume point, next priorities and topics to skip.
+how_to_use:
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
+  - It works best when your AI can read your supplied notes and ask follow-up
+    questions.

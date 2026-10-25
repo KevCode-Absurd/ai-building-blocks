@@ -2,7 +2,7 @@ slug: guru
 name: Guru
 maker: Guru
 url: https://www.getguru.com
-promise: Cited answers from your company's knowledge, kept up to date by your own experts.
+promise: "Find cited answers in company knowledge that your team’s experts can check and update."
 use_cases: [organise-work, research]
 categories: [productivity, sales-and-support]
 what_it_does:
@@ -12,12 +12,12 @@ what_it_does:
   - Sends answers to Slack, Teams and the browser.
   - Shows which knowledge is out of date.
 benefits:
-  - Give support and sales staff one answer they can trust.
+  - "Give staff answers with links they can check."
   - Cut repeat questions to your experts.
   - Find out which help pages have gone stale.
   - Show where each answer came from.
 best_for:
-  - Support, sales and enablement teams.
+  - "Support and sales teams that need shared company knowledge."
   - Companies where policies and product facts change often.
   - Teams that want answers inside Slack or the browser.
 not_for:

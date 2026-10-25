@@ -1,11 +1,11 @@
 // Original tool. All numbers shown are illustrative figures, not a real person’s results.
 export default {
   "slug": "interview-capacity",
-  "name": "Know how many interviews your team can cover",
-  "short": "Interview capacity",
-  "headline": "Know how many interviews your team can cover",
-  "summary": "Enter interview stages, panel size and candidate count. Compare the hours needed with interviewer availability.",
-  "question": "Know how many interviews your team can cover?",
+  "name": "Interview time planner",
+  "short": "Interview time planner",
+  "headline": "Interview time planner",
+  "summary": "Enter people to interview, session length and panel size. Compare the staff hours needed with the time your team has.",
+  "question": "Can our interviewers cover this round in the hours available?",
   "category": "hr",
   "shelf": [
     "general"
@@ -41,7 +41,7 @@ export default {
       "max": 1440,
       "step": 0.1,
       "integer": false,
-      "help": "Include preparation and written feedback.",
+      "help": "Include preparation and written feedback in the time for each candidate.",
       "where": "Your interview plan.",
       "tools": []
     },
@@ -93,7 +93,7 @@ export default {
     },
     {
       "id": "capacity",
-      "label": "Interviews the available time can cover",
+      "label": "Interviews that fit the available hours",
       "unit": "count",
       "formula": "IF(minutes > 0, ROUNDDOWN(available * 60 / (minutes * panel), 0), NA())",
       "sum": "{available} × 60 ÷ ({minutes} × {panel}), rounded down = {=}",

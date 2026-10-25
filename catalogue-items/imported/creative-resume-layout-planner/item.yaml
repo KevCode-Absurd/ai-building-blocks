@@ -1,0 +1,36 @@
+slug: creative-resume-layout-planner
+name: Creative resume layout planner
+summary: Share your creative role and portfolio. Get separate resume layouts for job portals and direct sharing.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: source_text
+    required: true
+  - type: brief
+    required: false
+outputs:
+  - type: document
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Daniel (San) Ávila
+  repo: davila7/claude-code-templates
+  path: cli-tool/components/skills/career/creative-portfolio-resume
+  url: https://github.com/davila7/claude-code-templates/tree/7d85535533914ff0880945570a94fcbec4adc042/cli-tool/components/skills/career/creative-portfolio-resume
+  licence: MIT
+  licence_file: LICENSE
+  commit: 7d85535533914ff0880945570a94fcbec4adc042
+  original_name: creative-portfolio-resume
+  imported: 2026-10-23
+  skill_sha256: aac8c989197a4509add51bac8a77cb3198e1cf88fc4575612e8f636215bf86f9
+version: 1.0.0
+credits:
+  - title: creative-portfolio-resume skill
+    by: Daniel (San) Ávila
+    url: https://github.com/davila7/claude-code-templates/tree/7d85535533914ff0880945570a94fcbec4adc042/cli-tool/components/skills/career/creative-portfolio-resume
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

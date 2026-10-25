@@ -2,10 +2,14 @@ thinking: high
 thinking_why: It asks questions and checks that every block fits the others.
 new_slug: business-model-canvas-builder
 name: Business model canvas builder
-summary: Describe your business. Get a nine-block canvas with the gaps between customers, costs and revenue listed.
+summary: Describe your business. Get a nine-block canvas with the gaps between
+  customers, costs and revenue listed.
 job: plan-strategy
 headline: Business model canvas builder
-subhead: Describe your business, who buys from you and how you earn money. It fills the nine blocks of a Business Model Canvas, starting with the match between your offer and your customers. You get the canvas, a cost and revenue consistency check and a list of gaps to fix.
+subhead: Describe your business, who buys from you and how you earn money. It
+  fills the nine blocks of a Business Model Canvas, starting with the match
+  between your offer and your customers. You get the canvas, a cost and revenue
+  consistency check and a list of gaps to fix.
 explain: |
   A nine-block Business Model Canvas for your business, checked so that customers, value, costs and revenue all line up.
 
@@ -26,5 +30,7 @@ you_get:
   - Cost and revenue consistency check
   - A list of gaps to fix
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.

@@ -1,0 +1,32 @@
+thinking: medium
+thinking_why: It follows a set method with a few checks.
+new_slug: gorgias-bug-report-writer
+name: Gorgias bug report writer
+summary: Share a Gorgias ticket. Get a bug report with steps, evidence, and missing details.
+job: help-customers
+headline: Gorgias bug report writer
+subhead: Give it the number of a Gorgias ticket that describes a bug. It separates the expected result from what happened and collects the evidence. You get a clear bug report, with an option to create an approved Linear issue.
+when:
+  - You use this tool for customer support and need help with this task.
+you_give:
+  - A Gorgias ticket number for a reported bug.
+  - Access to the full conversation and any available evidence.
+you_get:
+  - Show the report. Create a Linear issue only after you approve the report and team.
+how_it_works:
+  - title: Read the full thread
+    text: Fetch the ticket and read customer and staff messages before drafting.
+  - title: Build the bug report
+    text: Write the problem, steps, expected result, actual result, impact, and quoted evidence. Flag missing details.
+  - title: Offer an issue draft
+    text: Show the report. Create a Linear issue only after you approve the report and team.
+works_best_with:
+  tools:
+    - name: Gorgias and Linear
+      why: Live lookups need Composio CLI access and connected accounts for these services.
+how_to_use:
+  - Add the downloaded folder to an AI that can read skill files.
+  - Ask for gorgias bug report writer by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
+  - Provide a Gorgias ticket number for a reported bug.
+  - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
+  - Review the result. Approve any proposed sending or account changes before they happen.

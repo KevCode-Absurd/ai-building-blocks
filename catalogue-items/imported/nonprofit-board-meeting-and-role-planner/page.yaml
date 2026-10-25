@@ -1,0 +1,30 @@
+thinking: high
+thinking_why: It weighs real records, missing facts, and choices that affect people or funding.
+new_slug: nonprofit-board-meeting-and-role-planner
+name: Nonprofit board meeting and role planner
+summary: Share board issues and current rules. Get clearer roles, meeting agendas, committee duties, and review tools.
+job: lead-people
+headline: Nonprofit board meeting and role planner
+subhead: Share your board's rules, meeting habits, and the decisions that keep getting stuck. It separates board oversight from staff work. You get clearer roles, timed agendas, committee duties, and review tools suited to your board's way of making decisions.
+when:
+  - You need this task done for a nonprofit, community program, or donated-goods store.
+you_give:
+  - Board rules, current agenda and packets, committee duties, meeting problems, and leadership review process.
+you_get:
+  - A meeting agenda, role boundaries, committee charter, or board self-review tool matched to the task.
+how_it_works:
+  - title: Clarify who decides
+    text: Identify how the board works. Separate oversight from day-to-day staff work.
+  - title: Design useful meetings
+    text: Group routine votes, put key decisions early, and set time limits. Check the board's real voting rules.
+  - title: Set committee and review duties
+    text: Write who each committee answers to and when it reports. Set review steps for the board and chief executive.
+works_best_with:
+  tools:
+    - name: A chat AI that can read your files
+      why: The skill works from records and drafts you provide. Research tasks also need current, checked public sources.
+  inputs:
+    - Internal process design; consequential but not externally filed.
+how_to_use:
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.

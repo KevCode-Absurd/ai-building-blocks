@@ -1,23 +1,19 @@
 new_slug: image-ad-test-learnings
-name: "Learn what sells from 50 different image ads"
-summary: "Give it your brand details and photos. You get 50 image ads planned as a grid, so you can see what won."
+name: Image ad grid production and test planner
+summary: Share brand facts, buyer research and photos. Get a supported ad grid, pilot row and image production where tools allow, with test assumptions marked.
 job: plan-ad-tests
 thinking: high
-thinking_why: "It runs several skills in a row. Give it your strongest model."
-
-headline: "Learn what sells from 50 different image ads"
-subhead: Give it your brand file, buyer research and the photos you have. It plans 50 ads as a grid of 5 reasons to buy by 5 ad types by 2 looks, checks your budget can read it, makes one row as a pilot for your approval, then makes the rest.
-
+thinking_why: It compares supplied evidence and follows a specific method.
+headline: Image ad grid production and test planner
+subhead: It plans up to 50 image ads across buying reasons, ad types and looks, shrinking the grid when proof is thin. It checks a pilot before making more. You get briefs, images where possible and gaps. Image tools and stage approvals are needed; budget and winner rules are heuristics, not proof of sales lift.
 explain: |
   A first big batch of ads often turns into fifty versions of one idea, so when one wins you can't tell why. Was it the message, or the kind of ad? Or the batch fills with invented urgency, fake experts and stock faces that can't be used.
 
   This workflow plans the 50 as a grid. Five reasons to buy run across five ad types, each in two looks. Every reason meets every type, so afterwards you can see whether a reason won or a type won, with ten ads behind each answer. It checks your budget first: about 100 sales across the sprint reads every row and column, and if that's too much it shrinks the grid instead of padding it. A cell it can't fill honestly stays empty. You approve the grid, then a pilot row of ten finished ads, before it makes the rest.
-
 when:
   - You're about to make your first large batch of image ads and want each one to teach you something.
   - Past batches looked varied but all made the same argument.
   - You want a plan your team can split up and brief, with counts that prove the mix is balanced.
-
 you_give:
   - Your brand file with voice, claims, live offers, guarantee and never-show list
   - Buyer research such as reviews, buyer types and their own words
@@ -28,14 +24,12 @@ you_get:
   - Five reasons to buy, five ad types and two looks, with the proof for each
   - The grid of 50, empty cells marked, counts per row and column, and a budget check
   - After your approvals, a pilot row, then all the briefs and finished images with their check results
-
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your brand file and buyer research underneath, including only offers that are live today.
   - List every product photo you have and what it shows. Be honest if you only have one or two.
   - Ask for stage 1 only. Read the grid, the budget check and the MISSING lines before you approve anything.
   - Reply "approved" to move on. If you ask for changes, it shows the stage again and waits.
-
 how_it_works:
   - title: Lists your photos
     text: Notes what each photo shows and whether it can lead an ad, and suggests a shoot if you have too few.
@@ -51,7 +45,6 @@ how_it_works:
     text: Uses a skill that plans an image ad's layout to brief and make ten ads, then waits for your approval before the other forty.
   - title: Makes and checks the rest
     text: Uses a skill that finds flaws in finished image ads. Failed images are shown, never hidden.
-
 output_shape: |
   STAGE 1 PLAN. Nothing is briefed until you approve.
 
@@ -73,7 +66,6 @@ output_shape: |
   BUDGET   <purchases needed> x <cost per purchase> = <spend>
   MISSING: <photos, research, live offer, source>
   APPROVAL 1  WAITING FOR YOU.
-
 example:
   business: sprout
   input: |
@@ -153,7 +145,6 @@ example:
     APPROVAL 1  WAITING FOR YOU. Asking for changes isn't approval.
     (cut for length: the full run also had the one-line idea for all
     44 cells)
-
 tweaks:
   - what: Grid size
     how: Ask for 4 x 4 x 2 (32 ads) or 3 x 3 x 2 (18 ads) if your budget can't reach about 100 sales. The rules stay the same.
@@ -163,39 +154,38 @@ tweaks:
     how: Name them if you know which you've tested least, such as phone-made and photographed.
   - what: Your audience
     how: Say "people who know us" and it leans the types toward "can I believe it?" and "why now?".
-
 judge:
   - Every reason to buy names three buyers, or one buyer and a past ad that beat your cost per sale.
   - Every cell in the grid is either a real idea or marked EMPTY with the reason.
   - The counts per row and column add up to the total.
   - Read two cell ideas aloud. Each names something true about your product that a rival couldn't copy unchanged.
   - It stopped at the approval and didn't start writing briefs.
-
 test:
   - Add the counts yourself. Rows and columns must each add up to the planned total, with empty cells subtracted.
   - Run stage 1 with last year's winning ad in the past results. Its reason to buy should be a row. If it isn't, your research doesn't cover that buyer yet.
   - Run stage 1 twice. The rows and columns should mostly match. If half of them change, give it fewer, sharper buyer descriptions.
   - Ask for changes and check it shows the plan again and waits.
   - After the sprint, check each winning row or column had about 20 sales before you call it.
-
 improve:
   - Write your cost per sale into "What you need" in the skill file, so the budget check is exact every time.
   - Add your live offer and the one discount number that's real, so a "Why now?" column never quotes a number the site states two ways.
   - Mark the types you can never fill (for example Checked fact, with no study on file), so they're never chosen as a column.
   - After the sprint, keep the winning row and column and plan the next grid around them.
   - Pair it with a skill that finds the image ad types you've never tried before you start, and with one that finds flaws in finished image ads at the end.
-
 works_best_with:
   tools:
-    - {name: "Claude", why: "Holds a 50-cell plan and its rules across a long chat without dropping cells."}
-    - {name: "Google Sheets", why: "Adds up results by row and column once each ad name carries its code."}
-    - {name: "GPT Image", why: "Makes many pictures from the same product reference photos."}
-    - {name: "Meta Ads Manager", why: "Runs the sprint and exports purchases per ad, so the grid can be read."}
+    - name: Claude
+      why: Holds a 50-cell plan and its rules across a long chat without dropping cells.
+    - name: Google Sheets
+      why: Adds up results by row and column once each ad name carries its code.
+    - name: GPT Image
+      why: Makes many pictures from the same product reference photos.
+    - name: Meta Ads Manager
+      why: Runs the sprint and exports purchases per ad, so the grid can be read.
   inputs:
-    - "A naming rule that puts each ad's row, column and look in its ad name, so results sort into the grid"
-    - "A fresh product shoot by view (open, in hand, in use), so more cells can be filled honestly"
-    - "Your account's cost per purchase for the last 30 days, so the budget check uses a real number"
-
+    - A naming rule that puts each ad's row, column and look in its ad name, so results sort into the grid
+    - A fresh product shoot by view (open, in hand, in use), so more cells can be filled honestly
+    - Your account's cost per purchase for the last 30 days, so the budget check uses a real number
 terms:
   - term: Grid
     meaning: The plan of the sprint. Rows are reasons to buy, columns are ad types, and each cell is made in two looks.

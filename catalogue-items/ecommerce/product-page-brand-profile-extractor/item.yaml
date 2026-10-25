@@ -1,0 +1,19 @@
+slug: product-page-brand-profile-extractor
+name: Product page brand profile extractor
+summary: Read a product page and build a sourced brand profile with product facts, claim limits, colors and visual rules.
+category: ecommerce
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: brand_brain
+    required: true
+uses: []
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

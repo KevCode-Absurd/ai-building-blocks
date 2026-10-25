@@ -1,6 +1,6 @@
 slug: van-loading-planner
-name: Van loading planner
-summary: Give it your parcels and van size. Get a load order that fits everything and puts the first stop last in.
+name: "Van loading planner"
+summary: "Plan a van load from item sizes, weights, stops and vehicle limits. Check fit, balance, access and unloading order."
 category: general
 boards: []
 type: skill

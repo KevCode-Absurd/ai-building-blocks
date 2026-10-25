@@ -42,6 +42,20 @@
     window.clarity = clarityQueue(pending);
   }
   function gtag() { window.dataLayer.push(arguments); }
+  const uxEvents = new Set(['task_started', 'route_accepted', 'request_previewed', 'request_copied', 'pack_download_requested', 'help_opened', 'task_retried', 'result_useful', 'result_needs_work']);
+  let taskStartedAt = null;
+  document.addEventListener('abb:ux-event', event => {
+    // Never forward event.detail objects or arbitrary parameters supplied by app content.
+    const name = event.detail;
+    if (typeof name !== 'string' || !uxEvents.has(name) || !running || choice !== 'granted' || optedOut || !safeHere()) return;
+    if (name === 'task_started') taskStartedAt = Date.now();
+    const params = { page_location: location.origin + location.pathname, page_title: location.pathname, page_referrer: '' };
+    if (taskStartedAt !== null && ['request_copied', 'pack_download_requested', 'result_useful', 'result_needs_work'].includes(name)) {
+      const elapsed = Date.now() - taskStartedAt;
+      params.time_bucket = elapsed < 30000 ? 'under_30s' : elapsed < 120000 ? '30s_to_2m' : elapsed < 300000 ? '2m_to_5m' : 'over_5m';
+    }
+    gtag('event', name, params);
+  });
   function pageView() {
     if (!running || !safeHere() || lastPath === location.pathname) return;
     const previous = lastPath;
@@ -84,6 +98,7 @@
   }
   function decide(value) {
     choice = value;
+    taskStartedAt = null;
     try { localStorage.setItem(KEY, JSON.stringify({ value, at: Date.now() })); } catch (_) {}
     document.getElementById('abb-analytics-choice')?.remove();
     if (value === 'granted') start();
@@ -130,6 +145,7 @@
     const original = history[method];
     history[method] = function (state, unused, target) {
       const url = new URL(target || location.href, location.href);
+      if (!safeUrl(url)) taskStartedAt = null;
       if (running && url.origin === location.origin && !safeUrl(url)) stopReplay();
       const result = original.apply(this, arguments);
       if (running) pageView(); else start();
@@ -137,6 +153,7 @@
     };
   }
   window.addEventListener('popstate', () => {
+    if (!safeHere()) taskStartedAt = null;
     if (running && !safeHere()) stopReplay();
     if (running) pageView(); else start();
   });

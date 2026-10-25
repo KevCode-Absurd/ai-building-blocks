@@ -2,10 +2,15 @@ thinking: high
 thinking_why: Each check needs exact settings, and a wrong call hides bad data.
 new_slug: ad-data-quality-checker
 name: Ad data quality checker
-summary: Give it your ad and sales tables. Get nine checks that catch missing spend, duplicates and empty columns.
+summary: Give it your ad and sales tables. Get nine checks that catch missing
+  spend, duplicates and empty columns.
 job: track-numbers
 headline: Ad data quality checker
-subhead: Give it your ad and sales tables, the date window, the time zone and the systems you are comparing. It runs nine checks, including that spend adds up across buckets, leads are not double counted and columns are filled. You get the result of each check, the rows that failed, a column fill report and a repeatable record.
+subhead: Give it your ad and sales tables, the date window, the time zone and
+  the systems you are comparing. It runs nine checks, including that spend adds
+  up across buckets, leads are not double counted and columns are filled. You
+  get the result of each check, the rows that failed, a column fill report and a
+  repeatable record.
 explain: |
   Nine checks run on your ad and sales tables and catch missing spend, duplicates, double-counted leads and empty columns before they distort a report.
 
@@ -27,6 +32,9 @@ you_get:
   - The scope of each check
   - A repeatable record of the findings
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
-  - It works best when your AI can run Node code and SQL on your own BigQuery data.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
+  - It works best when your AI can run Node code and SQL on your own BigQuery
+    data.

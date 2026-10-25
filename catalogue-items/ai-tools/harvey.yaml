@@ -2,19 +2,19 @@ slug: harvey
 name: Harvey
 maker: Harvey
 url: https://www.harvey.ai
-promise: An AI built for lawyers that reviews contracts, researches law and drafts documents.
+promise: "Research legal questions, review contracts and draft documents for legal teams."
 use_cases: [legal]
 categories: [productivity, writing]
 what_it_does:
-  - Researches legal, regulatory and tax questions.
+  - "Researches questions about law, rules and tax."
   - Reviews contracts and supports negotiation.
   - Stores large sets of documents and answers questions about them.
   - Runs multi-step legal tasks through agents.
   - Tracks regulatory changes that affect a client.
 benefits:
-  - Review a stack of contracts faster than by hand.
+  - "Use AI to help review a set of contracts, with a lawyer checking the result."
   - Get answers that point back to their sources.
-  - Keep client work in separate spaces with ethical walls.
+  - "Use separate spaces and access restrictions for client work."
   - See how your firm uses AI.
 best_for:
   - Law firms.

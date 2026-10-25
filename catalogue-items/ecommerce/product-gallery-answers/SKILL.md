@@ -111,3 +111,14 @@ Write `NEED: <fact | photo job | review>` and swap or bend the image rather than
 - Reading the gallery from a file list or a scrape of every image on the page.
 - Making all the images before anyone has seen two.
 - Showing a change to a body or face unless the brand's own photos record it, any child, or a made-up person shown as a customer, expert or founder.
+
+
+## Reference fit, recurring proof and bundle frames
+
+Use this optional mode when it matches the requested job. Keep the core checks above and the decisions already supplied. Full procedure: references/cmo-method-pdp-image-factory.md.
+
+An optional reference mode adds gallery examples with EXACT/STRUCTURE/LOOSE fit, stable IDs and user direction. Open the real image; borrow information structure, not another product, identity or claim.
+
+Repeat proof beside the claim it supports rather than place all proof in one wall. Real evidence can be a detail, measurement, policy or authorized quote; omit fake rating furniture. Keep a common hero grammar across the range: camera, scale, margins and hierarchy stay coherent while each variant remains exact.
+
+Bundle frames show included items, actual charged individual prices, current bundle price and conditions. Do not invent gift values or falsely weaken another option. Cards versus radio buttons require clear selection, keyboard access and correct variants; they do not guarantee lift. For capture, account for carousels, offscreen tracks and lazy images before calling an asset absent. Revise only affected frames and inspect each ratio without geometry drift.

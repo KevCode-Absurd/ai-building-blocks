@@ -1,23 +1,19 @@
 new_slug: scroll-stopping-image-ads
-name: "Image ads that stop strangers scrolling"
-summary: "Give it your reviews and product photos. You get a set of image ads, each with a different reason to buy."
+name: Buyer research image-ad set builder
+summary: Share brand facts, customer evidence and exact product photos. Get varied ad arguments, concepts, image files or prompts and a check record.
 job: make-image-ads
 thinking: high
-thinking_why: "It runs several skills in a row. Give it your strongest model."
-
-headline: "Image ads that stop strangers scrolling"
-subhead: Give it your brand facts, customer reviews and product photos. It finds what buyers repeat, cuts the reasons any rival could claim, spreads the set across different ad types, then plans one picture and short words per ad, stopping twice for your approval.
-
+thinking_why: It compares supplied evidence and follows a specific method.
+headline: Buyer research image-ad set builder
+subhead: It builds buyer sheets, cuts unsupported arguments and plans varied ad types. It pauses at the required argument and visual approvals, then creates files when the tools are available. You get sources, sizes and gaps. Exact photos and claims remain the anchors. Ad variety is a planning choice; no fixed purchase count proves a winner or guarantees attention.
 explain: |
   Ads for people who have never heard of you usually fail in one of two ways. Six ads look different but all say the same thing, so you learn nothing. Or a clever picture could belong to any brand in your category, so nobody remembers it was yours.
 
   This workflow starts with research. It only uses a buyer insight when three separate customers say it, or one says it and an ad on that idea already beat your usual cost per sale. It writes more reasons to buy than you need and cuts any a rival could say word for word. Then it spreads the set across a map of nine ad types, so you can tell afterwards whether the reason or the kind of ad made the difference. Discount and deadline ads stay at one in five or fewer. Every headline is 7 words or fewer. You pick the reasons, then approve the concepts and the first picture before the rest are made.
-
 when:
   - You're launching to a new audience and need a first set that tests real differences, not six colours of one ad.
   - Your best ads open on the product or a discount and strangers scroll past them.
   - You have lots of reviews but no clear idea which reasons to buy are worth an ad.
-
 you_give:
   - Your brand facts, approved claims, voice, colours and never-say list
   - Customer reviews, comments or survey answers, with where each came from
@@ -29,14 +25,12 @@ you_get:
   - A list of reasons to buy with the proof for each, and the ones it cut
   - A plan of the set by ad type and look, then a concept per ad with headline options and word counts
   - After your approvals, the finished ads and a table of what each one tests
-
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your brand file, then your reviews and any past ad results underneath.
   - List the product photos you actually have and what each one shows. Say plainly if you only have one or two.
   - Say how many ads and which sizes, for example "4 ads, 4:5 and 9:16".
   - It pauses twice so you can pick the reasons and approve the concepts. Say "go ahead" at the start and it does both stops for you, marking each one (approve).
-
 how_it_works:
   - title: Builds the buyer sheets
     text: Uses this workflow's own research step. An insight needs three separate buyers, or one buyer and a past ad that beat your usual cost per sale.
@@ -50,7 +44,6 @@ how_it_works:
     text: Uses a skill that writes every word an image ad needs. Headlines are 7 words or fewer and trace to the buyer sheet.
   - title: Checks every finished ad
     text: Uses a skill that finds flaws in finished ads to check type, claims, the product against its photo, and that the brand shows with the logo covered.
-
 output_shape: |
   SOURCES  <what counts as a source for this run>
 
@@ -77,7 +70,6 @@ output_shape: |
   Support  <line>, traces to <buyer sheet line>
 
   STOP 2  WAITING.  MISSING: <photos by view, proof, brand files>
-
 example:
   business: sprout
   input: |
@@ -167,7 +159,6 @@ example:
              file.
     (cut for length: the full run also had the doubts field on each
     sheet, and concepts C and D)
-
 tweaks:
   - what: Batch size
     how: The rules scale. For 6 or more ads it needs at least 3 ad types and 2 looks, and discount or deadline ads stay at one in five or fewer.
@@ -177,7 +168,6 @@ tweaks:
     how: List every photo with what it shows. With a torn-pack or in-use shot it can plan scenes it otherwise has to avoid.
   - what: A proven winner
     how: Name a past winning ad and ask for "same reason, new type". It keeps the argument and moves it to a different ad type.
-
 judge:
   - Every insight marked USED has three buyers, or one buyer and a past ad that beat your cost per sale.
   - No two ads share both an ad type and a reason. Read the plan and check.
@@ -185,33 +175,33 @@ judge:
   - Each headline is 7 words or fewer, and the counts are shown.
   - Cover the logo. The colours, shapes and type should still say it's your brand.
   - The picture never shows a result your facts don't state, such as a changed body or a before and after.
-
 test:
   - Run it on a set you already ran, with the same reviews and results. Check whether its proposed picks include your best performer. If not, read why it cut it.
   - Run it twice on the same research. The USED insights and the cut list should match. If an insight moves to the hunch list, count its sources yourself.
   - Add one made-up review that claims something your product can't back, then run it. That insight should stay a hunch or be cut, never reach a headline.
   - Put your current best image ad beside concept A. Ask a colleague who each is for and what it claims, after two seconds each. The new one should be at least as clear.
   - Count the codes in the plan yourself. Discount and deadline ads must be one in five or fewer.
-
 improve:
   - Paste your brand file, never-say list and photo list into "What you need" in the skill file, so every set starts from the same facts and real views.
   - Change the three-buyer rule in step 1 if your research works differently, and write down why.
   - Add your brand's own looks (colours, light, styles) to step 4, so concepts stay on brand.
   - After each launch, write which reasons and types won into your brand file, and paste them next time as past results.
   - Pair it with a skill that writes every word an image ad needs, and with one that finds flaws in finished ads before you spend.
-
 works_best_with:
   tools:
-    - {name: "Claude", why: "Keeps track of a long workflow with stops, and holds every fact and source you gave it."}
-    - {name: "GPT Image", why: "Follows detailed scene prompts and takes several product reference photos at once."}
-    - {name: "Nano Banana", why: "Good with many reference images and with lighting on shiny packs."}
-    - {name: "Figma", why: "Sets real type over each picture and keeps the batch in one file."}
+    - name: Claude
+      why: Keeps track of a long workflow with stops, and holds every fact and source you gave it.
+    - name: GPT Image
+      why: Follows detailed scene prompts and takes several product reference photos at once.
+    - name: Nano Banana
+      why: Good with many reference images and with lighting on shiny packs.
+    - name: Figma
+      why: Sets real type over each picture and keeps the batch in one file.
   inputs:
-    - "Support tickets or survey answers, so more insights reach the three-buyer bar"
-    - "Cost per purchase for each past ad, so a single review backed by a result can count"
-    - "Photos of the product in real use, so In use and The moment ads don't need staged scenes"
-    - "Your typeface files and logo as an SVG, so the type layer matches your brand"
-
+    - Support tickets or survey answers, so more insights reach the three-buyer bar
+    - Cost per purchase for each past ad, so a single review backed by a result can count
+    - Photos of the product in real use, so In use and The moment ads don't need staged scenes
+    - Your typeface files and logo as an SVG, so the type layer matches your brand
 terms:
   - term: Reason to buy
     meaning: One buyer, their problem, what only this product does about it, and the proof. Marketers often call this an angle.

@@ -1,0 +1,98 @@
+# Marie Kondo: what they knew and believed
+
+Built from public sources, last checked 2026-10-23. Source tags identify the public basis for the method. The practical exercises and transfers below are applications written by us, not accounts of the person advising a client or endorsing this product.
+
+## In one paragraph
+
+Kondo developed the KonMari Method and wrote The Life-Changing Magic of Tidying Up. Her official method asks people to imagine the life they want, tidy by category in a defined order and choose belongings according to a personal sense of joy and purpose. [S5] Decide what you want to keep and why before trying to store everything. Gather categories so the quantity becomes visible, practise decisions on easier objects and assign retained belongings a usable home. The useful distinction is between a documented principle and a new situation in which you choose to test it. This profile keeps those two layers visible.
+
+## Core ideas
+
+### Begin with a desired life
+
+The official method treats tidying as a way to support an intentional life rather than as a competition for the emptiest room. [S1]
+
+**Application designed here:** Describe an ordinary day you want your home to support. Begin a clothing project by describing what daily dressing should feel like and support. Gather a manageable category so the quantity is visible, then let the owner select the useful and valued pieces. Keep a route for finishing and putting them away. The exercise is a deliberate choice about belongings, not permission to cover every bed when the person cannot complete the task. [S1]
+
+### Choose what remains
+
+KonMari frames the decision around belongings to retain, with joy as a personal criterion rather than an externally imposed discard quota. [S2]
+
+**Application designed here:** Pick up one belonging and explain why it deserves a place. A sentimental object is not an appropriate starting test for someone already overwhelmed. Practise decisions on easier categories first and allow emotional difficulty to remain real. A chosen set of keepsakes can be meaningful without representing every object ever connected to a person or period. Do not rush grief or promise that releasing an item will automatically bring closure. [S2]
+
+### Categories reveal quantity
+
+The method gathers related belongings across locations, making the scale of ownership visible before final storage decisions. [S1]
+
+**Application designed here:** Gather one manageable category from its different hiding places. For a work desk, name the work the surface should support before arranging decorative storage. Identify necessary tools and belongings that have drifted there from other activities. Choose a home for what remains and test whether it can be returned easily after use. Tidying has succeeded practically when the desk helps the person begin work, not merely when it resembles an ideal office photograph. [S1]
+
+### Order develops judgment
+
+The official sequence moves from clothes through books, papers and miscellaneous items to sentimental belongings. [S1]
+
+**Application designed here:** Practise decisions on easier items before family keepsakes. A useful collection can remain extensive if its owner values it and can care for it. Ask what the collection contributes and whether the space supports access and maintenance. Do not impose a quota borrowed from minimalism. The decision criterion belongs to the owner, while the practical consequences of space and upkeep still deserve an honest discussion. [S1]
+
+### Joy is individual
+
+The official joy lesson explicitly rejects treating someone else’s rule or taste as the standard for every person. [S2]
+
+**Application designed here:** Let the owner make the decision without arguing from your preference. Before moving, imagine ordinary life in the destination and check its actual capacity. Select possessions for that life before buying containers for everything currently owned. Preserve required records and necessary equipment. A smaller home requires practical decisions, but it does not justify another person taking control of belongings under the claim that they know what should bring the owner joy. [S2]
+
+### Function can have value
+
+The method’s emphasis on cherished belongings concerns a life that works, not simply a room filled with decorative favourites. [S1]
+
+**Application designed here:** Explain the useful role of an essential object before judging it. For shared space, distinguish ownership from the inconvenience of living together. Work on your own category first and negotiate a clearly defined shared one. Ask before discarding. A tidy home achieved through secret removal can damage trust, which defeats the intended improvement in daily life. Agreement about where something belongs may be more useful than agreement about whose taste is correct. [S1]
+
+### Tidying is not minimalism
+
+The official clarification distinguishes joy-centred selection from a requirement to own as little as possible. [S3]
+
+**Application designed here:** Keep a valued collection if its care and space are intentional. When considering a commitment, describe the life you want it to support and the time it will occupy. Ask what you would deliberately choose to keep if you were arranging the week afresh. This is an analogy from selecting belongings, not evidence that every difficult responsibility should be discarded because it lacks immediate pleasure. Consider duty, function and consequence alongside preference. [S3]
+
+### Respect can ease release
+
+The method includes acknowledging an item’s service before letting it go, making a difficult decision less like denying its history. [S1]
+
+**Application designed here:** Name what the object gave you, then decide its present role. A release ritual can be brief: acknowledge what the item contributed, decide its present role and choose a responsible next destination if it is leaving. The acknowledgment does not require supernatural claims. Its purpose in this application is to allow gratitude and a practical decision to coexist, so letting go is not confused with denying that the object once mattered. [S1]
+
+## How they decide
+
+- **Begin with a desired life:** Describe an ordinary day you want your home to support. Treat the result as a question to check in your own circumstances, rather than an instruction to ignore a conflicting constraint. [S1]
+- **Categories reveal quantity:** Gather one manageable category from its different hiding places. Treat the result as a question to check in your own circumstances, rather than an instruction to ignore a conflicting constraint. [S1]
+- **Joy is individual:** Let the owner make the decision without arguing from your preference. Treat the result as a question to check in your own circumstances, rather than an instruction to ignore a conflicting constraint. [S2]
+- **Tidying is not minimalism:** Keep a valued collection if its care and space are intentional. Treat the result as a question to check in your own circumstances, rather than an instruction to ignore a conflicting constraint. [S3]
+
+The order matters: understand the aim, inspect the material conditions, select a modest action, then observe the result. In this profile that sequence is a practical reconstruction from the public teaching, not a claim that Marie Kondo used a fixed checklist in every situation. [S1] [S2]
+
+## Where they stood
+
+Decide what you want to keep and why before trying to store everything. Gather categories so the quantity becomes visible, practise decisions on easier objects and assign retained belongings a usable home. [S1] [S2]
+
+**Applied question: cluttered clothes storage.** Gather a manageable clothing category, select what supports your present life and arrange the retained items for easy return. This is a proposed application, not a recorded client engagement. [S1]
+
+**Applied question: a desk that no longer supports work.** Describe the work you want to do, remove unrelated belongings and give necessary tools a clear home. This is a proposed application, not a recorded client engagement. [S1]
+
+**Applied question: moving to a smaller home.** Choose what belongs in the new life before buying storage, then check the real capacity of the destination. This is a proposed application, not a recorded client engagement. [S2]
+
+## A usable household brief
+
+**Cluttered clothes storage:** Gather a manageable clothing category, select what supports your present life and arrange the retained items for easy return. **Too many sentimental objects:** Build decision confidence on easier categories, then preserve a deliberate set of meaningful objects without rushing grief. **A desk that no longer supports work:** Describe the work you want to do, remove unrelated belongings and give necessary tools a clear home. **Choosing a new commitment:** Clarify the life and work you want before deciding which attractive opportunity deserves your time. **Moving to a smaller home:** Choose what belongs in the new life before buying storage, then check the real capacity of the destination. **Sharing space respectfully:** Work on your own belongings first and negotiate shared categories instead of discarding another person’s possessions.
+
+Bring these jobs to the method as practical questions rather than claims about its original scope. Decide what you want to keep and why before trying to store everything. Gather categories so the quantity becomes visible, practise decisions on easier objects and assign retained belongings a usable home. [S1]
+
+## Their work and record
+
+Kondo developed the KonMari Method and wrote The Life-Changing Magic of Tidying Up. Her official method asks people to imagine the life they want, tidy by category in a defined order and choose belongings according to a personal sense of joy and purpose. [S1][S2][S3][S4][S5]
+
+## Where they were wrong or criticised
+
+A whole-category tidying project can exceed a person’s energy or available space. Respect ownership and shared homes, protect necessary documents and adapt the pace without promising permanent transformation. These limitations concern applying the public work; they do not imply a consensus of critics or a newly discovered personal fault. [S5]
+
+## Blind spots to watch
+
+A familiar method can make a poor fit look like the user’s fault. Ask whether the problem is really within this person’s field, whether the user controls the relevant conditions, and whether the plan requires time or resources they do not have. Separate an informed practical suggestion from a professional assessment. Keep the first action reversible where possible, and stop when new evidence shows the premise was mistaken. These are editorial safeguards for using this profile; they are not quotations or newly attributed personal beliefs. [S1]
+
+## Short phrases on the record
+
+No verbatim phrases are reproduced here. The descriptions and sample applications use our own words, so the useful method can be applied without manufacturing a quotation or an endorsement.

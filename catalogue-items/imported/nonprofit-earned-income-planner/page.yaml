@@ -1,0 +1,30 @@
+thinking: high
+thinking_why: It weighs real records, missing facts, and choices that affect people or funding.
+new_slug: nonprofit-earned-income-planner
+name: Nonprofit earned income planner
+summary: Share your funding mix and income ideas. Get risk checks, break-even math, and a small pilot plan.
+job: plan-strategy
+headline: Nonprofit earned income planner
+subhead: Share your funding mix, costs, and ideas for fees, sales, rentals, or other income. It checks demand, mission fit, and break-even needs. You get a business case and pilot plan, with US tax questions flagged for an accountant before a board decision.
+when:
+  - You need this task done for a nonprofit, community program, or donated-goods store.
+you_give:
+  - Revenue by source, income idea, demand evidence, full costs, available capital, and mission limits.
+you_get:
+  - A funding-risk review, idea screen, break-even model, expert-review questions, and board pilot brief.
+how_it_works:
+  - title: Check funding dependence
+    text: Show how much income depends on single funders or types, then decide which risk a new income stream should address.
+  - title: Test the business case
+    text: Review demand and mission fit, include overhead, and calculate the sales volume needed to cover costs.
+  - title: Plan a limited pilot
+    text: Flag legal and tax questions for qualified review. Set funding, decision dates, and financial and mission checks for board approval.
+works_best_with:
+  tools:
+    - name: A chat AI that can read your files
+      why: The skill works from records and drafts you provide. Research tasks also need current, checked public sources.
+  inputs:
+    - Earned-income and social-enterprise models raise unrelated business income tax questions.
+how_to_use:
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.

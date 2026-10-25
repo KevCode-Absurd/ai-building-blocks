@@ -7,22 +7,22 @@ role: orchestrate
 job: ops
 level: intermediate
 inputs:
-  - {type: skill_files, required: true}
-  - {type: transcript, required: false}
+  - { type: skill_files, required: true }
+  - { type: transcript, required: false }
 outputs:
-  - {type: audit_report}
-  - {type: plan}
-uses: [skill-trigger-auditor, skill-file-validator, skill-quality-tester, skill-safety-checker, skill-portability-checker, project-skill-finder, repeated-work-skill-finder]
+  - { type: audit_report }
+  - { type: plan }
+uses: [ skill-trigger-auditor, skill-file-validator, skill-quality-tester, skill-safety-checker, skill-portability-checker, project-skill-finder, repeated-work-skill-finder ]
 steps:
-  - {uses: skill-trigger-auditor, note: "Every month: when each skill fires, and which skills block or copy each other."}
-  - {uses: skill-file-validator, note: "Every month, on each skill added or changed since last month: structure, wording and naming problems."}
-  - {uses: skill-quality-tester, note: "Only on skills that are new, changed, or flagged by the trigger audit: structure, scripts run and a score."}
-  - {uses: skill-safety-checker, note: "Only on skills that came from outside, or have new scripts since last month: risky code, data leaks and hidden commands."}
-  - {uses: skill-portability-checker, note: "Only when the skills are used in more than one AI tool: mistakes that stop them loading elsewhere."}
-  - {uses: project-skill-finder, note: "Only when nothing unsafe was found, and you gave a project: skills worth adding or updating."}
-  - {uses: repeated-work-skill-finder, note: "Only when you gave screen or session history: tasks you repeat that could become skills."}
+  - { uses: skill-trigger-auditor, note: "Every month: when each skill fires, and which skills block or copy each other." }
+  - { uses: skill-file-validator, note: "Every month, on each skill added or changed since last month: structure, wording and naming problems." }
+  - { uses: skill-quality-tester, note: "Only on skills that are new, changed, or flagged by the trigger audit: structure, scripts run and a score." }
+  - { uses: skill-safety-checker, note: "Only on skills that came from outside, or have new scripts since last month: risky code, data leaks and hidden commands." }
+  - { uses: skill-portability-checker, note: "Only when the skills are used in more than one AI tool: mistakes that stop them loading elsewhere." }
+  - { uses: project-skill-finder, note: "Only when nothing unsafe was found, and you gave a project: skills worth adding or updating." }
+  - { uses: repeated-work-skill-finder, note: "Only when you gave screen or session history: tasks you repeat that could become skills." }
 schedule: "First Monday of each month"
-asks_before: [editing, deleting or renaming any skill, installing a skill from outside, running a script that came with a skill, sharing or publishing a skill]
+asks_before: [ editing, deleting or renaming any skill, installing a skill from outside, running a script that came with a skill, sharing or publishing a skill ]
 origin: own
-version: 1.0.0
+version: 1.0.1
 example_pending: true

@@ -1,0 +1,32 @@
+thinking: medium
+thinking_why: It follows a set method with a few checks.
+new_slug: gorgias-satisfaction-follow-up-writer
+name: Gorgias satisfaction follow-up writer
+summary: Choose resolved tickets. Get personal follow-up emails to review before sending through Gmail.
+job: help-customers
+headline: Gorgias satisfaction follow-up writer
+subhead: Connect Gorgias and Gmail and choose recently closed tickets. It reads how each issue was solved and writes a short rating request. You get personal follow-up emails to review, with sending available after approval.
+when:
+  - You use this tool for customer support and need help with this task.
+you_give:
+  - Recently closed Gorgias tickets with customer and resolution details.
+  - Gmail access only if you want approved emails sent.
+you_get:
+  - Show all drafts first. Send only the emails you approve and report the result for each.
+how_it_works:
+  - title: Read closed tickets
+    text: Find recently resolved tickets and collect the customer, issue, and resolution.
+  - title: Write personal follow-ups
+    text: Reference the real issue, request a rating, and give the customer a way to reopen it.
+  - title: Approve and send
+    text: Show all drafts first. Send only the emails you approve and report the result for each.
+works_best_with:
+  tools:
+    - name: Gorgias and Gmail
+      why: Live lookups need Composio CLI access and connected accounts for these services.
+how_to_use:
+  - Add the downloaded folder to an AI that can read skill files.
+  - Ask for gorgias satisfaction follow-up writer by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
+  - Provide Recently closed Gorgias tickets with customer and resolution details.
+  - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
+  - Review the result. Approve any proposed sending or account changes before they happen.

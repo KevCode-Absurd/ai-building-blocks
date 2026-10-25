@@ -2,7 +2,7 @@ slug: cursor
 name: Cursor
 maker: Anysphere
 url: https://cursor.com
-promise: A code editor with an AI agent that writes and reviews code.
+promise: "Write, change and review project code with an AI agent inside your editor."
 use_cases: [code, build-apps]
 categories: [coding]
 what_it_does:
@@ -14,16 +14,16 @@ what_it_does:
   - Reviews pull requests on GitHub.
 benefits:
   - Hand off a bug fix and review the result instead of typing it.
-  - Keep your own rules and context in files so every session starts informed.
+  - "Save project rules and context in files for the agent to use."
   - Try a different AI model on the same task without changing editors.
   - Get a second review of a pull request before a teammate reads it.
 best_for:
   - People who already work in a code editor and want an AI pair inside it.
-  - Small teams shipping software who want agents to take the routine tickets.
-  - Founders who can read code and want to move faster on a real codebase.
+  - "Small software teams handing routine coding tasks to agents."
+  - "Founders who can read code and want help changing a working project."
 not_for:
   - Anyone who wants to describe an app and never see code (try Lovable or Bolt).
-  - Teams that need a Windows or Linux download confirmed before they commit.
+  - "People who must check that the editor runs on their computer before buying."
 pricing:
   model: freemium
   from: US$8 per month

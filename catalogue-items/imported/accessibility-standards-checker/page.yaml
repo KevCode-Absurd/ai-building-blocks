@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It tests against a fixed list of success criteria.
 new_slug: accessibility-standards-checker
 name: Accessibility standards checker
-summary: Describe your site or app. Get WCAG gaps by level, fixes ranked first, and accessibility statement notes.
+summary: Describe your site or app. Get WCAG gaps by level, fixes ranked first,
+  and accessibility statement notes.
 job: check-contracts
 headline: Accessibility standards checker
-subhead: "Describe your site or app, or share a link, code or screenshots, and say which level you aim for: A, AA or AAA. It checks each criterion and sorts the gaps by level. You get a gap table, fixes ranked by priority, corrected code, draft accessibility statement notes and a map from rules to laws."
+subhead: "Describe your site or app, or share a link, code or screenshots, and
+  say which level you aim for: A, AA or AAA. It checks each criterion and sorts
+  the gaps by level. You get a gap table, fixes ranked by priority, corrected
+  code, draft accessibility statement notes and a map from rules to laws."
 explain: |
   Where your site or app falls short of the web accessibility standard shows up in a list sorted by level, with the most important fixes first, plus notes for an accessibility statement.
 
@@ -27,5 +31,7 @@ you_get:
   - Draft notes for an accessibility statement
   - A map from rules to laws
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.

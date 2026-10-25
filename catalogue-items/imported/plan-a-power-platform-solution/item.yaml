@@ -1,0 +1,38 @@
+slug: plan-a-power-platform-solution
+name: Plan a Power Platform solution
+summary: Turn a business process into a Power Platform plan. Map the people, tools and data flow.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: true
+outputs:
+  - type: plan
+    required: true
+  - type: design_direction
+    required: true
+uses: []
+origin: imported
+source:
+  by: Tim Hanewich
+  repo: github/awesome-copilot
+  path: skills/power-platform-architect
+  url: https://github.com/github/awesome-copilot/tree/613efc8c21d9b3ce642dff361d17006cd9967e28/skills/power-platform-architect
+  licence: MIT
+  licence_file: LICENSE
+  commit: 613efc8c21d9b3ce642dff361d17006cd9967e28
+  original_name: power-platform-architect
+  author: Tim Hanewich
+  imported: 2026-10-24
+version: 1.0.0
+credits:
+  - title: power-platform-architect skill
+    by: Tim Hanewich
+    url: https://github.com/github/awesome-copilot/tree/613efc8c21d9b3ce642dff361d17006cd9967e28/skills/power-platform-architect
+    used: Original instructions and supporting files, with attribution and the MIT licence. Display copy describes the task.

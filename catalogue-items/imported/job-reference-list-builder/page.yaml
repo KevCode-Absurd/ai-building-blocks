@@ -1,0 +1,27 @@
+thinking: medium
+thinking_why: It follows a set method and adapts its questions or draft to your evidence.
+new_slug: job-reference-list-builder
+name: Job reference list builder
+summary: Share possible references and the role. Get a reference list, permission request and briefing drafts.
+job: find-a-job
+headline: Job reference list builder
+subhead: Share the role and people who can speak about your work. It helps choose relevant references and formats their details. You get a reference list, permission-request drafts and short briefings about the role for each person to review.
+explain: Share the role and people who can speak about your work. It helps choose relevant references and formats their details. You get a reference list, permission-request drafts and short briefings about the role for each person to review.
+you_give:
+  - The target role and possible professional references.
+  - Known contact details, working relationships and permission status.
+you_get:
+  - A formatted reference list with missing details marked.
+  - Draft permission requests and reference briefings.
+  - A checklist for sharing and follow-up.
+how_it_works:
+  - title: Step 1
+    text: Choose people who can give first-hand evidence for the role.
+  - title: Step 2
+    text: Check permission and current contact details before sharing.
+  - title: Step 3
+    text: Format the list and draft requests, briefings and thank-you notes.
+how_to_use:
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.
+  - It works best when your AI can read your supplied notes and ask follow-up questions.

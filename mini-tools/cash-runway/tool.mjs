@@ -14,12 +14,12 @@ const MONTHS = ["January", "February", "March", "April", "May", "June", "July", 
 
 export default {
   slug: "cash-runway",
-  name: "Know how many months your cash lasts",
+  name: "Cash balance and runway forecast",
   /** The plain name, used where the tool talks about itself. */
-  short: "Cash runway",
-  headline: "Know how many months your cash lasts, and the month it runs out",
-  summary: "Type your cash, what comes in and goes out each month, and how fast each grows. You get the months your cash lasts and the month it runs out.",
-  question: "How many months will my cash last, given what I earn, what I spend and how fast each is growing?",
+  short: "Cash balance and runway forecast",
+  headline: "Cash balance and runway forecast",
+  summary: "Enter cash, monthly income and spending, plus growth assumptions. Estimate how long cash lasts and any extra amount needed for your target.",
+  question: "How long might our cash last under these income and spending assumptions?",
   shelf: ["general"],
   version: "1.0.0",
   updated: "2026-10-21",
@@ -30,7 +30,7 @@ export default {
     { id: "costs", label: "Money out each month", unit: "money", example: 15000, min: 0, max: 1e10, step: 500, help: "Everything you pay in a normal month: pay, rent, software, stock, ads, loan payments and tax. Spread yearly bills over 12 months.", where: "Your bank withdrawals for the last 3 months, added up and divided by 3.", tools: ["Your banking app", "Xero or QuickBooks", "Your card statements"] },
     { id: "incomeGrowth", label: "Growth in money in, each month", unit: "percent", example: 0, min: 0, max: 100, step: 0.5, help: "How much more comes in each month, as a share of today's money in. 5 means 5% of today's figure is added every month. Use 0 if you expect no growth.", where: "Your money in over the last 6 months: the rise from the first month to the last, divided by 5, as a share of the first month.", tools: ["Your banking app", "A spreadsheet"] },
     { id: "costGrowth", label: "Growth in money out, each month", unit: "percent", example: 0, min: 0, max: 100, step: 0.5, help: "How much more you pay out each month, as a share of today's money out. Include hires you have planned. Use 0 if your costs stay flat.", where: "Your money out over the last 6 months, worked out the same way, plus any planned hires or price rises.", tools: ["Your banking app", "A spreadsheet", "Your hiring plan"] },
-    { id: "targetMonths", label: "Months you want your cash to last", unit: "count", example: 12, min: 1, max: 120, step: 1, integer: true, help: "How far ahead you want to be covered. 12 is a common choice.", where: "Your own goal. Many people use the time it takes to raise money or turn a profit.", tools: [] },
+    { id: "targetMonths", label: "Months you want your cash to last", unit: "count", example: 12, min: 1, max: 120, step: 1, integer: true, help: "Choose the period you want to cover with cash, using your own cash plan.", where: "Your own goal. Many people use the time it takes to raise money or turn a profit.", tools: [] },
     { id: "startMonth", label: "The month you are in now", unit: "count", example: 10, min: 1, max: 12, step: 1, integer: true, help: "1 is January and 12 is December. It is only used to name the month your cash runs out.", where: "Your calendar.", tools: ["Your calendar"] },
   ],
   outputs: [

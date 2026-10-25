@@ -9,12 +9,12 @@
 
 export default {
   slug: "store-or-marketplace",
-  name: "See whether an order keeps more on your store or on a marketplace",
+  name: "Store or marketplace profit",
   /** The plain name, used where the tool talks about itself. */
-  short: "Channel margin",
-  headline: "See whether an order keeps more on your own store or on a marketplace, fees and ads counted",
-  summary: "Type your price and cost of goods, then each channel's fees, shipping and ad cost per order. You get what an order keeps on each, the gap a month and the marketplace fee that would make them equal.",
-  question: "Does an order keep more on my own store or on a marketplace, once fees, shipping and ads are counted, and what is that worth a month?",
+  short: "Store or marketplace profit",
+  headline: "Store or marketplace profit",
+  summary: "Enter each channel’s fees, shipping and ad costs. Compare order profit, the monthly gap and the marketplace fee at which both match.",
+  question: "Which channel leaves more per order at the same price and volume?",
   shelf: ["ecommerce"],
   version: "1.0.0",
   updated: "2026-10-21",
@@ -31,7 +31,7 @@ export default {
     { id: "storeFee", label: "Payment fees on your store", unit: "percent", example: 3, min: 0, max: 100, step: 0.1, section: "store", help: "The share of each payment your payment provider keeps.", where: "Your payouts report: fees divided by sales.", tools: ["Shopify Payments", "Stripe", "PayPal"] },
     { id: "storeShip", label: "Shipping and packing per order on your store", unit: "money", example: 6, min: 0, max: 1e6, step: 0.5, section: "store", help: "Postage, box and packing for one order, less what the customer pays for shipping.", where: "Your shipping costs for the last 90 days divided by orders.", tools: ["Shopify shipping reports", "Your courier invoices"] },
     { id: "storeAd", label: "Ad cost to win one order on your store", unit: "money", example: 10, min: 0, max: 1e6, step: 1, section: "store", help: "Your ad spend divided by the orders it brought. Use 0 if your store orders come free.", where: "Your ads accounts: spend divided by orders, last 30 days.", tools: ["Meta Ads Manager", "Google Ads"] },
-    { id: "marketFee", label: "Marketplace fee", unit: "percent", example: 15, min: 0, max: 100, step: 0.5, section: "market", help: "The share of the price the marketplace keeps for the sale, including its payment handling.", where: "The marketplace's fee schedule for your category.", tools: ["Your seller account's fee schedule"] },
+    { id: "marketFee", label: "Marketplace fee", unit: "percent", example: 15, min: 0, max: 100, step: 0.5, section: "market", help: "The share of the price the marketplace keeps for the sale, including its payment handling.", where: "The fee list for your type of product on the marketplace.", tools: ["Your seller account's fee schedule"] },
     { id: "marketFulfil", label: "Fulfilment or shipping per order on the marketplace", unit: "money", example: 7, min: 0, max: 1e6, step: 0.5, section: "market", help: "What the marketplace charges to pick, pack and ship one order, or your own shipping cost if you ship it.", where: "The marketplace's fee calculator for your item.", tools: ["Your seller account's revenue calculator"] },
     { id: "marketAd", label: "Ad cost to win one order on the marketplace", unit: "money", example: 4, min: 0, max: 1e6, step: 0.5, section: "market", help: "Your ad spend on the marketplace divided by the orders it brought. Use 0 if you do not advertise there.", where: "The marketplace's ads dashboard: spend divided by orders.", tools: ["Your seller account's ads dashboard"] },
   ],

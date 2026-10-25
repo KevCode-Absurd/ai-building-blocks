@@ -24,13 +24,10 @@ This skill runs on its own. What's below makes the result better, but none of it
 **From the brand brain, read:** `00-start-here.md`, `customers.md`, `offers.md`, `proof-and-claims.md`, `market.md`. Take the buyers, the main promise and approved claims only. Source notes and rejected ideas never go into the result.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with customer words, your brand brain. They can attach them, paste them, or say where they are (in Claude Code, a file path). Name the recommended steps above as a suggestion, with their links. Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
-3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once, merge steps that give the same thing, and aim for under 700 words unless the job truly needs more. In CHECKS MISSED, name only the checks that failed, or write “none”.
+1. Read the supplied brief, pasted text and relevant attachments first. With file tools, open only the business project or files the user named. With chat alone, work from the supplied text; an unavailable file is a gap, not a fact to guess.
+2. Start the requested job with the facts already present. Ask only for a missing answer that changes a material decision; otherwise mark a working assumption and continue. Do not make a full intake or setup check a prerequisite for a small task.
+3. Return the requested result and any unresolved checks. Save files only in an authorized project destination; otherwise return named sections to copy or attach next time. Do not claim that another AI or future chat can remember unsaved context.
 
-**Tools that do this best:**
-- **Claude:** Every current Claude model reads up to 1 million tokens, so a big pile of reviews and tickets fits in one chat.
-- **Gemini:** Also takes long inputs, and works inside Google Sheets if your survey answers live there.
 <!-- /needs -->
 
 ## What you need
@@ -40,6 +37,8 @@ How to start:
 - **The brand file** (optional): voice, offers, approved claims, buyer groups, what competitors promise.
 
 ## Steps
+0. **Choose the smallest evidence pass that answers this job.** Name the current product, buyer decision and requested output. Reuse confirmed offer and buyer facts from the supplied brief instead of repeating intake. Separate buyer quotes, product facts, competitor statements and the analyst’s interpretation before combining them. Ask only for a missing answer that would change the message priority.
+
 1. **Find the moment.** What happened right before buyers started looking? Quote it. A moment is a situation ("after the third tub went stale in the cupboard"), not a label ("busy professionals").
 2. **Sort the evidence into four forces.** Quote each one; a force with no quote is a gap.
    - **Push:** what's wrong with how they do it now.
@@ -49,9 +48,9 @@ How to start:
 3. **Place their awareness** on Eugene Schwartz's five levels: unaware, problem aware, solution aware, product aware, most aware. Name the evidence that put them there. When the evidence splits, place the people who haven't bought yet.
 4. **Place what the market has heard.** Schwartz's market stages, plainly: (1) nobody has made this promise; (2) others make it, so it needs to be bigger or more specific; (3) everyone makes it, so the copy must show how it works; (4) everyone shows how, so it needs a better or more specific how; (5) buyers believe none of it, so the copy leads with the buyer's own situation. Use competitor claims from the brand file or the evidence.
 5. **Pick the force to work on.** Usually it's the weakest force for, or the strongest force against. Strong push but loud fear means the copy spends its words on proof and risk removal, not on the problem. Weak push means the copy has to make the problem felt first. Choose one.
-6. **Collect the words.** Five to eight short phrases buyers really use, each quoted from the evidence, for the writer to borrow.
+6. **Collect the words.** Keep five to eight useful phrases in the buyers’ actual wording, with stable source IDs and enough context to know which product and situation they concern. Merge duplicate reposts rather than counting them as different buyers. A quote supports what that person reported, not a measured share of the whole market. State sample size only when the unique records were counted.
 7. **Write the job line:** "When <the moment>, I want to <the progress>, so I can <what it gives them>. What stops me: <the fear or habit, in their words>."
-8. **Check it.** Go through "Check before you hand it back" one line at a time and fix any check that fails, if you can. Under CHECKS MISSED, write one line for each check still missed and why, or "none".
+8. **Check it and route the gaps.** Check every force and stage against the supplied source, then name what could change the chosen message priority. If evidence is missing, return a provisional brief with the gap visible. Add at most three focused research questions, each with a suitable source type and a condition that would change the brief. Without web tools, return those as ready-to-use questions; do not claim research ran. The requested brief still stays under250 words; put the source ledger and optional research plan outside that limit.
 
 ## What you hand back
 A brief under 250 words, in this order:
@@ -61,7 +60,7 @@ A brief under 250 words, in this order:
 - The four forces, each with one or two quotes, or `MISSING`
 - The force to work on, and what that means for the copy (one or two sentences)
 - The word bank
-- Gaps, each as a question to ask customers
+- Material gaps and provisional conclusions; put up to three decision-changing research questions outside the 250-word brief
 - CHECKS MISSED: one line per check still missed, or "none" (outside the 250 words)
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->

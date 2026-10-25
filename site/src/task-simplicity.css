@@ -1,0 +1,76 @@
+/* Reuse the existing palette and type. Task-first layout and disclosures only. */
+.task-start { max-width: 860px; margin: 1.5rem 0 0; text-align: left; border-top: 1px solid var(--line); padding-top: 1.25rem; }
+.task-stages { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 1rem; }
+.task-start .task-composer { margin: 1rem 0; }
+.task-start .composer-bar { flex-wrap: wrap; gap: .8rem; }
+.task-composer textarea, .task-copy-fallback textarea { display: block; box-sizing: border-box; width: 100%; max-width: 100%; min-height: 8rem; font: inherit; line-height: 1.5; padding: .8rem; color: inherit; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; resize: vertical; }
+.task-composer > label { display: block; font-weight: 600; margin-bottom: .6rem; }
+.task-materials { padding-left: 1.2rem; margin: .5rem 0 1rem; }
+.task-start details, .task-install details, .task-download details { margin: .8rem 0; }
+.task-start summary, .task-install summary, .task-download summary, .task-reference summary { cursor: pointer; padding: .5rem 0; }
+.task-output-example pre { max-height: 16rem; overflow: auto; white-space: pre-wrap; overflow-wrap: anywhere; font: inherit; line-height: 1.6; margin: .5rem 0; }
+.task-example-actions { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem 1rem; margin: 0; padding: .5rem 1rem; }
+.task-check { display: flex; gap: .5rem; align-items: start; }
+.task-transfer, .task-file-transfer, .task-result-check, .task-copy-fallback { margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid var(--line); }
+.task-transfer ol { padding-left: 1.3rem; }
+.task-result-check ul { padding-left: 1.3rem; }
+.task-reference { margin-top: .7rem; padding-top: .5rem; }
+.task-reference summary .bp-h2 { display: inline; font-size: 1.25rem; }
+.task-reference details[open] > summary { margin-bottom: .8rem; }
+.task-more .bp-actions { justify-content: flex-start; flex-wrap: wrap; gap: .6rem; }
+.task-copy-fallback { width: 100%; }
+.task-download .atf-foot { flex-wrap: wrap; gap: .75rem; }
+.task-start .workflow-launch { text-align: left; }
+.bp-toc > details > summary { font-weight: 600; cursor: pointer; }
+.bp-toc > details > a { display: block; }
+.task-reference :target { scroll-margin-top: 6rem; }
+.task-start, .task-reference { scroll-margin-top: 6rem; }
+@media (max-width: 640px) {
+  .task-start { margin-top: 1.25rem; }
+  .task-start .composer-bar .btn, .task-start > .btn, .task-install > .btn { width: 100%; }
+  .task-tool-choice .kind-tabs { flex-wrap: wrap; }
+  .task-download .atf-body { overflow-wrap: anywhere; }
+  .task-download .atf-foot .btn { flex: 1 1 auto; }
+}
+
+.task-stages [aria-current="step"] { font-weight: 700; text-decoration: underline; text-underline-offset: .3em; }
+
+.bp[data-testid="block-page"] .bp-hero { padding-top: 24px; }
+.bp[data-testid="block-page"] .bp-kicker { margin-top: 18px; }
+.task-start > p { margin-block: .5rem; }
+.task-start .task-output-example { margin: .5rem 0; }
+.task-start .task-composer > label { margin-bottom: 0; background: var(--panel); }
+.task-start .task-composer .task-extras { padding: .5rem 1rem; margin: 0; }
+.task-start .task-composer > textarea { min-height: 7rem; }
+.task-start .task-extras > summary { font-size: .85rem; }
+.task-input-help { margin: 0; padding: .5rem 1rem; }
+.task-action-help > p { max-width: 66ch; margin: .5rem 0; line-height: 1.6; }
+.task-action-help > a { display: inline-block; padding: .5rem 0; text-decoration: underline; text-underline-offset: .2em; }
+
+/* Shared task controls and panel interiors follow the heading's left edge. */
+.task-primary { max-width: 860px; margin-block: 1.5rem; }
+.task-primary-actions { display: flex; flex-wrap: wrap; gap: .75rem; }
+.task-primary > p { margin: .9rem 0 0; max-width: 70ch; line-height: 1.6; }
+.task-primary a { text-decoration: underline; text-underline-offset: .2em; }
+.task-primary .btn { min-height: 44px; }
+.task-customize-title { margin: 0 0 1rem; font-size: 1.2rem; line-height: 1.5; }
+.task-customize-title .small { font-weight: 400; }
+.task-composer > .task-transfer, .task-composer > .task-copy-fallback { margin: 0; padding: 1.25rem 1rem; }
+.task-composer > .task-materials { margin: 1rem; padding-left: 1.25rem; }
+.task-composer > p[role="alert"] { padding-inline: 1rem; }
+.task-composer .task-transfer h3 { margin: 0 0 .75rem; }
+.task-composer .task-transfer p { margin: .75rem 0 0; }
+.task-composer .task-transfer ol { margin: .5rem 0; }
+.task-composer .task-example-actions .link-btn, .task-composer .task-extras summary { min-height: 44px; display: inline-flex; align-items: center; }
+.task-composer .task-extras summary { display: list-item; align-content: center; }
+.task-install { box-sizing: border-box; padding: 1.25rem; }
+.task-install > p { margin: 1rem 0 0; line-height: 1.6; }
+.task-install .task-file-transfer h3 { margin-top: 0; }
+.task-more > .bp-actions { margin-top: .75rem; }
+.task-start .composer-bar { padding: .875rem 1rem; }
+@media (max-width: 640px) {
+  .task-primary-actions { flex-direction: column; }
+  .task-primary-actions > .btn { width: 100%; }
+  .task-install { padding: 1rem; }
+  .task-composer .composer-bar > span { flex-basis: 100%; }
+}

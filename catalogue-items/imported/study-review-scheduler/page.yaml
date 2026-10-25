@@ -1,0 +1,37 @@
+thinking: medium
+thinking_why: It follows a set method and adapts its questions or draft to your evidence.
+new_slug: study-review-scheduler
+name: Study review scheduler
+summary: Share due study cards. Get a recall session and updated review dates
+  based on how well you remember.
+job: study-and-practice
+headline: Study review scheduler
+subhead: Give it study cards with due dates and recent recall results. It
+  reviews the most overdue items first and adjusts each interval after your
+  answer. You get updated dates, failed items to retry and a view of the coming
+  week.
+explain: Give it study cards with due dates and recent recall results. It
+  reviews the most overdue items first and adjusts each interval after your
+  answer. You get updated dates, failed items to retry and a view of the coming
+  week.
+you_give:
+  - Understood study items with due dates and current intervals.
+  - Your recall result for each item.
+you_get:
+  - A review session capped at fifteen items.
+  - Updated intervals and next review dates.
+  - Failed-item retries and a seven-day review view.
+how_it_works:
+  - title: Step 1
+    text: Find due items and rank overdue ones first.
+  - title: Step 2
+    text: Show each question before its answer and record recall quality.
+  - title: Step 3
+    text: Update intervals, retry failed items and show the next review dates.
+how_to_use:
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
+  - It works best when your AI can read your supplied notes and ask follow-up
+    questions.

@@ -1,0 +1,27 @@
+thinking: medium
+thinking_why: It follows a process checklist and ties each step to your records.
+new_slug: project-time-and-expense-plan
+name: Project time and expense plan
+summary: Share your time and expense process. Get entry rules, approval steps and a clear handoff to billing.
+job: organise-work
+headline: Project time and expense plan
+subhead: Share how your team records project hours and expenses, plus the rules you use today. It maps entries, receipts, approvals and billing handoffs. You get a process plan, review roles and checks for late entries, missing receipts and project budget gaps.
+explain: Share how your team records project hours and expenses, plus the rules you use today. It maps entries, receipts, approvals and billing handoffs. You get a process plan, review roles and checks for late entries, missing receipts and project budget gaps.
+you_give:
+  - Current time and expense tools, project codes and policies.
+  - Approval roles, billing needs and known delays or missing records.
+you_get:
+  - Time and expense entry rules.
+  - An approval and exception process.
+  - A billing handoff plan with reporting checks.
+how_it_works:
+  - title: Step 1
+    text: Define project codes, billable flags, entry timing and receipt rules.
+  - title: Step 2
+    text: Set review roles, backup approvers and exception handling.
+  - title: Step 3
+    text: Plan the billing handoff and reports for delays and budget gaps.
+how_to_use:
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.
+  - It works best when your AI can read your supplied records; changing live systems needs separate access and approval.

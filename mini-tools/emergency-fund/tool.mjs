@@ -1,11 +1,11 @@
 // Original tool. All numbers shown are illustrative figures, not a real person’s results.
 export default {
   "slug": "emergency-fund",
-  "name": "Plan a cash buffer for essential expenses",
-  "short": "Emergency fund planner",
-  "headline": "Plan a cash buffer for essential expenses",
+  "name": "Emergency savings planner",
+  "short": "Emergency savings planner",
+  "headline": "Emergency savings planner",
   "summary": "Choose the months of expenses you want covered. See the target, current gap and months to save it.",
-  "question": "Plan a cash buffer for essential expenses?",
+  "question": "How much remains to save for my chosen cash buffer?",
   "category": "finance",
   "shelf": [
     "general"
@@ -97,7 +97,7 @@ export default {
       "unit": "count",
       "formula": "IF(gap = 0, 0, IF(monthly > 0, ROUNDUP(gap / monthly, 0), NA()))",
       "sum": "{gap} ÷ {monthly}, rounded up = {=}",
-      "means": "Assumes equal deposits and no interest.",
+      "means": "Assumes you add the same amount each month and earn no interest.",
       "none": "Set a monthly saving amount"
     }
   ],

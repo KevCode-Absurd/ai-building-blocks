@@ -1,0 +1,35 @@
+slug: review-support-bot-errors-with-retest-cases
+name: Support bot evidence review assistant
+summary: Paste redacted conversations and approved help text. Get evidence-linked failures, proposed fixes and repeatable review cases.
+category: agent
+type: agent
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: transcript
+    required: true
+  - type: document
+    required: true
+  - type: question
+    required: true
+outputs:
+  - type: audit_report
+  - type: document
+  - type: plan
+uses:
+  - support-chatbot-conversation-review
+  - support-issue-cause-investigator
+  - bug-report-writer
+steps:
+  - uses: support-chatbot-conversation-review
+    note: Use logs, approved sources and scope to classify resolution and accuracy with conversation evidence. Use connected log tools only when authorized; pasted exports allow offline review. Pass related failure clusters onward.
+  - uses: support-issue-cause-investigator
+    note: Use conversation clusters and linked tickets to compare shared timing/topics, evidence and counterexamples. Label unverified causes as hypotheses. Hand prioritized evidence-backed proposed fixes to issue drafting.
+  - uses: bug-report-writer
+    note: Draft one issue per distinct failure with redacted input, observed behavior, source-backed expected facts, escalation expectation and a pass/fail review case. Preserve evidence IDs and unresolved questions.
+execution: coordinator
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

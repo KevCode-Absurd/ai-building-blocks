@@ -1,0 +1,26 @@
+new_slug: review-a-power-bi-data-model
+name: Review a Power BI data model
+summary: Find risks in Power BI tables and links. Get a ranked fix list.
+job: track-numbers
+headline: Review a Power BI data model
+subhead: Share your Power BI tables, links and access rules. Check the model and get risks, fixes and tests to run.
+explain: Share your Power BI tables, links and access rules. Check the model and get risks, fixes and tests to run.
+when:
+  - You want to review a Power BI data model.
+you_give:
+  - Your table definitions, relationships, storage modes, measure context and reporting requirements.
+you_get:
+  - A model review with evidence, priorities, validation steps and unresolved questions.
+how_to_use:
+  - Download the complete skill folder and add it to your AI tool, or copy the instructions into a chat.
+  - Provide the inputs listed here and ask your AI to follow the skill.
+  - Review the result and any missing facts before using it.
+how_it_works:
+  - title: Check the model shape
+    text: Identify fact-table grain, dimensions, keys, relationship cardinality and filter paths.
+  - title: Review performance and access
+    text: Assess storage choices, cardinality, refresh needs, row security and missing evidence.
+  - title: Prioritize changes
+    text: Separate correctness risks from tuning ideas and propose tests and rollback considerations.
+thinking: medium
+thinking_why: It weighs your evidence and follows a specific method.

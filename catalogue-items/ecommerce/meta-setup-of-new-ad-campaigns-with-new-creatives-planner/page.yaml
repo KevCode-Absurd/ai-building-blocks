@@ -1,0 +1,37 @@
+new_slug: meta-setup-of-new-ad-campaigns-with-new-creatives-planner
+name: Meta creative test campaign planner
+summary: Plan a new Meta creative test with clear ad groups, a spend limit, evidence needs and review points.
+job: launch-and-scale-ads
+headline: Meta creative test campaign planner
+subhead: Plan a new Meta creative test with clear ad groups, a spend limit, evidence needs and review points.
+explain: |-
+  Share campaign settings, dated results, target economics and budget limits. Get a campaign plan with proposed settings and review points.
+
+  Follow the actual current account/project structure rather than source screenshots or fixed historical settings.
+when:
+  - You need a campaign plan with proposed settings and review points.
+you_give:
+  - Campaign settings, dated results, target economics and budget limits
+  - The exact change you want and actions you authorize
+you_get:
+  - A campaign plan with proposed settings and review points
+  - Missing inputs and a bounded verification plan
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Step 1
+    text: Define the creative question, target buyer, approved product facts, offer and required decision evidence. Choose whether an existing campaign draft or a new structure best fits the request. Duplication may preserve useful settings but must not carry stale assumptions into a new test.
+  - title: Step 2
+    text: Use a clear naming convention containing a stable test ID, brand or product, funnel purpose, geography, objective, audience and date where useful. Derive each field from actual setup; a naming example does not require a particular audience, country or account strategy.
+  - title: Step 3
+    text: Inspect objective, buying type, conversion event, special-category requirements, placements, geography and audience eligibility in the current account. Do not assume sales, purchase or no special category is appropriate for every product. Set the approved total budget and verify the level where it applies.
+  - title: Step 4
+    text: "Build one draft ad completely: correct media and thumbnail, approved words, current destination, tracking and preview crops. If testing hooks, preserve the intended message and offer while making the hook variants clear; additional copy variation is optional and can add confounding."
+  - title: Step 5
+    text: Duplicate the checked draft for remaining approved variants, replacing only planned elements and updating names. Verify each ad rather than assuming the template copied correctly. Choose a controlled experiment when causal comparison is required; ordinary delivery is not random equal exposure.
+  - title: Step 6
+    text: Deliver a draft inventory, budget exposure, preflight findings and review owner. Keep outstanding approvals visible. Publish only within existing authorization, verify actual status, and record the observation window and stopping rules before judging a winner.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

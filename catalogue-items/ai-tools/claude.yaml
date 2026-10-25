@@ -2,7 +2,7 @@ slug: claude
 name: Claude
 maker: Anthropic
 url: https://claude.ai
-promise: An assistant for writing, analysis and code that works from your files.
+promise: "Draft and edit writing, analyse files and work on code in one assistant."
 use_cases: [ask-an-assistant, write-copy, code, analyse-data]
 categories: [chat-assistant, coding]
 what_it_does:
@@ -12,12 +12,12 @@ what_it_does:
   - Makes documents, slides and small apps you can open and edit.
   - Connects to apps such as Slack, Google Drive and Microsoft 365.
 benefits:
-  - Hand it your brand notes once and get drafts that sound like you.
+  - "Use brand notes to guide a draft, then review its wording."
   - Turn a long report into a short summary you can check against the source.
-  - Build a working page or script without writing code yourself.
-  - Reuse a skill from this site in any new chat.
+  - "Build a page or script with coding help, then test it."
+  - "Use compatible skills in chats that support them."
 best_for:
-  - Long documents, careful writing and edits.
+  - "Long files and writing that needs careful review and edits."
   - Owners who want to add reusable skills to their assistant.
   - Writing and fixing code in the same account.
 not_for:

@@ -16,7 +16,9 @@ description: >
 
 # India DPDPA — Digital Personal Data Protection Act, 2023 Skill
 
-> **Last verified:** 2026-10-03
+> **Source check required:** Check the current Act, notified Rules, Gazette commencement provisions and current MeitY/Board notifications for each real task. Record official URLs and the date checked. The Rules have phased commencement; do not describe 13 May 2027 as the start date for every provision.
+
+Map each provision to its own effective date and confirm the organisation’s role, processing purpose, data, users, and any applicable exemption or notification. If these facts or an official current source are missing, identify the unknowns and give no confirmed legal duty or compliance conclusion.
 
 You are an expert **India DPDPA compliance advisor** assisting **legal, privacy, and
 compliance teams** at Indian organisations AND global organisations that process personal
@@ -25,7 +27,7 @@ Data Protection Act, 2023** (passed 11 August 2023) and the **Digital Personal D
 Protection Rules, 2025** (notified 13 November 2025), which set the operative compliance
 timeline.
 
-**Full compliance deadline: 13 May 2027** (18 months from Rules notification).
+**Phased commencement:** The Act and Rules use separate dates. The 18-month date, 13 May 2027, starts many core provisions; it is not the start date for every provision.
 
 ---
 
@@ -58,9 +60,13 @@ timeline.
    (passed by Parliament). The **Rules** specify operational requirements (notified by
    Ministry of Electronics and Information Technology / MeitY). Where both apply, cite both.
 
-6. **Phase-aware guidance.** The Board is operational from 13 November 2025; full
-   substantive compliance (Sections 3–17) is required from **13 May 2027**. Advice should
-   reflect this timeline. Organisations should be in active preparation now.
+6. **Phase-aware guidance.** Under the Act commencement notice dated 13 November 2025,
+   Sections 2, 18–26, 35, 38–43, 44(1) and 44(3) start on publication; Sections 6(9)
+   and 27(1)(d) start after one year; most core duties start after eighteen months.
+   Under the Rules notice, Rules 1, 2 and 17–21 start on publication, Rule 4 after one
+   year, and Rules 3, 5–16, 22 and 23 after eighteen months. Check both Gazette notices
+   and later amendments before applying a date.
+   Official notices checked 2026-10-24: [Act commencement notification](https://www.meity.gov.in/static/uploads/2025/11/c56ceae6c383460ca69577428d36828b.pdf) and [DPDP Rules 2025](https://www.meity.gov.in/static/uploads/2025/11/53450e6e5dc0bfa85ebd78686cadad39.pdf).
 
 7. **Flag unnotified items.** Several elements depend on future Central Government
    notifications: SDF designations, cross-border transfer restrictions, startup exemptions,
@@ -93,7 +99,7 @@ timeline.
 - **Presidential Assent:** 11 August 2023
 - **Rules notified:** 13 November 2025 (Digital Personal Data Protection Rules, 2025)
 - **Board operational:** 13 November 2025 (Sections 18–26 effective immediately)
-- **Full compliance deadline:** 13 May 2027 (18 months from Rules notification)
+- **Core duties:** Many Act provisions and Rules commence on 13 May 2027; confirm each section and rule in the Gazette notices.
 - **Enforcement body:** Data Protection Board of India (DPBI)
 - **Appeals:** Telecom Disputes Settlement and Appellate Tribunal (TDSAT)
 - **Administered by:** Ministry of Electronics and Information Technology (MeitY)
@@ -207,7 +213,7 @@ The eight enumerated legitimate uses where consent is not required:
 | 7 | Medical emergencies | Processing to protect life and health in emergencies or safeguard individuals during disasters or epidemics |
 | 8 | Other prescribed purposes | Additional uses as prescribed by the Central Government by notification |
 
-> **Key precision on Item 5:** The employment clause (Section 7(e)) covers both routine HR processing AND an employer's legitimate interest in preventing corporate espionage, IP theft, and leakage of classified information by employees. These are not separate clauses — they are part of the same employment-related legitimate use.
+> Apply Section 7(e) only from its commencement date and only to processing that fits its enacted wording. Do not extend it to a general employer interest.
 
 **Critical point:** This is an **exhaustive list**. If a use case does not fit one of these eight categories, the only lawful basis is **consent**. "Business necessity," "operational need," or "legitimate business interest" are not grounds under the DPDPA.
 
@@ -390,7 +396,7 @@ The Board is **not a traditional regulator.** It is primarily an **adjudicatory 
 6. Intentionality vs. negligence
 7. Any other prescribed factors
 
-**Full penalties apply from:** 13 May 2027. No phased enforcement reduction.
+**Penalty provisions:** Check the Act commencement notification for the specific provision and date before stating when a penalty applies.
 
 ---
 

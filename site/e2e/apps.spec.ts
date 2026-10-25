@@ -5,6 +5,9 @@ import { execFileSync } from "node:child_process";
 
 const errors = new WeakMap<Page, string[]>();
 test.beforeEach(async ({ page }) => {
+  // Frozen static previews have no API worker. These public app tours exercise
+  // the signed-out UI; account/auth behavior is covered by its own fixtures.
+  await page.route("**/api/auth", route => route.fulfill({ json: { configured: false } }));
   const list: string[] = [];
   errors.set(page, list);
   page.on("pageerror", (e) => list.push(e.message));
@@ -17,14 +20,29 @@ test.afterEach(async ({ page }) => {
 // The Next.js pages of the saved app fall back to loading the next saved page, and say so in the console.
 const EXPECTED = /tour: load the page|Falling back to browser navigation/;
 
+test("the saved guide uses the generic app name without missing illustrations", async ({ page }) => {
+  await page.goto("/example-app/guide/20-best-output-workflow");
+  await expect(page.locator('a .display').first()).toHaveText("Example app");
+  await expect(page.getByRole("heading", { name: "Using Example app for better creative outputs", exact: true })).toBeVisible();
+  await expect(page.locator("main")).not.toContainText(/Merc(?:atura|urata|uriata)/i);
+  await expect(page.locator('[id="1-find-the-right-part-of-the-app"]')).toBeVisible();
+  await expect(page.locator('[id="2-prepare-the-brand-before-making-a-batch"]')).toHaveCount(1);
+  await expect(page.locator('[id="3-keep-every-fact-within-its-actual-scope"]')).toHaveCount(1);
+  for (const name of ['best-home.png', 'best-brand-products.png', 'best-evidence-quality.png']) await expect(page.locator(`img[src$="/${name}"]`)).toHaveCount(0);
+  await expect(page.locator("#tour-bar")).toContainText("Nothing here runs");
+});
+
 test("the header leads to Apps: one finished example app, the starter pack and the open-source app", async ({ page }) => {
   await page.goto("/");
-  await page.locator(".nav").getByRole("link", { name: "Apps" }).click();
+  await page.getByTestId("menu-btn").click();
+  await page.getByRole("navigation", { name: "Sections", exact: true }).getByRole("link", { name: "Apps", exact: true }).click();
   const index = page.getByTestId("apps-index");
   await expect(index).toBeVisible();
-  await expect(page).toHaveTitle("Apps · AI Blocks");
+  await expect(page).toHaveTitle("Example AI apps you can copy · AI Blocks");
   await expect(index.getByTestId("tour-open")).toHaveAttribute("href", "/example-app/");
   await expect(index.getByTestId("tour-open")).toHaveAttribute("target", "_blank");
+  await expect(index.getByTestId("tour-open")).toHaveText("See an example");
+  await expect(index).not.toContainText(/Merc(?:atura|urata|uriata)/i);
   await expect(index.getByTestId("example-note")).toContainText("nothing runs");
   await expect(index.getByTestId("app-area")).toHaveCount(9);
   await expect(index.locator(".ap-stages li")).toHaveCount(9);
@@ -48,11 +66,16 @@ test("the example app works with no server: screens open, links move between the
   const list = errors.get(page)!;
   await page.goto("/example-app/");
   await expect(page).toHaveTitle(/Creative Studio/);
+  await expect(page).toHaveTitle(/Example app/);
+  await expect(page.locator('a .display').first()).toHaveText("Example app");
+  await expect(page.locator("body")).not.toContainText(/Merc(?:atura|urata|uriata)/i);
   await expect(page.locator("#tour-bar")).toContainText("Nothing here runs");
   await expect(page.locator("#tour-bar a", { hasText: "Back to AI Blocks" })).toHaveAttribute("href", "/apps");
   await page.locator('a[href="/example-app/references"]').first().click();
   await expect(page).toHaveURL(/\/example-app\/references$/);
   await expect(page.locator("main h1, main h2").first()).toBeVisible();
+  await expect(page.locator('a .display').first()).toHaveText("Example app");
+  await expect(page.locator("body")).not.toContainText(/Merc(?:atura|urata|uriata)/i);
   // Anything that would make or save something is stopped, with a note for the person who clicked.
   await page.mouse.click(4, 450);
   const status = await page.evaluate(() => fetch("/api/jobs", { method: "POST", body: "{}" }).then((r) => r.status));

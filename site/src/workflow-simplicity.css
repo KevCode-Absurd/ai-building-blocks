@@ -1,0 +1,85 @@
+/* Progressive workflow controls use the existing palette and tokens. */
+.workflow-options > summary { cursor: pointer; padding: 10px 0; color: var(--text); }
+.workflow-options[open] > summary { margin-bottom: 12px; }
+.workflow-options > .btn { margin: 8px 0; }
+.workflow-view { display: inline-flex; flex-wrap: wrap; gap: 4px; padding: 4px; border: 1px solid var(--line-2); border-radius: 12px; background: var(--bg); }
+.workflow-view .btn { min-height: 40px; height: auto; padding: 9px 12px; border-radius: 8px; }
+.workflow-view .btn[aria-pressed="true"], .workflow-view .btn[aria-pressed="true"]:hover { background: var(--btn); color: var(--btn-text); box-shadow: none; font-weight: 600; }
+.workflow-view .btn[aria-pressed="false"] { color: var(--muted); }
+.builder.workflow-simple { grid-template-columns: minmax(0, 1fr); }
+.builder.list .stage { min-height: 520px; }
+.builder.list .stage-list { flex: 1; overflow: auto; }
+.builder .stage-bar { flex-wrap: wrap; gap: 8px; }
+.builder .stage-bar > .btn { min-height: 40px; height: auto; padding-top: 9px; padding-bottom: 9px; }
+.builder .stage-bar [data-testid="download-handoff"] { margin-left: 8px; }
+.builder .flow-name { min-width: 140px; max-width: 300px; flex: 1 1 160px; }
+.builder .stage-foot { flex-wrap: wrap; gap: 10px; }
+.builder .stage-foot > .small { max-width: 420px; }
+.builder .stage-foot .stage-status { max-width: 100%; border-radius: 8px; white-space: normal; overflow-wrap: anywhere; line-height: 1.6; }
+.workflow-transfer { border-top: 1px solid var(--line); margin: 12px 0; padding: 14px 18px 14px 34px; font-size: 13px; line-height: 1.7; }
+.workflow-plan-status { border-left: 3px solid var(--line-2); padding-left: 12px; font-size: 14px; }
+.step-list .sl-purpose, .step-list .sl-result { display: block; margin-top: 6px; }
+.step-list .sl-ctl { align-self: center; }
+.builder .sl-end { gap: 6px; padding: 16px 18px; border-width: 1px; border-radius: 12px; line-height: 1.5; }
+.builder .sl-end b { font-size: 15px; }
+.builder .sl-end small { max-width: 100%; font-family: var(--sans); font-size: 14px; line-height: 1.6; overflow-wrap: anywhere; }
+.builder .sl-end:hover { background: var(--bg-2); border-color: var(--text); }
+.compose-page .compose-editor-grid { grid-template-columns: minmax(0, 1fr); grid-template-areas: "request" "settings" "submit"; }
+.compose-page .compose-settings-pane { border-left: 0; padding: 0; }
+.compose-page .compose-customize { margin-top: 20px; }
+.compose-page .compose-customize .compose-tabs { margin: 12px 0; }
+.compose-page .compose-workflow-canvas .builder.workflow-simple { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto; }
+.compose-page .compose-workflow-canvas .builder { height: auto; min-height: 520px; }
+.compose-next-step { margin-top: 22px; }
+.builder .workflow-view-help { margin: 0; padding: 10px 18px; line-height: 1.6; }
+.builder .workflow-run-help { margin: 0; padding: 0 18px 12px; }
+.workflow-run-help ol { padding-left: 1.3rem; line-height: 1.7; }
+.workflow-run-help > p { max-width: 66ch; line-height: 1.6; }
+.workflow-run-help > a { display: inline-block; padding: .5rem 0; text-decoration: underline; text-underline-offset: .2em; }
+.compose-result[hidden] { display: none; }
+@media (max-width: 760px) {
+ .builder.workflow-simple { grid-template-rows: auto; height: auto; }
+ .builder.workflow-customizing { height: auto; }
+ .builder .stage-bar .spacer { display: none; }
+ .builder .stage-bar { padding: 12px; }
+ .builder .workflow-view { width: 100%; }
+ .builder .workflow-view .btn { flex: 1; min-height: 44px; }
+ .builder .stage-bar [data-testid="download-handoff"] { margin-left: 0; }
+ .builder .stage-foot { position: relative; }
+ .builder .sl-row { flex-wrap: wrap; }
+ .builder .sl-txt { min-width: 0; }
+ .builder .sl-ctl { margin-left: 34px; }
+}
+
+.builder.workflow-simple.list { grid-template-rows: auto; height: auto; }
+.builder.workflow-simple:not(.list) { height: min(78vh, 800px); min-height: 560px; }
+.builder:not(.list) .stage { display: flex; flex-direction: column; overflow: auto; }
+.builder:not(.list) .stage > .stage-bar { position: static; padding: 12px; flex-shrink: 0; }
+.builder:not(.list) .stage > .workflow-view-help,
+.builder:not(.list) .stage > .workflow-run-help { flex-shrink: 0; }
+.builder:not(.list) .stage > .react-flow { flex: 1 0 420px; min-height: 420px; height: auto; }
+.builder:not(.list) .stage > .stage-foot { position: static; padding: 12px; left: auto; right: auto; bottom: auto; }
+.builder:not(.list) .stage > .stage-empty { position: relative; inset: auto; order: 1; width: 100%; min-width: 0; padding: 24px; flex: 0 0 auto; grid-template-columns: minmax(0, 1fr); }
+.builder:not(.list) .stage > .stage-empty > div { width: min(100%, 600px); min-width: 0; justify-self: center; overflow-wrap: anywhere; }
+.builder:not(.list) .stage > .stage-empty .goal { max-width: 100%; min-width: 0; }
+.builder:not(.list) .stage > .stage-empty .chip { max-width: 100%; white-space: normal; text-align: left; }
+.builder:not(.list) .stage:has(> .stage-empty) > .react-flow { flex: 0 0 110px; min-height: 110px; }
+.builder:not(.list) .stage:has(> .stage-empty) > .react-flow .react-flow__panel { display: none; }
+.builder:not(.list) .stage:has(> .stage-empty) > .stage-foot { order: 2; }
+.builder:not(.list) .stage-foot > .small { min-width: 0; max-width: 100%; }
+.builder.workflow-simple:not(.list):not(.full) { height: auto; }
+.builder .bar-more { display: block; position: relative; }
+.builder .bar-more-btn { display: inline-flex; }
+.builder .bar-extra { display: none; position: absolute; z-index: 30; top: calc(100% + 6px); right: 0; min-width: 220px; flex-direction: column; gap: 4px; background: var(--panel); border: 1px solid var(--line-2); padding: 10px; }
+.builder .bar-extra.open { display: flex; }
+.builder .bar-extra .btn, .builder .bar-extra select { width: 100%; }
+
+@media (max-width: 760px) {
+ .builder:not(.list) .stage > .react-flow { flex-basis: 320px; min-height: 320px; }
+ .builder .sl-row { display: grid; grid-template-columns: 26px minmax(0, 1fr); gap: 10px; }
+ .builder .sl-n { align-self: start; margin-top: 4px; }
+ .builder .sl-ctl { grid-column: 2; margin-left: 0; justify-content: flex-start; }
+ .builder .sl-txt { width: 100%; }
+ .compose-page .compose-result { padding: 12px; }
+ .compose-page .compose-workflow-canvas .stage-list { padding: 0 6px 12px; }
+}

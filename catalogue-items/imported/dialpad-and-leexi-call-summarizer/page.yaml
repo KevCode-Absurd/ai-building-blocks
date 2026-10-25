@@ -1,0 +1,32 @@
+thinking: medium
+thinking_why: It follows a set method with a few checks.
+new_slug: dialpad-and-leexi-call-summarizer
+name: Dialpad and Leexi call summarizer
+summary: Choose a call. Get the main points, promises, owners, and next steps from its transcript.
+job: work-with-audio
+headline: Dialpad and Leexi call summarizer
+subhead: Give it a call number or ask for recent calls in Dialpad or Leexi. It reads the call records and transcripts. You get a short summary, key decisions, promises, next steps, and warning signs worth checking.
+when:
+  - You use this tool for customer support and need help with this task.
+you_give:
+  - A call number or a request for recent calls.
+  - Dialpad or Leexi call records and transcripts.
+you_get:
+  - Return a short summary for each call, plus an overview table when several calls were reviewed.
+how_it_works:
+  - title: Fetch call records
+    text: Find the chosen call or a small set of recent calls and read the transcripts.
+  - title: Pull out commitments
+    text: Separate topics, decisions, promised work, owners, and due dates from the conversation.
+  - title: Write the call brief
+    text: Return a short summary for each call, plus an overview table when several calls were reviewed.
+works_best_with:
+  tools:
+    - name: Dialpad or Leexi
+      why: Live lookups need Composio CLI access and connected accounts for these services.
+how_to_use:
+  - Add the downloaded folder to an AI that can read skill files.
+  - Ask for dialpad and leexi call summarizer by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
+  - Provide a call number or a request for recent calls.
+  - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
+  - Review the result. Approve any proposed sending or account changes before they happen.

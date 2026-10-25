@@ -1,0 +1,35 @@
+slug: compare-project-options-against-cash-limits
+name: Choose project options within cash limits
+summary: Attach cash timing and project choices. Get a feasibility comparison, assumptions and a stop-or-review decision record.
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: question
+    required: true
+  - type: spreadsheet
+    required: true
+  - type: document
+    required: true
+outputs:
+  - type: plan
+  - type: spreadsheet
+  - type: audit_report
+uses:
+  - cash-forecast-builder
+  - constrained-decision-auditor
+  - decision-tripwire-planner
+steps:
+  - uses: cash-forecast-builder
+    note: Use ledger exports or CSV for dated inflows/outflows and explicit uncertainty. Avoid double-counting opening cash or commitments. Pass timing schedule and gaps to option formulation.
+  - uses: constrained-decision-auditor
+    note: Define project variables, units, objectives and hard/soft constraints. Validate candidate choices against cash schedule and other limits. Report feasible set or unresolved feasibility; optimality and infeasibility require proof.
+  - uses: decision-tripwire-planner
+    note: Use feasible choices, tradeoffs and uncertainty to challenge the preference, consider another option and set evidence-based review triggers. Return owner, next action and fallback. A proposed date is not a scheduled reminder.
+execution: coordinator
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

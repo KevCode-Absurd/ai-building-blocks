@@ -1,0 +1,34 @@
+thinking: medium
+thinking_why: It follows a set method and adapts its questions or draft to your evidence.
+new_slug: study-notebook-review
+name: Study notebook review
+summary: Share due lesson notes. Recall each topic, get honest feedback and
+  update your next review dates.
+job: study-and-practice
+headline: Study notebook review
+subhead: Give it the lesson notes and review dates from your study notebook. It
+  asks what you recall before showing the notes, then checks the gaps. You get
+  feedback, fresh review dates and a mixed quiz across the topics you revisited.
+explain: Give it the lesson notes and review dates from your study notebook. It
+  asks what you recall before showing the notes, then checks the gaps. You get
+  feedback, fresh review dates and a mixed quiz across the topics you revisited.
+you_give:
+  - Lesson notes with review intervals, due dates and key takeaways.
+  - Your study notebook dashboard and recall answers.
+you_get:
+  - Recall feedback for each reviewed topic.
+  - Updated note review dates.
+  - A mixed quiz and an updated session log.
+how_it_works:
+  - title: Step 1
+    text: Read the due-note queue and ask for recall before revealing takeaways.
+  - title: Step 2
+    text: Judge recall and adjust the interval for each note.
+  - title: Step 3
+    text: Run a mixed quiz and update notes, dashboard and session log.
+how_to_use:
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
+  - It works best when your AI can read and write local study notes.

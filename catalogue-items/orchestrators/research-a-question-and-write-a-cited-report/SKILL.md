@@ -10,6 +10,18 @@ Give it the question. Get an outline, the sources, a cited report and a check of
 This workflow chains 4 skills into one job. You run them one after another, and each skill's result is saved and passed to the next.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check the setup.** Use the tools listed below when the task needs them. If a tool is unavailable, say what you can do with the details provided. Do not claim you used it.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+
+**Tools that do this best:**
+- **Any good chat AI:** Every step is a plan or a piece of writing.
+- **A reference manager:** Holds the shortlisted sources and formats the citations.
+- **Scholarly databases:** The search step works best with access to full texts.
 <!-- /needs -->
 
 ## What you need
@@ -35,6 +47,14 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 4 step files and the summary. The third file holds the report; the last holds the claim check and the corrected version.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Journal submission formatter](https://useaiblocks.com/skills/journal-submission-formatter). It takes the document.
+- The [Policy redraft proposer](https://useaiblocks.com/skills/policy-redraft-proposer). It takes the audit report and document.
+- The [Article formatter](https://useaiblocks.com/skills/article-formatter). It takes the document.
+- The [AI store facts checker](https://useaiblocks.com/skills/brand-facts-accuracy-fixer). It takes the document.
+- The [Supplier shortlist vetter](https://useaiblocks.com/skills/factory-shortlist-vetter). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
 ## Check before you hand it back

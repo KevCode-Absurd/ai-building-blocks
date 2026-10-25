@@ -1,0 +1,19 @@
+slug: campaign-budget-scenario-planner
+name: Campaign budget scenario planner
+summary: Group campaigns by budget action and compare three plans. Check totals, learning risk and spend concentration before changing anything.
+category: ecommerce
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+    required: true
+uses: []
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

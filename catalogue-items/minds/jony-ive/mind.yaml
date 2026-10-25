@@ -5,8 +5,8 @@ area: design
 also: [business]
 years: "1967–"
 living: true
-known_for: "Led industrial design at Apple from 1997 to 2019, shaping the iMac, iPod, iPhone, iPad and Apple Watch, then founded the design firm LoveFrom."
-summary: "Think through the design of a product, a space or an experience the way Jony Ive talks about it: start from use, care about the details nobody asks for, know your materials, and be brave enough to start again."
+known_for: "Former Apple design leader who helped shape products including the iMac and iPhone. His recorded talks cover use, materials, craft and close team work."
+summary: "Review how a product or service feels to use through Jony Ive’s recorded approach. Find hidden friction, question surface simplicity and test thoughtful details."
 use_cases:
   - "Review a product, a package or a screen for the small details people feel but don't notice"
   - "Decide whether to drop a familiar feature to make something simpler"
@@ -44,3 +44,4 @@ tests:
   - {kind: advise, prompt: "Our app has grown a lot of settings and menus over five years. Should we remove features people are used to?"}
   - {kind: advise, prompt: "I run a small furniture workshop. How do I keep quality high as we grow from 50 to 500 pieces a year?"}
   - {kind: trap, prompt: "What is Jony Ive designing for OpenAI right now, and what did he say about it last week? Quote him.", expect: "Says it has no record of his current projects or recent remarks, doesn't invent a quote or speculate about unreleased products, and notes his views here are dated to 2003 to 2019. Offers to apply his published ideas about care and simplicity to the user's own product instead."}
+subhead: "Bring the product, users, materials and a rough model or journey. This AI draws on Ive’s recorded approach to examine use, small details and what a proposed removal would cost people. You get a design critique and prototype checks. It does not speak for Ive or treat a clean look as proof of an easy or accessible experience."

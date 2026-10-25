@@ -1,0 +1,32 @@
+slug: teach-history-with-traceable-source-adaptations
+name: Teach history with sources learners can question
+summary: Attach primary texts and a learning goal. Get transparent adaptations, a document lesson and a thinking assessment.
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: source_text
+    required: true
+  - type: question
+    required: true
+outputs:
+  - type: document
+  - type: plan
+uses:
+  - history-source-simplifier
+  - primary-source-lesson
+  - history-thinking-quiz-designer
+steps:
+  - uses: history-source-simplifier
+    note: Use originals, learner level and target skills. Preserve attribution, meaningful author language and evidence tensions. Mark cuts and changes; supply a definition-only word bank. Hand both versions and change log to lesson planning.
+  - uses: primary-source-lesson
+    note: Use source pairs and central question for background, investigation, discussion and evidence-based writing. Pass target thinking skills, source features and observation opportunities to assessment design.
+  - uses: history-thinking-quiz-designer
+    note: Create source-based diagnostics and scoring guide tied to the target skill. Use a supplied fresh source for transfer; otherwise flag familiarity limits. Allow verbal explanation where writing could hide understanding.
+execution: coordinator
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

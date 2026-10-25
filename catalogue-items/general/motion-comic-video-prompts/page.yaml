@@ -1,23 +1,19 @@
 new_slug: motion-comic-video-prompts
-name: "Motion comic video clip prompt writer"
-summary: "Paste your comic script and attach product photos. Get panel clip prompts and an edit list."
+name: Motion comic video clip prompt writer
+summary: Share your comic script and product photos. Get character, storyboard and clip prompts, plus an edit list and approval checkpoints.
 job: make-video-ads
-thinking: high
-thinking_why: "It runs several stages and keeps many rules at once across a long output."
-
-headline: "Motion comic video clip prompt writer"
-subhead: Give it a comic ad script and product photos. It draws one simple hero, builds sheets and a storyboard, and writes one clip per panel, stopping three times for your OK. You get every prompt and an edit list.
-
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.
+headline: Motion comic video clip prompt writer
+subhead: Share the panel script, real product photos, claims and brand style. It defines the hero, reference sheets and storyboard, then writes one motion prompt per panel. You get prompts and editing notes, with three review points. Images and clips can be made with connected tools; paid generation needs approval, and missing photos limit product checks.
 explain: |
   Comics are built for phones. One panel at a time, read top to bottom, with the story jumping forward in the gap between panels. AI video tools spoil the look in familiar ways. They draw letters as scribble, puff flat ink into 3D, change the hero between shots, and redraw your label.
 
   This skill runs the whole process in six stages. It confirms the panel list and names every cut. It writes a card for the hero, kept simple so viewers see themselves in them, and waits for your OK. It makes reference images, then a sheet with the hero from every angle, a product sheet drawn from your photos with no letters, and a set sheet. You approve those, then a storyboard with one still per panel. Only then does it write one clip per panel, each with one small motion. Captions go in during editing, and the last panel is your real product photo.
-
 when:
   - You have a comic ad script and want to make it with AI image and video tools.
   - Earlier attempts gave you garbled lettering or a product with a made-up label.
   - You want a short, handmade-looking problem-and-fix story for vertical video.
-
 you_give:
   - The comic script, with its panels, captions, narration and cast note
   - Photos of your product (front, side, top, out of the pack), how it's used, and the one claim
@@ -29,14 +25,12 @@ you_get:
   - A storyboard with one panel still and one card per panel
   - One clip prompt per panel, and an edit list for captions, narration, sound and the photo panel
   - Any check the prompts still missed, one line each, or none
-
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your comic script, ideally from "Motion comic video ad script writer", then attach your product photos.
   - Approve or change the hero card, then make the reference images and say which you picked.
   - Make and approve the sheets and lock lines, then the panel stills.
   - Make one clip per panel, then add captions, narration and the photo panel in your editor last.
-
 how_it_works:
   - title: Reads the script
     text: Checks a comic fits, confirms 5 to 8 panels with a named cut into each, and sets the ink line once.
@@ -50,7 +44,6 @@ how_it_works:
     text: One full-screen still per panel with its cut, one motion, caption and narration, checked for facing and the product's state. It stops for your OK.
   - title: Turns it into video
     text: One clip per panel with flat ink and no words, narration over it, hard cuts, captions lettered in editing and your real product photo last.
-
 output_shape: |
   STAGE 0  PANEL LIST  <n> | <transition in> | <what's drawn>
            INK         <line, fills, shadow, dots, palette, border>
@@ -73,7 +66,6 @@ output_shape: |
            EDIT LIST   <captions, narration, sound, photo panel,
                        offer, safe zones>
   CHECKS MISSED  <one line per check still missed, or none>
-
 example:
   business: sprout
   input: |
@@ -148,7 +140,6 @@ example:
 
     (cut for length: the full run also had the reference prompts,
     panel stills and clips for panels 1 to 3, 5 and 6)
-
 tweaks:
   - what: Number of panels
     how: Five panels for a quick 20-second cut, up to eight for a fuller story. The reveal panel always stays longest.
@@ -158,36 +149,34 @@ tweaks:
     how: Say "layers only" for the calmest look, or allow one moving part per panel for more life.
   - what: The palette
     how: Give your brand colours. The ink keeps black plus 3 or 4 flat colours, and your product stays the brightest.
-
 judge:
   - It stopped for your OK after the avatar card, the sheets and the storyboard, unless you asked for every stage in one go.
   - Every panel has a named transition, and the reveal panel is the longest.
   - The lock lines are the same, word for word, in every prompt.
   - No prompt asks the tool to draw words or numbers, and each clip has one kind of motion.
   - The last panel is your real product photo, set in editing.
-
 test:
   - Read the transition column. Most should be "action to action" or "subject to subject", with one slowed reveal.
   - Make the character sheet and three panel stills. The hero should look the same in each.
   - Search every prompt for words the tool would have to write. There should be none.
   - Make one clip. It should have one motion and flat ink, with no drift toward 3D.
-
 improve:
   - Write your ink line and palette into stage 0 of the skill file, so every comic ad in a series looks the same.
   - Add your product's never-show rules to the Avoid list.
   - Save the approved avatar card, character sheet and lock lines in your brand file, so the next ad starts at stage 4.
   - Pair it with "Motion comic video ad script writer" first, so the claim and panels are settled.
-
 works_best_with:
   tools:
-    - {name: "Nano Banana", why: "Takes up to 14 reference images and keeps up to four characters the same, so your sheets and panels match."}
-    - {name: "Veo", why: "Starts each clip from your approved panel still and can make sound with it, in 8-second clips."}
-    - {name: "CapCut", why: "Lets you add the words, numbers and captions as their own layers after the clips are made."}
+    - name: Nano Banana
+      why: Takes up to 14 reference images and keeps up to four characters the same, so your sheets and panels match.
+    - name: Veo
+      why: Starts each clip from your approved panel still and can make sound with it, in 8-second clips.
+    - name: CapCut
+      why: Lets you add the words, numbers and captions as their own layers after the clips are made.
   inputs:
-    - "Your lettering font file, so captions match your brand"
-    - "Two comic pages you like, attached as pictures, so the ink line has a target"
-    - "The final narration recording, so each panel's length fits its line"
-
+    - Your lettering font file, so captions match your brand
+    - Two comic pages you like, attached as pictures, so the ink line has a target
+    - The final narration recording, so each panel's length fits its line
 terms:
   - term: Avatar card
     meaning: A short, fixed description of the hero and the narrator's voice, approved before any image is made.

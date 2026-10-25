@@ -22,7 +22,7 @@ export default [
     inputs: { onHand: 1200, sold4: 0, incoming: 0, targetWeeks: 8, unitCost: 9 },
     // 0 a week, so no cover. Sell-through 0 / 1,200 = 0%. Cash 10,800. Target 0 units, so all 1,200 are extra (10,800). No weeks to the target.
     expect: { weeklySales: 0, cover: null, sellThrough: 0, cashTied: 10800, targetUnits: 0, excessUnits: 1200, excessCash: 10800, shortUnits: 0, weeksToTarget: null },
-    says: "never run out at this pace",
+    says: "a useful sell-down time cannot be estimated",
   },
   {
     name: "No stock and no sales",

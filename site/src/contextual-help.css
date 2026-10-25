@@ -1,0 +1,13 @@
+/* Help stays beside the decision, using the existing theme and native controls. */
+.hiw .context-help { border-block-start: 1px solid var(--line); padding-block: 8px; }
+.hiw .context-help > summary { cursor: pointer; padding-block: 12px; min-height: 44px; box-sizing: border-box; font-weight: 600; }
+.hiw .context-help[open] > summary { margin-bottom: 12px; }
+.hiw .context-help > p { margin-block: 16px; }
+.hiw .context-help .num-list { margin-bottom: 16px; }
+.hiw #use-in-ai a { text-decoration: underline; text-underline-offset: 3px; }
+.ai-guide-links { display: flex; flex-wrap: wrap; gap: .5rem; margin: 1.25rem 0; }
+.ai-guide-links a { display: inline-flex; align-items: center; min-height: 44px; padding: .5rem .875rem; border: 1px solid var(--line); border-radius: 8px; }
+.ai-setup-guide { padding-block: 1.25rem; border-top: 1px solid var(--line); scroll-margin-top: 6rem; }
+.ai-setup-guide h3 { margin: 0 0 1rem; }
+.ai-setup-guide code { overflow-wrap: anywhere; }
+.ai-setup-guide p { line-height: 1.6; }

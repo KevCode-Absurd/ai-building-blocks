@@ -1,6 +1,7 @@
+# Modified by AI Blocks on 2026-10-24: method/copy repair.
 slug: screen-capture-taker
-name: Screen capture taker
-summary: Ask for a screen, a window or a part of one. Get a saved screenshot.
+name: "Screen capture helper"
+summary: "Capture a browser page with a supported browser tool. Desktop capture needs a supported OS helper and any required screen permission."
 category: general
 boards: []
 type: skill
@@ -29,4 +30,4 @@ credits:
   - title: screenshot skill
     by: OpenAI
     url: https://github.com/openai/skills/tree/main/skills/.curated/screenshot
-    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.
+    used: Adapted for clarity and method consistency; upstream source and Apache-2.0 attribution are retained.

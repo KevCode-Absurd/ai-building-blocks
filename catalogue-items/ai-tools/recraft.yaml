@@ -2,7 +2,7 @@ slug: recraft
 name: Recraft
 maker: Recraft
 url: https://www.recraft.ai
-promise: Brand-ready images, icons and vector graphics from a written description.
+promise: "Create images, icons and scalable vector drafts from a written description."
 use_cases: [make-images, design]
 categories: [image, design]
 what_it_does:
@@ -13,7 +13,7 @@ what_it_does:
   - Puts readable text into posters and graphics.
 benefits:
   - Get icons and illustrations you can resize for any placement.
-  - Keep a whole set of graphics in one brand style.
+  - "Use a chosen style to guide a set of graphics for your brand."
   - Test logo and poster ideas before a designer starts.
 best_for:
   - Icons, illustrations and posters for a brand.

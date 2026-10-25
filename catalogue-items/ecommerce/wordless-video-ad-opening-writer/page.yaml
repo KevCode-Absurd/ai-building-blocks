@@ -1,23 +1,19 @@
 new_slug: wordless-video-ad-opening-writer
-name: "Wordless video ad opening writer"
-summary: "Attach product photos. Get 2 or 3 wordless openings, start and end frames, and clip prompts."
+name: Wordless video ad opening writer
+summary: Describe your product and its real motion. Get two or three wordless opening ideas, frame plans and prompts for making clips.
 job: make-video-ads
 thinking: medium
-thinking_why: "It writes or plans with a handful of checks."
-
-headline: "Wordless video ad opening writer"
-subhead: Give it your product photos, how it moves and the ad it will open. It plans 2 or 3 wordless openings, each a motion with a clear finish like a fill, click or peel. You get product sheets, start and end frames, and clip prompts.
-
+thinking_why: It compares supplied evidence and follows a specific method.
+headline: Wordless video ad opening writer
+subhead: Share product photos, how the product moves and the ad it should lead into, if available. It plans a motion with a visible finish, then writes product sheets, frame prompts and clip prompts in approval stages. Pictures and videos need a connected tool or separate production; missing details stay marked.
 explain: |
   The first seconds of an ad decide whether anyone sees the rest. A motion with a finish holds the eye: a glass filling to its line, a seal peeling off in one piece, a lid clicking shut. People wait for the end. A product slowly turning on a stand doesn't do this, because nothing finishes.
 
   This skill picks motions from the way your product really opens, pours or closes, never one made up, and gives each opening a different finish. Each one starts with the motion already under way, lands its finish in the last third, and holds still for the final half second. With no person in shot, your product is the avatar: you approve a product card, then a sheet from your photos and a set that matches your ad's first frame. Then it storyboards a start and an end frame for each opening, so the join into your ad doesn't jump, and writes the clip prompts with "real speed" once and the sound named.
-
 when:
   - Your ad holds people once they're in, but too many scroll past the first second.
   - Your product has a satisfying moment (a pour, a scoop, a click, a peel) that you've never shown up front.
   - You want to test new openings on an ad you already run, without filming a new ad.
-
 you_give:
   - Your product photos by what they show (pack front, out of the pack, in hand, close-up of the surface)
   - How it opens, pours or is used, its real motions and sounds, and what it's made of
@@ -29,14 +25,12 @@ you_get:
   - A product card, product and set sheets, and lock lines that spell out how the material moves
   - A start frame, an end frame and a shot card for each opening you approve
   - A clip prompt for each, a suggested overlay (or none) and a delivery list
-
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Attach your product photos and describe exactly how it opens and is used, in your brand's words.
   - Attach a still of the first frame of the ad it goes in front of.
   - Approve the line-up, the product card, the sheets and the storyboard, in that order.
   - Make one clip, check it, then the rest. Test each opening on the same ad as separate ads.
-
 how_it_works:
   - title: Picks by finish
     text: Level, fit, release, smooth or order, taken from how your product really moves. A motion nobody described is marked inferred.
@@ -50,7 +44,6 @@ how_it_works:
     text: Writes "real speed" once, never slow motion or time-lapse, uses plain verbs and names the sound.
   - title: Checks one clip first
     text: Frame 1 moving, the finish late, nothing new after it, a still last half second, and only the motion's own sound.
-
 output_shape: |
   STAGE 0  LINE-UP (approve one or more rows)
   <n> Focus: <..>  Finish: <kind>: <motion>. Done = <..>
@@ -71,7 +64,6 @@ output_shape: |
   OVERLAY  <1 to 4 words, or none>   DELIVER  <raw clip, overlay copy, end frame>
   MISSING: <..>
   CHECKS MISSED: <one line each, or none>
-
 example:
   business: sprout
   input: |
@@ -149,7 +141,6 @@ example:
     MISSING: how many gummies are in one pack; Sprout's real motions
     and sounds, written down.
     CHECKS MISSED: none
-
 tweaks:
   - what: The finish
     how: Choose level (a pour that settles), fit (a click, a cap on its thread), release (a seal off in one piece), smooth (a clean wipe) or order (a sort, old things swept aside).
@@ -159,7 +150,6 @@ tweaks:
     how: Locked by default. Overhead suits fills, sorts and spreads. A slow push in must stop when the motion ends.
   - what: Clip length
     how: 4 seconds suits most motions; ask for 6 if the motion needs it. The finish is kept in doubt until late either way.
-
 judge:
   - The run stopped for your yes on the line-up, the product card, the sheets and the storyboard, or marked those points if you asked for every stage at once.
   - The first frame already shows the motion part done, at thumbnail size.
@@ -167,30 +157,29 @@ judge:
   - The end frame is still and sits next to your ad's first frame without a jump in place or light.
   - The prompt says "real speed" once, with no slow-motion, time-lapse or "explode" style words.
   - No words in the picture and nobody talking.
-
 test:
   - Give it a product with no out-of-pack photo. It should leave out any opening that shows the product out of its pack, plan the others and say MISSING, not guess what's inside.
   - Search each clip prompt for "slow", "time-lapse", "explode" or a frame rate. Any of these changes how the tool plays it back.
   - Make one clip and scrub to the last half second. Nothing should move; if it does, end the motion earlier in the prompt and remake it.
   - Put the end frame next to your ad's first frame. If the place or light jumps, change the set sheet before making the batch.
-
 improve:
   - Write your product's real motions and sounds into the "Product" line of the skill file once (how it opens, pours, seals), so every product card starts from them.
   - Copy your brand's handling rules there word for word, so every clip prompt carries them.
   - Save your approved product sheet in your brand file, so the next batch starts at the storyboard.
   - Save which finish won to your brand file, and test a new focus with the same finish next time.
   - For a talking opening instead, pair it with the skill that makes talking openings.
-
 works_best_with:
   tools:
-    - {name: "Veo", why: "Makes the motion between a start frame and an end frame you give it, with matching sound."}
-    - {name: "Kling", why: "Starts each clip from the start frame you choose, which helps when testing several openings."}
-    - {name: "Nano Banana", why: "Makes the product sheet and the start and end frames from your photos with real-looking light."}
+    - name: Veo
+      why: Makes the motion between a start frame and an end frame you give it, with matching sound.
+    - name: Kling
+      why: Starts each clip from the start frame you choose, which helps when testing several openings.
+    - name: Nano Banana
+      why: Makes the product sheet and the start and end frames from your photos with real-looking light.
   inputs:
-    - "A still of your ad's first frame, so the end frame can match its place and light exactly"
-    - "A phone clip of the product being opened or poured, so the motion and its timing come from real life"
-    - "The number of pieces in one serving, so counts in the prompt are right"
-
+    - A still of your ad's first frame, so the end frame can match its place and light exactly
+    - A phone clip of the product being opened or poured, so the motion and its timing come from real life
+    - The number of pieces in one serving, so counts in the prompt are right
 terms:
   - term: Opening (hook)
     meaning: The first few seconds of an ad, whose only job is to keep the right person watching.

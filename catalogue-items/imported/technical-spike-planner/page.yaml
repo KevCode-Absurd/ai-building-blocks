@@ -1,0 +1,28 @@
+new_slug: technical-spike-planner
+name: Plan a time-boxed technical spike
+summary: Plan one short study that resolves a blocking code or design question, with tests, an owner and a deadline.
+job: research-topics
+headline: Plan a time-boxed technical spike
+subhead: Bring one technical unknown and a time limit. Get a study plan with proof needed to choose a path.
+explain: Bring one technical unknown and a time limit. Get a study plan with proof needed to choose a path.
+when:
+  - You want to plan a time-boxed technical spike.
+you_give:
+  - The blocking decision, affected code, constraints and deadline.
+  - A named owner and realistic research or prototype time budget.
+you_get:
+  - A focused spike document with tasks, dependencies and completion criteria.
+  - A findings/decision record that separates planned experiments from actual results.
+how_to_use:
+  - Download the complete skill folder and add it to your AI tool, or copy the instructions into a chat.
+  - Provide the inputs listed here and ask your AI to follow the skill.
+  - Review the result and any missing facts before using it.
+how_it_works:
+  - title: Fix the question and timebox
+    text: Choose one technical decision, its downstream impact, owner and deadline.
+  - title: Design decisive evidence
+    text: Specify document/code research and the smallest prototypes or tests that discriminate options.
+  - title: Close with a bounded decision
+    text: Record observed results, recommendation, limits and concrete follow-up work; leave unperformed tests planned.
+thinking: medium
+thinking_why: It weighs your evidence and follows a specific method.

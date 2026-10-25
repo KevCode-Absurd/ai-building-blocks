@@ -2,18 +2,18 @@ slug: bolt
 name: Bolt
 maker: StackBlitz
 url: https://bolt.new
-promise: Chat with an AI to build sites and apps, with hosting and a database.
+promise: "Build and publish sites or apps from a chat, with hosting and data storage."
 use_cases: [build-apps, code]
 categories: [coding]
 what_it_does:
   - Builds websites, apps, slides and prototypes from a chat.
   - Starts from scratch, a Figma design, a GitHub repo or a template.
-  - Includes hosting, a database, user sign-in and analytics.
+  - "Includes a place to host the app, store data, sign in users and view site stats."
   - Publishes with a custom domain on paid plans.
   - Builds with your own design system so the result matches your brand.
 benefits:
-  - Turn a Figma design into a working page without hand coding.
-  - Get a live link to test an idea the same day.
+  - "Turn a Figma design into a page you can review and test."
+  - "Publish a link so others can test your idea."
   - Keep hosting and a database in the same account as the build.
   - Start free before you commit to a plan.
 best_for:

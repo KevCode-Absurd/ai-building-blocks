@@ -1,7 +1,480 @@
-# Retained for review and provenance. Excluded from site data, pages and downloadable packs.
+agent-team-builder:
+  reason: Its calculator example evaluates raw input as Python code. Withheld pending a reviewed and tested safe adaptation.
+  evidence: SKILL.md:241
+ai-app-and-chatbot-builder:
+  reason: Its agent calculator evaluates raw input as Python code. Withheld pending a reviewed and tested safe adaptation.
+  evidence: SKILL.md:145
+ai-app-injection-defender:
+  reason: Its recommended tool validator ignores the configured approval requirement and a search argument limit. Withheld pending a corrected and tested adaptation.
+  evidence: SKILL.md:161-180; native/injection-gate-check.json
+meta-ads-daily-checker:
+  reason: Required run adapter and protocol files are absent from its package. Withheld pending a complete and tested package.
+  evidence: SKILL.md references run.sh, scripts/meta-kit.sh and _vibe-system protocols
+meta-account-structure-planner:
+  reason: Recommends a second account as a backup if banned. Withheld pending a reviewed adaptation that respects account restrictions.
+  evidence: SKILL.md step 7; conflicting account-separation advice in step 11
+metric-driven-file-improver:
+  reason: Its experiment runner resets the shared checkout without clean-state or expected-commit guards and does not preserve the measured baseline for its first comparison. Withheld pending a safe and tested adaptation.
+  evidence: scripts/run_experiment.py:197-233; scripts/setup_experiment.py:161-168
+ai-risk-framework-planner:
+  reason: Its claimed NIST AI RMF subcategory tables conflict with the official Core framework. Withheld pending an attributed and checked correction.
+  evidence: SKILL.md:71-72 and MEASURE table; official NIST AI RMF Core comparison recorded in review findings
+ai-spend-limit-checker:
+  reason: Its token-cost cap formula multiplies input and output token counts instead of adding their costs, and its retry rules conflict. Withheld pending a corrected and tested adaptation.
+  evidence: SKILL.md Limitations and retry rules; source-method finding recorded in review evidence
+ai-system-attack-tester:
+  reason: Its selected-scope scanner runs unrelated injection patterns when the chosen scope has no patterns. Withheld pending a corrected and tested adaptation.
+  evidence: scripts scanner scope conversion at lines 436-437; native threat-scanner check in review evidence
+amazon-brand-protection-planner:
+  reason: Its templates treat unauthorized resale and minimum advertised price disputes as grounds for intellectual-property complaints, conflicting with Amazon policy. Withheld pending a sourced and reviewed adaptation.
+  evidence: references templates.py:126-130,312; official Amazon intellectual property policy comparison in native review findings
+amazon-brand-registry-planner:
+  reason: Its enrollment guidance accepts packaging mockups and treats an ASIN as required, conflicting with current official Amazon enrollment guidance. Withheld pending a sourced and reviewed adaptation.
+  evidence: SKILL.md:49 and enrollment steps; official Amazon Brand Registry requirements comparison in native review findings
+narrated-video-maker:
+  reason: Its required video-rendering script and both named fallback scripts are absent from the package. Withheld pending a complete and tested package.
+  evidence: SKILL.md invokes ai-2md2marp2av.py, md2marp2av.py and md2video.py; native package inventory and workspace filename search
+amazon-launch-week-planner:
+  reason: Its launch budget treats the roughly thirty-review Vine tier as free, conflicting with the official quantity-based enrollment fees. Withheld pending a sourced correction.
+  evidence: SKILL.md:55; official Amazon Vine program fee comparison in native review findings
+amazon-listing-writer:
+  reason: Its mandatory Brand Registry requirement excludes the official approval route for brands not enrolled. Withheld pending a sourced correction.
+  evidence: SKILL.md:54; official Amazon branded-product approval guidance in native review findings
+amazon-reimbursement-claim-finder:
+  reason: Its blanket sale-price reimbursement rule conflicts with the current US inventory reimbursement basis for pre-order loss. Withheld pending a scope-specific sourced correction.
+  evidence: SKILL.md:52; official Amazon-hosted reimbursement policy comparison in native review findings
+amazon-seller-profit-calculator:
+  reason: Its break-even and target-margin price formulas fail synthetic recomputation checks, including a return-cost case. Withheld pending corrected formulas and regression tests.
+  evidence: calculator.py:218,232,262,268; two native pure-function checks and observed outputs in source-findings
+api-connector-builder:
+  reason: Its payment example retries POST requests without a stable idempotency key and omits the timeout required by its own rules. Withheld pending a corrected and tested adaptation.
+  evidence: SKILL.md:75,91-97,114,222,224; native pure-AST contract check in source-findings
+app-screenshot-maker:
+  reason: Its setup asks for a password in chat and embeds credential literals in a temporary script. Withheld pending a session-based or private-secret adaptation.
+  evidence: SKILL.md:77,183-187,290; native full-primary credential-handling review
+offer-designer:
+  reason: Its required planning loop prescribes a conversion-lift range without case evidence and includes an unsupported churn projection. Withheld pending a sourced or explicitly scenario-only adaptation.
+  evidence: SKILL.md diagnostic loop step 7 and churn claim; native source-method finding
+apple-interface-reviewer:
+  reason: Its contrast helper reports invalid color input as passing, and its touch-target check has no platform scope. Withheld pending validated inputs and platform-aware checks.
+  evidence: hig_checker.py:16,66,84; native invalid-hex contrast and target-size CLI checks
+oil-and-gas-reserves-valuer:
+  reason: Its primary and bundled reporting reference conflict on cumulative versus incremental reserve categories. Withheld pending a sourced classification correction.
+  evidence: SKILL.md reserve category labels; references/spe-standards.md and sec-reporting.md comparison in native findings
+on-call-runbook-writer:
+  reason: Its generic operational examples include destructive cleanup without target-specific retention checks and database promotion without an old-primary fencing step. Withheld pending operational review and a tested adaptation.
+  evidence: SKILL.md Disk Space Cleanup and PostgreSQL failover examples; native full-primary review, no commands executed
+one-time-stock-quantity-picker:
+  reason: Its marginal-profit formula can recommend stock beyond the profit optimum, and its worked profit example does not reconcile. Withheld pending corrected formulas and checks.
+  evidence: SKILL.md MultiProductNewsvendor marginal_benefit and worked revenue-cost example; native arithmetic counterexample
+online-order-fulfillment-planner:
+  reason: Its packaging helper checks volume without ensuring that item dimensions fit, and its pricing helper cannot establish the claimed margin. Withheld pending corrected and checked calculations.
+  evidence: SKILL.md optimize_packaging and calculate_shipping_budget; native rigid-item and missing-cost counterexamples
+online-store-profit-calculator:
+  reason: Its bundled calculator uses Amazon fees for a Shopify task, and its break-even result fails recomputation with its own cost model. Withheld pending a matching and corrected helper.
+  evidence: SKILL.md versus scripts/calculator.py; native synthetic helper output and price recomputation
+assembly-line-balancer:
+  reason: Its helpers assign a task longer than the station cycle limit, and its successor weighting can count a shared task twice. Withheld pending corrected algorithms and regression checks.
+  evidence: Native isolated RPW, LCR and diamond-successor checks in line-balance-check.json
+online-store-auditor:
+  reason: Its required procedure replaces algorithm labels with expert-pick claims based on product type without requiring real expert selection. Withheld pending truthful attribution rules.
+  evidence: SKILL.md Procedure 2 and Common mistakes; reference.md human-label recommendation; native full-primary and reference review
+online-store-bottleneck-finder:
+  reason: Its required diagnosis presents unsourced fixed thresholds as healthy or dangerous and infers a customer-value problem from a ratio alone. Withheld pending qualified planning rules and sourced checks.
+  evidence: SKILL.md BENCHMARKS, DTC Golden Ratios and required diagnosis; native full-primary review
+options-flow-reader:
+  reason: Its required output infers institutional hedging and trader intent from option-chain ratios alone. Withheld pending evidence-based limits on actor and intent claims.
+  evidence: SKILL.md Real puts definition and INSTITUTIONAL HEDGE example; native full-primary review
+options-payoff-chart-maker:
+  reason: Its calendar-spread example omits the expiring short leg's intrinsic value and can greatly overstate payoff. Withheld pending corrected payoff logic and checks.
+  evidence: SKILL.md Step 3 and references/strategies.md atNearExpiry; native supplied-value arithmetic counterexample
+australia-gov-security-check:
+  reason: Its blanket IRAP requirement for all PROTECTED and higher systems conflicts with the named official assessment pathways. Withheld pending a sourced and reviewed adaptation.
+  evidence: SKILL.md system authorization and references/control-applicability.md; official September 2026 ISM framework comparison in native findings
+average-order-value-tracker:
+  reason: It uses a customer's current lifetime order count to label historical orders as new or returning, which can misclassify the first order. Withheld pending order-time classification and checks.
+  evidence: SKILL.md customer.numberOfOrders classification; native two-order counterexample and official Shopify field definition
+order-fulfillment-mix-planner:
+  reason: Its routing example can select a node with insufficient stock when every score is ineligible. Withheld pending explicit no-eligible-route handling and checks.
+  evidence: SKILL.md OmnichannelOrderRouter candidate collection and minimum-score selection; native zero-stock counterexample
+order-note-collector:
+  reason: Its notes-only filter drops orders whose only note is in line-item attributes, and its line-item query lacks nested pagination. Withheld pending complete collection and filter checks.
+  evidence: SKILL.md lineItems(first:20) and only_with_notes filter; native line-item gift-message counterexample
+aws-access-policy-reviewer:
+  reason: Its unrestricted-action checker misses the valid wildcard-array form of an Allow policy. Withheld pending equivalent-policy handling and regression checks.
+  evidence: SKILL.md overpermissive-policy helper; native isolated synthetic policy checks
+aws-security-checker:
+  reason: Its score example leaves MFA parsing unimplemented and can report full marks when MFA is absent or report access fails. Withheld pending complete parsing and missing-evidence handling.
+  evidence: SKILL.md users_without_mfa placeholder and swallowed credential-report errors; native isolated mock checks
+azure-architecture-designer:
+  reason: Its low-cost architecture assumes a free Azure Front Door tier that conflicts with the named current billing model. Withheld pending sourced cost assumptions.
+  evidence: SKILL.md low-cost web-app example; official Microsoft Front Door billing comparison in native findings
+organic-traffic-drop-detective:
+  reason: Its failure-routing rules assign branded and non-branded traffic declines to specific causes without ruling out seasonality, measurement or other changes. Withheld pending consistent evidence-based diagnosis.
+  evidence: SKILL.md Failure patterns versus Layer 1 checks; native query-trend counterexample
+orphan-product-finder:
+  reason: Its collection-count limit can clear products that exceed a requested threshold, and no collection link does not prove no menu access. Withheld pending complete coverage and qualified findings.
+  evidence: SKILL.md collections(first:30), max_collections and navigation claims; native forty-five-membership counterexample
+outdoor-lesson-sequence-planner:
+  reason: Its prompt and example restrict cancellation to storm or lightning without allowing other unsafe conditions or official closures. Withheld pending locally governed safety and accessibility limits.
+  evidence: SKILL.md governing weather prompt and cancellation example; native closed-site and blocked-exit counterexamples
+bank-capital-rules-checker:
+  reason: Its blanket zero risk weight for sovereign exposures omits rating, currency and local-treatment conditions and conflicts with its own reference. Withheld pending a sourced and checked adaptation.
+  evidence: SKILL.md exposure weighting; bundled risk-weight reference and official Basel sovereign-table comparison in native findings
+bank-messaging-security-checker:
+  reason: Its stated mandatory and advisory control totals do not match the labels in its own control table. Withheld pending a reconciled and source-verified checklist.
+  evidence: SKILL.md stated twenty-six/six totals versus thirty-two-row table labelled twenty-three/nine; native internal consistency check
+page-seo-optimizer:
+  reason: Its page-speed fix delays the main image, its Core Web Vitals list is outdated and its Indexing API scope exceeds official guidance. Withheld pending sourced corrections.
+  evidence: SKILL.md hero loading, FID and Indexing API advice; official web.dev and Google Search documentation comparison in native findings
+page-traffic-conversion:
+  reason: Its advertised bounce-rate sorting mode is unsupported by its own query and governing metric note. Withheld pending a consistent supported-mode contract.
+  evidence: SKILL.md frontmatter, sort_by parameter, requested query metrics and unsupported bounce-rate note; native missing-metric check
+paid-media-budget-planner:
+  reason: Its device bid rule uses conversion rate without order economics and its ambiguous-result rule conflicts with its evidence-gathering branch. Withheld pending consistent profit-based and missing-evidence checks.
+  evidence: SKILL.md mobile-versus-desktop rule and default-kill instruction; native contribution-per-click counterexample
+pallet-stacking-planner:
+  reason: Its weight-limit calculation can propose a pallet far above stated capacity and still label its centre of gravity stable. Withheld pending total-weight enforcement and checked packing logic.
+  evidence: SKILL.md single-SKU layer limit and final stability check; native 7200-pound result against 2500-pound capacity
+blog-post-writer:
+  reason: Its worked example presents an unverified attributed survey statistic and claims a technical practice eliminates an entire category of risk. Withheld pending sources or a clearly fictional and qualified example.
+  evidence: SKILL.md Example 2 versus its credible-sourcing review step; native full-primary inspection and official-domain source search with no matching report found
+bluetooth-le-waveform-generator:
+  reason: Its all-mode code example includes a mode/channel combination that its own later rules explicitly forbid. Withheld pending consistent supported examples and checks.
+  evidence: SKILL.md all-mode loop with LE2M and ChannelIndex 37 versus explicit restrictions later in the same primary; native full-primary consistency review
+delivery-route-planner:
+  reason: Its route example can label a merely positive objective optimal, undercount vehicles for indivisible loads and show a route above capacity. Withheld pending feasible routing and accurate solver-status checks.
+  evidence: SKILL.md solver wrapper, automatic vehicle count and sample load 102 against capacity 100; native three-six-unit-loads counterexample
+gorgias-and-hubspot-contact-check:
+  reason: Its required no-ticket CRM count has no full CRM enumeration, and recent tickets cannot establish that a contact has never requested support. Withheld pending a report matched to actual search coverage.
+  evidence: SKILL.md per-ticket-email HubSpot lookup versus In HubSpot with No Tickets count; native one-email sample counterexample
+parallel-worker-setup-helper:
+  reason: Its setup example constructs a lazy worker constant without reading its value, so it contradicts the stated setup step and its own conventions. Withheld pending an example that actually triggers the required setup.
+  evidence: SKILL.md first modernisation example versus lazy Constant convention; native full-primary consistency review without MATLAB execution
+parfor-error-fixer:
+  reason: Its proposed fix changes multiplication of two fields into a sum, violating its own requirement to preserve behaviour. Withheld pending a checked equivalent rewrite.
+  evidence: SKILL.md Fix 6 versus preserve-semantics rule; supplied field values 2 and 3 require product 6 rather than sum 5
+bond-portfolio-reviewer:
+  reason: Its currency DV01 aggregation weights position-level amounts instead of adding them, and India-only scope conflicts with US data routes. Withheld pending consistent units and sources.
+  evidence: SKILL.md Workflow 2 versus monetary DV01 output; native equal-value positions with DV01 500 and 1000 require total 1500 rather than 750
+gorgias-shift-handover-writer:
+  reason: Its required recent-resolution section is unsupported by its active-ticket-only retrieval. Withheld pending a complete and clearly scoped handover method.
+  evidence: SKILL.md open/pending fetch versus Recently Resolved last-four-hours report section; native active-only handover example
+bookings-forecast-builder:
+  reason: blend_conversion converts rates to float without finite[0,1]validation, and compute_forecast converts absent amount to0. Actual synthetic calls accept1.5conversion, forecasting150on100opportunity, and missing amount returns0without missing-data warning. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-skills-a-source-findings.json
+books-reconciliation-pl:
+  reason: Step5a says net pay plus employer taxes plus contractor wages should match payroll expense. Employee withholdings/deductions reduce net pay but do not erase earned wages, so this compares unlike bases and can understate expense for an otherwise ordinary gross-wage ledger. Reconciliation needs explicit ledger/accrual/cash mapping. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-skills-a-source-findings.json
+bought-together-pair-finder:
+  reason: Workflow1skips single-line orders before building product/pair frequency maps, while metrics use total_orders and all orders containingA/B. It does not specify retaining single-product orders in denominators/marginals or clearly label conditional multi-item analysis. Literal skipping changes confidence/lift and may change which pairs pass thresholds. Query also caps lineItems50without nested pagination/coverage check. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-skills-a-source-findings.json
+patent-prior-art-searcher:
+  reason: Novelty strategy discards filing-date eligibility and assumes claim1covers broadest relevant scope. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-skills-b-native-source-holds.json
+pattern-to-skill-extractor:
+  reason: Mandatory named generation helper is not packaged or given a fallback. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-skills-b-native-source-holds.json
+payout-reconciler:
+  reason: Refund field contract mismatches and candidate orders do not establish payout membership. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-skills-b-native-source-holds.json
+payroll-timesheet-checker:
+  reason: Blanket approved-leave-to-paid-hours conversion ignores explicit unpaid leave type. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-skills-b-native-source-holds.json
+pcb-design-optimizer:
+  reason: Bandwidth extraction bridges separated passing regions across failing frequencies. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-skills-b-native-source-holds.json
+delivery-time-slot-route-planner:
+  reason: MIP time consistency includes both depot departure and return using the same w[depot,k]. Any positive-time closed trip implies w0+positive<=w0 and is infeasible. Separate start/end depot variables are needed. OR-Tools wrapper calls any positive objective Optimal without proof. Nearest-neighbour outer while cannot progress when an unserved customer is infeasible from the depot; it appends empty routes forever. Solomon seed and ALNS new-route paths also omit feasibility checks. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-specialist-skill-native.json
+demand-and-stock-planner:
+  reason: Safety Stock Calculation says moving95%to99% nearly doubles safety stock, while its own supplied z-scores1.65and2.33 imply2.33/1.65≈1.412, a41.2%rise with other inputs fixed. Correct this numeric teaching statement before presenting the source as checked. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-specialist-skill-native.json
+demand-supply-meeting:
+  reason: DemandReview.calculate_consensus_forecast never initializes consensus_forecast from statistical_forecast, leaving unadjusted rowsNaN. PreSopMeeting inventory_impact uses an ungrouped cumsum across product families; the first family’s inventory leaks into later families. financial_reconciliation calculates COGS from all supply_plan units but revenue from all demand, mislabelling produced-not-sold costs as cost of sales and recognizing unmet demand as revenue. These are material planning/reporting faults. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-specialist-skill-native.json
+design-system-file-writer:
+  reason: Primary mandates every active component have an infinite animation loop and never mount lists instantly, but supplies no reduced-motion/static alternative or pause boundary. This can conflict with the brief’s access needs. Repair the mandate or place a wrapper requiring user-needs/access overrides before claiming a general-purpose design method. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-specialist-skill-native.json
+gpu-code-speed-tuner:
+  reason: "Release hold: setup cleanup template uses comma-separated calls inside one anonymous expression, inconsistent with MATLAB single-expression syntax. Official https://www.mathworks.com/help/matlab/matlab_prog/anonymous-functions.html checked; no MATLAB parser executed. Release hold: if original codegen succeeds, no v1 source is created, yet Step2 always benchmarks <designFile>_v1_mex. The shown codegen call compiles the original name, leaving the stated baseline artifact unsupported on that branch. Withheld pending a reviewed and checked correction."
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-skills-root-native.json
+grant-and-bid-response-writer:
+  reason: "Release hold: drafting.md example assigns past performance30points and key personnel20, then says past performance gets three times the care. The stated ratio is1.5, not3. Needs a corrected, checked adaptation; imported bytes unchanged. Withheld pending a reviewed and checked correction."
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-skills-root-native.json
+graphql-schema-designer:
+  reason: "Release hold: countQuery reuses whereClause containing cursor predicate id<cursor. totalCount therefore counts the remaining page suffix, not all matching rows; no separate documented remaining-count contract. Withheld pending a reviewed and checked correction."
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-skills-root-native.json
+brand-identity-markup-adder:
+  reason: Source says self-published OrganizationJSON-LD confirms real/trusted brand rather than counterfeit/reseller, which is unsupported authentication assurance. Prerequisites list read/write_themes alone, while current official themeFilesUpsert docs require write_themes plus exemption. Placeholder JSON-LD template has no explicit JSON/script-context encoding rule; literal insertion of quotes fails JSON and closing-script text requires context handling. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-skills-a-source-findings.json
+phoenix-ai-app-tracer:
+  reason: Illustrative accuracy evaluator marks explicit contradiction correct from substring membership. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-skills-b-native-source-holds.json
+pcb-via-modeler:
+  reason: Differential-pair example gives2-column positions despite required4-column span schema. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-skills-b-native-source-holds.json
+discount-payoff-calculator:
+  reason: Calls(revenue−discount_cost)/discount_costtrue/incrementalROIwithoutcounterfactualsalesorproduct/fulfilment/adcosts. ClaimsROI<100%meansdiscountcostmorethanrevenue,butR150,D100gives50%andR>D. Lownewcustomer%pluslowerAOVisdeclaredcannibalisation/customerswouldbuyanywaywithoutcausalevidence. Currentcustomer.numberOfOrders==1doesnot identify every historicalfirstorder oncecustomers reorder. Automaticdiscountprocedure saysmatchviaorderdiscountdata,butshownquerydoesnotretrieveallocation/applicationidentity;stackedtotalDiscounts cannotbeuniquelyassignedtocodesfromtheshownfields. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-specialist-skill-native.json
+discount-spend-tracker:
+  reason: The main procedure prefers the first discount code while error handling instead allocates proportionally by value. Raw discount values can be percentages or money, so they are not comparable allocation weights. The shown query lacks per-line code allocations. This can give unsupported per-code totals even when the overall order discount is known. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-specialist-skill-native.json
+docker-setup-builder:
+  reason: The Node.js multi-stage example installs dependencies with npm ci --production=false, then copies the entire deps node_modules into the final image without a production-only install or prune. With any devDependencies present, this contradicts the mandatory no-dev-deps runtime rule and its production-grade claim. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-specialist-skill-native.json
+domain-and-dns-planner:
+  reason: The no-CAA failure pattern falsely says anyone with a misconfigured ACME client can issue a certificate for your domain. Lack of CAA does not remove certificate authority domain-control validation. This is a source-level security explanation defect; clearer catalogue copy alone does not repair it. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-specialist-skill-native.json
+growth-health-checker:
+  reason: "Release hold: gotchas.md good example gives3200spend and47leads at18each;actualcost/lead is about68.09. Needs a corrected checked example. Release hold: primary/threshold/gotcha text declares rising spend and CPL proves saturation and predicts90CPL after another50%budget. Those observations do not establish cause or a dose-response forecast. The fixed two-month sentiment effect is also unverified. Withheld pending a reviewed and checked correction."
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-skills-root-native.json
+growth-roadmap-builder:
+  reason: "Release hold: conversion is explicitly sessions-to-orders in the source, yet the revenue equation multiplies session×orderconversion×AOV by purchase frequency again. Repeat orders are already counted on that basis. Release hold: CAC/(AOV×margin)has units of contribution-generating orders, not a time period without purchase timing/frequency. The source labels it Payback Period without that time basis. Withheld pending a reviewed and checked correction."
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-skills-root-native.json
+guaranteed-format-generator:
+  reason: "Release hold: unpinned pip install is paired with old outlines.generate.* and outlines.models.* examples. Official https://dottxt-ai.github.io/outlines/main/features/core/generator/ says Generator in v1 replaces the listed old constructors; current official repo quickstart uses from_transformers. No compatible version is pinned or migration supplied. Withheld pending a reviewed and checked correction."
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-skills-root-native.json
+brand-strategy-report-writer:
+  reason: Report rule tells agent to infer missing information and not leave sections blank; persona section then demands name,age,job,city,monthlyincome and an authenticfirst-personquote. It does not require these generated details/quotes to be labelled hypothetical rather than researched. Sparse briefs can therefore become confident unsupported customer/market/history claims. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-skills-a-source-findings.json
+brand-style-setup-wizard:
+  reason: Validator marks body/linkcontrast3–4.5WARN; onboarding acceptsWARN and proceeds despite primary hard rule to refusebody/linkbelow4.5. Separately setup_completedchecks anynonemptyglobalconfigbeforeproject, returningfalsewhen effectiveprojectconfighascompletedtimestamp butglobalhasnull. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-skills-a-source-findings.json
+photopea-editor-embedder:
+  reason: Layer-export example doesnot restore initial visibility;it shows everylayer afterexport. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-skills-b-native-source-holds.json
+pipeline-and-forecast-checker:
+  reason: GTM helper maps zero monthly contribution to0-month healthy CACpayback. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-skills-b-native-source-holds.json
+driving-scenario-builder:
+  reason: Mandatory timestamp rules infer units from raw magnitude/span, then prescribe normalizing each sensor independently if one is already relative and another still epoch-based. Magnitude/span cannot uniquely distinguish elapsed seconds from milliseconds, and independent zeroing can erase real sensor start offsets unless original time origins are retained and reconciled. The primary supplies no explicit ambiguity-stop/recovery gate; a guaranteed synchronized reconstruction is unsupported. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-specialist-skill-native.json
+driving-scenario-simulator:
+  reason: Workflow G starts with SimulationCommand="Start" then loops Step without pause, directly contradicting Workflow B and Common Mistakes that Start runs freely and asynchronous Step needs waiting. Common Mistakes also says EnableLogging in simulateScenario before createSimulation, while multiple critical rules require createSimulation before simulateScenario. These execution paths cannot all satisfy the source’s mandatory order. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-specialist-skill-native.json
+drone-autopilot-connector:
+  reason: A connection-only skill includes a runnable COMMAND_LONG arm command after generic client discovery, without an explicit arm authorization, simulator/physical-device distinction, selected-target check or bench safety gate. The source’s own scope excludes mission/control work; the arm example creates a consequential scope expansion. It was not executed. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-specialist-skill-native.json
+dspy-prompt-optimizer:
+  reason: The representative-training-data block has an unterminated answer string in the first dspy.Example row (answer="...).with_inputs("question")), so the shown Python cannot parse as written. Provider/module compatibility is also unverified here, not claimed repaired. Imported source remains unchanged. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-specialist-skill-native.json
+habit-loop-designer:
+  reason: "Release hold: primary treats5%as a habit-confirmation rule and reference assigns universal habit-strength bands. Original author https://www.nirandfar.com/hooking-users-in-3-steps/ presents5%as a rule of thumb for beginning investigation after defining expected use,not universal proof of automatic behaviour. Withheld pending a reviewed and checked correction."
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-skills-root-native.json
+hard-topic-teaching-guide:
+  reason: "Release hold: example teaching sequence places HPA activation before adrenaline as one chain;HPA/adrenal-cortex cortisol and sympathetic/adrenal-medulla catecholamines need distinct pathways. Official https://training.seer.cancer.gov/anatomy/endocrine/glands/adrenal.html and https://www.apa.org/topics/stress/body support that distinction. A science teaching guide must not teach the conflated sequence. Withheld pending a reviewed and checked correction."
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-skills-root-native.json
+brazil-data-privacy-checker:
+  reason: Primary120 restricts Art37 recordkeeping to large-scale processors/public bodies. Official Art37 imposes records on controller/operator generally; any simplified or exceptional regime needs separate applicable authority. Primary212 says no adequacy decisions issued while its own earlier sections describe2026EUadequacy and current ANPD lists EU under Resolution32/2026. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-skills-a-source-findings.json
+breakeven-point-calculator:
+  reason: Reference defines one supervisor costing600000 per10000units capacity, base fixed5400000 and contribution180/unit. It calls40000units break-even then treats43333units as feasible with4supervisors in40001–50000band. That band requires5;40000loses600000 and43333loses600060. First non-loss integer in the band is46667. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-skills-a-source-findings.json
+bridge-page-writer:
+  reason: Source presents examples of perfect vision without treatment, diabetes-free testimonial and named expert/institution claims as winning templates. It recommends before-taken-down suppression urgency and tells writers to avoid qualifying language. It does not require evidence/permission/current claim scope before using those patterns. The finding is an instruction risk, not proof those historical quotations were fabricated or that an actual output ran. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-skills-a-source-findings.json
+browser-test-migrator:
+  reason: Reference maps not.exist primarily to not.toBeVisible, which permits hidden-but-existing nodes and therefore changes absence semantics. It lists toHaveCount(0) only as alternate. Line9maps data-cy to getByTestId without configuring testIdAttribute; default Playwright reads data-testid. Both require intent/config-aware conversion, not blind mapping. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-skills-a-source-findings.json
+browserstack-test-runner:
+  reason: Configured project names are chromelatestwindows-11, firefoxlatestwindows-11 and webkitlatestos-x-ventura. npm/run commands use chrome@*,firefox@*,webkit@* patterns instead. None matches the configured prefix; supplied setup and run contract do not align. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-skills-a-source-findings.json
+budget-and-space-picker-knapsack:
+  reason: project_portfolio_selection accepts max_projects but never uses it. Actual AST-selected definitions return2projects when max_projects=1 under a budget that fits both. Basic0/1DP success does not establish all requested constraints. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-skills-a-source-findings.json
+budget-variance-explainer:
+  reason: Three-way section uses budget volume for price effect. With constantmix1, budget100units×10 and actual110×12, its volume100+price200+mix0 totals300 but actual variance320. Missing20interaction prevents stated bridge reconciliation; valid two-way actual-volume price effect gives220plus100. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-skills-a-source-findings.json
+build-pipeline-setter:
+  reason: Manual rollback example substitutes inputs.version directly into run script as an unquoted shell fragment. A supplied semicolon value changes command syntax. Dispatch rights and actual environment permissions affect exposure; no unauthenticated exploitation or live compromise is asserted. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-skills-a-source-findings.json
+bulk-order-fulfiller:
+  reason: Current official fulfillmentOrders arguments have no assignedLocationId direct argument, while source uses it. Source permissions only read_orders/write_fulfillments omit current fulfilment-order read/write scopes and user permission. Inner lineItems(first10) is not paginated; partial quantities need complete explicit selection. Source34says API cannot cancel fulfilment, contradicted by current fulfillmentCancel with conditions. No assertion the expired2025-01schema was queried live. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-skills-a-source-findings.json
+bulk-price-changer:
+  reason: Source queries variants(first100) without inner cursor/pageInfo, yet175promises allvariants regardless page count. Outer product pagination does not retrieve variant101ofoneproduct. dry_run defaults false despite mandatorypreviewlanguage; a safe execution must explicitly preview and approve a complete set. No live price mutation or complete current GraphQL validation was performed. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-skills-a-source-findings.json
+bundle-pair-finder:
+  reason: Query only reads first50lineitems without inner pagination, so51-productbasketlosescombinations despite complete-order-history expectation. Parameter group_size3advertisestriplets but workflow generates pairs and output CSV only has product_a/product_b. Marginal probabilities need an explicit all-order population rather than silently conditioning on multi-item baskets. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-skills-a-source-findings.json
+bundle-stock-checker:
+  reason: Formula uses onhand less buffer as saleable basis; official Shopify onhand includes committed and unavailable. Synthetic onhand10/committed8/available2 with3needed gives3sourcebundles versus0available. Onhand1-buffer2 divided1 gives−1; brokenflagonly==0missesnegative without an undefined optional threshold. Inner100variants/50components/25levels lackpagination. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-skills-a-source-findings.json
+business-buyer-trust-builder:
+  reason: Employee advocacy claims1000employees×500connections=500Korganicreachperpost. That arithmetic ignores overlap and actual delivery; even unique network size is not measured reach. Source also prescribes6–8exposures to trust and claims2–5xconversion increase from recognition without supporting study/source here. No assertion all possible published studies are absent. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-skills-a-source-findings.json
+business-idea-killer:
+  reason: Ad-market check says90+dayrunmeanspayingbecauseitworks,whichdoesnotfollowwithoutoutcomes/costs. Same-niche old rejection immediatelygivesDEADwithoutcurrentoffer/buyer/evidencecheck,despiteprior-vs-verdictcautionelsewhere. Binarydecisioncanthereforeoverstatewhattheseproxiesestablish. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-skills-a-source-findings.json
+business-investment-analyst:
+  reason: Hiringpaybackusesloadedsalary+onboardingdividedannualrevenue,notnetcash. Positivegrossrevenuecanproducefinitequotientevenwithnegativenetcash. Budgetrule129–130fundsdescendingIRRuntilbudgetexhausted;indivisiblescaleconstraints canmakeitselectlowerNPVthanfeasiblealternative. Debt-financinginterestinstructionalso needsdeclaredcashflow/discountbasis to avoiddoublecounting. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-skills-a-source-findings.json
+pll-circuit-modeler:
+  reason: Mandatory PLL recipes contradict lock-measurement and holdoff-window requirements. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-skills-b-native-source-holds.json
+point-cloud-aligner:
+  reason: Ground-data example doesnot undo fixed-frame correction when mapping original moving points. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-skills-b-native-source-holds.json
+portfolio-company-tracker:
+  reason: Primary repeats an incorrect Indian display-scale factor and unit label. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-skills-b-native-source-holds.json
+postgres-schema-designer:
+  reason: UNIQUE NULLS syntax order and partial-index upsert ban conflict with current official PostgreSQL contracts. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-skills-b-native-source-holds.json
+postman-collection-maker:
+  reason: cURL URLencoded-body mapping is changed to multipart form-data. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-skills-b-native-source-holds.json
+powershell-pitfall-checker:
+  reason: Continue-error template can bypass catch and reach success despite a nonterminating cmdlet error. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-skills-b-native-source-holds.json
+earnings-preview-writer:
+  reason: The mandatory timing table classifies every timestamp before16:00ET as before the open. A14:00 report is during the regular session, not before open. The source needs an explicit intraday/unknown/exchange-calendar timing branch rather than a binary hour cutoff. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-specialist-skill-native.json
+earnings-recap-writer:
+  reason: earnings_reaction returns a value whenever post contains a daily row, but does not check that the relevant session has closed. A data source can supply an in-progress daily Close row. The source promises None/pending until closure but only tests empty data, so it can report a partial move as a completed-session reaction. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-specialist-skill-native.json
+earnings-update-report-writer:
+  reason: The source accepts a specified historic-quarter update but mandatory data-collection gates require latest earnings and a release within3months of today, telling the worker to search again if older. This conflicts with a legitimate older-quarter request and can substitute a different report period. It needs explicit current-versus-historical period handling. India-specific filing equivalents also need a named gap rather than inventing a10-Q. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-specialist-skill-native.json
+electronics-parts-sourcing:
+  reason: Allocation assessment silently skips a required BOM part when component master data are absent, hiding unknown supply risk. E&O _calculate_future_demand accepts months but never filters forecast dates to that horizon, so a12-month label can include later demand. Feeder assignment uses original DataFrame indices after sorting. Its positions50–69for indices0–19 collide with ordinary positions50–69later, allowing duplicate physical slot assignments. Line capacity sums print, placement, reflow and inspection times as one serial cycle without modeling pipelined line bottlenecks; fixed defaults are not verified factory capacity. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-specialist-skill-native.json
+email-drafter:
+  reason: The complaint example adds a completed15%renewal discount absent from the stated inputs, also claims engineering deployed a fix and subscription remains unaffected without supplied evidence. This trains ungrounded commitments/status claims in a ready-to-send output. It was not sent or executed. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-specialist-skill-native.json
+email-setup-health-checker:
+  reason: Step 2, output and final check require DMARC to start at none even when reviewing an existing enforced policy. For a valid current p=reject with verified passing reports, literal compliance would recommend weakening it solely to fit the starting-policy rule. The method needs a new-policy versus existing-policy gate and must not claim current provider or legal compliance from old checklist targets. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-specialist-skill-native.json
+email-test-planner:
+  reason: For send-time tests, step 4 permits click rate as the winning metric, step 8 compares average revenue, the output permits clicks, and the final checklist requires orders or revenue. Equal-size arms can have a higher-click but lower-revenue option, so these mandatory rules can choose different winners. Define the primary measure before launch and keep output and checks consistent; sample rules also need an explicit heuristic/power distinction. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-specialist-skill-native.json
+headless-store-builder:
+  reason: "Release hold: the cart example calls useLoaderData<typeof loader>() but supplies only an action, not its referenced loader. The customerAccount.mutate(LOGIN_MUTATION) email/password snippet has no defined mutation and does not establish the documented hosted Customer Account OAuth/session flow. Examples also combine unpinned latest creation with an expired 2025-01 API version and inconsistent framework imports. Official https://shopify.dev/docs/api/usage/versioning and https://shopify.dev/docs/storefronts/hydrogen/customer-accounts checked. Imported source unchanged; release requires versioned, build-tested examples. Withheld pending a reviewed and checked correction."
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-skills-root-native.json
+health-data-privacy-checker:
+  reason: "Release hold: primary says a Notice of Privacy Practices is required for all covered entities. HHS lists exceptions, including a clearinghouse holding PHI solely as another covered entity’s business associate, certain correctional institutions and certain fully insured group plans. Primary also says presence of any of18identifiers equals PHI; HHS says identifiers alone are not necessarily PHI without the health-information relationship and applicable scope. Primary blanket BAA wording likewise needs exception/scope checks. Official https://www.hhs.gov/hipaa/for-professionals/privacy/guidance/privacy-practices-for-protected-health-information/index.html and https://www.hhs.gov/hipaa/for-professionals/special-topics/de-identification/index.html checked. Imported source unchanged. Withheld pending a reviewed and checked correction."
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-skills-root-native.json
+heavy-feature-trimmer:
+  reason: "Release hold: Step2 orders quick-view removal even after asking whether shoppers use it, conflicting with Step1 and the final rule to keep features that earn their weight. A source requiring evidence-led decisions cannot give unconditional removal in the same flow. Performance byte savings, broad theme claims and post-change custom score are unmeasured examples, not results. Withheld pending a reviewed and checked correction."
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-skills-root-native.json
+helm-chart-builder:
+  reason: "Release hold: primary says a library chart has no templates directory, but reusable named-template files are stored under templates (for example templates/_configmap.yaml in official Helm guidance). Not rendering installable resource output is different from omitting the helper directory. Official https://docs.helm.sh/docs/topics/library_charts/ checked. Imported source unchanged; no Helm runtime validation. Withheld pending a reviewed and checked correction."
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-skills-root-native.json
+hero-image-loading-fixer:
+  reason: "Release hold: a text block can be the Largest Contentful Paint element at a slow time. Official https://web.dev/articles/lcp defines LCP for text as well as images/video and evaluates time; element type alone cannot prove good performance. A fictional text LCP5seconds directly contradicts the source shortcut and its own2.5second target. Imported/owned source unchanged pending correction. Withheld pending a reviewed and checked correction."
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-skills-root-native.json
+hidden-assumption-auditor:
+  reason: "Release hold: the source demands disagreement even if the user’s conclusion is supported, and its Chinese reconstruction/tips demand a changed conclusion while an English rule permits an unchanged conclusion with evidence. Forced change conflicts with rebuilding from verified premises. Imported source unchanged; no claim that disagreement is evidence of a better decision. Withheld pending a reviewed and checked correction."
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-skills-root-native.json
+hiring-market-researcher:
+  reason: "Release hold: supply/demand section calls candidate surplus candidate-driven and role surplus employer-driven; the labels are reversed relative to the described bargaining positions. Imported source unchanged. Raw applicants are not necessarily qualified available supply; vacancies and candidate counts also need matched scope. No claims about an actual market were established. Withheld pending a reviewed and checked correction."
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-skills-root-native.json
+buyer-psychology-advisor:
+  reason: Default Effect recommends preselecting desiredplan and opt-out subscriptions with only generic ethically-applied qualifier. It does not distinguish suggesteddefault from informed permission to charge, disclose material recurringterms or define cancellation boundary. This is a guard gap, not assertion every renewal/opt-outarrangement illegal everywhere. Ruleof7also presented as broad heuristic without scoped evidence; no fullpsychologyfactaudit claimed. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-skills-a-source-findings.json
+buyout-model-template-filler:
+  reason: The two trailing commas divide by one million. 10,000,000 rupees displays10 under the stated Cr label versus1crore, a10times label error, not lakh scaling or100times. The explicit /10000000 live formula remains correct. Same defect as imported India modelling conventions; leave licensed source unchanged. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-skills-a-source-findings.json
+cac-by-source:
+  reason: Workflow drops every order for a customer whose current lifetime numberOfOrders exceeds1. A new buyer with two orders inside the window is excluded completely, rather than counted once. Synthetic two-new-person source with200spend becomes filteredCAC200insteadtrue100. Official current Customer field is lifetime order count. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-skills-a-source-findings.json
+cac-payback-checker:
+  reason: Cash not given earns10points. CAC100, first contribution80, proven-repeat consumable, windowGP200/30days and improving trend yield15+40+10+10=75. Rule at77calls scale despite an unfunded20per-acquisition first-order gap. Source requires cash cover but the verdict does not enforce observed funding. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-skills-a-source-findings.json
+california-privacy-law-checker:
+  reason: Primary says preceding-year revenue exceeds25million; official CPPA effective2025adjustment is26.625million. Thus26million can be misclassified by revenue-only source test. Primary227–229and234also use old2500/7500and100–750monetary figures, whereas official adjustment lists2663/7988and107–799. Source cure-period and detailed2026enforcement/legislation claims also need separate verification; no comprehensive legal audit claimed. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-skills-a-source-findings.json
+pre-push-repo-cleaner:
+  reason: Immediate-deletion patterns include potentiallyrequiredvendoredcode,backupsandprojectnoteswithoutownership/dependencygate. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-skills-b-native-source-holds.json
+emotional-skills-lesson-sequence:
+  reason: The example teacher script guarantees every student will feel anxious before exams and says skeptical breathing practice still works. Other example passages call discussion therapeutic and claim breathing directly improves observation. Those universal or clinical effects are not established by a generic lesson plan and can misstate individual experience. Imported source is held rather than silently rewritten; the framework’s classroom and clinical limits remain relevant. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-specialist-skill-native.json
+engaged-list-expander:
+  reason: Step 5 and the final check require quiet contacts to enter in small samples, but step 6 also mandates monthly sends to everyone still subscribed, including the whole quiet group. That defeats the staged limit. Step 7 repeats the no-orders-in-365-days rule while saying all prior buyers are protected, so a buyer from 366 days ago can be removed by the literal cleanup test. The source example also says 375,000 + 37,500 = 410,000; the correct sum is 412,500. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-specialist-skill-native.json
+enterprising-bargain-screener:
+  reason: The frontmatter describes debt no greater than net current assets, while step 3 allows 110 percent of that amount. A company with net current assets 100 and debt 105 fails the former but passes the latter. The contract needs one explicitly stated threshold rather than different screening outcomes at this boundary. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-specialist-skill-native.json
+equipment-maintenance-planner:
+  reason: The reliability class sums downtime for multiple assets but subtracts it from one operating_hours_per_year denominator. Two assets each scheduled for 100 hours with 10 hours downtime should have 180/200 = 90 percent fleet availability; its formula with denominator 100 gives 80 percent. The RUL code returns infinity for any nonpositive slope before checking whether the current reading already exceeds the failure threshold, then recommends low-priority continued monitoring. Falling readings 200,190,180 against threshold 150 trigger that unsafe result. The output also lists fixed percentage benefits without project-specific evidence. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-specialist-skill-native.json
+equity-cushion-ratio-tester:
+  reason: Step 1 says to total all debt ranking level with or ahead of the user’s claim and then add their claim. If the supplied total includes that claim, the instruction counts it twice. The worked example totals bank 2m and bonds 4m as 6m, but no explicit exclusion prevents adding an included bond holding again. The method needs an other-claims-only or once-only reconciliation gate. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-specialist-skill-native.json
+error-and-log-debugger:
+  reason: The async cache example asserts unsynchronized dictionary writes explain a missing user_profile key and mentions mutation during iteration. The shown response unconditionally includes that literal key, stores only after awaiting a complete JSON value, and contains no iteration. Concurrent cache misses can cause duplicate fetches, but the asserted missing-key root cause is not established by the example. A source that teaches reproduce-before-fix should not present this unproven diagnosis as a confirmed root cause. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-specialist-skill-native.json
+error-budget-planner:
+  reason: The playbook calculates consumed downtime as target uptime minus actual uptime, then subtracts it from the full allowed budget. At exactly the allowed downtime, actual uptime equals target uptime, so it reports zero consumed and a full budget remaining instead of exhausted. It also labels fraction-of-total-budget used as burn rate, without normalizing for elapsed time. These errors can misstate release and alert decisions. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-specialist-skill-native.json
+etf-price-gap-calculator:
+  reason: The gamma reference assumes dealers short calls and long puts, but defines net GEX as call gamma minus put gamma and interprets a positive value as dealer-long gamma. Under its own assumed positions, dealer gamma has the opposite sign. The primary also says not to infer inventory from public OI alone, then states a negative convention value means dealers are short gamma and will amplify rallies. This is a sign and inference conflict, not resolved by the final descriptive caveat. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-specialist-skill-native.json
+etsy-listing-seo-scorer:
+  reason: The documented CLI accepts a listing JSON argument, but main only reads --zh and always constructs the embedded Beautiful Handmade Bracelet demo. A requested ceramic mug would be ignored. The keyword “research” is a fixed category list, competitor_insights is always empty, and the English formatter does not emit the promised rewritten title or prioritized action plan. The primary example also suggests tags longer than its own 20-character limit. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-specialist-skill-native.json
+eu-ai-act-risk-classifier:
+  reason: The primary says every system is exactly one of four tiers, and its classifier runs Article 50 only after the high-risk branch. Yet its own predeployment high-risk workflow separately checks Article 50 transparency. A one-tier output must not erase overlapping transparency or general duties. Official Article 50(6) expressly leaves Chapter III requirements in place; the source needs separate risk and duty axes and current-law validation rather than an exclusive-tier shortcut. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-specialist-skill-native.json
+eu-sustainability-report-checker:
+  reason: The updated scope section requires both more than 1,000 employees and turnover above 450m, but the operative Scope Determination workflow still directs an older employees/turnover/assets two-of-three test. The source also says reasonable assurance will phase in, then later says that empowerment was removed. These are internally conflicting rule vintages; a disclaimer does not choose a governing test or basis. The source must reconcile its workflows against current official law before a scope or assurance conclusion. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-specialist-skill-native.json
+event-ticket-pricer:
+  reason: The primary instructs replacing an algorithm recommendation label with “Others also booked” for experiences, without requiring actual co-booking evidence. The worked example applies that swap directly. An algorithm-only recommendation with no booking history would acquire an invented social-proof claim. It needs an evidence gate and neutral alternative, not a label change based only on product type. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-specialist-skill-native.json
+hiring-progress-reporter:
+  reason: "Release hold: primary mandates a specific third-party brand and references a missing brandguidelines.pdf plus external logo assets. Package listing contains no required PDF. This is not a ready general-purpose branded report/export path. Adaptation and complete dependency/layout checks are needed; imported method unchanged. Withheld pending a reviewed and checked correction."
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-skills-root-native.json
+hiring-quality-reviewer:
+  reason: "Release hold: primary treats screening and offer-rate cutoffs as definite diagnoses and calls one rehire question the strongest single quality-of-hire predictor without supporting evidence in the primary. An85%screening pass rate can arise from a tightly qualified pool; it does not logically establish inadequate sourcing ambition. Rate bands can prompt review but cannot decide causes from a proportion alone. Imported source unchanged. Withheld pending a reviewed and checked correction."
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-skills-root-native.json
+historical-context-lesson:
+  reason: "Release hold: the counterfactual assessment treats an unchanged document under a different date as proof the student is not contextualising. Evidence about comparable circumstances can support an unchanged interpretation; asking about context does not require a changed conclusion. Assessment should judge the evidence and connection, not mandate a different answer. Imported source unchanged. Withheld pending a reviewed and checked correction."
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-skills-root-native.json
+history-close-reading:
+  reason: "Release hold: the teaching example says a kindly welcome and a later threat cannot both happen, but those events are not logically exclusive within one encounter. Different accounts or omissions warrant investigation; they do not establish contradiction without checking chronology and claims. Imported source unchanged. No assertion about which Smith account is historically true. Withheld pending a reviewed and checked correction."
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-skills-root-native.json
+history-think-aloud:
+  reason: "Release hold: model sourcing script presents extraordinary memory or later reconstruction as exhaustive explanations for a17year-later account. Contemporaneous notes or earlier records are another possible basis; publication lag alone does not settle recall method. The example also states motives unrelated to the events as known while its rules require hypotheses and uncertainty. Imported source unchanged; no conclusion about Smith’s actual records or motives. Withheld pending a reviewed and checked correction."
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-skills-root-native.json
+holdings-results-review:
+  reason: "Release hold: one-dollar check compares raw company market-value change with profit retained after dividends/buybacks but has no equity-issuance/corporate-action adjustment or nonpositive retained-capital gate. New shares can raise total market value with unchanged per-share price, so attributing raw growth to retained profit is unsupported. Missing or nonpositive denominators cannot receive a finite per-dollar value-creation verdict. Owned source unchanged pending a guarded repair. Withheld pending a reviewed and checked correction."
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-skills-root-native.json
+holdout-test-planner:
+  reason: "Release hold: spend/incremental-orders decision rule has no zero/negative incremental-order gate. Spend100and estimated−2extraorders gives−50, mechanically below a positive40allowance, yet this is a loss estimate rather than favourable cost per extra order. Zero extra orders is undefined, and a range crossing zero cannot be reduced to a normal finite efficiency interval. Owned source unchanged pending correction. Withheld pending a reviewed and checked correction."
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-skills-root-native.json
+honest-product-review-writer:
+  reason: "Release hold: disclosure guidance requires saying the buyer’s price does not change without requiring that price relationship to be verified. Commission-link prices, promotions or fees can differ; the source’s no-fabrication rule must also govern this statement. Use verified relationship facts rather than a universal price promise. Imported method unchanged. Withheld pending a reviewed and checked correction."
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-skills-root-native.json
+hospital-supply-stock-planner:
+  reason: "Release hold: emergency-cart optimizer returns Remove from cart solely for no annual usage and expiry under24months, without an approved essential-item/minimum-readiness gate. A required emergency item can have no recent use and still be necessary. Official https://www.resus.org.uk/library/quality-standards-cpr/acute-care-equipment-and-drug-lists calls for local expert decisions and appropriate timely availability. The source’s own vital-item availability framework does not protect this branch. Imported method unchanged. Withheld pending a reviewed and checked correction."
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-skills-root-native.json
+campaign-attribution-analyst:
+  reason: safe_divide returns0for zero denominator; calculate_campaign_metrics defaults absent spend0and reports0ROI/ROAS. Actual local call spend0/revenue300returned0.0for both, hiding undefined/missing ratios. Positive100spend/300revenue sanity case returned3ROAS,200percentROI,20CPA. Profit labelling further requires a precise included-cost scope; full operating profit is not established by revenue minus media only. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-skills-a-source-findings.json
+event-tracking-planner:
+  reason: "The property guide forbids email addresses in event properties, but the canonical user_invited event requires invited_email. That is a direct collection-rule conflict. The blanket instruction to omit subscription tier from event payloads and rely on a current user-profile join also lacks an as-of-history gate: in a current-profile-only system it can reclassify old free-tier behavior as pro after an upgrade. A required referenced retention guide is missing from the local bundle. Withheld pending a reviewed and checked correction."
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-specialist-skill-native.json
+exam-study-roadmap-builder:
+  reason: The readiness-dashboard route requires preparedness percentages and a marks range but the stated intake only gathers materials, papers and time. It gives no diagnostic-performance or self-rating input gate or calibration method for those student-specific numbers. Past-paper frequency can support study priorities, not this learner’s knowledge score. The shared difficulty table also calls easy questions “Guaranteed marks,” conflicting with its explicit no-guarantee limit. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-specialist-skill-native.json
+hostile-code-reviewer:
+  reason: "Release hold: verdict definitions cover one-or-more criticals, two-or-more warnings, or only notes, leaving a report with exactly one warning and notes without a defined verdict. Mandatory findings and automatic severity promotion by persona agreement also risk replacing evidence/impact with quotas or repeated viewpoints. Imported source unchanged; none of the personas is an independent reviewer. Withheld pending a reviewed and checked correction."
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-skills-root-native.json
+presentation-builder:
+  reason: Example1 input provides only product/audience/count, yet output invents customer figures and says real beta cohort; contradicts no-source placeholder discipline. Example2 adds180–250ms,92%cachehit,5minuteTTL andzero-downtime details not in supplied source; illustrative status must remain explicit. Withheld pending a reviewed and checked correction.
+  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-skills-b-native.json
+find-leaked-keys-move-them-to-safe-storage-and-check-the-live-site:
+  reason: Existing dependent remains withheld until separately reviewed after its component repair.
+  evidence: Flagged repair batch batch-121
+weekly-dependency-and-security-sweep:
+  reason: Existing dependent remains withheld until separately reviewed after its component repair.
+  evidence: Flagged repair batch batch-121
 stable-diffusion-image-maker:
-  reason: Recommends disabling an image safety checker. Withheld pending a reviewed replacement.
-  evidence: references/troubleshooting.md:129
+  reason: "Release hold: the example disables the image safety checker with safety_checker=None and requires_safety_checker=False. Keep it out of the public catalogue until a reviewed safety gate replaces that path."
+  evidence: catalogue-items/imported/stable-diffusion-image-maker/references/advanced-usage.md
 secrets-hygiene-checker:
-  reason: Suggests git commit --no-verify to bypass checks. Withheld pending a reviewed replacement.
-  evidence: SKILL.md:186
+  reason: "Release hold: its source item.yaml says the skill was copied as-is. Rewrite it in our own words before publication, as required by RULES.md."
+  evidence: catalogue-items/imported/secrets-hygiene-checker/item.yaml

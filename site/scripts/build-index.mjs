@@ -10,6 +10,7 @@ import { quarantineClosure } from "../../tools/lib/quarantine.mjs";
 import { applyDisplayCopy } from "../../tools/lib/display-copy.mjs";
 import { acquireBuildLock } from "./lib/build-lock.mjs";
 import { INFO_PAGES } from "../src/lib/site-info.mjs";
+import { makeTaskRecipe } from "../src/lib/copyable-task.mjs";
 await acquireBuildLock(".index-build.lock");
 
 // CATALOGUE_ROOT points the build at another folder (tools/make-fake-catalogue.mjs makes one for load tests).
@@ -32,6 +33,27 @@ fs.mkdirSync(OUT_PAGES, { recursive: true });
 // Until a block has its page written, it is filed under the job closest to its old group.
 const TASK_FROM_JOB = { copy: "write-ad-copy", email: "write-ad-copy", ads: "make-image-ads", image: "make-image-ads", video: "make-video-ads", page: "write-landing-page", analysis: "read-ad-results", research: "understand-customers", brand: "brand-file", offer: "make-offer", organic: "grow-social", ops: "set-up-ai" };
 const PAGE_FIELDS = ["headline", "subhead", "explain", "when", "you_give", "you_get", "how_to_use", "how_it_works", "output_shape", "tweaks", "judge", "test", "improve", "terms", "works_best_with"];
+// Source schemas carry precise fields for some imported methods. Keep their
+// meaning separate from display copy and leave the original frontmatter intact.
+function schemaFields(schema) {
+  if (!schema || typeof schema !== "object") return [];
+  const rows = [], seen = new Set();
+  const add = (field, optional = false) => {
+    const name = typeof field === "string" ? field : field?.field ?? field?.name;
+    if (!name || seen.has(name)) return;
+    seen.add(name);
+    const description = typeof field === "object" && field?.description ? ": " + field.description : "";
+    rows.push(`${name}${description}${optional ? " (optional)" : ""}`);
+  };
+  if (schema.properties && typeof schema.properties === "object" && !Array.isArray(schema.properties)) {
+    const required = new Set(Array.isArray(schema.required) ? schema.required : []);
+    for (const [name, definition] of Object.entries(schema.properties)) add({ name, description: definition?.description }, !required.has(name));
+  } else {
+    for (const key of ["required", "optional"]) for (const field of Array.isArray(schema[key]) ? schema[key] : []) add(field, key === "optional");
+  }
+  for (const field of Array.isArray(schema.fields) ? schema.fields : []) add(field, field?.required === false || field?.optional === true);
+  return rows;
+}
 
 const types = YAML.parse(fs.readFileSync(path.join(ROOT, "_types.yaml"), "utf8"));
 const typeDesc = {};
@@ -79,7 +101,15 @@ for (const dirName of ["general", "ecommerce", "orchestrators", "agents", "impor
     fs.copyFileSync(skillPath, path.join(OUT_SKILLS, slug, "SKILL.md"));
     // Reference files and a licence travel with the skill, so a download installs complete.
     const refDir = path.join(folder, "references");
-    const files = imported || item.package_files === "all" ? walk(folder) : [...(fs.existsSync(refDir) ? fs.readdirSync(refDir).filter((f) => f.endsWith(".md")).sort().map((f) => `references/${f}`) : []), ...(fs.existsSync(path.join(folder, "LICENSE")) ? ["LICENSE"] : [])];
+    const candidateFiles = imported || item.package_files === "all" ? walk(folder) : [...(fs.existsSync(refDir) ? fs.readdirSync(refDir).filter((f) => f.endsWith(".md")).sort().map((f) => `references/${f}`) : []), ...(fs.existsSync(path.join(folder, "LICENSE")) ? ["LICENSE"] : [])];
+    // Windows may retain a lowercase source filename when the canonical path
+    // was written. Do not ship two case-colliding main files in one archive.
+    const files = candidateFiles.filter(file => {
+      if (file.toLowerCase() !== "skill.md") return true;
+      const alternate = fs.readFileSync(path.join(folder, file), "utf8");
+      if (alternate.replace(/\r\n?/g, "\n") !== skill.replace(/\r\n?/g, "\n")) throw Error(`${slug}: conflicting primary instruction filenames`);
+      return false;
+    });
     // They ship as one zip per skill (skills/<slug>.zip, the folder Claude installs), not one file each: the site stays
     // under Cloudflare Pages' file limit, and a download is one request. The skill's own files are never changed.
     if (files.length) {
@@ -94,12 +124,23 @@ for (const dirName of ["general", "ecommerce", "orchestrators", "agents", "impor
     const edited = applyDisplayCopy(item, page, copyEdits[slug]);
     item = edited.item; page = edited.page;
     if (copyEdits[slug]) copyUsed.add(slug);
-    if (page) {
-      const out = Object.fromEntries(PAGE_FIELDS.filter((f) => page[f] != null).map((f) => [f, page[f]]));
+    if (page || (item.type ?? "skill") === "skill") {
+      const out = Object.fromEntries(PAGE_FIELDS.filter((f) => page?.[f] != null).map((f) => [f, page[f]]));
       // Public sources a block was built from, shown on its page. Only http(s) links are kept.
       const credits = (item.credits ?? []).filter((c) => c && c.title && (!c.url || /^https?:\/\//.test(c.url))).map((c) => ({ title: String(c.title), by: c.by ? String(c.by) : "", url: c.url ? String(c.url) : "", used: c.used ? String(c.used) : "" }));
       if (credits.length) out.credits = credits;
-      out.html = { explain: page.explain ? sub(md.parse(String(page.explain))) : "", skill: sub(md.parse(bodyOf(skill))) };
+      out.html = { explain: page?.explain ? sub(md.parse(String(page.explain))) : "", skill: sub(md.parse(bodyOf(skill))) };
+      if ((item.type ?? "skill") === "skill") {
+        let metadata = {};
+        try {
+          const frontmatter = skill.replace(/^\uFEFF/, "").replace(/\r\n?/g, "\n").match(/^---\n([\s\S]*?)\n---/);
+          if (frontmatter) metadata = YAML.parse(frontmatter[1]) ?? {};
+        } catch { /* The complete source remains authoritative when a schema cannot be parsed. */ }
+        out.copyable = makeTaskRecipe({ ...item, slug, name: page?.name ?? item.name ?? slug,
+          task: page?.job ?? TASK_FROM_JOB[item.job] ?? "set-up-ai",
+          inputs: asPorts(item.inputs), outputs: asPorts(item.outputs), uses: item.uses ?? [], steps, hasFiles: files.length > 0,
+        }, { ...page, sourceInputFields: schemaFields(metadata.input_schema), sourceOutputFields: schemaFields(metadata.output_schema) }, skill);
+      }
       fs.writeFileSync(path.join(OUT_PAGES, `${slug}.json`), JSON.stringify(out));
     }
     blocks.push({
@@ -150,6 +191,7 @@ for (const r of roster.minds) if (!faces[r.slug]) problems.push(`minds/_avatars.
 // Role labels (catalogue-items/minds/_labels.yaml): what each person is known for doing, shown as badges and filters.
 const labelFile = fs.existsSync(path.join(MINDS, "_labels.yaml")) ? YAML.parse(fs.readFileSync(path.join(MINDS, "_labels.yaml"), "utf8")) : { labels: {}, people: {} };
 const labelsOf = (slug) => (labelFile.people?.[slug] ?? []).filter((l) => labelFile.labels?.[l]);
+const mindUseCases = new Map();
 for (const r of roster.minds) if (!labelsOf(r.slug).length) problems.push(`minds/_labels.yaml has no labels for ${r.slug}`);
 for (const r of roster.minds) {
   const folder = path.join(MINDS, r.slug);
@@ -157,6 +199,13 @@ for (const r of roster.minds) {
   if (!fs.existsSync(yamlPath) || !fs.existsSync(skillPath)) continue;
   let m;
   try { m = YAML.parse(fs.readFileSync(yamlPath, "utf8")); } catch (e) { problems.push(`minds/${r.slug}: ${e.message.split("\n")[0]}`); continue; }
+  // Storefront wording stays separate from the person's source profile and pack.
+  if (copyEdits[r.slug]) {
+    if (copyEdits[r.slug].name !== m.name) throw new Error(`Mind person name changed: ${r.slug}`);
+    m = applyDisplayCopy(m, null, copyEdits[r.slug]).item;
+    copyUsed.add(r.slug);
+  }
+  mindUseCases.set(r.slug, m.use_cases ?? []);
   const skill = fs.readFileSync(skillPath, "utf8");
   fs.mkdirSync(path.join(OUT_SKILLS, r.slug), { recursive: true });
   fs.copyFileSync(skillPath, path.join(OUT_SKILLS, r.slug, "SKILL.md"));
@@ -189,7 +238,7 @@ for (const r of roster.minds) {
   } : undefined;
   const page = {
     headline: m.name,
-    subhead: m.summary,
+    subhead: m.subhead ?? m.summary,
     explain: `${m.known_for}\n\nThis is an AI playing ${first} from public work: ${m.sources.length} public sources, listed below, written into a data set of what they knew and believed and a profile of how they think and talk. It isn't ${first}, and ${first} hasn't endorsed it.${m.living ? ` ${first} is alive, so views can change; it was last checked on ${String(m.last_checked).slice(0, 10)}.` : ""}`,
     when: m.use_cases,
     you_give: ["Your task or question", "Your facts, numbers or draft (optional; it asks once if they matter)", "A role for them, such as \"my investor\" (optional)"],
@@ -293,7 +342,7 @@ const portTypes = Object.fromEntries([...usedTypes].sort().map((t) => [t, typeDe
 const renamedFile = path.join(ROOT, "renamed.json");
 const renamed = fs.existsSync(renamedFile) ? Object.fromEntries(Object.entries(JSON.parse(fs.readFileSync(renamedFile, "utf8"))).filter(([, to]) => blocks.some((b) => b.slug === to))) : {};
 // The whole roster goes too, so /minds can show who's coming before their files are built.
-const minds = { areas: roster.areas ?? {}, roster: roster.minds.map((m) => ({ slug: m.slug, name: m.name, identity: bySlug[m.slug]?.identity ?? m.identity, area: m.area, seat: m.seat, living: !!m.living, built: !!bySlug[m.slug], face: faces[m.slug] ?? {}, labels: labelsOf(m.slug) })), labels: labelFile.labels ?? {} };
+const minds = { areas: roster.areas ?? {}, roster: roster.minds.map((m) => ({ slug: m.slug, name: m.name, identity: bySlug[m.slug]?.identity ?? m.identity, area: m.area, seat: m.seat, living: !!m.living, built: !!bySlug[m.slug], face: faces[m.slug] ?? {}, labels: labelsOf(m.slug), useCases: mindUseCases.get(m.slug) ?? [] })), labels: labelFile.labels ?? {} };
 // blocks.json is loaded by every page, so each block is sent as small as it can be: fields the list, search, home page and
 // builder never read are left out, and a value equal to its default is left out too. loadCatalogue (lib/data.ts) puts them back.
 const DEFAULTS = { category: "general", type: "skill", role: "make", job: "ops", level: "intermediate", thinking: "medium", origin: "own", version: "1.0.0", usedIn: 0 };
@@ -354,7 +403,7 @@ const intro = [
   "## Key facts", "",
   "- Free to use, no account needed.",
   `- ${nSkills} skills, workflows and prompts in ${tasksBySize.length} jobs, ${nMinds} minds and ${TOOLS.length} mini tools.`,
-  "- Imported skills are copied as they are from open-licence GitHub repos (MIT, Apache 2.0, BSD, CC BY, CC BY-SA), credited on their page with a link to the original.",
+  "- Imported skills keep their open-licence sources and credits (MIT, Apache 2.0, BSD, CC BY, CC BY-SA). Local changes are identified on the page and in the skill file.",
   "- Minds are AIs built from a person's public work, with their sources listed. They are not the person. Minds that invest teach frameworks only, never buy or sell advice.",
   "- Skills that scrape websites or need a paid outside account say so on their page.",
   `- Last built ${new Date().toISOString().slice(0, 10)}.`, "",

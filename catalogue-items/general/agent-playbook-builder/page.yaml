@@ -1,0 +1,38 @@
+new_slug: agent-playbook-builder
+name: Correlated agent playbook builder
+summary: Build a dry-run playbook with grouped signals and proposed actions.
+job: build-software
+headline: Correlated agent playbook builder
+subhead: Share dated findings, match conditions, cooldowns and owners. Get a dry-run playbook with grouped signals and proposed actions.
+explain: |-
+  Share dated findings, match conditions, cooldowns and owners. Get a dry-run playbook with grouped signals and proposed actions.
+
+  The complete method and its supporting files are in the download. It marks missing inputs and separates proposed actions from actions that were actually completed.
+when:
+  - You need a dry-run playbook with grouped signals and proposed actions.
+  - You are adding this function to an agent system.
+  - You need to compare an existing version with the supplied starter.
+you_give:
+  - Dated findings, match conditions, cooldowns and owners
+you_get:
+  - A dry-run playbook with grouped signals and proposed actions
+  - A failure checklist and synthetic test cases
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Step 1
+    text: Collect scoped findings in a defined time window.
+  - title: Step 2
+    text: Match the required independent signals.
+  - title: Step 3
+    text: Deduplicate incidents and enforce a cooldown.
+  - title: Step 4
+    text: Build child tasks and approval proposals.
+  - title: Step 5
+    text: Dry-run against known examples.
+  - title: Step 6
+    text: Keep the workflow recommendation-only until an owner authorizes execution.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

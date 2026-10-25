@@ -5,7 +5,7 @@ description: Use when Google shows a good ROAS but sales are flat, or you are th
 
 # Find your honest Google ROAS and decide whether to raise spend
 
-Give it your margins and 30 days of Google data. Get break-even targets, true non-brand ROAS, and a go or wait call.
+Give it your margins and 30 days of Google data. Get break-even targets, reported brand and non-brand returns, and a budget review.
 
 This workflow chains skills from the library. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
@@ -46,8 +46,8 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 Pause here: Export the last 30 days from Google Ads with campaigns, search terms and conversions, and mark which terms are your brand.
 
-2. **Brand and non-brand splitter.** Use the skill `brand-and-non-brand-splitter`. Splits brand from new-customer traffic and compares true non-brand ROAS with the break-even line from step one.
-3. **Google Ads scale gate checker.** Use the skill `google-ads-scale-gate-checker`. Give it the audit report from the steps before. Reads the split report and decides whether it is safe to raise spend, and by how much.
+2. **Brand and non-brand splitter.** Use the skill `brand-and-non-brand-splitter`. Separate queries by the supplied brand terms and compare reported non-brand ROAS with the break-even line from step one. Non-brand queries do not prove that buyers are new or that the ads caused their orders. Keep customer identity and causal claims unknown unless separate evidence supports them.
+3. **Google Ads scale gate checker.** Use the skill `google-ads-scale-gate-checker`. Pass the split report with its dates, query classification and limits. Review its budget recommendation against actual costs and required gates. Do not describe a query split as verified new-customer profit, causal return or proof that raising spend is safe. No live budget changes occur without approval.
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

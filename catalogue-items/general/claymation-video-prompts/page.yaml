@@ -1,23 +1,19 @@
 new_slug: claymation-video-prompts
-name: "Claymation video clip prompt writer"
-summary: "Paste your clay script and attach product photos. Get matching clip prompts and an edit list."
+name: Claymation video clip prompt writer
+summary: Paste your clay script and attach product photos. Get matching clip prompts and an edit list.
 job: make-video-ads
-thinking: high
-thinking_why: "It runs several stages and keeps many rules at once across a long output."
-
-headline: "Claymation video clip prompt writer"
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.
+headline: Claymation video clip prompt writer
 subhead: Give it a claymation ad script and photos of your product. It fixes one clay character, set and product, then builds reference images, sheets, a storyboard and stop-motion clip prompts, stopping three times for your OK. You get every prompt, an edit list and any check it missed.
-
 explain: |
   AI video tools drift. The character's hair changes between clips, clay turns into shiny plastic, your label gets redrawn with wrong letters, and the one change the ad depends on happens off screen. You end up paying for the same clip again and again.
 
   This skill runs the whole process in six stages, the way a stop-motion crew would. It writes fixed lines for the set, light and lens, with one clay finish and named stand-ins (water as clear gel, steam as cotton wool). It writes a card for the clay character and waits for your OK. Next come a sheet with the character from every angle, a product sheet and the set before and after, plus lock lines. You approve those, then a storyboard where only one thing moves in each shot. Only then does it write clips with stepped clay timing, and the one morph from a first and last frame.
-
 when:
   - You have a claymation script and want to make it with AI image and video tools.
   - Your earlier clips kept changing the character, the set or the product label.
   - You want the change in the ad (a knot loosening, a tower squashing flat) to happen on camera, at clay speed.
-
 you_give:
   - The script's shot table, with the changing object's three states, the character, the set, the product choice and the cast note
   - Photos of your product (front, side, top), every label line, and how it's used
@@ -29,14 +25,12 @@ you_get:
   - A storyboard with one still, one mover and counted beats per shot, and the morph's frame pair
   - Clip prompts and an edit list, with a fix list for each take
   - Any check the prompts couldn't meet, one line each
-
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste the script from "Claymation video ad script writer", then attach your product photos and list the label lines.
   - Approve or change the character card, then make the reference images and say which you picked.
   - Make and approve the sheets and lock lines, then the storyboard stills.
   - Make each clip from its approved still, check it against the fix list, then cut them over the narration.
-
 how_it_works:
   - title: Reads the script
     text: Lists each shot's mover and state, and writes the set, light, lens and palette lines with one clay finish and named stand-ins.
@@ -50,7 +44,6 @@ how_it_works:
     text: One still per shot, one mover, counted beats, one camera instruction, and the morph's first and last frame. It stops for your OK.
   - title: Turns it into video
     text: Clips with stepped clay timing and a hold line, narration laid on in editing, and a fix list for every take.
-
 output_shape: |
   STAGE 0  FIXED LINES  SET: <finish, stand-ins, no words>  LIGHT: <..>
                         LENS: <..>  PALETTES: Before <..> After <..>
@@ -72,7 +65,6 @@ output_shape: |
                            Camera. Hold line. Sound.
            EDIT LIST  <order, offer text, safe zones, fixes>
   CHECKS MISSED: <one line per check still missed, or none>
-
 example:
   business: sprout
   input: |
@@ -159,7 +151,6 @@ example:
 
     (cut for length: the full run also had shots 2 to 5 and 7 to 9,
     and the other clip prompts)
-
 tweaks:
   - what: The product choice
     how: Say "clay prop" to sculpt the pack in clay wrapped in its printed label, or "real photo" to use your photo lit by the set. The script usually decides; this changes only the product sheet and line.
@@ -169,37 +160,36 @@ tweaks:
     how: Give your tool's limits, for example "5 second clips". Each shot stays one action, so longer clips just hold the end pose longer.
   - what: Never-show list
     how: Paste the things your brand never shows (a body changing, a pack opened the wrong way). It writes them out of every prompt and describes what to show instead.
-
 judge:
   - It stopped for your OK after the avatar card, the sheets and the storyboard, or marked each "(approve)" if you asked for every stage at once.
   - The lock lines appear word for word in every still and clip prompt.
   - Each clip has one mover and one camera instruction, and there is at most one morph, made from a first and last frame.
   - The product follows its one product line in every shot, with the label exactly as printed.
   - The change happens in view, by a clay move, and never pops or vanishes.
-
 test:
   - Run it on a script where you already know the changing object and its three states. The before set sheet should show the same object in the same state.
   - Make the sheets before any clip. If the clay looks like shiny plastic or the label has new letters, fix the lock lines now, while it's cheap.
   - Run it twice on the same script and compare the lock lines. They should say the same thing both times.
   - Make only the morph clip and watch it muted. If someone can't say what changed, the change was too fast or happened off screen.
-
 improve:
   - Write your product line into stage 3 of the skill file once (shape, colours, label lines, size against a hand), so every run starts with it.
   - Add your brand's never-show rules to the Avoid list, for example that the daily pack is only ever torn straight across the top.
   - Save the approved avatar card, sheets and lock lines in your brand file, so the next clay ad starts at stage 4.
   - Pair it with "Claymation video ad script writer" first, so the changing object and its three states are settled.
-
 works_best_with:
   tools:
-    - {name: "Nano Banana", why: "Takes many reference images at once, so the character, set and product sheets match."}
-    - {name: "Veo", why: "Takes a first and a last frame, so the one morph starts and ends exactly where you planned."}
-    - {name: "Kling", why: "Takes several reference images in one job, so the character and product hold from shot to shot."}
-    - {name: "ElevenLabs", why: "Reads the narration at a steady pace you can time the clips to."}
+    - name: Nano Banana
+      why: Takes many reference images at once, so the character, set and product sheets match.
+    - name: Veo
+      why: Takes a first and a last frame, so the one morph starts and ends exactly where you planned.
+    - name: Kling
+      why: Takes several reference images in one job, so the character and product hold from shot to shot.
+    - name: ElevenLabs
+      why: Reads the narration at a steady pace you can time the clips to.
   inputs:
-    - "The flat label artwork, so a clay prop's printed label carries every line correctly"
-    - "Photos of real clay figures you like, so the finish line names marks that exist"
-    - "The recorded narration before you make clips, so each clip is timed to its line"
-
+    - The flat label artwork, so a clay prop's printed label carries every line correctly
+    - Photos of real clay figures you like, so the finish line names marks that exist
+    - The recorded narration before you make clips, so each clip is timed to its line
 terms:
   - term: Avatar card
     meaning: A short, fixed description of the clay character and the narrator's voice, approved before any image is made.

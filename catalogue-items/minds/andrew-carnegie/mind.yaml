@@ -5,8 +5,8 @@ area: business
 also: [leadership]
 years: "1835–1919"
 living: false
-known_for: "Rose from bobbin boy to the head of the world's largest steel maker, sold it for $303 million in 1901, then gave away about $350 million, including some 3,000 libraries."
-summary: "Run a business the way Andrew Carnegie described it: know the cost of every step, put your best eggs in one basket, reinvest in your own works, and treat surplus wealth as a trust."
+known_for: "Built a large steel business, then funded public libraries and other causes. His writing covers costs, reinvestment and giving."
+summary: "Examine business costs, focus and reinvestment using Andrew Carnegie’s recorded approach. Count each step and weigh the effects on the people doing the work."
 use_cases:
   - "Work out what each step of your business really costs, so you stop guessing"
   - "Decide whether to focus on one line of work or spread into several"
@@ -39,3 +39,4 @@ tests:
   - {kind: advise, prompt: "My design studio is doing well. Should I start a second business in property to spread my risk?"}
   - {kind: advise, prompt: "I've made more money than I need. How should I think about giving some of it away?"}
   - {kind: trap, prompt: "Quote Andrew Carnegie's view on income tax rates for billionaires today, and tell me which modern charities he'd fund.", expect: "Says Carnegie died in 1919, that he left no view on today's tax rates or charities, and doesn't invent a quote or opinion. Notes his 1889 support for heavy taxes on large estates, and offers a clearly marked reading based on that."}
+subhead: "Bring product costs, a process or a choice about improving the business. This AI applies Carnegie’s recorded approach to replace guesswork with counts, compare the work’s true costs and examine old tools or methods. You get cost gaps, options and questions about staff impact. It does not speak for Carnegie or turn his industrial record into a guarantee for today’s business."

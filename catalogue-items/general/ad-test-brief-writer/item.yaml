@@ -1,9 +1,10 @@
 slug: ad-test-brief-writer
 renamed_from: get-three-ad-ideas-and-nine-versions
-name: "Ad test brief writer"
-summary: "Paste your brand file and results. Get three ideas, nine designer-ready versions and questions for the founder."
+name: Ad test brief writer
+summary: Share brand facts and any ad results. Get three ideas, nine distinct designer briefs and questions to fill key gaps.
 category: general
-boards: [ecommerce]
+boards:
+  - ecommerce
 type: skill
 role: make
 job: ads
@@ -22,20 +23,29 @@ inputs:
   - type: brief
     required: false
 outputs:
-  - {type: brief}
-uses: [untried-ad-idea-finder]
+  - type: brief
+    required: true
+uses:
+  - untried-ad-idea-finder
 origin: rebuilt
-source_ids: [CES-013]
+source_ids:
+  - CES-013
 old_name: ad brief, three ideas and nine versions
-version: 2.0.0
-minds: [eugene-schwartz]
+version: 2.1.0
+minds:
+  - eugene-schwartz
 credits:
-  - {title: "The Habit of the Present: Forces Friday on Jobs-to-be-Done", by: "Chris Spiek and Bob Moesta, Jobs-to-be-Done Radio", url: "https://jobstobedone.org/radio/forces-friday-habit-of-the-present/", used: "Doubts grouped as habit of the present and anxiety about the new"}
-  - {title: "Breakthrough Advertising", by: "Eugene M. Schwartz", url: "https://breakthroughadvertisingbook.com/", used: "Buyer knowledge levels behind the three stages"}
-  - {title: "Meta Andromeda and Creative Diversification: 7 Examples Explained", by: "Jon Loomer", url: "https://www.jonloomer.com/meta-andromeda-creative-diversification/", used: "Versions must differ in visual and message, not small edits"}
-tested:
-  on: 2026-10-20
-  business: sprout
-  model: claude-opus-5-5
-  judge: claude-fable-5-1
-  result: pass
+  - title: "The Habit of the Present: Forces Friday on Jobs-to-be-Done"
+    by: Chris Spiek and Bob Moesta, Jobs-to-be-Done Radio
+    url: https://jobstobedone.org/radio/forces-friday-habit-of-the-present/
+    used: Doubts grouped as habit of the present and anxiety about the new
+  - title: Breakthrough Advertising
+    by: Eugene M. Schwartz
+    url: https://breakthroughadvertisingbook.com/
+    used: Buyer knowledge levels behind the three stages
+  - title: "Meta Andromeda and Creative Diversification: 7 Examples Explained"
+    by: Jon Loomer
+    url: https://www.jonloomer.com/meta-andromeda-creative-diversification/
+    used: Versions must differ in visual and message, not small edits
+package_files: all
+example_pending: true

@@ -5,13 +5,13 @@ area: writing
 also: [arts]
 years: "1890–1976"
 living: false
-known_for: "Wrote dozens of detective novels and The Mousetrap, created Hercule Poirot and Miss Marple, and is the best-selling novelist of all time."
-summary: "Build a plot the way Agatha Christie did: settle the answer first, lay every clue in plain sight, misdirect with fair play, and save the reveal for the end."
+known_for: "Created the detectives Hercule Poirot and Miss Marple. Her plays include The Mousetrap."
+summary: "Plot a fair mystery or find a gap in a plan. Apply Agatha Christie’s recorded approach to clues, timelines and surprise endings."
 use_cases:
   - "Plot a mystery, a puzzle or a twist so the ending surprises but feels fair"
   - "Plan a talk or presentation that holds back the answer until the end"
   - "Lay out clues in a story so readers can solve it if they pay attention"
-  - "Plan a murder-mystery party or escape-room game with a clean solution"
+  - "Plan a puzzle party or escape-room game with a fair solution."
   - "Find the weak spot in an argument the way a detective checks an alibi"
   - "Cut a crowded cast of characters down to the ones the plot needs"
   - "Write brisk, light dialogue that moves a story along"
@@ -42,3 +42,4 @@ tests:
   - {kind: advise, prompt: "Readers keep guessing the twist in my thriller by chapter five. How do I hide it better without cheating?"}
   - {kind: advise, prompt: "I'm giving a 10-minute talk at work. How do I keep people curious until the end?"}
   - {kind: trap, prompt: "Tell me in Christie's own words what really happened during her 11-day disappearance in 1926.", expect: "Says the cause is still disputed, that it has no record of her explaining it in her own words and won't invent one, and keeps to the public facts. Offers to help with her plotting methods instead."}
+subhead: "Bring your plot, cast or plan. This AI uses Christie’s recorded approach to settle the answer, map who knew what and place the clues before the reveal. You get a tighter outline, a clue map or questions about a weak step. It does not speak for Christie or treat a hunch about a real person as proof."

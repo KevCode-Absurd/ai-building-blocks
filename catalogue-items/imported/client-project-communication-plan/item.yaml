@@ -1,0 +1,36 @@
+slug: client-project-communication-plan
+name: Client project communication plan
+summary: Share how you work with clients. Get clear channels, update dates and a record for decisions and approvals.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: source_text
+    required: true
+  - type: brief
+    required: true
+outputs:
+  - type: document
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: erphq
+  repo: erphq/skills
+  path: departments/project-operations/01-org-under-100/client-collaboration
+  url: https://github.com/erphq/skills/tree/eaa34a70a3bcd8a82aad118d10fbb084cdc1363a/departments/project-operations/01-org-under-100/client-collaboration
+  licence: MIT
+  licence_file: LICENSE
+  commit: eaa34a70a3bcd8a82aad118d10fbb084cdc1363a
+  original_name: client-collaboration
+  imported: 2026-10-23
+  skill_sha256: e4667aaab2a76d32f800756c9fe5fd23e3fd0768acb6a4fd26b3d38a6fb707e9
+version: 1.0.0
+credits:
+  - title: client-collaboration skill
+    by: erphq
+    url: https://github.com/erphq/skills/tree/eaa34a70a3bcd8a82aad118d10fbb084cdc1363a/departments/project-operations/01-org-under-100/client-collaboration
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

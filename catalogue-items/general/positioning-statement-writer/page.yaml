@@ -1,56 +1,41 @@
 new_slug: positioning-statement-writer
-name: "Positioning statement writer"
-summary: "Paste your product and your main rivals. Get one position to own, the rival weakness to use, and a one-line statement."
+name: Positioning statement writer
+summary: Share your product, buyer evidence and main rivals. Get a proposed position, one clear statement and a short team brief.
 job: plan-strategy
 thinking: medium
-thinking_why: "It compares rivals and picks one attribute, which needs judgment, but the steps are fixed."
-
-headline: "Positioning statement writer"
-subhead: "Give it your product and the rivals a buyer would compare it with. It maps what each rival owns in the buyer's mind, finds a weakness you can truthfully use, and picks one attribute for you to own. You get a one-line position statement and a short brief."
-
+thinking_why: It compares supplied evidence and follows a specific method.
+headline: Positioning statement writer
+subhead: Share what buyers compare, what rivals are known for and the facts you can prove. It maps the choices, checks possible differences and picks one attribute to explore. You get a plain statement, proof needs and limits on the claim. Guesses stay marked, and any buyer test still needs real people.
 explain: |
   Buyers put brands in a ranking in their minds, one short ladder for each kind of product. The top rung is taken by a leader who stands for something. A brand that says "we do everything" gets no rung at all. Positioning is the work of deciding which rung and which single idea you will hold.
 
   This skill lists the categories a buyer would put you in and who tops each one. It names what each rival owns as a word or an attribute, and finds a true weakness you can use. If you can't be first in a category, it defines a new one you can lead. It picks one attribute to own, writes a plain one-line statement, tests that it needs no explaining and checks it doesn't stretch past the core.
-
 when:
   - Your pitch lists many strengths and buyers can't say what you stand for.
   - A rival leads your category and you need to know how to compete.
   - You are writing a homepage, ad or pitch and need one clear message first.
-
 you_give:
   - Your product and who it is for
   - Your main rivals, and what they are known for
   - What you can truthfully claim (optional)
 you_get:
-  - The categories a buyer would put you in, and who tops each
-  - What each rival owns, as one word or attribute
-  - A true weakness of the leader that you can use
-  - One position to own, and a one-line statement
-  - A short brief for the team
-
+  - Buyer categories and the rival evidence behind them
+  - A useful difference the product can prove, or a clear evidence gap
+  - One proposed position, a plain statement and limits on its use
+  - A short team brief, rival substitution check and reader-test status
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Describe your product, who it is for and your main rivals.
-  - Say what each rival is known for, in the words buyers use.
-  - Test the one-line statement on three people. If they need it explained, ask the skill to sharpen it.
-
+  - Supply the relevant brief and material, or name files in the authorized project.
+  - Ask for the stated result. Keep supplied facts, assumptions and missing evidence distinct.
+  - Review the result before authorizing repairs or external changes. Save the returned packet or authorize a file destination.
 how_it_works:
-  - title: Maps the ladders
-    text: Lists the categories a buyer would put you in and who is top of each in their mind.
-  - title: Names what rivals own
-    text: Names what each rival owns, as one word or one attribute.
-  - title: Finds a true weakness
-    text: Finds the weak spot of a rival that you can truthfully use.
-  - title: Defines a new category
-    text: If you cannot be first in a category, defines a new one you can lead.
-  - title: Picks one attribute
-    text: Picks one attribute to own and drops the rest.
-  - title: Writes the statement
-    text: Writes the position as one plain line and tests that it needs no explaining.
-  - title: Checks the stretch
-    text: Checks the line does not stretch the brand into areas that dilute it.
-
+  - title: Maps buyer choices
+    text: Names the relevant categories and rivals from the supplied buyer evidence. Any guessed ranking stays marked.
+  - title: Checks a real difference
+    text: Looks for a useful trade-off the product can prove. It does not infer a rival weakness from size or price.
+  - title: Writes a bounded position
+    text: Chooses one attribute, writes the line and checks whether the nearest rival could use it too. A niche is a proposal until evidence supports leadership.
+  - title: Returns the team brief
+    text: Separates facts from assumptions, sets the stretch limit and marks any reader test that has not run.
 output_shape: |
   THE LADDERS
   Category: <name> | Top rung: <brand> | Second: <brand> | Where you sit: <rung or none>
@@ -83,7 +68,6 @@ output_shape: |
 
   CHECKS MISSED
   <one line per check still missed, or none>
-
 tweaks:
   - what: Rivals you name
     how: Name those buyers actually compare you with, not those you wish they did.
@@ -93,34 +77,30 @@ tweaks:
     how: Give facts you can show. The position only claims what you can back up.
   - what: Your core product
     how: Say what you must keep selling. It sets the stretch limit.
-
 judge:
   - The position is a single attribute, not a list.
   - Each rival's owned idea is named.
   - The rival weakness is true and checkable.
   - A new category is only proposed when no rung is open.
   - The line stretches no further than the core product.
-
 test:
   - Read the one-line statement to three people and ask what it says you stand for.
   - Check the rival weakness against a source such as reviews or a public fact.
   - Run it twice. The attribute you own should stay close.
   - Put the statement next to rivals' lines and see if it is easy to tell apart.
-
 improve:
   - Add your categories and the usual leaders to step 1.
   - Add words buyers use in reviews, so rivals' attributes are in their language.
   - Save the position as part of your brand file.
   - Pair it with "Brand name stretch checker" before you add products under the name.
-
 works_best_with:
   tools:
-    - {name: "Any good chat AI", why: "Comparing rivals and writing a plain line is text work that any strong chat AI does with this skill."}
+    - name: Any good chat AI
+      why: Comparing rivals and writing a plain line is text work that any strong chat AI does with this skill.
   inputs:
-    - "Rival websites and reviews"
-    - "Your own reviews, for the words buyers use"
-    - "Proof points such as tests, awards and numbers"
-
+    - Rival websites and reviews
+    - Your own reviews, for the words buyers use
+    - Proof points such as tests, awards and numbers
 terms:
   - term: Position
     meaning: The one idea a brand holds in the buyer's mind compared with rivals.

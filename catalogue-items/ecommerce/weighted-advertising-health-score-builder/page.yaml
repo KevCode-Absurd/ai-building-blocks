@@ -1,0 +1,44 @@
+new_slug: weighted-advertising-health-score-builder
+name: Weighted advertising health score builder
+summary: Build a clear ad health score from weighted checks. Show what ran, what is missing and how each score was calculated.
+job: check-ads
+headline: Weighted advertising health score builder
+subhead: Share the inputs listed below. Get a reproducible score table with coverage and reliability notes. Check the gaps before you use the result.
+explain: |-
+  Build a clear ad health score from weighted checks. Show what ran, what is missing and how each score was calculated.
+
+  Share check results, severity weights, category weights and missing evidence. Get a reproducible score table with coverage and reliability notes.
+when:
+  - You need a reproducible score table with coverage and reliability notes.
+  - You need weighted advertising health score builder for a specific task.
+  - You want the method's decisions and assumptions written down before acting.
+you_give:
+  - Check results
+  - Severity weights
+  - Category weights and missing evidence
+you_get:
+  - A reproducible score table with coverage and reliability notes
+  - The sources used, missing inputs and assumptions
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Check the inputs
+    text: Confirm check results, severity weights, category weights and missing evidence. Mark facts that are missing.
+  - title: How This Works
+    text: Follow the how this works section in the full method and keep its required fields and decision rules.
+  - title: Collect Account Data
+    text: Follow the collect account data section in the full method and keep its required fields and decision rules.
+  - title: Scoring Formula
+    text: Follow the scoring formula section in the full method and keep its required fields and decision rules.
+  - title: Meta Ads Checks (30 checks)
+    text: Follow the meta ads checks (30 checks) section in the full method and keep its required fields and decision rules.
+  - title: Google Ads Checks (build in parallel)
+    text: Follow the google ads checks (build in parallel) section in the full method and keep its required fields and decision rules.
+  - title: Cross-Platform Aggregate (If Both Platforms)
+    text: Follow the cross-platform aggregate (if both platforms) section in the full method and keep its required fields and decision rules.
+  - title: Review the result
+    text: Return a reproducible score table with coverage and reliability notes. Check facts, math and the decisions before any action.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

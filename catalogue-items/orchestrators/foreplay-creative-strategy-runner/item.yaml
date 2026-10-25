@@ -1,0 +1,30 @@
+slug: foreplay-creative-strategy-runner
+name: Foreplay creative strategy workflow
+summary: Share your Foreplay ads. Get groups by ad type, notes on what they show and an HTML test brief.
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - type: reference_set
+    required: true
+  - type: competitor_set
+    required: false
+  - type: brand_brain
+    required: false
+  - type: performance_sheet
+    required: false
+outputs:
+  - type: ad_breakdowns
+    required: true
+  - type: brief
+    required: true
+  - type: plan
+    required: true
+uses: []
+execution: coordinator
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

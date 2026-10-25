@@ -2,10 +2,15 @@ thinking: medium
 thinking_why: It must match five loop types to your product.
 new_slug: growth-loop-designer
 name: Growth loop designer
-summary: Describe your product and users. Get the growth loops that fit, ranked, and how to start the first.
+summary: Describe your product and users. Get the growth loops that fit, ranked,
+  and how to start the first.
 job: plan-strategy
 headline: Growth loop designer
-subhead: Describe your product, who uses it and where growth comes from today. It checks the product against five loop types, where sharing, usage, teammates, posted content or referrals bring the next users in. You get the loops that fit, ranked, how each one works, its strengths and weak points, and how to start the first.
+subhead: Describe your product, who uses it and where growth comes from today.
+  It checks the product against five loop types, where sharing, usage,
+  teammates, posted content or referrals bring the next users in. You get the
+  loops that fit, ranked, how each one works, its strengths and weak points, and
+  how to start the first.
 explain: |
   Growth that feeds itself, matched to your product. Describe the product and who uses it, and you get the loops that fit, ranked, with the first one worth starting.
 
@@ -26,5 +31,7 @@ you_get:
   - Strengths and challenges
   - How to start the first loop
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.

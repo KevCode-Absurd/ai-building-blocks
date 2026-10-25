@@ -2,7 +2,7 @@ slug: veed
 name: VEED
 maker: VEED
 url: https://www.veed.io
-promise: Edit, caption and translate videos in your browser, with no install.
+promise: "Edit, caption and translate video in a browser, with no install."
 use_cases: [edit-video]
 categories: [video]
 what_it_does:
@@ -12,7 +12,7 @@ what_it_does:
   - Makes AI presenters and AI clips with its credits.
   - Records your screen and camera.
 benefits:
-  - Add captions to a video in a few minutes.
+  - "Create a caption draft, then check names, wording and timing."
   - Put one video in several languages.
   - Edit on any computer, since nothing needs installing.
 best_for:

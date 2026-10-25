@@ -2,7 +2,7 @@ slug: glean
 name: Glean
 maker: Glean
 url: https://www.glean.com
-promise: One search and chat across your work apps, with answers from your own files.
+promise: "Search connected work apps and ask questions with links to your company’s source files."
 use_cases: [organise-work, research]
 categories: [productivity, chat-assistant]
 what_it_does:
@@ -12,9 +12,9 @@ what_it_does:
   - Builds agents that take routine steps for you.
   - Shows up inside the apps your team already uses.
 benefits:
-  - Find the right document without asking three people.
+  - "Search for a document across the work apps your team has connected."
   - Get new hires up to speed from your own files.
-  - Stop re-answering the same internal questions.
+  - "Give staff a place to look for answers to repeat questions."
   - Keep results limited to what each person may see.
 best_for:
   - Large companies with files spread over many apps.

@@ -1,5 +1,6 @@
+import { library, libraryStorage } from "./library-storage";
 // A short file about the person and their work (a job, a business, or both), typed once and added to every skill they copy or workflow they download.
-// Kept in this browser only, like kits and workflows. Nothing is sent anywhere.
+// Saved to the signed-in account, or locally for guests.
 import { useSyncExternalStore } from "react";
 
 export const FIELDS = [
@@ -17,15 +18,16 @@ export type FieldId = (typeof FIELDS)[number]["id"];
 export type Business = Partial<Record<FieldId, string>>;
 
 const KEY = "abb:business";
-const read = (): Business => { try { return JSON.parse(localStorage.getItem(KEY) ?? "{}") ?? {}; } catch { return {}; } };
+const read = (): Business => { try { return JSON.parse(libraryStorage.getItem(KEY) ?? "{}") ?? {}; } catch { return {}; } };
 let current: Business = typeof localStorage !== "undefined" ? read() : {};
 const listeners = new Set<() => void>();
 const emit = () => listeners.forEach((l) => l());
+library.subscribe(() => { current = read(); emit(); });
 if (typeof window !== "undefined") window.addEventListener("storage", (e) => { if (e.key === KEY) { current = read(); emit(); } });
 
 export function setBusiness(next: Business) {
   current = Object.fromEntries(Object.entries(next).filter(([, v]) => v && v.trim())) as Business;
-  try { if (Object.keys(current).length) localStorage.setItem(KEY, JSON.stringify(current)); else localStorage.removeItem(KEY); } catch { /* private mode: keep it for this visit */ }
+  try { if (Object.keys(current).length) libraryStorage.setItem(KEY, JSON.stringify(current)); else libraryStorage.removeItem(KEY); } catch { /* private mode: keep it for this visit */ }
   emit();
 }
 export const getBusiness = () => current;

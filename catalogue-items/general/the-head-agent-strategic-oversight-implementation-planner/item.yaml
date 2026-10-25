@@ -1,0 +1,19 @@
+slug: the-head-agent-strategic-oversight-implementation-planner
+name: Multi-agent findings brief builder
+summary: Build a daily brief from agent findings. Merge duplicates, rank open issues and plan scoped handoffs with owners.
+category: general
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+    required: true
+uses: []
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

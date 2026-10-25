@@ -1,0 +1,19 @@
+slug: persona-stage-theme-matrix-planner
+name: Persona, stage and theme matrix planner
+summary: Map buyers, awareness stages and ad themes. Find gaps and rank which cells to make next.
+category: ecommerce
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+    required: true
+uses: []
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

@@ -8,12 +8,12 @@
 
 export default {
   slug: "landed-cost",
-  name: "Know what one unit really costs on your shelf",
+  name: "Delivered unit cost calculator",
   /** The plain name, used where the tool talks about itself. */
-  short: "Landed cost",
-  headline: "Know what one unit really costs once it reaches your shelf",
-  summary: "Type the supplier price, freight, your duty rate, fees and units in the shipment. You get the true cost of one unit and what it leaves you.",
-  question: "What does one unit really cost me after freight, duty and fees, and how much is left when I sell it?",
+  short: "Delivered unit cost calculator",
+  headline: "Delivered unit cost calculator",
+  summary: "Enter supplier price, freight, duties, fees and shipment units. Calculate cost per usable unit and profit before selling costs.",
+  question: "What does each usable unit cost after shipment charges and losses?",
   shelf: ["general", "ecommerce"],
   version: "1.0.0",
   updated: "2026-10-21",
@@ -106,11 +106,11 @@ export default {
       means: "The cost of each unit if every one could be sold.",
     },
     {
-      id: "costPerSellable", label: "True cost of one unit you can sell", unit: "money",
+      id: "costPerSellable", label: "Shipment cost per unit you can sell", unit: "money",
       formula: "IF(sellableUnits > 0, landedTotal / sellableUnits, NA())",
       none: "No units to sell",
       sum: "{landedTotal} ÷ {sellableUnits} = {=}",
-      means: "Use this as the cost per item in your store, so your profit reports are true.",
+      means: "Spread the shipment cost across the units you can sell. Add selling fees, delivery and ads separately.",
     },
     {
       id: "addOnShare", label: "How much more than the supplier price", unit: "percent",

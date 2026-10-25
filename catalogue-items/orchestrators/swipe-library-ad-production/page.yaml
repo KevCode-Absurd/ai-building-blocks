@@ -1,0 +1,31 @@
+new_slug: swipe-library-ad-production
+name: Swipe library ad builder
+summary: Choose reference layouts, rebuild them with real product photos and live type, then review checked ads in multiple sizes.
+job: make-image-ads
+headline: Swipe library ad builder
+subhead: Turn selected reference layouts into finished ads with a traceable claim and revision record.
+explain: A production workflow for a user-supplied or cleared swipe library. It keeps reference selection, source adaptation, layered construction and per-size QA together.
+when:
+  - You have a swipe library and want finished ads from selected layouts.
+  - You need a review deck with revisions tracked by ad and size.
+you_give:
+  - Brand facts, live offers, approved claims, logo and fonts.
+  - Real photos of the exact product variant.
+  - Reference layouts you have permission to study, with any directions for each.
+you_get:
+  - A selectable reference index and adaptation map.
+  - Editable compositions and approved-size exports where tools permit.
+  - A review deck, QA log and revision manifest.
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Choose layouts
+    text: Index the references, keep user selections stable and capture per-ad direction.
+  - title: Rebuild with real assets
+    text: Translate layout devices into true brand claims and composite text separately from imagery.
+  - title: Inspect every size
+    text: Render, check, fix and show a versioned review deck before any publishing.
+thinking: high
+thinking_why: It compares supplied evidence and follows a specific method.

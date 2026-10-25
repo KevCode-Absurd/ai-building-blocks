@@ -1,0 +1,35 @@
+new_slug: reference-frame-transformation-planner
+name: Reference-frame transformation planner
+summary: Share before and after ideas. Get image and video prompts for a drawing-to-3D or mechanical-toy change with scene locks.
+job: make-video-ads
+headline: Reference-frame transformation planner
+subhead: Share before and after ideas. Get image and video prompts for a drawing-to-3D or mechanical-toy change with scene locks. Bring the brief and any files you want it to use.
+explain: |-
+  Use this when you need a controlled before/after image-to-video transformation. Choose illustration-to-3D or mechanical-object-to-toy. Both start with approved before and after frames, but their transformation mechanics are different.
+
+  List properties shared by both endpoints: camera position/crop, room/page/desk, lighting/color, scale, placement and unchanged text. State the single permitted transformation.
+when:
+  - You need a controlled before/after image-to-video transformation.
+  - You want a clear draft and checks from the material you already have.
+you_give:
+  - brief
+  - "Optional: approved image"
+  - "Optional: reference set"
+you_get:
+  - plan
+  - image prompt
+  - video prompt
+  - Missing inputs and steps that still need to run
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Read the brief
+    text: Choose illustration-to-3D or mechanical-object-to-toy. Both start with approved before and after frames, but their transformation mechanics are different.
+  - title: Build the result
+    text: For illustration-to-3D replace only the selected drawing region with a plausible volumetric version, same pose/scale/placement. Preserve page texture, print, surrounding illustration and shadows outside the edit.
+  - title: Check and hand off
+    text: Check background drift, text damage, changed scale, float/contact errors and mismatched endpoints. Provide prompts and checks when tools are absent; perform no generation by implication.
+thinking: high
+thinking_why: It compares supplied evidence and follows a specific method.

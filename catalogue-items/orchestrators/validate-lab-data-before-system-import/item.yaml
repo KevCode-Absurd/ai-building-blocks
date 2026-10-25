@@ -1,0 +1,35 @@
+slug: validate-lab-data-before-system-import
+name: Prepare lab data for a checked import
+summary: Attach instrument exports and a target schema. Get mapped records, checked scientific labels and an import exception list.
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: document
+    required: true
+  - type: spreadsheet
+    required: true
+  - type: question
+    required: true
+outputs:
+  - type: document
+  - type: spreadsheet
+  - type: audit_report
+uses:
+  - lab-instrument-data-converter
+  - ontology-id-matcher
+  - data-quality-auditor
+steps:
+  - uses: lab-instrument-data-converter
+    note: Read raw exports and target examples. Detect the instrument; clarify ambiguous raw and calculated fields. When permitted tools exist, create ASM JSON and flat CSV. Hand off records, mapping decisions and source-row references.
+  - uses: ontology-id-matcher
+    note: Use mapped labels and sample context. Search the relevant ontology service and validate each selected term detail. Return original label, candidate ID, verified definition, evidence and unresolved ambiguity. Pass accepted mappings to validation.
+  - uses: data-quality-auditor
+    note: Compare converted records and accepted terms with the target schema. Reconcile counts, IDs, fields, units and missing values against raw input. Produce row-level exceptions before any import.
+execution: coordinator
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

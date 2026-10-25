@@ -1,0 +1,35 @@
+slug: customer-support-message-translator
+name: Customer support message translator
+summary: Paste a customer message. Get an English translation and a reply draft in the customer’s language.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: voc_reviews
+    required: true
+  - type: tool_connection
+    required: false
+outputs:
+  - type: copy_draft
+    required: true
+uses: []
+origin: imported
+source:
+  by: Composio
+  repo: composio-community/support-skills
+  path: translate-ticket
+  url: https://github.com/composio-community/support-skills/tree/83382c4b055fc4e5b055044adb5bfb7585484c9a/translate-ticket
+  licence: MIT
+  licence_file: README.md
+  commit: 83382c4b055fc4e5b055044adb5bfb7585484c9a
+  original_name: translate-ticket
+  imported: 2026-10-23
+version: 1.0.0
+credits:
+  - title: translate-ticket skill
+    by: Composio
+    url: https://github.com/composio-community/support-skills/tree/83382c4b055fc4e5b055044adb5bfb7585484c9a/translate-ticket
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

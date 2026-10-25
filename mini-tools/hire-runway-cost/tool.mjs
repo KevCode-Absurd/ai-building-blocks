@@ -10,12 +10,12 @@
 
 export default {
   slug: "hire-runway-cost",
-  name: "See how many months of runway a hire costs you",
+  name: "New hire cash runway impact",
   /** The plain name, used where the tool talks about itself. */
-  short: "Hire and runway",
-  headline: "See how many months of runway a hire costs you, and what they must bring in to keep it",
-  summary: "Type your cash, what comes in and goes out each month, and the hire's salary and extra costs. You get your runway before and after, the months lost and what the hire must add to keep it.",
-  question: "If I make this hire, how many months of cash do I lose, and how much must they bring in each month to keep my runway where it is?",
+  short: "New hire cash runway impact",
+  headline: "New hire cash runway impact",
+  summary: "Enter cash, monthly income and costs, then the hire’s pay and setup costs. Compare how long cash lasts before and after hiring.",
+  question: "How would this hire change the time our cash lasts?",
   shelf: ["general"],
   version: "1.0.0",
   updated: "2026-10-21",

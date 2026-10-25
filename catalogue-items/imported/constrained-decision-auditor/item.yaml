@@ -1,0 +1,35 @@
+slug: constrained-decision-auditor
+name: Audit a constrained decision
+summary: Check each hard limit and compare the feasible choices. State what the evidence proves about the best result.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: audit_report
+    required: true
+  - type: plan
+    required: true
+uses: []
+origin: imported
+source:
+  by: magnus919
+  repo: magnus919/agent-skills
+  path: constrained-optimization
+  url: https://github.com/magnus919/agent-skills/tree/92c327e525da69c9ad3812fd223a1770e977c2e3/constrained-optimization
+  licence: MIT
+  licence_file: LICENSE.md
+  commit: 92c327e525da69c9ad3812fd223a1770e977c2e3
+  original_name: constrained-optimization
+  imported: 2026-10-24
+version: 1.0.0
+credits:
+  - title: constrained-optimization skill
+    by: magnus919
+    url: https://github.com/magnus919/agent-skills/tree/92c327e525da69c9ad3812fd223a1770e977c2e3/constrained-optimization
+    used: Original instructions and supporting files, with attribution and the MIT licence. Display copy describes the task.

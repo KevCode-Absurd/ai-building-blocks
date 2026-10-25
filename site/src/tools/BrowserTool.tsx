@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "../lib/router";
 import { cleanText, contrastRatio, countText, csvToJson, formatJson, rankTasks, scoreOptions } from "./browser-tools.mjs";
 import { NEXT_TOOLS, runNextTool } from "./next-100-tools.mjs";
+import { LIBRARY_COVERAGE_TOOLS, runLibraryCoverageTool } from "./library-coverage-tools.mjs";
 import NextToolInputs, { FIELD_HELP, HAS_FIELDS } from "./NextToolInputs";
 import "./browser-tools.css";
 
@@ -14,7 +15,8 @@ const EXAMPLES: Record<string, string> = {
   "weighted-decision-matrix": "criterion,weight,Option A,Option B\nCost,3,8,5\nEase of use,4,6,9\nSupport,2,7,8",
 };
 export default function BrowserTool({ tool, toast }: { tool: { slug: string; short: string; summary: string }; toast: (s: string) => void }) {
-  const nextTool = NEXT_TOOLS.find(t => t.slug === tool.slug);
+  const coverageTool = LIBRARY_COVERAGE_TOOLS.find(t => t.slug === tool.slug);
+  const nextTool = NEXT_TOOLS.find(t => t.slug === tool.slug) ?? coverageTool;
   const [input, setInput] = useState(nextTool?.example ?? EXAMPLES[tool.slug] ?? "");
   const [mode, setMode] = useState("spacing");
   const [front, setFront] = useState("#222222"), [back, setBack] = useState("#ffffff");
@@ -22,12 +24,13 @@ export default function BrowserTool({ tool, toast }: { tool: { slug: string; sho
   useEffect(() => { document.title = `${tool.short} · AI Blocks`; }, [tool.short]);
   let output = "", error = "", ratio: number | null = null;
   try {
-    if (nextTool) output = runNextTool(tool.slug, input);
+    if (coverageTool) output = runLibraryCoverageTool(tool.slug, input);
+    else if (nextTool) output = runNextTool(tool.slug, input);
     else if (tool.slug === "word-counter") {
       const wpm = Number(speed);
       if (!Number.isFinite(wpm) || wpm <= 0) throw Error("Reading speed must be greater than zero.");
       const c = countText(input, wpm);
-      output = `${c.words} words\n${c.characters} characters (including spaces)\n${c.withoutSpaces} characters (excluding spaces)\n${c.paragraphs} paragraphs\n${c.minutes.toFixed(1)} minutes to read at ${wpm} words per minute`;
+      output = `${c.words} ${c.words === 1 ? "word" : "words"}\n${c.characters} ${c.characters === 1 ? "character" : "characters"} (including spaces)\n${c.withoutSpaces} ${c.withoutSpaces === 1 ? "character" : "characters"} (excluding spaces)\n${c.paragraphs} ${c.paragraphs === 1 ? "paragraph" : "paragraphs"}\n${c.minutes.toFixed(1)} minutes to read at ${wpm} words per minute`;
     } else if (tool.slug === "text-cleaner") output = cleanText(input, mode);
     else if (tool.slug === "contrast-checker") {
       ratio = contrastRatio(front, back);

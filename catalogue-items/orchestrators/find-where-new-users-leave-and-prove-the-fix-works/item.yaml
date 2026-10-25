@@ -7,17 +7,17 @@ role: orchestrate
 job: analysis
 level: intermediate
 inputs:
-  - {type: performance_sheet, required: true}
-  - {type: question, required: true}
-  - {type: persona, required: false}
-  - {type: web_page, required: false}
+  - { type: performance_sheet, required: true }
+  - { type: question, required: true }
+  - { type: persona, required: false }
+  - { type: web_page, required: false }
 outputs:
-  - {type: audit_report}
-uses: [new-user-drop-off-finder, small-usability-test-planner, product-metrics-review-writer]
+  - { type: audit_report }
+uses: [ new-user-drop-off-finder, small-usability-test-planner, product-metrics-review-writer ]
 steps:
-  - {uses: new-user-drop-off-finder, note: "Finds the biggest leak and the first-visit change to try. Starts from your funnel numbers."}
-  - {uses: small-usability-test-planner, note: "Plans a one-morning test of the leak the finder named. Reads the audit report from the step before."}
-  - {uses: product-metrics-review-writer, note: "Checks whether the fix moved the numbers. Reads the fresh export from after the wait."}
+  - { uses: new-user-drop-off-finder, note: "Finds the biggest leak and the first-visit change to try. Starts from your funnel numbers." }
+  - { uses: small-usability-test-planner, note: "Plans a one-morning test of the leak the finder named. Reads the audit report from the step before." }
+  - { uses: product-metrics-review-writer, note: "Checks whether the fix moved the numbers. Reads the fresh export from after the wait." }
 origin: rebuilt
-version: 1.0.0
+version: 1.0.1
 generated_from: intake/find-where-new-users-leave-and-prove-the-fix-works/skeleton.yaml

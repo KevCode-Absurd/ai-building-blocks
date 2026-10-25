@@ -1,0 +1,45 @@
+new_slug: meta-and-google-budget-comparison-reviewer
+name: Meta and Google budget comparison reviewer
+summary: Compare Meta and Google results on matched dates. Separate channel claims from store sales and propose a budget plan.
+job: read-ad-results
+headline: Meta and Google budget comparison reviewer
+subhead: Share meta and google exports, store sales, currency, dates and targets. Get a channel comparison, attribution caveats and budget proposals.
+explain: |-
+  Compare Meta and Google results on matched dates. Separate channel claims from store sales and propose a budget plan.
+
+  Share meta and google exports, store sales, currency, dates and targets. Get a channel comparison, attribution caveats and budget proposals.
+when:
+  - You need a channel comparison, attribution caveats and budget proposals.
+  - You need meta and google budget comparison reviewer for a specific task.
+  - You want the method's decisions and assumptions written down before acting.
+you_give:
+  - Meta and Google exports
+  - Store sales
+  - Currency
+  - Dates and targets
+you_get:
+  - A channel comparison, attribution caveats and budget proposals
+  - The sources used, missing inputs and assumptions
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Check the inputs
+    text: Confirm meta and google exports, store sales, currency, dates and targets. Mark facts that are missing.
+  - title: Collect Data
+    text: Follow the collect data section in the full method and keep its required fields and decision rules.
+  - title: Platform Comparison
+    text: Follow the platform comparison section in the full method and keep its required fields and decision rules.
+  - title: Cross-Platform Attribution
+    text: Follow the cross-platform attribution section in the full method and keep its required fields and decision rules.
+  - title: Budget Allocation Decision Matrix
+    text: Follow the budget allocation decision matrix section in the full method and keep its required fields and decision rules.
+  - title: Channel Strategy by Campaign Type
+    text: Follow the channel strategy by campaign type section in the full method and keep its required fields and decision rules.
+  - title: Deliver the Report
+    text: Follow the deliver the report section in the full method and keep its required fields and decision rules.
+  - title: Review the result
+    text: Return a channel comparison, attribution caveats and budget proposals. Check facts, math and the decisions before any action.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

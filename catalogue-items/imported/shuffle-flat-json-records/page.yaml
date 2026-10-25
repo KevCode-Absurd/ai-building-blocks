@@ -1,0 +1,26 @@
+new_slug: shuffle-flat-json-records
+name: Shuffle flat JSON records
+summary: Shuffle flat JSON records. Check that each record and value stays intact.
+job: work-with-files
+headline: Shuffle flat JSON records
+subhead: Share a flat JSON array and any rule changes. Check its shape before the shuffle. Get the reordered records and checks.
+explain: Share a flat JSON array and any rule changes. Check its shape before the shuffle. Get the reordered records and checks.
+when:
+  - You want to shuffle flat JSON records.
+you_give:
+  - A JSON array of flat records and any explicit schema or nesting overrides.
+you_get:
+  - A reordered array plus validation notes, or a precise explanation of the input issue.
+how_to_use:
+  - Download the complete skill folder and add it to your AI tool, or copy the instructions into a chat.
+  - Provide the inputs listed here and ask your AI to follow the skill.
+  - Review the result and any missing facts before using it.
+how_it_works:
+  - title: Confirm configuration
+    text: Identify the supplied array and any explicit structural overrides.
+  - title: Validate before changing
+    text: Check JSON syntax and consistent keys; reject nested records in the default mode.
+  - title: Reorder and reconcile
+    text: Shuffle record order while preserving complete records and valid JSON, then compare counts and record contents.
+thinking: medium
+thinking_why: It weighs your evidence and follows a specific method.

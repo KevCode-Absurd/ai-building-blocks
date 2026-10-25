@@ -195,6 +195,14 @@ elif [ -d "$INPUT_PATH" ]; then
     # Detect framework from package.json
     FRAMEWORK=$(detect_framework "$PROJECT_PATH/package.json")
 
+    # Silently ignoring .vercelignore can upload files the user excluded.
+    # Fail closed until this helper can apply its complete ignore semantics.
+    if [ -e "$PROJECT_PATH/.vercelignore" ]; then
+        echo "Error: .vercelignore is present but this deploy helper cannot safely reproduce its semantics." >&2
+        echo "Create a reviewed .tgz containing only deployable files and pass that archive explicitly." >&2
+        exit 1
+    fi
+
     # Stage files into a temporary directory to avoid mutating the source tree.
     mkdir -p "$STAGING_DIR"
     echo "Staging project files..." >&2
@@ -228,6 +236,10 @@ elif [ -d "$INPUT_PATH" ]; then
 else
     echo "Error: Input must be a directory or a .tgz file" >&2
     exit 1
+fi
+
+if [ -f "$INPUT_PATH" ] && [[ "$INPUT_PATH" == *.tgz ]]; then
+    echo "Warning: a supplied .tgz is uploaded byte-for-byte; review its contents for secrets first." >&2
 fi
 
 if [ "$FRAMEWORK" != "null" ]; then

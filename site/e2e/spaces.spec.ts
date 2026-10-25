@@ -23,8 +23,9 @@ async function makeSpace(page: Page, name: string) {
 
 test("the header leads to My space, and a space is made in one click", async ({ page }) => {
   await page.goto("/");
-  await page.getByTestId("nav-more").click();
-  await page.getByTestId("nav-space").click();
+  await page.getByTestId("menu-btn").click();
+  await page.getByRole("navigation", { name: "Sections", exact: true })
+    .getByRole("link", { name: "My space", exact: true }).click();
   await expect(page.getByTestId("space-page")).toContainText("Keep your skills and workflows in one place");
   await page.getByTestId("space-name").fill("Sam's team");
   await page.getByTestId("make-space-go").click();

@@ -1,15 +1,23 @@
 ---
 name: customs-trade-compliance
 description: Codified expertise for customs documentation, tariff classification, duty optimisation, restricted party screening, and regulatory compliance across multiple jurisdictions.
-risk: safe
-source: https://github.com/ai-evos/agent-skills
-date_added: '2026-02-27'
+license: CC-BY-4.0
+metadata:
+  source: https://github.com/ai-evos/agent-skills
+  risk: safe
+  date-added: "2026-02-27"
 ---
 
 ## When to Use
 Use this skill when navigating international trade regulations, classifying goods under HS codes, determining appropriate Incoterms, managing import/export documentation, or optimizing customs duty payments through Free Trade Agreements.
 
 # Customs & Trade Compliance
+
+## Current-source gate
+
+This file and its references contain dated and jurisdiction-specific examples. For each real shipment, identify the importing and exporting countries, exact product composition/function/use, origin, value, parties, transport mode and date. Check current official tariff schedules, customs authority guidance, trade agreement rules and sanctions/export-control lists for that route. Record each official URL and the date checked. WCO HS material supports the six-digit international structure; national tariff lines and duties must come from the relevant country's current official source.
+
+If product or route facts are missing, request them. If current official sources are unavailable or conflict, mark classification, duty and document requirements as unresolved. Do not state a tariff code, rate, required document, licence or permission as confirmed without the necessary evidence; do not call the output a clearance or compliance decision.
 
 ## Role and Context
 
@@ -153,7 +161,7 @@ When a restricted party screening tool returns a match, do not block the transac
 
 These are situations where the obvious approach is wrong. Brief summaries here — see [edge-cases.md](references/edge-cases.md) for full analysis.
 
-1. **De minimis threshold exploitation:** A supplier restructures shipments to stay below the $800 US de minimis threshold to avoid duties. Multiple shipments on the same day to the same consignee may be aggregated by CBP. Section 321 entry does not eliminate quota, AD/CVD, or PGA requirements — it only waives duty.
+1. **US low-value shipment rules change:** Do not treat the former $800 administrative de minimis exemption as currently available. CBP stated that, effective August 29, 2025, goods from all countries at or below $800 generally no longer qualify for de minimis treatment, subject to listed statutory exceptions and later official changes. Check current CBP instructions and entry requirements for the shipment date; do not advise splitting shipments to avoid duty.
 
 2. **Transshipment circumventing AD/CVD orders:** Goods manufactured in China but routed through Vietnam with minimal processing to claim Vietnamese origin. CBP uses evasion investigations (EAPA) with subpoena power. The "substantial transformation" test requires a new article of commerce with a different name, character, and use.
 

@@ -2,10 +2,15 @@ thinking: medium
 thinking_why: It mixes cost maths with a written argument.
 new_slug: headcount-business-case-builder
 name: Headcount business case builder
-summary: Describe a role to add. Get its full yearly cost, hire versus contract, and a case for finance.
+summary: Describe a role to add. Get its full yearly cost, hire versus contract,
+  and a case for finance.
 job: hire-people
 headline: Headcount business case builder
-subhead: Describe the role, level, location, salary range and the work it would do. It works out the fully loaded yearly cost, from pay and benefits to equipment and ramp-up time, then compares a hire with a contractor. You get the cost, the comparison, a payback estimate and a short case worded for finance.
+subhead: Describe the role, level, location, salary range and the work it would
+  do. It works out the fully loaded yearly cost, from pay and benefits to
+  equipment and ramp-up time, then compares a hire with a contractor. You get
+  the cost, the comparison, a payback estimate and a short case worded for
+  finance.
 explain: |
   A hiring request that finance can say yes to. Instead of arguing that the team is busy, you show what a role costs, what it returns, and when it pays back.
 
@@ -27,5 +32,7 @@ you_get:
   - A payback estimate
   - A short business case worded for finance
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.

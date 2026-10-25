@@ -1,0 +1,35 @@
+.minds-browse .bp-hero { padding-bottom: 24px; }
+.mind-browse-links { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 24px; margin-top: 18px; }
+.mind-browse-links a, .mind-back { display: inline-flex; gap: 6px; align-items: center; min-height: 36px; font-size: 14px; text-decoration: underline; text-underline-offset: 4px; }
+.mind-browse-links a:first-child { font-weight: 600; }
+.minds-browse .face-wall { margin-top: 22px; max-height: 72px; overflow: hidden; mask-image: linear-gradient(#000 65%, transparent); }
+.minds-browse .mind-search { margin: 0 0 18px; max-width: 640px; }
+.minds-browse .mind-search input { min-height: 48px; }
+.mind-role-filter { margin-top: 0; }
+.mind-results-meta { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 20px; margin-top: 20px; }
+.mind-results-meta p { margin: 0; }
+.mind-results-meta .link-btn { min-height: 36px; }
+.minds-browse .mind-grid { margin-top: 14px; }
+.mind-attribution { margin: 28px 0 0; }
+.mind-role-mark { position: absolute; right: 14px; top: 12px; color: var(--mind-accent); opacity: .22; pointer-events: none; }
+.minds-browse .mind { --mind-accent: #a69ac5; --mind-pattern: repeating-linear-gradient(135deg, transparent 0 12px, color-mix(in srgb, var(--mind-accent) 8%, transparent) 12px 13px); border-top: 3px solid var(--mind-accent); background-image: var(--mind-pattern); background-size: 100% 68px; background-repeat: no-repeat; }
+.minds-browse .mind::before { background: radial-gradient(ellipse at 90% 10%, color-mix(in srgb, var(--mind-accent) 18%, transparent), transparent 65%); }
+.minds-browse .mind-person { padding-right: 20px; align-items: flex-start; }
+.minds-browse .mind-face { outline: 2px solid color-mix(in srgb, var(--mind-accent) 50%, var(--line)); outline-offset: 3px; margin: 4px; flex-shrink: 0; }
+.minds-browse .mind[data-role="founder"], .minds-browse .mind[data-role="seller"] { --mind-accent: #c99859; --mind-pattern: repeating-linear-gradient(0deg, transparent 0 15px, color-mix(in srgb, var(--mind-accent) 9%, transparent) 15px 16px); }
+.minds-browse .mind[data-role="investor"], .minds-browse .mind[data-role="economist"] { --mind-accent: #6aa487; --mind-pattern: repeating-linear-gradient(90deg, transparent 0 17px, color-mix(in srgb, var(--mind-accent) 9%, transparent) 17px 18px); }
+.minds-browse .mind[data-role="operator"], .minds-browse .mind[data-role="leader"] { --mind-accent: #849bd2; }
+.minds-browse .mind[data-role="scientist"], .minds-browse .mind[data-role="engineer"], .minds-browse .mind[data-role="inventor"] { --mind-accent: #60acb8; --mind-pattern: radial-gradient(color-mix(in srgb, var(--mind-accent) 30%, transparent) 1px, transparent 1px); background-size: 12px 12px; }
+.minds-browse .mind[data-role="designer"], .minds-browse .mind[data-role="product"] { --mind-accent: #ad8ecb; --mind-pattern: linear-gradient(90deg, color-mix(in srgb, var(--mind-accent) 8%, transparent) 1px, transparent 1px), linear-gradient(color-mix(in srgb, var(--mind-accent) 8%, transparent) 1px, transparent 1px); background-size: 18px 18px; }
+.minds-browse .mind[data-role="marketer"], .minds-browse .mind[data-role="copywriter"] { --mind-accent: #cc8c79; }
+.minds-browse .mind[data-role="creator"], .minds-browse .mind[data-role="artist"], .minds-browse .mind[data-role="filmmaker"], .minds-browse .mind[data-role="musician"] { --mind-accent: #c28ea7; --mind-pattern: repeating-radial-gradient(circle at 100% 0, transparent 0 16px, color-mix(in srgb, var(--mind-accent) 10%, transparent) 16px 17px); }
+.minds-browse .mind[data-role="chef"], .minds-browse .mind[data-role="gardener"] { --mind-accent: #94aa70; }
+.mind-seat-plus { font-size: 18px; line-height: 1; margin-right: 6px; }
+.minds-browse .mind-seat-btn { min-height: 40px; }
+@media (max-width: 640px) {
+  .minds-browse .bp-hero { padding-top: 28px; }
+  .mind-browse-links { column-gap: 18px; row-gap: 0; margin-top: 12px; }
+  .minds-browse .face-wall { max-height: 48px; margin-top: 14px; }
+  .mind-role-filter { flex-wrap: wrap; overflow: visible; margin-left: 0; margin-right: 0; padding: 0; gap: 7px; }
+  .mind-role-filter .lchip { min-height: 38px; height: auto; }
+}

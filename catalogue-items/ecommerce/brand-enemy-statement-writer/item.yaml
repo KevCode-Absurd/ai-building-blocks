@@ -1,0 +1,25 @@
+slug: brand-enemy-statement-writer
+name: Brand enemy statement writer
+summary: Share what buyers dislike and what your product changes. Get a clear brand stance, a promise and proof gaps.
+category: ecommerce
+type: prompt
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brand_brain
+    required: false
+  - type: voc_reviews
+    required: false
+  - type: product_data
+    required: false
+outputs:
+  - type: brief
+    required: true
+  - type: copy_draft
+    required: true
+uses: []
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

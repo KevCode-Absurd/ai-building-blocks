@@ -2,10 +2,14 @@ thinking: low
 thinking_why: It turns notes into three short drafts.
 new_slug: call-follow-up-drafter
 name: Call follow-up drafter
-summary: Paste call notes or a transcript. Get a follow-up email, a team summary and CRM updates to approve.
+summary: Paste call notes or a transcript. Get a follow-up email, a team summary
+  and CRM updates to approve.
 job: sell-and-negotiate
 headline: Call follow-up drafter
-subhead: Paste your call notes or a transcript and name the contact or deal. It builds the follow-up from what was said and matches your CRM's own field and stage names. You get a follow-up email draft, a short team summary, CRM updates waiting for your yes, and next steps with owners.
+subhead: Paste your call notes or a transcript and name the contact or deal. It
+  builds the follow-up from what was said and matches your CRM's own field and
+  stage names. You get a follow-up email draft, a short team summary, CRM
+  updates waiting for your yes, and next steps with owners.
 explain: |
   Right after a call, you have a follow-up email ready to send, a short team summary, and a list of CRM changes waiting for your yes. Paste notes or a transcript and the draft is built from what was said, not from guesses.
 
@@ -26,6 +30,8 @@ you_get:
   - Proposed CRM updates to approve
   - A list of next steps and owners
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
   - It works best when your AI can read your CRM and email.

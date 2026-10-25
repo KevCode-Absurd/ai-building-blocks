@@ -1,0 +1,38 @@
+new_slug: update-campaign-copy-after-a-fact-change
+name: Campaign copy change and release workflow
+summary: Apply an approved fact or offer change across existing campaign copy. Get scoped patches, review results and a versioned publishing handoff.
+job: write-ad-copy
+headline: Campaign copy change and release workflow
+subhead: Share the current copy pack and approved change. Get only the affected revisions, unchanged locks and a handoff tied to exact versions.
+explain: |-
+  Share the current copy pack and approved change. Get only the affected revisions, unchanged locks and a handoff tied to exact versions.
+
+  The end product is a controlled update and release record for an existing pack. It does not build a brand guide, invent a new campaign or automatically publish. A later publisher must verify the target still matches the reviewed baseline before applying replacements.
+when:
+  - A product fact, price, offer term or approved claim changed after several campaign pieces were written.
+  - You need to update ads, email and a page together without silently changing the rest of the campaign.
+you_give:
+  - The actual existing ads, emails and page copy, identified by version and surface
+  - The approved old and new fact or offer, variant, effective time and conditions
+  - Current evidence, brand constraints, destination list and any action already authorized
+you_get:
+  - An impact and evidence register linking each change to affected copy fields
+  - Minimal revised snippets or complete affected files, with unchanged content locks
+  - A before/after review and exact-version publisher handoff, including unrun destination checks
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Freeze the current pack and approved change
+    text: Build a baseline manifest and exact change card. Separate a proposed future change from a live current fact. Map direct mentions, dependent arithmetic, terms, CTA destinations and rendered text needing replacement. Keep inaccessible assets unresolved rather than declaring them unchanged.
+  - title: Check only the evidence that the change affects
+    text: Review whether each affected source applies to this variant, audience and date. A stale or withdrawn proof record cannot travel as a current claim. Distinguish owner-confirmed product facts from researched estimates. Do not browse unrelated private documents or re-onboard the entire business.
+  - title: Approve the wording boundary before rewriting
+    text: Pair every new assertion and condition with its supporting fact. Recompute only affected arithmetic, showing inputs and units. Retain legal/offer qualifiers intact. Do not substitute a more persuasive claim or infer a new discount, guarantee or testimonial.
+  - title: Patch the affected copy by surface
+    text: Run only the writer branch needed for an affected ad, email or page. Supply the actual baseline and request a bounded patch, not a fresh concept round. Preserve approved voice, language, audience, layout role and all unaffected facts. Return a minimal snippet with placement or a requested full-file replacement and a change log.
+  - title: Review the actual patched pack and prepare release
+    text: Compare every changed field against the approved card and review cross-surface consistency. Confirm dependent prices, dates, exclusions and CTA promises agree. Recheck unchanged locks for accidental drift. Build a publisher handoff listing exact old/new versions, effective time, destinations, approval scope and rollback copy. Check rendered/live states only with actual tools and access; chat copy review is not that evidence.
+thinking: high
+thinking_why: It compares supplied evidence and follows a specific method.

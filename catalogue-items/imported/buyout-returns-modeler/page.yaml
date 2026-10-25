@@ -2,10 +2,14 @@ thinking: high
 thinking_why: It links debt, cash and returns across many assumptions.
 new_slug: buyout-returns-modeler
 name: Buyout returns modeler
-summary: Give it a company and deal terms. Get a buyout model with debt paydown, IRR and MOIC.
+summary: Give it a company and deal terms. Get a buyout model with debt paydown,
+  IRR and MOIC.
 job: money-and-investing
 headline: Buyout returns modeler
-subhead: "Give it a company's financials, the entry price, the debt terms and the exit plan. It builds a buyout model in order: sources and uses, a cash flow forecast, debt paydown and exit. You get the tables, investor returns as IRR and MOIC, and a sensitivity table on price, exit and growth."
+subhead: "Give it a company's financials, the entry price, the debt terms and
+  the exit plan. It builds a buyout model in order: sources and uses, a cash
+  flow forecast, debt paydown and exit. You get the tables, investor returns as
+  IRR and MOIC, and a sensitivity table on price, exit and growth."
 explain: |
   You find out if a company is worth buying with borrowed money. Give it a company and deal terms, and you get a model showing how debt shrinks over time and what the investors earn at exit, as IRR and MOIC.
 
@@ -26,5 +30,7 @@ you_get:
   - IRR and MOIC
   - A sensitivity table on price, exit and growth
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.

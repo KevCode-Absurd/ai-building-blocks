@@ -2,13 +2,20 @@ thinking: medium
 thinking_why: It follows a set method with a few checks.
 new_slug: resume-job-application-builder
 name: Resume and job application builder
-summary: Share your real experience and a job description. Get a tailored resume, cover letter and a check for unsupported claims.
+summary: Share your real experience and a job description. Get a tailored
+  resume, cover letter and a check for unsupported claims.
 job: find-a-job
 headline: Resume and job application builder
-subhead: Start with your actual work, study or project history and the role you want. Get tailored application drafts and a reusable profile template. File rendering needs Python and the packages listed in the download; hiring results are not guaranteed.
+subhead: Start with your actual work, study or project history and the role you
+  want. Get tailored application drafts and a reusable profile template. File
+  rendering needs Python and the packages listed in the download; hiring results
+  are not guaranteed.
 when:
   - You are applying for a job or internship using your own experience.
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
-  - It works best when your AI can run Python with the listed packages to render files, or return a text draft when that is unavailable.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
+  - It works best when your AI can run Python with the listed packages to render
+    files, or return a text draft when that is unavailable.

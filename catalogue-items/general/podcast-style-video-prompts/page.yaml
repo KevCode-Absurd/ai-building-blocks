@@ -1,23 +1,19 @@
 new_slug: podcast-style-video-prompts
-name: "Podcast-style video clip prompt writer"
-summary: "Paste your podcast-style script and attach a product photo. Get cast cards, a storyboard and clip prompts."
+name: Podcast-style video clip prompt writer
+summary: Share your script and product photo. Get cast cards, reference prompts, a storyboard and clip prompts, with approval stops.
 job: make-video-ads
-thinking: high
-thinking_why: "It runs several stages and keeps many rules at once across a long output."
-
-headline: "Podcast-style video clip prompt writer"
-subhead: Give it a Host-and-Guest script and a product photo. It casts two people nobody could mix up, builds sheets and a storyboard of timed turns, and writes the clip prompts, stopping three times for your OK. You get every prompt and finishing notes with the disclosure line.
-
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.
+headline: Podcast-style video clip prompt writer
+subhead: Share the Host and Guest script, a real product photo and your video tool’s limits. It plans two distinct speakers, reference images, a set and timed clips, then writes prompts and editing notes. It pauses for approval unless you approve the stages up front. With connected tools, it can offer to make clips after credit approval.
 explain: |
   AI video tools find two-person talk hard. The wrong mouth moves, voices swap between clips, the listener nods on a loop, the camera sways, and any sign or book on the set comes back misspelled. A made-up chat that looks real also needs to say it's a dramatization, because US ad rules ask for that when people who seem unscripted are actors.
 
   This skill runs the whole video process in order and fixes everything that can drift before anything moves. First two cast cards describe people who differ in at least four ways. You pick a reference image of each, then get a sheet for each person, your product and one plain room, with one locked camera and a microphone each placed so no mouth is hidden. A storyboard sets out each clip as timed turns, with the line in quotes and one reaction from the listener, whose mouth stays closed. Then come the clip prompts, the two voices and the finishing notes, with the offer and the disclosure line added as text.
-
 when:
   - You have a podcast-style script and need prompts for an AI image and video tool.
   - Earlier attempts had the wrong person talking, drifting faces or a moving camera.
   - You want the product in every frame without anyone holding it up to the camera.
-
 you_give:
   - The script, with lines labelled Host and Guest and the clip plan
   - A front photo of your product, its height against a mug or glass, and how it's held
@@ -28,14 +24,12 @@ you_get:
   - Reference image prompts, a cast picture and sheet prompts for both people, the product and the room
   - A storyboard with the opening frame and timed turns per clip
   - Clip prompts, a voice plan, finishing notes with the disclosure line, and a fix table
-
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your script underneath, then attach your product photo.
   - Approve the two cast cards, make the reference images and pick one of each. Check the cast picture at thumbnail size.
   - Approve the sheets and lock lines, then the storyboard.
   - Make each clip from its prompt, continuing from the last if your tool allows. Edit with the finishing notes.
-
 how_it_works:
   - title: Checks the script
     text: One speaker and one fact per turn, no personal results or titles, no spoken offer, and each clip ending where a turn ends.
@@ -51,7 +45,6 @@ how_it_works:
     text: Each clip starts from the frame before, with the listener's mouth closed and only the room's sound.
   - title: Finishes it
     text: Two steady voices, captions per speaker, a punch-in, the disclosure line and the offer as text over the last two seconds.
-
 output_shape: |
   STAGE 0  SCRIPT CHECK  pass, or <lines to send back>
   STAGE 1  CAST (approval 1, or approved in advance)
@@ -71,7 +64,6 @@ output_shape: |
   FINISHING NOTES  <cuts, captions, punch-in, disclosure, offer text, voice route>
   MISSING: <..>
   CHECKS MISSED: <one line each, or none>
-
 example:
   business: sprout
   input: |
@@ -166,7 +158,6 @@ example:
     the tool; if one drifts by clip 2, record both parts and lip-sync.
     MISSING: whether the brand uses music. None is planned.
     CHECKS MISSED: none
-
 tweaks:
   - what: Clip length
     how: Give your tool's clip lengths. At 8 seconds a clip holds two short turns; at 10 to 15 it holds three. Each clip still ends where a turn ends.
@@ -176,7 +167,6 @@ tweaks:
     how: Name your buyer's world (a kitchen table, a small studio, a garden table). The room line changes; the plain walls and the locked camera stay.
   - what: A cast you already have
     how: Attach the cast cards, picks and sheets from an earlier ad. The run reuses them and starts at the storyboard.
-
 judge:
   - The run stopped for your yes after the cast cards, the sheets and the storyboard, or marked each stop "approved in advance" if you gave the approvals up front.
   - Each line comes from the right mouth, and the listener's mouth stays closed.
@@ -184,30 +174,30 @@ judge:
   - The two voices stay apart and the same throughout.
   - The product is on the table in every frame, label unchanged, nothing in front of it.
   - The disclosure line and the offer text are in the finishing notes, and nobody says the offer.
-
 test:
   - Look at the cast picture at thumbnail size. If you can't tell the two apart in a second, change two more traits in the cast cards.
   - Make clip 1 and watch the listener's mouth during each line. If it moves, use the fix in the skill's table before making more.
   - Lay the end frames of clips 1 and 3 side by side. Faces, clothes, sides and microphones should match.
   - Play the finished ad on a phone speaker with your eyes closed. You should always know who is talking.
-
 improve:
   - Save your approved cast cards, picks and sheets in your brand file, so a second podcast-style ad keeps the same two people.
   - Write your room and light into stage 3 of the skill file, so every run starts in your buyer's world.
   - Add your caption colours and disclosure wording to the finishing step.
   - Pair it with the podcast clip script skill, which writes the turns, the clip plan, the cast note and the disclosure this skill reads.
-
 works_best_with:
   tools:
-    - {name: "Veo", why: "Speaks quoted lines for a named speaker and keeps faces from up to three reference images."}
-    - {name: "Kling", why: "Reuses saved characters made from your reference pictures, so both faces hold across clips."}
-    - {name: "ElevenLabs", why: "Records two clearly different voices once, so they never swap between clips."}
-    - {name: "Nano Banana", why: "Makes the reference images, sheets and opening frame with real-looking skin and cloth."}
+    - name: Veo
+      why: Speaks quoted lines for a named speaker and keeps faces from up to three reference images.
+    - name: Kling
+      why: Reuses saved characters made from your reference pictures, so both faces hold across clips.
+    - name: ElevenLabs
+      why: Records two clearly different voices once, so they never swap between clips.
+    - name: Nano Banana
+      why: Makes the reference images, sheets and opening frame with real-looking skin and cloth.
   inputs:
-    - "A photo of a real room in your buyer's world, so the set feels like where they live"
-    - "Short voice samples or descriptions you like for each part, so the voices fit your brand"
-    - "Your caption colours and disclosure wording, so finishing matches your other ads"
-
+    - A photo of a real room in your buyer's world, so the set feels like where they live
+    - Short voice samples or descriptions you like for each part, so the voices fit your brand
+    - Your caption colours and disclosure wording, so finishing matches your other ads
 terms:
   - term: Cast card
     meaning: A fixed description of one person, pasted word for word into every prompt so they look the same in every clip.

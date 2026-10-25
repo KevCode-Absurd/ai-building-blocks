@@ -1,0 +1,30 @@
+thinking: high
+thinking_why: It follows a set method with a few checks.
+new_slug: community-workshop-guide-builder
+name: Community workshop guide builder
+summary: Share a community goal and local facts. Get practical activities, worksheets, and clear notes for the host.
+job: teach-and-train
+headline: Community workshop guide builder
+subhead: Share the community, shared goal, time available, and local facts. It turns the need into hands-on activities with useful results. You get editable handouts, host notes, and review steps. Roles and local facts stay marked when they still need to be checked.
+you_give:
+  - Community and goal, local evidence, available time, participation needs, and any existing guide.
+you_get:
+  - A workshop guide or focused revision, worksheets, host notes, and maintenance details where needed.
+how_it_works:
+  - title: Set the community brief
+    text: Use known facts first and ask only what changes the guide. Record whose views are still missing.
+  - title: Design useful activities
+    text: Link each need to an activity and a real next step. Put essential preparation first.
+  - title: Write coordinated materials
+    text: Make worksheets and host notes agree on timing, roles, supplies, access needs, and fallbacks.
+  - title: Walk through and revise
+    text: Check each activity and reference. Report what still needs local verification or a real community pilot.
+works_best_with:
+  tools:
+    - name: A chat AI that can read the bundled reference files
+      why: Use the supplied references and templates for the chosen task. Scripts are optional unless that task specifically needs them.
+how_to_use:
+  - Add the downloaded skill folder to an AI that can read its reference files.
+  - Give the community, shared goal, time available, local facts, and access needs.
+  - For one short session, ask for only a brief participant worksheet and separate host notes. Set a length limit if needed.
+  - Check that section names, timings, and worksheet fields agree. Keep roles proposed until someone accepts them; review drafts before use.

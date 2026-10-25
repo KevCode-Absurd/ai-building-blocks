@@ -2,7 +2,7 @@ slug: otter
 name: Otter
 maker: Otter.ai
 url: https://otter.ai
-promise: Live meeting transcripts and summaries, with action items assigned for you.
+promise: "Turn meetings into live transcripts, summaries and action lists you can review."
 use_cases: [meeting-notes]
 categories: [productivity, voice]
 what_it_does:
@@ -12,7 +12,7 @@ what_it_does:
   - Gives a short briefing before a call from past conversations.
   - Joins Zoom, Google Meet and Teams from your calendar, or records without a bot.
 benefits:
-  - Leave a meeting with notes and tasks already written.
+  - "Get draft notes and tasks to review after the meeting."
   - Look up a decision from last month without replaying the recording.
   - Send call insights to your CRM without typing them.
   - Try it free on a few meetings before you pay.

@@ -1,0 +1,34 @@
+new_slug: ad-variant-change-auditor
+name: Ad variant change auditor
+summary: Compare a control ad and variants with the agreed test. Find unintended changes, unclear comparisons and the smallest repairs before testing.
+job: plan-ad-tests
+headline: Ad variant change auditor
+subhead: Compare a control ad and variants with the agreed test. Find unintended changes, unclear comparisons and the smallest repairs before testing. Supply the records and asset versions to review.
+explain: |-
+  Audit the differences in actual control/variant drafts against a predeclared experiment question. This checks implementation of the test contract; it does not generate variants, plan a test from scratch or infer causal results.
+
+  Checks actual variation against an already specified experiment and returns a confound/repair matrix; not creative generation, outcome analysis or blind prompt scoring.
+when:
+  - You need the stated review outcome from existing records.
+  - You want unknowns and proposed repairs separated from completed actions.
+you_give:
+  - brief
+  - copy draft
+  - static ads (optional)
+you_get:
+  - A control-to-variant matrix of actual changes
+  - Hidden extra changes, unknown media and the smallest repairs
+  - A version-bound readiness decision for each comparison
+how_to_use:
+  - Supply the relevant brief and material, or name files in the authorized project.
+  - Ask for the stated result. Keep supplied facts, assumptions and missing evidence distinct.
+  - Review the result before authorizing repairs or external changes. Save the returned packet or authorize a file destination.
+how_it_works:
+  - title: Define the review
+    text: Read the supplied test question, control ID/version, intended changed variable, invariants, audience/placement, destination and observation plan. If no comparison contract exists, list the missing decisions rather than inventing a post-hoc hypothesis.
+  - title: Compare the actual records
+    text: Distinguish a superficial wording change from a change in meaning. Two synonyms can preserve a factor; a different proof, price, implied promise or action may change the buying proposition even when only one sentence was edited.
+  - title: Return a bounded handoff
+    text: Return a variant-readiness matrix, repair list and remaining unknowns. Bind it to asset versions; a later change to proof, price, audience, destination or creative requires rechecking the affected comparison.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

@@ -1,0 +1,26 @@
+new_slug: diagnose-a-slow-power-bi-report
+name: Diagnose a slow Power BI report
+summary: Find what slows your Power BI report. Get a plan to test each likely cause.
+job: track-numbers
+headline: Diagnose a slow Power BI report
+subhead: Share the slow steps and measured times. Trace likely causes across the report and data model. Get a test plan.
+explain: Share the slow steps and measured times. Trace likely causes across the report and data model. Get a test plan.
+when:
+  - You want to diagnose a slow Power BI report.
+you_give:
+  - The slow interaction, affected users, model configuration and exported timing or capacity measurements.
+you_get:
+  - A diagnostic plan that distinguishes visual rendering, DAX, model, gateway and capacity causes.
+how_to_use:
+  - Download the complete skill folder and add it to your AI tool, or copy the instructions into a chat.
+  - Provide the inputs listed here and ask your AI to follow the skill.
+  - Review the result and any missing facts before using it.
+how_it_works:
+  - title: Define the slowdown
+    text: Record the affected report, operation, users, timing and business target.
+  - title: Compare evidence layers
+    text: Use supplied Performance Analyzer, query timing and infrastructure evidence to narrow hypotheses.
+  - title: Plan and verify changes
+    text: Rank scoped changes and specify before-and-after measurements; do not invent speed gains.
+thinking: medium
+thinking_why: It weighs your evidence and follows a specific method.

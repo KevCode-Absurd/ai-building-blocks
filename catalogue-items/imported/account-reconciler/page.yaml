@@ -2,10 +2,15 @@ thinking: medium
 thinking_why: It matches rows and explains what is left.
 new_slug: account-reconciler
 name: Account reconciler
-summary: Give it a ledger and a bank statement. Get matched items, the gaps sorted by type and a next step each.
+summary: Give it a ledger and a bank statement. Get matched items, the gaps
+  sorted by type and a next step each.
 job: track-numbers
 headline: Account reconciler
-subhead: Give it a ledger or trial balance extract, the bank statement or other record to compare, and the period you are closing. It matches the items that agree and sorts each gap into timing, adjustment or needs a look. You get the matched list, the differences by type, an aging view and a next action for each. Have an accountant check it.
+subhead: Give it a ledger or trial balance extract, the bank statement or other
+  record to compare, and the period you are closing. It matches the items that
+  agree and sorts each gap into timing, adjustment or needs a look. You get the
+  matched list, the differences by type, an aging view and a next action for
+  each. Have an accountant check it.
 explain: |
   Differences between your books and a bank statement, subledger or partner records are matched, sorted and explained. Have an accountant check the result before you rely on it.
 
@@ -27,6 +32,8 @@ you_get:
   - An aging view of open items
   - A note on the next action for each gap
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
   - It works best when your AI can run code and read the files you upload.

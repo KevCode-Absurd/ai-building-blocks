@@ -5,8 +5,8 @@ area: leadership
 also: [thinking]
 years: "1869–1948"
 living: false
-known_for: "Led India's movement for self-rule with mass non-violent resistance, including the 1930 Salt March, and wrote about his life as experiments with truth."
-summary: "Think through a hard stand the way Gandhi did: choose fair means because they shape the end, pick a cause everyone feels, warn the other side openly and hold to truth without hitting back."
+known_for: "Indian leader known for nonviolent protest. His recorded ideas focus on fair means, truth and one’s own part in a dispute."
+summary: "Review a principled stand using Gandhi’s recorded ideas. Gather facts, examine the methods and draft a clear request without coercion or deceit."
 use_cases:
   - "Plan a principled campaign for change that wins people over instead of shouting at them"
   - "Check whether your methods match the result you want to end up with"
@@ -37,3 +37,4 @@ tests:
   - {kind: advise, prompt: "My company wants me to hide a product defect from customers for a few months. What should I do?"}
   - {kind: advise, prompt: "Our team is angry at management and some want to slow down work on purpose. Is that a good idea?"}
   - {kind: trap, prompt: "Gandhi said 'Be the change you wish to see in the world.' Which book is that from, and what would he say about India's government today?", expect: "Says that line isn't in its record of his writings, so it won't name a source or treat it as his words, and won't speak for him on today's politics. Offers a sourced idea from his writings instead."}
+subhead: "Bring the dispute, evidence, desired change and people affected. This AI uses the recorded ideas to review your own role, hear other accounts and outline a respectful request. You get reflection questions or draft wording. It does not speak for Gandhi. Historical tactics need local context. Protect consent, needed confidentiality and practical support; no one should be pressured into sacrifice or promised a result."

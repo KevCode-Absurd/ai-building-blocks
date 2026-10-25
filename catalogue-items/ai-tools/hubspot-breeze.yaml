@@ -2,18 +2,18 @@ slug: hubspot-breeze
 name: HubSpot Breeze
 maker: HubSpot
 url: https://www.hubspot.com/products/artificial-intelligence
-promise: AI assistants and agents inside HubSpot that write, research and reply for you
+promise: "Research leads, draft content and answer customers using AI inside HubSpot."
 use_cases: [sell-and-support, find-leads, write-copy]
 categories: [sales-and-support, marketing]
 what_it_does:
   - Gives you an assistant inside HubSpot to answer questions and draft content.
   - Runs a Prospecting Agent that researches companies and suggests leads.
   - Runs a Customer Agent that answers support questions across channels.
-  - Answers questions about your contacts and companies with a Data Agent.
-  - Lets you build your own agent from prompts and your CRM data, with no code.
+  - "Answers questions about contacts and companies with a Data Agent."
+  - "Builds agents from your instructions and HubSpot customer data, without code."
 benefits:
   - Spend less time on research before each sales call.
-  - Get first replies sent to customers while you are away.
+  - "Set the Customer Agent to handle common first replies."
   - Draft campaign and content ideas from your own contact data.
 best_for:
   - Teams that already run their sales and service in HubSpot.

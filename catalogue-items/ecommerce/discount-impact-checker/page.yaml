@@ -1,24 +1,20 @@
 new_slug: discount-impact-checker
-name: "Discount impact checker"
-summary: "Add price, costs and a discount. Get the ROAS to hit and a score out of 100."
+name: Discount impact checker
+summary: Share prices, costs and a planned discount. Check whether your profit goal is possible and what ad return it would need.
 job: make-offer
 thinking: medium
-thinking_why: "It is mostly careful arithmetic with a few judgement calls, so a mid-size model is enough if it shows its sums."
-
-headline: "Discount impact checker"
-subhead: Give it your price, your real costs per order and the discount you plan to run. It works out the ROAS you must hit to keep the same profit, scores the plan out of 100 for how safe it is, and tells you to run it, cut the depth or try a different offer.
-
+thinking_why: It is mostly careful arithmetic with a few judgement calls, so a mid-size model is enough if it shows its sums.
+headline: Discount impact checker
+subhead: It compares full-price and discounted order numbers using your costs and expected units. First it checks whether the profit goal leaves any room for ad cost. A negative allowance is not viable; zero means no finite paid-ad target. Only a supported positive case gets a target and custom planning score. The score does not prove demand or profit.
 explain: |
-  A sale often looks good in the dashboard. Orders go up, AOV goes up, ROAS looks fine. Then the month ends and you made less money. A discount cuts your margin on every unit, and people often buy more units on sale, so your costs rise with them. The ROAS that was profitable at full price is no longer enough.
+  A discount reduces revenue per unit while product and fulfilment costs still need to be paid. Higher orders or reported ad returns alone do not show that profit improved.
 
-  This skill builds your full-price numbers first: gross profit, break-even ROAS and profit per order. Then it applies the discount to the retail value, adds the extra units, and solves for the ROAS you now need to end up with the same profit per order. It compares that bar to your current ROAS and to what your own past sales show is believable. Then it scores the plan and gives a verdict.
-
+  This skill calculates the full-price case and a supplied discount scenario, then checks the ad cost allowed by your profit goal. If that allowance is negative, the goal is impossible under those inputs even before ads. If it is zero, only zero acquisition cost can meet it. These cases get no finite paid-ad target, score or go-ahead. A positive supported case can show the target return and a custom planning score, with missing costs and demand assumptions visible.
 when:
   - You plan a site-wide sale, a code or an email discount and want to know the ROAS it needs before it goes live.
   - Someone suggests free shipping on a low-priced product and you want to see if it loses money.
   - A past sale had good ROAS but little profit and you want to know why.
   - You wonder if a two-for-one, bundle or gift would earn more than a percent off.
-
 you_give:
   - Price, product cost, shipping, fulfilment and payment fees per order
   - Current AOV, units per order and target ROAS or profit per order
@@ -28,25 +24,23 @@ you_give:
   - Cash you can spend while a sale pays back (optional)
 you_get:
   - The full-price numbers and the same numbers under the discount
-  - The ROAS bar the discount forces you to hit, and the gap to your current ROAS
-  - "A score out of 100 with the reasons, and a verdict: run it, cut the depth or switch offer"
+  - A supported positive-CPA ad target, or a not-viable/zero-CPA result with its reason
+  - A custom planning score only for valid complete inputs; points do not prove success
   - The discount depth with the most profit per order, when your history allows it
   - The same promo run as a percent off, a bundle or buy-one-get-one, and a gift, side by side
-
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your price and every cost per order, including shipping, fulfilment and payment fees.
   - Paste your current AOV, units per order and target ROAS, then the discount you plan.
-  - Add past sales at different discount levels if you have them. They make the depth advice reliable.
-  - Read the ROAS bar first, then the score and verdict. Run the cheaper options it suggests through the skill again.
-
+  - Add past sale records if available. They can inform scenarios but do not guarantee a future result.
+  - Read the feasibility result first. Rework nonpositive-CPA cases before considering a limited test or score.
 how_it_works:
   - title: Build full-price numbers
     text: Works out gross profit, break-even ROAS (1 divided by gross margin), target CPA and profit per order from your costs.
   - title: Apply the discount to retail value
     text: Takes the discount off the full retail value of the units bought, not off the new price, and adds the extra units you expect on sale.
   - title: Hold profit flat
-    text: Finds the CPA you can now afford and turns it into the ROAS you must hit to keep the same profit per order.
+    text: Finds the ad cost allowed by the profit goal. Negative means not viable; zero has no finite paid-ad target. Only a positive value permits division.
   - title: Test if the jump is believable
     text: Compares the gain in efficiency you need with what your own past sales show.
   - title: Find the best depth
@@ -58,8 +52,7 @@ how_it_works:
   - title: Check promo rules
     text: Checks the rules around the sale, such as winning on the first order, the returns policy and tying the deepest discount to a sign-up.
   - title: Score and give a verdict
-    text: Gives a score out of 100 that shows what was measured, then a verdict you can act on.
-
+    text: Scores only a supported positive-CPA case with complete costs. The house checklist is a planning aid, not proof of safety or a launch instruction.
 output_shape: |
   FULL PRICE
   AOV <$> | costs <$> | gross profit <$> | margin <%>
@@ -70,7 +63,8 @@ output_shape: |
   break-even ROAS <x>
 
   THE BAR
-  ROAS needed to keep <$> profit per order: <x>
+  Required CPA <value> | feasibility <positive / ZERO-CPA ONLY / NOT VIABLE / unresolved>
+  ROAS needed <only for positive required CPA; otherwise no finite paid-ad target>
   your current ROAS: <x> | gap: <+ or - %>
   believable? <yes / stretch / no, with the evidence>
 
@@ -80,26 +74,24 @@ output_shape: |
   percent off: contribution after CAC <$> | bundle or buy-one-get-one: <$> | gift: <$>
   discount + CAC per order: <$> in each case
 
-  SCORE <n>/100 now: <what was measured>
+  CUSTOM SCORE <n>/100 only for complete valid inputs, or NOT SCORED: <reason>
   penalties: <each with points>
   <n>/100 after <the suggested change>
 
-  VERDICT  <run it | cut the depth to <n>% | switch to a non-discount offer>
+  VERDICT <not viable | zero-CPA only | rework inputs | consider a limited test with agreed limits>
   NEXT  <the first test or change>
   MISSING: <costs | units on sale | history>
-
 tweaks:
   - what: Units per order on sale
     how: This number moves the answer most. Use your own last sale. If you have none, run a low case and a high case and read both.
   - what: Shipping and fulfilment cost
-    how: Include them per order and per unit. Using product cost alone makes every discount look safe.
+    how: Include shipping, fulfilment, fees and costs at the expected units. Missing costs prevent scoring.
   - what: Target
     how: Give a target profit per order, not only a target ROAS. The skill holds profit flat against it.
   - what: Offer type
     how: Name the bundle, two-for-one or gift you could run instead. The skill puts it next to the percent off with your own costs.
   - what: Layered offers
     how: Add the gift, bigger pack or subscribe discount you plan. A layered offer can need a much lower ROAS than a plain percent off.
-
 judge:
   - Every number can be traced to something you gave it, and the sums are shown.
   - The discount is taken off retail value, not off an already reduced price.
@@ -107,28 +99,28 @@ judge:
   - The score lists each penalty with its points and says what it measures.
   - Anything it had to assume is marked and not hidden inside a figure.
   - Each source figure is labelled as one source's claim, and a no-returns rule comes with a line to check the law.
-
+  - Nonpositive required CPA prevents target division, scoring and a run-it verdict; invalid rate denominators remain unresolved.
 test:
   - Run it on your last sale. Does the ROAS bar match the reason that sale made less profit than it looked?
   - Change only the discount from 15 to 25 percent and run it again. The ROAS bar should rise faster than the discount does.
   - Remove the shipping cost from your input. The skill should say shipping is missing and refuse to score.
   - Run it twice with the same input. The bar and verdict should match.
-
+  - Use AOV 100, cost 40, current target 2.5 and one unit. At 50% off, required CPA minus 10 is not viable; at 40%, CPA 0 has no finite paid-ad target; at 25%, CPA 15 gives requiredROAS 5.
 improve:
   - Save your real cost per order and your usual units per order in your brand file, so you do not retype them.
   - Add your own past sale results as a table, so the best-depth step has data to use.
   - Edit the score penalties in the skill file to fit your store, for example a lower tolerance if your cash is thin.
   - Pair it with a skill that picks the offer type first, and with one that plans sale timing.
-
 works_best_with:
   tools:
-    - {name: "Shopify", why: "Its reports give you AOV, units per order and discount codes used, which are the inputs this check needs."}
-    - {name: "Google Sheets", why: "Keep your cost table and past sales in a sheet, then paste them in."}
+    - name: Shopify
+      why: Its reports give you AOV, units per order and discount codes used, which are the inputs this check needs.
+    - name: Google Sheets
+      why: Keep your cost table and past sales in a sheet, then paste them in.
   inputs:
-    - "A past sale export with discount percent and units per order"
-    - "Your shipping cost table for one, two and three units"
-    - "Your monthly cash position, so the cash check is real"
-
+    - A past sale export with discount percent and units per order
+    - Your shipping cost table for one, two and three units
+    - Your monthly cash position, so the cash check is real
 terms:
   - term: Contribution after CAC
     meaning: What is left from one order after product, shipping, fulfilment, fees and the ad cost to win that customer.

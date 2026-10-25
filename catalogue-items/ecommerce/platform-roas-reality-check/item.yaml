@@ -7,23 +7,23 @@ role: check
 job: analysis
 level: intermediate
 inputs:
-  - {type: performance_sheet, required: true}
-  - {type: spreadsheet, required: false}
-  - {type: voc_reviews, required: false}
+  - { type: performance_sheet, required: true }
+  - { type: spreadsheet, required: false }
+  - { type: voc_reviews, required: false }
 outputs:
-  - {type: audit_report}
+  - { type: audit_report }
 uses: []
 origin: rebuilt
 example_pending: true
-version: 1.0.0
+version: 1.0.1
 credits:
-  - {title: "eCommerce Marketing Data 101", by: "Derric Haynie (e-commerce tools directory), interviewed", used: "Zero-party data (what the buyer says) against first-party data (what you tracked), and the where-did-you-hear-about-us conflict"}
-  - {title: "Everything You Need to Know About Finance in eCommerce", by: "Nathan, agency founder (Blue Sense Digital masterclass)", used: "The measurement ladder from platform ROAS up to geo holdout tests"}
-  - {title: "The $3B E-Commerce Strategist: The Playbook That's Making Everyone Else Rich", by: "Taylor Holiday, agency founder, interviewed on a business podcast", url: "https://www.youtube.com/watch?v=RHJSO4eVJVA", used: "The correlation check, the incrementality factor, testing a new channel first and measuring the effect on Amazon and retail"}
-  - {title: "The Death Spiral That Kills Most eCommerce Brands", by: "An agency operator who audits 8 and 9 figure stores (name not stated)", used: "The five-rung evidence ladder and the example of a ROAS of 20 falling to 7 once view-through credit is removed"}
-  - {title: "8 years of marketing advice in 70 minutes", by: "Mark, paid ads operator and mentor", used: "The range of over- and under-reporting in ad accounts after privacy changes"}
-  - {title: "How We Audit 8 and 9 Figure Ad Accounts (Full Process)", by: "A performance agency operator who audits 8 and 9 figure brands (name not stated)", used: "Comparing new-customer revenue per ad dollar with each platform's ROAS, and the notes for Meta, Google, TikTok and Pinterest"}
-  - {title: "The Only Video You Need On Meta Ads In 2026", by: "The same agency operator", used: "The furniture example where a dynamic product ad looked like 7x and was 1.9x on a click basis"}
-  - {title: "How to Scale an eCommerce Brand Profitably in 2026: The Full System", by: "Nathan, founder of a performance marketing agency for 8 and 9 figure brands (public long-form masterclass, about 9.5 hours)", used: "The nine audit mistakes, view-through inflation, and how Meta incremental attribution is worked out"}
-  - {title: "The #1 bottleneck in 80% of ecommerce audits (data integrity)", by: "An agency founder who has run 1,000+ audits on 7 to 9 figure brands (name not stated)", used: "The three sources of inflated ROAS and why ROAS should not be compared across platforms or funnel stages"}
-  - {title: "How To Scale Meta TOF Campaigns", by: "An agency operator (name not stated)", used: "The ad-by-ad check: audience split, attribution columns, excluding existing customers and measuring the advertised SKU"}
+  - { title: "eCommerce Marketing Data 101", by: "Derric Haynie (e-commerce tools directory), interviewed", used: "Zero-party data (what the buyer says) against first-party data (what you tracked), and the where-did-you-hear-about-us conflict" }
+  - { title: "Everything You Need to Know About Finance in eCommerce", by: "Nathan, agency founder (Blue Sense Digital masterclass)", used: "The measurement ladder from platform ROAS up to geo holdout tests" }
+  - { title: "The $3B E-Commerce Strategist: The Playbook That's Making Everyone Else Rich", by: "Taylor Holiday, agency founder, interviewed on a business podcast", url: "https://www.youtube.com/watch?v=RHJSO4eVJVA", used: "The correlation check, the incrementality factor, testing a new channel first and measuring the effect on Amazon and retail" }
+  - { title: "The Death Spiral That Kills Most eCommerce Brands", by: "An agency operator who audits 8 and 9 figure stores (name not stated)", used: "The five-rung evidence ladder and the example of a ROAS of 20 falling to 7 once view-through credit is removed" }
+  - { title: "8 years of marketing advice in 70 minutes", by: "Mark, paid ads operator and mentor", used: "The range of over- and under-reporting in ad accounts after privacy changes" }
+  - { title: "How We Audit 8 and 9 Figure Ad Accounts (Full Process)", by: "A performance agency operator who audits 8 and 9 figure brands (name not stated)", used: "Comparing new-customer revenue per ad dollar with each platform's ROAS, and the notes for Meta, Google, TikTok and Pinterest" }
+  - { title: "The Only Video You Need On Meta Ads In 2026", by: "The same agency operator", used: "The furniture example where a dynamic product ad looked like 7x and was 1.9x on a click basis" }
+  - { title: "How to Scale an eCommerce Brand Profitably in 2026: The Full System", by: "Nathan, founder of a performance marketing agency for 8 and 9 figure brands (public long-form masterclass, about 9.5 hours)", used: "The nine audit mistakes, view-through inflation, and how Meta incremental attribution is worked out" }
+  - { title: "The #1 bottleneck in 80% of ecommerce audits (data integrity)", by: "An agency founder who has run 1,000+ audits on 7 to 9 figure brands (name not stated)", used: "The three sources of inflated ROAS and why ROAS should not be compared across platforms or funnel stages" }
+  - { title: "How To Scale Meta TOF Campaigns", by: "An agency operator (name not stated)", used: "The ad-by-ad check: audience split, attribution columns, excluding existing customers and measuring the advertised SKU" }

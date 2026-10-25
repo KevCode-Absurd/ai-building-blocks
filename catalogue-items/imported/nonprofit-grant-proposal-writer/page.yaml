@@ -1,0 +1,30 @@
+thinking: high
+thinking_why: It weighs real records, missing facts, and choices that affect people or funding.
+new_slug: nonprofit-grant-proposal-writer
+name: Nonprofit grant proposal writer
+summary: Share funder rules, program facts, and budget. Get a proposal draft matched to the required sections.
+job: document-work
+headline: Nonprofit grant proposal writer
+subhead: Share the funder's rules, your program plan, and the approved budget. It matches the required sections, checks the figures, and trims to the limits. You get a proposal, inquiry letter, or grant report draft for program and finance review.
+when:
+  - You need this task done for a nonprofit, community program, or donated-goods store.
+you_give:
+  - Funder guidelines, existing program design, local evidence, approved budget, and required limits.
+you_get:
+  - A proposal, inquiry letter, budget narrative, or grant report matched to the funder's rules.
+how_it_works:
+  - title: Read the funder rules
+    text: Extract required sections, length limits, attachments, deadlines, and submission details.
+  - title: Draft from verified facts
+    text: Write the need, program, intended changes, measurement plan, and budget story from the supplied materials.
+  - title: Reconcile and review
+    text: Check totals, section limits, and missing attachments. Route facts, costs, and promises to the right internal reviewers.
+works_best_with:
+  tools:
+    - name: A chat AI that can read your files
+      why: The skill works from records and drafts you provide. Research tasks also need current, checked public sources.
+  inputs:
+    - Proposals are binding representations to a funder about what you will deliver.
+how_to_use:
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.

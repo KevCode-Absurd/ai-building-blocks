@@ -33,13 +33,15 @@ export const requestText = (a: Ask) => [
 /** Ask for a skill shaped to your industry. It opens an email to us with the details filled in. */
 export function TailorDrawer({ skill, onClose, toast }: { skill: string; onClose: () => void; toast: (m: string) => void }) {
   const [a, setA] = useState<Ask>({ skill, industry: "", want: "", name: "", email: "" });
+  const [copyFailed, setCopyFailed] = useState(false);
   const set = (k: keyof Ask) => (e: { target: { value: string } }) => setA({ ...a, [k]: e.target.value });
   const ready = !!a.want.trim() && /\S+@\S+\.\S+/.test(a.email);
   const subject = `Tailored skill: ${a.skill.trim() || "a skill"}${a.industry ? ` for ${a.industry.toLowerCase()}` : ""}`;
   const mail = `mailto:${TAILOR_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(requestText(a))}`;
+  const copyText = `To: ${TAILOR_EMAIL}\nSubject: ${subject}\n\n${requestText(a)}`;
   const copy = async () => {
-    await navigator.clipboard.writeText(`To: ${TAILOR_EMAIL}\nSubject: ${subject}\n\n${requestText(a)}`).catch(() => {});
-    toast(`Copied. Paste it into an email to ${TAILOR_EMAIL}.`);
+    try { await navigator.clipboard.writeText(copyText); setCopyFailed(false); toast(`Copied. Paste it into an email to ${TAILOR_EMAIL}.`); }
+    catch { setCopyFailed(true); }
   };
   return (
     <Drawer label="Get a skill tailored for you" top={<span className="mono">goes to {TAILOR_EMAIL}</span>} onClose={onClose}>
@@ -71,6 +73,7 @@ export function TailorDrawer({ skill, onClose, toast }: { skill: string; onClose
           <button type="button" className="btn btn-ghost btn-sm" disabled={!ready} onClick={copy} data-testid="tailor-copy">Copy it</button>
           <button className="btn btn-primary btn-sm" disabled={!ready} data-testid="tailor-send">Write the email</button>
         </div>
+        {copyFailed && <div className="task-copy-fallback"><p role="alert">Copy did not work. Select and copy the request below.</p><textarea aria-label="Copy the email request manually" readOnly rows={7} value={copyText} onFocus={e => e.currentTarget.select()} /></div>}
       </form>
     </Drawer>
   );

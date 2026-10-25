@@ -1,0 +1,28 @@
+new_slug: nonprofit-executive-dashboard-planner
+name: Plan nonprofit executive and board dashboards
+summary: Plan two views of nonprofit health. Give staff and the board clear measures, owners and action points.
+job: track-numbers
+headline: Plan nonprofit executive and board dashboards
+subhead: Bring goals and trusted data. Pick a small set of measures, define each one and build separate staff and board scorecards.
+explain: Bring goals and trusted data. Pick a small set of measures, define each one and build separate staff and board scorecards.
+when:
+  - You want to plan nonprofit executive and board dashboards.
+you_give:
+  - Strategic priorities and authoritative financial, fundraising, program and staff data
+  - Review cadence, metric owners and proposed decision thresholds
+you_get:
+  - Executive dashboard and smaller board scorecard specifications
+  - Metric dictionary with formulas, sources, owners and review actions
+how_to_use:
+  - Download the complete skill folder and add it to your AI tool, or copy the instructions into a chat.
+  - Provide the inputs listed here and ask your AI to follow the skill.
+  - Review the result and any missing facts before using it.
+how_it_works:
+  - title: Choose decisions and measures
+    text: Map candidates to strategic goals and balance mission, finance, stakeholders and organizational learning.
+  - title: Define each number
+    text: Specify formula, source, named owner, cadence, leading or lagging status and proposed thresholds before presenting status.
+  - title: Split and operate the views
+    text: Keep the executive view operational and the board view strategic; define reviews and an annual metric reset.
+thinking: medium
+thinking_why: It weighs your evidence and follows a specific method.

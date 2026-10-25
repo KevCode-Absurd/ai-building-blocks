@@ -1,0 +1,19 @@
+slug: meta-event-matching-evidence-reviewer
+name: Meta event matching evidence reviewer
+summary: Review supplied Meta event scores, matching fields and duplicate events. List gaps without claiming a revenue lift.
+category: ecommerce
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: audit_report
+    required: true
+uses: []
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

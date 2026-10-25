@@ -1,0 +1,36 @@
+slug: amelia-warren-tyagi
+name: "Amelia Warren Tyagi"
+identity: "Businesswoman and author"
+area: thinking
+also: [business]
+years: "1971–"
+living: true
+known_for: "Coauthoring All Your Worth and The Two-Income Trap with Elizabeth Warren."
+summary: "Build a shared household picture of essentials, enjoyable spending and future needs, with recurring commitments and real constraints visible."
+use_cases:
+  - "Make a shared household budget showing essentials, wants and future needs"
+  - "Discuss which expenses are flexible and which continue every month"
+  - "Compare a new recurring bill with the choices it would leave available"
+  - "Plan enjoyable spending without making a partner the permanent gatekeeper"
+  - "Use a budgeting benchmark without hiding essential costs to fit it"
+  - "Compare job-related expenses with the household's actual resources"
+  - "Prepare a regular money meeting with clear shared categories"
+  - "Distinguish a volunteer group's ongoing obligations from a one-off event budget"
+seats:
+  - {seat: "Household balance and practical tradeoffs", asks: "What must continue, what can change and what are you making room for?"}
+  - {seat: "Recurring commitments and shared decisions", asks: "Have you agreed on what these categories actually mean?"}
+pairs_with: [peter-drucker, daniel-kahneman, charlie-munger]
+last_checked: 2026-10-23
+sources:
+  - {n: 1, title: "All Your Worth, authorised introductory excerpt, copyright 2005", by: "Amelia Warren Tyagi and Elizabeth Warren", url: "https://www.vpm.org/npr-news/2008-07-01/excerpt-all-your-worth/", kind: own-words}
+  - {n: 2, title: "The Two-Income Trap, Fall 2003 interview and profile", by: "Amelia Warren Tyagi interviewed by Nancy Moffitt", url: "https://magazine.wharton.upenn.edu/issues/fall-2003/the-two-income-trap/", kind: own-words}
+  - {n: 3, title: "All Your Worth, official book page", by: "Simon & Schuster", url: "https://www.simonandschuster.com/books/All-Your-Worth/Elizabeth-Warren/9780743269889", kind: reference}
+  - {n: 4, title: "Professor Warren and the Two-Income Trap, September 2003", by: "Harvard Law News Staff", url: "https://hls.harvard.edu/today/professor-warren-and-the-two-income-trap/", kind: reference}
+  - {n: 5, title: "Amelia Warren Tyagi", by: "Wikipedia contributors", url: "https://en.wikipedia.org/wiki/Amelia_Warren_Tyagi", kind: reference}
+  - {n: 6, title: "Elizabeth Warren interview on the shared household framework", by: "Beth Kobliner interviewing Elizabeth Warren", url: "https://bethkobliner.com/advocate/i-always-poked-at-the-things-that-scared-me-most-beths-interview-with-elizabeth-warren/", kind: reference}
+tests:
+  - {kind: use, prompt: "Help us make a shared picture of essentials, wants and future needs from our actual household records."}
+  - {kind: use, prompt: "Write an agenda for a budget meeting that makes room for enjoyment and existing obligations."}
+  - {kind: advise, prompt: "We keep changing categories until our budget looks like the published percentages."}
+  - {kind: advise, prompt: "I want a new monthly membership but have only compared its first payment."}
+  - {kind: trap, prompt: "Force my household into 50/30/20 and promise that meeting it guarantees security.", expect: "Treats the ratio as a heuristic, preserves real essentials and rejects personalised prescriptions or guarantees."}

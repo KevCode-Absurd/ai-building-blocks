@@ -1,0 +1,27 @@
+thinking: medium
+thinking_why: It follows a process checklist and ties each step to your records.
+new_slug: business-data-move-runbook
+name: Business data move runbook
+summary: Plan a business data move with field maps, test imports, final switch checks and a recovery plan.
+job: work-with-files
+headline: Business data move runbook
+subhead: Share the old and new tools, records and deadline. It plans a test move and the final switch, then checks how to keep new work if you move back. Get a runbook, checks and a recovery plan.
+explain: Share the old and new tools, records and deadline. It plans a test move and the final switch, then checks how to keep new work if you move back. Get a runbook, checks and a recovery plan.
+you_give:
+  - Source and target tools, record types and counts.
+  - Field details, business timing, test results and responsible owners.
+you_get:
+  - A phased data-move runbook and field map.
+  - Checks for test imports, record links and totals.
+  - A recovery plan that keeps and checks new work before moving back.
+how_it_works:
+  - title: Step 1
+    text: Map source fields to the target and keep a full backup.
+  - title: Step 2
+    text: Plan a small test move, then check counts, samples and relationships.
+  - title: Plan the switch and recovery
+    text: Set switch checks and recovery triggers. Keep new records, edits and deletions, then reconcile them before reopening the old tool.
+how_to_use:
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.
+  - It works best when your AI can read your supplied records; changing live systems needs separate access and approval.

@@ -2,7 +2,7 @@ slug: windsurf
 name: Windsurf
 maker: Cognition
 url: https://windsurf.com
-promise: A code editor with an AI agent that edits code across your project.
+promise: "Write and change project code with an AI agent inside your editor."
 use_cases: [code, build-apps]
 categories: [coding]
 what_it_does:
@@ -21,7 +21,7 @@ best_for:
   - Teams that need admin and billing controls on a paid plan.
 not_for:
   - Anyone who wants an app with no code visible (try Lovable or Bolt).
-  - Anyone who needs stable plan names, since Windsurf moved under Cognition and its pricing page now redirects.
+  - "Buyers who need stable, published plans before choosing a paid editor."
 pricing:
   model: freemium
   from: US$20 per month
@@ -35,7 +35,6 @@ runs_in: [desktop, web]
 blocks:
   - agent-context-setter
   - mcp-config-version-checker
-  - docker-setup-builder
   - react-app-structure-planner
 alternatives: [cursor, claude-code, github-copilot, codex]
 last_checked: 2026-10-21

@@ -2,18 +2,18 @@ slug: stable-diffusion
 name: Stable Diffusion
 maker: Stability AI
 url: https://stability.ai
-promise: Images made from text, on your own computer or through an API.
+promise: "Create and edit images locally or connect the model to your own app."
 use_cases: [make-images]
 categories: [image]
 what_it_does:
   - Makes images from a written description.
-  - Edits images, with erase, fill-in, outpaint and background removal.
+  - "Removes parts of images, fills gaps, extends edges and removes backgrounds."
   - Makes small images bigger and sharper.
   - Follows a sketch or a layout you give it.
   - Offers model files you can download and run yourself.
 benefits:
-  - Make images in bulk at a few cents each.
-  - Run the model on your own computer if your files must stay private.
+  - "Make batches of images using a setup you control."
+  - "Run the model locally when your setup must keep files on your computer."
   - Build image steps into your own app or workflow.
 best_for:
   - Developers and technical teams that want control over the model.

@@ -1,3 +1,7 @@
+import { SharingSettings } from "./SharingSettings";
+import { hasAccount } from "../lib/library-storage";
+import { legacySpaceKey } from "../lib/space";
+import { LINK_ACCESS, type AccessPolicy } from "../server/space-access";
 // Spaces on the site: /space (your own), /s/<link> (a space someone shared with you) and /people (public items).
 // Data lives on the server (src/server/spaces.ts); this browser keeps only the owner key (src/lib/space.ts).
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
@@ -145,27 +149,27 @@ function AddForm({ onAdd }: { onAdd: (items: NewItem[]) => Promise<void> }) {
   );
 }
 
-function MakeSpace({ toast }: { toast: Toast }) {
+function MakeSpace({ toast, onMade }: { toast: Toast; onMade?: () => void }) {
   const [name, setName] = useState("");
   const [busy, setBusy] = useState(false);
   const [paste, setPaste] = useState("");
   const make = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
     setBusy(true);
-    try { const r = await spaces.make(name.trim() || "My space"); setSpaceKey(r.ownerKey); toast("Your space is ready"); }
+    try { const r = await spaces.make(name.trim() || "My space"); if (!hasAccount()) setSpaceKey(r.ownerKey); onMade?.(); toast("Your space is ready"); }
     catch (err) { toast(errText(err)); }
     finally { setBusy(false); }
   };
   const open = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
     const k = decodeURIComponent((/key=([^&\s]+)/.exec(paste)?.[1] ?? paste).trim());
-    try { await spaces.mine(k); setSpaceKey(k); toast("Space opened"); } catch (err) { toast(errText(err)); }
+    try { if (hasAccount()) await spaces.claim(k); else await spaces.mine(k); setSpaceKey(k); onMade?.(); toast("Space opened"); } catch (err) { toast(errText(err)); }
   };
   return (
     <div className="sp-start">
       <form className="sp-card" onSubmit={make} data-testid="make-space">
         <h2 className="bp-h2">Make your space</h2>
-        <p className="small">It's free, and it takes one click. No account or email needed yet.</p>
+        <p className="small">Sign in above to keep ownership across devices and restrict team access. Guest spaces need a private recovery link.</p>
         <label className="sp-field"><span>Name it</span><input value={name} onInput={(e) => setName(e.currentTarget.value)} maxLength={60} placeholder="Sam's marketing team" data-testid="space-name" /></label>
         <p><button className="btn btn-primary" disabled={busy} data-testid="make-space-go">{busy ? "Making it…" : "Make my space"} <ArrowIcon /></button></p>
       </form>
@@ -200,8 +204,9 @@ function BringIn({ items, onAdd }: { items: Item[]; onAdd: (items: NewItem[]) =>
 }
 
 function MySpace({ c, toast }: { c: Catalogue | null; toast: Toast }) {
-  const k = useSpaceKey();
-  const [state, setState] = useState<{ status: "loading" | "ready" | "off" | "error"; name: string; share: string; items: Item[]; message?: string }>({ status: "loading", name: "", share: "", items: [] });
+  const browserKey = useSpaceKey();
+  const k = hasAccount() ? "account" : browserKey;
+  const [state, setState] = useState<{ status: "loading" | "ready" | "off" | "error" | "empty"; access?: AccessPolicy; name: string; share: string; items: Item[]; message?: string }>({ status: "loading", name: "", share: "", items: [] });
   // A "use on another device" link: take the key from after the #, then clear it from the address bar.
   useEffect(() => {
     const m = /key=([^&]+)/.exec(location.hash);
@@ -209,8 +214,8 @@ function MySpace({ c, toast }: { c: Catalogue | null; toast: Toast }) {
   }, []);
   const load = useCallback(async () => {
     if (!spaceKey()) return;
-    try { const r = await spaces.mine(); setState({ status: "ready", name: r.space.name, share: r.shareToken, items: r.items }); }
-    catch (e) { setState({ status: e instanceof SpaceError && (e.status === 503 || e.status === 404) ? "off" : "error", name: "", share: "", items: [], message: errText(e) }); }
+    try { const r = await spaces.mine(); setState({ status: "ready", name: r.space.name, share: r.shareToken, access: r.access, items: r.items }); }
+    catch (e) { setState({ status: hasAccount() && e instanceof SpaceError && e.status === 404 ? "empty" : e instanceof SpaceError && (e.status === 503 || e.status === 404) ? "off" : "error", name: "", share: "", items: [], message: errText(e) }); }
   }, []);
   useEffect(() => { load(); }, [k, load]);
   useTitle(state.name || "My space");
@@ -231,15 +236,15 @@ function MySpace({ c, toast }: { c: Catalogue | null; toast: Toast }) {
     try { await spaces.newLink(); toast("New link made. The old one no longer works."); load(); } catch (e) { toast(errText(e)); }
   };
 
-  if (!k) {
+  if (!k || state.status === "empty") {
     return (
       <main className="bp sp" data-testid="space-page">
         <header className="wrap bp-hero">
           <p className="bp-kicker"><span className="kind">My space</span>Free</p>
           <h1 className="bp-h1">Keep your skills and workflows in one place, and share them with your team</h1>
-          <p className="bp-sub">Save your own skills, prompts, workflows, kits and agents. Anyone with your share link can read every item in the space, including items marked private. Make an item public when you want everyone to find it.</p>
+          <p className="bp-sub">Save your own skills, prompts, workflows, kits and agents. Sign in to save your space to your account. Choose invited email addresses or a company email domain before sharing. Make an item public only when you want everyone to find it.</p>
         </header>
-        <div className="wrap ap-body"><MakeSpace toast={toast} /></div>
+        <div className="wrap ap-body">{hasAccount() && legacySpaceKey() && <p><button className="btn btn-dark" onClick={async () => { try { await spaces.claim(); await load(); } catch (e) { toast(errText(e)); } }}>Link my existing browser space to this account</button></p>}<MakeSpace toast={toast} onMade={load} /></div>
       </main>
     );
   }
@@ -263,7 +268,7 @@ function MySpace({ c, toast }: { c: Catalogue | null; toast: Toast }) {
             <section className="sp-share" aria-label="Share your space" data-testid="share-box">
               <div>
                 <h2 className="bp-h2">Share with your team</h2>
-                <p className="small">Anyone with this link sees everything in your space, private items too, and can save copies to their own space. They can't change yours. Team sign-in with roles comes later.</p>
+                <p className="small">Choose who can open this link below. Allowed people can read and copy items; they cannot edit your space.</p>
               </div>
               <div className="sp-link">
                 <input readOnly value={shareLink(state.share)} aria-label="Share link" data-testid="share-link" onFocus={(e) => e.currentTarget.select()} />
@@ -272,24 +277,26 @@ function MySpace({ c, toast }: { c: Catalogue | null; toast: Toast }) {
               </div>
             </section>
 
+            <SharingSettings key={JSON.stringify(state.access)} access={state.access ?? LINK_ACCESS} onSaved={() => { toast("Workspace access saved"); void load(); }} />
+
             <Section id="add" title="Add to your space" wide>
               <AddForm onAdd={add} />
               <BringIn items={state.items} onAdd={add} />
             </Section>
 
-            <Section id="items" title="In your space" lead={state.items.length ? "Private items are seen only through your link. Public ones also show on From people." : undefined} wide>
+            <Section id="items" title="In your space" lead={state.items.length ? "Private items follow your workspace access settings. Public ones also show on From people." : undefined} wide>
               {state.items.length === 0 && <div className="empty"><h3 className="h3">Nothing here yet</h3><p>Add a skill above, or save a workflow from the builder.</p></div>}
               <Grouped items={state.items} render={(i) => <ItemCard key={i.id} item={i} c={c} toast={toast} owner onChange={(p) => change(i.id, p)} onDelete={() => remove(i.id)} />} />
             </Section>
 
-            <Section id="device" title="Use it on another device" lead="This link opens your space to change it. Treat it like a password: keep it to yourself.">
+            {!hasAccount() && <Section id="device" title="Use it on another device" lead="This link opens your space to change it. Treat it like a password: keep it to yourself.">
               <p><button className="btn btn-dark btn-sm" onClick={() => copy(deviceLink(spaceKey()), toast, "Copied. Open it on your other device.")} data-testid="device-copy">Copy my private link</button></p>
               <details>
                 <summary>Copy my private link manually</summary>
                 <label className="sp-field"><span>Private device link</span><input readOnly autoComplete="off" value={deviceLink(spaceKey())} onFocus={(e) => e.currentTarget.select()} data-testid="device-link" /></label>
               </details>
               <p className="small"><button className="link-btn" onClick={() => { if (confirm("Forget this space on this browser? You'll need your private link to open it again.")) setSpaceKey(""); }}>Forget it on this browser</button></p>
-            </Section>
+            </Section>}
           </>
         )}
       </div>
@@ -300,7 +307,7 @@ function MySpace({ c, toast }: { c: Catalogue | null; toast: Toast }) {
 /** Saves a copy of someone's item into your own space, if you have one. */
 function useSaveCopy(toast: Toast) {
   const k = useSpaceKey();
-  return k ? async (i: Item) => {
+  return k || hasAccount() ? async (i: Item) => {
     try { await spaces.add({ kind: i.kind, title: i.title, summary: i.summary, body: i.body, data: i.data }); toast(`Saved a copy of “${i.title}” to your space`); } catch (e) { toast(errText(e)); }
   } : undefined;
 }

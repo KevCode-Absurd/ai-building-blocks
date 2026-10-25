@@ -82,7 +82,8 @@ def scan_file(path: Path, max_bytes: int, root: Path) -> List[Dict[str, object]]
                         "pattern": kind,
                         "file": str(path.relative_to(root)),
                         "line": lineno,
-                        "snippet": line.strip()[:180],
+                        # Never echo candidate secrets into terminal or JSON reports.
+                        "snippet": "[redacted; inspect the referenced line locally]",
                     }
                 )
     return findings

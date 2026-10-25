@@ -1,0 +1,19 @@
+slug: meta-manage-ads-on-a-daily-basis-planner
+name: Daily Meta ad review planner
+summary: Review daily Meta results against local baselines. Separate urgent faults from weak signals and rank the next checks.
+category: ecommerce
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: performance_sheet
+    required: true
+outputs:
+  - type: plan
+    required: true
+uses: []
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

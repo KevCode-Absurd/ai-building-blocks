@@ -1,0 +1,28 @@
+new_slug: nonprofit-operating-budget-planner
+name: Plan a nonprofit operating budget
+summary: Build a nonprofit budget with clear funding assumptions, program costs and shared-cost splits for board review.
+job: money-and-investing
+headline: Plan a nonprofit operating budget
+subhead: Bring prior costs, grant plans and staff needs. Build the budget by program, show how shared costs split and draft the board memo.
+explain: Bring prior costs, grant plans and staff needs. Build the budget by program, show how shared costs split and draft the board memo.
+when:
+  - You want to plan a nonprofit operating budget.
+you_give:
+  - Prior actuals, expected funding and documented renewal assumptions
+  - Program plans, staffing costs and shared-cost allocation bases
+you_get:
+  - Revenue and expense budget structure with functional roll-ups
+  - Assumptions memo, board summary and variance-review plan
+how_to_use:
+  - Download the complete skill folder and add it to your AI tool, or copy the instructions into a chat.
+  - Provide the inputs listed here and ask your AI to follow the skill.
+  - Review the result and any missing facts before using it.
+how_it_works:
+  - title: Set assumptions and method
+    text: Choose incremental, zero-based or priority-based budgeting to fit the organization’s situation and document the basis.
+  - title: Build and reconcile
+    text: Tie funding to named sources, budget expenses by program and allocate shared costs using reproducible assumptions.
+  - title: Prepare approval and monitoring
+    text: Show net result and reserve impact, schedule committee and board review, and set variance explanations and amendment controls.
+thinking: medium
+thinking_why: It weighs your evidence and follows a specific method.

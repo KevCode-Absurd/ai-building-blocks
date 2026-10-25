@@ -1,0 +1,44 @@
+new_slug: meta-ads-30-check-account-auditor
+name: Meta Ads 30-check account auditor
+summary: Review thirty Meta Ads checks across tracking, creative, structure and audiences. Get weighted scores, data gaps and ranked fixes.
+job: check-ads
+headline: Meta Ads 30-check account auditor
+subhead: Share dated meta exports, tracking evidence, account settings and target economics. Get a thirty-check report with weighted scores and a tiered action plan.
+explain: |-
+  Review thirty Meta Ads checks across tracking, creative, structure and audiences. Get weighted scores, data gaps and ranked fixes.
+
+  Share dated meta exports, tracking evidence, account settings and target economics. Get a thirty-check report with weighted scores and a tiered action plan.
+when:
+  - You need a thirty-check report with weighted scores and a tiered action plan.
+  - You need meta ads 30-check account auditor for a specific task.
+  - You want the method's decisions and assumptions written down before acting.
+you_give:
+  - Dated Meta exports
+  - Tracking evidence
+  - Account settings and target economics
+you_get:
+  - A thirty-check report with weighted scores and a tiered action plan
+  - The sources used, missing inputs and assumptions
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Check the inputs
+    text: Confirm dated meta exports, tracking evidence, account settings and target economics. Mark facts that are missing.
+  - title: How This Works
+    text: Follow the how this works section in the full method and keep its required fields and decision rules.
+  - title: Data Collection
+    text: Follow the data collection section in the full method and keep its required fields and decision rules.
+  - title: Run The 30 Checks
+    text: Follow the run the 30 checks section in the full method and keep its required fields and decision rules.
+  - title: Calculate The Score
+    text: Follow the calculate the score section in the full method and keep its required fields and decision rules.
+  - title: Deliver The Audit Report
+    text: Follow the deliver the audit report section in the full method and keep its required fields and decision rules.
+  - title: IMPORTANT RULES
+    text: Follow the important rules section in the full method and keep its required fields and decision rules.
+  - title: Review the result
+    text: Return a thirty-check report with weighted scores and a tiered action plan. Check facts, math and the decisions before any action.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

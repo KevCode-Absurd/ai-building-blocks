@@ -1,0 +1,37 @@
+slug: circuit-design-verification-planner
+name: Check a circuit and its evidence
+summary: Check a circuit with part limits, worst-case math and a staged test plan. Keep predicted and measured results separate.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: true
+outputs:
+  - type: audit_report
+    required: true
+  - type: plan
+    required: true
+uses: []
+origin: imported
+source:
+  by: magnus919
+  repo: magnus919/agent-skills
+  path: electronics
+  url: https://github.com/magnus919/agent-skills/tree/92c327e525da69c9ad3812fd223a1770e977c2e3/electronics
+  licence: MIT
+  licence_file: LICENSE.md
+  commit: 92c327e525da69c9ad3812fd223a1770e977c2e3
+  original_name: electronics
+  imported: 2026-10-24
+version: 1.0.0
+credits:
+  - title: electronics skill
+    by: magnus919
+    url: https://github.com/magnus919/agent-skills/tree/92c327e525da69c9ad3812fd223a1770e977c2e3/electronics
+    used: Original instructions and supporting files, with attribution and the MIT licence. Display copy describes the task.

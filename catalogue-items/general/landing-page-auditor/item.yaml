@@ -1,37 +1,69 @@
 slug: landing-page-auditor
 renamed_from: fix-page-in-order-buyers-read-it
-name: "Landing page auditor"
-summary: "Paste your page and attach screenshots. Get ranked fixes, quick wins first, and a score out of 100."
+name: Landing page conversion review
+summary: Share your page and screenshots. Get conversion problems ranked by impact, with recommended fixes and a score.
 category: general
-boards: [ecommerce]
+boards:
+  - ecommerce
 type: skill
 role: check
 job: page
 level: intermediate
 inputs:
-  - {type: landing_page, required: true}
-  - {type: brand_brain, required: false}
+  - type: landing_page
+    required: true
+  - type: brand_brain
+    required: false
 outputs:
-  - {type: audit_report}
+  - type: audit_report
+    required: true
 uses: []
 origin: rebuilt
-source_ids: [CES-028]
-version: 2.0.0
-minds: [jakob-nielsen]
+source_ids:
+  - CES-028
+version: 2.1.0
+minds:
+  - jakob-nielsen
 credits:
-  - {title: "Scrolling and Attention", by: "Therese Fessenden, Nielsen Norman Group", url: "https://www.nngroup.com/articles/scrolling-and-attention/", used: "Most viewing time goes to the first screens, so position weights each finding"}
-  - {title: "F-Shaped Pattern of Reading on the Web", by: "Kara Pernice, Nielsen Norman Group", url: "https://www.nngroup.com/articles/f-shaped-pattern-reading-web-content/", used: "Scanning, skimming and full-reading modes behind the three reads"}
-  - {title: "Information Scent", by: "Raluca Budiu, Nielsen Norman Group", url: "https://www.nngroup.com/articles/information-scent/", used: "The ad-to-page match check"}
-  - {title: "Severity Ratings for Usability Problems", by: "Jakob Nielsen, Nielsen Norman Group", url: "https://www.nngroup.com/articles/how-to-rate-the-severity-of-usability-problems/", used: "The 0 to 4 severity scale and its three factors"}
-  - {title: "Five-Second Testing", by: "Lyssna", url: "https://www.lyssna.com/guides/five-second-testing/", used: "The glance read and its questions"}
-  - {title: "Cart Abandonment Rate Statistics", by: "Baymard Institute", url: "https://baymard.com/lists/cart-abandonment-rate", used: "Why shoppers leave at checkout, as the doubt-read checklist"}
-  - {title: "Web Vitals", by: "Google, web.dev", url: "https://web.dev/articles/vitals", used: "The published 'good' speed thresholds"}
-  - {title: "Guides Against Deceptive Pricing, 16 CFR Part 233", by: "US Federal Trade Commission", url: "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-B/part-233", used: "When a 'was' price is honest"}
-  - {title: "Directive 2011/83/EU on consumer rights", by: "European Union", url: "https://eur-lex.europa.eu/eli/dir/2011/83/oj", used: "Pre-ticked extra charges are not consent"}
-  - {title: "A/B Test Sample Size Calculator", by: "Evan Miller", url: "https://www.evanmiller.org/ab-testing/sample-size.html", used: "Work out the sample before suggesting a test"}
-tested:
-  on: 2026-10-20
-  business: sprout
-  model: claude-opus-5-5
-  judge: claude-fable-5-1
-  result: pass
+  - title: Scrolling and Attention
+    by: Therese Fessenden, Nielsen Norman Group
+    url: https://www.nngroup.com/articles/scrolling-and-attention/
+    used: Most viewing time goes to the first screens, so position weights each finding
+  - title: F-Shaped Pattern of Reading on the Web
+    by: Kara Pernice, Nielsen Norman Group
+    url: https://www.nngroup.com/articles/f-shaped-pattern-reading-web-content/
+    used: Scanning, skimming and full-reading modes behind the three reads
+  - title: Information Scent
+    by: Raluca Budiu, Nielsen Norman Group
+    url: https://www.nngroup.com/articles/information-scent/
+    used: The ad-to-page match check
+  - title: Severity Ratings for Usability Problems
+    by: Jakob Nielsen, Nielsen Norman Group
+    url: https://www.nngroup.com/articles/how-to-rate-the-severity-of-usability-problems/
+    used: The 0 to 4 severity scale and its three factors
+  - title: Five-Second Testing
+    by: Lyssna
+    url: https://www.lyssna.com/guides/five-second-testing/
+    used: The glance read and its questions
+  - title: Cart Abandonment Rate Statistics
+    by: Baymard Institute
+    url: https://baymard.com/lists/cart-abandonment-rate
+    used: Why shoppers leave at checkout, as the doubt-read checklist
+  - title: Web Vitals
+    by: Google, web.dev
+    url: https://web.dev/articles/vitals
+    used: The published 'good' speed thresholds
+  - title: Guides Against Deceptive Pricing, 16 CFR Part 233
+    by: US Federal Trade Commission
+    url: https://www.ecfr.gov/current/title-16/chapter-I/subchapter-B/part-233
+    used: When a 'was' price is honest
+  - title: Directive 2011/83/EU on consumer rights
+    by: European Union
+    url: https://eur-lex.europa.eu/eli/dir/2011/83/oj
+    used: Pre-ticked extra charges are not consent
+  - title: A/B Test Sample Size Calculator
+    by: Evan Miller
+    url: https://www.evanmiller.org/ab-testing/sample-size.html
+    used: Work out the sample before suggesting a test
+package_files: all
+example_pending: true

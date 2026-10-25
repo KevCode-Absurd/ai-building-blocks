@@ -1,0 +1,19 @@
+slug: meta-setup-of-new-ad-campaigns-with-new-creatives-planner
+name: Meta creative test campaign planner
+summary: Plan a new Meta creative test with clear ad groups, a spend limit, evidence needs and review points.
+category: ecommerce
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: performance_sheet
+    required: true
+outputs:
+  - type: plan
+    required: true
+uses: []
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

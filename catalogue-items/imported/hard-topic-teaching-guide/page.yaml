@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It must name real misconceptions and match examples to them.
 new_slug: hard-topic-teaching-guide
 name: Hard topic teaching guide
-summary: Name a topic you find hard to teach. Get common learner mistakes and the examples that clear them up.
+summary: Name a topic you find hard to teach. Get common learner mistakes and
+  the examples that clear them up.
 job: teach-and-train
 headline: Hard topic teaching guide
-subhead: Name the topic, the age group and your background with it. It maps the mistakes learners commonly make and why they make them. You get that list, the best examples and analogies, a read on your likely gaps and questions to check understanding mid-lesson.
+subhead: Name the topic, the age group and your background with it. It maps the
+  mistakes learners commonly make and why they make them. You get that list, the
+  best examples and analogies, a read on your likely gaps and questions to check
+  understanding mid-lesson.
 explain: |
   A topic guide for the lesson you feel least ready to teach. Knowing a subject is one thing. Knowing where learners get stuck, and which example clears it up, is another skill, and it is the one this guide builds.
 
@@ -14,7 +18,8 @@ when:
   - You are teaching a topic outside your main subject and feel unsure.
   - Students keep making the same mistake and you are not sure how to fix it.
   - You want better examples for a concept that never lands.
-  - You are preparing a new unit and want to plan for confusion before it happens.
+  - You are preparing a new unit and want to plan for confusion before it
+    happens.
 you_give:
   - The topic or unit you will teach
   - The age group or year
@@ -27,5 +32,7 @@ you_get:
   - A read on your likely strengths and gaps
   - Questions to check understanding mid-lesson
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.

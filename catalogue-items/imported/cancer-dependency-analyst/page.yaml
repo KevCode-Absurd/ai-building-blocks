@@ -2,17 +2,22 @@ thinking: medium
 thinking_why: It joins several large tables and reads them with care.
 new_slug: cancer-dependency-analyst
 name: Cancer dependency analyst
-summary: Name a gene or cell line. Get which cancers depend on it and which drugs hit them.
+summary: Name a gene or cell line. Get which cancers depend on it and which
+  drugs hit them.
 job: research-topics
 headline: Cancer dependency analyst
-subhead: Name a gene or cell line and, if you like, a cancer type to compare. It pulls the latest DepMap release, the public map of gene knockout screens in cancer cells, and runs the statistics. You get ranked gene dependencies, cell line group comparisons, genes that behave alike and drug response links.
+subhead: Name a gene or cell line and, if you like, a cancer type to compare. It
+  pulls the latest DepMap release, the public map of gene knockout screens in
+  cancer cells, and runs the statistics. You get ranked gene dependencies, cell
+  line group comparisons, genes that behave alike and drug response links.
 explain: |
   Name a gene or cell line and see which cancers need it to survive and which drugs hit them. The skill works from DepMap, the public map of gene knockout screens in cancer cells, and gives you ranked lists you can take to the lab as ideas to test.
 
   It finds the latest data release first and checks which files are really available, since some links are blank. Then it ranks dependencies, compares groups defined before you look, checks genes that rise and fall together, and links them to drug response data. It is careful to say that results suggest targets and do not prove a drug works. You need data downloads and a way to run code.
 when:
   - You study a gene and want to know which cancer types rely on it.
-  - You need to pick cell lines for an experiment and want the ones most sensitive to a knockout.
+  - You need to pick cell lines for an experiment and want the ones most
+    sensitive to a knockout.
   - You are looking for drugs that match a known weakness in a tumour group.
   - You want to check if two genes share a dependency.
 you_give:
@@ -26,6 +31,8 @@ you_get:
   - Related genes that behave alike
   - Drug response links with clear limits on what they mean
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
   - It works best when your AI can run Python code and download public data.

@@ -1,0 +1,19 @@
+slug: set-up-redis-bullmq-job-queue-builder-prompt
+name: Redis + BullMQ Job Queue coding prompt
+summary: Get a coding brief for a Redis and BullMQ job queue, with scoped jobs, retries and failed-job handling.
+category: general
+type: prompt
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+    required: true
+uses: []
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

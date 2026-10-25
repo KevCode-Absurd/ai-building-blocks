@@ -2,10 +2,14 @@ thinking: high
 thinking_why: It chains diagnosis, operations and pricing and needs your numbers.
 new_slug: business-turnaround-guide
 name: Stalled business turnaround guide
-summary: Describe your stalled business. Get a diagnosis, a weekly rhythm and offers repriced to real value.
+summary: Describe your stalled business. Get a diagnosis, a weekly rhythm and
+  offers repriced to real value.
 job: plan-strategy
 headline: Stalled business turnaround guide
-subhead: Describe a business that has stopped growing, your team and your numbers. It works through eight layers in order, from strategy to pricing, asking you to decide at each step. You get a written diagnosis, a strategy note for your team, a weekly operating rhythm and repriced offers.
+subhead: Describe a business that has stopped growing, your team and your
+  numbers. It works through eight layers in order, from strategy to pricing,
+  asking you to decide at each step. You get a written diagnosis, a strategy
+  note for your team, a weekly operating rhythm and repriced offers.
 explain: |
   A business that has stopped growing gets a diagnosis first and a plan second. You work through eight layers in order: strategy, weekly execution, management, structure, motivation, metrics, margin and pricing. Each step asks you to decide something, and your choices are saved in a docs folder so you can stop and pick up later.
 
@@ -26,5 +30,7 @@ you_get:
   - A weekly operating rhythm
   - Repriced offers tied to real value
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.

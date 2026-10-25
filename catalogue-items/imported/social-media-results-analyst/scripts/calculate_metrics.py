@@ -18,6 +18,7 @@ class SocialMediaMetricsCalculator:
             campaign_data: Dictionary containing platform, posts, and cost data
         """
         self.platform = campaign_data.get('platform', 'unknown')
+        self.campaign_data = campaign_data
         self.posts = campaign_data.get('posts', [])
         self.total_spend = campaign_data.get('total_spend', 0)
         self.metrics = {}
@@ -68,11 +69,12 @@ class SocialMediaMetricsCalculator:
         total_likes = sum(post.get('likes', 0) for post in self.posts)
         total_comments = sum(post.get('comments', 0) for post in self.posts)
         total_shares = sum(post.get('shares', 0) for post in self.posts)
+        total_saves = sum(post.get('saves', 0) for post in self.posts)
         total_reach = sum(post.get('reach', 0) for post in self.posts)
         total_impressions = sum(post.get('impressions', 0) for post in self.posts)
         total_clicks = sum(post.get('clicks', 0) for post in self.posts)
 
-        total_engagements = total_likes + total_comments + total_shares
+        total_engagements = total_likes + total_comments + total_shares + total_saves
 
         return {
             'platform': self.platform,
@@ -85,8 +87,8 @@ class SocialMediaMetricsCalculator:
             'ctr': self.calculate_ctr(total_clicks, total_impressions)
         }
 
-    def calculate_roi_metrics(self) -> Dict[str, float]:
-        """Calculate ROI and cost efficiency metrics."""
+    def calculate_roi_metrics(self) -> Dict[str, Any]:
+        """Calculate engagement costs and financial ROI only from attributed revenue."""
         campaign_metrics = self.calculate_campaign_metrics()
 
         total_engagements = campaign_metrics['total_engagements']
@@ -95,17 +97,33 @@ class SocialMediaMetricsCalculator:
         cost_per_engagement = self.safe_divide(self.total_spend, total_engagements)
         cost_per_click = self.safe_divide(self.total_spend, total_clicks)
 
-        # Assuming average value per engagement (can be customized)
-        avg_value_per_engagement = 2.50  # Example: $2.50 value per engagement
-        total_value = total_engagements * avg_value_per_engagement
-        roi_percentage = self.safe_divide(total_value - self.total_spend, self.total_spend) * 100
+        raw_revenue = self.campaign_data.get('attributed_revenue')
+        try:
+            attributed_revenue = float(raw_revenue) if raw_revenue is not None else None
+        except (TypeError, ValueError):
+            attributed_revenue = None
+        if attributed_revenue is not None and attributed_revenue < 0:
+            attributed_revenue = None
+        financial_roi = None
+        roas = None
+        attribution_method = self.campaign_data.get('attribution_method')
+        attribution_window = self.campaign_data.get('attribution_window')
+        has_attribution_basis = bool(attribution_method and attribution_window)
+        if attributed_revenue is not None and self.total_spend > 0 and has_attribution_basis:
+            financial_roi = self.safe_divide(attributed_revenue - self.total_spend, self.total_spend) * 100
+            roas = self.safe_divide(attributed_revenue, self.total_spend)
 
         return {
             'total_spend': round(self.total_spend, 2),
             'cost_per_engagement': round(cost_per_engagement, 2),
             'cost_per_click': round(cost_per_click, 2),
-            'estimated_value': round(total_value, 2),
-            'roi_percentage': round(roi_percentage, 2)
+            'attributed_revenue': round(attributed_revenue, 2) if attributed_revenue is not None else None,
+            'roas': round(roas, 2) if roas is not None else None,
+            'financial_roi_percentage': round(financial_roi, 2) if financial_roi is not None else None,
+            'roi_basis': {
+                'method': attribution_method,
+                'window': attribution_window
+            } if financial_roi is not None else None
         }
 
     def identify_top_posts(self, metric: str = 'engagement_rate', limit: int = 5) -> List[Dict[str, Any]]:

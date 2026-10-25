@@ -2,10 +2,14 @@ thinking: low
 thinking_why: The messages follow set patterns and a kind, clear tone.
 new_slug: candidate-message-drafter
 name: Candidate message drafter
-summary: Say where the candidate is in your process. Get an email draft with one clear next step.
+summary: Say where the candidate is in your process. Get an email draft with one
+  clear next step.
 job: hire-people
 headline: Candidate message drafter
-subhead: "Say who the candidate is, which role, where they are in your process and what happens next. It drafts the message for that moment: a screening invite, an update between rounds, an offer or a rejection. You get the email draft, one clear call to action and a suggested send time."
+subhead: "Say who the candidate is, which role, where they are in your process
+  and what happens next. It drafts the message for that moment: a screening
+  invite, an update between rounds, an offer or a rejection. You get the email
+  draft, one clear call to action and a suggested send time."
 explain: |
   The right message for a candidate, at the right moment, ready for you to send. Say where the person is in your process, such as screening invite, post-interview update, offer or rejection, and you get an email draft with a clear next step.
 
@@ -26,5 +30,7 @@ you_get:
   - A suggested send time
   - Short alternative wording for tone
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.

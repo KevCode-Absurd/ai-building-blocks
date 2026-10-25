@@ -1,0 +1,45 @@
+new_slug: funnel-stage-creative-brief-builder
+name: Funnel-stage creative brief builder
+summary: Turn buyer and product facts into five ad angles and full production briefs for the right funnel stage.
+job: plan-ad-tests
+headline: Funnel-stage creative brief builder
+subhead: Share brand profile, buyer, offer, evidence and production limits. Get ranked ad concepts and full hook, body, visual and cta briefs.
+explain: |-
+  Turn buyer and product facts into five ad angles and full production briefs for the right funnel stage.
+
+  Share brand profile, buyer, offer, evidence and production limits. Get ranked ad concepts and full hook, body, visual and cta briefs.
+when:
+  - You need ranked ad concepts and full hook, body, visual and CTA briefs.
+  - You need funnel-stage creative brief builder for a specific task.
+  - You want the method's decisions and assumptions written down before acting.
+you_give:
+  - Brand profile
+  - Buyer
+  - Offer
+  - Evidence and production limits
+you_get:
+  - Ranked ad concepts and full hook, body, visual and CTA briefs
+  - The sources used, missing inputs and assumptions
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Check the inputs
+    text: Confirm brand profile, buyer, offer, evidence and production limits. Mark facts that are missing.
+  - title: How This Works
+    text: Follow the how this works section in the full method and keep its required fields and decision rules.
+  - title: Collect Inputs
+    text: Follow the collect inputs section in the full method and keep its required fields and decision rules.
+  - title: Brand Intelligence
+    text: Follow the brand intelligence section in the full method and keep its required fields and decision rules.
+  - title: Generate 5 Messaging Angles
+    text: Follow the generate 5 messaging angles section in the full method and keep its required fields and decision rules.
+  - title: Funnel Adaptations
+    text: Follow the funnel adaptations section in the full method and keep its required fields and decision rules.
+  - title: Generate 10-15 Ad Concepts
+    text: Follow the generate 10-15 ad concepts section in the full method and keep its required fields and decision rules.
+  - title: Review the result
+    text: Return ranked ad concepts and full hook, body, visual and cta briefs. Check facts, math and the decisions before any action.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

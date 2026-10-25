@@ -1,0 +1,35 @@
+slug: gorgias-ticket-tag-planner
+name: Gorgias ticket tag planner
+summary: Share a ticket or queue. Get suggested tags, confidence levels, and reasons before changes.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: tool_connection
+    required: true
+outputs:
+  - type: audit_report
+    required: true
+uses: []
+origin: imported
+source:
+  by: Composio
+  repo: composio-community/support-skills
+  path: auto-tag
+  url: https://github.com/composio-community/support-skills/tree/83382c4b055fc4e5b055044adb5bfb7585484c9a/auto-tag
+  licence: MIT
+  licence_file: README.md
+  commit: 83382c4b055fc4e5b055044adb5bfb7585484c9a
+  original_name: auto-tag
+  imported: 2026-10-23
+version: 1.0.0
+credits:
+  - title: auto-tag skill
+    by: Composio
+    url: https://github.com/composio-community/support-skills/tree/83382c4b055fc4e5b055044adb5bfb7585484c9a/auto-tag
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

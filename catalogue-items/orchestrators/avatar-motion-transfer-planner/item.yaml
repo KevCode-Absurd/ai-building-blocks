@@ -1,0 +1,26 @@
+slug: avatar-motion-transfer-planner
+name: Avatar motion transfer planner
+summary: Share an approved avatar and owned performance clip. Get a motion-transfer plan, reference roles and checks for the result.
+category: orchestrator
+type: workflow
+role: orchestrate
+job: video
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: footage
+    required: false
+  - type: avatar_sheet
+    required: false
+outputs:
+  - type: plan
+    required: true
+  - type: video_prompt
+    required: true
+uses: []
+execution: coordinator
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

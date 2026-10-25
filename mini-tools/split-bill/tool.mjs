@@ -1,11 +1,11 @@
 // Original tool. All numbers shown are illustrative figures, not a real person’s results.
 export default {
   "slug": "split-bill",
-  "name": "Split a shared bill with tip and charges",
-  "short": "Split a bill",
-  "headline": "Split a shared bill with tip and charges",
-  "summary": "Enter the bill, extra charges, tip and people. Get an equal per-person share and a rounded collection total.",
-  "question": "Split a shared bill with tip and charges?",
+  "name": "Shared bill splitter",
+  "short": "Shared bill splitter",
+  "headline": "Shared bill splitter",
+  "summary": "Enter the bill, extra charges, tip and people. Get an equal share per person and a rounded collection total.",
+  "question": "What should each person pay when we split this bill equally?",
   "category": "finance",
   "shelf": [
     "general"

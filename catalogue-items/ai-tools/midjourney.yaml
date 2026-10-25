@@ -2,7 +2,7 @@ slug: midjourney
 name: Midjourney
 maker: Midjourney
 url: https://www.midjourney.com
-promise: Striking, artistic images from a written description, in a web app.
+promise: "Create artistic images, explore visual ideas and reuse a chosen style."
 use_cases: [make-images]
 categories: [image]
 what_it_does:
@@ -13,7 +13,7 @@ what_it_does:
   - Keeps your images in a gallery you can search.
 benefits:
   - Find a visual direction for a campaign before you brief a designer.
-  - Get mood boards and concept art in minutes.
+  - "Explore mood boards and concept art before choosing a direction."
   - Reuse one saved style so a batch of images feels like one set.
 best_for:
   - Mood boards, concept art and eye-catching social images.

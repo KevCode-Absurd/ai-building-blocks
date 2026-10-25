@@ -1,0 +1,19 @@
+slug: reusable-skill-requirements-planner-builder-prompt
+name: Reusable skill brief coding prompt
+summary: Get a coding brief that turns a task into a reusable skill, with inputs, steps, output rules and checks.
+category: general
+type: prompt
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+    required: true
+uses: []
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

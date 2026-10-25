@@ -1,0 +1,30 @@
+thinking: high
+thinking_why: It weighs real records, missing facts, and choices that affect people or funding.
+new_slug: nonprofit-donor-relationship-planner
+name: Nonprofit donor relationship planner
+summary: Share donor records and your goal. Get clear stages, next steps, owners, and review dates.
+job: organise-work
+headline: Nonprofit donor relationship planner
+subhead: Share your donor records, fundraising goal, and team capacity. It places each prospect at a clear stage and checks for stalled relationships. You get a stage guide, next-step plans, owners, review dates, and a view of where progress slows.
+when:
+  - You need this task done for a nonprofit, community program, or donated-goods store.
+you_give:
+  - Donor records, giving history, relationship notes, fundraising goal, and available staff time.
+you_get:
+  - A donor stage guide, next-step table, and review schedule.
+how_it_works:
+  - title: Set clear stages
+    text: Define what must happen before a donor moves from a new lead to a gift and follow-up care.
+  - title: Check stalled relationships
+    text: Review records for missing next steps, unclear owners, and long gaps between contacts.
+  - title: Plan the next contact
+    text: Write each action with its purpose, owner, and date. Show stage counts and gaps against your goal.
+works_best_with:
+  tools:
+    - name: A chat AI that can read your files
+      why: The skill works from records and drafts you provide. Research tasks also need current, checked public sources.
+  inputs:
+    - Moves management runs on donor records and personal information.
+how_to_use:
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.

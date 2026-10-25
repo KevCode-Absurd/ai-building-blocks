@@ -1,0 +1,19 @@
+slug: ad-photography-style-chooser
+name: Ad photography style chooser
+summary: Compare twelve photo styles for your ad. Pick a main style, a test style and one to avoid.
+category: ecommerce
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: design_direction
+    required: true
+uses: []
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It maps steps and finds where people drop off.
 new_slug: candidate-experience-improver
 name: Candidate experience improver
-summary: Describe your hiring steps. Get a map of the candidate path, friction points and messages per stage.
+summary: Describe your hiring steps. Get a map of the candidate path, friction
+  points and messages per stage.
 job: hire-people
 headline: Candidate experience improver
-subhead: Describe your hiring steps from application to offer, the roles you hire for and any drop-off numbers. It reviews each step for how long it takes and how the candidate feels. You get a map of the candidate path, the top friction points, message drafts per stage and a short survey.
+subhead: Describe your hiring steps from application to offer, the roles you
+  hire for and any drop-off numbers. It reviews each step for how long it takes
+  and how the candidate feels. You get a map of the candidate path, the top
+  friction points, message drafts per stage and a short survey.
 explain: |
   You see exactly what candidates go through in your hiring process and where they give up. Describe your steps, and you get a map of the candidate path from first look to offer or rejection, with the friction points marked and a message for each stage.
 
@@ -26,5 +30,7 @@ you_get:
   - Message drafts for each stage
   - A short survey to measure experience
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.

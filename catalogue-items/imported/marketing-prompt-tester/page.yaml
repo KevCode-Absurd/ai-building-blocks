@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It runs set tests and compares the results.
 new_slug: marketing-prompt-tester
 name: Marketing prompt tester
-summary: Give it your prompts and test cases. Get scored comparisons of each version and a saved version history.
+summary: Give it your prompts and test cases. Get scored comparisons of each
+  version and a saved version history.
 job: set-up-ai
 headline: Marketing prompt tester
-subhead: Give it two or more versions of a prompt, a set of test cases and any words the answer must never contain. It runs every prompt on every case and scores the results. You get the scores, a named winner with evidence, a saved version history and a change log.
+subhead: Give it two or more versions of a prompt, a set of test cases and any
+  words the answer must never contain. It runs every prompt on every case and
+  scores the results. You get the scores, a named winner with evidence, a saved
+  version history and a change log.
 explain: |
   Stop picking the prompt that looked best once. Give it two or more versions of a prompt and a set of test cases, and it scores each version, then tells you which wins and why.
 
@@ -26,6 +30,8 @@ you_get:
   - A saved version history
   - A change log between versions
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
   - It works best when your AI can run code and save files.

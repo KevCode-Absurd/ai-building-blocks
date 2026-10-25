@@ -1,0 +1,30 @@
+thinking: high
+thinking_why: It weighs real records, missing facts, and choices that affect people or funding.
+new_slug: resale-store-daily-procedure-planner
+name: Resale store daily procedure planner
+summary: Share till issues and store rules. Get opening, closing, cash checks, and stock-loss procedures for review.
+job: organise-work
+headline: Resale store daily procedure planner
+subhead: Share your store setup, register records, cash issues, and approved financial rules. It maps daily tasks and checks where money or stock can go missing. You get opening and closing lists, cash-count steps, deposit checks, and loss-prevention procedures for review.
+when:
+  - You need this task done for a nonprofit, community program, or donated-goods store.
+you_give:
+  - Register setup, daily sales and cash records, store roles, approved review thresholds, and current procedures.
+you_get:
+  - Opening and closing lists, cash variance template, deposit checks, and stock-loss control steps.
+how_it_works:
+  - title: Map the daily records
+    text: Check that the register reports sales by item group and payment type. Check it supports the store's price rules.
+  - title: Write cash checks
+    text: Plan opening and closing counts by two people, variance records, deposits, and review by a separate person.
+  - title: Set store safeguards
+    text: Plan stock checks, receipts, access rules, and staff training. Keep these in line with approved store policies.
+works_best_with:
+  tools:
+    - name: A chat AI that can read your files
+      why: The skill works from records and drafts you provide. Research tasks also need current, checked public sources.
+  inputs:
+    - Cash handling, reconciliation and loss prevention are financial controls.
+how_to_use:
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.

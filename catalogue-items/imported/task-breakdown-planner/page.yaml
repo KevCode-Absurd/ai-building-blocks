@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It orders work and sets checks from a clear spec.
 new_slug: task-breakdown-planner
 name: Task breakdown planner
-summary: Give it a spec. Get small, ordered tasks, each with a clear way to check it is done.
+summary: Give it a spec. Get small, ordered tasks, each with a clear way to
+  check it is done.
 job: build-software
 headline: Task breakdown planner
-subhead: Give it the spec, and the codebase if there is one. It reads both, writes no code, and maps what depends on what before cutting the work into small ordered tasks. You get the dependency map, the task list, a done check for each task, checkpoints and risks.
+subhead: Give it the spec, and the codebase if there is one. It reads both,
+  writes no code, and maps what depends on what before cutting the work into
+  small ordered tasks. You get the dependency map, the task list, a done check
+  for each task, checkpoints and risks.
 explain: |
   A spec turned into small ordered tasks, each with a plain test for when it is done. Big vague work becomes a plan that you or an AI agent can follow one step at a time without a tangle.
 
@@ -26,5 +30,7 @@ you_get:
   - Done checks for each task
   - Checkpoints and a list of risks
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.

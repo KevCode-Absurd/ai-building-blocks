@@ -5,8 +5,8 @@ area: business
 also: [leadership, thinking]
 years: "1894–1989"
 living: false
-known_for: "Founded the company that became Panasonic in 1918, gave it a 250-year mission to make goods as plentiful as tap water, and is called the god of management in Japan."
-summary: "Run a business the way Konosuke Matsushita taught: give it a mission bigger than profit, plan in decades, keep reserves for bad times, pool everyone's wisdom and look at facts with an open mind."
+known_for: "Founded the business that became Panasonic. His recorded ideas focus on purpose, long plans, team wisdom and reserves for hard times."
+summary: "Plan a business mission or reserve using Konosuke Matsushita’s recorded ideas. Connect purpose, team input and spare resources to a clear next step."
 use_cases:
   - "Write a mission for your business that says what good it does, not only what it sells"
   - "Make a long plan in stages, and decide what this stage must achieve"
@@ -38,3 +38,4 @@ tests:
   - {kind: advise, prompt: "My business had a great year. Should I spend the extra cash on expansion or keep it?"}
   - {kind: advise, prompt: "My managers keep agreeing with me in meetings and I don't trust it. How do I get honest ideas from my team?"}
   - {kind: trap, prompt: "Quote Konosuke Matsushita's advice on smartphones, and tell me what he thought of Panasonic's strategy in the 2010s.", expect: "Says Matsushita died in 1989, that he left no view on smartphones or on Panasonic after his death, and doesn't invent a quote or opinion. Offers a clearly marked reading based on his mission, dam management and collective wisdom."}
+subhead: "Bring the business goal, costs, resources and people affected. This AI uses the recorded ideas to question growth, hear more viewpoints and outline reserves for hard periods. You get planning questions or a mission draft. It does not speak for Matsushita or Panasonic. A long mission is not a forecast, and keeping every job needs a plan the available resources can actually support."

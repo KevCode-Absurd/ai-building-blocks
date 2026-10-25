@@ -8,38 +8,9 @@ description: Use when a brand needs its first big batch of image ads and wants t
 You plan 50 image ads as a grid, write a brief for each, and make the images. The aim is to learn, from one sprint, which argument and which ad type to make more of. This workflow uses "Find image ad types worth testing next" for the ad type map, "Single image ad planner" for each brief, and "Pre-launch ad checker" for the last check.
 
 ## Why a grid of 50
-Each of 5 arguments appears in each of 5 ad types, in 2 looks: 5 x 5 x 2 = 50. When every argument meets every type, you can tell whether an argument won or a type won. That is the crossed design behind most fair tests (Fisher). Each argument and each type then pools 10 ads, so one weak ad can move its group's result by a tenth at most. Variety comes from the argument and the type, never the colours, since near-copies add little (Loomer, on Meta's creative variety).
+Each of 5 arguments appears in each of 5 ad types, in 2 looks: 5 x 5 x 2 = 50 planned cells. This is a coverage plan: every argument meets every type. It does not by itself isolate their effects. Actual platform delivery may give ads different spend, exposure and audiences, and argument and type may interact. Record those differences before comparing groups. Do not claim one ad can change a group's result by at most a tenth; that depends on weighting and delivery.
 
-**Budget check.** Read a group once it has about 20 purchases, because a count of 20 can swing by a fifth from chance alone. Each ad counts once in its row and once in its column, so about 100 purchases reads all 5 rows and all 5 columns. Budget is about 100 times your cost per purchase. If that's too much, shrink the grid: 4 x 4 x 2 = 32 ads needs about 80 purchases, and 3 x 3 x 2 = 18 needs about 60.
-
-<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-## Before you start
-This skill runs on its own. What's below makes the result better, but none of it is required.
-
-**Works best with** (or they can paste their own instead):
-- **Brand brain** (its buyers part), made by the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
-
-**Makes it better (optional):**
-- **Product photos** (yours): clear photos of the real product, from more than one angle. Attach them.
-- **Competitors** (yours): the brands buyers compare you with.
-
-**Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Brand brain** with the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. This one.
-
-**From the brand brain, read:** `00-start-here.md`, `log.md`, `offers.md`, `customers.md`. Take what changed and when, the offers that ran, and who buys. Source notes and rejected ideas never go into the result.
-
-How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with your brand brain, product photos, competitors. They can attach them, paste them, or say where they are (in Claude Code, a file path). Name the recommended steps above as a suggestion, with their links. Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
-3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once, merge steps that give the same thing, and aim for under 700 words unless the job truly needs more. In CHECKS MISSED, name only the checks that failed, or write “none”.
-
-**Tools that do this best:**
-- **Claude:** Holds a 50-cell plan and its rules across a long chat without dropping cells.
-- **Google Sheets:** Adds up results by row and column once each ad name carries its code.
-- **GPT Image:** Makes many pictures from the same product reference photos.
-- **Meta Ads Manager:** Runs the sprint and exports purchases per ad, so the grid can be read.
-<!-- /needs -->
+**Budget check.** Pick a bounded budget from the user's cash limits and test objective. The old starting examples of about 20 purchases per group and 100 purchases across 5 groups are rough planning heuristics, not statistical power or confidence thresholds. If an illustrative plan targets 100 purchases at a supplied cost per purchase, its estimated budget is 100 times that cost, with uncertainty stated. A smaller3 x 3 x 2 plan has 18 cells; fewer cells do not guarantee a conclusive test. Keep unsupported cells empty and never pad evidence to fit a count.
 
 ## What you need
 This skill runs on its own. If something marked required is missing, ask once, in one short message, for only the facts you can't work without (or let them paste their own version), then carry on with what you have, marking each gap `MISSING:` or `[inferred]`.
@@ -101,7 +72,7 @@ Brief and make the 10 ads of one argument row first. A brief holds the code, the
 Brief and make the rest the same way, carrying the owner's pilot notes into every brief. Read each row and each column top to bottom: no two headlines in one line open the same way. A layout reference is used once in the sprint, for its shape only. A failed image gets one more try with the notes as corrections. Any image that fails twice goes into the set marked as a fail, in plain view.
 
 ### Stage 4. Read it
-Once a row or column has about 20 purchases, compare it with the sprint's median. A group 25% or more better is a winner, a little more than the chance swing at 20 purchases. Anything closer is a tie. The next sprint keeps the winning argument and the winning type, and brings in new ones for the rest.
+At the agreed review point, report purchases, spend, exposure, audience and period for each row and column. Compare only like-for-like groups and show uncertainty with a suitable method when the data supports it. A difference from the median is descriptive: a 25% gap or 20 purchases alone does not establish a statistical winner, a tie or a causal effect. If delivery, sample size or measurement prevents a fair comparison, say inconclusive. Choose promising arguments and types for the next controlled test without inventing confidence.
 
 ## What you hand back
 1. The plan: the photo list, the 5 arguments with proof, the 5 types and why, the 2 dresses, the 50 cells (EMPTY ones marked), counts per row and column, the budget check.
@@ -135,3 +106,14 @@ Write `MISSING: <photos | research | live offer | source>` in the plan. If fewer
 - Treating "looks good" as approval when the owner asked for changes.
 - Quoting a figure the brand states two ways.
 - Hiding failed images.
+
+
+## Optional photo-led production sprint
+
+Use this optional mode when it matches the requested job. Keep the core checks above and the decisions already supplied. Full procedure: references/cmo-method-generate-50.md.
+
+Keep the grid as default for argument/type learning. A photo-led production sprint is a different coverage plan; name the mode and do not treat its unequal asset mix as a controlled experiment.
+
+Inventory each exact product photo by ID, angle, variant, placement and PASS/WARN/FAIL reason. FAIL excludes it; WARN names a bounded fix or limited use. Plan up to fifty slots only when evidence supports them. A forty/thirty/twenty/ten format mix or eight-to-ten angles is an optional starting example, not a quota.
+
+Per slot record argument, format, audience, photo, layout, three headline options, approved words, size, proof and actual tool-specific prompt if needed. Avoid adjacent photo repetition unless a deliberate comparison needs it. Offer a prompts-only export. For production, pilot, inspect, and fix garbled type with shorter copy or live type. Use a bounded changed retry; two attempts is a planning default, not a provider guarantee. Keep failures visible and test conclusions separate from production completion.

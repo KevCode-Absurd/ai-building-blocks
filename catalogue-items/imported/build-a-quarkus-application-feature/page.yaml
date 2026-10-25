@@ -1,0 +1,26 @@
+new_slug: build-a-quarkus-application-feature
+name: Build a Quarkus application feature
+summary: Build a feature in your Quarkus app. Keep its versions and test the change.
+job: build-software
+headline: Build a Quarkus application feature
+subhead: Share your Quarkus code and feature brief. Check versions, make a scoped change and run tests when the tools are available.
+explain: Share your Quarkus code and feature brief. Check versions, make a scoped change and run tests when the tools are available.
+when:
+  - You want to build a Quarkus application feature.
+you_give:
+  - An existing Quarkus project and the feature’s required behavior and constraints.
+you_get:
+  - Scoped application changes with configuration, relevant tests and an honest verification report.
+how_to_use:
+  - Download the complete skill folder and add it to your AI tool, or copy the instructions into a chat.
+  - Provide the inputs listed here and ask your AI to follow the skill.
+  - Review the result and any missing facts before using it.
+how_it_works:
+  - title: Inspect versions and extensions
+    text: Read the build files and preserve the project’s platform, Java target and existing conventions.
+  - title: Implement the feature
+    text: Select documented REST, configuration, persistence or integration patterns and keep secrets outside source.
+  - title: Verify behavior
+    text: Run the applicable project checks when available and report missing infrastructure or unexecuted checks.
+thinking: medium
+thinking_why: It weighs your evidence and follows a specific method.

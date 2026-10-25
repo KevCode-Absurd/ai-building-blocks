@@ -13,12 +13,12 @@ const FORMATS = [
 
 export default {
   slug: "creative-volume-planner",
-  name: "Know how many ads to make each month",
+  name: "Monthly ad production planner",
   /** The plain name, used where the tool talks about itself. */
-  short: "Creative volume planner",
-  headline: "Know how many new ads your ad budget needs each month",
-  summary: "Type your ad spend and what an ad usually does. You get the ads to make each month, the budget to make them, and which formats pay.",
-  question: "How many ads a month does my spend need, what does making them cost, and does each format pay for itself?",
+  short: "Monthly ad production planner",
+  headline: "Monthly ad production planner",
+  summary: "Enter ad spend, average ad results and production costs. Estimate monthly ad volume, production budgets and profit by format.",
+  question: "How many ads might we need, and what production budget could cover them?",
   shelf: ["ecommerce"],
   version: "1.0.0",
   updated: "2026-10-19",
@@ -70,7 +70,7 @@ export default {
       id: "adsForSpend", label: "New ads a month to spend your budget", unit: "count",
       formula: "ROUNDUP(spend / spendPerAd, 0)",
       sum: "{spend} ÷ {spendPerAd}, rounded up = {=}",
-      means: "Make fewer than this and your budget lands on the same ads until they wear out.",
+      means: "Planned ad count at your average spend per ad. Actual ad life and results will vary.",
     },
     { id: "revenuePerAd", label: "Revenue one ad brings in", unit: "money", formula: "spendPerAd * roas", sum: "{spendPerAd} × {roas} = {=}", means: "What a typical ad sells over its life." },
     {

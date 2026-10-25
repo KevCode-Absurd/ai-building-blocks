@@ -1,0 +1,36 @@
+slug: guided-reasoning-tutor
+name: Guided reasoning tutor
+summary: Bring a problem you want to understand. Work through focused questions, hints and a small practice task.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: source_text
+    required: true
+  - type: brief
+    required: false
+outputs:
+  - type: document
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: edu-agent-skills contributors
+  repo: yugash007/edu-agent-skills
+  path: skills/teaching/socratic-mode
+  url: https://github.com/yugash007/edu-agent-skills/tree/e75f44303570bb2eae37a8f7536c0358be2502ee/skills/teaching/socratic-mode
+  licence: MIT
+  licence_file: LICENSE
+  commit: e75f44303570bb2eae37a8f7536c0358be2502ee
+  original_name: socratic-mode
+  imported: 2026-10-23
+  skill_sha256: 62f7608ae735d007fa4e5ffb0172c74dadafbe0f2f1294d55efdeb130ff4e679
+version: 1.0.0
+credits:
+  - title: socratic-mode skill
+    by: edu-agent-skills contributors
+    url: https://github.com/yugash007/edu-agent-skills/tree/e75f44303570bb2eae37a8f7536c0358be2502ee/skills/teaching/socratic-mode
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

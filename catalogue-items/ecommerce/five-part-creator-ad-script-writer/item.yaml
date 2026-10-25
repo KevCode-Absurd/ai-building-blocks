@@ -1,0 +1,19 @@
+slug: five-part-creator-ad-script-writer
+name: Five-part creator ad script writer
+summary: Write a creator ad in five parts, from hook to CTA. Get timing, delivery notes and a short shot list.
+category: ecommerce
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: script
+    required: true
+uses: []
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

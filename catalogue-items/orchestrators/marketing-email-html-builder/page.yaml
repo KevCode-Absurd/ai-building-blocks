@@ -1,0 +1,32 @@
+new_slug: marketing-email-html-builder
+name: Marketing email HTML builder
+summary: Give it your copy and product photos. Get two HTML email designs, previews and a file kit you can edit.
+job: write-emails
+headline: Marketing email HTML builder
+subhead: Make two email looks from one clear brief.
+explain: Produces actual HTML compositions rather than a designer brief. One copy deck becomes a house design and a reference-led design, with an image concept round and documented rendering checks.
+when:
+  - You have email copy or an angle and want a designed email.
+  - You need two visual directions for the same campaign.
+  - You want an editable HTML handoff for an email platform.
+you_give:
+  - Campaign goal, audience, current offer terms and approved product facts.
+  - Brand colours, fonts, logo and real photos of the exact product.
+  - Existing copy or a brief, plus any cleared design references.
+you_get:
+  - One copy deck and module map.
+  - Two HTML designs, a plain-text version and asset list.
+  - Preview/check results and a versioned handoff folder.
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Set the message
+    text: Confirm facts, audience, offer and one action; write copy and a module map.
+  - title: Compare visual directions
+    text: Plan two distinct executions and two or three hero concepts grounded in real product photos.
+  - title: Build and inspect
+    text: Compose editable HTML, preview both sizes and prepare an email-safe fallback before handoff.
+thinking: high
+thinking_why: It compares supplied evidence and follows a specific method.

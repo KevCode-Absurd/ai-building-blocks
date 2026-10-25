@@ -2,16 +2,22 @@ thinking: high
 thinking_why: Design choices have lasting effects, so it weighs them.
 new_slug: system-design-planner
 name: System design planner
-summary: Describe what you are building. Get an architecture choice with diagrams and the trade-offs behind it.
+summary: Describe what you are building. Get an architecture choice with
+  diagrams and the trade-offs behind it.
 job: build-software
 headline: System design planner
-subhead: Describe what you are building, with expected users, traffic and team size. It works through decision flows for monolith or microservices, which database fits and how the system should grow. You get a recommended architecture, a diagram, a dependency check and a trade-off summary for each choice.
+subhead: Describe what you are building, with expected users, traffic and team
+  size. It works through decision flows for monolith or microservices, which
+  database fits and how the system should grow. You get a recommended
+  architecture, a diagram, a dependency check and a trade-off summary for each
+  choice.
 explain: |
   Pick an architecture before you build it, with a diagram and a clear record of what you give up for each choice. You get a recommendation on monolith or microservices, which database fits, and how the system should grow, so the decision is written down and not guessed.
 
   The skill works through decision flows. For databases it asks about data shape, scale and consistency needs. For structure it weighs team size and traffic against complexity. Optional scripts can scan a project folder, draw the architecture as a Mermaid diagram, and flag tangled or circular dependencies. Each recommendation lists the trade-offs, so you can defend the call to your team. The scripts need Python.
 when:
-  - You are starting a new product and must choose between a monolith and services.
+  - You are starting a new product and must choose between a monolith and
+    services.
   - You need to pick a database and want the reasons laid out.
   - You inherited a codebase and want a diagram of how it really fits together.
   - Your app is slowing under load and you need a plan to scale.
@@ -27,6 +33,8 @@ you_get:
   - A dependency check with problems flagged
   - A trade-off summary for each choice
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
   - It works best when your AI can run code and read your project files.

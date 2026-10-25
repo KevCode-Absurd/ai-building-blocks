@@ -1,0 +1,19 @@
+slug: five-tactic-ad-hook-writer
+name: Five-tactic ad hook writer
+summary: Write short ad hooks using five tactics. Rank them by buyer fit and proof, then give production notes.
+category: ecommerce
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: hooks
+    required: true
+uses: []
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

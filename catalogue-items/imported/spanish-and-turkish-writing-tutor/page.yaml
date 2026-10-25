@@ -1,0 +1,31 @@
+thinking: medium
+thinking_why: It follows a set method and adapts its questions or draft to your evidence.
+new_slug: spanish-and-turkish-writing-tutor
+name: Spanish and Turkish writing tutor
+summary: Share a paragraph or study goal. Get clear corrections, grammar practice and a record of recurring mistakes.
+job: study-and-practice
+headline: Spanish and Turkish writing tutor
+subhead: Share a Spanish or Turkish text, or your study goal and deadline. It corrects your writing, explains each change and tags repeated errors. For ongoing study, it can keep a local mistake log and plan focused practice with your consent.
+explain: Share a Spanish or Turkish text, or your study goal and deadline. It corrects your writing, explains each change and tags repeated errors. For ongoing study, it can keep a local mistake log and plan focused practice with your consent.
+you_give:
+  - A Spanish or Turkish text, or a language goal and deadline.
+  - Your target level and Spanish variety when relevant.
+you_get:
+  - A corrected text with reasons for changes.
+  - Error tags and one grammar rule to focus on.
+  - An optional local study plan, mistake log and practice notes.
+how_it_works:
+  - title: Step 1
+    text: Choose a one-off correction or an ongoing study workspace.
+  - title: Step 2
+    text: Use the matching language pack to explain corrections and error tags.
+  - title: Step 3
+    text: For ongoing lessons, revisit open mistakes before teaching one new structure.
+how_to_use:
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.
+  - It works best when your AI can read the bundled Spanish or Turkish pack; local files are optional.
+when:
+  - Use it for written Spanish or Turkish practice.
+  - The bundled language guides have not had a native-speaker review. Check surprising corrections against your course or teacher.
+  - Text alone cannot prove speaking or listening skill.

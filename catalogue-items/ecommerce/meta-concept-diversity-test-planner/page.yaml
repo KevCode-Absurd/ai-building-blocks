@@ -1,0 +1,45 @@
+new_slug: meta-concept-diversity-test-planner
+name: Meta concept diversity test planner
+summary: Sort ads into thirteen concepts, find format and fatigue gaps, and plan three clear creative tests.
+job: plan-ad-tests
+headline: Meta concept diversity test planner
+subhead: Share ad list, concepts, formats, dated results and test budget. Get concept mix, fatigue findings and three ranked test plans.
+explain: |-
+  Sort ads into thirteen concepts, find format and fatigue gaps, and plan three clear creative tests.
+
+  Share ad list, concepts, formats, dated results and test budget. Get concept mix, fatigue findings and three ranked test plans.
+when:
+  - You need concept mix, fatigue findings and three ranked test plans.
+  - You need meta concept diversity test planner for a specific task.
+  - You want the method's decisions and assumptions written down before acting.
+you_give:
+  - Ad list
+  - Concepts
+  - Formats
+  - Dated results and test budget
+you_get:
+  - Concept mix, fatigue findings and three ranked test plans
+  - The sources used, missing inputs and assumptions
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Check the inputs
+    text: Confirm ad list, concepts, formats, dated results and test budget. Mark facts that are missing.
+  - title: How This Works
+    text: Follow the how this works section in the full method and keep its required fields and decision rules.
+  - title: Collect Ad Data
+    text: Follow the collect ad data section in the full method and keep its required fields and decision rules.
+  - title: Concept Classification
+    text: Follow the concept classification section in the full method and keep its required fields and decision rules.
+  - title: Diversity Scoring
+    text: Follow the diversity scoring section in the full method and keep its required fields and decision rules.
+  - title: Fatigue Detection
+    text: Follow the fatigue detection section in the full method and keep its required fields and decision rules.
+  - title: Performance Analysis
+    text: Follow the performance analysis section in the full method and keep its required fields and decision rules.
+  - title: Review the result
+    text: Return concept mix, fatigue findings and three ranked test plans. Check facts, math and the decisions before any action.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

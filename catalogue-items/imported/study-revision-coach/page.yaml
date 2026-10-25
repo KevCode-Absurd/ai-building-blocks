@@ -1,0 +1,37 @@
+thinking: medium
+thinking_why: It follows a set method and adapts its questions or draft to your evidence.
+new_slug: study-revision-coach
+name: Study revision coach
+summary: Share covered topics, mistakes and your deadline. Get a focused review
+  session that starts with your weakest topics.
+job: study-and-practice
+headline: Study revision coach
+subhead: Share the topics you covered, past mistakes and time before your exam
+  or interview. It ranks what needs review and tests recall before teaching
+  again. You get a focused session plan, practice questions and an honest list
+  of remaining gaps.
+explain: Share the topics you covered, past mistakes and time before your exam
+  or interview. It ranks what needs review and tests recall before teaching
+  again. You get a focused session plan, practice questions and an honest list
+  of remaining gaps.
+you_give:
+  - Covered topics, recurring errors and confidence notes.
+  - Your deadline and time available for review.
+you_get:
+  - A ranked revision plan with clear priorities.
+  - Recall prompts and practice exercises.
+  - A summary of passed checks and topics still needing review.
+how_it_works:
+  - title: Step 1
+    text: Rank topics by gaps, time since review and deadline value.
+  - title: Step 2
+    text: Review at most five topics through recall and short exercises.
+  - title: Step 3
+    text: Record clean passes and choose what needs another round.
+how_to_use:
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
+  - It works best when your AI can read your supplied notes and ask follow-up
+    questions.

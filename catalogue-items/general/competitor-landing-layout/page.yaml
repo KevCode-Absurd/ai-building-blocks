@@ -1,23 +1,19 @@
-name: "Competitor landing page layout planner"
+name: Competitor landing page layout planner
 new_slug: competitor-landing-layout
-summary: "Attach a page screenshot and facts. Get its layout filled with your own words and facts."
+summary: Attach a page screenshot and facts. Get its layout filled with your own words and facts.
 job: write-landing-page
-thinking: high
-thinking_why: "It studies ads or pages closely and works out why they work."
-
-headline: "Competitor landing page layout planner"
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.
+headline: Competitor landing page layout planner
 subhead: Attach a screenshot of a page whose structure you like, and paste your brand facts. It maps the page section by section and fills each slot from your facts or removes it. You get a layout map, your copy for every slot and any check it missed.
-
 explain: |
   You've seen a page that just works, and you want yours to feel the same. The risky way is to copy it and change the words, which leaves their claims, their star rating, their countdown timer and sometimes their photos on your page.
 
   This skill borrows only the structure. It reads the screenshot top to bottom and logs every section: its order, how much of the page it takes up, how many columns, where the image sits and what kind of block it is. Then it builds a slot map in four groups: people, numbers, badges, and pressure and price. Every slot that states a fact, from a review to a countdown timer, is filled from your own facts or removed. Sections that suit a different kind of product are changed or cut. Your copy is written to about the same length so the layout still holds, and nothing from the reference ships.
-
 when:
   - You've found a competitor's or another brand's page with a structure you'd like to follow.
   - You're briefing a designer and want a clear section-by-section plan, not "make it like this".
   - You want to test a new page layout without copying anyone's content.
-
 you_give:
   - A screenshot of the reference page, desktop and phone if you have both (attach it; your AI can see pictures)
   - Your brand facts, such as colours, fonts, voice, product, prices, offers, guarantee, delivery, real reviews and photos
@@ -29,14 +25,12 @@ you_get:
   - A slot map with your copy for each slot, or MISSING
   - A list of what you still need to supply, and an optional plain HTML skeleton
   - Any of its own checks the plan still misses, each named
-
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Attach the screenshot. Use a page you own or one you're allowed to study.
   - Paste your brand facts, real reviews with sources, your rating if you have one, and the list of photos you have.
   - Paste the ad that will send people to the page, so the first screen carries on from it.
   - Read the "removed" rows in the slot map. Those are the things you'd need real proof for before adding them back.
-
 how_it_works:
   - title: Reads the image first
     text: Logs each section's order, share of page height, columns, image side, background and type of block, before designing anything.
@@ -54,7 +48,6 @@ how_it_works:
     text: Writes each kept slot at about the reference's length, from your own reasons, and puts a labelled box where a photo is missing.
   - title: Checks the plan
     text: Goes through its own checks, such as no sentence from the reference and no rating you don't hold, fixes what it can, and names any check it still missed.
-
 output_shape: |
   LAYOUT MAP
   # | Section | Height | Columns | Background | Block type | Keep / change / remove
@@ -76,7 +69,6 @@ output_shape: |
 
   CHECKS MISSED
   <one line per check still missed, or none>
-
 example:
   business: sprout
   input: |
@@ -144,7 +136,6 @@ example:
     - Renewal price for one child ($74.98 is shown, probably for 2)
     - Any Kids claim beyond the label: "bright minds" and "Supports brain
       health" are on the risky list, so no slot uses them
-
 tweaks:
   - what: The reference
     how: Choose a page built for a product like yours. A page for something bought again (subscribe box, ingredient table) needs many sections changed if you sell something bought once.
@@ -154,7 +145,6 @@ tweaks:
     how: Ask for the HTML skeleton if you can open files. You get one page with your colours as variables and numbered, empty image slots, checked at phone width first.
   - what: Phone screenshot
     how: Add the reference's phone view too. Many pages reorder or drop sections on phones, and the layout map will show both.
-
 judge:
   - No sentence from the reference appears anywhere in the output.
   - Every fact on the page is one you supplied.
@@ -162,30 +152,28 @@ judge:
   - The first screen carries on from your ad.
   - Sections that don't suit how your product is bought are changed or removed.
   - The colours and fonts are yours, so the page can't be mistaken for the reference brand.
-
 test:
   - Search the output for any sentence from the reference page. There should be none, reworded or not.
   - Use a reference with a star rating and press logos you don't hold. The slot map should remove both, not keep them with your name on.
   - Try a reference for a different kind of product (bought once if yours is bought again). Sections that don't fit should be marked change or remove.
   - Ask for the skeleton page and open it at phone width. The sections should stack in the same order as the layout map.
-
 improve:
   - Add your proof on file to "Your brand facts" in the skill (real reviews, the rating you hold and where it comes from), so slots get filled instead of removed.
   - Add rows to the slot table in step 6 for slots common in your market, such as a size chart, with what fills them and what to do when you have none.
   - Put your colours, fonts and corner radius into step 9, so every skeleton starts in your brand.
   - Save layouts that work for you in your brand file, so your next page can start from your own best one.
   - Pair it with "Ad-matched landing page writer" to write the copy first, then place it into the slots. Once built, run "Landing page 30-point checker".
-
 works_best_with:
   tools:
-    - {name: "Any good chat AI that reads images", why: "It reads the reference screenshot section by section, which the layout map depends on."}
-    - {name: "Figma Make", why: "Turns the layout map and your copy into a working page prototype you can adjust before anyone builds it."}
+    - name: Any good chat AI that reads images
+      why: It reads the reference screenshot section by section, which the layout map depends on.
+    - name: Figma Make
+      why: Turns the layout map and your copy into a working page prototype you can adjust before anyone builds it.
   inputs:
-    - "A full-length phone screenshot of the reference, since many pages reorder or drop sections on phones"
-    - "Your colours as hex codes with the job each does, and your font names, so the result can't pass for the reference brand"
-    - "Your product photos listed by view (front, detail, in use, next to something for scale), so image slots get real pictures"
-    - "Real reviews with their sources and the rating you hold, so proof slots are kept instead of removed"
-
+    - A full-length phone screenshot of the reference, since many pages reorder or drop sections on phones
+    - Your colours as hex codes with the job each does, and your font names, so the result can't pass for the reference brand
+    - Your product photos listed by view (front, detail, in use, next to something for scale), so image slots get real pictures
+    - Real reviews with their sources and the rating you hold, so proof slots are kept instead of removed
 terms:
   - term: Slot
     meaning: One place on the page that holds a piece of content, such as a headline, a review, a photo or a price.

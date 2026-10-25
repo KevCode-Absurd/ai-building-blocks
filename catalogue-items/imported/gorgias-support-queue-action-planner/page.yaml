@@ -1,0 +1,32 @@
+thinking: medium
+thinking_why: It follows a set method with a few checks.
+new_slug: gorgias-support-queue-action-planner
+name: Gorgias support queue action planner
+summary: Connect Gorgias. Get one suggested next action for each waiting ticket, with reply drafts where useful.
+job: help-customers
+headline: Gorgias support queue action planner
+subhead: Connect Gorgias and ask for help with the waiting queue. It reads tickets in small batches and picks a next action for each. You get reply drafts and suggestions to assign, defer, close, or pass an issue to another team.
+when:
+  - You use this tool for customer support and need help with this task.
+you_give:
+  - Open Gorgias tickets needing attention.
+  - The latest messages and the teams available to handle them.
+you_get:
+  - Show the proposed actions and drafts. Carry out only the actions you approve.
+how_it_works:
+  - title: Read waiting tickets
+    text: Fetch unhandled tickets from oldest to newest and read them in batches of ten.
+  - title: Pick one next action
+    text: Choose a quick reply, request for information, handover, assignment, delay, or closure suggestion.
+  - title: Review the action queue
+    text: Show the proposed actions and drafts. Carry out only the actions you approve.
+works_best_with:
+  tools:
+    - name: Gorgias
+      why: Live lookups need Composio CLI access and connected accounts for these services.
+how_to_use:
+  - Add the downloaded folder to an AI that can read skill files.
+  - Ask for gorgias support queue action planner by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
+  - Provide Open Gorgias tickets needing attention.
+  - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
+  - Review the result. Approve any proposed sending or account changes before they happen.

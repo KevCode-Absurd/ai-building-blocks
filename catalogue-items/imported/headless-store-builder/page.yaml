@@ -2,10 +2,14 @@ thinking: high
 thinking_why: A custom storefront has many linked design and code choices.
 new_slug: headless-store-builder
 name: Headless store builder
-summary: Describe the store you want. Get a fast custom Shopify storefront built on Hydrogen, with deploy steps.
+summary: Describe the store you want. Get a fast custom Shopify storefront built
+  on Hydrogen, with deploy steps.
 job: build-websites
 headline: Headless store builder
-subhead: Give it your Shopify store domain, API token, design idea and page list. It sets up a Hydrogen project, a custom React storefront that talks to your Shopify store behind the scenes. You get the project, pages for home, product and collection, the product queries and deploy steps for Oxygen.
+subhead: Give it your Shopify store domain, API token, design idea and page
+  list. It sets up a Hydrogen project, a custom React storefront that talks to
+  your Shopify store behind the scenes. You get the project, pages for home,
+  product and collection, the product queries and deploy steps for Oxygen.
 explain: |
   A custom online storefront that loads fast and looks exactly how you want, connected to your Shopify store behind the scenes. Instead of using a theme, you build the front end yourself with React and Shopify's Hydrogen framework, then host it free on Shopify's Oxygen.
 
@@ -27,6 +31,8 @@ you_get:
   - GraphQL queries for your products
   - Deploy steps for Oxygen
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
   - It works best when your AI can run code and open a browser.

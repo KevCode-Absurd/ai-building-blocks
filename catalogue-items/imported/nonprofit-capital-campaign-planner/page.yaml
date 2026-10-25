@@ -1,0 +1,28 @@
+new_slug: nonprofit-capital-campaign-planner
+name: Plan a nonprofit capital campaign
+summary: Test a large fundraising goal. Build a gift table and a phased plan based on real prospects.
+job: plan-strategy
+headline: Plan a nonprofit capital campaign
+subhead: Bring the project cost, donor pipeline and interview findings. Test the goal, assign campaign roles and set a gate for the public launch.
+explain: Bring the project cost, donor pipeline and interview findings. Test the goal, assign campaign roles and set a gate for the public launch.
+when:
+  - You want to plan a nonprofit capital campaign.
+you_give:
+  - Proposed project, preliminary goal and available campaign capacity
+  - Documented prospect pipeline and feasibility interview findings
+you_get:
+  - Gift range table reconciled to the campaign goal
+  - Feasibility gaps, leadership roles and phase gates
+how_to_use:
+  - Download the complete skill folder and add it to your AI tool, or copy the instructions into a chat.
+  - Provide the inputs listed here and ask your AI to follow the skill.
+  - Review the result and any missing facts before using it.
+how_it_works:
+  - title: Test readiness
+    text: Plan confidential feasibility interviews and distinguish documented donor interest from aspirations.
+  - title: Build the gift table
+    text: Work backward from the goal and show which gift tiers have qualified prospects and which remain unsupported.
+  - title: Stage the campaign
+    text: Assign chair, cabinet and staff roles; define a quiet-phase launch gate and coordinate the public phase with annual giving.
+thinking: medium
+thinking_why: It weighs your evidence and follows a specific method.

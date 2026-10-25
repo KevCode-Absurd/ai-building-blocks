@@ -1,6 +1,6 @@
 ---
 name: selfie-style-video-prompts
-description: Use when you have an approved selfie-style script (five beats with the demo line marked) and want it made as a phone-style video with one made-up AI presenter talking to camera in one ordinary room. Runs the whole video process: presenter card, reference images, character, product and room sheets with lock lines, a storyboard of clips with one action each, then start frames, clip prompts, voice and the edit, with the ad labelled as AI-made. Ends with any check it still missed.
+description: "Use when you have an approved selfie-style script (five beats with the demo line marked) and want it made as a phone-style video with one made-up AI presenter talking to camera in one ordinary room. Runs the whole video process: presenter card, reference images, character, product and room sheets with lock lines, a storyboard of clips with one action each, then start frames, clip prompts, voice and the edit, with the ad labelled as AI-made. Ends with any check it still missed."
 ---
 
 # Selfie-style video clip prompt writer
@@ -142,3 +142,14 @@ Write `MISSING: <what>`, ask once for what you can't work without, then carry on
 - Copying a real person's face or voice, or a known creator's style of talking.
 - Squeezing the demo between unrelated lines.
 - Skin words a filter refuses. Describe the person, not their pores.
+
+
+## Format-specific sound and value-reveal mode
+
+Use this optional mode when it matches the requested job. Keep the core checks above and the decisions already supplied. Full procedure: references/cmo-method-realistic-ai-ugc.md.
+
+Name sounds from actual use: zip, click, pour, fold, brush, footsteps or package opening only when the mechanism exists. One selective audio beat can highlight an action; it cannot establish an unsupported feature.
+
+For a street exchange or two-person value reveal, state who asks, what the other can know and how the product enters. A fictional scripted exchange is not an independent customer interview. Do not invent testimonial history or a before/after result.
+
+Keep room tone continuous. Check actual image/video/audio input limits before upload rather than trust old caps. Use owned or cleared assets and never pick a real unknown person from social media as an avatar. Track action, featured sound, line and final frame per shot. Inspect real use, continuity and sync when outputs exist; otherwise return labelled sound cues rather than claim finished sound design.

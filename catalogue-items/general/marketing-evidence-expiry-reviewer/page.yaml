@@ -1,0 +1,33 @@
+new_slug: marketing-evidence-expiry-reviewer
+name: Marketing evidence review queue
+summary: Review dated claim evidence and where it is used. Get stale or out-of-scope items, affected assets and an owned review queue.
+job: check-ads
+headline: Marketing evidence review queue
+subhead: Review dated claim evidence and where it is used. Get stale or out-of-scope items, affected assets and an owned review queue. Supply the records and asset versions to review.
+explain: |-
+  Review the freshness, applicability and use of an existing marketing-evidence register. This manages review work and affected uses; it does not conduct a new fact check, issue legal clearance or treat old evidence as automatically false.
+
+  Maintains a dated evidence-to-asset use review queue with scope/permission dimensions; not a new claim fact-check, legal-policy search or general stale-process rewrite.
+when:
+  - You need the stated review outcome from existing records.
+  - You want unknowns and proposed repairs separated from completed actions.
+you_give:
+  - document
+  - copy draft (optional)
+you_get:
+  - An evidence status register with dates and scope kept separate
+  - One review job per underlying issue, linked to affected assets
+  - Renewal decisions, owners and the evidence still needed
+how_to_use:
+  - Supply the relevant brief and material, or name files in the authorized project.
+  - Ask for the stated result. Keep supplied facts, assumptions and missing evidence distinct.
+  - Review the result before authorizing repairs or external changes. Save the returned packet or authorize a file destination.
+how_it_works:
+  - title: Define the review
+    text: Establish the as-of time and timezone, applicable owner rules and evidence register supplied. Distinguish explicit expiry, review due date, source publication date and the date somebody last checked it. Do not invent a retention or validity interval.
+  - title: Compare the actual records
+    text: "Separate status dimensions: a review may be overdue while the underlying fact is still plausible; permission may be withdrawn even though a result was measured; a valid study may concern the wrong product or population. None of these is fixed by replacing the date."
+  - title: Return a bounded handoff
+    text: Create one review job per underlying evidence issue, with owner, missing material, decision needed, affected uses and acceptance evidence. Keep a history of superseded records and current allowed wording. Renew only after the required evidence or permission is actually supplied.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

@@ -7,14 +7,14 @@ role: check
 job: analysis
 level: intermediate
 inputs:
-  - {type: spreadsheet, required: true}
-  - {type: plan, required: true}
-  - {type: performance_sheet, required: false}
+  - { type: spreadsheet, required: true }
+  - { type: plan, required: true }
+  - { type: performance_sheet, required: false }
 outputs:
-  - {type: audit_report}
+  - { type: audit_report }
 uses: []
 origin: rebuilt
 example_pending: true
-version: 1.0.0
+version: 1.0.1
 credits:
-  - {title: "How to Scale an eCommerce Brand Profitably in 2026: The Full System", by: "Nathan, founder of a performance marketing agency for 8 and 9 figure brands (public long-form masterclass)", used: "Cash conversion cycle, why profit is not cash, cash-limited growth, grading stock from A to D, and selling slow stock with paid media on purpose"}
+  - { title: "How to Scale an eCommerce Brand Profitably in 2026: The Full System", by: "Nathan, founder of a performance marketing agency for 8 and 9 figure brands (public long-form masterclass)", used: "Cash conversion cycle, why profit is not cash, cash-limited growth, grading stock from A to D, and selling slow stock with paid media on purpose" }

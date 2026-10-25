@@ -8,6 +8,11 @@ tags: [Safety Alignment, NeMo Guardrails, NVIDIA, Jailbreak Detection, Guardrail
 dependencies: [nemoguardrails]
 ---
 
+## Version and example notes
+
+Compatibility note, 24 October 2026: Before running the examples below, read references/colang-guide.md, references/integrations.md and references/performance.md against your installed NeMo Guardrails version. The original sample syntax, helper names, integration APIs and latency or hardware figures are illustrative until verified in that environment; the supporting guides identify current documented paths, required setup and checks. Preserve source-specific data restrictions, obtain authorization for installs or outside calls, and report unrun checks honestly.
+
+
 # NeMo Guardrails - Programmable Safety for LLMs
 
 ## Quick start

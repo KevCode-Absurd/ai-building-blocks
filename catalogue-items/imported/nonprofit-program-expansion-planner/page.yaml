@@ -1,0 +1,30 @@
+thinking: high
+thinking_why: It weighs real records, missing facts, and choices that affect people or funding.
+new_slug: nonprofit-program-expansion-planner
+name: Nonprofit program expansion planner
+summary: Share program evidence and growth plans. Get a readiness review, expansion options, and a pilot plan.
+job: plan-strategy
+headline: Nonprofit program expansion planner
+subhead: Share evidence that your program works, your growth goal, and staff and funding limits. It checks readiness before choosing an expansion route. You get a readiness brief, parts that must stay fixed, possible local changes, and a measured pilot plan.
+when:
+  - You need this task done for a nonprofit, community program, or donated-goods store.
+you_give:
+  - Outcome evidence, delivery method, staff capacity, reserves, growth funding, and the proposed new community.
+you_get:
+  - A readiness memo, fixed-versus-flexible component table, expansion route, pilot, and monitoring plan.
+how_it_works:
+  - title: Check readiness first
+    text: Review outcome evidence, model clarity, staff capacity, funding, and demand in the new area.
+  - title: Protect what makes it work
+    text: Separate essential program parts from details that can change for a new location or group.
+  - title: Pilot before wider growth
+    text: Choose a delivery route, plan staff and systems, and set checks and correction rules for a first new site.
+works_best_with:
+  tools:
+    - name: A chat AI that can read your files
+      why: The skill works from records and drafts you provide. Research tasks also need current, checked public sources.
+  inputs:
+    - Replication decisions commit multi-site budgets and staff.
+how_to_use:
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.

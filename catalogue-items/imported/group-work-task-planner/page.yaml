@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It matches roles and prompts to the problem you name.
 new_slug: group-work-task-planner
 name: Group work task planner
-summary: Tell it where group work goes wrong. Get a task with roles and prompts that share the work.
+summary: Tell it where group work goes wrong. Get a task with roles and prompts
+  that share the work.
 job: teach-and-train
 headline: Group work task planner
-subhead: Tell it the participation problem you see, your class level and size, and the task topic. It designs a group task around that problem, with rotating roles and AI prompts that nudge quiet members to contribute. You get the task, the prompts, progress checkpoints and tips for running it.
+subhead: Tell it the participation problem you see, your class level and size,
+  and the task topic. It designs a group task around that problem, with rotating
+  roles and AI prompts that nudge quiet members to contribute. You get the task,
+  the prompts, progress checkpoints and tips for running it.
 explain: |
   A group task that stops one student doing everything while others watch. Tell it where group work goes wrong in your class and you get a task with set roles and AI prompts that spread participation.
 
@@ -26,5 +30,7 @@ you_get:
   - Checkpoints for progress
   - Tips for facilitating
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.

@@ -2,19 +2,25 @@ thinking: high
 thinking_why: Model choice and fit judgment need care.
 new_slug: system-model-estimator
 name: System model estimator
-summary: Give it input and output data. Get a fitted model of how the system behaves, with fit checks.
+summary: Give it input and output data. Get a fitted model of how the system
+  behaves, with fit checks.
 job: build-software
 headline: System model estimator
-subhead: Give it measured input and output data and what the model is for. It checks the data is rich enough, tries several model types and picks an order. You get a fitted MATLAB model, fit percentages on validation data, a comparison of candidates and warnings about weak data.
+subhead: Give it measured input and output data and what the model is for. It
+  checks the data is rich enough, tries several model types and picks an order.
+  You get a fitted MATLAB model, fit percentages on validation data, a
+  comparison of candidates and warnings about weak data.
 explain: |
   A mathematical model of how your system reacts, fitted from measured input and output data, with proof of how well it fits. You can then simulate it, predict from it or tune a controller against it.
 
   The skill prepares the data first, then checks the signal is rich enough to learn from. It tries model types such as transfer function, state space, ARX and process models, and picks an order by comparing fits. It estimates the parameters, then validates the result on data it has not seen, using fit percentages and residual checks. Candidate models are compared side by side so you see which one earns its complexity. It runs in MATLAB with the System Identification Toolbox.
 when:
-  - You logged inputs and outputs from a machine and need a model for control design.
+  - You logged inputs and outputs from a machine and need a model for control
+    design.
   - You are unsure which model order fits your measurements.
   - You want to compare several model types and keep the best one.
-  - Your system is too messy to derive equations, so you need a data-driven model.
+  - Your system is too messy to derive equations, so you need a data-driven
+    model.
   - You need natural frequencies and damping pulled from response data.
 you_give:
   - Input and output measurements, or a time series
@@ -27,6 +33,9 @@ you_get:
   - A comparison of candidate models
   - Residual checks and warnings about weak data
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
-  - It works best when your AI can run MATLAB with the System Identification Toolbox.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
+  - It works best when your AI can run MATLAB with the System Identification
+    Toolbox.

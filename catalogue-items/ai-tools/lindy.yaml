@@ -2,7 +2,7 @@ slug: lindy
 name: Lindy
 maker: Lindy
 url: https://www.lindy.ai
-promise: An AI assistant that does work across your email, calendar, meetings and apps.
+promise: "Handle email, scheduling, meeting notes and repeat work across your connected apps."
 use_cases: [automate, ask-an-assistant]
 categories: [automation, productivity]
 what_it_does:
@@ -10,12 +10,12 @@ what_it_does:
   - Drafts and sends email replies, and books meetings.
   - Joins calls, takes notes and drafts follow-ups.
   - Runs recurring work on a schedule, such as a morning brief or weekly report.
-  - Learns a task when you show it once.
+  - "Can reuse a task you demonstrate."
   - Keeps memory of your work in plain files you can edit.
 benefits:
   - Hand off inbox replies and meeting follow-ups.
   - Get a weekly report without building it by hand.
-  - Teach one process once and let the team reuse it.
+  - "Save a demonstrated process for the team to reuse."
   - Try it with free credits and no credit card.
 best_for:
   - Busy operators and founders who live in email and meetings.

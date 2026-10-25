@@ -1,0 +1,19 @@
+slug: creative-gap-to-brief-queue-planner
+name: Creative gap-to-brief queue planner
+summary: Turn format, message and buyer gaps into five to ten production briefs. Rank the queue by fit and effort.
+category: ecommerce
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: brief
+    required: true
+uses: []
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

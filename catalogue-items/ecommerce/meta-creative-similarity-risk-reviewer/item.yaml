@@ -1,0 +1,19 @@
+slug: meta-creative-similarity-risk-reviewer
+name: Meta creative similarity risk reviewer
+summary: Check the spread of formats, hooks and visuals in your ads. Flag observed repetition and suggest what to make next.
+category: ecommerce
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: audit_report
+    required: true
+uses: []
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

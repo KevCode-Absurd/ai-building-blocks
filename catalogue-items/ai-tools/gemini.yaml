@@ -2,7 +2,7 @@ slug: gemini
 name: Gemini
 maker: Google
 url: https://gemini.google.com
-promise: Answers, research reports and images from an assistant built into Google apps.
+promise: "Research, draft text, read files and create images through Google’s assistant and apps."
 use_cases: [ask-an-assistant, research, make-images]
 categories: [chat-assistant]
 what_it_does:
@@ -12,7 +12,7 @@ what_it_does:
   - Reads files and links you share with it.
   - Works inside Gmail, Docs, Drive and other Google apps.
 benefits:
-  - Get a sourced research report on a market or product while you work.
+  - "Request a research report with sources on a market or product."
   - Pull answers from your own Gmail and Drive without leaving the chat.
   - Make an image or a short clip from one description.
   - Try the free plan with only a Google account.

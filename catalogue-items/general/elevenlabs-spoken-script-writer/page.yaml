@@ -1,0 +1,32 @@
+new_slug: elevenlabs-spoken-script-writer
+name: ElevenLabs spoken script writer
+summary: Share your idea and length. Get a spoken script with clear speakers, pacing and light delivery cues.
+job: work-with-audio
+headline: ElevenLabs spoken script writer
+subhead: Share your idea and length. Get a spoken script with clear speakers, pacing and light delivery cues. Bring the brief and any files you want it to use.
+explain: |-
+  Use this when you need voice-over or dialogue with delivery marks. Confirm purpose, target duration, audience, tone and voice model only where missing information materially changes the script. Use explicit assumptions for a usable first draft.
+
+  Write short spoken sentences with contractions. Estimate duration from word count and delivery pace, leaving room for pauses; a word-count estimate is not measured audio.
+when:
+  - You need voice-over or dialogue with delivery marks.
+  - You want a clear draft and checks from the material you already have.
+you_give:
+  - brief
+  - "Optional: copy draft"
+you_get:
+  - script
+  - Missing inputs and steps that still need to run
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Read the brief
+    text: Confirm purpose, target duration, audience, tone and voice model only where missing information materially changes the script. Use explicit assumptions for a usable first draft.
+  - title: Build the result
+    text: Build a progression of emotion rather than tagging every sentence. Use sparse bracketed delivery cues such as [whispers], [sighs] or [laughs] only when supported by the selected voice mode.
+  - title: Check and hand off
+    text: Keep supplied product facts and approved claims exact. A fictional speaker cannot provide a fabricated customer testimonial.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

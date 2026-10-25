@@ -1,11 +1,11 @@
 // Original tool. All numbers shown are illustrative figures, not a real person’s results.
 export default {
   "slug": "print-image-size",
-  "name": "Know how large your image can print",
-  "short": "Print image size",
-  "headline": "Know how large your image can print",
-  "summary": "Enter image pixels and a chosen print density. See the print size in inches and centimetres.",
-  "question": "Know how large your image can print?",
+  "name": "Print size calculator",
+  "short": "Print size calculator",
+  "headline": "Print size calculator",
+  "summary": "Enter image size in pixels and print pixels per inch. Calculate print width and height in inches and centimetres.",
+  "question": "How large can this image print at the density I choose?",
   "category": "design",
   "shelf": [
     "general"

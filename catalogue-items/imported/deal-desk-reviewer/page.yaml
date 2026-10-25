@@ -2,10 +2,14 @@ thinking: high
 thinking_why: It weighs money, risk and terms before it advises.
 new_slug: deal-desk-reviewer
 name: Deal desk reviewer
-summary: Give it a deal with a big discount or redlined terms. Get margin, risky terms and a verdict.
+summary: Give it a deal with a big discount or redlined terms. Get margin, risky
+  terms and a verdict.
 job: sell-and-negotiate
 headline: Deal desk reviewer
-subhead: Give it the deal size, discount, tier and any redlined contract terms. It scores margin, risk and fit out of 100 and lands on approve, review, escalate or decline. You get the margin after discount, risky terms with counters, and who should sign off.
+subhead: Give it the deal size, discount, tier and any redlined contract terms.
+  It scores margin, risk and fit out of 100 and lands on approve, review,
+  escalate or decline. You get the margin after discount, risky terms with
+  counters, and who should sign off.
 explain: |
   A big discount request or a customer's redlined contract gets a score, a clear verdict and the right approver. It never approves on its own, so a person always signs off.
 
@@ -26,6 +30,8 @@ you_get:
   - Risky terms with counters
   - Margin after discount
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
   - It works best when your AI can run code.

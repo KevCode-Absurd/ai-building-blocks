@@ -1,0 +1,28 @@
+new_slug: nonprofit-strategy-cycle-planner
+name: Plan a nonprofit strategy cycle
+summary: Plan a nonprofit strategy process. Use real evidence to choose a few priorities, fund them and keep them under review.
+job: plan-strategy
+headline: Plan a nonprofit strategy cycle
+subhead: Bring mission goals, program results and funding trends. Run a focused planning cycle and turn the choices into a board plan with named owners.
+explain: Bring mission goals, program results and funding trends. Run a focused planning cycle and turn the choices into a board plan with named owners.
+when:
+  - You want to plan a nonprofit strategy cycle.
+you_give:
+  - Planning horizon, decision owners and available process capacity
+  - Program and funding trends, stakeholder evidence and prior strategy
+you_get:
+  - Five-phase planning calendar and retreat structure
+  - Draft priority framework, resource implications and a one-page plan
+how_to_use:
+  - Download the complete skill folder and add it to your AI tool, or copy the instructions into a chat.
+  - Provide the inputs listed here and ask your AI to follow the skill.
+  - Review the result and any missing facts before using it.
+how_it_works:
+  - title: Scope and gather evidence
+    text: Charter the process, timebox the scan and gather staff, board, participant, partner and financial evidence.
+  - title: Make choices
+    text: Synthesize a small set of priorities, test tradeoffs and state what will stop; assign outcome measures and owners.
+  - title: Adopt and keep it active
+    text: Prepare the board’s decision package, connect priorities to budget and staff plans, and schedule quarterly review and annual refresh.
+thinking: medium
+thinking_why: It weighs your evidence and follows a specific method.

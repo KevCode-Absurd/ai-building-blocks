@@ -1,37 +1,52 @@
 slug: spoken-video-ad-opening-writer
 renamed_from: get-talking-openings-that-keep-viewers-watching
-name: "Spoken video ad opening writer"
-summary: "Paste your ad, attach product photos. Get three spoken openings, a storyboard and clip prompts."
+name: Spoken video ad opening writer
+summary: Paste your ad, attach product photos. Get three spoken openings, a storyboard and clip prompts.
 category: general
-boards: [ecommerce]
+boards:
+  - ecommerce
 type: skill
 role: render
 job: video
 level: advanced
 inputs:
-  - {type: video_ads, required: true}
-  - {type: product_data, required: true}
-  - {type: persona, required: true}
-  - {type: brand_brain, required: false}
-  - {type: avatar_sheet, required: false}
+  - type: video_ads
+    required: true
+  - type: product_data
+    required: true
+  - type: persona
+    required: true
+  - type: brand_brain
+    required: false
+  - type: avatar_sheet
+    required: false
 outputs:
-  - {type: hooks}
-  - {type: image_prompt}
-  - {type: video_prompt}
-  - {type: avatar_sheet}
-  - {type: edit_plan}
-uses: [selfie-style-video-prompts]
+  - type: hooks
+    required: true
+  - type: image_prompt
+    required: true
+  - type: video_prompt
+    required: true
+  - type: avatar_sheet
+    required: true
+  - type: edit_plan
+    required: true
+uses:
+  - selfie-style-video-prompts
 example: new-hooks
 origin: rebuilt
-source_ids: [CES-007]
+source_ids:
+  - CES-007
 old_name: AI presenter openings
-version: 2.1.0
+version: 2.2.0
 credits:
-  - {title: "Creative best practices for performance ads", by: "TikTok Ads Help Center", url: "https://ads.tiktok.com/help/article/creative-best-practices", used: "Main point in the first 3 seconds; 3 to 5 creatives that differ a lot per test"}
-  - {title: "The Science of the Hook: How to Supercharge Your Reels Performance", by: "Meta for Business", url: "https://www.facebook.com/business/news/the-science-of-the-hook-how-to-supercharge-your-reels-performance", used: "Hook types that became the promise and gap moves; test hooks on the same Reel"}
-tested:
-  on: 2026-10-20
-  business: sprout
-  model: claude-opus-5-5
-  judge: claude-fable-5-1
-  result: pass
+  - title: Creative best practices for performance ads
+    by: TikTok Ads Help Center
+    url: https://ads.tiktok.com/help/article/creative-best-practices
+    used: Main point in the first 3 seconds; 3 to 5 creatives that differ a lot per test
+  - title: "The Science of the Hook: How to Supercharge Your Reels Performance"
+    by: Meta for Business
+    url: https://www.facebook.com/business/news/the-science-of-the-hook-how-to-supercharge-your-reels-performance
+    used: Hook types that became the promise and gap moves; test hooks on the same Reel
+package_files: all
+example_pending: true

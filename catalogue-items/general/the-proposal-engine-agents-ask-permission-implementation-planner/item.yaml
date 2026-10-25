@@ -1,0 +1,19 @@
+slug: the-proposal-engine-agents-ask-permission-implementation-planner
+name: Agent action approval builder
+summary: Build a timed approval record with validated callbacks and audit events.
+category: general
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+    required: true
+uses: []
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

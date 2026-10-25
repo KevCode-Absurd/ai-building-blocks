@@ -2,7 +2,7 @@ slug: descript
 name: Descript
 maker: Descript
 url: https://www.descript.com
-promise: Edit video and audio by editing the written transcript.
+promise: "Edit audio and video by changing the transcript, then add captions and finish."
 use_cases: [edit-video, voice-and-audio]
 categories: [video, voice]
 what_it_does:
@@ -12,8 +12,8 @@ what_it_does:
   - Clones your voice so you can fix a line by typing it.
   - Records your screen and your camera in one place.
 benefits:
-  - Cut a raw recording in minutes instead of hours.
-  - Fix a slip in the audio by typing the line.
+  - "Edit a recording by changing text in its transcript."
+  - "Review each spoken edit alongside its matching text."
   - Get captions and a transcript with the same edit.
 best_for:
   - Podcasters and people who record talking videos.

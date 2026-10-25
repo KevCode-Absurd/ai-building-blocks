@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It checks current APIs, then applies set review steps.
 new_slug: swiftui-code-reviewer
 name: SwiftUI code reviewer
-summary: Give it your SwiftUI code. Get it written, reviewed or refactored with current APIs and fewer speed traps.
+summary: Give it your SwiftUI code. Get it written, reviewed or refactored with
+  current APIs and fewer speed traps.
 job: build-software
 headline: SwiftUI code reviewer
-subhead: Share your SwiftUI code, or describe the feature you want. It checks data flow, view composition, animation and localisation against a checklist, and swaps old APIs for newer ones. You get review findings, refactored code and speed fixes, with a note on why each change helps.
+subhead: Share your SwiftUI code, or describe the feature you want. It checks
+  data flow, view composition, animation and localisation against a checklist,
+  and swaps old APIs for newer ones. You get review findings, refactored code
+  and speed fixes, with a note on why each change helps.
 explain: |
   SwiftUI code that is written, reviewed or fixed with current APIs and fewer slow spots. You get changes that follow how SwiftUI actually behaves, for iPhone, iPad or Mac apps.
 
@@ -27,6 +31,8 @@ you_get:
   - Performance fixes tied to the trace
   - Notes on why each change helps
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
   - It works best when your AI can read your project files.

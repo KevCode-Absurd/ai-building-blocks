@@ -1,0 +1,30 @@
+thinking: high
+thinking_why: It weighs real records, missing facts, and choices that affect people or funding.
+new_slug: resale-store-pricing-and-layout-planner
+name: Resale store pricing and layout planner
+summary: Share item grades and sales records. Get price bands, markdown dates, display zones, and a stock rotation plan.
+job: set-prices
+headline: Resale store pricing and layout planner
+subhead: Share your donated goods, condition grades, sales records, and shop layout. It checks category prices, slow stock, and display choices. You get price bands, premium-item rules, a markdown calendar, floor zones, and seasonal changes to review with your store team.
+when:
+  - You need this task done for a nonprofit, community program, or donated-goods store.
+you_give:
+  - Item categories, condition grades, sales and aging records, local price evidence, and available shop space.
+you_get:
+  - Price bands, premium criteria, markdown calendar, floor zones, seasonal plan, and sales-through measures.
+how_it_works:
+  - title: Set clear price bands
+    text: Use category and condition grades to make consistent price ranges, with separate criteria for premium items.
+  - title: Plan stock aging
+    text: Date or color-tag goods and set clear markdown and clearance stages so old stock does not pile up.
+  - title: Arrange and review the floor
+    text: Plan category zones and seasonal displays, then review how much stock sells before changing prices broadly.
+works_best_with:
+  tools:
+    - name: A chat AI that can read your files
+      why: The skill works from records and drafts you provide. Research tasks also need current, checked public sources.
+  inputs:
+    - Pricing and floor layout for donated goods; adjust and move on.
+how_to_use:
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.

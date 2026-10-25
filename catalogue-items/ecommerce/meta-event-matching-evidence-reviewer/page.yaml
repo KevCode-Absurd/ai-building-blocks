@@ -1,0 +1,43 @@
+new_slug: meta-event-matching-evidence-reviewer
+name: Meta event matching evidence reviewer
+summary: Review supplied Meta event scores, matching fields and duplicate events. List gaps without claiming a revenue lift.
+job: check-ads
+headline: Meta event matching evidence reviewer
+subhead: Share the inputs listed below. Get a per-event evidence review and prioritized verification plan. Check the gaps before you use the result.
+explain: |-
+  Review supplied Meta event scores, matching fields and duplicate events. List gaps without claiming a revenue lift.
+
+  Share redacted event field lists, supplied emq scores and deduplication evidence. Get a per-event evidence review and prioritized verification plan.
+when:
+  - You need a per-event evidence review and prioritized verification plan.
+  - You need meta event matching evidence reviewer for a specific task.
+  - You want the method's decisions and assumptions written down before acting.
+you_give:
+  - Redacted event field lists
+  - Supplied EMQ scores and deduplication evidence
+you_get:
+  - A per-event evidence review and prioritized verification plan
+  - The sources used, missing inputs and assumptions
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Check the inputs
+    text: Confirm redacted event field lists, supplied emq scores and deduplication evidence. Mark facts that are missing.
+  - title: Why EMQ Matters
+    text: Follow the why emq matters section in the full method and keep its required fields and decision rules.
+  - title: Collect Inputs
+    text: Follow the collect inputs section in the full method and keep its required fields and decision rules.
+  - title: Score Each Event
+    text: Follow the score each event section in the full method and keep its required fields and decision rules.
+  - title: Calculate Revenue Impact
+    text: Follow the calculate revenue impact section in the full method and keep its required fields and decision rules.
+  - title: Diagnose Missing Parameters
+    text: Follow the diagnose missing parameters section in the full method and keep its required fields and decision rules.
+  - title: Deduplication Check
+    text: Follow the deduplication check section in the full method and keep its required fields and decision rules.
+  - title: Review the result
+    text: Return a per-event evidence review and prioritized verification plan. Check facts, math and the decisions before any action.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

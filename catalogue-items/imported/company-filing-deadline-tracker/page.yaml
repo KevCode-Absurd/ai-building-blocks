@@ -1,19 +1,18 @@
+# Modified by AI Blocks on 2026-10-24: source/copy repair
 thinking: medium
 thinking_why: Deadlines depend on company type and place.
 new_slug: company-filing-deadline-tracker
 name: Company filing deadline tracker
-summary: List your companies and where they are registered. Get annual filings
-  and due dates. Not legal advice.
+summary: List your entities and places of registration. Check official filing
+  sources and track confirmed dates or open questions.
 job: check-contracts
 headline: Company filing deadline tracker
-subhead: One file that lists every company you run, where each is registered,
-  and what must be filed and when. Missed annual reports and franchise taxes
-  cost fees and can put a company out of good standing, so the dates are worth
-  having in one place.
+subhead: Share each entity type and filing place; get confirmed annual
+  deadlines, official sources, and unknowns in one tracker.
 explain: |
-  One file that lists every company you run, where each is registered, and what must be filed and when. Missed annual reports and franchise taxes cost fees and can put a company out of good standing, so the dates are worth having in one place.
+  Share each entity type and place of registration. The skill checks official filing sources and records confirmed dates, sources and unknowns.
 
-  You give Claude your list of entities with their states or countries. It builds a tracker file, then shows what is due soon and what is overdue. You can update statuses, walk through unknown items one by one, run a health check, or export a table. It splits entity types, since a Delaware company and a Delaware LLC differ. Confirm dates with your registered agent. Not legal advice.
+  Give your AI tool a list of entities with their states or countries. It builds a tracker file, then shows confirmed dates and unknowns. You can update statuses, review unknown items, run a health check, or export a table. It splits entity types because filing rules can differ. Confirm dates with the official filing office or registered agent.
 when:
   - You run several companies and lose track of annual report dates.
   - You want to know what is overdue before a lawyer or investor asks.
@@ -25,14 +24,15 @@ you_give:
   - Entity type for each (such as LLC or corporation)
   - Registered agent details (optional)
 you_get:
-  - A deadline tracker file
+  - A filing tracker with source links and check dates
   - An upcoming and overdue report
   - A health check of the whole list
   - A CSV or table export
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
-    or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
   - It works best when your AI can search the web to confirm current dates.
   - Where the skill points to /corporate-legal:cold-start-interview, use the
     setup-interview folder inside it. We copied it in so the skill works on its

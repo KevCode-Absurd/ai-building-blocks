@@ -1,23 +1,24 @@
 # How to Use This Skill
 
-Hey Claude—I just added the "social-media-analyzer" skill. Can you analyze this campaign's performance and give me actionable insights?
+I added the "social-media-analyzer" skill. Analyze this campaign's performance and give me actionable insights.
 
 ## Example Invocations
 
 **Example 1:**
-Hey Claude—I just added the "social-media-analyzer" skill. Can you analyze this Instagram campaign data and tell me which posts performed best?
+Analyze this Instagram campaign data and tell me which posts performed best.
 
 **Example 2:**
-Hey Claude—I just added the "social-media-analyzer" skill. Can you calculate the ROI on this Facebook ad campaign with $1,200 spend?
+Calculate financial ROI for this Facebook ad campaign. I have $1,200 spend and will provide attributed revenue and the attribution window.
 
 **Example 3:**
-Hey Claude—I just added the "social-media-analyzer" skill. Can you compare our engagement rates across Instagram, Facebook, and LinkedIn?
+Compare our engagement rates across Instagram, Facebook, and LinkedIn.
 
 ## What to Provide
 
 - Social media campaign data (likes, comments, shares, reach, impressions)
 - Platform name (Instagram, Facebook, Twitter, LinkedIn, TikTok)
 - Ad spend amount (for ROI calculations)
+- Attributed revenue and its attribution method/window (required for financial ROI)
 - Time period of the campaign
 - Post details (type, content, posting time - optional but helpful)
 

@@ -1,0 +1,19 @@
+slug: meta-set-up-a-bid-cap-campaign-planner
+name: Meta bid cap launch planner
+summary: Plan a Meta bid-cap campaign. Set the bid limit, budget, business goals and checks for delivery.
+category: ecommerce
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: performance_sheet
+    required: true
+outputs:
+  - type: plan
+    required: true
+uses: []
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

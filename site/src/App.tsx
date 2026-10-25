@@ -1,37 +1,35 @@
 import { spaceKey, spaces } from "./lib/space";
-import FeaturedTools, { FeaturedWorkflows } from "./tools/FeaturedTools";
+import FeaturedTools from "./tools/FeaturedTools";
+import { HomeMinds, HomeWorkflows, HomeAgents } from "./HomeSections";
+import { useLibrarySearch } from "./lib/library-search";
 import { syncPageMetadata } from "./lib/page-metadata";
-import { Suspense, createContext, lazy, useCallback, useContext, useDeferredValue, useEffect, useLayoutEffect, useMemo, useRef, useState, type ComponentType, type ReactNode } from "react";
-import { ArrowIcon, BlockCard, Drawer, Logo, SearchIcon, Select, ThemeToggle, Toast } from "./ui";
-import { type Block, type Catalogue, type Kind, AREAS, areasOf, FUNCTIONS, FUNCTION_MOVED, KINDS, LEVELS, TASKS, cap, functionsOf, kindOf, loadPage, pathOf, taskOf, useCatalogue } from "./lib/data";
+import { Suspense, createContext, lazy, useCallback, useContext, useDeferredValue, useEffect, useLayoutEffect, useMemo, useState, type ComponentType } from "react";
+import { ArrowIcon, BlockCard, Drawer, SearchIcon, Select, Toast } from "./ui";
+import { type Block, type Catalogue, type Kind, AREAS, areasOf, FUNCTIONS, FUNCTION_MOVED, KINDS, TASKS, functionsOf, kindOf, loadPage, pathOf, taskOf, useCatalogueState, workflowEntries } from "./lib/data";
 import { kits, queueForCanvas, useStore } from "./lib/store";
+import { SaveHint, usePersistence } from "./AccountPersistence";
+import { reviewedTask } from "./lib/task-discovery";
+import { trackUxEvent } from "./lib/ux-events";
+import "./simplicity.css";
+import "./home-library.css";
 import { Link, navigate, setPrefetch, setSearch, useLocation } from "./lib/router";
 import { BusinessDrawer, openBusiness, useBusinessOpener } from "./Business";
 import { TailorDrawer, useTailorOpener } from "./Tailor";
-import { hasBusiness, useBusiness } from "./lib/business";
+import SiteHeader from "./SiteHeader";
 import { STARTER_PATHS, isAudienceStarter, starterFor, starterTemplate } from "./lib/audience-starters";
 import { infoPage } from "./lib/site-info.mjs";
 import SiteFooter from "./SiteFooter";
+import PageRecovery from "./PageRecovery";
+import { useCommunityStars } from "./CommunityStars";
 
 const Builder = lazy(() => import("./Builder")); // the canvas loads only when someone scrolls near it
 const Globe = lazy(() => import("./Globe")); // drawn behind the hero, so the text never waits for it
 
-/** Draws its children only once the spot is close to the screen (or the link points at it). */
-function WhenNear({ id, children, fallback }: { id: string; children: ReactNode; fallback: ReactNode }) {
-  const ref = useRef<HTMLDivElement>(null);
-  const [near, setNear] = useState(() => location.hash === `#${id}`);
-  useEffect(() => {
-    if (near || !ref.current) return;
-    const io = new IntersectionObserver((e) => { if (e.some((x) => x.isIntersecting)) setNear(true); }, { rootMargin: "800px 0px" });
-    io.observe(ref.current);
-    const onHash = () => { if (location.hash === `#${id}`) setNear(true); };
-    addEventListener("hashchange", onHash);
-    return () => { io.disconnect(); removeEventListener("hashchange", onHash); };
-  }, [near, id]);
-  return near ? <>{children}</> : <div ref={ref}>{fallback}</div>;
-}
 // The other pages load after the home page has drawn, while the browser is idle, so a click opens them at once.
 const PAGES = {
+  docs: () => import("./ApiMcpPage"),
+  community: () => import("./CommunityPage"),
+  account: () => import("./AccountPage"),
   block: () => import("./BlockPage"),
   guide: () => import("./HowItWorks"),
   tools: () => import("./tools/ToolsPage"),
@@ -48,6 +46,9 @@ const PAGES = {
 /** Which section's code a link opens, if it isn't the home page or a block. */
 function sectionOf(to: string): keyof typeof PAGES | null {
   const path = to.split(/[?#]/)[0];
+  if (["/api-and-mcp", "/api-and-mcp.html"].includes(path)) return "docs";
+  if (["/publish", "/my-submissions", "/admin/review", "/community"].includes(path) || path.startsWith("/community/")) return "community";
+  if (["/account", "/sign-up", "/sign-in"].includes(path)) return "account";
   if (path === "/tools/growth-channel-planner") return "traction";
   if (infoPage(path)) return "info";
   if (path === "/tools" || path.startsWith("/tools/")) return "tools";
@@ -71,8 +72,24 @@ function startupPage<P extends object>(load: () => Promise<{ default: ComponentT
   });
 }
 const BlockPage = startupPage(PAGES.block);
+const CommunityPage = startupPage(PAGES.community);
 const HowItWorks = startupPage(PAGES.guide);
-const ToolsPage = startupPage(PAGES.tools);
+const ApiMcpPage = startupPage(PAGES.docs);
+async function loadToolPage(to: string) {
+  const slug = to.split(/[?#]/)[0].split("/")[2];
+  if (!slug) return PAGES.tools();
+  const { BROWSER_TOOLS } = await import("./tools/browser-tools.mjs");
+  return BROWSER_TOOLS.some(tool => tool.slug === slug) ? import("./tools/BrowserToolPage") : PAGES.tools();
+}
+type ToolPageProps = { path: string; toast: (message: string) => void };
+const toolRoutes = new Map<string, ComponentType<ToolPageProps>>();
+function ToolsPage({ path, toast }: ToolPageProps) {
+  // Keep the lazy component identity outside a suspended first render. A memo
+  // created in that render can be discarded and restart loading indefinitely.
+  let Page = toolRoutes.get(path);
+  if (!Page) { Page = startupPage<ToolPageProps>(() => loadToolPage(path)); toolRoutes.set(path, Page); }
+  return <Page path={path} toast={toast} />;
+}
 const AiToolsPage = startupPage(PAGES.aitools);
 const TractionPage = startupPage(PAGES.traction);
 const AppsPage = startupPage(PAGES.apps);
@@ -81,6 +98,7 @@ const MindsPage = startupPage(PAGES.minds);
 const IntakePage = startupPage(PAGES.intake);
 const ComposePage = startupPage(PAGES.compose);
 const InfoPage = startupPage(PAGES.info);
+const AccountPage = startupPage(PAGES.account);
 /** Finish an anchor landing once. Any user scroll cancels the correction. */
 function useHashLanding() {
   useEffect(() => {
@@ -114,15 +132,18 @@ function useIdlePrefetch() {
       const m = /^\/(skills|prompts|workflows|agents|minds)\/([a-z0-9-]+)/.exec(to);
       if (m) { void loadPage(m[2]); return; }
       const page = sectionOf(to);
+      if (page === "tools") { void loadToolPage(to).catch(() => {}); return; }
       if (page) void PAGES[page]().catch(() => {});
     });
+    // On the homepage, do not compete with first paint for the most common next page.
+    // Links still warm their destination on pointer/focus intent through setPrefetch above.
+    if (location.pathname === "/") return;
     // On data saver or a slow phone line, pages load when they're opened instead.
     const net = (navigator as Navigator & { connection?: { saveData?: boolean; effectiveType?: string } }).connection;
     if (net?.saveData || /(^|-)2g$/.test(net?.effectiveType ?? "")) return;
     const idle = window.requestIdleCallback ?? ((f: () => void) => window.setTimeout(f, 1200));
     const stop = window.cancelIdleCallback ?? window.clearTimeout;
-    // Warm the common next page on home. Other sections load on pointer intent;
-    // loading every calculator and app while a page opens competes with its data.
+    // Warm the next section on non-home pages only; on home, explicit link intent is enough.
     const ids: number[] = [];
     ids.push(idle(() => {
       if (location.pathname === "/") PAGES.block().catch(() => {});
@@ -138,77 +159,48 @@ const startRank = (slug: string) => { const index = START_HERE.indexOf(slug); re
 const PAGE = 16;
 const KIND_PATHS: Record<string, Kind> = Object.fromEntries(KINDS.map((k) => [k.path, k.id]));
 
-function Header({ onKits }: { onKits: () => void }) {
-  const [scrolled, setScrolled] = useState(false);
-  const kitCount = useStore((s) => s.kits.length);
-  const biz = hasBusiness(useBusiness());
-  // Phones get the sections behind a Menu button; it closes again on every page change.
-  const [menu, setMenu] = useState(false);
-  const { path } = useLocation();
-  const [more, setMore] = useState(false);
-  useEffect(() => { setMenu(false); setMore(false); }, [path]);
-  useEffect(() => {
-    if (!more) return;
-    const off = () => setMore(false);
-    const esc = (e: KeyboardEvent) => e.key === "Escape" && setMore(false);
-    document.addEventListener("click", off); document.addEventListener("keydown", esc);
-    return () => { document.removeEventListener("click", off); document.removeEventListener("keydown", esc); };
-  }, [more]);
-  useEffect(() => {
-    const on = () => setScrolled(window.scrollY > 8);
-    on(); window.addEventListener("scroll", on, { passive: true });
-    return () => window.removeEventListener("scroll", on);
-  }, []);
-  return (
-    <header className={`header${scrolled ? " scrolled" : ""}`}>
-      <div className="wrap header-in">
-        <Link to="/" className="brand" aria-label="AI Blocks, home"><Logo />AI Blocks</Link>
-        <nav className={`nav${menu ? " open" : ""}`} id="site-nav" aria-label="Sections" onClick={() => setMenu(false)}>
-          <Link to="/how-it-works">How it works</Link>
-          <Link to="/#library">Library</Link>
-          <Link to="/#build">Builder</Link>
-          <Link to="/compose" data-testid="nav-compose">Compose workflow</Link>
-          <Link to="/tools">Tools</Link>
-          <Link to="/apps">Apps</Link>
-          <span className={`nav-more${more ? " open" : ""}`} onClick={(e) => e.stopPropagation()}>
-            <button type="button" className="nav-more-btn" aria-expanded={more} aria-controls="nav-more-list" onClick={() => setMore((m) => !m)} data-testid="nav-more">More <span aria-hidden="true">▾</span></button>
-            <span className="nav-more-list" id="nav-more-list" onClick={() => { setMore(false); setMenu(false); }}>
-              <Link to="/ai-tools" data-testid="nav-ai-tools">AI tools</Link>
-              <Link to="/tools/growth-channel-planner">Growth planner</Link>
-              <Link to="/from-a-source" data-testid="nav-intake">Create skills from content</Link>
-              <Link to="/space" data-testid="nav-space">My space</Link>
-              <button type="button" className="link-btn" onClick={onKits} data-testid="open-kits">My kits{kitCount > 0 && <span className="badge">{kitCount}</span>}</button>
-              <Link to="/support">Help & contact</Link>
-            </span>
-          </span>
-        </nav>
-        <div className="header-end">
-          <button className="btn btn-ghost btn-sm" onClick={openBusiness} data-testid="open-business"><span className="context-full">Your context</span><span className="context-short">Context</span>{biz && <span className="dot" aria-label="filled in" />}</button>
-          <Link to="/minds" className="btn btn-ghost btn-sm" data-testid="nav-minds">Minds</Link>
-          <ThemeToggle />
-          <button className="btn btn-ghost btn-sm menu-btn" aria-expanded={menu} aria-controls="site-nav" onClick={() => setMenu((m) => !m)} data-testid="menu-btn">{menu ? "Close" : "Menu"}</button>
-        </div>
-      </div>
-    </header>
-  );
+type Filters = { q: string; audience: string; area: string; fn: string; task: string; kind: Kind | "all"; level: string; starred: string };
+const QUICK_JOB_IDS = ["coding", "marketing", "design", "writing", "business"];
+const NONE: Filters = { q: "", audience: "", area: "", fn: "", task: "", kind: "all", level: "", starred: "" };
+const LIBRARY_FORMATS: { id: Kind | "all"; name: string; line: string }[] = [
+  { id: "all", name: "All", line: "Explore the library" },
+  { id: "prompt", name: "Prompts", line: "Paste into a chat" },
+  { id: "skill", name: "Skills", line: "Reuse a proven method" },
+  { id: "workflow", name: "Workflows", line: "Connect several steps" },
+  { id: "agent", name: "Agents", line: "Delegate a repeatable job" },
+  { id: "mind", name: "Minds", line: "Borrow an expert's thinking" },
+];
+const librarySearchContext = (b: Block) => `${taskOf(b).name} ${functionsOf(b).map(x => x.name).join(" ")}`;
+function libraryFilters(search: URLSearchParams): Filters {
+  const task = TASKS.some(t => t.id === search.get("job")) ? search.get("job")! : "";
+  const fnId = FUNCTION_MOVED[search.get("fn") ?? ""] ?? search.get("fn");
+  const fn = FUNCTIONS.find(x => x.id === fnId)?.id ?? (task ? FUNCTIONS.find(x => x.tasks.includes(task))?.id ?? "" : "");
+  return { ...NONE, q: search.get("q") ?? "", starred: search.get("starred") === "1" ? "1" : "", audience: starterFor(search.get("audience") ?? "")?.id ?? "", area: AREAS.some(a => a.id === search.get("area")) ? search.get("area")! : "", fn, task, kind: KINDS.some(k => k.id === search.get("kind")) ? search.get("kind") as Kind : "all" };
 }
 
-type Filters = { q: string; audience: string; area: string; fn: string; task: string; kind: Kind | "all"; level: string };
-const NONE: Filters = { q: "", audience: "", area: "", fn: "", task: "", kind: "all", level: "" };
-
 function Library({ c }: { c: Catalogue }) {
-  const { search } = useLocation();
-  const [f, setF] = useState<Filters>(() => {
-    const task = TASKS.some((t) => t.id === search.get("job")) ? search.get("job")! : "";
-    const fnId = FUNCTION_MOVED[search.get("fn") ?? ""] ?? search.get("fn");
-    const fn = FUNCTIONS.find((x) => x.id === fnId)?.id ?? (task ? FUNCTIONS.find((x) => x.tasks.includes(task))!.id : "");
-    const kind = KINDS.some((k) => k.id === search.get("kind")) ? (search.get("kind") as Kind) : "all";
-    const area = AREAS.some((a) => a.id === search.get("area")) ? search.get("area")! : "";
-    return { ...NONE, q: search.get("q") ?? "", audience: starterFor(search.get("audience") ?? "")?.id ?? "", area, fn, task, kind, level: LEVELS.some((l) => l === search.get("level")) ? search.get("level")! : "" };
-  });
-  const set = (patch: Partial<Filters>) => setF((x) => ({ ...x, ...patch }));
+  const { ranked, starred, loading: starsLoading, loadError, reload } = useCommunityStars();
+  const { account } = usePersistence();
+  const popularity = useMemo(() => new Map(ranked.map((target, index) => [target, index])), [ranked]);
+  const [f, setF] = useState<Filters>(() => libraryFilters(new URLSearchParams(location.search)));
+  useEffect(() => {
+    const syncNavigation = () => {
+      const next = libraryFilters(new URLSearchParams(location.search));
+      setF(current => JSON.stringify(current) === JSON.stringify(next) ? current : next);
+    };
+    // Search replaces its URL silently. Only actual navigation should restore
+    // filters; a deferred render must never restore yesterday's keystroke.
+    window.addEventListener("popstate", syncNavigation);
+    window.addEventListener("abb:navigate", syncNavigation);
+    return () => { window.removeEventListener("popstate", syncNavigation); window.removeEventListener("abb:navigate", syncNavigation); };
+  }, []);
+  const applyFilters = (next: Filters) => {
+    setSearch({ q: next.q, audience: next.audience, area: next.area, fn: next.fn, job: next.task, kind: next.kind === "all" ? "" : next.kind, level: "", by: "", starred: next.starred });
+    setF(next);
+  };
+  const set = (patch: Partial<Filters>) => applyFilters({ ...f, ...patch });
   const [limit, setLimit] = useState(PAGE);
-  const [moreFilters, setMoreFilters] = useState(() => !!(f.fn || f.task || f.level));
+  const [moreFilters, setMoreFilters] = useState(() => !!(f.audience || f.fn || f.area && !QUICK_JOB_IDS.includes(f.area)));
   // Press / anywhere to jump to the search box.
   useEffect(() => {
     const on = (e: KeyboardEvent) => {
@@ -221,41 +213,41 @@ function Library({ c }: { c: Catalogue }) {
     window.addEventListener("keydown", on);
     return () => window.removeEventListener("keydown", on);
   }, []);
-  useEffect(() => { setLimit(PAGE); setSearch({ q: f.q, audience: f.audience, area: f.area, fn: f.fn, job: f.task, kind: f.kind === "all" ? "" : f.kind, level: f.level, by: "" }); }, [f]);
+  useEffect(() => { setLimit(PAGE); }, [f]);
 
   // Every count reflects all the other choices, so a zero is never a surprise.
   // The list and the counts follow the typing a beat behind, so the search box never waits on them.
   const df = useDeferredValue(f);
-  const words = df.q.toLowerCase().replace(/[_-]/g, " ").split(/\s+/).filter(Boolean);
-  const hays = useMemo(() => new Map(c.blocks.map((b) => [b.slug, `${b.name} ${(b.aliases ?? []).join(" ")} ${b.slug} ${b.summary} ${b.headline} ${taskOf(b).name} ${functionsOf(b).map((x) => x.name).join(" ")}`.toLowerCase().replace(/[_-]/g, " ")])), [c]);
-  const hay = (b: Block) => hays.get(b.slug)!;
+  const suggestion = reviewedTask(df.q);
+  const searchState = useLibrarySearch(c, df.q, { extraText: librarySearchContext });
+  const hasQuery = !!df.q.trim();
   // Each block's areas, groups and kind, worked out once, so a few thousand blocks still count fast.
   const facts = useMemo(() => new Map(c.blocks.map((b) => [b.slug, { areas: new Set(areasOf(b)), fns: new Set(functionsOf(b).map((x) => x.id)), kind: kindOf(b) }])), [c]);
   const fact = (b: Block) => facts.get(b.slug)!;
   const tests: Record<keyof Filters, (b: Block, v: string) => boolean> = {
-    q: (b) => words.every((w) => hay(b).includes(w)),
+    q: (b) => !hasQuery || b.slug === suggestion?.slug || searchState.hits.has(b.slug),
     audience: (b, v) => isAudienceStarter(b.slug, v),
     area: (b, v) => !v || fact(b).areas.has(v),
     fn: (b, v) => !v || fact(b).fns.has(v),
     task: (b, v) => !v || b.task === v,
     kind: (b, v) => v === "all" || fact(b).kind === v,
     level: (b, v) => !v || b.level === v,
+    starred: (b, v) => !v || starred.has(`catalogue:${b.slug}`),
   };
   const keys = Object.keys(tests) as (keyof Filters)[];
   // Counts are worked out once per settled search, not on every redraw.
-  const counted = useMemo(() => new Map<string, number>(), [c, df]); // eslint-disable-line react-hooks/exhaustive-deps
+  const counted = useMemo(() => new Map<string, number>(), [c, df, searchState.hits, starred]); // eslint-disable-line react-hooks/exhaustive-deps
   // The counts never change the search words, so the search runs once and every count works on what it matched.
-  const matched = useMemo(() => (words.length ? c.blocks.filter((b) => tests.q(b, df.q)) : c.blocks), [c, df]); // eslint-disable-line react-hooks/exhaustive-deps
+  const matched = useMemo(() => (hasQuery ? c.blocks.filter((b) => tests.q(b, df.q)) : c.blocks), [c, df, searchState.hits, starred]); // eslint-disable-line react-hooks/exhaustive-deps
   const facets = keys.filter((k) => k !== "q");
   const count = (over: Partial<Filters>) => {
     const key = JSON.stringify(over);
     if (!counted.has(key)) { const g = { ...df, ...over }; counted.set(key, matched.filter((b) => facets.every((k) => tests[k](b, g[k] as string))).length); }
     return counted.get(key)!;
   };
-  const order = (a: Block, b: Block) => startRank(a.slug) - startRank(b.slug) || Number(!!b.headline) - Number(!!a.headline) || KINDS.findIndex((k) => k.id === fact(a).kind) - KINDS.findIndex((k) => k.id === fact(b).kind) || byName.compare(a.name, b.name);
-  const results = useMemo(() => c.blocks.filter((b) => keys.every((k) => tests[k](b, df[k] as string))).sort(order), [c, df]); // eslint-disable-line react-hooks/exhaustive-deps
-  const filtered = JSON.stringify(f) !== JSON.stringify(NONE);
-  const clear = () => setF(NONE);
+  const order = (a: Block, b: Block) => Number(b.slug === suggestion?.slug) - Number(a.slug === suggestion?.slug) || (hasQuery ? (searchState.hits.get(b.slug)?.score ?? 0) - (searchState.hits.get(a.slug)?.score ?? 0) : (popularity.get(`catalogue:${a.slug}`) ?? ranked.length) - (popularity.get(`catalogue:${b.slug}`) ?? ranked.length)) || startRank(a.slug) - startRank(b.slug) || Number(!!b.headline) - Number(!!a.headline) || KINDS.findIndex((k) => k.id === fact(a).kind) - KINDS.findIndex((k) => k.id === fact(b).kind) || byName.compare(a.name, b.name);
+  const results = useMemo(() => c.blocks.filter((b) => keys.every((k) => tests[k](b, df[k] as string))).sort(order), [c, df, searchState.hits, popularity, starred]); // eslint-disable-line react-hooks/exhaustive-deps
+  const clear = () => applyFilters({ ...NONE, q: f.q });
   const fn = FUNCTIONS.find((x) => x.id === f.fn);
   const activeTask = TASKS.find((t) => t.id === f.task);
   const area = AREAS.find((a) => a.id === f.area);
@@ -263,21 +255,16 @@ function Library({ c }: { c: Catalogue }) {
   // An area shows its own groups; areas that so far hold only minds show the minds group.
   const fnsShown = area ? FUNCTIONS.filter((x) => area.fns.includes(x.id) || x.id === f.fn || (x.id === "minds" && count({ area: area.id, fn: "minds", task: "" }) > 0)) : FUNCTIONS;
 
-  const extraFilters = [f.fn, f.task, f.level].filter(Boolean).length;
-  const formats: { id: Kind | "all"; name: string; line: string }[] = [
-    { id: "all", name: "All", line: "Explore the library" },
-    { id: "prompt", name: "Prompts", line: "Paste into a chat" },
-    { id: "skill", name: "Skills", line: "Reuse a proven method" },
-    { id: "workflow", name: "Workflows", line: "Connect several steps" },
-    { id: "agent", name: "Agents", line: "Delegate a repeatable job" },
-    { id: "mind", name: "Minds", line: "Borrow an expert's thinking" },
-  ];
+  const extraFilters = [f.audience, f.fn, f.area && !QUICK_JOB_IDS.includes(f.area) ? f.area : ""].filter(Boolean).length;
+  const useCases = TASKS.filter(task => (!area || area.fns.some(id => FUNCTIONS.find(fn => fn.id === id)?.tasks.includes(task.id))) && (!fn || fn.tasks.includes(task.id)));
+  const quickJobs = [{ id: "", name: "All work" }, ...QUICK_JOB_IDS.map(id => AREAS.find(area => area.id === id)!)];
+  const shownResults = results.slice(0, limit);
+  const hasFilters = f.kind !== "all" || !!f.starred || !!(f.audience || f.area || f.fn || f.task);
+  const formats = LIBRARY_FORMATS;
 
   return (
     <section className="section wrap" id="library" aria-label="Library">
-      <div className="library-search-head"><h2>What do you want to get done?</h2><Link to="/how-it-works">How it works <span aria-hidden="true">→</span></Link></div>
-      <label className="search big"><SearchIcon /><span className="visually-hidden">Search</span><input value={f.q} onChange={(e) => set({ q: e.target.value })} placeholder="Search for a job, such as writing an ad or fixing code" data-testid="library-search" /><kbd className="kbd" aria-hidden="true">/</kbd></label>
-
+      <h2 className="visually-hidden">Find a task</h2>
       <div className="library-formats" role="tablist" aria-label="Format" onKeyDown={(e) => {
         if (!["ArrowRight", "ArrowLeft", "Home", "End"].includes(e.key)) return;
         e.preventDefault();
@@ -290,39 +277,42 @@ function Library({ c }: { c: Catalogue }) {
           <span>{k.name}</span><small>{k.line}</small>
         </button>)}
       </div>
-      <div className="library-filters">
-        <Select label="Start with" value={f.audience} onChange={(v) => setF({ ...NONE, audience: v })} testId="filter-audience"
-          options={[{ value: "", label: "Full library" }, ...STARTER_PATHS.map((a) => ({ value: a.id, label: a.name }))]} />
-        <Select label="Domain" value={f.area} onChange={(v) => set({ area: v, fn: "", task: "" })} testId="filter-domain"
-          options={[{ value: "", label: "All domains", count: count({ area: "", fn: "", task: "" }) }, ...AREAS.map((a) => ({ value: a.id, label: a.name, count: count({ area: a.id, fn: "", task: "" }) }))]} />
+      <div className="search big library-search-field"><SearchIcon /><label className="visually-hidden" htmlFor="task-search">What do you want to get done?</label><input id="task-search" value={f.q} onChange={e => set({ q: e.target.value })} placeholder="What do you want to get done?" title="Try SEO, AEO, meeting notes or a product launch" data-testid="library-search" />{f.q ? <button type="button" className="library-search-clear" aria-label="Clear search" onClick={() => { set({ q: "" }); document.getElementById("task-search")?.focus(); }}><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="m5 5 8 8M13 5l-8 8" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" /></svg></button> : <kbd className="kbd" aria-hidden="true">/</kbd>}</div>
+      <fieldset className="library-job-functions"><legend>Job function</legend><div className="library-job-options" role="group" aria-label="Common job functions">{quickJobs.map(job => <button type="button" key={job.id} aria-pressed={f.area === job.id} onClick={() => set({ area: job.id, fn: "", task: "" })} data-testid={`job-${job.id || "all"}`}>{job.name}</button>)}</div></fieldset>
+      <div className="library-use-case">
+        <Select label="Use case" value={f.task} onChange={value => set({ task: value })} testId="filter-task" options={[{ value: "", label: "All use cases" }, ...useCases.map(task => ({ value: task.id, label: task.name, count: count({ task: task.id }) }))]} />
+      </div>
+      <div className="library-toolbar">
+        <button type="button" className="library-star-filter" aria-pressed={!!f.starred} onClick={() => set({ starred: f.starred ? "" : "1" })}><svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true" fill={f.starred ? "currentColor" : "none"} stroke="currentColor" strokeWidth="1.7"><path d="m12 3 2.8 5.7 6.3.9-4.5 4.4 1 6.2-5.6-3-5.6 3 1-6.2L3 9.6l6.2-.9Z" /></svg>Starred</button>
         <button type="button" className="more-filters-btn" aria-expanded={moreFilters} aria-controls="library-more-filters" onClick={() => setMoreFilters((v) => !v)} data-testid="more-filters">More filters{extraFilters > 0 && <span className="badge">{extraFilters}</span>} <span aria-hidden="true">{moreFilters ? "−" : "+"}</span></button>
+        <Link to="/how-it-works" className="btn btn-ghost btn-sm">How it works <span aria-hidden="true">→</span></Link>
       </div>
       {audience && <div className="audience-guide small" data-testid="audience-guide">
-        <p><strong>{audience.goal}</strong> These are starter picks. Choose Full library to explore every block.</p>
+        <p><strong>{audience.goal}</strong> These are starter picks. Clear this filter to explore all tasks.</p>
         <p>Bring: {audience.bring}</p>
-        <p><button className="link-btn" onClick={openBusiness}>Save your context</button> · <a href={starterTemplate(audience.id)} download>Download a context template</a></p>
+        <p><button className="link-btn" onClick={openBusiness}>Add business details</button> · <a href={starterTemplate(audience.id)} download>Download a details template</a></p>
         {audience.id === "enterprise" && <p>These packs support your work in your chosen AI tool. Team access controls, company system connections and audit storage need your own implementation.</p>}
       </div>}
       {moreFilters && <div className="library-more-filters" id="library-more-filters" role="group" aria-label="More filters">
-        <Select label="Work" value={f.fn} onChange={(v) => set({ fn: v, task: "" })} testId="filter-work"
+        <Select label="Job function" value={f.area} onChange={value => set({ area: value, fn: "", task: "" })} testId="filter-domain" options={[{ value: "", label: "All functions" }, ...AREAS.map(area => ({ value: area.id, label: area.name }))]} />
+        <Select label="Start with" value={f.audience} onChange={(v) => set({ audience: v })} testId="filter-audience" options={[{ value: "", label: "Full library" }, ...STARTER_PATHS.map(a => ({ value: a.id, label: a.name }))]} />
+        <Select label="Specialty" value={f.fn} onChange={(v) => set({ fn: v, task: "" })} testId="filter-work"
           options={[{ value: "", label: "All work", count: count({ fn: "", task: "" }) }, ...fnsShown.map((x) => ({ value: x.id, label: x.name, count: count({ fn: x.id, task: "" }) }))]} />
-        {fn && <Select label="Task" value={f.task} onChange={(v) => set({ task: v })} testId="filter-task"
-          options={[{ value: "", label: "All tasks", count: count({ task: "" }) }, ...fn.tasks.map((id) => ({ value: id, label: TASKS.find((t) => t.id === id)!.name, count: count({ task: id }) }))]} />}
-        <Select label="Level" value={f.level} onChange={(v) => set({ level: v })} testId="filter-level"
-          options={[{ value: "", label: "Any", count: count({ level: "" }) }, ...LEVELS.map((l) => ({ value: l, label: cap(l), count: count({ level: l }) }))]} />
       </div>}
       <div id="library-results" role="tabpanel" aria-labelledby={`format-${f.kind}`}>
       <div className="result-line">
-        <span data-testid="result-count">{results.length} result{results.length === 1 ? "" : "s"}{activeTask ? ` for “${activeTask.name}”` : fn ? ` for “${fn.name}”` : area ? ` in ${area.name}` : ""}{f.kind !== "all" ? `. ${KINDS.find((k) => k.id === f.kind)!.what}` : ""}</span>
-        {filtered && <button className="link-btn" onClick={clear}>Clear all</button>}
+        <span data-testid="result-count" role="status" aria-atomic="true">{results.length} result{results.length === 1 ? "" : "s"}{activeTask ? ` for “${activeTask.name}”` : fn ? ` for “${fn.name}”` : area ? ` in ${area.name}` : ""}</span>
+        {hasFilters && <button type="button" className="btn btn-ghost btn-sm" onClick={clear}>Clear filters</button>}
       </div>
-      {results.length ? (
+      {hasQuery && searchState.loading && <p className="small" role="status">Searching full instructions…</p>}
+      {hasQuery && searchState.error && <p className="small" role="alert">Full instructions could not be searched. These results use titles and descriptions. <button type="button" className="link-btn" onClick={searchState.retry}>Try full search again</button></p>}
+      {f.starred && account.state !== "signed-in" ? <div className="empty"><h3 className="h3">Your starred library</h3><p>Sign in to keep useful skills and workflows close, across devices.</p><button className="btn btn-dark" onClick={() => void account.signIn()}>Sign in to see your stars</button></div> : f.starred && loadError ? <div className="empty"><h3 className="h3">Your stars could not be loaded</h3><p>Please try again to see your saved stars.</p><button className="btn btn-dark" onClick={reload}>Try again</button></div> : f.starred && starsLoading ? <p role="status">Loading your stars...</p> : results.length ? (
         <>
-          <div className="grid">{results.slice(0, limit).map((b) => <BlockCard key={b.slug} b={b} />)}</div>
-          {results.length > limit && <div className="more library-more"><button type="button" className="btn btn-dark" onClick={() => setLimit((n) => n + PAGE)} data-testid="show-more">Show {Math.min(PAGE, results.length - limit)} more</button><a href="#build" className="library-builder-link">Build a workflow <ArrowIcon size={12} /></a></div>}
+          {!!shownResults.length && <div className="grid">{shownResults.map((b) => <BlockCard key={b.slug} b={b} workflowBuilder />)}</div>}
+          {results.length > limit && <div className="more library-more"><button type="button" className="btn btn-dark" onClick={() => setLimit(n => n + PAGE)} data-testid="show-more">Show {Math.min(PAGE, results.length - limit)} more</button></div>}
         </>
-      ) : (
-        <div className="empty"><h3 className="h3">Nothing matches that yet</h3><p>Try fewer words, or <button className="link-btn" onClick={clear}>clear all</button>.</p></div>
+      ) : f.starred && starred.size === 0 ? <div className="empty"><h3 className="h3">Keep your next good find</h3><p>Open a skill or workflow and select Star. It will appear here.</p><button className="btn btn-dark" onClick={() => set({ starred: "" })}>Explore the library</button></div> : !searchState.loading && (
+        <div className="empty"><h3 className="h3">We couldn't find that task</h3><p>Your search is still here. Try the job name, such as “meeting notes” or “email reply”.</p>{hasFilters && <p><button className="link-btn" onClick={clear}>Search again without filters</button></p>}<button className="btn btn-dark" onClick={() => document.querySelector<HTMLInputElement>('[data-testid="library-search"]')?.focus()}>Edit my search</button></div>
       )}
       </div>
     </section>
@@ -338,8 +328,9 @@ function KitsDrawer({ c, onClose, toBuilder, toast }: { c: Catalogue; onClose: (
   };
   const [name, setName] = useState("");
   return (
-    <Drawer label="My kits" top={<span className="mono">saved in this browser</span>} onClose={onClose}>
+    <Drawer label="My kits" top={<span className="mono">My kits</span>} onClose={onClose}>
       <h2 className="title" style={{ marginTop: 0 }}>My kits</h2>
+      <SaveHint subject="kits" onNavigate={onClose} />
       <p className="small" style={{ marginBottom: 24 }}>Keep the skills you use together. Open a kit in the builder to turn it into a workflow.</p>
       <form className="kit-new" onSubmit={(e) => { e.preventDefault(); if (name.trim()) { kits.create(name); setName(""); } }}>
         <label className="search"><span className="visually-hidden">Kit name</span><input value={name} onChange={(e) => setName(e.target.value)} placeholder="Name a new kit" /></label>
@@ -364,25 +355,41 @@ function KitsDrawer({ c, onClose, toBuilder, toast }: { c: Catalogue; onClose: (
   );
 }
 
-/** Types the subhead out like a terminal. The full sentence is there from the start for screen readers,
- *  and the untyped part holds its space so nothing moves. Reduced motion shows it at once. */
-function Typewriter({ text }: { text: string }) {
-  const [n, setN] = useState(() => (matchMedia("(prefers-reduced-motion: reduce)").matches ? text.length : 0));
-  useLayoutEffect(() => {
-    if (n >= text.length) return;
-    const prev = text[n - 1];
-    const t = setTimeout(() => setN(n + 1), n === 0 ? 120 : prev === "." ? 140 : prev === "," ? 70 : 8 + Math.random() * 10);
-    return () => clearTimeout(t);
-  }, [n, text]);
-  return (
-    <p className="lede typed" data-done={n >= text.length}>
-      <span className="visually-hidden">{text}</span>
-      <span aria-hidden="true">{text.slice(0, n)}<span className="cursor" /><span className="ghost">{text.slice(n)}</span></span>
-    </p>
-  );
+function LibraryLoading({ error, retry }: { error: string | null; retry: () => void }) {
+  return <section className="section wrap library-recovery" id="library" aria-label="Task library"><h2 className="visually-hidden">Find a task</h2><div className="library-formats library-formats-loading">{LIBRARY_FORMATS.map(format => <Link key={format.id} to={`/?kind=${format.id === "all" ? "" : format.id}#library`}><span>{format.name}</span><small>{format.line}</small></Link>)}</div><label className="search big"><SearchIcon /><span className="visually-hidden">What do you want to get done?</span><input disabled placeholder="What do you want to get done?" data-testid="library-search" /></label>{error ? <><p role="alert">{error}</p><button className="btn btn-primary" onClick={retry}>Try again</button><p className="small">You can still use the public guides and browser tools.</p><Link to="/tools">Open browser tools →</Link></> : <p role="status" className="small">Opening the task library…</p>}</section>;
 }
 
-function Home({ c, toast }: { c: Catalogue | null; toast: (m: string) => void }) {
+function Home({ c, toast, error, retry, complete }: { c: Catalogue | null; toast: (m: string) => void; error: string | null; retry: () => void; complete: boolean }) {
+  const { search } = useLocation();
+  const selectedWorkflow = search.get("workflow") ?? "";
+  const [buildOpen, setBuildOpen] = useState(() => location.hash === "#build");
+  const [showGlobe, setShowGlobe] = useState(false);
+  useEffect(() => {
+    // Keep the decorative globe and its CPU work out of first paint. Start after
+    // the hero has been visible for a moment, then wait for an idle browser slot.
+    let idleId = 0;
+    const idleWindow = window as Window & {
+      requestIdleCallback?: (callback: IdleRequestCallback, options?: IdleRequestOptions) => number;
+      cancelIdleCallback?: (id: number) => void;
+    };
+    const timer = window.setTimeout(() => {
+      if (idleWindow.requestIdleCallback) idleId = idleWindow.requestIdleCallback(() => setShowGlobe(true), { timeout: 1800 });
+      else idleId = window.setTimeout(() => setShowGlobe(true), 250);
+    }, 1000);
+    return () => {
+      window.clearTimeout(timer);
+      if (idleWindow.cancelIdleCallback && idleId) idleWindow.cancelIdleCallback(idleId);
+      else if (idleId) window.clearTimeout(idleId);
+    };
+  }, []);
+  useEffect(() => { const hash = () => setBuildOpen(location.hash === "#build"); addEventListener("hashchange", hash); return () => removeEventListener("hashchange", hash); }, []);
+  useEffect(() => {
+    if (!c || !complete || !selectedWorkflow) return;
+    const workflow = c.bySlug[c.renamed[selectedWorkflow] ?? selectedWorkflow];
+    if (workflow && kindOf(workflow) === "workflow") { queueForCanvas(workflowEntries(workflow), workflow.name); setBuildOpen(true); }
+    else toast("That workflow could not be opened. Choose another from the library.");
+    setSearch({ workflow: "" });
+  }, [c, complete, selectedWorkflow, toast]);
   useEffect(() => {
     document.title = "Free AI Skills & Custom Workflow Builder | AI Blocks";
     const description = "Explore free AI skills, prompts and workflows. Build a custom workflow, edit the steps and download a pack to run in your AI. Try free browser tools too.";
@@ -400,29 +407,30 @@ function Home({ c, toast }: { c: Catalogue | null; toast: (m: string) => void })
     <main id="top">
       <StartupReady />
       <section className="hero">
-        <Suspense fallback={null}><Globe /></Suspense>
+        {showGlobe && <Suspense fallback={null}><Globe /></Suspense>}
         <div className="wrap hero-in">
           <h1 className="h1">Use AI like the top 1%</h1>
-          <Typewriter text="Turn hours of work into minutes. Spend the time you save on the work only you can do. Or at the beach (we won't tell)." />
+          <p className="lede typed" data-done="true">Turn hours of work into minutes. Spend the time you save on the work only you can do. Or at the beach (we won't tell).</p>
           <div className="hero-actions">
-            <Link to="/#library" className="btn btn-primary">Browse the blocks <ArrowIcon /></Link>
-            <Link to="/#build" className="btn btn-dark">Build a workflow</Link>
+            <Link to="/#library" className="btn btn-primary" onClick={e => { e.preventDefault(); trackUxEvent("task_started"); navigate("/#library"); requestAnimationFrame(() => document.querySelector<HTMLInputElement>('[data-testid="library-search"]')?.focus()); }}>Start with a task <ArrowIcon /></Link>
+            <Link to="/#build" className="btn btn-line" data-testid="hero-build-workflow">Build a workflow <ArrowIcon /></Link>
           </div>
         </div>
       </section>
 
-      {c ? <Library c={c} /> : <section className="section wrap" id="library"><p className="small">Loading…</p></section>}
+      {c && complete ? <Library c={c} /> : <LibraryLoading error={error} retry={retry} />}
 
-      <section className="section wrap" id="build" aria-labelledby="build-h">
+      {c && complete && <HomeMinds c={c} />}
+      {c && complete && <HomeWorkflows c={c}>{buildOpen && <section className="home-builder" id="build" aria-labelledby="build-h">
         <div className="sec-head">
           <h2 className="h2" id="build-h">Connect skills into a workflow you can run</h2>
           <p className="lede">Choose skills or start from a ready workflow. Review the steps, download one folder and give it to your AI to work through.</p>
         </div>
-        <p className="builder-app-link">Want a screen your team can use? <Link to="/apps/starter-pack">Turn your workflow into an app <ArrowIcon size={12} /></Link> <Link to="/apps">See the Mercatura example</Link></p>
-        <WhenNear id="build" fallback={<div className="builder" />}>{c && <Suspense fallback={<div className="builder" />}><Builder c={c} toast={toast} /></Suspense>}</WhenNear>
-      </section>
+        <p className="builder-app-link"><Link className="btn btn-dark btn-sm" to="/apps/starter-pack">Turn your workflow into an app <ArrowIcon size={12} /></Link><Link className="btn btn-ghost btn-sm" to="/apps">See an example →</Link></p>
+        {c && complete && <Suspense fallback={<div className="builder" role="status">Opening the steps…</div>}><Builder c={c} toast={toast} /></Suspense>}
+      </section>}</HomeWorkflows>}
+      {c && complete && <HomeAgents c={c} />}
       <FeaturedTools />
-      {c && <FeaturedWorkflows c={c} />}
     </main>
   );
 }
@@ -441,8 +449,9 @@ export default function App() {
   useHashLanding();
   const { path, search } = useLocation();
   const [kitsOpen, setKitsOpen] = useState(false);
-  const needsCatalogue = !infoPage(path) && !["/ai-tools", "/tools", "/apps", "/how-it-works", "/traction"].some((p) => path === p || path.startsWith(`${p}/`));
-  const c = useCatalogue(needsCatalogue || kitsOpen);
+  const needsCatalogue = !infoPage(path) && !["/ai-tools", "/tools", "/apps", "/how-it-works", "/traction", "/api-and-mcp", "/api-and-mcp.html"].some((p) => path === p || path.startsWith(`${p}/`));
+  const catalogueState = useCatalogueState(needsCatalogue || kitsOpen, { starterFirst: path === "/" && !search.has("block") && !search.has("workflow") });
+  const c = catalogueState.catalogue;
   const [bizOpen, setBizOpen] = useState(false);
   const closeBiz = useCallback(() => setBizOpen(false), []);
   const [tailor, setTailor] = useState<string | null>(null);
@@ -462,7 +471,7 @@ export default function App() {
   const here = now(pageSlug);
   const redirectTo = path === "/traction" ? "/tools/growth-channel-planner" : old ? pathOf(old) : here && pathOf(here) !== path ? pathOf(here) : null;
   // Optional library data must not delay the home hero or the space form.
-  const waitingForCatalogue = !c && (pageSlug !== null || ["/minds", "/compose", "/from-a-source"].includes(path)
+  const waitingForCatalogue = !c && !catalogueState.error && (pageSlug !== null || ["/minds", "/compose", "/from-a-source"].includes(path)
     || search.has("block") || (path === "/" && ["#library", "#build"].includes(location.hash)));
   useEffect(() => {
     if (redirectTo) navigate(redirectTo, { replace: true });
@@ -480,12 +489,16 @@ export default function App() {
   return (
     <>
       <a className="skip-link" href="#main-content">Skip to content</a>
-      <Header onKits={() => setKitsOpen(true)} />
+      <SiteHeader />
       <div id="main-content" tabIndex={-1}>
       <StartupContext.Provider value={!redirectTo && !waitingForCatalogue}>
-        <Suspense fallback={<main className="wrap bp-hero"><p className="small">Loading…</p></main>}>
-          {infoPage(path) ? (
+        <PageRecovery key={path}><Suspense fallback={<main className="wrap bp-hero"><p className="small" role="status">Opening this page…</p></main>}>
+          {catalogueState.error && !c && (pageSlug !== null || ["/minds", "/compose", "/from-a-source"].includes(path)) ? <main><StartupReady /><LibraryLoading error={catalogueState.error} retry={catalogueState.retry} /></main> : infoPage(path) ? (
             <InfoPage path={path} toast={setToast} />
+          ) : ["/publish", "/my-submissions", "/admin/review", "/community"].includes(path) || path.startsWith("/community/") ? (
+            <CommunityPage key={path} path={path} />
+          ) : ["/account", "/sign-up", "/sign-in"].includes(path) ? (
+            <AccountPage c={c} onKits={() => setKitsOpen(true)} />
           ) : path === "/traction" || path === "/tools/growth-channel-planner" ? (
             <TractionPage />
           ) : path === "/tools" || path.startsWith("/tools/") ? (
@@ -502,16 +515,18 @@ export default function App() {
             c ? <ComposePage c={c} toast={setToast} /> : <main className="wrap bp-hero"><p className="small">Loading…</p></main>
           ) : path === "/from-a-source" ? (
             c ? <IntakePage c={c} toast={setToast} /> : <main className="wrap bp-hero"><p className="small">Loading…</p></main>
+          ) : ["/api-and-mcp", "/api-and-mcp.html"].includes(path) ? (
+            <ApiMcpPage />
           ) : path === "/how-it-works" ? (
             <HowItWorks toast={setToast} />
           ) : pageSlug ? (
             c ? <BlockPage c={c} slug={pageSlug} toast={setToast} toBuilder={toBuilder} /> : <main className="wrap bp-hero"><p className="small">Loading…</p></main>
           ) : path === "/" ? (
-            <Home c={c} toast={setToast} />
+            <Home c={c ?? catalogueState.starterCatalogue} complete={catalogueState.complete} toast={setToast} error={catalogueState.error} retry={catalogueState.retry} />
           ) : (
             <main className="wrap bp-hero"><StartupReady /><h1 className="bp-h1">This page doesn't exist</h1><p className="lede">The address may have changed. Find a block in the library or ask us for help.</p><div className="hero-actions"><Link to="/#library" className="btn btn-primary">Browse the library</Link><Link to="/support" className="btn btn-dark">Get help</Link></div></main>
           )}
-        </Suspense>
+        </Suspense></PageRecovery>
       </StartupContext.Provider>
       </div>
       <SiteFooter />

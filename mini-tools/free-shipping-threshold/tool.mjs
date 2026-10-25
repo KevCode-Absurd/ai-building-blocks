@@ -10,12 +10,12 @@
 
 export default {
   slug: "free-shipping-threshold",
-  name: "Know where to set your free shipping minimum",
+  name: "Free shipping minimum calculator",
   /** The plain name, used where the tool talks about itself. */
-  short: "Free shipping threshold",
-  headline: "Know where to set a free shipping minimum so bigger orders pay for the postage",
-  summary: "Type your average order, your margin and what postage costs you. You get the order value to set as the minimum, and what postage takes from each order that reaches it.",
-  question: "How high should my free shipping minimum be so the postage is paid for by bigger orders?",
+  short: "Free shipping minimum calculator",
+  headline: "Free shipping minimum calculator",
+  summary: "Enter average order value, margin and postage costs. Calculate a free shipping minimum and the profit left at that level.",
+  question: "What order minimum keeps free shipping within my chosen cost limit?",
   shelf: ["ecommerce"],
   version: "1.0.0",
   updated: "2026-10-21",

@@ -2,7 +2,7 @@ slug: apollo
 name: Apollo
 maker: Apollo.io
 url: https://www.apollo.io
-promise: Find the right people to contact and email them from one account
+promise: "Find work contacts by role and company, then send follow-up emails."
 use_cases: [find-leads]
 categories: [sales-and-support]
 what_it_does:
@@ -10,13 +10,13 @@ what_it_does:
   - Shows emails and phone numbers for the people you find.
   - Sends email sequences from the same account.
   - Records calls and uses AI to help write messages on higher plans.
-  - Syncs with CRMs such as Salesforce and HubSpot.
+  - "Shares contact updates with tools such as Salesforce and HubSpot."
 benefits:
-  - Build a list of the right buyers in an afternoon.
+  - "Build a contact list using job and company filters."
   - Start contacting them without moving data between apps.
   - Keep outreach and contact details in one place.
 best_for:
-  - Solo sellers and small teams starting outbound.
+  - "Solo sellers and small teams contacting new business prospects."
   - Founders who need a first list of buyers.
   - Recruiters and agencies that source contacts.
 not_for:

@@ -1,0 +1,36 @@
+slug: system-design-practice-review
+name: System design practice review
+summary: Share a system design. Explain your choices, compare fixes and leave with a clear revision checklist.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: beginner
+inputs:
+  - type: source_text
+    required: true
+  - type: brief
+    required: false
+outputs:
+  - type: feedback_notes
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: edu-agent-skills contributors
+  repo: yugash007/edu-agent-skills
+  path: skills/projects/architecture-review
+  url: https://github.com/yugash007/edu-agent-skills/tree/e75f44303570bb2eae37a8f7536c0358be2502ee/skills/projects/architecture-review
+  licence: MIT
+  licence_file: LICENSE
+  commit: e75f44303570bb2eae37a8f7536c0358be2502ee
+  original_name: architecture-review
+  imported: 2026-10-23
+  skill_sha256: 8aceab9dedaff00b9a104bc8f0f3dade3b2960e2c13a744463905df50d3b002d
+version: 1.0.0
+credits:
+  - title: architecture-review skill
+    by: edu-agent-skills contributors
+    url: https://github.com/yugash007/edu-agent-skills/tree/e75f44303570bb2eae37a8f7536c0358be2502ee/skills/projects/architecture-review
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

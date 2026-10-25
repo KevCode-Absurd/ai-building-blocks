@@ -35,7 +35,7 @@
 
 | Original term | Replaced with |
 |---|---|
-| [e.g. p-value < 0.05] | [e.g. "We're 95% confident the difference is real"] |
+| [e.g. p-value = 0.03] | [e.g. "Under the no-effect assumption and test conditions, results this extreme or more would occur about 3% of the time"] |
 | [e.g. AUC = 0.83] | [e.g. "The model correctly identifies at-risk customers 83% of the time"] |
 
 ---

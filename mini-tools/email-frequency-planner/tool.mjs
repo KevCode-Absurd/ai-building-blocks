@@ -8,12 +8,12 @@
 
 export default {
   slug: "email-frequency-planner",
-  name: "See if sending more emails pays once unsubscribes are counted",
+  name: "Email frequency profit comparison",
   /** The plain name, used where the tool talks about itself. */
-  short: "Email frequency",
-  headline: "See if sending more emails pays, once the subscribers you lose are counted",
-  summary: "Type your list size, how often you send now and plan to, what 1,000 emails earn and your unsubscribe rate. You get the extra profit, the extra people lost and whether you come out ahead.",
-  question: "If I send more emails each month, what do the extra sales add, what do the extra unsubscribes cost me, and do I come out ahead?",
+  short: "Email frequency profit comparison",
+  headline: "Email frequency profit comparison",
+  summary: "Enter current and planned sending rates, sales per email and unsubscribe rates. Compare extra profit with the estimated value of lost subscribers.",
+  question: "Would a new email frequency leave more profit after lost subscribers are counted?",
   shelf: ["general", "ecommerce"],
   version: "1.0.0",
   updated: "2026-10-21",
@@ -52,7 +52,7 @@ export default {
       { if: "NOT(HAS(breakEvenValue))", text: "The change loses nobody extra, so there is no limit to check." },
       { text: "If a subscriber is worth more than this over their stay, the change does not pay." },
     ] },
-    { id: "shareLostYear", label: "Share of your list that leaves in a year, at the new pace", unit: "percent", formula: "IF(listSize > 0, unsubsNew * 12 / listSize * 100, NA())", none: "No list yet", sum: "{unsubsNew} × 12 ÷ {listSize} = {=}", means: "Before new sign-ups. Above 30% or so, the list shrinks faster than most can refill it." },
+    { id: "shareLostYear", label: "Yearly unsubscribes as a share of today’s list", unit: "percent", formula: "IF(listSize > 0, unsubsNew * 12 / listSize * 100, NA())", none: "No list yet", sum: "{unsubsNew} × 12 ÷ {listSize} = {=}", means: "Annual total at a fixed list size. This is a planning rate, not the share of distinct people who leave." },
   ],
   answer: [
     [
@@ -69,7 +69,7 @@ export default {
   next: [
     { slug: "email-cadence-planner", why: "Plan what each extra email says, so more sends do not mean more of the same." },
     { slug: "email-and-sms-performance-reader", why: "Read last month's numbers to see what is driving unsubscribes." },
-    { if: "shareLostYear > 30", slug: "sunset-flow-and-list-cleaner", why: "Stop emailing people who never open, before they unsubscribe." },
+    { if: "shareLostYear > 30", slug: "sunset-flow-and-list-cleaner", why: "Review whether to stop sending to people who never open your emails." },
   ],
   sources: [
     { what: "Profit from email", how: "Emails sent × sales per 1,000 emails × margin. A standard email revenue sum." },

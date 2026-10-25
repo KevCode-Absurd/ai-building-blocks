@@ -1,0 +1,121 @@
+<!--
+  Html-mode daily log — what gets APPENDED to Learning/<Subject>/logs/YYYY-MM-DD.html
+  (profile sets output_format.logs: html).
+
+  The daily file is bare fragments. The FIRST entry of the day creates the file
+  with the <style> scaffold below plus its filled entry; every later session
+  appends one <section class="log-entry"> at the end of the file. Entries stack
+  earliest-first through the day. Browsers and the Obsidian HTML Reader render
+  the fragments directly — no document wrapper, ever.
+
+  Contract: body-level markup only — no document tags (html/head/body, DOCTYPE),
+  no scripts, no external references, no agent-tutor-state island. Logs are
+  history; dashboards own the island. Same-date .md and .html logs coexist;
+  never convert or rewrite past entries.
+
+  Markdown signpost: the FIRST entry of the day also creates a thin
+  logs/YYYY-MM-DD.md from templates/log-hub.md — Obsidian hides .html files
+  unless the HTML Reader plugin is installed, and the stub is what makes the
+  day (and how to open it) visible there. Later entries append one bullet to
+  the stub's Entries list.
+
+  Entry anatomy: time · type badge · short title · 2–5 sentence body · optional
+  score line (only when a quiz or review produced a score).
+  Icons: 📖 session · 🧠 lesson · ❓ quiz · 💬 feedback · 🏁 milestone · 🔁 review.
+  Fill the {{placeholders}} and drop what a given entry doesn't need.
+  Style: Warm Paper — same system as the html dashboards (ivory, paper cards,
+  serif titles, mono labels, clay accent). Only the scaffold's <style> block
+  carries it; existing log files are never rewritten.
+-->
+<style>
+  :root {
+    --bg: #FAF9F5;
+    --card: #FFFFFF;
+    --ink: #141413;
+    --muted: #87867F;
+    --line: #D1CFC5;
+    --line-soft: #F0EEE6;
+    --accent: #D97757;
+    --accent-d: #B85C3E;
+    --accent-soft: #F7E5DC;
+    --serif: ui-serif, Georgia, "Times New Roman", Times, serif;
+    --mono: ui-monospace, "SF Mono", Menlo, Monaco, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #1B1A17;
+      --card: #25231E;
+      --ink: #EDEAE2;
+      --muted: #A39D90;
+      --line: #3B382F;
+      --line-soft: #2A2823;
+      --accent: #E28B69;
+      --accent-d: #EB9F7F;
+      --accent-soft: #3D2A20;
+    }
+  }
+  * { box-sizing: border-box; margin: 0; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font: 15.5px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 28px 16px 48px;
+  }
+  .log-entry {
+    background: var(--card);
+    border: 1.5px solid var(--line);
+    border-left: 4px solid var(--accent);
+    border-radius: 12px;
+    padding: 14px 18px;
+    margin-bottom: 14px;
+  }
+  .log-head { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+  .log-time { font: 600 12px/1.4 var(--mono); color: var(--muted); }
+  .log-title { font: 500 1.02rem/1.3 var(--serif); letter-spacing: -0.008em; }
+  .log-badge {
+    display: inline-block;
+    padding: 2px 9px;
+    border-radius: 999px;
+    font: 600 10px/1.5 var(--mono);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    background: var(--accent-soft);
+    color: var(--accent-d);
+  }
+  .log-entry p { margin-top: 8px; font-size: 0.94rem; }
+  .log-score { margin-top: 8px; font: 500 12px/1.5 var(--mono); color: var(--muted); }
+  .log-score strong { color: var(--accent-d); font-weight: 600; }
+</style>
+
+<!-- Worked example — filled entries as they land in the vault (earliest first). -->
+<section class="log-entry">
+  <div class="log-head">
+    <span class="log-time">09:05</span>
+    <span class="log-title">🔁 Review — ML · 06-backprop</span>
+    <span class="log-badge">review</span>
+  </div>
+  <p>Recalled the chain-rule framing from memory; stumbled on computational-graph ordering. Verdict: solid. Interval 6d → 15d, next due 2026-09-15.</p>
+</section>
+
+<section class="log-entry">
+  <div class="log-head">
+    <span class="log-time">14:20</span>
+    <span class="log-title">🧠 Topic 07 — Gradient descent</span>
+    <span class="log-badge">lesson</span>
+  </div>
+  <p>Covered cost functions, the update rule, and learning-rate behaviour. The cooking analogy (turning the stove down as the soup nears done) landed well. Weak spot: distinguishing convergence from oscillation.</p>
+  <p class="log-score">Quiz: <strong>7/8 (88%)</strong> — passed · re-quiz not needed</p>
+</section>
+
+<!-- Skeleton — the fragment shape to fill per entry. -->
+<section class="log-entry">
+  <div class="log-head">
+    <span class="log-time">{{HH:MM}}</span>
+    <span class="log-title">{{icon}} {{Short title}}</span>
+    <span class="log-badge">{{type: session | lesson | quiz | feedback | milestone | review}}</span>
+  </div>
+  <p>{{2–5 sentences: what was studied, scores, gaps found, next steps.}}</p>
+  <!-- <p class="log-score">Quiz: <strong>{{7/8 (88%)}}</strong> — {{verdict}}</p> -->
+</section>

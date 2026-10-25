@@ -2,7 +2,7 @@ slug: udio
 name: Udio
 maker: Udio
 url: https://www.udio.com
-promise: Songs with vocals from a text description of the sound you want.
+promise: "Explore song ideas with vocals from a description and your own or generated lyrics."
 use_cases: [voice-and-audio]
 categories: [voice]
 what_it_does:
@@ -12,12 +12,12 @@ what_it_does:
   - Lets you extend a track to make it longer.
 benefits:
   - Get a draft song for an idea without hiring a composer.
-  - Try many styles of one track in an afternoon.
+  - "Explore several styles for the same song idea."
   - Hear a jingle idea before you spend on a final version.
 best_for:
   - Song ideas and drafts.
   - Creators who want to try music styles for a video.
-  - Anyone comparing music makers, alongside Suno.
+  - "People testing song ideas with different music tools, such as Suno."
 not_for:
   - Commercial use until you confirm the current licence terms for your plan.
   - Downloading songs, which sources found in 2026 say may be limited.

@@ -2,7 +2,7 @@ slug: runway
 name: Runway
 maker: Runway
 url: https://runway.com
-promise: Video clips from text or images, with editing controls built in.
+promise: "Create short video clips from prompts or images, then edit existing footage."
 use_cases: [make-video, edit-video]
 categories: [video]
 what_it_does:
@@ -12,7 +12,7 @@ what_it_does:
   - Makes images and audio from the same account.
   - Spends one pool of credits across every kind of output.
 benefits:
-  - Fix or restyle a clip you already shot without a reshoot.
+  - "Try edits or a new style on footage you already have."
   - Try several versions of a scene in one sitting.
   - Keep making and editing in one place instead of moving files between apps.
 best_for:

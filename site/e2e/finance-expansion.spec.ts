@@ -4,20 +4,22 @@ import {unzipSync,strFromU8} from 'fflate';
 const specs=['public-markets','private-deals','operating-credit'].map(name=>JSON.parse(fs.readFileSync(new URL(`../../tools/finance-expansion/${name}.json`,import.meta.url),'utf8')));
 const items=specs.flatMap(shard=>[...shard.skills.map((item:any)=>({...item,type:'skill'})),...shard.workflows.map((item:any)=>({...item,type:'workflow'})),...shard.agents.map((item:any)=>({...item,type:'agent'}))]);
 if(items.length!==210||new Set(items.map((item:any)=>item.slug)).size!==210)throw new Error('Finance browser suite requires the complete 210-item batch.');
+const published=JSON.parse(fs.readFileSync(new URL('../public/data/blocks.json',import.meta.url),'utf8'));
+const publishedNames=new Map(published.blocks.map((item:any)=>[item.slug,item.name]));
+for(const item of items)if(!publishedNames.has(item.slug))throw new Error(`Finance item is absent from the public catalogue: ${item.slug}`);
 const route=(item:any)=>`/${item.type==='skill'?'skills':item.type==='workflow'?'workflows':'agents'}/${item.slug}`;
 for(const item of items) test(`finance ${item.type} complete download: ${item.slug}`,async({page},info)=>{
   const paidCalls:string[]=[];
   await page.route('**/api/compose',route=>{if(route.request().method()==='POST'){paidCalls.push(route.request().url());return route.abort();}return route.continue();});
   await page.goto(route(item));
-  await expect(page.getByRole('heading',{level:1})).toHaveText(item.name);
+  await expect(page.getByRole('heading',{level:1})).toHaveText(publishedNames.get(item.slug));
   let download;
   if(item.type==='skill') {
-    await page.getByTestId('add-to-ai').click();
-    const button=page.getByTestId('install-zip');await expect(button).toBeEnabled();
+    const button=page.getByRole('button',{name:'Download skill',exact:true});await expect(button).toBeEnabled();
     [download]=await Promise.all([page.waitForEvent('download'),button.click()]);
   } else {
-    await page.getByTestId('block-page').getByTestId('download-handoff').click();
-    [download]=await Promise.all([page.waitForEvent('download'),page.getByTestId('needs-download').click()]);
+    const button=page.getByRole('button',{name:'Download task pack',exact:true});await expect(button).toBeEnabled();
+    [download]=await Promise.all([page.waitForEvent('download'),button.click()]);
   }
   expect(download.suggestedFilename()).toMatch(/\.zip$/);
   const filename=info.outputPath(download.suggestedFilename());await download.saveAs(filename);
@@ -43,7 +45,7 @@ for(const width of [320,390]) test(`@mobile finance ${width}px all 210 pages`,as
   test.setTimeout(360000);await page.setViewportSize({width,height:844});
   for(let index=0;index<items.length;index++) {
     const item=items[index];await page.goto(route(item));
-    await expect(page.getByRole('heading',{level:1})).toHaveText(item.name);
+    await expect(page.getByRole('heading',{level:1})).toHaveText(publishedNames.get(item.slug));
     await expect(page.locator('#app-loader')).toBeHidden();
     expect(await page.evaluate(()=>document.documentElement.scrollWidth-innerWidth),item.slug).toBeLessThanOrEqual(0);
     if(index%35===0)await page.screenshot({path:info.outputPath(`${width}-${item.slug}.png`),fullPage:true});

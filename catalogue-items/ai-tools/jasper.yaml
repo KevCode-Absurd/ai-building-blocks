@@ -2,17 +2,17 @@ slug: jasper
 name: Jasper
 maker: Jasper
 url: https://www.jasper.ai
-promise: On-brand marketing content, written by AI agents that know your voice.
+promise: "Draft marketing content using your saved brand voice, product facts and audience details."
 use_cases: [write-copy, run-ads]
 categories: [writing, marketing]
 what_it_does:
   - Writes blog posts, emails, ads and social posts in a saved brand voice.
-  - Runs ready-made agents for jobs like SEO content, campaigns and research.
+  - "Runs agents for website content, campaigns and research."
   - Stores your brand rules, product facts and audiences in one place.
   - Makes content in batches from a grid, for many pages at once.
   - Makes on-brand product images and checks how your brand shows up in AI answers.
 benefits:
-  - Keep every writer and every channel in the same brand voice.
+  - "Use saved brand rules to guide drafts across writers and channels."
   - Turn one brief into many pieces of content without starting over.
   - Hand repeat marketing jobs to an agent and review the result.
   - Give your team one source for product facts and brand rules.
@@ -21,7 +21,7 @@ best_for:
   - Brands with a fixed voice and style guide to follow.
   - Teams that want agents built for marketing jobs.
 not_for:
-  - One-off writing, where a general chat assistant costs less.
+  - "One-off writing that does not need a shared marketing workspace."
   - Teams that need several seats on the entry plan, which means talking to sales.
 pricing:
   model: subscription

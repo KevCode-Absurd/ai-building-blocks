@@ -1,11 +1,11 @@
 // Original tool. All numbers shown are illustrative figures, not a real person’s results.
 export default {
   "slug": "monthly-budget",
-  "name": "See what is left after monthly commitments",
+  "name": "Monthly budget balance",
   "short": "Monthly budget balance",
-  "headline": "See what is left after monthly commitments",
+  "headline": "Monthly budget balance",
   "summary": "Enter take-home income, regular bills, flexible spending and savings. See your remaining balance and spending shares.",
-  "question": "See what is left after monthly commitments?",
+  "question": "What remains after my planned monthly spending and savings?",
   "category": "finance",
   "shelf": [
     "general"
@@ -29,7 +29,7 @@ export default {
       "step": 0.1,
       "integer": false,
       "help": "Income after tax and deductions.",
-      "where": "Your pay statement or regular incoming payments.",
+      "where": "Your payslip or records of money paid in.",
       "tools": []
     },
     {
@@ -41,7 +41,7 @@ export default {
       "max": 10000000,
       "step": 0.1,
       "integer": false,
-      "help": "Housing, utilities, debt minimums and other fixed commitments.",
+      "help": "Rent or home loan, household bills, debt payments and other fixed costs.",
       "where": "Your account statements.",
       "tools": []
     },

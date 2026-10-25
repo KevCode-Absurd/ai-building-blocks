@@ -1,0 +1,30 @@
+thinking: high
+thinking_why: It follows a set method with a few checks.
+new_slug: personal-goal-reflection-coach
+name: Personal goal reflection coach
+summary: Share a goal or choice to explore. Get focused questions and a small next step you own.
+job: think-and-decide
+headline: Personal goal reflection coach
+subhead: Share the personal goal or choice you want coaching on and what would make the conversation useful. It listens, asks focused questions, and helps you weigh options. You get a clearer decision or small next step. This supports routine adult reflection within stated limits.
+you_give:
+  - An adult's explicit request for coaching, a topic, desired mode, and boundaries.
+you_get:
+  - A user-owned reflection, choice, small experiment, progress review, or deliberate pause.
+how_it_works:
+  - title: Agree on the help
+    text: Check scope and whether the person wants reflection, options, a plan, or simple listening.
+  - title: Listen and check fit
+    text: Ask one focused question at a time. Keep interpretations tentative and consider practical barriers.
+  - title: Support a chosen next step
+    text: Offer a method only with permission. Let the person choose whether an action is useful.
+  - title: Review and close
+    text: Check what changed and whether the process helped. Keep memory, reminders, and outside contact off unless explicitly enabled.
+works_best_with:
+  tools:
+    - name: A chat AI that can read the bundled reference files
+      why: Use the supplied references and templates for the chosen task. Scripts are optional unless that task specifically needs them.
+how_to_use:
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.
+  - Where the skill points to ../teach-me/SKILL.md, use the related/teach-me folder inside it. We copied it in so the skill works on its own.
+  - Where the skill points to ../community-guides/SKILL.md, use the related/community-guides folder inside it. We copied it in so the skill works on its own.

@@ -5,6 +5,8 @@ description: India-specific modelling conventions for listed-equity and macro wo
 
 # India market conventions
 
+> Adapted from the Apache-2.0 source: corrected Excel scale labels and the stated crore error factor.
+
 The mechanical conventions an Indian financial deliverable has to get right. Load this alongside
 `india-market-data` (where to get the numbers) and `xlsx-author` / `pptx-author` (how to build the
 artifact).
@@ -22,17 +24,17 @@ Indian numbering: 1 lakh = 10⁵, 1 crore = 10⁷.
 ### The Excel trap (verified, 2026-09-28)
 
 In an Excel number format, **each trailing comma divides by 1,000.** Crore is 10⁷, which is
-**not** a multiple of 1,000 — so no number of trailing commas produces crore:
+**not** an integer power of 1,000 — so no number of trailing commas produces crore:
 
 | Format | On `1234567890` displays | What it actually is |
 |---|---|---|
 | `#,##0` | `1,234,567,890` | rupees |
-| `#,##0,` | `1,234,568` | **10⁶ = lakh** |
-| `#,##0,,` | `1,235` | **10⁶ = lakh** |
+| `#,##0,` | `1,234,568` | thousands of rupees (10³ per displayed unit) |
+| `#,##0,,` | `1,235` | millions of rupees (10⁶ per displayed unit; 10 lakh) |
 | `#,##0,,,` | `1` | 10⁹ = arab |
 
-So the format Indian models reach for — `#,##0,," Cr"` — **displays lakh while the column header
-says crore.** That is a **100× error**, and it is invisible in the formula bar because the stored
+So the format Indian models reach for — `#,##0,," Cr"` — **scales to millions while the column header
+says crore.** The displayed number is **10× the correct crore number**, and this is invisible in the formula bar because the stored
 value is untouched.
 
 **Correct approach: divide by 10⁷ in a live formula, and put the unit in the header.**
@@ -85,7 +87,7 @@ General precision loss: 14 significant digits stored, Excel displays '1.05722E+1
 ```
 
 Storing in ₹ crore keeps the same number to ~7 digits — well clear of the ceiling and readable in a
-cell. So the convention earns its keep twice: it avoids the 100× display trap, and it keeps the
+cell. So the convention earns its keep twice: it avoids the 10× crore display trap, and it keeps the
 workbook exact and legible. Apply an explicit `numberformat` to every money column regardless;
 `view issues` will name the ones still on General.
 
@@ -241,7 +243,7 @@ ownership is material, say so — an index-level "foreign flow" read does not tr
 
 - [ ] Fiscal periods labelled `FY26`, `Q3 FY26 (Oct–Dec 25)` — no bare calendar years
 - [ ] Units explicit in every header; crore/lakh derived by **formula**, never pre-scaled
-- [ ] No `#,##0,," Cr"` format (that is lakh — 100× error)
+- [ ] No `#,##0,," Cr"` format (that is millions — the displayed number is 10× the correct crore number)
 - [ ] Index named (NIFTY 50, not "the index"); venue stated for dual-listed names
 - [ ] Price series adjusted for corporate actions; circuit-bound prints excluded
 - [ ] Promoter pledging and RPTs surfaced in the risk section

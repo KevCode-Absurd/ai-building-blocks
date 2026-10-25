@@ -1,33 +1,55 @@
 slug: sales-funnel-drop-off-finder
 renamed_from: find-where-page-loses-buyers-test-fixes
-name: "Sales funnel drop-off finder"
-summary: "Paste step numbers and screenshots. Get the worst drop-off step, fixes and a score out of 100."
+name: Sales funnel drop-off finder
+summary: Paste step numbers and screenshots. Get the worst drop-off step, fixes and a score out of 100.
 category: general
-boards: [ecommerce]
+boards:
+  - ecommerce
 type: skill
 role: check
 job: page
 level: advanced
 inputs:
-  - {type: landing_page, required: true}
-  - {type: performance_sheet, required: false}
-  - {type: reference_set, required: false}
-  - {type: brand_brain, required: false}
+  - type: landing_page
+    required: true
+  - type: performance_sheet
+    required: false
+  - type: reference_set
+    required: false
+  - type: brand_brain
+    required: false
 outputs:
-  - {type: audit_report}
-uses: [landing-page-auditor, landing-page-30-point-checker, ab-test-traffic-checker, customer-question-finder]
+  - type: audit_report
+    required: true
+uses:
+  - landing-page-auditor
+  - landing-page-30-point-checker
+  - ab-test-traffic-checker
+  - customer-question-finder
 origin: rebuilt
-source_ids: [CES-027]
-version: 2.0.0
+source_ids:
+  - CES-027
+version: 2.1.0
 credits:
-  - {title: "Information Scent", by: "Raluca Budiu, Nielsen Norman Group", url: "https://www.nngroup.com/articles/information-scent/", used: "Checking the landing page against the ad"}
-  - {title: "Five-Second Testing", by: "Lyssna", url: "https://www.lyssna.com/guides/five-second-testing/", used: "The glance read of the first screen"}
-  - {title: "F-Shaped Pattern of Reading on the Web", by: "Kara Pernice, Nielsen Norman Group", url: "https://www.nngroup.com/articles/f-shaped-pattern-reading-web-content/", used: "The skim read"}
-  - {title: "Cart Abandonment Rate Statistics", by: "Baymard Institute", url: "https://baymard.com/lists/cart-abandonment-rate", used: "What to look for at the cart and checkout steps"}
-  - {title: "How Not To Run an A/B Test", by: "Evan Miller", url: "https://www.evanmiller.org/how-not-to-run-an-ab-test.html", used: "Only test what can reach its sample"}
-tested:
-  on: 2026-10-20
-  business: sprout
-  model: claude-opus-5-5
-  judge: claude-fable-5-1
-  result: pass
+  - title: Information Scent
+    by: Raluca Budiu, Nielsen Norman Group
+    url: https://www.nngroup.com/articles/information-scent/
+    used: Checking the landing page against the ad
+  - title: Five-Second Testing
+    by: Lyssna
+    url: https://www.lyssna.com/guides/five-second-testing/
+    used: The glance read of the first screen
+  - title: F-Shaped Pattern of Reading on the Web
+    by: Kara Pernice, Nielsen Norman Group
+    url: https://www.nngroup.com/articles/f-shaped-pattern-reading-web-content/
+    used: The skim read
+  - title: Cart Abandonment Rate Statistics
+    by: Baymard Institute
+    url: https://baymard.com/lists/cart-abandonment-rate
+    used: What to look for at the cart and checkout steps
+  - title: How Not To Run an A/B Test
+    by: Evan Miller
+    url: https://www.evanmiller.org/how-not-to-run-an-ab-test.html
+    used: Only test what can reach its sample
+package_files: all
+example_pending: true

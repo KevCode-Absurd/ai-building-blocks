@@ -1,11 +1,11 @@
 // Original tool. All numbers shown are illustrative figures, not a real person’s results.
 export default {
   "slug": "image-crop-planner",
-  "name": "See what a new image shape will crop",
+  "name": "Image crop planner",
   "short": "Image crop planner",
-  "headline": "See what a new image shape will crop",
+  "headline": "Image crop planner",
   "summary": "Enter the source size and target shape. Get the largest crop and the share of pixels removed.",
-  "question": "See what a new image shape will crop?",
+  "question": "How much of this image will a new shape remove?",
   "category": "design",
   "shelf": [
     "general"

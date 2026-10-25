@@ -1,11 +1,11 @@
 // Original tool. All numbers shown are illustrative figures, not a real person’s results.
 export default {
   "slug": "study-plan",
-  "name": "Check whether your course fits before the deadline",
+  "name": "Study time planner",
   "short": "Study time planner",
-  "headline": "Check whether your course fits before the deadline",
+  "headline": "Study time planner",
   "summary": "Enter lessons, lesson time, practice and weeks remaining. Compare required weekly hours with your available time.",
-  "question": "Check whether your course fits before the deadline?",
+  "question": "Does my course workload fit the study hours I have left?",
   "category": "personal",
   "shelf": [
     "general"

@@ -1,0 +1,32 @@
+thinking: medium
+thinking_why: It follows a set method with a few checks.
+new_slug: intercom-conversation-action-planner
+name: Intercom conversation action planner
+summary: Connect Intercom. Get waiting chats grouped by next action, with reply drafts to review.
+job: help-customers
+headline: Intercom conversation action planner
+subhead: Connect Intercom and ask for a review of open conversations. It reads recent threads and decides which need a reply, more facts, another team, a pause, or closure. You get a clear queue and reply drafts to review before changes.
+when:
+  - You use this tool for customer support and need help with this task.
+you_give:
+  - Open or paused Intercom conversations.
+  - Full message history and facts needed for replies.
+you_get:
+  - Show a dashboard and reply drafts. Ask before sending replies or changing conversation status.
+how_it_works:
+  - title: Read recent conversations
+    text: Fetch open and paused conversations, then read up to fifteen full threads.
+  - title: Choose the next step
+    text: Separate clear questions, missing facts, technical issues, waiting cases, and resolved chats.
+  - title: Review proposed actions
+    text: Show a dashboard and reply drafts. Ask before sending replies or changing conversation status.
+works_best_with:
+  tools:
+    - name: Intercom
+      why: Live lookups need Composio CLI access and connected accounts for these services.
+how_to_use:
+  - Add the downloaded folder to an AI that can read skill files.
+  - Ask for intercom conversation action planner by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
+  - Provide Open or paused Intercom conversations.
+  - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
+  - Review the result. Approve any proposed sending or account changes before they happen.

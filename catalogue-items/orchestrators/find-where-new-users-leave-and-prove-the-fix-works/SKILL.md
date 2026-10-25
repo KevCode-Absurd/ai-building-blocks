@@ -3,7 +3,7 @@ name: find-where-new-users-leave-and-prove-the-fix-works
 description: Use when sign-ups look fine but few people are still around a month later, and you want to fix the first visit before building a feature. It runs 3 skills in order, and checks each result before the next step starts.
 ---
 
-# Find where new users leave and prove the fix works
+# Find where new users leave and review the change
 
 Give it visits, sign-ups and 30-day users. Get the biggest leak, a one-morning test of the fix and a result check.
 
@@ -46,9 +46,9 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 1. **New user drop-off finder.** Use the skill `new-user-drop-off-finder`. Finds the biggest leak and the first-visit change to try. Starts from your funnel numbers.
 2. **Small usability test planner.** Use the skill `small-usability-test-planner`. Give it the audit report from the steps before. Plans a one-morning test of the leak the finder named. Reads the audit report from the step before.
 
-Pause here: Run the test with three people and one outsider, ship the first-visit fix, then wait two weeks and export the same numbers again.
+Pause here: Run the test with three people and one outsider. Implement the first-visit fix only with the owner’s approval. Export results only after the post-change cohort has completed the full observation window for the measure being reviewed. For 30-day retention, every included user must have had 30 days to return. Use the same cohort rules and complete window for the before and after groups. Earlier first-use results may be reviewed separately, labelled with their shorter window; they do not establish a 30-day retention result.
 
-3. **Product metrics review writer.** Use the skill `product-metrics-review-writer`. Checks whether the fix moved the numbers. Reads the fresh export from after the wait.
+3. **Product metrics review writer.** Use the skill `product-metrics-review-writer`. Before comparing, check cohort dates, measure definitions and complete observation windows. Stop the affected comparison if either group is too young or the windows differ. Read the supported before-and-after change as an observation, not proof that the fix caused it.
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

@@ -1,0 +1,31 @@
+new_slug: brand-enemy-statement-writer
+name: Brand enemy statement writer
+summary: Share what buyers dislike and what your product changes. Get a clear brand stance, a promise and proof gaps.
+job: plan-strategy
+headline: Brand enemy statement writer
+subhead: Name the old habit your brand wants to change.
+explain: A short positioning exercise that distinguishes customer evidence from assumptions and avoids personal attacks or unsupported competitor claims.
+when:
+  - Your positioning feels generic.
+  - You want a useful belief or status quo to challenge in your brand story.
+you_give:
+  - Customer complaints or reviews.
+  - Product facts and the common alternatives.
+  - Any existing brand values or positioning.
+you_get:
+  - Ranked customer frustrations and common failures.
+  - A concise enemy statement and positive promise.
+  - Evidence gaps and a check against misleading claims.
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Find repeated frustration
+    text: Separate observed customer language from inferred industry habits.
+  - title: Choose a practice to challenge
+    text: Connect the frustration to a real product difference.
+  - title: Write the stance
+    text: State the enemy and positive alternative without invented proof or personal blame.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

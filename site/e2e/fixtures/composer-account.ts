@@ -9,12 +9,13 @@ export async function mockComposerAccount(page: Page, signedIn = true, userId = 
     export class Clerk {
       listeners = new Set();
       session = ${signedIn ? `{ id: "sess_browser_fixture", status: "active", user: { id: ${JSON.stringify(userId)} }, getToken: async () => sessionStorage.getItem("fixture:session-token") || ${JSON.stringify(sessionToken)} }` : "null"};
-      constructor() { window.__switchMindAccount = id => { this.session = id ? { id: 'sess_' + id, status: 'active', user: { id }, getToken: async () => id } : null; this.listeners.forEach(l => l()); }; }
+      constructor() { window.__switchMindAccount = id => { sessionStorage.setItem('fixture:active-user', JSON.stringify(id)); this.session = id ? { id: 'sess_' + id, status: 'active', user: { id }, getToken: async () => id } : null; this.listeners.forEach(l => l()); }; const saved = sessionStorage.getItem('fixture:active-user'); if(saved !== null) window.__switchMindAccount(JSON.parse(saved)); }
       async load() {}
       addListener(listener) { this.listeners.add(listener); listener(); return () => this.listeners.delete(listener); }
       async redirectToSignIn(options) { sessionStorage.setItem("fixture:redirect", JSON.stringify(options)); }
       async redirectToSignUp(options) { sessionStorage.setItem("fixture:signup", JSON.stringify(options)); }
-      async signOut() { this.session = null; location.assign("/compose"); }
+      openUserProfile() { sessionStorage.setItem("fixture:profile", "opened"); }
+      async signOut(options) { sessionStorage.setItem("fixture:signout", "called"); sessionStorage.setItem("fixture:active-user", "null"); this.session = null; location.assign(options?.redirectUrl || "/account"); }
     }
   `;
   // The production dynamic import retains Clerk's named export. Intercept only

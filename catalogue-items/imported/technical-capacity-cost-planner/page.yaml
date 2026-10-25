@@ -1,0 +1,28 @@
+new_slug: technical-capacity-cost-planner
+name: Plan service capacity and cost
+summary: Link traffic, tested limits and running costs. Get a scaling plan that shows what still needs a load test.
+job: build-software
+headline: Plan service capacity and cost
+subhead: Bring traffic and cost records. Model demand, headroom and spend, then set checks for the next scale step.
+explain: Bring traffic and cost records. Model demand, headroom and spend, then set checks for the next scale step.
+when:
+  - You want to plan service capacity and cost.
+you_give:
+  - Traffic/growth/peak estimates, current resources and measured performance.
+  - Aligned cost records, budget, reliability limits and accountable owners.
+you_get:
+  - A demand-to-capacity projection with triggers and unit-cost calculations.
+  - A load/soak evidence plan and an owned budget-versus-reliability decision.
+how_to_use:
+  - Download the complete skill folder and add it to your AI tool, or copy the instructions into a chat.
+  - Provide the inputs listed here and ask your AI to follow the skill.
+  - Review the result and any missing facts before using it.
+how_it_works:
+  - title: Model demand and headroom
+    text: Map request or storage demand to resource limits using justified utilization and scaling assumptions.
+  - title: Calculate comparable costs
+    text: Align periods, scope and allocation methods; inspect tenant distributions when averages hide skew.
+  - title: Gate the capacity claim
+    text: Define representative load/soak acceptance evidence and escalate unresolved budget or reliability tradeoffs.
+thinking: medium
+thinking_why: It weighs your evidence and follows a specific method.

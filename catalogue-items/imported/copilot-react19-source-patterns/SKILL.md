@@ -16,7 +16,8 @@ Reference for every source-file migration required for React 19.
 | `unmountComponentAtNode` | → `root.unmount()` | Inline fix |
 | `ReactDOM.findDOMNode` | → direct ref | Inline fix |
 | `forwardRef(...)` wrapper | → ref as direct prop | See references/api-migrations.md |
-| `Component.defaultProps = {}` | → ES6 default params | See references/api-migrations.md |
+| Function component `.defaultProps` | → ES6 default params | See references/api-migrations.md |
+| Class component `static defaultProps` | Keep; React 19 still supports it | See references/api-migrations.md |
 | `useRef()` no arg | → `useRef(null)` | Inline fix  add `null` |
 | Legacy Context | → `createContext` | [→ api-migrations.md#legacy-context](references/api-migrations.md#legacy-context) |
 | String refs `this.refs.x` | → `createRef()` | [→ api-migrations.md#string-refs](references/api-migrations.md#string-refs) |

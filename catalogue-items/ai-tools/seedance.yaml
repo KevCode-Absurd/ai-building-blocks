@@ -2,14 +2,14 @@ slug: seedance
 name: Seedance
 maker: ByteDance
 url: https://dreamina.capcut.com/
-promise: Short video clips from a text prompt or a still image.
+promise: "Create short video clips from text, pictures and visual references."
 use_cases: [make-video]
 categories: [video]
 what_it_does:
   - Makes short video clips from a written description.
   - Turns a still image into a moving clip.
   - Takes reference images and clips to guide the look of a scene.
-  - Runs inside Dreamina, and through ByteDance's API for developers.
+  - "Use it in Dreamina, or connect your app through ByteDance’s API."
 benefits:
   - Test a video ad idea before you pay for a shoot.
   - Guide the look of a clip with your own reference pictures.

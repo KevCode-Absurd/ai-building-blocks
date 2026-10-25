@@ -1,0 +1,19 @@
+slug: five-voice-video-opener-writer
+name: Five-voice video opener writer
+summary: Write eighteen video openers in five voice styles. Add pace, emphasis and delivery notes for the chosen speaker.
+category: ecommerce
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: hooks
+    required: true
+uses: []
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

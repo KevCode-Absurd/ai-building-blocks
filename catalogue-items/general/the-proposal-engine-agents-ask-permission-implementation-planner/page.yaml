@@ -1,0 +1,38 @@
+new_slug: the-proposal-engine-agents-ask-permission-implementation-planner
+name: Agent action approval builder
+summary: Build a timed approval record with validated callbacks and audit events.
+job: build-software
+headline: Agent action approval builder
+subhead: Share the inputs listed below. Get a timed approval record with validated callbacks and audit events. Check the gaps before you use the result.
+explain: |-
+  Share proposed action, cost, reversibility, audience and policy matrix. Get a timed approval record with validated callbacks and audit events.
+
+  The complete method and its supporting files are in the download. It marks missing inputs and separates proposed actions from actions that were actually completed.
+when:
+  - You need a timed approval record with validated callbacks and audit events.
+  - You are adding this function to an agent system.
+  - You need to compare an existing version with the supplied starter.
+you_give:
+  - Proposed action, cost, reversibility, audience and policy matrix
+you_get:
+  - A timed approval record with validated callbacks and audit events
+  - A failure checklist and synthetic test cases
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Step 1
+    text: Calculate the risk tier from cost, reversibility and blast radius.
+  - title: Step 2
+    text: Default to review if policy is missing.
+  - title: Step 3
+    text: Create an expiring proposal with exact action parameters.
+  - title: Step 4
+    text: Authenticate approve or reject callbacks.
+  - title: Step 5
+    text: Recheck scope, expiry and current state before execution.
+  - title: Step 6
+    text: Record the decision and reject stale approvals.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

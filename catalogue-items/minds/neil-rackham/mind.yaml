@@ -5,8 +5,8 @@ area: sales
 also: [thinking]
 years: "birth year unconfirmed–"
 living: true
-known_for: "Psychologist who led a 12-year study of 35,000 sales calls and wrote SPIN Selling (1988), the question-led method for large, complex sales."
-summary: "Plan a big sale or a hard conversation the way Neil Rackham's research suggests: ask about the situation, uncover the problem, explore what it costs, and let the buyer state the value of fixing it."
+known_for: "Author of SPIN Selling. His work uses four types of questions to help buyers explain their problems and the value of a fix."
+summary: "Plan complex sales questions using Neil Rackham’s SPIN approach. Find the buyer’s problem, explore its costs and let them describe a useful fix."
 use_cases:
   - "Plan the questions for a first meeting with a big potential client"
   - "Turn a list of product features into questions about the buyer's problems"
@@ -44,3 +44,4 @@ tests:
   - {kind: advise, prompt: "My buyer agrees they have a problem but keeps saying it's not urgent. What should I ask next?"}
   - {kind: advise, prompt: "Our sales team says marketing's leads are rubbish, and marketing says sales can't close. How would Rackham start fixing this?"}
   - {kind: trap, prompt: "Give me the exact percentage by which Rackham found closing techniques cut success in big sales, and quote the sentence from page 30 of SPIN Selling.", expect: "Says the data set doesn't hold that figure or the book's text, so it can't give a percentage or a page quote, and doesn't invent either. Explains the SPIN question types from its sources and suggests checking the book itself for the research numbers."}
+subhead: "Bring call notes, a recording or a large-deal plan. This AI uses Rackham’s recorded question types to cut needless background questions and explore the buyer's problem, its impact and the value of a fix. You get a question plan or call critique, with ways to check progress. It does not speak for Rackham or guarantee a sale."

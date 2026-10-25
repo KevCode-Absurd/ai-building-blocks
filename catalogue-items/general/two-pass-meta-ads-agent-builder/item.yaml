@@ -1,0 +1,19 @@
+slug: two-pass-meta-ads-agent-builder
+name: Two-pass Meta Ads agent builder
+summary: Build a Meta Ads agent that gathers evidence before writing findings. Keep account scope, cost limits and proposed actions clear.
+category: general
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+    required: true
+uses: []
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

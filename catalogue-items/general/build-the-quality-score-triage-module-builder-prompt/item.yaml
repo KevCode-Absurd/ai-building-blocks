@@ -1,0 +1,19 @@
+slug: build-the-quality-score-triage-module-builder-prompt
+name: Quality Score review coding prompt
+summary: Get a coding brief to review Quality Score. Rank keyword fixes and show the data behind each one.
+category: general
+type: prompt
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+    required: true
+uses: []
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

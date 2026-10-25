@@ -1,6 +1,7 @@
+# Modified by AI Blocks on 2026-10-24: method/copy repair.
 slug: yield-curve-explainer
-name: Yield curve explainer
-summary: Name a government. Get its curve shape, key slopes and real rate split explained in plain words.
+name: "Yield curve explainer"
+summary: "Explain a government bond curve using dated, comparable yields. Show slope formulas, the sign convention and missing points."
 category: general
 boards: []
 type: skill
@@ -29,4 +30,4 @@ credits:
   - title: yield-curve-analysis skill
     by: nighomni123
     url: https://github.com/nighomni123/fsi-skills-india/tree/main/src/market-data/lseg/yield-curve-analysis
-    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.
+    used: Adapted for clarity and method consistency; upstream source and Apache-2.0 attribution are retained.

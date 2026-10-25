@@ -1,0 +1,27 @@
+thinking: medium
+thinking_why: It follows a process checklist and ties each step to your records.
+new_slug: client-project-communication-plan
+name: Client project communication plan
+summary: Share how you work with clients. Get clear channels, update dates and a record for decisions and approvals.
+job: organise-work
+headline: Client project communication plan
+subhead: Share your client projects, current communication channels and approval problems. It sets a main channel, update rhythm and decision record for each relationship. You get a communication plan, clear approval roles and steps for raising issues before they delay the work.
+explain: Share your client projects, current communication channels and approval problems. It sets a main channel, update rhythm and decision record for each relationship. You get a communication plan, clear approval roles and steps for raising issues before they delay the work.
+you_give:
+  - Client projects, stakeholders and current communication channels.
+  - Update needs, approval roles, document access and recurring problems.
+you_get:
+  - A client communication and update plan.
+  - A decision and deliverable-approval log format.
+  - An escalation and handover process.
+how_it_works:
+  - title: Step 1
+    text: Choose a main working channel and a shared home for documents.
+  - title: Step 2
+    text: Set update dates, decision records and approval roles.
+  - title: Step 3
+    text: Plan how issues, delays and stakeholder changes are raised.
+how_to_use:
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.
+  - It works best when your AI can read your supplied records; changing live systems needs separate access and approval.

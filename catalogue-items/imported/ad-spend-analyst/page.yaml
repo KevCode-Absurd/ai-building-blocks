@@ -2,10 +2,15 @@ thinking: high
 thinking_why: It must tell real results from luck and avoid overclaiming.
 new_slug: ad-spend-analyst
 name: Ad spend analyst
-summary: Give it your ad exports. Get wasted spend, standout campaigns and small budget tests to run next.
+summary: Give it your ad exports. Get wasted spend, standout campaigns and small
+  budget tests to run next.
 job: read-ad-results
 headline: Ad spend analyst
-subhead: Give it ad exports from each channel, your goal, your target cost per sale and your total budget. It lines up the data so channels can be compared, checks each campaign's health and labels what the data proves versus what it only hints at. You get the wasted spend, standout performers, budget shift scenarios and small tests to run next.
+subhead: Give it ad exports from each channel, your goal, your target cost per
+  sale and your total budget. It lines up the data so channels can be compared,
+  checks each campaign's health and labels what the data proves versus what it
+  only hints at. You get the wasted spend, standout performers, budget shift
+  scenarios and small tests to run next.
 explain: |
   You get a clear view of what is working and what is wasting money across your ad channels, plus small budget tests to try next. It labels what the data proves and what it only hints at.
 
@@ -27,5 +32,7 @@ you_get:
   - Budget shift ideas with scenarios
   - Small tests to run next
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.

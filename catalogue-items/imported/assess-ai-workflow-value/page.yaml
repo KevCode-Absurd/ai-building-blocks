@@ -1,0 +1,28 @@
+new_slug: assess-ai-workflow-value
+name: Check AI workflow value
+summary: Compare a pilot's results, costs and harms. Decide whether to grow it, limit it, change it or stop it.
+job: think-and-decide
+headline: Check AI workflow value
+subhead: Use pilot data to check full costs and tradeoffs, then name the next step and its owner.
+explain: Use pilot data to check full costs and tradeoffs, then name the next step and its owner.
+when:
+  - You want to check AI workflow value.
+you_give:
+  - The workflow, population, baseline and decision owner.
+  - Pilot outcomes, review effort, costs and known quality or privacy limits.
+you_get:
+  - An evidence ledger separating observations, assumptions and causal claims.
+  - A bounded decision with full costs, missing evidence, owner and reversal trigger.
+how_to_use:
+  - Download the complete skill folder and add it to your AI tool, or copy the instructions into a chat.
+  - Provide the inputs listed here and ask your AI to follow the skill.
+  - Review the result and any missing facts before using it.
+how_it_works:
+  - title: Define the comparison
+    text: Specify the changed work, baseline, population, measurable outcome and countermetrics.
+  - title: Reconcile the evidence
+    text: Compare full operating costs and relevant user/task slices; keep missing evidence and attribution limits visible.
+  - title: Bound the next decision
+    text: Choose one disposition, name its authority limit, owner, review trigger and rollback path.
+thinking: medium
+thinking_why: It weighs your evidence and follows a specific method.

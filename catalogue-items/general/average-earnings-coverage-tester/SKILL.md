@@ -36,15 +36,15 @@ How to start:
 1. **Write down the claim.** One line: borrower, rank, amount, yearly charge, due date, price. Mark gaps as `MISSING:`.
 2. **Test the whole borrower, not the collateral.** Safety comes from the borrower being able to pay everything it owes. Pledged assets are often worth far less when trouble comes, and claims on them take long to enforce. If the borrower's junior debt is shaky, a senior claim on it is not safe either.
 3. **List every fixed claim.** Make a table of claim, rank, amount and yearly charge: bank loans, bonds, notes and required lease payments. If you are testing a preferred share, add the preferred dividend as its own row. Interest that is owed only if earned is not a fixed charge. List it aside as junior capital.
-4. **Total all the charges.** Add every row to get TOTAL CHARGES. Always divide by this total, even when your claim is senior. Do not use the "prior deductions" figure, where you take senior charges off first and divide what is left by your own claim. It makes a junior claim look safer than the senior one.
+4. **Total all the charges once.** Show the debt-and-lease subtotal and any preferred-dividend subtotal separately. TOTAL CHARGES is the sum of the rows included in this test: debt and required lease charges for a debt test; those charges plus the preferred dividends for a preferred-share test. Include every relevant obligation once. Do not use prior deductions that subtract senior charges from earnings before dividing by only the junior claim. Keep the numerator, period and included claims explicit.
 5. **Build the earnings line.** For each year, write earnings before interest and lease charges. Use the figure after income tax for the stricter test. If you only have pre-tax figures, say so and treat a pass that is close to the bar as a fail. Remove clear one-offs first.
 6. **Average over about seven years.** Show two figures: the straight average with loss years at their real value, and the average with loss years set to zero. The second is often a fairer picture of ordinary earning power, but never hide the first. If the window holds a deep slump, widen it to ten years.
-7. **Divide.** Coverage is average earnings divided by TOTAL CHARGES. For a preferred share it is average earnings divided by TOTAL CHARGES plus the preferred dividend. A preferred share needs a higher bar than the debt ahead of it, which must be safer than it needs to be on its own.
+7. **Divide by the stated total once.** Coverage is average earnings divided by TOTAL CHARGES. In a preferred-share test, TOTAL CHARGES already includes the preferred-dividend row; do not add it again. For example, average earnings of 100, debt-and-lease charges of 10 and preferred dividends of 5 give a preferred coverage denominator of 15 and coverage of about 6.67, not a denominator of 20. A preferred share uses the stricter historical bar below. If the denominator is zero, negative, missing or not on a matching basis, leave coverage undefined or unresolved and explain why; never invent a finite ratio.
 8. **Pick the bar from how steady the business is.** Starting bars from the 1940 book, for coverage of total charges:
    - Steady income with little swing (a regulated or contract-based business): about 1.75 times.
    - Moderately steady, heavy on equipment: about 2 times.
    - An ordinary operating business, cyclical or small: about 3 times.
-   - For a preferred share, use about 2, 2.5 and 4 times charges plus preferred dividends.
+   - For a preferred share, use about 2, 2.5 and 4 times TOTAL CHARGES as defined for that test, including preferred dividends exactly once. These are historical method benchmarks, not current regulatory or universal approval standards.
    The less steady the business, the bigger the cushion. If it could not survive a long bad spell, it fails even when past cover is large.
 9. **Look at the trend, the worst year and the latest year.** These are judgments, not rules. If any one is poor, ask for an average well above the bar and a reason to think the slump ends. If all three are good, a bar met is a bar met.
 10. **Check the rate.** The same earnings cover a 3% loan twice as often as a 6% one. Redo the sum at the rate the borrower would pay to refinance when the debt comes due. A pass that depends on a cheap rate that cannot last is not a pass.
@@ -69,7 +69,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 
 ## Check before you hand it back
 
-- Every fixed claim is in the table and the total uses all of them.
+- Every relevant claim is in the table, subtotals reconcile to TOTAL CHARGES, and preferred dividends are included exactly once in a preferred-share denominator.
 - No prior-deductions figure was used.
 - Both averages are shown, with loss years treated as stated.
 - The bar is matched to how steady the business is, with a reason.

@@ -1,0 +1,19 @@
+slug: six-pattern-ad-performance-diagnoser
+name: Six-pattern ad performance diagnoser
+summary: Check six possible causes of an ad result change. Use local baselines first and explain confidence and missing evidence.
+category: ecommerce
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: audit_report
+    required: true
+uses: []
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

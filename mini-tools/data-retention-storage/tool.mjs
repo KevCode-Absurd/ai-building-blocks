@@ -1,11 +1,11 @@
 // Original tool. All numbers shown are illustrative figures, not a real person’s results.
 export default {
   "slug": "data-retention-storage",
-  "name": "Estimate storage for a chosen retention period",
-  "short": "Retention storage estimate",
-  "headline": "Estimate storage for a chosen retention period",
-  "summary": "Enter records per day, average size, days retained and copies. See steady-state storage before overhead.",
-  "question": "Estimate storage for a chosen retention period?",
+  "name": "Data retention storage estimate",
+  "short": "Data retention storage estimate",
+  "headline": "Data retention storage estimate",
+  "summary": "Enter daily records, average size, days kept and copies. Estimate storage once the full period is filled, plus monthly storage cost.",
+  "question": "How much storage does our chosen record-keeping period need?",
   "category": "compliance",
   "shelf": [
     "general"
@@ -92,7 +92,7 @@ export default {
       "unit": "number",
       "formula": "records * size * days / 1000000",
       "sum": "{records} × {size} × {days} ÷ 1,000,000 = {=}",
-      "means": "Decimal kilobytes and gigabytes; assumes old records expire on time.",
+      "means": "Uses decimal storage units and assumes old records are deleted on time.",
       "none": "Not enough data"
     },
     {
@@ -135,6 +135,6 @@ export default {
   ],
   "notes": [
     "The filled-in values are illustrative figures. Replace them with your own records; the result follows your inputs.",
-    "This is capacity arithmetic. Your retention policy must address applicable duties, consent, legal holds and deletion. Indexes, logs, requests, transfer fees and version history are outside this estimate."
+    "This estimates storage, not how long records should be kept. Your policy must cover the rules that apply, consent, records that must stay for a legal case and deletion. Indexes, logs, old versions, requests and transfer charges are not counted."
   ]
 };

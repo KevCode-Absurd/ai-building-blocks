@@ -98,11 +98,11 @@ function outsideInputs(b, bySlug) {
  * Things the block makes itself are left out, and the brand brain's parts are merged into one item.
  */
 export function needsOf(b, bySlug, describe = (t) => ({ label: t, what: t })) {
-  const madeHere = new Set((b.outputs ?? []).map((o) => o.type));
-  const madeBySteps = new Set((b.steps ?? []).flatMap((s) => (bySlug[s.uses]?.outputs ?? []).map((o) => o.type)));
   const byKey = new Map();
   for (const p of outsideInputs(b, bySlug)) {
-    if (madeHere.has(p.type) || madeBySteps.has(p.type)) continue;
+    // A transformation may take and return the same type (notes, drafts, tables).
+    // outsideInputs already tracks what earlier workflow steps have made; a
+    // later output must not erase material needed to start the job.
     const info = INPUTS[p.type] ?? describe(p.type);
     if (info.maker === b.slug) continue; // a block never needs what it makes (the brand file builder needs no brand brain)
     if (b.steps?.some((st) => st.uses === info.maker)) continue; // a workflow whose own step makes it
@@ -177,7 +177,15 @@ const FAMILY = {
   "lead-people": "people", "speak-and-persuade": "people", "sell-and-negotiate": "people",
   "write-and-tell-stories": "craft", "design-work": "craft", "build-software": "software",
 };
-const familyOf = (task) => FAMILY[task] ?? "marketing";
+const MARKETING_TASKS = new Set([
+  "check-ads", "write-ad-copy", "make-image-ads", "make-video-ads", "plan-ad-tests", "read-ad-results",
+  "audit-landing-page", "write-landing-page", "product-photos", "understand-customers", "brand-file",
+  "study-competitors", "make-offer", "grow-social", "write-emails", "get-found-in-search",
+  "launch-and-scale-ads", "run-google-ads", "keep-customers",
+]);
+// An unclassified task must not inherit the marketing family. Broad results such
+// as a report or plan need a known shared job before they become a useful link.
+const familyOf = (task) => FAMILY[task] ?? (MARKETING_TASKS.has(task) ? "marketing" : task);
 const BROAD = new Set(["audit_report", "plan", "brief", "question", "feedback_notes", "shortlist", "copy_draft"]);
 const START_HERE = ["fact-based-ad-copy-writer", "website-brand-brain-builder", "customer-buying-reasons-finder", "brand-voice-editor", "landing-page-30-point-checker", "quote-video-ad-script", "meta-ads-compliance-checker", "buyer-brief-writer", "hidden-offer-finder"];
 
@@ -190,6 +198,7 @@ const LIKE = { hooks: "ad_copy", objection_map: "angle_library", photo_set: "pro
 /** Blocks that open many paths get a chosen list: the brand brain feeds almost everything. */
 const NEXT_CHOSEN = {
   "website-brand-brain-builder": ["customer-buying-reasons-finder", "fact-based-ad-copy-writer", "quote-video-ad-script", "hidden-offer-finder", "ad-matched-landing-page-writer", "founder-interview-planner"],
+  "rough-notes-to-minutes-writer": ["weekly-meeting-actions-keeper", "board-minutes-drafter"],
 };
 
 export function nextOf(b, all, max = 5) {
@@ -211,7 +220,7 @@ export function nextOf(b, all, max = 5) {
   // A report, a plan or a brief can feed almost anything. A match on one of those only counts within the same family
   // of jobs, so a product page audit doesn't lead to a hiring plan.
   const sameFamily = (x) => familyOf(b.task) === familyOf(x.task);
-  const linked = (x) => x.inputs?.some((p) => outs.has(p.type) && (!BROAD.has(p.type) || sameFamily(x)));
+  const linked = (x) => x.inputs?.some((p) => outs.has(p.type) && (!BROAD.has(p.type) || (b.task !== "set-up-ai" && sameFamily(x))));
   const best = new Map();
   for (const x of all) {
     if (x.slug === b.slug || x.category === "orchestrator" || x.twin === b.slug || !linked(x)) continue;
@@ -243,8 +252,8 @@ export function beforeSection(plan, tools = [], nl = "\n") {
   const { needed, helps, chain, brain } = plan;
   const items = [...needed, ...helps];
   if (!items.length && !tools.length) return null;
-  const out = ["## Before you start", "This skill runs on its own. What's below makes the result better, but none of it is required.", ""];
-  if (needed.length) out.push("**Works best with** (or they can paste their own instead):", ...needed.map(itemLine), "");
+  const out = ["## Before you start", "Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.", ""];
+  if (needed.length) out.push("**What you need** (use your own material or the linked skill):", ...needed.map(itemLine), "");
   if (helps.length) out.push("**Makes it better (optional):**", ...helps.map(itemLine), "");
   if (chain.length) {
     out.push("**Recommended steps before this one** (optional; do each once, then reuse what it makes):");
@@ -261,8 +270,10 @@ export function beforeSection(plan, tools = [], nl = "\n") {
     ? "1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name."
     : "1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.");
   const ask = items.slice(0, 3).map((i) => (i.key === BRAND_BRAIN ? "your brand brain" : lower(i.label)));
-  out.push(`2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with ${ask.join(", ")}. They can attach them, paste them, or say where they are (a file path if your assistant can read the project).${items.some((i) => i.maker) || chain.length ? " Name the recommended steps above as a suggestion, with their links." : ""} Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.`);
-  out.push("3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once, merge steps that give the same thing, and aim for under 700 words unless the job truly needs more. In CHECKS MISSED, name only the checks that failed, or write “none”.");
+  out.push(ask.length
+    ? `2. **Check what's missing.** Look for ${ask.join(", ")}. They can attach files, paste the details, or share a file path your assistant can read.${items.some((i) => i.maker) || chain.length ? " Offer the linked skills above when they help prepare that material." : ""} Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.`
+    : "2. **Check the setup.** Use the tools listed below when the task needs them. If a tool is unavailable, say what you can do with the details provided. Do not claim you used it.");
+  out.push("3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.");
   if (tools.length) out.push("", "**Tools that do this best:**", ...tools.map((t) => `- **${t.name}:** ${t.why}`));
   return out.join(nl);
 }

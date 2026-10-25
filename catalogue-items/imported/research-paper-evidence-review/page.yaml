@@ -2,12 +2,17 @@ thinking: medium
 thinking_why: It follows a set method with a few checks.
 new_slug: research-paper-evidence-review
 name: Research paper evidence review
-summary: Share a paper and its supporting material. Get a claims review with evidence gaps, limits and questions to investigate.
+summary: Share a paper and its supporting material. Get a claims review with
+  evidence gaps, limits and questions to investigate.
 job: study-and-practice
 headline: Research paper evidence review
-subhead: Bring the full paper and any available supporting material. Get a review of what the results support, what remains uncertain and what could change the conclusion. Missing evidence stays visible.
+subhead: Bring the full paper and any available supporting material. Get a
+  review of what the results support, what remains uncertain and what could
+  change the conclusion. Missing evidence stays visible.
 when:
   - You need to assess how much weight to put on a paper's claims.
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.

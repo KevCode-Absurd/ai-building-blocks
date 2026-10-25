@@ -1,0 +1,35 @@
+slug: ai-knowledge-file-pack-builder
+name: AI knowledge file pack builder
+summary: Share knowledge and source notes. Get linked files your team and AI tools can read and reuse.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: document
+    required: true
+uses: []
+origin: imported
+source:
+  by: Magnus Hedemark
+  repo: magnus919/agent-skills
+  path: open-knowledge-format
+  url: https://github.com/magnus919/agent-skills/tree/92c327e525da69c9ad3812fd223a1770e977c2e3/open-knowledge-format
+  licence: MIT
+  licence_file: LICENSE.md
+  commit: 92c327e525da69c9ad3812fd223a1770e977c2e3
+  original_name: open-knowledge-format
+  imported: 2026-10-23
+version: 1.0.0
+credits:
+  - title: open-knowledge-format skill
+    by: Magnus Hedemark
+    url: https://github.com/magnus919/agent-skills/tree/92c327e525da69c9ad3812fd223a1770e977c2e3/open-knowledge-format
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

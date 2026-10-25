@@ -182,8 +182,10 @@ if [ $FAIL -eq 1 ]; then
   echo ""
   echo "BLOCKED: Secrets detected in staged changes."
   echo "Remove secrets before committing. Use environment variables instead."
-  echo "If this is a false positive, add it to .secretsignore or use:"
-  echo "  git commit --no-verify  (only if you're 100% certain it's safe)"
+  echo "Review the finding locally without copying the candidate value into logs."
+  echo "If it may be real, stop and ask the credential owner to verify it through the provider."
+  echo "If it is confirmed false, use only the scanner's reviewed, narrow fingerprint allowlist, then rerun the scan."
+  echo "Do not suppress a whole file or bypass the commit hook."
   exit 1
 fi
 

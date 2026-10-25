@@ -1,0 +1,19 @@
+slug: theme-based-ad-layout-blueprint-maker
+name: Theme-based ad layout blueprint maker
+summary: Plan an ad layout by theme and shape. Get text zones, product placement, a simple diagram and layout options.
+category: ecommerce
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: design_direction
+    required: true
+uses: []
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

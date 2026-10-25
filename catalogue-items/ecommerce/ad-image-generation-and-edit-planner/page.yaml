@@ -1,0 +1,44 @@
+new_slug: ad-image-generation-and-edit-planner
+name: Ad image generation and edit planner
+summary: Plan an ad image batch, choose edits by intent and keep each version tied to its source and approved facts.
+job: make-image-ads
+headline: Ad image generation and edit planner
+subhead: Share product photos, image brief, brand rules and available image tool. Get a generation plan, edit requests and version log.
+explain: |-
+  Plan an ad image batch, choose edits by intent and keep each version tied to its source and approved facts.
+
+  Share product photos, image brief, brand rules and available image tool. Get a generation plan, edit requests and version log.
+when:
+  - You need a generation plan, edit requests and version log.
+  - You need ad image generation and edit planner for a specific task.
+  - You want the method's decisions and assumptions written down before acting.
+you_give:
+  - Product photos
+  - Image brief
+  - Brand rules and available image tool
+you_get:
+  - A generation plan, edit requests and version log
+  - The sources used, missing inputs and assumptions
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Check the inputs
+    text: Confirm product photos, image brief, brand rules and available image tool. Mark facts that are missing.
+  - title: How This Works
+    text: Follow the how this works section in the full method and keep its required fields and decision rules.
+  - title: Collect Generation Inputs
+    text: Follow the collect generation inputs section in the full method and keep its required fields and decision rules.
+  - title: Generation Pipeline
+    text: Follow the generation pipeline section in the full method and keep its required fields and decision rules.
+  - title: Model Routing & Costs
+    text: Follow the model routing & costs section in the full method and keep its required fields and decision rules.
+  - title: Editing Workflow
+    text: Follow the editing workflow section in the full method and keep its required fields and decision rules.
+  - title: Configuration Output
+    text: Follow the configuration output section in the full method and keep its required fields and decision rules.
+  - title: Review the result
+    text: Return a generation plan, edit requests and version log. Check facts, math and the decisions before any action.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

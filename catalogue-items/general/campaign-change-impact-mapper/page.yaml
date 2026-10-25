@@ -1,0 +1,33 @@
+new_slug: campaign-change-impact-mapper
+name: Campaign change impact mapper
+summary: Compare an approved fact change with your campaign assets. Get affected lines, missing coverage, repair order and release checks.
+job: organise-work
+headline: Campaign change impact mapper
+subhead: Compare an approved fact change with your campaign assets. Get affected lines, missing coverage, repair order and release checks. Supply the records and asset versions to review.
+explain: |-
+  Trace a specific approved product, offer or claim change through an existing campaign pack. This maps impact; it does not invent a new offer, rewrite the whole campaign or publish anything.
+
+  Marketing fact-level dependency tracing and coordinated repair map across an existing asset manifest; not software compatibility analysis or a decision about whether to change the campaign.
+when:
+  - You need the stated review outcome from existing records.
+  - You want unknowns and proposed repairs separated from completed actions.
+you_give:
+  - document
+  - copy draft (optional)
+you_get:
+  - An asset-by-asset map of direct and derived effects
+  - A repair order, owners and missing evidence
+  - The effective-time boundary for old and new campaign facts
+how_to_use:
+  - Supply the relevant brief and material, or name files in the authorized project.
+  - Ask for the stated result. Keep supplied facts, assumptions and missing evidence distinct.
+  - Review the result before authorizing repairs or external changes. Save the returned packet or authorize a file destination.
+how_it_works:
+  - title: Define the review
+    text: Identify the approved before/after values, effective time, product or market scope, decision owner and source IDs. A proposed change is not approved merely because a draft file contains it. Keep unresolved versions separate.
+  - title: Compare the actual records
+    text: "Turn each changed fact into dependencies: direct wording, implied conditions, calculations, image text, spoken words, terms, landing destination, follow-up messages and measurements that rely on the old value. Preserve the exact location and evidence for each link."
+  - title: Return a bounded handoff
+    text: Keep historical performance records tied to the old fact/version rather than rewriting history to match the new offer. State the transition boundary so later comparisons do not combine unlike prices, terms or products.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

@@ -2,13 +2,11 @@ thinking: medium
 thinking_why: It ranks orders against limited stock.
 new_slug: supply-and-demand-balancer
 name: Supply and demand balancer
-summary: Give it your stock and open orders. Get a plan to fill the right orders
+summary: Allocate dated available supply against demand using the chosen priority rule. Show timing, constraints and unfilled demand.
   first when you cannot fill them all.
 job: plan-supply-chain
 headline: Supply and demand balancer
-subhead: Give it your stock and open orders. Get a plan to fill the right orders
-  first when you cannot fill them all. Bring stock on hand. Use the result to
-  plan your next step.
+subhead: A traceable allocation plan that respects inventory dates and customer rules.
 explain: |
   When you cannot fill every order, a plan for who gets stock first. It makes the allocation fair, fast and easy to defend.
 
@@ -29,6 +27,7 @@ you_get:
   - A shortage report
   - Optimised allocation (optional)
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
-    or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.

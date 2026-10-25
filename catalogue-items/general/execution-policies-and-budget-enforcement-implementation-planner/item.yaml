@@ -1,0 +1,19 @@
+slug: execution-policies-and-budget-enforcement-implementation-planner
+name: Agent spending cap builder
+summary: Build budget reservation rules, hard stops and cost tracking code.
+category: general
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+    required: true
+uses: []
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

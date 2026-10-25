@@ -10,12 +10,12 @@
 
 export default {
   slug: "new-hire-break-even",
-  name: "Know what a new hire must bring in to pay for themselves",
+  name: "New hire payback estimate",
   /** The plain name, used where the tool talks about itself. */
-  short: "Hire break-even",
-  headline: "Know what a new hire must bring in to pay for themselves, and when",
-  summary: "Type the salary, extra costs, ramp time and what the hire adds a month. You get the sales they must bring in, the month they pay back and their first-year result.",
-  question: "How much must a new hire bring in each month to cover what they cost, and how many months until they have paid back the hire?",
+  short: "New hire payback estimate",
+  headline: "New hire payback estimate",
+  summary: "Enter pay, other costs, time to full output and monthly contribution. Estimate first-year results and when the hire covers their costs.",
+  question: "What would this hire need to add to cover the costs entered?",
   shelf: ["general"],
   version: "1.0.0",
   updated: "2026-10-21",

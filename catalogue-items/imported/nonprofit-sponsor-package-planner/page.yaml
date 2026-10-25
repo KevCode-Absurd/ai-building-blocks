@@ -1,0 +1,30 @@
+thinking: high
+thinking_why: It weighs real records, missing facts, and choices that affect people or funding.
+new_slug: nonprofit-sponsor-package-planner
+name: Nonprofit sponsor package planner
+summary: Share your event, audience, and benefits. Get sponsor tiers, pitch copy, and a promise-tracking checklist.
+job: sell-and-negotiate
+headline: Nonprofit sponsor package planner
+subhead: Share your event or program, audience facts, available benefits, and sponsorship goal. It builds clear price tiers and a pitch for each prospect. You get a sponsor package, tailored pitch, delivery checklist, and renewal plan. Finance reviews any tax questions.
+when:
+  - You need this task done for a nonprofit, community program, or donated-goods store.
+you_give:
+  - Event or program facts, audience evidence, benefits available, existing sponsor promises, and funding goal.
+you_get:
+  - Sponsor tiers, pitch copy, a benefits checklist, and a renewal outline.
+how_it_works:
+  - title: Build the tier grid
+    text: List real benefits and price each tier. Reserve scarce benefits such as naming rights and category exclusivity.
+  - title: Tailor the sponsor pitch
+    text: Connect the audience and mission to the prospect's business. Make one clear tier request.
+  - title: Track the promises
+    text: List every benefit, owner, date, and proof to collect. Use delivery records to prepare renewal asks.
+works_best_with:
+  tools:
+    - name: A chat AI that can read your files
+      why: The skill works from records and drafts you provide. Research tasks also need current, checked public sources.
+  inputs:
+    - Benefit tiers touch the sponsorship-vs-advertising line and UBIT.
+how_to_use:
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.

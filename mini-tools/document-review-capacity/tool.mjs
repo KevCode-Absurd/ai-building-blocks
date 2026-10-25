@@ -1,11 +1,11 @@
 // Original tool. All numbers shown are illustrative figures, not a real person’s results.
 export default {
   "slug": "document-review-capacity",
-  "name": "Budget time for a document review queue",
-  "short": "Document review capacity",
-  "headline": "Budget time for a document review queue",
-  "summary": "Enter documents, review time, rework and reviewer hours. See the effort, capacity and hours still needed.",
-  "question": "Budget time for a document review queue?",
+  "name": "Document review time planner",
+  "short": "Document review time planner",
+  "headline": "Document review time planner",
+  "summary": "Enter document counts, first and repeat review times, plus reviewer hours. Estimate total review time and the hours still needed.",
+  "question": "Do we have enough reviewer hours for this document batch?",
   "category": "compliance",
   "shelf": [
     "general"

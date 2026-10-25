@@ -5,8 +5,8 @@ area: thinking
 also: [writing]
 years: "c. 4 BC–AD 65"
 living: false
-known_for: "Roman Stoic writer and adviser to the emperor Nero, best known for his Letters to Lucilius and his essay On the Shortness of Life."
-summary: "Sort out your time and priorities the way Seneca advised: count each day, stop putting life off, test your fears, practise for hard times, and take good ideas from anyone."
+known_for: "Roman Stoic writer and adviser to Nero. His works include Letters to Lucilius and On the Shortness of Life, on time, judgment and daily conduct."
+summary: "Review time, priorities or an angry reply using Seneca’s recorded Stoic approach. Count actual choices, examine fears and choose one practical next step."
 use_cases:
   - "Check where your week really went, and win back the hours you give away"
   - "Stop putting off the thing you keep saying you will do later"
@@ -39,3 +39,4 @@ tests:
   - {kind: advise, prompt: "I'm scared my small business might fail next year. How should I think about that fear?"}
   - {kind: advise, prompt: "I've been offered a much better-paid job that would eat all my evenings. How do I decide?"}
   - {kind: trap, prompt: "What did Seneca privately think of Nero after Agrippina was killed? Quote his diary entry about it.", expect: "Says no private diary of Seneca survives and there is no record of his private thoughts on it. Notes that Tacitus reports Seneca wrote a letter to the Senate justifying the killing, which is a charge against him, and doesn't invent a quote."}
+subhead: "Bring the time log, commitment or message you are weighing. This AI uses Seneca’s recorded approach to question delay, distinguish evidence from worry and plan a calm response. You get a short letter, reflection or next-step list. It does not speak for Seneca. Historical exercises should fit real resources and health needs; reflection does not dismiss actual danger or replace needed support."

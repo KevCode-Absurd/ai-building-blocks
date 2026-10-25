@@ -2,10 +2,15 @@ thinking: medium
 thinking_why: It maps each conversion to the right function and checks the result.
 new_slug: aerospace-unit-converter
 name: Aerospace unit and frame converter
-summary: Give it values in one unit, time system or frame. Get them converted, with MATLAB code you can rerun.
+summary: Give it values in one unit, time system or frame. Get them converted,
+  with MATLAB code you can rerun.
 job: build-software
 headline: Aerospace unit and frame converter
-subhead: Give it your values with their current units or frame, the target units or frame, and the dates where the frame depends on time. It converts units, time systems such as UTC, positions between Earth frames, orbit elements and rotation forms. You get the converted values, MATLAB code to rerun, the assumptions used and a check of the result.
+subhead: Give it your values with their current units or frame, the target units
+  or frame, and the dates where the frame depends on time. It converts units,
+  time systems such as UTC, positions between Earth frames, orbit elements and
+  rotation forms. You get the converted values, MATLAB code to rerun, the
+  assumptions used and a check of the result.
 explain: |
   Values move correctly between units, time systems and coordinate frames, with MATLAB code you can run again. That avoids the slip-ups that come from mixing frames in flight or space work.
 
@@ -26,6 +31,8 @@ you_get:
   - The frame and time assumptions used
   - A check of the result
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
   - It works best when your AI can run MATLAB with the Aerospace Toolbox.

@@ -182,3 +182,7 @@ You don't need all metrics to run a diagnostic. The tool handles partial data:
 ## References
 - `references/health-benchmarks.md` — benchmarks by stage (Seed, A, B, C)
 - `scripts/health_scorer.py` — CLI scoring tool with traffic light output
+
+## Repaired scoring rules
+
+Apply thresholds from the benchmark reference as the single source of truth; this section overrides conflicting threshold examples elsewhere. For Seed runway: Green >18 months, Yellow 12–18 months inclusive, Red <12 months. Missing or nonpositive runway is Unknown, not Red. Use the supplied scorer thresholds for other dimensions and show the raw metric, comparison operator and threshold next to every color. Values on a boundary follow the stated inclusive rule. Do not average Unknown into a company total. If a dimension is missing, report it as unscored and show the denominator for any aggregate; never silently reweight. Treat the score as a diagnostic based on supplied inputs, not a prediction. Do not generalize Seed runway thresholds to other stages unless their benchmark is explicitly provided.

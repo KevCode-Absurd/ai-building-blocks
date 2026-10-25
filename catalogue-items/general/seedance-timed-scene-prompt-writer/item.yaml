@@ -1,0 +1,25 @@
+slug: seedance-timed-scene-prompt-writer
+name: Seedance timed scene prompt writer
+summary: Share a scene idea and length. Get one timed video prompt with reference roles, camera moves, action and sound.
+category: general
+type: skill
+role: make
+job: video
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: reference_set
+    required: false
+  - type: footage
+    required: false
+outputs:
+  - type: video_prompt
+    required: true
+  - type: shot_list
+    required: true
+uses: []
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

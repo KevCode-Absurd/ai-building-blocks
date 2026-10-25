@@ -1,0 +1,19 @@
+slug: build-first-api-endpoint-builder-prompt
+name: First API Endpoint coding prompt
+summary: Get a coding brief for your first API endpoint, with request checks, error responses and a focused test plan.
+category: general
+type: prompt
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+    required: true
+uses: []
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

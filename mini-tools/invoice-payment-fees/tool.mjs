@@ -1,11 +1,11 @@
 // Original tool. All numbers shown are illustrative figures, not a real person’s results.
 export default {
   "slug": "invoice-payment-fees",
-  "name": "Price an invoice to receive your target after fees",
-  "short": "Payment fee gross-up",
-  "headline": "Price an invoice to receive your target after fees",
-  "summary": "Enter the amount you need to receive, percentage fee and fixed fee. See the gross charge and fees.",
-  "question": "Price an invoice to receive your target after fees?",
+  "name": "Invoice payment fee calculator",
+  "short": "Invoice payment fee calculator",
+  "headline": "Invoice payment fee calculator",
+  "summary": "Enter the amount you need after fees, the fee rate and fixed charge. Calculate the total to charge and expected fees.",
+  "question": "What charge leaves my target amount after these payment fees?",
   "category": "finance",
   "shelf": [
     "general"
@@ -21,7 +21,7 @@ export default {
   "inputs": [
     {
       "id": "target",
-      "label": "Net amount you want to receive",
+      "label": "Amount you want after fees",
       "unit": "money",
       "example": 1000,
       "min": 0,

@@ -1,0 +1,32 @@
+thinking: medium
+thinking_why: It follows a set method with a few checks.
+new_slug: support-issue-cause-investigator
+name: Support issue cause investigator
+summary: Share related tickets or notes. Get shared patterns, a possible cause, evidence, and a fix plan.
+job: help-customers
+headline: Support issue cause investigator
+subhead: Give it related Gorgias tickets, a topic, or pasted issue descriptions. It compares patterns and traces possible causes through repeated why questions. You get an evidence table, impact summary, possible root cause, and fixes to verify with the responsible team.
+when:
+  - You use this tool for customer support and need help with this task.
+you_give:
+  - Related ticket numbers, a topic, or pasted issue descriptions.
+  - Any dated evidence, common errors, or known workarounds.
+you_get:
+  - Show the proposed cause, evidence, impact, fixes by owner, and any temporary workaround.
+how_it_works:
+  - title: Collect related issues
+    text: Read the chosen ticket threads or pasted descriptions and note dates, customers, and common symptoms.
+  - title: Trace possible causes
+    text: Compare patterns and follow a chain of why questions, checking each explanation against the evidence.
+  - title: Write the investigation
+    text: Show the proposed cause, evidence, impact, fixes by owner, and any temporary workaround.
+works_best_with:
+  tools:
+    - name: Gorgias for ticket lookup; pasted notes also work
+      why: Live lookups need Composio CLI access and connected accounts for these services.
+how_to_use:
+  - Add the downloaded folder to an AI that can read skill files.
+  - Ask for support issue cause investigator by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
+  - Provide Related ticket numbers, a topic, or pasted issue descriptions.
+  - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
+  - Review the result. Approve any proposed sending or account changes before they happen.

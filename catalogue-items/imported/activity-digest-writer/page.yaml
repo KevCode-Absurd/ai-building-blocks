@@ -2,10 +2,15 @@ thinking: low
 thinking_why: It collects and groups recent items.
 new_slug: activity-digest-writer
 name: Activity digest writer
-summary: Ask what you missed. Get a daily or weekly digest of mentions, action items and decisions by project.
+summary: Ask what you missed. Get a daily or weekly digest of mentions, action
+  items and decisions by project.
 job: organise-work
 headline: Activity digest writer
-subhead: Say whether you want a day or a week, and which projects matter. It pulls activity from your connected chat, email and document tools and picks out what mentions you, decisions made and tasks waiting on you. You get your action items at the top, decisions, updates grouped by project and a note on any source it could not reach.
+subhead: Say whether you want a day or a week, and which projects matter. It
+  pulls activity from your connected chat, email and document tools and picks
+  out what mentions you, decisions made and tasks waiting on you. You get your
+  action items at the top, decisions, updates grouped by project and a note on
+  any source it could not reach.
 explain: |
   A daily or weekly digest of what you missed, grouped by project, puts your action items and decisions at the top. It is made for the morning after time away, or for Friday's review.
 
@@ -26,6 +31,8 @@ you_get:
   - Mentions of you
   - A note on any source that was unavailable
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
   - It works best when your AI can read your chat, email and docs.

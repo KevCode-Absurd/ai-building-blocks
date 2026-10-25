@@ -1,0 +1,45 @@
+new_slug: ad-photography-style-chooser
+name: Ad photography style chooser
+summary: Compare twelve photo styles for your ad. Pick a main style, a test style and one to avoid.
+job: make-image-ads
+headline: Ad photography style chooser
+subhead: Share product photos, buyer, placement, brand style and ad goal. Get primary, secondary and avoid style picks with shot notes.
+explain: |-
+  Compare twelve photo styles for your ad. Pick a main style, a test style and one to avoid.
+
+  Share product photos, buyer, placement, brand style and ad goal. Get primary, secondary and avoid style picks with shot notes.
+when:
+  - You need primary, secondary and avoid style picks with shot notes.
+  - You need ad photography style chooser for a specific task.
+  - You want the method's decisions and assumptions written down before acting.
+you_give:
+  - Product photos
+  - Buyer
+  - Placement
+  - Brand style and ad goal
+you_get:
+  - Primary, secondary and avoid style picks with shot notes
+  - The sources used, missing inputs and assumptions
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Check the inputs
+    text: Confirm product photos, buyer, placement, brand style and ad goal. Mark facts that are missing.
+  - title: Collect Context
+    text: Follow the collect context section in the full method and keep its required fields and decision rules.
+  - title: The 12 Styles
+    text: Follow the the 12 styles section in the full method and keep its required fields and decision rules.
+  - title: Style-to-Context Matrix
+    text: Follow the style-to-context matrix section in the full method and keep its required fields and decision rules.
+  - title: Deliver Spec
+    text: Follow the deliver spec section in the full method and keep its required fields and decision rules.
+  - title: Photography Style Spec
+    text: Follow the photography style spec section in the full method and keep its required fields and decision rules.
+  - title: Rules
+    text: Follow the rules section in the full method and keep its required fields and decision rules.
+  - title: Review the result
+    text: Return primary, secondary and avoid style picks with shot notes. Check facts, math and the decisions before any action.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

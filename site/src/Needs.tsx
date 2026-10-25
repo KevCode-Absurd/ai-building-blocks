@@ -18,6 +18,8 @@ function Item({ i }: { i: PlanItem }) {
 
 export function Before({ plan }: { plan: Plan }) {
   const { needed, helps, chain, brain } = plan;
+  const required = needed.filter(i => i.required);
+  const optional = [...needed.filter(i => !i.required), ...helps];
   return (
     <>
       {chain.length > 0 && (
@@ -34,10 +36,10 @@ export function Before({ plan }: { plan: Plan }) {
           </ol>
         </>
       )}
-      {needed.length > 0 && <><h3 className="with-h">Works best with</h3><ul className="needs">{needed.map((i) => <Item key={i.key} i={i} />)}</ul></>}
-      {helps.length > 0 && <><h3 className="with-h">Makes it better</h3><ul className="needs">{helps.map((i) => <Item key={i.key} i={i} />)}</ul></>}
+      {required.length > 0 && <><h3 className="with-h">Required material</h3><ul className="needs">{required.map(i => <Item key={i.key} i={i} />)}</ul></>}
+      {optional.length > 0 && <details><summary>Improve the result (optional)</summary><ul className="needs">{optional.map(i => <Item key={i.key} i={i} />)}</ul></details>}
       {brain && <p className="bp-note" data-testid="brain-files">From your brand brain it reads {brain.files.map((f, n) => <span key={f}>{n ? ", " : ""}<code>{f}</code></span>)}.</p>}
-      <p className="bp-note">The skill checks for each of these first. In Claude Code it looks in your project; in a chat it asks you to attach them. If one is missing, it says so, links to the skill that makes it, and carries on with what you have.</p>
+      <p className="bp-note">Give your AI the required material when you run the task. It should ask about missing facts and mark gaps. Optional extras can wait.</p>
     </>
   );
 }
@@ -67,13 +69,13 @@ export function WhatYouGet({ plan, tools, children }: { plan?: Plan; tools: { na
     <ol className="wyg" data-testid="what-you-get">
       {(better.length > 0 || tools.length > 0) && (
         <li className="wyg-part">
-          <h3 className="wyg-h">Better with <span>suggested, not required</span></h3>
+          <details><summary>Extra material and tools</summary>
           <ul className="wyg-chips">
             {better.map((i) => (
               <li key={i.key}>{i.maker ? <Link to={local(i.maker.url)}>{i.label}</Link> : <span>{i.label}</span>}</li>
             ))}
             {tools.map((t) => <li key={t.name} className="tool" title={t.why}><span>{t.name}</span></li>)}
-          </ul>
+          </ul></details>
         </li>
       )}
       <li className="wyg-part wyg-out">
@@ -82,8 +84,7 @@ export function WhatYouGet({ plan, tools, children }: { plan?: Plan; tools: { na
       </li>
       {next.length > 0 && (
         <li className="wyg-part">
-          <h3 className="wyg-h">Then you could <span>if you want to</span></h3>
-          <ul className="wyg-chips">{next.map((x) => <li key={x.slug}><Link to={local(x.url)}>{x.label}</Link></li>)}</ul>
+          <details><summary>Other tasks (optional)</summary><ul className="wyg-chips">{next.map((x) => <li key={x.slug}><Link to={local(x.url)}>{x.label}</Link></li>)}</ul></details>
         </li>
       )}
     </ol>

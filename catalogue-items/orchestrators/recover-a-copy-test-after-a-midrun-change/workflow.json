@@ -1,0 +1,104 @@
+{
+  "id": "recover-a-copy-test-after-a-midrun-change",
+  "uses": [
+    "campaign-change-impact-mapper",
+    "ad-variant-change-auditor",
+    "ad-results-report-writer",
+    "claim-and-proof-matcher",
+    "one-change-experiment-planner"
+  ],
+  "steps": [
+    {
+      "uses": "campaign-change-impact-mapper",
+      "note": "A dated change/impact timeline and an explicit version identity for each test period."
+    },
+    {
+      "uses": "ad-variant-change-auditor",
+      "note": "A comparability matrix with clean candidates, confounded groups and evidence gaps."
+    },
+    {
+      "uses": "ad-results-report-writer",
+      "note": "An observed result table, data-quality notes and a supported, inconclusive or unusable decision for each comparison."
+    },
+    {
+      "uses": "claim-and-proof-matcher",
+      "note": "A minimal copy patch or no-change record linked to the approved fact and affected version."
+    },
+    {
+      "uses": "one-change-experiment-planner",
+      "note": "A recovery pack and exact next-test/stop contract with planned versus actual actions."
+    }
+  ],
+  "inputs": [
+    {
+      "type": "performance_sheet",
+      "required": true
+    },
+    {
+      "type": "copy_draft",
+      "required": true
+    },
+    {
+      "type": "plan",
+      "required": true
+    },
+    {
+      "type": "document",
+      "required": false
+    }
+  ],
+  "outputs": [
+    {
+      "type": "audit_report"
+    },
+    {
+      "type": "copy_draft"
+    },
+    {
+      "type": "plan"
+    }
+  ],
+  "orderedStages": [
+    {
+      "title": "Freeze the planned comparison and locate material changes",
+      "skill": "campaign-change-impact-mapper",
+      "input": "Original test contract, actual control/variant versions and dated change log.",
+      "method": "Record the original question, one intended variable, assignment method, population, event definitions and stop rule. Map offer, product, page, tracking and creative changes to effective boundaries and affected variants. Preserve the full history; do not silently rewrite the test question after seeing outcomes.",
+      "output": "A dated change/impact timeline and an explicit version identity for each test period.",
+      "gate": "An unknown boundary or missing version-to-result link prevents a confident clean-period split. Do not invent timestamps or allocate aggregate outcomes by guess."
+    },
+    {
+      "title": "Check co-changes and determine comparable units",
+      "skill": "ad-variant-change-auditor",
+      "input": "Planned variable, actual versions and change timeline.",
+      "method": "Compare actual content and conditions against the intended one-variable design. Mark unintended co-changes, unequal offers, page/tracking differences and ambiguous assignments. Propose only defensible comparable groups using real unit/time linkage. Keep exclusion reasons and excluded totals visible; do not select a flattering subset.",
+      "output": "A comparability matrix with clean candidates, confounded groups and evidence gaps.",
+      "gate": "A pre/post split or matched date alone does not establish randomization or causal comparability. If reliable linkage is absent, preserve an inconclusive boundary."
+    },
+    {
+      "title": "Read only the evidence the design can support",
+      "skill": "ad-results-report-writer",
+      "input": "Raw totals and the comparability matrix with declared period and event definitions.",
+      "method": "Recompute observed counts, denominators and differences for validly linked groups. Keep currency, time, conversion delay and event definition aligned. Report source sums and uncertainty. A descriptive rate difference is not a statistically established copy effect; use only the predeclared or justified analysis and label post-hoc explorations. Do not hide whole-run totals or excluded periods.",
+      "output": "An observed result table, data-quality notes and a supported, inconclusive or unusable decision for each comparison.",
+      "gate": "No valid comparison means no winner claim or performance-based rewrite decision. A small clean segment may still be inconclusive."
+    },
+    {
+      "title": "Repair the current copy without moving the goalposts",
+      "skill": "claim-and-proof-matcher",
+      "input": "Approved current facts and the actual copy defect, if one exists.",
+      "method": "Correct a stale offer or factual error independently of the test verdict. Preserve the intended variable and all other agreed locks. Keep factual maintenance separate from an optimization hypothesis. If no copy defect exists, return an explicit no-copy-change decision rather than manufacture a rewrite to fill the workflow.",
+      "output": "A minimal copy patch or no-change record linked to the approved fact and affected version.",
+      "gate": "A confounded apparent winner does not authorize a stronger claim, new offer or broad redesign."
+    },
+    {
+      "title": "Choose and hand off the bounded recovery plan",
+      "skill": "one-change-experiment-planner",
+      "input": "Comparison decision, current checked copy, unresolved evidence and owner risk limits.",
+      "method": "Choose resume unchanged, restart aligned versions, run a new bounded test or stop for evidence. Specify the single variable, preserved facts, allocation, outcome, guardrails, conversion-lag handling, uncertainty/analysis plan, exposure/time limits, owner and next decision. Any required sample sizing depends on baseline, useful effect and design, not a universal spend or day count. Return the contract in chat or named files, not an implied launched experiment.",
+      "output": "A recovery pack and exact next-test/stop contract with planned versus actual actions.",
+      "gate": "No publication, budget change, live reassignment or result collection is claimed without its actual tool action and current authorization."
+    }
+  ],
+  "portable": true
+}

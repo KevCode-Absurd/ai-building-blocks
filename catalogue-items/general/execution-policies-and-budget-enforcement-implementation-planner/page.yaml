@@ -1,0 +1,38 @@
+new_slug: execution-policies-and-budget-enforcement-implementation-planner
+name: Agent spending cap builder
+summary: Build budget reservation rules, hard stops and cost tracking code.
+job: build-software
+headline: Agent spending cap builder
+subhead: Share action policy matrix, daily caps, reserved spend and recorded costs. Get budget reservation rules, hard stops and cost tracking code.
+explain: |-
+  Share action policy matrix, daily caps, reserved spend and recorded costs. Get budget reservation rules, hard stops and cost tracking code.
+
+  The complete method and its supporting files are in the download. It marks missing inputs and separates proposed actions from actions that were actually completed.
+when:
+  - You need budget reservation rules, hard stops and cost tracking code.
+  - You are adding this function to an agent system.
+  - You need to compare an existing version with the supplied starter.
+you_give:
+  - Action policy matrix, daily caps, reserved spend and recorded costs
+you_get:
+  - Budget reservation rules, hard stops and cost tracking code
+  - A failure checklist and synthetic test cases
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Step 1
+    text: Read the action policy before execution.
+  - title: Step 2
+    text: Reserve the worst allowed cost atomically before a call.
+  - title: Step 3
+    text: Deny missing or exceeded caps.
+  - title: Step 4
+    text: Reconcile the reservation with actual cost.
+  - title: Step 5
+    text: Record the operation tag.
+  - title: Step 6
+    text: Pause new work on a hard stop while preserving incident evidence.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

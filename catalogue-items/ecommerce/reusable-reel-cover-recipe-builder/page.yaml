@@ -1,0 +1,44 @@
+new_slug: reusable-reel-cover-recipe-builder
+name: Reusable Reel cover recipe builder
+summary: Build a repeatable Reel cover style using your portrait, title, colors and brand rules.
+job: grow-social
+headline: Reusable Reel cover recipe builder
+subhead: Share approved portrait, reel topic, title and brand colors. Get a reusable cover layout, title treatment and image prompt.
+explain: |-
+  Build a repeatable Reel cover style using your portrait, title, colors and brand rules.
+
+  Share approved portrait, reel topic, title and brand colors. Get a reusable cover layout, title treatment and image prompt.
+when:
+  - You need a reusable cover layout, title treatment and image prompt.
+  - You need reusable reel cover recipe builder for a specific task.
+  - You want the method's decisions and assumptions written down before acting.
+you_give:
+  - Approved portrait
+  - Reel topic
+  - Title and brand colors
+you_get:
+  - A reusable cover layout, title treatment and image prompt
+  - The sources used, missing inputs and assumptions
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Check the inputs
+    text: Confirm approved portrait, reel topic, title and brand colors. Mark facts that are missing.
+  - title: How This Works
+    text: Follow the how this works section in the full method and keep its required fields and decision rules.
+  - title: Collect Inputs
+    text: Follow the collect inputs section in the full method and keep its required fields and decision rules.
+  - title: Cover Recipe
+    text: Follow the cover recipe section in the full method and keep its required fields and decision rules.
+  - title: Title Rules
+    text: Follow the title rules section in the full method and keep its required fields and decision rules.
+  - title: Output
+    text: Follow the output section in the full method and keep its required fields and decision rules.
+  - title: Rules
+    text: Follow the rules section in the full method and keep its required fields and decision rules.
+  - title: Review the result
+    text: Return a reusable cover layout, title treatment and image prompt. Check facts, math and the decisions before any action.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

@@ -1,0 +1,30 @@
+thinking: high
+thinking_why: It weighs real records, missing facts, and choices that affect people or funding.
+new_slug: nonprofit-board-recruitment-planner
+name: Nonprofit board recruitment planner
+summary: Share board skills and open seats. Get candidate profiles, a recruitment plan, and new-member welcome steps.
+job: hire-people
+headline: Nonprofit board recruitment planner
+subhead: Share your board roster, skills, strategy, and upcoming vacancies. It identifies the gaps before suggesting how to find candidates. You get seat profiles, a recruitment tracker, a candidate packet, and a first-meeting welcome plan for board review.
+when:
+  - You need this task done for a nonprofit, community program, or donated-goods store.
+you_give:
+  - Current board skills, strategy, upcoming seat dates, bylaws, and expected member duties.
+you_get:
+  - Board skills table, target seat profiles, candidate process, expectation letter, and welcome plan.
+how_it_works:
+  - title: Find the board gaps
+    text: Compare current skills and community links with the strategy. Check which seats will open soon.
+  - title: Define and find candidates
+    text: Write each seat profile before choosing names. Plan a first chat, a chance to see the work, and a formal invitation.
+  - title: Prepare the first meeting
+    text: Prepare the candidate papers, written duties, and voting steps. Plan support through the new member's first meeting.
+works_best_with:
+  tools:
+    - name: A chat AI that can read your files
+      why: The skill works from records and drafts you provide. Research tasks also need current, checked public sources.
+  inputs:
+    - Board composition is a governance decision with fiduciary consequences.
+how_to_use:
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.

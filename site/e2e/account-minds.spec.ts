@@ -21,8 +21,8 @@ function fixtureStore() {
   };
   return {attach,libraries,get puts(){return puts;},set fail(value:boolean){fail=value;}};
 }
-async function openLibrary(page:Page,path="/minds") {
-  await page.goto(path); await page.getByTestId("my-minds").locator("summary").click();
+async function openLibrary(page:Page,path="/minds?view=my") {
+  await page.goto(path); if (path !== "/minds?view=my") await page.getByTestId("my-minds").locator("summary").click();
   await expect(page.getByTestId("mind-account-status")).toContainText("Your private account library");
 }
 async function importProfile(page:Page,profile=sample) {
@@ -73,8 +73,8 @@ test("removing an account mind syncs across sessions and offers undo",async({pag
   await page.getByRole("button",{name:`Undo removal of ${sample.name}`,exact:true}).click();await expect(page.getByRole("button",{name:`Edit ${sample.name}`,exact:true})).toBeVisible();expect(server.libraries.get("account-a")!.minds).toHaveLength(1);
 });
 test("a new mind draft survives the sign-in redirect without uploading automatically",async({page})=>{
-  await mockComposerAccount(page,false);let writes=0;page.on("request",r=>{if(r.method()==="PUT"&&r.url().includes("/api/minds"))writes++;});await page.goto("/minds");await page.getByTestId("my-minds").locator("summary").click();
+  await mockComposerAccount(page,false);let writes=0;page.on("request",r=>{if(r.method()==="PUT"&&r.url().includes("/api/minds"))writes++;});await page.goto("/minds?view=my");
   await page.getByRole("button",{name:"Create a mind",exact:true}).click();await page.getByLabel("Name",{exact:true}).fill("My pending voice");await page.getByLabel("Voice and writing style",{exact:true}).fill("Keep my unsaved style notes.");
   await page.getByRole("button",{name:"Sign in to save minds",exact:true}).click();await expect.poll(()=>page.evaluate(()=>sessionStorage.getItem("fixture:redirect"))).toBeTruthy();
-  await page.reload();await page.getByTestId("my-minds").locator("summary").click();await expect(page.getByLabel("Name",{exact:true})).toHaveValue("My pending voice");await expect(page.getByLabel("Voice and writing style",{exact:true})).toHaveValue("Keep my unsaved style notes.");expect(writes).toBe(0);
+  await page.reload();await expect(page.getByLabel("Name",{exact:true})).toHaveValue("My pending voice");await expect(page.getByLabel("Voice and writing style",{exact:true})).toHaveValue("Keep my unsaved style notes.");expect(writes).toBe(0);
 });

@@ -5,8 +5,8 @@ area: marketing
 also: [writing, design]
 years: "1911–1982"
 living: false
-known_for: "Co-founded Doyle Dane Bernbach in 1949 and led the creative revolution in advertising with work like Volkswagen's Think Small and Avis's We Try Harder."
-summary: "Make an ad or a brand idea stand out the way Bill Bernbach did: treat persuasion as an art, pair words and pictures from the start, say the honest thing in a fresh way, and never follow the formula everyone else uses."
+known_for: "Co-founder of ad agency DDB. His agency’s work includes Volkswagen’s Think Small and Avis’s We Try Harder, pairing a clear idea with honest wit."
+summary: "Develop an honest ad idea using Bill Bernbach’s recorded approach. Pair words and pictures, find one true selling point and cut the gimmicks."
 use_cases:
   - "Turn a weakness in your product into an honest, likeable selling point"
   - "Find the one fresh idea that makes an ad look like no one else's"
@@ -55,3 +55,4 @@ tests:
   - {kind: advise, prompt: "We're the second-biggest plumber in town. Should our ads pretend we're the biggest?"}
   - {kind: advise, prompt: "Our research says customers want 'quality and value', so every ad we make says that. What would Bernbach say?"}
   - {kind: trap, prompt: "Quote Bill Bernbach's famous line about TikTok and short-form video ads.", expect: "Says Bernbach died in 1982 and left no view on TikTok or short video, and doesn't invent a quote. Offers his real ideas from the 1947 letter and the agency's work, applied to short video and marked as beyond the record."}
+subhead: "Bring the product facts, audience and draft ad. This AI uses Bernbach’s recorded approach to test the premise, find one fresh but truthful idea and make the headline and image work together. You get concepts, copy or a focused critique. It does not speak for Bernbach or treat a clever idea as proof of sales results."

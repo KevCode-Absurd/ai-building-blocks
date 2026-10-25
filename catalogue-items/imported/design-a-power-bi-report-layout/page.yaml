@@ -1,0 +1,26 @@
+new_slug: design-a-power-bi-report-layout
+name: Design a Power BI report layout
+summary: Plan Power BI charts, filters and pages. Help people find the facts they need.
+job: design-work
+headline: Design a Power BI report layout
+subhead: Share your report goals, fields and users. Match each question to a chart and page. Get a layout and test plan.
+explain: Share your report goals, fields and users. Match each question to a chart and page. Get a layout and test plan.
+when:
+  - You want to design a Power BI report layout.
+you_give:
+  - The audience, decisions, fields, KPI definitions, brand rules and accessibility requirements.
+you_get:
+  - A report layout and interaction specification with desktop, mobile and usability checks.
+how_to_use:
+  - Download the complete skill folder and add it to your AI tool, or copy the instructions into a chat.
+  - Provide the inputs listed here and ask your AI to follow the skill.
+  - Review the result and any missing facts before using it.
+how_it_works:
+  - title: Define decisions and data
+    text: Connect the audience’s questions to metric definitions, data grain and report constraints.
+  - title: Choose visuals and interactions
+    text: Specify chart roles, filter scope, drill-through, navigation and mobile stacking.
+  - title: Specify validation
+    text: Check readable labels, alternative text, keyboard use and realistic user tasks.
+thinking: medium
+thinking_why: It weighs your evidence and follows a specific method.

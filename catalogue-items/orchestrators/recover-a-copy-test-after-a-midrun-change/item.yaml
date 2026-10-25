@@ -1,0 +1,47 @@
+slug: recover-a-copy-test-after-a-midrun-change
+name: Copy test change and recovery workflow
+summary: Check a copy test after an offer or tracking change. Get a fair comparison map, clear evidence limits and a plan to restart.
+category: orchestrator
+type: workflow
+role: orchestrate
+job: copy
+level: advanced
+inputs:
+  - type: performance_sheet
+    required: true
+  - type: copy_draft
+    required: true
+  - type: plan
+    required: true
+  - type: document
+    required: false
+outputs:
+  - type: audit_report
+    required: true
+  - type: copy_draft
+    required: true
+  - type: plan
+    required: true
+uses:
+  - campaign-change-impact-mapper
+  - ad-variant-change-auditor
+  - ad-results-report-writer
+  - claim-and-proof-matcher
+  - one-change-experiment-planner
+steps:
+  - uses: campaign-change-impact-mapper
+    note: A dated change/impact timeline and an explicit version identity for each test period.
+  - uses: ad-variant-change-auditor
+    note: A comparability matrix with clean candidates, confounded groups and evidence gaps.
+  - uses: ad-results-report-writer
+    note: An observed result table, data-quality notes and a supported, inconclusive or unusable decision for each comparison.
+  - uses: claim-and-proof-matcher
+    note: A minimal copy patch or no-change record linked to the approved fact and affected version.
+  - uses: one-change-experiment-planner
+    note: A recovery pack and exact next-test/stop contract with planned versus actual actions.
+execution: coordinator
+package_files: all
+needs_mode: manual
+origin: own
+example_pending: true
+version: 1.0.0

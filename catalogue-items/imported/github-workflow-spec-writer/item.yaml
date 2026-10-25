@@ -1,0 +1,33 @@
+slug: github-workflow-spec-writer
+name: Document a GitHub workflow contract
+summary: Turn a GitHub Actions file into a clear account of its triggers, jobs, data, rights, failure paths and checks.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: document
+    required: true
+uses: []
+origin: imported
+source:
+  by: github
+  repo: github/awesome-copilot
+  path: skills/create-github-action-workflow-specification
+  url: https://github.com/github/awesome-copilot/tree/613efc8c21d9b3ce642dff361d17006cd9967e28/skills/create-github-action-workflow-specification
+  licence: MIT
+  licence_file: LICENSE
+  commit: 613efc8c21d9b3ce642dff361d17006cd9967e28
+  original_name: create-github-action-workflow-specification
+  imported: 2026-10-24
+version: 1.0.0
+credits:
+  - title: create-github-action-workflow-specification skill
+    by: github
+    url: https://github.com/github/awesome-copilot/tree/613efc8c21d9b3ce642dff361d17006cd9967e28/skills/create-github-action-workflow-specification
+    used: Original instructions and supporting files, with attribution and the MIT licence. Display copy describes the task.

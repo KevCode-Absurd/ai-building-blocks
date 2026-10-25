@@ -2,10 +2,14 @@ thinking: low
 thinking_why: It fits tasks into set time blocks.
 new_slug: deep-work-day-planner
 name: Deep work day planner
-summary: Give it your tasks and calendar. Get a schedule with protected focus blocks and shallow work cut back.
+summary: Give it your tasks and calendar. Get a schedule with protected focus
+  blocks and shallow work cut back.
 job: organise-work
 headline: Deep work day planner
-subhead: Give it today's tasks with rough minutes and your fixed commitments. It labels each task deep or shallow, places deep work early in blocks of at least 90 minutes and batches shallow tasks into two short windows. You get a time-blocked schedule, your deep and shallow split and a focus-hours log.
+subhead: Give it today's tasks with rough minutes and your fixed commitments. It
+  labels each task deep or shallow, places deep work early in blocks of at least
+  90 minutes and batches shallow tasks into two short windows. You get a
+  time-blocked schedule, your deep and shallow split and a focus-hours log.
 explain: |
   A day built around your best focus hours. Give it your task list with rough minutes and it returns a schedule with deep work placed early in blocks of at least 90 minutes, and shallow tasks batched into two short windows.
 
@@ -26,6 +30,8 @@ you_get:
   - Questions to cut shallow work
   - Focus-hours log
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
   - It works best when your AI can run code.

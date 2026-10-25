@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It follows set steps and judges what is worth logging.
 new_slug: deal-notes-and-crm-updater
 name: Deal notes and CRM updater
-summary: Give it your emails, calls and meetings. Get deals and contacts updated and follow-ups drafted.
+summary: Give it your emails, calls and meetings. Get deals and contacts updated
+  and follow-ups drafted.
 job: sell-and-negotiate
 headline: Deal notes and CRM updater
-subhead: "Give it a meeting, call transcript or email thread and pick a mode: log, sweep, follow-up or clean-up. It logs the activity against the right deal and updates contacts and fields. You get a next-step queue with owners and follow-up drafts for deals that went quiet."
+subhead: "Give it a meeting, call transcript or email thread and pick a mode:
+  log, sweep, follow-up or clean-up. It logs the activity against the right deal
+  and updates contacts and fields. You get a next-step queue with owners and
+  follow-up drafts for deals that went quiet."
 explain: |
   Stop typing into the CRM. Give it a meeting, call transcript or email thread and it logs the activity against the right deal, updates contacts, and queues the next step so nothing sits without an owner.
 
@@ -26,7 +30,10 @@ you_get:
   - Follow-up drafts for quiet deals
   - Next-step queue with owners
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
   - It works best when your AI can read your accounts and files.
-  - Where the skill points to ../../shared/, use the shared folder inside it. We copied it in so the skill works on its own.
+  - Where the skill points to ../../shared/, use the shared folder inside it. We
+    copied it in so the skill works on its own.

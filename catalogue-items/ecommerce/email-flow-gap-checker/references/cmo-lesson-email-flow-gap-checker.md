@@ -1,0 +1,9 @@
+# Category-aware flow map and platform evidence checks
+
+Use a priority map rather than assume every store needs the same number of messages. Core candidates are welcome, cart/checkout recovery, post-purchase and eligible SMS welcome/recovery. Then consider browse recovery, win-back, VIP, review request, sunset and optional birthday/anniversary. Priority depends on real event volume, product use, permission, team capacity and evidence. No fixed share of email revenue proves a flow is broken.
+
+Category adjustments: beauty needs actual routine education and use-based review/reorder timing; supplements need supported product facts and careful claims; fashion needs fit/style and browsing context; home needs longer decisions, assembly/care and real complementary products; food needs actual consumption cycle; pet products need real species/size fit and use rate; baby/kids need verified safety facts and legitimate age-related needs; fitness needs the actual goal/use context without body-result pressure. Do not copy arbitrary source dates into flows as facts.
+
+For each flow show trigger, eligibility, branches, message purpose, delay basis, exits/handoffs, collisions, stop conditions, owner and measurement. A welcome sequence does not continue an expired discount. Cart and checkout are distinct events. SMS is optional and requires separate actual consent and regional/provider checks, not an assumed ninety-percent open rate.
+
+Add a platform evidence checklist: integration freshness; actual event payloads; attribution/tracking settings; preview text; appropriate re-entry filters; bounce/complaint suppression; opt-in policy; and applicable audience-sync permissions. Never turn off double opt-in by default, activate every SMS collection option or assume every flow needs the same never-entered filter. Mark admin-only settings unverified unless shown.

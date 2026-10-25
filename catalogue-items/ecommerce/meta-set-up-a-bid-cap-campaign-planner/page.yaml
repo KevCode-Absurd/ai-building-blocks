@@ -1,0 +1,37 @@
+new_slug: meta-set-up-a-bid-cap-campaign-planner
+name: Meta bid cap launch planner
+summary: Plan a Meta bid-cap campaign. Set the bid limit, budget, business goals and checks for delivery.
+job: launch-and-scale-ads
+headline: Meta bid cap launch planner
+subhead: Plan a Meta bid-cap campaign. Set the bid limit, budget, business goals and checks for delivery.
+explain: |-
+  Share campaign settings, dated results, target economics and budget limits. Get a campaign plan with proposed settings and review points.
+
+  A bid cap is an auction constraint. Realized CPA, delivery and contribution can change; none is guaranteed by the cap.
+when:
+  - You need a campaign plan with proposed settings and review points.
+you_give:
+  - Campaign settings, dated results, target economics and budget limits
+  - The exact change you want and actions you authorize
+you_get:
+  - A campaign plan with proposed settings and review points
+  - Missing inputs and a bounded verification plan
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Step 1
+    text: Confirm the selected account, objective, conversion event, supported bid strategies, approved budget and business target using the current interface. Explain that a bid cap constrains auction bidding, not the final realized CPA. If the account does not support the requested strategy, report the gap rather than substitute silently.
+  - title: Step 2
+    text: Read a representative historical window and evaluate purchase volume, tracking quality, CPA, contribution and conversion delay. Use the approved acquisition target as a constraint; historical average CPA alone is not a profitability target or a universally valid bid amount.
+  - title: Step 3
+    text: Choose creatives with relevant, sufficiently observed performance and approved claims. Where permitted and appropriate, record existing post IDs and verify the actual post, identity and destination. Do not install an unneeded extension or assume preserved social engagement guarantees stronger performance.
+  - title: Step 4
+    text: Draft the campaign and one checked ad set with deliberate objective, location, audience, event, budget and bid settings. Special ad categories must reflect the actual subject; never copy a default of none without checking. The exact structure follows current account capabilities and the test question.
+  - title: Step 5
+    text: Add the chosen creatives and names, then propose only the number of bid variants the spend cap and experiment design can support. Keep control variables stable and note that overlapping ad sets can compete or confound a comparison. Verify every budget, bid, post, URL and placement preview.
+  - title: Step 6
+    text: Leave the setup in draft for any outstanding review. Publish only within existing authorization, confirm the actual submitted status, and monitor spend, realized CPA, conversion volume and contribution. Predefine pause or rollback limits; no cap setting promises a CPA ceiling or profitable delivery.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

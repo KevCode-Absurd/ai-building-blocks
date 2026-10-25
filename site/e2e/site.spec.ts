@@ -214,7 +214,7 @@ test("saving a block to a kit persists after a reload", async ({ page }) => {
   await page.getByRole("button", { name: "Create" }).click();
   await expect(page.getByRole("status")).toContainText("Saved to Launch checks");
   await page.goto("/");
-  await page.getByTestId("nav-more").click();
+  await page.getByTestId("menu-btn").click();
   await expect(page.getByTestId("open-kits")).toContainText("1");
   await page.getByTestId("open-kits").click();
   const kit = page.getByTestId("kit");

@@ -1,0 +1,19 @@
+slug: elevenlabs-voice-description-writer
+name: ElevenLabs voice description writer
+summary: Describe an original voice. Get a short voice design prompt with tone, texture, pace and character.
+category: general
+type: skill
+role: make
+job: video
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: document
+    required: true
+uses: []
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

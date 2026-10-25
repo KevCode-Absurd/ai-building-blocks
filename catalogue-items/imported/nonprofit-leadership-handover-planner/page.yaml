@@ -1,0 +1,30 @@
+thinking: high
+thinking_why: It weighs real records, missing facts, and choices that affect people or funding.
+new_slug: nonprofit-leadership-handover-planner
+name: Nonprofit leadership handover planner
+summary: Share leadership risks and departure dates. Get emergency cover, search steps, and a clear handover plan.
+job: lead-people
+headline: Nonprofit leadership handover planner
+subhead: Share your leadership roles, key risks, and any planned departure date. It separates sudden absence cover from a planned leadership change. You get acting-role limits, a search timeline, internal development steps, and a relationship handover plan for the board to review.
+when:
+  - You need this task done for a nonprofit, community program, or donated-goods store.
+you_give:
+  - Leadership roles, existing backup plan, board decision rules, key relationships, and departure timing if known.
+you_get:
+  - An emergency cover plan and, when needed, a planned search and leadership handover.
+how_it_works:
+  - title: Check emergency cover
+    text: Name the acting role, board contact, decision limits, and secure location of access records. Do not collect passwords.
+  - title: Plan the longer change
+    text: Review money, staff readiness, search choices, and risks tied to the founder. Define a temporary leader's role if needed.
+  - title: Design a bounded handover
+    text: Set dates for knowledge transfer and donor introductions, then define the outgoing leader's future authority.
+works_best_with:
+  tools:
+    - name: A chat AI that can read your files
+      why: The skill works from records and drafts you provide. Research tasks also need current, checked public sources.
+  inputs:
+    - Emergency and long-term ED succession is a board responsibility.
+how_to_use:
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.

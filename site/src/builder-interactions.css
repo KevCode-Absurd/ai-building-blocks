@@ -1,0 +1,38 @@
+.builder-assist-options { flex-shrink: 0; padding: 12px 18px; border-bottom: 1px solid var(--line); }
+.builder-assist-options > .seg { width: fit-content; max-width: 100%; flex-wrap: wrap; }
+.builder-assist-options > .builder-ai-assist { margin: 16px 0 0; }
+.diagram-tools { flex-shrink: 0; display: flex; align-items: center; flex-wrap: wrap; gap: 10px; padding: 12px 18px; border-bottom: 1px solid var(--line); }
+.diagram-tools .seg { flex-wrap: wrap; }
+.builder .node-assign { margin-top: 10px; min-height: 36px; padding: 6px 10px; border: 1px solid var(--line-2); border-radius: 6px; background: var(--bg); color: var(--text); font: inherit; font-size: 12px; cursor: pointer; }
+.builder .node-assign:hover { border-color: var(--text); }
+.builder .node-assign:focus-visible { outline: 2px solid var(--text); outline-offset: 3px; }
+.builder .stage-empty { pointer-events: auto; }
+.builder.workflow-customizing:not(.full):not(:fullscreen) { height: auto; grid-template-rows: auto; align-items: stretch; }
+.builder.workflow-customizing.list { grid-template-columns: 300px minmax(0, 1fr); }
+.builder.workflow-customizing .chain-palette { min-width: 0; max-height: 1050px; }
+.builder:not(.full):not(:fullscreen) .stage > .react-flow { flex: 1 0 460px; }
+.builder.full .chain-palette, .builder:fullscreen .chain-palette { max-height: none; }
+.builder.full, .builder:fullscreen { height: 100dvh; }
+.builder .react-flow__nodesselection-rect, .builder .react-flow__selection { background: color-mix(in srgb, var(--text) 8%, transparent); border: 1px solid var(--text); }
+@media (max-width: 860px) {
+ .builder.workflow-customizing, .builder.workflow-customizing.list { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto auto; }
+ .builder.workflow-customizing .chain-palette { max-height: 580px; border-right: 0; border-bottom: 1px solid var(--line); }
+ .builder.full, .builder:fullscreen { grid-template-rows: minmax(180px, 38dvh) minmax(0, 1fr); }
+ .builder.full .chain-palette, .builder:fullscreen .chain-palette { max-height: none; }
+ .builder-assist-options, .diagram-tools { padding: 12px; }
+ .builder .node-assign { min-height: 44px; }
+}
+
+/* Full screen has one workspace row; the mobile palette gets its own bounded row. */
+.builder:is(.full, :fullscreen).workflow-customizing,
+.builder:is(.full, :fullscreen).workflow-simple { grid-template-rows: minmax(0, 1fr); height: 100dvh; min-height: 0; }
+.builder:is(.full, :fullscreen) > .stage { min-height: 0; height: 100%; overflow: auto; }
+.builder:is(.full, :fullscreen) > .chain-palette { min-height: 0; max-height: none; overflow: auto; }
+.builder:is(.full, :fullscreen) > .chain-palette > .palette-top { flex-shrink: 0; }
+.builder:is(.full, :fullscreen) > .chain-palette > .palette-list { flex: 0 0 auto; overflow: visible; }
+.builder:is(.full, :fullscreen).list .stage-list { flex: 0 0 auto; overflow: visible; }
+.builder:is(.full, :fullscreen) > .stage > :is(.workflow-run-help, .workflow-launch, .task-file-transfer) { order: 3; flex-shrink: 0; }
+.builder:is(.full, :fullscreen) > .stage > .stage-foot { order: 4; }
+@media (max-width: 860px) {
+ .builder:is(.full, :fullscreen).workflow-customizing { grid-template-rows: minmax(150px, 25dvh) minmax(0, 1fr); }
+}

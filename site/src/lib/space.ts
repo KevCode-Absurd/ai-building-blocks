@@ -4,6 +4,8 @@
 import { useSyncExternalStore } from "react";
 import type { Item, Kind, PublicItem, Space, Visibility } from "../server/spaces";
 import { protectedHeaders } from "./turnstile";
+import { getAccountToken, hasAccount } from "./library-storage";
+import type { AccessPolicy } from "../server/space-access";
 
 export type { Item, Kind, PublicItem, Space, Visibility };
 export const KIND_NAMES: Record<Kind, string> = { skill: "Skill", prompt: "Prompt", workflow: "Workflow", kit: "Kit", agent: "Agent" };
@@ -17,7 +19,8 @@ export function setSpaceKey(k: string) {
   try { key ? localStorage.setItem(KEY, key) : localStorage.removeItem(KEY); } catch { /* private mode: keep it for this visit */ }
   listeners.forEach((l) => l());
 }
-export const spaceKey = () => key;
+export const legacySpaceKey = () => key;
+export const spaceKey = () => hasAccount() ? "account" : key;
 export const useSpaceKey = () => useSyncExternalStore((l) => { listeners.add(l); return () => listeners.delete(l); }, () => key);
 if (typeof window !== "undefined") window.addEventListener("storage", (e) => { if (e.key === KEY) { key = read(); listeners.forEach((l) => l()); } });
 
@@ -28,11 +31,12 @@ export const shareLink = (token: string) => `${location.origin}/s/${encodeURICom
 export class SpaceError extends Error {
   constructor(message: string, public status: number) { super(message); }
 }
-async function call<T>(method: string, path: string, body?: unknown, auth = key): Promise<T> {
+async function call<T>(method: string, path: string, body?: unknown, auth?: string, extra: Record<string, string> = {}): Promise<T> {
   let r: Response;
   try {
     const verification = method === "POST" && path === "" ? await protectedHeaders("create_space") : {};
-    r = await fetch(`/api/spaces${path}`, { method, headers: { "content-type": "application/json", ...verification, ...(auth ? { authorization: `Bearer ${auth}` } : {}) }, body: body === undefined ? undefined : JSON.stringify(body) });
+    const credential = auth === undefined ? await getAccountToken() ?? key : auth;
+    r = await fetch(`/api/spaces${path}`, { method, cache: "no-store", headers: { "content-type": "application/json", ...verification, ...extra, ...(credential ? { authorization: `Bearer ${credential}` } : {}) }, body: body === undefined ? undefined : JSON.stringify(body) });
   } catch (e) {
     throw new SpaceError(e instanceof Error ? e.message : "Couldn't reach the site. Check your connection and try again.", 0);
   }
@@ -43,14 +47,16 @@ async function call<T>(method: string, path: string, body?: unknown, auth = key)
 
 export type NewItem = { kind: Kind; title: string; summary?: string; body?: string; data?: unknown; visibility?: Visibility };
 export const spaces = {
-  make: (name: string) => call<{ space: Space; ownerKey: string; shareToken: string }>("POST", "", { name }, ""),
-  mine: (k = key) => call<{ space: Space; shareToken: string; items: Item[] }>("GET", "/me", undefined, k),
+  make: (name: string) => call<{ space: Space; ownerKey: string; shareToken: string }>("POST", "", { name }),
+  mine: (k?: string) => call<{ space: Space; shareToken: string; access: AccessPolicy; items: Item[] }>("GET", "/me", undefined, k),
+  access: (access: AccessPolicy) => call<{ access: AccessPolicy }>("PUT", "/me/access", access),
+  claim: (legacy = key) => call<{ ok: true }>("POST", "/me/claim", undefined, undefined, { "x-space-key": legacy }),
   rename: (name: string) => call<{ space: Space }>("PATCH", "/me", { name }),
   newLink: () => call<{ shareToken: string }>("POST", "/me/link"),
   add: (item: NewItem) => call<{ item: Item }>("POST", "/me/items", item),
   change: (id: string, patch: Partial<NewItem>) => call<{ item: Item }>("PATCH", `/me/items/${encodeURIComponent(id)}`, patch),
   remove: (id: string) => call<{ ok: true }>("DELETE", `/me/items/${encodeURIComponent(id)}`),
-  shared: (token: string) => call<{ space: { name: string; updated: string }; items: Item[] }>("GET", `/shared/${encodeURIComponent(token)}`, undefined, ""),
+  shared: (token: string) => call<{ space: { name: string; updated: string }; items: Item[] }>("GET", `/shared/${encodeURIComponent(token)}`, undefined, hasAccount() ? undefined : ""),
   publicList: () => call<{ items: PublicItem[] }>("GET", "/public", undefined, ""),
   publicItem: (id: string) => call<{ item: Item }>("GET", `/public/${encodeURIComponent(id)}`, undefined, ""),
 };

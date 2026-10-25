@@ -2,12 +2,17 @@ thinking: medium
 thinking_why: It follows a set method with a few checks.
 new_slug: study-understanding-check
 name: Study understanding check
-summary: Share what you studied. Get questions, worked practice and feedback that shows what to review next.
+summary: Share what you studied. Get questions, worked practice and feedback
+  that shows what to review next.
 job: study-and-practice
 headline: Study understanding check
-subhead: Bring your notes, a chapter or a paper you can share. Answer questions or try a practice problem, then get feedback tied to the material. It supports learning through your own answers.
+subhead: Bring your notes, a chapter or a paper you can share. Answer questions
+  or try a practice problem, then get feedback tied to the material. It supports
+  learning through your own answers.
 when:
   - You want to check what you can explain or apply after studying.
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.

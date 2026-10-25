@@ -1,6 +1,6 @@
 ---
 name: talking-object-video-prompts
-description: Use when you have a talking object script (one household object with a face, one place, an 8 to 30 second monologue, the real product beside it) and need it made with an AI image and video tool. Runs the whole video process: a character card for the object, reference images, a sheet with every angle and the mood's expressions, product and set sheets with lock lines, a storyboard with start frames, then timed clip prompts, one voice and edit notes. Ends with any check it still missed.
+description: "Use when you have a talking object script (one household object with a face, one place, an 8 to 30 second monologue, the real product beside it) and need it made with an AI image and video tool. Runs the whole video process: a character card for the object, reference images, a sheet with every angle and the mood's expressions, product and set sheets with lock lines, a storyboard with start frames, then timed clip prompts, one voice and edit notes. Ends with any check it still missed."
 ---
 
 # Talking object video clip prompt writer
@@ -138,3 +138,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 
 ## If something is missing
 Write `MISSING: <what>`, ask once for what you can't work without, then carry on. No product photo: write the character card, set sheet and storyboard with the product slot marked `MISSING: product photo`, and make no product sheet or clip until a real photo arrives. No script: say in one line that the Talking object video ad script writer gives a better start, and take their own idea or monologue in plain words, splitting it into clips and marking what you added `[inferred]`. No accent given: assume the brand's home accent and say so.
+
+
+## Object metaphor and related-character set
+
+Use this optional mode when it matches the requested job. Keep the core checks above and the decisions already supplied. Full procedure: references/cmo-method-talking-object-ad.md.
+
+For an abstract brief, choose a tangible metaphor and explain it: time as clock, pressure as balloon, neglect as forgotten lamp, connection as charger. These are creative interpretations, not diagnoses or product claims.
+
+Set emotion from the story role: an overworked tool may be frazzled, unused object hopeful, broken part frustrated or reliable helper proud. Do not make every character shout the same complaint. Let physical features drive gesture while preserving real product geometry.
+
+On request add four related characters with object, role, emotion, silhouette, relationship and one beat. This is a cast menu, not five complete ads. Lock shared materials, light and scale; carry approved sheets into prompts. Use original descriptive art direction rather than a named studio. Spoken benefits still need proof; generation and inspection status remain factual.

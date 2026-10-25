@@ -1,23 +1,19 @@
 new_slug: growth-cash-limit-checker
-name: "Growth cash limit checker"
-summary: "Give it stock, terms and growth plan. Get whether cash or ads limit growth, scored out of 100."
+name: Growth cash limit checker
+summary: Share stock, supplier terms and your growth plan. Check funding gaps, stock cover and missing cash assumptions before deciding what to change.
 job: plan-supply-chain
 thinking: high
-thinking_why: "It joins stock, terms, debt and ad numbers into one cash picture, and a small slip changes the verdict. A stronger model keeps the sums consistent."
-
-headline: "Growth cash limit checker"
-subhead: "Give it your stock by product, supplier terms, debt and growth plan. It works out your cash conversion cycle, grades each product from A to D, and tests whether cash or ads will cap your growth. You get a score out of 100 and a plan for slow stock."
-
+thinking_why: It joins stock, terms, debt and ad numbers into one cash picture, and a small slip changes the verdict. A stronger model keeps the sums consistent.
+headline: Growth cash limit checker
+subhead: It reviews dated stock movements, supplier terms, cash, debt and planned growth. Get a cash-cycle sum, supported stock grades and a funding-gap review. A stock balance alone cannot turn profit into cash. Missing figures leave affected choices unresolved. The custom planning score shows assumptions and coverage; it does not prove the plan is safe.
 explain: |
-  Profit is not cash. A store that made $2 million in profit but bought $3 million of stock that did not sell is about $1 million down in cash. Growth needs stock before the sale, so a store can be cash limited long before it is ad limited. The masterclass speaker says you cannot triple a store in a year without large cash or loans, and that interest plus weaker ad returns can wipe net margin to zero.
+  Profit and cash differ, but closing unsold stock alone cannot explain the gap. You need dated cash receipts, payments and working-capital movements. Growth funding also depends on margins, stock turns, collection timing and supplier terms.
 
-  This skill measures the cash cycle: days of stock, plus days to be paid, minus days you take to pay suppliers. It grades each product from A (fast) to D (slow), tests whether lead times and upfront payment will cause stockouts, and tests whether your growth plan fits your cash. It also plans how to sell slow stock on purpose with paid media, so it turns back into cash. The score tells you how safe your plan is. It is a house scale, with every part shown.
-
+  This skill builds the supported cash view, checks stock cover against lead time and compares a growth plan with available funding. It uses stated custom grade rules for stock and proposes ways to review slow items. Missing definitions or cash movements remain unresolved. Its planning points do not predict cash availability, prove safety or authorise borrowing.
 when:
   - You plan to grow fast and want to know if cash will run out first.
   - Your profit looks good but your bank balance does not.
   - You have slow stock and want a plan to turn it into cash.
-
 you_give:
   - Stock by product, with days on hand
   - Supplier lead times and payment terms
@@ -25,59 +21,55 @@ you_give:
   - Planned spend and growth for the next 12 months
   - Your net margin and ad return today (optional)
 you_get:
-  - The cash conversion cycle in days
-  - A grade from A to D for each product, with a plan for each grade
-  - "A verdict: is cash or ad return the limit on growth"
-  - A score out of 100 for growth cash safety, and how it was worked out
-
+  - A supported cash bridge and cash-cycle sum, with missing movements shown
+  - Custom stock grades where definitions and records support them
+  - A funding-gap review or an unresolved verdict
+  - Custom planning points with applicable components, assumptions and coverage
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Ask your finance owner or accountant for stock, terms and debt, and paste them in.
   - Add your growth plan and your current net margin.
   - Read the grades and the verdict. Tell your ad team the goal if slow stock needs to move.
   - Rerun it each month, or when terms, stock or the plan change.
-
 how_it_works:
   - title: Separates profit from cash
-    text: Compares profit on the books with cash after unsold stock.
+    text: Uses dated receipts, payments and working-capital changes; closing stock alone is not a cash-flow adjustment.
   - title: Measures the cycle
     text: Days of inventory plus days sales outstanding minus days payable outstanding.
   - title: Tests stockouts
-    text: Checks lead time against how much stock you hold when you reorder, and what you pay up front.
+    text: Uses max(0, lead time minus stock-cover days) only under a stated same-basis cover assumption; actual uncertainty remains visible.
   - title: Tests the plan
     text: Checks whether your cash and loans cover the stock your growth needs, and what interest does to margin.
   - title: Grades stock
-    text: Grades each product A (fast), B (medium), C or D (slow), and flags a long tail of products.
+    text: Uses the owner’s stated grade definitions and data. A–D is this method’s custom scheme, not an automatic Shopify grade.
   - title: Plans slow stock
     text: A separate funnel at break-even or a small loss, whitelisted pages, even a new country at a deep discount.
   - title: Briefs the ad team
     text: Tells them the goal, so they do not chase profit alone, and checks whether a higher ad efficiency target is needed for a while.
   - title: Scores it
-    text: Adds four parts to a score out of 100, with the sum shown.
-
+    text: Shows defined custom components, applicable maximum and unknowns. Partial data cannot clear the plan.
 output_shape: |
-  PROFIT VS CASH  profit <$>, unsold stock <$>, cash effect <$>
-  CASH CONVERSION CYCLE  <days of stock> + <days sales outstanding> - <days payable> = <days>
+  CASH BRIDGE
+  <opening cash + dated receipts − dated payments = closing cash, or UNRESOLVED>
+  Profit and working-capital reconciliation <evidence or missing>
 
-  STOCK GRADES
-  <product> | grade <A/B/C/D> | days on hand <n> | value <$> | plan
-  Share of stock value in C and D: <%>
+  CASH CYCLE
+  <inventory days + collection days − payment days, with basis>
 
-  STOCKOUT TEST
-  Lead time <days>, paid up front <%>, cover held when you reorder <days> -> stockout risk <days per reorder>
-  Fixes: <lower upfront share | shorter lead time | other, with its cost and risk>
+  STOCK REVIEW
+  <product> | custom grade and definition, or unresolved | cover/value/period
+  Implied stockout gap= max(0, lead time−cover), where supported
 
-  GROWTH TEST
-  Plan needs <$> more stock; cash and terms cover <$>; gap <$>
-  Interest and ad return: net margin <%> now -> <%> at plan
-  VERDICT  <cash-limited | ad-limited | neither | both>
+  GROWTH FUNDING
+  <plan stock funding, available cash/terms, gap and debt cost with assumptions>
+  Verdict <supported finding or UNRESOLVED>
 
-  SLOW STOCK PLAN  <funnel, break-even target, pages, country if any>
-  BRIEF FOR YOUR AD TEAM  <goal in one line>
-
-  SCORE (higher is safer)  <n>/100 = cash cover <n>/40 + stockout <n>/20 + slow stock <n>/20 + debt and margin <n>/20
-  MISSING: <what you did not give>
-
+  CUSTOM PLANNING RUBRIC
+  <earned/applicable maximum or UNRESOLVED> | checked coverage <basis>
+  <cash cover, stockout, slow stock, debt/margin: amount, N/A or unknown>
+  No safety, cash forecast or borrowing approval follows from points.
+  MISSING / LIMITS
+  <list>
 tweaks:
   - what: Stock by product
     how: List every product with days on hand and value. The grades and the slow-stock share depend on it.
@@ -87,42 +79,40 @@ tweaks:
     how: Include every loan, advance and factoring cost. The growth test needs the full cost.
   - what: The growth plan
     how: Give the growth rate you want and the ad spend that goes with it, so the plan can be tested.
-
 judge:
   - The cash conversion cycle shows its three parts and the sum.
-  - Every product has a grade, and the slow-stock share is a number.
-  - The verdict names whether cash, ads or both limit growth.
-  - The score parts add up to the total.
+  - Each custom grade and slow-stock share has a defined data basis or stays unresolved.
+  - Any funding verdict follows from supported cash and cost data; missing material inputs leave it unresolved.
+  - Defined components add to the applicable subtotal; zero denominators and missing inputs are marked, not forced into 100 points.
   - Loan cost claims are labelled as the speaker's view.
-
 test:
-  - Run it on last year. The score should match what you remember of your cash year.
-  - Change the payment terms and see which parts of the score move.
+  - Use the same profit and closing stock but different cash-funded stock movements. Closing stock alone must not produce one cash-flow answer.
+  - "Use lead time 30 and cover 45: implied stockout gap 0, not minus 15. Zero lead time makes the ratio not applicable."
   - Ask your accountant to check the cycle sum with your books.
-  - Run it twice on the same data. The grades and score should match.
-
+  - Leave stock funding, cash or grade definitions missing. Do not clear the plan or show a complete score.
 improve:
   - Add your own grade lines (for example, A is more than 6 turns a year) so grades match your category.
   - Add your accountant's rule for the cash you must keep.
   - Add your safe level for interest cost against margin.
   - Pair it with the supplier terms and float planner for ways to improve the cycle.
-
 works_best_with:
   tools:
-    - {name: "Any good chat AI", why: "Any chat AI can run the cycle and grade your products from a pasted table."}
-    - {name: "Shopify", why: "Shows stock by product and sell-through, which is the base for the grades."}
-    - {name: "An accountant", why: "Checks the sums and the cost of your debt."}
+    - name: Any good chat AI
+      why: Any chat AI can run the cycle and grade your products from a pasted table.
+    - name: Shopify
+      why: Shows stock by product and sell-through, which is the base for the grades.
+    - name: An accountant
+      why: Checks the sums and the cost of your debt.
   inputs:
-    - "A stock report with value and days on hand by product"
-    - "Supplier invoices with terms"
-    - "Your loan and advance statements"
-    - "Your forecast for the next 12 months"
-
+    - A stock report with value and days on hand by product
+    - Supplier invoices with terms
+    - Your loan and advance statements
+    - Your forecast for the next 12 months
 terms:
   - term: Cash conversion cycle
     meaning: The days between paying for stock and getting the cash back from selling it, after the days you take to pay suppliers.
   - term: Inventory grades
-    meaning: "A grade for each product by how fast it sells: A fast, B medium, C and D slow."
+    meaning: An owner-defined grouping by stated stock and sales measures. This method’s A–D labels need explicit thresholds and a reporting period.
   - term: MER
     meaning: Marketing efficiency ratio, which is total revenue divided by total ad spend.
   - term: Whitelisted page

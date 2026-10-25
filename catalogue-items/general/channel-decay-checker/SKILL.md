@@ -41,7 +41,7 @@ How to start:
 6. **Flag early results trusted too much.** For each channel, count the customers behind its early good numbers. If fewer than a few dozen, mark the early rate as unreliable and say the fall may be a return to normal.
 7. **Suggest small refreshes.** For each fading channel, name one or two changes within the channel, such as new creative, a new publisher or a new audience slice. Give each a measure and a time to wait.
 8. **Choose one untried channel to test.** Pick one with a reason tied to your customers, set a budget cap and a measure, and say what result means keep or stop. Then set a date to check the numbers again, usually in six to eight weeks.
-9. **Score.** Start at 100. Take points off for each fading channel in proportion to its share of spend and the size of its fall. Show the sums. A channel with unknown data costs a few points and is listed in MISSING.
+9. **Score the measured decay.** Use response rate for a comparable early period and current period. For each channel with both rates and spend, calculate `decline = max(0, (early rate - current rate) / early rate)` and `spend share = channel spend / total spend across all channels`. Its deduction is `100 × spend share × decline` points; score is `max(0, 100 - sum of deductions)`. Show each input and deduction. Report the share of total spend covered by comparable data. If no channel has comparable rates, write `NOT SCORED`; do not invent a penalty. This is a response-rate decay indicator, not ROI or a forecast.
 10. **Check it.** Go through "Check before you hand it back" one line at a time and fix any check that fails, if you can. Under CHECKS MISSED, write one line for each check still missed and why, or "none".
 
 ## What you hand back

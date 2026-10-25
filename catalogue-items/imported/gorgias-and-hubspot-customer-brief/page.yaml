@@ -1,0 +1,32 @@
+thinking: medium
+thinking_why: It follows a set method with a few checks.
+new_slug: gorgias-and-hubspot-customer-brief
+name: Gorgias and HubSpot customer brief
+summary: Share a name or email. Get past tickets, contact details, and recent notes in one brief.
+job: help-customers
+headline: Gorgias and HubSpot customer brief
+subhead: Give it a customer name or email and connect Gorgias and HubSpot. It reads recent support tickets and contact history. You get one customer brief with their open issues, past contact, recent activity, and points needing attention.
+when:
+  - You use this tool for customer support and need help with this task.
+you_give:
+  - A customer name or email.
+  - Access to that customer's Gorgias and HubSpot records.
+you_get:
+  - Combine the profile, support history, activity timeline, and points needing attention.
+how_it_works:
+  - title: Find the customer
+    text: Search both tools using the name or email you provide.
+  - title: Read recent history
+    text: Read recent ticket threads and HubSpot notes, calls, emails, and deal records.
+  - title: Write one brief
+    text: Combine the profile, support history, activity timeline, and points needing attention.
+works_best_with:
+  tools:
+    - name: Gorgias and HubSpot
+      why: Live lookups need Composio CLI access and connected accounts for these services.
+how_to_use:
+  - Add the downloaded folder to an AI that can read skill files.
+  - Ask for gorgias and hubspot customer brief by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
+  - Provide a customer name or email.
+  - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
+  - Review the result. Approve any proposed sending or account changes before they happen.

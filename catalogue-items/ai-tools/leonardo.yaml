@@ -2,17 +2,17 @@ slug: leonardo
 name: Leonardo AI
 maker: Leonardo.Ai
 url: https://leonardo.ai
-promise: Game art, product visuals and ad images made from text, with steady characters.
+promise: "Make game art, product ideas and ad images with characters you can reuse."
 use_cases: [make-images, design]
 categories: [image, design]
 what_it_does:
   - Makes images from a written description with a choice of models.
-  - Keeps a character looking the same across images.
+  - "Helps create a character that appears across a set of images."
   - Makes bigger, sharper versions of images you like.
   - Edits part of an image in a canvas.
   - Keeps your generations private on paid plans.
 benefits:
-  - Build a set of images that feature one character or product.
+  - "Create a set of concepts featuring the same character or product."
   - Pick the model that suits each job instead of living with one look.
   - Test image ideas daily on the free plan.
 best_for:

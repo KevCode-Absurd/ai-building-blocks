@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It follows set checks but weighs how bad each problem is.
 new_slug: accessibility-checker
 name: Accessibility checker
-summary: Point it at a page or code. Get ranked WCAG 2.2 problems, with fixes if you ask.
+summary: Point it at a page or code. Get ranked WCAG 2.2 problems, with fixes if
+  you ask.
 job: test-and-fix-code
 headline: Accessibility checker
-subhead: Point it at a web address or code folder and say whether you want a report or fixes. It audits the live page where it can, otherwise the code, and ranks every finding against WCAG 2.2. You get the ranked list, the place of each problem, fixes if asked and a note on what automated checks miss.
+subhead: Point it at a web address or code folder and say whether you want a
+  report or fixes. It audits the live page where it can, otherwise the code, and
+  ranks every finding against WCAG 2.2. You get the ranked list, the place of
+  each problem, fixes if asked and a note on what automated checks miss.
 explain: |
   Accessibility problems on a page or in your code come back as a ranked list, checked against WCAG 2.2. Ask for fixes and it repairs them and checks again.
 
@@ -26,6 +30,8 @@ you_get:
   - Fixes applied and re-checked, if you asked
   - A note on what automated checks cannot cover
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
   - It works best when your AI can run code and open a browser.

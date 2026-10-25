@@ -1,0 +1,33 @@
+new_slug: google-ads-report-code-builder-prompt
+name: Google Ads report coding prompt
+summary: Get a coding brief for a Google Ads report with matched dates, clear metrics, evidence and owned next steps.
+job: build-software
+headline: Google Ads report coding prompt
+subhead: Get a coding brief for a Google Ads report with matched dates, clear metrics, evidence and owned next steps.
+explain: |-
+  Share your project and the required feature. Get a coding brief for google ads report code builder, with setup and test steps.
+
+  The complete method and its supporting files are in the download. It marks missing inputs and separates proposed actions from actions that were actually completed.
+when:
+  - You need a coding brief for google ads report code builder.
+  - You need build monthly report generator prompt for a specific task.
+  - You want the method's decisions and assumptions written down before acting.
+you_give:
+  - The repository or relevant code and schema
+  - The feature requirements and available services
+you_get:
+  - A coding brief for google ads report code builder
+  - Required files, setup gaps and test cases
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Inspect the target project
+    text: Check its file structure, interfaces and service setup before choosing paths.
+  - title: Write the feature brief
+    text: Follow the full method below. Preserve its named modules, decision rules and required output.
+  - title: Check the handoff
+    text: List missing dependencies, acceptance cases and the failure paths the implementation must cover.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

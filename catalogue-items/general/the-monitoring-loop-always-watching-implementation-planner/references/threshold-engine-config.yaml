@@ -1,0 +1,131 @@
+# Threshold Engine Config
+#
+# Declarative thresholds for common ecom marketing metrics. Loaded at agent
+# boot into the threshold engine. Resolution order for each metric:
+#   1. Client-specific baseline (from performance_baselines table)
+#   2. Category baseline (from this file, matched on `category`)
+#   3. Platform baseline (from this file, matched on `platform`)
+#   4. Default (from this file, under `defaults`)
+#
+# Edit freely. Changes take effect on the next worker restart.
+
+version: 1
+
+defaults:
+  frequency:
+    direction: above
+    absolute_warn: 3.0
+    absolute_critical: 5.0
+    relative_warn_pct: 0.30
+    relative_critical_pct: 0.60
+    description: "Ad frequency (Meta). Above 3.0x is warning, above 5.0x is critical."
+
+  ctr:
+    direction: below
+    absolute_warn: 0.008         # 0.8%
+    absolute_critical: 0.005     # 0.5%
+    relative_warn_pct: 0.25
+    relative_critical_pct: 0.50
+    description: "Click-through rate. Below 0.8% is warning."
+
+  cpm:
+    direction: above
+    absolute_warn: 45
+    absolute_critical: 75
+    relative_warn_pct: 0.25
+    relative_critical_pct: 0.50
+
+  cpa:
+    direction: above
+    relative_warn_pct: 0.30
+    relative_critical_pct: 0.60
+
+  roas:
+    direction: below
+    relative_warn_pct: 0.20
+    relative_critical_pct: 0.40
+    description: "ROAS decline vs baseline. Absolute value depends on client target."
+
+  spend_daily:
+    direction: above
+    relative_warn_pct: 0.20
+    relative_critical_pct: 0.50
+    description: "Daily spend anomaly vs planned pacing."
+
+  conversion_rate:
+    direction: below
+    relative_warn_pct: 0.25
+    relative_critical_pct: 0.50
+
+# ----------------------------------------------------------------------------
+# PLATFORM OVERRIDES
+# ----------------------------------------------------------------------------
+
+platforms:
+  meta:
+    frequency:
+      absolute_warn: 3.0
+      absolute_critical: 5.0
+    cpm:
+      absolute_warn: 40
+      absolute_critical: 70
+
+  google:
+    # Google does not have frequency in the same sense; omit.
+    cpa:
+      relative_warn_pct: 0.25
+      relative_critical_pct: 0.50
+    quality_score:
+      direction: below
+      absolute_warn: 6
+      absolute_critical: 4
+
+  klaviyo:
+    open_rate:
+      direction: below
+      absolute_warn: 0.18
+      absolute_critical: 0.12
+    click_rate:
+      direction: below
+      absolute_warn: 0.015
+      absolute_critical: 0.008
+
+# ----------------------------------------------------------------------------
+# CATEGORY OVERRIDES
+# ----------------------------------------------------------------------------
+
+categories:
+  supplement:
+    frequency:
+      absolute_warn: 3.5
+      absolute_critical: 5.5
+    roas:
+      relative_warn_pct: 0.15
+      relative_critical_pct: 0.30
+      description: "Supplement brands are ROAS-sensitive; tighter bounds."
+
+  apparel:
+    frequency:
+      absolute_warn: 2.5
+      absolute_critical: 4.5
+
+  coffee:
+    cpa:
+      relative_warn_pct: 0.35
+      relative_critical_pct: 0.70
+
+  skincare:
+    cpm:
+      absolute_warn: 55
+      absolute_critical: 90
+      description: "Skincare CPMs run higher due to competitive auctions."
+
+# ----------------------------------------------------------------------------
+# GLOBAL SETTINGS
+# ----------------------------------------------------------------------------
+
+settings:
+  min_history_days_for_relative: 7
+  baseline_refresh_cron: "0 7 * * *"   # 7 AM daily
+  fallback_confidence_low: 0.35        # when relying on defaults only
+  fallback_confidence_high: 0.95       # when using client-specific 90+ day baseline

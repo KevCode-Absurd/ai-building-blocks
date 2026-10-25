@@ -1,7 +1,8 @@
+# Modified by AI Blocks on 2026-10-24: method/copy repair.
 slug: rates-economy-dashboard
 renamed_from: rates-and-economy-dashboard-builder
-name: "Rates and economy dashboard builder"
-summary: "Name a region. Get a dashboard of key indicators, the yield curve and what they say about the cycle."
+name: "India economy dashboard"
+summary: "Build an India economy dashboard from dated official data. Show key measures, sources, gaps and limits."
 category: general
 boards: []
 type: skill
@@ -30,4 +31,4 @@ credits:
   - title: macro-rates-monitor skill
     by: nighomni123
     url: https://github.com/nighomni123/fsi-skills-india/tree/main/src/market-data/lseg/macro-rates-monitor
-    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.
+    used: Adapted for clarity and method consistency; upstream source and Apache-2.0 attribution are retained.

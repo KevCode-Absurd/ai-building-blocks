@@ -1,0 +1,28 @@
+new_slug: constrained-decision-auditor
+name: Audit a constrained decision
+summary: Check each hard limit and compare the feasible choices. State what the evidence proves about the best result.
+job: think-and-decide
+headline: Audit a constrained decision
+subhead: Bring goals, limits and candidate choices. Check the math, then get a decision with clear proof limits.
+explain: Bring goals, limits and candidate choices. Check the math, then get a decision with clear proof limits.
+when:
+  - You want to audit a constrained decision.
+you_give:
+  - The decision variables, units, bounds, objectives and decision owner.
+  - Hard/soft constraints, candidate solutions and any solver status, limits or bounds.
+you_get:
+  - A unit-consistent formulation and independent feasibility audit.
+  - A candidate/Pareto decision with explicit optimality, uncertainty and recheck limits.
+how_to_use:
+  - Download the complete skill folder and add it to your AI tool, or copy the instructions into a chat.
+  - Provide the inputs listed here and ask your AI to follow the skill.
+  - Review the result and any missing facts before using it.
+how_it_works:
+  - title: Write the formulation
+    text: Define variable domains, objective direction, hard constraints, tolerances and soft preferences.
+  - title: Compare fair candidates
+    text: Keep a feasible baseline, common budget/checker and meaningful solver-status distinctions.
+  - title: Verify independently
+    text: Recompute every constraint and objective from the chosen decision; state bounds, gaps, unknowns and owner.
+thinking: medium
+thinking_why: It weighs your evidence and follows a specific method.

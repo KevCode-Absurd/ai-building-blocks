@@ -1,0 +1,30 @@
+thinking: high
+thinking_why: It weighs real records, missing facts, and choices that affect people or funding.
+new_slug: nonprofit-annual-appeal-planner
+name: Nonprofit annual appeal planner
+summary: Share donor groups and giving history. Get appeal copy, gift amounts, a schedule, and measures to track.
+job: write-emails
+headline: Nonprofit annual appeal planner
+subhead: Share your donor groups, giving history, campaign goal, and channels. It plans suitable gift amounts and writes a clear fundraising ask. You get appeal letters or emails, matching reply wording, a send calendar, and measures for reviewing results.
+when:
+  - You need this task done for a nonprofit, community program, or donated-goods store.
+you_give:
+  - Donor groups, past gift amounts, verified impact facts, campaign goal, channel, and key dates.
+you_get:
+  - An appeal plan, draft messages, suggested gift amounts, and results measures.
+how_it_works:
+  - title: Group donors by history
+    text: Separate new, returning, lapsing, and larger donors so each group receives a fitting ask.
+  - title: Write a clear appeal
+    text: Use a specific story, verified gift impact, suggested amounts, deadline, and one next step.
+  - title: Plan dates and review
+    text: Match reply amounts across channels, space appeals sensibly, and define response and cost measures for review.
+works_best_with:
+  tools:
+    - name: A chat AI that can read your files
+      why: The skill works from records and drafts you provide. Research tasks also need current, checked public sources.
+  inputs:
+    - Solicitation copy goes to your whole donor file at once.
+how_to_use:
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.

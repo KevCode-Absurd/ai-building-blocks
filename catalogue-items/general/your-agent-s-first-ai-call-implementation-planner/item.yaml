@@ -1,0 +1,19 @@
+slug: your-agent-s-first-ai-call-implementation-planner
+name: Agent AI call cost tracker builder
+summary: Build a bounded ai call wrapper with token and cost records.
+category: general
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+    required: true
+uses: []
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

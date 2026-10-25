@@ -1,0 +1,32 @@
+thinking: medium
+thinking_why: It follows a set method with a few checks.
+new_slug: gorgias-duplicate-ticket-finder
+name: Gorgias duplicate ticket finder
+summary: Connect Gorgias. Get tickets about the same issue, with match reasons to check before merging.
+job: help-customers
+headline: Gorgias duplicate ticket finder
+subhead: Connect Gorgias and ask for duplicate tickets. It compares recent open tickets by customer, subject, message, date, and shared details. You get groups of likely duplicates and related issues, with reasons and suggested primary tickets for human review.
+when:
+  - You use this tool for customer support and need help with this task.
+you_give:
+  - Recent open or pending Gorgias tickets.
+  - Customer, subject, message, tags, order details, and dates.
+you_get:
+  - Separate likely duplicates from related issues and explain each match. It does not merge tickets.
+how_it_works:
+  - title: Read recent tickets
+    text: Fetch recent open and pending tickets and collect customer, subject, message, tags, and dates.
+  - title: Compare shared details
+    text: Use matching customers, similar messages, close dates, shared errors, and order references as clues.
+  - title: List groups for review
+    text: Separate likely duplicates from related issues and explain each match. It does not merge tickets.
+works_best_with:
+  tools:
+    - name: Gorgias
+      why: Live lookups need Composio CLI access and connected accounts for these services.
+how_to_use:
+  - Add the downloaded folder to an AI that can read skill files.
+  - Ask for gorgias duplicate ticket finder by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
+  - Provide Recent open or pending Gorgias tickets.
+  - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
+  - Review the result. Approve any proposed sending or account changes before they happen.

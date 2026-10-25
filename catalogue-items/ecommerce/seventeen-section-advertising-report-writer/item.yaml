@@ -1,0 +1,19 @@
+slug: seventeen-section-advertising-report-writer
+name: Seventeen-section advertising report writer
+summary: Build a seventeen-section ad report from dated results. Explain changes, supported wins, open issues and who owns the next steps.
+category: ecommerce
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: document
+    required: true
+uses: []
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

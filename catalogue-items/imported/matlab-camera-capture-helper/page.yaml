@@ -5,7 +5,10 @@ name: MATLAB camera capture helper
 summary: Say which camera. Get it connected and images or video captured in MATLAB.
 job: build-software
 headline: MATLAB camera capture helper
-subhead: Tell it the camera type and model, your operating system and whether you want stills or video. It lists the devices, connects through MATLAB's video input object, sets exposure and frame rate and grabs frames. You get listing, setup and capture code plus the support packages to install.
+subhead: Tell it the camera type and model, your operating system and whether
+  you want stills or video. It lists the devices, connects through MATLAB's
+  video input object, sets exposure and frame rate and grabs frames. You get
+  listing, setup and capture code plus the support packages to install.
 explain: |
   A camera connected and capturing in MATLAB, whether it is a laptop webcam, a USB camera or an industrial GigE model. You get code that finds the device, sets it up and grabs a still image or video.
 
@@ -26,6 +29,8 @@ you_get:
   - Working capture code
   - A list of support packages to install
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
   - It works best when your AI can run MATLAB and reach a camera.

@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It reviews a whole lesson against three principles.
 new_slug: accessible-lesson-auditor
 name: Accessible lesson auditor
-summary: Paste a lesson plan. Get the barriers it creates for some learners, with fixes ranked by impact.
+summary: Paste a lesson plan. Get the barriers it creates for some learners,
+  with fixes ranked by impact.
 job: teach-and-train
 headline: Accessible lesson auditor
-subhead: Paste the lesson or unit plan, the learning goal and your class size and age group. It reads the plan against the three Universal Design for Learning ideas and finds choices that shut some learners out. You get the barriers, fixes ranked by impact, what already works and what to leave alone.
+subhead: Paste the lesson or unit plan, the learning goal and your class size
+  and age group. It reads the plan against the three Universal Design for
+  Learning ideas and finds choices that shut some learners out. You get the
+  barriers, fixes ranked by impact, what already works and what to leave alone.
 explain: |
   A lesson you already wrote can be checked for barriers, with the fixes that matter most listed first. It keeps your learning goal and works within limits you cannot change.
 
@@ -26,5 +30,7 @@ you_get:
   - Things the lesson already does well
   - Notes on what to leave alone
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.

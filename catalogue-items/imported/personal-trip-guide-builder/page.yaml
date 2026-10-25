@@ -1,0 +1,30 @@
+thinking: high
+thinking_why: It follows a set method with a few checks.
+new_slug: personal-trip-guide-builder
+name: Personal trip guide builder
+summary: Share your trip dates, needs, and budget. Get a sourced plan with daily stops, breaks, and alternatives.
+job: organise-work
+headline: Personal trip guide builder
+subhead: Share your destination, dates, travel group, budget, and needs. It checks current travel facts and builds a plan that fits your pace. You get a sourced trip guide, with optional printable or web versions. PDF output needs a browser or document renderer.
+you_give:
+  - Destination, dates, travelers, budget, mobility or food needs, and the audience for the guide.
+you_get:
+  - A sourced itinerary and trip brief, with private or shareable editions when requested.
+how_it_works:
+  - title: Define the trip
+    text: Confirm the route, dates, people, pace, limits, and how the plan will be shared.
+  - title: Check current details
+    text: Use current venue and transport sources. Separate checked facts, suggestions, estimates, and unknowns.
+  - title: Build flexible days
+    text: Choose a few fitting stops, then add meals, breaks, ordinary local life, and bad-weather or low-energy alternatives.
+  - title: Prepare and review
+    text: Review the layout and make a separate shareable copy. Check all free text for private details after named fields are redacted.
+works_best_with:
+  tools:
+    - name: Web research and a document renderer
+      why: Current travel details need checked sources. Printable output also needs rendering and a visual check.
+  inputs:
+    - The redaction helper handles named fields. Manually check free text, photos, and links before sharing.
+how_to_use:
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.

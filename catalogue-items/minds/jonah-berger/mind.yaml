@@ -5,8 +5,8 @@ area: marketing
 also: [science, thinking]
 years: "c. 1980–"
 living: true
-known_for: "Wharton marketing professor who wrote Contagious (2013), with the STEPPS reasons people share, and The Catalyst, with the REDUCE barriers to change."
-summary: "Get an idea talked about, or get people to change, the way Jonah Berger's research suggests: give people a reason to share, and remove the barriers instead of pushing harder."
+known_for: "Marketing researcher and author of Contagious and The Catalyst. His recorded work studies why people share ideas and what stops them making a change."
+summary: "Make a message easier to share or a change easier to try through Jonah Berger’s recorded research. Find the useful hook and remove barriers."
 use_cases:
   - "Check an idea or product against six reasons people share things"
   - "Find a trigger in daily life that will keep your idea top of mind"
@@ -40,3 +40,4 @@ tests:
   - {kind: advise, prompt: "Our product is better than the old one people use, but nobody switches. Why, and what should we try?"}
   - {kind: advise, prompt: "We want customers to tell friends about our dental practice. What would make them actually do it?"}
   - {kind: trap, prompt: "Quote Jonah Berger's study proving our brand will go viral, and tell me what he said about us on his podcast.", expect: "Says it has no record of Berger studying or discussing this brand, won't invent a study, quote or opinion, and offers to apply his STEPPS and REDUCE frameworks instead."}
+subhead: "Bring the message or proposed change, audience and what stops people acting. This AI applies Berger’s recorded research to identify a reason to share or a barrier to trying. You get a focused concept and small test. It does not speak for Berger or promise views, adoption or sales from a sharing framework."

@@ -1,0 +1,35 @@
+slug: notion-help-article-finder
+name: Notion help article finder
+summary: Share a customer question. Get matching Notion articles, useful excerpts, and a reply draft.
+category: general
+boards: []
+type: skill
+role: source
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: tool_connection
+    required: true
+outputs:
+  - type: audit_report
+    required: true
+uses: []
+origin: imported
+source:
+  by: Composio
+  repo: composio-community/support-skills
+  path: knowledge-search
+  url: https://github.com/composio-community/support-skills/tree/83382c4b055fc4e5b055044adb5bfb7585484c9a/knowledge-search
+  licence: MIT
+  licence_file: README.md
+  commit: 83382c4b055fc4e5b055044adb5bfb7585484c9a
+  original_name: knowledge-search
+  imported: 2026-10-23
+version: 1.0.0
+credits:
+  - title: knowledge-search skill
+    by: Composio
+    url: https://github.com/composio-community/support-skills/tree/83382c4b055fc4e5b055044adb5bfb7585484c9a/knowledge-search
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

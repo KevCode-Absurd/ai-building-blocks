@@ -2,7 +2,7 @@ slug: gumloop
 name: Gumloop
 maker: Gumloop
 url: https://www.gumloop.com
-promise: Describe the work in plain words and get an agent that does it.
+promise: "Build agents that work across your connected apps from a written task."
 use_cases: [automate]
 categories: [automation]
 what_it_does:
@@ -11,14 +11,14 @@ what_it_does:
   - Watches the web or your apps and acts when your conditions match.
   - Saves reusable skills that agents write, refine and share.
   - Makes shareable dashboards, documents and web apps from your connected data.
-  - Lets IT control access, with SSO and audit logs.
+  - "Lets IT manage access, sign-in and records of what agents do."
 benefits:
   - Hand off lead research, CRM updates and ticket sorting.
   - Share one agent with the whole team instead of rebuilding it.
   - Let a team build agents while IT keeps control of access.
-  - Run reports on a schedule without anyone remembering.
+  - "Set reports to run on a schedule."
 best_for:
-  - Marketing, sales and operations teams that want agents, not flowcharts.
+  - "Marketing, sales and operations teams that want agents to use their connected apps."
   - Companies where IT must approve what agents can reach.
   - Teams replacing manual lead and CRM work.
 not_for:

@@ -1,0 +1,32 @@
+slug: marketing-email-html-builder
+name: Marketing email HTML builder
+summary: Give it your copy and product photos. Get two HTML email designs, previews and a file kit you can edit.
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: brand_brain
+    required: false
+  - type: product_photos
+    required: true
+  - type: copy_draft
+    required: false
+  - type: reference_set
+    required: false
+outputs:
+  - type: copy_draft
+    required: true
+  - type: page_layout_spec
+    required: true
+  - type: image
+    required: true
+uses: []
+execution: coordinator
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

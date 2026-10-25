@@ -7,23 +7,23 @@ role: orchestrate
 job: copy
 level: beginner
 inputs:
-  - {type: brief, required: true}
-  - {type: brand_brain, required: false}
-  - {type: performance_sheet, required: false}
+  - { type: brief, required: true }
+  - { type: brand_brain, required: false }
+  - { type: performance_sheet, required: false }
 outputs:
-  - {type: copy_draft}
-  - {type: plan}
-uses: [content-topic-planner, marketing-content-drafter, plain-english-editor, draft-brand-voice-checker, subject-line-writer, email-send-readiness-scorer]
+  - { type: copy_draft }
+  - { type: plan }
+uses: [ content-topic-planner, marketing-content-drafter, plain-english-editor, draft-brand-voice-checker, subject-line-writer, email-send-readiness-scorer ]
 steps:
-  - {uses: content-topic-planner, note: "Once a quarter, or when the topic list runs dry: topic clusters and the next 12 issues, from what readers asked and replied to."}
-  - {uses: marketing-content-drafter, note: "Every week: the issue drafted from your notes and the moment you noticed, for one named reader."}
-  - {uses: plain-english-editor, note: "Every week: the draft cut to plain words, each cut explained, voice kept."}
-  - {uses: draft-brand-voice-checker, note: "Every week, when a brand brain exists: off-voice lines ranked, each with a fix."}
-  - {uses: subject-line-writer, note: "Every week: subject lines in several angles, led by the biggest worry in the issue."}
-  - {uses: email-send-readiness-scorer, note: "Every week, last: counts, cuts, a score out of 100 and a ship or fix call. Loops back to the editor if the call is fix."}
+  - { uses: content-topic-planner, note: "Once a quarter, or when the topic list runs dry: topic clusters and the next 12 issues, from what readers asked and replied to." }
+  - { uses: marketing-content-drafter, note: "Every week: the issue drafted from your notes and the moment you noticed, for one named reader." }
+  - { uses: plain-english-editor, note: "Every week: the draft cut to plain words, each cut explained, voice kept." }
+  - { uses: draft-brand-voice-checker, note: "Every week, when a brand brain exists: off-voice lines ranked, each with a fix." }
+  - { uses: subject-line-writer, note: "Every week: subject lines in several angles, led by the biggest worry in the issue." }
+  - { uses: email-send-readiness-scorer, note: "Every week, last: counts, cuts, a score out of 100 and a ship or fix call. Loops back to the editor if the call is fix." }
 schedule: "Every Thursday, two days before the issue goes out"
-asks_before: [sending or scheduling the issue, changing the list or segments, publishing the issue anywhere, replying to a reader, adding a link or offer not in your notes]
-minds: [ann-handley]
+asks_before: [ sending or scheduling the issue, changing the list or segments, publishing the issue anywhere, replying to a reader, adding a link or offer not in your notes ]
+minds: [ ann-handley ]
 origin: own
-version: 1.0.0
+version: 1.0.1
 example_pending: true

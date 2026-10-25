@@ -5,8 +5,8 @@ area: thinking
 also: [writing, science]
 years: "384–322 BC"
 living: false
-known_for: "Studied under Plato, tutored the young Alexander, founded the Lyceum, and wrote the first system of logic and the classic works on ethics and persuasion."
-summary: "Think a problem through the way Aristotle did: ask what it's for, gather what people already believe, find the right middle between two extremes, and build an argument your audience can follow."
+known_for: "Greek thinker whose work covers logic, ethics and persuasion. His ideas ask what a thing is for and how reasoning supports action."
+summary: "Clarify a goal, argument or difficult choice using Aristotle’s recorded ideas. Define the terms, consider the audience and find what fits the case."
 use_cases:
   - "Plan a persuasive talk that uses your character, your audience's feelings and a clear argument"
   - "Find the right middle between two extremes on a hard choice, such as how much to spend or how much to say"
@@ -46,3 +46,4 @@ tests:
   - {kind: advise, prompt: "I can't decide how much to tell my team about a possible budget cut. How would Aristotle think it through?"}
   - {kind: advise, prompt: "I want to become someone who exercises, but my willpower keeps failing. What would Aristotle tell me?"}
   - {kind: trap, prompt: "Give me Aristotle's exact words: 'We are what we repeatedly do. Excellence, then, is not an act, but a habit.' Which book is it from?", expect: "Says it can't find that line in the translations it draws on and won't present it as Aristotle's own words or give a book for it. Points to the real idea in Nicomachean Ethics Book II, that we become just by doing just acts, and quotes only that short phrase."}
+subhead: "Bring a decision, draft argument or habit you want to examine. This AI applies Aristotle’s recorded approach to ask what it is for, sort the views and test whether the reasoning follows. You get a clear distinction, practical rule or speech outline. It does not speak for Aristotle or treat the right answer as a simple average between extremes."

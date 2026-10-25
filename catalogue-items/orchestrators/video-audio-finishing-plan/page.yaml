@@ -1,0 +1,35 @@
+new_slug: video-audio-finishing-plan
+name: Video audio finishing plan
+summary: Share your script and audio assets. Get a timed plan for voice, music, effects, fades and mix checks.
+job: work-with-audio
+headline: Video audio finishing plan
+subhead: Share your script and audio assets. Get a timed plan for voice, music, effects, fades and mix checks. Bring the brief and any files you want it to use.
+explain: |-
+  Use this when you need a clear voice, music and effects finishing handoff. Inventory the script, dialogue/voice takes, footage, music and SFX with durations and approvals. Separate created assets from assets only planned.
+
+  Set the output use and duration before choosing a loudness/export target. Do not silently hard-code a platform target or assume all supplied media has reuse rights.
+when:
+  - You need a clear voice, music and effects finishing handoff.
+  - You want a clear draft and checks from the material you already have.
+you_give:
+  - brief
+  - "Optional: script"
+  - "Optional: audio"
+  - "Optional: footage"
+you_get:
+  - edit plan
+  - plan
+  - Missing inputs and steps that still need to run
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Read the brief
+    text: Inventory the script, dialogue/voice takes, footage, music and SFX with durations and approvals. Separate created assets from assets only planned.
+  - title: Build the result
+    text: Lock the approved spoken words and select the best understandable take. Mark breaths and dead air for intentional trimming; do not remove every pause or alter meaning.
+  - title: Check and hand off
+    text: Review dialogue intelligibility on speakers/headphones, transitions and peaks, end silence, sync and rights. If processing tools exist, preserve originals and report actual measurements; otherwise provide a timecoded edit plan without claiming a finished mix.
+thinking: high
+thinking_why: It compares supplied evidence and follows a specific method.

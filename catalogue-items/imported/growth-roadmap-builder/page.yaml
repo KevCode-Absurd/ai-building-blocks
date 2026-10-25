@@ -2,17 +2,23 @@ thinking: high
 thinking_why: It weighs five growth levers against your stage and numbers.
 new_slug: growth-roadmap-builder
 name: Growth roadmap builder
-summary: Tell it your shop numbers. Get the growth lever that pays most now and a 90 day roadmap.
+summary: Tell it your shop numbers. Get the growth lever that pays most now and
+  a 90 day roadmap.
 job: run-your-store
 headline: Growth roadmap builder
-subhead: "Tell it your platforms, monthly revenue, margin, and what you know about customer cost and order size. It checks the health of those numbers, then scores five growth levers: traffic, conversion, bigger orders, repeat buyers and expansion. You get the lever that pays most right now, a verdict on new channels or products, and a 90 day roadmap."
+subhead: "Tell it your platforms, monthly revenue, margin, and what you know
+  about customer cost and order size. It checks the health of those numbers,
+  then scores five growth levers: traffic, conversion, bigger orders, repeat
+  buyers and expansion. You get the lever that pays most right now, a verdict on
+  new channels or products, and a 90 day roadmap."
 explain: |
   If your online shop has stalled, you probably do not need more of everything. You need the one fix that pays most right now. This skill checks your numbers first: cost to win a customer, lifetime value, average order size and margin per sale. Then it scores five growth levers: more traffic, better conversion, bigger orders, more repeat buyers, and expansion.
 
   It also uses the Ansoff Matrix, adjusted for shops, to compare selling more on your current channel, adding channels like Amazon or TikTok Shop, adding products, or entering new markets. The result is a ranked list of moves and a 90 day roadmap with steps in order. No code or API key is needed.
 when:
   - Your shop has been flat for a few months and you do not know why.
-  - You are choosing between adding a new sales channel and launching new products.
+  - You are choosing between adding a new sales channel and launching new
+    products.
   - You want a 90 day plan with a clear order of work.
   - You are not sure whether to spend on ads, email or your product page first.
 you_give:
@@ -27,5 +33,7 @@ you_get:
   - A channel or product expansion verdict
   - A 90 day roadmap with steps in order
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.

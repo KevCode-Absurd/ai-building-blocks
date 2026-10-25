@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It reads closely and builds questions from the text.
 new_slug: deep-reading-guide
 name: Deep reading guide
-summary: Give it a book, paper or document. Get its claims and evidence mapped, then recall questions.
+summary: Give it a book, paper or document. Get its claims and evidence mapped,
+  then recall questions.
 job: think-and-decide
 headline: Deep reading guide
-subhead: "Give it a book, paper, article or PDF and pick a mode: quick, deep, map, Feynman or whole book. It separates the author's claims from the evidence behind them. You get a thesis and claim list, an evidence ledger, an idea map and recall questions that show where your understanding has gaps."
+subhead: "Give it a book, paper, article or PDF and pick a mode: quick, deep,
+  map, Feynman or whole book. It separates the author's claims from the evidence
+  behind them. You get a thesis and claim list, an evidence ledger, an idea map
+  and recall questions that show where your understanding has gaps."
 explain: |
   Understand a book or paper well enough to explain it from memory. Give it a document and choose a mode, and you get the author's claims separated from their evidence, then questions that test whether you really got it.
 
@@ -25,5 +29,7 @@ you_get:
   - Idea map
   - Recall questions with gap check
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.

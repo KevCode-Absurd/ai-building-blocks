@@ -5,24 +5,7 @@ description: Framework for building competitive landscape decks — market posit
 
 # Competitive Landscape Mapping
 
-## India
-
-This skill operates on **Indian markets**. Load **`india-market-conventions`**
-before building anything, and **`india-market-data`** for sources. Two rules cause
-most Indian errors:
-
-- **Fiscal year is April–March.** `FY2025` = year ending **31 Mar 2025**; `Q1 FY26` =
-  Apr–Jun 2025. Label periods `Q3 FY26 (Oct–Dec 25)`, never a bare calendar year.
-  Never annualise a quarter without stating the fiscal offset.
-- **Units are lakh (10⁵) and crore (10⁷).** Never use the Excel format
-  `#,##0,," Cr"` — each trailing comma divides by 1,000, so that format displays
-  **lakh under a crore label: a 100× error**. Divide by `10000000` in a live
-  formula and label the column `Total Revenue (₹ Cr)`.
-
-What has no Indian equivalent is listed in `NOT-ADAPTABLE.md`. Name the gap —
-never substitute a proxy and present it as the real thing.
-
-Build a complete competitive analysis deck. This is a two-phase process: gather requirements and get outline approval first, then build.
+> Modified by AI Blocks on 2026-10-24: method/copy repair.
 
 ## Environment check
 
@@ -296,3 +279,7 @@ Before finishing:
 Run standard visual verification checks on every slide — this catches overlaps, overflow, and low-contrast text that don't show up when you're reading back the XML.
 
 - **Runbook:** [`references/runbook-competitive-analysis.md`](references/runbook-competitive-analysis.md) — the end-to-end walkthrough (which skills to load in what order, and the output contract).
+
+## Repaired scope and evidence rules
+
+Use the geography the user names; if none is named, ask for it. The method is not India-only. Preserve local fiscal years, currencies and reporting definitions for each company; do not force India conventions onto other markets. Compare values only when period, currency, definition and denominator match. Label estimates and missing data. Cite each factual metric to its source and date. Use primary company filings first, then dated company materials and credible secondary sources. For exchange-rate conversion, state the rate, date and source. Distinguish reported fact, estimate and analysis. Do not invent market size, competitor facts or rankings. Ask for outline approval before making slides; approval applies to the outline, not to unsupported facts. If inputs conflict, show both with provenance.

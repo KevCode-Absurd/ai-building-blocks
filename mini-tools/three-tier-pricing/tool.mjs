@@ -8,12 +8,12 @@
 
 export default {
   slug: "three-tier-pricing",
-  name: "See what three price tiers make per buyer against one price",
+  name: "Three-tier pricing comparison",
   /** The plain name, used where the tool talks about itself. */
-  short: "Price tiers",
-  headline: "See what three price tiers make per buyer, and whether they beat one price for everyone",
-  summary: "Type your three prices, what each costs you and the share of buyers who pick each. You get the average price and profit a buyer, and the gain against a single price.",
-  question: "With three prices on the page, what do I make per buyer on average, and does it beat one price for everyone?",
+  short: "Three-tier pricing comparison",
+  headline: "Three-tier pricing comparison",
+  summary: "Enter three prices, costs and buyer shares. Compare average profit per buyer and monthly profit with a single-price offer.",
+  question: "Would these three price tiers leave more profit than one price at the same buyer count?",
   shelf: ["general"],
   version: "1.0.0",
   updated: "2026-10-21",
@@ -30,7 +30,7 @@ export default {
     { id: "c2", label: "What the middle tier costs you per buyer", unit: "money", example: 10, min: 0, max: 1e9, step: 1, help: "Goods, delivery, fees or hours to serve one buyer on this tier.", where: "Your cost of goods or the hours it takes, priced at your rate.", tools: ["Xero or QuickBooks", "A spreadsheet"] },
     { id: "s2", label: "Share of buyers who pick the middle tier", unit: "percent", example: 55, min: 0, max: 100, step: 5, help: "Of everyone who buys, the share on this tier.", where: "Orders by plan or product, last 90 days.", tools: ["Your checkout", "Stripe", "Shopify analytics"] },
     { id: "p3", label: "Price of the top tier", unit: "money", example: 129, min: 0, max: 1e9, step: 1, help: "The dearest option. It makes the middle one look sensible.", where: "Your pricing page or plan.", tools: [] },
-    { id: "c3", label: "What the top tier costs you per buyer", unit: "money", example: 30, min: 0, max: 1e9, step: 1, help: "Goods, delivery, fees or hours to serve one buyer on this tier.", where: "Your cost of goods or the hours it takes, priced at your rate.", tools: ["Xero or QuickBooks", "A spreadsheet"] },
+    { id: "c3", label: "What the top tier costs you per buyer", unit: "money", example: 30, min: 0, max: 1e9, step: 1, help: "The highest-priced option you plan to offer.", where: "Your cost of goods or the hours it takes, priced at your rate.", tools: ["Xero or QuickBooks", "A spreadsheet"] },
     { id: "s3", label: "Share of buyers who pick the top tier", unit: "percent", example: 15, min: 0, max: 100, step: 5, help: "Of everyone who buys, the share on this tier.", where: "Orders by plan or product, last 90 days.", tools: ["Your checkout", "Stripe", "Shopify analytics"] },
     { id: "buyers", label: "Buyers a month", unit: "count", example: 100, min: 0, max: 1e9, step: 10, integer: true, help: "How many people buy in a month. The sum keeps this the same with tiers or one price.", where: "Orders for the last 3 months, divided by 3.", tools: ["Your checkout", "Shopify analytics"] },
     { id: "single", label: "The one price you would charge instead", unit: "money", example: 49, min: 0, max: 1e9, step: 1, section: "single", help: "If there were only one option.", where: "Your current price, or the price you are thinking of.", tools: [] },
@@ -79,6 +79,6 @@ export default {
   notes: [
     "The number of buyers is the same with tiers or one price. In practice tiers can raise or lower how many buy, so test it.",
     "The shares are scaled to add up to 100, so you can type them as counts of orders instead of percentages.",
-    "A top tier few people pick still does a job: it makes the middle tier look reasonable. This sum only counts the money it brings in directly.",
+    "This counts only direct sales and costs. It does not predict how one tier changes the appeal of another.",
   ],
 };

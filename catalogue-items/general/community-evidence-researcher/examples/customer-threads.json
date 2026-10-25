@@ -1,0 +1,10 @@
+[
+  {"id":"C-01","thread":"T-1","date":"2026-05-03","text":"I couldn't tell whether save had worked.","theme":"save-state uncertainty"},
+  {"id":"C-02","thread":"T-1","date":"2026-05-03","text":"The invite email went to spam, so I stopped.","theme":"invite delivery"},
+  {"id":"C-03","thread":"T-2","date":"2026-05-04","text":"I didn't know which field was required.","theme":"field requirements"},
+  {"id":"C-04","thread":"T-2","date":"2026-05-04","text":"I couldn't tell whether save had worked.","theme":"save-state uncertainty"},
+  {"id":"C-05","thread":"T-3","date":"2026-05-05","text":"Setup was quick once I found the workspace switch.","theme":"navigation"},
+  {"id":"C-06","thread":"T-3","date":"2026-05-05","text":"I wanted a sample project before connecting data.","theme":"sample project"},
+  {"id":"C-02","thread":"T-1","date":"2026-05-03","text":"The invite email went to spam, so I stopped.","theme":"invite delivery"},
+  {"id":"C-06","thread":"T-3","date":"2026-05-05","text":"I wanted a sample project before connecting data.","theme":"sample project"}
+]

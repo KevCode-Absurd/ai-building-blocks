@@ -2,10 +2,14 @@ thinking: low
 thinking_why: It writes a draft in a known format.
 new_slug: marketing-content-drafter
 name: Marketing content drafter
-summary: Say what you need. Get a blog post, social post, newsletter, page or press release with headline options.
+summary: Say what you need. Get a blog post, social post, newsletter, page or
+  press release with headline options.
 job: grow-social
 headline: Marketing content drafter
-subhead: Tell it the content type, topic, audience and two to four key messages. It writes a first draft in your voice, formatted for the channel, and applies your brand voice notes if you have them. You get the full draft, headline options and a note on the voice it used.
+subhead: Tell it the content type, topic, audience and two to four key messages.
+  It writes a first draft in your voice, formatted for the channel, and applies
+  your brand voice notes if you have them. You get the full draft, headline
+  options and a note on the voice it used.
 explain: |
   A first draft of a blog post, social post, newsletter, landing page, press release or case study, with headline options, ready to edit. It writes for a named audience in your voice.
 
@@ -27,5 +31,7 @@ you_get:
   - Platform-fitted formatting
   - Notes on voice used
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.

@@ -1,0 +1,21 @@
+slug: creative-sprint-readiness-reviewer
+name: Creative sprint readiness reviewer
+summary: Review a creative sprint before briefs, before image generation and before launch. Check source facts, buyer fit, copy, product truth and delivery files.
+category: ecommerce
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: static_ads
+    required: false
+outputs:
+  - type: audit_report
+    required: true
+uses: []
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

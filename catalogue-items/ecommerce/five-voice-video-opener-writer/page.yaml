@@ -1,0 +1,43 @@
+new_slug: five-voice-video-opener-writer
+name: Five-voice video opener writer
+summary: Write eighteen video openers in five voice styles. Add pace, emphasis and delivery notes for the chosen speaker.
+job: make-video-ads
+headline: Five-voice video opener writer
+subhead: Share product facts, target buyer, angle, speaker and approved claims. Get eighteen grouped openers with voice and delivery notes.
+explain: |-
+  Write eighteen video openers in five voice styles. Add pace, emphasis and delivery notes for the chosen speaker.
+
+  Share product facts, target buyer, angle, speaker and approved claims. Get eighteen grouped openers with voice and delivery notes.
+when:
+  - You need eighteen grouped openers with voice and delivery notes.
+  - You need five-voice video opener writer for a specific task.
+  - You want the method's decisions and assumptions written down before acting.
+you_give:
+  - Product facts
+  - Target buyer
+  - Angle
+  - Speaker and approved claims
+you_get:
+  - Eighteen grouped openers with voice and delivery notes
+  - The sources used, missing inputs and assumptions
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Check the inputs
+    text: Confirm product facts, target buyer, angle, speaker and approved claims. Mark facts that are missing.
+  - title: Collect Inputs
+    text: Follow the collect inputs section in the full method and keep its required fields and decision rules.
+  - title: The 5 Voice Styles
+    text: Follow the the 5 voice styles section in the full method and keep its required fields and decision rules.
+  - title: Generate 18 Voiceover Hooks
+    text: Follow the generate 18 voiceover hooks section in the full method and keep its required fields and decision rules.
+  - title: Delivery Notes
+    text: Follow the delivery notes section in the full method and keep its required fields and decision rules.
+  - title: Rules
+    text: Follow the rules section in the full method and keep its required fields and decision rules.
+  - title: Review the result
+    text: Return eighteen grouped openers with voice and delivery notes. Check facts, math and the decisions before any action.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

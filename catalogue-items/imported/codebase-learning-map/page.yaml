@@ -1,0 +1,35 @@
+thinking: medium
+thinking_why: It follows a set method and adapts its questions or draft to your evidence.
+new_slug: codebase-learning-map
+name: Codebase learning map
+summary: Share a code folder. Get an ordered learning map, key prerequisites and
+  paths that fit your goal.
+job: study-and-practice
+headline: Codebase learning map
+subhead: Give it a code folder, its main guide and your learning goal. It maps
+  the lessons and features, checks what you need to know first and suggests
+  routes. You get an ordered study map and a choice of starting paths.
+explain: Give it a code folder, its main guide and your learning goal. It maps
+  the lessons and features, checks what you need to know first and suggests
+  routes. You get an ordered study map and a choice of starting paths.
+you_give:
+  - A repository and its main guide or course outline.
+  - Your goal and current level.
+you_get:
+  - An ordered map of learning phases.
+  - A list of prerequisites and likely sticking points.
+  - Two or three study paths with tradeoffs.
+how_it_works:
+  - title: Step 1
+    text: Identify whether the repository teaches lessons or holds a working project.
+  - title: Step 2
+    text: Map phases, outcomes and the knowledge each phase needs.
+  - title: Step 3
+    text: Offer different learning paths and ask you to choose.
+how_to_use:
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
+  - It works best when your AI can read your supplied notes and ask follow-up
+    questions.

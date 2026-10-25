@@ -2,24 +2,24 @@ slug: n8n
 name: n8n
 maker: n8n
 url: https://n8n.io
-promise: Build automations and AI agents you can host yourself or run in the cloud.
+promise: "Build automations and AI agents on your own server or in the cloud."
 use_cases: [automate]
 categories: [automation]
 what_it_does:
   - Builds automations from steps you can open, test and re-run one by one.
-  - Connects more than 500 apps, plus any API through HTTP requests.
+  - "Connects apps through built-in links or web requests."
   - Builds AI agents with the model you choose and approval steps you set.
   - Lets you switch from visual steps to code when a job gets complex.
   - Runs on your own server or in n8n's cloud.
   - Keeps a version history and detailed logs of every run.
 benefits:
-  - Keep your data on your own server if your rules require it.
+  - "Run workflows on your own server when your data rules require that setup."
   - Re-run only the step that failed instead of the whole job.
   - Add a human approval step before an agent acts.
   - Try it free by self-hosting before you pay for the cloud.
 best_for:
   - Technical teams that want control and self-hosting.
-  - Operators working with a developer on larger automations.
+  - "People working with a coder to build larger repeat tasks."
   - Companies building AI agents with approval steps.
 not_for:
   - Beginners who want the easiest possible setup.

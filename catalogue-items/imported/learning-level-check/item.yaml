@@ -1,0 +1,36 @@
+slug: learning-level-check
+name: Learning level check
+summary: Choose a technical topic. Answer short questions to find a useful starting point for your lessons.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: beginner
+inputs:
+  - type: source_text
+    required: true
+  - type: brief
+    required: false
+outputs:
+  - type: feedback_notes
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: edu-agent-skills contributors
+  repo: yugash007/edu-agent-skills
+  path: skills/onboarding/find-your-level
+  url: https://github.com/yugash007/edu-agent-skills/tree/e75f44303570bb2eae37a8f7536c0358be2502ee/skills/onboarding/find-your-level
+  licence: MIT
+  licence_file: LICENSE
+  commit: e75f44303570bb2eae37a8f7536c0358be2502ee
+  original_name: find-your-level
+  imported: 2026-10-23
+  skill_sha256: 7c3ef1048a3306688640ec74271ac35b430e874657d688b90df264bc0b0a5ca9
+version: 1.0.0
+credits:
+  - title: find-your-level skill
+    by: edu-agent-skills contributors
+    url: https://github.com/yugash007/edu-agent-skills/tree/e75f44303570bb2eae37a8f7536c0358be2502ee/skills/onboarding/find-your-level
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

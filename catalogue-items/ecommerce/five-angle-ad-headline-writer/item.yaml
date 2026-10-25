@@ -1,0 +1,19 @@
+slug: five-angle-ad-headline-writer
+name: Five-angle ad headline writer
+summary: Write five short headlines for one ad, each with a new angle. Get word counts and a fair test plan.
+category: ecommerce
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: ad_copy
+    required: true
+uses: []
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

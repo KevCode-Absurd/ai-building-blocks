@@ -1,0 +1,35 @@
+thinking: medium
+thinking_why: It follows a set method and adapts its questions or draft to your evidence.
+new_slug: system-design-practice-review
+name: System design practice review
+summary: Share a system design. Explain your choices, compare fixes and leave
+  with a clear revision checklist.
+job: study-and-practice
+headline: System design practice review
+subhead: Share your design, expected load and learning goal. It names what
+  works, then asks questions that test your assumptions. You compare options for
+  the biggest risks and get a checklist of the changes you choose to make.
+explain: Share your design, expected load and learning goal. It names what
+  works, then asks questions that test your assumptions. You compare options for
+  the biggest risks and get a checklist of the changes you choose to make.
+you_give:
+  - A system design as a diagram, description or code.
+  - Expected load, reliability needs, team limits and learning goal.
+you_get:
+  - A question-led review of your design.
+  - Ranked risks and alternatives with tradeoffs.
+  - A revision checklist based on your choices.
+how_it_works:
+  - title: Step 1
+    text: Name design strengths and ask questions about weak assumptions.
+  - title: Step 2
+    text: After your answers, rank the main risks by severity.
+  - title: Step 3
+    text: Compare options, ask for your choice and record the agreed changes.
+how_to_use:
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
+  - It works best when your AI can read your supplied notes and ask follow-up
+    questions.

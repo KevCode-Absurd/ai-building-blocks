@@ -1,0 +1,76 @@
+{
+  "createdOn": "2026-10-25T05:20:20.649Z",
+  "status": "candidate-measured",
+  "method": "Three cold Chrome contexts per scenario, local production assets, no network/CPU throttling; desktop 1440×900 and mobile emulation 390×844/deviceScaleFactor 2. Synthetic auth unconfigured; slow-starter adds a 1,500ms delay only to the optional starter payload. Values are local browser measurements, not field Web Vitals.",
+  "baseline": {
+    "desktop": "2026-10-25-live-baseline",
+    "mobile": "live-baseline"
+  },
+  "candidate": {
+    "desktop": "2026-10-25-release-candidate",
+    "mobile": "release-candidate"
+  },
+  "home": {
+    "desktop": {
+      "beforeMs": 380.59999999962747,
+      "afterMs": 347.29999999981374,
+      "changeMs": -33.3,
+      "improvementPercent": 8.7,
+      "javascriptDecodedBytes": {
+        "before": 236751,
+        "after": 219566
+      },
+      "longTaskBlockingMs": {
+        "before": 107,
+        "after": 102
+      }
+    },
+    "mobile": {
+      "beforeMs": 366.8999999994412,
+      "afterMs": 280,
+      "changeMs": -86.9,
+      "improvementPercent": 23.7,
+      "javascriptDecodedBytes": {
+        "before": 227293,
+        "after": 219566
+      },
+      "longTaskBlockingMs": {
+        "before": 83,
+        "after": 62
+      }
+    }
+  },
+  "slowOptionalStarter": {
+    "delayMs": 1500,
+    "desktop": {
+      "beforeMs": 1665.9000000003725,
+      "afterMs": 265.3999999994412,
+      "changeMs": -1400.5,
+      "improvementPercent": 84.1,
+      "javascriptDecodedBytes": {
+        "before": 412853,
+        "after": 219566
+      },
+      "longTaskBlockingMs": {
+        "before": 52,
+        "after": 63
+      }
+    },
+    "mobile": {
+      "beforeMs": 1677.0999999996275,
+      "afterMs": 255.70000000018626,
+      "changeMs": -1421.4,
+      "improvementPercent": 84.8,
+      "javascriptDecodedBytes": {
+        "before": 412853,
+        "after": 219566
+      },
+      "longTaskBlockingMs": {
+        "before": 55,
+        "after": 59
+      }
+    }
+  },
+  "scope": "Focused on first-screen readiness, reduced optional startup work and delayed decorative globe. Other routes retained route-specific chunks; no correctness/auth/account boundaries were removed.",
+  "limitations": "This local synthetic benchmark does not replace PageSpeed/Lighthouse field data. The broader repository E2E suite is not clean: some pre-existing specs assert a retired account-link/compose-tab selector, and the static QA preview intentionally returns 503 for unmocked APIs; these were recorded separately and not counted as passing."
+}

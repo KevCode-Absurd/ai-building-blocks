@@ -1,0 +1,32 @@
+thinking: medium
+thinking_why: It follows a set method with a few checks.
+new_slug: gorgias-and-hubspot-contact-check
+name: Gorgias and HubSpot contact check
+summary: Connect Gorgias and HubSpot. Get missing contacts, mismatched fields, and suggested fixes.
+job: organise-work
+headline: Gorgias and HubSpot contact check
+subhead: Connect Gorgias and HubSpot and ask for a contact check. It matches customer email addresses from recent support tickets to your contact records. You get missing contacts, conflicting names or fields, and suggested fixes to review.
+when:
+  - You use this tool for customer support and need help with this task.
+you_give:
+  - Recent Gorgias customer email addresses and names.
+  - HubSpot contact records for comparing those fields.
+you_get:
+  - List missing contacts and mismatches with suggested fixes. This review does not sync records itself.
+how_it_works:
+  - title: Collect customer records
+    text: Read recent Gorgias tickets and collect unique customer email addresses and names.
+  - title: Match HubSpot contacts
+    text: Look up each email in HubSpot and compare the fields found in both tools.
+  - title: Explain the gaps
+    text: List missing contacts and mismatches with suggested fixes. This review does not sync records itself.
+works_best_with:
+  tools:
+    - name: Gorgias and HubSpot
+      why: Live lookups need Composio CLI access and connected accounts for these services.
+how_to_use:
+  - Add the downloaded folder to an AI that can read skill files.
+  - Ask for gorgias and hubspot contact check by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
+  - Provide Recent Gorgias customer email addresses and names.
+  - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
+  - Review the result. Approve any proposed sending or account changes before they happen.

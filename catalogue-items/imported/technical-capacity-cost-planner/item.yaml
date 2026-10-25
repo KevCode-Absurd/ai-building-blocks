@@ -1,0 +1,37 @@
+slug: technical-capacity-cost-planner
+name: Plan service capacity and cost
+summary: Link traffic, tested limits and running costs. Get a scaling plan that shows what still needs a load test.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: performance_sheet
+    required: true
+outputs:
+  - type: plan
+    required: true
+  - type: audit_report
+    required: true
+uses: []
+origin: imported
+source:
+  by: magnus919
+  repo: magnus919/agent-skills
+  path: capacity-and-cost-engineering
+  url: https://github.com/magnus919/agent-skills/tree/92c327e525da69c9ad3812fd223a1770e977c2e3/capacity-and-cost-engineering
+  licence: MIT
+  licence_file: LICENSE.md
+  commit: 92c327e525da69c9ad3812fd223a1770e977c2e3
+  original_name: capacity-and-cost-engineering
+  imported: 2026-10-24
+version: 1.0.0
+credits:
+  - title: capacity-and-cost-engineering skill
+    by: magnus919
+    url: https://github.com/magnus919/agent-skills/tree/92c327e525da69c9ad3812fd223a1770e977c2e3/capacity-and-cost-engineering
+    used: Original instructions and supporting files, with attribution and the MIT licence. Display copy describes the task.

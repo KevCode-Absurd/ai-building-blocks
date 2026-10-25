@@ -3,32 +3,26 @@ renamed_from: get-offer-reel-that-shows-your-real-product
 name: "An offer video with your product and price exactly right"
 summary: "Give it your product photos, words and offer. You get a finished 10 to 20 second video in every size you need."
 category: general
-boards: [ecommerce]
+boards: [ ecommerce ]
 type: workflow
 role: render
 job: video
 level: expert
 inputs:
-  - {type: product_data, required: true}
-  - {type: script, required: true}
-  - {type: offer, required: false}
-  - {type: brand_brain, required: true}
-  - {type: product_photos, required: false}
+  - { type: product_data, required: true }
+  - { type: script, required: true }
+  - { type: offer, required: false }
+  - { type: brand_brain, required: true }
+  - { type: product_photos, required: false }
 outputs:
-  - {type: video_ads}
+  - { type: video_ads }
 uses: []
 origin: own
-source_ids: [CES-052]
+source_ids: [ CES-052 ]
 old_name: motion-reel
-version: 2.0.0
+version: 2.0.1
 credits:
-  - {title: "The core idea", by: "Remotion", url: "https://www.remotion.dev/docs/the-fundamentals", used: "A video as frames drawn from the current frame number, with set size, length and fps"}
-  - {title: "Flickering", by: "Remotion", url: "https://www.remotion.dev/docs/flickering", used: "Frames that depend only on time, seeded randomness, no CSS animations"}
-  - {title: "Prompting videos with coding agents", by: "Remotion", url: "https://www.remotion.dev/docs/ai/claude-code", used: "Setting up a blank project with agent skills for Claude Code"}
-  - {title: "Executing UX Animations: Duration and Motion Characteristics", by: "Page Laubheimer, Nielsen Norman Group", url: "https://www.nngroup.com/articles/animation-duration/", used: "Ease out to enter, ease in to leave, exits shorter than entrances"}
-tested:
-  on: 2026-10-20
-  business: sprout
-  model: claude-opus-5-5
-  judge: claude-fable-5-1
-  result: pass
+  - { title: "The core idea", by: "Remotion", url: "https://www.remotion.dev/docs/the-fundamentals", used: "A video as frames drawn from the current frame number, with set size, length and fps" }
+  - { title: "Flickering", by: "Remotion", url: "https://www.remotion.dev/docs/flickering", used: "Frames that depend only on time, seeded randomness, no CSS animations" }
+  - { title: "Prompting videos with coding agents", by: "Remotion", url: "https://www.remotion.dev/docs/ai/claude-code", used: "Setting up a blank project with agent skills for Claude Code" }
+  - { title: "Executing UX Animations: Duration and Motion Characteristics", by: "Page Laubheimer, Nielsen Norman Group", url: "https://www.nngroup.com/articles/animation-duration/", used: "Ease out to enter, ease in to leave, exits shorter than entrances" }

@@ -28,12 +28,12 @@ const months = MODELS.map((m) => `${m.id}Month`).join(", ");
 
 export default {
   slug: "ai-run-cost",
-  name: "Know what an AI job costs before you run it",
+  name: "AI run cost calculator",
   /** The plain name, used where the tool talks about itself. */
-  short: "AI run cost",
-  headline: "Know what an AI job costs on each lab, per run and per month",
-  summary: "Type how much goes in and comes out, and how often you run it. You get the cost per run and per month on 12 models.",
-  question: "What does one run cost on each of the four labs, and what is that a month at my volume?",
+  short: "AI run cost calculator",
+  headline: "AI run cost calculator",
+  summary: "Enter input and output tokens, run count and prices. Compare estimated cost per run and month across the listed models.",
+  question: "What would this AI task cost per run and month at these prices?",
   shelf: ["general"],
   /** Lab prices are in US dollars, so this tool always shows dollars. */
   fixedCurrency: "$",

@@ -1,0 +1,28 @@
+thinking: high
+thinking_why: It follows a set method with a few checks.
+new_slug: book-writing-project-coach
+name: Book writing project coach
+summary: Share your book idea or draft and stage. Get the outline, writing plan, revision, or submission draft.
+job: write-and-tell-stories
+headline: Book writing project coach
+subhead: Share your writing project, current stage, audience, and goal. It chooses the right help for planning, drafting, revision, or approaching publishers. You get a focused outline, session plan, edit, or submission draft that protects your voice and keeps research gaps visible.
+you_give:
+  - Project type, current stage, audience, goal, constraints, and your draft or idea.
+you_get:
+  - A stage-matched outline, writing session, revision plan, query letter, or proposal draft.
+how_it_works:
+  - title: Match the project stage
+    text: Confirm the kind of book, where the writer is in the process, and what finished work is needed.
+  - title: Use the right mode
+    text: Plan the story, support drafting, review structure, or prepare submission material without mixing all stages together.
+  - title: Preserve voice and truth
+    text: Keep research gaps visible, revise structure before sentence polish, and separate measured writing stats from judgment.
+  - title: Hand over the next piece
+    text: Deliver the requested artifact and a useful next step, with no claim that a submission was sent.
+works_best_with:
+  tools:
+    - name: A chat AI that can read the bundled reference files
+      why: Use the supplied references and templates for the chosen task. Scripts are optional unless that task specifically needs them.
+how_to_use:
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.

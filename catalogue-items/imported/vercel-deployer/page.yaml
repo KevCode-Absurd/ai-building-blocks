@@ -2,16 +2,14 @@ thinking: low
 thinking_why: It follows a fixed deploy path.
 new_slug: vercel-deployer
 name: Vercel deployer
-summary: Say "deploy my app". Get it live on Vercel and a link you can share.
+summary: Check the configured Vercel target, then deploy with a clear preview or production status and link.
 job: ship-and-host
 headline: Vercel deployer
-subhead: Tell it to deploy and your app goes live on Vercel with a link to
-  share. It makes a preview first, so you check before anything reaches real
-  visitors.
+subhead: Check the project, branch, and environment before deploying, then get the deployment status and link.
 explain: |
-  Tell it to deploy and your app goes live on Vercel with a link to share. It makes a preview first, so you check before anything reaches real visitors.
+  Check the project target and environment before deploying. A preview or production deployment depends on the configured target and explicit authorization.
 
-  The skill starts with four checks: is there a git remote, is the folder linked to a Vercel project, is the Vercel CLI installed and signed in, and which teams you belong to. Then it picks the best way to deploy, aiming to get you to the setup where every git push deploys on its own. It runs the deploy command, waits for the build and returns the preview link. Production deploys happen only when you explicitly ask. It needs a Vercel account.
+  The skill starts with four checks: is there a git remote, is the folder linked to a Vercel project, is the Vercel CLI installed and signed in, and which teams you belong to. Then it verifies the configured project, branch, team, and environment before any deployment action. It runs the approved command, waits for status, and returns the resulting deployment link. Production requires explicit authorization; a preview is not guaranteed until the target is verified. It needs a Vercel account.
 when:
   - You built an app and want a link to show a friend or client.
   - You want a preview of changes before they go to the live site.
@@ -23,12 +21,13 @@ you_give:
   - The team to deploy under, if you have several
   - A clear yes if you want production (optional)
 you_get:
-  - A live preview link
+  - Deployment status and the resulting link
   - The project linked to Vercel
   - A check of git, login and team setup
   - Next steps for automatic deploys
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
-    or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
   - It works best when your AI can run commands and sign in to Vercel.

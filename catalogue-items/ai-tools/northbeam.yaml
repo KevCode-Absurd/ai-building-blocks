@@ -2,17 +2,17 @@ slug: northbeam
 name: Northbeam
 maker: Northbeam
 url: https://www.northbeam.io
-promise: Find out which ads and channels drive your sales, across every platform
+promise: "Compare reported ad results across channels using your store’s sales data."
 use_cases: [run-ads, analyse-data]
 categories: [marketing, data]
 what_it_does:
-  - Tracks each customer's path across ads using your own first-party data.
+  - "Uses your store’s own data to link advertising and sales records."
   - Shows results for every ad channel side by side in custom dashboards.
   - Counts people who saw an ad and bought later.
-  - Connects to AI assistants through an MCP connection so you can ask about results.
-  - Offers incrementality testing on higher plans.
+  - "Connects to supported AI assistants so you can ask about results."
+  - "Offers tests of whether ads bring extra sales, on higher plans."
 benefits:
-  - Move budget to the channels that bring in sales, not the ones that claim credit.
+  - "Review channel results on one reporting basis before deciding where to spend."
   - Compare Meta, Google and TikTok on one set of numbers.
   - Back a budget decision with data you can show a partner.
 best_for:

@@ -1,0 +1,35 @@
+thinking: medium
+thinking_why: It follows a set method and adapts its questions or draft to your evidence.
+new_slug: student-coding-project-review
+name: Student coding project review
+summary: Share a learning project and its goal. Get specific strengths, priority
+  fixes and questions that deepen your understanding.
+job: study-and-practice
+headline: Student coding project review
+subhead: Share your project, requirements and what you hoped to learn. It starts
+  with your own review, then checks the work and the learning behind it. You get
+  specific strengths, up to five priority issues and a next step for each.
+explain: Share your project, requirements and what you hoped to learn. It starts
+  with your own review, then checks the work and the learning behind it. You get
+  specific strengths, up to five priority issues and a next step for each.
+you_give:
+  - Project code, notes and original requirements.
+  - Your learning goals and your own view of the work.
+you_get:
+  - Specific strengths tied to your project.
+  - Up to five ranked issues with code references.
+  - Next steps and a reflection question.
+how_it_works:
+  - title: Step 1
+    text: Ask what you think went well and what you would change.
+  - title: Step 2
+    text: Review scope, correctness, code quality, tests and learning.
+  - title: Step 3
+    text: Name strengths, rank at most five issues and ask what you learned.
+how_to_use:
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
+  - It works best when your AI can read your supplied notes and ask follow-up
+    questions.

@@ -1,0 +1,27 @@
+thinking: medium
+thinking_why: It follows a set method and adapts its questions or draft to your evidence.
+new_slug: creative-resume-layout-planner
+name: Creative resume layout planner
+summary: Share your creative role and portfolio. Get separate resume layouts for job portals and direct sharing.
+job: find-a-job
+headline: Creative resume layout planner
+subhead: Share your creative field, resume and portfolio style. It plans a plain version for job portals and a designed version for direct sharing. You get layout, type and colour choices, plus clear links between your resume and your work samples.
+explain: Share your creative field, resume and portfolio style. It plans a plain version for job portals and a designed version for direct sharing. You get layout, type and colour choices, plus clear links between your resume and your work samples.
+you_give:
+  - Your resume, creative field and target application route.
+  - Your portfolio link and existing style choices.
+you_get:
+  - A plan for plain and designed resume versions.
+  - Type, colour and layout specifications.
+  - Portfolio-link guidance and a readability checklist.
+how_it_works:
+  - title: Step 1
+    text: Choose when a plain or designed resume is appropriate.
+  - title: Step 2
+    text: Set type, colour, spacing and section rules for both versions.
+  - title: Step 3
+    text: Link the resume to relevant work samples and check readability.
+how_to_use:
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.
+  - It works best when your AI can read your supplied notes and ask follow-up questions.

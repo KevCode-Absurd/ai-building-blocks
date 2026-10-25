@@ -1,0 +1,81 @@
+{
+  "proposal": "community-evidence-researcher",
+  "status": "source-reviewed-awaiting-isolated-release",
+  "recommendation": "Add as one general-purpose research skill.",
+  "summary": "Analyzes supplied discussion exports and user-approved public material to answer bounded customer or company questions with auditable evidence, counts, counterexamples, and sample limitations.",
+  "duplicate_review": [
+    {
+      "skill": "catalogue-items/imported/reddit-thread-collector",
+      "license": "catalogue item.yaml records the upstream material as CC-BY-4.0; imported SKILL.md frontmatter says MIT. The metadata differs, so no upstream text is reused.",
+      "overlap": "Both can involve online community posts.",
+      "difference": "The imported skill routes collection through a paid Apify actor and focuses on retrieval. This proposal analyzes supplied exports or specifically approved public material, makes no paid collection calls, and centers traceable synthesis and limitations."
+    },
+    {
+      "skill": "catalogue-items/imported/organization-dossier-researcher",
+      "license": "MIT",
+      "overlap": "Both can examine public evidence about companies.",
+      "difference": "The imported skill creates a broad hypothesis-tested entity dossier with a prescribed multistage search and DOCX output. This proposal answers a narrow evidence question across customer or stakeholder discussion and company contexts, with reusable evidence table and sample accounting; company scope is evidence collection only."
+    },
+    {
+      "skill": "catalogue-items/imported/community-needs-research-planner",
+      "license": "MIT (front matter)",
+      "overlap": "Both can organize community evidence.",
+      "difference": "The imported skill is a nonprofit needs assessment planner emphasizing primary data collection, service landscape, and program gaps. This proposal analyzes existing supplied or approved material for customer and company research and does not plan human-subject collection or nonprofit program decisions."
+    }
+  ],
+  "references_and_reuse": {
+    "external_sources_used": [],
+    "upstream_text_reused": false,
+    "note": "The listed repository skills were inspected only to assess overlap and boundaries. The proposal is newly written; its fictional worked datasets are invented examples, not attributed sources."
+  },
+  "worked_example_checks": [
+    {
+      "example": "A — fictional customer feedback export",
+      "rawRows": 8,
+      "exactDuplicateRowsRemoved": 2,
+      "uniqueExcerpts": 6,
+      "threads": 3,
+      "saveStateUncertaintyExcerpts": 2,
+      "shareOfUniqueExcerpts": "2/6 = 33.3%",
+      "sameTextDifferentCommentIdsRetained": [
+        "C-01",
+        "C-04"
+      ]
+    },
+    {
+      "example": "B — fictional public company discussion excerpts",
+      "excerpts": 5,
+      "threads": 2,
+      "migrationCompatibilityExcerpts": 2,
+      "performanceBenefitExcerpts": 1,
+      "compatibilityConcernOpinions": 1,
+      "unverifiedRetirementDateClaims": 1
+    }
+  ],
+  "guardrails_reviewed": [
+    "Question, source boundary, dates, collection method, and access limits are logged.",
+    "Exact quotes are locator-linked; facts, opinions, and inferences are distinguished.",
+    "Duplicates, thread dependence, denominator, sample bias, conflicts, and missing evidence are reported.",
+    "No silent paid Apify or metered API use; no promise to retrieve every comment; no access-control bypass.",
+    "Company work is public evidence collection only, with no personalized investment recommendation or return promise."
+  ],
+  "files": [
+    "check-examples.mjs",
+    "examples",
+    "item.yaml",
+    "LICENSE",
+    "page.yaml",
+    "SKILL.md"
+  ],
+  "rootReview": {
+    "status": "canonical-source-and-fictional-examples-reviewed-not-published",
+    "card": "Share posts, comments or files. Get sourced findings, counted themes and a clear note on what the sample cannot show.",
+    "cardWords": 20,
+    "cardGrade": 3.1,
+    "externalModelCalls": 0,
+    "limits": "Fictional focused evidence examples; no live collection, company fact verification or investment recommendation.",
+    "intro": "Share a question, a date range and the posts or files to review. It groups themes, checks quotes and compares conflicting views. Get an evidence table and a short brief with sources, counts and gaps.",
+    "exactQuoteCorrection": "Worked examples now preserve the supplied ASCII apostrophes in exact excerpts.",
+    "checkedOn": "2026-10-23T17:46:12.591Z"
+  }
+}

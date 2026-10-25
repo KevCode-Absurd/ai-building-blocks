@@ -1,6 +1,6 @@
 slug: supply-and-demand-balancer
-name: Supply and demand balancer
-summary: Give it your stock and open orders. Get a plan to fill the right orders first when you cannot fill them all.
+name: "Supply and demand balancer"
+summary: "Allocate dated available supply against demand using the chosen priority rule. Show timing, constraints and unfilled demand."
 category: general
 boards: []
 type: skill

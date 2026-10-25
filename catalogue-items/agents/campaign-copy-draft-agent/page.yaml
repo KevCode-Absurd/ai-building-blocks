@@ -1,0 +1,37 @@
+new_slug: campaign-copy-draft-agent
+name: Campaign copy draft agent
+summary: Share your brief, offer and approved claims. Get a copy deck checked against those facts, plus a checkpoint for the next revision.
+job: set-up-ai
+headline: Campaign copy draft agent
+subhead: Share your brief, offer and approved claims. Get a copy deck checked against those facts, plus a checkpoint for the next revision.
+explain: |-
+  Share campaign brief, audience, current offer, approved claims and brand voice. Get a source-checked copy deck and next-revision checkpoint.
+
+  This is a portable agent procedure for one bounded run. It can be reused with a checkpoint, but it does not claim an installed worker or continuous autonomous runtime.
+when:
+  - You need a source-checked copy deck and next-revision checkpoint.
+you_give:
+  - Campaign brief, audience, current offer, approved claims and brand voice
+  - Authorized tools, owner, limits and any prior checkpoint
+you_get:
+  - A source-checked copy deck and next-revision checkpoint
+  - Evidence gaps, proposed actions and checks not run
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Step 1
+    text: "On first use configure the role from the brief and optional editable template: scope, owner, allowed tools, evidence sources, output contract, review limits and stop conditions. Resolve only material missing fields. A role file does not deploy a background process or grant access to another agent."
+  - title: Step 2
+    text: Run only the current bounded request or an explicitly authorized repeat. Load the last supplied checkpoint if present, compare its scope and evidence dates, then use the current request as authority. Set a maximum work/time/cost boundary before any paid or external operation.
+  - title: Step 3
+    text: Extract the actual buyer, purpose, channel, offer conditions and approved claim evidence. Mark missing facts rather than filling them with performance promises or fabricated customer quotes.
+  - title: Step 4
+    text: Write the requested copy deliverable with distinct angles where useful. For ads separate headline, primary text and CTA; for email keep subject, preview and body clear. Preserve the supplied voice and exact approved facts.
+  - title: Step 5
+    text: Check each claim and number against evidence, review reading flow and channel constraints, then return the copy deck, assumptions and a focused next test or revision.
+  - title: Step 6
+    text: End the run with a checkpoint containing scope, evidence dates/IDs, completed deliverables, proposed actions, unresolved facts, approvals and the next review trigger. Store it only in the destination the user requested; otherwise return it in the answer. A later run must revalidate stale facts and approvals. No promise of continuous monitoring or sending is implied.
+thinking: high
+thinking_why: It compares supplied evidence and follows a specific method.

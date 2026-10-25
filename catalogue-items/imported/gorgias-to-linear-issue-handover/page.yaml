@@ -1,0 +1,32 @@
+thinking: medium
+thinking_why: It follows a set method with a few checks.
+new_slug: gorgias-to-linear-issue-handover
+name: Gorgias to Linear issue handover
+summary: Share a ticket or problem. Get an issue draft and Slack alert to approve together.
+job: help-customers
+headline: Gorgias to Linear issue handover
+subhead: Give it a Gorgias ticket number or describe the problem. It prepares a Linear issue and a Slack message with the right team and channel. You review both before it creates the issue and posts the approved alert.
+when:
+  - You use this tool for customer support and need help with this task.
+you_give:
+  - A Gorgias ticket number or a clear problem description.
+  - The intended Linear team and Slack channel.
+you_get:
+  - After approval, create the Linear issue and include its returned link in the Slack alert.
+how_it_works:
+  - title: Collect the issue facts
+    text: Read the ticket or problem description and find the available Linear teams and Slack channels.
+  - title: Prepare the handover
+    text: Show the proposed issue title, details, priority, team, and Slack message.
+  - title: Create approved records
+    text: After approval, create the Linear issue and include its returned link in the Slack alert.
+works_best_with:
+  tools:
+    - name: Gorgias, Linear, and Slack
+      why: Live lookups need Composio CLI access and connected accounts for these services.
+how_to_use:
+  - Add the downloaded folder to an AI that can read skill files.
+  - Ask for gorgias to linear issue handover by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
+  - Provide a Gorgias ticket number or a clear problem description.
+  - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
+  - Review the result. Approve any proposed sending or account changes before they happen.

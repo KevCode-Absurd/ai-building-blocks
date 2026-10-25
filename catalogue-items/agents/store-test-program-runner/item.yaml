@@ -7,24 +7,24 @@ role: orchestrate
 job: analysis
 level: advanced
 inputs:
-  - {type: performance_sheet, required: true}
-  - {type: question, required: true}
-  - {type: store_capture, required: false}
-  - {type: voc_reviews, required: false}
+  - { type: performance_sheet, required: true }
+  - { type: question, required: true }
+  - { type: store_capture, required: false }
+  - { type: voc_reviews, required: false }
 outputs:
-  - {type: plan}
-  - {type: audit_report}
-uses: [store-profit-per-visitor-calculator, heatmap-and-recording-reader, test-idea-ranker, big-swing-test-picker, store-test-readiness-checker, shopify-test-setup-picker, store-test-verdict-maker]
+  - { type: plan }
+  - { type: audit_report }
+uses: [ store-profit-per-visitor-calculator, heatmap-and-recording-reader, test-idea-ranker, big-swing-test-picker, store-test-readiness-checker, shopify-test-setup-picker, store-test-verdict-maker ]
 steps:
-  - {uses: store-profit-per-visitor-calculator, note: "Once, then each quarter: the gross profit per visitor every test is judged against."}
-  - {uses: heatmap-and-recording-reader, note: "Only when the backlog has fewer than two ideas with two kinds of evidence each: turns what you watched into friction and test ideas."}
-  - {uses: test-idea-ranker, note: "Each time a next test is needed: ranks the backlog by evidence and profit and names the one to run."}
-  - {uses: big-swing-test-picker, note: "Only when orders are between 30 and 300 a month: swaps the ranked list for bold tests the traffic can prove."}
-  - {uses: store-test-readiness-checker, note: "Before every test: repair or test, the sample, the weeks and the main metric. If it says repair first or research only, no test is planned."}
-  - {uses: shopify-test-setup-picker, note: "For the first test, and whenever the plan, tool or page changes: what can be tested and by which route."}
-  - {uses: store-test-verdict-maker, note: "When a test has ended: can the result be trusted, the lift as a range, the money, and a ship call. It writes the log entry."}
+  - { uses: store-profit-per-visitor-calculator, note: "Once, then each quarter: the gross profit per visitor every test is judged against." }
+  - { uses: heatmap-and-recording-reader, note: "Only when the backlog has fewer than two ideas with two kinds of evidence each: turns what you watched into friction and test ideas." }
+  - { uses: test-idea-ranker, note: "Each time a next test is needed: ranks the backlog by evidence and profit and names the one to run." }
+  - { uses: big-swing-test-picker, note: "Only when orders are between 30 and 300 a month: swaps the ranked list for bold tests the traffic can prove." }
+  - { uses: store-test-readiness-checker, note: "Before every test: repair or test, the sample, the weeks and the main metric. If it says repair first or research only, no test is planned." }
+  - { uses: shopify-test-setup-picker, note: "For the first test, and whenever the plan, tool or page changes: what can be tested and by which route." }
+  - { uses: store-test-verdict-maker, note: "When a test has ended: can the result be trusted, the lift as a range, the money, and a ship call. It writes the log entry." }
 schedule: "Every two weeks, and the day a running test ends"
-asks_before: [starting or stopping a test in a testing tool, publishing a test version or a winner to the live store, changing a theme or product page, changing a price, sending an email into a test]
+asks_before: [ starting or stopping a test in a testing tool, publishing a test version or a winner to the live store, changing a theme or product page, changing a price, sending an email into a test ]
 origin: own
-version: 1.0.0
+version: 1.0.1
 example_pending: true

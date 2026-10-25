@@ -2,7 +2,7 @@ slug: suno
 name: Suno
 maker: Suno
 url: https://suno.com
-promise: Full songs with vocals from a few lines about the sound you want.
+promise: "Draft songs with vocals from a sound description and your own or generated lyrics."
 use_cases: [voice-and-audio]
 categories: [voice]
 what_it_does:
@@ -11,8 +11,8 @@ what_it_does:
   - Makes several versions so you can pick the best.
   - Lets paid plans download songs.
 benefits:
-  - Get a jingle or background track without hiring a composer.
-  - Try many musical styles for one ad in an afternoon.
+  - "Draft a jingle or backing track to review before final production."
+  - "Try several musical styles for an idea."
   - Have a draft song to share before you spend on a final one.
 best_for:
   - Jingles and background music for video ads.

@@ -1,0 +1,21 @@
+slug: elevenlabs-spoken-script-writer
+name: ElevenLabs spoken script writer
+summary: Share your idea and length. Get a spoken script with clear speakers, pacing and light delivery cues.
+category: general
+type: skill
+role: make
+job: video
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: copy_draft
+    required: false
+outputs:
+  - type: script
+    required: true
+uses: []
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

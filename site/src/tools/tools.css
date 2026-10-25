@@ -96,7 +96,7 @@ details.mt-sec[open] > summary { margin-bottom: 6px; }
 /* On a phone: the first line of the answer, pinned to the bottom while the answer itself is off screen. */
 .mt-peek { display: none; }
 @media (max-width: 900px) {
-  .mt-peek { display: block; position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 30; padding: 12px 14px; border: 1.5px solid var(--text); border-radius: 10px; background: var(--panel); box-shadow: var(--hard); font-size: 14.5px; font-weight: 500; line-height: 1.4; }
+  .mt-peek { display: block; position: fixed; left: 12px; right: 72px; bottom: max(12px, env(safe-area-inset-bottom)); z-index: 30; padding: 12px 14px; border: 1.5px solid var(--text); border-radius: 10px; background: var(--panel); box-shadow: var(--hard); font-size: 14.5px; font-weight: 500; line-height: 1.4; }
 }
 
 .tools-search { max-width: 740px; margin-bottom: 16px; }

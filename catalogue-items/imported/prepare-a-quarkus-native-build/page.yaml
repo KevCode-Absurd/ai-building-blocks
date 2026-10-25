@@ -1,0 +1,26 @@
+new_slug: prepare-a-quarkus-native-build
+name: Prepare a Quarkus native build
+summary: Build and check a Quarkus native app. Find toolchain, platform and runtime faults.
+job: ship-and-host
+headline: Prepare a Quarkus native build
+subhead: Share the Quarkus project, target platform and build logs. Match the tools to the target. Get fixes and checks for the built app.
+explain: Share the Quarkus project, target platform and build logs. Match the tools to the target. Get fixes and checks for the built app.
+when:
+  - You want to prepare a Quarkus native build.
+you_give:
+  - The Quarkus project, build tool, target platform and native or container failure evidence.
+you_get:
+  - Version-aware build guidance, scoped fixes and a verification plan for the actual artifact.
+how_to_use:
+  - Download the complete skill folder and add it to your AI tool, or copy the instructions into a chat.
+  - Provide the inputs listed here and ask your AI to follow the skill.
+  - Review the result and any missing facts before using it.
+how_it_works:
+  - title: Check build compatibility
+    text: Identify Quarkus and toolchain versions, host architecture and target runtime before choosing flags.
+  - title: Address native requirements
+    text: Review reflection, resources, initialization and container-image requirements against the failure evidence.
+  - title: Validate the artifact
+    text: Distinguish JVM output from native binaries; test the target artifact and review generated manifests before deployment.
+thinking: medium
+thinking_why: It weighs your evidence and follows a specific method.

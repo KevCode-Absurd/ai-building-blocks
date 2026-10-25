@@ -1,23 +1,19 @@
 new_slug: product-gallery-answers
-name: "A product gallery that answers shoppers' doubts"
-summary: "Give it your product, photos, reviews and current gallery. You get a checked set of images, ready to upload."
+name: Product gallery doubt review and image builder
+summary: Share exact product photos, brand facts and customer feedback. Get a gallery review, image plan and checked files when image tools are available.
 job: product-photos
 thinking: high
-thinking_why: "It runs several skills in a row. Give it your strongest model."
-
-headline: "A product gallery that answers shoppers' doubts"
-subhead: Give it your product, facts, photos, reviews and current gallery. It reads the gallery like a shopper, sorts every customer worry into five fears, plans each image around one question, and stops twice for your OK before handing over checked files with alt text.
-
+thinking_why: It compares supplied evidence and follows a specific method.
+headline: Product gallery doubt review and image builder
+subhead: It reviews the actual gallery, groups shopper doubts and plans each image around one question. You approve the plan and two pilot images before the rest. You get numbered files, source notes and alt text. Exact-variant photos and image tools are required for production; missing photos or checks stay marked, and no gallery is uploaded automatically.
 explain: |
   A weak gallery is rarely fixed by nicer photos. The images usually don't answer what shoppers want to know, and nobody has checked which worries go unanswered. Starting again with an image tool and no plan gives you new pictures with the same gaps.
 
   This workflow first reads your current gallery on a phone, one row per image, and lists the questions nobody answers. Then it reads your reviews, return reasons and pre-sale questions line by line and tags each worry as one of five fears, such as "it won't suit me" or "I'll overpay or get stuck". Return reasons and pre-sale questions count double, because they happen before a sale or undo one. The biggest worry gets the second image. You approve the plan, then the first two images, before the rest are made and checked.
-
 when:
   - Your product page isn't selling well and you suspect the images aren't doing their job.
   - You're rebuilding a product page and want the gallery done properly from start to finish.
   - You need images, words and alt text that a team can review in one place before upload.
-
 you_give:
   - The exact product and variant
   - Your brand facts (claims with sources, reviews, guarantee terms, offers, colours, typefaces, what you never show)
@@ -29,14 +25,12 @@ you_get:
   - Customer worries grouped by fear, counted, with real quotes and the image that answers each
   - The image-by-image plan and a gaps list
   - Finished images in upload order, in each shape, with alt text and check results
-
 how_to_use:
   - Copy the workflow and paste it into Claude, ChatGPT or Gemini. Each step can run in the same chat.
   - Paste your facts and reviews, attach your product photos, and attach your current gallery images in order.
   - At the first stop, read the worries and the plan, fill the gaps or accept them, and approve every word.
   - At the second stop, look at the first two images. Change the look now, before the rest are made.
   - Clear every note on the review sheet, then upload the files in their numbered order.
-
 how_it_works:
   - title: Gathers the facts
     text: Collects the product, photos by job, claims, reviews and guarantee, and writes down exactly how the product looks. Every blank becomes a question for you.
@@ -54,7 +48,6 @@ how_it_works:
     text: Each shape composed on its own, words short enough for a phone, logos placed from your files, every image checked.
   - title: Hands over
     text: Files in upload order with one line of alt text each, and a review sheet. Nothing is handed over while a note is open.
-
 output_shape: |
   1. GALLERY AUDIT
   <nn> | shows | job | verdict (keep / fix / drop)
@@ -76,7 +69,6 @@ output_shape: |
   <nn>-<type>_<shape>  alt: <what it shows and tells>
 
   5. CHECK RESULTS AND REVIEW SHEET
-
 example:
   business: sprout
   input: |
@@ -141,7 +133,6 @@ example:
       arrives; one star rating and its source (4.8 from 100,000 or
       4.75 from 109,639); the Low Sugar vs Sugar-Free panel text.
     Next: the full plan, then images 01 and 02 for STOP 2.
-
 tweaks:
   - what: Photos only
     how: If you only want photos with no words, say so. It lists what that leaves unanswered (everything a shopper asks after "what is it") before going ahead.
@@ -151,37 +142,35 @@ tweaks:
     how: Add return reasons and support questions if you have them. They count double, so they move the plan more than praise does.
   - what: Marketplace set
     how: Say "marketplace" and the set opens with that platform's plain main image.
-
 judge:
   - The audit of your current gallery came before the plan.
   - The biggest stopper is answered in slot 2, with quotes in customers' own words.
   - Every word on every image is in the plan with a source.
   - You saw two finished images before the rest were made, unless you asked for it all in one go.
   - Files are numbered in upload order, and nothing was handed over while a note was open.
-
 test:
   - Run the audit on a page you know well. The unanswered questions should match what customers ask you. If it misses one you hear every week, add your support questions.
   - Check the worry groups against your 1 to 3 star reviews. The quotes should be in customers' words, not yours.
   - At the first stop, read every word in the plan against your facts. Anything without a source should be a gap, not a line.
   - When the files come back, upload them to a draft page and swipe the gallery on your phone. Each image should answer a different question.
-
 improve:
   - Add your return reasons and top support questions to step 3 of the skill file as a standing source, so every run counts the same evidence.
   - Add a stop if a legal check must see every claim, after the plan in step 4.
   - Fix the shapes in step 6 to the ones your store's theme uses, so nothing extra gets made.
   - 'Write your alt text rule into step 9, such as always naming the variant (for Sprout: "Original, Low Sugar, 28 daily packs").'
   - Pair it with the skill that borrows a photo's look when you need wordless photos for ads, and run this again whenever the packaging changes.
-
 works_best_with:
   tools:
-    - {name: "Nano Banana", why: "Built for brand consistency and handles words and layout well, which suits images with short lines on them."}
-    - {name: "GPT Image", why: "Lets you point at one word or part on an image and fix it, which suits the one-change remake rule."}
-    - {name: "Shopify", why: "Lets you add alt text to each product image in the admin, so the alt lines go straight in."}
+    - name: Nano Banana
+      why: Built for brand consistency and handles words and layout well, which suits images with short lines on them.
+    - name: GPT Image
+      why: Lets you point at one word or part on an image and fix it, which suits the one-change remake rule.
+    - name: Shopify
+      why: Lets you add alt text to each product image in the admin, so the alt lines go straight in.
   inputs:
-    - "For worn products, the model's height and size, so the scale image can state them"
-    - "Your store theme's gallery shape (square or 4:5), so each image is composed for it"
-    - "Your logo and font files, so dense panels and logos can be set by a designer"
-
+    - For worn products, the model's height and size, so the scale image can state them
+    - Your store theme's gallery shape (square or 4:5), so each image is composed for it
+    - Your logo and font files, so dense panels and logos can be set by a designer
 terms:
   - term: Alt text
     meaning: A short written description of an image, read out by screen readers and used by search engines.

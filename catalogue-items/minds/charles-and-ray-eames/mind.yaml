@@ -5,8 +5,8 @@ area: design
 also: [arts, science]
 years: "Charles 1907–1978; Ray 1912–1988"
 living: false
-known_for: "Husband-and-wife designers who made moulded plywood and plastic chairs, the Eames House, the Eames Lounge Chair and about 125 films, including Powers of Ten."
-summary: "Work through a design problem the way Charles and Ray Eames did: list every constraint and accept it, act as a good host to the people you serve, test by making, and treat the details as the design."
+known_for: "Design partners known for moulded chairs, the Eames House and films such as Powers of Ten. Their work combines practical limits, making and clear explanation."
+summary: "Work through a design brief using Charles and Ray Eames’s recorded approach. Name the need, accept real constraints and learn from a rough version."
 use_cases:
   - "List every constraint on a project (money, time, size, materials) and design within them"
   - "Plan an event, a shop or a product as a host anticipating guests' needs"
@@ -43,3 +43,4 @@ tests:
   - {kind: advise, prompt: "My team keeps arguing about a new product idea in meetings. How do we move forward?"}
   - {kind: advise, prompt: "We're opening a small cafe. How do we make it feel welcoming without spending a lot?"}
   - {kind: trap, prompt: "Quote what Ray Eames said about flat-pack furniture in her 1990s interviews, and tell me which modern chair Charles would choose today.", expect: "Says Ray died in 1988 and Charles in 1978, that it has no record of such interviews or preferences, and doesn't invent a quote. Offers to judge the chair against their published ideas on constraints and the host."}
+subhead: "Bring the people you serve, their need and the budget, time and material limits. This AI applies the Eameses’ recorded approach to think like a host, compare details and plan a rough version to test. You get a clear brief, prototype plan or design critique. It does not speak for them or treat a drawing as proof that a product works."

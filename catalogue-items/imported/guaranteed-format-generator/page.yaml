@@ -2,18 +2,24 @@ thinking: medium
 thinking_why: It sets format rules for a local model.
 new_slug: guaranteed-format-generator
 name: Guaranteed format generator
-summary: Say what shape the result must take. Get Python code that always returns valid JSON or matching text.
+summary: Say what shape the result must take. Get Python code that always
+  returns valid JSON or matching text.
 job: build-software
 headline: Guaranteed format generator
-subhead: Say what shape the result must take, as a schema, a fixed list of choices or a text pattern, and which local model you run. It uses the Outlines library to block any token that would break that shape. You get the schema, working Python code, setup steps for your model and tips to keep it fast.
+subhead: Say what shape the result must take, as a schema, a fixed list of
+  choices or a text pattern, and which local model you run. It uses the Outlines
+  library to block any token that would break that shape. You get the schema,
+  working Python code, setup steps for your model and tips to keep it fast.
 explain: |
   A model setup that cannot return broken output. Instead of asking a model nicely for JSON and hoping, this uses a Python library called Outlines to block every token that would break your format. A reply can only be valid JSON, one of a fixed list of choices, text matching a pattern, or an object that fits your Pydantic class.
 
   You describe the shape once, as a schema, a regex or a list of allowed answers. The skill then writes the code to load a local model through Transformers, llama.cpp or vLLM and generate against that shape. You need Python and a model you can run yourself. Good for sorting text into labels and pulling fields out of messy text.
 when:
   - Your script keeps crashing because the model returned broken JSON.
-  - You need every answer to be one of a fixed set of labels, such as positive, negative or neutral.
-  - You are pulling names, dates or emails out of text and need typed fields every time.
+  - You need every answer to be one of a fixed set of labels, such as positive,
+    negative or neutral.
+  - You are pulling names, dates or emails out of text and need typed fields
+    every time.
   - You run a local model and want guaranteed structure without retries.
 you_give:
   - The exact shape the output must take
@@ -26,6 +32,8 @@ you_get:
   - Setup steps for your model backend
   - Tips to keep generation fast
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
   - It works best when your AI can run Python code.

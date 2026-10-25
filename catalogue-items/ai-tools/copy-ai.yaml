@@ -2,7 +2,7 @@ slug: copy-ai
 name: Copy.ai
 maker: Copy.ai
 url: https://www.copy.ai
-promise: Turn your sales and marketing routines into AI workflows your team can run.
+promise: "Set up repeat sales and marketing tasks for research, writing and record updates."
 use_cases: [write-copy, automate]
 categories: [writing, marketing, automation]
 what_it_does:
@@ -12,13 +12,13 @@ what_it_does:
   - Lets you chat with several AI models from one account.
   - Connects to sales and marketing apps your team already uses.
 benefits:
-  - Repeat a good sales or content process the same way every time.
+  - "Reuse the same steps for a repeat sales or content process."
   - Write outreach and content that already uses your company facts.
   - Fill in lead and account details without copying between apps.
   - Let people who are not technical run an AI workflow.
 best_for:
   - Sales and marketing teams with a process they repeat daily.
-  - Operations people who keep lead and customer records up to date.
+  - "People who keep lead and customer records up to date."
   - Teams that want one place to try several AI models.
 not_for:
   - Solo writers who want a quick draft. A chat assistant is simpler.

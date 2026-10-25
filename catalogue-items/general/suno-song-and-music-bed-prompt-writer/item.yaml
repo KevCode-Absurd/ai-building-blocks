@@ -1,0 +1,21 @@
+slug: suno-song-and-music-bed-prompt-writer
+name: Suno song and music bed prompt writer
+summary: Describe the music you need. Get a compact Suno style prompt with tempo, instruments, structure and mix.
+category: general
+type: skill
+role: make
+job: video
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: script
+    required: false
+outputs:
+  - type: document
+    required: true
+uses: []
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

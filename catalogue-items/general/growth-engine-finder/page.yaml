@@ -1,15 +1,15 @@
 new_slug: growth-engine-finder
 name: Growth engine finder
-summary: Describe how customers arrive and your rates. Get your growth engine, its key rate and a sum showing where you stand.
+summary: Describe how customers arrive and stay. Compare repeat use, referrals and paid growth, with clear sums and the missing facts to check.
 job: plan-strategy
 thinking: medium
 thinking_why: It picks one of three models and does short sums, but needs care with missing figures.
 headline: Growth engine finder
-subhead: Describe how your customers arrive and what you know about your rates. It picks sticky, viral or paid growth, does the sum with your figures and names the one rate to watch. You get a verdict and a short list of numbers you can stop reporting.
-explain: |-
-  Growth talks go in circles because everyone points at a different number. Marketing wants more traffic, the product team wants better features, and finance wants lower costs. Usually only one of those matters for how your business really grows.
+subhead: It identifies a supported main growth model and calculates what your figures allow. Repeat-use data can show net customer growth, referral data can show a loop factor, and paid-customer data can show unit margin. These are different measures. Get a primary metric, its units and the next review date. Missing growth evidence stays unresolved.
+explain: |
+  A business can grow through customers staying, customers bringing others, paid acquisition or a mix. These are useful planning models, not proof that only one rate matters.
 
-  This skill decides which of three engines drives you: customers who stay, customers who bring others, or customers you pay to win. Each has its own sum. If you add 30 customers per 100 each month and lose 28, you grow 2 percent, not 30. It does that sum with your figures, names the one rate to watch, drops the rest and tells you how to spot the engine running out.
+  This skill uses your records to choose a supported main model and show its sum. It keeps customer growth per period separate from a referral loop factor or lifetime unit margin. A positive margin alone does not show that customer numbers grew or that cash is available. Get a metric with clear units, supporting facts to keep and a review date.
 when:
   - Growth has stalled and the team disagrees about why.
   - You are about to spend on ads, features or referrals and want to know which would matter.
@@ -19,57 +19,49 @@ you_give:
   - Your rates, if you have them (optional)
   - Your plan (optional)
 you_get:
-  - The engine that drives your growth
-  - A sum with your figures and a verdict
-  - The one rate to watch
-  - A list of numbers to drop
+  - A supported main model, or the evidence still needed to choose one
+  - A calculation with units, assumptions and missing figures
+  - A primary metric with its owner and review date
+  - A simpler weekly view that retains necessary cost, customer-flow and cash evidence
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Describe where your last twenty customers came from and whether they stayed.
   - Paste your monthly figures if you have them.
-  - Put the one rate on the wall and review it on the date the skill gives you.
+  - Review the primary metric with its units and supporting counts, costs and cash timing.
 how_it_works:
   - title: Picks the engine
     text: Sticky, viral or paid, from how customers arrive.
-  - title: Writes the one rate
-    text: The figure that drives that engine.
+  - title: Names a primary metric
+    text: "Keeps the units clear: customer rate, assumed loop factor or unit margin."
   - title: Does the sum
     text: With your numbers, gaps left open.
   - title: Gives a verdict
-    text: Grows, stalls or shrinks, and the biggest lever.
+    text: Reports only the conclusion the supplied model supports; missing counts or timing leave customer growth unresolved.
   - title: Names what to watch
-    text: And what to drop from the report.
+    text: Names the main metric while retaining the supporting evidence needed to interpret it.
   - title: Checks the value
     text: Whether people get a real benefit.
   - title: Notes the run-out sign
     text: And a date to check again.
-output_shape: |-
-  ENGINE
-  <sticky | viral | paid> because <reason>
-  Parked: <others>
+output_shape: |
+  MAIN MODEL
+  <repeat use | referrals | paid | unresolved> | evidence <basis>
+  Other models <roles and evidence>
 
-  THE SUM
-  <formula with your figures>
-  Verdict: <grows | stalls | shrinks> by <rate> per <period>
-  Biggest lever: <figure>
+  SUPPORTED SUM
+  <formula, inputs and units>
+  Customer growth per period <rate or unresolved>
+  Loop factor <cohort/cycle assumptions or not applicable>
+  Lifetime unit margin <basis or unresolved; not a customer rate>
 
-  WATCH THIS ONE
-  <rate> | counted as <how> | owner <name> | look every <rhythm>
+  WATCH
+  <primary metric> | units/counting basis <definition> | owner <name> | review <date>
+  Supporting evidence to retain <customer flows, costs, cash timing>
 
-  DROP FROM THE WEEKLY VIEW
-  <figures>
-
-  VALUE CHECK
-  <what shows people get a benefit>
-
-  RUNS OUT WHEN
-  <sign> | review on <date>
-
-  MISSING
-  <gaps>
-
-  CHECKS MISSED
-  <lines or none>
+  NEXT TEST / LIMITS
+  <lever as hypothesis, assumptions and run-out signs>
+  MISSING / CHECKS MISSED
+  <list>
 tweaks:
   - what: Monthly figures
     how: Real counts of gained and lost customers make the verdict firm instead of a range.
@@ -80,16 +72,18 @@ tweaks:
   - what: How people hear of you
     how: Tell it the actual route. Guesses push the pick to the wrong engine.
 judge:
-  - Only one engine is chosen.
+  - The main model is supported or explicitly unresolved; other material growth routes are not erased.
   - The sum uses your numbers, with gaps shown.
-  - The verdict says by how much per period.
-  - The one rate is a rate, not a running total.
-  - It names at least one number to stop reporting.
+  - "Verdict units match the model: unit margin alone cannot establish per-period customer growth."
+  - The primary metric has clear units and a counting basis, owner and review date.
+  - The weekly view retains supporting customer, cost and cash evidence needed to interpret the primary metric.
 test:
   - Run it on a business you know well. See if the engine matches how it grows.
   - Run it with a low and a high guess for a missing figure. Check whether the verdict flips.
   - Show the one rate to a teammate and ask what they would do if it fell.
   - Check the rate again next month and see if the engine pick still holds.
+  - "Use lifetime value after service costs 30 and acquisition cost 22: unit margin 8, but customer growth per month remains unresolved without counts and timing."
+  - "Use starting customers 100, new 30, lost 28 in one period: net growth 2%. A missing or zero starting base leaves the rate undefined."
 improve:
   - Add your own period (week or month) and units to step 2 so sums come out in your terms.
   - Add the figures you already track so the drop list is specific.

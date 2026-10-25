@@ -2,7 +2,7 @@ slug: canva
 name: Canva
 maker: Canva
 url: https://www.canva.com
-promise: Social posts, decks and documents designed fast, with AI help built in.
+promise: "Design posts, slides, documents and videos with templates, brand assets and AI help."
 use_cases: [design, make-images, slides-and-docs]
 categories: [design, image, productivity]
 what_it_does:
@@ -12,8 +12,8 @@ what_it_does:
   - Drafts text and presentations from a short prompt.
   - Stores your logo, colours and fonts so every design matches.
 benefits:
-  - Make a week of social posts without a designer.
-  - Resize one ad design for every placement in a few clicks.
+  - "Use templates to make a set of social posts without starting each design from scratch."
+  - "Resize an ad design for different placements, then check each layout."
   - Keep every design in your brand colours and fonts.
   - Share a design with your team and edit it together.
 best_for:
@@ -22,7 +22,7 @@ best_for:
   - Finishing an image from another AI product with text and a logo.
 not_for:
   - Detailed interface design for apps.
-  - Photo-real images that need careful control.
+  - "Real-looking images that need tight control of each detail."
 pricing:
   model: freemium
   from: US$18 per month

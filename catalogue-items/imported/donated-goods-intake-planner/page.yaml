@@ -1,0 +1,30 @@
+thinking: high
+thinking_why: It weighs real records, missing facts, and choices that affect people or funding.
+new_slug: donated-goods-intake-planner
+name: Donated goods intake planner
+summary: Share donated items and intake issues. Get acceptance rules, grading steps, routing lanes, and receipt wording.
+job: organise-work
+headline: Donated goods intake planner
+subhead: Share the goods you accept, intake space, staff, and current bottlenecks. It separates acceptance, sorting, grading, and routing for a resale store. You get clear intake steps, grading rules, safe handling checks, and receipt wording that leaves value decisions to the donor.
+when:
+  - You need this task done for a nonprofit, community program, or donated-goods store.
+you_give:
+  - Accepted goods, intake space, staffing, disposal routes, current grading rules, and the main bottleneck.
+you_get:
+  - Acceptance list, intake layout, grading guide, routing plan, basic receipt template, and tracking measures.
+how_it_works:
+  - title: Define what you accept
+    text: Write what goods you accept. Plan staffed drop-offs or booked pickups.
+  - title: Sort, test, and grade
+    text: Sort goods into groups and use clear grades for their condition. Test electrical items and send high-value goods for review.
+  - title: Route and record goods
+    text: Choose shop floor, online sale, recycling, or discard. Plan basic receipts without assigning a donor tax value.
+works_best_with:
+  tools:
+    - name: A chat AI that can read your files
+      why: The skill works from records and drafts you provide. Research tasks also need current, checked public sources.
+  inputs:
+    - At-donation receipts are tax documents for the donor.
+how_to_use:
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.

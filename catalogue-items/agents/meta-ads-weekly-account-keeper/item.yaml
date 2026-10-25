@@ -7,23 +7,23 @@ role: orchestrate
 job: ads
 level: intermediate
 inputs:
-  - {type: performance_sheet, required: true}
-  - {type: product_data, required: true}
-  - {type: brand_brain, required: false}
+  - { type: performance_sheet, required: true }
+  - { type: product_data, required: true }
+  - { type: brand_brain, required: false }
 outputs:
-  - {type: audit_report}
-  - {type: plan}
-uses: [break-even-roas-and-cpa-calculator, ad-sales-drop-analyst, meta-delivery-troubleshooter, platform-roas-reality-check, meta-campaign-purpose-checker, creative-test-reader, meta-scaling-campaign-planner]
+  - { type: audit_report }
+  - { type: plan }
+uses: [ break-even-roas-and-cpa-calculator, ad-sales-drop-analyst, meta-delivery-troubleshooter, platform-roas-reality-check, meta-campaign-purpose-checker, creative-test-reader, meta-scaling-campaign-planner ]
 steps:
-  - {uses: break-even-roas-and-cpa-calculator, note: "Once, then reused: the break-even ROAS and CPA every later call is measured against."}
-  - {uses: ad-sales-drop-analyst, note: "Only when sales fell or cost per sale rose sharply against last week: which link broke, before any other change."}
-  - {uses: meta-delivery-troubleshooter, note: "Only when the drop analysis points at reach, frequency or cost per 1,000 views: the failing delivery step and one change."}
-  - {uses: platform-roas-reality-check, note: "On the first run, then every fourth week, or sooner when Meta's ROAS and your own new-customer numbers move apart: how far to trust Meta's number."}
-  - {uses: meta-campaign-purpose-checker, note: "On the first run, then monthly or when a campaign was added: keep, merge or cut each campaign and fix setup errors."}
-  - {uses: creative-test-reader, note: "Every week a creative test ran: keep, leave or replace calls by ad set, and the next brief."}
-  - {uses: meta-scaling-campaign-planner, note: "Only when nothing is broken and the trust check is not low: the spend ladder and a raise-or-hold call."}
+  - { uses: break-even-roas-and-cpa-calculator, note: "Once, then reused: the break-even ROAS and CPA every later call is measured against." }
+  - { uses: ad-sales-drop-analyst, note: "Only when sales fell or cost per sale rose sharply against last week: which link broke, before any other change." }
+  - { uses: meta-delivery-troubleshooter, note: "Only when the drop analysis points at reach, frequency or cost per 1,000 views: the failing delivery step and one change." }
+  - { uses: platform-roas-reality-check, note: "On the first run, then every fourth week, or sooner when Meta's ROAS and your own new-customer numbers move apart: how far to trust Meta's number." }
+  - { uses: meta-campaign-purpose-checker, note: "On the first run, then monthly or when a campaign was added: keep, merge or cut each campaign and fix setup errors." }
+  - { uses: creative-test-reader, note: "Every week a creative test ran: keep, leave or replace calls by ad set, and the next brief." }
+  - { uses: meta-scaling-campaign-planner, note: "Only when nothing is broken and the trust check is not low: the spend ladder and a raise-or-hold call." }
 schedule: "Every Monday morning, after last week's data is in"
-asks_before: [changing budgets or bids, pausing or turning on campaigns, ad sets or ads, adding or removing audiences or exclusions, launching new ads, changing the attribution setting]
+asks_before: [ changing budgets or bids, pausing or turning on campaigns, ad sets or ads, adding or removing audiences or exclusions, launching new ads, changing the attribution setting ]
 origin: own
-version: 1.0.0
+version: 1.0.1
 example_pending: true

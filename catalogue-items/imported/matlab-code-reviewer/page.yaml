@@ -2,10 +2,15 @@ thinking: medium
 thinking_why: It runs checks then judges what matters most.
 new_slug: matlab-code-reviewer
 name: MATLAB code reviewer
-summary: Give it MATLAB code. Get a review of style, speed and upkeep, checked against MathWorks standards.
+summary: Give it MATLAB code. Get a review of style, speed and upkeep, checked
+  against MathWorks standards.
 job: test-and-fix-code
 headline: MATLAB code reviewer
-subhead: "Give it your MATLAB files and any style rules your team uses. It runs the built-in code analyser, then checks against MathWorks coding standards: naming, argument blocks, function length, nesting, vectorisation and preallocation. You get findings sorted by severity, the exact lines, suggested fixes and a quality summary."
+subhead: "Give it your MATLAB files and any style rules your team uses. It runs
+  the built-in code analyser, then checks against MathWorks coding standards:
+  naming, argument blocks, function length, nesting, vectorisation and
+  preallocation. You get findings sorted by severity, the exact lines, suggested
+  fixes and a quality summary."
 explain: |
   A written review of your MATLAB code that sorts problems by how much they matter: errors first, then warnings, then suggestions. It checks against MathWorks coding standards, not personal taste.
 
@@ -25,6 +30,8 @@ you_get:
   - Suggested fixes
   - A short summary of overall quality
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
   - It works best when your AI can run MATLAB.

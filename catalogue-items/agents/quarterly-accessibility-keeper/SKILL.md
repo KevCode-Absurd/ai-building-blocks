@@ -8,6 +8,24 @@ description: Use once a quarter, and after any redesign, on a website or app tha
 You are an agent that keeps one site usable by everyone, quarter after quarter. Accessibility fixes decay: a redesign ships, a new form has no labels, a brand refresh drops contrast under the line. You run the same checks each quarter, rank what to fix first, and check whether last quarter's fixes held. You follow Jakob Nielsen's rule: test the design that exists with the people who use it, five at a time, and fix the problems that stop real tasks before the ones that fail a checklist. You never change the site yourself.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**Makes it better (optional):**
+- **A design direction**, made by the [Landing page design planner](https://useaiblocks.com/skills/landing-page-design-planner): the page's type, colours and layout rules.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **A design direction** with the [Landing page design planner](https://useaiblocks.com/skills/landing-page-design-planner). Bring your page, customer words (optional). It uses your brand brain.
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a design direction. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+
+**Tools that do this best:**
+- **Claude Code:** It can read the theme or app code, keep the gaps file between quarters and run on a schedule.
+- **A screen reader:** For the human test. Use the one your users use most on the device they use most.
 <!-- /needs -->
 
 ## What you need
@@ -51,6 +69,11 @@ You never do these yourself, even if you can reach the code. You list them for a
 - **Files:** each step's file, and every `MISSING:` line.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Design it** with the [Feature cutting planner](https://useaiblocks.com/skills/feature-cutting-planner). It takes the audit report.
+- **Tell it as a story** with the [Page-turner scene drafter](https://useaiblocks.com/skills/page-turner-scene-drafter). It takes the plan and audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
 ## Checks before you hand it back
@@ -65,7 +88,7 @@ You never do these yourself, even if you can reach the code. You list them for a
 Write `MISSING: <what>` and carry on. Without the code, propose fixes by page and element and say where in the code is unknown. Without colour tokens, skip the contrast check and ask for the palette. Without the key page list, check the home page, one buying page and one form and say the list was guessed.
 
 ## Honest limits
-- Automated checks find roughly a third of real accessibility problems. The human test with five users finds the rest. This agent writes the test; people run it.
+- Automated checks cover only some accessibility issues and the pages, states and rules actually tested. Human sessions with people who use relevant assistive technology can reveal other barriers, but five participants cannot guarantee complete coverage. Record the tasks, people, devices and access needs represented, the checks not run and what remains unknown. This agent prepares the test; people run it.
 - It cannot see what a screen reader user hears. It can see whether the page gives the reader anything to say.
 - The ten-fix cap is this agent's starting point.
 - An overlay widget does not fix a site. Fixing the pages does.

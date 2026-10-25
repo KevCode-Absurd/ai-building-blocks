@@ -1,23 +1,19 @@
 new_slug: article-landing-page
-name: "Article-style landing page writer"
-summary: "Paste your facts, offer and ad. Get an article-style page, labelled as an ad, and an image list."
+name: Article-style landing page writer
+summary: Paste your facts, offer and ad. Get an article-style page, labelled as an ad, and an image list.
 job: write-landing-page
 thinking: medium
-thinking_why: "It writes or plans with a handful of checks."
-
-headline: "Article-style landing page writer"
+thinking_why: It compares supplied evidence and follows a specific method.
+headline: Article-style landing page writer
 subhead: Give it your product facts, your offer and the ad that sends people over. It writes a long page in ten sections, from a problem the reader knows to your offer, labelled as an ad. You get the page copy, an image list and any check it missed.
-
 explain: |
   Someone who clicks an ad but has never heard of you isn't ready for a price and a button. Send them to a product page and most leave. They first need to see their own problem, understand why what they tried didn't work, and only then meet your product.
 
   This skill writes that kind of page, often called an advertorial (an ad written like an article). It moves the reader in four steps. Recognise: the problem in their words. Understand: why the usual fixes fail, and the tests a real fix would have to pass. Believe: your product against each test, with proof you can show. Decide: the offer with full terms and the last doubts answered. It puts "Advertisement" above the headline, writes subheads that tell the story on their own, and never invents a journalist, doctor, founder quote or review.
-
 when:
   - You run ads to people who have the problem but don't know your product yet, and they bounce off your product page.
   - Your ad reads like a story or article, and the page it sends people to jumps straight to "Add to cart".
   - You have a real reason the usual fixes fail and want a page with room to explain it.
-
 you_give:
   - Your product facts, price, offers, guarantee and the claims you're allowed to make
   - The ad that sends people to the page (its first line, buyer and offer, with its image attached)
@@ -29,14 +25,12 @@ you_get:
   - A page brief and an image list with a caption for every image
   - A MISSING list of everything left out because you didn't supply the fact
   - Any of its own checks the page still misses, each named
-
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your product facts and your claims list underneath, including what you must never say.
   - Paste the ad that will send people here, word for word, and say who it speaks to.
   - Write two or three sentences on why the usual fixes fail and why yours is different. If you can't, work that out first, because the page is built on it.
   - Read the MISSING list before anything else, then check the offer block against your real prices.
-
 how_it_works:
   - title: Keeps the ad's promise
     text: The headline keeps the ad's words, the first image shows the same product, and any offer the ad named comes first.
@@ -54,7 +48,6 @@ how_it_works:
     text: Subheads that say something, a caption under every image, and short paragraphs for phones.
   - title: Checks the page
     text: Goes through its own checks, such as the ad label above the headline and no button before section 5, fixes what it can, and names any check it still missed.
-
 output_shape: |
   PAGE BRIEF
   Ad hook: <the ad's first line>   Buyer: <who it's for>
@@ -89,7 +82,6 @@ output_shape: |
 
   CHECKS MISSED
   <one line per check still missed, or none>
-
 example:
   business: sprout
   input: |
@@ -170,7 +162,6 @@ example:
     (cut for length: sections 9 and 10, the subheads list and the image
     list. MISSING in the full run: grams of sugar per pack, and the ad's
     image)
-
 tweaks:
   - what: The "why the usual fix fails" lines
     how: This is the spine of the page. The more exactly you say what goes wrong with the old fix, the sharper the tests in section 4 get. Leave it out and the skill asks once, then leaves that section as a marked gap.
@@ -180,7 +171,6 @@ tweaks:
     how: Paste reviews about the page's problem. Each one goes beside the claim it backs. Quotes that claim results the brand can't claim are left out and listed.
   - what: Bought again or bought once
     how: Say which it is if it isn't obvious. A pan or a jacket gets materials, returns and warranty in place of ingredients and subscription terms.
-
 judge:
   - The word "Advertisement" sits above the headline, and nothing looks like a newspaper.
   - The headline uses the ad's words and doesn't name your brand or product.
@@ -188,30 +178,28 @@ judge:
   - Every price, guarantee line and claim matches your facts word for word.
   - No quote, doctor, founder line or rating appears that you didn't supply.
   - Read only the subheads. They should tell the story.
-
 test:
   - Run it from an ad that already brings you cold clicks. The headline should keep the ad's words, and the first screen should show what the ad showed.
   - Leave out the reason the usual fix fails. It should ask once, then leave that section as a marked MISSING gap, never a cause it made up.
   - Give it facts with one gap on purpose, such as no delivery time. The page should leave delivery out and list it under MISSING.
   - Give it a review that claims a health result. It should leave the review out and say why.
   - Ask someone who doesn't know your product to read only the subheads, then say what it does and who it isn't for.
-
 improve:
   - Write your voice into step 5 of the skill file, with three lines from your best copy and the words you never use.
   - In step 7, delete the "bought once" or "bought again" branch that doesn't fit, and add your own pack sizes, pause rules or warranty terms.
   - Add your allowed and banned claims under "What you need", so the page never goes beyond what you can prove.
   - Save the cause and the tests from section 4 to your brand file. They rarely change, and other pages can use them.
   - Pair it with a skill that maps real customer doubts, so section 9 answers what buyers ask, and run a landing page check before it goes live.
-
 works_best_with:
   tools:
-    - {name: "Any good chat AI", why: "Any current chat AI can write the ten sections. Give it every fact so the MISSING list stays honest."}
-    - {name: "Hemingway Editor", why: "Marks hard sentences in yellow and red, so paragraphs stay short enough for phones."}
+    - name: Any good chat AI
+      why: Any current chat AI can write the ten sections. Give it every fact so the MISSING list stays honest.
+    - name: Hemingway Editor
+      why: Marks hard sentences in yellow and red, so paragraphs stay short enough for phones.
   inputs:
-    - "Test results or an ingredient or materials sheet, so the proof section has facts to walk through"
-    - "Real customer photos shared with permission, so image captions show real use"
-    - "Questions buyers ask before buying, from chat or email, so the questions section uses their words"
-
+    - Test results or an ingredient or materials sheet, so the proof section has facts to walk through
+    - Real customer photos shared with permission, so image captions show real use
+    - Questions buyers ask before buying, from chat or email, so the questions section uses their words
 terms:
   - term: Advertorial
     meaning: An ad written like an article. It must be clearly labelled as advertising.

@@ -1,0 +1,26 @@
+new_slug: write-a-rhino-modeling-script
+name: Write a Rhino modeling script
+summary: Write or fix a Rhino script. Handle units, undo and user input with care.
+job: design-work
+headline: Write a Rhino modeling script
+subhead: Share your Rhino version, task and source script. Choose the right API and guard each change. Get code and steps to check it.
+explain: Share your Rhino version, task and source script. Choose the right API and guard each change. Get code and steps to check it.
+when:
+  - You want to write a Rhino modeling script.
+you_give:
+  - The Rhino version, modeling task, document units, input geometry and any existing script.
+you_get:
+  - A scoped Python, VBScript, C# or command-macro solution with running instructions and verification limits.
+how_to_use:
+  - Download the complete skill folder and add it to your AI tool, or copy the instructions into a chat.
+  - Provide the inputs listed here and ask your AI to follow the skill.
+  - Review the result and any missing facts before using it.
+how_it_works:
+  - title: Choose the scripting surface
+    text: Match task complexity and the installed Rhino runtime to Python, legacy VBScript, C# or a macro.
+  - title: Handle document behavior
+    text: Use document tolerances, validate selections and group changes with redraw and undo cleanup.
+  - title: Explain running and testing
+    text: Provide loading instructions and expected checks without claiming a Rhino runtime was exercised.
+thinking: medium
+thinking_why: It weighs your evidence and follows a specific method.

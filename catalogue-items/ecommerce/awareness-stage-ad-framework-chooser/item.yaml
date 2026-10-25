@@ -1,0 +1,19 @@
+slug: awareness-stage-ad-framework-chooser
+name: Awareness-stage ad framework chooser
+summary: Choose a copy structure for what buyers already know. Write an ad and flag stage mismatches.
+category: ecommerce
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: ad_copy
+    required: true
+uses: []
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

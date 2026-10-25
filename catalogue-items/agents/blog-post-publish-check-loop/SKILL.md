@@ -8,6 +8,26 @@ description: Use each time an article, guide or FAQ page is about to go live. It
 You are an agent that stands between a finished draft and the publish button. You run the same checks on every piece, fix what you are allowed to fix, re-check, and stop when the piece passes or when three rounds are done. You edit the way William Zinsser taught: ask what the writer is trying to say, hunt the clutter, find the person and the verb, give each sentence one thought, and let the writer sound like themselves. You never change a claim, a number or the point of the piece. Those go back to the writer.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**Makes it better (optional):**
+- **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+2. This one.
+
+**From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
+2. **Check what's missing.** Look for your brand brain. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+
+**Tools that do this best:**
+- **Claude Code:** It can read the draft from your repo, keep the log between pieces and run on each ready draft.
+- **Any good chat AI:** Paste the agent and the draft. Attach the brand brain for the voice and claims checks.
 <!-- /needs -->
 
 ## What you need
@@ -49,6 +69,11 @@ You never do these yourself, even if you can reach the site. You list them for a
 - **Files:** each round's file, and every `MISSING:` line.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Tell it as a story** with the [Story theme and scene review](https://useaiblocks.com/skills/hidden-theme-finder). It takes the draft and audit report.
+- **Design it** with the [Plain error message writer](https://useaiblocks.com/prompts/plain-error-message-writer). It takes the draft.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
 ## Checks before you hand it back

@@ -44,7 +44,15 @@ headObserver.observe(document.head, { childList: true, subtree: true, characterD
 /** Static HTML and SPA navigation share one small build-generated route record. */
 export function syncPageMetadata(input: string) {
   const path = normalize(input), controller = new AbortController();
-  const privatePage = path === '/space' || path.startsWith('/s/');
+  if (path.startsWith('/community/')) {
+    apply({ title: 'Community skill or workflow · AI Blocks', description: 'Read a reviewed community submission and inspect its complete files before use.', canonical: SITE + path, robots: 'noindex, nofollow', graph: null }, path);
+    return () => controller.abort();
+  }
+  if (['/account', '/sign-up', '/sign-in'].includes(path)) {
+    apply({ title: (path === '/account' ? 'My account' : path === '/sign-up' ? 'Create an account' : 'Sign in') + ' · AI Blocks', description: 'Your saved kits, skills, workflows and account settings in one place.', canonical: SITE + path, robots: 'noindex, nofollow', graph: null }, path);
+    return () => controller.abort();
+  }
+  const privatePage = path === '/space' || path.startsWith('/s/') || ['/publish', '/my-submissions', '/admin/review'].includes(path);
   setMeta('name', 'robots', privatePage ? 'noindex, nofollow' : 'max-image-preview:large, max-snippet:-1');
   if (cache.has(path)) { apply(cache.get(path)!, path); return () => controller.abort(); }
   const key = path.startsWith('/s/') ? 'shared-space-shell' : path === '/' ? 'index' : path.slice(1);
@@ -63,4 +71,10 @@ export function syncPageMetadata(input: string) {
     }
   })();
   return () => controller.abort();
+}
+
+export function communityPageMetadata(title: string, description: string) {
+  const path = normalize(location.pathname);
+  if (!path.startsWith('/community/')) return;
+  apply({ title: title + ' · AI Blocks', description, canonical: SITE + path, robots: 'max-image-preview:large, max-snippet:-1', graph: null }, path);
 }

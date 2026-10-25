@@ -1,0 +1,26 @@
+thinking: medium
+thinking_why: It follows a set method with a few checks.
+new_slug: project-gutenberg-book-text-finder
+name: Project Gutenberg book text finder
+summary: Share a title or book number. Find available editions and extract readable text for research.
+job: work-with-files
+headline: Project Gutenberg book text finder
+subhead: Share a title, author, or Project Gutenberg book number. It searches the catalog and retrieves a suitable text or ebook file. You get book details and readable text, with format limits shown. Live use needs Python and internet access; check reuse rights for your country.
+you_give:
+  - A title, author, or book number, desired language or format, and a folder for downloads.
+you_get:
+  - Book metadata, available files, extracted text, and a fiction or nonfiction classification where useful.
+how_it_works:
+  - title: Find the right book
+    text: Search the catalog or read the chosen book record and available formats.
+  - title: Retrieve readable text
+    text: Prefer plain text, check for unexpectedly short files, and use an ebook format when needed.
+  - title: Report the extraction
+    text: State the source, retrieved format, text limits, and any uncertain classification. Keep original files for provenance.
+works_best_with:
+  tools:
+    - name: Python and internet access
+      why: The included lookup helper needs these tools. Offline instruction checks do not prove that live catalog access works.
+how_to_use:
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.

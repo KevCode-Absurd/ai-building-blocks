@@ -2,10 +2,15 @@ thinking: medium
 thinking_why: It turns taste answers into usable design rules.
 new_slug: aesthetic-direction-brief-writer
 name: Aesthetic direction brief writer
-summary: Answer four questions about tone and feel. Get a brief that keeps copy, design and images in one style.
+summary: Answer four questions about tone and feel. Get a brief that keeps copy,
+  design and images in one style.
 job: design-work
 headline: Aesthetic direction brief writer
-subhead: "Describe the project and audience, then answer four questions: how formal or playful you sound, what style ideas guide the work, whether you speak as expert, friend or peer, and how rich the feel should be. You get a tone setting, a style direction, a defined audience relationship, a sensory goal and a brief other tools can follow."
+subhead: "Describe the project and audience, then answer four questions: how
+  formal or playful you sound, what style ideas guide the work, whether you
+  speak as expert, friend or peer, and how rich the feel should be. You get a
+  tone setting, a style direction, a defined audience relationship, a sensory
+  goal and a brief other tools can follow."
 explain: |
   A vague feeling like "premium but warm" becomes a short brief that fixes the look and feel of your project, so your copy, design and images match.
 
@@ -27,5 +32,7 @@ you_get:
   - A sensory goal
   - A brief other tools can follow
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.

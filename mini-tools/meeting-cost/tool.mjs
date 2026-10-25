@@ -7,12 +7,12 @@
 
 export default {
   slug: "meeting-cost",
-  name: "See what a repeating meeting costs you a year",
+  name: "Meeting cost calculator",
   /** The plain name, used where the tool talks about itself. */
-  short: "Meeting cost",
-  headline: "See what a repeating meeting costs in people's time over a year",
-  summary: "Type who comes, what they earn, how long it runs and how often. You get the cost each time, the cost a year and what cutting it saves.",
-  question: "What does my weekly meeting cost in a year, and what do I save if I cut it in half?",
+  short: "Meeting cost calculator",
+  headline: "Meeting cost calculator",
+  summary: "Enter attendees, pay, meeting length and frequency. Calculate yearly time cost and the time a shorter or less frequent meeting could release.",
+  question: "What is the value of this meeting’s time over a year?",
   shelf: ["general"],
   version: "1.0.0",
   updated: "2026-10-21",

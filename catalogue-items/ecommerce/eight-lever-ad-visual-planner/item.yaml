@@ -1,0 +1,19 @@
+slug: eight-lever-ad-visual-planner
+name: Eight-lever ad visual planner
+summary: Set eight visual controls for an ad. Choose what stays fixed and what changes across the image tests.
+category: ecommerce
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: design_direction
+    required: true
+uses: []
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

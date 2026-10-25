@@ -1,0 +1,44 @@
+new_slug: five-tactic-ad-hook-writer
+name: Five-tactic ad hook writer
+summary: Write short ad hooks using five tactics. Rank them by buyer fit and proof, then give production notes.
+job: write-ad-copy
+headline: Five-tactic ad hook writer
+subhead: Share product facts, angle, buyer and approved claims. Get ten to fifteen hooks grouped by tactic, with first test picks.
+explain: |-
+  Write short ad hooks using five tactics. Rank them by buyer fit and proof, then give production notes.
+
+  Share product facts, angle, buyer and approved claims. Get ten to fifteen hooks grouped by tactic, with first test picks.
+when:
+  - You need ten to fifteen hooks grouped by tactic, with first test picks.
+  - You need five-tactic ad hook writer for a specific task.
+  - You want the method's decisions and assumptions written down before acting.
+you_give:
+  - Product facts
+  - Angle
+  - Buyer and approved claims
+you_get:
+  - Ten to fifteen hooks grouped by tactic, with first test picks
+  - The sources used, missing inputs and assumptions
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Check the inputs
+    text: Confirm product facts, angle, buyer and approved claims. Mark facts that are missing.
+  - title: Collect Inputs
+    text: Follow the collect inputs section in the full method and keep its required fields and decision rules.
+  - title: The 5 Hook Tactics
+    text: Follow the the 5 hook tactics section in the full method and keep its required fields and decision rules.
+  - title: Generate 10-15 Hooks
+    text: Follow the generate 10-15 hooks section in the full method and keep its required fields and decision rules.
+  - title: Rank
+    text: Follow the rank section in the full method and keep its required fields and decision rules.
+  - title: Production Notes
+    text: Follow the production notes section in the full method and keep its required fields and decision rules.
+  - title: Rules
+    text: Follow the rules section in the full method and keep its required fields and decision rules.
+  - title: Review the result
+    text: Return ten to fifteen hooks grouped by tactic, with first test picks. Check facts, math and the decisions before any action.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

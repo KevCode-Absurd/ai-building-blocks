@@ -2,7 +2,7 @@ slug: ideogram
 name: Ideogram
 maker: Ideogram
 url: https://ideogram.ai
-promise: Images with clean, correct text in them, from a written description.
+promise: "Create poster, logo and ad image drafts with text from your prompt."
 use_cases: [make-images, design]
 categories: [image, design]
 what_it_does:
@@ -12,8 +12,8 @@ what_it_does:
   - Copies the style of reference images you upload.
   - Makes bigger, sharper versions of images you like.
 benefits:
-  - Get ad images and posters where the headline is spelled right.
-  - Try logo and sticker ideas in minutes.
+  - "Draft posters and ad images with short text, then check the wording."
+  - "Try logo and sticker ideas before you finish the design."
   - Keep a set of images in one style by reusing a reference.
 best_for:
   - Posters, social graphics and ad images that carry words.

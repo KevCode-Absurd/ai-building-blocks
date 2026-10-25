@@ -1,0 +1,45 @@
+new_slug: theme-based-ad-copy-set-writer
+name: Theme-based ad copy set writer
+summary: Turn one product theme into three to five full ad copy sets. Check claims, brand voice and which pair to test.
+job: write-ad-copy
+headline: Theme-based ad copy set writer
+subhead: Share product, theme, buyer stage, brand voice and approved claims. Get three to five headline, body and cta sets with test picks.
+explain: |-
+  Turn one product theme into three to five full ad copy sets. Check claims, brand voice and which pair to test.
+
+  Share product, theme, buyer stage, brand voice and approved claims. Get three to five headline, body and cta sets with test picks.
+when:
+  - You need three to five headline, body and CTA sets with test picks.
+  - You need theme-based ad copy set writer for a specific task.
+  - You want the method's decisions and assumptions written down before acting.
+you_give:
+  - Product
+  - Theme
+  - Buyer stage
+  - Brand voice and approved claims
+you_get:
+  - Three to five headline, body and CTA sets with test picks
+  - The sources used, missing inputs and assumptions
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Check the inputs
+    text: Confirm product, theme, buyer stage, brand voice and approved claims. Mark facts that are missing.
+  - title: Collect Inputs
+    text: Follow the collect inputs section in the full method and keep its required fields and decision rules.
+  - title: Copy Components
+    text: Follow the copy components section in the full method and keep its required fields and decision rules.
+  - title: Theme-Specific Frameworks
+    text: Follow the theme-specific frameworks section in the full method and keep its required fields and decision rules.
+  - title: Generate 3-5 Copy Sets
+    text: Follow the generate 3-5 copy sets section in the full method and keep its required fields and decision rules.
+  - title: Quality Gate
+    text: Follow the quality gate section in the full method and keep its required fields and decision rules.
+  - title: A/B Test Recommendation
+    text: Follow the a/b test recommendation section in the full method and keep its required fields and decision rules.
+  - title: Review the result
+    text: Return three to five headline, body and cta sets with test picks. Check facts, math and the decisions before any action.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

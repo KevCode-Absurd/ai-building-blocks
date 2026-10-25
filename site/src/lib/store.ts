@@ -1,5 +1,6 @@
+import { library, libraryStorage } from "./library-storage";
 // Everything a person saves (kits, workflows, recently viewed) lives here.
-// For now it is kept in this browser; moving it to a free account later only changes this file.
+// Account saves use stable keys; anonymous data remains in its original browser namespace.
 import type { CustomSkill } from "./custom-skills";
 import type { CustomMind } from "./custom-minds";
 import { useSyncExternalStore } from "react";
@@ -25,17 +26,18 @@ const empty: State = { kits: [], flows: [], recent: [], currentFlow: null, draft
 
 function read(): State {
   try {
-    const raw = localStorage.getItem(KEY);
+    const raw = libraryStorage.getItem(KEY);
     return raw ? { ...empty, ...JSON.parse(raw) } : empty;
   } catch {
     return empty;
   }
 }
 let state: State = read();
+library.subscribe(() => { state = read(); listeners.forEach(l => l()); });
 const listeners = new Set<() => void>();
 function set(next: State) {
   state = next;
-  try { localStorage.setItem(KEY, JSON.stringify(state)); } catch { /* storage full or blocked: keep working in memory */ }
+  try { libraryStorage.setItem(KEY, JSON.stringify(state)); } catch { /* storage full or blocked: keep working in memory */ }
   listeners.forEach((l) => l());
 }
 if (typeof window !== "undefined") window.addEventListener("storage", (e) => { if (e.key === KEY) { state = read(); listeners.forEach((l) => l()); } });

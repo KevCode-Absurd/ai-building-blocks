@@ -1,17 +1,14 @@
+# Modified by AI Blocks on 2026-10-24: method/copy repair.
 thinking: low
 thinking_why: It runs one simple capture.
 new_slug: screen-capture-taker
-name: Screen capture taker
-summary: Ask for a screen, a window or a part of one. Get a saved screenshot.
+name: Screen capture helper
+summary: Capture a browser page when browser capture tools are available. State clearly when desktop capture is unavailable.
 job: work-with-files
-headline: Screen capture taker
-subhead: "A saved screenshot of exactly what you asked for: the whole desktop,
-  one app window, or a region of the screen. Say where to save it, or leave it
-  out and the file goes to your system's default screenshot folder."
+headline: Screen capture helper
+subhead: Capture a browser page with an available tool. Desktop capture needs a supported OS helper and may need screen permission.
 explain: |
-  A saved screenshot of exactly what you asked for: the whole desktop, one app window, or a region of the screen. Say where to save it, or leave it out and the file goes to your system's default screenshot folder. If Claude only needs the image to look at, it goes in a temporary folder instead.
-
-  The skill ships with ready scripts for Windows, Mac and Linux, so Claude does not have to work out the right command each time. On a Mac it first checks screen recording permission once, so you are not asked again and again. It prefers a browser or design tool's own capture where one exists, and uses this for desktop apps and full-screen shots.
+  Capture a rendered browser page when a browser screenshot tool is available. For a full desktop, app window or screen region, the system needs a working OS capture helper. macOS requires Screen Recording permission, Linux needs a supported screenshot utility, and Windows uses the supplied PowerShell helper. The result must match the capture type the tool actually returned. Browser capture does not show other apps or the full desktop.
 when:
   - You want a picture of a desktop app window saved to a folder you choose.
   - Claude needs to look at your screen to help debug something visual.
@@ -27,7 +24,8 @@ you_get:
   - A temporary copy when Claude only needs to look
   - Mac permission set up once
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
-    or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
   - It works best when your AI can capture your screen.

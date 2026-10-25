@@ -2,7 +2,7 @@ slug: microsoft-copilot
 name: Microsoft Copilot
 maker: Microsoft
 url: https://copilot.microsoft.com
-promise: An assistant inside Word, Excel, Outlook and Teams that drafts and summarises your work.
+promise: "Draft and summarise work in Microsoft apps, including Word, Excel, Outlook and Teams."
 use_cases: [ask-an-assistant, write-copy, research, make-images]
 categories: [chat-assistant, productivity]
 what_it_does:

@@ -1,49 +1,42 @@
 new_slug: email-flow-gap-checker
-name: "Email flow gap checker"
-summary: "List your flows and triggers. Get a score out of 100, missing flows and wrong triggers."
+name: Email automation gaps and trigger reviewer
+summary: Review a store’s email flows, triggers and timing. Get missing steps, possible rule conflicts and a house score based only on what was shown.
 job: write-emails
 thinking: medium
-thinking_why: "It compares your flows with a fixed list of checks. A mid-size model does this well if you list each trigger and filter."
+thinking_why: It compares supplied evidence and follows a specific method.
+headline: Email automation gaps and trigger reviewer
+subhead: Bring flow triggers, filters, delays, email counts and recent results. It checks a core flow list, distinguishes cart from checkout events and reviews timing, offers and settings. Get gaps and a proposed build order, with unseen areas marked. Tool-specific rules and business results need verification. The score is a checklist summary, not a forecast of recovered sales.
+explain: |-
+  Email flows send after an event, such as joining a list or adding to cart. Names can hide a mismatch: a cart flow built on Checkout Started misses people who never started checkout.
 
-headline: "Email flow gap checker"
-subhead: List your live email flows with their triggers, filters, delays and email counts. It checks them against the core flows every store needs, scores the set out of 100 and ranks the missing flows and wrong triggers by likely revenue.
-
-explain: |
-  Flows are the emails that send on their own, such as a welcome series or a cart reminder. They often earn about half of a store's email revenue, yet many stores run them half-built. A common fault is an "abandoned cart" flow that fires on Checkout Started, which makes it a checkout flow, so shoppers who only added to cart get nothing.
-
-  This skill checks the flows you have against the core list, then checks each one's trigger, exit filters, delays, length, discount rules and settings. It only judges what you paste, so it lists what it could not see. It ranks the gaps so you fix the ones that earn most first. The source says to fix the basics before adding fancy splits.
-
+  This skill checks supplied triggers, exit rules, delays, offers and settings against its core list. Exits depend on each flow’s stage and events since entry. It marks unseen checks, shows a house score and proposes a build order. Source targets are starting points, not forecasts of recovered sales.
 when:
   - You set up your flows a while ago and have never had them reviewed.
   - Your flows earn much less of your email revenue than your campaigns.
   - You moved to a new email tool and want to know nothing was missed.
-
 you_give:
   - Your live flows, each with trigger, filters, delay and number of emails
   - Revenue per flow for the last 90 days (optional)
   - Whether Added to Cart is tracked in your store (optional)
   - Your discount rules (optional)
-
 you_get:
   - A score out of 100, with how it was worked out
-  - Missing core flows ranked by likely revenue
+  - Missing flow candidates, prioritized using available recipients and results
   - Trigger, filter and timing errors, each with a fix
   - The order to build or rework them
-
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - List each flow with its trigger event, filters, delays and email count. A screenshot of the flow works too.
   - Add revenue per flow for the last 90 days, if you have it.
   - Fix the trigger faults first. They stop whole flows from firing for the right people.
   - Run the check again when you have changed a flow.
-
 how_it_works:
   - title: Checks the core flows
     text: Welcome, site abandonment, browse abandonment, cart abandonment, checkout abandonment, post-purchase, win-back and sunset. Back-in-stock or replenishment are added if your product suits.
   - title: Checks the triggers
     text: A real cart flow needs the Added to Cart event. A flow built on Checkout Started is a checkout flow. A store with only one of the two has a gap.
   - title: Checks exit filters
-    text: Each flow drops people who moved further along, and does not re-enter them too soon.
+    text: Checks later events since entry for the specific flow stage. A cart shopper viewing a product again has not moved beyond cart. Welcome and post-purchase exits need their own goals.
   - title: Checks delays and length
     text: Delays get shorter as buying intent rises. Each flow has about the right number of emails.
   - title: Checks discount rules
@@ -52,14 +45,13 @@ how_it_works:
     text: Smart sending off and UTM tracking on in every flow email, and one distinct angle per email.
   - title: Scores and ranks
     text: It adds up the points, shows the sum and ranks the gaps by recipients and revenue.
-
 output_shape: |
   FLOW GAP SCORE  <n>/100
   Core flows <n>/40 | Triggers and filters <n>/25 | Timing and length <n>/15
   Discount and urgency <n>/10 | Settings <n>/10
   Scored on <n> points that could be seen. Not seen: <list>
 
-  MISSING FLOWS (ranked by likely revenue)
+  MISSING FLOW CANDIDATES (priority and evidence; unknown impact marked)
   <flow> | why it matters | what to build first
 
   TRIGGER AND FILTER ERRORS
@@ -74,46 +66,44 @@ output_shape: |
   BUILD ORDER
   1. <...>
   MISSING: <flow list | revenue per flow | trigger events>
-
 tweaks:
   - what: Revenue per flow
-    how: Add 90 days of revenue per flow. The ranking of gaps then uses real money, not a guess.
+    how: Add recipients and revenue for 90 days. They inform priorities but cannot measure sales from a flow that does not yet exist.
   - what: Your platform
     how: Say which email tool you use. The checks assume event triggers like Klaviyo's, and the fixes use its event names.
   - what: Your product
     how: Say what you sell. A product that runs out or is reordered suits back-in-stock or replenishment flows.
   - what: Your discount rules
     how: Tell it how discounts are used today. It checks that codes are unique, expire and match the real deadline.
-
 judge:
   - It names the exact event that triggers each flow, not just the flow name.
   - Each fault has a fix you could make in the email tool.
   - The score shows its sum and says what could not be seen.
   - It does not count SMS steps, and says so.
   - The revenue split is read against your own history too, because sources give different numbers.
-
+  - Exit rules match each flow’s stage and use events since entry. Repeat product views do not automatically end a cart flow.
 test:
   - Give it a flow you know has a fault, such as a cart flow built on Checkout Started. It should catch it.
   - Run it twice on the same list. The score should match.
   - Add up the points by hand from the table. The sum should match.
   - Fix one gap and run it again. The score should rise by the points of that check.
-
+  - Give a cart entrant who views a product again. The check should not treat that view alone as progress beyond cart.
 improve:
   - Add your own flow lengths and delays to the skill file once you know what works for your product.
   - Add your discount policy, such as no discount before email 4.
   - Add your event names, so the trigger check uses the names in your tool.
   - Save the final flow list to your brand file as your record of what is live.
   - Pair it with the email test planner to decide which flow to test, and the email setup health checker for the settings.
-
 works_best_with:
   tools:
-    - {name: "Klaviyo", why: "Its flow screens show triggers, filters, delays and revenue per flow, which is everything this check reads."}
-    - {name: "Shopify", why: "It provides the Checkout Started and Placed Order events, and the Added to Cart event with the right tracking."}
+    - name: Klaviyo
+      why: Its flow screens show triggers, filters, delays and revenue per flow, which is everything this check reads.
+    - name: Shopify
+      why: It provides the Checkout Started and Placed Order events, and the Added to Cart event with the right tracking.
   inputs:
-    - "Screenshots of each flow canvas"
-    - "Revenue per flow and per campaign for 90 days"
-    - "Your best-performing campaigns, so they can be swapped into flows"
-
+    - Screenshots of each flow canvas
+    - Revenue per flow and per campaign for 90 days
+    - Your best-performing campaigns, so they can be swapped into flows
 terms:
   - term: Flow
     meaning: A set of emails that sends on its own when someone does something, such as joining your list.

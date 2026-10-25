@@ -1,0 +1,37 @@
+new_slug: google-ads-audit-engine-builder
+name: Google Ads audit engine builder
+summary: Share your codebase, schema and audit rules. Get a typed Google Ads audit engine, check registry and score report with coverage gaps.
+job: build-software
+headline: Google Ads audit engine builder
+subhead: Share your codebase, schema and audit rules. Get a typed Google Ads audit engine, check registry and score report with coverage gaps.
+explain: |-
+  Share selected codebase, schema, google ads access setup and approved check rules. Get a typed google ads audit engine and check registry.
+
+  The source inventory is a historical starting catalogue. Current platform fields and account strategies must be verified. Unsupported rules remain unevaluated rather than fabricated or replaced with private dependencies.
+when:
+  - You need a typed google ads audit engine and check registry.
+you_give:
+  - Selected codebase, schema, Google Ads access setup and approved check rules
+  - Synthetic data fixtures and the intended account types
+you_get:
+  - A typed Google Ads audit engine and check registry
+  - A coverage-aware score report and validation plan
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Step 1
+    text: Inspect the selected repository, Google Ads client setup, manager/target account mapping, secrets model and supported API/library versions. Plan dependencies deliberately; do not install packages or call an account just because the source brief contains a command.
+  - title: Step 2
+    text: Define typed raw rows, date ranges, normalized currency/micros helpers, validated query responses and a Finding contract with check ID, applicability, status, severity, metric, threshold, evidence and proposed action. Fetch only the authorized account and validate each data shape.
+  - title: Step 3
+    text: Implement the API client and separate account, campaign, ad-group, keyword, search-term and conversion data fetchers. Keep credential errors, unavailable fields, rate limits and account authorization distinct; avoid logging credential or customer payload values.
+  - title: Step 4
+    text: Turn the supplied seventy-four-item inventory into a versioned rule registry. For each rule check current applicability and owner-approved thresholds. Structural preferences such as keyword grouping, match-type share, recommendations, attribution or optimization score are context-dependent review prompts, not universal failures.
+  - title: Step 5
+    text: "Calculate weighted category scores only for evaluated applicable rules. Keep missing/unsupported checks out of the earned/max denominator and report coverage separately. Preserve exact counts: planned inventory, evaluated, failed, missing and not applicable. No completed-check claim follows from a label saying seventy-four."
+  - title: Step 6
+    text: Add quick-win ranking, scoped persistence and deterministic synthetic tests for micros conversion, scoring, empty or partial data, cross-account rejection and failing provider calls. Produce the code/change plan, interface map, configured inventory and actual test results or not-run reasons. No campaign mutation or AI call is required by the audit engine.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

@@ -1,0 +1,45 @@
+new_slug: five-part-creator-ad-script-writer
+name: Five-part creator ad script writer
+summary: Write a creator ad in five parts, from hook to CTA. Get timing, delivery notes and a short shot list.
+job: make-video-ads
+headline: Five-part creator ad script writer
+subhead: Share creator type, buyer, product use steps, approved claims and length. Get a five-part timed script and four-to-eight-shot filming list.
+explain: |-
+  Write a creator ad in five parts, from hook to CTA. Get timing, delivery notes and a short shot list.
+
+  Share creator type, buyer, product use steps, approved claims and length. Get a five-part timed script and four-to-eight-shot filming list.
+when:
+  - You need a five-part timed script and four-to-eight-shot filming list.
+  - You need five-part creator ad script writer for a specific task.
+  - You want the method's decisions and assumptions written down before acting.
+you_give:
+  - Creator type
+  - Buyer
+  - Product use steps
+  - Approved claims and length
+you_get:
+  - A five-part timed script and four-to-eight-shot filming list
+  - The sources used, missing inputs and assumptions
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Check the inputs
+    text: Confirm creator type, buyer, product use steps, approved claims and length. Mark facts that are missing.
+  - title: Collect Inputs
+    text: Follow the collect inputs section in the full method and keep its required fields and decision rules.
+  - title: Script Structure
+    text: Follow the script structure section in the full method and keep its required fields and decision rules.
+  - title: The Voice Rules
+    text: Follow the the voice rules section in the full method and keep its required fields and decision rules.
+  - title: Delivery Notes
+    text: Follow the delivery notes section in the full method and keep its required fields and decision rules.
+  - title: Shot List
+    text: Follow the shot list section in the full method and keep its required fields and decision rules.
+  - title: Rules
+    text: Follow the rules section in the full method and keep its required fields and decision rules.
+  - title: Review the result
+    text: Return a five-part timed script and four-to-eight-shot filming list. Check facts, math and the decisions before any action.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

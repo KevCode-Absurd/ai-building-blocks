@@ -1,23 +1,19 @@
 new_slug: proof-backed-sales-copy-writer
-name: "Proof-backed sales copy writer"
-summary: "Paste your opening and proof. Get the body and close, with proof beside every claim."
+name: Evidence-based sales copy writer
+summary: Paste your opening and proof. Get the body and close, with proof beside every claim.
 job: write-landing-page
 thinking: medium
-thinking_why: "It writes or plans with a handful of checks."
-
-headline: "Proof-backed sales copy writer"
+thinking_why: It compares supplied evidence and follows a specific method.
+headline: Evidence-based sales copy writer
 subhead: Give it the opening you have, a note on your buyer, and your facts, proof, offer and guarantee. It writes the body and close, with each claim's proof beside it. You get the finished text, a proof list and any gaps left as placeholders.
-
 explain: |
   The opening of a sales page gets the attention, but the body and close make the sale, and that's where most pages go soft. Claims sit in one section and proof sits three scrolls away. The deal is vague, the guarantee loses its conditions, and the page ends on three buttons and a fake countdown.
 
   This skill writes the middle and the end. It finds the one interesting true thing a rival couldn't say and builds around it. It covers four things: a problem the buyer has now, a promise this offer can make, proof beside the claim, and an easy next step. The close states the deal plainly with every condition, uses the real guarantee, answers the doubt most likely to stop this buyer, and asks for one action named by what's behind it.
-
 when:
   - You have a strong opening for a page, email or long ad and need the rest written.
   - Your page makes claims but the proof is buried or missing.
   - Your close is a pile of buttons, offers and timers, and you want one clear ask.
-
 you_give:
   - The opening lines you already have, or the kind of opening
   - A note on the buyer, how much they know, their doubts and their words
@@ -28,14 +24,10 @@ you_get:
   - The body and close as finished text, within your length
   - A list of each claim and the proof placed beside it
   - What it assumed, any placeholders left for missing figures, and any check it couldn't meet
-
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste the opening you already have.
-  - Paste a note on your buyer and the doubt most likely to stop them.
-  - Paste your facts, proof and offer with every condition, including the guarantee's small print.
-  - Give a length, then check the "Proof placed" list against your files before it goes live.
-
+  - Supply the relevant brief and material, or name files in the authorized project.
+  - Ask for the stated result. Keep supplied facts, assumptions and missing evidence distinct.
+  - Review the result before authorizing repairs or external changes. Save the returned packet or authorize a file destination.
 how_it_works:
   - title: Finds the true detail
     text: Looks for the one interesting fact a rival couldn't say, such as how it's made or an odd detail a customer noticed, and builds around it.
@@ -53,7 +45,8 @@ how_it_works:
     text: Comes back to what the opening promised, so the buyer can say in one sentence what they get.
   - title: Checks the copy
     text: Goes through its own checks, such as proof within one sentence of each claim and no number you didn't give, fixes what it can, and names any it missed.
-
+  - title: Checks the exact draft
+    text: Keeps each claim within the product evidence and holds offer facts steady across variants. It labels any suggested review that has not run.
 output_shape: |
   <the body and close as finished text, within your length>
 
@@ -69,7 +62,6 @@ output_shape: |
 
   CHECKS MISSED
   <one line per check still missed, or none>
-
 example:
   business: sprout
   input: |
@@ -138,7 +130,6 @@ example:
 
     CHECKS MISSED
     None.
-
 tweaks:
   - what: The buyer's main doubt
     how: The close answers one doubt just before the ask. Give it the real one from your reviews, such as price or whether a subscription is a trap, and the ending changes to match.
@@ -148,37 +139,33 @@ tweaks:
     how: For a doubtful buyer, it may admit a small real flaw early, then the larger benefit. For a cold buyer, the benefit comes first.
   - what: Urgency
     how: Give it a real date, stock level or price change and it will use it. Without one, it uses the real cost of the problem continuing, or leaves urgency out.
-
 judge:
   - Every claim a doubtful buyer would question has proof within one sentence.
   - There's one action, not several.
   - No figure, review, expert, study, date or count you didn't supply.
   - The guarantee is stated with its real conditions, or not at all.
   - The ending comes back to what the opening promised.
-
 test:
   - Run it with the opening of a page you know sells. Compare its body and close with yours, and check its proof list uses the proof you rely on.
   - Run it twice. The one true detail it builds around should be the same both times.
   - Read each claim in the result and find its proof within one sentence. Mark any claim with none.
   - Check the guarantee in the close word for word against your real terms.
   - Show its close and yours to someone like your buyer. Ask which one makes the next step clearer.
-
 improve:
   - Paste your guarantee with every condition into "What you need" in the skill file, so step 8 always states the real terms.
   - Write the one doubt that stops most of your buyers, from your reviews, into step 9.
   - Add the proof you hold to step 5, matched to the doubt it answers (for example reviews for "others like me", a lab test for "is it real").
   - Save the one true detail it builds around to your brand file.
   - Pair it with "Sales copy opening writer" to write the opening first, and check the page with "Sales copy readiness checker".
-
 works_best_with:
   tools:
-    - {name: "Any good chat AI", why: "This is a writing job from proof you supply, and the main chat AIs all do it well."}
+    - name: Any good chat AI
+      why: This is a writing job from proof you supply, and the main chat AIs all do it well.
   inputs:
-    - "Your guarantee text with every condition, copied from your policy page, so the close states the real limits"
-    - "The single doubt that stops most buyers, in a customer's own words from a review or support ticket"
-    - "Test results, survey numbers and study details with their dates and sample sizes, so each proof line is exact"
-    - "Five reviews from buyers like this page's reader, so the 'will it work for me' proof sounds like them"
-
+    - Your guarantee text with every condition, copied from your policy page, so the close states the real limits
+    - The single doubt that stops most buyers, in a customer's own words from a review or support ticket
+    - Test results, survey numbers and study details with their dates and sample sizes, so each proof line is exact
+    - Five reviews from buyers like this page's reader, so the 'will it work for me' proof sounds like them
 terms:
   - term: Body
     meaning: The middle of a sales page or long ad, where the argument and proof go.

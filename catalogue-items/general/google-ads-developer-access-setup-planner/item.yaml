@@ -1,0 +1,19 @@
+slug: google-ads-developer-access-setup-planner
+name: Google Ads token and access check planner
+summary: Plan the final Google Ads access check. Keep tokens private and verify the selected manager and target account with a read probe.
+category: general
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+    required: true
+uses: []
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

@@ -1,0 +1,36 @@
+new_slug: video-ad-production-plan-builder
+name: Video ad production plan builder
+summary: Share your product facts and ad idea. Get a cast kit, timed shots, prompts and edit handoff in your chosen style.
+job: make-video-ads
+headline: Video ad production plan builder
+subhead: Share your product facts and ad idea. Get a cast kit, timed shots, prompts and edit handoff in your chosen style. Bring the brief and any files you want it to use.
+explain: |-
+  Use this when you need an end-to-end ad production master plan. Choose podcast conversation, 2D illustrated animation, clay stop-motion or live-action short-film as an explicit mode. Do not mix their material rules unless requested.
+
+  Extract approved product facts, who the ad addresses, one benefit, supporting evidence, offer and desired action. Mark missing evidence rather than creating testimonials or product efficacy.
+when:
+  - You need an end-to-end ad production master plan.
+  - You want a clear draft and checks from the material you already have.
+you_give:
+  - brief
+  - "Optional: product photos"
+  - "Optional: brand brain"
+you_get:
+  - plan
+  - script
+  - shot list
+  - video prompt
+  - Missing inputs and steps that still need to run
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Read the brief
+    text: Choose podcast conversation, 2D illustrated animation, clay stop-motion or live-action short-film as an explicit mode. Do not mix their material rules unless requested.
+  - title: Build the result
+    text: "Create a tight spoken story arc: attention, situation/tension, credible product interaction, supported payoff, action. Keep word count plausible for the requested duration."
+  - title: Check and hand off
+    text: Add a production order, approval gates, missing assets and edit/sound handoff. Attach only the relevant mode reference rather than flooding every brief with all four guides.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

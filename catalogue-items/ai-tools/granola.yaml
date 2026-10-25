@@ -2,7 +2,7 @@ slug: granola
 name: Granola
 maker: Granola
 url: https://www.granola.ai
-promise: Your own meeting notes, finished by AI, with no bot on the call.
+promise: "Turn your rough meeting notes into fuller summaries without a bot joining the call."
 use_cases: [meeting-notes]
 categories: [productivity]
 what_it_does:
@@ -12,12 +12,12 @@ what_it_does:
   - Drafts follow-up emails and action items after the call.
   - Answers questions across your meeting history in a chat.
 benefits:
-  - Keep your own notes and still get a complete write-up.
+  - "Turn rough meeting notes into a fuller draft to check."
   - Join calls without a bot that guests can see.
-  - Send a follow-up email within minutes of hanging up.
-  - Keep notes private until you choose to share them.
+  - "Draft a follow-up email from the meeting notes."
+  - "Choose when to share meeting notes with your team."
 best_for:
-  - Founders, managers and consultants with back-to-back calls.
+  - "People who run or advise teams and spend much of the day in calls."
   - In-person meetings, as well as Zoom, Meet and Teams.
   - People who prefer to write their own notes.
 not_for:

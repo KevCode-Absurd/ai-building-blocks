@@ -2,17 +2,14 @@ thinking: low
 thinking_why: It runs set calculations on your numbers.
 new_slug: social-media-results-analyst
 name: Social media results analyst
-summary: Give it your post numbers. Get engagement rates, ROI and platform
-  benchmarks, plus what to post next.
+summary: Get engagement rates, benchmarks, and financial ROI when you supply attributed revenue, matching spend, method, and window.
 job: grow-social
 headline: Social media results analyst
-subhead: Your post numbers turned into engagement rates, return on spend and a
-  comparison with platform norms, plus ideas on what to post next. You give your
-  figures, and the skill does the maths.
+subhead: Compare post results and activity costs. Financial ROI appears only with attributed revenue, matching spend, and the method and window used.
 explain: |
-  Your post numbers turned into engagement rates, return on spend and a comparison with platform norms, plus ideas on what to post next. You give your figures, and the skill does the maths.
+  Compare post engagement and activity costs with platform benchmarks. Financial ROI appears only when you supply measured attributed revenue, matching spend, the attribution method, and the attribution window. Likes, comments, shares, saves, and clicks are not assigned made-up dollar values.
 
-  It first checks the data, for example that reach is above zero and dates make sense. Then it works out engagement per post, adds up campaign totals and calculates return on investment if you gave ad spend. It compares results with benchmarks for Instagram, Facebook, TikTok and LinkedIn, picks the top and bottom posts, and checks that the numbers are possible, such as engagement under 100 percent. Python helper scripts do the calculations, so the results are the same each time.
+  It first checks the data, for example that reach is above zero and dates make sense. Then it works out engagement per post and campaign totals. It calculates financial ROI only when attributed revenue, matching spend, the attribution method, and the attribution window are supplied. It compares results with benchmarks for Instagram, Facebook, TikTok and LinkedIn, picks the top and bottom posts, and checks that the numbers are possible, such as engagement under 100 percent. Python helper scripts do the calculations, so the results are the same each time.
 when:
   - You have a spreadsheet of post stats and no idea what it means.
   - You need to show a client the return on a campaign.
@@ -20,16 +17,17 @@ when:
   - You are choosing what to post more of.
 you_give:
   - "Post data: reach, likes, comments, shares and dates"
-  - Ad spend and revenue (optional)
+  - Attributed revenue, matching spend, the attribution method, and window (optional; all are required for financial ROI)
   - The platforms involved
   - Your goal for the campaign (optional)
 you_get:
   - Engagement rate for each post
-  - Campaign totals and return on spend
+  - Campaign totals and activity costs; financial ROI only when its required revenue and attribution inputs are supplied
   - Comparison with platform benchmarks
   - Top and bottom posts and what to do next
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
-    or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
   - It works best when your AI can run code and read your files.

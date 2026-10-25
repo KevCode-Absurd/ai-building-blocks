@@ -1,0 +1,26 @@
+new_slug: review-a-feature-and-plan-its-future
+name: Review a feature and plan its future
+summary: Check what a feature has achieved. Prepare a plan to keep it, improve it or retire it.
+job: build-product
+headline: Review a feature and plan its future
+subhead: Share the feature goals, results and user feedback. Compare facts with hopes. Get a decision brief for the person who owns the choice.
+explain: Share the feature goals, results and user feedback. Compare facts with hopes. Get a decision brief for the person who owns the choice.
+when:
+  - You want to review a feature and plan its future.
+you_give:
+  - The original feature goals, observed outcomes, customer impact, costs and known measurement limits.
+you_get:
+  - An outcome review, assumption updates and a decision brief with accountable owners and follow-up.
+how_to_use:
+  - Download the complete skill folder and add it to your AI tool, or copy the instructions into a chat.
+  - Provide the inputs listed here and ask your AI to follow the skill.
+  - Review the result and any missing facts before using it.
+how_it_works:
+  - title: Separate claims and observations
+    text: Label expectations, measured outcomes, uncertainty and inference before comparing results.
+  - title: Assess feature health
+    text: Review adoption, technical, operational and strategic evidence without collapsing it to one score.
+  - title: Prepare the lifecycle decision
+    text: Explain alternatives and human authority; if retirement is chosen, plan migration, support and learning closure.
+thinking: medium
+thinking_why: It weighs your evidence and follows a specific method.

@@ -2,10 +2,14 @@ thinking: high
 thinking_why: It plans and writes working code for your own tools.
 new_slug: support-desk-automation-builder
 name: Support desk automation builder
-summary: Tell it your help desk and tools. Get scripts, reply templates and a triage routine that drafts replies.
+summary: Tell it your help desk and tools. Get scripts, reply templates and a
+  triage routine that drafts replies.
 job: help-customers
 headline: Support desk automation builder
-subhead: Tell it which help desk and billing tools you use and your common ticket types. It plans the connections, writes the scripts and a config file, and sets up reply templates. You get a triage routine that drafts answers for you to approve. Nothing is sent without you.
+subhead: Tell it which help desk and billing tools you use and your common
+  ticket types. It plans the connections, writes the scripts and a config file,
+  and sets up reply templates. You get a triage routine that drafts answers for
+  you to approve. Nothing is sent without you.
 explain: |
   A working support automation made for your company: scripts that read your help desk, templates for common replies and a triage routine that drafts answers for you to approve. Nothing is sent without you.
 
@@ -28,6 +32,9 @@ you_get:
   - A triage workflow that drafts for approval
   - A reusable skill definition
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
-  - It works best when your AI can run code and use your help desk and billing API keys.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
+  - It works best when your AI can run code and use your help desk and billing
+    API keys.

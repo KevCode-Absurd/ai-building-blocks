@@ -1,0 +1,35 @@
+thinking: medium
+thinking_why: It follows a set method and adapts its questions or draft to your evidence.
+new_slug: guided-reasoning-tutor
+name: Guided reasoning tutor
+summary: Bring a problem you want to understand. Work through focused questions,
+  hints and a small practice task.
+job: study-and-practice
+headline: Guided reasoning tutor
+subhead: Bring a concept or problem and explain your current thinking. It asks
+  focused questions, gives hints when needed and corrects gaps along the way.
+  You finish by restating the idea and applying it to a small new task.
+explain: Bring a concept or problem and explain your current thinking. It asks
+  focused questions, gives hints when needed and corrects gaps along the way.
+  You finish by restating the idea and applying it to a small new task.
+you_give:
+  - A concept or problem you want to reason through.
+  - Your current explanation and any recurring mistakes.
+you_get:
+  - A guided question-and-hint session.
+  - A corrected explanation in your own words.
+  - One small task to apply the idea.
+how_it_works:
+  - title: Step 1
+    text: Agree on the reasoning goal and hear your current explanation.
+  - title: Step 2
+    text: Probe with concrete questions and offer hints when you get stuck.
+  - title: Step 3
+    text: Correct gaps, ask for a restatement and set one practice task.
+how_to_use:
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
+  - It works best when your AI can read your supplied notes and ask follow-up
+    questions.

@@ -1,23 +1,19 @@
 new_slug: 3d-explainer-video-prompts
-name: "3D how-it-works video clip prompt writer"
-summary: "Paste your 3D script or product facts. Get matching how-it-works clip prompts and an edit list."
+name: 3D how-it-works video prompt writer
+summary: Share a 3D script or sourced product facts. Get a storyboard, image and clip prompts, a voice brief and edit list.
 job: make-video-ads
-thinking: high
-thinking_why: "It runs several stages and keeps many rules at once across a long output."
-
-headline: "3D how-it-works video clip prompt writer"
-subhead: Give it a 3D how-it-works script, or product facts with sources. It locks each part's colour and shape, storyboards a dive into the hidden process and back, and writes the clips, stopping three times for your OK. You get every prompt, an edit list and any check it missed.
-
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.
+headline: 3D how-it-works video prompt writer
+subhead: Share a locked script, or product facts with sources and claim limits. It tests the hidden process, then fixes each part’s name, colour and shape. It pauses for approval of the parts cards, reference sheets and storyboard. Get matching image and clip prompts, narration notes, captions and an edit list. Making pictures or video needs a suitable connected tool and approval before credits are spent.
 explain: |
   A short 3D explainer about something nobody can see (what an ingredient does, how a fabric handles sweat) can hold attention like a good science film. Most attempts fail one of two ways. They bend a claim to fit a dramatic picture, or the parts change colour and shape from shot to shot until nobody can follow them.
 
   This skill runs the whole process in six stages. With no script, it first tests which hidden process is true and worth teaching, offers 2 or 3 story options and waits for your pick. Then your product's working part becomes the avatar: each part of the process gets one name, colour and shape, and it waits for your OK. Next come sheets for every part, your product and each size of the world, plus lock lines. You approve those, then a storyboard with the one long dive. Only then does it write the clips, the voice and the edit.
-
 when:
   - Your product's benefit is invisible and you want an honest 3D film about how it works.
   - You have a 3D how-it-works script and want to make it with AI image and video tools.
   - Your earlier 3D clips changed the parts' colours or showed more than your claims allow.
-
 you_give:
   - A 3D how-it-works script and its cast note, or your product facts with a source for each step
   - Clean product photos (front, side, top) and every label line
@@ -30,14 +26,12 @@ you_get:
   - Sheet prompts for the parts, the product and each size of the world, with lock lines
   - A storyboard with the dive, clip prompts, a caption list, a voice brief and an edit list
   - Any check the prompts couldn't meet, one line each
-
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your script from "3D how-it-works video ad script writer", or your product facts with sources and your banned claims.
   - If it offers story options, pick one by its letter.
   - Approve the avatar cards, pick the reference renders, then approve the sheets and lock lines and the storyboard.
   - If your product sits in a field with claim rules (health, beauty, food, money, alcohol and the like), get the script checked before any picture is made.
-
 how_it_works:
   - title: Reads or builds the script
     text: Tests a script you bring, or tests candidate chains, sets honesty rules and offers story options, then waits for your pick.
@@ -51,7 +45,6 @@ how_it_works:
     text: The surface, the one long dive, each link and back out, checked so the parts key never changes. It stops for your OK.
   - title: Turns it into video
     text: An approved voice first, then clips that describe only the motion, captions with the key word marked, and the offer over the last shot.
-
 output_shape: |
   STAGE 0  SCRIPT IN    <locked script, tests passed>, or CHAINS,
                         HONESTY NOTES, STORY OPTIONS > STOP for choice
@@ -71,7 +64,6 @@ output_shape: |
   STAGE 5  CLIPS        <start frame, end frame, motion only>
            EDIT LIST    <voice brief, captions, cuts, offer, safe zones>
   CHECKS MISSED: <one line per check still missed, or none>
-
 example:
   business: sprout
   input: |
@@ -147,7 +139,6 @@ example:
 
     (cut for length: the full run also had the other frames, clips 1
     and 3 to 8, and the full caption list)
-
 tweaks:
   - what: Your sources
     how: Add a source for each step of how it works. Links marked "common knowledge, brand to confirm" turn into sourced ones and more chains survive.
@@ -157,36 +148,34 @@ tweaks:
     how: Say "no person" and the surface shots show only hands and the product. The parts carry the whole film.
   - what: Clip limits
     how: Give your tool's real clip lengths and whether it takes start and end frames. It keeps the dive as one move only if your tool can join clips cleanly.
-
 judge:
   - It stopped for your OK after the avatar cards, the sheets and the storyboard, or marked each "(approve)" if you asked for every stage at once.
   - Every link in the chain is marked sourced or common knowledge, never assumed.
   - The parts key keeps the same name, colour and shape in every prompt.
   - In the storyboard, the product first appears at its own link.
   - The voice is one the brand recorded, hired or licensed, and a person approved the read.
-
 test:
   - Give it product facts with no script. It should offer story options and stop before any avatar card.
   - Check each link in the kept chain against its source.
   - Make the parts sheet and two small-size frames. The colours and shapes should match in all three.
   - Show the finished film to someone and ask them to draw the process in four boxes. Their boxes should match the chain.
-
 improve:
   - Add your sourced chains to "What you need" in the skill file, so stage 0 starts from them.
   - Save the parts key, sheets and lock lines in your brand file, so a series of explainers looks the same.
   - Write the details of the voice you've recorded or licensed into stage 1, so every video uses the same one.
   - Pair it with "3D how-it-works video ad script writer" when you want the script on its own first.
-
 works_best_with:
   tools:
-    - {name: "Nano Banana", why: "Takes up to 14 reference images, so your parts sheet and frames keep the same colours and shapes."}
-    - {name: "Veo", why: "Takes a first and a last frame, so the dive starts and ends exactly where you planned."}
-    - {name: "ElevenLabs", why: "Reads the narration with tags for pauses and pace, in a voice you designed or licensed."}
+    - name: Nano Banana
+      why: Takes up to 14 reference images, so your parts sheet and frames keep the same colours and shapes.
+    - name: Veo
+      why: Takes a first and a last frame, so the dive starts and ends exactly where you planned.
+    - name: ElevenLabs
+      why: Reads the narration with tags for pauses and pace, in a voice you designed or licensed.
   inputs:
-    - "Diagrams or microscope images from your supplier or a published study, so the 3D parts match the real thing"
-    - "How each hard word is said, from your supplier or a dictionary, so the voice gets it right"
-    - "The questions buyers ask about how it works, so the film answers a real one"
-
+    - Diagrams or microscope images from your supplier or a published study, so the 3D parts match the real thing
+    - How each hard word is said, from your supplier or a dictionary, so the voice gets it right
+    - The questions buyers ask about how it works, so the film answers a real one
 terms:
   - term: Avatar card
     meaning: A short, fixed description of what carries the ad. Here it's usually your product's working part.

@@ -1,0 +1,19 @@
+slug: competitor-ad-theme-and-gap-mapper
+name: Competitor ad theme and gap mapper
+summary: Group competitor ads by thirteen themes. Compare formats and messages, then rank gaps worth testing.
+category: ecommerce
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: ad_breakdowns
+    required: true
+uses: []
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

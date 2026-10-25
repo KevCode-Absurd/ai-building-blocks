@@ -1,6 +1,6 @@
 slug: company-health-scorer
-name: Company health scorer
-summary: Give it signals from your teams. Get a traffic-light score on eight areas with what to fix first.
+name: "Company health scorer"
+summary: "Score company functions from supplied metrics using published thresholds. Show missing data and the reason for each rating."
 category: general
 boards: []
 type: skill

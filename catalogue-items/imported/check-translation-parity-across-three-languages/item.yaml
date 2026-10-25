@@ -1,0 +1,35 @@
+slug: check-translation-parity-across-three-languages
+name: Check translation parity across three languages
+summary: Check RU, EN and PT-BR chapters for drift. Flag changed facts, names, terms and fixed quotes.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: source_text
+    required: true
+  - type: brand_guide
+    required: true
+outputs:
+  - type: audit_report
+    required: true
+uses: []
+origin: imported
+source:
+  by: Mikefluff
+  repo: Mikefluff/skills
+  path: skills/translation-sync
+  url: https://github.com/Mikefluff/skills/tree/bbab3d82df330d964c932386158db1a25c24a149/skills/translation-sync
+  licence: MIT
+  licence_file: LICENSE
+  commit: bbab3d82df330d964c932386158db1a25c24a149
+  original_name: translation-sync
+  imported: 2026-10-24
+version: 1.0.0
+credits:
+  - title: translation-sync skill
+    by: Mikefluff
+    url: https://github.com/Mikefluff/skills/tree/bbab3d82df330d964c932386158db1a25c24a149/skills/translation-sync
+    used: Original instructions and supporting files, with attribution and the MIT licence. Display copy describes the task.

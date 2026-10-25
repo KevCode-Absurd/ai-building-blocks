@@ -1,0 +1,35 @@
+thinking: medium
+thinking_why: It follows a set method and adapts its questions or draft to your evidence.
+new_slug: study-gap-tracker
+name: Study gap tracker
+summary: Share repeated mistakes and past checks. Get a short list of learning
+  gaps and what to practice first.
+job: study-and-practice
+headline: Study gap tracker
+subhead: Give it your error notes, past checks and learning goal. It groups
+  repeated mistakes, ranks the gaps and chooses what to revisit. You get a short
+  active list, the next practice task and clear rules for closing each gap.
+explain: Give it your error notes, past checks and learning goal. It groups
+  repeated mistakes, ranks the gaps and chooses what to revisit. You get a short
+  active list, the next practice task and clear rules for closing each gap.
+you_give:
+  - Error notes with topic, date and repeated attempts.
+  - Your learning goal and any earlier gap list.
+you_get:
+  - An active gap table with scores and evidence.
+  - One or two topics to focus on next.
+  - Progress states tied to repeated clean checks.
+how_it_works:
+  - title: Step 1
+    text: Add each observed mistake to the existing gap list.
+  - title: Step 2
+    text: Rank gaps using their type, repeat count and time since practice.
+  - title: Step 3
+    text: Pick at most two focus areas and keep at most five active gaps.
+how_to_use:
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
+  - It works best when your AI can read your supplied notes and ask follow-up
+    questions.

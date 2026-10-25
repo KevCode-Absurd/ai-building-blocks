@@ -7,7 +7,7 @@ export function taskFocus(request: string): string {
   // Do not strip arbitrary "for ..." text: it can be essential subject matter.
   const business = /\s+(?:for|of|at|in)\s+(?:my|our|the|an?|this)\s+(?:(?:e[ -]?commerce|online|retail|small)\s+)*(?:store|shop|business|company)\b.*$/i;
   const task = focus.replace(business, "").trim();
-  return (task || focus).replace(/\be[ -]?commerce\b/gi, "online store");
+  return (task || focus).replace(/\b(?:e[ -]?commerce|online\s+(?:store|shop))\b/gi, "store");
 }
 
 export function isReviewRequest(request: string): boolean {

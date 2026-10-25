@@ -2,17 +2,23 @@ thinking: medium
 thinking_why: It maps four named steps onto your product with some judgment.
 new_slug: habit-loop-designer
 name: Habit loop designer
-summary: Describe your product. Get a four step loop that brings users back, with the weak steps scored.
+summary: Describe your product. Get a four step loop that brings users back,
+  with the weak steps scored.
 job: build-product
 headline: Habit loop designer
-subhead: "Describe your product, what brings users in now and where they stop coming back. It maps your habit loop in four steps from the Hook Model: trigger, action, variable reward and investment. You get the map, a score out of 10 with the weak steps named, ideas to replace reminders with inner triggers, and an ethics check."
+subhead: "Describe your product, what brings users in now and where they stop
+  coming back. It maps your habit loop in four steps from the Hook Model:
+  trigger, action, variable reward and investment. You get the map, a score out
+  of 10 with the weak steps named, ideas to replace reminders with inner
+  triggers, and an ethics check."
 explain: |
   A four step loop that gives people a reason to come back to your product without being nagged. It uses the Hook Model: a trigger, an action, a reward that varies, and an investment that makes the next visit more likely.
 
   You describe your product and the skill checks each step. Does an inner feeling, like boredom or worry, prompt the visit? Is the action very easy? Is the reward unpredictable enough to stay interesting? Does the user put something in, such as data, settings or followers, that makes the next trip better? Each step scores 0 to 2. An ethics check caps the score if the design just hooks people.
 when:
   - People sign up and then never return.
-  - You are planning notifications, streaks or progress bars and want them to mean something.
+  - You are planning notifications, streaks or progress bars and want them to
+    mean something.
   - You want to know why users drop off after the first week.
   - You want to check that your engagement tactics are fair to users.
 you_give:
@@ -26,5 +32,7 @@ you_get:
   - Ideas to move users from reminders to inner triggers
   - An ethics check on your design
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.

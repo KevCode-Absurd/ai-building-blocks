@@ -2,23 +2,23 @@ slug: nano-banana
 name: Nano Banana
 maker: Google
 url: https://gemini.google
-promise: Images made and edited from plain requests, inside Gemini.
+promise: "Create, combine and edit images from plain requests inside Gemini."
 use_cases: [make-images]
 categories: [image]
 what_it_does:
   - Makes images from a written description in the Gemini app.
   - Edits a photo you upload when you say what to change.
   - Blends several photos into one scene.
-  - Keeps a person or product looking the same across images.
+  - "Uses references to help keep a person or product consistent across images."
   - Writes short pieces of readable text inside an image.
 benefits:
-  - Fix or restyle a product photo by typing one sentence.
+  - "Ask for a product-photo edit, then check the result against the original."
   - Make a set of matching ad images from one reference picture.
   - Try image ideas for free before you pay for anything.
 best_for:
   - Product photos and ad images built from your own pictures.
-  - Quick edits to a photo without opening editing software.
-  - Anyone already using Gemini or a Google account.
+  - "People who want to edit a photo by typing the change."
+  - "People who already use Google apps or Gemini."
 not_for:
   - Long runs of images when you need a fixed monthly allowance.
   - Exact brand colours and fonts, which you still need to check by eye.

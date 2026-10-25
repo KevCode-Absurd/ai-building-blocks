@@ -1,0 +1,38 @@
+new_slug: feedback-loops-humans-teaching-agents-implementation-planner
+name: Agent feedback learning builder
+summary: Build a four-way feedback log and proposed lessons for review.
+job: build-software
+headline: Agent feedback learning builder
+subhead: Share original finding, human reaction and review owner. Get a four-way feedback log and proposed lessons for review.
+explain: |-
+  Share original finding, human reaction and review owner. Get a four-way feedback log and proposed lessons for review.
+
+  The complete method and its supporting files are in the download. It marks missing inputs and separates proposed actions from actions that were actually completed.
+when:
+  - You need a four-way feedback log and proposed lessons for review.
+  - You are adding this function to an agent system.
+  - You need to compare an existing version with the supplied starter.
+you_give:
+  - Original finding, human reaction and review owner
+you_get:
+  - A four-way feedback log and proposed lessons for review
+  - A failure checklist and synthetic test cases
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Step 1
+    text: Distinguish approve, reject, already-known and right-diagnosis/wrong-action feedback.
+  - title: Step 2
+    text: Keep the original finding immutable.
+  - title: Step 3
+    text: Record who reviewed it and why.
+  - title: Step 4
+    text: Aggregate repeated signals.
+  - title: Step 5
+    text: Draft a lesson or skill change for human review.
+  - title: Step 6
+    text: Do not rewrite live rules from one reaction.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

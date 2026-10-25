@@ -1,0 +1,32 @@
+thinking: medium
+thinking_why: It follows a set method with a few checks.
+new_slug: gorgias-shift-handover-writer
+name: Gorgias shift handover writer
+summary: Connect Gorgias. Get urgent tickets, pending replies, recent fixes, and clear notes for the next shift.
+job: help-customers
+headline: Gorgias shift handover writer
+subhead: Connect Gorgias before a shift change or ticket handover. It checks open work and reads the threads needing attention. You get a handover note covering urgent tickets, customer replies, work in progress, recent fixes, and unresolved blockers.
+when:
+  - You use this tool for customer support and need help with this task.
+you_give:
+  - Open and pending Gorgias tickets.
+  - Current owners, last actions, waiting replies, and recent fixes.
+you_get:
+  - Show the last action, next step, blockers, and useful context for the incoming person.
+how_it_works:
+  - title: Read active work
+    text: Find open and waiting tickets. Read urgent threads and recent customer replies.
+  - title: Separate waiting states
+    text: Group tickets by immediate action, waiting on customers, work in progress, and recent resolution.
+  - title: Write handover notes
+    text: Show the last action, next step, blockers, and useful context for the incoming person.
+works_best_with:
+  tools:
+    - name: Gorgias
+      why: Live lookups need Composio CLI access and connected accounts for these services.
+how_to_use:
+  - Add the downloaded folder to an AI that can read skill files.
+  - Ask for gorgias shift handover writer by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
+  - Provide Open and pending Gorgias tickets.
+  - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
+  - Review the result. Approve any proposed sending or account changes before they happen.

@@ -1,0 +1,30 @@
+slug: reference-library-photoshoot
+name: Reference library product photoshoot
+summary: Pick photo looks for one real product. Get a shot plan, a pilot and checked files in each size you ask for.
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - type: product_photos
+    required: true
+  - type: brand_brain
+    required: false
+  - type: reference_set
+    required: true
+  - type: product_data
+    required: false
+outputs:
+  - type: photo_set
+    required: true
+  - type: truth_sheet
+    required: true
+  - type: audit_report
+    required: true
+uses: []
+execution: coordinator
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

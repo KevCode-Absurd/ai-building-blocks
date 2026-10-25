@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It reads the task for hard language, not hard ideas.
 new_slug: task-language-demand-checker
 name: Task language demand checker
-summary: Paste a task or text. Get the words and sentence types that may block students still learning English.
+summary: Paste a task or text. Get the words and sentence types that may block
+  students still learning English.
 job: teach-and-train
 headline: Task language demand checker
-subhead: Paste the task or text and say the year group and subject. It flags abstract nouns, passive voice, long nested sentences and command verbs such as justify or evaluate. You get the list of barriers, a language demand rating, a support for each barrier and the words to pre-teach.
+subhead: Paste the task or text and say the year group and subject. It flags
+  abstract nouns, passive voice, long nested sentences and command verbs such as
+  justify or evaluate. You get the list of barriers, a language demand rating, a
+  support for each barrier and the words to pre-teach.
 explain: |
   A list of the words, phrases and sentence types in a task that may stop students who are still learning English, before they ever get to the subject itself. You can then support the language and keep the thinking hard.
 
@@ -27,5 +31,7 @@ you_get:
   - Suggested supports for each barrier
   - Words to pre-teach
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.

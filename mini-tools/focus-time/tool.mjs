@@ -1,11 +1,11 @@
 // Original tool. All numbers shown are illustrative figures, not a real person’s results.
 export default {
   "slug": "focus-time",
-  "name": "Find space for focused work in your week",
+  "name": "Focus time planner",
   "short": "Focus time planner",
-  "headline": "Find space for focused work in your week",
-  "summary": "Subtract meetings and daily admin from working hours. See how many complete focus blocks can fit.",
-  "question": "Find space for focused work in your week?",
+  "headline": "Focus time planner",
+  "summary": "Subtract meetings and daily admin from working hours. See how many complete focus blocks can fit in the remaining time.",
+  "question": "How many focus blocks could fit after meetings and daily admin?",
   "category": "personal",
   "shelf": [
     "general"
@@ -92,7 +92,7 @@ export default {
       "unit": "hours",
       "formula": "MAX(0, days * hours - meetings - days * admin)",
       "sum": "{days} × {hours} − {meetings} − {days} × {admin}, with zero as the floor = {=}",
-      "means": "Time available in total, before calendar placement.",
+      "means": "Total free time before you choose calendar slots.",
       "none": "Not enough data"
     },
     {

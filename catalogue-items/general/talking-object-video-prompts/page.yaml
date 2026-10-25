@@ -1,23 +1,19 @@
 new_slug: talking-object-video-prompts
-name: "Talking object video clip prompt writer"
-summary: "Paste your talking-object script and attach a product photo. Get a character card, clip prompts and edit notes."
+name: Talking object video clip prompt writer
+summary: Paste your talking-object script and attach a product photo. Get a character card, clip prompts and edit notes.
 job: make-video-ads
-thinking: high
-thinking_why: "It runs several stages and keeps many rules at once across a long output."
-
-headline: "Talking object video clip prompt writer"
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.
+headline: Talking object video clip prompt writer
 subhead: Give it a talking object script and a product photo. It writes one fixed character card, builds sheets and a storyboard, and writes timed clip prompts with every line in quotes, stopping three times for your OK. You get the character card, every prompt and edit notes.
-
 explain: |
   A talking object ad lives or dies on whether it stays the same object from clip to clip. Video tools drift. The face moves, an arm appears from nowhere, the mouth keeps going after the line ends, and the product grows a face of its own.
 
   This skill runs the whole video process and locks the object down before anything moves. It writes one character card (material, damage, where the face sits, eyes, brows, mouth, limbs) and pastes it unchanged into every prompt. You pick one of a few reference images, then approve a sheet with every angle and the expressions the mood needs, your product from its photo, and the set with light chosen by the mood. The storyboard gives clip 1 and the turn clip their own start frames, so your product never pops in. Each clip prompt has timed beats with the line in quotes and the same voice. It doesn't write the script.
-
 when:
   - You have a talking object script and want to make it with an AI image and video tool.
   - Earlier tries gave you a face that moved, extra limbs, or a product with a face.
   - You want to test the same complaint told by different objects and need a fixed setup for each.
-
 you_give:
   - The script, clip by clip, with the narrator, its mood and the turn
   - A real front photo of your product, its size, how it opens and what it replaces
@@ -29,14 +25,12 @@ you_get:
   - A storyboard with start frames and a shot card per clip
   - Timed clip prompts, a fix table and edit notes
   - Any check the prompts still miss, one line each
-
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your script underneath and attach the product's front photo.
   - Approve the character card, make the reference images and pick one at thumbnail size on your phone.
   - Approve the sheets, then the storyboard and its start frames.
   - Make the clips in order, join them with hard cuts, and add captions and the offer in your editor.
-
 how_it_works:
   - title: Confirms who talks
     text: Keeps the script's narrator unless it's not really in that room, has no natural face spot, or could be mistaken for the product.
@@ -52,7 +46,6 @@ how_it_works:
     text: Beats like [00:00-00:03], the line in quotes, the mouth closing when it ends, and the room's sound.
   - title: Fixes misses
     text: A table of what to change when the face slides, an arm appears, the mouth won't stop or the voice drifts.
-
 output_shape: |
   STAGE 0  NARRATOR  <object>: confirmed (<why>) or replaced by <object>
   STAGE 1  AVATAR CARD (approval 1)
@@ -71,7 +64,6 @@ output_shape: |
   EDIT NOTES  <hard cuts, captions, offer text, voice route>
   MISSING: <..>
   CHECKS MISSED: <one line per check still missed, or none>
-
 example:
   business: sprout
   input: |
@@ -153,7 +145,6 @@ example:
     all six lines once and lip-sync.
     MISSING: the buyer's accent (plain US assumed); whether Sprout uses
     music (none planned).
-
 tweaks:
   - what: Limbs
     how: By default the object has none. Ask for arms only if a line needs a gesture. You get two thin arms, and every extra part is one more thing that can drift.
@@ -163,7 +154,6 @@ tweaks:
     how: If your video tool makes sound, the lines stay in the prompts. If not, or the voice changes between clips, record the whole monologue once and lip-sync each clip.
   - what: Clip length
     how: Say your tool's lengths. At 8 seconds a clip holds about two short lines. A tool that makes 10 or 15 seconds can hold three, so fewer clips are needed.
-
 judge:
   - The run stopped for your yes after the character card, the sheets and the storyboard, unless you asked for every stage in one go.
   - Pause the first frame, muted, at thumbnail size. You can see the face and its feeling.
@@ -171,30 +161,30 @@ judge:
   - The mouth moves only with the words and closes when each line ends.
   - The product's label matches its photo, it has no face, and it arrives by a cut at the turn.
   - The object never states a price, a result it couldn't see, or a sales pitch.
-
 test:
   - Pick the reference image on your phone at thumbnail size. If you can't see the face and its mood in a second, move the face spot before going further.
   - Run the skill twice. The character card should come back almost word for word; if the material or face spot changes, lock your own card and paste it in.
   - Lay the end frames of clips 1 and 3 side by side. The eyes, brows and mouth should sit in the same place.
   - Check every frame for a second face, an extra limb or printing on the object. If you find one, use the matching fix from the skill's table.
-
 improve:
   - Save your approved character card, pick and sheet in your brand file, so a second ad with the same object starts at the storyboard.
   - Write your product-showing rules into the product sheet step (how the pack opens, what is never torn), so the product is right first time.
   - Add your house voice description to stage 1, so every object speaks in a voice your brand would use.
   - Pair it with the skill that writes a talking object script, if you don't have a script yet.
-
 works_best_with:
   tools:
-    - {name: "Veo", why: "Takes up to three reference images and speaks quoted lines with matching sound in each clip."}
-    - {name: "Kling", why: "Reuses a saved character made from your reference photos, so the face holds across clips."}
-    - {name: "GPT Image", why: "Makes the sheets and start frames from your product photo and keeps its label words readable."}
-    - {name: "ElevenLabs", why: "Records one steady voice for the whole monologue when the video tool's voice drifts."}
+    - name: Veo
+      why: Takes up to three reference images and speaks quoted lines with matching sound in each clip.
+    - name: Kling
+      why: Reuses a saved character made from your reference photos, so the face holds across clips.
+    - name: GPT Image
+      why: Makes the sheets and start frames from your product photo and keeps its label words readable.
+    - name: ElevenLabs
+      why: Records one steady voice for the whole monologue when the video tool's voice drifts.
   inputs:
-    - "A photo of the real old object (the shaker, the kettle) from the front and side, so the character looks like the thing buyers own"
-    - "A photo of the product out of its pack, so anything the object looks at is shown as it really is"
-    - "A short voice sample or description your brand has used before, so the object sounds like your other ads"
-
+    - A photo of the real old object (the shaker, the kettle) from the front and side, so the character looks like the thing buyers own
+    - A photo of the product out of its pack, so anything the object looks at is shown as it really is
+    - A short voice sample or description your brand has used before, so the object sounds like your other ads
 terms:
   - term: Character card
     meaning: One fixed description of the object, pasted word for word into every prompt so it stays the same.

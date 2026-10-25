@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It picks a stack, then builds with performance limits in mind.
 new_slug: 3d-web-scene-builder
 name: 3D web scene builder
-summary: Describe the scene or product viewer. Get working 3D page code with fast loading and a fallback.
+summary: Describe the scene or product viewer. Get working 3D page code with
+  fast loading and a fallback.
 job: build-websites
 headline: 3D web scene builder
-subhead: Describe the scene, product viewer or portfolio piece and the devices it must run on. It picks a tool (Spline, React Three Fiber or Three.js), prepares your models and sets up loading, controls and a fallback. You get the scene as code, the tool choice with reasons and a performance checklist.
+subhead: Describe the scene, product viewer or portfolio piece and the devices
+  it must run on. It picks a tool (Spline, React Three Fiber or Three.js),
+  prepares your models and sets up loading, controls and a fallback. You get the
+  scene as code, the tool choice with reasons and a performance checklist.
 explain: |
   A product viewer, configurator or portfolio scene can run in the browser, load quickly, and fall back to a plain view on devices that cannot run it.
 
@@ -27,6 +31,8 @@ you_get:
   - Controls tuned for first-time users
   - A performance checklist
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
   - It works best when your AI can run code and open a browser.

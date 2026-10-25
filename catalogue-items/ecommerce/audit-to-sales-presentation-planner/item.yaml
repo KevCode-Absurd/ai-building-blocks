@@ -1,0 +1,19 @@
+slug: audit-to-sales-presentation-planner
+name: Audit-to-sales presentation planner
+summary: Turn an audit into a ten-slide sales story. Keep the findings, proof, value assumptions and proposed scope clear.
+category: ecommerce
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: document
+    required: true
+uses: []
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

@@ -2,7 +2,7 @@ slug: krea
 name: Krea
 maker: Krea
 url: https://www.krea.ai
-promise: Image, video and 3D models in one place, with a free daily allowance.
+promise: "Create and refine images, video and 3D work with several models in one account."
 use_cases: [make-images, make-video, design]
 categories: [image, video]
 what_it_does:
@@ -13,7 +13,7 @@ what_it_does:
   - Chains steps into a repeatable flow with Krea Nodes.
 benefits:
   - Compare several models on the same idea without extra sign-ups.
-  - Try everything free, with 100 units back every day.
+  - "Try ideas with the listed free daily allowance."
   - Keep a brand look by training on your own pictures.
 best_for:
   - Designers and marketers who test many models.

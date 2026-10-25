@@ -670,3 +670,7 @@ Zone 5 (20-26ft) - Stop 1 (First):
 - **container-loading-optimization**: For container loading
 - **fleet-management**: For vehicle fleet optimization
 - **last-mile-delivery**: For final delivery optimization
+
+## Repaired packing feasibility rules
+
+A plan is feasible only after item dimensions and weights, usable cargo-space dimensions, door opening, wheel-well intrusions, payload/GVWR, axle or axle-group limits, tie-down rules and stop sequence are known. Unknown limits block a safety claim. Check each item fits through the opening and in its assigned orientation; verify load dimensions, total weight and axle loads from actual geometry and load positions. Include packaging, pallet, passenger, equipment and fuel allowances in payload as applicable. Keep heavy cargo low and secure it; do not exceed any manufacturer or legal limit. For multi-stop work, load reverse delivery order only when safe access and restraint remain valid. Never claim an optimized or compliant load from volume utilization alone. Return feasible items, rejected items, assumptions and unresolved measurements separately.

@@ -1,23 +1,19 @@
 new_slug: buyer-brief-writer
-name: "Buyer brief writer"
-summary: "Paste your offer and some reviews. Get a half-page buyer brief and the one force your copy must move."
+name: Buyer brief writer
+summary: Share your offer and real buyer words. Get a short copy brief showing their situation, doubts and the main concern to address.
 job: understand-customers
-thinking: low
-thinking_why: "It reshapes what you give it, with few judgement calls."
-
-headline: "Buyer brief writer"
-subhead: Paste your offer and real buyer evidence, such as reviews, support emails or survey answers. It sorts their words into what pushes, pulls, worries and holds them back. You get a half-page brief, the one force your copy must work on, and any check it missed.
-
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.
+headline: Buyer brief writer
+subhead: Share the offer and real reviews, interviews or support messages. It identifies the buying moment, sorts reasons to change or stay put, and checks what buyers and rivals already know. Get a brief under 250 words, exact customer phrases and one message priority. Missing evidence stays visible. A proposed priority is a writing decision, not proof that every buyer thinks the same.
 explain: |
   Most copy misses because it's aimed at a label ("busy mums 30 to 45") or at everything at once. It describes the problem to people who already feel it, and skips the worry that's really stopping them.
 
   This skill reads your buyer evidence the way switching research does. Buyers move when the push of the problem and the pull of something better outweigh their fear of the new and the comfort of habit. It quotes your buyers for each of those four forces, places them on Eugene Schwartz's five levels of awareness, and judges how much the market has already heard. Then it picks the one force your copy must move, and ends with a one-line job statement the writer works from.
-
 when:
   - You're about to write an ad, a page, an email or a script and want to aim it first.
   - You have a pile of reviews and want to know what they say about why people buy.
   - Your copy explains the problem well, but people still don't buy.
-
 you_give:
   - Your offer in a few lines, what you sell, the price and the terms
   - Buyer evidence, such as reviews, support messages, survey answers, call notes or cancellation reasons
@@ -29,14 +25,10 @@ you_get:
   - The four forces in your buyers' own words, and the one your copy must work on
   - A bank of buyer phrases to borrow, and a list of gaps to ask customers about
   - Any of its own checks the brief still misses, each named
-
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your offer in three or four lines.
-  - Paste the buyer evidence as written. Include unhappy reviews and cancellation reasons; they hold the fears.
-  - Add what competitors promise, if you know, so it can judge what the market has heard.
-  - Read the gaps list. Each one is a question worth asking your customers.
-
+  - Supply the relevant brief and material, or name files in the authorized project.
+  - Ask for the stated result. Keep supplied facts, assumptions and missing evidence distinct.
+  - Review the result before authorizing repairs or external changes. Save the returned packet or authorize a file destination.
 how_it_works:
   - title: Finds the moment
     text: Quotes what happened right before buyers started looking, as a situation, never a label.
@@ -52,7 +44,8 @@ how_it_works:
     text: When this happens, I want this, so I can do this. What stops me is this.
   - title: Checks the brief
     text: Goes through its own checks, such as exact quotes and one force only, fixes what it can, and names any check it still missed.
-
+  - title: Keeps research bounded
+    text: Uses unique relevant records, separates customer language from proof and returns a provisional brief. It asks only the missing questions that could change the decision.
 output_shape: |
   JOB LINE
   When <the moment>, I want to <the progress>, so I can <what it gives
@@ -81,7 +74,6 @@ output_shape: |
 
   CHECKS MISSED
   <one line per check still missed, or none>
-
 example:
   business: sprout
   input: |
@@ -145,7 +137,6 @@ example:
     - Is the price worry about the first box or the renewal?
     - Does "can a gummy hold enough?" worry them? The brand file says so,
       but none of these reviews do.
-
 tweaks:
   - what: The evidence you paste
     how: Reviews come from people who already switched, so they show push and pull. Cancellation reasons and support messages show fear and habit. Paste both for all four forces.
@@ -155,35 +146,32 @@ tweaks:
     how: Paste what three competitors promise. It makes the market stage a judgement from evidence instead of a guess.
   - what: No evidence at all
     how: It will mark the awareness level as assumed and give you three questions to ask customers. Ask them before writing.
-
 judge:
   - Every quote appears word for word in the evidence you pasted. Search for two of them.
   - There's exactly one force to work on, with a reason.
   - Forces with no evidence are marked as gaps, not filled with guesses.
   - The job line describes a moment, not an age group or a job title.
   - The market stage names the evidence it rests on.
-
 test:
   - Run it on reviews from a buyer group you know well. If the job line describes someone you don't recognise, check which reviews it leaned on.
   - Run it twice on the same evidence. The awareness level and the force to work on should match.
   - Add a batch of cancellation reasons and run it again. The fear and habit lines should fill in.
   - Give the brief to a writer and compare their draft with one written without it. The aimed draft should spend its words on the chosen force.
-
 improve:
   - Add the buyer groups from your brand file to "What you need" in the skill file, so step 3 places each group the same way every run.
   - Write what your main competitors promise into step 4, so the market stage is judged the same way every time.
   - Save each brief to your brand file, one per buyer group, and update it when new reviews come in.
   - Pair it with "Sales copy opening writer" or "Ad first line writer and scorer", which both start from this brief.
-
 works_best_with:
   tools:
-    - {name: "Claude", why: "Every current Claude model reads up to 1 million tokens, so a big pile of reviews and tickets fits in one chat."}
-    - {name: "Gemini", why: "Also takes long inputs, and works inside Google Sheets if your survey answers live there."}
+    - name: Claude
+      why: Every current Claude model reads up to 1 million tokens, so a big pile of reviews and tickets fits in one chat.
+    - name: Gemini
+      why: Also takes long inputs, and works inside Google Sheets if your survey answers live there.
   inputs:
-    - "Cancellation reasons or refund notes, so the fear and habit forces have quotes"
-    - "Answers to 'what nearly stopped you buying?' from a short survey after purchase, so fears come from real words"
-    - "Competitor ads from the Meta Ad Library, so the market stage rests on what others promise"
-
+    - Cancellation reasons or refund notes, so the fear and habit forces have quotes
+    - Answers to 'what nearly stopped you buying?' from a short survey after purchase, so fears come from real words
+    - Competitor ads from the Meta Ad Library, so the market stage rests on what others promise
 terms:
   - term: Buyer evidence
     meaning: Anything your buyers wrote or said in their own words, such as reviews, emails or survey answers.

@@ -1,0 +1,37 @@
+thinking: medium
+thinking_why: It follows a set method and adapts its questions or draft to your evidence.
+new_slug: technical-topic-deep-dive
+name: Technical topic deep dive
+summary: Choose a topic you know partly. Practice explaining how it works, its
+  tradeoffs and where it can fail.
+job: study-and-practice
+headline: Technical topic deep dive
+subhead: Choose a technical topic whose basics you already know. It checks your
+  starting point, then explores how it works, tradeoffs and failure cases. You
+  explain each step back and finish with a short account of the idea in your own
+  words.
+explain: Choose a technical topic whose basics you already know. It checks your
+  starting point, then explores how it works, tradeoffs and failure cases. You
+  explain each step back and finish with a short account of the idea in your own
+  words.
+you_give:
+  - A technical topic and what you already understand.
+  - The interview, design choice or bug that makes it useful.
+you_get:
+  - A guided path from the basics to real failure cases.
+  - Questions and worked traces at your current level.
+  - A final explain-it-back task.
+how_it_works:
+  - title: Step 1
+    text: Check your current depth and skip basics you can already explain.
+  - title: Step 2
+    text: Use worked traces, choices and edge cases to test deeper understanding.
+  - title: Step 3
+    text: Finish with an explanation written in your own words.
+how_to_use:
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
+  - It works best when your AI can read your supplied notes and ask follow-up
+    questions.

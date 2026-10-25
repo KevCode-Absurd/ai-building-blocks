@@ -1,3 +1,4 @@
+import { choosePlanner, submitPlan } from "./fixtures/workflow-ui";
 import { test, expect } from "@playwright/test";
 import fs from "node:fs";
 import { createHash } from "node:crypto";
@@ -5,9 +6,9 @@ import { unzipSync, strFromU8, strToU8, deflateSync } from "fflate";
 
 test("custom workflow offers top instructions and downloads a verified, unexecuted contract", async ({ page, context }, info) => {
   await context.grantPermissions(["clipboard-read", "clipboard-write"]);
-  await page.goto("/compose"); await page.getByRole("tab", { name: "Free assembly" }).click();
+  await page.goto("/compose"); await choosePlanner(page, "free");
   const goal = "Build a landing page from scratch and deliver source code";
-  await page.getByTestId("compose-goal").fill(goal); await page.getByTestId("compose-submit").click();
+  await page.getByTestId("compose-goal").fill(goal); await submitPlan(page);
   const prompt = page.getByTestId("execution-prompt").first();
   await expect(prompt).toBeVisible(); await prompt.getByTestId("copy-execution-prompt").click();
   expect(await page.evaluate(() => navigator.clipboard.readText())).toContain(`for this goal: ${goal}`);
@@ -20,10 +21,10 @@ test("custom workflow offers top instructions and downloads a verified, unexecut
   expect(JSON.parse(strFromU8(files["templates/execution-report.json"])).run_status).toBe("NOT_STARTED");
   expect(strFromU8(files["START_HERE.txt"])).toContain("Never invent accepted inputs");
   for (const s of contract.steps) expect(s.skill_sha256).toBe(createHash("sha256").update(files[s.skill_path]).digest("hex"));
-  await page.screenshot({ path: "../reports/workflow-execution-desktop.png", fullPage: true });
+  await page.screenshot({ path: info.outputPath("workflow-execution-desktop.png"), fullPage: true });
   await page.setViewportSize({ width: 390, height: 844 }); await expect(prompt).toBeVisible();
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
-  await page.screenshot({ path: "../reports/workflow-execution-mobile.png", fullPage: true });
+  await page.screenshot({ path: info.outputPath("workflow-execution-mobile.png"), fullPage: true });
   const edited = JSON.parse(strFromU8(files["workflow.edit.json"]));
   edited.flowCode = Buffer.from(deflateSync(strToU8(JSON.stringify({ v: 1, n: "Incomplete", s: [contract.steps[0].skill, "missing-required-skill"], p: [[0, 0], [1, 0]], e: [[0, 1]], m: [] })))).toString("base64url");
   await page.getByLabel("Import workflow JSON").setInputFiles({ name: "workflow.edit.json", mimeType: "application/json", buffer: Buffer.from(JSON.stringify(edited)) });
@@ -33,6 +34,7 @@ test("custom workflow offers top instructions and downloads a verified, unexecut
 test("clipboard failure provides manual instructions and never says copied", async ({ page }) => {
   await page.addInitScript(() => Object.defineProperty(navigator, "clipboard", { value: { writeText: async () => { throw Error("denied"); } }, configurable: true }));
   await page.goto("/from-a-source");
+  await page.getByText("How to use the downloaded files", { exact: true }).click();
   const prompt = page.getByTestId("execution-prompt").first(); await prompt.getByTestId("copy-execution-prompt").click();
   await expect(prompt.getByRole("alert")).toHaveText("Copy did not work. Select and copy the instructions above.");
   await expect(prompt.getByLabel("AI execution instructions")).toBeVisible();
@@ -41,7 +43,7 @@ test("clipboard failure provides manual instructions and never says copied", asy
 
 test("source-authoring download uses the shared contract and preserves its real approval gate", async ({ page }, info) => {
   await page.goto("/from-a-source"); await page.getByTestId("intake-title").fill("Checked source workflow"); await page.getByTestId("intake-text").fill("Read the current material. Compare its facts and list missing evidence. Ask the user to review the method before writing.");
-  const [download] = await Promise.all([page.waitForEvent("download"), page.getByTestId("intake-download-top").click()]);
+  const [download] = await Promise.all([page.waitForEvent("download"), page.getByTestId("intake-download").click()]);
   const file = info.outputPath("source.zip"); await download.saveAs(file); const raw = unzipSync(fs.readFileSync(file));
   const files = Object.fromEntries(Object.entries(raw).map(([p, b]) => [p.split("/").slice(1).join("/"), b]));
   expect(strFromU8(files["AUTHORING.md"])).toContain("A generic earlier");
@@ -55,6 +57,7 @@ test("standalone builder separates its prompt from the toolbar and rejects incom
   const packed = (slugs: string[]) => Buffer.from(deflateSync(strToU8(JSON.stringify({ v: 1, n: "Checked workflow", g: "Draft a clear reply", s: slugs, p: slugs.map((_, i) => [4 + i * 36, 11]), e: [], m: [] })))).toString("base64url");
   await page.goto(`/?flow=${packed(["executive-email-draft"])}#build`);
   const builder = page.getByTestId("builder"); await expect(builder.getByLabel("Workflow name")).toHaveValue("Checked workflow");
+  await builder.getByTestId("workflow-diagram-view").click();
   // Capture all rectangles in one frame: #build uses smooth scrolling, so separate calls can drift.
   const layout = await builder.evaluate(el => {
     const toolbar = el.querySelector(".stage-bar")!.getBoundingClientRect();
@@ -71,6 +74,7 @@ test("standalone builder separates its prompt from the toolbar and rejects incom
 
 test("mind collections route workflow entries to complete workflow downloads", async ({ page }, info) => {
   await page.goto("/minds/cal-newport");
+  await page.getByRole("heading", { name: "Skills from Cal Newport's work", exact: true }).click();
   const workflows = page.getByTestId("mind-workflow-downloads");
   await expect(workflows).toContainText("Each workflow has its own complete pack");
   const slug = "daily-shutdown-planner";
@@ -86,6 +90,7 @@ test("mind collections route workflow entries to complete workflow downloads", a
 test("incomplete legacy workflows stop at the missing reference without producing a partial pack", async ({ page }) => {
   let downloads = 0; page.on("download", () => downloads++);
   await page.goto("/minds/jeff-bezos");
+  await page.getByRole("heading", { name: "Skills from Jeff Bezos's work", exact: true }).click();
   await page.getByTestId("mind-workflow-downloads").locator('a[data-slug="weekly-product-funnel-watcher"]').click();
   await page.getByTestId("download-handoff").click();
   await page.getByTestId("needs-download").click();

@@ -1,34 +1,49 @@
 slug: selfie-style-video-prompts
 renamed_from: selfie-style-video-clip-prompt-writer
-name: "Selfie-style video clip prompt writer"
-summary: "Paste your selfie-style script and attach product photos. Get phone-style clip prompts and an edit list."
+name: Selfie-style video clip prompt writer
+summary: Paste your selfie-style script and attach product photos. Get phone-style clip prompts and an edit list.
 category: general
-boards: [ecommerce]
+boards:
+  - ecommerce
 type: skill
 role: render
 job: video
 level: advanced
 inputs:
-  - {type: script, required: true}
-  - {type: product_data, required: true}
-  - {type: brand_brain, required: false}
+  - type: script
+    required: true
+  - type: product_data
+    required: true
+  - type: brand_brain
+    required: false
 outputs:
-  - {type: image_prompt}
-  - {type: video_prompt}
-  - {type: avatar_sheet}
-  - {type: edit_plan}
-uses: [selfie-style-ad-script]
+  - type: image_prompt
+    required: true
+  - type: video_prompt
+    required: true
+  - type: avatar_sheet
+    required: true
+  - type: edit_plan
+    required: true
+uses:
+  - selfie-style-ad-script
 example: ugc
 origin: rebuilt
-source_ids: [CES-100]
-version: 2.1.0
+source_ids:
+  - CES-100
+version: 2.2.0
 credits:
-  - {title: "Federal Trade Commission Announces Final Rule Banning Fake Reviews and Testimonials", by: "US Federal Trade Commission", url: "https://www.ftc.gov/news-events/news/press-releases/2024/08/federal-trade-commission-announces-final-rule-banning-fake-reviews-testimonials", used: "No testimonial from a person who doesn't exist, so a made-up presenter's first-person results go back to the writer"}
-  - {title: "Ultimate prompting guide for Veo 3.1", by: "Khulan Davaajav and Hussain Chinoy, Google Cloud", url: "https://cloud.google.com/blog/products/ai-machine-learning/ultimate-prompting-guide-for-veo-3-1", used: "Quoted speech, ambient and SFX sound lines, reference images reused across clips"}
-  - {title: "Meta Ads Safe Zones: A Guide to the 2026 Unified Creative Updates", by: "Dovile Miseviciute, Billo", url: "https://billo.app/blog/meta-ads-safe-zones", used: "Keeping the top 14% and bottom third of the first still plain"}
-tested:
-  on: 2026-10-20
-  business: sprout
-  model: claude-opus-5-5
-  judge: claude-fable-5-1
-  result: pass
+  - title: Federal Trade Commission Announces Final Rule Banning Fake Reviews and Testimonials
+    by: US Federal Trade Commission
+    url: https://www.ftc.gov/news-events/news/press-releases/2024/08/federal-trade-commission-announces-final-rule-banning-fake-reviews-testimonials
+    used: No testimonial from a person who doesn't exist, so a made-up presenter's first-person results go back to the writer
+  - title: Ultimate prompting guide for Veo 3.1
+    by: Khulan Davaajav and Hussain Chinoy, Google Cloud
+    url: https://cloud.google.com/blog/products/ai-machine-learning/ultimate-prompting-guide-for-veo-3-1
+    used: Quoted speech, ambient and SFX sound lines, reference images reused across clips
+  - title: "Meta Ads Safe Zones: A Guide to the 2026 Unified Creative Updates"
+    by: Dovile Miseviciute, Billo
+    url: https://billo.app/blog/meta-ads-safe-zones
+    used: Keeping the top 14% and bottom third of the first still plain
+package_files: all
+example_pending: true

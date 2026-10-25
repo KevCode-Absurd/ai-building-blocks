@@ -9,12 +9,12 @@
 
 export default {
   slug: "price-increase-calculator",
-  name: "Know how many sales a price rise can cost you",
+  name: "Price rise profit calculator",
   /** The plain name, used where the tool talks about itself. */
-  short: "Price increase calculator",
-  headline: "Know how many sales you can lose after a price rise and still make the same profit",
-  summary: "Type your price, your costs and the rise. You get the share of sales you can lose and still make the same profit, and what your own guess does to it.",
-  question: "If I put my price up by 5%, 10% or 20%, how many sales can I lose before I make less profit than today?",
+  short: "Price rise profit calculator",
+  headline: "Price rise profit calculator",
+  summary: "Enter your current price, costs and proposed rise. See how many sales you could lose while keeping the same profit.",
+  question: "How would a price rise affect profit if some sales are lost?",
   shelf: ["general", "ecommerce"],
   version: "1.0.0",
   updated: "2026-10-21",

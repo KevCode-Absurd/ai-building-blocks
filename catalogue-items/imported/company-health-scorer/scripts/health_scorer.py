@@ -67,12 +67,23 @@ class Metric:
     higher_is_better: bool = True
 
     def score(self) -> Optional[float]:
-        """Score 1-10. Returns None if no value."""
+        """Score 1-10. Returns None if missing or an invalid runway value."""
         if self.value is None:
             return None
         v = self.value
         g = self.green_threshold
         r = self.red_threshold
+        if self.name == "Runway (months)":
+            if v <= 0:
+                return None
+            # Runway boundaries are explicit: green > g, red < r, yellow inclusive.
+            if v > g:
+                excess = min((v - g) / max(g * 0.3, 0.01), 1.0)
+                return 7.0 + (3.0 * excess)
+            if v < r:
+                deficit = min((r - v) / max(r * 0.5, 0.01), 1.0)
+                return max(1.0, 3.0 - (2.0 * deficit))
+            return 5.0
 
         if self.higher_is_better:
             if v >= g:
@@ -153,7 +164,7 @@ class Dimension:
 def build_financial_dimension(stage: Stage, **kwargs) -> Dimension:
     # Thresholds vary by stage
     runway_green = {Stage.SEED: 18, Stage.SERIES_A: 12, Stage.SERIES_B: 12, Stage.SERIES_C: 18}
-    runway_red = {Stage.SEED: 9, Stage.SERIES_A: 6, Stage.SERIES_B: 6, Stage.SERIES_C: 9}
+    runway_red = {Stage.SEED: 12, Stage.SERIES_A: 6, Stage.SERIES_B: 6, Stage.SERIES_C: 9}
     burn_green = {Stage.SEED: 3.0, Stage.SERIES_A: 2.0, Stage.SERIES_B: 1.5, Stage.SERIES_C: 1.0}
     burn_red = {Stage.SEED: 5.0, Stage.SERIES_A: 3.0, Stage.SERIES_B: 2.5, Stage.SERIES_C: 1.5}
 

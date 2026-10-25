@@ -7,12 +7,12 @@ role: check
 job: analysis
 level: intermediate
 inputs:
-  - {type: email_flow, required: true}
-  - {type: performance_sheet, required: true}
+  - { type: email_flow, required: true }
+  - { type: performance_sheet, required: true }
 outputs:
-  - {type: audit_report, required: true}
+  - { type: audit_report, required: true }
 origin: rebuilt
-version: 1.0.0
-minds: [joanna-wiebe]
+version: 1.0.1
+minds: [ joanna-wiebe ]
 credits:
-  - {title: "Where do I start when I want to optimize an email automation? (2025)", by: "Joanna Wiebe, Copyhackers", used: "Treating current emails as the control, mapping the flow, recording each email's numbers and sorting emails into green, yellow and red"}
+  - { title: "Where do I start when I want to optimize an email automation? (2025)", by: "Joanna Wiebe, Copyhackers", used: "Treating current emails as the control, mapping the flow, recording each email's numbers and sorting emails into green, yellow and red" }

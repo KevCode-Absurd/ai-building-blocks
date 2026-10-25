@@ -1,0 +1,46 @@
+new_slug: approved-plan-video-production-workflow
+name: Approved-plan video production workflow
+summary: Turn your footage and brief into an edit plan. Approve the plan, review the render and prepare the delivery files.
+job: make-video-ads
+headline: Approved-plan video production workflow
+subhead: Turn your footage and brief into an edit plan. Approve the plan, review the render and prepare the delivery files.
+explain: |-
+  Turn footage into an edit plan, then use approval, production and QA gates before delivery or posting.
+
+  Share raw footage, transcript, target platform, duration, rights and tool access. Get an approved edit plan, render qa record and delivery handoff.
+when:
+  - You need an approved edit plan, render QA record and delivery handoff.
+  - You need approved-plan video production workflow for a specific task.
+  - You want the method's decisions and assumptions written down before acting.
+you_give:
+  - Raw footage
+  - Transcript
+  - Target platform
+  - Duration
+  - Rights and tool access
+you_get:
+  - An approved edit plan, render QA record and delivery handoff
+  - The sources used, missing inputs and assumptions
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Check the inputs
+    text: Confirm raw footage, transcript, target platform, duration, rights and tool access. Mark facts that are missing.
+  - title: How This Works
+    text: Follow the how this works section in the full method and keep its required fields and decision rules.
+  - title: Intake
+    text: Follow the intake section in the full method and keep its required fields and decision rules.
+  - title: Analyze
+    text: Follow the analyze section in the full method and keep its required fields and decision rules.
+  - title: Edit Plan
+    text: Follow the edit plan section in the full method and keep its required fields and decision rules.
+  - title: Approval Gate
+    text: Follow the approval gate section in the full method and keep its required fields and decision rules.
+  - title: Produce
+    text: Follow the produce section in the full method and keep its required fields and decision rules.
+  - title: Review the result
+    text: Return an approved edit plan, render qa record and delivery handoff. Check facts, math and the decisions before any action.
+thinking: high
+thinking_why: It compares supplied evidence and follows a specific method.

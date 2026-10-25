@@ -2,7 +2,7 @@ slug: capcut
 name: CapCut
 maker: ByteDance
 url: https://www.capcut.com
-promise: Cut, caption and finish short videos on your phone or computer.
+promise: "Edit, caption and resize short videos on your phone or computer."
 use_cases: [edit-video, make-video]
 categories: [video]
 what_it_does:
@@ -12,7 +12,7 @@ what_it_does:
   - Offers templates, effects and music for short videos.
   - Makes AI clips and images with its AI features.
 benefits:
-  - Finish a short video from your phone in one sitting.
+  - "Edit a short video from your phone or computer."
   - Add captions without typing every line.
   - Reuse one edit in several sizes for different feeds.
 best_for:

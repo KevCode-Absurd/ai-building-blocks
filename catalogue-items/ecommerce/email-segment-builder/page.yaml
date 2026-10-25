@@ -1,117 +1,98 @@
 new_slug: email-segment-builder
-name: "Email segment builder"
-summary: "Give it your email tool and send rhythm. Get core segments with exact conditions, send rules and a clean-up plan."
+name: Email audience segment and exclusion planner
+summary: Define store email audiences with explicit AND/OR rules. Get engaged, buyer and exclusion groups, send order and a reviewed cleanup plan.
 job: write-emails
 thinking: medium
-thinking_why: "The work is exact rules with AND and OR logic. A mid-size model can do it, but check each condition in your tool."
+thinking_why: It compares supplied evidence and follows a specific method.
+headline: Email audience segment and exclusion planner
+subhead: Share the email tool, list size, sending pace, region and VIP rule. It proposes core audiences, separates purchase history from recent activity and writes exact conditions. Get group rules, missing values and a plan for checking recipients before use. Tool names and consent rules need local review. This plan does not suppress contacts or authorize sends.
+explain: |-
+  This skill writes proposed email audience rules with clear AND and OR conditions. Send groups need current marketing permission and delivery checks. Exclusion and cleanup groups may include ineligible profiles so the audit can find them; those groups must never receive a campaign.
 
-headline: "Email segment builder"
-subhead: Give it your email tool, list size, send rhythm, region and what counts as a VIP. It builds the segments that matter, with exact conditions. You get engaged, unengaged and suppression groups, buyer and prospect groups, a send order and a list clean-up plan.
-
-explain: |
-  Sending every campaign to your whole list wears down your open rate and your inbox placement. Cutting the list into dozens of small groups does the opposite: each person gets fewer chances to buy, and you spend your week building groups instead of emails.
-
-  This skill builds a short set of segments that does the work. A main engaged group is the one you send to. An unengaged group feeds your sunset flow, and a suppression group holds people you stop sending to. A few groups of buyers and prospects handle special sends. It writes every condition out, shows where to use AND and where to use OR, and says which groups to skip if you are small.
-
+  Quietness alone does not remove a known buyer under this source’s rule. That protection needs reliable lifetime purchase history. It does not override verified complaints, opt-outs or delivery blocks. Review provider and local rules before any change. The result is a plan, not a live send or suppression action.
 when:
   - You send campaigns to your whole list and your open rate is falling.
   - You want to know who counts as engaged and who to stop sending to.
   - You want VIP, first-time buyer and high-intent groups without cutting your list into tiny pieces.
-
 you_give:
   - Your email tool and how many people are on your list
   - How many campaigns you send a month
   - Your region, US or EU, since consent rules differ
   - Your average order value and what counts as a VIP for you
   - Your current open and click rates (optional)
-
 you_get:
   - A set of segments, each with its exact conditions
-  - Exclusion and suppression groups
+  - Separate send-eligible groups and exclusion or cleanup audit groups
   - A suggested send order by segment
   - A list clean-up plan
-
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your tool's name, your list size, your send rhythm, your region and your average order value.
-  - Build the engaged group and the suppression group first, and send campaigns only to them.
+  - Review the engaged group and exclusion groups first. Send only to eligible recipients, and exclude every suppression group.
   - Add buyer and high-intent groups once the engaged group works.
   - Clone a segment instead of rebuilding it when you need another window.
-
 how_it_works:
-  - title: Sets who can be emailed
-    text: Every segment starts with "can receive marketing". In the EU it means the person subscribed. It keeps subscribed apart from can receive marketing.
+  - title: Separates sends from audits
+    text: Send groups include permission and delivery eligibility. Exclusion and cleanup audits may include ineligible profiles. A purchase does not establish consent.
   - title: Builds the engaged group
     text: Opened or clicked, or ordered, or started checkout, or active on site in the window, joined with OR. Then it adds can receive marketing with AND.
-  - title: Builds unengaged and suppressed
-    text: Unengaged feeds the sunset flow. Suppressed holds spam reporters, hard bounces and long-silent profiles.
+  - title: Separates quietness from delivery blocks
+    text: Quietness-based candidates require reliable lifetime history showing no orders. Known buyers are protected from that rule, while verified complaints, opt-outs and delivery blocks still apply.
   - title: Builds buyer and prospect groups
     text: First-time buyers, returning buyers, non-buyers, VIPs, high-potential visitors, window shoppers and win-back.
   - title: Sets the send order
-    text: Core campaigns go to the engaged group. Special sends go to the small groups, and the whole list gets only big news.
+    text: Core campaigns are proposed for eligible engaged recipients. Special and broad sends keep the same permission, delivery and suppression exclusions.
   - title: Adds the resend trick
     text: A group of people who got a key email and did not open it gets a resend a day or two later with a new subject.
-
-output_shape: |
-  SEGMENTS  <store> | <tool> | <list size> | region <US | EU>
-
-  CORE
-  Can receive marketing   <condition>
-  Engaged <n> days        <opened OR clicked OR ordered OR checkout started OR active on site in n days> AND can receive marketing
-  Unengaged <n> days      <zero opens, clicks, site activity, checkouts; no orders ever>
-  Suppress 180            <conditions>
-  All but suppressed      <excludes unengaged, spam-marked, bounced, bot-looking>
-
-  SPECIALTY
-  First-time | Returning | Non-buyers | VIP | High potential | Window shoppers | Last chance | Win-back
-    <exact conditions for each>
-
-  SEND ORDER   <segment | how often | what to send>
-  RESEND       <received and did not open> after <1 to 2 days>
-  CLEAN-UP     <steps, timing, region note>
-  CHECKS MISSED: <none or the list>
-  MISSING: <what was not given>
-
+output_shape: |-
+  SEGMENTS <store> | <tool> | <list size> | region
+  SEND ELIGIBLE <each group: exact activity rule AND current permission AND delivery eligibility, excluding suppression>
+  EXCLUSION/AUDIT <complaints, opt-outs, delivery blocks and quietness candidates; never send here>
+  QUIETNESS CANDIDATES <no lifetime order, reliable history, activity and send-count checks>
+  KNOWN BUYERS <not removed solely for quietness; verified safety blocks still apply>
+  SPECIALTY <buyer, prospect, VIP and high-potential rules>
+  SEND ORDER <eligible group | cadence | exclusions>
+  CLEANUP REVIEW <policy, history gaps and approval before action>
+  CHECKS MISSED <list or none>
+  MISSING <unresolved data or rules>
 tweaks:
   - what: Your send rhythm
     how: Tell it how often you send. A store sending three to four times a week uses a shorter engaged window than a store sending once a week.
   - what: Your open rate
-    how: Give the current rate. If it keeps falling, the skill sends to the 30 or 60 day group until it recovers, then widens.
+    how: Give the current rates. It may propose testing a shorter engaged window, then widening only after reviewing results; it does not send emails itself.
   - what: Your size
     how: Under about 20 million a year with one or two people on email, the skill keeps groups big and uses dynamic blocks for differences, instead of many small groups.
   - what: What counts as a VIP
     how: Give your rule, such as 4 or more orders, or spend near four times your average order value. The skill adapts it.
-
 judge:
   - Every segment states its exact conditions with AND and OR in the right places.
-  - Every segment includes the "can receive marketing" condition, and the region note is included.
+  - Every send group includes permission, delivery and suppression checks. Exclusion audits are labeled and never used as send groups.
   - The sources' different engaged windows are shown with when each fits.
-  - Quiet buyers are not suppressed by mistake.
+  - Known buyers are protected from quietness-only suppression; verified opt-outs, complaints and delivery blocks remain separate.
   - The skill says to adapt names to your tool.
-
 test:
   - Build the engaged group in your tool and compare its size with your list. It should be a share of the list, not all of it.
-  - "Check the OR trap: if the group is nearly your whole list, an OR sits where an AND belongs."
-  - Check that a customer with an order but no opens is not in the suppression group.
+  - Check AND/OR logic with eligible, ineligible and suppressed examples. Segment size alone does not prove which condition is wrong.
+  - A buyer from 366 days ago must not enter quietness-only suppression. A verified complaint still excludes that same buyer from sends.
   - Run it twice on the same facts. The conditions should match.
-
 improve:
   - Add your tool's exact filter names to the skill file, so conditions can be pasted straight in.
   - Add your VIP rule and your average order value.
   - Add the segments you already use, so the skill keeps what works.
   - Pair it with the sunset flow and list cleaner, the win-back flow builder and the inbox placement recovery planner.
-
 works_best_with:
   tools:
-    - {name: "Klaviyo", why: "The conditions in this skill follow its segment filters, so they can be copied across."}
-    - {name: "Shopify", why: "Order and customer data feed the buyer and VIP groups."}
-    - {name: "Any good chat AI", why: "Any current chat AI can write and check the conditions."}
+    - name: Klaviyo
+      why: The conditions in this skill follow its segment filters, so they can be copied across.
+    - name: Shopify
+      why: Order and customer data feed the buyer and VIP groups.
+    - name: Any good chat AI
+      why: Any current chat AI can write and check the conditions.
   inputs:
-    - "Open and click rates for the last 30, 60 and 90 days"
-    - "Spam complaint and bounce counts"
-    - "Your campaign calendar, to match groups to sends"
-    - "Your VIP list, to check the rule picks the right people"
-
+    - Open and click rates for the last 30, 60 and 90 days
+    - Spam complaint and bounce counts
+    - Your campaign calendar, to match groups to sends
+    - Your VIP list, to check the rule picks the right people
 terms:
   - term: Segment
     meaning: A saved group of people who match a set of conditions, such as "opened an email in the last 90 days".

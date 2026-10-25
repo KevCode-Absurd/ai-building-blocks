@@ -2,7 +2,7 @@ slug: lovable
 name: Lovable
 maker: Lovable
 url: https://lovable.dev
-promise: Chat with an AI to build a web app or site, then publish it.
+promise: "Build, edit and publish a web app or site through a chat."
 use_cases: [build-apps]
 categories: [coding]
 what_it_does:
@@ -12,7 +12,7 @@ what_it_does:
   - Publishes the app to a live link, with custom domains on paid plans.
   - Lets everyone in your workspace share one pool of credits.
 benefits:
-  - See a working first version of your idea in an afternoon.
+  - "Build a first version you can test and refine."
   - Test an idea with real users before you pay for a developer.
   - Fix and restyle the app by describing the change.
   - Start free with a daily credit allowance.

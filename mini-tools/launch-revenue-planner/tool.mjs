@@ -8,12 +8,12 @@
 
 export default {
   slug: "launch-revenue-planner",
-  name: "Know what your webinar or launch will make, and the sign-ups you need to break even",
+  name: "Webinar and launch profit planner",
   /** The plain name, used where the tool talks about itself. */
-  short: "Launch planner",
-  headline: "Know what your webinar or launch will make after refunds and ads, and the sign-ups you need to break even",
-  summary: "Type your sign-ups, show-up rate, buy rate, price, refunds and costs. You get the buyers, the profit, what one sign-up is worth and the sign-ups you need to break even.",
-  question: "How much will my webinar or launch make after refunds and ad costs, and how many sign-ups do I need to break even?",
+  short: "Webinar and launch profit planner",
+  headline: "Webinar and launch profit planner",
+  summary: "Enter sign-ups, attendance, buying and refund rates, price and costs. Estimate buyers, profit and the sign-ups needed to cover costs.",
+  question: "How many sign-ups would cover this webinar or launch’s costs?",
   shelf: ["general"],
   version: "1.0.0",
   updated: "2026-10-21",

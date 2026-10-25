@@ -1,0 +1,21 @@
+slug: midjourney-four-direction-prompt-writer
+name: Midjourney image prompt writer
+summary: Share an image idea or reference. Get four distinct Midjourney prompts and optional directions to try next.
+category: general
+type: skill
+role: make
+job: image
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: reference_set
+    required: false
+outputs:
+  - type: image_prompt
+    required: true
+uses: []
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

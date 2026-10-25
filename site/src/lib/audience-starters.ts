@@ -4,13 +4,13 @@ export const AUDIENCE_STARTERS = [
     id: "students", name: "Students",
     goal: "Learn a topic, check your understanding or prepare an application.",
     bring: "Your syllabus or notes, what you already know, your deadline and the rules for AI use on your course.",
-    slugs: ["topic-learning-roadmap", "study-understanding-check", "research-paper-reading-guide", "research-paper-evidence-review", "research-literature-comparison", "exam-study-roadmap-builder", "adaptive-tutor", "resume-job-application-builder"],
+    slugs: ["topic-learning-roadmap", "study-understanding-check", "research-paper-reading-guide", "research-paper-evidence-review", "research-literature-comparison", "study-session-planner-and-review", "adaptive-tutor", "resume-job-application-builder"],
   },
   {
     id: "professionals", name: "Professionals",
     goal: "Prepare meetings, turn notes into actions and make clearer documents.",
     bring: "The source notes or files, who will use the result, its due date and what you may share with your AI tool.",
-    slugs: ["executive-meeting-brief", "executive-action-register", "executive-email-draft", "executive-daily-digest", "plain-english-editor", "spreadsheet-checker", "set-up-a-documentation-system-and-write-sops-that-pass-a-check", "resume-job-application-builder"],
+    slugs: ["executive-meeting-brief", "executive-action-register", "executive-email-draft", "executive-daily-digest", "plain-english-editor", "spreadsheet-checker", "documentation-system-planner", "resume-job-application-builder"],
   },
   {
     id: "startups", name: "Startups",
@@ -22,7 +22,7 @@ export const AUDIENCE_STARTERS = [
     id: "enterprise", name: "Enterprise",
     goal: "Review policies, suppliers and processes with evidence and named reviewers.",
     bring: "Approved source documents, their owner and date, your access and retention rules, and the person who signs off the result.",
-    slugs: ["company-policy-explainer", "vendor-risk-reviewer", "vendor-scorecard-builder", "ai-vendor-terms-checker", "procurement-agent-architecture-plan", "people-risk-register-builder", "set-up-a-documentation-system-and-write-sops-that-pass-a-check", "data-quality-scorecard-maker"],
+    slugs: ["company-policy-explainer", "vendor-risk-reviewer", "vendor-scorecard-builder", "ai-vendor-terms-checker", "procurement-agent-architecture-plan", "people-risk-register-builder", "sop-and-runbook-checker", "data-quality-scorecard-maker"],
   },
 ] as const;
 

@@ -1,0 +1,32 @@
+thinking: medium
+thinking_why: It follows a set method with a few checks.
+new_slug: gorgias-support-reply-writer
+name: Gorgias support reply writer
+summary: Share a ticket number. Get a reply based on the whole thread, ready for review.
+job: help-customers
+headline: Gorgias support reply writer
+subhead: Give it a Gorgias ticket number and connect your support account. It reads the full thread, earlier fixes, and unanswered questions. You get a warm, clear reply to review, with an option to save it as a Gmail draft.
+when:
+  - You use this tool for customer support and need help with this task.
+you_give:
+  - A Gorgias ticket number and access to the full thread.
+  - Verified facts needed to answer any open questions.
+you_get:
+  - Show the draft and offer edits. Save it in Gmail only when you choose that option.
+how_it_works:
+  - title: Read the conversation
+    text: Read the full thread, customer details, current owner, and ticket status.
+  - title: Answer open questions
+    text: Cover the latest message, respect what has already been tried, and state the next step.
+  - title: Review the reply
+    text: Show the draft and offer edits. Save it in Gmail only when you choose that option.
+works_best_with:
+  tools:
+    - name: Gorgias; Gmail for optional drafts
+      why: Live lookups need Composio CLI access and connected accounts for these services.
+how_to_use:
+  - Add the downloaded folder to an AI that can read skill files.
+  - Ask for gorgias support reply writer by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
+  - Provide a Gorgias ticket number and access to the full thread.
+  - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
+  - Review the result. Approve any proposed sending or account changes before they happen.

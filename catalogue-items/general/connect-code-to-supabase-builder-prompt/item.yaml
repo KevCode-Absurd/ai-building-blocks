@@ -1,0 +1,19 @@
+slug: connect-code-to-supabase-builder-prompt
+name: Connect Code to Supabase coding prompt
+summary: Get a coding brief to connect your app to Supabase, with scoped access, safe secrets and a read check.
+category: general
+type: prompt
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+    required: true
+uses: []
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

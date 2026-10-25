@@ -1,0 +1,19 @@
+slug: trigger-to-payoff-ad-structure-planner
+name: Trigger-to-payoff ad structure planner
+summary: Build an ad around trigger, emotion, evidence and payoff. Place each part in a video timeline or image layout.
+category: ecommerce
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: brief
+    required: true
+uses: []
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

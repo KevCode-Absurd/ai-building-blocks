@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It runs a fixed pipeline but checks primers and overlap first.
 new_slug: 16s-microbiome-read-processor
 name: 16S microbiome read processor
-summary: Give it paired 16S reads and primers. Get a sequence variant table, species labels and a repeatable record.
+summary: Give it paired 16S reads and primers. Get a sequence variant table,
+  species labels and a repeatable record.
 job: research-topics
 headline: 16S microbiome read processor
-subhead: Give it paired 16S read files, your primer sequences and a trained classifier. It checks the setup, then trims, denoises and labels the reads in QIIME 2. You get a table of sequence variants per sample, a species label for each, a read-retention report and saved files that record every step.
+subhead: Give it paired 16S read files, your primer sequences and a trained
+  classifier. It checks the setup, then trims, denoises and labels the reads in
+  QIIME 2. You get a table of sequence variants per sample, a species label for
+  each, a read-retention report and saved files that record every step.
 explain: |
   You end up with a table of sequence variants, a species label for each one, and a saved record of every step, so a colleague can rerun the work and get the same answer.
 
@@ -28,6 +32,8 @@ you_get:
   - Saved QIIME 2 files that record every step
   - A short list of checks that passed or failed
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
   - It works best when your AI can run code.

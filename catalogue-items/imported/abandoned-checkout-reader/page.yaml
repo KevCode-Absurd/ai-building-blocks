@@ -2,10 +2,14 @@ thinking: low
 thinking_why: It adds up records into a table.
 new_slug: abandoned-checkout-reader
 name: Abandoned checkout reader
-summary: Pick a date range. Get abandoned checkouts counted by cart value and hour of day.
+summary: Pick a date range. Get abandoned checkouts counted by cart value and
+  hour of day.
 job: run-your-store
 headline: Abandoned checkout reader
-subhead: Give it your Shopify store and a start and end date. It pulls every abandoned checkout in that range and counts them by cart value band and by hour of the day. You get both tables, the total found and plain notes on where and when buyers drop off most.
+subhead: Give it your Shopify store and a start and end date. It pulls every
+  abandoned checkout in that range and counts them by cart value band and by
+  hour of the day. You get both tables, the total found and plain notes on where
+  and when buyers drop off most.
 explain: |
   Shoppers who leave at checkout do it at certain prices and certain hours, and this report shows both. It splits abandoned checkouts by cart value and by hour of day.
 
@@ -26,6 +30,8 @@ you_get:
   - The total number found
   - Plain notes on where drop-off is highest
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
   - It works best when your AI can access your Shopify admin.

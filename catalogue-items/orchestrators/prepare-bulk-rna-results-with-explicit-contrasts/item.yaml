@@ -1,0 +1,33 @@
+slug: prepare-bulk-rna-results-with-explicit-contrasts
+name: Turn bulk RNA counts into checked results
+summary: Attach counts and sample metadata. Get an explicit comparison, analysis records and figures with unresolved quality issues.
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: spreadsheet
+    required: true
+  - type: question
+    required: true
+outputs:
+  - type: spreadsheet
+  - type: document
+  - type: audit_report
+uses:
+  - rna-seq-comparison-preparer
+  - rna-seq-group-difference-finder
+  - journal-ready-figure-maker
+steps:
+  - uses: rna-seq-comparison-preparer
+    note: Confirm bulk biological replication, count provenance, reference build and quantification path. Assemble gene-level counts with the explicit conversion policy. Hand counts, metadata, QC and exclusions to statistical fitting.
+  - uses: rna-seq-group-difference-finder
+    note: Require matching sample sets, full-rank design and residual degrees of freedom. Use explicit contrast/reference levels. Preserve complete tables, warnings, missing adjusted values and coefficient-matched shrinkage details.
+  - uses: journal-ready-figure-maker
+    note: Use result tables and diagnostics to create labelled figures with transformations, uncertainty and exclusion notes. Preserve plotting code and source data. Separate diagnostic patterns from biological conclusions.
+execution: coordinator
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

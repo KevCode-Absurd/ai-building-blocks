@@ -1,0 +1,32 @@
+new_slug: creative-sprint-readiness-reviewer
+name: Creative sprint readiness reviewer
+summary: Review a creative sprint before briefs, before image generation and before launch. Check source facts, buyer fit, copy, product truth and delivery files.
+job: check-ads
+headline: Creative sprint readiness reviewer
+subhead: Share the sprint briefs, source facts and finished assets. Get a stage-by-stage go or fix report with each blocker and its owner.
+explain: "Check a creative sprint at four gates: source readiness, concept brief, production brief and finished assets. The method checks buyer language, recent results, visual settings, copy fields, product fidelity and delivery records. Freshness dates, format limits and fixed counts are starting settings that should fit the team and current platform."
+when:
+  - A sprint is ready for design or paid image generation.
+  - Finished ads need a final check before account upload.
+you_give:
+  - Brand and product facts, buyer notes and dated ad results
+  - Concepts, production briefs and visual settings
+  - Finished assets and the intended platform specs
+you_get:
+  - A go or fix result for each sprint gate
+  - Evidence for each blocker, plus owner and recheck action
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Check readiness
+    text: Check freshness, buyer detail and the prior performance anchors before briefing.
+  - title: Review the concepts
+    text: Check awareness stage, opening, claim support, voice and CTA fit.
+  - title: Review the production brief
+    text: Check all visual settings, copy fields, aspect ratios and reference roles.
+  - title: Review finished assets
+    text: Check product truth, text legibility, brand fit and delivery records. Hold failed assets and assign the fix.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

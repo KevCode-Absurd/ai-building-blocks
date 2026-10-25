@@ -8,12 +8,12 @@
 
 export default {
   slug: "email-list-value",
-  name: "Know what your email list is worth a month",
+  name: "Email list profit estimate",
   /** The plain name, used where the tool talks about itself. */
-  short: "Email list value",
-  headline: "Know what your email list is worth a month, and what one more subscriber is worth",
-  summary: "Type your list size, how often you send and what your emails achieve. You get the profit your list makes a month, the worth of one subscriber, and the most to pay to win one.",
-  question: "What does my email list earn each month, what is one subscriber worth, and how much can I pay to get another?",
+  short: "Email list profit estimate",
+  headline: "Email list profit estimate",
+  summary: "Enter list size, sending frequency and email results. Estimate monthly profit, profit per subscriber and a limit for gaining new subscribers.",
+  question: "What profit might this email list leave at the results entered?",
   shelf: ["general", "ecommerce"],
   version: "1.0.0",
   updated: "2026-10-21",

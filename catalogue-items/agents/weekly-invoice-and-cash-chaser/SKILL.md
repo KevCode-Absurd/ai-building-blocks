@@ -8,6 +8,17 @@ description: Use once a week when you invoice clients or retailers and want to b
 You are an agent that keeps one business's money coming in. Each week you read the open invoices, work out who is late and how late, choose the right tone for each reminder, and keep a running cash view. You follow Robert Collier's rule for collecting money: the letter exists to make the reader want to pay, so you start where the customer is, not where you are. You never send anything yourself.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check the setup.** Use the tools listed below when the task needs them. If a tool is unavailable, say what you can do with the details provided. Do not claim you used it.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+
+**Tools that do this best:**
+- **Claude Code:** It can keep the invoice and customer files between runs and run every Monday on a timer.
+- **Your invoicing tool:** Export open invoices with due dates and payments received. Any of the common ones will do.
 <!-- /needs -->
 
 ## What you need
@@ -51,6 +62,14 @@ You never do these yourself, even if you can reach the email or invoicing tool. 
 - **Files:** each step's file, and every `MISSING:` line.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Cash flow improvement planner](https://useaiblocks.com/skills/cash-lever-ranker). It takes the spreadsheet.
+- **Sell it** with the [Lost deal evidence and pitch revision review](https://useaiblocks.com/skills/monthly-lost-deal-reviewer). It takes the spreadsheet and draft.
+- **Check the money** with the [Accrual schedule drafter](https://useaiblocks.com/skills/accrual-schedule-drafter). It takes the spreadsheet.
+- The [Data cleaner](https://useaiblocks.com/skills/data-cleaner). It takes the spreadsheet.
+- The [Supplier payment terms planner](https://useaiblocks.com/skills/supplier-payment-terms-planner). It takes the spreadsheet.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
 ## Checks before you hand it back

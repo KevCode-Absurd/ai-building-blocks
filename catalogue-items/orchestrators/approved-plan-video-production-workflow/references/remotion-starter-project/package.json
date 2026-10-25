@@ -1,0 +1,22 @@
+{
+  "name": "bwm-video-editing-remotion-starter",
+  "version": "0.1.0",
+  "description": "Minimal Remotion starter for the house video-editing pipeline",
+  "scripts": {
+    "start": "remotion studio src/Root.tsx",
+    "render": "remotion render src/Root.tsx ReelComposition out.mp4",
+    "upgrade": "remotion upgrade"
+  },
+  "dependencies": {
+    "@remotion/bundler": "^4.0.0",
+    "@remotion/cli": "^4.0.0",
+    "@remotion/renderer": "^4.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "remotion": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "typescript": "^5.0.0"
+  }
+}

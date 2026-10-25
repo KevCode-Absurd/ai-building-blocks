@@ -1,0 +1,33 @@
+slug: prepare-new-data-use-review-for-signoff
+name: Prepare a new data use for review
+summary: Describe a feature and attach privacy policies. Get triage, an assessment where needed and owned sign-off questions.
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: question
+    required: true
+  - type: document
+    required: true
+outputs:
+  - type: audit_report
+  - type: document
+  - type: plan
+uses:
+  - new-data-use-screener
+  - privacy-impact-assessment-writer
+  - feature-legal-risk-assessor
+steps:
+  - uses: new-data-use-screener
+    note: Load required practice and matter context first. Use data flows, jurisdiction and policies to determine the review route. Pass classification, evidence and questions to assessment. Classification does not approve launch.
+  - uses: privacy-impact-assessment-writer
+    note: When triage triggers assessment, use house format, seed and product answers to draft conditions, owners and policy checks. Verify current mandatory triggers from primary sources when access permits; otherwise record unresolved legal verification.
+  - uses: feature-legal-risk-assessor
+    note: Use assessment and triage to find novel or serious risks requiring deeper attention. Draft a separate assessment only when the actual threshold is met; otherwise document why specialist escalation is not proposed.
+execution: coordinator
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

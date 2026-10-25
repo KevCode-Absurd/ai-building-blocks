@@ -1,0 +1,36 @@
+slug: academic-cv-builder
+name: Academic CV builder
+summary: Share your research and teaching record. Get a CV draft ordered for the academic role you want.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: source_text
+    required: true
+  - type: brief
+    required: false
+outputs:
+  - type: document
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Daniel (San) Ávila
+  repo: davila7/claude-code-templates
+  path: cli-tool/components/skills/career/academic-cv-builder
+  url: https://github.com/davila7/claude-code-templates/tree/7d85535533914ff0880945570a94fcbec4adc042/cli-tool/components/skills/career/academic-cv-builder
+  licence: MIT
+  licence_file: LICENSE
+  commit: 7d85535533914ff0880945570a94fcbec4adc042
+  original_name: academic-cv-builder
+  imported: 2026-10-23
+  skill_sha256: 36de94cf6d3944ff5c83f4e383fe205f8291bd4300e96deefaf16a12466c38d9
+version: 1.0.0
+credits:
+  - title: academic-cv-builder skill
+    by: Daniel (San) Ávila
+    url: https://github.com/davila7/claude-code-templates/tree/7d85535533914ff0880945570a94fcbec4adc042/cli-tool/components/skills/career/academic-cv-builder
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

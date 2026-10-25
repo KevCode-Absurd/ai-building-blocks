@@ -16,7 +16,7 @@ export const MODELS: Model[] = [
   { id: "deepseek-v4-pro", label: "DeepSeek V4 Pro", provider: "deepseek", input: 1.32, output: 3.96, cached: .044, note: "Peak rates; off-peak is half." },
 ];
 export const KEY_NAMES = { openai: "OPENAI_API_KEY", gemini: "GEMINI_API_KEY", anthropic: "ANTHROPIC_API_KEY", deepseek: "DEEPSEEK_API_KEY" } as const;
-export const planOutputLimit = (model: Model) => model.id === "gpt-6-luna" ? 8000 : 5000;
+export const planOutputLimit = (model: Model) => model.id === "gpt-6-luna" ? 12000 : 5000;
 export type Usage = { input: number; output: number; cached: number; cacheWrite: number };
 export function usageCost(model: Model, u: Usage, at = new Date()): number {
   let multiplier = 1;
@@ -30,14 +30,35 @@ export class ProviderError extends Error {
   status: number; billable: ModelResult | null; unbilled = false; providerCode?: string;
   constructor(message: string, status = 502, billable: ModelResult | null = null) { super(message); this.status = status; this.billable = billable; }
 }
+function anthropicSchema(schema: unknown): unknown {
+  const copy = structuredClone(schema);
+  const visit = (node: any) => {
+    if (!node || typeof node !== "object" || Array.isArray(node)) return;
+    const constraints: Record<string, unknown> = {};
+    for (const key of ["maxItems", "minLength", "maxLength", "minimum", "maximum", "multipleOf", "minItems"]) {
+      if (Object.hasOwn(node, key) && (key !== "minItems" || ![0, 1].includes(node[key]))) { constraints[key] = node[key]; delete node[key]; }
+    }
+    if (Object.keys(constraints).length) node.description = [node.description, "Application-validated constraints: " + JSON.stringify(constraints)].filter(Boolean).join("\n");
+    for (const key of ["properties", "$defs", "definitions"]) for (const child of Object.values(node[key] ?? {})) visit(child);
+    visit(node.items);
+    for (const key of ["anyOf", "allOf", "oneOf"]) for (const child of node[key] ?? []) visit(child);
+  };
+  visit(copy);
+  return copy;
+}
 export async function callModel(model: Model, key: string, prompt: { system: string; user: string }, schema: unknown, maxOutput = 5000, fetcher: typeof fetch = fetch): Promise<ModelResult> {
   let url: string, body: unknown, headers: Record<string, string> = { "content-type": "application/json" };
-  if (model.provider === "openai") {
+  const lunaChat = model.provider === "openai" && model.id === "gpt-6-luna";
+  if (lunaChat) {
+    // Luna's chat endpoint returns a single structured answer without a commentary phase.
+    url = "https://api.openai.com/v1/chat/completions"; headers.authorization = `Bearer ${key}`;
+    body = { model: model.id, messages: [{ role: "developer", content: prompt.system }, { role: "user", content: prompt.user }], reasoning_effort: (schema as any)?.properties?.steps ? "low" : "none", verbosity: "low", max_completion_tokens: maxOutput, store: false, response_format: { type: "json_schema", json_schema: { name: "workflow_plan", strict: true, schema } } };
+  } else if (model.provider === "openai") {
     url = "https://api.openai.com/v1/responses"; headers.authorization = `Bearer ${key}`;
-    body = { model: model.id, instructions: prompt.system, input: prompt.user, reasoning: { effort: model.id === "gpt-6-luna" ? "none" : "low" }, max_output_tokens: maxOutput, store: false, text: { format: { type: "json_schema", name: "workflow_plan", strict: true, schema } } };
+    body = { model: model.id, instructions: prompt.system, input: prompt.user, reasoning: { effort: "low" }, max_output_tokens: maxOutput, store: false, text: { format: { type: "json_schema", name: "workflow_plan", strict: true, schema } } };
   } else if (model.provider === "anthropic") {
     url = "https://api.anthropic.com/v1/messages"; headers["x-api-key"] = key; headers["anthropic-version"] = "2023-06-01";
-    body = { model: model.id, system: prompt.system, messages: [{ role: "user", content: prompt.user }], max_tokens: maxOutput, output_config: { effort: "low", format: { type: "json_schema", schema } } };
+    body = { model: model.id, system: prompt.system, messages: [{ role: "user", content: prompt.user }], max_tokens: maxOutput, output_config: { effort: "low", format: { type: "json_schema", schema: anthropicSchema(schema) } } };
   } else if (model.provider === "gemini") {
     url = `https://generativelanguage.googleapis.com/v1beta/models/${model.id}:generateContent`; headers["x-goog-api-key"] = key;
     body = { systemInstruction: { parts: [{ text: prompt.system }] }, contents: [{ role: "user", parts: [{ text: prompt.user }] }], generationConfig: { maxOutputTokens: maxOutput, thinkingConfig: { thinkingLevel: "LOW" }, responseMimeType: "application/json", responseJsonSchema: schema } };
@@ -60,7 +81,13 @@ export async function callModel(model: Model, key: string, prompt: { system: str
   }
   const d = await response.json() as any;
   let text = "", usage: Usage = { input: 0, output: 0, cached: 0, cacheWrite: 0 }, finish = "", actualModel = d.model ?? d.modelVersion ?? model.id;
-  if (model.provider === "openai") {
+  if (lunaChat) {
+    text = d.choices?.[0]?.message?.content ?? "";
+    usage.cached = d.usage?.prompt_tokens_details?.cached_tokens ?? 0;
+    usage.input = (d.usage?.prompt_tokens ?? 0) - usage.cached;
+    usage.output = d.usage?.completion_tokens ?? 0;
+    finish = d.choices?.[0]?.finish_reason === "length" ? "incomplete" : d.choices?.[0]?.finish_reason ?? "";
+  } else if (model.provider === "openai") {
     // Responses can contain both commentary and final JSON. Combining them corrupts JSON.
     const messages = (d.output ?? []).filter((o: any) => (!o.type || o.type === "message") && (!o.role || o.role === "assistant"));
     const final = messages.filter((o: any) => o.phase === "final_answer").at(-1) ?? messages.filter((o: any) => !o.phase).at(-1);

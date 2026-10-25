@@ -6,6 +6,8 @@ argument-hint: "<description> [data source]"
 
 # /build-dashboard - Build Interactive Dashboards
 
+> Modified by AI Blocks on 2026-10-24: method/copy repair.
+
 > If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
 
 Build a self-contained interactive HTML dashboard with charts, filters, tables, and professional styling. Opens directly in a browser -- no server or dependencies required.
@@ -90,7 +92,7 @@ Generate a single self-contained HTML file using the base template below. The fi
 - Print-friendly styles
 
 **Interactivity (JavaScript):**
-- Chart.js for interactive charts (included via CDN)
+- Inline SVG charts; a local chart library only when it is included in the delivered folder
 - Filter dropdowns that update all charts and tables simultaneously
 - Sortable table columns
 - Hover tooltips on charts
@@ -103,7 +105,7 @@ Generate a single self-contained HTML file using the base template below. The fi
 
 ### 5. Implement Chart Types
 
-Use Chart.js for all charts. Common dashboard chart patterns:
+Prefer inline SVG charts for offline dashboards. Use Chart.js only when a local copy is present in the delivered folder. Common dashboard chart patterns:
 
 - **Line chart**: Time series trends
 - **Bar chart**: Category comparisons
@@ -137,8 +139,6 @@ Every dashboard follows this structure:
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard Title</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1" integrity="sha384-jb8JQMbMoBUzgWatfe6COACi2ljcDdZQ2OxczGA3bGNeWe+6DChMTBJemed7ZnvJ" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3.0.0" integrity="sha384-cVMg8E3QFwTvGCDuK+ET4PD341jF3W8nO1auiXfuZNQkzbUUiBGLsIQUE+b1mxws" crossorigin="anonymous"></script>
     <style>
         /* Dashboard styles go here */
     </style>
@@ -255,6 +255,8 @@ function formatValue(value, format) {
 ```
 
 ## Chart.js Integration
+
+These patterns require a local Chart.js bundle included beside the HTML. When no local bundle is supplied, use inline SVG and local JavaScript instead. Never insert a CDN script into an offline dashboard.
 
 ### Chart Container Pattern
 
@@ -922,3 +924,7 @@ function renderTablePage(data, page, pageSize = 50) {
 - For real-time dashboards, consider connecting to a BI tool instead. These dashboards are point-in-time snapshots
 - Request "dark mode" or "presentation mode" for different styling
 - You can request a specific color scheme to match your brand
+
+## Repaired offline build method
+
+“Works offline” means every runtime dependency is stored in the delivered folder or embedded in the HTML. Do not use Chart.js or any other CDN, remote font, API or network-loaded asset. Prefer inline SVG or local JavaScript for charts; if a local library is used, include and test that file beside the HTML. Keep data local unless the user explicitly requests a connected dashboard. Add a visible data-as-of note and mark sample data as sample. Before delivery, open the file with network access disabled and check that charts render and filters update every linked chart and table. If that test is not run, describe the file as intended to work offline, not verified offline. Include the source data and formulas or clearly label derived values.

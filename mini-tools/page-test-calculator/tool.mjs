@@ -11,12 +11,12 @@
 
 export default {
   slug: "page-test-calculator",
-  name: "Know if a page test is worth running",
+  name: "Page conversion and test calculator",
   /** The plain name, used where the tool talks about itself. */
-  short: "Page and test calculator",
-  headline: "Know what a visitor is worth, and how long a page test takes",
-  summary: "Type your visitors, orders and order value. You get revenue per visitor, the visitors an A/B test needs, and what more ad traffic does to your rate.",
-  question: "What is each visitor worth, how many visitors does an A/B test need, and what does more cold traffic do to my conversion rate?",
+  short: "Page conversion and test calculator",
+  headline: "Page conversion and test calculator",
+  summary: "Enter visitors, orders and sales value. Estimate revenue per visitor, page test size and the effect of changing the visitor mix.",
+  question: "How large a page test can our traffic support?",
   shelf: ["general"],
   version: "1.0.0",
   updated: "2026-10-19",
@@ -34,9 +34,9 @@ export default {
     { id: "lift", label: "Smallest lift worth finding", unit: "percent", example: 10, min: 0.1, max: 1000, step: 1, section: "test", help: "How much better the new version must be for you to care. 10 means a 3% rate rising to 3.3%.", where: "Your own call: the smallest change that would be worth the work.", tools: [] },
     { id: "confidence", label: "Confidence", unit: "percent", example: 95, min: 50, max: 99.9, step: 1, section: "test", help: "How sure you want to be that a winner isn't luck. 95 is the usual choice.", where: "Leave it at 95 unless you have a reason.", tools: [] },
     { id: "power", label: "Power", unit: "percent", example: 80, min: 50, max: 99.9, step: 1, section: "test", help: "The chance the test spots a lift that's really there. 80 is the usual choice.", where: "Leave it at 80 unless you have a reason.", tools: [] },
-    { id: "coldRate", label: "Conversion rate of new visitors from ads", unit: "percent", example: 1.5, min: 0, max: 100, step: 0.1, section: "mix", help: "People who've never heard of you buy less often.", where: "Your analytics, filtered to new visitors from paid social or search.", tools: ["Google Analytics", "Shopify analytics (sessions by source)"] },
-    { id: "warmRate", label: "Conversion rate of everyone else", unit: "percent", example: 5, min: 0, max: 100, step: 0.1, section: "mix", help: "Returning visitors, email, search for your name.", where: "Your analytics, filtered to returning visitors and email.", tools: ["Google Analytics", "Shopify analytics (sessions by source)", "Klaviyo"] },
-    { id: "coldShare", label: "Share of visitors new from ads, today", unit: "percent", example: 50, min: 0, max: 100, step: 5, section: "mix", help: "Of all your visitors, the share who are new and came from ads.", where: "Your analytics: new visitors from paid channels divided by all visitors.", tools: ["Google Analytics", "Shopify analytics (sessions by source)"] },
+    { id: "coldRate", label: "Conversion rate of new visitors from ads", unit: "percent", example: 1.5, min: 0, max: 100, step: 0.1, section: "mix", help: "Use the rate for new visitors from ads, measured over a matching period.", where: "Your analytics, filtered to new visitors from paid social or search.", tools: ["Google Analytics", "Shopify analytics (sessions by source)"] },
+    { id: "warmRate", label: "Conversion rate of everyone else", unit: "percent", example: 5, min: 0, max: 100, step: 0.1, section: "mix", help: "Returning visitors, email, search for your name.", where: "Your site report for returning visitors and email traffic.", tools: ["Google Analytics", "Shopify analytics (sessions by source)", "Klaviyo"] },
+    { id: "coldShare", label: "Share of visitors new from ads, today", unit: "percent", example: 50, min: 0, max: 100, step: 5, section: "mix", help: "Of all your visitors, the share who are new and came from ads.", where: "Your site report. Divide new visitors from paid ads by all visitors.", tools: ["Google Analytics", "Shopify analytics (sessions by source)"] },
     { id: "coldShareNext", label: "Share of visitors new from ads, if you spend more", unit: "percent", example: 70, min: 0, max: 100, step: 5, section: "mix", help: "Your guess for the share after you raise ad spend.", where: "Your plan for next month.", tools: [] },
   ],
   outputs: [

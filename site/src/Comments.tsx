@@ -95,7 +95,7 @@ export default function Comments({ slug, name, also, toast }: { slug: string; na
     go(); window.addEventListener("hashchange", go);
     return () => window.removeEventListener("hashchange", go);
   }, []);
-  const close = useCallback(() => { setOpen(false); if (location.hash === "#comments") history.replaceState(null, "", location.pathname + location.search); }, []);
+  const close = useCallback(() => { setOpen(false); if (location.hash === "#comments") history.replaceState(history.state, "", location.pathname + location.search); }, []);
   const tops = comments.filter((c) => !c.parent);
   const repliesTo = (id: string) => comments.filter((c) => c.parent === id);
   const hide = async (id: string) => {

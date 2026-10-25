@@ -1,0 +1,45 @@
+new_slug: five-gate-campaign-scaling-planner
+name: Five-gate campaign scaling planner
+summary: Check five gates before scaling Meta campaigns. Compare pacing, methods and stop rules using your targets and risk limits.
+job: launch-and-scale-ads
+headline: Five-gate campaign scaling planner
+subhead: Share campaign results, targets, budget, pacing dates and saturation signals. Get a five-gate scaling review with method, timing and stop rules.
+explain: |-
+  Check five gates before scaling Meta campaigns. Compare pacing, methods and stop rules using your targets and risk limits.
+
+  Share campaign results, targets, budget, pacing dates and saturation signals. Get a five-gate scaling review with method, timing and stop rules.
+when:
+  - You need a five-gate scaling review with method, timing and stop rules.
+  - You need five-gate campaign scaling planner for a specific task.
+  - You want the method's decisions and assumptions written down before acting.
+you_give:
+  - Campaign results
+  - Targets
+  - Budget
+  - Pacing dates and saturation signals
+you_get:
+  - A five-gate scaling review with method, timing and stop rules
+  - The sources used, missing inputs and assumptions
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Check the inputs
+    text: Confirm campaign results, targets, budget, pacing dates and saturation signals. Mark facts that are missing.
+  - title: How This Works
+    text: Follow the how this works section in the full method and keep its required fields and decision rules.
+  - title: Collect Campaign Data
+    text: Follow the collect campaign data section in the full method and keep its required fields and decision rules.
+  - title: 5-Point Scale-Readiness Checklist
+    text: Follow the 5-point scale-readiness checklist section in the full method and keep its required fields and decision rules.
+  - title: Budget Pacing Analysis
+    text: Follow the budget pacing analysis section in the full method and keep its required fields and decision rules.
+  - title: Scaling Method Recommendations
+    text: Follow the scaling method recommendations section in the full method and keep its required fields and decision rules.
+  - title: Saturation Signals
+    text: Follow the saturation signals section in the full method and keep its required fields and decision rules.
+  - title: Review the result
+    text: Return a five-gate scaling review with method, timing and stop rules. Check facts, math and the decisions before any action.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

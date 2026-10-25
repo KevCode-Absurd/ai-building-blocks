@@ -1,0 +1,30 @@
+thinking: high
+thinking_why: It weighs real records, missing facts, and choices that affect people or funding.
+new_slug: nonprofit-program-outcome-planner
+name: Nonprofit program outcome planner
+summary: Share your program and intended change. Get a clear activity-to-outcome map, assumptions, and evidence gaps.
+job: plan-strategy
+headline: Nonprofit program outcome planner
+subhead: Share your program, resources, community need, and intended change. It maps how each activity could lead to results and checks the links. You get a one-page program model, a plain explanation of the change, and assumptions or evidence gaps to review.
+when:
+  - You need this task done for a nonprofit, community program, or donated-goods store.
+you_give:
+  - Confirmed community need, resources, program activities, intended participant changes, and supporting evidence.
+you_get:
+  - A program model table, change explanation, assumptions list, and notes for measurement or grant writing.
+how_it_works:
+  - title: Start with the change
+    text: Define the long-term aim, then work backward to the smaller changes needed along the way.
+  - title: Connect activities to results
+    text: Map resources, activities, counts of work delivered, and changes for people. Keep counts separate from outcomes.
+  - title: Check the assumptions
+    text: Test why each link should hold, name outside factors, and identify missing evidence or delivery knowledge.
+works_best_with:
+  tools:
+    - name: A chat AI that can read your files
+      why: The skill works from records and drafts you provide. Research tasks also need current, checked public sources.
+  inputs:
+    - Logic models set what the program promises to achieve.
+how_to_use:
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.

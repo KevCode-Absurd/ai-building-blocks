@@ -2,25 +2,25 @@ slug: make
 name: Make
 maker: Make (formerly Integromat)
 url: https://make.com
-promise: Build visual automations and AI agents that connect your apps.
+promise: "Connect apps and build repeatable tasks or AI agents on a visual canvas."
 use_cases: [automate]
 categories: [automation]
 what_it_does:
   - Lets you build automations by dragging steps onto a canvas.
-  - Connects more than 3,000 apps, plus any app with an API.
+  - "Connects apps through ready-made links or their APIs."
   - Builds AI agents with the goals, apps and limits you set.
   - Adds JavaScript or Python when a step needs code.
-  - Lets Claude, ChatGPT or Gemini run your automations through an MCP server.
+  - "Lets supported AI assistants start your connected Make automations."
   - Shows each run live, so you can find and fix a failure.
 benefits:
   - See your whole process on one canvas, not a list of rules.
-  - Handle branches, loops and filters that basic connectors cannot.
+  - "Build steps with branches, repeated actions and filters."
   - Start on a free plan with no credit card.
   - Let a developer add code only where it is needed.
 best_for:
-  - Operators who want more control than a basic app connector.
+  - "People who want to see and control the steps that connect their apps."
   - Teams that run larger or branching automations.
-  - Agencies building automations for several clients.
+  - "Teams that build app links and repeat tasks for several clients."
 not_for:
   - People who want the simplest possible first automation.
   - Teams that need a fixed price, since cost depends on credits used.

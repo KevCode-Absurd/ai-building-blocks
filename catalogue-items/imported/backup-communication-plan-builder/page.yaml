@@ -1,0 +1,28 @@
+thinking: high
+thinking_why: It follows a set method with a few checks.
+new_slug: backup-communication-plan-builder
+name: Backup communication plan builder
+summary: Share your group and communication methods. Get fallback paths, owners, switch triggers, and a safe test plan.
+job: organise-work
+headline: Backup communication plan builder
+subhead: Share who must reach whom, the communication methods available, and local rules. It checks whether fallback paths share the same weak points. You get a primary and backup plan, owners, switch triggers, open gaps, and an authorized exercise outline.
+you_give:
+  - The mission, required contacts, available methods, local procedures, owners, and activation authority.
+you_get:
+  - A communication fallback worksheet, check-in card, test outline, and gap or correction log.
+how_it_works:
+  - title: Map who needs contact
+    text: List every required sender and receiver pair and the methods both ends can use.
+  - title: Check shared weak points
+    text: Compare devices, power, networks, providers, and places so backup methods are meaningfully different.
+  - title: Set clear switch rules
+    text: Record owners, approval limits, check-ins, failure signs, fallback triggers, and missing facts.
+  - title: Plan a bounded test
+    text: Define authorized tests, evidence, stop rules, correction owners, and review dates. Drafting does not activate a plan.
+works_best_with:
+  tools:
+    - name: A chat AI that can read the bundled reference files
+      why: Use the supplied references and templates for the chosen task. Scripts are optional unless that task specifically needs them.
+how_to_use:
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.

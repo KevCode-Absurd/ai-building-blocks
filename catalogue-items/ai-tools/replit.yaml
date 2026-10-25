@@ -2,7 +2,7 @@ slug: replit
 name: Replit
 maker: Replit
 url: https://replit.com
-promise: Describe an app and get it built, hosted and live in one place.
+promise: "Build, edit and publish an app with code, hosting and data in one workspace."
 use_cases: [build-apps, code]
 categories: [coding]
 what_it_does:
@@ -21,7 +21,7 @@ best_for:
   - Beginners who want the code, hosting and database handled for them.
   - Anyone prototyping a web app over a weekend.
 not_for:
-  - Large apps with strict security needs, unless you check the enterprise plan.
+  - "Work that needs a security check and has no coder to help."
   - Anyone who wants a fixed bill, since extra AI use is charged on top.
 pricing:
   model: freemium

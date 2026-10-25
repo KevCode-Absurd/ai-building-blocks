@@ -1,11 +1,11 @@
 // Original tool. All numbers shown are illustrative figures, not a real person’s results.
 export default {
   "slug": "support-staffing",
-  "name": "Estimate the staff time your support queue needs",
-  "short": "Support staffing",
-  "headline": "Estimate the staff time your support queue needs",
-  "summary": "Enter ticket volume, handling time and productive hours. See the people needed at the hours you enter.",
-  "question": "Estimate the staff time your support queue needs?",
+  "name": "Support workload calculator",
+  "short": "Support workload calculator",
+  "headline": "Support workload calculator",
+  "summary": "Enter ticket count, handling time and usable staff hours. Estimate staffing for that workload, before shift cover and demand peaks.",
+  "question": "How much staff time does this support workload need?",
   "category": "operations",
   "shelf": [
     "general"
@@ -97,7 +97,7 @@ export default {
       "unit": "number",
       "formula": "IF(work = 0, 0, IF(perPerson > 0, work / perPerson, NA()))",
       "sum": "{work} ÷ {perPerson} = {=}",
-      "means": "A workload ratio, before shift coverage and peaks.",
+      "means": "Total work divided by usable hours per person. A result of 1.5 means one person’s time plus half another’s, before planning shifts.",
       "none": "No productive time entered"
     }
   ],
@@ -126,7 +126,7 @@ export default {
   ],
   "notes": [
     "The filled-in values are illustrative figures. Replace them with your own records; the result follows your inputs.",
-    "This is a workload estimate. It does not predict wait times, concurrency, arrival spikes, shift coverage or a service-level guarantee."
+    "This estimates workload. It does not predict waiting time, how many chats one person can handle, busy spells, shift cover or promised response times."
   ],
   "fixedCurrency": "$"
 };

@@ -2,7 +2,7 @@ slug: elevenlabs
 name: ElevenLabs
 maker: ElevenLabs
 url: https://elevenlabs.io
-promise: Natural voice-overs from text, plus dubbing, sound effects and music.
+promise: "Make voice-overs from text, transcribe speech and create dubbed audio, effects or music."
 use_cases: [voice-and-audio]
 categories: [voice]
 what_it_does:
@@ -14,7 +14,7 @@ what_it_does:
 benefits:
   - Add a voice-over to a video ad without booking a studio.
   - Put one narration in several languages.
-  - Keep the same voice across every video you make.
+  - "Use a chosen narration voice across a series of videos."
 best_for:
   - Video ads, explainers and training that need narration.
   - Teams who add voices to AI video clips.

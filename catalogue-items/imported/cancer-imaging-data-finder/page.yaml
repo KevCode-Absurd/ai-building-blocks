@@ -2,10 +2,15 @@ thinking: medium
 thinking_why: It builds queries and checks each dataset's licence.
 new_slug: cancer-imaging-data-finder
 name: Cancer imaging data finder
-summary: Describe the scans you need. Get matching public cancer images, licence details and download commands.
+summary: Describe the scans you need. Get matching public cancer images, licence
+  details and download commands.
 job: research-topics
 headline: Cancer imaging data finder
-subhead: Describe the cancer type, scan type or collection you need and any filters such as body part or case count. It searches the National Cancer Institute's Imaging Data Commons by the cheapest route available. You get matching collections and series, licence and citation details, and download commands.
+subhead: Describe the cancer type, scan type or collection you need and any
+  filters such as body part or case count. It searches the National Cancer
+  Institute's Imaging Data Commons by the cheapest route available. You get
+  matching collections and series, licence and citation details, and download
+  commands.
 explain: |
   A short list of public cancer scans that fit your project, with licences checked and download steps ready. Describe the cancer type, scan type or collection you need, and the skill searches the National Cancer Institute's Imaging Data Commons.
 
@@ -26,6 +31,8 @@ you_get:
   - Download commands for the files
   - Notes on which access path to use
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
   - It works best when your AI can run Python code and download public data.

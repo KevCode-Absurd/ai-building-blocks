@@ -7,13 +7,13 @@ role: check
 job: analysis
 level: intermediate
 inputs:
-  - {type: product_data, required: true}
-  - {type: performance_sheet, required: false}
+  - { type: product_data, required: true }
+  - { type: performance_sheet, required: false }
 outputs:
-  - {type: audit_report}
+  - { type: audit_report }
 uses: []
 origin: rebuilt
 example_pending: true
-version: 1.0.0
+version: 1.0.1
 credits:
-  - {title: "Finance for e-commerce: a set of about 16 finance lectures and Excel walk-throughs (contribution margin P&L, unit economics, LTV and CAC, cohorts, churn, discounts, Black Friday, prepaid subscriptions, subscription model, inventory cash, Amazon launch model)", by: "Eric, startup finance educator (one channel; a few segments co-presented by a subscription-software company's strategy director)", used: "Lifetime value for one-time, 3-order and 6-order prepaid customers, the weighted mix view, the working-capital effect, stepped discounts, defaulting to subscription and the pause option"}
+  - { title: "Finance for e-commerce: a set of about 16 finance lectures and Excel walk-throughs (contribution margin P&L, unit economics, LTV and CAC, cohorts, churn, discounts, Black Friday, prepaid subscriptions, subscription model, inventory cash, Amazon launch model)", by: "Eric, startup finance educator (one channel; a few segments co-presented by a subscription-software company's strategy director)", used: "Lifetime value for one-time, 3-order and 6-order prepaid customers, the weighted mix view, the working-capital effect, stepped discounts, defaulting to subscription and the pause option" }

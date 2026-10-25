@@ -1,6 +1,7 @@
+# Modified by AI Blocks on 2026-10-24: method/copy repair.
 slug: dashboard-builder
-name: Dashboard builder
-summary: Give it your data and what to track. Get one HTML dashboard with charts, filters and tables you can open and share.
+name: "Offline dashboard builder"
+summary: "Build a self-contained HTML dashboard from supplied data, with charts and filters that work offline."
 category: general
 boards: []
 type: skill
@@ -29,4 +30,4 @@ credits:
   - title: build-dashboard skill
     by: Anthropic
     url: https://github.com/anthropics/knowledge-work-plugins/tree/main/data/skills/build-dashboard
-    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.
+    used: Adapted for clarity and method consistency; upstream source and Apache-2.0 attribution are retained.

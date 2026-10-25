@@ -1,8 +1,9 @@
 import { memo, useEffect, useRef, useState, type CSSProperties, type KeyboardEvent as ReactKeyEvent, type ReactNode } from "react";
 import { B8, ICONS } from "./lib/pixel";
-import { type Block, formatOf, kindInfo, loadPage, paidService, pathOf, taskOf } from "./lib/data";
+import { type Block, kindInfo, loadPage, paidService, pathOf, taskOf } from "./lib/data";
+import { TASK_STARTERS } from "./lib/task-discovery";
+import { trackUxEvent } from "./lib/ux-events";
 import { Link } from "./lib/router";
-import { ThinkBars } from "./Gauge";
 import PixelFace from "./PixelFace";
 import { kits, useStore } from "./lib/store";
 
@@ -18,47 +19,11 @@ function Mark() {
   );
 }
 
-// What the blocks build, on a 6 by 6 grid, top row first. Each one goes up from the bottom, a block at a time.
-const BUILDS: string[][] = [
-  ["..##..", ".####.", "######", ".####.", ".#.##.", ".#.##."], // house
-  ["..##..", ".####.", ".#..#.", ".####.", "######", "#.##.#"], // rocket
-  ["..##..", ".####.", "######", ".####.", "..##..", "..##.."], // tree
-  [".####.", "#.##.#", "######", ".####.", ".#..#.", ".#..#."], // robot
-  [".#..#.", "######", "######", ".####.", "..##..", "......"], // heart
-  ["#.#..#", "######", ".####.", ".#..#.", ".####.", ".####."], // castle
-];
-const cellsOf = (rows: string[]) => {
-  const out: [number, number][] = [];
-  for (let y = rows.length - 1; y >= 0; y--) for (let x = 0; x < 6; x++) if (rows[y][x] === "#") out.push([x, y]);
-  return out;
-};
-const BUILT = BUILDS.map(cellsOf);
-
-/** The logo. It shows the mark, then stacks blocks into a house, a rocket, a tree, a robot, a heart and a castle,
- *  and comes back to the mark. Still for anyone who asks for reduced motion. */
+/** Keep the logo still so the navigation stays calm and recognizable. */
 export function Logo() {
-  const [frame, setFrame] = useState({ build: -1, n: 0, clearing: false });
-  useEffect(() => {
-    if (window.matchMedia?.("(prefers-reduced-motion: reduce)").matches) return;
-    let t: number;
-    const step = (f: typeof frame) => {
-      setFrame(f);
-      let next: typeof frame, wait: number;
-      if (f.build === -1) { next = { build: 0, n: 0, clearing: false }; wait = 3200; }
-      else if (f.clearing) { next = { build: f.build + 1 < BUILT.length ? f.build + 1 : -1, n: 0, clearing: false }; wait = 380; }
-      else if (f.n < BUILT[f.build].length) { next = { ...f, n: f.n + 1 }; wait = 70; }
-      else { next = { ...f, clearing: true }; wait = 1500; }
-      t = window.setTimeout(() => step(next), wait);
-    };
-    step({ build: -1, n: 0, clearing: false });
-    return () => window.clearTimeout(t);
-  }, []);
-  const { build, n, clearing } = frame;
   return (
-    <svg viewBox="0 0 24 24" aria-hidden="true" className={`logo${build >= 0 ? " building" : ""}${clearing ? " clearing" : ""}`} data-testid="logo">
-      {build < 0 ? <Mark /> : BUILT[build].slice(0, n).map(([x, y]) => (
-        <rect key={`${build}-${x}-${y}`} className="drop" x={x * 4 + 0.3} y={y * 4 + 0.3} width="3.4" height="3.4" fill="currentColor" />
-      ))}
+    <svg viewBox="0 0 24 24" aria-hidden="true" className="logo" data-testid="logo">
+      <Mark />
     </svg>
   );
 }
@@ -128,19 +93,24 @@ export const MAKERS: { id: Maker; name: string }[] = [
 export const fromLabel = (b: Block) => { const m = makerOf(b); return m === "ai-blocks" ? "" : m === "community" ? "From the community" : `From ${m === "openai" ? "OpenAI" : "Anthropic"}`; };
 
 // Memoised: typing in the search box redraws the list, not every card in it.
-export const BlockCard = memo(function BlockCard({ b }: { b: Block }) {
+export const BlockCard = memo(function BlockCard({ b, workflowBuilder = false }: { b: Block; workflowBuilder?: boolean }) {
   const kind = kindInfo(b);
-  const fmt = formatOf(b);
+  const starter = TASK_STARTERS.find(task => task.slug === b.slug);
   // Pointing at a card starts fetching its page, so the click opens it without a wait.
   const wake = () => { void loadPage(b.slug); };
-  const view = b.category === "orchestrator" || b.type === "agent" ? `View the ${b.steps.length} steps` : `View the ${kind.name.toLowerCase()}`;
+  const view = kind.id === "workflow" && b.steps.length ? `View the ${b.steps.length} steps` : `View the ${kind.name.toLowerCase()}`;
+  const requirements = [paidService(b) ? `Needs a paid ${paidService(b)} account` : "", b.hasFiles ? "Uses supporting files" : "", b.warnings?.includes("scrapes") ? "Collects data from websites" : ""].filter(Boolean);
+  const opensBuilder = workflowBuilder && kind.id === "workflow";
   return (
-    <Link to={pathOf(b)} className="card" data-testid="block-card" data-slug={b.slug} data-kind={kind.id} onMouseEnter={wake} onFocus={wake}
+    <Link to={opensBuilder ? `/?workflow=${encodeURIComponent(b.slug)}#build` : pathOf(b)} className="card" data-testid="block-card" data-slug={b.slug} data-kind={kind.id} onMouseEnter={wake} onFocus={wake} onClick={() => trackUxEvent("task_started")}
       style={{ "--pat": `var(--pat-${taskOf(b).id})` } as CSSProperties}>
-      <span className="meta"><span className="kind">{kind.name}</span>{b.thinking && <ThinkBars level={b.thinking} />}{b.origin === "imported" && <span className="from" data-testid="from-label">{fromLabel(b)}</span>}{b.warnings?.includes("scrapes") && <span className="from warn" data-testid="scrapes-label" title="Collects data from websites">Scrapes sites</span>}{paidService(b) && <span className="from warn" data-testid="paid-label" title={`Needs a paid ${paidService(b)} account`}>Needs a paid account</span>}<span className="type">{fmt ? (fmt === "image" ? "Image ad" : "Video ad") : taskOf(b).name}</span></span>
       <span className="nm">{b.type === "mind" && <PixelFace face={b.face} area={b.area} slug={b.slug} size={32} className="card-face" />}{b.name}{b.type === "mind" && b.identity && <span className="mind-identity">{b.identity}</span>}</span>
-        <Peek text={b.summary} />
-      <span className="view">{view}<ArrowIcon size={12} /></span>
+        <Peek text={starter ? `Give it ${starter.give.toLowerCase()}. Get ${starter.get.toLowerCase()}.` : b.summary} />
+      <span className="card-footer">
+        {requirements.length > 0 && <span className="requirement">{requirements.join(" · ")}</span>}
+        <span className="meta secondary-meta"><span className="kind">{kind.name}</span>{b.origin === "imported" && <span className="from" data-testid="from-label">{fromLabel(b)}</span>}</span>
+        <span className="view">{opensBuilder ? "Open in builder" : starter ? "Start this task" : view}<ArrowIcon size={12} /></span>
+      </span>
     </Link>
   );
 });
@@ -191,7 +161,15 @@ export function Drawer({ label, top, onClose, children }: { label: string; top: 
   useEffect(() => {
     const before = document.activeElement as HTMLElement | null;
     ref.current?.focus();
-    const esc = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };
+    const esc = (e: KeyboardEvent) => {
+      if (e.key === "Escape") { e.preventDefault(); onClose(); return; }
+      if (e.key !== "Tab" || !ref.current) return;
+      const targets = Array.from(ref.current.querySelectorAll<HTMLElement>('a[href], button:not(:disabled), input:not(:disabled), select:not(:disabled), textarea:not(:disabled), summary, [tabindex="0"]')).filter(el => el.getClientRects().length > 0);
+      const first = targets[0], last = targets[targets.length - 1];
+      if (!first) { e.preventDefault(); ref.current.focus(); }
+      else if (e.shiftKey && (document.activeElement === first || document.activeElement === ref.current)) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && (document.activeElement === last || document.activeElement === ref.current)) { e.preventDefault(); first.focus(); }
+    };
     document.addEventListener("keydown", esc);
     document.body.style.overflow = "hidden";
     return () => { document.removeEventListener("keydown", esc); document.body.style.overflow = ""; before?.focus?.(); };

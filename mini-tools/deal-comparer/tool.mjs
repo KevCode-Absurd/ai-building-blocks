@@ -7,12 +7,12 @@
 
 export default {
   slug: "deal-comparer",
-  name: "Pick the deal that keeps the most profit",
+  name: "Sales offer profit comparison",
   /** The plain name, used where the tool talks about itself. */
-  short: "Deal comparer",
-  headline: "Pick the deal that keeps more of each order",
-  summary: "Compare buy-some-get-some against money off, a gift against a deeper cut, and credit next time against money off now.",
-  question: "Is \"buy 2, get 1 free\" better than 30% off? A gift or a deeper cut? Credit next time or money off now?",
+  short: "Sales offer profit comparison",
+  headline: "Sales offer profit comparison",
+  summary: "Compare multi-buy discounts, gifts and store credit using your costs. See which offer leaves more profit under your assumptions.",
+  question: "Which of these sales offers leaves more profit at my costs?",
   shelf: ["ecommerce"],
   version: "1.0.0",
   updated: "2026-10-19",

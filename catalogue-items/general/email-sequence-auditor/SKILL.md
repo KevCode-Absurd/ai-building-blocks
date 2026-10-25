@@ -1,6 +1,6 @@
 ---
 name: email-sequence-auditor
-description: Use when an email flow underperforms and you need to know what to protect and what to fix before rewriting anything. Treats current emails as the control, maps the flow, records each email's opens, clicks, conversions, unsubscribes and revenue, sorts emails into green, yellow and red, scores the flow out of 100, and proposes one fix and one test for each red email. Ends with findings for the team and any checks it missed.
+description: Use when an email flow underperforms and you need to know what to protect and what to fix before rewriting anything. Treats current emails as the control, maps the flow, records each email's opens, clicks, conversions, unsubscribes and revenue, sorts emails into green, yellow and red, shows data coverage and scores the flow only when all score components can be judged, and proposes one fix and one test for each red email. Ends with findings for the team and any checks it missed.
 ---
 
 # Email sequence auditor
@@ -42,12 +42,12 @@ How to start:
 6. **Sort into yellow.** Yellow is everything else, and any email with missing numbers. These come next, after red.
 7. **Leave out taste.** Do not comment on writing style, tone or design unless a number points there. Do not solve problems the numbers do not show. If you spot a style idea, list it under ideas to test later, not under findings.
 8. **Propose one fix and one test per red email.** The fix addresses the number that failed (for example, a subject line for a low open rate). The test says what to compare and which number decides.
-9. **Report before any rewrite.** Write a short note for the team: what to protect, what to fix, what data is missing, and the decisions needed. Score the flow: map 20, numbers recorded 20, healthy emails 40 in proportion to green and yellow share, no dead ends 20. Show the sums.
+9. **Report before any rewrite.** Write a short note for the team: what to protect, what to fix, what data is missing, and the decisions needed. Show the audit components separately: map 20, verified numbers recorded 20, healthy emails 40 and no dead ends 20. Missing numbers are not verified records or healthy results. For the healthy component, give 40 times the green share among emails with enough comparable outcome data; yellow due to missing data gets no health credit and is excluded from that denominator. Report outcome-data coverage as judged emails of total emails. If no email has enough data, write HEALTH NOT SCORED and withhold an overall flow score; any structural subtotal must be explicitly labeled structural only. Show denominators and unresolved components rather than converting unknown outcomes into health points. If any score component is unresolved, withhold the overall score rather than scaling the other components to 100. When some outcomes can be judged, the health component describes only that subset; show its coverage prominently.
 10. **Check it.** Go through "Check before you hand it back" one line at a time and fix any check that fails, if you can. Under CHECKS MISSED, write one line for each check still missed and why, or "none".
 
 ## What you hand back
 
-The score out of 100 with how it was worked out. The flow map. The numbers table. Green, red and yellow lists with reasons. One fix and one test for each red email. The note for the team. MISSING lines. Last, CHECKS MISSED: one line per check missed, or "none".
+The score out of 100 only when all components can be judged, with the sums and data coverage. Otherwise give NOT SCORED, any available health component and a separately labeled structural subtotal; do not scale a partial result into a full flow score. The flow map. The numbers table. Green, red and yellow lists with reasons. One fix and one test for each red email. The note for the team. MISSING lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
@@ -66,7 +66,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Nothing is rewritten before the control is measured.
 - Missing data is listed, not guessed.
 - Each red email has one proposed fix and one test.
-- The score shows its sums.
+- The score shows its sums and outcome-data coverage. Missing results earn no health credit. A full score is withheld if any component is unresolved; a structural subtotal never stands in for health.
 - Dead ends are listed or stated as none.
 
 ## If something is missing

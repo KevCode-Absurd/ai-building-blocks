@@ -1,0 +1,19 @@
+slug: seven-bucket-ad-concept-brainstormer
+name: Seven-bucket ad concept brainstormer
+summary: Generate ad concepts in seven groups. Rank the best eight by fit, proof needs, effort and risk.
+category: ecommerce
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: angle_library
+    required: true
+uses: []
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

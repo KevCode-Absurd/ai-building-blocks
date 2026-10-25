@@ -2,10 +2,15 @@ thinking: medium
 thinking_why: It gathers ads, then reads the pattern in them.
 new_slug: ad-library-teardown-writer
 name: Ad library teardown writer
-summary: Name a competitor. Get their live ads broken into hooks, offers, calls to action and tests to run.
+summary: Name a competitor. Get their live ads broken into hooks, offers, calls
+  to action and tests to run.
 job: study-competitors
 headline: Ad library teardown writer
-subhead: Name a competitor or paste an ad library link and pick the platform. It pulls their active public ads from the Meta, Google or LinkedIn library, records the wording, offers, buttons and video speech, and reads the landing page. You get a summary of their angles, a swipe file of hooks, offers and calls to action, and recommended tests.
+subhead: Name a competitor or paste an ad library link and pick the platform. It
+  pulls their active public ads from the Meta, Google or LinkedIn library,
+  records the wording, offers, buttons and video speech, and reads the landing
+  page. You get a summary of their angles, a swipe file of hooks, offers and
+  calls to action, and recommended tests.
 explain: |
   A competitor's live ads get broken into hooks, offers, calls to action and test ideas for you to try. It collects public ads from websites, so it works only on what is shown there.
 
@@ -27,6 +32,8 @@ you_get:
   - Notes from video transcripts
   - Recommended tests for you
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
   - It works best when your AI can run code and use your ScrapeCreators key.

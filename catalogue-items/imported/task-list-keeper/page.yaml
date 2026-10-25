@@ -2,10 +2,14 @@ thinking: low
 thinking_why: It edits one small file.
 new_slug: task-list-keeper
 name: Task list keeper
-summary: Tell it your tasks. Get one TASKS file kept current as you add, finish and review work.
+summary: Tell it your tasks. Get one TASKS file kept current as you add, finish
+  and review work.
 job: organise-work
 headline: Task list keeper
-subhead: Tell it your tasks, and say when you finish one or are waiting on someone. It keeps one plain TASKS file with four sections (Active, Waiting On, Someday, Done) and moves items as you report. You get a current file, a review of stuck work and an optional task board.
+subhead: Tell it your tasks, and say when you finish one or are waiting on
+  someone. It keeps one plain TASKS file with four sections (Active, Waiting On,
+  Someday, Done) and moves items as you report. You get a current file, a review
+  of stuck work and an optional task board.
 explain: |
   One plain TASKS file that stays current as you add, finish and review your work; you know what is active, waiting and can wait.
 
@@ -26,6 +30,8 @@ you_get:
   - A review of open and stuck work
   - An optional visual task board
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
   - It works best when your AI can read and write files.

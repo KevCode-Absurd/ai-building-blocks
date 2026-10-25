@@ -1,0 +1,44 @@
+new_slug: ad-performance-early-warning-reviewer
+name: Ad performance early-warning reviewer
+summary: Compare ad costs, frequency, clicks and view rates with past results. Flag signals to check without predicting a sales drop.
+job: read-ad-results
+headline: Ad performance early-warning reviewer
+subhead: Share matched daily results, account baselines, campaign age and alert rules. Get a five-signal warning report with next checks and review times.
+explain: |-
+  Compare ad costs, frequency, clicks and view rates with past results. Flag signals to check without predicting a sales drop.
+
+  Share matched daily results, account baselines, campaign age and alert rules. Get a five-signal warning report with next checks and review times.
+when:
+  - You need a five-signal warning report with next checks and review times.
+  - You need ad performance early-warning reviewer for a specific task.
+  - You want the method's decisions and assumptions written down before acting.
+you_give:
+  - Matched daily results
+  - Account baselines
+  - Campaign age and alert rules
+you_get:
+  - A five-signal warning report with next checks and review times
+  - The sources used, missing inputs and assumptions
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Check the inputs
+    text: Confirm matched daily results, account baselines, campaign age and alert rules. Mark facts that are missing.
+  - title: The Five Leading Indicators
+    text: Follow the the five leading indicators section in the full method and keep its required fields and decision rules.
+  - title: Collect Data
+    text: Follow the collect data section in the full method and keep its required fields and decision rules.
+  - title: Calculate Baselines
+    text: Follow the calculate baselines section in the full method and keep its required fields and decision rules.
+  - title: Pattern Match to Severity
+    text: Follow the pattern match to severity section in the full method and keep its required fields and decision rules.
+  - title: Deliver the Warning Report
+    text: Follow the deliver the warning report section in the full method and keep its required fields and decision rules.
+  - title: "Leading Indicator Report: {Campaign}"
+    text: "Follow the leading indicator report: {campaign} section in the full method and keep its required fields and decision rules."
+  - title: Review the result
+    text: Return a five-signal warning report with next checks and review times. Check facts, math and the decisions before any action.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

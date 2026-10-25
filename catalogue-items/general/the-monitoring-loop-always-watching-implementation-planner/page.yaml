@@ -1,0 +1,38 @@
+new_slug: the-monitoring-loop-always-watching-implementation-planner
+name: Agent anomaly monitoring builder
+summary: Build checks for unusual changes in your data. Set local baselines, quiet periods, alert rules and next checks.
+job: build-software
+headline: Agent anomaly monitoring builder
+subhead: Build checks for unusual changes in your data. Set local baselines, quiet periods, alert rules and next checks.
+explain: |-
+  Share metric history, baselines, thresholds, schedule and cooldowns. Get a scoped anomaly detector and a quiet alert policy.
+
+  The complete method and its supporting files are in the download. It marks missing inputs and separates proposed actions from actions that were actually completed.
+when:
+  - You need a scoped anomaly detector and a quiet alert policy.
+  - You are adding this function to an agent system.
+  - You need to compare an existing version with the supplied starter.
+you_give:
+  - Metric history, baselines, thresholds, schedule and cooldowns
+you_get:
+  - A scoped anomaly detector and a quiet alert policy
+  - A failure checklist and synthetic test cases
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Step 1
+    text: Load the approved metric checks and account scope.
+  - title: Step 2
+    text: Compare like-for-like time windows.
+  - title: Step 3
+    text: Distinguish missing data from a threshold breach.
+  - title: Step 4
+    text: Require configured confirmation checks.
+  - title: Step 5
+    text: Deduplicate alerts with a cooldown.
+  - title: Step 6
+    text: Store findings and proposed follow-up; do not treat an alert as an approved account change.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

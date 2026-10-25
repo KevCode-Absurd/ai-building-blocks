@@ -1,10 +1,16 @@
 ---
 name: "screenshot"
-description: "Use when the user explicitly asks for a desktop or system screenshot (full screen, specific app or window, or a pixel region), or when tool-specific capture capabilities are unavailable and an OS-level capture is needed."
+description: "Capture a browser page with an available browser screenshot tool. Capture a desktop, window, or region only when a supported OS helper is available; macOS capture needs Screen Recording permission."
 ---
 
 
 # Screenshot Capture
+
+> Modified by AI Blocks on 2026-10-24: method/copy repair.
+
+## Capability check
+
+First identify whether a browser screenshot tool or an OS capture helper is available. Browser capture records the rendered page only. Desktop, app-window and region capture require a supported OS helper: macOS uses Screen Recording permission, Linux needs one of the listed screenshot utilities, and Windows uses the PowerShell helper. If the required tool or permission is absent, say that capture type is unavailable. Do not describe a browser image as a desktop screenshot. The browser fixture test validates only browser-page capture; it does not validate native OS capture.
 
 Follow these save-location rules every time:
 
@@ -265,3 +271,7 @@ gnome-screenshot -w -f output/window.png
 - If Linux region/window capture fails, check tool availability with `command -v scrot`, `command -v gnome-screenshot`, and `command -v import`.
 - If saving to the OS default location fails with permission errors in a sandbox, rerun the command with escalated permissions.
 - Always report the saved file path in the response.
+
+## Repaired capability boundary
+
+Use only a capture tool that is actually available in the current environment. A browser page screenshot can be claimed only after the browser tool returns an image for the requested page or a local fixture. It captures rendered browser content, not the desktop, other applications, hidden windows or arbitrary screen regions. Native operating-system capture requires a working OS capture tool and permission; if unavailable, say desktop capture is unavailable and offer browser-page capture when supported. Never fabricate a screenshot or describe a fixture image as the user's screen. Report the tool, target and saved output path only when returned by the tool. The current Codex native-computer capability may be disabled; confirm capability at runtime.

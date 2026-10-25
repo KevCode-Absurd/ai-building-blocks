@@ -4,11 +4,12 @@ import { useEffect, type CSSProperties, type ReactNode } from "react";
 import { ArrowIcon } from "./ui";
 import { Code, Section } from "./BlockPage";
 import { Link } from "./lib/router";
+import "./contextual-help.css";
 
 const KINDS: { id: string; n: number; name: string; line: string; here: boolean }[] = [
   { id: "prompt", n: 1, name: "Prompt", line: "One message. You paste it in and get one result.", here: true },
-  { id: "skill", n: 2, name: "Skill", line: "Instructions you add to your AI once. It follows them every time.", here: true },
-  { id: "routine", n: 3, name: "Routine", line: "A skill or workflow that runs on a schedule, like every Monday at 9.", here: true },
+  { id: "skill", n: 2, name: "Skill", line: "Saved instructions for a job you do again, with steps and checks.", here: true },
+  { id: "routine", n: 3, name: "Routine", line: "A skill or workflow you schedule in your AI or another tool.", here: true },
   { id: "workflow", n: 4, name: "Workflow", line: "Several skills in order. Each one hands its work to the next.", here: true },
   { id: "agent", n: 5, name: "Agent", line: "An AI that works through the steps on its own, using tools. Optional.", here: true },
   { id: "app", n: 6, name: "App", line: "A screen your team signs in to. Fill in a form, press a button.", here: true },
@@ -61,7 +62,7 @@ const WORDS: [string, string][] = [
   ["Input", "What you give a step, like your reviews or a link to your website."],
   ["Result", "What a step gives back, like an ad, a script or a checklist."],
   ["Check", "A step that looks over work before it goes out, and says what to fix."],
-  ["Kit", "Your saved list of skills and prompts. It's kept in this browser."],
+  ["Kit", "Your saved list of tasks. Guests save in this browser. Sign in to keep an account copy."],
 ];
 
 const Steps = ({ items }: { items: ReactNode[] }) => (
@@ -73,6 +74,8 @@ const Box = ({ title, items }: { title: string; items: ReactNode[] }) => (
 const Status = ({ here }: { here: boolean }) => <span className={`hiw-status${here ? " here" : ""}`}>{here ? "On this site" : "Not in the library yet"}</span>;
 
 const TOC: [string, string][] = [
+  ["start", "Start with one task"],
+  ["use-in-ai", "Use your request or files"],
   ["kinds", "The six kinds"],
   ["prompt", "Prompts"],
   ["skill", "Skills"],
@@ -92,10 +95,10 @@ export default function HowItWorks({ toast }: { toast: (m: string) => void }) {
   return (
     <main className="bp hiw" data-testid="how-it-works">
       <header className="wrap bp-hero">
-        <Link to="/" className="back"><span aria-hidden="true">←</span> Home</Link>
-        <p className="bp-kicker"><span className="kind">Guide</span>About 6 minutes to read</p>
+        <Link to="/#library" className="back"><span aria-hidden="true">←</span> Find a task</Link>
+        <p className="bp-kicker"><span className="kind">Guide</span>Start below. Look up more when you need it.</p>
         <h1 className="bp-h1">How AI Blocks work</h1>
-        <p className="bp-sub">Everything here is a set of written instructions for your AI. This guide explains the six kinds, how to use each one, and how to build a workflow, in plain words.</p>
+        <p className="bp-sub">Choose a job, bring the details it needs and get instructions for your AI to follow. This guide explains skills, workflows and apps, what each one gives you, and how to start.</p>
       </header>
       <div className="wrap bp-body">
         <nav className="bp-toc" aria-label="On this page">
@@ -103,6 +106,57 @@ export default function HowItWorks({ toast }: { toast: (m: string) => void }) {
           {TOC.map(([id, label]) => <a key={id} href={`#${id}`}>{label}</a>)}
         </nav>
         <div className="bp-main">
+          <Section id="start" title="Start with one task" lead="Use this path for your first job. The full reference is below.">
+            <Steps items={[
+              <>Choose what you want to do in <Link to="/#library">Find a task</Link>. Try meeting notes or an email reply.</>,
+              "Add the details the task asks for. Optional details can wait.",
+              "Copy the request into your AI chat, or give your AI the downloaded files. Send it to start the work.",
+            ]} />
+            <p className="small">Browser tools make their result on this site. Requests and downloaded files are used in your AI.</p>
+            <p><Link to="/#library" className="btn btn-primary">Find a task <ArrowIcon /></Link></p>
+          </Section>
+          <Section id="use-in-ai" title="Use your request or files in your AI" lead="Choose the help that matches what you have. You do not need to read the whole guide.">
+            <p className="small">Your AI makes the result in your chat or workspace.</p>
+            <nav className="ai-guide-links" aria-label="Choose your AI"><a href="#guide-chatgpt">ChatGPT</a><a href="#guide-claude">Claude</a><a href="#guide-claude-code">Claude Code</a><a href="#guide-codex">Codex</a></nav>
+            <div className="ai-setup-guide" id="guide-chatgpt" data-testid="guide-chatgpt"><h3>ChatGPT</h3><Steps items={[
+              "For a quick start, copy the skill and paste it into a new chat. Add your goal and the details it needs.",
+              "If the skill has supporting files, download and unzip it. Attach SKILL.md and the needed files to the chat. Ask ChatGPT to follow SKILL.md for your task.",
+              "To reuse it, add the files to a ChatGPT project's Sources. In the project instructions, ask ChatGPT to use those files for this job.",
+            ]} /><p className="small">A file upload adds reference material. It does not install a coding skill. <a href="https://learn.chatgpt.com/docs/projects" target="_blank" rel="noopener noreferrer">ChatGPT project guide ↗</a></p></div>
+            <div className="ai-setup-guide" id="guide-claude" data-testid="guide-claude"><h3>Claude</h3><Steps items={[
+              "For a quick start, paste the copied skill into a new chat with your task details. Attach any supporting files.",
+              "To save a reusable skill, download its ZIP. Open Customize → Skills in Claude, then choose + → Create skill → Upload a skill.",
+              "Upload the ZIP and turn the skill on. Start a chat and describe the job you want it to do.",
+            ]} /><p className="small">Your organization's settings may limit skill uploads. <a href="https://support.claude.com/en/articles/12512180-use-skills-in-claude" target="_blank" rel="noopener noreferrer">Claude skill guide ↗</a></p></div>
+            <div className="ai-setup-guide" id="guide-claude-code" data-testid="guide-claude-code"><h3>Claude Code</h3><Steps items={[
+              "Download and unzip the skill. Keep SKILL.md and its supporting files in the same skill folder.",
+              <>In your local project, put that folder in <code>.claude/skills/</code>. The file should be at <code>.claude/skills/skill-name/SKILL.md</code>.</>,
+              <>Open Claude Code in that project. Type <code>/skill-name</code> and add your task details. For all your projects, use <code>~/.claude/skills/</code> instead.</>,
+            ]} /><p className="small"><a href="https://code.claude.com/docs/en/skills" target="_blank" rel="noopener noreferrer">Claude Code skill guide ↗</a></p></div>
+            <div className="ai-setup-guide" id="guide-codex" data-testid="guide-codex"><h3>Codex</h3><Steps items={[
+              "Download and unzip the skill. Keep all its supporting files beside SKILL.md.",
+              <>Put the skill folder in your project's <code>.agents/skills/</code> folder. The file should be at <code>.agents/skills/skill-name/SKILL.md</code>. For all projects, use <code>~/.agents/skills/</code>.</>,
+              "Open the project in Codex and ask it to use the skill by name for your task. If the new skill does not appear, restart Codex.",
+            ]} /><p className="small"><a href="https://developers.openai.com/codex/skills/" target="_blank" rel="noopener noreferrer">Codex skill guide ↗</a></p></div>
+            <p className="small"><b>Downloaded a workflow or agent?</b> Keep the whole pack together. Open it in your AI and ask it to follow START_HERE.txt and HANDOFF.md. In a chat, attach every file it needs. A workflow pack contains several skills; it is not a single skill upload.</p>
+            <details className="context-help" data-testid="help-copied-request"><summary>I copied a request</summary>
+              <Steps items={[
+                "Open a new chat in your AI assistant.",
+                "Paste the complete request. Add any files it asks for, then send it.",
+                "Read the result. Ask for changes in the same chat if it missed something.",
+              ]} />
+              <p className="small">If copying did not work, select and copy the text shown below the copy button.</p>
+            </details>
+            <details className="context-help" data-testid="help-downloaded-files"><summary>I downloaded files</summary>
+              <Steps items={[
+                "Unzip the download. Keep all its files and folders together.",
+                "In a coding assistant, open that folder. In a chat, attach the files. If your AI cannot read a zip, unzip it first; check that it can read every needed file.",
+                "Follow START_HERE.txt or the README in the pack. For a workflow, say “Follow HANDOFF.md”. Add your goal and the material the task needs.",
+              ]} />
+              <p className="small">“Copy AI instructions” gives you a first message. It does not replace the downloaded files. Your AI must be able to read them and use the tools the job needs.</p>
+            </details>
+            <p className="small">Need the result here instead? <Link to="/tools">Open browser tools</Link>. <Link to="/apps">App tours</Link> show example screens; a tour does not run your work.</p>
+          </Section>
           <Section id="kinds" title="Six kinds, from one message to an app" lead="Each one does more than the one before. Start with the smallest one that does your job." wide>
             <ol className="hiw-ladder">
               {KINDS.map((k) => (
@@ -134,33 +188,35 @@ export default function HowItWorks({ toast }: { toast: (m: string) => void }) {
             <Code name="a-prompt.txt" text={PROMPT} toast={toast} />
           </Section>
 
-          <Section id="skill" title="A skill: instructions your AI follows every time">
+          <Section id="skill" title="A skill: saved steps for a repeat job">
             <div className="prose big">
-              <p>A skill is a longer set of instructions, saved in a file called SKILL.md. You add it to your AI once. After that, you start it by name in any chat, and it works through the same steps every time. Before it hands the work back, it checks it.</p>
+              <p>A skill is a set of instructions saved in a file called SKILL.md. It tells your AI how to do a job, such as review a CV, plan a lesson or draft a customer reply. Save it in an AI tool that supports skills, or paste it into a chat when you need it.</p>
+              <p>Read the page before you download. The name tells you the job. The description tells you what to share, what steps the AI follows and what comes back. Some jobs need extra software or access to an account; check the page and skill file for those details.</p>
             </div>
             <div className="give-get">
               <div><h3>A prompt</h3><ul><li>You paste it in every time.</li><li>Best for a job you do once.</li><li>Short: a few lines.</li></ul></div>
-              <div><h3>A skill</h3><ul><li>You add it once, then ask for it by name.</li><li>Best for a job you do again and again.</li><li>Longer: steps, rules and checks.</li></ul></div>
+              <div><h3>A skill</h3><ul><li>Keep the file and reuse its instructions.</li><li>Best for a job you do again and again.</li><li>Longer: steps, rules and checks.</li></ul></div>
             </div>
             <h3 className="sub-h">Add a skill to your AI</h3>
             <Steps items={[
-              <>Open a skill and press <b>Add it to your AI</b>.</>,
-              "Choose how you use your AI: a chat, a coding assistant or saved instructions.",
-              "Follow the steps shown. Reuse the saved instructions when your AI supports them.",
+              "Open a skill and read what it needs.",
+              "Use “Copy the request” if it is offered, or download the complete files. Keep supporting files with the skill.",
+              <>Follow <a href="#use-in-ai">the steps for your request or files</a>. Save the instructions for reuse if your AI supports that.</>,
             ]} />
             <h3 className="sub-h">Use it</h3>
             <Steps items={[
               <>Start a chat and ask for it by name, like “use the meta-ads-compliance-checker skill”. Attach its SKILL.md file if it is not already available.</>,
               "Paste in what it asks for. Each skill's page lists what to give it.",
-              "Read what comes back. The skill has already checked it, but you're the final check.",
+              "Read the result and the checks the skill asks for. Confirm any facts, figures or changes before you use them.",
             ]} />
-            <p className="bp-note">Every skill file has the same parts, in plain text. This is the top of a real one:</p>
+            <p className="bp-note">Skill files use plain text. This example shows the main parts; files from other authors may use different headings.</p>
             <Code name="SKILL.md" text={SKILL} toast={toast} />
           </Section>
 
           <Section id="routine" title="A routine: a skill that runs on a schedule">
             <div className="prose big">
               <p>A routine is a skill or a workflow with a time or a trigger. “Every Monday at 9, read last week's ad results and tell me what to cut.” You set it up once, and it runs without you starting it.</p>
+              <p>You set up the schedule in your AI or another tool. Downloading instructions here does not start a schedule.</p>
             </div>
             <h3 className="sub-h">Set one up</h3>
             <Steps items={[
@@ -174,10 +230,11 @@ export default function HowItWorks({ toast }: { toast: (m: string) => void }) {
 
           <Section id="workflow" title="A workflow: several skills, one after another">
             <div className="prose big">
-              <p>A workflow runs skills in order. Each step saves its result and hands it to the next step. For example: teach your AI your brand, work out who you're writing for, write the ad, then check it against Meta's ad rules.</p>
+              <p>A workflow joins several skills to finish a bigger job. Each step gives the next one what it needs. You might turn meeting notes into tasks and a follow-up email, or turn customer research into an ad and check its claims.</p>
+              <p>A workflow download contains the plan and the skill files. Give it to an AI assistant with the tools it needs, then ask it to follow the plan. Downloading the pack prepares the job; your AI carries it out when you start it.</p>
             </div>
             <div className="hiw-flow" aria-label="An example workflow">
-              {[["Website brand brain builder", "brand file"], ["Buyer brief writer", "brief"], ["Fact-based ad copy writer", "ad copy"], ["Meta ads compliance checker", ""]].map(([step, carry], i) => (
+              {[["Brand profile builder", "brand file"], ["Buyer brief writer", "brief"], ["Fact-based ad copy writer", "ad copy"], ["Meta ads compliance checker", ""]].map(([step, carry], i) => (
                 <div className="hiw-flow-step" key={step}>
                   <span className="hiw-flow-box"><span className="hiw-n">{i + 1}</span>{step}</span>
                   {carry && <span className="hiw-carry">{carry}</span>}
@@ -200,7 +257,7 @@ export default function HowItWorks({ toast }: { toast: (m: string) => void }) {
 
           <Section id="agent" title="An agent: an AI that does the steps on its own">
             <div className="prose big">
-              <p>A chat AI writes. An agent can also act. It can open files, search the web, use other tools and decide what to do next. You give it a goal, and it keeps going until the job is done. Then it tells you what it did.</p>
+              <p>A chat AI writes. An agent can also act. It can open files, search the web and use other tools when they are available. You give it a goal. It works through the steps and may pause for missing details or your approval.</p>
               <p>In a chat, you start each step and read each answer. An agent can run a whole workflow while you do something else. Some can start on their own, for example every Monday morning.</p>
             </div>
             <Box title="Try it with what's here" items={[
@@ -215,7 +272,7 @@ export default function HowItWorks({ toast }: { toast: (m: string) => void }) {
             <div className="prose big">
               <p>An app puts a workflow behind a form and a button. You fill in your details, press the button, and get the result. There's no chat and no files to upload, so anyone on your team can use it.</p>
               <p>An app is worth it when many people do the same job the same way, many times. For a job you do now and then, a skill is enough.</p>
-              <p>An app doesn't need an agent. Most apps run fixed steps, with one AI call per button.</p>
+              <p>An app doesn't need an agent. Some apps use AI; others do not. The app tours here show examples. They do not run work with your files.</p>
             </div>
             <p className="hiw-now"><Status here /> <Link to="/apps">Take the tour of a finished app</Link>, or <Link to="/apps/starter-pack">get the app starter pack</Link> to build your own.</p>
           </Section>
@@ -243,17 +300,17 @@ export default function HowItWorks({ toast }: { toast: (m: string) => void }) {
 
           <Section id="builder" title="Build a workflow in the builder, the right way">
             <Steps items={[
-              "Start from a goal. Type the result you want, like “a landing page for my best ad”, and the builder lays out the steps. Or pick a ready workflow.",
-              "Read it in order. Steps run left to right, then on to the next row. The label on each line says what passes to the next step.",
+              "Pick a ready workflow, add skills in the builder, or use “Plan a workflow” to ask AI for a plan.",
+              "Read the list from top to bottom. Diagram view shows the same plan as connected steps.",
               "Click a step to see what it needs. “You give it this” means you bring it. “Comes from step 1” means an earlier step makes it.",
-              "Fix dashed lines. A dashed line means the next step can't use what the last one made. Move or swap a step until the line is solid.",
-              <>Press <b>Preview</b> to watch the steps run in order.</>,
+              "In Diagram view, check dashed lines. They warn that steps may not pass the right material between them. Review the step's inputs and change the connection if needed.",
+              <>Press <b>Preview the steps</b> to see the plan and sample results. This does not run your work.</>,
               <>Press <b>Save</b> to keep it, or <b>Share</b> to send it as a link.</>,
               <>Press <b>Download the workflow</b>. Gather what the list asks for, then upload the folder to your AI.</>,
             ]} />
             <Box title="Tips" items={[
-              "Put “Brand profile builder” first. Most steps read your brand file.",
-              "End with a check, like “Meta ads compliance checker”.",
+              "Start with the facts the job needs, such as a brief, a document or a brand profile.",
+              "End with a check that fits the job, such as a facts review or an ad rules check.",
               "Start with three to five steps. Add more once it works.",
               "Made a mistake? Press Ctrl+Z to undo it.",
               "On a phone, the builder shows a list. Use the arrows to change the order.",

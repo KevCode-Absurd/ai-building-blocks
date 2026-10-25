@@ -2,10 +2,14 @@ thinking: high
 thinking_why: It fills linked sheets with many assumptions.
 new_slug: buyout-model-template-filler
 name: Buyout model template filler
-summary: Give it a blank buyout template and deal facts. Get the model filled with live formulas and checked.
+summary: Give it a blank buyout template and deal facts. Get the model filled
+  with live formulas and checked.
 job: money-and-investing
 headline: Buyout model template filler
-subhead: "Give it a blank buyout model in Excel plus the deal facts: price, debt, fees and forecast assumptions. It fills in the funding, forecast, debt schedule and returns using your file's own layout. You get a completed model with live formulas and a list of checks that passed or failed."
+subhead: "Give it a blank buyout model in Excel plus the deal facts: price,
+  debt, fees and forecast assumptions. It fills in the funding, forecast, debt
+  schedule and returns using your file's own layout. You get a completed model
+  with live formulas and a list of checks that passed or failed."
 explain: |
   A blank buyout template becomes a finished, checked model. You hand over the template and the deal facts, and the skill fills in the purchase funding, operating forecast, debt schedule and returns, using your file's layout exactly instead of building a new one.
 
@@ -26,6 +30,8 @@ you_get:
   - A debt schedule and returns section
   - A list of checks that passed or failed
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
   - It works best when your AI can run code and read your files.

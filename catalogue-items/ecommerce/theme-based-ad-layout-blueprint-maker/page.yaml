@@ -1,0 +1,45 @@
+new_slug: theme-based-ad-layout-blueprint-maker
+name: Theme-based ad layout blueprint maker
+summary: Plan an ad layout by theme and shape. Get text zones, product placement, a simple diagram and layout options.
+job: make-image-ads
+headline: Theme-based ad layout blueprint maker
+subhead: Share ad theme, buyer stage, aspect ratio, copy and product photos. Get a zone diagram, hierarchy rules and three to four layout options.
+explain: |-
+  Plan an ad layout by theme and shape. Get text zones, product placement, a simple diagram and layout options.
+
+  Share ad theme, buyer stage, aspect ratio, copy and product photos. Get a zone diagram, hierarchy rules and three to four layout options.
+when:
+  - You need a zone diagram, hierarchy rules and three to four layout options.
+  - You need theme-based ad layout blueprint maker for a specific task.
+  - You want the method's decisions and assumptions written down before acting.
+you_give:
+  - Ad theme
+  - Buyer stage
+  - Aspect ratio
+  - Copy and product photos
+you_get:
+  - A zone diagram, hierarchy rules and three to four layout options
+  - The sources used, missing inputs and assumptions
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Check the inputs
+    text: Confirm ad theme, buyer stage, aspect ratio, copy and product photos. Mark facts that are missing.
+  - title: How This Works
+    text: Follow the how this works section in the full method and keep its required fields and decision rules.
+  - title: Collect Inputs
+    text: Follow the collect inputs section in the full method and keep its required fields and decision rules.
+  - title: Generate Layout Blueprint
+    text: Follow the generate layout blueprint section in the full method and keep its required fields and decision rules.
+  - title: Generate Variations
+    text: Follow the generate variations section in the full method and keep its required fields and decision rules.
+  - title: Deliver Layout Spec
+    text: Follow the deliver layout spec section in the full method and keep its required fields and decision rules.
+  - title: Rules
+    text: Follow the rules section in the full method and keep its required fields and decision rules.
+  - title: Review the result
+    text: Return a zone diagram, hierarchy rules and three to four layout options. Check facts, math and the decisions before any action.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

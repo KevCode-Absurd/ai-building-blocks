@@ -1,0 +1,30 @@
+new_slug: digital-twin-design-planner
+name: Plan a governed digital twin
+summary: Plan how a digital twin will track the real system, test its claims and control each action.
+job: build-software
+headline: Plan a governed digital twin
+subhead: Bring a real system and its data sources. Set freshness and proof rules, then get a twin plan with action limits.
+explain: Bring a real system and its data sources. Set freshness and proof rules, then get a twin plan with action limits.
+when:
+  - You want to plan a governed digital twin.
+you_give:
+  - The represented entity/process, authoritative data sources and intended decision.
+  - Freshness/fidelity needs, model assumptions, owners, risks and permitted action scope.
+you_get:
+  - A twin/shadow classification, architecture contracts and evaluation plan.
+  - A release-evidence checklist with independent validation, stop rules and unresolved gaps.
+how_to_use:
+  - Download the complete skill folder and add it to your AI tool, or copy the instructions into a chat.
+  - Provide the inputs listed here and ask your AI to follow the skill.
+  - Review the result and any missing facts before using it.
+how_it_works:
+  - title: Frame and classify
+    text: Identify the original, useful decision, simpler alternatives and whether this is a model, shadow or twin.
+  - title: Define evidence contracts
+    text: Specify identity, schema, clocks, provenance, freshness, uncertainty and replayable model/scenario versions.
+  - title: Test before effects
+    text: Compare read-only/shadow behavior with independent reality and fail to hold on stale or contradictory evidence.
+  - title: Govern the lifecycle
+    text: Separate approval, execution, rollback and stop, with scoped credentials, owners and retirement checks.
+thinking: medium
+thinking_why: It weighs your evidence and follows a specific method.

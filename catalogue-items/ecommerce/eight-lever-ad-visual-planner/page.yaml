@@ -1,0 +1,44 @@
+new_slug: eight-lever-ad-visual-planner
+name: Eight-lever ad visual planner
+summary: Set eight visual controls for an ad. Choose what stays fixed and what changes across the image tests.
+job: make-image-ads
+headline: Eight-lever ad visual planner
+subhead: Share product photos, brand colors, ad theme and reference images. Get eight visual settings and fixed versus flexible choices.
+explain: |-
+  Set eight visual controls for an ad. Choose what stays fixed and what changes across the image tests.
+
+  Share product photos, brand colors, ad theme and reference images. Get eight visual settings and fixed versus flexible choices.
+when:
+  - You need eight visual settings and fixed versus flexible choices.
+  - You need eight-lever ad visual planner for a specific task.
+  - You want the method's decisions and assumptions written down before acting.
+you_give:
+  - Product photos
+  - Brand colors
+  - Ad theme and reference images
+you_get:
+  - Eight visual settings and fixed versus flexible choices
+  - The sources used, missing inputs and assumptions
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Check the inputs
+    text: Confirm product photos, brand colors, ad theme and reference images. Mark facts that are missing.
+  - title: How This Works
+    text: Follow the how this works section in the full method and keep its required fields and decision rules.
+  - title: Collect Context
+    text: Follow the collect context section in the full method and keep its required fields and decision rules.
+  - title: The 8 Levers
+    text: Follow the the 8 levers section in the full method and keep its required fields and decision rules.
+  - title: Priority Hierarchy
+    text: Follow the priority hierarchy section in the full method and keep its required fields and decision rules.
+  - title: Variation Strategies
+    text: Follow the variation strategies section in the full method and keep its required fields and decision rules.
+  - title: Deliver Configuration
+    text: Follow the deliver configuration section in the full method and keep its required fields and decision rules.
+  - title: Review the result
+    text: Return eight visual settings and fixed versus flexible choices. Check facts, math and the decisions before any action.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

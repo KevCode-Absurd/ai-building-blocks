@@ -5,4 +5,4 @@
 - @json-schema-manual - the same field list as a validation schema.
 
 
-See the [Reusable Prompt](references/reusable-prompt.md) reference for the full guidance.
+See the [Reusable Prompt](../references/reusable-prompt.md) reference for the full guidance.

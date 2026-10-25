@@ -1,23 +1,19 @@
-name: "Competitor ad swipe file builder"
+name: Competitor ad swipe file builder
 new_slug: competitor-ad-swipe-file-builder
-summary: "Paste ads from Meta's Ad Library. Get them sorted into 9 types, with what to study in each."
+summary: Paste ads from Meta's Ad Library. Get them sorted into 9 types, with what to study in each.
 job: study-competitors
-thinking: high
-thinking_why: "It studies ads or pages closely and works out why they work."
-
-headline: "Competitor ad swipe file builder"
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.
+headline: Competitor ad swipe file builder
 subhead: Give it competitor ads you collected from Meta's Ad Library, each with its ID, start date and a screenshot. It files every ad under one of nine types. You get a study board with three examples per type, what to study in each, and the gaps to fill.
-
 explain: |
   Most people save competitor ads into one long folder and never look at it again. With no order, you can't see which kinds of ad a category runs, which ones last, or what an ad of a certain type needs to work.
 
   This skill turns that pile into a study board. It looks at each ad itself, not just its text, and files it under one of nine types on the same map the other ad skills here use, such as a product shot, a customer quote, a before-and-after with objects, or an offer. It picks three per type from at least two brands, so one brand's habit isn't mistaken for a pattern. Each ad gets a tier from its start date: new (under 30 days), kept (30 to 89) or long-runner (90 or more). The Ad Library shows no spend or sales for ordinary ads, so the board never calls anything a winner. It's for learning how ads are built. Nothing from it is copied into your own.
-
 when:
   - You've saved dozens of competitor ads and want them organised before planning your own.
   - You want three good examples of one kind of ad (a customer quote ad, a comparison) before you make one.
   - You're new to a category and want a quick picture of what other brands run and keep running.
-
 you_give:
   - The ads, each with its library ID, advertiser, start date, text and a screenshot (attach the screenshots; your AI can see pictures)
   - What you sell, who to, and which competitors matter (recommended)
@@ -27,14 +23,12 @@ you_get:
   - A one-line pattern note for each buyer question
   - A list of thin types and ads it couldn't look at
   - Any of its own checks the board still misses, each one named
-
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Open facebook.com/ads/library, pick your country, and search each competitor by name. Don't use scrapers or spy tools.
   - For each ad you keep, copy the library ID and the "started running" date, and take a screenshot.
   - Paste them in with a line on what you sell and who your competitors are.
   - Read the "what to study" column, then open those ads and look at their structure, not their wording.
-
 how_it_works:
   - title: Removes your own ads
     text: The board is for learning from other advertisers, so anything of yours comes out first.
@@ -50,7 +44,6 @@ how_it_works:
     text: Searches a neighbouring category once if a type is thin, then records an honest gap rather than padding it.
   - title: Checks the board
     text: Goes through its own checks, fixes what it can, and names any check still missed.
-
 output_shape: |
   BOARD
   Type | Code | Advertiser | Library ID | Started | Tier | Live? | What to study
@@ -68,7 +61,6 @@ output_shape: |
 
   CHECKS MISSED
   <one line each, or none>
-
 example:
   business: sprout
   input: |
@@ -136,7 +128,6 @@ example:
     CHECKS MISSED
     No type is full yet. The board is empty until the screenshots,
     IDs, dates and other advertisers above come in.
-
 tweaks:
   - what: Which types
     how: Ask for only the types you need ("Their words and Old way, new way only") to get a deeper pick in each.
@@ -146,38 +137,36 @@ tweaks:
     how: Name your category and competitors. It then knows which ads come from neighbouring categories and says so on the board.
   - what: Rerunning it
     how: Paste the existing board's library IDs and say "add only new ads". It also updates each card's tier.
-
 judge:
   - None of your own ads are on the board.
   - Every card has a library ID and start date you can check in the library.
   - No ad appears twice. Any type shown as full has three cards from at least two advertisers, and thinner types are listed as gaps, not padded.
   - Nothing is called a "winner". The tier is shown as a hint, with the days live.
   - The "what to study" line points at structure (layout, eye path, how it proves or offers), not wording to copy.
-
 test:
   - Slip two of your own ads into the pile. Neither should appear on the board.
   - Add an ad you've only seen as text, with no screenshot. It should land on the "not looked at" list.
   - Add three near-identical ads from one advertiser. They should merge into one card.
   - Run it twice on the same pile. The types should match. If an ad moves, check which element is biggest in its frame.
   - Look up three library IDs from the board yourself. The advertiser and start date should match.
-
 improve:
   - Mark the types your market never uses, so the board doesn't chase them.
   - Change "three per type" in step 5 to two if you want a quick look, and keep the two-advertiser rule.
   - Write your main competitors and category into "Your work" in the skill, so you don't paste them every time.
   - Save the notes to the competitors page of your brand file each time you rebuild the board, with the date.
   - Pair it with a skill that finds the ad ideas competitors all miss, then a writing skill that builds your own ad from your product facts.
-
 works_best_with:
   tools:
-    - {name: "Meta Ad Library", why: "The public source for every active ad, with its library ID and start date, browsed by hand."}
-    - {name: "Google Sheets", why: "Keeps the board and its library IDs, so reruns only add new ads."}
-    - {name: "Any good chat AI", why: "Filing ads from screenshots works in any strong chat AI that reads images."}
+    - name: Meta Ad Library
+      why: The public source for every active ad, with its library ID and start date, browsed by hand.
+    - name: Google Sheets
+      why: Keeps the board and its library IDs, so reruns only add new ads.
+    - name: Any good chat AI
+      why: Filing ads from screenshots works in any strong chat AI that reads images.
   inputs:
-    - "A screenshot of each ad's whole library card, so the start date and versions are on file"
-    - "Ads from 3 to 6 advertisers, so each type can reach two brands"
-    - "One or two neighbouring categories whose buyers ask the same questions, for thin types"
-
+    - A screenshot of each ad's whole library card, so the start date and versions are on file
+    - Ads from 3 to 6 advertisers, so each type can reach two brands
+    - One or two neighbouring categories whose buyers ask the same questions, for thin types
 terms:
   - term: Study board
     meaning: A collection of other brands' ads saved for study, sorted so you can find examples fast. Marketers often call it a swipe board.

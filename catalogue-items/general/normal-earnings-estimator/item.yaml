@@ -7,11 +7,11 @@ role: make
 job: analysis
 level: advanced
 inputs:
-  - {type: audit_report, required: true}
+  - { type: audit_report, required: true }
 outputs:
-  - {type: audit_report}
+  - { type: audit_report }
 origin: rebuilt
-version: 1.0.0
-minds: [benjamin-graham]
+version: 1.0.1
+minds: [ benjamin-graham ]
 credits:
-  - {title: "Security Analysis: Principles and Technique (second edition)", by: "Benjamin Graham and David L. Dodd", used: "Valuing from an average of five to ten years instead of the latest year; when the latest year may stand alone; not projecting a trend beyond what a normal year has already shown; restating per share for changes in capital"}
+  - { title: "Security Analysis: Principles and Technique (second edition)", by: "Benjamin Graham and David L. Dodd", used: "Valuing from an average of five to ten years instead of the latest year; when the latest year may stand alone; not projecting a trend beyond what a normal year has already shown; restating per share for changes in capital" }

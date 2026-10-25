@@ -1,0 +1,37 @@
+new_slug: agent-database-migration-planner
+name: Agent database migration planner
+summary: Plan a database change that preserves existing agent data. Get a schema map, staging checks, release order and recovery steps.
+job: build-software
+headline: Agent database migration planner
+subhead: Plan a database change that preserves existing agent data. Get a schema map, staging checks, release order and recovery steps.
+explain: |-
+  Share the selected codebase, schemas and service setup. Get a concrete setup or code-change plan with required files.
+
+  Use forward migrations and rehearsed recovery. Existing data and access policies must survive the planned change unless a separate explicit decision authorizes otherwise.
+when:
+  - You need a concrete setup or code-change plan with required files.
+you_give:
+  - The selected codebase, schemas and service setup
+  - The exact change you want and actions you authorize
+you_get:
+  - A concrete setup or code-change plan with required files
+  - Missing inputs and a bounded verification plan
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Step 1
+    text: Inspect schema history, live table definitions, constraints, data volume, ownership and every job/runtime component that reads them. Capture the current state and backup/restore evidence before designing a change. A mismatch with a classroom schema is not a reason to delete data.
+  - title: Step 2
+    text: Map required agent registry, jobs, activity, issues, findings, costs and proposal records to the selected project. Separate missing columns, renamed fields and semantic differences. Define compatibility for old readers and in-flight jobs.
+  - title: Step 3
+    text: Write an ordered forward migration that adds or transforms the necessary data without an unqualified table reset. Plan backfill, constraints and access policies deliberately. Make destructive changes a separate reviewed proposal with explicit data-loss scope, never a default repair step.
+  - title: Step 4
+    text: Rehearse the migration and restoration path in isolated staging with synthetic data and a representative schema. Check row counts, transformed values, indexes, ownership and old/new client compatibility. Use transactions or resumable phases where supported and appropriate.
+  - title: Step 5
+    text: Document release ordering, locking or maintenance needs, monitoring and the precise rollback limits. A rollback script that cannot restore deleted data is not a complete recovery plan. Pause the rollout if the rehearsed recovery or isolation check fails.
+  - title: Step 6
+    text: Return the migration plan, change files when requested, source-to-target mapping, verification queries and actual run/not-run evidence. A full reset is allowed only for an explicitly disposable environment and separate user authorization, with the exact target checked first.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

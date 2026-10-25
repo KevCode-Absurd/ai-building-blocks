@@ -8,18 +8,18 @@
 
 export default {
   slug: "subscriber-lifetime-value",
-  name: "Know what a subscriber is worth over their whole stay",
+  name: "Subscriber lifetime profit estimate",
   /** The plain name, used where the tool talks about itself. */
-  short: "Lifetime value",
-  headline: "Know what a subscriber is worth over their whole stay, and if that covers what they cost to win",
-  summary: "Type your monthly price, margin, churn and what a subscriber costs to win. You get how long they stay, their lifetime value, the ratio to cost and the most to spend.",
-  question: "How long does a subscriber stay at my churn rate, what are they worth over that time, and is it enough against what they cost to win?",
+  short: "Subscriber lifetime profit estimate",
+  headline: "Subscriber lifetime profit estimate",
+  summary: "Enter price, profit share, leaving rate and customer cost. Estimate subscriber profit over time, payback and a limit for finding new customers.",
+  question: "What profit might a subscriber leave over their stay, before the cost to gain them?",
   shelf: ["general"],
   version: "1.0.0",
   updated: "2026-10-21",
   presets: [{ id: "general", label: "Any business" }],
   inputs: [
-    { id: "price", label: "What a subscriber pays a month", unit: "money", example: 30, min: 0, max: 1e9, step: 1, help: "The average monthly payment across your plans. For yearly plans, divide the yearly price by 12.", where: "Monthly recurring revenue divided by active subscribers.", tools: ["Stripe", "Your billing tool", "A spreadsheet"] },
+    { id: "price", label: "What a subscriber pays a month", unit: "money", example: 30, min: 0, max: 1e9, step: 1, help: "The average monthly payment across your plans. For yearly plans, divide the yearly price by 12.", where: "Divide monthly subscription sales by the number of people paying.", tools: ["Stripe", "Your billing tool", "A spreadsheet"] },
     { id: "margin", label: "Share of each payment you keep", unit: "percent", example: 80, min: 0, max: 100, step: 1, help: "What is left after the cost to serve one subscriber: hosting, payment fees, support, goods shipped. Do not take marketing off here.", where: "Your profit and loss report: gross profit divided by revenue.", tools: ["Xero or QuickBooks", "Your accountant"] },
     { id: "churn", label: "Share of subscribers who cancel each month", unit: "percent", example: 5, min: 0, max: 100, step: 0.5, help: "Cancellations in a month divided by the subscribers you started the month with. 5 means 5 in 100 leave each month.", where: "Your billing tool's churn report, averaged over the last 3 months.", tools: ["Stripe", "Your billing tool", "Your subscription app"] },
     { id: "cac", label: "Cost to win one subscriber", unit: "money", example: 150, min: 0, max: 1e9, step: 5, help: "Marketing and sales spend divided by the new subscribers it brought in.", where: "Ad and marketing spend for the last 90 days divided by new subscribers in the same days.", tools: ["Meta Ads Manager", "Google Ads", "A spreadsheet"] },
@@ -71,6 +71,6 @@ export default {
   notes: [
     "Churn is the same every month here. Real churn is often highest in the first months, so use a rate from a group who joined at least 6 months ago.",
     "Money now and money later count the same. There is no discount for waiting.",
-    "Lifetime value is an average. Half your subscribers are worth less than it.",
+    "Lifetime value is an average estimate. Some subscribers leave sooner and others stay much longer.",
   ],
 };

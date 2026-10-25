@@ -1,0 +1,26 @@
+new_slug: set-product-decision-rights
+name: Set product decision rights
+summary: Set who decides product questions. Agree what facts they need and where to take disputes.
+job: build-product
+headline: Set product decision rights
+subhead: Share your team roles, product scope and rules. Map each choice to an owner. Get review steps, evidence needs and a path for disputes.
+explain: Share your team roles, product scope and rules. Map each choice to an owner. Get review steps, evidence needs and a path for disputes.
+when:
+  - You want to set product decision rights.
+you_give:
+  - Your product scope, decision types, roles, existing authority, review routines and assurance needs.
+you_get:
+  - A decision-rights map, review cadence and evidence requirements with exception and escalation records.
+how_to_use:
+  - Download the complete skill folder and add it to your AI tool, or copy the instructions into a chat.
+  - Provide the inputs listed here and ask your AI to follow the skill.
+  - Review the result and any missing facts before using it.
+how_it_works:
+  - title: Choose an operating mode
+    text: Adapt lightweight or high-assurance governance to actual obligations and team context.
+  - title: Map accountable decisions
+    text: Name the decision owner, consulted roles, required evidence and escalation path for each decision type.
+  - title: Make reviews observable
+    text: Set review inputs and outputs, then document waivers and contested decisions with revisit triggers.
+thinking: medium
+thinking_why: It weighs your evidence and follows a specific method.

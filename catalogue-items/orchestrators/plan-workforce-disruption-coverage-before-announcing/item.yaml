@@ -1,0 +1,34 @@
+slug: plan-workforce-disruption-coverage-before-announcing
+name: Plan staff coverage during a disruption
+summary: Provide essential services, staff availability and disruption facts. Get feasible coverage options, escalation roles and message drafts.
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: question
+    required: true
+  - type: spreadsheet
+    required: true
+  - type: document
+    required: true
+outputs:
+  - type: plan
+  - type: document
+uses:
+  - workforce-crisis-playbook-writer
+  - shift-schedule-planner
+  - executive-action-register
+steps:
+  - uses: workforce-crisis-playbook-writer
+    note: Use confirmed disruption facts for workforce priorities, decision owners, communication routes and staff support. Pass approved essential-service priorities and safety constraints to scheduling.
+  - uses: shift-schedule-planner
+    note: Use priorities, skills, confirmed availability and working limits for coverage options. Mark gaps, rest constraints and unconfirmed availability rather than impossible assignments. Hand exceptions and proposed choices to the action register.
+  - uses: executive-action-register
+    note: Capture gaps, decisions, owner, deadline, escalation trigger and message approval. Link draft schedules to their facts and approvals; return pending actions for incident lead review. Treat proposed assignments as proposals, not accepted commitments; never guess an owner or due date.
+execution: coordinator
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

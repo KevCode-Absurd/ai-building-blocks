@@ -2,7 +2,7 @@ slug: codex
 name: Codex
 maker: OpenAI
 url: https://openai.com/codex
-promise: An AI coding agent that writes, tests and reviews code from your ChatGPT account.
+promise: "Write, test and review project code with an agent connected to your ChatGPT account."
 use_cases: [code, build-apps]
 categories: [coding]
 what_it_does:
@@ -14,7 +14,7 @@ what_it_does:
 benefits:
   - Start coding help with the ChatGPT plan you may already pay for.
   - Hand off several small tasks and review the results later.
-  - Get a code review pass on every pull request.
+  - "Request a review of a pull request before it is merged."
   - Pick pay-as-you-go through the API if a plan does not fit.
 best_for:
   - Developers who already use ChatGPT.

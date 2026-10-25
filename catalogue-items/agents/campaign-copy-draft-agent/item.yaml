@@ -1,0 +1,24 @@
+slug: campaign-copy-draft-agent
+name: Campaign copy draft agent
+summary: Share your brief, offer and approved claims. Get a copy deck checked against those facts, plus a checkpoint for the next revision.
+category: agent
+type: agent
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: document
+    required: false
+outputs:
+  - type: ad_copy
+    required: true
+  - type: document
+    required: true
+uses: []
+execution: coordinator
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

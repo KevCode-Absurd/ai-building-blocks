@@ -1,0 +1,32 @@
+new_slug: uncanny-anime-image-prompt-writer
+name: Uncanny anime image prompt writer
+summary: Share a strange scene idea. Get a cinematic anime image prompt with a clear visual hook, camera and mood.
+job: make-images
+headline: Uncanny anime image prompt writer
+subhead: Share a strange scene idea. Get a cinematic anime image prompt with a clear visual hook, camera and mood. Bring the brief and any files you want it to use.
+explain: |-
+  Use this when you need cinematic uncanny manga/OVA image prompts. Use the user idea immediately. Offer a small set of visual lanes only if they need direction; do not require artist selection before drafting.
+
+  Choose a descriptive lane such as dense retro cyberpunk, technical armor/urban detail, rough dark samurai drama, extreme-perspective ensemble, or deadpan psychic comedy.
+when:
+  - You need cinematic uncanny manga/OVA image prompts.
+  - You want a clear draft and checks from the material you already have.
+you_give:
+  - brief
+  - "Optional: reference set"
+you_get:
+  - image prompt
+  - Missing inputs and steps that still need to run
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Read the brief
+    text: Use the user idea immediately. Offer a small set of visual lanes only if they need direction; do not require artist selection before drafting.
+  - title: Build the result
+    text: "Create one uncanny visual hook that changes the scene meaning: scale mismatch, impossible observer position, ordinary behavior amid strange events, or uneasy empty space. Preserve the main user concept."
+  - title: Check and hand off
+    text: Return one copy-ready image prompt plus optional variation axes. A video clip requires a separate motion/timing handoff rather than pretending a still prompt is a complete film.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

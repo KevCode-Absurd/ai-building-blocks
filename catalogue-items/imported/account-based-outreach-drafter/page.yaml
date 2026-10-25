@@ -2,10 +2,15 @@ thinking: medium
 thinking_why: It picks the best hooks from the data and writes three versions.
 new_slug: account-based-outreach-drafter
 name: Account-based outreach drafter
-summary: Name a company or contact. Get an email, call script and LinkedIn message built from real signals.
+summary: Name a company or contact. Get an email, call script and LinkedIn
+  message built from real signals.
 job: write-emails
 headline: Account-based outreach drafter
-subhead: Name a company or contact and say why you are reaching out. It looks them up in your Common Room data, pulls activity, posts, hiring and funding signals, and searches the web if the data is thin. You get a personal email, a call script and a LinkedIn message, with the signals behind each. You send them.
+subhead: Name a company or contact and say why you are reaching out. It looks
+  them up in your Common Room data, pulls activity, posts, hiring and funding
+  signals, and searches the web if the data is thin. You get a personal email, a
+  call script and a LinkedIn message, with the signals behind each. You send
+  them.
 explain: |
   One target, three ready messages: an email, a call script and a LinkedIn note. Each is based on what that company or person has actually been doing. You review and send them yourself.
 
@@ -27,6 +32,8 @@ you_get:
   - The signals each message is based on
   - A suggested contact, if you gave only a company
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
   - It works best when your AI can connect to your Common Room account.

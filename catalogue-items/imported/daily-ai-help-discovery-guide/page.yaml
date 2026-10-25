@@ -1,0 +1,28 @@
+thinking: high
+thinking_why: It follows a set method with a few checks.
+new_slug: daily-ai-help-discovery-guide
+name: Daily AI help discovery guide
+summary: Talk through a recent day. Find small ways AI could help, matched to tools it can actually use.
+job: set-up-ai
+headline: Daily AI help discovery guide
+subhead: Share a recent day, a repeated hassle, or a small change you want to try. It asks one focused question at a time and checks what your AI can do. You get a short recap and useful options, with memory choices kept separate.
+you_give:
+  - A recent experience or routine you want to explore, your time limit, and boundaries.
+you_get:
+  - A recap, a few evidence-based help ideas, and an optional small experiment.
+how_it_works:
+  - title: Choose a useful focus
+    text: Start with a day review, recurring issue, possible AI help, or one small experiment.
+  - title: Explore one thing
+    text: Ask one clear question, reflect the answer, and treat guesses as guesses.
+  - title: Check the real tools
+    text: Match possible help to tools the AI actually has. Label anything that still needs checking or building.
+  - title: Close with choices
+    text: Summarize what came up. Ask which next step or memory, if any, the person wants.
+works_best_with:
+  tools:
+    - name: A chat AI that can read the bundled reference files
+      why: Use the supplied references and templates for the chosen task. Scripts are optional unless that task specifically needs them.
+how_to_use:
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.

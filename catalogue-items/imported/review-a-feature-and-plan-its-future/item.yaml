@@ -1,0 +1,41 @@
+slug: review-a-feature-and-plan-its-future
+name: Review a feature and plan its future
+summary: Check what a feature has achieved. Prepare a plan to keep it, improve it or retire it.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: performance_sheet
+    required: true
+  - type: feedback_notes
+    required: true
+outputs:
+  - type: audit_report
+    required: true
+  - type: plan
+    required: true
+  - type: lessons_register
+    required: true
+uses: []
+origin: imported
+source:
+  by: magnus919
+  repo: magnus919/agent-skills
+  path: product-lifecycle-learning
+  url: https://github.com/magnus919/agent-skills/tree/92c327e525da69c9ad3812fd223a1770e977c2e3/product-lifecycle-learning
+  licence: MIT
+  licence_file: LICENSE.md
+  commit: 92c327e525da69c9ad3812fd223a1770e977c2e3
+  original_name: product-lifecycle-learning
+  imported: 2026-10-24
+version: 1.0.0
+credits:
+  - title: product-lifecycle-learning skill
+    by: magnus919
+    url: https://github.com/magnus919/agent-skills/tree/92c327e525da69c9ad3812fd223a1770e977c2e3/product-lifecycle-learning
+    used: Original instructions and supporting files, with attribution and the MIT licence. Display copy describes the task.

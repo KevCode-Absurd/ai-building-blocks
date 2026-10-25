@@ -1,0 +1,32 @@
+new_slug: cinematic-image-shot-variation-planner
+name: Cinematic image shot variation planner
+summary: Share a visual idea. Get four still-image prompts with distinct camera positions, lenses, light and moments.
+job: make-images
+headline: Cinematic image shot variation planner
+subhead: Share a visual idea. Get four still-image prompts with distinct camera positions, lenses, light and moments. Bring the brief and any files you want it to use.
+explain: |-
+  Use this when you need four camera-aware still-image variations. Identify subject, moment, intended style and fixed continuity. Return four variations unless the user asks for another number.
+
+  Before writing, plan distance, lens feel, physical witness position, orientation, foreground, crop, focus, height and tilt for each variation.
+when:
+  - You need four camera-aware still-image variations.
+  - You want a clear draft and checks from the material you already have.
+you_give:
+  - brief
+  - "Optional: reference set"
+you_get:
+  - image prompt
+  - Missing inputs and steps that still need to run
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Read the brief
+    text: Identify subject, moment, intended style and fixed continuity. Return four variations unless the user asks for another number.
+  - title: Build the result
+    text: At least three setups differ substantially in physical camera position or lens/distance relationship. Do not use only height or renamed angle labels for variety.
+  - title: Check and hand off
+    text: Add a concise camera label above every prompt. Respect identity/product continuity and simple mechanical poses for small stylized figures.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

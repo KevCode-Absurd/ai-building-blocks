@@ -2,7 +2,7 @@ slug: veo
 name: Veo
 maker: Google
 url: https://deepmind.google/models/veo/
-promise: Short video clips with sound from a text prompt or a still image.
+promise: "Create short video clips with sound from text or still images."
 use_cases: [make-video]
 categories: [video]
 what_it_does:
@@ -13,7 +13,7 @@ what_it_does:
 benefits:
   - Test a video ad idea before you pay for a shoot.
   - Get a clip with its own sound, so you skip a separate audio step.
-  - Start from your product photo to keep the product looking the same.
+  - "Use a product photo to guide the clip, then check its details."
 best_for:
   - Short ad clips for Reels, TikTok and Shorts.
   - People who already pay for a Google AI plan.

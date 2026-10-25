@@ -2,15 +2,14 @@ thinking: high
 thinking_why: Rules vary by country and each answer needs careful reasoning.
 new_slug: import-export-paperwork
 name: Import and export paperwork advisor
-summary: Describe your goods and route. Get tariff codes, duty options and the
-  papers customs will ask for.
+summary: Describe your goods and route. Check official tariff and customs
+  sources, then list supported options and open questions.
 job: check-contracts
 headline: Import and export paperwork advisor
-subhead: A clear list of the tariff code, duty options and papers customs will
-  ask for, matched to your goods and shipping route. That saves you from a held
-  shipment or a wrong duty bill.
+subhead: Share product, origin, route and value; get a source-based tariff
+  review, duty options, and the facts still needed.
 explain: |
-  A clear list of the tariff code, duty options and papers customs will ask for, matched to your goods and shipping route. That saves you from a held shipment or a wrong duty bill. It gives general guidance, so check key decisions with a licensed broker.
+  Share the product, origin, route and value. The skill checks current official sources and shows supported codes, duties and unknowns. Confirm shipment decisions with a licensed broker.
 
   The skill sorts your goods by the Harmonized System, working through the General Rules of Interpretation in strict order. It points out common mistakes, such as classing a multi-function device by its priciest part. It picks a fitting Incoterm and lists the documents: commercial invoice, packing list, certificate of origin, bill of lading, and the US security filing and entry summary where they apply.
 when:
@@ -25,12 +24,13 @@ you_give:
   - The value and sale terms (optional)
   - Any papers you already have (optional)
 you_get:
-  - A likely tariff code with the reasoning
+  - A supported tariff code or the facts still needed
   - Duty options to check
-  - A list of required documents
+  - A document list with sources and check dates
   - Trade term suggestions
   - Common mistakes to avoid
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
-    or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.

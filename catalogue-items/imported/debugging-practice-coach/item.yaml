@@ -1,0 +1,36 @@
+slug: debugging-practice-coach
+name: Debugging practice coach
+summary: Share a bug and what you tried. Learn to gather evidence, test causes and verify your own fix.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: codebase
+    required: true
+  - type: brief
+    required: true
+outputs:
+  - type: document
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: edu-agent-skills contributors
+  repo: yugash007/edu-agent-skills
+  path: skills/projects/debug-teacher
+  url: https://github.com/yugash007/edu-agent-skills/tree/e75f44303570bb2eae37a8f7536c0358be2502ee/skills/projects/debug-teacher
+  licence: MIT
+  licence_file: LICENSE
+  commit: e75f44303570bb2eae37a8f7536c0358be2502ee
+  original_name: debug-teacher
+  imported: 2026-10-23
+  skill_sha256: a2836db08cad901017ba6a9c7f1995fc848fb123ed8a75cc4537143ce16f06ef
+version: 1.0.0
+credits:
+  - title: debug-teacher skill
+    by: edu-agent-skills contributors
+    url: https://github.com/yugash007/edu-agent-skills/tree/e75f44303570bb2eae37a8f7536c0358be2502ee/skills/projects/debug-teacher
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

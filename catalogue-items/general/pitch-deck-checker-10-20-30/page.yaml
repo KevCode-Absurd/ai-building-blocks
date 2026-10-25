@@ -1,47 +1,41 @@
 new_slug: pitch-deck-checker-10-20-30
-name: "Pitch deck 10/20/30 checker"
-summary: "Paste your pitch deck. Get a score out of 100 on slide count, length, text size and opening, with fixes."
+name: Pitch deck 10/20/30 checker
+summary: Share your pitch slides, time limit and audience. Check length, type size and opening, with clear fixes and a custom score.
 job: speak-and-persuade
 thinking: low
-thinking_why: "It counts and compares against fixed limits, then lists fixes."
-
-headline: "Pitch deck 10/20/30 checker"
-subhead: Paste your pitch deck text, with the talk time and the font size if you know them. It counts slides, times the talk, checks text size, the opening and the stated niche, and gives a score out of 100. You get fixes in order, each tied to a slide.
-
+thinking_why: It counts and compares against fixed limits, then lists fixes.
+headline: Pitch deck 10/20/30 checker
+subhead: It counts slides, estimates speaking time and reviews the opening and stated niche. It checks a valid font size you supply; without one, word count is only a labelled text-density proxy. Get fixes by slide and bounded custom points. Missing inputs stay visible. The score does not predict audience response or funding.
 explain: |
-  Decks that run too long, hold too much text and open with company history lose the room. The audience reads instead of listening, runs out of patience and cannot say what you do.
+  The ten-slide, twenty-minute and thirty-point rule is a presentation guide, not a test of whether a pitch will succeed. Word counts can help plan timing, but a rehearsal is needed to measure it. Font size also needs the actual deck or a valid supplied value.
 
-  This checker measures a deck against three limits: ten slides, twenty minutes and thirty point type. It also checks that the opening is made for this audience, that the aim is to avoid being ruled out rather than to win every point, and that the niche is stated as both valuable and unique. The score is out of 100 and shows how it was worked out, check by check. Every fix names the slide it touches.
-
+  This skill reviews the supplied text and gives fixes by slide. Its five custom parts each stay between 0 and 20. The total appears only when the inputs or stated proxies support it. A word-count proxy does not measure font size or legibility. Timing assumptions, proxies and missing checks remain visible beside the points.
 when:
   - Your deck has twenty slides and you have a short slot.
   - You are not sure the text is big enough for the room.
   - You use the same opening with every audience.
-
 you_give:
   - The text of your deck, slide by slide
   - How long you have to speak, and the room or screen
   - The smallest font size in the deck (optional)
 you_get:
-  - A score out of 100, with the points for each check
-  - Slide count, timing and text size results
+  - Five custom score parts between 0 and 20, with a supported total or partial subtotal
+  - Slide count, estimated timing and a font check or labelled text-density proxy
   - Fixes in order of impact, each tied to a slide
   - A note on the opening for this audience
-
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste the deck text, with a heading for each slide.
   - Say who you are pitching to and how long you have.
   - Fix the highest-impact items first, then run it again.
   - Keep both scores to see what changed.
-
 how_it_works:
   - title: Counts the slides
     text: Compares slide count with the ten slide limit and names slides to merge or cut.
   - title: Times the talk
-    text: Estimates talk time from the words and compares with twenty minutes or your slot.
+    text: Uses the source’s 130-words-per-minute planning assumption. Actual speaking time needs a rehearsal.
   - title: Checks text size
-    text: Compares the font size you give with thirty points, and flags slides with too much text.
+    text: Checks a valid supplied font size. Without it, marks the font check missing and uses a labelled word-count proxy where text is available.
   - title: Checks the opening
     text: Looks for an opening made for this audience, not a general company history.
   - title: Checks the aim
@@ -49,10 +43,9 @@ how_it_works:
   - title: Checks the niche
     text: Looks for a stated niche that is valuable and unique.
   - title: Scores and fixes
-    text: Adds up the points, then lists fixes in order, each naming a slide.
-
+    text: Bounds each custom part 0–20 and shows any proxy or unresolved input. Points do not predict the pitch outcome.
 output_shape: |
-  SCORE: <n> out of 100
+  CUSTOM SCORE: <n>/100 if supported, or <known subtotal and unresolved parts>
   How it was worked out: slides <n>/20, length <n>/20, text size <n>/20, opening <n>/20, aim and niche <n>/20
 
   SLIDES
@@ -62,7 +55,8 @@ output_shape: |
   Words: <n> | Estimated time: <minutes> | Limit: <minutes>
 
   TEXT SIZE
-  Smallest font: <pt or MISSING> | Slides with too much text: <numbers>
+  Actual smallest font: <valid supplied pt or MISSING>
+  Text-density proxy <labelled points or unresolved> | dense slides <numbers>
 
   OPENING
   <what it does now, and what a custom opening needs>
@@ -78,45 +72,43 @@ output_shape: |
 
   CHECKS MISSED
   <one line per check still missed, or none>
-
 tweaks:
   - what: Your talk time
     how: Give the real slot. The limit changes from twenty minutes to whatever you have.
   - what: Font size
-    how: Say the smallest size used. Without it, text size is only judged from word counts.
+    how: Give the smallest valid font size. Without it, the actual font check stays missing; word counts provide a labelled proxy only.
   - what: Who you pitch to
     how: Name the person or firm. The opening check needs it.
   - what: Speaker notes
     how: Paste them separately. Time is based on what you will say, not on the slide text.
-
 judge:
   - Slide count and timing are reported with numbers.
-  - Text size is checked, or marked MISSING if not given.
+  - Actual font size is checked from a valid supplied value or marked missing; the word-count proxy is labelled separately.
   - The opening is judged against this audience.
   - Every fix says which slide it touches.
-  - The score shows how it was worked out.
-
+  - Each part stays 0–20 and a total 0–100 appears only when supported. Estimates, proxies and missing parts remain visible.
 test:
   - Run it on a deck you already know is too long. The score should be low and the fixes clear.
   - Cut the slides it names, run it again and compare the scores.
   - Time yourself speaking the deck and compare it with the estimate.
   - Show the deck to a stranger for one minute and ask what you do.
-
+  - "Use 12 slides, estimated 60 minutes, 10-point type, and 20 each for opening/aim: parts 14/0/0/20/20, total 54; no negative part."
+  - "Omit font size but supply two slides over 40 words: actual font MISSING, clearly labelled density proxy 10/20."
 improve:
   - Change the limits in step 1 if your event sets different ones, such as eight slides.
   - Add your investor or client list so the opening check knows their interests.
   - Add your own points system if you want to weight length higher.
   - Pair it with "Talk tension planner" to order the beats before you check them.
-
 works_best_with:
   tools:
-    - {name: "Any good chat AI", why: "Counting, timing and listing fixes is text work any strong chat AI does well with this skill."}
-    - {name: "Slide software", why: "To check font size and view the deck as the audience will."}
+    - name: Any good chat AI
+      why: Counting, timing and listing fixes is text work any strong chat AI does well with this skill.
+    - name: Slide software
+      why: To check font size and view the deck as the audience will.
   inputs:
-    - "The slide text, one block per slide"
-    - "Your speaker notes"
-    - "Who you are pitching to and what they invest in"
-
+    - The slide text, one block per slide
+    - Your speaker notes
+    - Who you are pitching to and what they invest in
 terms:
   - term: 10/20/30
     meaning: A rule of thumb for decks of ten slides, twenty minutes and type no smaller than thirty points.

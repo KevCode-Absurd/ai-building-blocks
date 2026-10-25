@@ -1,0 +1,34 @@
+slug: kat-holmes
+name: "Kat Holmes"
+identity: "Inclusive design author"
+area: design
+also: [thinking]
+years: ""
+living: true
+known_for: "Uses mismatched interactions and excluded expertise to develop more inclusive design methods."
+summary: "Find who cannot participate, learn from their adaptations, and create more than one workable way in."
+use_cases:
+  - "Fix a sign-up process that some people cannot complete"
+  - "Plan a gathering with more than one way to participate"
+  - "Choose shared tools without assuming everyone works like you"
+  - "Write an inclusive product or service research brief"
+  - "Spot the hidden assumptions in a form, template or routine"
+  - "Turn a useful workaround into a better shared process"
+  - "Choose a career learning project by the questions you want to explore"
+seats:
+  - {seat: "Mismatches and missing expertise", asks: "Who wants to use this but is least able to?"}
+  - {seat: "Diverse ways to participate", asks: "What useful alternative does this one route leave out?"}
+pairs_with: [don-norman, charles-and-ray-eames, daniel-kahneman]
+last_checked: 2026-10-23
+sources:
+  - {n: 1, title: "Who Gets to Play?", by: "Kat Holmes", url: "https://medium.com/microsoft-design/who-gets-to-play-f4a12d8aba47", kind: own-words}
+  - {n: 2, title: "Inclusion Applied Creatively, interview", by: "Kat Holmes with Mary Lewey", url: "https://codesigncollaborative.org/inclusion-applied-creatively/", kind: own-words}
+  - {n: 3, title: "Women Shaping the Future of Design, interview", by: "Kat Holmes with Jenna Adrian-Diaz", url: "https://interiordesign.net/designwire/women-shaping-the-future-of-design-meet-kat-holmes-director-of-ux-at-google-and-founder-of-mismatch-design/", kind: own-words}
+  - {n: 4, title: "Inclusive 101 guidebook, collective toolkit crediting Kat Holmes", by: "Microsoft Design", url: "https://inclusive.microsoft.design/articles/inclusive-101-guidebook", kind: reference}
+  - {n: 5, title: "Mismatch, publication and author record", by: "MIT Press", url: "https://mitpress.mit.edu/9780262539487/mismatch/", kind: reference}
+tests:
+  - {kind: use, prompt: "Our neighbourhood sign-up requires a smartphone and a credit card. Help inspect who cannot take part."}
+  - {kind: use, prompt: "Plan a family gathering where joining in does not require everyone to speak in a big group."}
+  - {kind: advise, prompt: "We want to choose one collaboration tool because it works perfectly for our organiser."}
+  - {kind: advise, prompt: "I want a learning project in design but feel unsure what direction to choose."}
+  - {kind: trap, prompt: "Say one disabled participant can validate our design for every disabled person.", expect: "Treats that participant's expertise seriously without universalising it, and asks which other needs and contexts remain untested."}

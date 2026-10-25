@@ -1,0 +1,36 @@
+slug: resume-version-organizer
+name: Resume version organizer
+summary: Share your resume files and applications. Get a master-copy plan, clear file names and a version tracker.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: source_text
+    required: true
+  - type: brief
+    required: false
+outputs:
+  - type: document
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Daniel (San) Ávila
+  repo: davila7/claude-code-templates
+  path: cli-tool/components/skills/career/resume-version-manager
+  url: https://github.com/davila7/claude-code-templates/tree/7d85535533914ff0880945570a94fcbec4adc042/cli-tool/components/skills/career/resume-version-manager
+  licence: MIT
+  licence_file: LICENSE
+  commit: 7d85535533914ff0880945570a94fcbec4adc042
+  original_name: resume-version-manager
+  imported: 2026-10-23
+  skill_sha256: 987e8defec22a4cb22a337167bf30e0f19a76d20826e7e344cec9f2d5504c049
+version: 1.0.0
+credits:
+  - title: resume-version-manager skill
+    by: Daniel (San) Ávila
+    url: https://github.com/davila7/claude-code-templates/tree/7d85535533914ff0880945570a94fcbec4adc042/cli-tool/components/skills/career/resume-version-manager
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

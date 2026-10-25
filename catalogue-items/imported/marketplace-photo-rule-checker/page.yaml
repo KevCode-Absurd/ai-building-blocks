@@ -2,10 +2,14 @@ thinking: low
 thinking_why: It measures the picture against fixed platform rules.
 new_slug: marketplace-photo-rule-checker
 name: Marketplace photo rule checker
-summary: Give it product photos and your platform. Get a pass or reject per photo, and fixed copies.
+summary: Give it product photos and your platform. Get a pass or reject per
+  photo, and fixed copies.
 job: product-photos
 headline: Marketplace photo rule checker
-subhead: Give it a product photo or a folder of them and name the store you sell on. It checks each against the image rules of Amazon, TikTok Shop, Temu, Shopee, Shopify and Taobao. You get a pass or reject per photo, the problems found and fixed copies where possible.
+subhead: Give it a product photo or a folder of them and name the store you sell
+  on. It checks each against the image rules of Amazon, TikTok Shop, Temu,
+  Shopee, Shopify and Taobao. You get a pass or reject per photo, the problems
+  found and fixed copies where possible.
 explain: |
   Run a product photo through the image rules of the store you sell on and get a clear pass or reject before you upload. If it fails, it can fix what is fixable.
 
@@ -26,6 +30,8 @@ you_get:
   - Fixed copies where possible
   - A batch summary
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
   - It works best when your AI can run Python code on your computer.

@@ -2,10 +2,15 @@ thinking: medium
 thinking_why: It follows set quality rules while making many layout choices.
 new_slug: accessible-ui-builder
 name: Accessible UI builder
-summary: Describe the screen. Get accessible, responsive component code that follows your design system.
+summary: Describe the screen. Get accessible, responsive component code that
+  follows your design system.
 job: build-websites
 headline: Accessible UI builder
-subhead: Describe the screen, your design system and the framework you use. It builds small components that each do one job, follow your style rules and work with a keyboard and screen reader. You get the component code, a responsive layout, focus handling, loading, empty and error states, and tests if you want them.
+subhead: Describe the screen, your design system and the framework you use. It
+  builds small components that each do one job, follow your style rules and work
+  with a keyboard and screen reader. You get the component code, a responsive
+  layout, focus handling, loading, empty and error states, and tests if you want
+  them.
 explain: |
   A screen that is responsive, usable with a keyboard and screen reader, and consistent with your design system is built for you. It should look like a careful designer made it, not a generic AI page.
 
@@ -14,7 +19,8 @@ when:
   - You need a new page or component that follows your style.
   - Your current screen fails on keyboard or screen reader use.
   - You want a layout that works on phone and desktop.
-  - Generated screens in your app all look the same and you want them to look hand made.
+  - Generated screens in your app all look the same and you want them to look
+    hand made.
 you_give:
   - A description of the screen
   - Your design system or style rules
@@ -27,6 +33,8 @@ you_get:
   - Loading, empty and error states
   - Tests for the component (optional)
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
   - It works best when your AI can run code and open a browser.

@@ -1,0 +1,32 @@
+thinking: medium
+thinking_why: It follows a set method with a few checks.
+new_slug: gorgias-support-metrics-report
+name: Gorgias support metrics report
+summary: Choose report dates. Get ticket counts, response times, issue groups, and trends, with sample limits shown.
+job: help-customers
+headline: Gorgias support metrics report
+subhead: Connect Gorgias and choose the dates you want to review. It gathers ticket records and samples detailed threads for response times. You get counts, issue groups, trends, and timing measures, with an optional Google Sheets export. Check the sample limits before sharing.
+when:
+  - You use this tool for customer support and need help with this task.
+you_give:
+  - The report date range and access to Gorgias tickets.
+  - Full message timestamps for the sampled response-time measures.
+you_get:
+  - Show volume, response times, issue groups, trends, and notable tickets. Offer a Google Sheets export.
+how_it_works:
+  - title: Choose the date range
+    text: Read ticket records for the chosen dates within the skill's stated collection limits.
+  - title: Measure the sample
+    text: Use a sample of full threads for response times. Keep sampled measures separate from whole-queue counts.
+  - title: Prepare the report
+    text: Show volume, response times, issue groups, trends, and notable tickets. Offer a Google Sheets export.
+works_best_with:
+  tools:
+    - name: Gorgias; Google Sheets for optional export
+      why: Live lookups need Composio CLI access and connected accounts for these services.
+how_to_use:
+  - Add the downloaded folder to an AI that can read skill files.
+  - Ask for gorgias support metrics report by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
+  - Provide the report date range and access to Gorgias tickets.
+  - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
+  - Review the result. Approve any proposed sending or account changes before they happen.

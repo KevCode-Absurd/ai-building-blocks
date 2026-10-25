@@ -1,11 +1,11 @@
 // Original tool. All numbers shown are illustrative figures, not a real person’s results.
 export default {
   "slug": "backlog-clearance",
-  "name": "Check how fast you can clear a growing backlog",
-  "short": "Backlog clearance",
-  "headline": "Check how fast you can clear a growing backlog",
-  "summary": "Enter the backlog, new work and daily completion capacity. See whether the queue shrinks and when it clears.",
-  "question": "Check how fast you can clear a growing backlog?",
+  "name": "Backlog clearance estimate",
+  "short": "Backlog clearance estimate",
+  "headline": "Backlog clearance estimate",
+  "summary": "Enter waiting work, new arrivals and daily completions. See whether the queue can shrink and estimate days to clear it.",
+  "question": "Can our daily capacity clear the backlog while new work arrives?",
   "category": "operations",
   "shelf": [
     "general"
@@ -41,7 +41,7 @@ export default {
       "max": 10000000,
       "step": 0.1,
       "integer": false,
-      "help": "Use an average over a representative period.",
+      "help": "Use the average from a normal period of work.",
       "where": "Your recent queue history.",
       "tools": []
     },

@@ -1,0 +1,28 @@
+new_slug: nonprofit-annual-report-planner
+name: Plan a nonprofit annual report
+summary: Plan a clear yearly report. Check the facts, numbers and names before it goes to print.
+job: work-with-files
+headline: Plan a nonprofit annual report
+subhead: Bring final accounts, program results and approved stories. Build the report outline, then check totals and donor names for the year.
+explain: Bring final accounts, program results and approved stories. Build the report outline, then check totals and donor names for the year.
+when:
+  - You want to plan a nonprofit annual report.
+you_give:
+  - Fiscal-year scope and finalized financial statements
+  - Verified program results, approved stories and supporter recognition preferences
+you_get:
+  - Section architecture with a theme and space budgets
+  - A reconciliation and recognition review checklist
+how_to_use:
+  - Download the complete skill folder and add it to your AI tool, or copy the instructions into a chat.
+  - Provide the inputs listed here and ask your AI to follow the skill.
+  - Review the result and any missing facts before using it.
+how_it_works:
+  - title: Set the year and theme
+    text: Confirm the reporting period and finalized numbers, then choose a theme grounded in the year’s actual wins and challenges.
+  - title: Build the report
+    text: Budget space for leadership, mission results, consent-cleared stories, financial summary, recognition, leadership roster and next actions.
+  - title: Check the facts
+    text: Reconcile financial totals, preserve anonymous-giving preferences and route the complete outline through leadership review.
+thinking: medium
+thinking_why: It weighs your evidence and follows a specific method.

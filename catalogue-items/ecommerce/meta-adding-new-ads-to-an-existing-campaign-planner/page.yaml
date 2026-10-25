@@ -1,0 +1,37 @@
+new_slug: meta-adding-new-ads-to-an-existing-campaign-planner
+name: Meta creative refresh setup planner
+summary: Plan a creative refresh in an existing Meta campaign. Preserve working settings and define the new ads, review points and spend limits.
+job: launch-and-scale-ads
+headline: Meta creative refresh setup planner
+subhead: Plan a creative refresh in an existing Meta campaign. Preserve working settings and define the new ads, review points and spend limits.
+explain: |-
+  Share campaign settings, dated results, target economics and budget limits. Get a campaign plan with proposed settings and review points.
+
+  Follow the actual current account/project structure rather than source screenshots or fixed historical settings.
+when:
+  - You need a campaign plan with proposed settings and review points.
+you_give:
+  - Campaign settings, dated results, target economics and budget limits
+  - The exact change you want and actions you authorize
+you_get:
+  - A campaign plan with proposed settings and review points
+  - Missing inputs and a bounded verification plan
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Step 1
+    text: Confirm the exact account, campaign, ad set, objective, conversion event, destination and creative test goal. Record the active settings and preserve them as the comparison baseline. Verify the current Ads Manager controls rather than assuming a historical button label still applies.
+  - title: Step 2
+    text: Choose an appropriate existing ad as a template and duplicate it into a draft in the intended ad set. Inspect the copied tracking, destination, identity, offer and placements; duplication is a convenience, not proof that inherited settings are correct.
+  - title: Step 3
+    text: Replace the media with the exact approved new asset. Wait for processing and preview every intended placement. Adjust crop only where the actual placement needs it, preserving product detail, visible words, creator framing and safe regions.
+  - title: Step 4
+    text: Review headline, primary text, description, CTA and landing page against the current approved offer and the new creative. Remove expired codes and unsupported claims. Resolve material copy or account questions with the designated reviewer.
+  - title: Step 5
+    text: Give each ad a stable creative ID, meaningful hook or version name, and unambiguous launch date. For additional variants duplicate the checked draft, replace only intended variables, then repeat the media, copy, URL and tracking check.
+  - title: Step 6
+    text: Return the draft inventory and review checklist. Submit or publish only if already authorized; otherwise leave drafts for review. After an authorized submission confirm actual delivery/review status and processing failures. Compare results after an agreed observation window; shared delivery makes this an observational creative test unless a controlled experiment is configured.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

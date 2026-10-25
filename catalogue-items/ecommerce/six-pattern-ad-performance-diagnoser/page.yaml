@@ -1,0 +1,44 @@
+new_slug: six-pattern-ad-performance-diagnoser
+name: Six-pattern ad performance diagnoser
+summary: Check six possible causes of an ad result change. Use local baselines first and explain confidence and missing evidence.
+job: read-ad-results
+headline: Six-pattern ad performance diagnoser
+subhead: Share current and baseline results, targets, margin and account change log. Get a ranked diagnosis with supporting signals and follow-up tests.
+explain: |-
+  Check six possible causes of an ad result change. Use local baselines first and explain confidence and missing evidence.
+
+  Share current and baseline results, targets, margin and account change log. Get a ranked diagnosis with supporting signals and follow-up tests.
+when:
+  - You need a ranked diagnosis with supporting signals and follow-up tests.
+  - You need six-pattern ad performance diagnoser for a specific task.
+  - You want the method's decisions and assumptions written down before acting.
+you_give:
+  - Current and baseline results
+  - Targets
+  - Margin and account change log
+you_get:
+  - A ranked diagnosis with supporting signals and follow-up tests
+  - The sources used, missing inputs and assumptions
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Check the inputs
+    text: Confirm current and baseline results, targets, margin and account change log. Mark facts that are missing.
+  - title: Collect Data
+    text: Follow the collect data section in the full method and keep its required fields and decision rules.
+  - title: 4-Level Threshold Fallback Chain
+    text: Follow the 4-level threshold fallback chain section in the full method and keep its required fields and decision rules.
+  - title: Profitability Gate
+    text: Follow the profitability gate section in the full method and keep its required fields and decision rules.
+  - title: Multi-Signal Pattern Detection
+    text: Follow the multi-signal pattern detection section in the full method and keep its required fields and decision rules.
+  - title: Confidence Scoring
+    text: Follow the confidence scoring section in the full method and keep its required fields and decision rules.
+  - title: Deliver Diagnosis
+    text: Follow the deliver diagnosis section in the full method and keep its required fields and decision rules.
+  - title: Review the result
+    text: Return a ranked diagnosis with supporting signals and follow-up tests. Check facts, math and the decisions before any action.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

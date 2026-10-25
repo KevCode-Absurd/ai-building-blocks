@@ -183,7 +183,11 @@ function App() {
 
 ---
 
-## defaultProps Removed
+## Function Component `defaultProps` Removed
+
+React 19 ignores `defaultProps` on function components. Use destructuring defaults there. Class
+components still support `static defaultProps`; do not migrate class components by caching props in
+the constructor. Rendering should read `this.props` so later parent updates are reflected.
 
 ### Pattern 1: Function Component with defaultProps
 
@@ -193,19 +197,19 @@ function Button({ label = 'Click', disabled = false }) {
   return <button disabled={disabled}>{label}</button>;
 }
 
-// WORKS BUT is removed in React 19:
+// Removed for function components in React 19:
 Button.defaultProps = {
   label: 'Click',
   disabled: false
 };
 
 // After (React 19):
-// ES6 default params are now the ONLY way:
+// Use ES6 default parameters for function components:
 function Button({ label = 'Click', disabled = false }) {
   return <button disabled={disabled}>{label}</button>;
 }
 
-// Remove all defaultProps assignments
+// Remove the function component's defaultProps assignment.
 ```
 
 ### Pattern 2: Class Component defaultProps
@@ -223,21 +227,19 @@ class Button extends React.Component {
   }
 }
 
-// After (React 19):
-// Use default params in constructor or class field:
+// React 19: class defaultProps remain supported. Keep the class behavior:
 class Button extends React.Component {
-  constructor(props) {
-    super(props);
-    this.label = props.label || 'Click';
-    this.disabled = props.disabled || false;
-  }
-  
+  static defaultProps = {
+    label: 'Click',
+    disabled: false
+  };
+
   render() {
-    return <button disabled={this.disabled}>{this.label}</button>;
+    return <button disabled={this.props.disabled}>{this.props.label}</button>;
   }
 }
 
-// Or simplify to function component with ES6 defaults:
+// Optional rewrite as a function component, using defaults:
 function Button({ label = 'Click', disabled = false }) {
   return <button disabled={disabled}>{label}</button>;
 }

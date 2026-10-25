@@ -1,0 +1,76 @@
+new_slug: community-evidence-researcher
+name: Community evidence researcher
+summary: Share posts, comments or files. Get sourced findings, counted themes and a clear note on what the sample cannot show.
+job: research-topics
+thinking: medium
+thinking_why: It compares sources and keeps quotes, counts and guesses separate.
+headline: Community evidence researcher
+subhead: Share a question, a date range and the posts or files to review. It groups themes, checks quotes and compares conflicting views. Get an evidence table and a short brief with sources, counts and gaps.
+explain: Use it for customer research, Reddit discussion reviews, or company and market questions. Share source material or name public pages an approved reader can access. It groups themes and checks quotes, counts and conflicting views. Get a brief with clear sources and limits.
+when:
+  - You have discussion exports and a focused customer or product question.
+  - You have Reddit posts or comments to review, or an approved reader that can access the named public sources.
+  - You want to compare public company or market discussion without treating sentiment as verified fact.
+  - You need counts and source locators alongside a short research brief.
+you_give:
+  - A focused question and intended use
+  - Supplied posts, comments, documents or approved public-source links
+  - Date range and source boundary, if known
+  - Any terms, groups or exclusions that define the scope
+you_get:
+  - A table with source links or record IDs, with facts, opinions and conclusions kept separate
+  - Counts you can recheck, with the total used and how repeats were handled
+  - A short answer showing where sources disagree, who is missing and what to check next
+how_to_use:
+  - State the question, date window and sources to include.
+  - Attach exports or identify public sources you authorize the available tools to read.
+  - Review the source list and check which words are quoted and which are put in new words.
+  - Use the findings only within the stated sample and limits.
+how_it_works:
+  - title: Sets the boundary
+    text: Records the question, subjects, dates and sources, plus how the material was gathered and what could not be read.
+  - title: Checks the records
+    text: Counts usable items, repeats and threads. Flags missing fields and gaps in the dates.
+  - title: Tests the pattern
+    text: Groups useful themes and searches for support, counterexamples and conflicts.
+  - title: Writes the brief
+    text: Links claims to source locators and states bias, uncertainty and missing evidence.
+output_shape: |-
+  Question and scope
+  Answer limited to the available sample
+  Evidence table: ID | date | locator | type | theme | quote or paraphrase | caveat
+  Counts and denominator
+  Conflicts, sample limits, gaps, next useful evidence
+tweaks:
+  - what: Narrower question
+    how: Name one decision, population or company issue and a bounded date window.
+  - what: Group comparison
+    how: Name the groups and keep their counts separate.
+  - what: Quote audit
+    how: Ask for every exact quote with its source ID and locator.
+judge:
+  - Every quote matches inspected source text and has a locator.
+  - Counts can be checked using record IDs, rules for repeats and the stated total.
+  - Facts, participant opinions and researcher inferences are distinct.
+  - Conflicting evidence, selection bias, access gaps and unknowns are stated.
+  - Company research makes no personalized investment recommendation or return promise.
+test:
+  - In the fictional customer fixture, deduplicate exact repeated records by ID, thread and text; retain equal text with different IDs and threads.
+  - Recompute the fictional customer theme share as 2 of 6 unique excerpts and verify the quoted text against the fixture.
+  - In the fictional company fixture, count five excerpts across two threads and keep the retirement-date statement unverified.
+  - Confirm the skill does not claim live retrieval, complete coverage, or access beyond approved tools.
+improve:
+  - Add new supplied records with source IDs and dates.
+  - Add a comparison group only when the sample supports it.
+  - Verify claims against primary material where the question requires confirmation.
+works_best_with:
+  tools:
+    - name: User-approved source reader
+      why: Use only a connected tool the user has approved for the named public source.
+  inputs:
+    - A focused research question
+    - Supplied discussion exports or approved public-source material
+example:
+  business: Fictional customer feedback
+  input: "Question: What blocks setup in this supplied fictional sample? Review the eight rows in examples/customer-threads.json, dated 3–5 May 2026. Deduplicate only exact repeated records with the same ID, thread and text. Count save-state uncertainty among unique excerpts."
+  output: "Eight raw rows contain two exact repeats: C-02 and C-06. Six unique excerpts remain across three threads. Save-state uncertainty appears in C-01 (T-1) and C-04 (T-2): 2 of 6 unique excerpts, or 33.3%. Both say, “I couldn't tell whether save had worked.” Equal words with different IDs and threads remain separate records. These are excerpt counts, not unique people or all customers. The selected sample also mentions invite delivery, required fields, navigation and a sample project. It cannot show how common these issues are outside these records."

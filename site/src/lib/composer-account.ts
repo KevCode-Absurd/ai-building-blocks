@@ -1,8 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import type { Clerk } from "@clerk/clerk-js";
+import { library } from "./library-storage";
 
 type AccountState = "loading" | "unconfigured" | "signed-out" | "signed-in" | "error";
-type Usage = { completed: number; attemptsToday: number; dailyAttemptLimit: number };
+type Usage = { completed: number; attemptsToday: number; dailyAttemptLimit: number | null; unlimited?: boolean; dailyIpAttemptLimit?: number | null };
 let clientPromise: Promise<Clerk> | null = null;
 let configPromise: Promise<{ configured: boolean; publishableKey?: string }> | null = null;
 function config() {
@@ -21,6 +22,7 @@ export function useComposerAccount(active: boolean, loadUsage = true) {
   const [usage, setUsage] = useState<Usage | null>(null);
   const [sessionId, setSessionId] = useState<string | null>(null);
   const [userId, setUserId] = useState<string | null>(null);
+  const [profile, setProfile] = useState({ name: "", email: "" });
   const clerk = useRef<Clerk | null>(null);
   const [revision, setRevision] = useState(0);
   useEffect(() => {
@@ -38,15 +40,20 @@ export function useComposerAccount(active: boolean, loadUsage = true) {
         setState(sdk.session?.status === "active" ? "signed-in" : "signed-out");
         setSessionId(sdk.session?.id ?? null);
         setUserId(sdk.session?.status === "active" ? sdk.session.user.id : null);
+        const user = sdk.session?.status === "active" ? sdk.user : null;
+        setProfile({ name: user?.fullName || user?.username || "", email: user?.primaryEmailAddress?.emailAddress || "" });
       });
     })().catch(() => { if (live) setState("error"); });
     return () => { live = false; unsubscribe?.(); };
   }, [active, revision]);
-  const token = async (expectedUser?: string) => {
-    if (expectedUser && clerk.current?.session?.user.id !== expectedUser) throw Error("Your account changed. Reopen your mind library and try again.");
-    const value = await clerk.current?.session?.getToken();
-    if (expectedUser && clerk.current?.session?.user.id !== expectedUser) throw Error("Your account changed. Reopen your mind library and try again.");
-    if (!value) { setState("signed-out"); setUsage(null); throw Error("Sign in to generate a free AI workflow."); }
+  const token = async (expectedUser?: string, forceRefresh = false) => {
+    if (expectedUser && clerk.current?.session?.user.id !== expectedUser) throw Object.assign(Error("Your account changed. Reopen your saved work and try again."), { code: "AUTH_SESSION_REQUIRED" });
+    const value = await clerk.current?.session?.getToken({ skipCache: forceRefresh });
+    if (expectedUser && clerk.current?.session?.user.id !== expectedUser) throw Object.assign(Error("Your account changed. Reopen your saved work and try again."), { code: "AUTH_SESSION_REQUIRED" });
+    if (!value) {
+      if (clerk.current?.session?.status === "active") throw Error("Sign-in verification is temporarily unavailable. Your saved work is kept on this device.");
+      setState("signed-out"); setUsage(null); throw Object.assign(Error("Sign in to finish saving your work."), { code: "AUTH_SESSION_REQUIRED" });
+    }
     return value;
   };
   const refreshUsage = async () => {
@@ -60,14 +67,25 @@ export function useComposerAccount(active: boolean, loadUsage = true) {
   };
   useEffect(() => { setUsage(null); if (active && loadUsage && state === "signed-in") void refreshUsage(); }, [active, loadUsage, state, sessionId]);
   return {
-    state, userId, usage, token, refreshUsage,
+    state, userId, profile, usage, token, refreshUsage,
     retry: () => { configPromise = null; setRevision(v => v + 1); },
     expired: () => { setState("signed-out"); setUsage(null); },
-    signIn: (signUp = false) => {
-      const returnPath = location.pathname === "/minds" ? "/minds" : "/compose";
-      const options = { signInForceRedirectUrl: `${location.origin}${returnPath}`, signUpForceRedirectUrl: `${location.origin}${returnPath}` };
+    signIn: (signUp = false, destination?: string) => {
+      const returnPath = destination ?? location.pathname + location.search;
+      const target = new URL(returnPath, location.origin);
+      // Both sign-in and account creation carry this browser's durable snapshot.
+      const handoff = library.prepareSignUp();
+      if (handoff) target.searchParams.set("browser_save", handoff);
+      const options = { signInForceRedirectUrl: target.href, signUpForceRedirectUrl: target.href };
       return signUp ? clerk.current?.redirectToSignUp(options) : clerk.current?.redirectToSignIn(options);
     },
-    signOut: () => clerk.current?.signOut({ redirectUrl: "/compose" }),
+    manageProfile: () => clerk.current?.openUserProfile(),
+    signOut: async () => {
+      const sdk = clerk.current, session = sdk?.session;
+      if (!sdk || !session) return;
+      await library.saveBeforeSignOut(session.user.id);
+      if (sdk.session?.id !== session.id) throw Error("Your account changed. Please try signing out again.");
+      await sdk.signOut({ redirectUrl: "/account" });
+    },
   };
 }

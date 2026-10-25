@@ -1,0 +1,35 @@
+slug: freshdesk-ticket-priority-planner
+name: Freshdesk ticket priority planner
+summary: Connect Freshdesk. Get open tickets grouped by urgency, issue type, and response deadline.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: tool_connection
+    required: true
+outputs:
+  - type: audit_report
+    required: true
+uses: []
+origin: imported
+source:
+  by: Composio
+  repo: composio-community/support-skills
+  path: freshdesk-triage
+  url: https://github.com/composio-community/support-skills/tree/83382c4b055fc4e5b055044adb5bfb7585484c9a/freshdesk-triage
+  licence: MIT
+  licence_file: README.md
+  commit: 83382c4b055fc4e5b055044adb5bfb7585484c9a
+  original_name: freshdesk-triage
+  imported: 2026-10-23
+version: 1.0.0
+credits:
+  - title: freshdesk-triage skill
+    by: Composio
+    url: https://github.com/composio-community/support-skills/tree/83382c4b055fc4e5b055044adb5bfb7585484c9a/freshdesk-triage
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

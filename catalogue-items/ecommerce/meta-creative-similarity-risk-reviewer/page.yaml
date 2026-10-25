@@ -1,0 +1,44 @@
+new_slug: meta-creative-similarity-risk-reviewer
+name: Meta creative similarity risk reviewer
+summary: Check the spread of formats, hooks and visuals in your ads. Flag observed repetition and suggest what to make next.
+job: check-ads
+headline: Meta creative similarity risk reviewer
+subhead: Share active ad list, previews, spend and concept labels. Get a four-part diversity score and observed similarity risk report.
+explain: |-
+  Check the spread of formats, hooks and visuals in your ads. Flag observed repetition and suggest what to make next.
+
+  Share active ad list, previews, spend and concept labels. Get a four-part diversity score and observed similarity risk report.
+when:
+  - You need a four-part diversity score and observed similarity risk report.
+  - You need meta creative similarity risk reviewer for a specific task.
+  - You want the method's decisions and assumptions written down before acting.
+you_give:
+  - Active ad list
+  - Previews
+  - Spend and concept labels
+you_get:
+  - A four-part diversity score and observed similarity risk report
+  - The sources used, missing inputs and assumptions
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Check the inputs
+    text: Confirm active ad list, previews, spend and concept labels. Mark facts that are missing.
+  - title: Collect Input
+    text: Follow the collect input section in the full method and keep its required fields and decision rules.
+  - title: Fetch Active Ads
+    text: Follow the fetch active ads section in the full method and keep its required fields and decision rules.
+  - title: Score Four Dimensions (25 each, 100 total)
+    text: Follow the score four dimensions (25 each, 100 total) section in the full method and keep its required fields and decision rules.
+  - title: Detect Entity ID Clustering
+    text: Follow the detect entity id clustering section in the full method and keep its required fields and decision rules.
+  - title: Deliver Report
+    text: Follow the deliver report section in the full method and keep its required fields and decision rules.
+  - title: "Andromeda Check: {Brand}"
+    text: "Follow the andromeda check: {brand} section in the full method and keep its required fields and decision rules."
+  - title: Review the result
+    text: Return a four-part diversity score and observed similarity risk report. Check facts, math and the decisions before any action.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

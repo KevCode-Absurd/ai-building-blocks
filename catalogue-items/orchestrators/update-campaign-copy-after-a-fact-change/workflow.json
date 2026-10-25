@@ -1,0 +1,114 @@
+{
+  "id": "update-campaign-copy-after-a-fact-change",
+  "uses": [
+    "campaign-change-impact-mapper",
+    "marketing-evidence-expiry-reviewer",
+    "claim-and-proof-matcher",
+    "theme-based-ad-copy-set-writer",
+    "campaign-email-writer",
+    "ad-matched-landing-page-writer",
+    "pre-launch-ad-checker"
+  ],
+  "steps": [
+    {
+      "uses": "campaign-change-impact-mapper",
+      "note": "A scoped impact map with affected fields, dependencies, unchanged locks and unresolved assets."
+    },
+    {
+      "uses": "marketing-evidence-expiry-reviewer",
+      "note": "A per-claim current, review-needed or withdrawn decision with source and next action."
+    },
+    {
+      "uses": "claim-and-proof-matcher",
+      "note": "A claim decision register and exact allowed wording/terms for each affected surface."
+    },
+    {
+      "uses": "theme-based-ad-copy-set-writer",
+      "note": "Versioned proposed copy and an affected-field diff; unaffected surfaces remain explicitly unchanged."
+    },
+    {
+      "uses": "campaign-email-writer",
+      "note": "Versioned proposed copy and an affected-field diff; unaffected surfaces remain explicitly unchanged."
+    },
+    {
+      "uses": "ad-matched-landing-page-writer",
+      "note": "Versioned proposed copy and an affected-field diff; unaffected surfaces remain explicitly unchanged."
+    },
+    {
+      "uses": "pre-launch-ad-checker",
+      "note": "A text review, unresolved production/destination checks and the exact-version handoff."
+    }
+  ],
+  "inputs": [
+    {
+      "type": "copy_draft",
+      "required": true
+    },
+    {
+      "type": "product_data",
+      "required": true
+    },
+    {
+      "type": "offer",
+      "required": false
+    },
+    {
+      "type": "document",
+      "required": false
+    }
+  ],
+  "outputs": [
+    {
+      "type": "copy_draft"
+    },
+    {
+      "type": "audit_report"
+    },
+    {
+      "type": "document"
+    }
+  ],
+  "orderedStages": [
+    {
+      "title": "Freeze the current pack and approved change",
+      "skill": "campaign-change-impact-mapper",
+      "input": "Actual baseline copy, stable surface IDs and explicit old/new values with variant and effective time.",
+      "method": "Build a baseline manifest and exact change card. Separate a proposed future change from a live current fact. Map direct mentions, dependent arithmetic, terms, CTA destinations and rendered text needing replacement. Keep inaccessible assets unresolved rather than declaring them unchanged.",
+      "output": "A scoped impact map with affected fields, dependencies, unchanged locks and unresolved assets.",
+      "gate": "An ambiguous variant, unapproved new value or unknown effective boundary blocks that change; unrelated safe mapping may continue."
+    },
+    {
+      "title": "Check only the evidence that the change affects",
+      "skill": "marketing-evidence-expiry-reviewer",
+      "input": "Change/impact map and evidence records used by affected claims or terms.",
+      "method": "Review whether each affected source applies to this variant, audience and date. A stale or withdrawn proof record cannot travel as a current claim. Distinguish owner-confirmed product facts from researched estimates. Do not browse unrelated private documents or re-onboard the entire business.",
+      "output": "A per-claim current, review-needed or withdrawn decision with source and next action.",
+      "gate": "A missing or withdrawn support record blocks the dependent assertion; a neutral factual rewrite may still be drafted without it."
+    },
+    {
+      "title": "Approve the wording boundary before rewriting",
+      "skill": "claim-and-proof-matcher",
+      "input": "Affected statements, new fact/offer card and evidence decisions.",
+      "method": "Pair every new assertion and condition with its supporting fact. Recompute only affected arithmetic, showing inputs and units. Retain legal/offer qualifiers intact. Do not substitute a more persuasive claim or infer a new discount, guarantee or testimonial.",
+      "output": "A claim decision register and exact allowed wording/terms for each affected surface.",
+      "gate": "Unsupported assertions are removed or left blocked; no invented value fills them."
+    },
+    {
+      "title": "Patch the affected copy by surface",
+      "skill": "theme-based-ad-copy-set-writer; campaign-email-writer; ad-matched-landing-page-writer",
+      "input": "Baseline copy, allowed changed wording, surface-specific context and unchanged locks.",
+      "method": "Run only the writer branch needed for an affected ad, email or page. Supply the actual baseline and request a bounded patch, not a fresh concept round. Preserve approved voice, language, audience, layout role and all unaffected facts. Return a minimal snippet with placement or a requested full-file replacement and a change log.",
+      "output": "Versioned proposed copy and an affected-field diff; unaffected surfaces remain explicitly unchanged.",
+      "gate": "A missing baseline prevents a safe replacement for that surface. Return the needed snippet or slot without claiming the unseen file was updated."
+    },
+    {
+      "title": "Review the actual patched pack and prepare release",
+      "skill": "pre-launch-ad-checker",
+      "input": "Original and revised copy, claim register, impact map and destination/version manifest.",
+      "method": "Compare every changed field against the approved card and review cross-surface consistency. Confirm dependent prices, dates, exclusions and CTA promises agree. Recheck unchanged locks for accidental drift. Build a publisher handoff listing exact old/new versions, effective time, destinations, approval scope and rollback copy. Check rendered/live states only with actual tools and access; chat copy review is not that evidence.",
+      "output": "A text review, unresolved production/destination checks and the exact-version handoff.",
+      "gate": "Unresolved material claims, stale target versions or unverified critical destination behavior block activation. Reuse existing authorization for any permitted next action; do not claim publication from the handoff alone."
+    }
+  ],
+  "portable": true
+}

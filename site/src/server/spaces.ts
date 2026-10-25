@@ -1,11 +1,12 @@
+import { emailAllowed, readAccess, LINK_ACCESS, type AccessPolicy } from "./space-access.ts";
 // Spaces: each person's own place for skills, prompts, workflows, kits and agents, shared with a private link.
 // One handler serves the live site (a Cloudflare Pages Function with a D1 database, functions/api/spaces/[[path]].ts)
 // and the dev server (an in-memory store, vite.config.ts), so the tests run the code that runs live.
 //
-// There are no accounts yet. Making a space gives back two secrets:
-//   - the owner key: it opens the space to change it. The browser keeps it; only its hash is stored.
-//   - the share link token: anyone with the link can read the space, nothing more. The owner can replace it,
-//     and the old link stops working.
+// Signed-in owners recover their space by account ID. Unclaimed legacy spaces retain
+// their original private owner key until explicitly linked. Shared links can require
+// verified invited emails or an exact company domain. Link-only legacy access remains
+// available until the owner changes it; rotating a link revokes the previous token.
 // An item can also be made public: it then shows on the "From people" page, marked as not checked by us.
 //
 //   POST   /api/spaces                         {name}              make a space -> {space, ownerKey, shareToken}
@@ -24,7 +25,7 @@ export const KINDS = ["skill", "prompt", "workflow", "kit", "agent"] as const;
 export type Kind = (typeof KINDS)[number];
 export type Visibility = "private" | "public";
 export type Space = { id: string; name: string; created: string; updated: string };
-export type SpaceRow = Space & { ownerHash: string; shareToken: string; ipHash: string };
+export type SpaceRow = Space & { userId?: string | null; access?: AccessPolicy; ownerHash: string; shareToken: string; ipHash: string };
 export type Item = { id: string; spaceId: string; kind: Kind; title: string; summary: string; body: string; data: unknown; visibility: Visibility; created: string; updated: string };
 export type ItemRow = Item & { hidden: boolean };
 /** What the public list shows: no body, and the space only by name. */
@@ -32,9 +33,11 @@ export type PublicItem = Omit<Item, "body" | "spaceId" | "data"> & { space: stri
 
 export interface SpaceStore {
   addSpace(row: SpaceRow): Promise<void>;
+  spaceByUser(userId: string): Promise<SpaceRow | null>;
+  claimSpace(id: string, userId: string): Promise<boolean>;
   spaceByOwner(ownerHash: string): Promise<SpaceRow | null>;
   spaceByShare(token: string): Promise<SpaceRow | null>;
-  updateSpace(id: string, patch: Partial<Pick<SpaceRow, "name" | "shareToken" | "updated">>): Promise<void>;
+  updateSpace(id: string, patch: Partial<Pick<SpaceRow, "name" | "shareToken" | "updated" | "access">>): Promise<void>;
   spacesSince(ipHash: string, since: string): Promise<number>;
   items(spaceId: string): Promise<ItemRow[]>;
   item(id: string): Promise<ItemRow | null>;
@@ -44,7 +47,7 @@ export interface SpaceStore {
   publicItems(limit: number): Promise<(ItemRow & { spaceName: string })[]>;
 }
 
-export type Options = { ip: string; salt?: string; teamToken?: string; now?: () => Date; limit?: boolean };
+export type Options = { ip: string; salt?: string; teamToken?: string; now?: () => Date; limit?: boolean; authenticate?: () => Promise<string | Response>; verifiedEmails?: (user: string) => Promise<string[]> };
 export const LIMITS = { name: 60, title: 80, summary: 240, body: 100_000, data: 60_000, items: 300, spacesPerDay: 10 };
 
 const json = (status: number, data: unknown) =>
@@ -97,7 +100,9 @@ function readItem(input: Record<string, unknown>, partial: boolean): { ok: Parti
 export async function handleSpaces(req: Request, store: SpaceStore | null, o: Options): Promise<Response> {
   if (!store) return oops(503, "Spaces aren't switched on for this site yet.");
   const url = new URL(req.url);
+  if (!["GET", "HEAD"].includes(req.method) && (req.headers.get("sec-fetch-site") === "cross-site" || req.headers.has("origin") && req.headers.get("origin") !== url.origin)) return oops(403, "Open your space on this site.");
   const parts = url.pathname.replace(/^\/api\/spaces\/?/, "").split("/").filter(Boolean);
+  const identity = () => o.authenticate ? o.authenticate() : Promise.resolve(oops(401, "Sign in to open this space."));
   const now = (o.now ?? (() => new Date()))().toISOString();
   const body = async () => { try { return (await req.json()) as Record<string, unknown>; } catch { return null; } };
 
@@ -109,8 +114,11 @@ export async function handleSpaces(req: Request, store: SpaceStore | null, o: Op
     if (o.limit !== false && (await store.spacesSince(ipHash, new Date(Date.parse(now) - 24 * 3600_000).toISOString())) >= LIMITS.spacesPerDay) {
       return oops(429, "You've made a lot of spaces today. Try again tomorrow.");
     }
+    const user = o.authenticate && req.headers.has("authorization") ? await identity() : null;
+    if (user instanceof Response) return user;
+    if (user && await store.spaceByUser(user)) return oops(409, "Your account already has a space. Open My space.");
     const ownerKey = secret();
-    const row: SpaceRow = { id: crypto.randomUUID(), name: clean(input.name, LIMITS.name) || "My space", created: now, updated: now, ownerHash: await sha(ownerKey), shareToken: secret(), ipHash };
+    const row: SpaceRow = { userId: user, access: user ? { mode: "invited", emails: [], domain: "" } : LINK_ACCESS, id: crypto.randomUUID(), name: clean(input.name, LIMITS.name) || "My space", created: now, updated: now, ownerHash: await sha(ownerKey), shareToken: secret(), ipHash };
     await store.addSpace(row);
     return json(201, { space: spaceOut(row), ownerKey, shareToken: row.shareToken });
   }
@@ -120,6 +128,15 @@ export async function handleSpaces(req: Request, store: SpaceStore | null, o: Op
     if (req.method !== "GET") return oops(405, "A shared space can only be read.");
     const space = parts[1] ? await store.spaceByShare(parts[1]) : null;
     if (!space) return oops(404, "This link doesn't open a space. It may have been replaced; ask for the new one.");
+    const policy = space.access ?? LINK_ACCESS;
+    if (policy.mode !== "link") {
+      const user = await identity(); if (user instanceof Response) return user;
+      if (user !== space.userId) {
+        try {
+          if (!o.verifiedEmails || !emailAllowed(policy, await o.verifiedEmails(user))) return oops(403, "This account is not invited. Sign in with an allowed email address or ask the owner for access.");
+        } catch { return oops(503, "Email verification is temporarily unavailable. Try again."); }
+      }
+    }
     return json(200, { space: { name: space.name, updated: space.updated }, items: (await store.items(space.id)).filter((i) => !i.hidden).map(pub) });
   }
 
@@ -145,11 +162,27 @@ export async function handleSpaces(req: Request, store: SpaceStore | null, o: Op
   // Everything else is the owner's own space.
   if (parts[0] !== "me") return oops(404, "Not a spaces address.");
   const key = ownerKeyOf(req);
-  const space = key ? await store.spaceByOwner(await sha(key)) : null;
+  // Legacy unclaimed spaces retain their private key. Claimed spaces require the account.
+  let space = key ? await store.spaceByOwner(await sha(key)) : null;
+  if (space?.userId) space = null;
+  let user: string | null = null;
+  if (!space && o.authenticate) {
+    const who = await identity(); if (who instanceof Response) return who;
+    user = who;
+    if (parts[1] === "claim" && req.method === "POST") {
+      const legacy = req.headers.get("x-space-key") ?? "";
+      const old = legacy ? await store.spaceByOwner(await sha(legacy)) : null;
+      if (!old || old.userId && old.userId !== user) return oops(403, "That private key cannot be linked to this account.");
+      if (!await store.claimSpace(old.id, user)) return oops(409, "This account or space is already linked. No saved items were changed.");
+      return json(200, { ok: true });
+    }
+    space = await store.spaceByUser(user);
+    if (!space) return oops(404, "Your account has no space yet. Create one or link your existing browser space.");
+  }
   if (!space) return oops(401, "That space key doesn't open a space.");
 
   if (parts.length === 1) {
-    if (req.method === "GET") return json(200, { space: spaceOut(space), shareToken: space.shareToken, items: (await store.items(space.id)).map(pub) });
+    if (req.method === "GET") return json(200, { space: spaceOut(space), shareToken: space.shareToken, access: space.access ?? LINK_ACCESS, items: (await store.items(space.id)).map(pub) });
     if (req.method === "PATCH") {
       const input = (await body()) ?? {};
       const name = clean(input.name, LIMITS.name);
@@ -158,6 +191,14 @@ export async function handleSpaces(req: Request, store: SpaceStore | null, o: Op
       return json(200, { space: { ...spaceOut(space), name, updated: now } });
     }
     return oops(405, "Use GET or PATCH.");
+  }
+
+  if (parts[1] === "access" && req.method === "PUT") {
+    if (!user || space.userId !== user) return oops(401, "Sign in and link this space to manage access.");
+    let access: AccessPolicy;
+    try { access = readAccess(await body()); } catch (e) { return oops(400, (e as Error).message); }
+    await store.updateSpace(space.id, { access, updated: now });
+    return json(200, { access });
   }
 
   if (parts[1] === "link" && req.method === "POST") {
@@ -205,6 +246,8 @@ export function memorySpaces(): SpaceStore {
   const items: ItemRow[] = [];
   return {
     async addSpace(row) { spaces.push({ ...row }); },
+    async spaceByUser(user) { return spaces.find(s => s.userId === user) ?? null; },
+    async claimSpace(id, user) { const row = spaces.find(s => s.id === id); if (!row || row.userId && row.userId !== user || spaces.some(s => s.userId === user && s.id !== id)) return false; row.userId = user; return true; },
     async spaceByOwner(h) { return spaces.find((s) => s.ownerHash === h) ?? null; },
     async spaceByShare(t) { return spaces.find((s) => s.shareToken === t) ?? null; },
     async updateSpace(id, patch) { const s = spaces.find((x) => x.id === id); if (s) Object.assign(s, patch); },
@@ -223,13 +266,13 @@ export function memorySpaces(): SpaceStore {
 
 /** The parts of Cloudflare's D1 database the store uses. */
 type D1 = { prepare(sql: string): { bind(...v: unknown[]): { all<T>(): Promise<{ results: T[] }>; first<T>(): Promise<T | null>; run(): Promise<unknown> } } };
-type DbSpace = { id: string; name: string; owner_hash: string; share_token: string; ip_hash: string; created: string; updated: string };
+type DbSpace = { user_id: string | null; access_policy: string; id: string; name: string; owner_hash: string; share_token: string; ip_hash: string; created: string; updated: string };
 type DbItem = { id: string; space_id: string; kind: Kind; title: string; summary: string; body: string; data: string | null; visibility: Visibility; hidden: number; created: string; updated: string; space_name?: string };
-const fromSpace = (r: DbSpace): SpaceRow => ({ id: r.id, name: r.name, ownerHash: r.owner_hash, shareToken: r.share_token, ipHash: r.ip_hash, created: r.created, updated: r.updated });
+const fromSpace = (r: DbSpace): SpaceRow => ({ userId: r.user_id, access: readAccess(JSON.parse(r.access_policy)), id: r.id, name: r.name, ownerHash: r.owner_hash, shareToken: r.share_token, ipHash: r.ip_hash, created: r.created, updated: r.updated });
 const fromItem = (r: DbItem): ItemRow => ({ id: r.id, spaceId: r.space_id, kind: r.kind, title: r.title, summary: r.summary, body: r.body, data: r.data ? JSON.parse(r.data) : null, visibility: r.visibility, hidden: !!r.hidden, created: r.created, updated: r.updated });
-const SPACE_COLS: Record<string, string> = { name: "name", shareToken: "share_token", updated: "updated" };
+const SPACE_COLS: Record<string, string> = { access: "access_policy", name: "name", shareToken: "share_token", updated: "updated" };
 const ITEM_COLS: Record<string, string> = { kind: "kind", title: "title", summary: "summary", body: "body", data: "data", visibility: "visibility", hidden: "hidden", updated: "updated" };
-const dbValue = (k: string, v: unknown) => (k === "data" ? JSON.stringify(v ?? null) : k === "hidden" ? (v ? 1 : 0) : v);
+const dbValue = (k: string, v: unknown) => ((k === "data" || k === "access") ? JSON.stringify(v ?? null) : k === "hidden" ? (v ? 1 : 0) : v);
 
 /** Keeps spaces in a D1 database (tables made by migrations/0002_spaces.sql). */
 export function d1Spaces(db: D1): SpaceStore {
@@ -239,7 +282,12 @@ export function d1Spaces(db: D1): SpaceStore {
   };
   return {
     async addSpace(r) {
-      await db.prepare("INSERT INTO spaces (id, name, owner_hash, share_token, ip_hash, created, updated) VALUES (?, ?, ?, ?, ?, ?, ?)").bind(r.id, r.name, r.ownerHash, r.shareToken, r.ipHash, r.created, r.updated).run();
+      await db.prepare("INSERT INTO spaces (id, name, owner_hash, share_token, ip_hash, created, updated, user_id, access_policy) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)").bind(r.id, r.name, r.ownerHash, r.shareToken, r.ipHash, r.created, r.updated, r.userId ?? null, JSON.stringify(r.access ?? LINK_ACCESS)).run();
+    },
+    async spaceByUser(user) { const r = await db.prepare("SELECT * FROM spaces WHERE user_id = ?").bind(user).first<DbSpace>(); return r ? fromSpace(r) : null; },
+    async claimSpace(id, user) {
+      const result = await db.prepare("UPDATE spaces SET user_id = ? WHERE id = ? AND (user_id IS NULL OR user_id = ?) AND NOT EXISTS (SELECT 1 FROM spaces WHERE user_id = ? AND id <> ?)").bind(user, id, user, user, id).run();
+      return (result as { meta?: { changes?: number } }).meta?.changes === 1;
     },
     async spaceByOwner(h) { const r = await db.prepare("SELECT * FROM spaces WHERE owner_hash = ?").bind(h).first<DbSpace>(); return r ? fromSpace(r) : null; },
     async spaceByShare(t) { const r = await db.prepare("SELECT * FROM spaces WHERE share_token = ?").bind(t).first<DbSpace>(); return r ? fromSpace(r) : null; },

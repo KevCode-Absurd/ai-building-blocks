@@ -9,6 +9,7 @@ import fs from "node:fs";
 import { BROWSER_TOOLS } from "../src/tools/browser-tools.mjs";
 import { INFO_PAGES, OPERATOR, POLICY_DATE, SUPPORT_EMAIL, emailLink, infoPage } from "../src/lib/site-info.mjs";
 import path from "node:path";
+import { normalizeSkillHtml } from "../src/lib/skill-html.mjs";
 
 const DIST = process.env.PRERENDER_DIST || "dist";
 const SITE = "https://useaiblocks.com";
@@ -69,15 +70,19 @@ const ORG = { "@type": "Organization", "@id": `${SITE}/#org`, name: "AI Blocks",
 const WEBSITE = { "@type": "WebSite", "@id": `${SITE}/#site`, name: "AI Blocks", url: `${SITE}/`, inLanguage: "en", publisher: { "@id": `${SITE}/#org` }, description: "Free AI skills, workflows, prompts, minds and mini tools that do real work for you and your work." };
 
 // The same links on every plain page, so no page is more than a few clicks from the rest.
-const NAV = [["/jobs", "All skills by job"], ["/minds", "Minds"], ["/tools", "Mini tools"], ["/how-it-works", "How it works"], ["/from-a-source", "From a source"], ["/apps", "Apps"]];
-const header = `<header class="wrap small" data-prerendered-nav><a href="/"><b>AI Blocks</b></a> · ${NAV.map(([h, t]) => `<a href="${h}">${t}</a>`).join(" · ")}</header>`;
+const NAV = [["/jobs", "All skills by job"], ["/minds", "Minds"], ["/tools", "Mini tools"], ["/how-it-works", "How it works"], ["/from-a-source", "From a source"], ["/apps", "Apps"], ["/api-and-mcp", "API &amp; MCP"], ["/api-and-mcp#api", "Documentation"]];
+const header = `<header class="small" data-prerendered-nav><a href="/"><b>AI Blocks</b></a><nav aria-label="Main navigation"><a href="/#library">Find a task</a> · <a href="/account" data-testid="account-link">My saved work</a> · <a href="/how-it-works">Help</a><details><summary>More</summary>${[["/#build", "Build a workflow"], ["/compose", "Plan a workflow"], ...NAV.filter(([href]) => href !== "/how-it-works"), ["/apps/starter-pack", "Build an app"], ["/ai-tools", "AI tools"], ["/space", "Spaces"]].map(([href, label]) => `<p><a href="${href}">${label}</a></p>`).join("")}</details></nav></header>`;
 const footer = `<footer class="wrap small"><p>Free AI skills, workflows, prompts, minds and mini tools.</p><p>${NAV.map(([h, t]) => `<a href="${h}">${t}</a>`).join(" · ")} · <a href="/llms.txt">llms.txt</a> · <a href="/sitemap.xml">Sitemap</a></p><p>${INFO_PAGES.map(page => `<a href="${page.path}">${esc(page.label)}</a>`).join(" · ")}</p><p><a href="${emailLink()}">${SUPPORT_EMAIL}</a></p></footer>`;
 
 // Pages that aren't blocks: their title and the line a search result shows.
 const STATIC = {
+  "/community": ["Skills and workflows from the community", "Explore skills and workflows made by the community and reviewed before publication."],
+  "/publish": ["Share your skill or workflow", "Create a submission with your instructions and supporting files for our team to review."],
+  "/my-submissions": ["Your community submissions", "Track your drafts, review feedback and published submissions."],
+  "/admin/review": ["Review community submissions", "Backend review queue for community skills and workflows."],
   "/compose": ["Build a custom workflow", "Describe what you want to achieve. Get a step-by-step workflow with connected skills and checks, ready to edit, download and run in your own AI."],
   "/how-it-works": ["How AI Blocks works", "Start with one prompt, add skills, join them into a workflow and build up to your own AI app. Free, step by step."],
-  "/minds": ["Minds: hire great thinkers to work on your problem", "Over 300 minds built from public sources. Bring a real problem and get their way of thinking, method and voice applied to it."],
+  "/minds": ["Minds: hire great thinkers to work on your problem", "Over 500 minds built from public sources. Get practical help with everyday life, learning, work and creative projects, using their methods and questions."],
   "/from-a-source": ["Create AI skills from articles, transcripts and notes", "Paste source text and download a handoff pack. Your AI uses it to turn the source's method into reusable skills and a workflow you can review."],
   "/tools": ["Free everyday tools for work and life", "Free tools for design, money, hiring, operations and personal effectiveness. Calculate, clean text, convert data and compare options in your browser."],
   "/apps": ["Example AI apps you can copy", "A real AI app to click through, and a starter pack to build your own from the same parts."],
@@ -88,6 +93,12 @@ const list = (items) => (items.length ? `<ul>${items.map((x) => `<li>${x}</li>`)
 const link = (b) => `<a href="${hrefOf(b)}">${esc(b.name)}</a>`;
 
 function pageFor(url) {
+  if (url === "/api-and-mcp") return {
+    title: "API & MCP documentation", h1: "Connect with API & MCP.",
+    desc: "Connect to AI Blocks with MCP or the REST API. Get server URLs, setup instructions, authentication scopes, API examples and troubleshooting.",
+    content: fs.readFileSync("src/content/api-mcp.html", "utf8"),
+    stylesheet: fs.readdirSync(path.join(DIST, "assets")).find(file => /^ApiMcpPage-.*\.css$/.test(file)),
+  };
   const info = infoPage(url);
   if (info) return {
     title: info.title, h1: info.title, desc: info.description,
@@ -180,22 +191,35 @@ function pageFor(url) {
   const when = Array.isArray(page.when) ? page.when : page.when ? [page.when] : [];
   const lead = `${b.name} is a free ${noun}${job ? ` for the job "${job}"` : ""}. ${isFlow ? "It guides your AI through several skills in order, passing each step's output to the next." : "Give the instructions to an AI assistant that supports the required files and tools, then review its output."}`;
   const titleBase = `${b.name}: free ${noun}`;
+  const rowText = value => typeof value === "string" ? value : Object.entries(value ?? {}).map(([, part]) => typeof part === "string" ? part : "").filter(Boolean).join(". ");
+  const requiresFiles = !!b.hasFiles || b.type === "agent";
+  const reference = [
+    ["what", "How the task works", list((page.how_it_works ?? []).map(value => esc(rowText(value))))],
+    ["use", "Full instructions", list((page.how_to_use ?? []).map(esc))],
+    ["get", "Example result", page.output_shape ? `<p class="small">This is an example, not work made from your details.</p><pre>${esc(page.output_shape)}</pre>` : ""],
+    ["test", "Check your result", list((page.judge ?? []).map(esc))],
+    ["most", "Change the instructions", list((page.tweaks ?? []).map(value => esc(rowText(value))))],
+    ["improve", "Improve the result", list((page.improve ?? []).map(value => esc(rowText(value))))],
+    ["terms", "Words used in this task", Array.isArray(page.terms) ? list(page.terms.map(x => esc(typeof x === "string" ? x : `${x.term ?? ""}: ${x.meaning ?? x.definition ?? ""}`))) : ""],
+    ["file", "Full instruction file", normalizeSkillHtml(page.html?.skill ?? "", slug, page.files ?? []).replace(/<(\/?)h([1-5])\b/g, (_, slash, level) => `<${slash}h${Number(level) + 1}`)],
+  ].filter(([, , html]) => html);
   return {
     title: isFlow ? (`${b.name} · AI workflow`.length <= 60 ? `${b.name} · AI workflow` : b.name) : titleBase.length <= 60 ? titleBase : b.name,
     desc: `${b.summary} Free reusable instructions for your AI assistant.`, h1: b.headline || b.name,
     crumbs: job ? [[job, jobHref(b.task)]] : [],
     body: [
       `<p class="bp-sub">${esc(b.summary)}</p>`, `<p>${esc(lead)}</p>`, `<p class="small">${facts.map(esc).join(" · ")}</p>`,
-      by && src.url ? `<p class="small">Made by ${esc(by)}. <a href="${esc(src.url)}" rel="noopener">See the original on GitHub</a>; we copied it as it is, with its licence.</p>` : "",
+      `<section id="task-start"><h2>Start this task</h2><p>${isFlow ? "Get the plan and all the skill files. Give the complete pack to your AI, then ask it to follow HANDOFF.md." : requiresFiles ? "Download the complete instructions and supporting files. Add the material the task needs in an AI that supports those files and tools." : "Add your task details in the form when the page opens. Copy the complete request into your AI. Your AI does the work."}</p>${!isFlow ? `<p><a href="/skills/${esc(slug)}${b.hasFiles ? ".zip" : "/SKILL.md"}" download>${b.hasFiles ? "Download all files" : "Download the instructions"}</a></p>` : ""}</section>`,
+      by && src.url ? `<p class="small">From ${esc(by)}. <a href="${esc(src.url)}" rel="noopener">See the original on GitHub</a>; shared under its licence, with a plain name for this library.</p>` : "",
       explain ? `<h2>What it does</h2><p>${esc(words(explain, 150))}</p>` : "",
       give.length ? `<h2>You give it</h2>${list(give.map(esc))}` : "",
       get.length ? `<h2>You get</h2>${list(get.map(esc))}` : "",
       when.length ? `<h2>Use it when</h2>${list(when.slice(0, 5).map(esc))}` : "",
       steps.length ? `<h2>Steps</h2><ol>${steps.map((s) => `<li>${link(s)}: ${esc(s.summary)}</li>`).join("")}</ol>` : "",
-      (page.how_to_use ?? []).length ? `<h2>How to use it</h2><ol>${page.how_to_use.slice(0, 6).map((s) => `<li>${esc(s)}</li>`).join("")}</ol>` : "",
       flows.length ? `<h2>Workflows that use it</h2>${list(flows.map(link))}` : "",
       twin ? `<h2>Same look, other format</h2>${list([link(twin)])}` : "",
       pick.length ? `<h2>More for ${esc(job || "the same job")}</h2>${list(pick.map(link))}${job ? `<p><a href="${jobHref(b.task)}">Every ${esc(job.toLowerCase())} skill</a></p>` : ""}` : "",
+      ...reference.map(([id, title, html]) => `<details id="${id}"><summary>${title}</summary>${html}</details>`),
     ].join(""),
     main: isFlow
       ? { "@type": "HowTo", name: b.name, description: b.summary, step: steps.map((s, i) => ({ "@type": "HowToStep", position: i + 1, name: s.name, text: s.summary, url: `${SITE}${hrefOf(s)}` })) }
@@ -218,12 +242,15 @@ function render(url, p, { plain = false, noindex = false } = {}) {
       breadcrumb: { "@id": `${full}#crumbs` }, ...(p.main ? { mainEntity: p.main } : {}) },
     { "@type": "BreadcrumbList", "@id": `${full}#crumbs`, itemListElement: crumbs.map(([n, u], i) => ({ "@type": "ListItem", position: i + 1, name: n, item: `${SITE}${u}` })) },
   ];
-  const body = `<main class="wrap bp-hero" data-prerendered>${header}<p class="small">${crumbs.slice(0, -1).map(([n, u]) => `<a href="${u}">${esc(n)}</a>`).join(" › ")}</p><h1 class="bp-h1">${esc(p.h1)}</h1>${p.body}${footer}</main>`;
+  const body = p.content
+    ? `<main class="wrap api-mcp-docs" data-prerendered>${header}${p.content}${footer}</main>`
+    : `<main class="wrap bp-hero" data-prerendered>${header}<p class="small">${crumbs.slice(0, -1).map(([n, u]) => `<a href="${u}">${esc(n)}</a>`).join(" › ")}</p><h1 class="bp-h1">${esc(p.h1)}</h1>${p.body}${footer}</main>`;
   const metadata = { title, description: desc, canonical: full, robots: noindex ? "noindex, nofollow" : "max-image-preview:large, max-snippet:-1", graph: noindex ? null : { "@context": "https://schema.org", "@graph": graph }, markdown: p.markdown || null, image: `${SITE}/og/default.png` };
   const metadataFile = path.join(DIST, "metadata", `${url === "/" ? "index" : url.slice(1)}.json`);
   fs.mkdirSync(path.dirname(metadataFile), { recursive: true });
   fs.writeFileSync(metadataFile, JSON.stringify(metadata));
   const head = [
+    p.stylesheet ? `<link rel="stylesheet" href="/assets/${p.stylesheet}" />` : "",
     noindex ? "" : `<script type="application/ld+json">${JSON.stringify({ "@context": "https://schema.org", "@graph": graph }).replace(/</g, "\\u003c")}</script>`,
     p.markdown ? `<link rel="alternate" type="text/markdown" href="${p.markdown}" title="The skill file" />` : "",
     `<meta name="robots" content="${metadata.robots}" />`,
@@ -244,15 +271,29 @@ function render(url, p, { plain = false, noindex = false } = {}) {
 const write = (url, html) => { const out = path.join(DIST, `${url.slice(1)}.html`); fs.mkdirSync(path.dirname(out), { recursive: true }); fs.writeFileSync(out, html); };
 
 const urls = [...fs.readdirSync("public").filter((f) => /^sitemap-.*.xml$/.test(f)).map((f) => fs.readFileSync(`public/${f}`, "utf8")).join("").matchAll(/<loc>https:\/\/useaiblocks\.com([^<]*)<\/loc>/g)].map((m) => m[1] || "/");
+if (!urls.includes("/api-and-mcp")) urls.push("/api-and-mcp");
 let wrote = 0;
 const titles = new Map(), problems = [];
 
 // The home page: the main sections and every job, so a crawler reaches the whole library in two steps.
 const tasks = Object.entries(byTask).sort((a, b) => b[1].length - a[1].length);
+const homeTypes = [["", "All", "Explore the library"], ["prompt", "Prompts", "Paste into a chat"], ["skill", "Skills", "Reuse a proven method"], ["workflow", "Workflows", "Connect several steps"], ["agent", "Agents", "Delegate a repeatable job"], ["mind", "Minds", "Borrow an expert's thinking"]];
+const homeMinds = cat.blocks.filter(b => b.type === "mind");
+const homeFlows = cat.blocks.filter(b => kindPath(b) === "workflows" && hasPage(b));
+const homeAgents = cat.blocks.filter(b => b.type === "agent" && hasPage(b));
 fs.writeFileSync(path.join(DIST, "index.html"), render("/", {
   documentTitle: "Free AI Skills & Custom Workflow Builder | AI Blocks",
   title: "Free AI skills, workflows and minds", desc: "Explore free AI skills, prompts and workflows. Build a custom workflow, edit the steps and download a pack to run in your AI. Try free browser tools too.", h1: "Use AI like the top 1%",
-  body: `<p class="bp-sub">Turn hours of work into minutes. Spend the time you save on the work only you can do. Or at the beach (we won't tell).</p><p><a href="/compose">Build a custom workflow</a> · <a href="/tools">Explore free browser tools</a></p><h2>Skills by job</h2>${list(tasks.map(([t, bs]) => `<a href="${jobHref(t)}">${esc(TASK_NAMES[t] ?? t)}</a> (${bs.length}): ${bs.slice(0, 3).map(link).join(", ")}`))}<h2>Minds</h2>${list(cat.blocks.filter((b) => b.type === "mind").slice(0, 24).map(link))}<p><a href="/minds">All minds</a></p>`,
+  body: [
+    `<p class="bp-sub">Turn hours of work into minutes. Spend the time you save on the work only you can do. Or at the beach (we won't tell).</p>`,
+    `<p><a class="btn btn-line" href="/#build" data-testid="hero-build-workflow">Build a workflow →</a></p>`,
+    `<section id="library"><h2>Explore the library</h2><nav aria-label="Task types">${list(homeTypes.map(([kind, name, description]) => `<a href="/${kind ? `?kind=${kind}` : ""}#library"><b>${name}</b></a>: ${description}`))}</nav>${list(cat.blocks.filter(b => hasPage(b) && b.type !== "mind").slice(0, 16).map(b => `${link(b)}: ${esc(b.summary)}`))}<p><a href="/jobs">Browse all tasks by job</a> · <a href="/how-it-works">How it works</a></p></section>`,
+    `<section id="home-minds"><h2>Minds</h2>${list(homeMinds.slice(0, 8).map(link))}<p><a href="/minds">Explore all ${homeMinds.length} minds</a></p></section>`,
+    `<section id="home-workflows"><h2>Workflows and builder</h2><p><a href="/#build">Open the workflow builder</a> · <a href="/compose">Plan from a goal</a> · <a href="/apps">See an example</a></p>${list(homeFlows.slice(0, 6).map(link))}<p><a href="/?kind=workflow#library">Browse all workflows</a></p></section>`,
+    `<section id="home-agents"><h2>Agents</h2>${list(homeAgents.slice(0, 4).map(link))}<p><a href="/?kind=agent#library">Browse all agents</a></p></section>`,
+    `<section id="everyday-tools"><h2>Free everyday tools</h2><p><a href="/tools">Explore all tools</a></p></section>`,
+    `<h2>Skills by job</h2>${list(tasks.map(([t, bs]) => `<a href="${jobHref(t)}">${esc(TASK_NAMES[t] ?? t)}</a> (${bs.length}): ${bs.slice(0, 3).map(link).join(", ")}`))}`,
+  ].join(""),
 }).replace(/<title>[^<]*<\/title>/, "<title>Free AI Skills &amp; Custom Workflow Builder | AI Blocks</title>"));
 
 // Job hubs: /jobs lists every job; /jobs/<job> lists every page for it with its one line, 150 to a page.
@@ -293,6 +334,8 @@ for (const url of urls) {
 }
 
 // A dedicated shell avoids Pages' wildcard-to-index rewrite loop for shared links.
+for (const [url, title] of [["/account", "My account"], ["/sign-up", "Create an account"], ["/sign-in", "Sign in"]]) write(url, render(url, { title, desc: "Your saved kits, skills, workflows and account settings in one place.", h1: title, body: "<p>Keep your work together in your AI Blocks account.</p>" }, { noindex: true }));
+for (const url of ["/community", "/publish", "/my-submissions", "/admin/review"]) write(url, render(url, pageFor(url), { noindex: url !== "/community" }));
 write("/space", render("/space", { title: "My private space", desc: "Keep your own AI skills, prompts and workflows together. Manage your space using your private device link and choose what to share.", h1: "My private space", body: "<p>Your owner link controls access to this space. Keep it private.</p>" }, { noindex: true }));
 write("/people", render("/people", { title: "Skills and workflows from people", desc: "Explore public AI skills, prompts and workflows shared by the community. Open a shared item or add it to your own collection.", h1: "From people", body: "<p>Discover skills and workflows people have chosen to make public.</p>" }));
 write("/shared-space-shell", render("/shared-space-shell", { title: "Shared space", desc: "Read a shared collection of AI skills and workflows.", h1: "Shared space", body: "" }, { noindex: true }));

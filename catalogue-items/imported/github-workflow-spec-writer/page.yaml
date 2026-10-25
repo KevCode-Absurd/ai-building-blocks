@@ -1,0 +1,28 @@
+new_slug: github-workflow-spec-writer
+name: Document a GitHub workflow contract
+summary: Turn a GitHub Actions file into a clear account of its triggers, jobs, data, rights, failure paths and checks.
+job: document-work
+headline: Document a GitHub workflow contract
+subhead: Bring a workflow file. Trace jobs, inputs and gates, then get a written contract with gaps called out.
+explain: Bring a workflow file. Trace jobs, inputs and gates, then get a written contract with gaps called out.
+when:
+  - You want to document a GitHub workflow contract.
+you_give:
+  - The existing workflow YAML and related reusable workflows/actions.
+  - Known owners, required approvals and constraints that are not encoded in the file.
+you_get:
+  - A workflow behavior specification with job dependency map.
+  - Input/output, security, timeout and failure-path requirements with unknowns called out.
+how_to_use:
+  - Download the complete skill folder and add it to your AI tool, or copy the instructions into a chat.
+  - Provide the inputs listed here and ask your AI to follow the skill.
+  - Review the result and any missing facts before using it.
+how_it_works:
+  - title: Read the actual workflow
+    text: Trace event/path/branch filters, jobs, dependencies and conditional execution.
+  - title: Extract the contracts
+    text: Record inputs, outputs, artifacts, permissions, secrets by name and runtime constraints.
+  - title: Describe verification
+    text: Map quality/approval gates and error paths to acceptance checks without inventing absent targets.
+thinking: medium
+thinking_why: It weighs your evidence and follows a specific method.

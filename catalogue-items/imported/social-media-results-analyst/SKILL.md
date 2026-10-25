@@ -1,6 +1,6 @@
 ---
 name: "social-media-analyzer"
-description: Social media campaign analysis and performance tracking. Calculates engagement rates, ROI, and benchmarks across platforms. Use when analyzing social media performance, calculating engagement rate, measuring campaign ROI, comparing platform metrics, or benchmarking against industry standards. Also use when the user mentions "social media audit," "engagement rate," or "which platform performs best."
+description: Social media campaign analysis and performance tracking. Calculates engagement rates and platform benchmarks, with financial ROI only when measured attributed revenue is supplied. Use when analyzing social media performance, calculating engagement rate, measuring campaign ROI, comparing platform metrics, or benchmarking against industry standards. Also use when the user mentions "social media audit," "engagement rate," or "which platform performs best."
 triggers:
   - analyze social media
   - calculate engagement rate
@@ -16,7 +16,7 @@ triggers:
 
 # Social Media Analyzer
 
-Campaign performance analysis with engagement metrics, ROI calculations, and platform benchmarks.
+Campaign performance analysis with engagement metrics, measured financial ROI when revenue data is supplied, and platform benchmarks.
 
 ---
 
@@ -24,7 +24,7 @@ Campaign performance analysis with engagement metrics, ROI calculations, and pla
 
 - [Analysis Workflow](#analysis-workflow)
 - [Engagement Metrics](#engagement-metrics)
-- [ROI Calculation](#roi-calculation)
+- [Financial Return](#financial-return)
 - [Platform Benchmarks](#platform-benchmarks)
 - [Tools](#tools)
 - [Examples](#examples)
@@ -38,11 +38,11 @@ Analyze social media campaign performance:
 1. Validate input data completeness (reach > 0, dates valid)
 2. Calculate engagement metrics per post
 3. Aggregate campaign-level metrics
-4. Calculate ROI if ad spend provided
+4. Calculate financial ROI only when attributed revenue and matching spend are provided
 5. Compare against platform benchmarks
 6. Identify top and bottom performers
 7. Generate recommendations
-8. **Validation:** Engagement rate < 100%, ROI matches spend data
+8. **Validation:** Engagement rate < 100%; financial ROI requires supplied attributed revenue and matching spend
 
 ### Input Requirements
 
@@ -57,7 +57,10 @@ Analyze social media campaign performance:
 | posts[].shares | No | Share/retweet count |
 | posts[].saves | No | Save/bookmark count |
 | posts[].clicks | No | Link clicks |
-| total_spend | No | Ad spend (for ROI) |
+| total_spend | No | Spend matched to the campaign period |
+| attributed_revenue | No | Measured revenue attributed to this campaign |
+| attribution_method | No | How revenue was attributed; required for financial ROI |
+| attribution_window | No | Attribution period; required for financial ROI |
 
 ### Data Validation Checks
 
@@ -100,16 +103,16 @@ Engagement Rate = (Likes + Comments + Shares + Saves) / Reach × 100
 
 ---
 
-## ROI Calculation
+## Financial Return
 
-Calculate return on ad spend:
+Calculate activity costs from engagement and click counts. Calculate financial return only when the input includes measured attributed revenue, matching spend, the attribution method, and its window:
 
 1. Sum total engagements across posts
 2. Calculate cost per engagement (CPE)
 3. Calculate cost per click (CPC) if clicks available
-4. Estimate engagement value using benchmark rates
-5. Calculate ROI percentage
-6. **Validation:** ROI = (Value - Spend) / Spend × 100
+4. Do not assign dollar values to likes, comments, shares, saves or clicks.
+5. When attributed revenue, spend, method, and window are supplied, calculate `ROAS = attributed revenue / spend` and `financial ROI = (attributed revenue - spend) / spend × 100`.
+6. Otherwise return financial ROI as unavailable and say which inputs are missing. Never recommend budget increases from engagement rates or a dollar proxy.
 
 ### ROI Formulas
 
@@ -120,25 +123,15 @@ Calculate return on ad spend:
 | Cost Per Thousand (CPM) | (Spend / Impressions) × 1000 |
 | Return on Ad Spend (ROAS) | Revenue / Ad Spend |
 
-### Engagement Value Estimates
-
-| Action | Value | Rationale |
-|--------|-------|-----------|
-| Like | $0.50 | Brand awareness |
-| Comment | $2.00 | Active engagement |
-| Share | $5.00 | Amplification |
-| Save | $3.00 | Intent signal |
-| Click | $1.50 | Traffic value |
-
-### ROI Interpretation
+### Financial ROI Interpretation
 
 | ROI % | Rating | Recommendation |
 |-------|--------|----------------|
-| > 500% | Excellent | Scale budget significantly |
-| 200-500% | Good | Increase budget moderately |
-| 100-200% | Acceptable | Optimize before scaling |
-| 0-100% | Break-even | Review targeting and creative |
-| < 0% | Negative | Pause and restructure |
+| > 500% | High reported return | Verify attribution window, margin, and incremental lift before a budget decision |
+| 200-500% | Positive reported return | Check margin and attribution quality before expansion |
+| 100-200% | Positive reported return | Review costs and conversion quality |
+| 0-100% | Low or break-even reported return | Check revenue coverage and costs |
+| < 0% | Negative reported return | Review costs, attribution, and campaign setup |
 
 ---
 
@@ -243,7 +236,8 @@ See `assets/expected_output.json`:
   "roi_metrics": {
     "total_spend": 500.0,
     "cost_per_engagement": 0.33,
-    "roi_percentage": 660.5
+    "attributed_revenue": null,
+    "financial_roi_percentage": null
   },
   "insights": {
     "overall_health": "excellent",
@@ -261,8 +255,8 @@ See `assets/expected_output.json`:
 The sample campaign shows:
 - **Engagement rate 8.36%** vs 1.22% benchmark = Excellent (6.8x above average)
 - **CTR 1.55%** vs 0.22% benchmark = Excellent (7x above average)
-- **ROI 660%** = Outstanding return on $500 spend
-- **Recommendation:** Scale budget, replicate successful elements
+- **Financial ROI:** unavailable because attributed revenue was not supplied
+- **Recommendation:** Compare engagement and click costs; do not infer business return from them
 
 ---
 

@@ -1,6 +1,7 @@
+# Modified by AI Blocks on 2026-10-24: method/copy repair.
 interface:
-  display_name: "Screenshot Capture"
-  short_description: "Capture screenshots"
+  display_name: "Screen Capture Helper"
+  short_description: "Browser capture or desktop capture with OS tools"
   icon_small: "./assets/screenshot-small.svg"
   icon_large: "./assets/screenshot.png"
-  default_prompt: "Capture the right screenshot for this task (target, area, and output path)."
+  default_prompt: "Capture the browser page with a browser tool, or the desktop only when an OS helper and required permissions are available."

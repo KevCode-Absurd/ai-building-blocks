@@ -1,0 +1,34 @@
+new_slug: visual-prompt-director
+name: Image and video prompt director
+summary: Share an image or video idea, rough prompt or bad result. Get a usable prompt, clear gaps and one focused next change.
+job: make-images
+headline: Image and video prompt director
+subhead: Share an image or video idea, rough prompt or bad result. Get a usable prompt, clear gaps and one focused next change. Bring the brief and any files you want it to use.
+explain: |-
+  Use this when you need a model-neutral image/video prompt with gap detection and focused repair. Pick idea, detailed brief, existing-prompt repair or bad-result diagnosis. Do not restart intake if the user already provided an actionable idea.
+
+  Extract confirmed subject, action, environment, light, camera, composition, palette, texture/style and, for video, motion/audio/timing. Mark meaningful choices made by the assistant as assumptions.
+when:
+  - You need a model-neutral image/video prompt with gap detection and focused repair.
+  - You want a clear draft and checks from the material you already have.
+you_give:
+  - brief
+  - "Optional: reference set"
+  - "Optional: copy draft"
+you_get:
+  - image prompt
+  - video prompt
+  - Missing inputs and steps that still need to run
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Read the brief
+    text: Pick idea, detailed brief, existing-prompt repair or bad-result diagnosis. Do not restart intake if the user already provided an actionable idea.
+  - title: Build the result
+    text: Read visible references first and state which traits came from each. Never guarantee exact identity/style replication or claim to see an unavailable reference.
+  - title: Check and hand off
+    text: Keep a confirmed-details list and preserve it across iterations. This skill writes prompts; generation is a separate explicitly requested, tool-supported action.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

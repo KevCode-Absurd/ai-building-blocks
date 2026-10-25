@@ -1,0 +1,35 @@
+slug: support-ticket-thread-summarizer
+name: Support ticket thread summarizer
+summary: Paste a thread or share a ticket. Get the timeline, attempted fixes, blockers, and next actions.
+category: general
+boards: []
+type: skill
+role: compress
+job: ops
+level: intermediate
+inputs:
+  - type: source_text
+    required: true
+  - type: tool_connection
+    required: false
+outputs:
+  - type: audit_report
+    required: true
+uses: []
+origin: imported
+source:
+  by: Composio
+  repo: composio-community/support-skills
+  path: ticket-summarize
+  url: https://github.com/composio-community/support-skills/tree/83382c4b055fc4e5b055044adb5bfb7585484c9a/ticket-summarize
+  licence: MIT
+  licence_file: README.md
+  commit: 83382c4b055fc4e5b055044adb5bfb7585484c9a
+  original_name: ticket-summarize
+  imported: 2026-10-23
+version: 1.0.0
+credits:
+  - title: ticket-summarize skill
+    by: Composio
+    url: https://github.com/composio-community/support-skills/tree/83382c4b055fc4e5b055044adb5bfb7585484c9a/ticket-summarize
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

@@ -1,0 +1,30 @@
+new_slug: enterprise-transition-architect
+name: Plan enterprise architecture changes
+summary: Link business goals, systems and owners to a phased change plan. State what each step needs to prove.
+job: plan-strategy
+headline: Plan enterprise architecture changes
+subhead: Bring goals and a system list. Map what each one serves, then plan changes with owners and exit checks.
+explain: Bring goals and a system list. Map what each one serves, then plan changes with owners and exit checks.
+when:
+  - You want to plan enterprise architecture changes.
+you_give:
+  - Enterprise goals, scope, time horizon and accountable stakeholders.
+  - Current capability/application/data portfolio, constraints, costs and evidence gaps.
+you_get:
+  - An evidence-labeled capability and application portfolio view.
+  - A current/target/transition roadmap with ownership, conflict escalation and exit evidence.
+how_to_use:
+  - Download the complete skill folder and add it to your AI tool, or copy the instructions into a chat.
+  - Provide the inputs listed here and ask your AI to follow the skill.
+  - Review the result and any missing facts before using it.
+how_it_works:
+  - title: Map outcome to portfolio
+    text: Connect value-stream stages and capabilities to applications, authoritative information, dependencies and owners.
+  - title: Compare reachable states
+    text: Define the target from explicit principles, preserve current-state evidence and test duplication assumptions.
+  - title: Place decision rights
+    text: Compare centralized/federated arrangements and name consultation, exceptions and conflict escalation.
+  - title: Sequence the transition
+    text: Give increments dependencies, coexistence assumptions, exit evidence and accountable owners.
+thinking: medium
+thinking_why: It weighs your evidence and follows a specific method.

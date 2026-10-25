@@ -1,6 +1,7 @@
+import { REMOTE_LIBRARY_UPDATE, libraryStorage } from "./lib/library-storage";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { type Catalogue } from "./lib/data";
-import { type Choices, type Composition, finalize, freeSelection, LIMITS, QUESTIONS, questionsFor, requestError, validateChoices } from "./lib/composer-core";
+import { type Catalogue, portLabel } from "./lib/data";
+import { type Choices, type Composition, finalize, freeSelection, LEGACY_REQUEST_LIMIT, LIMITS, QUESTIONS, questionsFor, requestError, validateChoices } from "./lib/composer-core";
 import Builder from "./Builder";
 import { packFlow, unpackFlow } from "./lib/plan";
 import { withCustomSkills, validateCustomSkills, type CustomSkill } from "./lib/custom-skills";
@@ -12,9 +13,11 @@ import { businessText, getBusiness } from "./lib/business";
 import { flows, type Flow } from "./lib/store";
 import { Link, navigate } from "./lib/router";
 import "./compose.css";
+import "./workflow-simplicity.css";
 import { protectedHeaders } from "./lib/turnstile";
 import { useComposerAccount } from "./lib/composer-account";
 import ExecutionPrompt from "./ExecutionPrompt";
+import { TransferGuide } from "./DownloadDialog";
 
 type Result = { plan: Composition; model: string; cost: number; latencyMs: number; context?: string };
 
@@ -23,10 +26,16 @@ export default function ComposePage({ c: baseCatalogue, toast }: { c: Catalogue;
   const [customSkills, setCustomSkills] = useState<CustomSkill[]>([]);
   const c = useMemo(() => withCustomSkills(baseCatalogue, customSkills), [baseCatalogue, customSkills]);
   const [goal, setGoal] = useState("");
+  const defaultChoice = (id: string) => id === "mode" ? "Create from scratch" : id === "reference" ? "Original direction" : id === "delivery" ? "Source code" : "Follow your request";
+  const [review, setReview] = useState(false);
+  const abortRef = useRef<AbortController | null>(null);
   const [context, setContext] = useState("");
   const [useContext, setUseContext] = useState(false);
   const [mode, setMode] = useState<"free" | "ai">("ai");
+  const [assignMinds, setAssignMinds] = useState(true);
   const account = useComposerAccount(mode === "ai");
+  const networkLimit = account.usage && "dailyIpAttemptLimit" in account.usage ? account.usage.dailyIpAttemptLimit : undefined;
+  const networkNote = typeof networkLimit === "number" ? ` A separate network limit of ${networkLimit} attempts per day applies.` : networkLimit === null ? "" : " A separate daily network limit may apply.";
   const [available, setAvailable] = useState(false);
   const [dictating, setDictating] = useState(false);
 
@@ -36,62 +45,91 @@ export default function ComposePage({ c: baseCatalogue, toast }: { c: Catalogue;
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
   const [packBusy, setPackBusy] = useState(false);
+  const [preparedZip, setPreparedZip] = useState<string | null>(null);
   const [graphFlow, setGraphFlow] = useState<Flow | null>(null);
   const [restored, setRestored] = useState(false);
   const importRef = useRef<HTMLInputElement>(null);
   const resultRef = useRef<HTMLElement>(null);
   const requestRef = useRef(0);
+  const remoteApplying = useRef(false), lastPersisted = useRef<string | null>(null);
+  const editing = useRef({ busy, result, goal }); editing.current = { busy, result, goal };
   useEffect(() => {
     document.title = "Build a custom workflow | AI Blocks";
     let live = true;
     fetch("/api/compose").then(r => { if (!r.ok) throw Error(); return r.json(); }).then(d => { if (live) setAvailable(d.enabled === true); }).catch(() => {}).finally(() => { if (live) setConnecting(false); });
-    try { const saved = JSON.parse(localStorage.getItem("abb:composer") ?? "null"); if (saved?.format === "ai-blocks-composition/1") { const custom = validateCustomSkills(saved.customSkills); const plan = finalize(withCustomSkills(baseCatalogue, custom), saved.plan, saved.plan.source); const restoredFlow = typeof saved.flowCode === "string" ? unpackFlow(baseCatalogue, saved.flowCode) : null; if (saved.flowCode !== undefined && !restoredFlow) throw Error("Saved workflow is incomplete."); setCustomSkills(custom); setGoal(saved.goal.slice(0, LIMITS.request)); setChoices(validateChoices(saved.choices ?? {})); setContext(saved.context ?? ""); setResult({ plan, model: saved.model || "free", cost: saved.cost || 0, latencyMs: saved.latencyMs || 0 }); setGraphFlow(restoredFlow); setRestored(true); } } catch { setError("The saved workflow could not be restored without changing its steps. Import a complete copy or create a new workflow."); }
+    try { const saved = JSON.parse(libraryStorage.getItem("abb:composer") ?? "null"); if (saved?.format === "ai-blocks-composition/1") { remoteApplying.current = true; const custom = validateCustomSkills(saved.customSkills); const plan = finalize(withCustomSkills(baseCatalogue, custom), saved.plan, saved.plan.source); const restoredFlow = typeof saved.flowCode === "string" ? unpackFlow(baseCatalogue, saved.flowCode) : null; if (saved.flowCode !== undefined && !restoredFlow) throw Error("Saved workflow is incomplete."); setCustomSkills(custom); setGoal(saved.goal); setAssignMinds(saved.assignMinds !== false); setChoices(validateChoices(saved.choices ?? {})); setContext(saved.context ?? ""); setResult({ plan, model: saved.model || "free", cost: saved.cost || 0, latencyMs: saved.latencyMs || 0 }); setGraphFlow(restoredFlow); setRestored(true); setReview(true); } } catch { setError("The saved workflow could not be restored without changing its steps. Import a complete copy or create a new workflow."); }
     try {
       const pending = JSON.parse(sessionStorage.getItem("abb:composer-signin") ?? "null");
       sessionStorage.removeItem("abb:composer-signin");
       if (pending && typeof pending.goal === "string" && typeof pending.context === "string") {
-        setGoal(pending.goal.slice(0, LIMITS.request)); setContext(pending.context.slice(0, LIMITS.context));
+        setGoal(pending.goal); setContext(pending.context.slice(0, LIMITS.context));
         setChoices(validateChoices(pending.choices ?? {})); setUseContext(pending.useContext === true);
+        setAssignMinds(pending.assignMinds !== false);
         setCustomSkills(validateCustomSkills(pending.customSkills)); setResult(null); setMode("ai");
       }
     } catch { /* Invalid local drafts never block sign-in. */ }
-    return () => { live = false; requestRef.current++; };
+    return () => { live = false; requestRef.current++; abortRef.current?.abort(); };
   }, [baseCatalogue]);
-  const envelope = () => ({ format: "ai-blocks-composition/1", goal, context: result?.context ?? context, choices, customSkills: graphFlow?.customSkills ?? customSkills, flowCode: graphFlow ? packFlow(graphFlow) : undefined, plan: result?.plan, model: result?.model, cost: result?.cost, latencyMs: result?.latencyMs });
-  useEffect(() => { if (result) try { localStorage.setItem("abb:composer", JSON.stringify(envelope())); } catch { /* storage can be unavailable */ } }, [result, goal, context, choices, customSkills, graphFlow]);
-  const reset = () => { setGraphFlow(null); setResult(null); setError(""); setRestored(false); requestRef.current++; try { localStorage.removeItem("abb:composer"); } catch {} };
-  const changeGoal = (value: string) => { reset(); setGoal(value); setChoices({}); };
+  const initialGraph = useMemo(() => result ? graphFlow ?? { ...compositionFlow(c, result.plan, goal, result.context ?? context), customSkills } : null, [result?.plan]);
+  const envelope = () => {
+    const flow = graphFlow ?? initialGraph;
+    return { format: "ai-blocks-composition/1", goal, context: result?.context ?? context, choices, assignMinds, customSkills: flow?.customSkills ?? customSkills, flowCode: flow ? packFlow(flow) : undefined, plan: result?.plan, model: result?.model, cost: result?.cost, latencyMs: result?.latencyMs };
+  };
+  useEffect(() => { if (result) try {
+    const raw = JSON.stringify(envelope());
+    if (remoteApplying.current) { remoteApplying.current = false; lastPersisted.current = raw; return; }
+    if (raw !== lastPersisted.current) { libraryStorage.setItem("abb:composer", raw); lastPersisted.current = raw; }
+  } catch { /* storage can be unavailable */ } }, [result, goal, context, choices, assignMinds, customSkills, graphFlow]);
+  useEffect(() => {
+    const received = (event: Event) => {
+      if (!(event as CustomEvent<string[]>).detail.includes("abb:composer")) return;
+      if (editing.current.busy || !editing.current.result && editing.current.goal.trim()) return;
+      try {
+        const saved = JSON.parse(libraryStorage.getItem("abb:composer") ?? "null");
+        if (saved?.format === "ai-blocks-composition/1") {
+          const custom = validateCustomSkills(saved.customSkills), plan = finalize(withCustomSkills(baseCatalogue, custom), saved.plan, saved.plan.source);
+          const restoredFlow = typeof saved.flowCode === "string" ? unpackFlow(baseCatalogue, saved.flowCode) : null;
+          if (saved.flowCode !== undefined && !restoredFlow) throw Error();
+          remoteApplying.current = true; setPreparedZip(null); setCustomSkills(custom); setGoal(saved.goal); setAssignMinds(saved.assignMinds !== false); setChoices(validateChoices(saved.choices ?? {})); setContext(saved.context ?? ""); setResult({ plan, model: saved.model || "free", cost: saved.cost || 0, latencyMs: saved.latencyMs || 0 }); setGraphFlow(restoredFlow); setRestored(true); setReview(true);
+        } else if (!saved) { remoteApplying.current = false; lastPersisted.current = null; setResult(null); setGraphFlow(null); setPreparedZip(null); }
+      } catch { setError("The updated workflow could not be opened. Your saved account copy is intact."); }
+    };
+    window.addEventListener(REMOTE_LIBRARY_UPDATE, received); return () => window.removeEventListener(REMOTE_LIBRARY_UPDATE, received);
+  }, [baseCatalogue]);
+  const reset = () => { setPreparedZip(null); setGraphFlow(null); setResult(null); setError(""); setRestored(false); requestRef.current++; try { libraryStorage.removeItem("abb:composer"); } catch {} };
+  const changeGoal = (value: string) => { reset(); setReview(false); setGoal(value); setChoices({}); };
   const signIn = async (signUp = false) => {
     try {
-      sessionStorage.setItem("abb:composer-signin", JSON.stringify({ goal, context, choices, useContext, customSkills }));
+      sessionStorage.setItem("abb:composer-signin", JSON.stringify({ goal, context, choices, useContext, customSkills, assignMinds }));
       await account.signIn(signUp);
     } catch { setError("Sign-in could not open. Please try again."); }
   };
   const compose = async () => {
     setError(""); const invalid = requestError(goal); if (invalid) { setError(invalid); return; }
-    if (mode === "ai" && !available) { setError("AI composition is not connected yet. Free assembly is ready to use."); return; }
+    if (mode === "ai" && !available) { setError("AI planning is unavailable. Open Customize and choose Find steps from the library if you want browser matching instead."); return; }
     if (mode === "ai" && account.state !== "signed-in") { setError("Sign in to generate a free AI workflow."); return; }
     const id = ++requestRef.current;
-    setBusy(true); setGraphFlow(null); setRestored(false);
+    const controller = new AbortController(); abortRef.current = controller;
+    const timeout = window.setTimeout(() => { controller.abort(); if (requestRef.current === id) { requestRef.current++; setBusy(false); setError("Planning timed out. Your request and earlier plan are still here. Try again when you are ready."); } }, 120000);
+    setBusy(true); setRestored(false);
     try {
       const combined = [context, useContext && businessText(getBusiness())].filter(Boolean).join("\n\n");
       if (combined.length > LIMITS.context) throw Error("Keep added context, including saved context, under 4,000 characters.");
-      if (mode === "free") setResult({ plan: finalize(c, freeSelection(c, goal, choices, combined), "free"), model: "free", cost: 0, latencyMs: 0, context: combined });
+      if (mode === "free") { const nextPlan = finalize(c, freeSelection(c, goal, choices, combined), "free"); setPreparedZip(null); setGraphFlow(null); setResult({ plan: nextPlan, model: "free", cost: 0, latencyMs: 0, context: combined }); }
       else {
         const verification = await protectedHeaders("compose");
         // Human verification can outlast a session JWT; acquire it immediately before sending.
         const token = await account.token();
-        const response = await fetch("/api/compose", { method: "POST", headers: { "content-type": "application/json", "idempotency-key": crypto.randomUUID(), authorization: `Bearer ${token}`, ...verification }, body: JSON.stringify({ goal, context: combined, choices }) });
+        const response = await fetch("/api/compose", { method: "POST", signal: controller.signal, headers: { "content-type": "application/json", "idempotency-key": crypto.randomUUID(), authorization: `Bearer ${token}`, ...verification }, body: JSON.stringify({ goal, context: combined, choices, assignMinds }) });
         if (response.status === 401) account.expired();
         const out = await response.json(); if (!response.ok) throw Error(out.error || "The model could not finish. Try free assembly.");
-        if (requestRef.current === id) setResult({ ...out, context: combined, plan: finalize(c, out.plan, "ai") });
+        if (requestRef.current === id) { const nextPlan = finalize(c, out.plan, "ai", undefined, assignMinds); setPreparedZip(null); setGraphFlow(null); setResult({ ...out, context: combined, plan: nextPlan }); }
         void account.refreshUsage();
       }
       requestAnimationFrame(() => resultRef.current?.scrollIntoView({ block: "start", behavior: "smooth" }));
-    } catch (e) { if (requestRef.current === id) setError(e instanceof Error ? e.message : "The workflow could not be created."); }
-    finally { setBusy(false); }
+    } catch (e) { if (requestRef.current === id) setError(controller.signal.aborted ? "Planning stopped. Your request is still here. Try again when you are ready." : e instanceof Error ? e.message : "The workflow could not be created."); }
+    finally { window.clearTimeout(timeout); if (requestRef.current === id) setBusy(false); }
   };
-  const initialGraph = useMemo(() => result ? graphFlow ?? { ...compositionFlow(c, result.plan, goal, result.context ?? context), customSkills } : null, [result?.plan]);
   const asFlow = () => graphFlow ?? initialGraph!;
   const exportJson = () => download(new Blob([JSON.stringify(envelope(), null, 2)], { type: "application/json" }), "workflow.edit.json");
   const exportPack = async () => {
@@ -99,12 +137,12 @@ export default function ComposePage({ c: baseCatalogue, toast }: { c: Catalogue;
     try {
       const flow = asFlow();
       const built = await buildHandoffZip(withCustomSkills(baseCatalogue, flow.customSkills ?? customSkills), flow, useContext ? getBusiness() : {}, { "workflow.edit.json": JSON.stringify(envelope(), null, 2), "README.md": `# ${result.plan.title}\n\n${result.plan.summary}\n\n## Run\nRead HANDOFF.md. Check the current AI session, supplied context and existing brand brain first. Validate existing artifacts and ask for missing required inputs. Apply every declared step and its checks in order; reusing an artifact does not waive a step. Run the workflow in an AI runner with the tools each skill needs. Code needs a coding environment; browser checks need a rendered preview. Mark checks not run if tools are unavailable.\n\n## Edit\nOpen /compose on AI Blocks and choose Import workflow. Select workflow.edit.json. Edit notes, add or reorder steps, then download again.\n\n## Boundaries\nThis pack is a plan. No skills have run, no page has been published and no agent has been scheduled. Authorize concrete external actions during execution.\n`, "inputs.json": JSON.stringify({ required: result.plan.missing, choices, status: "awaiting-user-inputs" }, null, 2) });
-      if ("error" in built) throw Error(built.error); download(built.blob, built.filename); toast("Your workflow pack is downloaded");
+      if ("error" in built) throw Error(built.error); download(built.blob, built.filename); setPreparedZip(built.filename); toast("Your workflow pack is downloaded");
     } catch (e) { setError((e as Error).message); } finally { setPackBusy(false); }
   };
   const importPack = async (file?: File) => {
     if (!file) return; setError("");
-    try { if (file.size > 1000000) throw Error("Keep the workflow file under 1 MB."); const data = JSON.parse(await file.text()); if (data.format !== "ai-blocks-composition/1" || typeof data.goal !== "string" || data.goal.length > LIMITS.request || typeof data.context !== "string" || data.context.length > LIMITS.context) throw Error("Choose a workflow.edit.json exported from this composer."); const importedFlow = typeof data.flowCode === "string" ? unpackFlow(baseCatalogue, data.flowCode) : null; if (data.flowCode !== undefined && !importedFlow) throw Error("This workflow is incomplete or invalid. No steps were imported. Supply a complete workflow."); const custom = validateCustomSkills(data.customSkills); const plan = finalize(withCustomSkills(baseCatalogue, custom), data.plan, data.plan.source === "ai" ? "ai" : "free"); setCustomSkills(custom); setGoal(data.goal); setContext(data.context); setChoices(validateChoices(data.choices ?? {})); setResult({ plan, model: typeof data.model === "string" ? data.model : "free", cost: Number.isFinite(data.cost) && data.cost >= 0 ? data.cost : 0, latencyMs: 0 }); setGraphFlow(importedFlow); setRestored(true); toast("Your workflow is ready to edit"); } catch (e) { setError((e as Error).message); } finally { if (importRef.current) importRef.current.value = ""; }
+    try { if (file.size > 1000000) throw Error("Keep the workflow file under 1 MB."); const data = JSON.parse(await file.text()); if (data.format !== "ai-blocks-composition/1" || typeof data.goal !== "string" || data.goal.length > LEGACY_REQUEST_LIMIT || typeof data.context !== "string" || data.context.length > LIMITS.context) throw Error("Choose a workflow.edit.json exported from this composer."); const importedFlow = typeof data.flowCode === "string" ? unpackFlow(baseCatalogue, data.flowCode) : null; if (data.flowCode !== undefined && !importedFlow) throw Error("This workflow is incomplete or invalid. No steps were imported. Supply a complete workflow."); const custom = validateCustomSkills(data.customSkills); const plan = finalize(withCustomSkills(baseCatalogue, custom), data.plan, data.plan.source === "ai" ? "ai" : "free"); setCustomSkills(custom); setGoal(data.goal); setAssignMinds(data.assignMinds !== false); setContext(data.context); setChoices(validateChoices(data.choices ?? {})); setResult({ plan, model: typeof data.model === "string" ? data.model : "free", cost: Number.isFinite(data.cost) && data.cost >= 0 ? data.cost : 0, latencyMs: 0 }); setGraphFlow(importedFlow); setPreparedZip(null); setRestored(true); setReview(true); toast("Your workflow is ready to edit"); } catch (e) { setError(e instanceof SyntaxError ? "This file could not be read. Choose workflow.edit.json from a previous download. Your current workflow is kept." : (e as Error).message); } finally { if (importRef.current) importRef.current.value = ""; }
   };
 
   const questions = questionsFor([goal, context, useContext && businessText(getBusiness())].filter(Boolean).join("\n"), choices);
@@ -114,51 +152,57 @@ export default function ComposePage({ c: baseCatalogue, toast }: { c: Catalogue;
   const possibleQuestions = [...new Set([...questions, ...Object.keys(choices)])].filter(id => Object.hasOwn(QUESTIONS, id));
   return <main className="wrap compose-page" data-testid="compose-page">
     <div className="compose-intro"><span className="mono small">YOUR GOAL → YOUR WORKFLOW</span><h1 className="h2">Build a custom workflow</h1><p className="lede">Describe what you want to achieve. Get a step-by-step workflow with connected skills and checks, ready to edit, download and run in your own AI.</p></div>
-    <nav className="compose-navigation" aria-label="Composer sections"><a href="#compose-request">1. Your request</a><a href="#compose-workflow">2. Your workflow</a></nav>
+    <nav className="compose-navigation" aria-label="Composer sections"><a href="#compose-request">1. Your request</a>{busy || result ? <a href="#compose-workflow">2. Your workflow</a> : <span aria-disabled="true">2. Your workflow</span>}</nav>
     <div className="compose-layout">
       <section id="compose-request" className="compose-form" aria-label="Your request">
-        <div className="compose-tabs" role="tablist" aria-label="How to create your workflow"><button role="tab" disabled={busy} aria-selected={mode === "free"} onClick={() => setMode("free")}>Free assembly</button><button role="tab" disabled={busy} aria-selected={mode === "ai"} onClick={() => setMode("ai")}>AI composition</button></div>
-        <p className="small">{mode === "free" ? "Match your request to library skills using browser rules. Requests without a match get a general template. Choose AI composition for a tailored plan." : "Create a tailored workflow for free. Sign in to use your daily allowance. No payment details needed."}</p>
-        {mode === "ai" && <div className="compose-account" data-testid="compose-account" aria-label="Workflow account">
-          {account.state === "loading" && <p className="small" role="status">Checking sign-in…</p>}
-          {account.state === "unconfigured" && <p className="small">Sign-in is being connected. You can use free assembly now.</p>}
-          {account.state === "error" && <><p className="small">Sign-in could not load. Free assembly is available.</p><button className="link-btn" onClick={account.retry}>Try sign-in again</button></>}
-          {account.state === "signed-out" && <><p className="small">Sign in to create your free AI workflow.</p><div className="compose-actions"><button className="btn btn-dark btn-sm" onClick={() => void signIn()}>Sign in</button><button className="link-btn" onClick={() => void signIn(true)}>Create a free account</button></div></>}
-          {account.state === "signed-in" && <><p className="small">Signed in · Free access{account.usage ? ` · ${account.usage.completed} workflows created · ${Math.max(0, account.usage.dailyAttemptLimit - account.usage.attemptsToday)} attempts left today` : ""}</p><button className="link-btn" disabled={busy} onClick={() => void account.signOut()?.catch(() => setError("Sign-out could not finish. Please try again."))}>Sign out</button></>}
-        </div>}
-        {mode === "ai" && <p className="small compose-policy-note">Account creation and AI submissions are for adults aged 18 or older. Read our <Link to="/terms">Terms of service</Link> and <Link to="/privacy">Privacy policy</Link> before continuing.</p>}
-        <MyMinds onSignIn={() => signIn()} />
-        <form className="compose-editor-grid" onSubmit={e => { e.preventDefault(); void compose(); }}>
+        <form className="compose-editor-grid" onSubmit={e => { e.preventDefault(); if (!review) { const invalid = requestError(goal); if (invalid) setError(invalid); else { setError(""); setReview(true); } } else void compose(); }}>
           <div className="compose-request-pane"><label htmlFor="compose-goal">What would you like to get done?</label>
           <div className="compose-request-box">
-            <textarea id="compose-goal" data-testid="compose-goal" value={goal} onChange={e => changeGoal(e.currentTarget.value)} maxLength={LIMITS.request} rows={5} placeholder="Build a landing page, check it and give me the source code" required disabled={busy || dictating} />
-            <div className="compose-request-footer"><VoiceRequest value={goal} onChange={changeGoal} disabled={busy} onListeningChange={setDictating} /><span className="compose-voice-count small">{goal.length.toLocaleString()} / 10,000 characters</span></div>
+            <textarea id="compose-goal" data-testid="compose-goal" value={goal} onChange={e => changeGoal(e.currentTarget.value)} maxLength={LIMITS.request} rows={5} placeholder="Build a landing page, check it and give me the source code" aria-describedby="compose-goal-help" required disabled={busy || dictating} />
+            <div className="compose-request-footer"><VoiceRequest value={goal} onChange={changeGoal} disabled={busy} onListeningChange={setDictating} /><span className="compose-voice-count small">{goal.length.toLocaleString()} / {LIMITS.request.toLocaleString()} characters{goal.length > LIMITS.request ? " · Shorten this draft before creating a new workflow." : ""}</span></div>
           </div>
-          </div><div className="compose-settings-pane"><h2 className="compose-settings-title">Make it yours</h2>
-          {possibleQuestions.length > 0 && <fieldset><legend>Choices that shape the workflow</legend>{possibleQuestions.map(id => { const q = QUESTIONS[id as keyof typeof QUESTIONS]; return <label key={id} className="compose-choice">{q.text}<select aria-label={q.text} value={choices[id as keyof Choices] ?? ""} disabled={busy} onChange={e => { const value = e.currentTarget.value; reset(); setChoices(v => { const next = { ...v }; if (value) next[id as keyof Choices] = value; else delete next[id as keyof Choices]; return next; }); }}><option value="">Use a sensible starting point</option>{q.options.map(([value, label]) => <option key={value} value={value}>{label}</option>)}</select></label>; })}</fieldset>}
+          <p className="small compose-goal-help" id="compose-goal-help">Say what you need, who it is for and the format you want. Try an example below if you are unsure.</p>
+          {mode === "ai" && <div><label className="compose-check"><input type="checkbox" data-testid="compose-assign-minds" checked={assignMinds} disabled={busy || dictating} onChange={event => setAssignMinds(event.currentTarget.checked)} aria-describedby="compose-minds-help" /> Assign minds to tasks</label><p className="small" id="compose-minds-help">Uses a suggested perspective for each step. Complex decisions may use a small group. You can change or remove them.</p></div>}
+          </div>{review && <details className="compose-settings-pane workflow-options"><summary>Customize the plan (optional)</summary>
+          {possibleQuestions.length > 0 && <fieldset><legend>Choices that shape the workflow</legend>{possibleQuestions.map(id => { const q = QUESTIONS[id as keyof typeof QUESTIONS]; return <label key={id} className="compose-choice">{q.text}<select aria-label={q.text} value={choices[id as keyof Choices] ?? ""} disabled={busy} onChange={e => { const value = e.currentTarget.value; reset(); setChoices(v => { const next = { ...v }; if (value) next[id as keyof Choices] = value; else delete next[id as keyof Choices]; return next; }); }}><option value="">Starting point: {defaultChoice(id)}</option>{q.options.map(([value, label]) => <option key={value} value={value}>{label}</option>)}</select></label>; })}</fieldset>}
           <details className="compose-context"><summary>Add context and constraints</summary><label htmlFor="compose-context">Audience, offer, available inputs and limits</label><textarea id="compose-context" rows={4} value={context} maxLength={LIMITS.context} onChange={e => { reset(); setContext(e.currentTarget.value); }} disabled={busy} /><label className="compose-check"><input type="checkbox" checked={useContext} onChange={e => { reset(); setUseContext(e.currentTarget.checked); }} disabled={busy} /> Include my saved context</label></details>
-          {mode === "ai" && <p className="small">{connecting ? "Checking service availability…" : "Your request, added context and relevant skill descriptions go to our AI provider. The service selects the model and enforces usage limits."}</p>}
+          {mode === "ai" && <p className="small">{connecting ? "Checking service availability…" : "Your request, added context and relevant skill descriptions go to our AI provider. When Assign minds is on, public mind profiles go too. The service selects the model and enforces usage limits."}</p>}
           {mode === "ai" && <p className="small compose-policy-note">Generated results and usage records are stored by the service. Share only information you are authorised to provide. <Link to="/privacy#server">How your data is handled</Link>.</p>}
-          </div><div className="compose-submit-pane">
-          <button className="btn btn-primary" type="submit" data-testid="compose-submit" disabled={busy || dictating || !goal.trim() || mode === "ai" && (!available || connecting || account.state !== "signed-in")}>{busy ? "Connecting your workflow…" : mode === "free" ? "Assemble my workflow" : "Create my workflow"}</button>
-          {busy && <p role="status" className="small">This can take up to two minutes. You can keep this page open.</p>}
+          </details>}<div className="compose-submit-pane">
+          <button className="btn btn-primary" type="submit" data-testid="compose-submit" disabled={busy || dictating || !goal.trim() || goal.length > LIMITS.request || review && mode === "ai" && (!available || connecting || account.state !== "signed-in")}>{busy ? "Preparing your plan…" : !review ? "Continue" : mode === "free" ? "Find steps from the library" : "Create my plan"}</button>
+          {busy && <button type="button" className="link-btn" onClick={() => { abortRef.current?.abort(); requestRef.current++; setBusy(false); setError("Planning stopped. Your request is still here."); }}>Stop planning</button>}
           <div className="compose-examples" aria-label="Example requests">{EXAMPLES.map(s => <button type="button" key={s} disabled={busy || dictating} onClick={() => changeGoal(s)}>{s}</button>)}</div>
           </div>
         </form>
-        <div className="compose-import"><button className="link-btn" onClick={() => importRef.current?.click()} disabled={busy || dictating}>Import workflow</button><input ref={importRef} type="file" accept=".json,application/json" className="visually-hidden" aria-label="Import workflow JSON" onChange={e => void importPack(e.currentTarget.files?.[0])} /></div>
+        {review && <div className="compose-next-step"><h2 className="h3">Create your step-by-step plan</h2><p className="small">{!connecting && !available && mode === "ai" ? "AI planning is unavailable. Choose library matching in Customize if you want to continue without AI planning. " : ""}Your AI will do the work after you download the plan. Review the optional choices, then create your plan.</p>        {mode === "ai" && <div className="compose-account" data-testid="compose-account" aria-label="Workflow account">
+          {account.state === "loading" && <p className="small" role="status">Checking sign-in…</p>}
+          {account.state === "unconfigured" && <p className="small">Sign-in is unavailable. Open Customize and choose Find steps from the library to use browser matching.</p>}
+          {account.state === "error" && <><p className="small">Sign-in could not load. Retry, or choose library matching in Customize.</p><button className="link-btn" onClick={account.retry}>Try sign-in again</button></>}
+          {account.state === "signed-out" && <><p className="small">Create up to five free AI workflows per day. Sign in to begin.</p><div className="compose-actions"><button className="btn btn-dark btn-sm" onClick={() => void signIn()}>Sign in</button><button className="link-btn" onClick={() => void signIn(true)}>Create a free account</button></div></>}
+          {account.state === "signed-in" && <><p className="small">Signed in · Free access{account.usage ? ` · ${account.usage.completed} workflows created${account.usage.unlimited === true ? " · No daily account count limit" : typeof account.usage.dailyAttemptLimit === "number" ? ` · ${Math.max(0, account.usage.dailyAttemptLimit - account.usage.attemptsToday)} attempts left today` : ""}` : ""}</p><button className="link-btn" disabled={busy} onClick={() => void account.signOut()?.catch(() => setError("Sign-out could not finish. Please try again."))}>Sign out</button></>}
+        </div>}
+        {mode === "ai" && <p className="small compose-policy-note">Account creation and AI submissions are for adults aged 18 or older. Read our <Link to="/terms">Terms of service</Link> and <Link to="/privacy">Privacy policy</Link> before continuing.</p>}
+</div>}
+        <details className="compose-customize workflow-options"><summary>Customize: planner, minds and imports</summary>        <div className="compose-tabs" role="tablist" aria-label="How to create your workflow"><button role="tab" disabled={busy} aria-selected={mode === "free"} onClick={() => setMode("free")}>Find steps from the library</button><button role="tab" disabled={busy} aria-selected={mode === "ai"} onClick={() => setMode("ai")}>AI planning</button></div>
+        <p className="small">{mode === "free" ? "Match your request to library skills using browser rules. Requests without a match get a general template. Choose AI composition for a tailored plan." : account.usage?.unlimited === true ? `Your account has no daily workflow count limit.${networkNote} Service spending and safety limits still apply.` : "Create up to five free AI workflows per day. Failed attempts count toward your allowance. Resets at 00:00 UTC (5:30 a.m. India time). No payment details needed."}</p>
+<MyMinds onSignIn={() => signIn()} />
+        <div className="compose-import"><button className="link-btn" onClick={() => importRef.current?.click()} disabled={busy || dictating}>Import workflow</button><input ref={importRef} type="file" accept=".json,application/json" className="visually-hidden" aria-label="Import workflow JSON" onChange={e => void importPack(e.currentTarget.files?.[0])} /></div></details>
         {error && <p className="compose-error" role="alert">{error}</p>}
       </section>
-      <section id="compose-workflow" className="compose-result" ref={resultRef} aria-label="Your workflow" aria-live="polite">
-        {busy ? <div className="compose-loading" role="status"><div className="compose-loading-blocks" aria-hidden="true"><span>▧</span><i>→</i><span>▧</span><i>→</i><span>✓</span></div><h2 className="h3">Connecting the dots…</h2><p className="small">Finding the right skills and putting your workflow together.</p></div> : result ? <>
-          <div className="compose-result-toolbar"><div><span className="mono small">{usableResult ? "YOUR WORKFLOW" : "YOUR REQUEST"}</span><h2 className="h3">{result.plan.title}</h2></div>{usableResult && <div className="compose-actions"><button className="btn btn-primary" data-testid="compose-download" disabled={packBusy} onClick={() => void exportPack()}>{packBusy ? "Preparing the files…" : "Download the workflow"}</button><button className="btn btn-dark" data-testid="compose-export" onClick={exportJson}>Export editable JSON</button></div>}</div>
+      <section hidden={!busy && !result} id="compose-workflow" className="compose-result" ref={resultRef} aria-label="Your workflow">
+        {busy ? <div className="compose-loading" role="status"><div className="compose-loading-blocks" aria-hidden="true"><span>▧</span><i>→</i><span>▧</span><i>→</i><span>✓</span></div><h2 className="h3">Preparing your plan…</h2><p className="small">Finding the right skills and putting your workflow together.</p></div> : result ? <>
+          <div className="compose-result-toolbar"><div><span className="mono small">{usableResult ? "YOUR WORKFLOW" : "YOUR REQUEST"}</span><h2 className="h3">{result.plan.title}</h2></div>{usableResult && <div className="compose-actions"><button className="btn btn-primary" data-testid="compose-download" disabled={packBusy} onClick={() => void exportPack()}>{packBusy ? "Preparing the files…" : "Download the workflow"}</button><details className="workflow-options"><summary>Other formats</summary><p className="small">Editable JSON reopens this plan in AI Blocks. To run the plan in your AI, download the workflow.</p><button className="btn btn-dark" data-testid="compose-export" onClick={exportJson}>Export editable JSON</button></details></div>}</div>
+          {usableResult && <p className="workflow-plan-status" data-testid="plan-ready" role="status">Plan ready. No steps have run yet.</p>}
+          {usableResult && <details className="workflow-options workflow-run-help" data-testid="compose-run-help"><summary>How do I get my result?</summary><ol><li>Review the steps, then download the workflow.</li><li>Unzip it and give the complete files to your AI.</li><li>Ask your AI to read START_HERE.txt and follow HANDOFF.md. Add the material it asks for.</li></ol><p className="small">Copy AI instructions gives you a first message to send with the files. Your AI makes the result in your chat or workspace.</p><a href="/how-it-works#use-in-ai" target="_blank" rel="noopener noreferrer">Read the steps in a new tab</a></details>}
           {usableResult && <ExecutionPrompt name={asFlow().name} goal={asFlow().goal} />}
           {restored && <p className="small">Restored from your saved workflow.</p>}
           {usableResult && <p className="small">{result.plan.summary}</p>}
+          {usableResult && result.plan.missing.length > 0 && <details className="workflow-options" data-testid="workflow-inputs"><summary>What to add in your AI ({result.plan.missing.length})</summary><p className="small">You can download now. Add these when your AI asks; you do not need to upload private files here.</p><ul>{result.plan.missing.map(item => <li key={item.type}>{portLabel(item.type)} · needed by step {item.steps.join(", ")}</li>)}</ul></details>}
           {hasGeneralTemplate && <div className="compose-match-notice" role="status" data-testid="compose-unmatched"><b>{hasSpecialist ? "Part of your request needs a specialist match" : "Your request did not match a specialist workflow"}</b><p className="small">{hasSpecialist ? "Unmatched parts use" : "The steps below are"} a general brief, draft and check template. Different unmatched requests produce the same steps. Choose AI composition for a tailored workflow.</p>{available ? <button className="btn btn-dark btn-sm" onClick={() => { setMode("ai"); setError(""); }}>Use AI composition for this request</button> : <p className="small">AI composition is currently unavailable. You can replace the template steps with skills from the library.</p>}</div>}
-          {usableResult && <><p className="small">Click a step to edit its instructions or assign a mind. Drag blocks to arrange them, or connect their inputs and outputs.</p>
-          <div className="compose-workflow-canvas" data-testid="compose-steps">{initialGraph && <Builder key={initialGraph.id} c={baseCatalogue} toast={toast} initialFlow={initialGraph} onFlowChange={setGraphFlow} />}</div>
-          <div className="compose-actions"><button className="link-btn" onClick={() => { const flow = asFlow(); flows.save(flow); flows.open(flow.id); navigate("/#build"); }}>Open in the full builder</button></div><p className="small">Your edits are saved in this browser. Download the pack to run it in your AI.</p></>}
-        </> : <div className="compose-empty"><span className="mono">01 → 02 → 03 → ✓</span><h2 className="h3">A complete plan, ready to make your own</h2><p className="small">Your workflow will show what each step does, what it needs and what comes next. Edit the order and instructions before you download.</p><div><b>Free assembly</b><p className="small">Library search, typed connections and built-in checks.</p><b>AI composition</b><p className="small">Request interpretation and instructions tailored to your goal.</p></div></div>}
+          {usableResult && <><p className="small">Read the steps in order. Open a step to see what to add and what it makes. Use Diagram view to edit connections.</p>
+          <div className="compose-workflow-canvas" data-testid="compose-steps">{initialGraph && <Builder key={initialGraph.id} c={baseCatalogue} toast={toast} initialFlow={initialGraph} onFlowChange={setGraphFlow} onDelete={reset} />}</div>
+          <div className="compose-actions"><button className="link-btn" onClick={() => { const flow = asFlow(); flows.save(flow); flows.open(flow.id); navigate("/#build"); }}>Open in the full builder</button></div>{preparedZip && <TransferGuide name={asFlow().name} goal={asFlow().goal} zip={preparedZip} />}</>}
+        </> : <div className="compose-empty"><span className="mono">01 → 02 → 03 → ✓</span><h2 className="h3">A complete plan, ready to make your own</h2><p className="small">Your workflow will show what each step does, what it needs and what comes next. Edit the order and instructions before you download.</p></div>}
       </section>
     </div>
   </main>;

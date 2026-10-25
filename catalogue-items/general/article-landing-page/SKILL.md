@@ -1,6 +1,6 @@
 ---
 name: article-landing-page
-description: Use when people who have the problem but don't know your product (often clicking an article-style ad) need a long page that explains the problem before the product appears. Writes the page in four moves (recognise, understand, believe, decide), labelled as advertising the way the FTC's native advertising guide asks, in the business's own voice. Ends with any of its checks the page still misses.
+description: "Use when people who have the problem but don't know your product (often clicking an article-style ad) need a long page that explains the problem before the product appears. Writes the page in four moves (recognise, understand, believe, decide), labelled as advertising the way the FTC's native advertising guide asks, in the business's own voice. Ends with any of its checks the page still misses.\r"
 ---
 
 # Article-style landing page writer
@@ -109,3 +109,14 @@ Write `MISSING: <what>`. No quotes: proof runs on facts alone. No guarantee: no 
 - Making up customers, experts or founder stories.
 - Showing the price before section 5 has made the case.
 - Turning the problem sections into a feature list.
+
+
+## Optional narrative-page implementation
+
+Use this optional mode when it matches the requested job. Keep the core checks above and the decisions already supplied. Full procedure: references/cmo-method-advertorial-v1.md.
+
+When the user asks for a built page, carry the approved story through HTML rather than stop at a copy brief. Use a real founder or customer account only when supplied; otherwise use a branded explanation. Do not invent an expert narrator.
+
+Map hero, problem, real alternatives, supported discovery, product, explanation, real proof, offer, who-for/not-for, FAQ and close. Omit unsupported blocks. Show three bundles only if those combinations and charged prices exist. The story does not excuse invented reviews or a false publication identity.
+
+Choose an editorial layout with a readable column, clear reason headings, image/text rhythm, optional discovery callout and bounded cards. Motion is optional and must respect reduced motion. Keep essential content visible when scripts fail. Build semantic responsive HTML, live words and buttons, real images and conditions beside prices. Check narrow/wide layouts, quote sources, CTA targets and cropping. Save revisions, and distinguish drafted, rendered, inspected and integrated status.

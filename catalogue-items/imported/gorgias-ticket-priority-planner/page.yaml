@@ -1,0 +1,32 @@
+thinking: medium
+thinking_why: It follows a set method with a few checks.
+new_slug: gorgias-ticket-priority-planner
+name: Gorgias ticket priority planner
+summary: Connect Gorgias. Get open tickets grouped by urgency and issue type, with suggested next steps.
+job: help-customers
+headline: Gorgias ticket priority planner
+subhead: Connect Gorgias and ask which tickets need attention first. It reads recent open tickets and up to fifteen full threads. You get a queue grouped by urgency and issue type, with the customer, ticket age, and suggested next steps.
+when:
+  - You use this tool for customer support and need help with this task.
+you_give:
+  - Recent open Gorgias tickets and message threads.
+  - Any status, date, or tag filters you want to use.
+you_get:
+  - Show each ticket with its age, category, customer, summary, and recommended next step.
+how_it_works:
+  - title: Read open tickets
+    text: Fetch recent open tickets and read the full conversations for up to fifteen.
+  - title: Sort by urgency
+    text: Group outages, broken features, payment issues, questions, and feedback into clear priority levels.
+  - title: Plan the next actions
+    text: Show each ticket with its age, category, customer, summary, and recommended next step.
+works_best_with:
+  tools:
+    - name: Gorgias
+      why: Live lookups need Composio CLI access and connected accounts for these services.
+how_to_use:
+  - Add the downloaded folder to an AI that can read skill files.
+  - Ask for gorgias ticket priority planner by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
+  - Provide Recent open Gorgias tickets and message threads.
+  - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
+  - Review the result. Approve any proposed sending or account changes before they happen.

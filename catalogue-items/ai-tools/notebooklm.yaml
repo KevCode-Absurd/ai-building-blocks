@@ -2,7 +2,7 @@ slug: notebooklm
 name: NotebookLM
 maker: Google
 url: https://notebooklm.google.com
-promise: Answers, summaries and audio overviews drawn only from the sources you add.
+promise: "Ask questions, make study guides and hear summaries from the sources you add."
 use_cases: [research, organise-work]
 categories: [chat-assistant, productivity]
 what_it_does:
@@ -12,7 +12,7 @@ what_it_does:
   - Turns your sources into a spoken audio overview.
   - Lets you share a notebook with other people.
 benefits:
-  - Check each answer against the page it came from.
+  - "Open linked citations to check an answer against the original source."
   - Turn a stack of reports into one short brief.
   - Listen to a summary of a long document on the move.
   - Keep one topic's papers, notes and links in one notebook.

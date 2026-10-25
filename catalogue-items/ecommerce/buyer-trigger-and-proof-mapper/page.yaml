@@ -1,0 +1,43 @@
+new_slug: buyer-trigger-and-proof-mapper
+name: Buyer trigger and proof mapper
+summary: Map what starts a buyer's search, how they feel, what proof they need and what outcome they want.
+job: understand-customers
+headline: Buyer trigger and proof mapper
+subhead: Share customer words, product facts and existing ads. Get a buyer trigger, emotion, evidence and payoff map.
+explain: |-
+  Map what starts a buyer's search, how they feel, what proof they need and what outcome they want.
+
+  Share customer words, product facts and existing ads. Get a buyer trigger, emotion, evidence and payoff map.
+when:
+  - You need a buyer trigger, emotion, evidence and payoff map.
+  - You need buyer trigger and proof mapper for a specific task.
+  - You want the method's decisions and assumptions written down before acting.
+you_give:
+  - Customer words
+  - Product facts and existing ads
+you_get:
+  - A buyer trigger, emotion, evidence and payoff map
+  - The sources used, missing inputs and assumptions
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Check the inputs
+    text: Confirm customer words, product facts and existing ads. Mark facts that are missing.
+  - title: The TEEP Framework
+    text: Follow the the teep framework section in the full method and keep its required fields and decision rules.
+  - title: Map the Buyer's TEEP
+    text: Follow the map the buyer's teep section in the full method and keep its required fields and decision rules.
+  - title: Audit Current Ads
+    text: Follow the audit current ads section in the full method and keep its required fields and decision rules.
+  - title: Prescribe TEEP-Balanced Creative
+    text: Follow the prescribe teep-balanced creative section in the full method and keep its required fields and decision rules.
+  - title: Deliver Psychology Map
+    text: Follow the deliver psychology map section in the full method and keep its required fields and decision rules.
+  - title: "Buyer Psychology Map: [Audience]"
+    text: "Follow the buyer psychology map: [audience] section in the full method and keep its required fields and decision rules."
+  - title: Review the result
+    text: Return a buyer trigger, emotion, evidence and payoff map. Check facts, math and the decisions before any action.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

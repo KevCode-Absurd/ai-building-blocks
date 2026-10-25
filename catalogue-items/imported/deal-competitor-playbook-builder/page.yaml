@@ -2,10 +2,14 @@ thinking: high
 thinking_why: It must compare sources and tie claims to evidence.
 new_slug: deal-competitor-playbook-builder
 name: Deal competitor playbook builder
-summary: Name a rival and the deal. Get a plan to win it, plus your win and loss patterns.
+summary: Name a rival and the deal. Get a plan to win it, plus your win and loss
+  patterns.
 job: sell-and-negotiate
 headline: Deal competitor playbook builder
-subhead: Name the rival and the deal you are in. It reads their public pages for launches, pricing and news, and your past deals against them if you connect your CRM. You get a plan for winning this deal, their strengths and gaps, and the patterns behind your wins and losses.
+subhead: Name the rival and the deal you are in. It reads their public pages for
+  launches, pricing and news, and your past deals against them if you connect
+  your CRM. You get a plan for winning this deal, their strengths and gaps, and
+  the patterns behind your wins and losses.
 explain: |
   Before you meet a buyer who is also talking to a rival, get a plan for how to win: where the rival is strong, where it is weak, and what your past wins and losses against it show.
 
@@ -26,6 +30,8 @@ you_get:
   - Competitor strengths and gaps
   - Battlecard or weekly digest (optional)
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
   - It works best when your AI can search the web and read your CRM.

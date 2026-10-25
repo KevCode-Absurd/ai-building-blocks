@@ -1,0 +1,19 @@
+slug: build-the-display-placement-auditor-builder-prompt
+name: Display placement review coding prompt
+summary: Get a coding brief to review Display ad sites. Find signs of waste and list proposed blocks with proof.
+category: general
+type: prompt
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+    required: true
+uses: []
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

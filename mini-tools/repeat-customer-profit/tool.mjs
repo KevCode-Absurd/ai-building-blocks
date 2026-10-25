@@ -21,12 +21,12 @@ const horizon = (m) => [
 
 export default {
   slug: "repeat-customer-profit",
-  name: "Know what a customer is worth over a year",
+  name: "Repeat customer profit estimate",
   /** The plain name, used where the tool talks about itself. */
-  short: "Repeat customer profit",
-  headline: "Know what a customer is worth over a year, and when they pay back",
-  summary: "Type your profit per order, how often people reorder and what a customer costs to win. You get their worth at 3, 6 and 12 months.",
-  question: "What is a customer worth over 3, 6 or 12 months of repeat orders, and when does the ad spend to win them pay back?",
+  short: "Repeat customer profit estimate",
+  headline: "Repeat customer profit estimate",
+  summary: "Enter profit per order, reorder timing, repeat rate and customer cost. Estimate profit after 3, 6 and 12 months.",
+  question: "What profit might repeat orders leave after the cost of gaining a customer?",
   shelf: ["general", "ecommerce"],
   version: "1.0.0",
   updated: "2026-10-19",
@@ -47,13 +47,13 @@ export default {
     {
       id: "daysBetween", label: "Days between orders", unit: "days", example: 60, min: 1, max: 3650, step: 1,
       help: "How long a repeat customer usually waits before ordering again. For a 30-day supply, about 30.",
-      where: "Your customer report: the average days between a customer's first and second order.",
+      where: "Your customer report. Find the average days between a first and second order.",
       tools: ["Shopify customer reports", "Klaviyo", "A spreadsheet of your orders"],
     },
     {
       id: "comeBack", label: "Share who order again each time", unit: "percent", example: 40, min: 0, max: 100, step: 5,
       help: "Of the customers who ordered last time, the share who order again.",
-      where: "Your returning customer rate: customers with 2 or more orders divided by all customers, over a year.",
+      where: "Your customer report. Divide customers with two or more orders by all customers over a year.",
       tools: ["Shopify analytics (returning customer rate)", "Klaviyo", "Google Analytics"],
     },
   ],

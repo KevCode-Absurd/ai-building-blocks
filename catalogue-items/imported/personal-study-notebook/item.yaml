@@ -1,0 +1,36 @@
+slug: personal-study-notebook
+name: Personal study notebook
+summary: Choose a subject and note folder. Get a study plan, lesson notes, quizzes and a progress dashboard.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: source_text
+    required: true
+  - type: brief
+    required: false
+outputs:
+  - type: document
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Mohamed El-Sharqawy
+  repo: Mohamed-El-Sharqawy/agent-tutor
+  path: skills/agent-tutor
+  url: https://github.com/Mohamed-El-Sharqawy/agent-tutor/tree/5651e2eec062785967d07bcb4752a59f1bcf0eee/skills/agent-tutor
+  licence: MIT
+  licence_file: LICENSE
+  commit: 5651e2eec062785967d07bcb4752a59f1bcf0eee
+  original_name: agent-tutor
+  imported: 2026-10-23
+  skill_sha256: 7431ac981650f8177e9039007943c7cb9e0429edeb7d3e7391ad3a69abf53ac7
+version: 1.0.0
+credits:
+  - title: agent-tutor skill
+    by: Mohamed El-Sharqawy
+    url: https://github.com/Mohamed-El-Sharqawy/agent-tutor/tree/5651e2eec062785967d07bcb4752a59f1bcf0eee/skills/agent-tutor
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

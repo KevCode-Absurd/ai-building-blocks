@@ -8,7 +8,8 @@ import { type Catalogue, kindOf, loadSkillText, loadSkillZip, portLabel, taskOf,
 import type { Flow, FlowNode } from "./store";
 import { type Business, businessText, withBusiness as addBusiness } from "./business";
 import { crewSlugs, isMind, leadsOf, mindName } from "./crew";
-import { ASSURANCE, EXECUTION_VERSION, entryDocument, executionMarkdown, executionPolicy, executionPrompt, inspectSkillArchive, packageManifest, safePackagePath, sha256, verifyLocalReferences } from "./workflow-execution";
+import { ASSURANCE, EXECUTION_VERSION, entryDocument, executionMarkdown, executionPolicy, executionPrompt, inspectSkillArchive, packageManifest, referenceFixtureExclusions, safePackagePath, sha256, verifyLocalReferences } from "./workflow-execution";
+import { prerequisiteMarkdown, prerequisitePolicy, prerequisiteRegister } from "./workflow-prerequisites";
 
 const COUNCIL = "advisory-council";
 export const taskCouncilInstructions = `# A council on one task
@@ -124,6 +125,7 @@ export function handoffMarkdown(c: Catalogue, flow: Flow, order: Ordered[], with
   L.push(prepare.length ? "Resolve these inputs from the available context first. Ask only for what is still missing. Don't start a step whose required inputs remain missing." : "Nothing needs preparing: every input comes from an earlier step.");
   if (prepare.length) L.push("", ...prepare);
   L.push("");
+  L.push(prerequisiteMarkdown(order.flatMap(o => blockOf(o)?.inputs.map(input => input.type) ?? [])));
 
   const leads = leadsOf(c, flow, order);
   const team = (flow.team?.minds ?? []).filter((s) => isMind(c, s));
@@ -198,6 +200,7 @@ export function workflowJson(c: Catalogue, flow: Flow, order: Ordered[]) {
     format: "abb-workflow/1",
     contract_version: EXECUTION_VERSION,
     execution: executionPolicy(),
+    prerequisites: prerequisitePolicy(),
     governing_skills: (flow.governingSkills ?? []).map(s => ({ skill: s, path: `skills/${s}/SKILL.md`, version: c.bySlug[s]?.version ?? null, read_before: "step-1", coverage: "PENDING_FULL_REVIEW" })),
     name: flow.name,
     start: { goal: flow.goal?.trim() || null, notes: flow.notes?.trim() || null },
@@ -287,6 +290,7 @@ export async function buildHandoffZip(c: Catalogue, flow: Flow, business: Busine
   put("EXECUTION.md", executionMarkdown());
   put("OPTIONAL_USER_PROMPT.txt", executionPrompt(flow.goal, flow.name));
   put("HANDOFF.md", handoffMarkdown(c, flow, order, !!about));
+  put("templates/prerequisite-register.json", JSON.stringify({ contract_version: EXECUTION_VERSION, ...prerequisiteRegister(contract.steps) }, null, 2));
   if (order.some(o => (leadsOf(c, flow, order)[o.step]?.minds?.length ?? 0) > 1)) put("TASK-COUNCIL.md", taskCouncilInstructions);
   for (const mind of flow.customMinds ?? []) put(`minds/${mind.slug}.json`, mindFile(mind));
   if (about) put("about-me.md", about);
@@ -350,7 +354,7 @@ export async function buildHandoffZip(c: Catalogue, flow: Flow, business: Busine
     bytesByPath["workflow.json"] = strToU8(JSON.stringify(contract, null, 2) + "\n");
     files["workflow.json"] = [bytesByPath["workflow.json"], { mtime: FIXED_TIME }];
     put("requirements.json", JSON.stringify({ contract_version: EXECUTION_VERSION, coverage: "PARTIAL_GLOBAL_RULES_MAPPED_SKILL_REVIEW_PENDING", requirements: executionPolicy().rules.map(r => ({ ...r, modality: "MUST", source: "EXECUTION.md", verification_owner: "host-assistant", disposition: "PENDING", enforcement: "portable-instruction", steps: contract.steps.map(s => s.id) })), source_inventory: sources, unresolved: ["Extract and classify all operative skill/reference clauses before their governed actions. This export does not certify semantic compatibility or complete instruction coverage."] }, null, 2));
-    put("reference-links.json", JSON.stringify({ resolved: referenceLinks, scope: "Concrete local Markdown links to reference/template folders. Prose references, examples, conditional activation and external links require full skill preflight.", unresolved_classification: "NOT_REVIEWED" }, null, 2));
+    put("reference-links.json", JSON.stringify({ resolved: referenceLinks, negative_fixture_exclusions: referenceFixtureExclusions(bytesByPath), scope: "Concrete operative Markdown links to reference/template folders. The exact known negative test is classified separately and preserved. Prose references, other examples, conditional activation and external links require full skill preflight.", unresolved_classification: "NOT_REVIEWED" }, null, 2));
     const credentialPattern = /(?:\b(?:sk-proj-|sk-ant-api\d+-)[A-Za-z0-9_-]{40,}|\bAKIA[A-Z0-9]{16}\b)/;
     for (const [path, bytes] of Object.entries(bytesByPath)) if (/\.(?:md|txt|json|ya?ml|[cm]?[jt]s|py|env)$/.test(path) && credentialPattern.test(new TextDecoder().decode(bytes))) throw Error(`Possible credential in ${path}. Remove it before exporting.`);
     put("export-checks.json", JSON.stringify({ contract_version: EXECUTION_VERSION, status: "EXPORTED_REQUIRES_EXECUTION_PREFLIGHT", checks: [{ id: "graph-and-bindings", status: "PASS" }, { id: "selected-skill-bundles-loaded", status: "PASS" }, { id: "archive-path-and-size-limits", status: "PASS" }, { id: "credential-pattern-scan", status: "PASS", limitation: "Known high-confidence token patterns only; not a comprehensive secret audit." }, { id: "skill-semantic-compatibility-and-instruction-coverage", status: "NOT_RUN" }, { id: "required-capability-probe", status: "NOT_RUN" }, { id: "execution-input-acceptance", status: "NOT_RUN" }, { id: "cross-provider-behavior", status: "NOT_RUN" }] }, null, 2));

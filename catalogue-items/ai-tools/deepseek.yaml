@@ -2,7 +2,7 @@ slug: deepseek
 name: DeepSeek
 maker: DeepSeek
 url: https://www.deepseek.com
-promise: A free chat assistant and a low-cost model for your own apps.
+promise: "Ask questions, write text and code, or add a model to your app."
 use_cases: [ask-an-assistant, write-copy, code]
 categories: [chat-assistant, coding]
 what_it_does:
@@ -13,15 +13,15 @@ what_it_does:
   - Gives developers an API to build it into their own apps.
 benefits:
   - Try a capable assistant at no cost in the chat app.
-  - Cut the cost of an app that calls an AI model many times a day.
+  - "Compare the model’s cost and results on tasks your app runs often."
   - Get code written and explained in one chat.
-  - Run lower-cost tests before you pick a bigger model.
+  - "Test the model on your own tasks before choosing it."
 best_for:
   - Developers who watch cost per call.
   - Code and reasoning questions.
   - Teams that want to test a second model.
 not_for:
-  - Sensitive company data, since the hosted service runs on the maker's servers.
+  - "Work that requires data to stay off outside servers."
   - Topics where answers need a full check before you use them.
 pricing:
   model: usage

@@ -1,0 +1,42 @@
+new_slug: the-10-step-heartbeat-protocol-implementation-planner
+name: Single-task agent heartbeat builder
+summary: Build a bounded one-task heartbeat with run and cost records.
+job: build-software
+headline: Single-task agent heartbeat builder
+subhead: Share agent state, pending wakeups, work queue, budget and time limits. Get a bounded one-task heartbeat with run and cost records.
+explain: |-
+  Share agent state, pending wakeups, work queue, budget and time limits. Get a bounded one-task heartbeat with run and cost records.
+
+  The complete method and its supporting files are in the download. It marks missing inputs and separates proposed actions from actions that were actually completed.
+when:
+  - You need a bounded one-task heartbeat with run and cost records.
+  - You are adding this function to an agent system.
+  - You need to compare an existing version with the supplied starter.
+you_give:
+  - Agent state, pending wakeups, work queue, budget and time limits
+you_get:
+  - A bounded one-task heartbeat with run and cost records
+  - A failure checklist and synthetic test cases
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Step 1
+    text: Load agent and scope.
+  - title: Step 2
+    text: Claim due wakeups.
+  - title: Step 3
+    text: Check pause state, policy and budget.
+  - title: Step 4
+    text: Find eligible assigned or approved work.
+  - title: Step 5
+    text: Atomically check out exactly one task.
+  - title: Step 6
+    text: Execute it within limits.
+  - title: Step 7
+    text: Save result and status.
+  - title: Step 8
+    text: Release the lock, reconcile cost and finalize the run even after failure.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

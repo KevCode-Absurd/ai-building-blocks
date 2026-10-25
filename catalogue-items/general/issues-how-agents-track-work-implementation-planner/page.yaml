@@ -1,0 +1,38 @@
+new_slug: issues-how-agents-track-work-implementation-planner
+name: Agent issue and checkout builder
+summary: Build an issue schema and atomic checkout and release flow.
+job: build-software
+headline: Agent issue and checkout builder
+subhead: Share issue states, ownership, parent links and lease duration. Get an issue schema and atomic checkout and release flow.
+explain: |-
+  Share issue states, ownership, parent links and lease duration. Get an issue schema and atomic checkout and release flow.
+
+  The complete method and its supporting files are in the download. It marks missing inputs and separates proposed actions from actions that were actually completed.
+when:
+  - You need an issue schema and atomic checkout and release flow.
+  - You are adding this function to an agent system.
+  - You need to compare an existing version with the supplied starter.
+you_give:
+  - Issue states, ownership, parent links and lease duration
+you_get:
+  - An issue schema and atomic checkout and release flow
+  - A failure checklist and synthetic test cases
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Step 1
+    text: Create a scoped issue and parent link.
+  - title: Step 2
+    text: Atomically acquire one owner lease.
+  - title: Step 3
+    text: Refuse work already held by another owner.
+  - title: Step 4
+    text: Track blocked dependencies.
+  - title: Step 5
+    text: Renew leases while working and release in a finalizer.
+  - title: Step 6
+    text: Recover stale leases without losing the audit trail.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

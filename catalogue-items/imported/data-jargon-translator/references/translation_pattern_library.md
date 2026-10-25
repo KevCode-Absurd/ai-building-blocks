@@ -8,8 +8,8 @@ Ready-to-use translations for common technical concepts. Apply these when rewrit
 
 | Technical | Business translation | Notes |
 |---|---|---|
-| "p-value of 0.03" | "We're 97% confident this result isn't random chance" | Invert the p-value for intuitive framing |
-| "statistically significant at α=0.05" | "The difference is large enough that we're confident it's real" | Drop the alpha entirely for executive audiences |
+| "p-value of 0.03" | "If there were no real effect, results this extreme or more would occur about 3% of the time under the test's assumptions." | This is not the probability that the result is real or due to chance. State the null model and assumptions when known. |
+| "statistically significant at α=0.05" | "The result met the test's 5% threshold for evidence against the no-effect assumption." | This does not show that the effect is large, important, or certainly real. Keep α when it matters. |
 | "95% confidence interval: [12, 18]" | "We estimate the true value is between 12 and 18" | Keep the range; drop "confidence interval" |
 | "not statistically significant" | "The data doesn't give us enough evidence to draw a conclusion" | Avoid "failed to reject the null" entirely |
 | "effect size of 0.4 (medium)" | "A meaningful difference — visible in practice, not just in data" | Cohen's d in business terms |
@@ -74,3 +74,5 @@ Ready-to-use translations for common technical concepts. Apply these when rewrit
 **Replace technical process with outcome:**
 - Before: "After applying SMOTE to address class imbalance and tuning hyperparameters via grid search..."
 - After: "We built a model that reliably identifies at-risk customers even though they're a small fraction of our base."
+
+**Preserve conditional probability:** Never translate `p` into `1 - p` confidence in a result. A p-value describes data at least this extreme assuming the null model and test assumptions; it does not give the probability of the null or alternative hypothesis.

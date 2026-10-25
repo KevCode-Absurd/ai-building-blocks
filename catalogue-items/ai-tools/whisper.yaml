@@ -2,7 +2,7 @@ slug: whisper
 name: Whisper
 maker: OpenAI
 url: https://github.com/openai/whisper
-promise: Accurate speech-to-text in many languages, free to run on your own computer.
+promise: "Turn recordings into text in many languages, locally or through a paid API."
 use_cases: [voice-and-audio, meeting-notes]
 categories: [voice]
 what_it_does:
@@ -12,7 +12,7 @@ what_it_does:
   - Runs on your own computer with open source code under the MIT licence.
   - Is also sold per minute through the OpenAI API.
 benefits:
-  - Get a transcript of a call, interview or video for free.
+  - "Run the open model on your own computer to make transcripts."
   - Keep audio on your own computer when it is private.
   - Pay about US$0.36 an hour if you would rather not run it yourself.
 best_for:

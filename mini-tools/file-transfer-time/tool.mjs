@@ -1,11 +1,11 @@
 // Original tool. All numbers shown are illustrative figures, not a real person’s results.
 export default {
   "slug": "file-transfer-time",
-  "name": "Estimate how long an upload or backup will take",
-  "short": "File transfer time",
-  "headline": "Estimate how long an upload or backup will take",
-  "summary": "Enter file size, transfer speed and expected efficiency. See the transfer time in minutes and hours.",
-  "question": "Estimate how long an upload or backup will take?",
+  "name": "File transfer time estimate",
+  "short": "File transfer time estimate",
+  "headline": "File transfer time estimate",
+  "summary": "Enter file size, transfer speed and the share of that speed you expect to use. Estimate minutes and hours to transfer.",
+  "question": "How long might this upload or backup take at the speed entered?",
   "category": "operations",
   "shelf": [
     "general"

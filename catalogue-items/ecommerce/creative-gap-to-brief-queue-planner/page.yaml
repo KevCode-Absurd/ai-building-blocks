@@ -1,0 +1,44 @@
+new_slug: creative-gap-to-brief-queue-planner
+name: Creative gap-to-brief queue planner
+summary: Turn format, message and buyer gaps into five to ten production briefs. Rank the queue by fit and effort.
+job: plan-ad-tests
+headline: Creative gap-to-brief queue planner
+subhead: Share creative gap report, buyer groups, brand facts and capacity. Get a ranked brief queue with gap links and production needs.
+explain: |-
+  Turn format, message and buyer gaps into five to ten production briefs. Rank the queue by fit and effort.
+
+  Share creative gap report, buyer groups, brand facts and capacity. Get a ranked brief queue with gap links and production needs.
+when:
+  - You need a ranked brief queue with gap links and production needs.
+  - You need creative gap-to-brief queue planner for a specific task.
+  - You want the method's decisions and assumptions written down before acting.
+you_give:
+  - Creative gap report
+  - Buyer groups
+  - Brand facts and capacity
+you_get:
+  - A ranked brief queue with gap links and production needs
+  - The sources used, missing inputs and assumptions
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Check the inputs
+    text: Confirm creative gap report, buyer groups, brand facts and capacity. Mark facts that are missing.
+  - title: Collect Inputs
+    text: Follow the collect inputs section in the full method and keep its required fields and decision rules.
+  - title: Rank the Gaps
+    text: Follow the rank the gaps section in the full method and keep its required fields and decision rules.
+  - title: Translate Gaps to Briefs
+    text: Follow the translate gaps to briefs section in the full method and keep its required fields and decision rules.
+  - title: Write the Brief Queue
+    text: Follow the write the brief queue section in the full method and keep its required fields and decision rules.
+  - title: Rank the Queue
+    text: Follow the rank the queue section in the full method and keep its required fields and decision rules.
+  - title: Deliver
+    text: Follow the deliver section in the full method and keep its required fields and decision rules.
+  - title: Review the result
+    text: Return a ranked brief queue with gap links and production needs. Check facts, math and the decisions before any action.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

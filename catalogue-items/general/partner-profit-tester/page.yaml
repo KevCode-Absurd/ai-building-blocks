@@ -1,23 +1,19 @@
 new_slug: partner-profit-tester
-name: "Partner profit tester"
-summary: "Paste your offer, fees and partner costs. Get what the partner keeps, at forecast and weaker sales, and a call."
+name: Partner profit tester
+summary: Paste your offer, fees and partner costs. Get what the partner keeps, at forecast and weaker sales, and a call.
 job: sell-and-negotiate
 thinking: medium
-thinking_why: "The core is a set of sums on your numbers, with a clear pass line. A mid-range model does it well if the numbers are given."
-
-headline: "Find out if your partner or franchisee really makes money from your deal"
+thinking_why: The core is a set of sums on your numbers, with a clear pass line. A mid-range model does it well if the numbers are given.
+headline: Find out if your partner or franchisee really makes money from your deal
 subhead: Describe your offer, every fee you charge and what it costs the partner to run it. It works out what the partner keeps after your fees at your forecast and at weaker sales, and says if a hard-working partner earns a fair living. You get the sums and a call of fair, thin or unfair.
-
 explain: |
   A partner deal can look good to you and fail the partner. If a franchisee, reseller or licensee works full time and takes home less than a fair wage, they will leave, cut corners or fail, and your name goes down with them.
 
   This skill puts yourself in the partner's seat. It builds their income and costs for one location or one year, adds every fee you charge (a start-up fee, a share of sales, a markup on supplies, required equipment, advertising), and shows what is left. It then tests the same sums at sales a fifth lower than you forecast. It compares what is left with a fair wage for the hours the partner will work, and with what they could earn elsewhere. The call is fair, thin or unfair, with the one change that helps most.
-
 when:
   - You are about to offer a franchise, reseller or licence deal and have not run the partner's numbers.
   - Partners are leaving or struggling and you are not sure if your fees are the reason.
   - A partner says the deal does not work and you need to see if they are right.
-
 you_give:
   - Your offer and every fee, required purchase and cost the partner pays you or others you require
   - The partner's expected sales, costs and hours worked
@@ -27,28 +23,26 @@ you_get:
   - The same table at weaker sales
   - What the partner earns per hour worked, set against a fair wage
   - A call of fair, thin or unfair, and the one change that helps most
-
+  - A simple payback estimate where supported, with owner-pay cash kept separate
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - List every payment from the partner to you, and every purchase you require them to make.
   - Give expected sales and costs for one location or one year, and how many hours the partner will work.
   - Read the call and the one change first. Then test the change in the table.
   - Bring the result to "Franchise and reseller terms writer".
-
 how_it_works:
   - title: Builds the partner's year
     text: Sales, then each cost, then what is left, with each line tied to a number you gave or a MISSING mark.
   - title: Adds every fee
     text: Start-up fee, share of sales, markup on supplies, required equipment, advertising levy and any other payment.
   - title: Tests weaker sales
-    text: Runs the same sums with sales a fifth lower and says what is left.
+    text: Runs the sums with sales a fifth lower, changing each cost or fee only on its stated basis.
   - title: Sets pay against hours
     text: Divides what is left by the hours worked, and compares it with a fair wage and with the partner's other options.
   - title: Calls it
     text: Fair, thin or unfair, and names the one fee or cost that moves the result most.
   - title: Checks itself
     text: Runs its own checks and names any it missed.
-
 output_shape: |
   PARTNER'S YEAR AT YOUR FORECAST
   Sales: <> | Costs: <each line> | Your fees: <each line> | Left: <>
@@ -67,43 +61,42 @@ output_shape: |
 
   CHECKS MISSED
   <one line per check still missed, or none>
-
 tweaks:
   - what: Hours worked
     how: Be honest. A partner who works 70 hours to earn the left-over sum is paid less than it looks.
   - what: Fees that rise with sales
-    how: Say if a fee is a share of sales. It grows when sales grow but hurts most when sales fall.
+    how: State each fee basis. A fixed percentage fee falls with sales; a fixed fee stays the same and takes a larger share of lower sales. Compare both sides before proposing a change.
   - what: Required purchases
     how: List everything the partner must buy from you or your chosen supplier. These hide a second fee.
   - what: Start-up money
-    how: Give the cost of opening and how fast the partner needs it back. The sums then include payback.
-
+    how: Give the opening cost and the cash available to recover it. Positive payback needs positive cash after any owner pay allocated from the same amount; zero or negative cash cannot give finite positive payback.
 judge:
   - Every fee you charge appears in the table.
   - Each line uses a number you gave or shows MISSING.
   - The weaker-sales table is present.
   - Pay per hour is compared with a fair wage.
   - The call names the one change that helps most.
-
+  - Nonpositive cash gives no finite positive payback. Missing cash basis stays unresolved, and owner pay is not also counted as capital repayment.
 test:
   - Give it a deal where you take a share of sales and mark up supplies. Both fees should appear as separate lines.
   - Give it no hours worked. Pay per hour should show MISSING and the call should be capped at thin.
   - Run it twice on the same numbers. The call should be the same.
-
+  - "Use start-up cost 10000 and yearly cash minus 1000: show a loss and no finite positive payback, not negative ten years."
+  - "Drop sales 100 to 80: a 10% fee falls 10 to 8; fixed 10 stays 10 and rises from 10% to 12.5% of sales."
 improve:
   - Replace estimates with real figures from your first partners after three months.
   - Rerun when you change a fee or a required purchase.
   - Ask two partners to check the table against their own books.
-
 works_best_with:
   tools:
-    - {name: "A spreadsheet", why: "You can keep the table and change one fee at a time to see its effect."}
-    - {name: "Any good chat AI", why: "Building the partner's year from a few facts is reasoning work any strong chat AI does well."}
+    - name: A spreadsheet
+      why: You can keep the table and change one fee at a time to see its effect.
+    - name: Any good chat AI
+      why: Building the partner's year from a few facts is reasoning work any strong chat AI does well.
   inputs:
-    - "A list of every fee and required purchase"
-    - "Real figures from an existing partner"
-    - "A local fair wage for the work"
-
+    - A list of every fee and required purchase
+    - Real figures from an existing partner
+    - A local fair wage for the work
 terms:
   - term: Fair wage
     meaning: What the partner could earn per hour doing similar work for someone else.

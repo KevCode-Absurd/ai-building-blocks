@@ -2,7 +2,7 @@ slug: figma-ai
 name: Figma AI
 maker: Figma
 url: https://www.figma.com
-promise: Draft screens and working prototypes from a written prompt, inside Figma.
+promise: "Draft screens and working prototypes from written prompts inside Figma."
 use_cases: [design, build-apps]
 categories: [design, coding]
 what_it_does:
@@ -20,7 +20,7 @@ best_for:
   - Founders testing an app idea with a prototype.
   - Teams that hand designs to developers.
 not_for:
-  - Quick social posts, which Canva handles better.
+  - "Simple social posts that do not need an app-design workspace."
   - Heavy AI use on a plan with a small monthly credit cap.
 pricing:
   model: freemium

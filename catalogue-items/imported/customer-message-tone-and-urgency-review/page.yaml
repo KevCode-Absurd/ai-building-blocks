@@ -1,0 +1,32 @@
+thinking: medium
+thinking_why: It follows a set method with a few checks.
+new_slug: customer-message-tone-and-urgency-review
+name: Customer message tone and urgency review
+summary: Paste customer messages. Get tone, urgency, warning signs, and a suggested response approach.
+job: help-customers
+headline: Customer message tone and urgency review
+subhead: Paste a customer message or share a Gorgias ticket number. It looks for emotional language, urgency, and signs the customer may leave. You get ratings with supporting quotes and a suggested tone, priority, and points to address.
+when:
+  - You use this tool for customer support and need help with this task.
+you_give:
+  - Customer message text or a Gorgias ticket number.
+  - Earlier customer messages if you want a tone trend.
+you_get:
+  - Show quotes behind each rating and suggest the tone, priority, and concerns to address.
+how_it_works:
+  - title: Read the message
+    text: Use pasted text directly or fetch all customer messages from the chosen ticket.
+  - title: Review the signals
+    text: Rate tone and urgency, identify emotions, and mark language about cancelling or switching.
+  - title: Recommend a response approach
+    text: Show quotes behind each rating and suggest the tone, priority, and concerns to address.
+works_best_with:
+  tools:
+    - name: Gorgias for ticket lookup; pasted messages also work
+      why: Live lookups need Composio CLI access and connected accounts for these services.
+how_to_use:
+  - Add the downloaded folder to an AI that can read skill files.
+  - Ask for customer message tone and urgency review by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
+  - Provide Customer message text or a Gorgias ticket number.
+  - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
+  - Review the result. Approve any proposed sending or account changes before they happen.

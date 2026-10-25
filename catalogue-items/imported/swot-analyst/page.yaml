@@ -2,10 +2,14 @@ thinking: low
 thinking_why: It fills four boxes and adds standard actions.
 new_slug: swot-analyst
 name: SWOT analyst
-summary: Name your business or product. Get strengths, weaknesses, opportunities and threats, with actions to take.
+summary: Name your business or product. Get strengths, weaknesses, opportunities
+  and threats, with actions to take.
 job: plan-strategy
 headline: SWOT analyst
-subhead: Name your business or product and give some background. It sorts what it finds into strengths and weaknesses from inside the business, and opportunities and threats from outside, then turns each point into an action. You get the four lists, recommended actions and a one-page summary.
+subhead: Name your business or product and give some background. It sorts what
+  it finds into strengths and weaknesses from inside the business, and
+  opportunities and threats from outside, then turns each point into an action.
+  You get the four lists, recommended actions and a one-page summary.
 explain: |
   A SWOT analysis that goes past four lists. Each point leads to something you can do, so the result drives a decision.
 
@@ -26,5 +30,7 @@ you_get:
   - Recommended actions
   - A one-page summary
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.

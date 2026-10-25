@@ -1,0 +1,24 @@
+slug: marketing-evidence-expiry-reviewer
+name: Marketing evidence review queue
+summary: Review dated claim evidence and where it is used. Get stale or out-of-scope items, affected assets and an owned review queue.
+category: general
+type: skill
+role: make
+job: analysis
+level: intermediate
+inputs:
+  - type: document
+    required: true
+  - type: copy_draft
+    required: false
+outputs:
+  - type: audit_report
+    required: true
+  - type: plan
+    required: true
+uses: []
+package_files: all
+needs_mode: manual
+origin: own
+example_pending: true
+version: 1.0.0

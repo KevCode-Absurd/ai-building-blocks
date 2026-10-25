@@ -18,7 +18,7 @@ outputs:
   - type: plan
 uses: []
 origin: rebuilt
-version: 1.0.0
+version: 1.0.1
 minds:
   - alex-hormozi
 credits:

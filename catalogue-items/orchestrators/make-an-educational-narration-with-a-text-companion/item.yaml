@@ -1,0 +1,33 @@
+slug: make-an-educational-narration-with-a-text-companion
+name: Make a lesson narration learners can follow
+summary: Attach an approved lesson and audio brief. Get a checked spoken script, narration where tools permit and a text companion.
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: document
+    required: true
+  - type: question
+    required: true
+outputs:
+  - type: script
+  - type: audio
+  - type: document
+uses:
+  - plain-english-editor
+  - elevenlabs-spoken-script-writer
+  - voiceover-maker
+steps:
+  - uses: plain-english-editor
+    note: Use approved lesson and listener brief to prepare clear narration text. Preserve required facts/terms and explain specialist words. Hand edited text and material-change list to spoken-script preparation.
+  - uses: elevenlabs-spoken-script-writer
+    note: Use edited text and length to build short spoken sentences, pauses and pronunciation notes. Supply a tag-free version for the chosen synthesis system; mark duration estimated until measured.
+  - uses: voiceover-maker
+    note: Use approved tag-free script, supported built-in voice and authorized tools. Generate real audio only when runtime and credentials exist. Check facts, pronunciation, pacing and truncation; return transcript-equivalent companion text and corrections.
+execution: coordinator
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

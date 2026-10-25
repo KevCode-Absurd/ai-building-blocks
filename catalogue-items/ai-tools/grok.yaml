@@ -2,7 +2,7 @@ slug: grok
 name: Grok
 maker: xAI
 url: https://grok.com
-promise: An assistant that answers with live posts from X and the web.
+promise: "Search X and the web, ask questions, draft text and create images."
 use_cases: [ask-an-assistant, research, make-images]
 categories: [chat-assistant]
 what_it_does:
@@ -13,11 +13,11 @@ what_it_does:
   - Offers deeper research on harder questions.
 benefits:
   - See what people are saying about a topic today.
-  - Spot a trend on X before it reaches the news.
+  - "Explore a recent topic through posts on X and linked web sources."
   - Get a quick image for a post or mock-up.
   - Try it free before you pay.
 best_for:
-  - Checking live conversation and recent topics.
+  - "Reading what people are saying about recent topics."
   - Social media research.
   - People who already use X every day.
 not_for:

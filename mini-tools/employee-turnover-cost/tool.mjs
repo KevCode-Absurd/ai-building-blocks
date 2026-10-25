@@ -1,11 +1,11 @@
 // Original tool. All numbers shown are illustrative figures, not a real person’s results.
 export default {
   "slug": "employee-turnover-cost",
-  "name": "See the cost of replacing a team member",
-  "short": "Employee turnover cost",
-  "headline": "See the cost of replacing a team member",
-  "summary": "Add hiring, cover, onboarding and ramp-up costs. Get a transparent replacement cost from your own assumptions.",
-  "question": "See the cost of replacing a team member?",
+  "name": "Staff replacement cost calculator",
+  "short": "Staff replacement cost calculator",
+  "headline": "Staff replacement cost calculator",
+  "summary": "Add hiring, temporary cover and support time, plus other costs you can support. Estimate the cost of replacing one team member.",
+  "question": "What would replacing one team member cost under these assumptions?",
   "category": "hr",
   "shelf": [
     "general"
@@ -28,7 +28,7 @@ export default {
       "max": 10000000,
       "step": 0.1,
       "integer": false,
-      "help": "Include recruiter fees, listings and assessments.",
+      "help": "Include fees for finding staff, job ads and candidate tests.",
       "where": "Hiring invoices and your recruitment budget.",
       "tools": []
     },
@@ -73,7 +73,7 @@ export default {
     },
     {
       "id": "ramp",
-      "label": "Other measured ramp-up cost",
+      "label": "Other measured costs while learning the role",
       "unit": "money",
       "example": 1500,
       "min": 0,

@@ -71,14 +71,14 @@ export function Sample({ text, name, step }: { text: string; name: string; step?
   const { n } = useTyped(text, true, STEP_S * 650);
   return (
     <figure className={`node-out${step ? " run-out" : ""}`} aria-label={`What ${name} hands back`} data-testid="step-sample">
-      <figcaption>{step ? `step ${step}: what it hands back` : "what it hands back"}</figcaption>
+      <figcaption>{step ? `Step ${step}: sample result` : "Sample result, not work produced here"}</figcaption>
       <pre>{text.slice(0, n)}<span className="cursor" /></pre>
     </figure>
   );
 }
 const BITS = ["0", "1", "1", "0", "1", "0"];
 
-export type FlowEdgeData = { label?: string; mismatch?: boolean; run?: number; delay?: number };
+export type FlowEdgeData = { fromPort?: string; toPort?: string; label?: string; mismatch?: boolean; run?: number; delay?: number };
 export type FlowEdgeT = Edge<FlowEdgeData, "flow">;
 
 /** A connection with what it carries written on it. During a preview, 0s and 1s run along it. */
@@ -175,13 +175,13 @@ export function StartPanel({ c, goal, notes, overseer, team, onChange, onClose }
         <p className="sp-sum">It's always first. Say what this workflow is for, so every step works toward the same thing.</p>
         <label className="sp-field">
           <span>What it's for</span>
-          <textarea value={goal} maxLength={2000} rows={3} placeholder="For example: Decide whether to raise our price to $49" onChange={(e) => onChange({ goal: e.target.value })} data-testid="start-goal" />
+          <textarea value={goal} maxLength={3000} rows={3} placeholder="For example: Decide whether to raise our price to $49" onChange={(e) => onChange({ goal: e.target.value })} data-testid="start-goal" />
         </label>
         <label className="sp-field">
           <span>Notes for every step</span>
           <textarea value={notes} maxLength={2000} rows={3} placeholder="For example: We sell to small gyms. Keep every answer short." onChange={(e) => onChange({ notes: e.target.value })} data-testid="start-notes" />
         </label>
-        <Crew c={c} overseer={overseer} team={team} onChange={onChange} />
+        <details className="workflow-options"><summary>Add expert perspectives (optional)</summary><Crew c={c} overseer={overseer} team={team} onChange={onChange} /></details>
       </div>
     </aside>
   );
@@ -233,7 +233,7 @@ export function StepPanel({ c, flow, order, nodeId, onClose, onRemove, onReplace
         <span className="sp-step">{stepOf[node.id] ? `Step ${stepOf[node.id]}` : ""}</span>
         <button className="icon-btn" onClick={onClose} aria-label="Close">×</button>
       </div>
-      {!b ? <p className="small">This block isn't in the library any more. Remove it, or the download skips it.</p> : (
+      {!b ? <p className="small">This skill is no longer in the library. Replace or remove it before downloading.</p> : (
         <div className="sp-body">
           <h3 className="sp-name">{b.name}</h3>
           <p className="sp-sum">{b.summary}</p>
@@ -245,8 +245,8 @@ export function StepPanel({ c, flow, order, nodeId, onClose, onRemove, onReplace
               const from = binding ? ins.find(n => n.id === binding.from) : ins.find((n) => c.bySlug[n.slug]?.outputs.some((o) => o.type === p.type));
               return (
                 <li key={p.type}>
-                  <b>{portLabel(p.type)}{p.required ? "" : <span className="opt"> optional</span>}</b>
-                  <small>{from ? `Comes from ${stepName(from.id)}` : "You give it this"}{c.portTypes[p.type] ? `. ${c.portTypes[p.type]}` : ""}</small>
+                  <b>{portLabel(p.type)}<span className="opt"> {p.required ? "required" : "optional"}</span></b>
+                  <small>{from ? `Comes from ${stepName(from.id)}` : p.required ? "Use an existing file, link or earlier result. If it is missing, ask your AI to help create it before this step" : "Add this in your AI if it helps"}{c.portTypes[p.type] ? `. ${c.portTypes[p.type]}` : ""}</small>
                   {binding && <small>{binding.instruction}</small>}
                 </li>
               );
@@ -265,7 +265,8 @@ export function StepPanel({ c, flow, order, nodeId, onClose, onRemove, onReplace
             })}
           </ul>
           {b.type !== "mind" && <StepMind c={c} flow={flow} order={order} nodeId={node.id} onNotes={onNotes} />}
-          <StepNotes id={node.id} role={node.role ?? ""} notes={node.notes ?? ""} seats={b.seats ?? []} onNotes={onNotes} />
+          <details className="workflow-options"><summary>Edit instructions</summary>
+          <StepNotes id={node.id} role={node.role ?? ""} notes={node.notes ?? ""} seats={b.seats ?? []} onNotes={onNotes} /></details>
           {page?.output_shape && (
             <>
               <h4 className="sp-h">What it hands back</h4>
@@ -298,7 +299,7 @@ function StepMind({ c, flow, order, nodeId, onNotes }: { c: Catalogue; flow: Flo
   const personal = mindsIn(c).filter(m => m.version === "local");
   return (
     <div className="sp-crew" data-testid="step-mind">
-      <h4 className="sp-h">Minds for this task</h4>
+      <h4 className="sp-h">Assign Mind</h4>
       <p className="small">Choose one mind for its method and voice, or up to {TEAM_MAX} for a council. The downloaded workflow asks each council member for a view, has them challenge one another, then combines their strongest ideas and records disagreement. For writing, the first selected mind sets the final voice.</p>
       {selected.length > 0 && <div className="task-mind-selected" aria-label="Selected task minds">{selected.map(s => <button key={s} type="button" className="chip" aria-pressed="true" onClick={() => toggle(s)} aria-label={`Remove ${mindName(c, s)} from task`}>{mindName(c, s)} ×</button>)}</div>}
       {selected.length > 1 && <p className="small" data-testid="task-council">Council of {selected.length} · Compare views → challenge → one answer with dissent</p>}
@@ -322,7 +323,7 @@ export function GoalBox({ onPlan, big }: { onPlan: (goal: string) => boolean; bi
       <label className="goal-q" htmlFor={big ? "goal-big" : "goal-side"}>What do you want at the end?</label>
       <div className="goal-row">
         <input id={big ? "goal-big" : "goal-side"} value={goal} onChange={(e) => { setGoal(e.target.value); setMiss(false); }} placeholder={`Try “${GOAL_EXAMPLES[0]}”`} data-testid="goal-input" />
-        <button className="btn btn-dark btn-sm" disabled={!goal.trim()} data-testid="goal-go">Lay out the steps</button>
+        <button className="btn btn-dark btn-sm" disabled={!goal.trim()} data-testid="goal-go">Find my steps</button>
       </div>
       {miss && <p className="small goal-miss">No steps for that yet. Name the result you want, like a landing page, video ads or ad copy.</p>}
       {big && <div className="goal-eg">{GOAL_EXAMPLES.map((g) => <button type="button" key={g} className="chip" onClick={() => go(g)}>{g}</button>)}</div>}
@@ -352,7 +353,7 @@ export function StepList({ c, order, selectedId, leads = {}, run, live, samples,
               <span className="sl-n">{o.step}</span>
               <button className="sl-txt" aria-pressed={selectedId === o.node.id} onClick={() => onOpen(o.node.id)} data-testid="step-open">
                 <b>{b?.name ?? o.node.slug}</b>
-                <small>{(leads[o.step]?.minds?.length ?? 0) > 1 ? `Council: ${leads[o.step].minds!.map(s => mindName(c, s)).join(", ")}` : leads[o.step] ? `Done like ${mindName(c, leads[o.step].mind)}${o.node.role ? `, as ${o.node.role}` : ""}` : o.node.role ? `Role: ${o.node.role}` : b ? `${taskOf(b).name}. Tap to see what it needs or add notes` : "No longer in the library"}</small>
+                <small className="sl-purpose">{b?.summary ?? "Review this step before using it."}</small><small className="sl-result">Makes: {b?.outputs.map(p => portLabel(p.type)).join(", ") || "See this step’s instructions"}</small><small>{(leads[o.step]?.minds?.length ?? 0) > 1 ? `Council: ${leads[o.step].minds!.map(s => mindName(c, s)).join(", ")}` : leads[o.step] ? `Done like ${mindName(c, leads[o.step].mind)}${o.node.role ? `, as ${o.node.role}` : ""}` : o.node.role ? `Role: ${o.node.role}` : b ? `${taskOf(b).name}. Tap to see what it needs or add notes` : "No longer in the library"}</small>
               </button>
               <span className="sl-ctl">
                 <button className="icon-btn" onClick={() => onMove(i, i - 1)} disabled={i === 0} aria-label={`Move ${b?.name ?? "step"} up`} data-testid="step-up">↑</button>

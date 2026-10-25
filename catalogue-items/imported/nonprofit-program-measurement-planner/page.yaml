@@ -1,0 +1,30 @@
+thinking: high
+thinking_why: It weighs real records, missing facts, and choices that affect people or funding.
+new_slug: nonprofit-program-measurement-planner
+name: Nonprofit program measurement planner
+summary: Share your program goals and records. Get measures, tracking dates, owners, and clear rules for reports.
+job: track-numbers
+headline: Nonprofit program measurement planner
+subhead: Share the changes your program aims to make and the records you can collect. It chooses useful measures and a realistic way to track them. You get an evaluation plan, collection calendar, and report structure that keeps missing data and limits visible.
+when:
+  - You need this task done for a nonprofit, community program, or donated-goods store.
+you_give:
+  - Program model or outcome list, available records, budget, staff time, and existing baselines.
+you_get:
+  - Outcome measures with targets, a collection calendar, an evaluation approach, and a results report outline.
+how_it_works:
+  - title: Choose useful measures
+    text: Match each intended change to a clear measure that your team can afford to collect.
+  - title: Set the collection plan
+    text: State the baseline, target, method, timing, owner, and minimum response level before collecting data.
+  - title: Report with clear limits
+    text: Show the group behind each rate, sample sizes, missing follow-ups, and what the design can or cannot prove.
+works_best_with:
+  tools:
+    - name: A chat AI that can read your files
+      why: The skill works from records and drafts you provide. Research tasks also need current, checked public sources.
+  inputs:
+    - Reported outcomes go to funders and the board as fact.
+how_to_use:
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.

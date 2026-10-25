@@ -2,10 +2,15 @@ thinking: medium
 thinking_why: It checks copy against a long set of rules.
 new_slug: ad-and-page-policy-checker
 name: Ad and page policy checker
-summary: Paste your ad, page or email. Get policy risks flagged line by line, safer rewrites and a compliance score.
+summary: Paste your ad, page or email. Get policy risks flagged line by line,
+  safer rewrites and a compliance score.
 job: check-ads
 headline: Ad and page policy checker
-subhead: Paste your ad copy, page text, video script or email and name the platform and product type. It runs a nine-point check covering personal attributes, sensational wording, health and income claims, before and after images and more. You get each issue with its severity, a safer rewrite for each and a compliance score.
+subhead: Paste your ad copy, page text, video script or email and name the
+  platform and product type. It runs a nine-point check covering personal
+  attributes, sensational wording, health and income claims, before and after
+  images and more. You get each issue with its severity, a safer rewrite for
+  each and a compliance score.
 explain: |
   Ads, landing pages, video scripts and emails can be checked before launch for rules that could get them rejected or your account flagged. Each issue comes with a safer rewrite.
 
@@ -27,5 +32,7 @@ you_get:
   - Safer rewrites
   - A compliance score
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.

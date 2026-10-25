@@ -1,21 +1,24 @@
+import { choosePlanner, submitPlan, exportEditable } from "./fixtures/workflow-ui";
 import { test, expect, type Page, type TestInfo } from "@playwright/test";
 import fs from "node:fs";
 import { inflateSync, strFromU8, unzipSync } from "fflate";
+
+test.beforeEach(async ({ page }, info) => { if (info.project.name === "desktop") await page.addInitScript(() => localStorage.setItem("abb:workflow-view", "diagram")); });
 
 test.beforeEach(async ({ page }) => {
   await page.route("**/api/compose", route => route.fulfill({ json: { enabled: false } }));
   await page.route("**/api/auth/config", route => route.fulfill({ json: { configured: false } }));
 });
 const editable = async (page: Page, info: TestInfo, name: string) => {
-  const [file] = await Promise.all([page.waitForEvent("download"), page.getByTestId("compose-export").click()]);
+  const [file] = await Promise.all([page.waitForEvent("download"), exportEditable(page)]);
   const target = info.outputPath(name); await file.saveAs(target);
   const data = JSON.parse(fs.readFileSync(target, "utf8"));
   return { data, flow: JSON.parse(strFromU8(inflateSync(Buffer.from(data.flowCode, "base64url")))) };
 };
 const assemble = async (page: Page) => {
-  await page.goto("/compose"); await page.getByRole("tab", { name: "Free assembly" }).click();
+  await page.goto("/compose"); await choosePlanner(page, "free");
   await page.getByTestId("compose-goal").fill("Build a landing page from scratch and give me source code");
-  await page.getByTestId("compose-submit").click();
+  await submitPlan(page);
   await expect(page.getByTestId("add-workflow-skill")).toBeVisible();
 };
 
@@ -78,6 +81,7 @@ test("insert in the middle and append at the end on a narrow phone", async ({ pa
     await dialog.getByRole("group", { name: "Skills to add" }).getByRole("button", { name: /^Excel input form builder/ }).click();
     expect(await dialog.evaluate(el => el.scrollWidth <= el.clientWidth + 1)).toBe(true);
     await dialog.getByRole("button", { name: "Add skill", exact: true }).click(); await expect(dialog).not.toBeVisible();
+    await page.getByTestId("step-panel").getByRole("button", { name: "Close", exact: true }).click();
   }
   const revised = await editable(page, info, "revised.json");
   expect(revised.flow.s).toEqual([...original.flow.s.slice(0, 3), "excel-input-form-builder", ...original.flow.s.slice(3), "excel-input-form-builder"]);

@@ -1,0 +1,31 @@
+new_slug: elevenlabs-voice-description-writer
+name: ElevenLabs voice description writer
+summary: Describe an original voice. Get a short voice design prompt with tone, texture, pace and character.
+job: work-with-audio
+headline: ElevenLabs voice description writer
+subhead: Describe an original voice. Get a short voice design prompt with tone, texture, pace and character. Bring the brief and any files you want it to use.
+explain: |-
+  Use this when you need a compact original voice design description. Identify use case, personality and intensity before describing vocal traits. Use an original voice; do not imply copying an identifiable person without permission.
+
+  Define an approximate adult age range and vocal presentation only when useful, then specify pitch/register, texture, rhythm and pacing.
+when:
+  - You need a compact original voice design description.
+  - You want a clear draft and checks from the material you already have.
+you_give:
+  - brief
+you_get:
+  - document
+  - Missing inputs and steps that still need to run
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Read the brief
+    text: Identify use case, personality and intensity before describing vocal traits. Use an original voice; do not imply copying an identifiable person without permission.
+  - title: Build the result
+    text: "Add one clear personality and, if needed, a second emotional layer: outward composure with restrained concern, for example. Avoid contradictory piles of adjectives."
+  - title: Check and hand off
+    text: On iteration change only the requested quality and preserve the rest of the identity. If preview audio is supplied, compare it against the intended pitch, texture, pace and character.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

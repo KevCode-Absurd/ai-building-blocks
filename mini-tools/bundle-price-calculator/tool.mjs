@@ -9,12 +9,12 @@
 
 export default {
   slug: "bundle-price-calculator",
-  name: "Know the price to set on a bundle",
+  name: "Bundle price calculator",
   /** The plain name, used where the tool talks about itself. */
   short: "Bundle price calculator",
-  headline: "Know the price to set on a bundle so it keeps your margin and looks like a deal",
-  summary: "Type the prices and costs of two or three products. You get the bundle price, the saving it shows and how many bundles match your single sales.",
-  question: "What price should I put on a bundle of two or three products so I keep my margin, and how many bundles do I need compared with single sales?",
+  headline: "Bundle price calculator",
+  summary: "Enter product prices, costs and target margin. Calculate a bundle price, its saving and the bundles needed to match single-sale profit.",
+  question: "What bundle price protects my margin, and what saving does it show?",
   shelf: ["ecommerce"],
   version: "1.0.0",
   updated: "2026-10-21",

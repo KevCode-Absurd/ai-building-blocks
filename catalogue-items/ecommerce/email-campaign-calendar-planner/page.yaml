@@ -1,43 +1,36 @@
 new_slug: email-campaign-calendar-planner
-name: "Email campaign calendar planner"
-summary: "Give it your launches and sales. Get a month of sends, mix checked."
+name: Monthly email campaign calendar planner
+summary: Plan a month of store emails around real dates and team capacity. Get audiences, angles, owners, content variety and a production schedule.
 job: write-emails
 thinking: medium
-thinking_why: "It sorts dates into a calendar and checks ratios. A mid-size model handles this well."
-
-headline: "Email campaign calendar planner"
-subhead: Give it your brand, products, fixed dates and the content you already have. It plans a month of campaign emails with send dates, types, segments, angles and owners, checks the mix against seven content types and sets a production schedule two weeks ahead.
-
+thinking_why: It compares supplied evidence and follows a specific method.
+headline: Monthly email campaign calendar planner
+subhead: Share the brand, products, month, fixed dates, segments and available content. It proposes a pace, places launches and sales, then fills gaps with useful messages. Get send dates, two-line angles, owners and a mix check, plus a two-week preparation plan. Agency frequency rules are starting points to test. Deadlines, stock claims and send permission must be real.
 explain: |
   Many stores email only when they have a sale. That teaches customers to wait for a discount, and it leaves the days between sales empty. Others send every day and drive people away.
 
   This skill builds a calendar around a steady rhythm. It places your fixed dates first (launches, restocks, sales), then holidays that fit your brand, then content you already own, then fills the gaps with non-discount ideas. It checks the mix, no two sends in a row of the same type, and how many are promotions. It sets a pace that fits your revenue and your team. A team that cannot keep a pace should start lower, because skipping weeks raises unsubscribes.
-
 when:
   - You send emails only around sales and want a steady monthly rhythm.
   - You have a launch coming and want the sends around it planned.
   - You are always writing the same day's email at the last minute.
-
 you_give:
   - Your brand, products and target customer
   - "Fixed dates: launches, restocks and sale events"
   - Blogs, videos and reviews you can reuse
   - The month to plan and the segments you can send to
   - Your monthly revenue and team size (optional)
-
 you_get:
   - A month calendar with send date, type, segment, status and owner
   - A two-line angle for each send
   - A mix check against seven content types
   - A production schedule that keeps you two weeks ahead
-
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your brand context, fixed dates and the month to plan.
   - List the content you already have, such as blogs, videos and reviews.
   - Check the mix and the pace against your real team capacity before you commit.
   - Load the emails two weeks ahead and review the results at month end.
-
 how_it_works:
   - title: Picks the pace
     text: By monthly revenue and team size. Under $50,000 a month, 2 to 3 campaigns a week. Above that, 3 to 4. Rarely above 5. A small team starts at 2 a week.
@@ -53,7 +46,6 @@ how_it_works:
     text: Promotions, product, education, proof and brand sends each have a target range, and no two sends in a row are of the same type.
   - title: Sets the runway
     text: Everything is written, designed and loaded two weeks ahead, with a review at month end.
-
 output_shape: |
   PACE
   <n> campaigns a week | why: <revenue, team, list health>
@@ -76,7 +68,6 @@ output_shape: |
   MONTH-END REVIEW
   <top opens, clicks, revenue; what lagged>
   MISSING: <fixed dates | content | segments | team size>
-
 tweaks:
   - what: Your team size
     how: Tell it how many designed emails a week your team can make. Smaller teams use plain text for half the sends and start at two a week.
@@ -88,7 +79,6 @@ tweaks:
     how: Name the segments you can send to. The plan sends to engaged segments, with one or two sends a month to everyone still subscribed.
   - what: Your content
     how: List every blog, video, review roundup and guide you own. Reusing them is the quickest way to fill the calendar.
-
 judge:
   - Fixed dates are placed before anything else.
   - The mix check shows the counts, not only a verdict.
@@ -96,29 +86,27 @@ judge:
   - The pace matches your revenue and team, and the page says what to do if you cannot keep it.
   - Discount emails are rare and the plan says why.
   - Anything you did not provide is marked, not invented.
-
 test:
   - Give it a month with one sale and one launch. Both should sit on the right dates, with supporting sends around them.
   - Count the types in the calendar and compare with the mix check. The counts should match.
   - Ask for a team of one. The pace should drop and some sends should be plain text.
   - Follow the calendar for a month, then compare revenue per send with your last month.
-
 improve:
   - Add your own idea buckets and a list of ideas that fit your brand.
   - Add your real send days, based on your own send-time tests.
   - Add your team's weekly capacity and who owns each type of send.
   - Save each month's review to your brand file so the next calendar starts from what earned.
   - Pair it with the email topic bank builder for ideas, the campaign email writer for the copy and the engaged list expander for the audience.
-
 works_best_with:
   tools:
-    - {name: "Klaviyo", why: "Its campaign calendar shows scheduled sends and segments in one view."}
-    - {name: "Notion or Google Sheets", why: "A shared table with date, type, owner and status keeps the production schedule visible."}
+    - name: Klaviyo
+      why: Its campaign calendar shows scheduled sends and segments in one view.
+    - name: Notion or Google Sheets
+      why: A shared table with date, type, owner and status keeps the production schedule visible.
   inputs:
-    - "Your last 3 months of campaigns with revenue per send"
-    - "Your reviews, grouped by product"
-    - "A list of your blogs and videos with dates"
-
+    - Your last 3 months of campaigns with revenue per send
+    - Your reviews, grouped by product
+    - A list of your blogs and videos with dates
 terms:
   - term: Segment
     meaning: A group of people in your email tool who share something, such as having opened an email recently.

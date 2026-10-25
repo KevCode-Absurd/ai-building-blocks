@@ -2,18 +2,18 @@ slug: v0
 name: v0
 maker: Vercel
 url: https://v0.app
-promise: Describe a screen or app and get working code and a live preview.
+promise: "Turn an app idea into code and a live preview, ready to deploy."
 use_cases: [build-apps, design, code]
 categories: [coding]
 what_it_does:
   - Builds user interfaces and full apps from a plain-words prompt.
-  - Turns a wireframe or mock-up into a high-fidelity screen.
+  - "Turns a wireframe or mock-up into a detailed working screen."
   - Shows a live preview as it builds.
   - Fixes errors in the code on its own.
   - Deploys to Vercel in one click.
   - Opens a pull request for review.
 benefits:
-  - Get a clickable screen to show a client before any developer starts.
+  - "Build a clickable screen to review with a client."
   - Hand a developer real code to build on, not a picture.
   - Change copy and layout by asking for it.
   - Publish a prototype to a live link in one step.
@@ -22,7 +22,7 @@ best_for:
   - Developers who build with React and Vercel.
   - Teams that want a quick prototype before a full build.
 not_for:
-  - Anyone who wants a full back-end system without technical help.
+  - "A complete system for data and server work without technical help."
   - Free users who need more than 7 messages a day.
 pricing:
   model: freemium

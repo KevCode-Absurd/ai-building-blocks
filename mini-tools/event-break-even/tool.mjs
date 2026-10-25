@@ -1,11 +1,11 @@
 // Original tool. All numbers shown are illustrative figures, not a real person’s results.
 export default {
   "slug": "event-break-even",
-  "name": "Find how many tickets cover your event costs",
-  "short": "Event break-even",
-  "headline": "Find how many tickets cover your event costs",
-  "summary": "Enter fixed costs, ticket price, fees and per-person costs. See break-even attendance and profit at your expected turnout.",
-  "question": "Find how many tickets cover your event costs?",
+  "name": "Event break-even calculator",
+  "short": "Event break-even calculator",
+  "headline": "Event break-even calculator",
+  "summary": "Enter fixed costs, ticket price, fees and costs per guest. See tickets needed to cover costs and profit at your expected turnout.",
+  "question": "How many paid tickets cover our event costs?",
   "category": "operations",
   "shelf": [
     "general"
@@ -67,7 +67,7 @@ export default {
       "max": 1000000,
       "step": 0.1,
       "integer": false,
-      "help": "Food, materials and other attendance-based costs.",
+      "help": "Food, supplies and other costs for each guest.",
       "where": "Your supplier quotes.",
       "tools": []
     },
@@ -139,6 +139,6 @@ export default {
   ],
   "notes": [
     "The filled-in values are illustrative figures. Replace them with your own records; the result follows your inputs.",
-    "Include fixed per-ticket fees inside the per-attendee cost. Capacity, refunds, taxes, sponsorship and free-guest costs need separate planning."
+    "Add any fixed ticket fee to the cost per guest. Plan space, refunds, tax, sponsors and free guests separately."
   ]
 };

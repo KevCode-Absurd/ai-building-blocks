@@ -2,19 +2,25 @@ thinking: medium
 thinking_why: One change can quietly clash with other rules.
 new_slug: handbook-change-checker
 name: Handbook change checker
-summary: Give it a proposed handbook change. Get the other policies it breaks and state differences. Not legal advice.
+summary: Give it a proposed handbook change. Get the other policies it breaks
+  and state differences. Not legal advice.
 job: hire-people
 headline: Handbook change checker
-subhead: Give it the handbook section, the new wording and your current handbook. It finds other policies and state pages the change touches. You get old and new side by side, cross-references that may break, a state by state check and a flag if a promised benefit is cut.
+subhead: Give it the handbook section, the new wording and your current
+  handbook. It finds other policies and state pages the change touches. You get
+  old and new side by side, cross-references that may break, a state by state
+  check and a flag if a promised benefit is cut.
 explain: |
   Before you change a line of your handbook, see what else it breaks. Change the paid leave policy and you may also affect final pay, the leave cross-reference and several state add-on pages. This skill finds those ripples while the change is still a draft.
 
   You give it the section, the new wording and the reason. It shows old and new side by side, then searches for other policies that point to that section and terms that depend on it. For each state supplement it asks whether the change makes it wrong, outdated or newly required. It also flags changes that cut something employees were promised, since some states treat handbooks as contracts. It is not legal advice.
 when:
   - You are about to edit the leave, pay or conduct section of your handbook.
-  - You have staff in several states and need to know if local add-on pages still fit.
+  - You have staff in several states and need to know if local add-on pages
+    still fit.
   - You want to know if a change reduces a benefit people were promised.
-  - You are doing a yearly handbook cleanup and want to catch broken cross-references.
+  - You are doing a yearly handbook cleanup and want to catch broken
+    cross-references.
 you_give:
   - The handbook section that is changing
   - The new wording
@@ -27,6 +33,10 @@ you_get:
   - A state by state impact check
   - A flag if the change cuts a promised benefit
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
-  - Where the skill points to /employment-legal:cold-start-interview, use the setup-interview folder inside it. We copied it in so the skill works on its own.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
+  - Where the skill points to /employment-legal:cold-start-interview, use the
+    setup-interview folder inside it. We copied it in so the skill works on its
+    own.

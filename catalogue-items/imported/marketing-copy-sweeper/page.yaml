@@ -2,10 +2,14 @@ thinking: low
 thinking_why: It runs fixed edit passes on text.
 new_slug: marketing-copy-sweeper
 name: Marketing copy sweeper
-summary: Paste your copy. Get it tightened in set passes for clarity, voice, proof and calls to action.
+summary: Paste your copy. Get it tightened in set passes for clarity, voice,
+  proof and calls to action.
 job: write-landing-page
 headline: Marketing copy sweeper
-subhead: Paste the copy you want to improve, plus the goal and any brand notes. It runs seven set passes, one each for clarity, voice, proof, calls to action and more. You get the edited copy, a reason for every change and the result of each pass.
+subhead: Paste the copy you want to improve, plus the goal and any brand notes.
+  It runs seven set passes, one each for clarity, voice, proof, calls to action
+  and more. You get the edited copy, a reason for every change and the result of
+  each pass.
 explain: |
   Your copy, tightened in seven set passes, each on one thing: clarity, voice, proof, calls to action and more. One focused pass at a time catches problems that a single read-through misses.
 
@@ -26,5 +30,7 @@ you_get:
   - Results of each pass
   - Only the changed lines for a small edit
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.

@@ -1,0 +1,45 @@
+new_slug: persona-stage-theme-matrix-planner
+name: Persona, stage and theme matrix planner
+summary: Map buyers, awareness stages and ad themes. Find gaps and rank which cells to make next.
+job: plan-ad-tests
+headline: Persona, stage and theme matrix planner
+subhead: Share buyer groups, awareness stages, themes, prior tests and capacity. Get a three-axis matrix and ranked production queue.
+explain: |-
+  Map buyers, awareness stages and ad themes. Find gaps and rank which cells to make next.
+
+  Share buyer groups, awareness stages, themes, prior tests and capacity. Get a three-axis matrix and ranked production queue.
+when:
+  - You need a three-axis matrix and ranked production queue.
+  - You need persona, stage and theme matrix planner for a specific task.
+  - You want the method's decisions and assumptions written down before acting.
+you_give:
+  - Buyer groups
+  - Awareness stages
+  - Themes
+  - Prior tests and capacity
+you_get:
+  - A three-axis matrix and ranked production queue
+  - The sources used, missing inputs and assumptions
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Check the inputs
+    text: Confirm buyer groups, awareness stages, themes, prior tests and capacity. Mark facts that are missing.
+  - title: Define Personas
+    text: Follow the define personas section in the full method and keep its required fields and decision rules.
+  - title: Map Awareness Stages
+    text: Follow the map awareness stages section in the full method and keep its required fields and decision rules.
+  - title: Apply 9 Themes
+    text: Follow the apply 9 themes section in the full method and keep its required fields and decision rules.
+  - title: Build the Matrix
+    text: Follow the build the matrix section in the full method and keep its required fields and decision rules.
+  - title: Prioritize
+    text: Follow the prioritize section in the full method and keep its required fields and decision rules.
+  - title: Deliver
+    text: Follow the deliver section in the full method and keep its required fields and decision rules.
+  - title: Review the result
+    text: Return a three-axis matrix and ranked production queue. Check facts, math and the decisions before any action.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

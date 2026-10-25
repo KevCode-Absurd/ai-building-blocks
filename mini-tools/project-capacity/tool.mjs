@@ -1,11 +1,11 @@
 // Original tool. All numbers shown are illustrative figures, not a real person’s results.
 export default {
   "slug": "project-capacity",
-  "name": "Check whether your project fits the team’s time",
-  "short": "Project capacity",
-  "headline": "Check whether your project fits the team’s time",
-  "summary": "Set team hours, weeks and the share available for the project. Compare capacity with the estimate and contingency.",
-  "question": "Check whether your project fits the team’s time?",
+  "name": "Project capacity checker",
+  "short": "Project capacity checker",
+  "headline": "Project capacity checker",
+  "summary": "Set team hours, weeks and time available for the project. Compare capacity with the estimate and your extra time allowance.",
+  "question": "Does our project estimate fit the team’s available hours?",
   "category": "operations",
   "shelf": [
     "general"
@@ -86,14 +86,14 @@ export default {
     },
     {
       "id": "buffer",
-      "label": "Extra effort allowance",
+      "label": "Extra time allowance",
       "unit": "percent",
       "example": 20,
       "min": 0,
       "max": 500,
       "step": 0.1,
       "integer": false,
-      "help": "Your chosen contingency on the base estimate.",
+      "help": "Your chosen extra allowance on the base estimate.",
       "where": "Your past project overruns or plan.",
       "tools": []
     }
@@ -132,7 +132,7 @@ export default {
       "unit": "hours",
       "formula": "MAX(0, capacity - required)",
       "sum": "{capacity} − {required}, with zero as the floor = {=}",
-      "means": "Unallocated capacity if the estimate fits.",
+      "means": "Time left if the work fits.",
       "none": "Not enough data"
     }
   ],

@@ -1,0 +1,43 @@
+new_slug: competitor-ad-theme-and-gap-mapper
+name: Competitor ad theme and gap mapper
+summary: Group competitor ads by thirteen themes. Compare formats and messages, then rank gaps worth testing.
+job: study-competitors
+headline: Competitor ad theme and gap mapper
+subhead: Share competitor names, dated ad references and your brand facts. Get a theme and format comparison with ranked test gaps.
+explain: |-
+  Group competitor ads by thirteen themes. Compare formats and messages, then rank gaps worth testing.
+
+  Share competitor names, dated ad references and your brand facts. Get a theme and format comparison with ranked test gaps.
+when:
+  - You need a theme and format comparison with ranked test gaps.
+  - You need competitor ad theme and gap mapper for a specific task.
+  - You want the method's decisions and assumptions written down before acting.
+you_give:
+  - Competitor names
+  - Dated ad references and your brand facts
+you_get:
+  - A theme and format comparison with ranked test gaps
+  - The sources used, missing inputs and assumptions
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Check the inputs
+    text: Confirm competitor names, dated ad references and your brand facts. Mark facts that are missing.
+  - title: How This Works
+    text: Follow the how this works section in the full method and keep its required fields and decision rules.
+  - title: Collect Info
+    text: Follow the collect info section in the full method and keep its required fields and decision rules.
+  - title: Per-Competitor Analysis
+    text: Follow the per-competitor analysis section in the full method and keep its required fields and decision rules.
+  - title: Cross-Competitor Synthesis
+    text: Follow the cross-competitor synthesis section in the full method and keep its required fields and decision rules.
+  - title: Opportunity Recommendations
+    text: Follow the opportunity recommendations section in the full method and keep its required fields and decision rules.
+  - title: Deliver Report
+    text: Follow the deliver report section in the full method and keep its required fields and decision rules.
+  - title: Review the result
+    text: Return a theme and format comparison with ranked test gaps. Check facts, math and the decisions before any action.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

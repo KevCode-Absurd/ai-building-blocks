@@ -1,0 +1,37 @@
+new_slug: agent-database-setup-planner
+name: Agent database setup planner
+summary: Plan an agent database with scoped records, access rules and staging checks. Get the schema map and setup steps.
+job: build-software
+headline: Agent database setup planner
+subhead: Plan an agent database with scoped records, access rules and staging checks. Get the schema map and setup steps.
+explain: |-
+  Share the selected codebase, schemas and service setup. Get a concrete setup or code-change plan with required files.
+
+  Use forward migrations and rehearsed recovery. Existing data and access policies must survive the planned change unless a separate explicit decision authorizes otherwise.
+when:
+  - You need a concrete setup or code-change plan with required files.
+you_give:
+  - The selected codebase, schemas and service setup
+  - The exact change you want and actions you authorize
+you_get:
+  - A concrete setup or code-change plan with required files
+  - Missing inputs and a bounded verification plan
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Step 1
+    text: Identify the selected project and whether the database is a new disposable development environment or an existing shared system. Inspect current tables, schema history, extensions and access policies before proposing any setup.
+  - title: Step 2
+    text: Define the minimal durable job and activity records the agent requires, including stable job identity, account scope, status, timestamps and error/cost references. Reuse compatible existing tables or plan a forward change instead of creating a parallel incompatible store.
+  - title: Step 3
+    text: Configure the database client using secure settings and the least privilege supported by the runtime. Browser/public keys and privileged server credentials have different roles; never expose a service credential in a public client or report.
+  - title: Step 4
+    text: Plan schema creation as a versioned migration with named constraints, indexes and row-level or application access checks. Use explicit scoped policies; a broad allow-all policy is not a harmless way to silence a test error.
+  - title: Step 5
+    text: Rehearse in an isolated environment with synthetic rows. Check write/read shape, status transitions, account isolation, rejected unauthorized access and reconnect/failure behavior. A client connection alone does not prove the full agent system works.
+  - title: Step 6
+    text: Deliver the proposed schema/configuration, setup gaps, actual test evidence where available and rollback or recovery plan. Do not drop existing tables or reset production data to make the source example fit.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

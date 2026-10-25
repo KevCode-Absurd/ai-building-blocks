@@ -13,7 +13,7 @@ outputs:
   - type: meeting_notes
 uses: []
 origin: own
-version: 1.0.0
+version: 1.0.1
 example_pending: true
 credits:
   - title: meeting-notes skill

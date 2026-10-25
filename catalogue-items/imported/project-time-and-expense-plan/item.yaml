@@ -1,0 +1,36 @@
+slug: project-time-and-expense-plan
+name: Project time and expense plan
+summary: Share your time and expense process. Get entry rules, approval steps and a clear handoff to billing.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: source_text
+    required: true
+  - type: brief
+    required: true
+outputs:
+  - type: document
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: erphq
+  repo: erphq/skills
+  path: departments/project-operations/01-org-under-100/time-expense
+  url: https://github.com/erphq/skills/tree/eaa34a70a3bcd8a82aad118d10fbb084cdc1363a/departments/project-operations/01-org-under-100/time-expense
+  licence: MIT
+  licence_file: LICENSE
+  commit: eaa34a70a3bcd8a82aad118d10fbb084cdc1363a
+  original_name: time-expense
+  imported: 2026-10-23
+  skill_sha256: 90738ea0a17c158c384dd18662bec845c8f9357f706c757b1c011bf6b8a5700f
+version: 1.0.0
+credits:
+  - title: time-expense skill
+    by: erphq
+    url: https://github.com/erphq/skills/tree/eaa34a70a3bcd8a82aad118d10fbb084cdc1363a/departments/project-operations/01-org-under-100/time-expense
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

@@ -1,0 +1,32 @@
+thinking: medium
+thinking_why: It follows a set method with a few checks.
+new_slug: zoho-desk-ticket-priority-planner
+name: Zoho Desk ticket priority planner
+summary: Connect Zoho Desk. Get waiting tickets grouped by urgency, department, and issue type.
+job: help-customers
+headline: Zoho Desk ticket priority planner
+subhead: Connect Zoho Desk and ask for a review of waiting tickets. It reads open tickets and up to fifteen full threads. You get a queue grouped by urgency, with the department, customer, age, issue type, and suggested next steps.
+when:
+  - You use this tool for customer support and need help with this task.
+you_give:
+  - Open Zoho Desk tickets and full message threads.
+  - The ticket departments, contacts, dates, and issue details.
+you_get:
+  - List tickets by urgency with department, age, customer, and suggested next actions.
+how_it_works:
+  - title: Read open tickets
+    text: Fetch open tickets and read full details and message threads for up to fifteen.
+  - title: Classify the issues
+    text: Separate serious problems, billing issues, questions, feature requests, and account issues.
+  - title: Show team priorities
+    text: List tickets by urgency with department, age, customer, and suggested next actions.
+works_best_with:
+  tools:
+    - name: Zoho Desk
+      why: Live lookups need Composio CLI access and connected accounts for these services.
+how_to_use:
+  - Add the downloaded folder to an AI that can read skill files.
+  - Ask for zoho desk ticket priority planner by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
+  - Provide Open Zoho Desk tickets and full message threads.
+  - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
+  - Review the result. Approve any proposed sending or account changes before they happen.

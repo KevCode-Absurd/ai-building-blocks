@@ -8,19 +8,19 @@
 
 export default {
   slug: "marketplace-unit-margin",
-  name: "Know what one unit leaves you after marketplace fees and ads",
+  name: "Marketplace unit profit calculator",
   /** The plain name, used where the tool talks about itself. */
-  short: "Marketplace fee",
-  headline: "Know what one unit leaves you after the marketplace's fees, fulfilment and ads",
-  summary: "Type your price, the referral fee, fulfilment and storage per unit, what the goods cost you and your ad spend. You get the profit per unit, the margin and the most you can spend on ads.",
-  question: "After the marketplace's fees, fulfilment and ads, what does one unit leave me, and what is the most I can spend on ads for every 100 of sales?",
+  short: "Marketplace unit profit calculator",
+  headline: "Marketplace unit profit calculator",
+  summary: "Enter price, marketplace fees, stock cost, returns and ads. Calculate profit per unit, margin and the ad spend limit before losses.",
+  question: "What does each marketplace unit leave after the costs entered?",
   shelf: ["ecommerce"],
   version: "1.0.0",
   updated: "2026-10-21",
   presets: [{ id: "ecommerce", label: "Online store" }],
   inputs: [
     { id: "price", label: "Selling price of one unit", unit: "money", example: 30, min: 0, max: 1e9, step: 1, help: "What the buyer pays, before any sales tax the marketplace collects for you.", where: "Your listing.", tools: ["Your seller account"] },
-    { id: "referral", label: "Referral fee", unit: "percent", example: 15, min: 0, max: 100, step: 0.5, help: "The share of the price the marketplace keeps for the sale. It differs by category.", where: "The marketplace's fee schedule for your category, or your settlement report.", tools: ["Your seller account's fee schedule", "Your settlement report"] },
+    { id: "referral", label: "Referral fee", unit: "percent", example: 15, min: 0, max: 100, step: 0.5, help: "The share of the price the marketplace keeps for the sale. It differs by category.", where: "The fee list for your type of product, or the report of your payouts.", tools: ["Your seller account's fee schedule", "Your settlement report"] },
     { id: "fulfil", label: "Fulfilment fee per unit", unit: "money", example: 5.5, min: 0, max: 1e6, step: 0.25, help: "What the marketplace charges to pick, pack and ship one unit. If you ship it yourself, type your own shipping and packing cost.", where: "The marketplace's fee calculator for your item's size and weight, or your settlement report.", tools: ["Your seller account's revenue calculator", "Your settlement report"] },
     { id: "storage", label: "Storage per unit", unit: "money", example: 0.4, min: 0, max: 1e6, step: 0.1, help: "Monthly storage fees spread over the units you sell. Use 0 if you store stock yourself.", where: "Last month's storage fees divided by units sold.", tools: ["Your seller account's storage report"] },
     { id: "cogs", label: "What one unit costs you, landed", unit: "money", example: 8, min: 0, max: 1e9, step: 0.5, help: "What you paid for the unit plus freight, duty and inbound shipping to the warehouse. The landed cost tool works it out.", where: "Your supplier and freight invoices, divided by units.", tools: ["The landed cost tool", "Your supplier invoices"] },
@@ -30,7 +30,7 @@ export default {
   ],
   outputs: [
     { id: "referralFee", label: "Referral fee on one unit", unit: "money", formula: "price * referral / 100", sum: "{price} × {referral} = {=}", means: "The marketplace's cut of the sale." },
-    { id: "feesTotal", label: "All marketplace fees on one unit", unit: "money", formula: "referralFee + fulfil + storage", sum: "{referralFee} + {fulfil} + {storage} = {=}", means: "Referral, fulfilment and storage, before ads." },
+    { id: "feesTotal", label: "All marketplace fees on one unit", unit: "money", formula: "referralFee + fulfil + storage", sum: "{referralFee} + {fulfil} + {storage} = {=}", means: "Selling, packing, shipping and storage fees, before ads." },
     { id: "feeShare", label: "Share of the price the marketplace keeps", unit: "percent", formula: "IF(price > 0, feesTotal / price * 100, NA())", none: "No price", sum: "{feesTotal} ÷ {price} = {=}", means: "Before ads. Cheap items give up a bigger share, because fulfilment is a flat fee." },
     { id: "returnsCost", label: "Returns cost spread over every unit", unit: "money", formula: "returnRate / 100 * returnCost", sum: "{returnRate} × {returnCost} = {=}", means: "What returns cost you on an average unit sold." },
     { id: "beforeAds", label: "What one unit leaves before ads", unit: "money", formula: "price - feesTotal - cogs - returnsCost", sum: "{price} − {feesTotal} fees − {cogs} goods − {returnsCost} returns = {=}", means: [
@@ -43,7 +43,7 @@ export default {
     { id: "profit", label: "Profit on one unit", unit: "money", formula: "beforeAds - adCost", sum: "{beforeAds} − {adCost} = {=}", means: [
       { if: "profit < 0", text: "A loss: every unit sold costs you {=:abs}." },
       { if: "profit = 0", text: "You break even on each unit." },
-      { text: "What one unit leaves you after everything." },
+      { text: "What one unit leaves after the costs entered here, before fixed costs and tax." },
     ] },
     { id: "profitPct", label: "Margin after ads", unit: "percent", formula: "IF(price > 0, profit / price * 100, NA())", none: "No price", sum: "{profit} ÷ {price} = {=}", means: "The share of the price you keep after ads." },
     { id: "breakEvenAdShare", label: "Most to spend on ads for every 100 of sales", unit: "percent", formula: "IF(price > 0, MAX(0, beforeAds) / price * 100, NA())", none: "No price", sum: "{beforeAds} ÷ {price}, never below 0 = {=}", means: [

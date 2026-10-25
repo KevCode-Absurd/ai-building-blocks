@@ -1,0 +1,53 @@
+slug: update-campaign-copy-after-a-fact-change
+name: Campaign copy change and release workflow
+summary: Apply an approved fact or offer change across existing campaign copy. Get scoped patches, review results and a versioned publishing handoff.
+category: orchestrator
+type: workflow
+role: orchestrate
+job: copy
+level: advanced
+inputs:
+  - type: copy_draft
+    required: true
+  - type: product_data
+    required: true
+  - type: offer
+    required: false
+  - type: document
+    required: false
+outputs:
+  - type: copy_draft
+    required: true
+  - type: audit_report
+    required: true
+  - type: document
+    required: true
+uses:
+  - campaign-change-impact-mapper
+  - marketing-evidence-expiry-reviewer
+  - claim-and-proof-matcher
+  - theme-based-ad-copy-set-writer
+  - campaign-email-writer
+  - ad-matched-landing-page-writer
+  - pre-launch-ad-checker
+steps:
+  - uses: campaign-change-impact-mapper
+    note: A scoped impact map with affected fields, dependencies, unchanged locks and unresolved assets.
+  - uses: marketing-evidence-expiry-reviewer
+    note: A per-claim current, review-needed or withdrawn decision with source and next action.
+  - uses: claim-and-proof-matcher
+    note: A claim decision register and exact allowed wording/terms for each affected surface.
+  - uses: theme-based-ad-copy-set-writer
+    note: Versioned proposed copy and an affected-field diff; unaffected surfaces remain explicitly unchanged.
+  - uses: campaign-email-writer
+    note: Versioned proposed copy and an affected-field diff; unaffected surfaces remain explicitly unchanged.
+  - uses: ad-matched-landing-page-writer
+    note: Versioned proposed copy and an affected-field diff; unaffected surfaces remain explicitly unchanged.
+  - uses: pre-launch-ad-checker
+    note: A text review, unresolved production/destination checks and the exact-version handoff.
+execution: coordinator
+package_files: all
+needs_mode: manual
+origin: own
+example_pending: true
+version: 1.0.0

@@ -8,6 +8,17 @@ description: Use on the first Monday of each month if you sell and lose some dea
 You are an agent that turns one team's lost deals into a better pitch, one month at a time. Lost deals get a reason in the CRM ("price", "timing") and are never read again. The reason the buyer gave is rarely the cause. You read the losses the way Melanie Perkins read her hundred investor rejections: ask for the advice behind the no, rebuild the pitch around the problem and the buyer, and go again. You never contact a lost buyer or change the live pitch yourself.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check the setup.** Use the tools listed below when the task needs them. If a tool is unavailable, say what you can do with the details provided. Do not claim you used it.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+
+**Tools that do this best:**
+- **Claude Code:** It can keep the register, pitch and rules files between months and run on the first Monday.
+- **Your CRM:** Export lost deals with stage, reason, rival, urgency and notes.
 <!-- /needs -->
 
 ## What you need
@@ -49,6 +60,14 @@ You never do these yourself. You list them for approval:
 - **Files:** each step's file, and every `MISSING:` line.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Sell it** with the [Ten-second opener writer](https://useaiblocks.com/skills/ten-second-opener-writer). It takes the buying reasons.
+- **Make image ads** with the [Image ad maker from customer quotes](https://useaiblocks.com/skills/customer-quote-image-ad). It takes the buying reasons.
+- **Make video ads** with the [Video ad script writer from customer quotes](https://useaiblocks.com/skills/quote-video-ad-script). It takes the buying reasons.
+- **Say it to the room** with the [Pitch objection and answer writer](https://useaiblocks.com/skills/hardest-objections-answer-writer). It takes the draft and objection map.
+- **Lead the team** with the [Polite request editor](https://useaiblocks.com/skills/order-to-request-rewriter). It takes the draft.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
 ## Checks before you hand it back

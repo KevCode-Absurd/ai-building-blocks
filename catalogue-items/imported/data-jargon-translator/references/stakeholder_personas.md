@@ -36,7 +36,7 @@ Profiles of common business audiences. Use these to calibrate vocabulary, depth,
 - Include a "what this means for the roadmap" paragraph
 - Charts preferred over tables
 
-**Vocabulary bridge:** "The test was significant" is fine; "p=0.03" replace with "we're 97% confident"
+**Vocabulary bridge:** For `p=0.03`, say that results this extreme would occur about 3% of the time under the no-effect assumption and test conditions. Do not call this 97% confidence that the result is real.
 
 ---
 

@@ -1,0 +1,19 @@
+slug: wakeups-how-agents-alert-each-other-implementation-planner
+name: Agent wakeup and stale-claim builder
+summary: Build an agent wakeup flow with scoped events, duplicate checks, claim leases, retries and recovery.
+category: general
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+    required: true
+uses: []
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

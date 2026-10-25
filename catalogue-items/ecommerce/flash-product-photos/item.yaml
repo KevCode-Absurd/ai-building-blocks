@@ -1,33 +1,48 @@
 slug: flash-product-photos
 renamed_from: flash-snapshot-product-photo-maker
-name: "Flash snapshot product photo maker"
-summary: "Attach your product photos. Get 6 flash snapshot prompts from one real occasion."
+name: Flash snapshot product photo maker
+summary: Attach your product photos. Get 6 flash snapshot prompts from one real occasion.
 category: ecommerce
 type: skill
 role: render
 job: image
 level: advanced
 inputs:
-  - {type: product_photos, required: true}
-  - {type: brand_brain, required: true}
-  - {type: persona, required: false}
+  - type: product_photos
+    required: true
+  - type: brand_brain
+    required: true
+  - type: persona
+    required: false
 outputs:
-  - {type: photo_set}
-uses: [product-image-spec-writer]
+  - type: photo_set
+    required: true
+uses:
+  - product-image-spec-writer
 example: flash-snapshots
 origin: rebuilt
-source_ids: [CES-036]
+source_ids:
+  - CES-036
 old_name: candid flash photo set
-version: 2.0.0
-minds: [jakob-nielsen]
+version: 2.1.0
+minds:
+  - jakob-nielsen
 credits:
-  - {title: "Bounce flash photography & The Inverse Square Law", by: "Neil van Niekerk, Tangents", url: "https://neilvn.com/tangents/bounce-flash-photography-and-inverse-square-law/", used: "Why direct flash leaves the background dark, and how distance to the wall changes falloff"}
-  - {title: "Flash synchronization", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Flash_synchronization", used: "Flash with a slow shutter: lit areas sharp, ambient areas glowing with motion trails"}
-  - {title: "Photos as Web Content", by: "Jakob Nielsen, Nielsen Norman Group", url: "https://www.nngroup.com/articles/photos-as-web-content/", used: "People skip decorative stock-style images and look at real people and real products"}
-  - {title: "How to prompt Gemini 2.5 Flash Image Generation for the best results", by: "Philipp Schmid, Logan Kilpatrick, Alisa Fortin, Google", url: "https://developers.googleblog.com/en/how-to-prompt-gemini-2-5-flash-image-generation-for-the-best-results/", used: "Prompts as one described scene, with camera and light in physical terms"}
-tested:
-  on: 2026-10-20
-  business: sprout
-  model: claude-opus-5-5
-  judge: claude-fable-5-1
-  result: pass
+  - title: Bounce flash photography & The Inverse Square Law
+    by: Neil van Niekerk, Tangents
+    url: https://neilvn.com/tangents/bounce-flash-photography-and-inverse-square-law/
+    used: Why direct flash leaves the background dark, and how distance to the wall changes falloff
+  - title: Flash synchronization
+    by: Wikipedia
+    url: https://en.wikipedia.org/wiki/Flash_synchronization
+    used: "Flash with a slow shutter: lit areas sharp, ambient areas glowing with motion trails"
+  - title: Photos as Web Content
+    by: Jakob Nielsen, Nielsen Norman Group
+    url: https://www.nngroup.com/articles/photos-as-web-content/
+    used: People skip decorative stock-style images and look at real people and real products
+  - title: How to prompt Gemini 2.5 Flash Image Generation for the best results
+    by: Philipp Schmid, Logan Kilpatrick, Alisa Fortin, Google
+    url: https://developers.googleblog.com/en/how-to-prompt-gemini-2-5-flash-image-generation-for-the-best-results/
+    used: Prompts as one described scene, with camera and light in physical terms
+package_files: all
+example_pending: true

@@ -1,0 +1,26 @@
+new_slug: build-an-app-from-an-openapi-spec
+name: Build an app from an OpenAPI spec
+summary: Turn an OpenAPI spec into an app. Add routes, data types, checks and setup steps.
+job: build-software
+headline: Build an app from an OpenAPI spec
+subhead: Share your API spec and chosen stack. Check the contract, build the app and get code with tests and setup notes.
+explain: Share your API spec and chosen stack. Check the contract, build the app and get code with tests and setup notes.
+when:
+  - You want to build an app from an OpenAPI spec.
+you_give:
+  - Your OpenAPI file, target framework and version, auth needs and any business rules the spec leaves open.
+you_get:
+  - An app project with mapped routes and data types, scoped business logic, tests, setup notes and known gaps.
+how_to_use:
+  - Download the complete skill folder and add it to your AI tool, or copy the instructions into a chat.
+  - Provide the inputs listed here and ask your AI to follow the skill.
+  - Review the result and any missing facts before using it.
+how_it_works:
+  - title: Read the API contract
+    text: Check paths, methods, schemas and auth rules. Ask about behavior that the contract leaves unclear.
+  - title: Build the app layers
+    text: Create route handlers, data types, service logic, config and data access only where the brief requires them.
+  - title: Check against the spec
+    text: Add tests and sample requests. Run available checks and report any missing tool, rule or failed case.
+thinking: medium
+thinking_why: It weighs your evidence and follows a specific method.

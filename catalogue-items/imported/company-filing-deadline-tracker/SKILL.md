@@ -7,8 +7,21 @@ description: >
   jurisdiction, and surfaces what's due in the next 30/60/90 days. Use when
   user says "entity compliance", "filing deadlines", "annual reports due",
   "entity tracker", "what filings are due", "entity health", or "good standing".
-argument-hint: "[--init | --report [--days N] | --update [--from-report] | --sweep | --audit | --export [--format csv|table]]"
+metadata:
+  argument-hint: "[--init | --report [--days N] | --update [--from-report] | --sweep | --audit | --export [--format csv|table]]"
 ---
+
+<!-- Modified by AI Blocks on 2026-10-24: source/copy repair -->
+
+# Company filing deadline tracker
+
+This imported guide contains stale, jurisdiction-specific examples. Treat every date, amount, filing name, penalty, statutory citation and tracker path in it as unverified. Before calculating a deadline, identify the entity type, formation/qualification jurisdiction, filing status and relevant period; then check the current official filing authority page and current statute, and record the URL and date checked. Use an agent report as entity-specific evidence when supplied. If a source conflicts or cannot be checked, mark the item unknown and do not calculate a date. Never infer a legal duty from this tracker.
+
+Use a file location available to the user in the current environment. The legacy Claude paths below are examples only; do not read or write them unless the user has provided them and they are accessible.
+
+## Real-task output
+
+For each entity, show the confirmed source and as-of date, the filing and date (or “unknown”), the entity facts used, and any missing facts. Call the result a tracking aid, not a legal determination.
 
 # /entity-compliance
 
@@ -24,6 +37,8 @@ argument-hint: "[--init | --report [--days N] | --update [--from-report] | --swe
 4. After any update: show summary of changes and next action.
 
 ---
+
+<!-- Modified by AI Blocks on 2026-10-24: source/copy repair -->
 
 ## Purpose
 
@@ -56,14 +71,16 @@ to share it.
 > **Delaware — the split that matters:**
 >
 > - **DE Corporation (Inc., Corp.):** Annual report AND franchise tax, both due **March 1**. Franchise tax is calculated by the authorized-shares method or the assumed-par-value capital method (whichever is lower); the annual report captures director / officer information. Statutory basis: 8 Del. C. §§ 501–502 [verify current].
-> - **DE LLC:** No annual report required. Annual tax is a **flat $300**, due **June 1**. Statutory basis: 6 Del. C. § 18-1107(d) [verify current fee and date].
-> - **DE LP:** No annual report required. Annual tax is a **flat $300**, due **June 1** (parallel to the LLC rule). Statutory basis: 6 Del. C. § 17-1109 [verify current].
+> - **DE LLC:** No annual report is listed by the Delaware Division of Corporations; an annual tax is due **June 1**. Verify the current amount and date with the current official filing page for the relevant year.
+> - **DE LP:** No annual report is listed by the Delaware Division of Corporations; an annual tax is due **June 1**. Verify current amount and date with the current official filing page for the relevant year.
 >
 > A DE LLC is NOT required to file a March 1 annual report — writing that deadline for an LLC carries real risk (spurious "overdue" flags that mask actual June 1 exposure, or worse, the inverse: a user who treats the March 1 corporation rule as universal and misses the June 1 LLC deadline). If the entity table records a Delaware entity without a type, flag it as `type_unknown` and ask the user to confirm before computing either deadline.
 >
 > The same entity-type discipline applies in every other jurisdiction with divergent filing regimes by entity type (e.g., CA corp Statement of Information vs. CA LLC SOI cadence; TX franchise tax applies to corporations, LLCs, and LPs but with different no-tax-due thresholds). When the reference table for a jurisdiction is populated, make sure it is indexed by entity type, not just by state.
 
 ---
+
+<!-- Modified by AI Blocks on 2026-10-24: source/copy repair -->
 
 ## Tracker file
 
@@ -117,6 +134,8 @@ Status values:
 - `unknown` — no information; needs manual confirmation
 
 ---
+
+<!-- Modified by AI Blocks on 2026-10-24: source/copy repair -->
 
 ## Mode 1: Initialise
 
@@ -218,6 +237,8 @@ Run /corporate-legal:entity-compliance --report to see what's due.
 
 ---
 
+<!-- Modified by AI Blocks on 2026-10-24: source/copy repair -->
+
 ## Mode 2: Report
 
 Surfaces upcoming deadlines and flags overdue items. Default: next 90 days.
@@ -258,6 +279,8 @@ GOOD STANDING:
 If the tracker covers more than ~10 entities, or any time the user asks: offer the dashboard (see CLAUDE.md `## Outputs → Dashboard offer for data-heavy outputs`). Shape the offer for this output — counts by filing status (overdue / due soon / filed / unknown), counts by good-standing state, and a sortable entity table with jurisdiction, filing type, and next due date.
 
 ---
+
+<!-- Modified by AI Blocks on 2026-10-24: source/copy repair -->
 
 ## Mode 3: Update
 
@@ -338,6 +361,8 @@ Updates tracker after each confirmation. Produces a completion summary.
 
 ---
 
+<!-- Modified by AI Blocks on 2026-10-24: source/copy repair -->
+
 ## Mode 4: Health audit
 
 ```
@@ -406,6 +431,8 @@ RECOMMENDED ACTIONS
 
 ---
 
+<!-- Modified by AI Blocks on 2026-10-24: source/copy repair -->
+
 ## Mode 5: Export
 
 ```
@@ -427,6 +454,8 @@ If `--format table`: produce a markdown table suitable for pasting into
 a report or Slack message, showing only the next 90 days of filings.
 
 ---
+
+<!-- Modified by AI Blocks on 2026-10-24: source/copy repair -->
 
 ## What this skill does not do
 

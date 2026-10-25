@@ -1,0 +1,30 @@
+new_slug: circuit-design-verification-planner
+name: Check a circuit and its evidence
+summary: Check a circuit with part limits, worst-case math and a staged test plan. Keep predicted and measured results separate.
+job: build-product
+headline: Check a circuit and its evidence
+subhead: Bring a circuit, exact part data and readings. Check limits and loading, then plan the next safe measurement.
+explain: Bring a circuit, exact part data and readings. Check limits and loading, then plan the next safe measurement.
+when:
+  - You want to check a circuit and its evidence.
+you_give:
+  - The actual topology, supply/load/signal ranges and exact component documentation.
+  - Known measurements, instrument setup, acceptable error and current physical limits.
+you_get:
+  - A reproducible conditional calculation or fault/evidence ledger.
+  - A staged bench plan with expected ranges, limits, next checks and acceptance scope.
+how_to_use:
+  - Download the complete skill folder and add it to your AI tool, or copy the instructions into a chat.
+  - Provide the inputs listed here and ask your AI to follow the skill.
+  - Review the result and any missing facts before using it.
+how_it_works:
+  - title: Fix the physical contract
+    text: Identify topology, exact parts, operating versus absolute limits, function and missing facts that change the decision.
+  - title: Calculate relevant corners
+    text: Include loading, tolerances, thermal/timing effects and correlated error with explicit units and assumptions.
+  - title: Define the measurement
+    text: Choose test points, instrument configuration, expected range, safe limits and restoration steps before active work.
+  - title: Match the conclusion to evidence
+    text: Label modeled, simulated, user-reported and measured facts separately and retain the controlling uncertainty.
+thinking: medium
+thinking_why: It weighs your evidence and follows a specific method.

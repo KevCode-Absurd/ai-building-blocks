@@ -120,3 +120,14 @@ Write `MISSING: <what>`. No product photo: ask once, then carry on from the desc
 - A detailed, realistic hero face. Viewers watch them instead of seeing themselves.
 - Panels that zoom, spin and drift at once. Pick one motion.
 - A drawn expert, a drawn customer reporting a result, or a drawn child.
+
+
+## Panel continuity and payoff sound arc
+
+Use this optional mode when it matches the requested job. Keep the core checks above and the decisions already supplied. Full procedure: references/cmo-method-comic-book-ad.md.
+
+Create prop/character sheets and panel IDs before keyframes. Keep scale, pattern, colour, orientation and lettering consistent. Generated continuity sheets do not become physical product proof.
+
+A gutter-break beat must tell the story: name the source panel, moving object, border, motion and receiving panel. Random cards bursting out are not a narrative transition. Plan a sound arc with a deliberately sparse opening, action detail, optional rise, controlled impact and room for the close. No universal need for a bass hit or silence; brand and scene decide. Keep words intelligible and do not claim measured loudness without measurement.
+
+Fix a failed keyframe or bounded layer before rerendering its sequence. End cards use real offer terms and legible action. Track frame/version/shot dependencies so fixing one prop does not change unrelated panels.

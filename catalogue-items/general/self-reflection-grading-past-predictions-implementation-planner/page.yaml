@@ -1,0 +1,38 @@
+new_slug: self-reflection-grading-past-predictions-implementation-planner
+name: Agent prediction review builder
+summary: Build a prediction score log and proposed lessons.
+job: build-software
+headline: Agent prediction review builder
+subhead: Share recorded predictions, dates, actual outcomes and grading rules. Get a prediction score log and proposed lessons.
+explain: |-
+  Share recorded predictions, dates, actual outcomes and grading rules. Get a prediction score log and proposed lessons.
+
+  The complete method and its supporting files are in the download. It marks missing inputs and separates proposed actions from actions that were actually completed.
+when:
+  - You need a prediction score log and proposed lessons.
+  - You are adding this function to an agent system.
+  - You need to compare an existing version with the supplied starter.
+you_give:
+  - Recorded predictions, dates, actual outcomes and grading rules
+you_get:
+  - A prediction score log and proposed lessons
+  - A failure checklist and synthetic test cases
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Step 1
+    text: Save the prediction before the outcome is known.
+  - title: Step 2
+    text: Match the correct outcome window.
+  - title: Step 3
+    text: Grade with deterministic math where possible.
+  - title: Step 4
+    text: Use explanation text only after scoring.
+  - title: Step 5
+    text: Separate wrong diagnosis from wrong action.
+  - title: Step 6
+    text: Propose lessons and record review maturity without silently changing production rules.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

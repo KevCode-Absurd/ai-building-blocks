@@ -7,20 +7,20 @@ role: orchestrate
 job: email
 level: intermediate
 inputs:
-  - {type: document, required: true}
-  - {type: performance_sheet, required: true}
-  - {type: store_capture, required: false}
-  - {type: email_flow, required: false}
-  - {type: offer, required: false}
+  - { type: document, required: true }
+  - { type: performance_sheet, required: true }
+  - { type: store_capture, required: false }
+  - { type: email_flow, required: false }
+  - { type: offer, required: false }
 outputs:
-  - {type: audit_report}
-uses: [email-setup-health-checker, inbox-placement-recovery-planner, engaged-list-expander, sunset-flow-and-list-cleaner, email-and-sms-performance-reader]
+  - { type: audit_report }
+uses: [ email-setup-health-checker, inbox-placement-recovery-planner, engaged-list-expander, sunset-flow-and-list-cleaner, email-and-sms-performance-reader ]
 steps:
-  - {uses: email-setup-health-checker, note: "Finds the setup problems that push mail to spam."}
-  - {uses: inbox-placement-recovery-planner, note: "Turns your results into a recovery plan with a send pause and a restart order."}
-  - {uses: engaged-list-expander, note: "Widens the engaged group step by step, following the restart order from the recovery plan."}
-  - {uses: sunset-flow-and-list-cleaner, note: "Writes the sunset flow and the clean-out rule for the people who stayed quiet."}
-  - {uses: email-and-sms-performance-reader, note: "Reads the sunset flow results to see if opens and revenue per send recovered."}
+  - { uses: email-setup-health-checker, note: "Finds the setup problems that push mail to spam." }
+  - { uses: inbox-placement-recovery-planner, note: "Turns your results into a recovery plan with a send pause and a restart order." }
+  - { uses: engaged-list-expander, note: "Widens the engaged group step by step, following the restart order from the recovery plan." }
+  - { uses: sunset-flow-and-list-cleaner, note: "Writes the sunset flow and the clean-out rule for the people who stayed quiet." }
+  - { uses: email-and-sms-performance-reader, note: "Reads the sunset flow results to see if opens and revenue per send recovered." }
 origin: rebuilt
-version: 1.0.0
+version: 1.0.1
 generated_from: intake/fix-inbox-placement-and-win-back-your-opens/skeleton.yaml

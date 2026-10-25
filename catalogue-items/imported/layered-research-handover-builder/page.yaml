@@ -1,0 +1,26 @@
+thinking: high
+thinking_why: It follows a set method with a few checks.
+new_slug: layered-research-handover-builder
+name: Layered research handover builder
+summary: Share research notes and sources. Get a short summary linked to deeper analysis and supporting evidence.
+job: document-work
+headline: Layered research handover builder
+subhead: Share your research question, notes, sources, and who will read the work. It separates the main findings from deeper analysis and source records. You get a linked research folder so readers can start with the summary and inspect the evidence when needed.
+you_give:
+  - A research question, audience, notes, source evidence, and a destination folder.
+you_get:
+  - A research index, findings summary, topic analyses, evidence records, and coverage notes.
+how_it_works:
+  - title: Separate the layers
+    text: Keep the index for finding files. Put findings in the summary, reasoning in the analysis, and source facts in evidence records.
+  - title: Connect findings to evidence
+    text: Link each summary to the right analysis files. Link the analysis to the records behind it.
+  - title: Check the handover
+    text: Check the entry point, paths, and gaps. Make sure each file makes sense on its own. Treat the bundled checker as a helper.
+works_best_with:
+  tools:
+    - name: A chat AI that can read the bundled reference files
+      why: Use the supplied references and templates for the chosen task. Scripts are optional unless that task specifically needs them.
+how_to_use:
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.

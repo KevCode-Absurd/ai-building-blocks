@@ -2,10 +2,15 @@ thinking: high
 thinking_why: It joins many parts into one plan.
 new_slug: marketing-plan-writer
 name: Marketing plan writer
-summary: Describe your business. Get a full marketing plan by funnel stage with a 90-day or 12-month roadmap.
+summary: Describe your business. Get a full marketing plan by funnel stage with
+  a 90-day or 12-month roadmap.
 job: plan-strategy
 headline: Marketing plan writer
-subhead: Describe your business, audience, offer, budget and team size. It researches, asks questions, then walks you through 13 sections one at a time, from strategy to referrals. You get the full plan, a 90-day roadmap with owners, a 12-month outlook, tactics marked Now, Later or Skip, and a measurement plan.
+subhead: Describe your business, audience, offer, budget and team size. It
+  researches, asks questions, then walks you through 13 sections one at a time,
+  from strategy to referrals. You get the full plan, a 90-day roadmap with
+  owners, a 12-month outlook, tactics marked Now, Later or Skip, and a
+  measurement plan.
 explain: |
   A written marketing plan for your business with a 90-day roadmap and a 12-month outlook, laid out by funnel stage so every move has a place and an owner.
 
@@ -27,5 +32,7 @@ you_get:
   - A list of tactics marked Now, Later or Skip
   - A measurement plan with open decisions
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.

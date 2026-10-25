@@ -1,0 +1,44 @@
+new_slug: audit-to-sales-presentation-planner
+name: Audit-to-sales presentation planner
+summary: Turn an audit into a ten-slide sales story. Keep the findings, proof, value assumptions and proposed scope clear.
+job: sell-and-negotiate
+headline: Audit-to-sales presentation planner
+subhead: Share audit findings, verified proof, proposed scope and supported cost assumptions. Get a ten-slide narrative with evidence and pricing assumptions.
+explain: |-
+  Turn an audit into a ten-slide sales story. Keep the findings, proof, value assumptions and proposed scope clear.
+
+  Share audit findings, verified proof, proposed scope and supported cost assumptions. Get a ten-slide narrative with evidence and pricing assumptions.
+when:
+  - You need a ten-slide narrative with evidence and pricing assumptions.
+  - You need audit-to-sales presentation planner for a specific task.
+  - You want the method's decisions and assumptions written down before acting.
+you_give:
+  - Audit findings
+  - Verified proof
+  - Proposed scope and supported cost assumptions
+you_get:
+  - A ten-slide narrative with evidence and pricing assumptions
+  - The sources used, missing inputs and assumptions
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Check the inputs
+    text: Confirm audit findings, verified proof, proposed scope and supported cost assumptions. Mark facts that are missing.
+  - title: How This Works
+    text: Follow the how this works section in the full method and keep its required fields and decision rules.
+  - title: Collect Audit Data
+    text: Follow the collect audit data section in the full method and keep its required fields and decision rules.
+  - title: Build The Narrative Arc
+    text: Follow the build the narrative arc section in the full method and keep its required fields and decision rules.
+  - title: Generate Each Section
+    text: Follow the generate each section section in the full method and keep its required fields and decision rules.
+  - title: Writing Rules
+    text: Follow the writing rules section in the full method and keep its required fields and decision rules.
+  - title: IMPORTANT RULES
+    text: Follow the important rules section in the full method and keep its required fields and decision rules.
+  - title: Review the result
+    text: Return a ten-slide narrative with evidence and pricing assumptions. Check facts, math and the decisions before any action.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

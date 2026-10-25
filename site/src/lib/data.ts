@@ -1,5 +1,6 @@
 import type { Face } from "./face";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
+import { trackUxEvent } from "./ux-events";
 import { migrateSlugs } from "./store";
 
 export type Thinking = "low" | "medium" | "high";
@@ -80,6 +81,8 @@ export type Plan = {
 };
 /** The full page for one block, loaded when its page opens. */
 export type Page = {
+  /** Reviewed method adapters for this skill, generated from the published inputs and steps. */
+  copyable?: ReturnType<typeof import('./copyable-task.mjs').makeTaskRecipe>;
   headline: string; subhead: string; explain: string; when: string[];
   you_give: string[]; you_get: string[]; how_to_use: string[];
   how_it_works: { title: string; text: string }[];
@@ -110,7 +113,7 @@ export type Page = {
   /** Markdown already turned into HTML by the index build. */
   html: { explain: string; skill: string };
 };
-export type RosterMind = { slug: string; name: string; identity?: string; area: string; seat: string; living: boolean; built: boolean; face?: Face; labels?: string[] };
+export type RosterMind = { slug: string; name: string; identity?: string; area: string; seat: string; living: boolean; built: boolean; face?: Face; labels?: string[]; useCases?: string[] };
 /** A block as blocks.json sends it: defaults and empty values left out (a headline equal to the name too), ports as "type" or "type?" (optional), steps as a slug or [slug, note]. */
 type Wire = Partial<Omit<Block, "inputs" | "outputs" | "steps" | "tested">> & { slug: string; inputs?: string[]; outputs?: string[]; steps?: (string | [string, string])[]; tested?: 1 };
 const port = (p: string): Port => (p.endsWith("?") ? { type: p.slice(0, -1), required: false } : { type: p, required: true });
@@ -123,7 +126,7 @@ function unwire(w: Wire): Block {
     inputs: (inputs ?? []).map(port), outputs: (outputs ?? []).map(port), steps: (steps ?? []).map((s) => (typeof s === "string" ? { uses: s, note: "" } : { uses: s[0], note: s[1] })),
   } as Block;
 }
-export type Catalogue = { built: string; portTypes: Record<string, string | null>; renamed: Record<string, string>; minds?: { areas: Record<string, string>; roster: RosterMind[]; labels?: Record<string, string> }; blocks: Block[]; bySlug: Record<string, Block> };
+export type Catalogue = { built: string; sourceHash?: string; portTypes: Record<string, string | null>; renamed: Record<string, string>; minds?: { areas: Record<string, string>; roster: RosterMind[]; labels?: Record<string, string> }; blocks: Block[]; bySlug: Record<string, Block> };
 
 export const ROLES: { id: Role; name: string; does: string }[] = [
   { id: "source", name: "Source", does: "Brings information in" },
@@ -147,24 +150,65 @@ const PORT_NAMES: Record<string, string> = {
 export const portLabel = (t: string) => PORT_NAMES[t] ?? cap(t.replace(/_/g, " ").replace(/\b(cta|ugc|vsl|cro|pdp|seo|ai)\b/g, (m) => m.toUpperCase()));
 
 let catalogue: Promise<Catalogue> | null = null;
+let resolvedCatalogue: Catalogue | null = null;
+let starter: Promise<Catalogue> | null = null;
+let resolvedStarter: Catalogue | null = null;
+function decodeCatalogue(d: Omit<Catalogue, "blocks" | "bySlug"> & { blocks: Wire[] }): Catalogue {
+  // Full and starter catalogues use the same wire records and decoder.
+  const faces = new Map<string, Face | undefined>((d.minds?.roster ?? []).map((m: RosterMind) => [m.slug, m.face]));
+  const blocks: Block[] = d.blocks.map(unwire);
+  for (const b of blocks) if (b.type === "mind" && !b.face) b.face = faces.get(b.slug);
+  return { ...d, blocks, bySlug: Object.fromEntries(blocks.map(b => [b.slug, b])) };
+}
+export function loadStarterCatalogue(): Promise<Catalogue> {
+  starter ??= fetch("/data/starter-blocks.json", { signal: AbortSignal.timeout(2000) })
+    .then(async response => {
+      if (!response.ok) throw Error("Starter tasks unavailable");
+      const text = await response.text();
+      if (text.length > 128000) throw Error("Starter tasks too large");
+      const data = JSON.parse(text);
+      if (data.starter !== true || !Array.isArray(data.blocks) || data.blocks.length !== 4) throw Error("Invalid starter tasks");
+      resolvedStarter = decodeCatalogue(data); return resolvedStarter;
+    }).catch(error => { starter = null; throw error; });
+  return starter;
+}
 export function loadCatalogue(): Promise<Catalogue> {
-  catalogue ??= fetch("/data/blocks.json")
-    .then((r) => { if (!r.ok) throw new Error(`Catalogue: ${r.status}`); return r.json(); })
+  catalogue ??= fetch("/data/blocks.json", { signal: AbortSignal.timeout(15000) })
+    .then(async (r) => {
+      if (!r.ok) throw new Error(`Catalogue: ${r.status}`);
+      const bytes = await r.arrayBuffer(), digest = await crypto.subtle.digest("SHA-256", bytes);
+      return { ...JSON.parse(new TextDecoder().decode(bytes)), sourceHash: Array.from(new Uint8Array(digest), byte => byte.toString(16).padStart(2, "0")).join("") };
+    })
     .then((d) => {
       migrateSlugs(d.renamed ?? {});
-      // A mind's face is sent once, on the roster, and copied onto its block here.
-      const faces = new Map<string, Face | undefined>((d.minds?.roster ?? []).map((m: RosterMind) => [m.slug, m.face]));
-      const blocks: Block[] = (d.blocks as Wire[]).map(unwire);
-      for (const b of blocks) if (b.type === "mind" && !b.face) b.face = faces.get(b.slug);
-      return { ...d, blocks, bySlug: Object.fromEntries(blocks.map((b) => [b.slug, b])) };
+      resolvedCatalogue = decodeCatalogue(d); return resolvedCatalogue;
     }).catch((e) => { catalogue = null; throw e; });
   return catalogue;
 }
-export function useCatalogue(enabled = true) {
-  const [c, setC] = useState<Catalogue | null>(null);
-  useEffect(() => { if (!enabled) return; let live = true; loadCatalogue().then((c) => { if (live) setC(c); }).catch(() => {}); return () => { live = false; }; }, [enabled]);
-  return c;
+export function useCatalogueState(enabled = true, { starterFirst = false }: { starterFirst?: boolean } = {}) {
+  const [catalogue, setCatalogue] = useState<Catalogue | null>(resolvedCatalogue);
+  const [starterCatalogue, setStarterCatalogue] = useState<Catalogue | null>(resolvedStarter);
+  const [error, setError] = useState("");
+  const [attempt, setAttempt] = useState(0);
+  const [loading, setLoading] = useState(enabled);
+  const retry = useCallback(() => { trackUxEvent("task_retried"); setAttempt(value => value + 1); }, []);
+  useEffect(() => {
+    if (!enabled) { setLoading(false); return; }
+    let live = true;
+    setLoading(true); setError("");
+    // The starter is optional. A stalled starter must not hold the full library
+    // behind its timeout; both public downloads can make progress independently.
+    if (starterFirst && !resolvedCatalogue) {
+      void loadStarterCatalogue().then(value => { if (live) setStarterCatalogue(value); }).catch(() => {});
+    }
+    loadCatalogue().then(value => { if (live) setCatalogue(value); }).catch(() => {
+      if (live) setError("The task library could not load. Check your connection and try again.");
+    }).finally(() => { if (live) setLoading(false); });
+    return () => { live = false; };
+  }, [enabled, attempt, starterFirst]);
+  return { catalogue, starterCatalogue: starterFirst ? starterCatalogue : null, complete: catalogue !== null, loading, error, retry };
 }
+export function useCatalogue(enabled = true) { return useCatalogueState(enabled).catalogue; }
 const textCache = new Map<string, Promise<string | null>>();
 export function loadSkillText(slug: string, file = "SKILL.md"): Promise<string | null> {
   const key = `${slug}/${file}`;
@@ -311,7 +355,7 @@ export const taskOf = (b: Block) => TASK_BY_ID.get(b.task) ?? TASKS[0];
 
 const pageCache = new Map<string, Promise<Page | null>>();
 export function loadPage(slug: string): Promise<Page | null> {
-  if (!pageCache.has(slug)) pageCache.set(slug, fetch(`/data/pages/${slug}.json`).then((r) => (r.ok ? r.json() : null)).catch(() => null));
+  if (!pageCache.has(slug)) pageCache.set(slug, fetch(`/data/pages/${slug}.json`).then((r) => (r.ok ? r.json() : null)).catch(() => null).then(page => { if (!page) pageCache.delete(slug); return page; }));
   return pageCache.get(slug)!;
 }
 

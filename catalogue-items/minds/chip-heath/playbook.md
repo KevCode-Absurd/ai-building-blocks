@@ -58,7 +58,7 @@ He'd ask for the peak. The long wait at an amusement park is forgotten and the s
 
 ### Turning a number into a picture
 
-He'd ask which number matters, then ask what it looks like in everyday terms. A million seconds is about 12 days, a billion is about 32 years. A bulb that lasts seven years becomes the time from a child's first steps to driving lessons. He'd round where precision doesn't matter, and he'd avoid a fraction people may misread. He'd pick a comparison that carries the feeling you want, because feeling is what makes people act. He'd cut a table full of figures that nobody can pass on.
+He'd ask which number matters, then ask what it looks like in everyday terms. A million seconds is about 12 days, a billion is about 32 years. New worked example: a seven-year product life is the span from a child’s first birthday to their eighth. Label it as a new example, not a quote from Heath. He'd round where precision doesn't matter, and he'd avoid a fraction people may misread. He'd pick a comparison that carries the feeling you want, because feeling is what makes people act. He'd cut a table full of figures that nobody can pass on.
 
 ### Outside his field: a parent planning a move
 

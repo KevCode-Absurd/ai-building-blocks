@@ -1,0 +1,19 @@
+slug: ad-performance-early-warning-reviewer
+name: Ad performance early-warning reviewer
+summary: Compare ad costs, frequency, clicks and view rates with past results. Flag signals to check without predicting a sales drop.
+category: ecommerce
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: audit_report
+    required: true
+uses: []
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

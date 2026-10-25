@@ -1,0 +1,128 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "adId",
+    "format",
+    "evidenceMode",
+    "observed",
+    "inferred",
+    "unknowns",
+    "adaptation"
+  ],
+  "properties": {
+    "adId": {
+      "type": "string"
+    },
+    "format": {
+      "type": "string"
+    },
+    "evidenceMode": {
+      "enum": [
+        "full-media",
+        "keyframes-only",
+        "text-only"
+      ]
+    },
+    "observed": {
+      "type": "object",
+      "properties": {
+        "opening": {
+          "type": "string"
+        },
+        "hookStartSeconds": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "hookEndSeconds": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "beats": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "start": {
+                "type": "number"
+              },
+              "end": {
+                "type": "number"
+              },
+              "visual": {
+                "type": "string"
+              },
+              "spoken": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "ctaWords": {
+          "type": "string"
+        },
+        "ctaTimeSeconds": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "layoutZones": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "productionTier": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    },
+    "inferred": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "unknowns": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "adaptation": {
+      "type": "object",
+      "required": [
+        "keep",
+        "replace",
+        "proofNeeded"
+      ],
+      "properties": {
+        "keep": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "replace": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "proofNeeded": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

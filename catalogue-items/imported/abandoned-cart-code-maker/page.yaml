@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It creates real codes, so it must get the rules right.
 new_slug: abandoned-cart-code-maker
 name: Abandoned cart code maker
-summary: Connect your Shopify store. Get one discount code per shopper who left a cart, plus a tag.
+summary: Connect your Shopify store. Get one discount code per shopper who left
+  a cart, plus a tag.
 job: make-offer
 headline: Abandoned cart code maker
-subhead: Give it your Shopify store, how many days back to look, a minimum cart value and the discount. It pulls recent abandoned checkouts, drops small carts and makes one unique code per shopper. You get a preview count, the live codes, a tag on each customer and a summary. Codes cannot be bulk deleted.
+subhead: Give it your Shopify store, how many days back to look, a minimum cart
+  value and the discount. It pulls recent abandoned checkouts, drops small carts
+  and makes one unique code per shopper. You get a preview count, the live
+  codes, a tag on each customer and a summary. Codes cannot be bulk deleted.
 explain: |
   You get a unique discount code for each shopper who left a cart, and each of them is tagged in your Shopify store so you can message them next. The codes are live as soon as they are made, and they cannot be bulk deleted.
 
@@ -27,6 +31,9 @@ you_get:
   - A tag on each customer
   - A summary of what was created
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
-  - It works best when your AI can access your Shopify admin and change live store data.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
+  - It works best when your AI can access your Shopify admin and change live
+    store data.

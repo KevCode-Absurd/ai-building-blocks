@@ -1,0 +1,33 @@
+new_slug: rapid-cut-product-video-prompt
+name: Rapid-cut product video prompt
+summary: Share a product and short spot idea. Get a timed product-only or surreal comedy prompt with a clear final hero shot.
+job: make-video-ads
+headline: Rapid-cut product video prompt
+subhead: Share a product and short spot idea. Get a timed product-only or surreal comedy prompt with a clear final hero shot. Bring the brief and any files you want it to use.
+explain: |-
+  Use this when you need a timed product-only or surreal-comedy spot. Choose product-only hyper-motion or surreal actor-and-product comedy. These are modes of one short-spot method; neither requires a long spoken script.
+
+  Get duration, real product reference, palette and permitted transformations. Product package geometry, label, logo and material remain fixed even when its surroundings become surreal.
+when:
+  - You need a timed product-only or surreal-comedy spot.
+  - You want a clear draft and checks from the material you already have.
+you_give:
+  - brief
+  - "Optional: product photos"
+you_get:
+  - video prompt
+  - shot list
+  - Missing inputs and steps that still need to run
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Read the brief
+    text: Choose product-only hyper-motion or surreal actor-and-product comedy. These are modes of one short-spot method; neither requires a long spoken script.
+  - title: Build the result
+    text: "For product-only default architecture use ten short beats: material-world macro, material cascade, floating elements, vortex, pack reveal, label/material detail, badge accent, hero arc, tactile payoff and final hero hold."
+  - title: Check and hand off
+    text: Keep the final label/front readable; exact text may require compositing approved artwork. Choose audio intentionally and avoid unsupported claims about model superiority, price or render resolution.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

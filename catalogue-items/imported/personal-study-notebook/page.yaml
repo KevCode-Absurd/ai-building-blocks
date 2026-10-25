@@ -1,0 +1,36 @@
+thinking: medium
+thinking_why: It follows a set method and adapts its questions or draft to your evidence.
+new_slug: personal-study-notebook
+name: Personal study notebook
+summary: Choose a subject and note folder. Get a study plan, lesson notes,
+  quizzes and a progress dashboard.
+job: study-and-practice
+headline: Personal study notebook
+subhead: Choose a subject, goal and folder for your notes. It learns your
+  preferences, plans short lessons and checks your answers. You get lesson
+  notes, quiz feedback, review dates and a dashboard that keeps the next study
+  step visible.
+explain: Choose a subject, goal and folder for your notes. It learns your
+  preferences, plans short lessons and checks your answers. You get lesson
+  notes, quiz feedback, review dates and a dashboard that keeps the next study
+  step visible.
+you_give:
+  - Your subject, goal, current level and weekly study time.
+  - A local folder for notes and any source materials.
+you_get:
+  - A personal study plan and lesson notes.
+  - Quiz reports and review dates.
+  - A progress dashboard in Markdown or static HTML.
+how_it_works:
+  - title: Step 1
+    text: Ask about your learning goal, preferred explanations and note format.
+  - title: Step 2
+    text: Plan phases and write source-based lesson notes.
+  - title: Step 3
+    text: Quiz each topic and update review dates, logs and the dashboard.
+how_to_use:
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
+  - It works best when your AI can read and write local notes.

@@ -7,12 +7,12 @@
 
 export default {
   slug: "hire-or-freelance",
-  name: "Know whether to hire or use a freelancer",
+  name: "Employee or freelancer costs",
   /** The plain name, used where the tool talks about itself. */
-  short: "Hire or freelance",
-  headline: "Know whether hiring or a freelancer costs less for the same work",
-  summary: "Type the salary, the extra costs, the hours of work and the freelancer's rate. You get both yearly costs and the hours where hiring becomes cheaper.",
-  question: "Is it cheaper to hire someone or pay a freelancer for this work, and from how many hours does hiring win?",
+  short: "Employee or freelancer costs",
+  headline: "Employee or freelancer costs",
+  summary: "Enter salary, employment costs, workload and freelance rate. Compare yearly costs and the hours at which an employee costs less.",
+  question: "Which costs less for this workload: an employee or a freelancer?",
   shelf: ["general"],
   version: "1.0.0",
   updated: "2026-10-21",
@@ -22,7 +22,7 @@ export default {
     { id: "oncost", label: "Extra costs on top of salary", unit: "percent", example: 25, min: 0, max: 200, step: 5, help: "Employer taxes, benefits, equipment, software and paid time off, as a share of salary. These differ by country, so check with an accountant.", where: "Your accountant, or the employer costs for your country.", tools: ["Your accountant", "Your payroll provider"] },
     { id: "hours", label: "Hours of this work a year", unit: "hours", example: 1200, min: 0, max: 100000, step: 50, help: "How many hours of this work you need in a year.", where: "Time you or your team spend on it now, or what a freelancer billed last year.", tools: ["Toggl or Harvest", "Freelancer invoices", "Your calendar"] },
     { id: "rate", label: "Freelancer's hourly rate", unit: "money", example: 50, min: 0, max: 1e6, step: 5, help: "What a freelancer charges for an hour of this work.", where: "Quotes from two or three freelancers, or past invoices.", tools: ["Freelancer quotes", "Upwork or Fiverr rates", "Past invoices"] },
-    { id: "capacity", label: "Hours one employee works a year", unit: "hours", example: 1800, min: 1, max: 5000, step: 50, help: "Hours actually worked after holidays and sick days. A full-time year is about 1,800.", where: "The contract hours of the role, less time off.", tools: ["Your contract template"] },
+    { id: "capacity", label: "Hours one employee works a year", unit: "hours", example: 1800, min: 1, max: 5000, step: 50, help: "Hours one employee can work after leave. Use the work pattern and your own calendar.", where: "The contract hours of the role, less time off.", tools: ["Your contract template"] },
   ],
   outputs: [
     { id: "employeeCost", label: "Cost of an employee a year", unit: "money", formula: "salary * (1 + oncost / 100)", sum: "{salary} × (100% + {oncost}) = {=}", means: "You pay this whether the work fills the year or not." },
@@ -62,7 +62,7 @@ export default {
     { what: "Hours where hiring becomes cheaper", how: "Employee cost ÷ freelancer rate. The standard make-or-buy break-even sum." },
   ],
   notes: [
-    "Employment costs and the rules on who counts as an employee or a freelancer differ by country, so check the numbers with an accountant and the rules with a lawyer.",
+    "Staff costs and the rules on hiring differ by country. Check the costs with your accountant. Ask a lawyer if you need to check whether a role can be freelance.",
     "This leaves out the cost of finding and training a hire, and your time managing either choice.",
     "It says nothing about quality, how fast someone can start, or whether the work will last. Those can matter more than the cost.",
   ],

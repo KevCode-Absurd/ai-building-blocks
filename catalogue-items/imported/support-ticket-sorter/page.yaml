@@ -2,10 +2,14 @@ thinking: low
 thinking_why: Sorting tickets by clear rules needs little deep thought.
 new_slug: support-ticket-sorter
 name: Support ticket sorter
-summary: Give it incoming tickets. Get each one classified, ranked by severity, routed and given a first reply.
+summary: Give it incoming tickets. Get each one classified, ranked by severity,
+  routed and given a first reply.
 job: help-customers
 headline: Support ticket sorter
-subhead: Paste a batch of incoming tickets, with your team list and severity rules if you have them. For each ticket it works out what the customer wants, sets a severity, picks the team and drafts a first reply. You get the sorted list with urgent cases flagged for escalation.
+subhead: Paste a batch of incoming tickets, with your team list and severity
+  rules if you have them. For each ticket it works out what the customer wants,
+  sets a severity, picks the team and drafts a first reply. You get the sorted
+  list with urgent cases flagged for escalation.
 explain: |
   A batch of tickets sorted in one pass. Each gets a type, a severity, an owner and a first reply, so urgent ones surface first.
 
@@ -27,5 +31,7 @@ you_get:
   - A draft first reply
   - An escalation flag for urgent cases
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.

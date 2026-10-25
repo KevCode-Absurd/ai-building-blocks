@@ -1,0 +1,38 @@
+new_slug: the-job-queue-where-agents-actually-run-implementation-planner
+name: Recoverable agent job queue builder
+summary: Build a scoped job queue with repeat-safe work, retries, recovery and a clear path for failed jobs.
+job: build-software
+headline: Recoverable agent job queue builder
+subhead: Build a scoped job queue with repeat-safe work, retries, recovery and a clear path for failed jobs.
+explain: |-
+  Share job schema, redis connection, worker registry and retry rules. Get an idempotent queue worker with recovery and dead-letter handling.
+
+  The complete method and its supporting files are in the download. It marks missing inputs and separates proposed actions from actions that were actually completed.
+when:
+  - You need an idempotent queue worker with recovery and dead-letter handling.
+  - You are adding this function to an agent system.
+  - You need to compare an existing version with the supplied starter.
+you_give:
+  - Job schema, Redis connection, worker registry and retry rules
+you_get:
+  - An idempotent queue worker with recovery and dead-letter handling
+  - A failure checklist and synthetic test cases
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Step 1
+    text: Create a durable scoped job before enqueueing its stable ID.
+  - title: Step 2
+    text: Bound retries with backoff.
+  - title: Step 3
+    text: Check budget and policy before work.
+  - title: Step 4
+    text: Mark active, complete or failed states.
+  - title: Step 5
+    text: Recover orphaned jobs without repeating side effects.
+  - title: Step 6
+    text: Diagnose stuck jobs and preserve dead-letter evidence before any replay.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

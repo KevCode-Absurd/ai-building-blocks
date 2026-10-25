@@ -1,0 +1,28 @@
+new_slug: nonprofit-executive-board-report-writer
+name: Write a nonprofit executive board report
+summary: Write a board report that asks for clear decisions. Explain results, risks and the next steps the executive owns.
+job: lead-people
+headline: Write a nonprofit executive board report
+subhead: Bring the board’s goals, results and open issues. Draft the executive’s report, chair agenda or review memo with evidence and clear requests.
+explain: Bring the board’s goals, results and open issues. Draft the executive’s report, chair agenda or review memo with evidence and clear requests.
+when:
+  - You want to write a nonprofit executive board report.
+you_give:
+  - Board governance model, written expectations and upcoming decisions
+  - Verified results, risks, dashboard and previous commitments
+you_get:
+  - Executive narrative and decision requests
+  - Chair meeting agenda, executive-session preparation or evaluation memo
+how_to_use:
+  - Download the complete skill folder and add it to your AI tool, or copy the instructions into a chat.
+  - Provide the inputs listed here and ask your AI to follow the skill.
+  - Review the result and any missing facts before using it.
+how_it_works:
+  - title: Establish the board’s frame
+    text: Confirm the governance model and written limits, then separate vote requests, exceptions and questions for discussion.
+  - title: Write the executive material
+    text: Explain what changed and why without repeating every dashboard number; tie claims to evidence and name unresolved gaps.
+  - title: Close the loop
+    text: Prepare chair follow-ups, evaluation evidence or a meeting debrief with owners and commitments.
+thinking: medium
+thinking_why: It weighs your evidence and follows a specific method.

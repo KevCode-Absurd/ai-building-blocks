@@ -1,23 +1,19 @@
 thinking: medium
-thinking_why: "It writes or plans with a handful of checks."
+thinking_why: It compares supplied evidence and follows a specific method.
 new_slug: visual-twist-image-ad-maker
-name: "Visual twist image ad maker"
-summary: "Paste a buyer's words. Get a one-twist image ad, its words, layout and image prompt."
+name: Visual twist image ad maker
+summary: Paste a buyer's words. Get a one-twist image ad, its words, layout and image prompt.
 job: make-image-ads
-
-headline: "Visual twist image ad maker"
+headline: Visual twist image ad maker
 subhead: Give it the problem in a buyer's words, your product facts, a product photo and your colours. It anchors the idea in a real moment and adds one twist that is both unexpected and relevant. You get the words, the layout and an image prompt ready to paste.
-
 explain: |
   Ask an image tool for an ad and you get a centred product, a floating headline and a pretty picture of the benefit. People scroll past it, because they've seen it a thousand times and nothing in it is about them.
 
   This skill builds the picture from one thought you want the buyer to have. It anchors that thought in a real moment from a review, then adds one twist: two things side by side, merged, or one swapped in where another belongs. Research on ads shows people remember what is both unexpected and relevant, so the skill checks both before it writes a word. It keeps the frame simple, gives the headline one job (a gain, news or a question about the picture) and builds the real product from your photo.
-
 when:
   - Your image ads look like everyone's, with a product in the middle and a benefit headline.
   - You have a review that describes a vivid moment and want a picture built on it.
   - You need an image prompt with a clear layout, because "make an ad for my product" keeps giving you the same ad.
-
 you_give:
   - The problem in a buyer's words and the moment it shows
   - Your product facts, the line on how it works and what you never show
@@ -29,14 +25,12 @@ you_get:
   - A headline with its job, a support line and the line under the image
   - Layout notes and how to draw the product from your photo
   - An image prompt ready to paste, plus a MISSING list
-
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste one review that describes the problem, word for word, and say when it happens.
   - Paste your product facts and claims, and attach your product photos.
   - Give your colours as hex codes and your typeface name.
   - Read the MISSING lines, then paste the image prompt into your image tool and set the words in your design tool.
-
 how_it_works:
   - title: Writes the one thought
     text: Finishes "After one look, the buyer thinks..." in the buyer's own words.
@@ -52,7 +46,6 @@ how_it_works:
     text: One focal point, the real product readable at thumbnail size, words in one quiet area, at most two colours.
   - title: Writes the prompt
     text: Problem first, then the twist, then the product from your photo, with scale set against something ordinary.
-
 output_shape: |
   ONE THOUGHT  <what the buyer thinks after one look> (<quote and source>)
   MOMENT       <place, object, time>
@@ -77,7 +70,6 @@ output_shape: |
   Not used: <options dropped, and why>
   CHECKS MISSED: <one line each, or none>
   Still to do: <a check that needs a photo you couldn't see, or none>
-
 example:
   business: sprout
   input: |
@@ -151,7 +143,6 @@ example:
               A news headline, since no new fact fits this thought.
     CHECKS MISSED: none
     Still to do: none
-
 tweaks:
   - what: The one thought
     how: Change the sentence and the whole ad changes. For Sprout, "A gummy can hold enough" leads to a fact-led picture instead of a mess.
@@ -161,7 +152,6 @@ tweaks:
     how: Name it if you have a house look. A sketch suits how it works; a drawn look suits a private subject; a photo suits a real cost or mess.
   - what: The frame size
     how: Say "tall 9:16" and the words move out of the top seventh and the bottom third, where the app's buttons sit.
-
 judge:
   - Cover the headline. The picture alone shows the problem.
   - You can say in one sentence why the picture is unexpected and why it's relevant.
@@ -169,28 +159,26 @@ judge:
   - The picture shows the problem or its cause, never a result like a changed body or a before-and-after.
   - The headline names a moment or a gain, not a condition the reader has.
   - The prompt mentions the problem before the product.
-
 test:
   - Run it on the problem your best-selling ad already shows. Compare the twist with your ad. If yours is still stronger, name your structure in the input and run again.
   - Make the image, cover the words and show it to someone who has the problem. If they can't say what's wrong in a second, ask for a simpler twist.
   - Run it twice with the same quote. The one thought and the moment should match.
   - Compare the drawn product with your real photo. Shape, colours and large print must match; any invented small print means the prompt needs the "leave small print out" line.
-
 improve:
   - Paste your brand colours and typeface into "What you need", and attach the same product photos each run, so every run builds the product the same way.
   - Add your show-it-right rules (how the pack opens, what's never shown) to the check list.
   - Save each one thought that wins, with its twist, in your brand file, and name it in your next run.
   - Pair it with a skill that checks finished image ads for errors before you spend.
-
 works_best_with:
   tools:
-    - {name: "GPT Image", why: "Keeps your real product close to its reference photo, and sets short headlines better."}
-    - {name: "Nano Banana", why: "Takes up to 6 product photos and is Google's pick for brand consistency, so the product and colours stay true."}
+    - name: GPT Image
+      why: Keeps your real product close to its reference photo, and sets short headlines better.
+    - name: Nano Banana
+      why: Takes up to 6 product photos and is Google's pick for brand consistency, so the product and colours stay true.
   inputs:
-    - "Two or three of your ads that people ignored, so the twist avoids looking like them"
-    - "A photo of the real moment from your team or a customer (with permission), so the scene has the one exact detail"
-    - "A product photo from the angle the scene needs, so the image model doesn't have to guess the side it can't see"
-
+    - Two or three of your ads that people ignored, so the twist avoids looking like them
+    - A photo of the real moment from your team or a customer (with permission), so the scene has the one exact detail
+    - A product photo from the angle the scene needs, so the image model doesn't have to guess the side it can't see
 terms:
   - term: Twist
     meaning: The one unexpected move in the picture, such as two things side by side or one thing swapped in where another belongs.

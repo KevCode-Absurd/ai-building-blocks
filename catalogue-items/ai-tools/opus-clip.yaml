@@ -2,17 +2,17 @@ slug: opus-clip
 name: Opus Clip
 maker: Opus
 url: https://www.opus.pro
-promise: Turn one long video into short clips ready to post.
+promise: "Turn long recordings into captioned short clips to review and post."
 use_cases: [edit-video]
 categories: [video]
 what_it_does:
-  - Finds the best moments in a long video.
+  - "Suggests moments to turn into short clips."
   - Cuts them into short clips sized for TikTok, Reels and Shorts.
   - Adds captions to each clip.
   - Reframes the video so the speaker stays in view.
 benefits:
-  - Get a week of short posts from one podcast or webinar.
-  - Skip the hours of scrubbing through a long recording.
+  - "Create several short clip drafts from a podcast or webinar."
+  - "Review suggested moments instead of searching only by hand."
   - Post a clip every day from videos you already have.
 best_for:
   - Podcasters, webinar hosts and course makers.

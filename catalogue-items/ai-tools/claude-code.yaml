@@ -2,7 +2,7 @@ slug: claude-code
 name: Claude Code
 maker: Anthropic
 url: https://claude.com/product/claude-code
-promise: An AI coding agent that fixes bugs and writes tests in your project.
+promise: "Change project code, fix bugs and run tests with an AI coding agent."
 use_cases: [code, build-apps]
 categories: [coding]
 what_it_does:
@@ -10,13 +10,13 @@ what_it_does:
   - Fixes bugs, refactors code and moves a project to a new setup.
   - Maps and explains a codebase you have never seen.
   - Opens pull requests for the changes it makes.
-  - Asks before it edits files or runs commands.
+  - "Can ask for approval before editing files or running commands."
   - Runs in the terminal, your editor, the web, the desktop app and Slack.
 benefits:
   - Get a first pass at a bug fix while you work on something else.
-  - Understand an unfamiliar project in an afternoon instead of a week.
-  - Keep project rules in a file so the agent follows them every time.
-  - Review every change before it lands, because it asks first.
+  - "Use an explanation of the files and code paths to explore an unfamiliar project."
+  - "Save project rules in a file for the agent to use."
+  - "Review changes before you merge or deploy them."
 best_for:
   - Developers who want an agent that works across a whole project.
   - Founders with a codebase who need bugs fixed and tests written.

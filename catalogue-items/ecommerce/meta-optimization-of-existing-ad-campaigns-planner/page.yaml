@@ -1,0 +1,37 @@
+new_slug: meta-optimization-of-existing-ad-campaigns-planner
+name: Meta campaign change review planner
+summary: Review proposed changes to a Meta campaign. Use matched evidence, isolate the change and define how to judge the result.
+job: launch-and-scale-ads
+headline: Meta campaign change review planner
+subhead: Review proposed changes to a Meta campaign. Use matched evidence, isolate the change and define how to judge the result.
+explain: |-
+  Share campaign settings, dated results, target economics and budget limits. Get a campaign plan with proposed settings and review points.
+
+  Follow the actual current account/project structure rather than source screenshots or fixed historical settings.
+when:
+  - You need a campaign plan with proposed settings and review points.
+you_give:
+  - Campaign settings, dated results, target economics and budget limits
+  - The exact change you want and actions you authorize
+you_get:
+  - A campaign plan with proposed settings and review points
+  - Missing inputs and a bounded verification plan
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Step 1
+    text: Clarify the account goal, current budget and approved economics. ROAS means attributed revenue divided by ad spend; one-times ROAS only equates those two quantities. Require contribution margin and variable costs, or an approved lifetime-value/payback basis, before calling an acquisition result break-even or profitable.
+  - title: Step 2
+    text: Review campaign purpose and aggregate results, then inspect ad-set and ad-level spend, purchases, revenue, CPA and order value. Identify the source of a weak aggregate before recommending an entire ad-set pause. Match dates, attribution and currency across levels.
+  - title: Step 3
+    text: Assess each ad against the owner-approved spend exposure, conversion delay and evidence threshold. A source example such as forty dollars spent without a purchase is not a universal pause rule. Leave genuinely under-observed ads in an explicit gather-evidence state with a review date.
+  - title: Step 4
+    text: Use CTR, CPC, CPM, video attention, landing-page views and cart activity to narrow possible causes. Do not allow an attractive engagement metric or high reported ROAS to overrule missing contribution, tracking or customer-mix evidence.
+  - title: Step 5
+    text: Prepare maintain, investigate, refresh or proposed-pause actions, noting the exact evidence and risk. Evaluate evergreen and retargeting work in their own context without treating either as exempt from spend controls or customer-overlap checks.
+  - title: Step 6
+    text: Record authorized changes, prior settings, reasoning and follow-up time. Request new concepts or hooks tied to observed gaps. Reassess after enough data and lag, rather than assuming every account stabilizes in two or three days or that a change caused a later result.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

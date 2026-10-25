@@ -1,0 +1,40 @@
+new_slug: agent-delegation-builder
+name: Agent delegation and dependency planner
+summary: Plan which agent owns each task, what it may do and which inputs it must wait for. Get handoff and failure rules.
+job: build-software
+headline: Agent delegation and dependency planner
+subhead: Plan which agent owns each task, what it may do and which inputs it must wait for. Get handoff and failure rules.
+explain: |-
+  Share agent registry, authority rules, issue tree and blocked dependencies. Get a scoped delegation plan with authority and dependency checks.
+
+  The complete method and its supporting files are in the download. It marks missing inputs and separates proposed actions from actions that were actually completed.
+when:
+  - You need a scoped delegation plan with authority and dependency checks.
+  - You are adding this function to an agent system.
+  - You need to compare an existing version with the supplied starter.
+you_give:
+  - Agent registry, authority rules, issue tree and blocked dependencies
+you_get:
+  - A scoped delegation plan with authority and dependency checks
+  - A failure checklist and synthetic test cases
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Step 1
+    text: Confirm client scope.
+  - title: Step 2
+    text: Select the specialist by domain.
+  - title: Step 3
+    text: Check delegation authority and parent depth.
+  - title: Step 4
+    text: Record blocked dependencies before wakeup.
+  - title: Step 5
+    text: Route risky work through its approval policy.
+  - title: Step 6
+    text: Create one child issue, then record its wakeup and audit entry.
+  - title: Step 7
+    text: Never wake blocked work.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

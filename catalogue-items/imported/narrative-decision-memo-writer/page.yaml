@@ -1,0 +1,28 @@
+thinking: high
+thinking_why: It follows a set method with a few checks.
+new_slug: narrative-decision-memo-writer
+name: Narrative decision memo writer
+summary: Share a decision and evidence. Get a clear memo with choices, risks, missing facts, and a review plan.
+job: document-work
+headline: Narrative decision memo writer
+subhead: Share the decision, reader, evidence, and limits. It chooses a short brief, fuller narrative, or future-product question document. You get a connected argument with choices, costs, risks, and gaps kept visible. It uses original templates inspired by Amazon's writing practices.
+you_give:
+  - The reader, decision, evidence, options, known costs, constraints, and review needs.
+you_get:
+  - A decision memo or short brief, assumptions and evidence gaps, and review arrangement when requested.
+how_it_works:
+  - title: Choose the right form
+    text: Respect the requested document and reader. Use only the structure and length the decision needs.
+  - title: Build the argument
+    text: Compare real alternatives, the current baseline, costs, risks, assumptions, and what evidence could change the call.
+  - title: Revise for the reader
+    text: Improve the reasoning and connected prose. Keep important limits in the main text and preserve the writer's voice.
+  - title: Plan review and closure
+    text: Name the decision owner and review questions. Do not claim approval, sending, or an exact page count without evidence.
+works_best_with:
+  tools:
+    - name: A chat AI that can read the bundled reference files
+      why: Use the supplied references and templates for the chosen task. Scripts are optional unless that task specifically needs them.
+how_to_use:
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.

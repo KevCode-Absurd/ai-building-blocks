@@ -2,10 +2,14 @@ thinking: low
 thinking_why: It captures a decision you already made in a fixed format.
 new_slug: decision-record-writer
 name: Decision record writer
-summary: Tell it a design choice you made. Get a short record of why, with the options you passed on.
+summary: Tell it a design choice you made. Get a short record of why, with the
+  options you passed on.
 job: build-software
 headline: Decision record writer
-subhead: Tell it about a design or technology choice, the options you considered and your reasons. It checks your project for an existing record format and matches it. You get a short decision record with the context, the rejected options, the trade-offs you accepted and a suggested file name and place.
+subhead: Tell it about a design or technology choice, the options you considered
+  and your reasons. It checks your project for an existing record format and
+  matches it. You get a short decision record with the context, the rejected
+  options, the trade-offs you accepted and a suggested file name and place.
 explain: |
   A short written record of why you chose option A over option B, so nobody has to ask in six months. Tell it about a design or technology choice and you get a record of the context, the options you passed on and the trade-offs you accepted.
 
@@ -26,5 +30,7 @@ you_get:
   - Stated trade-offs
   - Suggested file name and place
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.

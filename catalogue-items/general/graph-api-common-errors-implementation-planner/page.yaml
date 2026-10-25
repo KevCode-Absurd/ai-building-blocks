@@ -1,0 +1,36 @@
+new_slug: graph-api-common-errors-implementation-planner
+name: Meta API access troubleshooter
+summary: Build a cause-by-cause access diagnosis and a safe retry plan.
+job: build-software
+headline: Meta API access troubleshooter
+subhead: Share token scopes, account access and three redacted api probe results. Get a cause-by-cause access diagnosis and a safe retry plan.
+explain: |-
+  Share token scopes, account access and three redacted api probe results. Get a cause-by-cause access diagnosis and a safe retry plan.
+
+  The complete method and its supporting files are in the download. It marks missing inputs and separates proposed actions from actions that were actually completed.
+when:
+  - You need a cause-by-cause access diagnosis and a safe retry plan.
+  - You are adding this function to an agent system.
+  - You need to compare an existing version with the supplied starter.
+you_give:
+  - Token scopes, account access and three redacted API probe results
+you_get:
+  - A cause-by-cause access diagnosis and a safe retry plan
+  - A failure checklist and synthetic test cases
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Step 1
+    text: Compare the supplied error code and scope list.
+  - title: Step 2
+    text: Separate invalid tokens from missing account access.
+  - title: Step 3
+    text: Review account, Ads Library and insights probes in isolation.
+  - title: Step 4
+    text: Use redacted IDs and a bounded retry.
+  - title: Step 5
+    text: Do not broaden permissions without a specific need.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

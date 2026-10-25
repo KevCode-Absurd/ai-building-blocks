@@ -9,12 +9,12 @@
 
 export default {
   slug: "creator-deal-calculator",
-  name: "Know if a paid creator post will pay",
+  name: "Creator post profit calculator",
   /** The plain name, used where the tool talks about itself. */
-  short: "Creator deal calculator",
-  headline: "Know if a paid creator post will pay, and the views it needs",
-  summary: "Type the fee, the gift and what the post should get. You get the profit or loss on the deal, and the views the post needs to break even.",
-  question: "Will paying this creator or influencer for a post make money, and how many views does it need to pay back the fee?",
+  short: "Creator post profit calculator",
+  headline: "Creator post profit calculator",
+  summary: "Enter the fee, gift costs and expected views, clicks and sales. Estimate deal profit and the views needed to break even.",
+  question: "How many views and orders would cover this creator deal’s cost?",
   shelf: ["general", "ecommerce"],
   version: "1.0.0",
   updated: "2026-10-21",
@@ -23,7 +23,7 @@ export default {
     { id: "fee", label: "Fee for the post", unit: "money", example: 500, min: 0, max: 1e9, step: 50, help: "What you pay the creator. Use 0 for a gift-only deal.", where: "The price in your creator's quote or contract.", tools: ["Your creator's email or contract", "Your agency's quote"] },
     { id: "giftCost", label: "Cost of the gift", unit: "money", example: 30, min: 0, max: 1e9, step: 5, help: "What the product you send costs you, plus postage. It is your cost, not the shop price.", where: "Your cost of goods for the product, plus the courier fee.", tools: ["Your supplier invoices", "Shopify (cost per item)", "Your courier invoices"] },
     { id: "views", label: "Views you expect", unit: "count", example: 40000, min: 0, max: 1e10, step: 1000, help: "The views you expect the post to get. Use the creator's recent average, not their best post.", where: "The creator's last 10 posts of the same kind: add the views and divide by 10.", tools: ["The creator's profile", "Their media kit", "A social analytics tool"] },
-    { id: "clickRate", label: "Share of viewers who click your link", unit: "percent", example: 1, min: 0, max: 100, step: 0.1, help: "Out of all views, the share who click through to you. It is often under 2%.", where: "Your past creator posts: link clicks divided by views. If you have none, start low.", tools: ["Your link tracker", "Google Analytics", "Shopify analytics"] },
+    { id: "clickRate", label: "Share of viewers who click your link", unit: "percent", example: 1, min: 0, max: 100, step: 0.1, help: "Use the share of viewers who click your link, based on relevant past posts if available.", where: "Your past creator posts: link clicks divided by views. If you have none, start low.", tools: ["Your link tracker", "Google Analytics", "Shopify analytics"] },
     { id: "convRate", label: "Share of clickers who order", unit: "percent", example: 2, min: 0, max: 100, step: 0.1, help: "Out of everyone who clicks, the share who buy.", where: "Your store's conversion rate for social traffic, for the last 30 days.", tools: ["Shopify analytics", "Google Analytics"] },
     { id: "orderValue", label: "Average order value", unit: "money", example: 50, min: 0, max: 1e9, step: 1, help: "What an order from this post brings in.", where: "Your revenue divided by orders for the last 90 days.", tools: ["Shopify analytics", "Your accounts software"] },
     { id: "margin", label: "Profit margin on an order", unit: "percent", example: 45, min: 0, max: 100, step: 1, help: "The share of each order you keep after goods, shipping and fees, before the cost of this deal.", where: "The order margin tool, or your profit and loss report.", tools: ["Xero or QuickBooks", "Shopify analytics", "A spreadsheet of your sales"] },
@@ -42,7 +42,7 @@ export default {
   ],
   answer: [
     [
-      { if: "totalCost = 0", text: "The deal costs you nothing, so you can only gain. You expect {net} profit." },
+      { if: "totalCost = 0", text: "At the costs you entered, there is no fee or gift cost. Estimated profit is {net}." },
       { if: "NOT(HAS(breakEvenViews))", text: "No number of views pays this deal back, because clicks, orders or profit per order are zero. You lose {totalCost}." },
       { if: "net < 0", text: "At {views} views you lose {net:abs} on this deal. It needs {breakEvenViews} views to break even." },
       { if: "net = 0", text: "At {views} views you break even. Any fewer views and you lose money." },

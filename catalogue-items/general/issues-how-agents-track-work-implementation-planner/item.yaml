@@ -1,0 +1,19 @@
+slug: issues-how-agents-track-work-implementation-planner
+name: Agent issue and checkout builder
+summary: Build an issue schema and atomic checkout and release flow.
+category: general
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+    required: true
+uses: []
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

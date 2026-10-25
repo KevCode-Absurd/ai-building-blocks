@@ -1,0 +1,19 @@
+slug: build-the-video-performance-analyzer-builder-prompt
+name: Video ad results coding prompt
+summary: Get a coding brief to compare video ad results, calculate view rates and flag patterns worth checking.
+category: general
+type: prompt
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+    required: true
+uses: []
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

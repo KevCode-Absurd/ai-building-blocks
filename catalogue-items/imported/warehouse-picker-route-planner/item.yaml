@@ -1,6 +1,6 @@
 slug: warehouse-picker-route-planner
-name: Warehouse picker route planner
-summary: Give it your aisle layout and pick lists. Get the shortest walking order for each picker.
+name: "Warehouse picker route planner"
+summary: "Plan legal picker paths from a warehouse map, pick list and travel rules. Respect one-way aisles and return paths."
 category: general
 boards: []
 type: skill

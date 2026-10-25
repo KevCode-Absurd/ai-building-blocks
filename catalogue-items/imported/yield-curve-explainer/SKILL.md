@@ -1,54 +1,28 @@
 ---
 name: yield-curve-analysis
-description: Analyze the government yield curve — curve shape, 2s10s and 5s30s slopes, butterfly, and real-rate decomposition from the TIPS curve. Use for steepener/flattener/butterfly framing, curve roll-down, policy-expectation reads, and curve trade ideas. Free-source edition (US Treasury, ECB, FRED). This is the free replacement for the upstream swap-curve skill — swap spreads, basis, and swaption vols have no free source and are explicitly out of scope.
+description: Explain a government yield curve from dated official data. Calculate requested slopes, show sign conventions and missing points, and give neutral context. Market coverage depends on available sources.
 ---
 
-# Yield Curve Analysis
+# Yield Curve Explainer
 
-## India
-
-This skill operates on **Indian markets**. Load **`india-market-conventions`**
-before building anything, and **`india-market-data`** for sources. Two rules cause
-most Indian errors:
-
-- **Fiscal year is April–March.** `FY2025` = year ending **31 Mar 2025**; `Q1 FY26` =
-  Apr–Jun 2025. Label periods `Q3 FY26 (Oct–Dec 25)`, never a bare calendar year.
-  Never annualise a quarter without stating the fiscal offset.
-- **Units are lakh (10⁵) and crore (10⁷).** Never use the Excel format
-  `#,##0,," Cr"` — each trailing comma divides by 1,000, so that format displays
-  **lakh under a crore label: a 100× error**. Divide by `10000000` in a live
-  formula and label the column `Total Revenue (₹ Cr)`.
-
-What has no Indian equivalent is listed in `NOT-ADAPTABLE.md`. Name the gap —
-never substitute a proxy and present it as the real thing.
-
-You are a rates strategist. Build the government curve from free sources, decompose real rates
-against the TIPS curve, read curve shape, and frame curve trades.
-
-> **Scope note — this is not a swap curve.** The upstream skill was built on the LSEG
-> `ir_swap` connector: OIS/SOFR swap rates, swap spreads, and swaption vols. **None of those have a
-> free programmatic source.** A Treasury par curve is not a swap curve — substituting one for the
-> other and labelling the result "swap spreads" would be wrong, so this skill does not do it.
-> If a user genuinely needs swap spreads, say so and stop; the answer is a paid feed.
+> Modified by AI Blocks on 2026-10-24: method/copy repair.
 
 ## Core principles
 
-The curve prices expected future short rates plus a term premium. Always work in this order:
-establish the nominal curve, overlay the TIPS curve to get real rates, classify the shape, then
-place the historical context before calling a trade. Curve metrics (2s10s, 5s30s, 2s5s10s butterfly)
-mean little without knowing where they sit versus the last several years.
+Describe the supplied government curve using the source's instrument definition. Compare nominal and real yields only when the source provides compatible observations. Add historical context only when the same series is available over the chosen period. Keep interpretation descriptive; do not call trades or recommend positions.
 
 **Slope sign convention:** state it. "2s10s = −45bp" (inverted) and "10y-2y = +45bp" (steep) are the
 same market described two ways. Pick one, label it, and keep it.
 
 ## Data sources (free)
 
-| Need | Source |
+| Market and need | Example official source |
 |---|---|
 | US nominal curve, 1M–30Y, daily | US Treasury daily par yield CSV, no key — exact URL in `market-data-sources` |
 | US real curve (TIPS) | same feed, `type=daily_treasury_real_yield_curve` |
 | Bills / long-term average | same feed, `_bill_rates` / `_long_term` |
 | Euro curve | ECB `YC` SDMX, no key |
+| India government curve | Use official Indian source data only when the curve definition, date and permitted use are established; do not assume a public quote is a fitted curve |
 | Historical yields, keyless | FRED `fredgraph.csv?id=<SERIES>&cosd=…` |
 | Macro context | FRED (`GDPC1`, `CPIAUCSL`, `UNRATE`, `DFF`, `SOFR`), IMF DataMapper, World Bank |
 
@@ -65,26 +39,17 @@ All free sources are EOD or delayed — not real-time. Carry source + retrieval 
 
 ## Workflow
 
-1. **Pull the nominal curve.** Treasury par yields (or ECB `YC`) for standard tenors:
-   3M, 6M, 1Y, 2Y, 3Y, 5Y, 7Y, 10Y, 20Y, 30Y. Note the as-of date and flag any missing tenor.
-2. **Pull the real curve.** TIPS yields for the tenors that overlap. Where a tenor is missing on one
-   side, say so rather than silently matching a different point.
-3. **Classify the shape.** 2s10s, 5s30s, 3M-10Y, and the 2s5s10s butterfly. Name it: normal, flat,
-   inverted, or humped.
-4. **Decompose real rates.** Real rate = nominal − breakeven, per tenor. Assess whether real policy
-   is accommodative or restrictive. **This replaces the upstream inflation-breakeven connector step**
-   and is the correct free substitute.
-5. **Historical context.** Pull the same series over 1–3 years. Where does the current slope sit
-   versus that range — percentile, and has the shape been trending?
-6. **Macro read.** Cross-check with FRED policy rates and inflation prints. Is the curve consistent
-   with what the central bank is doing, or is it pricing something different?
-7. **Synthesize.** Deliver the tables below, then frame curve trades — but size them off the
-   **government** curve's DV01, and say plainly that swap-relative sizing is unavailable.
+1. **Set the market and date.** Use the country or currency area named by the user and an official source that identifies the instrument, units and observation date. Do not load India-specific conventions for another market or use US series as an India proxy.
+2. **Record nominal points.** Preserve whether the source reports par yields, zero rates or security quotes. List requested tenors; leave unavailable points blank with a reason.
+3. **Calculate requested slopes.** State formula and sign convention next to each result. Use same-date values from the same curve. Calculate `10Y−2Y`, `30Y−5Y`, or another slope only when both inputs exist. Do not label a curve flat unless a threshold was defined in advance.
+4. **Compare real yields only when supplied comparably.** For US Treasury data, TIPS real yields are observations for their stated dates and tenors. A breakeven is nominal Treasury yield minus same-date, same-tenor TIPS real yield; it is not a pure inflation forecast. For other markets, use the source's real-rate series only when its definition and horizon match.
+5. **Add history only from the same series.** State the comparison window and method. Do not infer percentiles or direction from a different instrument or a partial history.
+6. **Summarize neutrally.** Separate observed values, calculations and interpretation. Identify missing or incomparable data. Do not frame, size or recommend trades.
 
 ## Output format
 
 ### Curve table
-| Tenor | Nominal (%) | TIPS Real (%) | Breakeven (bp) |
+| Tenor | Nominal rate (source unit) | Comparable real rate (if available) | Breakeven (if matched) |
 |-------|-------------|---------------|----------------|
 | 2Y | | | |
 | 5Y | | | |
@@ -99,16 +64,14 @@ All free sources are EOD or delayed — not real-time. Carry source + retrieval 
 | 2s5s10s butterfly (bp) | | | |
 | Shape | | | |
 
-### Real-rate decomposition
-| Tenor | Nominal | Breakeven | Real | Signal |
+### Real-rate comparison (when comparable inputs exist)
+| Tenor | Nominal | Breakeven | Real | Notes |
 |-------|---------|-----------|------|--------|
-| 2Y | | | | Accommodative / Restrictive |
-| 10Y | | | | Accommodative / Restrictive |
+| 2Y | | | | |
+| 10Y | | | | |
 
-### Trade framing
-For each idea: structure (e.g. 2s10s steepener), the thesis in one or two sentences, what would
-invalidate it, and DV01 sizing **against the government curve**. State explicitly that these are
-Treasury-relative, not swap-relative.
+### Plain-language read
+Explain what the reported slopes and available real-rate observations show. State the limits of the data and avoid a forecast or trading recommendation.
 
 ## What this skill does not do
 
@@ -117,3 +80,9 @@ Treasury-relative, not swap-relative.
 - Live pricing.
 
 Say so rather than approximating. A labelled gap is a useful answer; a fabricated swap spread is not.
+
+## Repaired method and market scope
+
+Follow the market named by the user. The workflow below applies only where a named official source supplies the requested instrument and date. Preserve local period labels and units, and do not substitute another country's yield series. For India, use official Indian curve data only when its source definition and permitted use are established. For the US, distinguish Treasury par yields from zero rates and TIPS real yields. For euro-area curves, use the identified ECB series. Do not claim one source covers every market.
+
+The rules in this section control the whole method above. Use same-date, same-instrument tenor pairs. State slope formula and sign: 10Y−2Y; positive is upward by this convention, negative is inverted. Define a flat threshold before using that label; otherwise report the number only. Butterfly=2×5Y−2Y−10Y, with units and sign stated. Real yield is an observed series where available; do not also call it nominal minus an unrelated inflation series. Breakeven=nominal minus real only for matched instruments, tenors and dates, and is not a pure inflation forecast. Never fabricate or interpolate missing points. Report source, observation date, retrieval date and delayed/EOD status. Do not give trade advice or position sizing.

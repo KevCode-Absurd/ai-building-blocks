@@ -2,7 +2,7 @@ slug: higgsfield
 name: Higgsfield
 maker: Higgsfield
 url: https://higgsfield.ai
-promise: Images and video clips from many top models, in one place.
+promise: "Create images and short videos using several models in one account."
 use_cases: [make-images, make-video]
 categories: [image, video]
 what_it_does:
@@ -13,7 +13,7 @@ what_it_does:
   - Builds AI influencer characters and face swap or try-on clips.
 benefits:
   - Test a video ad idea with several models before you pay for a shoot.
-  - Keep your product the same across clips by starting from your photo.
+  - "Use your product photo to guide a clip, then check its details."
   - Use one account instead of signing up for each model.
 best_for:
   - Product ads and short clips for Reels, TikTok and Shorts.

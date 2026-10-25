@@ -1,0 +1,33 @@
+new_slug: nano-banana-image-prompt-planner
+name: Nano Banana image and edit prompt planner
+summary: Describe an image or edit. Get matching plain-language and JSON prompts with clear reference roles and changes.
+job: make-images
+headline: Nano Banana image and edit prompt planner
+subhead: Describe an image or edit. Get matching plain-language and JSON prompts with clear reference roles and changes. Bring the brief and any files you want it to use.
+explain: |-
+  Use this when you need paired natural-language and JSON image/edit prompts. Choose generation, edit, composite/outpaint, style extraction or style reuse from the actual request. A single requested change is not permission to redesign the whole scene.
+
+  Build the three pillars: subject, physical context and style. Set camera position/direction, action/body position, expression, lighting, foreground/background, color and aspect ratio only where relevant.
+when:
+  - You need paired natural-language and JSON image/edit prompts.
+  - You want a clear draft and checks from the material you already have.
+you_give:
+  - brief
+  - "Optional: approved image"
+  - "Optional: reference set"
+you_get:
+  - image prompt
+  - Missing inputs and steps that still need to run
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Read the brief
+    text: Choose generation, edit, composite/outpaint, style extraction or style reuse from the actual request. A single requested change is not permission to redesign the whole scene.
+  - title: Build the result
+    text: Return plain language first and JSON second with equivalent information. Keep fields meaningful; omit irrelevant clothing/skin fields for non-human subjects.
+  - title: Check and hand off
+    text: Check JSON parses, edit instructions do not conflict with preserve rules, and the plain-language/JSON versions agree. Prompt drafting does not imply an image was rendered.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

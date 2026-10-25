@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It scans many deals for set warning signs.
 new_slug: deal-watch-digest-writer
 name: Deal watch digest writer
-summary: Pick a pipeline, tier or team. Get a short alert list of quiet deals, slipping dates and renewals.
+summary: Pick a pipeline, tier or team. Get a short alert list of quiet deals,
+  slipping dates and renewals.
 job: sell-and-negotiate
 headline: Deal watch digest writer
-subhead: "Pick the scope, such as your own pipeline, a tier of accounts or your team, and a time period. It sweeps the open deals and reports only what changed or crossed a line. You get a short alert list ranked by urgency: quiet deals, slipping dates, renewals and competitor mentions."
+subhead: "Pick the scope, such as your own pipeline, a tier of accounts or your
+  team, and a time period. It sweeps the open deals and reports only what
+  changed or crossed a line. You get a short alert list ranked by urgency: quiet
+  deals, slipping dates, renewals and competitor mentions."
 explain: |
   A short alert list you can read every day. It sweeps your open deals and reports only what changed or crossed a line: quiet deals, slipping close dates, renewals opening soon, competitors named, and buyers waiting on a reply.
 
@@ -26,6 +30,8 @@ you_get:
   - Upcoming renewals
   - Competitor mentions
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
   - It works best when your AI can read your CRM, email and calendar.

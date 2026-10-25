@@ -1,5 +1,6 @@
 // Small, private browser utilities. Shared metadata keeps routes, search and SEO aligned.
 import { NEXT_TOOLS } from './next-100-tools.mjs';
+import { LIBRARY_COVERAGE_TOOLS } from './library-coverage-tools.mjs';
 import { parseCsv, csvToJson } from './csv-utils.mjs';
 export { parseCsv, csvToJson } from './csv-utils.mjs';
 export const BROWSER_TOOLS = [
@@ -11,6 +12,7 @@ export const BROWSER_TOOLS = [
   { slug: "task-priority-planner", short: "Task priority planner", category: "personal", summary: "Rank tasks by impact, urgency and hours of effort so you can choose what to do next." },
   { slug: "weighted-decision-matrix", short: "Weighted decision matrix", category: "work", summary: "Compare options against criteria you choose, with visible weights and scores." },
   ...NEXT_TOOLS,
+  ...LIBRARY_COVERAGE_TOOLS,
 ].map(t => ({ ...t, name: t.short, headline: t.short, kind: "browser", question: t.summary }));
 
 export function countText(text, wordsPerMinute = 200) {

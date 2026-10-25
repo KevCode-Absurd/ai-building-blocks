@@ -1,6 +1,6 @@
 # Social Media Platform Benchmarks
 
-Industry benchmarks for engagement rates, CTR, and ROI by platform.
+Industry benchmarks for engagement rates and CTR by platform. These compare activity metrics; they do not establish financial return.
 
 ---
 
@@ -209,18 +209,6 @@ ROI = ((Revenue - Cost) / Cost) × 100
 | Return on Ad Spend (ROAS) | Revenue / Ad Spend |
 | Customer Acquisition Cost (CAC) | Total Spend / New Customers |
 
-### Engagement Value Estimation
-
-| Action | Estimated Value |
-|--------|-----------------|
-| Like | $0.50 |
-| Comment | $2.00 |
-| Share | $5.00 |
-| Save | $3.00 |
-| Click | $1.50 |
+Engagements do not have a universal dollar value. Calculate financial ROI only from supplied attributed revenue and matching spend, and state the attribution method and window. Engagement rates, clicks, and platform benchmarks are not revenue or proof of incremental impact.
 | Follow | $10.00 |
 
-**Total Engagement Value:**
-```
-Value = (Likes × $0.50) + (Comments × $2.00) + (Shares × $5.00) + (Saves × $3.00) + (Clicks × $1.50)
-```

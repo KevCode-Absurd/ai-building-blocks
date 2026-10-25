@@ -1,0 +1,26 @@
+new_slug: plan-a-power-platform-solution
+name: Plan a Power Platform solution
+summary: Turn a business process into a Power Platform plan. Map the people, tools and data flow.
+job: build-software
+headline: Plan a Power Platform solution
+subhead: Share process notes, user roles and rules. Map each need to a Power Platform tool. Get a plan with gaps to check.
+explain: Share process notes, user roles and rules. Map each need to a Power Platform tool. Get a plan with gaps to check.
+when:
+  - You want to plan a Power Platform solution.
+you_give:
+  - Your process description or discovery notes, users, systems, access rules and constraints.
+you_get:
+  - A proposed component architecture with each component’s role, process flow, assumptions and optional diagram.
+how_to_use:
+  - Download the complete skill folder and add it to your AI tool, or copy the instructions into a chat.
+  - Provide the inputs listed here and ask your AI to follow the skill.
+  - Review the result and any missing facts before using it.
+how_it_works:
+  - title: Extract the process
+    text: Identify users, sources, manual friction, triggers, access needs and unresolved exceptions.
+  - title: Choose necessary components
+    text: Map each requirement to an app, data layer, workflow, portal or reporting component.
+  - title: Trace people and data
+    text: Describe the end-to-end flow, approval points and open licensing or integration checks.
+thinking: medium
+thinking_why: It weighs your evidence and follows a specific method.

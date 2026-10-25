@@ -1,0 +1,27 @@
+thinking: medium
+thinking_why: It follows a set method and adapts its questions or draft to your evidence.
+new_slug: portfolio-case-study-writer
+name: Portfolio case study writer
+summary: Share project notes and results. Get a case study that explains your role, choices, work and lessons.
+job: find-a-job
+headline: Portfolio case study writer
+subhead: Share a project summary, your role, key decisions and measured results. It expands those facts into a clear story for your portfolio. You get a case study covering the problem, process, solution and lessons, plus a list of useful visuals.
+explain: Share a project summary, your role, key decisions and measured results. It expands those facts into a clear story for your portfolio. You get a case study covering the problem, process, solution and lessons, plus a list of useful visuals.
+you_give:
+  - Project notes with your role, decisions and constraints.
+  - Real results, dates and available screenshots or work samples.
+you_get:
+  - A structured portfolio case study draft.
+  - A results section based on supplied evidence.
+  - A visual asset list and lessons learned.
+how_it_works:
+  - title: Step 1
+    text: Set the project context, problem and your specific role.
+  - title: Step 2
+    text: Describe the work, choices and solution from your notes.
+  - title: Step 3
+    text: Present known results, lessons and the visuals readers need.
+how_to_use:
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.
+  - It works best when your AI can read your supplied notes and ask follow-up questions.

@@ -2,10 +2,15 @@ thinking: high
 thinking_why: Deals have many risks to weigh, so it needs deep reasoning.
 new_slug: acquisition-due-diligence
 name: Acquisition due diligence planner
-summary: Describe the deal. Get a due diligence checklist, valuation checks, red flags and an integration plan.
+summary: Describe the deal. Get a due diligence checklist, valuation checks, red
+  flags and an integration plan.
 job: money-and-investing
 headline: Acquisition due diligence planner
-subhead: Describe the deal, the parties, your reason for it and your timeline. It starts by testing why this deal makes sense, then lists what a buyer reviews and the valuation methods to cross-check the price. You get a due diligence checklist, valuation checks, a red flag list, an integration plan and a pre-signing verification list.
+subhead: Describe the deal, the parties, your reason for it and your timeline.
+  It starts by testing why this deal makes sense, then lists what a buyer
+  reviews and the valuation methods to cross-check the price. You get a due
+  diligence checklist, valuation checks, a red flag list, an integration plan
+  and a pre-signing verification list.
 explain: |
   Before you sign a deal to buy or sell a company, this skill hands you a due diligence list, valuation checks and an integration plan, so you ask the right questions.
 
@@ -27,5 +32,7 @@ you_get:
   - A list of red flags
   - A pre-signing verification list
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.

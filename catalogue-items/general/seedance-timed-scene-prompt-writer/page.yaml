@@ -1,0 +1,34 @@
+new_slug: seedance-timed-scene-prompt-writer
+name: Seedance timed scene prompt writer
+summary: Share a scene idea and length. Get one timed video prompt with reference roles, camera moves, action and sound.
+job: make-video-ads
+headline: Seedance timed scene prompt writer
+subhead: Share a scene idea and length. Get one timed video prompt with reference roles, camera moves, action and sound. Bring the brief and any files you want it to use.
+explain: |-
+  Use this when you need portable timed scene prompts with 2.0 and 2.5 modes. Route explicitly to legacy timed 2.0 or bracketed scene 2.5 when the user names a version; otherwise use a model-neutral timed treatment. Treat model-specific capacity/duration limits as unverified until checked in the actual tool.
+
+  One brief produces one prompt unless the user requests a sequence, continuation or multiple alternatives. Multiple internal cuts remain beats inside that one prompt.
+when:
+  - You need portable timed scene prompts with 2.0 and 2.5 modes.
+  - You want a clear draft and checks from the material you already have.
+you_give:
+  - brief
+  - "Optional: reference set"
+  - "Optional: footage"
+you_get:
+  - video prompt
+  - shot list
+  - Missing inputs and steps that still need to run
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Read the brief
+    text: Route explicitly to legacy timed 2.0 or bracketed scene 2.5 when the user names a version; otherwise use a model-neutral timed treatment. Treat model-specific capacity/duration limits as unverified until checked in the actual tool.
+  - title: Build the result
+    text: Collect exact requested duration, music choice and language preference together only if missing. Do not invent reference filenames; list attached materials in an upload map with role and excluded properties.
+  - title: Check and hand off
+    text: Handle native edits, extension, first/last frames, storyboard grids and multi-reference scenes as distinct modes; only promise execution if supported tools/materials are available. Remove every private app/deck/memory dependency and bypass instruction.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

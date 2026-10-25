@@ -2,7 +2,7 @@ slug: heygen
 name: HeyGen
 maker: HeyGen
 url: https://www.heygen.com
-promise: Videos with a talking AI presenter, in your look and voice.
+promise: "Turn scripts into videos with AI presenters and versions in other languages."
 use_cases: [make-video]
 categories: [video]
 what_it_does:
@@ -12,12 +12,12 @@ what_it_does:
   - Translates a video into other languages.
   - Exports in 1080p, or 4K on the Pro plan.
 benefits:
-  - Send personal video messages without filming each one.
+  - "Make presenter videos from scripts instead of filming every update."
   - Put your sales or support video into other languages.
   - Update a video by changing the script instead of reshooting.
 best_for:
-  - Product demos, outreach videos and explainers.
-  - Founders who want a video version of themselves without the shoot.
+  - "Short product demos, sales videos and how-to guides."
+  - "Teams making presenter videos that need updates without a new shoot."
   - Teams that need videos in many languages.
 not_for:
   - Cinematic ads or story-led clips.

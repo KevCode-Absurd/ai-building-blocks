@@ -1,0 +1,40 @@
+new_slug: wakeups-how-agents-alert-each-other-implementation-planner
+name: Agent wakeup and stale-claim builder
+summary: Build an agent wakeup flow with scoped events, duplicate checks, claim leases, retries and recovery.
+job: build-software
+headline: Agent wakeup and stale-claim builder
+subhead: Build an agent wakeup flow with scoped events, duplicate checks, claim leases, retries and recovery.
+explain: |-
+  Share scoped event signals, deduplication key, claim lease and agent state. Get a bounded wakeup dispatcher with retry and stale-claim recovery.
+
+  The complete method and its supporting files are in the download. It marks missing inputs and separates proposed actions from actions that were actually completed.
+when:
+  - You need a bounded wakeup dispatcher with retry and stale-claim recovery.
+  - You are adding this function to an agent system.
+  - You need to compare an existing version with the supplied starter.
+you_give:
+  - Scoped event signals, deduplication key, claim lease and agent state
+you_get:
+  - A bounded wakeup dispatcher with retry and stale-claim recovery
+  - A failure checklist and synthetic test cases
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Step 1
+    text: Persist one event signal with a deduplication key.
+  - title: Step 2
+    text: Claim eligible events atomically.
+  - title: Step 3
+    text: Keep client and agent scope attached.
+  - title: Step 4
+    text: Respect pause and budget limits.
+  - title: Step 5
+    text: Dispatch a bounded heartbeat.
+  - title: Step 6
+    text: Mark consumed only after handoff.
+  - title: Step 7
+    text: Reset stale claims safely and avoid creating extra user-visible threads.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

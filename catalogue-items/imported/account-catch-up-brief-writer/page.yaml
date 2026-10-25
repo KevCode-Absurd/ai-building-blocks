@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It pulls several sources together and picks what matters.
 new_slug: account-catch-up-brief-writer
 name: Account catch-up brief writer
-summary: Name a customer. Get a one-page brief from your CRM, email, docs and calls, each fact linked.
+summary: Name a customer. Get a one-page brief from your CRM, email, docs and
+  calls, each fact linked.
 job: sell-and-negotiate
 headline: Account catch-up brief writer
-subhead: Name a customer and connect your CRM, email and docs. It reads the recent records, call notes and threads, and cites each fact with a link so you can check it. You get a one-page brief with open deals, recent contacts, blank fields named as blank and next steps to approve.
+subhead: Name a customer and connect your CRM, email and docs. It reads the
+  recent records, call notes and threads, and cites each fact with a link so you
+  can check it. You get a one-page brief with open deals, recent contacts, blank
+  fields named as blank and next steps to approve.
 explain: |
   Five tools worth of customer news fits in one brief that pulls together your CRM, email, shared docs and call notes.
 
@@ -27,6 +31,8 @@ you_get:
   - Gaps where data was blank
   - Suggested next steps for you to approve
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
   - It works best when your AI can read your CRM, email and calendar.

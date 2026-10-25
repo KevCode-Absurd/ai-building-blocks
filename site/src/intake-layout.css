@@ -1,0 +1,24 @@
+/* Keep source entry and its one download action apart from optional transfer help. */
+.intake > .bp-sub { margin-bottom: 24px; }
+.intake .intake-steps { margin-block: 24px 32px; gap: 10px; }
+.intake .intake-form { gap: 18px; padding-bottom: 40px; }
+.intake .intake-actions { margin: 6px 0 0; justify-content: flex-start; align-items: center; gap: 12px; flex-wrap: wrap; }
+.intake .intake-actions .btn { min-height: 44px; }
+.intake .intake-local-note { margin: 0; line-height: 1.6; }
+.intake .intake-entry-note, .intake .intake-error { margin: 0; line-height: 1.6; }
+.intake .intake-field-help { font-weight: 400; line-height: 1.5; }
+.intake .intake-transfer-help { border-top: 1px solid var(--line); padding-top: 16px; }
+.intake .intake-transfer-help > summary { min-height: 44px; display: list-item; list-style-position: inside; padding-block: 10px; cursor: pointer; }
+.intake .intake-transfer-help > p { margin: 12px 0 16px; }
+.intake .intake-transfer-help > p a { text-decoration: underline; text-underline-offset: 3px; }
+.intake .intake-transfer-help > ol { padding-left: 24px; margin-block: 16px; line-height: 1.6; }
+.intake .intake-transfer-help > ol > li + li { margin-top: 10px; }
+.intake .intake-transfer-help .workflow-launch { margin: 16px 0 0; padding: 16px; }
+.intake .intake-transfer-help .workflow-launch-actions { align-items: flex-start; gap: 12px 18px; }
+.intake .intake-transfer-help .workflow-launch-actions .small { flex: 1 1 220px; }
+.intake .intake-transfer-help .workflow-launch details { margin-top: 16px; }
+@media (max-width: 640px) {
+  .intake .intake-actions .btn-primary { flex: 1 1 100%; }
+  .intake .intake-transfer-help .workflow-launch-actions { flex-direction: column; }
+  .intake .intake-transfer-help .workflow-launch-actions .small { flex: none; }
+}

@@ -1,11 +1,11 @@
 // Original tool. All numbers shown are illustrative figures, not a real person’s results.
 export default {
   "slug": "task-time-buffer",
-  "name": "Add an honest buffer to a task estimate",
+  "name": "Task time buffer",
   "short": "Task time buffer",
-  "headline": "Add an honest buffer to a task estimate",
-  "summary": "Enter the base estimate, number of tasks and buffer. See the hours to reserve and the extra time added.",
-  "question": "Add an honest buffer to a task estimate?",
+  "headline": "Task time buffer",
+  "summary": "Enter the base estimate, task count and extra time allowance. See the total hours to reserve and the time added.",
+  "question": "How much time should I reserve with my chosen extra allowance?",
   "category": "personal",
   "shelf": [
     "general"
@@ -109,7 +109,7 @@ export default {
   ],
   "notes": [
     "The filled-in values are illustrative figures. Replace them with your own records; the result follows your inputs.",
-    "A buffer is an allowance, rather than a confidence interval. Re-estimate tasks with different scopes separately."
+    "This adds the extra time you choose. It does not say how likely a task is to finish on time. Estimate tasks with different work separately."
   ],
   "fixedCurrency": "$"
 };

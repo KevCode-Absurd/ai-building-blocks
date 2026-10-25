@@ -1,0 +1,26 @@
+slug: community-evidence-researcher
+name: Community evidence researcher
+summary: Share posts, comments or files. Get sourced findings, counted themes and a clear note on what the sample cannot show.
+category: general
+type: skill
+role: digest
+job: research
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: voc_reviews
+    required: false
+  - type: source_text
+    required: false
+outputs:
+  - type: audit_report
+  - type: document
+uses: []
+origin: own
+version: 1.0.0
+package_files: all
+aliases:
+  - customer discussion research
+  - company and market discussion research
+  - company and market questions

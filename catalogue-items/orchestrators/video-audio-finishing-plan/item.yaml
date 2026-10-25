@@ -1,0 +1,28 @@
+slug: video-audio-finishing-plan
+name: Video audio finishing plan
+summary: Share your script and audio assets. Get a timed plan for voice, music, effects, fades and mix checks.
+category: orchestrator
+type: workflow
+role: orchestrate
+job: video
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: script
+    required: false
+  - type: audio
+    required: false
+  - type: footage
+    required: false
+outputs:
+  - type: edit_plan
+    required: true
+  - type: plan
+    required: true
+uses: []
+execution: coordinator
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

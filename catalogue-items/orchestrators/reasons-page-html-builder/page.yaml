@@ -1,0 +1,32 @@
+new_slug: reasons-page-html-builder
+name: Five reasons landing page builder
+summary: Share product facts and an offer. Get a five-reasons HTML page, with a choice of looks and a Shopify file if needed.
+job: write-landing-page
+headline: Five reasons landing page builder
+subhead: Build a reasons page from facts you can back up.
+explain: Extends a reasons-page copy draft into two explicit design modes and portable implementation. Handles fewer than five true reasons honestly rather than padding claims.
+when:
+  - You want a complete reasons-style landing page, not just copy.
+  - You need a choice of editorial or direct-response layout.
+  - You want a portable Shopify section from an approved design.
+you_give:
+  - Brand/product facts, the sending ad and the intended buyer.
+  - Actual offer terms, product images and source-backed proof.
+  - Design preference and optional Shopify project conventions.
+you_get:
+  - A reason/proof map and page copy.
+  - Responsive HTML in the chosen design with a revision log.
+  - Optional namespaced Liquid section and template data, with validation status.
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Build five supported reasons
+    text: Map distinct buying arguments to actual product and customer evidence.
+  - title: Choose a visual mode
+    text: Use editorial pacing or a more direct product/offer layout without changing the facts.
+  - title: Build and verify
+    text: Render mobile HTML, refine it and export scoped Shopify files when requested.
+thinking: high
+thinking_why: It compares supplied evidence and follows a specific method.

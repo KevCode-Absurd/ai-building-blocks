@@ -1,113 +1,102 @@
 new_slug: email-and-sms-performance-reader
-name: "Email and SMS performance reader"
-summary: "Paste last month's numbers. Get what broke, what to repeat and a score out of 100."
+name: Email and SMS performance reader
+summary: Review email and SMS results against your own history. Get possible causes, tests to try and a house score with missing checks shown.
 job: write-emails
 thinking: high
-thinking_why: "It reads several tables and weighs rules of thumb against thin data, so a stronger model reasons better."
+thinking_why: It reads several tables and weighs rules of thumb against thin data, so a stronger model reasons better.
+headline: Email and SMS performance reader
+subhead: Bring campaign and flow results, orders, list changes, delivery rates and traffic context. It checks what can be verified, compares patterns and ranks possible explanations. Get repeat or rework suggestions, a test list and a score for the areas judged. The score is a house summary. Missing evidence and uncertain causes stay visible; percentage changes alone do not prove noise or impact.
+explain: |-
+  Email and SMS exports show results, but a pattern alone does not prove its cause. Revenue may change with traffic, order value, audience mix or a site fault. Opens can be inflated by privacy features.
 
-headline: "Email and SMS performance reader"
-subhead: Paste last month's campaign list, flow revenue, list growth and SMS rates. It checks nothing is broken, reads what earned and what did not, and ranks causes. You get a short diagnosis, what to repeat, what to rework and a channel health score out of 100.
-
-explain: |
-  Email and SMS reports are full of numbers and short on answers. Open rates are inflated by Apple's privacy features. A big campaign can hide low order volume. A flow can lose revenue only because your site traffic fell.
-
-  This skill reads your numbers in a fixed order. It first checks that nothing broke, such as the pop-up or a flow that stopped sending. Then list growth, campaigns, flows, deliverability and SMS. It leads with clicks and placed orders, not opens. It also treats the speakers' benchmarks as rules of thumb to compare with your own history. The score covers the areas it could read, shows its sum and says what is missing.
-
+  This skill separates observed faults from possible causes. It reviews list growth, campaigns, flows, delivery and SMS against your own history. Live features remain not checked unless evidence is supplied. It ranks tests and shows the score’s sums, coverage and gaps. If no area can be judged, it gives NOT SCORED.
 when:
   - It is the start of the month and you want to know what your email and SMS did.
   - Your revenue from email dropped and you do not know whether to blame the list, the emails or the site.
   - You suspect a deliverability problem because clicks keep falling.
-
 you_give:
   - Campaign list for the last 30 days or more, with revenue, clicks and placed orders
   - Flow revenue, with the number of recipients and skips
   - List growth, with pop-up views and sign-ups
   - Deliverability figures, and SMS click, unsubscribe and delivery rates
   - Your site traffic change (optional)
-
 you_get:
-  - A short diagnosis, with causes ranked
-  - The campaign types to repeat and the ones to rework
-  - A deliverability status and a recovery step if needed
-  - A channel health score out of 100, with the sum and what was not judged
-
+  - Observed findings and possible causes, kept separate
+  - Campaign types to repeat or rework as tests
+  - Delivery concerns supported by the supplied checks, with unknowns shown
+  - A house score for judged areas, or NOT SCORED if no area can be judged
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Export campaigns and flows from your email tool, with test variants included, and paste or attach them.
   - Add list growth, deliverability and SMS figures, and say how your site traffic changed.
-  - Read the diagnosis first, then the fix order.
+  - Read the evidence and possible causes first, then review the test order.
   - Test each change before you roll it out, and run the skill again next month.
-
 how_it_works:
-  - title: Checks nothing is broken
-    text: The pop-up still shows after theme updates, flows are still sending and checkout opt-ins still arrive.
+  - title: Checks evidence of faults
+    text: Marks pop-up, flow and opt-in checks as verified working, observed problem or not checked. An export alone cannot verify a live feature.
   - title: Reads list growth
     text: New and lost subscribers by source. Pop-up sign-ups equal views times submit rate, so it checks traffic before it blames the form.
   - title: Reads campaigns
-    text: Sort by revenue, then read clicks for interest and placed orders for pull. High clicks and low revenue means change the product placement.
+    text: Compares revenue, clicks, orders and order value. High clicks with low sales can have several causes; product placement is one possible test.
   - title: Reads flows
-    text: Flow revenue follows site traffic. Under 5 percent change is noise, over 10 percent is worth a look.
+    text: Checks traffic, recipient mix, order value, comparable periods and data limits. A change below 5 percent is not automatically noise or too small to matter.
   - title: Reads deliverability
-    text: Open rates above 30 percent and click rates above 0.5 percent are the floors in one source. Below them, suspect deliverability.
+    text: Uses the source’s delivery benchmarks as rough screens, then checks the store’s history and provider data. These figures alone do not confirm an inbox problem.
   - title: Reads SMS
-    text: Click rate 5 to 15 percent, unsubscribes under 1 percent, delivery above 90 percent.
-  - title: Ranks causes and scores
-    text: The biggest cause first, with a fix for each, and a score on the areas it could judge.
-
-output_shape: |
-  EMAIL AND SMS REVIEW  <month>
-  DIAGNOSIS (causes ranked)
-  1. <cause> | evidence: <numbers> | confidence: <high | medium | low> | fix: <...>
-  NOTHING BROKEN? <pop-up | flows sending | opt-ins>: <ok | problem>
-  LIST GROWTH: <new> vs <lost> | by source | pop-up: <views> x <submit rate>
-  CAMPAIGNS: repeat: <types> | rework: <types> | high clicks, low revenue: <...>
-  FLOWS: <flow> revenue <+/- %> vs traffic <+/- %> | late emails earning: <yes/no>
-  DELIVERABILITY: open <n>% | click <n>% | status: <ok | trouble> | recovery: <...>
-  SMS: click <n>% | unsubscribe <n>% | delivery <n>%
-  TESTS TO RUN FIRST: <where volume is highest>
-  SCORE  <n>/100 = <points earned> of <points judged> x 100 | not judged: <areas>
-  MISSING: <what was not given>
-
+    text: Reads SMS clicks, opt-outs and delivery rates. The source’s ranges are rough comparisons, with proposed changes framed as tests.
+  - title: Ranks tests and shows coverage
+    text: Ranks possible causes by measured impact where known. It marks unknown impact, separates facts from guesses and scores only areas it can judge.
+output_shape: |-
+  EMAIL AND SMS REVIEW <month>
+  FINDINGS <observed faults and possible causes, kept separate>
+  <fact or hypothesis> | evidence: <numbers> | other causes: <...> | confidence: <...> | test: <...>
+  FAULT CHECKS <pop-up | flows | opt-ins>: <verified working | observed problem | not checked>
+  LIST GROWTH <new, lost, source and pop-up views x submit rate>
+  CAMPAIGNS <clicks, orders, order value, repeat or rework tests>
+  FLOWS <revenue change, traffic change, recipient mix and missing context>
+  DELIVERY AND SMS <figures, rough comparisons and supported concerns>
+  TESTS TO RUN FIRST <test, decision and volume>
+  SCORE <earned>/<judged> x 100, or NOT SCORED | not judged: <areas>
+  MISSING <data and live checks>
 tweaks:
   - what: Export range
     how: Use 90 days or more for campaigns and daily detail for flows, with test variants included, so patterns show up over several sends.
   - what: Site traffic change
-    how: Tell it if traffic rose or fell. Flow revenue follows traffic, so a drop may not be a flow problem.
+    how: Add site traffic changes. They help assess one possible explanation for a flow change; they do not prove the cause.
   - what: Your own history
     how: Paste last quarter's figures. The benchmarks are rules of thumb, and your own history is the better comparison.
   - what: Apple opens
     how: Say you know opens are inflated. The skill already leads with clicks and placed orders, and weighs opens less.
-
 judge:
-  - Each cause quotes the numbers it rests on.
+  - Possible causes quote evidence, name uncertainty and stay separate from observed faults.
   - Clicks and placed orders lead the reading, not opens.
   - Benchmarks are called rules of thumb, and your own history comes first.
   - The score shows its sum and says which areas were not judged.
   - Every change is advised as a test, not a sure fix.
-
+  - Live features without evidence stay not checked. No judged areas means NOT SCORED.
 test:
-  - Give it a month where you know something broke, such as a pop-up that stopped. It should list that first.
-  - Run it twice on the same export. The causes should be the same, though the order may shift.
+  - Supply evidence of a known broken pop-up and its timing. It should report the fault and assess its relevance without claiming a cause from the label alone.
+  - Give a 4 percent decline with no variance or traffic context. It should not call the change noise by percentage alone.
   - "Check one flow figure yourself: revenue change against traffic change."
   - Make the top change as a test and compare the next month's figures.
-
 improve:
   - Put your own benchmarks in the skill file once you have three months of data.
   - Add a list of your campaign types, so the reader groups them the way you do.
   - Add the flows you plan to build, so gaps show up as to-dos.
   - Pair it with the email setup health checker for deliverability set-up, and the email test planner for the next tests.
-
 works_best_with:
   tools:
-    - {name: "Klaviyo", why: "Its export of campaign and flow analytics, by-provider report and test results give the figures this skill reads."}
-    - {name: "Shopify", why: "Traffic, orders and average order value show whether a drop is a site problem."}
-    - {name: "Any good chat AI", why: "Any current chat AI can read an exported file and apply the steps."}
+    - name: Klaviyo
+      why: Its export of campaign and flow analytics, by-provider report and test results give the figures this skill reads.
+    - name: Shopify
+      why: Traffic, orders and average order value show whether a drop is a site problem.
+    - name: Any good chat AI
+      why: Any current chat AI can read an exported file and apply the steps.
   inputs:
-    - "Campaign export with all test variants, 90 days or more"
-    - "Daily flow export with test variants"
-    - "The deliverability tab and the by-provider report"
-    - "Last quarter's numbers, for comparison"
-
+    - Campaign export with all test variants, 90 days or more
+    - Daily flow export with test variants
+    - The deliverability tab and the by-provider report
+    - Last quarter's numbers, for comparison
 terms:
   - term: Placed order rate
     meaning: The share of recipients who bought, which tells you more than opens do.

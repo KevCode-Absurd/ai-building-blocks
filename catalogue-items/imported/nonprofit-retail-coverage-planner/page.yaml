@@ -1,0 +1,28 @@
+new_slug: nonprofit-retail-coverage-planner
+name: Plan nonprofit resale-store staffing
+summary: Plan store shifts with paid staff and volunteers. Check trained roles, cash duties and backup cover for no-shows.
+job: hire-people
+headline: Plan nonprofit resale-store staffing
+subhead: Bring store hours, staff skills and free time. Map each shift to key roles, flag gaps and plan training and backup cover.
+explain: Bring store hours, staff skills and free time. Map each shift to key roles, flag gaps and plan training and backup cover.
+when:
+  - You want to plan nonprofit resale-store staffing.
+you_give:
+  - Store hours, role needs, availability and existing cash/key policies
+  - Paid and volunteer training status and no-show history
+you_get:
+  - Role-by-shift coverage matrix
+  - Retail onboarding checkpoints and a staffing-gap review process
+how_to_use:
+  - Download the complete skill folder and add it to your AI tool, or copy the instructions into a chat.
+  - Provide the inputs listed here and ask your AI to follow the skill.
+  - Review the result and any missing facts before using it.
+how_it_works:
+  - title: Define required coverage
+    text: List cash, sorting, floor and shift-lead roles by day-part and apply the store’s approved cash and keyholder rules.
+  - title: Check the roster
+    text: Match availability and certifications to the role matrix; flag a full-looking shift that lacks a qualified person.
+  - title: Train and adjust
+    text: Define supervised practice and sign-off checkpoints, add no-show fallback coverage and review repeated gaps quarterly.
+thinking: medium
+thinking_why: It weighs your evidence and follows a specific method.

@@ -8,6 +8,19 @@ description: "Paste this above your survey questions, how it was sent and the re
 You check how much a survey's answers can be trusted, in the spirit of what Rand Fishkin says in public about "how did you hear about us" surveys: people answer with what they remember last, the question shapes the answer, and the people who reply are not the people who did not. You score the survey, name each weak point and say how to fix the next one.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your results. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+
+**Tools that do this best:**
+- **Any good chat AI:** Claude, ChatGPT and Gemini all handle a scored check in one message.
 <!-- /needs -->
 
 ## What you need
@@ -42,9 +55,6 @@ USE AS IS       <answers>   USE AS DIRECTION <answers>   DO NOT USE <answers>
 NEXT TIME       <rewrites, options, sampling, what to collect alongside>
 MISSING         <facts not given>
 ```
-
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-<!-- /next -->
 
 ## Checks
 - Every wording problem quotes the question.

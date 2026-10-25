@@ -1,0 +1,42 @@
+new_slug: awareness-stage-ad-framework-chooser
+name: Awareness-stage ad framework chooser
+summary: Choose a copy structure for what buyers already know. Write an ad and flag stage mismatches.
+job: write-ad-copy
+headline: Awareness-stage ad framework chooser
+subhead: Share product, buyer awareness stage, offer and proof. Get a stage-matched framework and ad copy.
+explain: |-
+  Choose a copy structure for what buyers already know. Write an ad and flag stage mismatches.
+
+  Share product, buyer awareness stage, offer and proof. Get a stage-matched framework and ad copy.
+when:
+  - You need a stage-matched framework and ad copy.
+  - You need awareness-stage ad framework chooser for a specific task.
+  - You want the method's decisions and assumptions written down before acting.
+you_give:
+  - Product
+  - Buyer awareness stage
+  - Offer and proof
+you_get:
+  - A stage-matched framework and ad copy
+  - The sources used, missing inputs and assumptions
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Check the inputs
+    text: Confirm product, buyer awareness stage, offer and proof. Mark facts that are missing.
+  - title: Identify the Stage
+    text: Follow the identify the stage section in the full method and keep its required fields and decision rules.
+  - title: Pick the Framework Per Stage
+    text: Follow the pick the framework per stage section in the full method and keep its required fields and decision rules.
+  - title: Write Copy for the Stage
+    text: Follow the write copy for the stage section in the full method and keep its required fields and decision rules.
+  - title: Deliver + Cross-Stage Warning
+    text: Follow the deliver + cross-stage warning section in the full method and keep its required fields and decision rules.
+  - title: Rules
+    text: Follow the rules section in the full method and keep its required fields and decision rules.
+  - title: Review the result
+    text: Return a stage-matched framework and ad copy. Check facts, math and the decisions before any action.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

@@ -1,0 +1,35 @@
+thinking: medium
+thinking_why: It follows a set method and adapts its questions or draft to your evidence.
+new_slug: technical-topic-explainer
+name: Technical topic explainer
+summary: Name a concept and a familiar field. Get an everyday analogy, its
+  limits and a next step.
+job: study-and-practice
+headline: Technical topic explainer
+subhead: Share the concept that feels too abstract and a field you know well. It
+  chooses one familiar analogy, explains where it stops working and checks your
+  understanding. You then learn the correct terms one layer at a time.
+explain: Share the concept that feels too abstract and a field you know well. It
+  chooses one familiar analogy, explains where it stops working and checks your
+  understanding. You then learn the correct terms one layer at a time.
+you_give:
+  - The concept and the part that confuses you.
+  - A familiar field it can use for examples.
+you_get:
+  - One grounded analogy with clear limits.
+  - A plain explanation at your current level.
+  - A question that bridges the analogy to the real terms.
+how_it_works:
+  - title: Step 1
+    text: Find whether the gap is in words, purpose or how things work.
+  - title: Step 2
+    text: Use one familiar analogy and say where it breaks down.
+  - title: Step 3
+    text: Check your explanation before adding the correct technical terms.
+how_to_use:
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
+  - It works best when your AI can read your supplied notes and ask follow-up
+    questions.

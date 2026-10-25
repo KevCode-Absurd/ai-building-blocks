@@ -5,11 +5,11 @@
 // Interest uses the increment directly so tiny positive interest stays positive.
 export default {
   "slug": "loan-payment",
-  "name": "Estimate a fixed loan’s monthly payment",
-  "short": "Loan payment estimate",
-  "headline": "Estimate a fixed loan’s monthly payment",
-  "summary": "Enter the amount, fixed yearly interest and monthly payment count. See instalments and total interest before fees.",
-  "question": "Estimate a fixed loan’s monthly payment?",
+  "name": "Fixed loan payment calculator",
+  "short": "Fixed loan payment calculator",
+  "headline": "Fixed loan payment calculator",
+  "summary": "Enter the loan amount, fixed yearly rate and payment count. Estimate monthly payments and total interest before fees.",
+  "question": "What monthly payment follows from this fixed loan rate and term?",
   "category": "finance",
   "shelf": [
     "general"
@@ -38,7 +38,7 @@ export default {
     },
     {
       "id": "annual",
-      "label": "Fixed annual nominal interest rate",
+      "label": "Fixed yearly rate before fees",
       "unit": "percent",
       "example": 12,
       "min": 0,
@@ -70,7 +70,7 @@ export default {
       "unit": "percent",
       "formula": "annual / 12",
       "sum": "{annual} ÷ 12 = {=}",
-      "means": "Nominal yearly interest divided into twelve equal periods.",
+      "means": "The yearly rate you entered, divided by twelve.",
       "none": "Not enough data"
     },
     {
@@ -88,7 +88,7 @@ export default {
       "unit": "money",
       "formula": "payment * months",
       "sum": "{payment} × {months} = {=}",
-      "means": "All estimated monthly payments added together.",
+      "means": "The sum of all the monthly payments.",
       "none": "Not enough data"
     },
     {
@@ -122,7 +122,7 @@ export default {
   ],
   "notes": [
     "The filled-in values are illustrative figures. Replace them with your own records; the result follows your inputs.",
-    "Estimate for a fixed nominal rate, monthly compounding and payments at month end. It does not calculate APR, daily interest, fees, insurance, variable rates or early repayments. Confirm the lender’s repayment schedule."
+    "Uses the fixed yearly rate divided by 12 for monthly interest, with payments at month end. It leaves out fees, insurance, daily interest, changing rates and extra repayments. Check the lender’s payment schedule."
   ]
 };
 

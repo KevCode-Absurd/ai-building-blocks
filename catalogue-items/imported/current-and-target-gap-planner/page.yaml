@@ -1,0 +1,28 @@
+thinking: high
+thinking_why: It follows a set method with a few checks.
+new_slug: current-and-target-gap-planner
+name: Current and target gap planner
+summary: Share your current results and target. Get evidence-backed gaps, priorities, owners, and checks for closing them.
+job: think-and-decide
+headline: Current and target gap planner
+subhead: Share the current state, the target you need to reach, and evidence for both. It compares like with like and separates gaps from guesses about causes. You get a clear gap table, priorities, owners, and a plan for proving each chosen gap is closed.
+you_give:
+  - The decision, scope, target and its source, current evidence, limits, and responsible owner.
+you_get:
+  - A gap register, priority reasons, action roadmap, unknowns, and measurable closure checks.
+how_it_works:
+  - title: Define a justified target
+    text: Set the decision boundary and trace each target to a real requirement, goal, or stated preference.
+  - title: Compare the evidence
+    text: Use matching units and periods. Separate measured gaps, missing evidence, possible causes, and proposed fixes.
+  - title: Choose what to close
+    text: Explain priority using impact, cost, urgency, dependencies, and confidence. Assign a real owner and closure test.
+  - title: Plan a recheck
+    text: Set a review date or trigger. Treat a gap as closed only when new evidence shows the target is met.
+works_best_with:
+  tools:
+    - name: A chat AI that can read the bundled reference files
+      why: Use the supplied references and templates for the chosen task. Scripts are optional unless that task specifically needs them.
+how_to_use:
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.

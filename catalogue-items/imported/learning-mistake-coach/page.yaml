@@ -1,0 +1,37 @@
+thinking: medium
+thinking_why: It follows a set method and adapts its questions or draft to your evidence.
+new_slug: learning-mistake-coach
+name: Learning mistake coach
+summary: Share a repeated mistake. Get a clear correction, a fresh example and a
+  question that checks your understanding.
+job: study-and-practice
+headline: Learning mistake coach
+subhead: Share the explanation you keep getting wrong and what you have already
+  tried. It checks the belief behind the mistake, then chooses a matching
+  correction. You get a clearer model, a worked example and a fresh question to
+  try.
+explain: Share the explanation you keep getting wrong and what you have already
+  tried. It checks the belief behind the mistake, then chooses a matching
+  correction. You get a clearer model, a worked example and a fresh question to
+  try.
+you_give:
+  - Your incorrect answer or explanation in your own words.
+  - The topic and examples of the same mistake happening again.
+you_get:
+  - A named mistake type with evidence from your answer.
+  - A corrected explanation and example.
+  - A fresh question and a plan for more practice.
+how_it_works:
+  - title: Step 1
+    text: Classify the mistake and check that the stated belief matches yours.
+  - title: Step 2
+    text: Find the cause and choose a definition, worked trace or guided question.
+  - title: Step 3
+    text: Explain the corrected idea and test it in a new case.
+how_to_use:
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
+  - It works best when your AI can read your supplied notes and ask follow-up
+    questions.

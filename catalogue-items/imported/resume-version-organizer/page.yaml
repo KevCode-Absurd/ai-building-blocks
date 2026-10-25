@@ -1,0 +1,27 @@
+thinking: medium
+thinking_why: It follows a set method and adapts its questions or draft to your evidence.
+new_slug: resume-version-organizer
+name: Resume version organizer
+summary: Share your resume files and applications. Get a master-copy plan, clear file names and a version tracker.
+job: find-a-job
+headline: Resume version organizer
+subhead: Share your resume versions, recent changes and application list. It separates the master record from copies tailored for each role. You get a folder and naming plan, a tracker showing which copy went where and a queue of updates.
+explain: Share your resume versions, recent changes and application list. It separates the master record from copies tailored for each role. You get a folder and naming plan, a tracker showing which copy went where and a queue of updates.
+you_give:
+  - Your resume files and the roles each one targets.
+  - Application records and new achievements to add.
+you_get:
+  - A master-and-tailored-copy structure.
+  - Clear file naming rules and a version tracker.
+  - An update queue with old copies kept for reference.
+how_it_works:
+  - title: Step 1
+    text: Identify the master record and the purpose of each tailored copy.
+  - title: Step 2
+    text: Set a clear folder layout and file naming pattern.
+  - title: Step 3
+    text: Track applications by version and list updates or copies to archive.
+how_to_use:
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.
+  - It works best when your AI can read your supplied notes and ask follow-up questions.

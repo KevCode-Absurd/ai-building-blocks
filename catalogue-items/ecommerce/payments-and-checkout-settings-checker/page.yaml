@@ -1,64 +1,56 @@
 new_slug: payments-and-checkout-settings-checker
-name: "Payments and checkout settings checker"
-summary: "Give it your payment and checkout settings. Get a score out of 100, ranked risks and fixes."
+name: Payments and checkout settings checker
+summary: Share store settings and your country. Get checked findings, missing rules and fixes to review, with a custom checklist score.
 job: set-up-store
 thinking: medium
-thinking_why: "It checks a list of settings against rules and ranks the risks, so a middle model is enough."
-
-headline: "Payments and checkout settings checker"
-subhead: Tell it your platform, country, business type and current payment and checkout settings. It checks payout verification, capture, wallets, checkout fields, consent boxes and recovery emails. You get a score out of 100, risks ranked by how likely they are to block payouts, and the settings to change in order.
-
+thinking_why: It checks a list of settings against rules and ranks the risks, so a middle model is enough.
+headline: Payments and checkout settings checker
+subhead: Share your platform, plan, country, business type and current settings. It checks current provider and local rules before proposing changes to payments, checkout or consent. Get confirmed findings, unchecked items and a custom score with its coverage. The score does not predict payout holds or prove readiness. Missing rules leave affected advice unresolved.
 explain: |
-  Payment problems often show up after launch, when money is held back. A name that does not match your ID, a business type that does not fit, or a missing bank detail can hold your payouts for days. Checkout settings cost sales in quieter ways: an extra required field, no guest checkout, a surprise at the last step.
+  Payment and checkout problems need checks against your actual provider, country, plan and customer regions. A setting that fits one store may not fit another.
 
-  This skill checks the payment setup first, because that is what can stop you getting paid, then the checkout. It looks at two-step sign-in, business type, name matching, bank account type, capture, wallets, and on WooCommerce the Stripe and PayPal connections. For checkout it looks at fields, guest checkout, email and SMS consent by region, order limits, customer accounts, trust signals and recovery emails. It never asks for bank or ID numbers. It only tells you what to have ready. Consent rules vary by country, so this is not legal advice.
-
+  This skill reviews the facts you supply and checks current official rules before proposing affected settings. It keeps confirmed blockers separate from other concerns and marks missing evidence. Its custom points help organise the checklist; they do not measure the chance of a payout hold or prove a launch is ready. A high score with material checks missing leaves readiness unresolved. It does not ask for bank, ID or card numbers. Applying settings, installing tools or switching live payments needs separate approval.
 when:
-  - You are setting up payments and want to avoid a payout hold.
+  - You are setting up payments and need to check current provider requirements.
   - Your checkout loses buyers and you think the settings are the cause.
-  - You are about to start collecting emails or texts at checkout and need the consent boxes right for each country.
-
+  - You need to review email or SMS consent for your actual customer regions.
 you_give:
   - Your platform and country
-  - Your business type (individual or registered business) and your ID name as printed
+  - Your actual legal business type and whether account details match; no bank, ID or card numbers
   - Your current payment, wallet and checkout field settings
   - The regions you sell to, and whether you use a separate email tool
   - Whether you offer cash on delivery, and any checkout or abandonment reports (optional)
 you_get:
-  - A score out of 100, with how it was worked out
-  - Problems ranked by how likely they are to block payouts
-  - The exact settings to change, in order
-  - A recommended setting for each checkout field, and consent-box setup by region
-
+  - A custom checklist score, its sum and how much was checked
+  - Confirmed payout blockers, other concerns and their evidence
+  - Proposed settings supported by dated provider and local rules
+  - Unchecked items and the facts needed before giving advice
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your platform, country, business type and current settings.
   - Never type bank, ID or card numbers into the chat. Say only what type of account you have.
-  - Change the settings in the order it gives, and run it again.
+  - Review the sources and missing items before choosing any change. Keep launch readiness unresolved when a material check is missing.
   - Check Shopify setting names against your admin, since they move often.
-
 how_it_works:
-  - title: Checks sign-in and identity
-    text: Two-step sign-in on, the right business type, and names that match your ID exactly.
-  - title: Checks payout readiness
-    text: The bank account type you need to have ready for your country, and whether review is still pending.
-  - title: Checks capture and wallets
-    text: Automatic capture, and wallets such as Shop Pay, Apple Pay and Google Pay left on.
-  - title: Checks WooCommerce gateways
-    text: Stripe and PayPal connected, the connection test passed, and a test order before going live.
-  - title: Checks checkout fields
-    text: Email or phone but not both, and optional company, address line 2 and phone.
-  - title: Checks consent and accounts
-    text: Opt-in boxes by region, guest checkout, customer accounts and order limits.
-  - title: Checks trust and recovery
-    text: Shipping shown early, payment logos, a clear delivery promise and abandoned-checkout emails.
-
+  - title: Checks the rules that apply
+    text: Records platform, plan, provider, country, currency, legal business type and customer regions. Verifies current official rules before affected advice.
+  - title: Reviews payment setup
+    text: Checks supported sign-in, identity, bank, capture and gateway requirements. A business number or continent alone cannot settle the answer.
+  - title: Reviews checkout options
+    text: Checks the actual plan and current admin before proposing fields, wallets, accounts or recovery settings.
+  - title: Reviews consent by region
+    text: Checks email and SMS separately. Brand size does not decide whether a box can be preselected.
+  - title: Shows findings and gaps
+    text: Puts confirmed blockers first, explains other judgments and reports unchecked items beside the custom score.
 output_shape: |
-  SCORE  <n>/100 (100 - 20 x <blockers> - 8 x <risks> - 3 x <polish> = <n>)
+  CUSTOM CHECKLIST SCORE  <n>/100 (100 - 20 x <blockers> - 8 x <risks> - 3 x <polish> = <n>)
 
-  RANKED RISKS (most likely to block payouts first)
+  Coverage: <checked / applicable items, or unknown>
+  Custom points are not payout probability or proof of readiness.
+
+  RANKED FINDINGS (confirmed payout blockers first)
   <n>. <BLOCKER | RISK | POLISH> <area>: <what is wrong>
-     fix: <exact setting and value>
+     fix: <supported setting and value, with dated official source; otherwise unresolved>
 
   SETTINGS TO CHANGE, IN ORDER
   1. <setting> -> <value>
@@ -76,47 +68,46 @@ output_shape: |
   <item, and what is needed>
   MISSING: <platform | country | business type | settings>
   Consent rules vary by country. This is not legal advice.
-
 tweaks:
   - what: Platform and country
     how: Shopify Payments is not in every country. Say yours so it checks the list first and plans other gateways if needed.
   - what: Business type
-    how: Say if you have a business registration number. No number means individual, even for a sole proprietor.
+    how: Use the actual legal entity and current provider categories for your country. A registration number alone does not decide the account type.
   - what: Regions you sell to
-    how: Name them. The pre-ticked consent box is not allowed in places such as the UK and the EU.
+    how: Check each customer region and channel against current applicable consent rules. Do not infer preselection from brand size.
   - what: Email tool
     how: Say if you use a separate email tool, so the consent and sign-up boxes match what that tool needs.
-
 judge:
-  - Risks are ranked by how likely they are to block payouts.
-  - The score line shows the sum.
-  - Every fix names the setting and the value.
+  - Confirmed payout blockers come first; other rankings state their evidence and judgment limits.
+  - The score shows its sum, coverage and material unchecked items; it does not clear a launch or predict payout holds.
+  - Every affected setting has a dated official provider source and applicable local basis, or stays unresolved.
   - Nothing asks you to type bank, ID or card numbers.
   - Consent advice is by region and ends with a note that it is not legal advice.
-
 test:
   - Say your ID reads Robert but your store account says Rob. It should flag it as a likely verification hold.
   - Say you sell to the UK and your marketing box is pre-ticked. It should flag it.
   - Leave out your country. It should ask, because Shopify Payments is not in every country.
   - Run it twice on the same settings. The ranking should match.
-
+  - "Provide no checked settings: undeducted points cannot prove readiness. Provide one blocker, two risks and one polish item: custom score 61, with launch still blocked."
+  - Give a new brand, no customer regions, a business number and a bank described only as Europe. Leave entity category, network and consent choices unresolved.
 improve:
   - Add the checkout fields and wallets you want as your standard, so each run checks against them.
   - Add your list of regions and the consent rule for each, with the date you checked it.
   - Add your gateway rules, such as which methods you run together.
   - Pair it with the store go-live checker for the test orders, and with a checkout page auditor for friction.
-
 works_best_with:
   tools:
-    - {name: "Shopify Payments", why: "Built into Shopify, with wallets such as Shop Pay, Apple Pay and Google Pay, and payout verification."}
-    - {name: "Stripe", why: "Has a connection test and test mode, and is used on WooCommerce through a plugin."}
-    - {name: "PayPal", why: "Can run beside Shopify Payments, and on WooCommerce needs a business account to connect."}
+    - name: Shopify Payments
+      why: Built into Shopify, with wallets such as Shop Pay, Apple Pay and Google Pay, and payout verification.
+    - name: Stripe
+      why: Has a connection test and test mode, and is used on WooCommerce through a plugin.
+    - name: PayPal
+      why: Can run beside Shopify Payments, and on WooCommerce needs a business account to connect.
   inputs:
-    - "Screenshots of your payment and checkout settings"
-    - "Your abandoned checkout report"
-    - "A list of regions you sell to"
-    - "Your email tool's consent requirements"
-
+    - Screenshots of your payment and checkout settings
+    - Your abandoned checkout report
+    - A list of regions you sell to
+    - Your email tool's consent requirements
 terms:
   - term: Payment capture
     meaning: When the money is taken from the buyer's card, either at checkout or after you review the order.

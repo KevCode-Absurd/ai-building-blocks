@@ -9,8 +9,8 @@ Benchmarks for scoring each dimension at Seed, Series A, Series B, and Series C.
 | Metric | Seed | Series A | Series B | Series C |
 |--------|------|----------|----------|----------|
 | Runway (green) | >18mo | >12mo | >12mo | >18mo |
-| Runway (yellow) | 9-18mo | 6-12mo | 6-12mo | 9-18mo |
-| Runway (red) | <9mo | <6mo | <6mo | <9mo |
+| Runway (yellow) | 12-18mo inclusive | 6-12mo | 6-12mo | 9-18mo |
+| Runway (red) | <12mo | <6mo | <6mo | <9mo |
 | Burn multiple (green) | <3x | <2x | <1.5x | <1x |
 | Burn multiple (yellow) | 3-5x | 2-3x | 1.5-2.5x | 1-1.5x |
 | Gross margin (green) | >50% | >65% | >70% | >75% |

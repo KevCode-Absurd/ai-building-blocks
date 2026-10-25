@@ -1,0 +1,26 @@
+slug: ad-variant-change-auditor
+name: Ad variant change auditor
+summary: Compare a control ad and variants with the agreed test. Find unintended changes, unclear comparisons and the smallest repairs before testing.
+category: general
+type: skill
+role: make
+job: analysis
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: copy_draft
+    required: true
+  - type: static_ads
+    required: false
+outputs:
+  - type: audit_report
+    required: true
+  - type: plan
+    required: true
+uses: []
+package_files: all
+needs_mode: manual
+origin: own
+example_pending: true
+version: 1.0.0

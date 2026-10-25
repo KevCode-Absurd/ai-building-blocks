@@ -2,23 +2,23 @@ slug: clay
 name: Clay
 maker: Clay
 url: https://www.clay.com
-promise: Lead lists with emails, phones and company details filled in from many data sources
+promise: "Research contact lists and fill in emails, phone numbers and company details."
 use_cases: [find-leads]
 categories: [sales-and-support, data]
 what_it_does:
   - Builds a table of leads from your list or a search.
-  - Fills in emails, phones and company details by checking several data providers in turn.
+  - "Checks several data sources in turn to fill in emails, phones and company details."
   - Runs an AI research agent called Claygent that reads a company's website.
-  - Syncs enriched leads to your CRM on the Growth plan.
+  - "Sends researched contact details to your customer records on the Growth plan."
   - Sends emails from the Launch plan.
 benefits:
   - Get a lead list ready to contact, with details already filled in.
   - Find an email through several providers instead of one.
   - Write outreach that mentions something real about each company.
 best_for:
-  - Sales and growth teams building targeted outbound lists.
+  - "Sales teams looking for contacts in a chosen group of companies."
   - Agencies that research many accounts for clients.
-  - Anyone who wants lead research tied to their own CRM fields.
+  - "Teams that want lead research matched to their own customer-record fields."
 not_for:
   - First-time users who want a ready list without building a table.
   - Teams that need phone numbers on the free plan, which does not include them.

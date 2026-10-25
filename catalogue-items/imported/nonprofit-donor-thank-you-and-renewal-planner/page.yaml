@@ -1,0 +1,30 @@
+thinking: high
+thinking_why: It weighs real records, missing facts, and choices that affect people or funding.
+new_slug: nonprofit-donor-thank-you-and-renewal-planner
+name: Nonprofit donor thank-you and renewal planner
+summary: Share giving history and current follow-ups. Get thank-you steps, welcome messages, and plans for lapsed donors.
+job: keep-customers
+headline: Nonprofit donor thank-you and renewal planner
+subhead: Share your giving records, thank-you process, and recent donor messages. It checks where follow-ups stop and which donors do not return. You get a thank-you plan, first-gift welcome steps, renewal timing, and separate plans for lapsed donors. US receipt rules need local review.
+when:
+  - You need this task done for a nonprofit, community program, or donated-goods store.
+you_give:
+  - Dated giving records, current thank-you process, receipt wording, and donor contact preferences.
+you_get:
+  - A thank-you guide, donor contact plan, retention measures, and lapsed-donor campaign outline.
+how_it_works:
+  - title: Measure returning donors
+    text: Compare repeat gifts and first-year donors over clear yearly periods. Keep the groups and rate definitions consistent.
+  - title: Fix the first follow-up
+    text: Review receipt speed and personal thanks. Plan a welcome sequence after the first gift.
+  - title: Plan renewals and returns
+    text: Map later contacts to giving dates and separate recently lapsed donors from longer-lapsed supporters.
+works_best_with:
+  tools:
+    - name: A chat AI that can read your files
+      why: The skill works from records and drafts you provide. Research tasks also need current, checked public sources.
+  inputs:
+    - Acknowledgment processes carry tax-receipt language donors rely on.
+how_to_use:
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.

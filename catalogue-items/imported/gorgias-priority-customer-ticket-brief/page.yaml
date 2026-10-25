@@ -1,0 +1,32 @@
+thinking: medium
+thinking_why: It follows a set method with a few checks.
+new_slug: gorgias-priority-customer-ticket-brief
+name: Gorgias priority customer ticket brief
+summary: Connect Gorgias and HubSpot. Get open tickets from important accounts, with context and suggested handling.
+job: help-customers
+headline: Gorgias priority customer ticket brief
+subhead: Connect Gorgias and HubSpot and ask which important accounts need attention. It matches open tickets to customer records and value signals. You get a priority queue with account context and suggested handling, plus an optional Slack alert after approval.
+when:
+  - You use this tool for customer support and need help with this task.
+you_give:
+  - Open Gorgias tickets and HubSpot account records.
+  - The account value signals or priority flags your team uses.
+you_get:
+  - Show tickets with account context and recommended handling. Ask before posting any Slack alert.
+how_it_works:
+  - title: Match open tickets
+    text: Read open tickets and look up each customer email in HubSpot.
+  - title: Check account signals
+    text: Review plan, deal value, account flags, active growth plans, and signs the customer may leave.
+  - title: Prepare the priority brief
+    text: Show tickets with account context and recommended handling. Ask before posting any Slack alert.
+works_best_with:
+  tools:
+    - name: Gorgias and HubSpot; Slack for optional alerts
+      why: Live lookups need Composio CLI access and connected accounts for these services.
+how_to_use:
+  - Add the downloaded folder to an AI that can read skill files.
+  - Ask for gorgias priority customer ticket brief by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
+  - Provide Open Gorgias tickets and HubSpot account records.
+  - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
+  - Review the result. Approve any proposed sending or account changes before they happen.

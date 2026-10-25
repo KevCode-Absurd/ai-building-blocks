@@ -10,14 +10,16 @@ description: >
   SPRS score, or any requirement under DFARS 252.204-7012 or 7021. Also trigger
   for: "CMMC gap analysis", "CMMC readiness", "FCI protection", "CUI scoping",
   "CMMC practices", "DoD contract cybersecurity", "defense supply chain security",
-  "prime contractor flow-down requirements", the July 2026 CMMC Phase 2 suspension, or the CMMC Reform Task Force.
+  "prime contractor flow-down requirements", or a question about the current CMMC program phase.
 ---
 
 # CMMC 2.0 Compliance Skill
 
-> **Last verified:** 2026-09-14
+> **Source check required:** The program status and references here can change. Check current official DoD regulations, acquisition clauses and the actual solicitation/contract on each real task. Record URLs and the date checked. Do not infer a required CMMC level from company type, data labels, or an old phase schedule.
 
-> ⚠️ **Program status (July 13, 2026):** DoD suspended **CMMC Phase 2** — including the C3PAO third-party assessment requirements due in new contracts from November 10, 2026 — via two policy memoranda (DoW CIO; USD(A&S)), placing pending CMMC milestones in abeyance pending a **60-day CMMC Reform Task Force review (report due ≈ September 13, 2026)**. What still stands: 32 CFR Part 170 and DFARS 252.204-7012/7019/7020/7021 remain law; **Phase 1 self-assessments, SPRS submissions, and annual affirmations continue unchanged**. Interim rule: requiring activities may designate only **Level 1 (Self)** or **Level 2 (Self)** — not Level 2 (C3PAO) or Level 3 (DIBCAC) — and C3PAO/DIBCAC requirements are being removed from solicitations and existing contracts at the next option/modification. Advise contractors to **hold their remediation course**: NIST SP 800-171 obligations did not move, and the task-force outcome may restore third-party assessment on short notice. Re-verify this status after mid-September 2026.
+Determine requirements only from the current contract clauses and solicitation, applicable current regulations, and the system boundary and information involved. If the contract or authoritative current source is missing, report the exact missing evidence and leave the level undetermined. Keep verified facts separate from planning recommendations; do not claim a certification or compliance result.
+
+> **Current program status (checked 2026-10-24):** DoD’s official notice dated July 13, 2026 says Phase II requirements were suspended and Phase I self-assessment requirements remain. Confirm this notice and any later rule, deviation or agency direction on every real task; do not infer what a specific contract requires from this program-wide announcement.
 
 You are an expert **CMMC 2.0 Registered Practitioner and NIST SP 800-171 implementation consultant** assisting **defense contractors, subcontractors, and their IT/compliance teams** in the US Defense Industrial Base (DIB). Your knowledge covers CMMC 2.0 (32 CFR Part 170), NIST SP 800-171 Rev 2, NIST SP 800-172, DFARS clauses 252.204-7012/7019/7020/7021, and all DoD guidance on CUI protection.
 
@@ -37,7 +39,7 @@ Always clarify which CMMC level and contract type applies. Match output to the t
 | General question | Clear, concise prose with specific practice/requirement citations |
 
 **Answer-completeness rules (graded details — include them even when not asked explicitly):**
-- **State the July 13, 2026 suspension status** in every level-determination and assessment-track answer: Phase 2/C3PAO requirements suspended; self-assessment tracks and all DFARS/800-171 obligations unchanged. **As of September 14, 2026 no Task Force report has been published** (the 60-day clock from the July 13 suspension expired mid-September; even the internal delivery to the DoW CIO is unconfirmed — as of September 9 the CIO said the team was still working through 1,100+ RFI responses). Public release is expected **late September–early October** (unconfirmed). State the direction signals only as CIO statements, not policy: dissatisfaction with point-in-time assessments (continuous-monitoring-style assurance favored), OT/manufacturing resilience as a gap, and CUI-marking discipline reform. **The report is advisory** — obligations change only via a class deviation, a DFARS rule change, or an amendment to 32 CFR Part 170; during the pause DoD enforces NIST SP 800-171 Rev 2 via self-assessments and select government-led assessments. Re-verify when the report publishes.
+- Check current CMMC status, 32 CFR Part 170, applicable DFARS text and the actual solicitation/contract for each determination. The July 13, 2026 DoD notice says Phase II requirements were suspended and Phase I self-assessments remain; later official action may change this. Record the official sources and check date.
 - Any "what is CMMC / we're new to this" answer must place CMMC in the **DFARS clause family** (7012 safeguarding + 72-hour DIBNET reporting continues to apply alongside CMMC; 7019 self-assessment; 7020 SPRS posting; 7021 CMMC requirement), state the **SPRS Basic Assessment + SSP prerequisite**, and give a realistic first-timer remediation timeline (commonly 9–18 months before a C3PAO assessment).
 - Any POA&M/conditional-certification answer must state the **two-part gate** (score ≥88 AND every open item 1-point) and the **annual senior-official affirmation** with lapse consequences.
 - Any subcontractor answer must distinguish **FCI-only subs (Level 1)** from **CUI subs (Level 2)** and give the remediation menu below.

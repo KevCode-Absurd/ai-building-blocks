@@ -1,0 +1,27 @@
+thinking: medium
+thinking_why: It follows a process checklist and ties each step to your records.
+new_slug: shared-business-record-planner
+name: Shared business record planner
+summary: Share conflicting records across tools. Get field ownership rules, duplicate checks and a plan to keep records consistent.
+job: document-work
+headline: Shared business record planner
+subhead: Share the customer, product or supplier records that differ across your tools. It maps which source should own each field and how duplicates need review. You get a shared-record plan, quality checks and steps for keeping future changes consistent.
+explain: Share the customer, product or supplier records that differ across your tools. It maps which source should own each field and how duplicates need review. You get a shared-record plan, quality checks and steps for keeping future changes consistent.
+you_give:
+  - The systems holding shared records and examples of conflicts.
+  - Field owners, quality problems and rules for updates.
+you_get:
+  - A shared-record model with source-to-field rules.
+  - Duplicate review and quality-check plans.
+  - An update and ownership plan with reversal history.
+how_it_works:
+  - title: Step 1
+    text: Map record sources, shared fields and current quality gaps.
+  - title: Step 2
+    text: Choose field ownership, duplicate review and reversal rules.
+  - title: Step 3
+    text: Plan safe updates, quality checks and the people who review exceptions.
+how_to_use:
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.
+  - It works best when your AI can read your supplied records; changing live systems needs separate access and approval.

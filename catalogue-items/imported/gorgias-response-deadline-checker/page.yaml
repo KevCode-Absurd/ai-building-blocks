@@ -1,0 +1,32 @@
+thinking: medium
+thinking_why: It follows a set method with a few checks.
+new_slug: gorgias-response-deadline-checker
+name: Gorgias response deadline checker
+summary: Share your response targets. Get late and at-risk Gorgias tickets, deadlines, and next actions.
+job: help-customers
+headline: Gorgias response deadline checker
+subhead: Connect Gorgias and share your reply and resolution targets. It compares ticket timestamps with those limits. You get late and at-risk tickets, time remaining, suggested actions, and a score out of 100 for meeting response targets.
+when:
+  - You use this tool for customer support and need help with this task.
+you_give:
+  - Your reply and resolution time targets.
+  - Gorgias ticket messages with timestamps and current status.
+you_get:
+  - Group late, at-risk, and on-track tickets with times, next steps, and response target scores.
+how_it_works:
+  - title: Set response targets
+    text: Use your stated reply and resolution limits. Review any suggested defaults before relying on them.
+  - title: Compare ticket times
+    text: Read open ticket threads and compare customer and staff timestamps with each target.
+  - title: Show deadline risks
+    text: Group late, at-risk, and on-track tickets with times, next steps, and response target scores.
+works_best_with:
+  tools:
+    - name: Gorgias
+      why: Live lookups need Composio CLI access and connected accounts for these services.
+how_to_use:
+  - Add the downloaded folder to an AI that can read skill files.
+  - Ask for gorgias response deadline checker by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
+  - Provide your reply and resolution time targets.
+  - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
+  - Review the result. Approve any proposed sending or account changes before they happen.

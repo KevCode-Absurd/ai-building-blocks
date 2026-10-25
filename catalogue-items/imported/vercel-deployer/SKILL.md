@@ -59,13 +59,15 @@ Either file means the project is linked. Check for both.
 
 This is the ideal state. The project is linked and has git integration.
 
-1. **Ask the user before pushing.** Never push without explicit approval:
+1. **Select and verify the target before asking to push.** Read the current branch and the project’s configured production branch; never infer production from a branch name alone. For a preview, use a verified non-production branch with preview deployment enabled, or use the CLI preview route. If configuration is unknown, stop the git route.
+
+2. **Ask for push approval with the verified target named.** Never push without explicit approval. General push approval is not production authorization; pushing the configured production branch requires explicit production authorization.
    ```
-   This project is connected to Vercel via git. I can commit and push to
-   trigger a deployment. Want me to proceed?
+   The verified target is <branch> and Vercel will create a <preview/production>
+   deployment. I can commit and push to trigger it. Want me to proceed?
    ```
 
-2. **Commit and push:**
+   **Commit and push only after target verification and push approval:**
    ```bash
    git add .
    git commit -m "deploy: <description of changes>"
@@ -130,7 +132,7 @@ The CLI is working but the project isn't linked yet. This is the opportunity to 
    This prompts the user to select or create a project. It creates `.vercel/project.json`.
 
 4. **Then deploy using the best available method:**
-   - If a git remote exists → commit and push (see git push method above)
+   - If a git remote exists → verify preview/production target and obtain push approval before commit and push (see git push method above)
    - If no git remote → `vercel deploy [path] -y --no-wait --scope <team-slug>`, then `vercel inspect <url>` to check status
 
 ---
@@ -158,7 +160,7 @@ The Vercel CLI isn't set up at all.
    vercel link --scope <team-slug>          # if no git remote
    ```
 
-5. **Deploy** using the best available method (git push if remote exists, otherwise `vercel deploy -y --no-wait --scope <team-slug>`, then `vercel inspect <url>` to check status).
+5. **Deploy** using the best available method (target-verified, approved git push if remote exists, otherwise `vercel deploy -y --no-wait --scope <team-slug>`, then `vercel inspect <url>` to check status).
 
 ---
 

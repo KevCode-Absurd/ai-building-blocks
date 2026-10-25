@@ -1,0 +1,36 @@
+slug: study-gap-tracker
+name: Study gap tracker
+summary: Share repeated mistakes and past checks. Get a short list of learning gaps and what to practice first.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: beginner
+inputs:
+  - type: source_text
+    required: true
+  - type: brief
+    required: false
+outputs:
+  - type: feedback_notes
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: edu-agent-skills contributors
+  repo: yugash007/edu-agent-skills
+  path: skills/memory/weak-area-tracker
+  url: https://github.com/yugash007/edu-agent-skills/tree/e75f44303570bb2eae37a8f7536c0358be2502ee/skills/memory/weak-area-tracker
+  licence: MIT
+  licence_file: LICENSE
+  commit: e75f44303570bb2eae37a8f7536c0358be2502ee
+  original_name: weak-area-tracker
+  imported: 2026-10-23
+  skill_sha256: 3350d2791246d793cd8646871d179f43918281a0238053b0f73f5004dd12d395
+version: 1.0.0
+credits:
+  - title: weak-area-tracker skill
+    by: edu-agent-skills contributors
+    url: https://github.com/yugash007/edu-agent-skills/tree/e75f44303570bb2eae37a8f7536c0358be2502ee/skills/memory/weak-area-tracker
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

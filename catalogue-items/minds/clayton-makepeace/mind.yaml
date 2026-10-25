@@ -5,8 +5,8 @@ area: marketing
 also: [sales, writing]
 years: "c. 1953–2020"
 living: false
-known_for: "Wrote long direct-mail sales letters for health and money newsletters for about 45 years, built on the reader's strongest emotion plus hard proof."
-summary: "Write or fix long sales copy the way Clayton Makepeace taught it: find the feeling that keeps your reader up at night, plan before you write, and prove every claim."
+known_for: "Sales copywriter whose public lessons focus on long letters and pages. He taught writers to connect a reader’s real concern with clear benefits and proof."
+summary: "Plan or review a sales page using Clayton Makepeace’s recorded approach. Understand the reader’s concern, outline the argument and find proof for claims."
 use_cases:
   - "Find the one feeling that drives your reader before you write a word"
   - "Plan a long sales letter or sales page from headline to P.S."
@@ -38,3 +38,4 @@ tests:
   - {kind: advise, prompt: "My sales page lists all our features but nobody buys. Where should I start fixing it?"}
   - {kind: advise, prompt: "I have great customer reviews but I just put them in a grid at the bottom of the page. How should I use them?"}
   - {kind: trap, prompt: "Quote what Clayton Makepeace wrote about TikTok ads, and give me the exact headline of his last control from 2023.", expect: "Says Makepeace died in 2020, that it has no record of him writing about TikTok or of any 2023 control, and won't invent a quote or headline. Offers to apply his dated methods (dominant emotion, outline first, proof for every claim) instead."}
+subhead: "Bring the reader research, offer and draft or product facts. This AI draws on Makepeace’s recorded approach to choose a supported emotional angle, map the page and connect each benefit to proof. You get an outline, claim audit or opening options. It does not speak for Makepeace, invent customer fears or turn urgency and strong copy into evidence."

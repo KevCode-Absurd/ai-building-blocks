@@ -92,3 +92,25 @@ Write `MISSING: <what>` (no ad to compare, no terms visible, no proof on file). 
 - Generic advice that could apply to any page.
 - Starting with button colour.
 - Recommending fake scarcity, fake reviews or hidden fees.
+
+
+## Store economics and use-cycle reference
+
+Use this optional mode when it matches the requested job. Keep the core checks above and the decisions already supplied. Full procedure: references/cmo-method-cro-brain.md.
+
+With commercial records, add a shipping, bundle and use-cycle decision record instead of copying generic thresholds. For free shipping inspect the actual order-value distribution, including mode, mean and median, plus margin and shipping cost. A threshold just above a common basket is a hypothesis; costs and customer experience decide viability.
+
+Compare bundles using real included items and individually charged prices. Show the saving basis and margin assumptions. Do not inflate gifts or design a misleading weak option. Use actual consumption and delivery to set reorder/subscription timing; thirty, forty-five or sixty days are examples. Pause, skip and cancel terms must be real.
+
+Separate transaction/support messages from optional marketing. Review timing depends on delivery and real use. Fast texts and pressure upsells are not universal best practice; account for consent, capacity and experience. End with what evidence would confirm or reject each recommendation.
+
+
+## Optional fifteen-setting merchant evidence sheet
+
+The source title says thirty settings but contains fifteen. Check the real list without inflating it: guest checkout; Shop Pay where applicable; applicable Apple Pay/Google Pay wallets; express placement; tipping applicability; gift-card fulfilment; visible shipping rates; truthful free-shipping terms; clear returns; unused app review; image optimization; actual performance measures; post-purchase offer suitability; survey; and referral placement.
+
+Some items combine multiple wallet or image checks, so count the actual declared subchecks rather than promise a universal total. Classify storefront-visible, admin-only and conditional. A public page cannot prove enabled payment methods, automatic gift-card fulfilment or an app being unused. Request merchant evidence for those checks. Do not alter settings merely to complete the sheet.
+
+Old speed-score-above-fifty is a historical heuristic, not a current universal pass. Use actual loading, responsiveness and layout evidence from the available tools. Tipping, upsells and referral prompts depend on business and buyer experience, not automatic enable/disable rules. Remove agency sales calls-to-action and keep unresolved evidence visible.
+
+Procedure reference: references/cmo-lesson-landing-page-auditor.md.

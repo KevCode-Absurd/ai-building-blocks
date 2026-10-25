@@ -6,11 +6,15 @@ import { onRequest as compose } from "../functions/api/compose.ts";
 import { onRequest as transcribe } from "../functions/api/transcribe.ts";
 import { onRequest as auth } from "../functions/api/auth.ts";
 import { onRequest as minds } from "../functions/api/minds.ts";
+import { onRequest as library } from "../functions/api/library.ts";
+import { onRequest as community } from "../functions/api/community/[[path]].ts";
 import { securityConfig, apiSecurity, previewSecurity } from "./server/api-security.ts";
 import { previewSessionRoute } from "./server/preview-session.ts";
+import { handlePublicApi } from "./server/public-api.ts";
+import { handleCompanyApi, isCompanyApiRoute, type CompanyApiEnv } from "./server/company-api.ts";
 
 type Env = Parameters<typeof comments>[0]["env"] & Parameters<typeof spaces>[0]["env"] &
-  Parameters<typeof compose>[0]["env"] & { ASSETS: { fetch(request: Request): Promise<Response> } };
+  Parameters<typeof compose>[0]["env"] & Parameters<typeof community>[0]["env"] & CompanyApiEnv;
 
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
@@ -19,6 +23,8 @@ export default {
     const privatePreview = await previewSecurity(request, env);
     if (privatePreview) return privatePreview;
     const path = new URL(request.url).pathname.replace(/\/+$/, '') || '/';
+    if (isCompanyApiRoute(path)) return handleCompanyApi(request, env);
+    if (path === '/mcp' || path === '/api/v1' || path.startsWith('/api/v1/')) return handlePublicApi(request, env);
     if (path === "/apps/mercatura-ads" && ["GET", "HEAD"].includes(request.method)) {
       const target = new URL(request.url); target.pathname = "/apps";
       return Response.redirect(target.toString(), 301);
@@ -27,6 +33,8 @@ export default {
     if (path === "/api/transcribe") return transcribe({ request, env });
     if (path === "/api/auth") return auth({ request, env });
     if (path === "/api/minds") return minds({ request, env });
+    if (path === "/api/library") return library({ request, env });
+    if (path === "/api/community" || path.startsWith("/api/community/")) return community({ request, env });
     if (path === "/api/comments") return comments({ request, env });
     if (path === "/api/spaces" || path.startsWith("/api/spaces/")) return spaces({ request, env });
     if (path === "/api/compose") return compose({ request, env });
@@ -36,6 +44,10 @@ export default {
       return Response.json({ error: "API route not found." }, { status: 404, headers: { "cache-control": "no-store" } });
     }
     const response = await env.ASSETS.fetch(request);
+    if (response.status === 404 && /^\/community\/[0-9a-f-]+$/.test(path) && ["GET", "HEAD"].includes(request.method)) {
+      const shell = await env.ASSETS.fetch(new Request(new URL('/community', request.url), { method: request.method }));
+      if (shell.ok) return shell;
+    }
     // Vite's app router repairs links using the wrong block type. Preserve that
     // behavior for missing typed paths while retaining a real 404 for unknown slugs.
     const typed = path.match(/^\/(skills|prompts|workflows|agents|minds)\/([a-z0-9-]+)(?:\.html)?$/);

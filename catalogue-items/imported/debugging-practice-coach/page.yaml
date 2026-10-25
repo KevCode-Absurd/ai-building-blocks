@@ -1,0 +1,35 @@
+thinking: medium
+thinking_why: It follows a set method and adapts its questions or draft to your evidence.
+new_slug: debugging-practice-coach
+name: Debugging practice coach
+summary: Share a bug and what you tried. Learn to gather evidence, test causes
+  and verify your own fix.
+job: study-and-practice
+headline: Debugging practice coach
+subhead: Share the code, error and result you expected. It helps you gather
+  evidence, form possible causes and test them one at a time. You work out the
+  fix and explain why it works, then choose a check that proves it.
+explain: Share the code, error and result you expected. It helps you gather
+  evidence, form possible causes and test them one at a time. You work out the
+  fix and explain why it works, then choose a check that proves it.
+you_give:
+  - The code, error and expected result.
+  - Your environment and fixes already tried.
+you_get:
+  - A guided debugging session.
+  - An explanation of the cause in your own words.
+  - A fix proposal and a verification test.
+how_it_works:
+  - title: Step 1
+    text: State the expected and actual result, then gather evidence.
+  - title: Step 2
+    text: Ask you to propose causes and a test for each.
+  - title: Step 3
+    text: Check your explanation, fix and a test that would catch the bug again.
+how_to_use:
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
+  - It works best when your AI can read your supplied notes and ask follow-up
+    questions.

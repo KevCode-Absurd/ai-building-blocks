@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <script defer src="/analytics.js"></script>
+    <script defer src="/support-chat.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Free AI Skills &amp; Custom Workflow Builder | AI Blocks</title>
     <meta name="description" content="Explore free AI skills, prompts and workflows. Build a custom workflow, edit the steps and download a pack to run in your AI. Try free browser tools too." />
@@ -48,33 +49,18 @@
       }
       html[data-theme="dark"][data-boot] #app-loader { background: #0a0a0a; color: #fafafa; }
       html[data-boot="ready"] #app-loader { opacity: 0; visibility: hidden; pointer-events: none; }
-      .boot-content { display: grid; justify-items: center; gap: 24px; }
-      .boot-mark { position: relative; display: grid; grid-template-columns: repeat(3, 12px); gap: 5px; padding: 25px; }
-      .boot-mark::before { content: ""; position: absolute; inset: 0; border: 1px solid currentColor; opacity: .14; border-radius: 22px; transform: rotate(-8deg); }
-      .boot-mark i { width: 12px; height: 12px; background: currentColor; border-radius: 2px; animation: boot-assemble 2.4s cubic-bezier(.22,1,.36,1) infinite; animation-delay: calc(var(--n) * -90ms); }
-      .boot-mark i:nth-child(3n + 1) { --x: -16px; }
-      .boot-mark i:nth-child(3n + 2) { --x: 0px; }
-      .boot-mark i:nth-child(3n) { --x: 16px; }
-      .boot-mark i:nth-child(-n + 3) { --y: -16px; }
-      .boot-mark i:nth-child(n + 4) { --y: 0px; }
-      .boot-mark i:nth-child(n + 7) { --y: 16px; }
-      .boot-brand { margin: 0; font: 500 15px/1.5 "JetBrains Mono", ui-monospace, monospace; letter-spacing: -.04em; }
-      .boot-caption { margin: 6px 0 0; font-size: 12px; opacity: .6; }
-      .boot-recovery { display: none; max-width: 280px; }
-      .boot-recovery p { margin: 0 0 16px; }
+      .boot-content { min-height: 100dvh; display: grid; place-content: center; justify-items: center; gap: 18px; padding: 24px; text-align: center; }
+      .boot-loading { display: grid; justify-items: center; gap: 14px; }
+      .boot-brand { color: inherit; font: 650 18px/1.2 "Space Grotesk", system-ui, sans-serif; letter-spacing: -.04em; }
+      .boot-progress { display: block; width: 42px; height: 3px; border-radius: 3px; background: currentColor; opacity: .55; transform-origin: left; animation: boot-progress 900ms ease-in-out infinite alternate; }
+      @keyframes boot-progress { to { transform: scaleX(1.55); opacity: .28; } }
+      .diagram-tools .workflow-view-help { display: none !important; }
+      .boot-recovery { display: none; max-width: 360px; margin: auto auto 0; text-align: center; }
+      .boot-recovery p { margin: 0 0 12px; }
       .boot-recovery a { display: inline-block; color: inherit; padding: 8px 12px; text-underline-offset: 4px; }
       .boot-recovery a:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
       html[data-boot="error"] .boot-recovery { display: block; }
-      html[data-boot="error"] .boot-caption { display: none; }
-      html[data-boot="error"] .boot-mark i { animation: none; }
-      @keyframes boot-assemble {
-        0%, 12%, 100% { transform: translate(var(--x), var(--y)) rotate(-90deg) scale(.45); opacity: .2; }
-        42%, 72% { transform: translate(0, 0) rotate(0) scale(1); opacity: 1; }
-      }
-      @media (prefers-reduced-motion: reduce) {
-        .boot-mark i { animation: none; }
-        html[data-boot] #app-loader { transition: none; }
-      }
+      @media (prefers-reduced-motion: reduce) { html[data-boot] #app-loader { transition: none; } .boot-progress { animation: none; } }
     </style>
     <script>
       // Run before the body can paint; JavaScript-free readers keep the HTML view.
@@ -100,6 +86,10 @@
         if (bootStyleFailed) return;
         window.removeEventListener("error", bootStyleError, true);
         document.documentElement.dataset.boot = "ready";
+        // The live app now owns the page semantics. Keep the short visual fade,
+        // but prevent its duplicated heading and links from being announced.
+        const loader = document.getElementById("app-loader");
+        loader?.setAttribute("aria-hidden", "true");
         setTimeout(function () { document.getElementById("app-loader")?.remove(); }, 200);
       }, { once: true });
     </script>
@@ -110,11 +100,19 @@
     <!-- The library list starts downloading alongside the code instead of after it. -->
     <script>
       // Only catalogue screens need the full index. Keep independent pages light.
-      if (location.pathname === "/" || /^\/(skills|prompts|workflows|agents|minds|space|people|s|from-a-source)(\/|$)/.test(location.pathname)) {
-        const catalogue = document.createElement("link");
-        catalogue.rel = "preload"; catalogue.href = "/data/blocks.json";
-        catalogue.as = "fetch"; catalogue.crossOrigin = "anonymous";
-        document.head.append(catalogue);
+      if (location.pathname === "/" || /^\/(skills|prompts|workflows|agents|minds|space|people|s|compose|from-a-source)(\/|$)/.test(location.pathname)) {
+        // Public files can load while sign-in opens. Keep the full homepage
+        // catalogue behind critical code/fonts in the network queue.
+        const home = location.pathname === "/";
+        const params = new URLSearchParams(location.search);
+        const starter = home && !params.has("block") && !params.has("workflow");
+        for (const href of starter ? ["/data/blocks.json", "/data/starter-blocks.json"] : ["/data/blocks.json"]) {
+          const catalogue = document.createElement("link");
+          catalogue.rel = "preload"; catalogue.href = href;
+          catalogue.as = "fetch"; catalogue.crossOrigin = "anonymous";
+          if (home && href === "/data/blocks.json") catalogue.fetchPriority = "low";
+          document.head.append(catalogue);
+        }
       }
     </script>
     <style>
@@ -124,15 +122,27 @@
   </head>
   <body>
     <!-- APP_LOADER_START -->
-    <div id="app-loader" role="status" aria-live="polite" aria-label="Loading AI Blocks">
+    <div id="app-loader" role="status" aria-live="polite" aria-label="AI Blocks is opening">
       <div class="boot-content">
-        <div class="boot-mark" aria-hidden="true"><i style="--n:0"></i><i style="--n:1"></i><i style="--n:2"></i><i style="--n:3"></i><i style="--n:4"></i><i style="--n:5"></i><i style="--n:6"></i><i style="--n:7"></i><i style="--n:8"></i></div>
-        <div><p class="boot-brand">AI Blocks</p><p class="boot-caption">Putting the blocks together</p></div>
+        <div class="boot-loading" aria-hidden="true"><span class="boot-brand">AI Blocks</span><span class="boot-progress"></span></div>
         <div class="boot-recovery"><p>This is taking longer than expected.</p><a href="">Try again</a><a href="/jobs">Browse the library</a></div>
       </div>
     </div>
     <!-- APP_LOADER_END -->
     <div id="root"></div>
+    <script>
+      // Public prerender contains a search-engine reading page. Reuse only its
+      // title in this compact first screen; never flash the long text wall.
+      if (location.pathname !== "/") {
+        const isPrivate = /^\/(account|sign-in|sign-up|space|people|s|my-submissions|admin)(\/|$)/.test(location.pathname);
+        const heading = isPrivate ? "Your work, in one place." : document.querySelector("#root [data-prerendered] h1")?.textContent?.trim();
+        if (heading) document.querySelector(".boot-h1").textContent = heading;
+        if (isPrivate) {
+          document.querySelector(".boot-kicker").textContent = "Your saved work";
+          document.querySelector(".boot-lede").textContent = "Sign in to find your saved skills and workflows.";
+        }
+      }
+    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

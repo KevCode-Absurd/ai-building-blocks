@@ -8,12 +8,12 @@
 
 export default {
   slug: "reorder-point",
-  name: "Know when to reorder stock and how much",
+  name: "Stock reorder planner",
   /** The plain name, used where the tool talks about itself. */
-  short: "Reorder point",
-  headline: "Know when to reorder stock and how much, so you rarely run out",
-  summary: "Type your daily sales, how much they swing and your supplier's lead time. You get the stock level that tells you to reorder, and how much to order.",
-  question: "At what stock level should I reorder, how much should I order, and how much spare stock protects me from selling out?",
+  short: "Stock reorder planner",
+  headline: "Stock reorder planner",
+  summary: "Enter daily sales, sales variation and delivery time. Estimate spare stock, a reorder point and the quantity to order.",
+  question: "At what stock level should I review a reorder, and how many units cover my target?",
   shelf: ["general", "ecommerce"],
   version: "1.0.0",
   updated: "2026-10-21",
@@ -29,8 +29,8 @@ export default {
       tools: ["Shopify inventory reports", "Amazon Business Reports", "Your sales export in a spreadsheet"],
     },
     {
-      id: "swing", label: "How much your daily sales swing", unit: "number", example: 6, min: 0, max: 1e7, step: 0.5,
-      help: "The usual gap between one day's sales and your average. If most days land within 6 of your average, type 6. Type 0 if sales are perfectly steady.",
+      id: "swing", label: "Daily sales spread", unit: "number", example: 6, min: 0, max: 1e7, step: 0.5,
+      help: "Use the standard deviation of daily unit sales over a normal period. A spreadsheet can calculate it. Use 0 if sales never vary.",
       where: "Put your daily units for the last 90 days in a spreadsheet and use its STDEV function.",
       tools: ["A spreadsheet (STDEV)", "Shopify inventory reports", "Your sales export"],
     },
@@ -134,7 +134,7 @@ export default {
     { what: "Safety stock", how: "Safety factor × daily swing × the square root of the lead time. The standard safety stock formula for steady supplier lead times." },
   ],
   notes: [
-    "This assumes sales are steady apart from random swings and your supplier delivers on time. Late deliveries, a launch, a sale or a season need more spare stock than it shows.",
+    "Assumes daily sales vary at random and the delivery time stays fixed. A late delivery, launch, sale or season can make the estimate too low. Update those assumptions before ordering.",
     "Each result rounds up to a whole unit.",
     "It says nothing about what your cash can afford. Check the order size against your cash first.",
   ],

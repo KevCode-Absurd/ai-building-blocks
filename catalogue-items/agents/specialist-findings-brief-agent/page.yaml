@@ -1,0 +1,37 @@
+new_slug: specialist-findings-brief-agent
+name: Specialist findings brief agent
+summary: Turn specialist findings into one clear brief. Resolve clashes, rank next steps and save a checkpoint with owners and open questions.
+job: set-up-ai
+headline: Specialist findings brief agent
+subhead: Turn specialist findings into one clear brief. Resolve clashes, rank next steps and save a checkpoint with owners and open questions.
+explain: |-
+  Share scoped specialist findings, goals, evidence dates and delegation limits. Get a concise strategic brief, owned next steps and state checkpoint.
+
+  This is a portable agent procedure for one bounded run. It can be reused with a checkpoint, but it does not claim an installed worker or continuous autonomous runtime.
+when:
+  - You need a concise strategic brief, owned next steps and state checkpoint.
+you_give:
+  - Scoped specialist findings, goals, evidence dates and delegation limits
+  - Authorized tools, owner, limits and any prior checkpoint
+you_get:
+  - A concise strategic brief, owned next steps and state checkpoint
+  - Evidence gaps, proposed actions and checks not run
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Step 1
+    text: "On first use configure the role from the brief and optional editable template: scope, owner, allowed tools, evidence sources, output contract, review limits and stop conditions. Resolve only material missing fields. A role file does not deploy a background process or grant access to another agent."
+  - title: Step 2
+    text: Run only the current bounded request or an explicitly authorized repeat. Load the last supplied checkpoint if present, compare its scope and evidence dates, then use the current request as authority. Set a maximum work/time/cost boundary before any paid or external operation.
+  - title: Step 3
+    text: Collect current specialist findings for one scope. Group duplicate issues, retain source/evidence links and mark disagreement rather than counting repeated claims as independent proof.
+  - title: Step 4
+    text: Compare urgency, business impact, confidence and dependencies. Reconcile metric definitions before combining numbers. Platform conversions can overlap; do not sum them as unique customers without evidence.
+  - title: Step 5
+    text: "Write a short decision brief: main recommendation, strongest uncertainty or dissent, checks that change the decision, owner and next step. Propose specialist delegation only through the current authority registry and user authorization; coordination does not grant unrestricted execution."
+  - title: Step 6
+    text: End the run with a checkpoint containing scope, evidence dates/IDs, completed deliverables, proposed actions, unresolved facts, approvals and the next review trigger. Store it only in the destination the user requested; otherwise return it in the answer. A later run must revalidate stale facts and approvals. No promise of continuous monitoring or sending is implied.
+thinking: high
+thinking_why: It compares supplied evidence and follows a specific method.

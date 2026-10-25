@@ -7,12 +7,12 @@ role: check
 job: analysis
 level: advanced
 inputs:
-  - {type: audit_report, required: true}
-  - {type: performance_sheet, required: false}
+  - { type: audit_report, required: true }
+  - { type: performance_sheet, required: false }
 outputs:
-  - {type: audit_report}
+  - { type: audit_report }
 origin: rebuilt
-version: 1.0.0
-minds: [warren-buffett]
+version: 1.0.1
+minds: [ warren-buffett ]
 credits:
-  - {title: "The Warren Buffett Way, Second Edition (2005)", by: "Robert G. Hagstrom", used: "The habit of naming the events that could hurt a business, rating how likely each is, and working out in plain sums how large a loss the business could absorb in one year and still break even"}
+  - { title: "The Warren Buffett Way, Second Edition (2005)", by: "Robert G. Hagstrom", used: "The habit of naming the events that could hurt a business, rating how likely each is, and working out in plain sums how large a loss the business could absorb in one year and still break even" }

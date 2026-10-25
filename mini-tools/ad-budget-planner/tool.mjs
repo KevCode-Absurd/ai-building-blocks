@@ -9,12 +9,12 @@
 
 export default {
   slug: "ad-budget-planner",
-  name: "Know the ad budget your sales goal needs",
+  name: "Ad budget and sales goal planner",
   /** The plain name, used where the tool talks about itself. */
-  short: "Ad budget planner",
-  headline: "Know the ad budget and traffic your sales or profit goal needs",
-  summary: "Type your goal, your order value and what a click costs. You get the monthly ad budget, the clicks and orders you need, and your profit after ads.",
-  question: "How much should I spend on ads each month, and how much traffic do I need, to reach my sales or profit goal?",
+  short: "Ad budget and sales goal planner",
+  headline: "Ad budget and sales goal planner",
+  summary: "Enter a sales or profit goal, order value and ad results. Estimate spend, clicks, orders and profit after ads.",
+  question: "What ad budget would my sales or profit goal need at these results?",
   shelf: ["general", "ecommerce"],
   version: "1.0.0",
   updated: "2026-10-21",

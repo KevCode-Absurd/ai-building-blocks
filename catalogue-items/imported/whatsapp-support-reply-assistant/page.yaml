@@ -1,0 +1,32 @@
+thinking: medium
+thinking_why: It follows a set method with a few checks.
+new_slug: whatsapp-support-reply-assistant
+name: WhatsApp support reply assistant
+summary: Connect Wati or Whautomate. Get waiting chats, reply drafts, and issues needing another team.
+job: help-customers
+headline: WhatsApp support reply assistant
+subhead: Connect Wati or Whautomate and ask for a review of waiting WhatsApp chats. It reads recent conversations and groups them by next action. You get reply drafts, missing details, issues for another team, and resolved chats to review before sending.
+when:
+  - You use this tool for customer support and need help with this task.
+you_give:
+  - Unresolved Wati or Whautomate conversations.
+  - Recent message history and verified facts for replies.
+you_get:
+  - Show the waiting queue and reply drafts. Send only the replies you approve.
+how_it_works:
+  - title: Read waiting chats
+    text: Fetch unresolved WhatsApp conversations and read recent history for the top ten.
+  - title: Choose each next step
+    text: Mark clear questions, missing details, issues needing another team, and chats that appear resolved.
+  - title: Review proposed replies
+    text: Show the waiting queue and reply drafts. Send only the replies you approve.
+works_best_with:
+  tools:
+    - name: Wati or Whautomate
+      why: Live lookups need Composio CLI access and connected accounts for these services.
+how_to_use:
+  - Add the downloaded folder to an AI that can read skill files.
+  - Ask for whatsapp support reply assistant by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
+  - Provide Unresolved Wati or Whautomate conversations.
+  - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
+  - Review the result. Approve any proposed sending or account changes before they happen.

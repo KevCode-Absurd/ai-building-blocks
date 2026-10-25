@@ -1,0 +1,28 @@
+slug: swipe-library-ad-production
+name: Swipe library ad builder
+summary: Choose reference layouts, rebuild them with real product photos and live type, then review checked ads in multiple sizes.
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - type: brand_brain
+    required: true
+  - type: product_photos
+    required: true
+  - type: reference_set
+    required: true
+outputs:
+  - type: static_ads
+    required: true
+  - type: brief
+    required: true
+  - type: audit_report
+    required: true
+uses: []
+execution: coordinator
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

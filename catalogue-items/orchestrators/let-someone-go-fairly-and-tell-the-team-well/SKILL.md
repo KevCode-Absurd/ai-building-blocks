@@ -10,6 +10,17 @@ Give it the situation. Get a fair exit plan, risk flags, a handover checklist an
 This workflow chains 4 skills into one job. You run them one after another, and each skill's result is saved and passed to the next.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check the setup.** Use the tools listed below when the task needs them. If a tool is unavailable, say what you can do with the details provided. Do not claim you used it.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+
+**Tools that do this best:**
+- **Any good chat AI:** Every step is a plan or a document for you to check.
+- **A lawyer or HR adviser:** The risk flags are a first check, never the final word.
 <!-- /needs -->
 
 ## What you need
@@ -38,6 +49,14 @@ Pause here: Have a lawyer or HR check the plan and the flags. Hold the conversat
 4 step files and the summary. The first file holds the exit plan, the second the risk flags, the last the announcement.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Applicant shortlist builder](https://useaiblocks.com/skills/applicant-shortlist-builder). It takes the document.
+- **Set up AI to work for you** with the [Deliverable requirements checker](https://useaiblocks.com/skills/request-acceptance-checker). It takes the plan and document.
+- The [Factory price-break negotiator](https://useaiblocks.com/skills/factory-price-break-negotiator). It takes the plan and document.
+- The [Article formatter](https://useaiblocks.com/skills/article-formatter). It takes the document.
+- The [Plain-words contract summary](https://useaiblocks.com/prompts/plain-words-contract-summary). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
 ## Check before you hand it back

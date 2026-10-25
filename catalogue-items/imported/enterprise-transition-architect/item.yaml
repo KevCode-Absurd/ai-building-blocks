@@ -1,0 +1,37 @@
+slug: enterprise-transition-architect
+name: Plan enterprise architecture changes
+summary: Link business goals, systems and owners to a phased change plan. State what each step needs to prove.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: true
+outputs:
+  - type: plan
+    required: true
+  - type: document
+    required: true
+uses: []
+origin: imported
+source:
+  by: magnus919
+  repo: magnus919/agent-skills
+  path: enterprise-architecture
+  url: https://github.com/magnus919/agent-skills/tree/92c327e525da69c9ad3812fd223a1770e977c2e3/enterprise-architecture
+  licence: MIT
+  licence_file: LICENSE.md
+  commit: 92c327e525da69c9ad3812fd223a1770e977c2e3
+  original_name: enterprise-architecture
+  imported: 2026-10-24
+version: 1.0.0
+credits:
+  - title: enterprise-architecture skill
+    by: magnus919
+    url: https://github.com/magnus919/agent-skills/tree/92c327e525da69c9ad3812fd223a1770e977c2e3/enterprise-architecture
+    used: Original instructions and supporting files, with attribution and the MIT licence. Display copy describes the task.

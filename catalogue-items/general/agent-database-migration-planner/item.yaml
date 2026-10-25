@@ -1,0 +1,19 @@
+slug: agent-database-migration-planner
+name: Agent database migration planner
+summary: Plan a database change that preserves existing agent data. Get a schema map, staging checks, release order and recovery steps.
+category: general
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+    required: true
+uses: []
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

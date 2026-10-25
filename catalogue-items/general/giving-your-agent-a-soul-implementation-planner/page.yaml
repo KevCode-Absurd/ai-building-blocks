@@ -1,0 +1,36 @@
+new_slug: giving-your-agent-a-soul-implementation-planner
+name: Agent role file loader builder
+summary: Build a role loader with validated metadata and bounded context.
+job: build-software
+headline: Agent role file loader builder
+subhead: Share role files, section priorities and token budget. Get a role loader with validated metadata and bounded context.
+explain: |-
+  Share role files, section priorities and token budget. Get a role loader with validated metadata and bounded context.
+
+  The complete method and its supporting files are in the download. It marks missing inputs and separates proposed actions from actions that were actually completed.
+when:
+  - You need a role loader with validated metadata and bounded context.
+  - You are adding this function to an agent system.
+  - You need to compare an existing version with the supplied starter.
+you_give:
+  - Role files, section priorities and token budget
+you_get:
+  - A role loader with validated metadata and bounded context
+  - A failure checklist and synthetic test cases
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Step 1
+    text: Parse frontmatter separately from role text.
+  - title: Step 2
+    text: Validate the role identifier, sections and budget.
+  - title: Step 3
+    text: Keep critical boundaries before optional personality text when trimming.
+  - title: Step 4
+    text: Fail clearly on malformed or missing files.
+  - title: Step 5
+    text: Do not treat related role names as permission to contact agents.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

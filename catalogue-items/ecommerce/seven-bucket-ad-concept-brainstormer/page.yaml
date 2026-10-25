@@ -1,0 +1,45 @@
+new_slug: seven-bucket-ad-concept-brainstormer
+name: Seven-bucket ad concept brainstormer
+summary: Generate ad concepts in seven groups. Rank the best eight by fit, proof needs, effort and risk.
+job: plan-ad-tests
+headline: Seven-bucket ad concept brainstormer
+subhead: Share product facts, target buyer, offer, past ads and production limits. Get a ranked concept list with top-eight production picks.
+explain: |-
+  Generate ad concepts in seven groups. Rank the best eight by fit, proof needs, effort and risk.
+
+  Share product facts, target buyer, offer, past ads and production limits. Get a ranked concept list with top-eight production picks.
+when:
+  - You need a ranked concept list with top-eight production picks.
+  - You need seven-bucket ad concept brainstormer for a specific task.
+  - You want the method's decisions and assumptions written down before acting.
+you_give:
+  - Product facts
+  - Target buyer
+  - Offer
+  - Past ads and production limits
+you_get:
+  - A ranked concept list with top-eight production picks
+  - The sources used, missing inputs and assumptions
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Check the inputs
+    text: Confirm product facts, target buyer, offer, past ads and production limits. Mark facts that are missing.
+  - title: Collect Context
+    text: Follow the collect context section in the full method and keep its required fields and decision rules.
+  - title: Generate Concepts in Batches
+    text: Follow the generate concepts in batches section in the full method and keep its required fields and decision rules.
+  - title: For Each Concept, Produce
+    text: Follow the for each concept, produce section in the full method and keep its required fields and decision rules.
+  - title: Rank
+    text: Follow the rank section in the full method and keep its required fields and decision rules.
+  - title: Deliver
+    text: Follow the deliver section in the full method and keep its required fields and decision rules.
+  - title: "Brainstorm: [product]"
+    text: "Follow the brainstorm: [product] section in the full method and keep its required fields and decision rules."
+  - title: Review the result
+    text: Return a ranked concept list with top-eight production picks. Check facts, math and the decisions before any action.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

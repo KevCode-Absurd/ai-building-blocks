@@ -1,0 +1,32 @@
+thinking: medium
+thinking_why: It follows a set method with a few checks.
+new_slug: notion-help-article-finder
+name: Notion help article finder
+summary: Share a customer question. Get matching Notion articles, useful excerpts, and a reply draft.
+job: help-customers
+headline: Notion help article finder
+subhead: Give it a customer question and connect your Notion workspace. It searches exact titles and related words, then reads the best matches. You get linked articles, useful excerpts, a suggested reply, and gaps in your help content.
+when:
+  - You use this tool for customer support and need help with this task.
+you_give:
+  - The customer's question or topic.
+  - Access to the relevant Notion knowledge base.
+you_get:
+  - Return article links, useful excerpts, a customer reply, and missing or outdated help topics.
+how_it_works:
+  - title: Search the question
+    text: Try the exact topic and related words in your Notion knowledge base.
+  - title: Read the best matches
+    text: Read the full content of the best matching pages and note their dates.
+  - title: Draft a sourced answer
+    text: Return article links, useful excerpts, a customer reply, and missing or outdated help topics.
+works_best_with:
+  tools:
+    - name: Notion
+      why: Live lookups need Composio CLI access and connected accounts for these services.
+how_to_use:
+  - Add the downloaded folder to an AI that can read skill files.
+  - Ask for notion help article finder by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
+  - Provide the customer's question or topic.
+  - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
+  - Review the result. Approve any proposed sending or account changes before they happen.

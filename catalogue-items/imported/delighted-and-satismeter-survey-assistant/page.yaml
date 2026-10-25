@@ -1,0 +1,32 @@
+thinking: medium
+thinking_why: It follows a set method with a few checks.
+new_slug: delighted-and-satismeter-survey-assistant
+name: Delighted and Satismeter survey assistant
+summary: Connect your survey tool. Get a satisfaction report, or review a recipient list before sending surveys.
+job: help-customers
+headline: Delighted and Satismeter survey assistant
+subhead: Connect Delighted or Satismeter and choose to read results or send surveys. It groups responses and calculates the available scores. You get trends, reasons for low ratings, positive themes, and next steps, or an approved survey send report.
+when:
+  - You use this tool for customer support and need help with this task.
+you_give:
+  - Survey service access and dates for a results review.
+  - A recipient list and approved survey if you want to send one.
+you_get:
+  - Show scores, response counts, trends, reasons for low ratings, positive comments, and next actions.
+how_it_works:
+  - title: Choose the survey task
+    text: Ask to review existing responses or prepare surveys for a chosen customer list.
+  - title: Read or send surveys
+    text: Read available results. If sending, confirm the recipient list before any survey goes out.
+  - title: Report the findings
+    text: Show scores, response counts, trends, reasons for low ratings, positive comments, and next actions.
+works_best_with:
+  tools:
+    - name: Delighted or Satismeter
+      why: Live lookups need Composio CLI access and connected accounts for these services.
+how_to_use:
+  - Add the downloaded folder to an AI that can read skill files.
+  - Ask for delighted and satismeter survey assistant by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
+  - Provide Survey service access and dates for a results review.
+  - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
+  - Review the result. Approve any proposed sending or account changes before they happen.

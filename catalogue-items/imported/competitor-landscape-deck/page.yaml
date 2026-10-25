@@ -1,14 +1,13 @@
+# Modified by AI Blocks on 2026-10-24: method/copy repair.
 thinking: medium
 thinking_why: It compares peers and pulls out a view.
 new_slug: competitor-landscape-deck
-name: Competitor landscape deck builder
-summary: Name a company and its rivals. Get a deck on market position, side by
+name: Competitor landscape deck
+summary: Compare companies in the user’s chosen market. Build a sourced slide outline, then create the approved deck.
   side comparison and what it means.
 job: plan-strategy
-headline: Competitor landscape deck builder
-subhead: A slide deck that shows where a company sits among its rivals, with a
-  side by side comparison and a clear takeaway. The work runs in two phases, so
-  you agree the plan before any slides are built.
+headline: Competitor landscape deck
+subhead: A clear competitor comparison with matched metrics, dated sources and an approved slide plan.
 explain: |
   A slide deck that shows where a company sits among its rivals, with a side by side comparison and a clear takeaway. The work runs in two phases, so you agree the plan before any slides are built.
 
@@ -29,6 +28,7 @@ you_get:
   - Side by side comparison slides
   - A closing slide on what it means
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
-    or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.

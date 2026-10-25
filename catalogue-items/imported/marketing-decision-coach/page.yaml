@@ -2,10 +2,14 @@ thinking: high
 thinking_why: It weighs your numbers and rivals before it gives a verdict.
 new_slug: marketing-decision-coach
 name: Marketing decision coach
-summary: Ask whether a marketing move will work. Get a straight verdict with the reasons, including "not worth doing".
+summary: Ask whether a marketing move will work. Get a straight verdict with the
+  reasons, including "not worth doing".
 job: plan-strategy
 headline: Marketing decision coach
-subhead: Describe your product, offer, audience, budget and the marketing move you are weighing. It judges whether the move will trade for something real, such as money or clear prospects. You get a straight verdict, the reasoning, the volume a test needs and a next step or a stop.
+subhead: Describe your product, offer, audience, budget and the marketing move
+  you are weighing. It judges whether the move will trade for something real,
+  such as money or clear prospects. You get a straight verdict, the reasoning,
+  the volume a test needs and a next step or a stop.
 explain: |
   A straight verdict on a marketing move, with the reasoning, including "not worth doing" when that is true. It gives a decision, not a list of tactics.
 
@@ -26,5 +30,7 @@ you_get:
   - The volume a test needs
   - A next step or a stop recommendation
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.

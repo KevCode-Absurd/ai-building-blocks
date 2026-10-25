@@ -7,12 +7,12 @@ role: make
 job: analysis
 level: advanced
 inputs:
-  - {type: performance_sheet, required: true}
-  - {type: audit_report, required: false}
+  - { type: performance_sheet, required: true }
+  - { type: audit_report, required: false }
 outputs:
-  - {type: audit_report}
+  - { type: audit_report }
 origin: rebuilt
-version: 1.0.0
-minds: [warren-buffett]
+version: 1.0.1
+minds: [ warren-buffett ]
 credits:
-  - {title: "The Warren Buffett Way, Second Edition (2005)", by: "Robert G. Hagstrom", used: "The owner earnings measure (profit plus non-cash charges, less the spending needed to stay level and extra working capital), why plain cash flow overstates, and the habit of giving a rough range instead of a false exact figure"}
+  - { title: "The Warren Buffett Way, Second Edition (2005)", by: "Robert G. Hagstrom", used: "The owner earnings measure (profit plus non-cash charges, less the spending needed to stay level and extra working capital), why plain cash flow overstates, and the habit of giving a rough range instead of a false exact figure" }

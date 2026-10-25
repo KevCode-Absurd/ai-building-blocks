@@ -2,7 +2,7 @@ slug: github-copilot
 name: GitHub Copilot
 maker: GitHub (Microsoft)
 url: https://github.com/features/copilot
-promise: AI help in your code editor and on GitHub, from suggestions to pull requests.
+promise: "Get code suggestions, agent changes and pull request reviews in your development tools."
 use_cases: [code]
 categories: [coding]
 what_it_does:
@@ -10,7 +10,7 @@ what_it_does:
   - Answers coding questions in chat and proposes changes to your code.
   - Works through a GitHub issue in the background and opens the changes for review.
   - Reviews pull requests on GitHub.
-  - Connects to outside services through MCP servers your organisation approves.
+  - "Links to outside apps your team has approved."
   - Gathers docs and repositories into a shared reference for a team.
 benefits:
   - Write routine code faster without leaving the editor you already use.
@@ -20,7 +20,7 @@ benefits:
 best_for:
   - Teams that already host their code on GitHub.
   - Developers who use VS Code, JetBrains, Visual Studio or Xcode.
-  - Companies that need admin controls over how AI is used.
+  - "Companies that need controls over staff access and AI use."
 not_for:
   - Anyone who wants an app built from a description with no coding.
   - Heavy agent users who want a flat, predictable bill, since agent work uses credits.

@@ -1,0 +1,35 @@
+slug: gorgias-shift-handover-writer
+name: Gorgias shift handover writer
+summary: Connect Gorgias. Get urgent tickets, pending replies, recent fixes, and clear notes for the next shift.
+category: general
+boards: []
+type: skill
+role: compress
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: tool_connection
+    required: true
+outputs:
+  - type: audit_report
+    required: true
+uses: []
+origin: imported
+source:
+  by: Composio
+  repo: composio-community/support-skills
+  path: handoff-notes
+  url: https://github.com/composio-community/support-skills/tree/83382c4b055fc4e5b055044adb5bfb7585484c9a/handoff-notes
+  licence: MIT
+  licence_file: README.md
+  commit: 83382c4b055fc4e5b055044adb5bfb7585484c9a
+  original_name: handoff-notes
+  imported: 2026-10-23
+version: 1.0.0
+credits:
+  - title: handoff-notes skill
+    by: Composio
+    url: https://github.com/composio-community/support-skills/tree/83382c4b055fc4e5b055044adb5bfb7585484c9a/handoff-notes
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

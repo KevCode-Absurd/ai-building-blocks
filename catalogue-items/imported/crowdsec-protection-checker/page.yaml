@@ -1,0 +1,28 @@
+new_slug: crowdsec-protection-checker
+name: Check CrowdSec protection
+summary: Trace logs, detections and blocking in CrowdSec. Find where protection stops working and plan a scoped fix with an undo path.
+job: secure-code
+headline: Check CrowdSec protection
+subhead: Bring host details and log samples. Trace each stage, then get a fix and proof plan.
+explain: Bring host details and log samples. Trace each stage, then get a fix and proof plan.
+when:
+  - You want to check CrowdSec protection.
+you_give:
+  - The authorized host/container, installed CrowdSec version, log samples and observed symptoms.
+  - Read access plus the agreed action scope, maintenance window and rollback plan before changes.
+you_get:
+  - A stage-by-stage diagnosis from log capture through parser, scenario, decision and bouncer.
+  - A bounded fix and harmless proof plan; an alert alone is not evidence of blocking.
+how_to_use:
+  - Download the complete skill folder and add it to your AI tool, or copy the instructions into a chat.
+  - Provide the inputs listed here and ask your AI to follow the skill.
+  - Review the result and any missing facts before using it.
+how_it_works:
+  - title: Confirm scope and recovery
+    text: Record target, version, read/write boundary and undo path. Prefer inspection and simulation before enforcement.
+  - title: Trace the protection chain
+    text: Check acquisition, parsing, scenarios, decisions and bouncer activity in order to locate the failed stage.
+  - title: Prove the scoped fix
+    text: Use benign fixtures and inspect the actual proxy/firewall outcome, retaining evidence and limits.
+thinking: medium
+thinking_why: It weighs your evidence and follows a specific method.

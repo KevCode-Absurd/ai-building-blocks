@@ -2,15 +2,14 @@ thinking: medium
 thinking_why: It picks the rules first, then applies them.
 new_slug: saudi-rules-finder
 name: Saudi rules finder
-summary: Describe your business in Saudi Arabia. Get which Saudi cyber and data
-  rules apply, then the steps for each.
+summary: Describe your Saudi operations. Check official sources for rules that
+  may apply and see the steps and open questions.
 job: check-contracts
 headline: Saudi rules finder
-subhead: Operating in Saudi Arabia means several rule sets at once, and the hard
-  part is knowing which are yours. Describe your business and get the Saudi
-  cyber and data rules that apply, then steps for each.
+subhead: Share your Saudi business, licences, data and cloud use; get a source
+  check of rules and facts still to confirm.
 explain: |
-  Operating in Saudi Arabia means several rule sets at once, and the hard part is knowing which are yours. Describe your business and get the Saudi cyber and data rules that apply, then steps for each.
+  Share your sector, licences, data and cloud setup. The skill checks current Saudi sources, maps possible rules and lists facts still to confirm.
 
   It starts with an intake. What type of organisation are you: government, critical infrastructure, bank or insurer, telecom or cloud provider? What licences do you hold, what personal data do you handle and where is it hosted? Your answers route you to the right frameworks, such as the National Cybersecurity Authority controls, the Personal Data Protection Law, the central bank cyber framework and cloud rules. It then guides each one and can map them to ISO 27001, NIST or SOC 2.
 when:
@@ -25,11 +24,12 @@ you_give:
   - Kinds of personal data you process
   - Where your cloud and data are hosted
 you_get:
-  - Which Saudi rules apply to you
+  - Possible rules with official sources and check dates
   - Steps for each framework
   - A gap view against your current setup
   - A mapping to ISO 27001, NIST or SOC 2
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
-    or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.

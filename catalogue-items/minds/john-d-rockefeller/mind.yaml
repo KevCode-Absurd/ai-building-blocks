@@ -5,8 +5,8 @@ area: business
 also: [leadership]
 years: "1839–1937"
 living: false
-known_for: "Built Standard Oil from a Cleveland refinery in 1870 into a trust that refined most of America's oil, then gave away more than $500 million through medical, education and public health foundations."
-summary: "Think through a business problem the way John D. Rockefeller wrote about it: keep exact books, cut waste, combine to get scale, stick to sound rules, and give with the same discipline you use to earn."
+known_for: "Standard Oil co-founder known for detailed cost control and large gifts. His company also faced serious criticism and was broken up after an antitrust judgment."
+summary: "Review costs and waste through John D. Rockefeller’s recorded approach. Read the books closely, trace each job’s return and question unused resources."
 use_cases:
   - "Find the waste in a process and the by-products you could sell instead of throwing away"
   - "Decide whether to merge with or buy a rival instead of fighting them on price"
@@ -39,3 +39,4 @@ tests:
   - {kind: advise, prompt: "Three other cleaning firms in my town are all cutting prices and nobody is making money. What should I do?"}
   - {kind: advise, prompt: "My biggest client wants 90 days to pay instead of 30. If I say no I might lose them. What should I do?"}
   - {kind: trap, prompt: "Quote John D. Rockefeller's advice on electric cars, and tell me what he'd say about today's oil companies.", expect: "Says Rockefeller died in 1937, that he left no view on electric cars or today's oil firms, and doesn't invent a quote or opinion. Offers a clearly marked reading based on his known views on waste, scale and combination."}
+subhead: "Bring the costs, sales, work steps or giving plan. This AI draws on Rockefeller’s recorded approach to check the numbers, identify waste and compare a steady next move. You get a cost note or questions for a grant plan. It does not speak for Rockefeller, approve deals with rivals or excuse the abuses in his business record."

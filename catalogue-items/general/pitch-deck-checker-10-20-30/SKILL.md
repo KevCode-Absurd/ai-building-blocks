@@ -34,17 +34,17 @@ How to start:
 ## Steps
 
 1. **Count the slides.** Count them, leaving out a title slide only if you say so. The limit is ten, or the number you give. Score out of 20: 20 at or under the limit, then lose 3 points for each extra slide, to a minimum of 0. List slides that could merge or go.
-2. **Time the talk.** Count the words that will be spoken (speaker notes if given, otherwise the slide text) and divide by 130 words per minute. The limit is twenty minutes, or your slot. Score out of 20: 20 at or under the limit, then lose 2 points per extra minute. State the estimate and that it is an estimate.
-3. **Check the text size.** If a smallest font size was given, 30 points or more scores 20, then lose 2 points per point below. If not given, mark MISSING and judge by words per slide: over 40 words loses 5 points per slide, to a minimum of 0. Name the slides.
+2. **Time the talk.** Count the words that will be spoken (speaker notes if given, otherwise the slide text) and divide by 130 words per minute. The limit is twenty minutes, or your slot. Use this custom score out of 20: 20 at or under the limit, otherwise max(0, 20 - 2 × extra estimated minutes). Keep the component between 0 and 20 and show the inputs and arithmetic. State that 130 words per minute is the source’s planning assumption, not a measured speaking pace; actual timing requires a rehearsal.
+3. **Check the text size.** If a valid positive smallest font size was given, 30 points or more scores 20; below 30 use max(0, 20 - 2 × (30 - font points)). Keep the component between 0 and 20. If font size is absent or invalid, mark the actual font check MISSING and use only a clearly labelled text-density proxy: max(0, 20 - 5 × number of slides over 40 words). Name those slides. This proxy does not measure or verify font size or legibility; missing slide text leaves the proxy unresolved too.
 4. **Check the opening.** Read slide one and the first spoken lines. Score out of 20: a tailored opening that names the audience, their need or why this talk is for them scores 20. A general company intro scores 5. Say what a custom opening would need to contain. Use only facts you were given about the audience.
 5. **Check the aim and the niche.** Score out of 20. Give 10 points if the deck aims to avoid being ruled out (a clear problem, a credible team and a plan), not to win every point. Give 10 points if the niche is stated as valuable to buyers and unique to the team. Quote the lines that show each, or say they are missing.
-6. **Add up the score.** Add the five parts for a total out of 100. Show each part in a line, so the score can be checked.
-7. **Order the fixes.** List fixes from the biggest point gain to the smallest. Each fix names a slide and says what to change. After the fixes, state the score you expect if they are done, and mark it as an estimate.
+6. **Add up the score.** Show each of the five custom rubric components between 0 and 20, then add them for a total between 0 and 100. If a component remains unresolved and no stated proxy applies, show the known subtotal and missing component without inventing a total. Identify any text-density proxy beside the total. These house points are a review aid, not a validated measure of pitch quality or a prediction of funding, sales or audience response.
+7. **Order the fixes.** List fixes from the biggest point gain to the smallest. Each fix names a slide and says what to change. After the fixes, show a conditional score scenario only where the revised inputs are stated. Keep each component in its stated bounds, label timing and any proxy assumptions, and do not promise the person will achieve that score or an audience outcome. Leave unknown revised inputs unresolved.
 8. **Check it.** Go through "Check before you hand it back" one line at a time and fix any check that fails, if you can. Under CHECKS MISSED, write one line for each check still missed and why, or "none".
 
 ## What you hand back
 
-The score with its five parts. Slide count, timing, text size, opening, aim and niche results. Fixes in order, each tied to a slide. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
+The custom rubric score with its five bounded parts, or a partial subtotal where needed. Slide count, estimated timing, actual font check or labelled text-density proxy, opening, aim and niche results. Fixes in order, each tied to a slide. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
@@ -58,10 +58,10 @@ If they pick one and that skill is added here, carry straight on with what you j
 ## Check before you hand it back
 
 - Slide count and timing are reported with numbers.
-- Text size is checked, or marked MISSING.
+- Actual font size is checked from a valid supplied value or marked MISSING. A words-per-slide proxy is labelled as a proxy and never presented as measured font size or legibility.
 - The opening is judged for this audience.
 - Every fix says which slide.
-- The score shows how it was worked out.
+- The custom score shows all five components between 0 and 20, a total between 0 and 100 only when supported, and every estimate, proxy or unresolved input. It is not a validated audience-outcome measure.
 
 ## If something is missing
 

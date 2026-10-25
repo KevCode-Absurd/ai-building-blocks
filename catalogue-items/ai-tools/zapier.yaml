@@ -2,15 +2,15 @@ slug: zapier
 name: Zapier
 maker: Zapier
 url: https://zapier.com
-promise: Connect your apps and run steps for you whenever something happens.
+promise: "Connect apps and run repeatable steps when a chosen event happens."
 use_cases: [automate]
 categories: [automation]
 what_it_does:
   - Links more than 9,000 apps so one can start work in another.
-  - Runs multi-step automations (called Zaps) when a trigger fires.
+  - "Runs a series of steps, called a Zap, when your chosen event happens."
   - Adds AI steps where they help, and plain rules elsewhere.
   - Builds AI agents that score leads, sort tickets and process documents.
-  - Lets AI assistants use your apps through MCP.
+  - "Lets supported AI assistants work through your connected apps."
   - Gives admins control over which apps and actions are allowed.
 benefits:
   - Stop copying data between your store, inbox and spreadsheet.
@@ -18,9 +18,9 @@ benefits:
   - Build a first automation without writing code.
   - Keep track of what runs, with logs and admin controls on paid plans.
 best_for:
-  - Operators who connect many apps and have no developer.
+  - "People connecting apps and repeat tasks without a coder."
   - Small teams automating lead, order and support hand-offs.
-  - Companies that need central control over automations.
+  - "Teams that need one place to manage which app tasks can run."
 not_for:
   - High-volume jobs, since cost rises with the number of tasks.
   - Free users who need multi-step automations, which need a paid plan.

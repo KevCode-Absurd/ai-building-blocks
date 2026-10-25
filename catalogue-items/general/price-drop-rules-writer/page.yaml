@@ -1,133 +1,104 @@
 new_slug: price-drop-rules-writer
-name: "Price drop rules writer"
-summary: "Paste your holdings plan. Get a one-page set of rules for when prices fall or jump, written before it happens."
+name: Price drop rules writer
+summary: Share your holdings plan and money needs. Draft calmer price-drop rules while keeping documented checks, notices and response deadlines in place.
 job: money-and-investing
 thinking: medium
-thinking_why: "It writes a rule card from your plan and a few honest answers. The steps are fixed, and the care is in matching rules to you."
-
-headline: "Price drop rules writer"
-subhead: "Paste your holdings plan and a few facts about your money. It runs the half-value test, checks money you need soon, ties every reaction to business facts, sets do and do-not rules for drops and jumps, fixes when you look at prices and names your mind traps. A method of analysis, not personal financial advice."
-
+thinking_why: It writes a rule card from your plan and a few honest answers. The steps are fixed, and the care is in matching rules to you.
+headline: Price drop rules writer
+subhead: Share your holdings plan, money needs and any documented monitoring duties or deadlines. It runs a half-value exercise, reviews business facts and drafts rules for drops and jumps. Get a one-page routine with optional review dates and cooling steps. Required checks stay active, unknown duties stay marked, and no trade is prescribed.
 explain: |
-  Nobody chooses well in the middle of a fall. The screen is red, fear is loud and every reason to act sounds sensible. The fix is to decide ahead of time, when you are calm, what you will do and what you will not.
+  A sharp price change can make a planned decision harder. Writing a routine in advance can help you separate a discretionary reaction from a change in business facts or a real cash obligation.
 
-  This skill writes those rules on one page. It asks whether you could watch half your holdings vanish and stay put, and checks money you will need within five years and any loan against your holdings. Every rule points to a business fact, never to a price level alone. You get a plan for small, medium and large drops and for a jump, dates for looking at prices and nothing in between, the three mind traps that fit you, and a line to read when the urge arrives. It gives no buy or sell calls.
-
+  This skill drafts a one-page rule card. It asks how you would react to a half-value scenario, lists money needed soon and reviews supplied business facts. It separates optional price-checking habits from documented collateral checks, cash needs and response deadlines. Cooling periods cannot override those requirements. Unknown obligations stay missing for the responsible adviser to clarify. This is an analysis routine, not a personal risk diagnosis or a buy or sell call.
 when:
   - You hold investments and want rules in place before the next fall.
   - You sold in a panic once and do not want to do it again.
   - You are about to put more money in and want a calm plan for the bumps.
-
 you_give:
   - Your holdings plan, with what you hold, how long, and the facts behind each
-  - When you will need the money and any loan against your holdings (optional)
+  - Money needed and when, loans against holdings, and actual documented checks, notices, deadlines and responsible people
   - A review of your holdings by business results (optional)
 you_get:
   - The half-value test, with your honest answer
   - A check of money needed soon and borrowed-money risk
   - Do and do-not rules for three drop sizes and a jump
-  - Fixed dates for looking at prices
+  - Discretionary review dates, with required checks and deadlines kept separately
   - Three mind traps that fit you, with counter-rules
-  - A cooling line and a witness
-
+  - A conditional cooling line and a witness you choose, or a missing name
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your holdings plan, or the rule set from "Sit-still rule writer".
-  - Answer the half-value question honestly. No one sees your answer but the AI.
-  - Tell it what you need the money for and when.
-  - Print the card, name your witness and keep it where you look at prices.
-
+  - Answer the half-value question in your own words. An unanswered question stays missing; the exercise does not diagnose your personal risk capacity.
+  - Supply money needs and any documented loan, monitoring or response terms. Unknown requirements stay marked for the responsible adviser.
+  - Review the proposed card, preserve required checks and deadlines, and choose a witness if useful. Sharing or contacting anyone needs your authorization.
 how_it_works:
   - title: Runs the half-value test
     text: Halves your holdings on paper and asks what you would do.
   - title: Checks money needed soon
     text: Lists what you need within five years and flags overlap and borrowed money.
   - title: Anchors to facts
-    text: Lists the business facts that justify each holding and keeps price out of that list.
+    text: Lists supplied business facts and verified cash, collateral or monitoring duties. An unchanged business does not cancel a separate obligation.
   - title: Sets drop rules
-    text: For three sizes of fall, what to check, what to do and what not to do.
+    text: Drafts check, do and do-not lines for three fall sizes. A discretionary no-action example cannot suppress a required response.
   - title: Sets the jump rule
-    text: What to do and not do when prices rise a lot, including chasing.
+    text: Checks business facts and verified obligations before a discretionary reaction. It prescribes neither a trade nor a universal urgent response.
   - title: Fixes the look dates
-    text: Fixed dates for checking prices, and nothing between them.
+    text: Agrees on optional review dates and alerts while preserving required checks and notices at their verified frequency and deadlines.
   - title: Names your traps
     text: Picks the mind traps that fit you and writes a counter-rule for each.
   - title: Adds a cooling line and a witness
-    text: A note for the moment of the urge, and one person who will be told.
-
+    text: Proposes a discretionary cooling period that cannot delay a verified deadline. The witness is chosen by you; no contact is made by this draft.
 output_shape: |
-  HALF-VALUE TEST
-  Now <n> -> half <n>. Your answer: <...>. Verdict: <fits / too much risk>
-
-  MONEY NEEDED SOON
-  <amount, when, overlap with holdings> | BORROWED-MONEY RISK: <yes / no>
-
-  FACTS THAT JUSTIFY EACH HOLDING
-  <holding>: <facts>
-
-  IF PRICES FALL
-  A tenth: check <...> | do <...> | do not <...>
-  A quarter: ...
-  A half: ...
-
-  IF PRICES JUMP
-  check <...> | do <...> | do not <...>
-
-  WHEN YOU LOOK
-  Dates: <...>. Between dates: <no price checks>
-
-  YOUR MIND TRAPS
-  <trap>: shows up as <...> | counter: <...>
-
-  COOLING LINE
-  <line> | WITNESS: <name>
-
-  MISSING
-  <list>
-
-  CHECKS MISSED
-  <one line per check still missed, or none>
-
+  HALF-VALUE EXERCISE <now, half, your answer and matters to review; not a personal risk diagnosis>
+  MONEY NEEDED SOON <amounts, dates, overlap and loan risk, or missing>
+  REQUIRED CHECKS <supplied monitoring, collateral, cash and notice requirements, frequency, response deadlines and responsible people; unknown terms MISSING>
+  BUSINESS FACTS <supplied reasons for each holding>
+  DROP / JUMP RULES <check, proposed action and limits; required obligations take precedence; no named-security trade call>
+  OPTIONAL REVIEW ROUTINE <chosen dates and optional alert settings, separate from required checks>
+  TRAPS AND COUNTERS <provisional patterns, not diagnosis>
+  COOLING LINE <agreed discretionary pause only; cannot delay a verified requirement>
+  WITNESS <your choice or MISSING; contact requires authorization>
+  MISSING / CHECKS MISSED <list or none>
 tweaks:
   - what: The drop sizes
     how: Choose sizes that would hurt you, such as a tenth, a quarter and a half, and it uses yours.
   - what: How often you look
-    how: Say if you want monthly, quarterly or yearly. Yearly is the calmest.
+    how: Choose optional monthly, quarterly or yearly reviews to suit the plan. Preserve actual required checks and notices at their verified frequency; unknown duties do not become absent.
   - what: Your witness
     how: Choose someone who will say no to you, not someone who agrees with everything.
-
 judge:
-  - The half-value test shows both figures and an honest answer.
-  - Money needed within five years is listed and borrowed money flagged first.
-  - Every reaction rule points to a business fact.
+  - The half-value exercise shows both figures and the person’s answer, without diagnosing risk capacity.
+  - Money needed soon and known loan risk are visible.
+  - Rules use supplied business facts and verified obligations. No-action examples do not override a required response.
   - Each drop size has check, do and do-not lines.
-  - Nothing says to buy or sell a named security.
-
+  - Optional review dates, alerts and cooling periods cannot delay documented checks or deadlines. Unknown requirements stay missing.
+  - No named-security trade or universal urgent transaction is prescribed. A witness is not contacted without authorization.
 test:
-  - Tell it you would sell everything if the value halved. It should say the plan is too big for you and not write rules that assume you will sit still.
+  - Say you would sell if value halved. It should flag the stated discomfort for review and avoid assuming you will sit still, without diagnosing your full risk capacity.
   - Say you have a loan secured on your holdings. It should flag that first.
   - Give it a plan with no business facts. It should ask for them.
   - Run it twice on the same plan. The rules should match.
-
+  - Supply daily collateral checks and a two-day response deadline. A quarterly routine or proposed week-long pause must not replace those duties.
+  - Leave obligations unknown. It should mark them missing, not assume none exist or invent a law or deadline.
 improve:
-  - Reread the card once a year, on a look date, and after any big fall.
+  - Review the card on agreed discretionary dates and when relevant facts or verified obligations change. This does not replace required monitoring.
   - After a real fall, note what you did and add the lesson to the card.
   - Share the card with your witness and ask them to test it.
   - Pair it with "Holdings business results reviewer" so the fact list is current.
-
 works_best_with:
   tools:
-    - {name: "Any good chat AI", why: "Turning a plan and a few honest answers into a rule card is text work any strong chat AI does well with this skill."}
-    - {name: "A printed page or a note on your phone", why: "A rule card only works if you can see it at the moment you want to break it."}
+    - name: Any good chat AI
+      why: Turning a plan and a few honest answers into a rule card is text work any strong chat AI does well with this skill.
+    - name: A printed page or a note on your phone
+      why: A rule card only works if you can see it at the moment you want to break it.
   inputs:
-    - "Your holdings and the facts behind each"
-    - "A list of money you will need in the next five years"
-    - "The rule set from the Sit-still rule writer"
-
+    - Your holdings and the facts behind each
+    - A list of money you will need in the next five years
+    - The rule set from the Sit-still rule writer
 terms:
   - term: Half-value test
     meaning: Asking whether you could watch your holdings lose half their value and not sell in a panic.
   - term: Loss pain
-    meaning: The habit of feeling a loss about twice as strongly as an equal gain, which makes people cling to losers.
+    meaning: A proposed pattern in how losses and gains feel. Its strength varies; the method’s illustration is not a diagnosis of this person.
   - term: Mr. Market
     meaning: A picture of the share market as a moody partner who names a price every day. You may take the price or ignore it.

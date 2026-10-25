@@ -1,0 +1,42 @@
+slug: nonprofit-donor-thank-you-and-renewal-planner
+name: Nonprofit donor thank-you and renewal planner
+summary: Share giving history and current follow-ups. Get thank-you steps, welcome messages, and plans for lapsed donors.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: document
+    required: false
+outputs:
+  - type: plan
+    required: true
+  - type: copy_draft
+    required: false
+uses: []
+origin: imported
+source:
+  by: Nonprofit Skills
+  repo: sector-skills/nonprofit-skills
+  path: nonprofit-skills-library/skills/fundraising-development/nonprofit-donor-retention
+  url: https://github.com/sector-skills/nonprofit-skills/tree/7d8a2ca9d471fc975d0e9ccd02fcdd66520fd1c8/nonprofit-skills-library/skills/fundraising-development/nonprofit-donor-retention
+  licence: MIT
+  licence_file: LICENSE
+  commit: 7d8a2ca9d471fc975d0e9ccd02fcdd66520fd1c8
+  original_name: nonprofit-donor-retention
+  author: Brendon Connelly
+  imported: 2026-10-23
+version: 1.0.0
+credits:
+  - title: nonprofit-donor-retention skill
+    by: Nonprofit Skills
+    url: https://github.com/sector-skills/nonprofit-skills/tree/7d8a2ca9d471fc975d0e9ccd02fcdd66520fd1c8/nonprofit-skills-library/skills/fundraising-development/nonprofit-donor-retention
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Brendon Connelly
+    url: https://brendonconnelly.com
+    used: Wrote the skill; Nonprofit Skills shared it in their collection.

@@ -918,3 +918,7 @@ If you need more context:
 - **network-flow-optimization**: For warehouse flow modeling
 - **graph-algorithms**: For shortest path and routing
 - **metaheuristic-optimization**: For large-scale routing problems
+
+## Repaired legal-path routing rules
+
+Represent aisles and cross-aisles as a directed graph whenever travel is one-way. A route is valid only if every consecutive location is connected by a permitted directed path and the route reaches the required exit or depot. Do not use the Return Routing baseline in a one-way aisle unless a legal directed return path exists. If a corridor dead-ends and no cross-aisle connects its far end, a picker entering it cannot be routed back to its entrance; report infeasible and request a layout change or alternate access. Include depot start/end, aisle direction, cross-aisles, blocked edges, equipment limits and required return. Compute route distance on graph edges, not straight-line coordinates. Label heuristic routes as estimates; do not call them optimal without an exact solver and proven result. Do not invent congestion data.

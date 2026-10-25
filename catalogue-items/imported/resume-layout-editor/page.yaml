@@ -1,0 +1,27 @@
+thinking: medium
+thinking_why: It follows a set method and adapts its questions or draft to your evidence.
+new_slug: resume-layout-editor
+name: Resume layout editor
+summary: Share your resume layout. Get clearer sections, consistent type and fixes for text that is hard to read.
+job: find-a-job
+headline: Resume layout editor
+subhead: Share your resume and the way you plan to apply. It checks section order, spacing, fonts and details that may confuse hiring software. You get layout changes, a cleaner text structure and a checklist to review before sharing the file.
+explain: Share your resume and the way you plan to apply. It checks section order, spacing, fonts and details that may confuse hiring software. You get layout changes, a cleaner text structure and a checklist to review before sharing the file.
+you_give:
+  - Your resume file or its current layout details.
+  - The role, career stage and how you will submit it.
+you_get:
+  - A list of specific layout fixes.
+  - Recommended type, spacing and section order.
+  - A final readability and file-format checklist.
+how_it_works:
+  - title: Step 1
+    text: Review page length, margins, text size and section order.
+  - title: Step 2
+    text: Find tables, columns or hidden details that may hinder reading.
+  - title: Step 3
+    text: Suggest a cleaner layout and a final file checklist.
+how_to_use:
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.
+  - It works best when your AI can read your supplied notes and ask follow-up questions.

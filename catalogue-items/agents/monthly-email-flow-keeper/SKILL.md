@@ -9,23 +9,23 @@ You are an agent that looks after a store's email and text program once a month.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-This skill runs on its own. What's below makes the result better, but none of it is required.
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **Makes it better (optional):**
-- **Brand brain** (its products part), made by the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
-- **Your offer**, made by the [Hidden offer finder](https://useaiblocks.com/prompts/hidden-offer-finder): what you sell and the real terms: price, trial, guarantee, delivery.
+- **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+- **Your offer**, made by the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder): what you sell and the real terms: price, trial, guarantee, delivery.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Brand brain** with the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **Your offer** with the [Hidden offer finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your brand brain.
+1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+2. **Your offer** with the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your brand brain.
 3. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with your brand brain, your offer. They can attach them, paste them, or say where they are (in Claude Code, a file path). Name the recommended steps above as a suggestion, with their links. Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
-3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once, merge steps that give the same thing, and aim for under 700 words unless the job truly needs more. In CHECKS MISSED, name only the checks that failed, or write “none”.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
+2. **Check what's missing.** Look for your brand brain, your offer. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
 - **Claude Code:** It can keep the keeper folder, read last month's files and run on a monthly schedule.
@@ -52,7 +52,7 @@ Keep one folder, `keeper/`. Save each step's result as `keeper/<month>/step-NN-<
    - If the reader or the recovery plan shows many contacts who never open, run `sunset-flow-and-list-cleaner`. This is a second fix, not the only one.
    - Otherwise go on to step 6.
 6. **Rebuild one flow.** Pick the one flow to rebuild. Missing core flows come first, in this order: welcome, cart or checkout recovery, browse, post-purchase, win-back. If all exist, take the one with the biggest gap in the flow checker's ranking. Run the matching skill: `welcome-flow-builder`, `cart-recovery-flow-builder`, `browse-abandonment-flow-builder`, `post-purchase-flow-builder` or `win-back-flow-builder`. If the owner has no offer or discount room, say what the flow does without one. Save the flow.
-7. **Check the new copy.** Run `email-draft-reviewer` on the first two emails of the rebuilt flow. Our starting point: an email is ready when its score is 80 or more and it has no Stop item. If one is not ready, apply the fixes and review it again. Stop after two rounds. If it still is not ready, hand it back marked "needs your eyes" with the open problems.
+7. **Check the new copy.** Run `email-draft-reviewer` on every new or rewritten email in the rebuilt flow. Record each email's version, checks and result separately. Our starting point: an email is ready when its score is 80 or more and it has no Stop item. If one is not ready, apply the fixes and review it again. Stop after two rounds. If it still is not ready, hand it back marked "needs your eyes" with the open problems.
 8. **Set the tests.** Run `email-test-planner` on the flows and send volumes. Keep the top three tests. Put the rebuilt flow's first test at the top.
 9. **Save and hand back.** Write `keeper/<month>/summary.md` (channel score, flow rebuilt, tests set, changes proposed) so next month can compare. Then hand back and stop.
 
@@ -71,7 +71,7 @@ If the owner approves a change in clear words and you are connected, make only t
 - **This month in one line:** channel score and flow revenue against last month, and what moved most.
 - **Last month's fix:** helped, no change or worse, with the numbers.
 - **Path taken:** sending fixes first, a flow rebuild, or both, and why.
-- **The rebuilt flow:** the flow, the review result for its first two emails and any "needs your eyes" notes.
+- **The rebuilt flow:** the flow, the review result for every new or rewritten email and any "needs your eyes" notes.
 - **Changes to approve:** each change, where it goes and why. At most 10. Most important first.
 - **Next tests:** the top three, with sample sizes and win rules from the planner.
 - **Files and missing:** each step's file, then every `MISSING:` line in one list.
@@ -80,10 +80,10 @@ If the owner approves a change in clear words and you are connected, make only t
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Check it before it goes live** with the [Permission email audit](https://useaiblocks.com/skills/permission-email-audit). It takes the email flow.
-- The [Customer stage flow mapper](https://useaiblocks.com/skills/customer-stage-flow-mapper). It takes the email flow.
-- **Set up AI to work for you** with the [AI workflow handoff planner](https://useaiblocks.com/skills/ai-workflow-handoff-planner). It takes the plan.
+- The [Task follow-up writer](https://useaiblocks.com/skills/executive-due-task-drafts). It takes the plan.
 - **Plan what to test** with the [Ad test brief writer](https://useaiblocks.com/skills/ad-test-brief-writer). It takes the audit report.
-- **Read your ad results** with the [Campaign keep-or-change checker](https://useaiblocks.com/skills/campaign-keep-or-change-checker). It takes the audit report.
+- **Read your ad results** with the [Campaign performance reviewer](https://useaiblocks.com/skills/campaign-keep-or-change-checker). It takes the audit report.
+- **Make an offer people want** with the [Lead generation cost planner](https://useaiblocks.com/skills/lead-cost-and-friction-planner). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

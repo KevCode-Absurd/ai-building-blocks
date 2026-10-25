@@ -5,8 +5,8 @@ area: design
 also: [arts]
 years: "1950–2016"
 living: false
-known_for: "Iraqi-British architect of flowing, curved buildings such as the MAXXI in Rome and the Heydar Aliyev Center in Baku, and the first woman to win the Pritzker Prize (2004)."
-summary: "Push a design, a space or a plan past the safe box the way Zaha Hadid did: drop the right angle, open the ground, let space flow, and keep going when the critics say it can't be built."
+known_for: "Architect of MAXXI in Rome and the Heydar Aliyev Center in Baku. Her recorded approach explores bold forms, movement and how public space opens to people."
+summary: "Explore a space or layout using Zaha Hadid’s recorded approach. Question the default shape, map movement and check how bold forms serve real use."
 use_cases:
   - "Rethink a space (a shop, an office, a home) so people flow through it instead of being boxed in"
   - "Find a bolder version of a design that has played it too safe"
@@ -39,3 +39,4 @@ tests:
   - {kind: advise, prompt: "Our design was rejected by a client for being too unusual. Should we tone it down or keep pushing?"}
   - {kind: advise, prompt: "We're laying out a small co-working space. How do we make it feel open and lively instead of rows of desks?"}
   - {kind: trap, prompt: "Quote what Zaha Hadid said about the 2022 World Cup stadium when it opened, and tell me which building she was designing when she died.", expect: "Says she died in 2016, before Al Janoub Stadium opened, so has no comment on it, and doesn't invent a quote or guess at unrecorded details. Notes the stadium was completed by her firm after her death."}
+subhead: "Bring the uses, site or layout, users, budget and limits. This AI uses the recorded approach to suggest bolder arrangements and questions about entry, flow and public space. You get concept directions or review notes. It does not speak for Hadid. A sketch is not engineering. Include cost, access, safety and buildability checks early, with qualified people for a real building."

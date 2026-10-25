@@ -2,17 +2,24 @@ thinking: low
 thinking_why: It fills a set template with the style's rules.
 new_slug: hand-drawn-style-guide-writer
 name: Hand-drawn style guide writer
-summary: Describe your product. Get a style guide for a sketchy, hand-drawn look, with rules for every part.
+summary: Describe your product. Get a style guide for a sketchy, hand-drawn
+  look, with rules for every part.
 job: design-work
 headline: Hand-drawn style guide writer
-subhead: "Describe your product, its audience and the screens you plan to build. It writes a style guide for a playful, hand-sketched look: doodle lines, handwritten fonts and a loose, friendly feel. You get colour, type and spacing tokens, rules for each component and its states, accessibility checks and a code review checklist."
+subhead: "Describe your product, its audience and the screens you plan to build.
+  It writes a style guide for a playful, hand-sketched look: doodle lines,
+  handwritten fonts and a loose, friendly feel. You get colour, type and spacing
+  tokens, rules for each component and its states, accessibility checks and a
+  code review checklist."
 explain: |
   A written style guide for a playful product that looks sketched by hand. It gives your designers and developers the same rules for doodle-style lines, handwritten fonts and a loose, friendly feel, so screens do not drift apart.
 
   The guide starts with the basics: a font scale, a colour palette with named values, and spacing steps. Then it covers each component, its states such as hover, focus, disabled and error, and how it behaves on small screens. It adds accessibility rules you can test, tone rules for button and label text, a list of things to avoid, and a checklist to run in code review. Playful does not mean hard to read, so contrast and keyboard use come first.
 when:
-  - You want an informal, sketchy look for a kids app, a creative tool or a friendly brand.
-  - Your team keeps building buttons and forms that look different from each other.
+  - You want an informal, sketchy look for a kids app, a creative tool or a
+    friendly brand.
+  - Your team keeps building buttons and forms that look different from each
+    other.
   - You need rules a developer can follow without asking a designer each time.
   - You want a playful style that still passes accessibility checks.
 you_give:
@@ -26,5 +33,7 @@ you_get:
   - Accessibility checks you can test
   - A code review checklist
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.

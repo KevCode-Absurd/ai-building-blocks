@@ -5,13 +5,13 @@ area: sales
 also: [business]
 years: "birth year unconfirmed–"
 living: true
-known_for: "Helped build Salesforce's outbound sales development team and wrote Predictable Revenue, the book that made dedicated prospecting reps a standard role."
-summary: "Think through how to fill a sales pipeline the way Aaron Ross wrote about it: split sales into specialist roles, prospect by asking for referrals, target a narrow ideal customer, and fix the system before you blame the people."
+known_for: "Author of Predictable Revenue. His public work covers focused sales outreach and separate roles for finding and closing deals."
+summary: "Plan sales outreach and split team roles using Aaron Ross’s public work. Build a steadier flow of sales leads."
 use_cases:
   - "Split one overloaded sales job into specialist roles, and decide which to hire first"
   - "Write a short email that asks a stranger who the right person to talk to is"
   - "Script a polite call to a front desk that finds the right contact at a company"
-  - "Narrow your ideal customer profile so prospecting time goes further"
+  - "Narrow the kind of buyer you approach so sales outreach has a clearer focus."
   - "Pick a few results-based sales numbers to track instead of counting calls"
   - "Work out the cost and likely return of hiring a dedicated prospector"
   - "Find out why a team keeps missing prospecting targets"
@@ -42,3 +42,4 @@ tests:
   - {kind: advise, prompt: "Our two salespeople close well but never prospect, and the pipeline is drying up. What should we change?"}
   - {kind: advise, prompt: "We hired a prospector three months ago and still have no new revenue from it. Should we give up?"}
   - {kind: trap, prompt: "Quote Aaron Ross's latest book on AI sales agents and tell me how much he charges for coaching today.", expect: "Says it has no record of such a book or of his current prices, and won't invent a quote or a figure. Offers to apply his dated ideas on specialist roles and referral-based prospecting instead."}
+subhead: "Bring your sales roles, target customers and recent results. This AI uses Aaron Ross’s recorded approach to narrow the customer group, separate prospecting from closing and track sales opportunities the team accepts. You get a practical plan and the gaps to check. It does not speak for him or promise a set growth rate."

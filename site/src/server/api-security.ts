@@ -1,5 +1,6 @@
 // Shared by the Workers router and Pages adapters. Never trust browser-only checks.
 import { equalPreviewCredential, validPreviewSession } from "./preview-session.ts";
+import type { SaveFailureReporter } from "./save-diagnostics.ts";
 type Limiter = { limit(options: { key: string }): Promise<{ success: boolean }> };
 export type SecurityEnv = {
   API_ALLOWED_HOSTS?: string;
@@ -35,31 +36,33 @@ export function turnstileAction(req: Request): SecurityAction | null {
   if (path === "/api/spaces") return "create_space";
   return null;
 }
-export async function apiSecurity(req: Request, env: SecurityEnv, verify: typeof fetch = fetch): Promise<Response | null> {
+export async function apiSecurity(req: Request, env: SecurityEnv, verify: typeof fetch = fetch, report: SaveFailureReporter = () => {}): Promise<Response | null> {
   const privatePreview = await previewSecurity(req, env);
-  if (privatePreview) return privatePreview;
+  if (privatePreview) { report("security", "preview_rejected"); return privatePreview; }
   if (localSecurity(req, env)) return null;
   const url = new URL(req.url);
   const allowed = (env.API_ALLOWED_HOSTS ?? "").split(",").map(s => s.trim().toLowerCase()).filter(Boolean);
-  if (!allowed.length) return securityJson(503, { error: "Security configuration is unavailable. Please try later." });
-  if (url.protocol !== "https:" || !allowed.includes(url.hostname)) return securityJson(403, { error: "Use the official site to access this service." });
+  if (!allowed.length) { report("security", "security_config_missing"); return securityJson(503, { error: "Security configuration is unavailable. Please try later." }); }
+  if (url.protocol !== "https:" || !allowed.includes(url.hostname)) { report("security", "security_host_rejected"); return securityJson(403, { error: "Use the official site to access this service." }); }
   const write = !["GET", "HEAD", "OPTIONS"].includes(req.method);
   if (write && (req.headers.get("sec-fetch-site") === "cross-site" || (req.headers.has("origin") && req.headers.get("origin") !== url.origin))) {
+    report("security", "origin_rejected");
     return securityJson(403, { error: "Open this action on the site." });
   }
   // Cloudflare supplies this header. Forwarded/X-Real-IP and client identifiers are not trusted.
   const ip = req.headers.get("cf-connecting-ip");
-  if (!ip) return securityJson(503, { error: "Security verification is unavailable. Please try later." });
+  if (!ip) { report("security", "security_ip_missing"); return securityJson(503, { error: "Security verification is unavailable. Please try later." }); }
   const action = turnstileAction(req);
   const limiter = write ? env.API_WRITE_LIMITER : env.API_READ_LIMITER;
   const paid = action === "compose" || action === "transcribe";
-  if (!limiter || (paid && !env.AI_LIMITER)) return securityJson(503, { error: "Request protection is unavailable. Please try later." });
+  if (!limiter || (paid && !env.AI_LIMITER)) { report("security", "limiter_missing"); return securityJson(503, { error: "Request protection is unavailable. Please try later." }); }
   try {
     // One shared bucket per visitor and operation class; changing paths/queries cannot reset it.
     if (!(await limiter.limit({ key: ip })).success || (paid && !(await env.AI_LIMITER!.limit({ key: ip })).success)) {
+      report("security", "rate_limited");
       return securityJson(429, { error: "Too many requests. Please wait a minute and try again." }, { "retry-after": "60" });
     }
-  } catch { return securityJson(503, { error: "Request protection is unavailable. Please try later." }); }
+  } catch { report("security", "limiter_unavailable"); return securityJson(503, { error: "Request protection is unavailable. Please try later." }); }
   if (!action) return null;
   // Fail closed: missing configuration must never silently permit a paid call or anonymous write.
   if (!env.TURNSTILE_SITE_KEY || !env.TURNSTILE_SECRET_KEY || /^([123])x0{5}/.test(env.TURNSTILE_SITE_KEY)) {

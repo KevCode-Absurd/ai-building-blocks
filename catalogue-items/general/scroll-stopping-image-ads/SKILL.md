@@ -82,7 +82,7 @@ Dress: **Camera**, **Designed** or **Lo-fi** (phone-made, always your own design
 6. **Write the words** with `image-ad-copy-writer` if it's added here, or write them yourself to the same rules, to the picture that now exists. Give 2 or 3 headline options per ad. Each line traces to a buyer-sheet entry. A stranger the product isn't for should be able to tell it isn't for them.
 7. **Lay out each ad.** Real type over the picture, in the brand's typefaces, with a clear order of size. The skeleton follows the type: Product alone and The offer stack, Look inside uses centre and labels, Old way, new way splits, The moment and In use run full bleed with a card, Their words and Checked fact use big type.
 8. **Check every ad at full size** against the glance rules, the honesty rules and these: type crisp, no clipped letters; every claim and number on file; the product matches its photo; with the logo covered, a stranger could still guess the brand from its colours, shapes and type (Romaniuk on distinctive brand assets). Then check the batch: codes, arguments, the 1 in 5 limit, the type and dress counts.
-9. **After launch.** Read results by type and by argument, pooling ads, once each group has about 20 purchases. A count of 20 can swing by a fifth from chance, so a smaller gap is noise. Keep the winning argument and change the type or the buyer next time. Record what you learned in the brand file.
+9. **After an authorized launch.** Read actual results by type and argument at the planned review point. Record spend, exposure, audience, period and purchase counts before pooling ads. Twenty purchases is a rough planning example, not a fixed noise band, significance threshold or proof of a winner. Compare only compatible groups, show uncertainty with a suitable method when supported, and say inconclusive when delivery or sample limits prevent a fair comparison. Choose promising ideas for a next controlled test; do not infer causal effects from a coverage grid or name a statistical winner from a fixed percentage gap. Record the evidence and limits in the brand file.
 
 ## Glance rules
 - A stranger gets it in 2 seconds: people spend about 1.7 seconds on a feed post on a phone (Facebook IQ, 2016).
@@ -125,3 +125,14 @@ Write `MISSING: <buyer research | proof | product view | brand look>`. Mark any 
 - A discount on a product shot as the plan for winning strangers.
 - Six looks of one claim counted as six ads.
 - Letting the AI pick the arguments when the owner hasn't approved ahead. When they have, pick by the rules and mark the stop "(approve)".
+
+
+## Split-layer production and creative forecast
+
+Use this optional mode when it matches the requested job. Keep the core checks above and the decisions already supplied. Full procedure: references/cmo-method-tof-statics.md.
+
+For split-layer production, write a creative forecast first: buyer, why the message may matter, contrary evidence, what would disconfirm it and how the test will be read. It is a hypothesis, not predicted ROAS.
+
+Support buyer insights with two independent sources when available. Do not count the same quote twice. Ask four angle questions: who is it for, what observed problem, what specific product proof, and how does this differ from the other arguments? Shrink unsupported batches.
+
+Use metaphor, explanation and original native-looking composition as optional families. Never impersonate an app conversation or endorsement. Generate a text-free base from exact real anchors, inspect it, then write/composite approved live text and logos. For Figma or similar, use stable frame names, deliberate fills/crops and verified export sizes. Inspect full resolution. Later compare the argument/format record to real delivery, noting unequal exposure and multiple-change limits.

@@ -16,8 +16,8 @@ import re
 import sys
 
 JARGON_MAP = {
-    r"\bp[\s-]?value\b": "probability-of-chance result",
-    r"\bstatistical(?:ly)?\s+significant\b": "unlikely to be random chance",
+    r"\bp[\s-]?value\b": "probability of data this extreme or more extreme under the no-effect assumption",
+    r"\bstatistical(?:ly)?\s+significant\b": "met the stated evidence threshold under the test assumptions",
     r"\bconfidence interval\b": "likely range for the true value",
     r"\bstandard deviation\b": "typical spread around the average",
     r"\bstandard error\b": "uncertainty in the estimate",

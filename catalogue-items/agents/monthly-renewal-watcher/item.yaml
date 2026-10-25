@@ -7,23 +7,23 @@ role: orchestrate
 job: analysis
 level: intermediate
 inputs:
-  - {type: spreadsheet, required: true}
-  - {type: tool_connection, required: false}
-  - {type: voc_reviews, required: false}
+  - { type: spreadsheet, required: true }
+  - { type: tool_connection, required: false }
+  - { type: voc_reviews, required: false }
 outputs:
-  - {type: plan}
-  - {type: document}
-  - {type: copy_draft}
-uses: [renewal-watch-planner, account-catch-up-brief-writer, deal-health-reviewer, customer-success-plan-writer, post-sale-follow-up-planner]
+  - { type: plan }
+  - { type: document }
+  - { type: copy_draft }
+uses: [ renewal-watch-planner, account-catch-up-brief-writer, deal-health-reviewer, customer-success-plan-writer, post-sale-follow-up-planner ]
 steps:
-  - {uses: renewal-watch-planner, note: "Every month: renewals in the next 90 days with timing, risk and room to raise the price, from the register or a read-only connection."}
-  - {uses: account-catch-up-brief-writer, note: "For each renewal inside 60 days: one brief on what is going on with the account from notes, email and calls you give it."}
-  - {uses: deal-health-reviewer, note: "Only for a renewal marked at risk, or one where you want a price rise: health, gaps and the next actions."}
-  - {uses: customer-success-plan-writer, note: "Only when an at-risk account has not reached the result it bought the product for: the plan to get them there before the date."}
-  - {uses: post-sale-follow-up-planner, note: "Only for a healthy renewal: the thank-you and the plan to keep them, so a safe renewal stays safe."}
+  - { uses: renewal-watch-planner, note: "Every month: renewals in the next 90 days with timing, risk and room to raise the price, from the register or a read-only connection." }
+  - { uses: account-catch-up-brief-writer, note: "For each renewal inside 60 days: one brief on what is going on with the account from notes, email and calls you give it." }
+  - { uses: deal-health-reviewer, note: "Only for a renewal marked at risk, or one where you want a price rise: health, gaps and the next actions." }
+  - { uses: customer-success-plan-writer, note: "Only when an at-risk account has not reached the result it bought the product for: the plan to get them there before the date." }
+  - { uses: post-sale-follow-up-planner, note: "Only for a healthy renewal: the thank-you and the plan to keep them, so a safe renewal stays safe." }
 schedule: "On the first working day of each month"
-asks_before: [contacting any customer, changing a price, term or renewal date, offering a discount or credit, letting a contract lapse, sharing account notes with anyone outside your team]
-minds: [dharmesh-shah]
+asks_before: [ contacting any customer, changing a price, term or renewal date, offering a discount or credit, letting a contract lapse, sharing account notes with anyone outside your team ]
+minds: [ dharmesh-shah ]
 origin: own
-version: 1.0.0
+version: 1.0.1
 example_pending: true

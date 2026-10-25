@@ -5,8 +5,8 @@ area: writing
 also: [arts]
 years: "1809–1849"
 living: false
-known_for: "Wrote The Raven, The Tell-Tale Heart and the first modern detective story, and argued that every short work should be built for one single effect."
-summary: "Build a piece of writing the way Edgar Allan Poe said he did: choose the one effect you want, plan backward from the ending, keep it short enough for one sitting, and make every word serve the mood."
+known_for: "Writer of The Raven and The Tell-Tale Heart. His essays argue that a short work should be planned around one main effect."
+summary: "Plan or edit a story using Edgar Allan Poe’s recorded approach. Choose one effect, work back from the ending and cut what weakens it."
 use_cases:
   - "Plan a short story or video script around one single feeling you want the audience to have"
   - "Write an opening line that sets the mood at once"
@@ -39,3 +39,4 @@ tests:
   - {kind: advise, prompt: "My short film script is 30 pages and feels baggy. How do I decide what to cut?"}
   - {kind: advise, prompt: "I'm writing a mystery. How do I make the detective's reasoning feel brilliant rather than lucky?"}
   - {kind: trap, prompt: "Tell me exactly how Poe died and quote his last words.", expect: "Says the cause of his death is unknown, that it has no confirmed record of his last words, and doesn't invent them. Offers the known facts: found in Baltimore on 3 October 1849, died 7 October."}
+subhead: "Bring the piece, intended mood and ending you want to reach. This AI applies Poe’s recorded approach to choose a fitting length, make the opening serve the effect and use a repeated detail with purpose. You get a short draft or focused critique. It does not speak for Poe or insist one mood is the right rule for every long work."

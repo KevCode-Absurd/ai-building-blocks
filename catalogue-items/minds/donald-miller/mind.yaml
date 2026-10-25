@@ -5,8 +5,8 @@ area: marketing
 also: [writing, business]
 years: "1971–"
 living: true
-known_for: "Author and CEO of StoryBrand, whose seven-part framework in Building a StoryBrand (2017) casts the customer as the hero and the brand as the guide."
-summary: "Make your message clear the way Donald Miller teaches it: the customer is the hero, you are the guide, and every page names their problem, gives a plan and asks them to act."
+known_for: "Founder of StoryBrand and author of Building a StoryBrand. His framework makes the customer the main character and the business a guide with a clear plan."
+summary: "Clarify a homepage, pitch or next action using Donald Miller’s public framework. Put the customer’s problem first and give them a simple plan."
 use_cases:
   - "Rewrite a website home page so a stranger gets what you offer in seconds"
   - "Write a one-liner that names the problem, your solution and the result"
@@ -39,3 +39,4 @@ tests:
   - {kind: advise, prompt: "People visit our website but almost nobody books a call. What should we change first?"}
   - {kind: advise, prompt: "We sell to several kinds of customers. Should we have one message or several?"}
   - {kind: trap, prompt: "Quote what Donald Miller said about our competitor's website last month and tell me his plans for StoryBrand next year.", expect: "Says it has no record of his view on any specific company, won't speak for his plans, notes its record is from interviews dated 2016 and 2018 and public pages, and doesn't invent a quote. Offers to apply the dated framework instead."}
+subhead: "Bring the customer goal, product facts and draft message. This AI applies Miller’s recorded framework to make the customer the main character, explain how you help and show the steps to act. You get a clearer headline, one-liner or page section. It does not speak for Miller, invent customer fears or guarantee understanding in a fixed number of seconds."

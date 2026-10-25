@@ -1,0 +1,35 @@
+slug: ai-training-data-labeling-planner
+name: AI training data labeling planner
+summary: Share examples and the task. Get label rules, reviewer guidance, quality checks, and a sampling plan.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: plan
+    required: true
+uses: []
+origin: imported
+source:
+  by: Magnus Hedemark
+  repo: magnus919/agent-skills
+  path: training-data-annotation
+  url: https://github.com/magnus919/agent-skills/tree/92c327e525da69c9ad3812fd223a1770e977c2e3/training-data-annotation
+  licence: MIT
+  licence_file: LICENSE.md
+  commit: 92c327e525da69c9ad3812fd223a1770e977c2e3
+  original_name: training-data-annotation
+  imported: 2026-10-23
+version: 1.0.0
+credits:
+  - title: training-data-annotation skill
+    by: Magnus Hedemark
+    url: https://github.com/magnus919/agent-skills/tree/92c327e525da69c9ad3812fd223a1770e977c2e3/training-data-annotation
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

@@ -1,0 +1,37 @@
+new_slug: two-pass-meta-ads-agent-builder
+name: Two-pass Meta Ads agent builder
+summary: Build a Meta Ads agent that gathers evidence before writing findings. Keep account scope, cost limits and proposed actions clear.
+job: build-software
+headline: Two-pass Meta Ads agent builder
+subhead: Build a Meta Ads agent that gathers evidence before writing findings. Keep account scope, cost limits and proposed actions clear.
+explain: |-
+  Share the selected codebase, schemas and service setup. Get a concrete setup or code-change plan with required files.
+
+  Follow the actual current account/project structure rather than source screenshots or fixed historical settings.
+when:
+  - You need a concrete setup or code-change plan with required files.
+you_give:
+  - The selected codebase, schemas and service setup
+  - The exact change you want and actions you authorize
+you_get:
+  - A concrete setup or code-change plan with required files
+  - Missing inputs and a bounded verification plan
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Step 1
+    text: Inspect the selected runtime and explicit Meta account scope. Confirm available data fetchers, job handlers, metrics definitions, model gateway, response filter and approval/budget controls. Missing private course modules are missing dependencies, not installed capabilities.
+  - title: Step 2
+    text: Define a typed observation record containing dates, currency, attribution, source metrics, missing fields and validated derived values. Fetch only the authorized account data and preserve raw evidence IDs for every finding.
+  - title: Step 3
+    text: Build the first pass as bounded triage over deterministic metrics and known account targets. Mark missing data and rank potential issues. Do not let a low-cost model invent metrics or turn an alert into an approved account action.
+  - title: Step 4
+    text: Route only selected complex or ambiguous findings to the second reasoning pass, carrying the same scoped evidence and explicit questions. Enforce per-run and per-account call/time/cost limits before each pass. A more expensive model is not inherently a correct reviewer.
+  - title: Step 5
+    text: Validate the final report for supported numerical claims, client scope, secrets, contradictory advice and clear action ownership. Return recommended checks and proposed changes, not direct campaign mutations, unless the current user separately authorized the exact operation.
+  - title: Step 6
+    text: Use synthetic fixtures for normal findings, sparse data, conflicting signals, invalid scope, budget denial and model failure. Return code or a complete implementation plan with missing dependencies and actual tests distinguished from proposed tests. Keep the last successful report and a checkpoint for a later authorized run.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

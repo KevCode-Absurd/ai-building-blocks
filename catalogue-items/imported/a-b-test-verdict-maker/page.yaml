@@ -2,10 +2,14 @@ thinking: high
 thinking_why: Wrong statistics lead to wrong launches, so each check needs care.
 new_slug: a-b-test-verdict-maker
 name: A/B test verdict maker
-summary: Give it your A/B test data. Get a split check, results with confidence ranges and a ship call.
+summary: Give it your A/B test data. Get a split check, results with confidence
+  ranges and a ship call.
 job: track-numbers
 headline: A/B test verdict maker
-subhead: Give it your test plan, the data with user, version and outcome, and your main and guard metrics. It checks that traffic split as planned, works out each version's result with a 95 percent range and looks for side effects. You get a report and a ship, stop or keep running call.
+subhead: Give it your test plan, the data with user, version and outcome, and
+  your main and guard metrics. It checks that traffic split as planned, works
+  out each version's result with a 95 percent range and looks for side effects.
+  You get a report and a ship, stop or keep running call.
 explain: |
   Your A/B test ends with a clear ship, don't ship or keep running call, backed by the numbers.
 
@@ -27,6 +31,8 @@ you_get:
   - A ship, stop or extend call
   - A written test report
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
   - It works best when your AI can run code.

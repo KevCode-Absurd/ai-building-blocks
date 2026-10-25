@@ -5,7 +5,10 @@ name: Marketing video producer
 summary: Say the video you need. Get the right tool, a script and a shot plan.
 job: make-video-ads
 headline: Marketing video producer
-subhead: "Tell it the video's goal, audience, where it will play and your budget. It sorts the job into one of three routes: AI clips, a talking avatar or video coded from templates. You get the route and tool pick, a script, a shot plan and prompts to paste."
+subhead: "Tell it the video's goal, audience, where it will play and your
+  budget. It sorts the job into one of three routes: AI clips, a talking avatar
+  or video coded from templates. You get the route and tool pick, a script, a
+  shot plan and prompts to paste."
 explain: |
   Say what video you need and get the right way to make it, plus a script and a shot plan. It sorts the job into three routes: AI generated clips, talking avatars, or video coded from text and templates.
 
@@ -27,6 +30,8 @@ you_get:
   - Video prompts ready to paste
   - Length and format settings
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
   - It works best when your AI can call a video tool.

@@ -1,9 +1,9 @@
 ---
 name: write-a-skill-and-check-it-is-safe-to-share
-description: Use when you want a skill your AI reliably picks, that you can pass to other people without risk. It runs 5 skills in order, and checks each result before the next step starts.
+description: Use when you want to write a reusable skill and review its trigger wording, quality, security risks and portability. Inspect the files before any code execution, preserve test limits and do not claim that sharing is risk-free.
 ---
 
-# Write a skill and check it is safe to share
+# Write a skill and review its quality, triggers and sharing risks
 
 Give it a job you repeat. Get a written skill, a score, a trigger grade, a safety scan and a portability check.
 
@@ -39,13 +39,13 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 ## Steps
 1. **Write the skill.** Use the skill `skill-writer`. Turns your description of the job into a skill folder with test prompts.
-2. **Score its quality.** Use the skill `skill-quality-tester`. Give it the skill files from the steps before. Reads the skill folder from the step before and scores it with a fix list.
+2. **Inspect before quality execution, then score.** Read the full skill folder and use `skill-safety-checker` for a non-executing static review before invoking any quality tool that imports or runs its scripts. Treat unknown origin as external. Resolve blocking risks and define the permitted environment, inputs, network access and file writes before execution; a timeout is not a sandbox. If the boundary cannot be met, keep execution blocked and return static findings only. Then use `skill-quality-tester` on the permitted scope, preserving actual results and failures rather than treating its score as complete validation.
 3. **Grade when it fires.** Use the skill `skill-trigger-auditor`. Give it the skill files from the steps before. Reads the same skill folder and grades the line that decides when it runs.
 
 Pause here: Apply the fixes from the score and the trigger grade to the skill files. Keep a copy of the first draft.
 
-4. **Scan it for risk.** Use the skill `skill-safety-checker`. Give it the skill files from the steps before. Scans the fixed skill files for risky code and data leaks.
-5. **Check it loads elsewhere.** Use the skill `skill-portability-checker`. Give it the skill files from the steps before. Checks the same files will load in other AI tools, so you can share them.
+4. **Rescan the fixed version for risk.** Use the non-executing `skill-safety-checker` on the exact revised files. Check for risky code, data leaks and changes since the earlier gate. No static review proves that the skill is risk-free. Any later execution needs its own permitted scope and actual evidence.
+5. **Check target-tool portability.** Use `skill-portability-checker` on the same revised files for named target tools. Separate file-format review from actual loading tests and record versions, cases, missing access and failures. Do not claim every AI tool is supported from a limited check.
 6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

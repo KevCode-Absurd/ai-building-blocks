@@ -1,0 +1,37 @@
+slug: write-a-rhino-modeling-script
+name: Write a Rhino modeling script
+summary: Write or fix a Rhino script. Handle units, undo and user input with care.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+    required: true
+  - type: document
+    required: true
+uses: []
+origin: imported
+source:
+  by: github
+  repo: github/awesome-copilot
+  path: skills/rhino3d-scripts
+  url: https://github.com/github/awesome-copilot/tree/613efc8c21d9b3ce642dff361d17006cd9967e28/skills/rhino3d-scripts
+  licence: MIT
+  licence_file: LICENSE
+  commit: 613efc8c21d9b3ce642dff361d17006cd9967e28
+  original_name: rhino3d-scripts
+  imported: 2026-10-24
+version: 1.0.0
+credits:
+  - title: rhino3d-scripts skill
+    by: github
+    url: https://github.com/github/awesome-copilot/tree/613efc8c21d9b3ce642dff361d17006cd9967e28/skills/rhino3d-scripts
+    used: Original instructions and supporting files, with attribution and the MIT licence. Display copy describes the task.

@@ -1,0 +1,32 @@
+thinking: medium
+thinking_why: It follows a set method with a few checks.
+new_slug: customer-feedback-report-from-survey-tools
+name: Customer feedback report from survey tools
+summary: Choose a date range. Get feedback themes, repeated requests, quotes, and suggested next steps.
+job: help-customers
+headline: Customer feedback report from survey tools
+subhead: Connect Delighted, GatherUp, Gleap, or Simplesat and choose a date range. It gathers recent feedback and groups the comments by topic. You get repeated problems, feature requests, praise, and suggested actions with counts and sample quotes.
+when:
+  - You use this tool for customer support and need help with this task.
+you_give:
+  - A date range and the connected feedback sources to review.
+  - Comments from Delighted, GatherUp, Gleap, or Simplesat.
+you_get:
+  - Show theme counts, sample quotes, urgent concerns, and proposed product or help content changes.
+how_it_works:
+  - title: Gather recent feedback
+    text: Read feedback from the connected services for the chosen dates.
+  - title: Group common themes
+    text: Sort comments into problems, usability, pricing, support, praise, and feature requests.
+  - title: Write the report
+    text: Show theme counts, sample quotes, urgent concerns, and proposed product or help content changes.
+works_best_with:
+  tools:
+    - name: Delighted, GatherUp, Gleap, or Simplesat
+      why: Live lookups need Composio CLI access and connected accounts for these services.
+how_to_use:
+  - Add the downloaded folder to an AI that can read skill files.
+  - Ask for customer feedback report from survey tools by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
+  - Provide a date range and the connected feedback sources to review.
+  - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
+  - Review the result. Approve any proposed sending or account changes before they happen.

@@ -2,10 +2,14 @@ thinking: low
 thinking_why: It follows common plotting patterns.
 new_slug: matlab-chart-maker
 name: MATLAB chart maker
-summary: Describe the chart. Get working code for line, bar, heatmap or surface plots, with labels and layout.
+summary: Describe the chart. Get working code for line, bar, heatmap or surface
+  plots, with labels and layout.
 job: build-software
 headline: MATLAB chart maker
-subhead: Give it your data or its column names and the point the chart should make. It sorts the request by what you want to show, such as a trend or a comparison, then picks the plotting function. You get working MATLAB code with labels and legends, plus multi-chart layout.
+subhead: Give it your data or its column names and the point the chart should
+  make. It sorts the request by what you want to show, such as a trend or a
+  comparison, then picks the plotting function. You get working MATLAB code with
+  labels and legends, plus multi-chart layout.
 explain: |
   A chart in MATLAB that fits the question your data answers, with labels, layout and colours done. Describe the chart you want and get working code for lines, bars, heatmaps, surfaces and more.
 
@@ -26,6 +30,8 @@ you_get:
   - Labels, titles and legends
   - Layout code for multiple charts
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
   - It works best when your AI can run MATLAB.

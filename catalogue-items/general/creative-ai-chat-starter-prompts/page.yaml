@@ -1,0 +1,31 @@
+new_slug: creative-ai-chat-starter-prompts
+name: Creative AI chat starter prompts
+summary: Name the creative task. Get one tailored starter prompt for copy, content, ads or strategy, with facts and output rules.
+job: set-up-ai
+headline: Creative AI chat starter prompts
+subhead: Name the creative task. Get one tailored starter prompt for copy, content, ads or strategy, with facts and output rules. Bring the brief and any files you want it to use.
+explain: |-
+  Use this when you need a selected creative task prompt from a reusable starter set. Identify the actual deliverable first: copy, content ideas, ad/script, visual concept, brand strategy or prompt repair. Use the closest starter rather than forcing an image/video workflow onto every job.
+
+  Replace placeholders with supplied context, audience, approved facts, tone, goal and output requirements. Keep unavailable facts marked MISSING; do not invent proof, customer experiences or performance.
+when:
+  - You need a selected creative task prompt from a reusable starter set.
+  - You want a clear draft and checks from the material you already have.
+you_give:
+  - brief
+you_get:
+  - document
+  - Missing inputs and steps that still need to run
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Read the brief
+    text: "Identify the actual deliverable first: copy, content ideas, ad/script, visual concept, brand strategy or prompt repair. Use the closest starter rather than forcing an image/video workflow onto every job."
+  - title: Build the result
+    text: Choose one starter by default and return the tailored prompt. Twenty starter templates live in the reference file, not twenty separate agents. Role labels describe a drafting perspective and do not authorize tool actions.
+  - title: Check and hand off
+    text: Keep fact-based claims and creative assumptions separate. If the selected task needs another specialist, explain what input to take there rather than silently switching the deliverable.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

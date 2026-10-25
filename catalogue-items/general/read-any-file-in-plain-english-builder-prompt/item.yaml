@@ -1,0 +1,19 @@
+slug: read-any-file-in-plain-english-builder-prompt
+name: Read Any File in Plain English coding prompt
+summary: Get a coding brief for a file reader that turns supported uploads into plain text, with format checks and clear failures.
+category: general
+type: prompt
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+    required: true
+uses: []
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

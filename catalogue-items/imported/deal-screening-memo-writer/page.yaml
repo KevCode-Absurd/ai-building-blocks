@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It tests a deal against your set criteria.
 new_slug: deal-screening-memo-writer
 name: Deal screening memo writer
-summary: Give it a teaser or CIM and your criteria. Get a one-page memo marking each test pass or fail.
+summary: Give it a teaser or CIM and your criteria. Get a one-page memo marking
+  each test pass or fail.
 job: money-and-investing
 headline: Deal screening memo writer
-subhead: "Drop in a teaser, CIM or deal description and your fund's criteria. It pulls the facts: sector, revenue, EBITDA, margins, growth, deal type and asking price. You get a one-page memo with each criterion marked pass or fail, the red flags and the questions to ask the seller."
+subhead: "Drop in a teaser, CIM or deal description and your fund's criteria. It
+  pulls the facts: sector, revenue, EBITDA, margins, growth, deal type and
+  asking price. You get a one-page memo with each criterion marked pass or fail,
+  the red flags and the questions to ask the seller."
 explain: |
   A one-page memo that tells you in minutes whether a deal is worth more time. Drop in a teaser or CIM and your fund's criteria, and you get each test marked pass or fail with the numbers beside it.
 
@@ -26,5 +30,7 @@ you_get:
   - Questions for the seller
   - One-page screening memo
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.

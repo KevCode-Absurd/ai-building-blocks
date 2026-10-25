@@ -1,0 +1,36 @@
+slug: technical-topic-explainer
+name: Technical topic explainer
+summary: Name a concept and a familiar field. Get an everyday analogy, its limits and a next step.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: source_text
+    required: true
+  - type: brief
+    required: false
+outputs:
+  - type: document
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: edu-agent-skills contributors
+  repo: yugash007/edu-agent-skills
+  path: skills/teaching/simplify-topic
+  url: https://github.com/yugash007/edu-agent-skills/tree/e75f44303570bb2eae37a8f7536c0358be2502ee/skills/teaching/simplify-topic
+  licence: MIT
+  licence_file: LICENSE
+  commit: e75f44303570bb2eae37a8f7536c0358be2502ee
+  original_name: simplify-topic
+  imported: 2026-10-23
+  skill_sha256: 9283decf006d9f5a86f2127a80cc72941b99162708581825a708abb175a8d7b1
+version: 1.0.0
+credits:
+  - title: simplify-topic skill
+    by: edu-agent-skills contributors
+    url: https://github.com/yugash007/edu-agent-skills/tree/e75f44303570bb2eae37a8f7536c0358be2502ee/skills/teaching/simplify-topic
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

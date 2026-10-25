@@ -1,0 +1,19 @@
+slug: how-messages-reach-your-agent-implementation-planner
+name: Scoped Slack agent router builder
+summary: Build a routing plan with scoped queue payloads and denial paths.
+category: general
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+    required: true
+uses: []
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

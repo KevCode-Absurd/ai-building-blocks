@@ -195,7 +195,7 @@ secretGroup = 0
 - Install: `brew install gitleaks` or download from GitHub releases.
 - Pre-commit hook: `gitleaks git --pre-commit --staged`
 - Baseline scanning: `gitleaks detect --source . --report-path gitleaks-report.json`
-- Manage false positives in `.gitleaksignore` (one fingerprint per line).
+- For a suspected false positive, inspect the exact finding locally, confirm it is a public example or non-secret value, and record the reason. If suppression is still needed, use the installed scanner's documented, narrow fingerprint-based allowlist with a reviewer and expiry. Never suppress a whole file or bypass the hook to make a scan pass.
 
 ### detect-secrets
 
@@ -218,9 +218,9 @@ repos:
 
 ### False Positive Management
 
-- Maintain `.gitleaksignore` or `.secrets.baseline` in version control so the whole team shares exclusions.
-- Review false positive lists during security audits — patterns may mask real leaks over time.
-- Prefer tightening regex patterns over broadly ignoring files.
+- Do not add broad exclusions to make scans pass. Keep any reviewed, narrow exception visible with its reason, owner and review date.
+- If a finding may be real, treat it as exposed: avoid copying the value into logs or online scanners, ask the credential owner to verify through the provider, and rotate or revoke it if confirmed.
+- If the scan is a false positive, diagnose the exact pattern and context, then tighten the rule or add only a tool-supported fingerprint exception after review.
 
 ---
 

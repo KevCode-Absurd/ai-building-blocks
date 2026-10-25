@@ -1,23 +1,19 @@
 new_slug: sales-copy-editor
-name: "Sales copy editor"
-summary: "Paste a draft and facts. Get weak lines fixed, each with its gain, and a one-line verdict."
+name: Sales copy editor
+summary: Paste a draft and facts. Get weak lines fixed, each with its gain, and a one-line verdict.
 job: write-ad-copy
 thinking: medium
-thinking_why: "It writes or plans with a handful of checks."
-
-headline: "Sales copy editor"
+thinking_why: It compares supplied evidence and follows a specific method.
+headline: Sales copy editor
 subhead: Paste an ad, page or email and the facts it may use. It reads the draft as a skimmer, a line-by-line reader and a doubter, and fixes only where one would stop. You get each fix with its gain, the claims to check and a one-line verdict.
-
 explain: |
   Edits often make copy worse. The odd true detail gets cut because it sounds informal, or the whole piece gets rewritten and loses its voice. Meanwhile the real gaps stay: no clear promise, praise words with no fact behind them, a price with its renewal hidden.
 
   This skill first points to the sentence that says what the buyer gets. Then it reads the draft three ways. As a skimmer, who sees only headings, first lines and buttons. Line by line, asking if a person would say each sentence. As a doubter about to pay, swapping praise for your facts and checking every price and guarantee. Ads get four more checks, such as an ask that gives the price. Each change goes in a ledger with its gain. A change with no gain is undone.
-
 when:
   - You have a draft ad, page, email or script and want an editor's read before it goes out.
   - Your copy leans on words like "premium" or "potent", and you want your real facts in their place.
   - You need to change one thing in copy that already works, without breaking the rest.
-
 you_give:
   - The draft, with each part labelled (headline, main text, button)
   - The ad's image, if it's an ad (attach it; your AI can see pictures)
@@ -31,18 +27,13 @@ you_get:
   - A ledger of changes, each with the check that found it and what it gains
   - Claims to send to a claims check, missing facts, and a one-line verdict
   - Any of its six checks (ten for an ad) the edited draft still misses, one line each
-
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your draft underneath, with each part labelled. Say if it's an ad, and attach the image.
-  - Paste the facts it may use, including the price, what it renews at and the guarantee wording. It won't add anything beyond them.
-  - Add one line on who it's for and what makes them hesitate.
-  - Read the verdict first. If it says the reason to buy is weak, rethink the offer before you polish lines.
-  - Read the ledger. Undo any change whose gain doesn't convince you.
-
+  - Supply the relevant brief and material, or name files in the authorized project.
+  - Ask for the stated result. Keep supplied facts, assumptions and missing evidence distinct.
+  - Review the result before authorizing repairs or external changes. Save the returned packet or authorize a file destination.
 how_it_works:
   - title: Locks what can't move
-    text: Lists your claims, numbers, prices, guarantee wording and quotes, plus every specific detail. None of them gets reworded.
+    text: Locks approved product facts, prices, terms and quotes. It flags draft errors against those facts instead of protecting an accidental falsehood.
   - title: Finds the one promise
     text: Points to the sentence that says what the buyer gets. If there isn't one, writing it is the first fix.
   - title: Reads as a skimmer
@@ -54,12 +45,11 @@ how_it_works:
   - title: Checks an ad's opening and ask
     text: For ads, checks that the first words pick out the buyer and match the picture. The ask must give the price and guarantee.
   - title: Fixes from the top
-    text: Makes the plainest fix for each stop, top first, and logs the gain. No gain means no change.
+    text: Repairs reader problems in order, checks the close follows from the draft and logs each concrete gain. A default edit limit does not leave an essential repair hidden.
   - title: Measures again
     text: Re-reads around each change, then gives the new word count and reading grade.
   - title: Checks the edit
     text: Checks six things, such as one clear promise and every praise word backed by a fact, plus four more for an ad. It names any check the edited draft still misses.
-
 output_shape: |
   LOCKED
   <claims, numbers, terms, quotes, the order of the argument>
@@ -90,7 +80,6 @@ output_shape: |
 
   CHECKS MISSED
   <one line per check, or none>
-
 example:
   business: sprout
   input: |
@@ -183,7 +172,6 @@ example:
     A wording problem. The reason to buy is clear, but the draft hid
     the renewal price, the very thing this buyer fears. Fix
     "probiotics" and "61%" before this ad runs again.
-
 tweaks:
   - what: The facts
     how: Every fix for a vague word comes from here. A short list gets you more MISSING notes and plainer lines. A full list with amounts, tests, renewal price and guarantee terms gets you specific ones.
@@ -195,39 +183,37 @@ tweaks:
     how: The doubter read aims at the doubt you name. "Will the price jump?" pulls the renewal price forward; "will it fit in my kitchen?" pulls the sizes forward.
   - what: How many changes
     how: Six is the default. Ask for "the top three" if you're short on time. It fixes from the top down.
-
 judge:
   - You can point to the one sentence that says what the buyer gets.
   - No claim, number, price, guarantee wording, name or quote was reworded. Compare them side by side.
   - Every new fact in a fix is in the facts you gave it, and every ledger row names a gain.
   - Most lines were left as they were, with a reason.
   - If it's an ad, the ask says what to do, what it costs and what happens if they don't like it.
-
 test:
   - Run it on copy a good editor has already fixed. It should find most of the same lines and keep the details your editor kept.
   - Run it twice. The locked list, the promise and the changed lines should match both times. If they move, add amounts, tests and terms to your facts.
   - Put "premium" in a line where your facts hold the number behind it. It should swap the word for that number, not for another adjective.
   - Plant a guarantee with its limit left out, or a price with no renewal. The doubter read should catch it.
   - Check the before and after reading grades with a free readability checker. They should be close to what it reports.
-
 improve:
   - Paste your full facts list and the claims your brand must never make into "What you need" in the skill file. Then every fix has real numbers, and none goes near a banned claim.
   - If your copy always has the same parts, list them in step 1 (for example "headline, main text, button").
   - Set your own reading grade target in step 2. Add your platform's limits to step 7, such as "main text before See more under 125 characters".
   - When the same MISSING fact comes up twice, find it and save it to your brand file. Save the specifics it protects there too.
   - If an AI tool wrote the draft, run "Anti-AI-slop copy editor" first. Finish with "Sales copy readiness checker".
-
 works_best_with:
   tools:
-    - {name: "Any good chat AI", why: "Any current chat AI can follow the reads. Give it the facts list so it adds nothing."}
-    - {name: "Hemingway Editor", why: "Gives a reading grade and marks hard sentences, so you can check the before and after numbers yourself."}
-    - {name: "Meta Ads Manager", why: "Its ad preview shows where your main text gets cut at See more, so you can check the opening."}
+    - name: Any good chat AI
+      why: Any current chat AI can follow the reads. Give it the facts list so it adds nothing.
+    - name: Hemingway Editor
+      why: Gives a reading grade and marks hard sentences, so you can check the before and after numbers yourself.
+    - name: Meta Ads Manager
+      why: Its ad preview shows where your main text gets cut at See more, so you can check the opening.
   inputs:
-    - "Results for the draft if it already runs (clicks, replies), so the edit starts where readers stop"
-    - "Two or three pieces in your voice that worked, so it leaves your proven phrasing alone"
-    - "A screenshot of the ad image, so it can check the words agree with the picture"
-    - "Your buyers' main doubt in their own words from a review, so the doubter read aims at it"
-
+    - Results for the draft if it already runs (clicks, replies), so the edit starts where readers stop
+    - Two or three pieces in your voice that worked, so it leaves your proven phrasing alone
+    - A screenshot of the ad image, so it can check the words agree with the picture
+    - Your buyers' main doubt in their own words from a review, so the doubter read aims at it
 terms:
   - term: Promise
     meaning: The one sentence that says what the buyer gets. Every edit starts by finding it.

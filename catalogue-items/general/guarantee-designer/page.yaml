@@ -1,15 +1,15 @@
 new_slug: guarantee-designer
 name: Guarantee designer
-summary: Paste your offer and costs. Get a guarantee that fits your risk, with the refund sums and a name.
+summary: Share your offer, costs and refund history. Get a guarantee draft, refund scenarios and the checks needed before you use it.
 job: make-offer
 thinking: high
 thinking_why: It must compare several guarantee types against your costs and run the sums. Give it your strongest model.
 headline: Guarantee designer
-subhead: Give it your offer, price and what it costs to deliver. It picks the buyer's biggest fear, chooses a guarantee type that fits your ticket size and costs, writes it in an if-then form, runs the refund sums and gives it a name.
-explain: |-
-  The biggest reason people do not buy is risk: the fear of paying and not getting the result. A guarantee takes that risk from the buyer and puts it on you. A strong one can lift sales a lot, even when it leads to some refunds.
+subhead: It ranks buyer concerns, compares guarantee types and drafts clear conditions, timing and remedies. Get refund-and-cost scenarios, name ideas and missing checks. A revenue-only refund ratio does not preserve profit when delivery costs remain. Affordability and applicable rules need evidence; the draft stays unapproved where those checks are missing.
+explain: |
+  A guarantee can address a buyer concern, but it also creates costs and obligations. Refund rates, delivery costs, remedy costs and cash limits all affect what the business can afford. A guarantee cannot replace evidence for the promised result.
 
-  This skill designs one that you can afford. It starts with the buyer's main fear and offers four kinds: no conditions, conditions tied to actions, all sales final with a reason, and pay-on-result. It writes the guarantee in a form with an if and an or what, so it is not weak. Then it runs the refund sums on your numbers, including the cost you have already spent on a buyer who asks for money back. Conditions tied to the actions that cause success also screen for buyers who will do the work.
+  This skill drafts options and shows supplied scenarios. It keeps the sales lift needed to preserve net revenue separate from the lift needed to preserve profit. A zero or negative new per-sale profit cannot recover a positive old profit just by selling more under the same assumptions. Missing costs leave affordability unresolved. Current consumer, claim and platform rules must be checked for the actual market before the draft is used.
 when:
   - Buyers say they are not sure it will work for them.
   - You offer a generic 30-day refund and it does little.
@@ -23,13 +23,13 @@ you_get:
   - The buyer's top fears, ranked
   - The guarantee type that fits, with the reason
   - The guarantee written in an if-then form, with options for the remedy
-  - Refund sums on your numbers and the sales lift needed to break even
+  - Refund-and-cost scenarios with supported profit-preserving lift, or an unresolved result
   - Three names for it, and a note on rules and limits
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste the offer, price and cost to deliver.
   - List the actions a buyer must take for the result to happen.
-  - Check the sums, then run the guarantee for a month and watch refunds and sales.
+  - Check the costs, cash limits and applicable rules before approving any use. A test needs agreed measures and loss limits.
 how_it_works:
   - title: Finds the fear
     text: Ranks what buyers worry about when they pay.
@@ -38,9 +38,9 @@ how_it_works:
   - title: Writes it with teeth
     text: If you do not get this result in this time having done these actions, we do this.
   - title: Runs the sums
-    text: Net sales and net money before and after, with delivery cost on refunds.
+    text: Keeps revenue-retaining and profit-retaining lift separate, counts stated costs on refunded buyers and flags undefined or unviable cases.
   - title: Names and checks
-    text: Three names, and a check against rules and your ability to deliver.
+    text: Gives three name ideas and lists the applicable-rule and delivery-evidence checks; it does not clear an unverified draft.
 output_shape: |-
   BUYER FEARS
   1. ... 2. ... 3. ...
@@ -55,7 +55,7 @@ output_shape: |-
   <3 to 5 choices>
 
   REFUND SUMS
-  <before and after, net sales, net money, break-even lift>
+  <dated inputs and assumptions, per-sale profit, total profit and supported lift or UNRESOLVED>
 
   NAMES
   <3>
@@ -78,13 +78,15 @@ tweaks:
 judge:
   - The guarantee has an if, a time and an or what.
   - The type fits the ticket size and delivery cost.
-  - The refund sums include delivery cost on refunded buyers.
-  - Conditions are actions that cause the result.
+  - Profit-preserving lift uses complete applicable costs and a positive new per-sale profit; revenue-only lift is labelled separately.
+  - Proposed conditions have evidence tying them to the result; they do not override mandatory consumer rights.
   - A rules note is included and no result is promised that you cannot support.
 test:
   - Redo the sums by hand. Net money before and after should match.
   - Give the guarantee to a buyer who is unsure. They should be able to say what they would do to qualify.
   - Track refunds for a month and compare them to the sums.
+  - "Use price 900, cost 120, refunds 5% then 10%: per-sale profits 735 and 690; profit-preserving lift is about 6.52%, not the revenue-only 5.56%."
+  - Use zero/negative new per-sale profit or missing costs. Do not promise affordability or divide into a positive sales target.
 improve:
   - Start with a service or pay-on-result guarantee, and loosen it only once you know refunds stay low.
   - Tie each guarantee to the one action that best predicts success.

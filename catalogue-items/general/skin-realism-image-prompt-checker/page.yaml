@@ -1,0 +1,34 @@
+new_slug: skin-realism-image-prompt-checker
+name: Skin realism image prompt checker
+summary: Share a portrait or prompt. Get focused fixes for skin, hands and contact while keeping identity and light.
+job: make-images
+headline: Skin realism image prompt checker
+subhead: Share a portrait or prompt. Get focused fixes for skin, hands and contact while keeping identity and light. Bring the brief and any files you want it to use.
+explain: |-
+  Use this when you need a focused skin, hand and contact realism review. Use this for photorealistic adult faces/hands, beauty/UGC stills or portrait-to-video consistency. A stylized brief does not need photoreal skin correction.
+
+  Read the image if accessible; distinguish observation from prompt-only intent. Keep the chosen identity, age, skin tone and existing marks rather than adding arbitrary blemishes.
+when:
+  - You need a focused skin, hand and contact realism review.
+  - You want a clear draft and checks from the material you already have.
+you_give:
+  - brief
+  - "Optional: approved image"
+  - "Optional: reference set"
+you_get:
+  - audit report
+  - image prompt
+  - Missing inputs and steps that still need to run
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Read the brief
+    text: Use this for photorealistic adult faces/hands, beauty/UGC stills or portrait-to-video consistency. A stylized brief does not need photoreal skin correction.
+  - title: Build the result
+    text: "Review skin by facial zone: forehead/nose versus cheeks, under-eyes, lips, peach fuzz and natural tonal variation. Texture strength should follow distance, focus and light rather than uniform stamped pores."
+  - title: Check and hand off
+    text: Return one revised prompt or edit instruction, exact preserve list and remaining visual checks. Do not claim a beauty product result or invent a before/after efficacy story.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

@@ -2,10 +2,15 @@ thinking: high
 thinking_why: It models demand against hiring capacity.
 new_slug: headcount-plan-builder
 name: Headcount plan builder
-summary: Share your growth goals and budget. Get a role by role hiring plan with a priority order.
+summary: Share your growth goals and budget. Get a role by role hiring plan with
+  a priority order.
 job: hire-people
 headline: Headcount plan builder
-subhead: Share your business goals, current headcount by team, hiring requests from managers and your budget. It turns growth targets into headcount the business can afford and your recruiters can handle. You get a role by role hiring plan, a priority order, conservative, base and fast-growth versions, and a monthly report outline.
+subhead: Share your business goals, current headcount by team, hiring requests
+  from managers and your budget. It turns growth targets into headcount the
+  business can afford and your recruiters can handle. You get a role by role
+  hiring plan, a priority order, conservative, base and fast-growth versions,
+  and a monthly report outline.
 explain: |
   A hiring plan for next year that starts from your business goals and ends with a role-by-role list. Instead of collecting wish lists from every manager, you get a plan checked against what the business can afford and what your recruiters can handle.
 
@@ -27,5 +32,7 @@ you_get:
   - Conservative, base and fast-growth versions
   - A monthly demand and supply report outline
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.

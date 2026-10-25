@@ -1,0 +1,28 @@
+new_slug: aws-resource-inventory-reader
+name: Read AWS resource inventory
+summary: Read AWS resource details within an agreed account and region. Return a short table and leave secret values untouched.
+job: connect-tools
+headline: Read AWS resource inventory
+subhead: Bring a scoped AWS question and read access. Get filtered facts with clear gaps and limits.
+explain: Bring a scoped AWS question and read access. Get filtered facts with clear gaps and limits.
+when:
+  - You want to read AWS resource inventory.
+you_give:
+  - The inventory question, authorized AWS account/profile and regions.
+  - An installed AWS CLI with permission to read the relevant metadata.
+you_get:
+  - Focused resource metadata tables and stated query scope.
+  - Clear permission, missing-resource and region limits without a resource mutation.
+how_to_use:
+  - Download the complete skill folder and add it to your AI tool, or copy the instructions into a chat.
+  - Provide the inputs listed here and ask your AI to follow the skill.
+  - Review the result and any missing facts before using it.
+how_it_works:
+  - title: Fix identity and scope
+    text: Resolve the service, filters, account and region before selecting commands.
+  - title: Query metadata only
+    text: Use relevant read operations and filtered fields; exclude secret and parameter values.
+  - title: Explain the result
+    text: Summarize counts and useful fields, retaining permission and regional coverage limits.
+thinking: medium
+thinking_why: It weighs your evidence and follows a specific method.

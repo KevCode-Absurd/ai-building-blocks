@@ -2,10 +2,14 @@ thinking: high
 thinking_why: Async C++ has subtle traps that need careful thought.
 new_slug: c-network-code-helper
 name: C++ network code helper
-summary: Describe the networking job. Get C++ Boost.Asio code that compiles on your version of Boost.
+summary: Describe the networking job. Get C++ Boost.Asio code that compiles on
+  your version of Boost.
 job: build-software
 headline: C++ network code helper
-subhead: Describe the networking job, such as a server, client, timer or secure connection, and name your Boost version and C++ standard. It picks the async style your setup can build, since most online examples are old. You get working C++ code, notes on the style chosen and build hints.
+subhead: Describe the networking job, such as a server, client, timer or secure
+  connection, and name your Boost version and C++ standard. It picks the async
+  style your setup can build, since most online examples are old. You get
+  working C++ code, notes on the style chosen and build hints.
 explain: |
   C++ network code that actually compiles on your version of Boost. Describe the job, such as a server, client, timer or secure connection, and you get working asynchronous code in the style your setup supports.
 
@@ -26,6 +30,8 @@ you_get:
   - Notes on why that style was chosen
   - Build hints for your setup
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
   - It works best when your AI can run code and read your project files.

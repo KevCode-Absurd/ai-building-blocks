@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It runs many scenarios through a set model.
 new_slug: deal-returns-sensitivity-builder
 name: Deal returns sensitivity builder
-summary: Give it deal terms. Get IRR and MOIC tables across entry price, debt, exit price and hold time.
+summary: Give it deal terms. Get IRR and MOIC tables across entry price, debt,
+  exit price and hold time.
 job: money-and-investing
 headline: Deal returns sensitivity builder
-subhead: "Enter the deal: entry EBITDA and multiple, net debt, growth, margins and exit year. It builds the base case with live formulas, then changes one assumption at a time. You get a returns model, an IRR table, a MOIC table and notes on which assumptions matter most."
+subhead: "Enter the deal: entry EBITDA and multiple, net debt, growth, margins
+  and exit year. It builds the base case with live formulas, then changes one
+  assumption at a time. You get a returns model, an IRR table, a MOIC table and
+  notes on which assumptions matter most."
 explain: |
   Tables that show what a deal returns if the price, the debt or the exit changes. You get IRR and MOIC grids across entry multiple, debt level, exit multiple and hold period, so you can see which assumption matters most.
 
@@ -13,7 +17,8 @@ explain: |
 when:
   - You are weighing a bid and need to know how much price headroom you have.
   - Your lender wants to see returns at different debt levels.
-  - You want to show an investment committee what happens if the exit multiple falls.
+  - You want to show an investment committee what happens if the exit multiple
+    falls.
   - You are comparing a three-year and a five-year hold.
 you_give:
   - Entry EBITDA and multiple
@@ -27,5 +32,7 @@ you_get:
   - MOIC sensitivity table
   - Notes on which assumptions drive the result
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.

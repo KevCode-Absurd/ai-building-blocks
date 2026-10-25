@@ -1,37 +1,60 @@
 slug: visual-twist-image-ad-maker
 renamed_from: stop-the-scroll-with-your-buyers-problem
-name: "Visual twist image ad maker"
-summary: "Paste a buyer's words. Get a one-twist image ad, its words, layout and image prompt."
+name: Visual twist image ad maker
+summary: Paste a buyer's words. Get a one-twist image ad, its words, layout and image prompt.
 category: general
-boards: [ecommerce]
+boards:
+  - ecommerce
 type: skill
 role: make
 job: ads
 level: advanced
 inputs:
-  - {type: persona, required: false}
-  - {type: product_data, required: true}
-  - {type: voc_reviews, required: false}
+  - type: persona
+    required: false
+  - type: product_data
+    required: true
+  - type: voc_reviews
+    required: false
 outputs:
-  - {type: image_prompt}
-  - {type: ad_copy}
-uses: [accurate-product-image-ad-maker]
+  - type: image_prompt
+    required: true
+  - type: ad_copy
+    required: true
+uses:
+  - accurate-product-image-ad-maker
 example: ad-concept
 origin: rebuilt
-source_ids: [CES-135]
+source_ids:
+  - CES-135
 old_name: problem-first image ad
-version: 2.0.0
-minds: [john-caples]
+version: 2.1.0
+minds:
+  - john-caples
 credits:
-  - {title: "The Role of Expectancy and Relevancy in Memory for Verbal and Visual Information: What Is Incongruency?", by: "Susan Heckler and Terry Childers, Journal of Consumer Research", url: "https://doi.org/10.1086/209275", used: "The unexpected-and-relevant check"}
-  - {title: "Beyond Visual Metaphor: A New Typology of Visual Rhetoric in Advertising", by: "Barbara J. Phillips and Edward F. McQuarrie, Marketing Theory", url: "https://doi.org/10.1177/1470593104044089", used: "Side by side, merged and swapped in, ordered by how much they ask of the viewer"}
-  - {title: "The Stopping Power of Advertising: Measures and Effects of Visual Complexity", by: "Rik Pieters, Michel Wedel and Rajeev Batra, Journal of Marketing", url: "https://doi.org/10.1509/jmkg.74.5.048", used: "Simple pixels, clever arrangement"}
-  - {title: "Tested Advertising Methods", by: "John Caples", url: "https://openlibrary.org/works/OL3350190W", used: "Headline jobs: gain, news, curiosity"}
-  - {title: "Facebook Ads Guide: image ad specs", by: "Meta", url: "https://www.facebook.com/business/ads-guide/update/image", used: "4:5 Feed shape and the 27-character headline"}
-  - {title: "Privacy Violations and Personal Attributes", by: "Meta Transparency Center", url: "https://transparency.meta.com/policies/ad-standards/objectionable-content/privacy-violations-personal-attributes/", used: "No line or picture saying the reader has a condition"}
-tested:
-  on: 2026-10-20
-  business: sprout
-  model: claude-opus-5-5
-  judge: claude-fable-5-1
-  result: pass
+  - title: "The Role of Expectancy and Relevancy in Memory for Verbal and Visual Information: What Is Incongruency?"
+    by: Susan Heckler and Terry Childers, Journal of Consumer Research
+    url: https://doi.org/10.1086/209275
+    used: The unexpected-and-relevant check
+  - title: "Beyond Visual Metaphor: A New Typology of Visual Rhetoric in Advertising"
+    by: Barbara J. Phillips and Edward F. McQuarrie, Marketing Theory
+    url: https://doi.org/10.1177/1470593104044089
+    used: Side by side, merged and swapped in, ordered by how much they ask of the viewer
+  - title: "The Stopping Power of Advertising: Measures and Effects of Visual Complexity"
+    by: Rik Pieters, Michel Wedel and Rajeev Batra, Journal of Marketing
+    url: https://doi.org/10.1509/jmkg.74.5.048
+    used: Simple pixels, clever arrangement
+  - title: Tested Advertising Methods
+    by: John Caples
+    url: https://openlibrary.org/works/OL3350190W
+    used: "Headline jobs: gain, news, curiosity"
+  - title: "Facebook Ads Guide: image ad specs"
+    by: Meta
+    url: https://www.facebook.com/business/ads-guide/update/image
+    used: 4:5 Feed shape and the 27-character headline
+  - title: Privacy Violations and Personal Attributes
+    by: Meta Transparency Center
+    url: https://transparency.meta.com/policies/ad-standards/objectionable-content/privacy-violations-personal-attributes/
+    used: No line or picture saying the reader has a condition
+package_files: all
+example_pending: true

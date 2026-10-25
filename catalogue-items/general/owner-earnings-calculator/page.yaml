@@ -1,59 +1,52 @@
 new_slug: owner-earnings-calculator
-name: "Owner earnings calculator"
-summary: "Paste a company's profit, depreciation and spending. Get the cash an owner could take out each year, as a range."
+name: Owner earnings calculator
+summary: Share profit, spending and working-capital records. Get three owner-earnings estimates, input gaps and an order check before using a range.
 job: money-and-investing
 thinking: medium
-thinking_why: "The sum is fixed, but it needs judgment about what spending keeps the business level. Use a strong model."
-
-headline: "Owner earnings calculator"
-subhead: "Paste several years of a company's profit, depreciation, capital spending and working capital. It removes one-off items, splits the spending into keeping level and growing, and gives the cash an owner could really take out each year, as a low, middle and high figure. It is a method of analysis, not personal financial advice."
-
+thinking_why: The sum is fixed, but it needs judgment about what spending keeps the business level. Use a strong model.
+headline: Owner earnings calculator
+subhead: It cleans the accounts and tests three estimates of upkeep spending. You get labelled owner-earnings candidates, an order check and supported yearly figures. Missing data stays missing. A range appears only when the inputs and order pass; a ratio or growth rate may be undefined. This is a method of analysis, not a buy or sell call.
 explain: |
-  Profit is an opinion built from accounting rules. Plain cash flow is worse, because it adds back depreciation and forgets that the machines, shops or systems have to be replaced. A business can show growing profit and still hand its owners almost nothing.
+  Reported profit and a simple add-back of non-cash charges do not by themselves show what an owner could take out while keeping the business level. Upkeep spending and changes in working capital need evidence too.
 
-  This skill works out owner earnings: profit, plus non-cash charges, minus the spending needed to stay where you are, minus the extra money tied up as sales grow. Because nobody knows next year's spending, it gives a range, with the three ways it estimated the spending to stay level. It also shows the trend and flags businesses that keep eating cash. It gives no buy or sell calls and marks every missing figure.
-
+  This skill calculates three labelled candidates from the supplied records and the method’s upkeep proxies. It checks whether they form a valid low, middle and high order. Conflicting candidates remain separate, with NO VALID ORDERED RANGE. Missing working-capital data leaves actual owner earnings unresolved. Ratios and compound growth appear only where their inputs are meaningful. No valuation handoff follows from an unresolved range.
 when:
   - You are about to value a business and the profit figure may hide how much cash it eats.
   - A company shows rising profit but the owners never seem to get any money.
   - You want one cash figure to feed into a value calculation.
-
 you_give:
   - Four or five years of profit after tax, depreciation, capital spending and working capital lines
   - Earlier findings on the business (optional)
   - A line on what the business does (optional)
 you_get:
   - A year-by-year table with one-off items removed
-  - Low, middle and high owner earnings
-  - How much of reported profit survives as owner earnings
-  - The yearly growth and how steady it is
-  - A note where the method does not fit
-
+  - Three labelled upkeep and owner-earnings candidates
+  - An order check and either an eligible range or NO VALID ORDERED RANGE
+  - Ratios and growth only where the inputs support them
+  - Missing figures and method limits
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste the figures from the company's accounts, or attach the spreadsheet.
   - Say what you know about one-off items, such as a building sale.
-  - Read the three figures and the ratio to profit before you use any of them.
-  - Take the working figure and the range to "Business value range calculator".
-
+  - Check the inputs, candidate labels and order before using a range. Read ratios only when their basis is defined.
+  - Carry a working figure to a value calculation only after the data, upkeep assumptions and order checks pass. Keep unresolved cases out of that handoff.
 how_it_works:
   - title: Lines up the years
     text: Puts profit, non-cash charges, capital spending and working capital side by side and marks every gap.
   - title: Removes one-offs
     text: Takes out sale gains, write-downs and refunds so a single odd year does not set the answer.
   - title: Splits the spending
-    text: Estimates what it costs to stay level three ways, low, middle and high.
+    text: Estimates upkeep three ways and preserves the light, depreciation and heavy proxy labels.
   - title: Counts the cash tied up
     text: Adds the yearly rise in receivables and stock, less payables, as money the owner cannot take.
   - title: Does the sum for each year
     text: Profit plus non-cash charges, minus staying-level spending, minus extra working capital.
   - title: Compares with profit
-    text: Shows how much of reported profit is really free cash.
+    text: Shows a candidate-to-profit ratio only with positive comparable profit; otherwise marks the ratio undefined or not meaningful.
   - title: Shows the trend
-    text: Works out the yearly growth and says how steady it is.
+    text: Shows supplied yearly figures and computes compound growth only with positive endpoints, comparable inputs and a valid year gap.
   - title: Checks itself
-    text: Runs its own checks and names any it missed.
-
+    text: Checks missing inputs and candidate order. It does not sort, clamp or rename conflicting candidates to manufacture a range.
 output_shape: |
   FIGURES BY YEAR
   <year> | profit | non-cash | capital spending | working capital | MISSING
@@ -62,14 +55,16 @@ output_shape: |
   <what was removed and why>
 
   OWNER EARNINGS
-  Low <n> | Middle <n> | High <n>  (spending to stay level: <n> / <n> / <n>)
+  Light proxy <n or unresolved> | Depreciation proxy <n or unresolved> | Heavy proxy <n or unresolved>
+  RANGE ORDER: <passes | NO VALID ORDERED RANGE> with inputs and reasons
+  Eligible low/middle/high range: <only if inputs and order pass; otherwise unresolved>
   Plain cash flow for comparison: <n>
 
   SHARE OF PROFIT
-  <owner earnings / profit, and what that says>
+  <candidate / positive comparable profit, or undefined/not meaningful with reason>
 
   TREND
-  <yearly growth, how steady>
+  <supplied annual candidates; CAGR only with positive comparable endpoints and gaps > 0, otherwise undefined/not meaningful>
 
   WHERE IT DOES NOT FIT
   <or none>
@@ -79,7 +74,6 @@ output_shape: |
 
   CHECKS MISSED
   <one line per check still missed, or none>
-
 tweaks:
   - what: Which spending counts as staying level
     how: If you know, say so ("the new warehouse was growth"). It replaces the three estimates for that item.
@@ -87,35 +81,33 @@ tweaks:
     how: Give four or five. Add a note if one year was unusual, such as a closure or a boom.
   - what: What the business does
     how: A shop, a factory and a software firm need very different amounts of spending. One line helps it judge.
-
 judge:
   - Every number comes from your figures or is marked missing.
   - One-off items are named and removed.
-  - The answer is a range with a working figure.
+  - A range and working figure appear only after complete-input and order checks; no sorting or clamping hides a conflict.
   - Plain cash flow is shown next to owner earnings.
   - Nothing says to buy or sell a named security.
-
+  - Missing working capital stays unknown; any requested zero-working-capital scenario is labelled separately.
 test:
   - Give it a year with a big building sale. The sale should be removed and named.
-  - Give it a business with heavy equipment and low depreciation. The low case should sit well below the middle case.
+  - Use profit 50, depreciation 1, working-capital rise 3 and capex 10/14/16/18. Keep candidates 38/47/33.5 separate and return NO VALID ORDERED RANGE.
   - Leave out the capital spending line. It should stop and ask for it, not guess.
-  - Run it twice on the same figures. The ranges should be close.
-
+  - Leave working capital out, use zero profit or negative growth endpoints. Keep actual owner earnings unresolved and invalid ratios or CAGR undefined.
 improve:
   - Keep your cleaned figures in a sheet so next year's run only adds one row.
   - Add the notes from the annual report that explain big spending.
   - Run it on a rival and compare the share of profit that survives.
   - Pair it with "Return on equity and margin checker" for the full set of money tests.
-
 works_best_with:
   tools:
-    - {name: "A spreadsheet", why: "Lets you keep the year-by-year table and rerun the sum when a new year arrives."}
-    - {name: "Any good chat AI", why: "Reading pasted statements and doing a short fixed sum is work any strong chat AI does well with this skill."}
+    - name: A spreadsheet
+      why: Lets you keep the year-by-year table and rerun the sum when a new year arrives.
+    - name: Any good chat AI
+      why: Reading pasted statements and doing a short fixed sum is work any strong chat AI does well with this skill.
   inputs:
-    - "The cash flow statement and balance sheet for four or five years"
-    - "Notes on one-off items, such as a building sale or a lawsuit payout"
-    - "A list of big spending projects and whether each was growth or upkeep"
-
+    - The cash flow statement and balance sheet for four or five years
+    - Notes on one-off items, such as a building sale or a lawsuit payout
+    - A list of big spending projects and whether each was growth or upkeep
 terms:
   - term: Owner earnings
     meaning: The cash left each year if you owned the whole business and kept it as strong as it is today.

@@ -7,19 +7,19 @@ role: check
 job: analysis
 level: intermediate
 inputs:
-  - {type: performance_sheet, required: true}
-  - {type: question, required: false}
+  - { type: performance_sheet, required: true }
+  - { type: question, required: false }
 outputs:
-  - {type: audit_report}
-  - {type: plan}
+  - { type: audit_report }
+  - { type: plan }
 uses: []
 origin: rebuilt
 example_pending: true
-version: 1.0.0
+version: 1.0.1
 credits:
-  - {title: "The #1 bottleneck in 80% of ecommerce audits (data integrity)", by: "An agency founder who has run 1,000+ audits on 7 to 9 figure brands", used: "Data first, then creative, then account structure, the treadmill check and one bottleneck at a time"}
-  - {title: "Alo Yoga teardown: creative, offers, landers and acquisition", by: "Nathan, head of paid media at an ecommerce ad agency", used: "Checking the real commercial effect of each change and the pull of levers outside the ad account"}
-  - {title: "The six bottlenecks in ecommerce growth (cash conversion cycle)", by: "Unnamed presenter", used: "Knowing when the limit is cash, not ads"}
-  - {title: "$1B Marketer Explains: How to Scale an Ecommerce Brand in 2026", by: "Eddie, agency owner", used: "The conversion rate times order value scale check and the rule to test product and audience first"}
-  - {title: "The Death Spiral That Kills Most eCommerce Brands", by: "An agency operator who audits 8 and 9 figure stores", used: "Splitting CAC into click cost and conversion rate, and how to offset rising CPMs"}
-  - {title: "8 years of marketing advice in 70 minutes", by: "Mark, paid ads operator and mentor", used: "Treating a low conversion rate as a sign, finding the funnel step, and trying to break the funnel before launch"}
+  - { title: "The #1 bottleneck in 80% of ecommerce audits (data integrity)", by: "An agency founder who has run 1,000+ audits on 7 to 9 figure brands", used: "Data first, then creative, then account structure, the treadmill check and one bottleneck at a time" }
+  - { title: "Alo Yoga teardown: creative, offers, landers and acquisition", by: "Nathan, head of paid media at an ecommerce ad agency", used: "Checking the real commercial effect of each change and the pull of levers outside the ad account" }
+  - { title: "The six bottlenecks in ecommerce growth (cash conversion cycle)", by: "Unnamed presenter", used: "Knowing when the limit is cash, not ads" }
+  - { title: "$1B Marketer Explains: How to Scale an Ecommerce Brand in 2026", by: "Eddie, agency owner", used: "The conversion rate times order value scale check and the rule to test product and audience first" }
+  - { title: "The Death Spiral That Kills Most eCommerce Brands", by: "An agency operator who audits 8 and 9 figure stores", used: "Splitting CAC into click cost and conversion rate, and how to offset rising CPMs" }
+  - { title: "8 years of marketing advice in 70 minutes", by: "Mark, paid ads operator and mentor", used: "Treating a low conversion rate as a sign, finding the funnel step, and trying to break the funnel before launch" }

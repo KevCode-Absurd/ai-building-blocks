@@ -1,0 +1,30 @@
+thinking: high
+thinking_why: It weighs real records, missing facts, and choices that affect people or funding.
+new_slug: donated-goods-online-resale-planner
+name: Donated goods online resale planner
+summary: Share item details and condition. Get listing fields, photo needs, pricing research, and shipping steps.
+job: run-your-store
+headline: Donated goods online resale planner
+subhead: Share the donated item, condition, measurements, and the marketplace you use. It checks whether online sale is suitable and uses sold-item evidence for pricing. You get listing fields, a photo checklist, shipping steps, and a review plan for returns and costs.
+when:
+  - You need this task done for a nonprofit, community program, or donated-goods store.
+you_give:
+  - Item details, condition and flaws, measurements, photos, target marketplace, sold-price evidence, and shipping limits.
+you_get:
+  - Online selection rules, a truthful listing template, photo needs, packing standards, and review measures.
+how_it_works:
+  - title: Research suitable items
+    text: Check what the item is. Look at prices from past sales before choosing online sale or the shop floor.
+  - title: Prepare an honest listing
+    text: Specify needed photos, dimensions, condition, and flaws. Choose a sale format based on the available price evidence.
+  - title: Plan safe delivery
+    text: Include packaging and shipping costs, handling dates, buyer-message steps, and a monthly returns and margin review.
+works_best_with:
+  tools:
+    - name: A chat AI that can read your files
+      why: The skill works from records and drafts you provide. Research tasks also need current, checked public sources.
+  inputs:
+    - Marketplace listings and photos; mistakes are relisted.
+how_to_use:
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.

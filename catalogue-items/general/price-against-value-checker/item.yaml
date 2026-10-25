@@ -7,12 +7,12 @@ role: check
 job: analysis
 level: intermediate
 inputs:
-  - {type: audit_report, required: true}
-  - {type: question, required: false}
+  - { type: audit_report, required: true }
+  - { type: question, required: false }
 outputs:
-  - {type: plan, required: true}
+  - { type: plan, required: true }
 origin: rebuilt
-version: 1.0.0
+version: 1.0.1
 minds:
   - charlie-munger
   - warren-buffett

@@ -1,15 +1,26 @@
 thinking: high
-thinking_why: It must distinguish reported facts, estimates and valuation assumptions across several sources.
+thinking_why: It must distinguish reported facts, estimates and valuation
+  assumptions across several sources.
 new_slug: equity-research-valuation-report-builder
 name: Equity research and valuation report builder
-summary: Share company reports and a dated share price. Get a stock research report with value ranges, source checks and clear assumptions.
+summary: Share company reports and a dated share price. Get a stock research
+  report with value ranges, source checks and clear assumptions.
 job: money-and-investing
 headline: Equity research and valuation report builder
-subhead: Supply the company, exchange, currency, research date and permitted filings. Get a research report with traceable inputs and valuation scenarios. An included English adapter runs the original calculation and provenance checks. Source truth and investment conclusions still need human review.
+subhead: Supply the company, exchange, currency, research date and permitted
+  filings. Get a research report with traceable inputs and valuation scenarios.
+  An included English adapter runs the original calculation and provenance
+  checks. Source truth and investment conclusions still need human review.
 when:
-  - You are preparing company research and valuation with explicit assumptions and an as-of date.
+  - You are preparing company research and valuation with explicit assumptions
+    and an as-of date.
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
-  - Use launch-tools/USAGE.md for English rendering, the matching strict validator and clearly labelled sample exhibits.
-  - It works best when your AI can run Python 3.9 or later and read supplied filings or access permitted research sources; it includes no live market-data feed.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
+  - Use launch-tools/USAGE.md for English rendering, the matching strict
+    validator and clearly labelled sample exhibits.
+  - It works best when your AI can run Python 3.9 or later and read supplied
+    filings or access permitted research sources; it includes no live
+    market-data feed.

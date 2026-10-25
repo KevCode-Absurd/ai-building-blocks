@@ -1,0 +1,32 @@
+slug: plan-a-local-nature-project-with-stewardship
+name: Plan a nature project that can continue
+summary: Describe a local place and learner group. Get an observation-led project, harm checks and a stewardship handover.
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: true
+outputs:
+  - type: plan
+  - type: document
+uses:
+  - nature-inquiry-cycle
+  - intervention-impact-planner
+  - learning-documentation-planner
+steps:
+  - uses: nature-inquiry-cycle
+    note: Use learners, site and observations to plan noticing, inquiry, a small trial, ongoing care and honest sharing. Pass the proposed action, local-system description and evidence gaps to impact review.
+  - uses: intervention-impact-planner
+    note: Use that system description and proposed action to test feasibility, unintended effects, adult responsibilities and doing less. Return revised action and stop conditions to documentation planning.
+  - uses: learning-documentation-planner
+    note: Use the revised inquiry to plan observations, learner explanations and reflection records. Separate direct observations from adult interpretations. Provide consent-aware sharing and future-care records.
+execution: coordinator
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

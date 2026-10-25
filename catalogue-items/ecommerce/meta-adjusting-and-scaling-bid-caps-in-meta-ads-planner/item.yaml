@@ -1,0 +1,19 @@
+slug: meta-adjusting-and-scaling-bid-caps-in-meta-ads-planner
+name: Meta bid cap adjustment planner
+summary: Review Meta bid caps against delivery and business targets. Get proposed adjustments, a test window and clear stop rules.
+category: ecommerce
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: performance_sheet
+    required: true
+outputs:
+  - type: plan
+    required: true
+uses: []
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

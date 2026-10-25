@@ -1,11 +1,11 @@
 // Original tool. All numbers shown are illustrative figures, not a real person’s results.
 export default {
   "slug": "electricity-running-cost",
-  "name": "Estimate what an appliance costs to run",
-  "short": "Electricity running cost",
-  "headline": "Estimate what an appliance costs to run",
+  "name": "Appliance electricity cost",
+  "short": "Appliance electricity cost",
+  "headline": "Appliance electricity cost",
   "summary": "Enter watts, hours of use and your electricity unit price. See energy use and cost for your chosen days.",
-  "question": "Estimate what an appliance costs to run?",
+  "question": "What does this appliance’s use cost at my entered electricity price?",
   "category": "personal",
   "shelf": [
     "general"
@@ -88,12 +88,12 @@ export default {
       "unit": "number",
       "formula": "daily * days",
       "sum": "{daily} × {days} = {=}",
-      "means": "Estimated energy consumed over your chosen days.",
+      "means": "Energy used over the days you chose.",
       "none": "Not enough data"
     },
     {
       "id": "cost",
-      "label": "Variable electricity cost for the period",
+      "label": "Energy cost for the chosen days",
       "unit": "money",
       "formula": "energy * price",
       "sum": "{energy} × {price} = {=}",

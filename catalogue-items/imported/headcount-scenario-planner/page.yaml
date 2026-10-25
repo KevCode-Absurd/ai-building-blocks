@@ -2,10 +2,14 @@ thinking: high
 thinking_why: Several linked cases need careful thought.
 new_slug: headcount-scenario-planner
 name: Headcount scenario planner
-summary: Give it your hiring plan. Get base, best and worst cases with costs, and signals that say switch plans.
+summary: Give it your hiring plan. Get base, best and worst cases with costs,
+  and signals that say switch plans.
 job: hire-people
 headline: Headcount scenario planner
-subhead: Give it your hiring plan, cost per role and the risks you worry about. It builds base, upside and downside cases with headcount and cost for each. You get the three plans, trigger signals that say when to switch, and the actions to take under each one.
+subhead: Give it your hiring plan, cost per role and the risks you worry about.
+  It builds base, upside and downside cases with headcount and cost for each.
+  You get the three plans, trigger signals that say when to switch, and the
+  actions to take under each one.
 explain: |
   Three versions of next year's workforce, so one wrong guess does not wreck your plan. Most plans assume a single future. This one tests what happens if sales drop 20 percent, a market closes, or growth runs faster than expected.
 
@@ -27,5 +31,7 @@ you_get:
   - Trigger signals to switch plans
   - Actions to take under each scenario
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.

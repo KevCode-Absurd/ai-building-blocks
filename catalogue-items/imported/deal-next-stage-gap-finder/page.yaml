@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It compares the deal to what the next stage needs.
 new_slug: deal-next-stage-gap-finder
 name: Deal next-stage gap finder
-summary: Name a deal. Get what is missing to reach the next stage, with an owner and date for each gap.
+summary: Name a deal. Get what is missing to reach the next stage, with an owner
+  and date for each gap.
 job: sell-and-negotiate
 headline: Deal next-stage gap finder
-subhead: Name a deal and say whether you want the next stage or the close. It reads the CRM record, contact roles, emails and open commitments against your stage exit rules. You get the missing items, an owner and due date for each, and the shortest path to close.
+subhead: Name a deal and say whether you want the next stage or the close. It
+  reads the CRM record, contact roles, emails and open commitments against your
+  stage exit rules. You get the missing items, an owner and due date for each,
+  and the shortest path to close.
 explain: |
   Know exactly what stands between this deal and the next stage. You get a gap list measured against your stage exit rules and qualification method, with who should do each task and by when, plus the shortest path to close.
 
@@ -13,7 +17,8 @@ explain: |
 when:
   - A deal has sat in one stage for weeks and you need to move it.
   - You want a clear to-do list before your next call with the buyer.
-  - You need to know what is missing before you can commit the deal in the forecast.
+  - You need to know what is missing before you can commit the deal in the
+    forecast.
   - A new rep inherits a deal and needs to know what is left to do.
 you_give:
   - Deal name or ID
@@ -26,6 +31,8 @@ you_get:
   - Shortest path to close
   - Suggested record updates with evidence
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
   - It works best when your AI can read your CRM, email and calendar.

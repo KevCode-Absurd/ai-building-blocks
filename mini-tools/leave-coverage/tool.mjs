@@ -1,11 +1,11 @@
 // Original tool. All numbers shown are illustrative figures, not a real person’s results.
 export default {
   "slug": "leave-coverage",
-  "name": "Check team cover before approving time off",
-  "short": "Leave coverage",
-  "headline": "Check team cover before approving time off",
+  "name": "Team leave coverage checker",
+  "short": "Team leave coverage checker",
+  "headline": "Team leave coverage checker",
   "summary": "Enter team size, planned leave and minimum cover. See spare cover or the number of people short.",
-  "question": "Check team cover before approving time off?",
+  "question": "Will enough people be available during this leave period?",
   "category": "hr",
   "shelf": [
     "general"

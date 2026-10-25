@@ -7,12 +7,12 @@ role: make
 job: analysis
 level: advanced
 inputs:
-  - {type: audit_report, required: true}
-  - {type: source_text, required: false}
+  - { type: audit_report, required: true }
+  - { type: source_text, required: false }
 outputs:
-  - {type: audit_report}
+  - { type: audit_report }
 origin: rebuilt
-version: 1.0.0
-minds: [benjamin-graham]
+version: 1.0.1
+minds: [ benjamin-graham ]
 credits:
-  - {title: "Security Analysis: Principles and Technique (second edition)", by: "Benjamin Graham and David L. Dodd", used: "Valuing shares as a multiple of normal earnings; a hard ceiling on the multiple for an investment buy; the floor on earnings yield; adjusting for debt and preferred shares ahead; splitting a price into an investment part and a speculative part"}
+  - { title: "Security Analysis: Principles and Technique (second edition)", by: "Benjamin Graham and David L. Dodd", used: "Valuing shares as a multiple of normal earnings; a hard ceiling on the multiple for an investment buy; the floor on earnings yield; adjusting for debt and preferred shares ahead; splitting a price into an investment part and a speculative part" }

@@ -1,0 +1,36 @@
+slug: learning-session-handoff
+name: Learning session handoff
+summary: Share session notes. Get an updated learner profile and a clear place to resume next time.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: source_text
+    required: true
+  - type: brief
+    required: false
+outputs:
+  - type: document
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: edu-agent-skills contributors
+  repo: yugash007/edu-agent-skills
+  path: skills/memory/learning-memory
+  url: https://github.com/yugash007/edu-agent-skills/tree/e75f44303570bb2eae37a8f7536c0358be2502ee/skills/memory/learning-memory
+  licence: MIT
+  licence_file: LICENSE
+  commit: e75f44303570bb2eae37a8f7536c0358be2502ee
+  original_name: learning-memory
+  imported: 2026-10-23
+  skill_sha256: 07d150a371220965529b3986da3425929c9e9dc79920063884e2ecfa2f790fad
+version: 1.0.0
+credits:
+  - title: learning-memory skill
+    by: edu-agent-skills contributors
+    url: https://github.com/yugash007/edu-agent-skills/tree/e75f44303570bb2eae37a8f7536c0358be2502ee/skills/memory/learning-memory
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

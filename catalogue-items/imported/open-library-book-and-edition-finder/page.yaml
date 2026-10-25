@@ -1,0 +1,28 @@
+thinking: medium
+thinking_why: It follows a set method with a few checks.
+new_slug: open-library-book-and-edition-finder
+name: Open Library book and edition finder
+summary: Share a title, author, or ISBN. Get book records, editions, author details, and available cover links.
+job: research-topics
+headline: Open Library book and edition finder
+subhead: Share a book title, author, ISBN, or Open Library record number. It looks up the public catalog and follows links between books, editions, and authors. You get matching records and source details. Live lookups need Python, its requests package, and internet access.
+you_give:
+  - A title, author, ISBN, or Open Library identifier, plus desired language or result limit.
+you_get:
+  - Book and author matches, edition details, public ratings when available, and cover links.
+how_it_works:
+  - title: Choose the lookup
+    text: Decide whether the task is a title search, author search, ISBN match, edition list, or rating lookup.
+  - title: Follow the right records
+    text: Keep book works, editions, and authors distinct. Follow merged or redirected records instead of assuming a match.
+  - title: Return sourced book details
+    text: Show the requested fields, missing information, and original record links without claiming a book was borrowed.
+works_best_with:
+  tools:
+    - name: Python with requests and internet access
+      why: The included lookup helper needs these tools. Offline instruction checks do not prove that live catalog access works.
+how_to_use:
+  - Add the downloaded folder to an AI that can read the skill and run its helper.
+  - The bundled helper needs Python 3.8 or later, the requests package, and internet access for live catalog lookups.
+  - Give a title, author, ISBN, or record number. Say whether you want a work, one edition, all editions, or author details.
+  - Ask for source record links and missing details. An offline plan does not mean a lookup has run.

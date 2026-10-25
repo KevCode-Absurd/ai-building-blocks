@@ -2,16 +2,21 @@ thinking: high
 thinking_why: It traces roles, owners and order states across the whole codebase.
 new_slug: marketplace-access-auditor
 name: Marketplace access auditor
-summary: Point it at a marketplace app's code. Get a report of who can see or change what.
+summary: Point it at a marketplace app's code. Get a report of who can see or
+  change what.
 job: secure-code
 headline: Marketplace access auditor
-subhead: Point it at the code of a marketplace app with several user roles. It builds a table of rules per role, then walks every entry point to see what each role can see or change. You get the permissions table, findings backed by code, a severity ranking and fixes.
+subhead: Point it at the code of a marketplace app with several user roles. It
+  builds a table of rules per role, then walks every entry point to see what
+  each role can see or change. You get the permissions table, findings backed by
+  code, a severity ranking and fixes.
 explain: |
   A report on who can see or change what in a marketplace app, backed by lines of code as proof.
 
   The skill first builds a table of rules for each role. For every action it asks five things: the role, the link to the specific item, the scope, the state of the item and the fields involved. Then it walks the code in order. It lists every entry point, follows how identity and scope are passed, checks each object lookup, checks field limits, and tests state changes like refunds and shipping.
 when:
-  - You built a marketplace with buyers, vendors and admins and want to check the walls between them.
+  - You built a marketplace with buyers, vendors and admins and want to check
+    the walls between them.
   - You are about to launch and need a security review of access rules.
   - A bug report says a user saw someone else's order.
   - You inherited code and do not know what each role can do.
@@ -27,6 +32,8 @@ you_get:
   - Tests that should be blocked
   - A fix list
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
   - It works best when your AI can read your project files.

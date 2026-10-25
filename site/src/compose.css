@@ -89,7 +89,11 @@
 .compose-steps details { margin-left: 38px; border: 0; padding: 0 0 12px; }
 .compose-steps textarea { margin-top: 12px; }
 .compose-inputs ul { list-style: none; padding: 0; margin-bottom: 0; }.compose-inputs li { display: flex; justify-content: space-between; gap: 10px; font-size: 12px; padding: 7px 0; border-bottom: 1px solid var(--line); }
-.compose-actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 25px 0 12px; }.compose-actions .btn { font-size: 12px; }
+.compose-actions { display: flex; align-items: flex-start; flex-wrap: wrap; gap: 16px; margin: 25px 0 12px; }.compose-actions .btn { font-size: 13px; min-height: 44px; }
+.compose-actions > .workflow-options { border: 0; padding: 0; }
+.compose-actions > .workflow-options > summary { display: list-item; min-height: 44px; padding: 11px 12px; border-radius: 8px; color: var(--text); }
+.compose-actions > .workflow-options > summary:hover { background: var(--bg-2); }
+.compose-result > .workflow-launch { margin-top: 24px; margin-bottom: 24px; }
 .compose-add label { margin-top: 15px; }.compose-add > button { display: block; width: 100%; background: var(--bg); color: var(--text); text-align: left; border: 1px solid var(--line); padding: 10px; font-size: 12px; margin-top: 6px; }
 .compose-empty { min-height: 450px; display: flex; flex-direction: column; justify-content: center; max-width: 380px; margin: auto; }.compose-empty > span { font-size: 25px; color: var(--faint); margin-bottom: 26px; }.compose-empty > div { border-top: 1px solid var(--line); padding-top: 20px; margin-top: 15px; }.compose-empty b { font-size: 13px; }
 @media(max-width:900px) { .compose-layout { grid-template-columns: 1fr; }.compose-intro { margin-bottom: 30px; }.compose-page { padding-top: 40px; }.compose-empty { min-height: 300px; }.compose-form,.compose-result { padding: 20px; } }
@@ -112,3 +116,6 @@
 }
 
 .compose-empty { min-height: 0; max-width: none; padding: 12px 0; }.compose-empty > span { font-size: 18px; margin-bottom: 14px; }.compose-empty > div { margin-top: 8px; }
+.compose-goal-help { margin: .6rem 0 0; line-height: 1.6; }
+.compose-navigation > span[aria-disabled="true"] { color: var(--muted); }
+.compose-actions > .workflow-options > p { max-width: 32ch; line-height: 1.6; }

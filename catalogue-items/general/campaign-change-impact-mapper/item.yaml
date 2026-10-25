@@ -1,0 +1,24 @@
+slug: campaign-change-impact-mapper
+name: Campaign change impact mapper
+summary: Compare an approved fact change with your campaign assets. Get affected lines, missing coverage, repair order and release checks.
+category: general
+type: skill
+role: make
+job: analysis
+level: intermediate
+inputs:
+  - type: document
+    required: true
+  - type: copy_draft
+    required: false
+outputs:
+  - type: plan
+    required: true
+  - type: audit_report
+    required: true
+uses: []
+package_files: all
+needs_mode: manual
+origin: own
+example_pending: true
+version: 1.0.0

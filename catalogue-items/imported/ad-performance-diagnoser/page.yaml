@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It checks five set areas in order.
 new_slug: ad-performance-diagnoser
 name: Ad performance diagnoser
-summary: Give it a campaign that is underperforming. Get the main bottleneck, the root cause and the fix to try first.
+summary: Give it a campaign that is underperforming. Get the main bottleneck,
+  the root cause and the fix to try first.
 job: read-ad-results
 headline: Ad performance diagnoser
-subhead: "Give it your campaign results, the offer and audience, the ads and landing page, and how you follow up sales. It checks five places in order: offer, audience, creative, funnel and sales. You get the first weak link, a check of all five areas, a root cause statement and the one fix to try first."
+subhead: "Give it your campaign results, the offer and audience, the ads and
+  landing page, and how you follow up sales. It checks five places in order:
+  offer, audience, creative, funnel and sales. You get the first weak link, a
+  check of all five areas, a root cause statement and the one fix to try first."
 explain: |
   Before you change five things at once and learn nothing, find the main reason your campaign is underperforming and the fix to try first.
 
@@ -26,5 +30,7 @@ you_get:
   - A root cause statement
   - A fix to try first
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.

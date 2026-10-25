@@ -1,0 +1,19 @@
+slug: creative-ai-chat-starter-prompts
+name: Creative AI chat starter prompts
+summary: Name the creative task. Get one tailored starter prompt for copy, content, ads or strategy, with facts and output rules.
+category: general
+type: prompt
+role: make
+job: image
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: document
+    required: true
+uses: []
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

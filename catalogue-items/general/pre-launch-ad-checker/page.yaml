@@ -1,23 +1,19 @@
 new_slug: pre-launch-ad-checker
-name: "Pre-launch ad checker"
-summary: "Attach your finished ad. Get stop-ship mistakes, each fix, a verdict and a score out of 100."
+name: Pre-launch ad checker
+summary: Share your ad, audience and approved facts. Get located issues, fixes, human checks and a custom score before launch.
 job: check-ads
-thinking: high
-thinking_why: "It judges work against many checks, so a stronger model catches more."
-
-headline: "Pre-launch ad checker"
-subhead: Attach the finished ad and paste its words, who it's for and your live offer. It checks every fact and walks the ad as a viewer meets it on a phone. You get stop-ship fixes, things worth a look, a verdict and a score out of 100.
-
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.
+headline: Pre-launch ad checker
+subhead: Share the finished image or video, its words and the facts behind the offer. It reviews the viewing order, argument, product details and supported claims. You get fixes by location, a custom score and checks for a person. Unconfirmed facts stay unconfirmed; a score cannot replace a phone check or the platform’s policy review.
 explain: |
   Most ad mistakes are small and cheap to fix before launch. Think of a price that no longer matches the shop, a claim you can't back, or words hidden under the app's buttons. Once the ad is live, the same mistakes cost you money to find.
 
   This skill is that last look. It goes through the ad in the order a viewer meets it. First the file, then the first second with the sound off, the middle and the end. Then it reads the ad as your buyer, link by link, and checks every fact, the product, your logo and your font. Stop-ship holds the few mistakes that should stop a launch. Worth a look holds the rest, each with the quote behind it and the smallest fix. For a person is what needs your eyes on a real phone. You get a verdict and a readiness score out of 100, now and with the fixes made. You decide.
-
 when:
   - You're about to approve an ad or a batch from a designer, an editor or an AI tool.
   - An ad looks fine on your laptop and you haven't seen it on a phone yet.
   - You have a storyboard, or a few versions of one ad, and want to know they hold up.
-
 you_give:
   - The finished ad, attached, as the image at full size, the video's key frames with its script, or a storyboard (your AI can see pictures)
   - Its main text, headline, button and where it will run
@@ -25,23 +21,18 @@ you_give:
   - Your logo, font and real product photos (recommended)
   - Who the ad is for, and the rest of the batch (optional)
 you_get:
-  - A stop-ship list of wrong facts, wrong product, wrong logo or font, hidden or misspelt words and wrong size, each with its fix
-  - A worth-a-look list with the number or quote behind each item, including the weakest of five links in the ad's argument
-  - The things to check yourself on a phone
-  - A verdict of approve, fix or remake, and one next action
-  - A readiness score out of 100 worked out from the mistakes found, now and with the fixes made
-
+  - A version-bound list of observed problems and the smallest fixes
+  - The buyer argument checked against the supplied facts and proof
+  - A clear list of media, destination, tracking or spec checks still needed
+  - A scoped verdict and observed/eligible coverage
+  - An internal editing score, with any post-fix score marked provisional
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Attach the image at full size, or the video's key frames or storyboard with the script and timings.
-  - Paste the main text, headline and button exactly as they'll run, and name where it runs and who it's for.
-  - Attach your brand file, or at least your offer, your claims list, your logo and your font.
-  - Fix the stop-ship list first, then read worth a look, then open the ad on your own phone for "for a person".
-  - For Facebook and Instagram, also run the "Meta ads compliance checker". This check doesn't cover policy.
-
+  - Supply the relevant brief and material, or name files in the authorized project.
+  - Ask for the stated result. Keep supplied facts, assumptions and missing evidence distinct.
+  - Review the result before authorizing repairs or external changes. Save the returned packet or authorize a file destination.
 how_it_works:
   - title: Checks the file fits
-    text: Shape and size for where it runs, Meta's safe zones on tall video (top 14%, bottom 35%, 6% each side), text lengths and captions.
+    text: Checks the intended shape, size and safe regions against an inspected preview or dated specification. Missing placement evidence stays NOT CHECKED.
   - title: Looks at the first second
     text: With the sound off, is something happening, can you see the product, and can the words be read in about two seconds? A plain box pasted over the art gets flagged.
   - title: Reads the middle
@@ -55,8 +46,7 @@ how_it_works:
   - title: Checks the versions
     text: Each version should change one nameable thing. In a batch, it names any two ads that are the same idea.
   - title: Gives a verdict
-    text: Approve, fix the named things or remake, then the one thing to do next.
-
+    text: Returns fix, remake, scoped ready or INCOMPLETE for the exact version. It reports unknown launch checks and never treats a review as publication.
 output_shape: |
   AD: <name> (<shape>, <where it runs>)
   For: <buyer>
@@ -84,7 +74,6 @@ output_shape: |
 
   NEXT ACTION
   <the one thing to do now>
-
 example:
   business: sprout
   input: |
@@ -171,7 +160,6 @@ example:
     NEXT ACTION
     Make the five stop-ship fixes, then run "Keep Facebook from
     blocking your ads" on the new words.
-
 tweaks:
   - what: Your facts
     how: Attach your brand file with the live offer and approved claims. Then lines like "Fix" and "61% Off" in the example are caught against your own facts, not just flagged as something to check.
@@ -183,37 +171,34 @@ tweaks:
     how: Give the script with seconds and the frames in order. It checks the person, product and props match shot to shot, and tests the ad with the last three seconds cut.
   - what: Several versions
     how: Paste the whole batch. It checks that each one changes one nameable thing and names any two that are the same idea.
-
 judge:
   - Every item quotes the line, gives the number or names the spot, with a fix.
   - The stop-ship list holds only wrong facts, wrong product, wrong logo or font, hidden or misspelt words and wrong size, never taste.
   - The five links are marked and the weakest one has a fix.
   - Nothing it couldn't confirm is passed, and nothing only a person on a phone could judge is marked as checked.
   - No fix covers the art with a plain box, the score's sum matches the lists, and there's no click-rate guess.
-
 test:
   - Run it on an ad where you found a mistake after launch. The mistake should land on stop-ship or worth a look. If it doesn't, attach the fact it would need, such as your live offer.
   - Plant one mistake on purpose, such as a price that doesn't match your page. It should appear under stop-ship with the exact quote.
   - Run it twice on the same ad. The stop-ship list, the weakest link and the verdict should match.
   - Go through "for a person" on your own phone. If you find a problem it didn't list, add that check to the skill file.
-
 improve:
   - Keep your brand file current. The facts check is only as good as your offer and claims list on the day you run it.
   - Add your own red flags to step 6, such as a discount you no longer run, a retired pack design or how your product opens.
   - If you only make image ads, delete the video and storyboard lines in steps 2 to 4 so the lists stay short.
   - Save the mistakes it catches in the mistakes list from the "AI image and video fix rule writer", so the next ad avoids them from the start.
   - Pair it with the "Meta ads compliance checker" before you publish.
-
 works_best_with:
   tools:
-    - {name: "Claude", why: "Reads full-size images closely, so it can spell-check the words in the picture and spot the safe zones."}
-    - {name: "Meta Ads Manager", why: "Its safe zone guardrail marks the area the app's buttons and labels won't cover, so you see what might get hidden."}
+    - name: Claude
+      why: Reads full-size images closely, so it can spell-check the words in the picture and spot the safe zones.
+    - name: Meta Ads Manager
+      why: Its safe zone guardrail marks the area the app's buttons and labels won't cover, so you see what might get hidden.
   inputs:
-    - "The image at full size or the real video file, not a description, so the words in the picture can be checked"
-    - "A screenshot of your checkout showing today's price, so the offer check uses what buyers really pay"
-    - "Your mistakes list from earlier ads, so known problems are checked first"
-    - "The ad it was built from, so it can say which version is clearer"
-
+    - The image at full size or the real video file, not a description, so the words in the picture can be checked
+    - A screenshot of your checkout showing today's price, so the offer check uses what buyers really pay
+    - Your mistakes list from earlier ads, so known problems are checked first
+    - The ad it was built from, so it can say which version is clearer
 terms:
   - term: 4:5 and 9:16
     meaning: Image shapes. 4:5 is the tall-ish feed post; 9:16 is the full phone screen used by Reels and Stories.

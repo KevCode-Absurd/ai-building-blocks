@@ -1,24 +1,39 @@
 slug: campaign-email-writer
-name: "Campaign email writer"
-summary: "Give it a campaign goal and product facts. Get email copy by block, with subject lines."
+name: Campaign email writer
+summary: Give it a campaign goal and product facts. Get email copy by block, with subject lines.
 category: ecommerce
 type: skill
 role: make
 job: email
 level: beginner
 inputs:
-  - {type: brief, required: true}
-  - {type: brand_brain, required: false}
-  - {type: voc_reviews, required: false}
+  - type: brief
+    required: true
+  - type: brand_brain
+    required: false
+  - type: voc_reviews
+    required: false
 outputs:
-  - {type: copy_draft}
+  - type: copy_draft
+    required: true
 uses: []
 origin: rebuilt
 example_pending: true
-version: 1.0.0
+version: 1.1.0
 credits:
-  - {title: "Klaviyo email marketing full course (3+ hours)", by: "An agency founder who has set up email for 30+ seven and eight figure stores", used: "Copy rules, subject and preview length, and persuasion rules"}
-  - {title: "Master email copywriting for e-commerce brands", by: "An email agency owner (free course module)", used: "Writing copy block by block, from the banner to the guarantee"}
-  - {title: "Complete ecommerce email marketing strategy for 2026", by: "An agency founder who runs email for seven to nine figure brands", used: "The two-step AI prompt: give context first, then ask for copy"}
-  - {title: "Ecommerce Email Marketing 2025", by: "An email agency founder for Shopify and Klaviyo brands (agency case results, not independent data)", used: "Writing for the skim, the length rule and the copy prompt"}
-  - {title: "8 Hour Copywriting Course For Beginners", by: "A freelance copywriting YouTuber", used: "Soft versus hard call to action and the promo and deadline sequence logic"}
+  - title: Klaviyo email marketing full course (3+ hours)
+    by: An agency founder who has set up email for 30+ seven and eight figure stores
+    used: Copy rules, subject and preview length, and persuasion rules
+  - title: Master email copywriting for e-commerce brands
+    by: An email agency owner (free course module)
+    used: Writing copy block by block, from the banner to the guarantee
+  - title: Complete ecommerce email marketing strategy for 2026
+    by: An agency founder who runs email for seven to nine figure brands
+    used: "The two-step AI prompt: give context first, then ask for copy"
+  - title: Ecommerce Email Marketing 2025
+    by: An email agency founder for Shopify and Klaviyo brands (agency case results, not independent data)
+    used: Writing for the skim, the length rule and the copy prompt
+  - title: 8 Hour Copywriting Course For Beginners
+    by: A freelance copywriting YouTuber
+    used: Soft versus hard call to action and the promo and deadline sequence logic
+package_files: all

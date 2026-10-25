@@ -1,0 +1,32 @@
+thinking: medium
+thinking_why: It follows a set method with a few checks.
+new_slug: customer-support-message-translator
+name: Customer support message translator
+summary: Paste a customer message. Get an English translation and a reply draft in the customer’s language.
+job: help-customers
+headline: Customer support message translator
+subhead: Paste a customer message or give it a Gorgias ticket number. It identifies the language, explains unclear phrases, and matches the level of formality. You get an English translation, a reply draft in the original language, and its English meaning.
+when:
+  - You use this tool for customer support and need help with this task.
+you_give:
+  - The customer message or Gorgias ticket number.
+  - Verified product facts for the reply.
+you_get:
+  - Write a reply in the customer's language and translate that reply into English for review.
+how_it_works:
+  - title: Identify the language
+    text: Read the message. Identify its language, possible dialect, and how formal it is.
+  - title: Translate the meaning
+    text: Translate to English. Flag unclear phrases and explain sayings that do not translate well.
+  - title: Draft and translate back
+    text: Write a reply in the same language. Give its English meaning so the support person can check it.
+works_best_with:
+  tools:
+    - name: Gorgias for ticket lookup; pasted text also works
+      why: Live lookups need Composio CLI access and connected accounts for these services.
+how_to_use:
+  - Add the downloaded folder to an AI that can read skill files.
+  - Ask for customer support message translator by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
+  - Provide the customer message or Gorgias ticket number.
+  - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
+  - Review the result. Approve any proposed sending or account changes before they happen.

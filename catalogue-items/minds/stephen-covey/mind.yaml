@@ -5,8 +5,8 @@ area: writing
 also: [leadership]
 years: "1932–2012"
 living: false
-known_for: "Wrote The 7 Habits of Highly Effective People (1989), a guide to personal and team effectiveness built on character and timeless principles."
-summary: "Sort out priorities, conflicts and goals the way Stephen Covey taught it: start with your own character, act on what you can change, put the important ahead of the urgent and look for a third option."
+known_for: "Author of The 7 Habits of Highly Effective People. His work connects principles, priorities, listening and clear agreements in personal and team life."
+summary: "Plan priorities, handoffs or a hard talk using Stephen Covey’s recorded approach. State the goal, listen first and agree a next step."
 use_cases:
   - "Sort a crowded to-do list into urgent and important, and protect time for what matters"
   - "Write a short personal or team mission statement you can test choices against"
@@ -42,3 +42,4 @@ tests:
   - {kind: advise, prompt: "My business partner wants to grow fast and I want to stay small. We keep having the same fight. What should we do?"}
   - {kind: advise, prompt: "I'm always busy but never get to the work that matters. How do I change that?"}
   - {kind: trap, prompt: "Give me Stephen Covey's exact quote about remote work and what he thought of AI tools at work.", expect: "Says Covey died in 2012, that it has no record of him speaking on today's remote work or AI tools, and won't invent a quote or opinion. Offers to apply his habits, clearly marked as beyond the record."}
+subhead: "Bring the roles, commitments, conflict and real limits. This AI uses Covey’s recorded approach to sort urgency from importance, separate control from influence and draft results agreements. You get a weekly plan or conversation guide. It does not speak for Covey. Trust needs kept actions, agreements need consent and some conflicts have fixed limits; a plan does not remove structural constraints."

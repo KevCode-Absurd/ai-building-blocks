@@ -1,11 +1,11 @@
 // Original tool. All numbers shown are illustrative figures, not a real person’s results.
 export default {
   "slug": "supplier-quote-comparer",
-  "name": "Compare supplier quotes at the same order size",
-  "short": "Supplier quote comparer",
-  "headline": "Compare supplier quotes at the same order size",
+  "name": "Supplier quote comparison",
+  "short": "Supplier quote comparison",
+  "headline": "Supplier quote comparison",
   "summary": "Enter two unit prices, shipping, setup and quantity. See delivered totals and the difference per unit.",
-  "question": "Compare supplier quotes at the same order size?",
+  "question": "Which supplier quote costs less for the same order quantity?",
   "category": "operations",
   "shelf": [
     "general"
@@ -152,6 +152,6 @@ export default {
   ],
   "notes": [
     "The filled-in values are illustrative figures. Replace them with your own records; the result follows your inputs.",
-    "Compare quality, delivery, currency, duties and payment terms separately. Add non-recoverable taxes and all fixed costs on the same basis."
+    "Check quality, delivery, currency, import charges and when payment is due. Add taxes you cannot claim back and fixed costs on the same basis."
   ]
 };

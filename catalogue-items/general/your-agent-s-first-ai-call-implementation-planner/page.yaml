@@ -1,0 +1,38 @@
+new_slug: your-agent-s-first-ai-call-implementation-planner
+name: Agent AI call cost tracker builder
+summary: Build a bounded ai call wrapper with token and cost records.
+job: build-software
+headline: Agent AI call cost tracker builder
+subhead: Share selected model, allowed operation tags, token estimates and budget. Get a bounded ai call wrapper with token and cost records.
+explain: |-
+  Share selected model, allowed operation tags, token estimates and budget. Get a bounded ai call wrapper with token and cost records.
+
+  The complete method and its supporting files are in the download. It marks missing inputs and separates proposed actions from actions that were actually completed.
+when:
+  - You need a bounded AI call wrapper with token and cost records.
+  - You are adding this function to an agent system.
+  - You need to compare an existing version with the supplied starter.
+you_give:
+  - Selected model, allowed operation tags, token estimates and budget
+you_get:
+  - A bounded AI call wrapper with token and cost records
+  - A failure checklist and synthetic test cases
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Step 1
+    text: Read the role and operation policy.
+  - title: Step 2
+    text: Check and reserve budget before the model call.
+  - title: Step 3
+    text: Pass scoped context and the selected model.
+  - title: Step 4
+    text: Record input and output tokens, provider status and actual price inputs.
+  - title: Step 5
+    text: Reconcile failed or cancelled calls.
+  - title: Step 6
+    text: Return an explicit error instead of inventing a model response.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

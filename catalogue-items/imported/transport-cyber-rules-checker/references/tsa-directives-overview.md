@@ -5,6 +5,8 @@ https://www.tsa.gov/sd-and-ea
 
 Note: TSA Security Directives are classified as Sensitive Security Information (SSI). Full directive text is not publicly available. This reference is based on publicly disclosed summaries, Federal Register notices, and TSA press releases.
 
+**Currency correction (checked 2026-10-24):** The revision history and “current revision” labels below are not a live source and may be stale. An official TSA copy of SD-1582-21-01C states an expiration date of October 24, 2025. Do not treat that copy or any listed revision as current in 2026. Verify the current directive, effective and expiration dates, covered-operator notice, and any replacement on TSA’s official source for each real task. Do not infer that a proposed rule or information circular creates a binding duty.
+
 ---
 
 ## Overview

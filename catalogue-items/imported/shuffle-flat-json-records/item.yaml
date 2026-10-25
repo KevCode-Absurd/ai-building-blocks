@@ -1,0 +1,35 @@
+slug: shuffle-flat-json-records
+name: Shuffle flat JSON records
+summary: Shuffle flat JSON records. Check that each record and value stays intact.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: document
+    required: true
+outputs:
+  - type: document
+    required: true
+  - type: test_report
+    required: true
+uses: []
+origin: imported
+source:
+  by: github
+  repo: github/awesome-copilot
+  path: skills/shuffle-json-data
+  url: https://github.com/github/awesome-copilot/tree/613efc8c21d9b3ce642dff361d17006cd9967e28/skills/shuffle-json-data
+  licence: MIT
+  licence_file: LICENSE
+  commit: 613efc8c21d9b3ce642dff361d17006cd9967e28
+  original_name: shuffle-json-data
+  imported: 2026-10-24
+version: 1.0.0
+credits:
+  - title: shuffle-json-data skill
+    by: github
+    url: https://github.com/github/awesome-copilot/tree/613efc8c21d9b3ce642dff361d17006cd9967e28/skills/shuffle-json-data
+    used: Original instructions and supporting files, with attribution and the MIT licence. Display copy describes the task.

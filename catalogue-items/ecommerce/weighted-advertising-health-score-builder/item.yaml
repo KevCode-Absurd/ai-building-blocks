@@ -1,0 +1,19 @@
+slug: weighted-advertising-health-score-builder
+name: Weighted advertising health score builder
+summary: Build a clear ad health score from weighted checks. Show what ran, what is missing and how each score was calculated.
+category: ecommerce
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: audit_report
+    required: true
+uses: []
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

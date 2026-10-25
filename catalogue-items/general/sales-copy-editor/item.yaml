@@ -1,36 +1,72 @@
 slug: sales-copy-editor
 renamed_from: edit-a-draft-so-it-sells
-name: "Sales copy editor"
-summary: "Paste a draft and facts. Get weak lines fixed, each with its gain, and a one-line verdict."
+name: Sales copy editor
+summary: Paste a draft and facts. Get weak lines fixed, each with its gain, and a one-line verdict.
 category: general
-boards: [ecommerce]
+boards:
+  - ecommerce
 type: skill
 role: check
 job: copy
 level: advanced
 inputs:
-  - {type: copy_draft, required: true}
-  - {type: brand_brain, required: false}
-  - {type: ad_copy, required: false}
+  - type: copy_draft
+    required: true
+  - type: brand_brain
+    required: false
+  - type: ad_copy
+    required: false
 outputs:
-  - {type: audit_report}
-uses: [anti-ai-slop-copy-editor, sales-copy-readiness-checker, clear-before-clever-copy-checker]
+  - type: audit_report
+    required: true
+uses:
+  - anti-ai-slop-copy-editor
+  - sales-copy-readiness-checker
+  - clear-before-clever-copy-checker
 origin: rebuilt
-source_ids: [CES-022, CES-024]
-version: 2.1.0
-minds: [jakob-nielsen, claude-hopkins, david-ogilvy, joseph-sugarman, victor-schwab]
+source_ids:
+  - CES-022
+  - CES-024
+version: 2.2.0
+minds:
+  - jakob-nielsen
+  - claude-hopkins
+  - david-ogilvy
+  - joseph-sugarman
+  - victor-schwab
 credits:
-  - {title: "How Users Read on the Web", by: "Jakob Nielsen, Nielsen Norman Group", url: "https://www.nngroup.com/articles/how-users-read-on-the-web/", used: "Most readers scan and distrust promotional language; concise, scannable, objective text tests better (the skim and doubt reads)"}
-  - {title: "F-Shaped Pattern of Reading on the Web", by: "Kara Pernice, Nielsen Norman Group", url: "https://www.nngroup.com/articles/f-shaped-pattern-reading-web-content/", used: "Put the point first in each block; subheads that say something"}
-  - {title: "Scrolling and Attention", by: "Therese Fessenden, Nielsen Norman Group", url: "https://www.nngroup.com/articles/scrolling-and-attention/", used: "Fix from the top first, where attention is highest"}
-  - {title: "Scientific Advertising", by: "Claude C. Hopkins", url: "https://www.holloway.com/g/scientific-advertising", used: "Specific facts are believed where superlatives are discounted; the headline picks out the reader (prove it, and the ad opening)"}
-  - {title: "Confessions of an Advertising Man", by: "David Ogilvy", url: "https://en.wikipedia.org/wiki/Confessions_of_an_Advertising_Man", used: "Far more people read the headline than the body, so the opening must carry the promise"}
-  - {title: "The Adweek Copywriting Handbook", by: "Joseph Sugarman", url: "https://en.wikipedia.org/wiki/Joseph_Sugarman", used: "Each sentence must make the next one read (the slide read)"}
-  - {title: "The Elements of Style", by: "William Strunk Jr.", url: "https://en.wikipedia.org/wiki/The_Elements_of_Style", used: "Omit needless words; active voice; positive form"}
-  - {title: "Flesch-Kincaid readability tests", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Flesch%E2%80%93Kincaid_readability_tests", used: "Reading grade measured before and after"}
-tested:
-  on: 2026-10-20
-  business: sprout
-  model: claude-opus-5-5
-  judge: claude-fable-5-1
-  result: pass
+  - title: How Users Read on the Web
+    by: Jakob Nielsen, Nielsen Norman Group
+    url: https://www.nngroup.com/articles/how-users-read-on-the-web/
+    used: Most readers scan and distrust promotional language; concise, scannable, objective text tests better (the skim and doubt reads)
+  - title: F-Shaped Pattern of Reading on the Web
+    by: Kara Pernice, Nielsen Norman Group
+    url: https://www.nngroup.com/articles/f-shaped-pattern-reading-web-content/
+    used: Put the point first in each block; subheads that say something
+  - title: Scrolling and Attention
+    by: Therese Fessenden, Nielsen Norman Group
+    url: https://www.nngroup.com/articles/scrolling-and-attention/
+    used: Fix from the top first, where attention is highest
+  - title: Scientific Advertising
+    by: Claude C. Hopkins
+    url: https://www.holloway.com/g/scientific-advertising
+    used: Specific facts are believed where superlatives are discounted; the headline picks out the reader (prove it, and the ad opening)
+  - title: Confessions of an Advertising Man
+    by: David Ogilvy
+    url: https://en.wikipedia.org/wiki/Confessions_of_an_Advertising_Man
+    used: Far more people read the headline than the body, so the opening must carry the promise
+  - title: The Adweek Copywriting Handbook
+    by: Joseph Sugarman
+    url: https://en.wikipedia.org/wiki/Joseph_Sugarman
+    used: Each sentence must make the next one read (the slide read)
+  - title: The Elements of Style
+    by: William Strunk Jr.
+    url: https://en.wikipedia.org/wiki/The_Elements_of_Style
+    used: Omit needless words; active voice; positive form
+  - title: Flesch-Kincaid readability tests
+    by: Wikipedia
+    url: https://en.wikipedia.org/wiki/Flesch%E2%80%93Kincaid_readability_tests
+    used: Reading grade measured before and after
+package_files: all
+needs_mode: manual
+example_pending: true

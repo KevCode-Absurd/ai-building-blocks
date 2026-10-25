@@ -8,12 +8,12 @@
 
 export default {
   slug: "stock-weeks-of-cover",
-  name: "Know how many weeks your stock lasts and how much is more than you need",
+  name: "Stock cover and target gap",
   /** The plain name, used where the tool talks about itself. */
-  short: "Weeks of stock",
-  headline: "Know how many weeks your stock lasts at today's pace, and how much cash sits in stock you do not need",
-  summary: "Type your units on hand, what you sold in the last 4 weeks, what is on the way and the weeks of cover you want. You get weeks of cover, sell-through, the cash tied up and the extra or missing units.",
-  question: "How many weeks will my stock last at today's sales pace, how much cash is tied up in it, and how many units are more than I need?",
+  short: "Stock cover and target gap",
+  headline: "Stock cover and target gap",
+  summary: "Enter stock, recent sales, incoming units and target weeks. Estimate cover, stock value and units above or below your target.",
+  question: "How does our current and incoming stock compare with the cover target?",
   shelf: ["ecommerce"],
   version: "1.0.0",
   updated: "2026-10-21",
@@ -27,34 +27,34 @@ export default {
   ],
   outputs: [
     { id: "weeklySales", label: "Units you sell a week", unit: "number", formula: "sold4 / 4", sum: "{sold4} ÷ 4 = {=}", means: "Today's pace. Seasons and sales change it, so refresh it often." },
-    { id: "cover", label: "Weeks your stock lasts", unit: "weeks", formula: "IF(weeklySales > 0, (onHand + incoming) / weeklySales, NA())", none: "No sales, so it never runs out", sum: "({onHand} + {incoming}) ÷ {weeklySales} a week = {=}", means: [
+    { id: "cover", label: "Stock cover including incoming units", unit: "weeks", formula: "IF(weeklySales > 0, (onHand + incoming) / weeklySales, NA())", none: "No sales, so it never runs out", sum: "({onHand} + {incoming}) ÷ {weeklySales} a week = {=}", means: [
       { if: "NOT(HAS(cover))", text: "Nothing sold in the last 4 weeks, so at this pace the stock never moves." },
-      { text: "What you have and have coming, at today's pace." },
+      { text: "Counts current and incoming stock at the recent sales pace. It does not check whether deliveries arrive before current stock runs out." },
     ] },
-    { id: "sellThrough", label: "Sell-through over the last 4 weeks", unit: "percent", formula: "IF(onHand + sold4 > 0, sold4 / (onHand + sold4) * 100, NA())", none: "No stock and no sales", sum: "{sold4} ÷ ({sold4} + {onHand}) = {=}", means: "Of the stock you had 4 weeks ago, the share you sold. Low numbers mean slow stock." },
+    { id: "sellThrough", label: "Four-week sales share", unit: "percent", formula: "IF(onHand + sold4 > 0, sold4 / (onHand + sold4) * 100, NA())", none: "No stock and no sales", sum: "{sold4} ÷ ({sold4} + {onHand}) = {=}", means: "Sales divided by sales plus current stock. This matches the share of opening stock sold only if no stock arrived or was adjusted." },
     { id: "cashTied", label: "Cash tied up in stock on hand", unit: "money", formula: "onHand * unitCost", sum: "{onHand} × {unitCost} = {=}", means: "Money sitting on shelves instead of in the bank." },
     { id: "targetUnits", label: "Units you want to hold", unit: "number", formula: "weeklySales * targetWeeks", sum: "{weeklySales} × {targetWeeks} = {=}", means: "Enough for the weeks of cover you chose, at today's pace." },
     { id: "excessUnits", label: "Units more than you need", unit: "number", formula: "MAX(0, onHand + incoming - targetUnits)", sum: "{onHand} + {incoming} − {targetUnits}, never below 0 = {=}", means: [
       { if: "excessUnits = 0", text: "None: you hold your target or less." },
       { text: "Stock above your target. Candidates for a bundle, a sale or a smaller next order." },
     ] },
-    { id: "excessCash", label: "Cash in the units you do not need", unit: "money", formula: "excessUnits * unitCost", sum: "{excessUnits} × {unitCost} = {=}", means: "What you could have in the bank instead." },
+    { id: "excessCash", label: "Recorded cost of excess stock", unit: "money", formula: "excessUnits * unitCost", sum: "{excessUnits} × {unitCost} = {=}", means: "Cost recorded against stock above your target. Selling or cancelling it may recover a different amount." },
     { id: "shortUnits", label: "Units short of your target", unit: "number", formula: "MAX(0, targetUnits - onHand - incoming)", sum: "{targetUnits} − {onHand} − {incoming}, never below 0 = {=}", means: [
       { if: "shortUnits = 0", text: "None: you have at least your target." },
-      { text: "Order at least this many to reach the cover you want." },
+      { text: "Extra units needed to reach the target. Check cash, minimum orders and delivery dates before buying." },
     ] },
-    { id: "weeksToTarget", label: "Weeks until stock is down to your target", unit: "weeks", formula: "IF(weeklySales > 0, excessUnits / weeklySales, NA())", none: "No sales", sum: "{excessUnits} ÷ {weeklySales} a week = {=}", means: "How long before you should reorder, if nothing changes." },
+    { id: "weeksToTarget", label: "Weeks until stock is down to your target", unit: "weeks", formula: "IF(weeklySales > 0, excessUnits / weeklySales, NA())", none: "No sales", sum: "{excessUnits} ÷ {weeklySales} a week = {=}", means: "Time to use the amount above your target at the recent sales pace. Check delivery time before ordering." },
   ],
   answer: [
     [
       { if: "NOT(HAS(sellThrough))", text: "No stock and no sales, so there is nothing to work out. Type your units on hand and what you sold." },
-      { if: "NOT(HAS(cover))", text: "You sold nothing in the last 4 weeks, so your {onHand} units ({cashTied}) never run out at this pace. All of it is more than you need." },
+      { if: "NOT(HAS(cover))", text: "No sales were recorded in the last 4 weeks, so a useful sell-down time cannot be estimated. You hold {onHand} units at a recorded cost of {cashTied}. Check expected demand before calling this excess stock." },
       { if: "excessUnits > 0", text: "At {weeklySales} units a week your stock lasts about {cover}. You want {targetWeeks} of cover, so {excessUnits} units ({excessCash}) are more than you need. It takes {weeksToTarget} to sell down to your target." },
       { if: "shortUnits > 0", text: "At {weeklySales} units a week your stock lasts about {cover}, under the {targetWeeks} you want. You are {shortUnits} units short of your target." },
       { text: "At {weeklySales} units a week your stock lasts about {cover}, exactly the {targetWeeks} you want." },
     ],
     [
-      { if: "AND(HAS(sellThrough), HAS(cover))", text: "You sold {sellThrough} of the stock you had 4 weeks ago, and {cashTied} is tied up in what is left." },
+      { if: "AND(HAS(sellThrough), HAS(cover))", text: "Sales are {sellThrough} of sales plus current stock; {cashTied} is the recorded cost of stock left." },
     ],
   ],
   next: [

@@ -1,0 +1,35 @@
+thinking: medium
+thinking_why: It follows a set method and adapts its questions or draft to your evidence.
+new_slug: learning-level-check
+name: Learning level check
+summary: Choose a technical topic. Answer short questions to find a useful
+  starting point for your lessons.
+job: study-and-practice
+headline: Learning level check
+subhead: Share the technical topic you want to learn and your goal. It asks
+  questions that rise in difficulty and stops when the gaps are clear. You get a
+  suggested level, reasons for that choice and a starting point to confirm.
+explain: Share the technical topic you want to learn and your goal. It asks
+  questions that rise in difficulty and stops when the gaps are clear. You get a
+  suggested level, reasons for that choice and a starting point to confirm.
+you_give:
+  - A technical topic and the outcome you want.
+  - Your self-reported level and any relevant project.
+you_get:
+  - A short topic-specific level check.
+  - An explained starting-level estimate.
+  - A recommended first lesson.
+how_it_works:
+  - title: Step 1
+    text: Ask about your goal and current confidence.
+  - title: Step 2
+    text: Use short topic questions to check vocabulary, examples and tradeoffs.
+  - title: Step 3
+    text: Suggest a starting level and confirm it with you.
+how_to_use:
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
+  - It works best when your AI can read your supplied notes and ask follow-up
+    questions.

@@ -1,0 +1,29 @@
+slug: video-ad-production-plan-builder
+name: Video ad production plan builder
+summary: Share your product facts and ad idea. Get a cast kit, timed shots, prompts and edit handoff in your chosen style.
+category: ecommerce
+type: skill
+role: make
+job: video
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: product_photos
+    required: false
+  - type: brand_brain
+    required: false
+outputs:
+  - type: plan
+    required: true
+  - type: script
+    required: true
+  - type: shot_list
+    required: true
+  - type: video_prompt
+    required: true
+uses: []
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

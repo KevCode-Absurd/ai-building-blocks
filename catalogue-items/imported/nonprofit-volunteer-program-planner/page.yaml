@@ -1,0 +1,30 @@
+thinking: high
+thinking_why: It weighs real records, missing facts, and choices that affect people or funding.
+new_slug: nonprofit-volunteer-program-planner
+name: Nonprofit volunteer program planner
+summary: Share volunteer roles and current issues. Get clear roles, screening steps, training, shift plans, and follow-ups.
+job: hire-people
+headline: Nonprofit volunteer program planner
+subhead: Share the work volunteers will do, who they serve, and where your current process breaks down. It plans recruitment, risk-based screening, training, shifts, and recognition. You get clear roles and practical steps for keeping volunteers active, with staff review of screening and safety.
+when:
+  - You need this task done for a nonprofit, community program, or donated-goods store.
+you_give:
+  - Volunteer roles, time needs, people served, risk limits, current intake steps, and any attendance records.
+you_get:
+  - Role descriptions, screening and welcome steps, scheduling guidance, and follow-up measures.
+how_it_works:
+  - title: Define the volunteer roles
+    text: Write duties, hours, supervision, skills, and support before choosing recruitment channels.
+  - title: Match screening to risk
+    text: Choose checks that fit each role's risk. Plan a welcome session, task training, and a buddy for the first shift.
+  - title: Support and retain people
+    text: Plan reminders, check-ins, recognition, and measures showing where volunteers drop out.
+works_best_with:
+  tools:
+    - name: A chat AI that can read your files
+      why: The skill works from records and drafts you provide. Research tasks also need current, checked public sources.
+  inputs:
+    - Screening and onboarding volunteers touches background checks and duty of care.
+how_to_use:
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.

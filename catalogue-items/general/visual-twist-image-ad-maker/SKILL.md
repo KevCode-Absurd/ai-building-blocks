@@ -1,6 +1,6 @@
 ---
 name: visual-twist-image-ad-maker
-description: Use when you need one designed image ad that makes the buyer's problem felt before any word is read. Starts from one sentence the buyer should think, anchors it in a real moment, adds one twist by placing, merging or swapping two things, and checks the idea is both unexpected and relevant before writing the headline, layout and prompt.
+description: "Use when you need one designed image ad that makes the buyer's problem felt before any word is read. Starts from one sentence the buyer should think, anchors it in a real moment, adds one twist by placing, merging or swapping two things, and checks the idea is both unexpected and relevant before writing the headline, layout and prompt.\r"
 ---
 
 # Visual twist image ad maker
@@ -139,3 +139,14 @@ If photos are named but you can't see them, say so in one line. Take the product
 - Using two twists in one picture.
 - A picture that looks like evidence the brand doesn't have.
 - Fixing a garbled label by remaking the same image. Shorten the label instead.
+
+
+## Metaphor-to-layout planning record
+
+Use this optional mode when it matches the requested job. Keep the core checks above and the decisions already supplied. Full procedure: references/cmo-method-scroll-stopper-static-ads.md.
+
+Map problem, supported reframe, headline, lever, metaphor, treatment and layout before the prompt. Contrast, unusual scale, pattern break, recognizable tension and curiosity are design hypotheses, not guaranteed attention results. Product and claim truth still govern.
+
+Write a zone map: headline band, main scene, product/brand information and quiet close if appropriate. Fixed source percentages are examples; adapt to copy, product and channel covers. Never hide conditions in a quiet zone. Two-tone type must retain contrast and honest emphasis. Composite exact text live when precision matters.
+
+Do not add force words, measurements or impossible effects merely to intensify fear. Give a weak literal versus stronger truthful metaphor comparison. No censored spelling to evade review and no image implying unsupported medical/body results. Inspect phone-size hierarchy and full-size detail only when actual renders exist, and report missing checks.

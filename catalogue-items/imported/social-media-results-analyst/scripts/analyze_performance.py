@@ -90,8 +90,13 @@ class PerformanceAnalyzer:
             )
 
         # Analyze ROI
-        roi = self.roi_metrics.get('roi_percentage', 0)
-        if roi < 100:
+        roi = self.roi_metrics.get('financial_roi_percentage')
+        if roi is None:
+            recommendations.append(
+                "Financial ROI is unavailable: supply attributed revenue, its attribution basis, and matching spend. "
+                "Engagement and click costs are activity metrics, not business return."
+            )
+        elif roi < 100:
             recommendations.append(
                 f"ROI ({roi:.1f}%) needs improvement. Focus on: (1) Conversion rate optimization, "
                 "(2) Reducing cost per acquisition, (3) Better audience segmentation"
@@ -151,8 +156,8 @@ class PerformanceAnalyzer:
         if engagement_rate > 1.0:
             strengths.append("Strong audience engagement")
 
-        roi = self.roi_metrics.get('roi_percentage', 0)
-        if roi > 150:
+        roi = self.roi_metrics.get('financial_roi_percentage')
+        if roi is not None and roi > 150:
             strengths.append("Excellent return on investment")
 
         ctr = self.campaign_metrics.get('ctr', 0)
@@ -169,8 +174,8 @@ class PerformanceAnalyzer:
         if engagement_rate < 0.5:
             weaknesses.append("Low engagement rate - content may not resonate with audience")
 
-        roi = self.roi_metrics.get('roi_percentage', 0)
-        if roi < 50:
+        roi = self.roi_metrics.get('financial_roi_percentage')
+        if roi is not None and roi < 50:
             weaknesses.append("ROI below target - need to improve conversion or reduce costs")
 
         cpc = self.roi_metrics.get('cost_per_click', 0)

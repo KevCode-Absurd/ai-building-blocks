@@ -1,0 +1,28 @@
+slug: product-brand-sheet-planner
+name: Product brand sheet planner
+summary: Share your product and brand direction. Get a one-page visual sheet plan, image prompts and a list of missing assets.
+category: orchestrator
+type: workflow
+role: orchestrate
+job: image
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: product_photos
+    required: false
+  - type: brand_brain
+    required: false
+outputs:
+  - type: plan
+    required: true
+  - type: brand_guide
+    required: true
+  - type: image_prompt
+    required: true
+uses: []
+execution: coordinator
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

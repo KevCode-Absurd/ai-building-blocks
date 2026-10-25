@@ -7,12 +7,12 @@ role: check
 job: analysis
 level: intermediate
 inputs:
-  - {type: source_text, required: true}
-  - {type: audit_report, required: false}
+  - { type: source_text, required: true }
+  - { type: audit_report, required: false }
 outputs:
-  - {type: audit_report}
+  - { type: audit_report }
 origin: rebuilt
-version: 1.0.0
-minds: [benjamin-graham]
+version: 1.0.1
+minds: [ benjamin-graham ]
 credits:
-  - {title: "Security Analysis: Principles and Technique (second edition)", by: "Benjamin Graham and David L. Dodd", used: "Judging safety by ability to pay, not by collateral; testing on bad-year results; counting all fixed charges together; the seven-year average with loss years set to zero; bars that rise as a business gets less steady; stricter bars for preferred shares; how coverage moves with the interest rate"}
+  - { title: "Security Analysis: Principles and Technique (second edition)", by: "Benjamin Graham and David L. Dodd", used: "Judging safety by ability to pay, not by collateral; testing on bad-year results; counting all fixed charges together; the seven-year average with loss years set to zero; bars that rise as a business gets less steady; stricter bars for preferred shares; how coverage moves with the interest rate" }

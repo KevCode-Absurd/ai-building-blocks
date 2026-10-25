@@ -1,0 +1,41 @@
+slug: business-data-move-runbook
+name: Business data move runbook
+summary: Share the old and new tools. Get a data-move plan with field maps, checks and a rollback path.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: source_text
+    required: true
+  - type: brief
+    required: true
+outputs:
+  - type: document
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: erphq
+  repo: erphq/skills
+  path: templates/01-org-under-100/migration-runbook
+  url: https://github.com/erphq/skills/tree/eaa34a70a3bcd8a82aad118d10fbb084cdc1363a/templates/01-org-under-100/migration-runbook
+  licence: MIT
+  licence_file: LICENSE
+  commit: eaa34a70a3bcd8a82aad118d10fbb084cdc1363a
+  original_name: migration-runbook
+  imported: 2026-10-23
+  skill_sha256: 262d148c0768108cc7fc36b3f7d76a2d88a9a903dc6d7ecbf215ad1ab809ae98
+  local_adaptation:
+    date: 2026-10-23
+    upstream_skill_sha256: 262d148c0768108cc7fc36b3f7d76a2d88a9a903dc6d7ecbf215ad1ab809ae98
+    adapted_skill_sha256: 78611561355fa0721aaf2b457d6e1f1cf2e6c8bcb0dd12ed59ae1a6a28f77ac4
+    reason: Preserve and reconcile target-only changes before returning to the source system.
+version: 1.0.1
+credits:
+  - title: migration-runbook skill
+    by: erphq
+    url: https://github.com/erphq/skills/tree/eaa34a70a3bcd8a82aad118d10fbb084cdc1363a/templates/01-org-under-100/migration-runbook
+    used: Adapted under the MIT licence. The local recovery steps preserve new work before moving back. Original notice retained in LICENSE.

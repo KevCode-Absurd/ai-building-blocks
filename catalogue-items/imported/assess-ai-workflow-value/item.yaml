@@ -1,0 +1,37 @@
+slug: assess-ai-workflow-value
+name: Check AI workflow value
+summary: Compare a pilot's results, costs and harms. Decide whether to grow it, limit it, change it or stop it.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: performance_sheet
+    required: true
+outputs:
+  - type: audit_report
+    required: true
+  - type: plan
+    required: true
+uses: []
+origin: imported
+source:
+  by: magnus919
+  repo: magnus919/agent-skills
+  path: ai-operating-economics
+  url: https://github.com/magnus919/agent-skills/tree/92c327e525da69c9ad3812fd223a1770e977c2e3/ai-operating-economics
+  licence: MIT
+  licence_file: LICENSE.md
+  commit: 92c327e525da69c9ad3812fd223a1770e977c2e3
+  original_name: ai-operating-economics
+  imported: 2026-10-24
+version: 1.0.0
+credits:
+  - title: ai-operating-economics skill
+    by: magnus919
+    url: https://github.com/magnus919/agent-skills/tree/92c327e525da69c9ad3812fd223a1770e977c2e3/ai-operating-economics
+    used: Original instructions and supporting files, with attribution and the MIT licence. Display copy describes the task.

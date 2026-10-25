@@ -1,0 +1,19 @@
+slug: meta-ads-30-check-account-auditor
+name: Meta Ads 30-check account auditor
+summary: Review thirty Meta Ads checks across tracking, creative, structure and audiences. Get weighted scores, data gaps and ranked fixes.
+category: ecommerce
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: audit_report
+    required: true
+uses: []
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

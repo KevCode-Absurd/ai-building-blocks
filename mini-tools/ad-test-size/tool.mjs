@@ -8,12 +8,12 @@
 
 export default {
   slug: "ad-test-size",
-  name: "Know how many people each ad needs before you can trust a winner",
+  name: "Ad test sample and budget planner",
   /** The plain name, used where the tool talks about itself. */
-  short: "Ad test size",
-  headline: "Know how many people each ad version needs, what the test costs and how long it runs",
-  summary: "Type your click or sale rate, the lift you want to find, your cost per 1,000 views and daily budget. You get the views each ad needs, the total cost and the days to run.",
-  question: "How many people must see each ad version before I can trust the winner, what does the test cost, and how many days will it take?",
+  short: "Ad test sample and budget planner",
+  headline: "Ad test sample and budget planner",
+  summary: "Enter today’s rate, target improvement, view cost and daily budget. Estimate views per ad, total spend and test days.",
+  question: "How many views, how much spend and how many days would this ad test need?",
   shelf: ["general", "ecommerce"],
   version: "1.0.0",
   updated: "2026-10-21",

@@ -1,0 +1,45 @@
+new_slug: brand-to-image-prompt-compiler
+name: Brand-to-image prompt compiler
+summary: Combine brand, scene, product, text and avoid rules into one image prompt. Keep the chosen facts and controls clear.
+job: make-image-ads
+headline: Brand-to-image prompt compiler
+subhead: Share brand profile, layout, eight visual settings, approved copy and product facts. Get a compact image prompt, negative prompt and tool assumptions.
+explain: |-
+  Combine brand, scene, product, text and avoid rules into one image prompt. Keep the chosen facts and controls clear.
+
+  Share brand profile, layout, eight visual settings, approved copy and product facts. Get a compact image prompt, negative prompt and tool assumptions.
+when:
+  - You need a compact image prompt, negative prompt and tool assumptions.
+  - You need brand-to-image prompt compiler for a specific task.
+  - You want the method's decisions and assumptions written down before acting.
+you_give:
+  - Brand profile
+  - Layout
+  - Eight visual settings
+  - Approved copy and product facts
+you_get:
+  - A compact image prompt, negative prompt and tool assumptions
+  - The sources used, missing inputs and assumptions
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Check the inputs
+    text: Confirm brand profile, layout, eight visual settings, approved copy and product facts. Mark facts that are missing.
+  - title: Collect Upstream Inputs
+    text: Follow the collect upstream inputs section in the full method and keep its required fields and decision rules.
+  - title: Build the Prompt in Sections
+    text: Follow the build the prompt in sections section in the full method and keep its required fields and decision rules.
+  - title: Compression
+    text: Follow the compression section in the full method and keep its required fields and decision rules.
+  - title: Model Routing
+    text: Follow the model routing section in the full method and keep its required fields and decision rules.
+  - title: Deliver the Compiled Prompt
+    text: Follow the deliver the compiled prompt section in the full method and keep its required fields and decision rules.
+  - title: Compiled Generation Prompt
+    text: Follow the compiled generation prompt section in the full method and keep its required fields and decision rules.
+  - title: Review the result
+    text: Return a compact image prompt, negative prompt and tool assumptions. Check facts, math and the decisions before any action.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

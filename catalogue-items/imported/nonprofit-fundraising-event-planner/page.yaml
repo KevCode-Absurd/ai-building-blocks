@@ -1,0 +1,30 @@
+thinking: high
+thinking_why: It weighs real records, missing facts, and choices that affect people or funding.
+new_slug: nonprofit-fundraising-event-planner
+name: Nonprofit fundraising event planner
+summary: Share your event goal and costs. Get a budget, income scenarios, auction tracker, and event-day schedule.
+job: organise-work
+headline: Nonprofit fundraising event planner
+subhead: Share your event goal, expected attendance, costs, and planned income sources. It works back from the money left after expenses. You get a full budget, cautious and stretch scenarios, auction tracker, event-day schedule, and staffing plan.
+when:
+  - You need this task done for a nonprofit, community program, or donated-goods store.
+you_give:
+  - Net fundraising goal, attendance assumptions, cost estimates, income sources, timing, and available staff.
+you_get:
+  - An event budget, income scenarios, auction tracker, event-day schedule, and staffing plan.
+how_it_works:
+  - title: Plan the money left
+    text: Build all costs and income lines, then show gross income, expenses, and money left after expenses.
+  - title: Prepare event delivery
+    text: Assign auction item requests, fair-value checks, event segments, and staff or volunteer duties.
+  - title: Plan the final review
+    text: Compare actuals with budget, calculate fundraising cost, and record lessons and receipt work for the next cycle.
+works_best_with:
+  tools:
+    - name: A chat AI that can read your files
+      why: The skill works from records and drafts you provide. Research tasks also need current, checked public sources.
+  inputs:
+    - Auctions and raffles are state-regulated and budgets commit real money.
+how_to_use:
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.

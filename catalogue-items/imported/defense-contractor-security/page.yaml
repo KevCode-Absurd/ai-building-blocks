@@ -2,17 +2,16 @@ thinking: high
 thinking_why: The rules are dense and tie to many linked controls.
 new_slug: defense-contractor-security
 name: Defense contractor security checker
-summary: Describe your defense work and systems. Get your CMMC level, gaps and
-  the plan papers an assessor expects.
+summary: Share your contract and system details. Check current CMMC sources,
+  identify gaps and flag missing evidence.
 job: check-contracts
 headline: Defense contractor security checker
-subhead: Find out which CMMC level you need and how far your systems are from
-  it. Describe your defense contracts and systems, and you get the level, a gap
-  table by practice, and drafts of the papers an assessor will ask for.
+subhead: Share your contract, data and system details; get a current CMMC
+  check, evidence gaps, and open questions.
 explain: |
-  Find out which CMMC level you need and how far your systems are from it. Describe your defense contracts and systems, and you get the level, a gap table by practice, and drafts of the papers an assessor will ask for.
+  Share the contract clauses and system boundary. The skill checks current DoD sources, maps evidence to practices and marks unknowns.
 
-  It asks which level and contract type apply, then works through NIST SP 800-171 practices: status, evidence needed and gap notes. It drafts System Security Plan sections and a plan of action and milestones with owners and dates. It also covers scoping of controlled unclassified information and what you must pass to subcontractors. It notes the July 2026 suspension of Phase 2. This is guidance from an AI, so have a qualified assessor confirm it.
+  It checks current DoD sources and the contract before mapping CMMC requirements to your system boundary. You get evidence gaps and draft planning notes for your security plan and milestones. It can help scope controlled unclassified information and review subcontract terms. Have a qualified assessor confirm decisions.
 when:
   - You won a subcontract and the prime says you need CMMC.
   - You must decide what counts as controlled information in your systems.
@@ -24,11 +23,12 @@ you_give:
   - Current security controls
   - Target CMMC level (optional)
 you_get:
-  - Required CMMC level
+  - A supported level assessment or a list of missing evidence
   - Gap table by practice
   - System security plan sections
   - Action and milestone plan
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
-    or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.

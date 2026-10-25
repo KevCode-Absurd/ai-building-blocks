@@ -1,0 +1,28 @@
+thinking: high
+thinking_why: It follows a set method with a few checks.
+new_slug: persuasive-claim-truth-checker
+name: Persuasive claim truth checker
+summary: Share an article, pitch, or post. Get checked claims, missing context, evidence links, and clear uncertainty.
+job: research-topics
+headline: Persuasive claim truth checker
+subhead: Share the message and the decision it is trying to influence. It separates factual claims from hints, value judgments, and predictions, then checks authoritative sources. You get a claim-by-claim report showing what is supported, contradicted, misleading, unclear, or still unknown.
+you_give:
+  - The original message or source, its context, and the decision or claim to check.
+you_get:
+  - A truth assessment, source ledger, missing context, and proportionate next verification step.
+how_it_works:
+  - title: Separate the claims
+    text: Write each factual claim and its likely meaning. Identify what would confirm or contradict it.
+  - title: Check original evidence
+    text: Trace claims to direct sources and check the exact scope, dates, labels, and numbers.
+  - title: Test the other case
+    text: Look for strong contrary evidence and explain real disagreements without guessing the speaker's motives.
+  - title: Report a careful verdict
+    text: Separate supported facts, contradiction, missing context, and unknowns. Link the evidence and state the next useful check.
+works_best_with:
+  tools:
+    - name: A chat AI that can read the bundled reference files
+      why: Use the supplied references and templates for the chosen task. Scripts are optional unless that task specifically needs them.
+how_to_use:
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.

@@ -2,10 +2,14 @@ thinking: low
 thinking_why: It sums up a chat in a set format.
 new_slug: handoff-note-writer
 name: Handoff note writer
-summary: Finish or pause a chat. Get a short handoff note that another AI can carry on from.
+summary: Finish or pause a chat. Get a short handoff note that another AI can
+  carry on from.
 job: organise-work
 headline: Handoff note writer
-subhead: Ask for a handoff when a long chat is done. It boils the work down to what is done, what is open and what comes next, pointing to files by path instead of copying them. You get a short note, the open items and the skills the next session should use.
+subhead: Ask for a handoff when a long chat is done. It boils the work down to
+  what is done, what is open and what comes next, pointing to files by path
+  instead of copying them. You get a short note, the open items and the skills
+  the next session should use.
 explain: |
   A short note that lets a fresh AI chat carry on exactly where this one stopped. Long chats get slow and messy. Instead of pasting it all into a new one, ask for a handoff.
 
@@ -25,5 +29,7 @@ you_get:
   - Pointers to related files instead of copied text
   - Skills the next session should use
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.

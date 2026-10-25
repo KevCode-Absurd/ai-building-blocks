@@ -222,7 +222,7 @@ dlazy seedream-5.0 --dry-run --prompt '...' --images a.jpg b.jpg --size 3:4
 | 两件单品颜色互串 | 色彩相近 | 追加「颜色不得互相污染」句，写死每件的色名 |
 | 外套把内搭全挡住 | 未写层次 | 追加层次排序句，要求露出内搭领口与前襟 |
 | 整组图风格不统一 | 每次 prompt 都改了背景/光线 | 固定第四节四项描述逐字不变 |
-| 单品数量超过 8 | 超出能力 | 拆成两套 Look，或先用 [image-fusion](./skill.md) 出主体、再用 [wear-everything](../wear-everything/skill.md) 单独加配饰 |
+| 单品数量超过 8 | 超出能力 | 拆成两套 Look，或先用 [image-fusion](./SKILL.md) 出主体、再用 [wear-everything](../wear-everything/skill.md) 单独加配饰 |
 
 ---
 

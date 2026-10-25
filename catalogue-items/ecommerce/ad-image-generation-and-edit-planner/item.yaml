@@ -1,0 +1,19 @@
+slug: ad-image-generation-and-edit-planner
+name: Ad image generation and edit planner
+summary: Plan an ad image batch, choose edits by intent and keep each version tied to its source and approved facts.
+category: ecommerce
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: image_prompt
+    required: true
+uses: []
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

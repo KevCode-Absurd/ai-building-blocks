@@ -2,13 +2,13 @@ slug: flux
 name: Flux
 maker: Black Forest Labs
 url: https://bfl.ai
-promise: Photo-real images from a written description, through an API or apps built on it.
+promise: "Create and edit images from prompts through an API or a supporting app."
 use_cases: [make-images]
 categories: [image]
 what_it_does:
   - Makes images from a written description.
   - Edits an existing image from a written instruction.
-  - Keeps a character or product looking the same across images.
+  - "Uses references to help keep a character or product consistent across images."
   - Runs through an API that other apps and your own code can call.
   - Offers some model files you can run on your own computer.
 benefits:

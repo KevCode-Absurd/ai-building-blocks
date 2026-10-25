@@ -1,0 +1,35 @@
+slug: project-gutenberg-book-text-finder
+name: Project Gutenberg book text finder
+summary: Share a title or book number. Find available editions and extract readable text for research.
+category: general
+boards: []
+type: skill
+role: source
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: source_text
+    required: true
+uses: []
+origin: imported
+source:
+  by: Magnus Hedemark
+  repo: magnus919/agent-skills
+  path: gutenberg
+  url: https://github.com/magnus919/agent-skills/tree/92c327e525da69c9ad3812fd223a1770e977c2e3/gutenberg
+  licence: MIT
+  licence_file: LICENSE.md
+  commit: 92c327e525da69c9ad3812fd223a1770e977c2e3
+  original_name: gutenberg
+  imported: 2026-10-23
+version: 1.0.0
+credits:
+  - title: gutenberg skill
+    by: Magnus Hedemark
+    url: https://github.com/magnus919/agent-skills/tree/92c327e525da69c9ad3812fd223a1770e977c2e3/gutenberg
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

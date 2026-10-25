@@ -1,0 +1,36 @@
+slug: project-requirement-tracker
+name: Project requirement tracker
+summary: Share project requirements. Get a table that links each need to its owner, build, test and approval.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: source_text
+    required: true
+  - type: brief
+    required: true
+outputs:
+  - type: document
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: erphq
+  repo: erphq/skills
+  path: templates/01-org-under-100/requirements-traceability
+  url: https://github.com/erphq/skills/tree/eaa34a70a3bcd8a82aad118d10fbb084cdc1363a/templates/01-org-under-100/requirements-traceability
+  licence: MIT
+  licence_file: LICENSE
+  commit: eaa34a70a3bcd8a82aad118d10fbb084cdc1363a
+  original_name: requirements-traceability
+  imported: 2026-10-23
+  skill_sha256: b3a605830fea98050575f35d077a36decea6b1ba53f73647fba2248331133766
+version: 1.0.0
+credits:
+  - title: requirements-traceability skill
+    by: erphq
+    url: https://github.com/erphq/skills/tree/eaa34a70a3bcd8a82aad118d10fbb084cdc1363a/templates/01-org-under-100/requirements-traceability
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

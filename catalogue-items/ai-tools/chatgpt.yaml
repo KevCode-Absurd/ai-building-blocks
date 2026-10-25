@@ -2,7 +2,7 @@ slug: chatgpt
 name: ChatGPT
 maker: OpenAI
 url: https://chatgpt.com
-promise: A general assistant that writes, researches, analyses files and draws pictures.
+promise: "Write, research, read files and make images in one chat assistant."
 use_cases: [ask-an-assistant, write-copy, research, make-images]
 categories: [chat-assistant]
 what_it_does:
@@ -12,7 +12,7 @@ what_it_does:
   - Makes and edits images from a written description.
   - Remembers your preferences and keeps work in projects.
 benefits:
-  - Get a first draft of an ad, email or product page in minutes.
+  - "Get a first draft of an ad, email or product page to edit."
   - Ask questions of a spreadsheet and get a plain answer back.
   - Keep your brand details in one project so every chat starts informed.
   - Try an image idea before you brief a designer.
@@ -21,8 +21,8 @@ best_for:
   - Quick research and summaries of long documents.
   - Anyone who wants one assistant for many small jobs.
 not_for:
-  - Facts you cannot check, since it can state wrong answers with confidence.
-  - Exact text inside images, which still comes out wrong at times.
+  - "Decisions based on facts you cannot check against reliable sources."
+  - "Image text that must be exact without manual checking."
 pricing:
   model: freemium
   from: Check the maker's site

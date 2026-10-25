@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It looks for friction and then redesigns the order of steps.
 new_slug: decision-friction-auditor
 name: Decision friction auditor
-summary: Give it a page or flow. Get the spots where layout, defaults or order stop people, with fixes.
+summary: Give it a page or flow. Get the spots where layout, defaults or order
+  stop people, with fixes.
 job: audit-landing-page
 headline: Decision friction auditor
-subhead: Give it a page, screenshot or flow such as a checkout or sign-up, the one action you want and who the users are. It traces the path step by step. You get a marked-up list of friction points in layout, defaults and order, a clearer replacement for each and ideas to test.
+subhead: Give it a page, screenshot or flow such as a checkout or sign-up, the
+  one action you want and who the users are. It traces the path step by step.
+  You get a marked-up list of friction points in layout, defaults and order, a
+  clearer replacement for each and ideas to test.
 explain: |
   Spot why people stall on your page or flow, and fix it. Give it a screen, checkout or sign-up and you get a marked-up list of friction points in layout, defaults, order of steps and cues, each with a clearer replacement.
 
@@ -26,5 +30,7 @@ you_get:
   - Redesign suggestions
   - Ideas to test
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.

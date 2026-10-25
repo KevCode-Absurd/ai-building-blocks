@@ -2,7 +2,7 @@ slug: pika
 name: Pika
 maker: Pika Labs
 url: https://pika.art
-promise: Quick, playful video clips from a text prompt or a still image.
+promise: "Create short, stylised video clips from text or still images."
 use_cases: [make-video]
 categories: [video]
 what_it_does:
@@ -17,7 +17,7 @@ benefits:
 best_for:
   - Short, stylised clips for social posts.
   - People who want to try AI video before paying monthly.
-  - Small budgets, since top-ups cost US$1 for 60 credits.
+  - "Occasional video jobs where extra credit packs suit you better than a monthly plan."
 not_for:
   - Long videos with one continuous take.
   - Commercial work on the Starter plan, which has no commercial licence.

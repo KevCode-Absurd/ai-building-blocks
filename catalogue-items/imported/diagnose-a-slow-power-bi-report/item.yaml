@@ -1,0 +1,37 @@
+slug: diagnose-a-slow-power-bi-report
+name: Diagnose a slow Power BI report
+summary: Find what slows your Power BI report. Get a plan to test each likely cause.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: performance_sheet
+    required: true
+outputs:
+  - type: audit_report
+    required: true
+  - type: plan
+    required: true
+uses: []
+origin: imported
+source:
+  by: github
+  repo: github/awesome-copilot
+  path: skills/power-bi-performance-troubleshooting
+  url: https://github.com/github/awesome-copilot/tree/613efc8c21d9b3ce642dff361d17006cd9967e28/skills/power-bi-performance-troubleshooting
+  licence: MIT
+  licence_file: LICENSE
+  commit: 613efc8c21d9b3ce642dff361d17006cd9967e28
+  original_name: power-bi-performance-troubleshooting
+  imported: 2026-10-24
+version: 1.0.0
+credits:
+  - title: power-bi-performance-troubleshooting skill
+    by: github
+    url: https://github.com/github/awesome-copilot/tree/613efc8c21d9b3ce642dff361d17006cd9967e28/skills/power-bi-performance-troubleshooting
+    used: Original instructions and supporting files, with attribution and the MIT licence. Display copy describes the task.

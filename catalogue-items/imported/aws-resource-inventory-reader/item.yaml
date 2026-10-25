@@ -1,0 +1,35 @@
+slug: aws-resource-inventory-reader
+name: Read AWS resource inventory
+summary: Read AWS resource details within an agreed account and region. Return a short table and leave secret values untouched.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: tool_connection
+    required: true
+outputs:
+  - type: audit_report
+    required: true
+uses: []
+origin: imported
+source:
+  by: github
+  repo: github/awesome-copilot
+  path: skills/aws-resource-query
+  url: https://github.com/github/awesome-copilot/tree/613efc8c21d9b3ce642dff361d17006cd9967e28/skills/aws-resource-query
+  licence: MIT
+  licence_file: LICENSE
+  commit: 613efc8c21d9b3ce642dff361d17006cd9967e28
+  original_name: aws-resource-query
+  imported: 2026-10-24
+version: 1.0.0
+credits:
+  - title: aws-resource-query skill
+    by: github
+    url: https://github.com/github/awesome-copilot/tree/613efc8c21d9b3ce642dff361d17006cd9967e28/skills/aws-resource-query
+    used: Original instructions and supporting files, with attribution and the MIT licence. Display copy describes the task.

@@ -1,0 +1,76 @@
+# Local dev environment for the agent system.
+# Brings up Redis (BullMQ) and a Postgres matching Supabase's runtime shape.
+# Slack stays remote (Socket Mode); no local Slack is possible.
+#
+# Usage:
+#   docker compose up -d
+#   REDIS_URL=redis://localhost:6379 npm run dev
+#
+# Stop:
+#   docker compose down
+#
+# Wipe volumes:
+#   docker compose down -v
+
+services:
+  redis:
+    image: redis:7-alpine
+    container_name: bwm-agent-redis
+    command: ["redis-server", "--appendonly", "yes"]
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+  postgres:
+    image: postgres:15-alpine
+    container_name: bwm-agent-postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: bwm_agent
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+      - ./init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d bwm_agent"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  # Optional: Redis Commander UI at http://localhost:8081
+  redis-ui:
+    image: rediscommander/redis-commander:latest
+    container_name: bwm-agent-redis-ui
+    environment:
+      REDIS_HOSTS: "local:redis:6379"
+    ports:
+      - "8081:8081"
+    depends_on:
+      redis:
+        condition: service_healthy
+
+  # Optional: pgAdmin at http://localhost:5050 (email: dev@bwm.local / pw: dev)
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: bwm-agent-pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: dev@bwm.local
+      PGADMIN_DEFAULT_PASSWORD: dev
+      PGADMIN_CONFIG_SERVER_MODE: "False"
+    ports:
+      - "5050:80"
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+volumes:
+  redis-data:
+  postgres-data:

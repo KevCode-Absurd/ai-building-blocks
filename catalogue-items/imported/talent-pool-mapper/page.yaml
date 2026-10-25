@@ -2,10 +2,14 @@ thinking: high
 thinking_why: It sizes pools and judges competitors from patchy public facts.
 new_slug: talent-pool-mapper
 name: Talent pool mapper
-summary: Describe who you need. Get target companies, pool sizes and ways in. Reads public web pages.
+summary: Describe who you need. Get target companies, pool sizes and ways in.
+  Reads public web pages.
 job: hire-people
 headline: Talent pool mapper
-subhead: Describe the role you need, your industry and where you can hire. It sorts target companies into three circles, from direct competitors outward, and reads public web pages to size each pool. You get a ranked company list, pool sizes, how hard each is to reach and suggested ways in.
+subhead: Describe the role you need, your industry and where you can hire. It
+  sorts target companies into three circles, from direct competitors outward,
+  and reads public web pages to size each pool. You get a ranked company list,
+  pool sizes, how hard each is to reach and suggested ways in.
 explain: |
   A map of where the people you want to hire work today, how many of them exist, and how hard they are to reach. Recruiters stop guessing and start with a ranked list of companies and a view of the rivals competing for the same people.
 
@@ -27,6 +31,8 @@ you_get:
   - Competition and move likelihood per pool
   - Suggested ways in
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
   - It works best when your AI can search the web.

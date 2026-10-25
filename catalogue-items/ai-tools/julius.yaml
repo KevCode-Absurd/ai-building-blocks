@@ -2,7 +2,7 @@ slug: julius
 name: Julius AI
 maker: Julius AI
 url: https://julius.ai
-promise: Upload a spreadsheet, ask a question in plain words, and get charts and answers.
+promise: "Upload data, ask questions and create charts and tables in plain language."
 use_cases: [analyse-data]
 categories: [data]
 what_it_does:
@@ -14,7 +14,7 @@ what_it_does:
 benefits:
   - Find out which products or ads earn the most without writing formulas.
   - Turn a raw export into a chart you can paste into a report.
-  - Clean up a messy file in a single chat.
+  - "Use a chat to work through messy data columns, then inspect the changes."
   - Check a result by reading the steps behind it.
 best_for:
   - Owners and marketers with exports from ads, sales or surveys.

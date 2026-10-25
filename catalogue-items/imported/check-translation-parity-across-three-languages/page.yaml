@@ -1,0 +1,26 @@
+new_slug: check-translation-parity-across-three-languages
+name: Check translation parity across three languages
+summary: Check RU, EN and PT-BR chapters for drift. Flag changed facts, names, terms and fixed quotes.
+job: write-and-tell-stories
+headline: Check translation parity across three languages
+subhead: Share the three texts, term list and house rules. Compare matching lines. Get a report of drift with cited text; the files stay unchanged.
+explain: Share the three texts, term list and house rules. Compare matching lines. Get a report of drift with cited text; the files stay unchanged.
+when:
+  - You want to check translation parity across three languages.
+you_give:
+  - Matching RU, EN and PT-BR passages plus the author’s term registry, fixed quotations and house typography rules.
+you_get:
+  - A read-only parity report with passage evidence, rule references, severity and unresolved canon questions.
+how_to_use:
+  - Download the complete skill folder and add it to your AI tool, or copy the instructions into a chat.
+  - Provide the inputs listed here and ask your AI to follow the skill.
+  - Review the result and any missing facts before using it.
+how_it_works:
+  - title: Load the author’s canon
+    text: Match corresponding passages and use supplied terminology, quotations and typography rules; keep sample registries as examples.
+  - title: Compare facts and wording
+    text: Check exact numbers, dates, names, quotations, emphasized words and registered terms across languages.
+  - title: Report without rewriting
+    text: Cite each discrepancy and its rule, flag unknown canon and leave translation decisions to the author.
+thinking: medium
+thinking_why: It weighs your evidence and follows a specific method.

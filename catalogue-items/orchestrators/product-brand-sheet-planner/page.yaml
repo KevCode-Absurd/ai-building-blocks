@@ -1,0 +1,35 @@
+new_slug: product-brand-sheet-planner
+name: Product brand sheet planner
+summary: Share your product and brand direction. Get a one-page visual sheet plan, image prompts and a list of missing assets.
+job: brand-file
+headline: Product brand sheet planner
+subhead: Share your product and brand direction. Get a one-page visual sheet plan, image prompts and a list of missing assets. Bring the brief and any files you want it to use.
+explain: |-
+  Use this when you need a cohesive one-page product visual sheet. Read the brand/product material actually supplied: exact product geometry/labels, audience, approved claims, palette, type and desired use. A URL alone is not proof it was read.
+
+  Create an asset inventory with missing photography, logo artwork, fonts, approved product copy and licensing/permission notes. Use original example assets when no brand exists.
+when:
+  - You need a cohesive one-page product visual sheet.
+  - You want a clear draft and checks from the material you already have.
+you_give:
+  - brief
+  - "Optional: product photos"
+  - "Optional: brand brain"
+you_get:
+  - plan
+  - brand guide
+  - image prompt
+  - Missing inputs and steps that still need to run
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Read the brief
+    text: "Read the brand/product material actually supplied: exact product geometry/labels, audience, approved claims, palette, type and desired use. A URL alone is not proof it was read."
+  - title: Build the result
+    text: "Design a small visual system before generating images: camera character, light, palette/material world, composition and permitted variation. Keep SKU/product truth separate from creative styling."
+  - title: Check and hand off
+    text: Check consistency, product accuracy, contrast/readability and completeness. Distinguish a planned sheet from an exported document and list steps that did not run.
+thinking: high
+thinking_why: It compares supplied evidence and follows a specific method.

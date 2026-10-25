@@ -1,0 +1,31 @@
+thinking: medium
+thinking_why: It follows a set method with a few checks.
+new_slug: support-reply-tone-editor
+name: Support reply tone editor
+summary: Paste a reply and choose a tone. Get a rewrite that keeps the same facts and next steps.
+job: help-customers
+headline: Support reply tone editor
+subhead: Give it a support reply and the tone you want, such as warm, firm, formal, or brief. It changes the wording while keeping the meaning and facts. You get a rewritten reply and a short explanation of the changes.
+when:
+  - You use this tool for customer support and need help with this task.
+you_give:
+  - The support reply you want changed.
+  - Your preferred tone, such as warm, firm, formal, or brief.
+you_get:
+  - Return the new reply and key edits, or several tone options when no preference was given.
+how_it_works:
+  - title: Read the reply
+    text: Identify the existing tone, core message, facts, and requested tone.
+  - title: Rewrite the wording
+    text: Adjust formality, detail, warmth, or length while preserving the reply's meaning.
+  - title: Explain the changes
+    text: Return the new reply and key edits, or several tone options when no preference was given.
+works_best_with:
+  tools:
+    - name: Pasted text; no outside account needed
+      why: This task works directly from the text you provide.
+how_to_use:
+  - Add the downloaded folder to an AI that can read skill files.
+  - Ask for support reply tone editor by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
+  - Provide the support reply you want changed.
+  - Review the result. Approve any proposed sending or account changes before they happen.

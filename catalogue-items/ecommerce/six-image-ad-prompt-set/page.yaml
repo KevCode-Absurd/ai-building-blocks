@@ -1,0 +1,31 @@
+new_slug: six-image-ad-prompt-set
+name: Six image ad prompt builder
+summary: Turn one real product photo into six complete ad prompts, with a shared brand fingerprint and clear scene or overlay directions.
+job: make-image-ads
+headline: Six image ad prompt builder
+subhead: A compact prompt pack for six deliberate variations from one supplied product photograph.
+explain: Creates copy-paste prompts rather than claiming finished images. Choose scene transformations or graphic overlays and keep the product identity and approved copy consistent.
+when:
+  - You want six ready-to-use image prompts from one product photo.
+  - You need a portable brand block reused consistently across variations.
+you_give:
+  - The exact product photograph and brand name.
+  - Colour, type, tone and product facts, plus the real offer if any.
+  - Scene transformation or graphic overlay preference and target size.
+you_get:
+  - A confirmed brand fingerprint.
+  - Six distinct copy-and-layout concepts and complete prompts.
+  - A correction guide for product, spelling and layout drift.
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Record the fingerprint
+    text: Read the supplied product and brand rules, separating visible facts from missing information.
+  - title: Choose a mode
+    text: Use scene transformations or graphic overlays, with a different communication job per variation.
+  - title: Write six complete prompts
+    text: Include the same identity block, exact copy, layout, size and checks in every prompt.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

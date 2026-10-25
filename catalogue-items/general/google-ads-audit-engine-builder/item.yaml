@@ -1,0 +1,19 @@
+slug: google-ads-audit-engine-builder
+name: Google Ads audit engine builder
+summary: Share your codebase, schema and audit rules. Get a typed Google Ads audit engine, check registry and score report with coverage gaps.
+category: general
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+    required: true
+uses: []
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

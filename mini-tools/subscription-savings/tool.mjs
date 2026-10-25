@@ -1,11 +1,11 @@
 // Original tool. All numbers shown are illustrative figures, not a real person’s results.
 export default {
   "slug": "subscription-savings",
-  "name": "Check when an annual subscription pays off",
-  "short": "Monthly or annual subscription",
-  "headline": "Check when an annual subscription pays off",
-  "summary": "Compare monthly and annual prices with months you expect to use the service. See the cost difference and break-even.",
-  "question": "Check when an annual subscription pays off?",
+  "name": "Monthly or annual plan comparison",
+  "short": "Monthly or annual plan comparison",
+  "headline": "Monthly or annual plan comparison",
+  "summary": "Compare monthly and annual prices with your expected months of use. See the cost gap and when both plans cost the same.",
+  "question": "Does an annual plan cost less for the time I expect to use it?",
   "category": "finance",
   "shelf": [
     "general"

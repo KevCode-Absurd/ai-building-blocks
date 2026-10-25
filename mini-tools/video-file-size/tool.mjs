@@ -1,11 +1,11 @@
 // Original tool. All numbers shown are illustrative figures, not a real person’s results.
 export default {
   "slug": "video-file-size",
-  "name": "Estimate video storage before you export",
-  "short": "Video file size",
-  "headline": "Estimate video storage before you export",
-  "summary": "Enter video and audio bitrates, length and file count. Estimate gigabytes before uploading or archiving.",
-  "question": "Estimate video storage before you export?",
+  "name": "Video storage estimate",
+  "short": "Video storage estimate",
+  "headline": "Video storage estimate",
+  "summary": "Enter video length, file count and the rates used to save sound and picture data. Estimate the storage needed in gigabytes.",
+  "question": "How much storage will these video exports need?",
   "category": "design",
   "shelf": [
     "general"

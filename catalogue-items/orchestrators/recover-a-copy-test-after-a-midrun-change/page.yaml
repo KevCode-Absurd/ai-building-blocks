@@ -1,0 +1,38 @@
+new_slug: recover-a-copy-test-after-a-midrun-change
+name: Copy test change and recovery workflow
+summary: Check a copy test after an offer or tracking change. Get a fair comparison map, clear evidence limits and a plan to restart.
+job: plan-ad-tests
+headline: Copy test change and recovery workflow
+subhead: Share the test plan, versioned ads, dated results and change log. Get a comparison map, an honest result boundary and a bounded recovery pack.
+explain: |-
+  Share the test plan, versioned ads, dated results and change log. Get a comparison map, an honest result boundary and a bounded recovery pack.
+
+  This workflow salvages the interpretation and integrity of a test affected by mid-run changes. It does not rank new concepts, allocate the next budget or promise an optimized winner. A necessary factual correction can proceed while the performance inference remains inconclusive.
+when:
+  - An offer, page, tracking rule or copy version changed while a test was running.
+  - You need to know which comparisons remain usable before rewriting an apparent winner.
+you_give:
+  - The original control/variant copy, test question, assignment and planned decision rule
+  - Results with dates, timezone, exposure/outcome definitions and version or unit mapping
+  - Actual change times for offers, tracking, pages or creative, plus approved current facts
+you_get:
+  - A period/version map showing which rows remain comparable and why
+  - An observed result or explicit inconclusive decision without invented partitions or attribution
+  - A locked copy repair if needed and a recovery test contract with evidence, exposure and stop limits
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Freeze the planned comparison and locate material changes
+    text: Record the original question, one intended variable, assignment method, population, event definitions and stop rule. Map offer, product, page, tracking and creative changes to effective boundaries and affected variants. Preserve the full history; do not silently rewrite the test question after seeing outcomes.
+  - title: Check co-changes and determine comparable units
+    text: Compare actual content and conditions against the intended one-variable design. Mark unintended co-changes, unequal offers, page/tracking differences and ambiguous assignments. Propose only defensible comparable groups using real unit/time linkage. Keep exclusion reasons and excluded totals visible; do not select a flattering subset.
+  - title: Read only the evidence the design can support
+    text: Recompute observed counts, denominators and differences for validly linked groups. Keep currency, time, conversion delay and event definition aligned. Report source sums and uncertainty. A descriptive rate difference is not a statistically established copy effect; use only the predeclared or justified analysis and label post-hoc explorations. Do not hide whole-run totals or excluded periods.
+  - title: Repair the current copy without moving the goalposts
+    text: Correct a stale offer or factual error independently of the test verdict. Preserve the intended variable and all other agreed locks. Keep factual maintenance separate from an optimization hypothesis. If no copy defect exists, return an explicit no-copy-change decision rather than manufacture a rewrite to fill the workflow.
+  - title: Choose and hand off the bounded recovery plan
+    text: Choose resume unchanged, restart aligned versions, run a new bounded test or stop for evidence. Specify the single variable, preserved facts, allocation, outcome, guardrails, conversion-lag handling, uncertainty/analysis plan, exposure/time limits, owner and next decision. Any required sample sizing depends on baseline, useful effect and design, not a universal spend or day count. Return the contract in chat or named files, not an implied launched experiment.
+thinking: high
+thinking_why: It compares supplied evidence and follows a specific method.

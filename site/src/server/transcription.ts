@@ -1,3 +1,4 @@
+import { dailyBudget } from "../lib/composer-policy.ts";
 import type { ComposerEnv, ComposerStore } from "./composer.ts";
 
 export const MAX_VOICE_BYTES = 44 + 16000 * 2 * 300;
@@ -36,8 +37,8 @@ export async function handleTranscription(request: Request, env: ComposerEnv, st
   // The global atomic composer budget also covers voice. Never store audio or
   // transcripts in the usage ledger, or count voice as account workflows.
   const reserve = Math.ceil(duration) * .006 / 60 * 1.25;
-  const cap = Math.min(25, Number(env.WORKFLOW_DAILY_CAP_USD || 2));
-  if (!Number.isFinite(cap) || cap <= 0 || !await store.claim({ id, fingerprint: await hash(audio), day: new Date().toISOString().slice(0, 10), ip: ipHash, user_id: "voice:" + ipHash, charge: reserve, status: "pending", result: null }, cap)) return json(429, { error: "The voice allowance is reached. You can still type your request." });
+  const cap = dailyBudget(env);
+  if (!Number.isFinite(cap) || cap <= 0 || !await store.claim({ id, fingerprint: await hash(audio), day: new Date().toISOString().slice(0, 10), ip: ipHash, user_id: "voice:" + ipHash, charge: reserve, status: "pending", result: null }, cap, 10)) return json(429, { error: "The voice allowance is reached. You can still type your request." });
   let rejectedBeforeTranscription = false;
   try {
     const form = new FormData(); form.set("model", "whisper-1"); form.set("response_format", "json");

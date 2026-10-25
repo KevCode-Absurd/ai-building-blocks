@@ -35,7 +35,7 @@ export default [
     // Cost 0. Clicks 10. Orders 0.1. Sales 10. Profit per order 50. 0.1 x 50 = 5; 5 - 0 = 5.
     // Sales per 1 guarded to 0 and per 1,000 views 0. Orders 0 / 50 = 0. Views: 0 / (0.0001 x 50) = 0.
     expect: { totalCost: 0, clicks: 10, orders: 0.1, revenue: 10, profitPerOrder: 50, net: 5, roas: 0, cpm: 0, breakEvenOrders: 0, breakEvenViews: 0 },
-    says: "The deal costs you nothing",
+    says: "there is no fee or gift cost. Estimated profit is $5.00",
   },
   {
     name: "Nobody clicks",

@@ -1,0 +1,30 @@
+slug: reasons-page-html-builder
+name: Five reasons landing page builder
+summary: Share product facts and an offer. Get a five-reasons HTML page, with a choice of looks and a Shopify file if needed.
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - type: brand_brain
+    required: false
+  - type: product_data
+    required: true
+  - type: offer
+    required: false
+  - type: ad_copy
+    required: false
+  - type: product_photos
+    required: false
+outputs:
+  - type: landing_page
+    required: true
+  - type: page_layout_spec
+    required: true
+uses: []
+execution: coordinator
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

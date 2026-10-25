@@ -1,0 +1,40 @@
+slug: resale-store-pricing-and-layout-planner
+name: Resale store pricing and layout planner
+summary: Share item grades and sales records. Get price bands, markdown dates, display zones, and a stock rotation plan.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: document
+    required: false
+outputs:
+  - type: plan
+    required: true
+uses: []
+origin: imported
+source:
+  by: Nonprofit Skills
+  repo: sector-skills/nonprofit-skills
+  path: nonprofit-skills-library/skills/retail-operations/nonprofit-retail-pricing-merchandising
+  url: https://github.com/sector-skills/nonprofit-skills/tree/7d8a2ca9d471fc975d0e9ccd02fcdd66520fd1c8/nonprofit-skills-library/skills/retail-operations/nonprofit-retail-pricing-merchandising
+  licence: MIT
+  licence_file: LICENSE
+  commit: 7d8a2ca9d471fc975d0e9ccd02fcdd66520fd1c8
+  original_name: nonprofit-retail-pricing-merchandising
+  author: Brendon Connelly
+  imported: 2026-10-23
+version: 1.0.0
+credits:
+  - title: nonprofit-retail-pricing-merchandising skill
+    by: Nonprofit Skills
+    url: https://github.com/sector-skills/nonprofit-skills/tree/7d8a2ca9d471fc975d0e9ccd02fcdd66520fd1c8/nonprofit-skills-library/skills/retail-operations/nonprofit-retail-pricing-merchandising
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Brendon Connelly
+    url: https://brendonconnelly.com
+    used: Wrote the skill; Nonprofit Skills shared it in their collection.

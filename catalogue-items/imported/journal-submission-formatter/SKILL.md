@@ -1,8 +1,7 @@
 ---
 name: venue-templates
 description: Prepares journal manuscripts, conference papers, research posters, and grant documents using venue-specific formatting guidance and bundled LaTeX scaffolds. Supports selecting an official template, checking current page or anonymity rules, adapting academic writing to a venue, or inspecting a submission PDF.
-license: MIT license
-compatibility: Requires Python 3.11+ for helper scripts; LaTeX and Poppler command-line tools are optional for compilation and PDF inspection. Needs network access to verify current venue instructions.
+license: MIT
 metadata:
   version: "1.6"
   last-reviewed: "2026-10-01"
@@ -10,6 +9,10 @@ metadata:
 ---
 
 # Venue Templates
+
+Requires network access for current venue checks. Python 3.11+ is needed for helper scripts; LaTeX and Poppler are optional for compilation and PDF inspection.
+
+For each real submission, verify the exact venue, year/cycle, track, article type and stage against the venue’s current official author guide, call, funder notice or submission portal. Record the source URL and check date, then apply only rules supported by that source. Treat bundled style notes and templates as examples unless the official venue source confirms them. If the venue or track is missing, ask for it; if an official guide cannot be found, pause rule-dependent formatting and state what is needed. Do not claim the paper is compliant.
 
 Prepare publication and funding documents without treating stale formatting details as authoritative. This skill combines:
 

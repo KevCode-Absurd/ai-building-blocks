@@ -1,0 +1,19 @@
+slug: twelve-pattern-opening-frame-designer
+name: Twelve-pattern opening frame designer
+summary: Choose opening frames from twelve visual patterns. Get a clear design brief for each first-frame test.
+category: ecommerce
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: design_direction
+    required: true
+uses: []
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

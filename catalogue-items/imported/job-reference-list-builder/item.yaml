@@ -1,0 +1,36 @@
+slug: job-reference-list-builder
+name: Job reference list builder
+summary: Share possible references and the role. Get a reference list, permission request and briefing drafts.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: source_text
+    required: true
+  - type: brief
+    required: false
+outputs:
+  - type: document
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Daniel (San) Ávila
+  repo: davila7/claude-code-templates
+  path: cli-tool/components/skills/career/reference-list-builder
+  url: https://github.com/davila7/claude-code-templates/tree/7d85535533914ff0880945570a94fcbec4adc042/cli-tool/components/skills/career/reference-list-builder
+  licence: MIT
+  licence_file: LICENSE
+  commit: 7d85535533914ff0880945570a94fcbec4adc042
+  original_name: reference-list-builder
+  imported: 2026-10-23
+  skill_sha256: c6496b819f261521ca447b8de5501503cd468a615a58ee083870555911355937
+version: 1.0.0
+credits:
+  - title: reference-list-builder skill
+    by: Daniel (San) Ávila
+    url: https://github.com/davila7/claude-code-templates/tree/7d85535533914ff0880945570a94fcbec4adc042/cli-tool/components/skills/career/reference-list-builder
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

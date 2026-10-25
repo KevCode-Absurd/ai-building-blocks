@@ -6,13 +6,12 @@ summary: Describe your finance firm and IT suppliers. Get DORA gaps, incident
   reporting steps and supplier contract checks.
 job: check-contracts
 headline: Financial IT resilience checker
-subhead: A gap list against the EU's DORA rules for IT resilience, with incident
-  reporting steps and a check of your supplier contracts. It tells you what a
-  finance firm in the EU must have in place and what is missing.
+subhead: Share your finance firm, systems and suppliers; get current DORA
+  sources, evidence gaps, and incident facts to confirm.
 explain: |
-  A gap list against the EU's DORA rules for IT resilience, with incident reporting steps and a check of your supplier contracts. It tells you what a finance firm in the EU must have in place and what is missing.
+  Share your firm, systems and supplier details. The skill checks current DORA sources, maps evidence and lists missing incident facts.
 
-  You describe your firm and the IT suppliers you use. The skill walks through the rule chapters in order: the risk management framework, incident classification and reporting, resilience testing including threat-led tests, third-party risk, the register of information, and the contract terms every critical supplier must accept. It keeps DORA separate from NIS2 and cites the actual articles and technical standards. Rules apply from 17 January 2025. It is guidance for planning, not legal advice.
+  You describe your firm and the IT suppliers you use. The skill checks current DORA texts and standards, separates DORA from NIS2, and records source links and dates. Incident classification stays open when required facts are missing.
 when:
   - You run a bank, insurer or payments firm in the EU and must meet DORA.
   - A cloud supplier contract needs checking against the required clauses.
@@ -30,6 +29,7 @@ you_get:
   - A register of information outline
   - Priority actions
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
-    or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.

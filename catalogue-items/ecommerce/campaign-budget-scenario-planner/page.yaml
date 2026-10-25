@@ -1,0 +1,45 @@
+new_slug: campaign-budget-scenario-planner
+name: Campaign budget scenario planner
+summary: Group campaigns by budget action and compare three plans. Check totals, learning risk and spend concentration before changing anything.
+job: launch-and-scale-ads
+headline: Campaign budget scenario planner
+subhead: Share campaign spend, budget, results, targets and allowed total spend. Get three budget plans with balanced totals and change limits.
+explain: |-
+  Group campaigns by budget action and compare three plans. Check totals, learning risk and spend concentration before changing anything.
+
+  Share campaign spend, budget, results, targets and allowed total spend. Get three budget plans with balanced totals and change limits.
+when:
+  - You need three budget plans with balanced totals and change limits.
+  - You need campaign budget scenario planner for a specific task.
+  - You want the method's decisions and assumptions written down before acting.
+you_give:
+  - Campaign spend
+  - Budget
+  - Results
+  - Targets and allowed total spend
+you_get:
+  - Three budget plans with balanced totals and change limits
+  - The sources used, missing inputs and assumptions
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Check the inputs
+    text: Confirm campaign spend, budget, results, targets and allowed total spend. Mark facts that are missing.
+  - title: How This Works
+    text: Follow the how this works section in the full method and keep its required fields and decision rules.
+  - title: Collect Campaign Data
+    text: Follow the collect campaign data section in the full method and keep its required fields and decision rules.
+  - title: Campaign Classification
+    text: Follow the campaign classification section in the full method and keep its required fields and decision rules.
+  - title: 3-Scenario Projections
+    text: Follow the 3-scenario projections section in the full method and keep its required fields and decision rules.
+  - title: Safety Rails
+    text: Follow the safety rails section in the full method and keep its required fields and decision rules.
+  - title: Reallocation Math
+    text: Follow the reallocation math section in the full method and keep its required fields and decision rules.
+  - title: Review the result
+    text: Return three budget plans with balanced totals and change limits. Check facts, math and the decisions before any action.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

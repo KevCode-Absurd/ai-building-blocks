@@ -2,7 +2,7 @@ slug: synthesia
 name: Synthesia
 maker: Synthesia
 url: https://www.synthesia.io
-promise: Videos with a talking AI presenter, made from a script you type.
+promise: "Turn scripts into videos with AI presenters for training and product guides."
 use_cases: [make-video]
 categories: [video]
 what_it_does:
@@ -16,9 +16,9 @@ benefits:
   - Update a video by changing the script, not by reshooting.
   - Put the same video in several languages.
 best_for:
-  - Training, onboarding and product explainer videos.
+  - "Training, new-staff guides and product how-to videos."
   - Teams that need many videos with a steady, clear presenter.
-  - Companies that need security features such as SSO.
+  - "Companies that need controls for staff sign-in and access."
 not_for:
   - Cinematic ads or story-led clips.
   - Videos where a real person on camera builds the trust.

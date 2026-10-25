@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It builds a full plan from a short brief.
 new_slug: campaign-brief-calendar
 name: Campaign brief and calendar builder
-summary: Describe your launch or push. Get a brief with goal, audience, messages, channels and a weekly calendar.
+summary: Describe your launch or push. Get a brief with goal, audience,
+  messages, channels and a weekly calendar.
 job: plan-strategy
 headline: Campaign brief and calendar builder
-subhead: "Describe your campaign: the goal, the audience, the dates and the budget range. It fills each section of a brief and asks for any missing detail first. You get a brief with a measurable goal, audience and message sections, a channel plan, a week-by-week calendar and success measures."
+subhead: "Describe your campaign: the goal, the audience, the dates and the
+  budget range. It fills each section of a brief and asks for any missing detail
+  first. You get a brief with a measurable goal, audience and message sections,
+  a channel plan, a week-by-week calendar and success measures."
 explain: |
   A launch plan you can hand to a team: goals, audience, messages, channels and a week-by-week calendar, all in one brief. Describe your push and the skill fills each section, asking for any key detail that is missing first.
 
@@ -28,5 +32,7 @@ you_get:
   - A week-by-week content calendar
   - Success measures
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.

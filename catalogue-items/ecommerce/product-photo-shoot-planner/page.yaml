@@ -1,23 +1,19 @@
 new_slug: product-photo-shoot-planner
-name: "Product photo shoot planner"
-summary: "Attach your product photos and colours. Get a style sheet and 9 matching photo prompts."
+name: Product photo shoot planner
+summary: Attach your product photos and colours. Get a style sheet and 9 matching photo prompts.
 job: product-photos
 thinking: medium
-thinking_why: "It writes or plans with a handful of checks."
-
-headline: "Product photo shoot planner"
+thinking_why: It compares supplied evidence and follows a specific method.
+headline: Product photo shoot planner
 subhead: Attach your product photos and give your brand colours. It writes one style sheet that every prompt repeats, then plans about 9 frames that each differ in job, distance or angle. You get the style sheet, a frame list and one prompt per frame.
-
 explain: |
   Product photos made one at a time rarely match. One is cool and bright, the next warm and dark, the props change, and side by side they look like five different brands. Photographers avoid this with a style guide: a few choices that never change across a shoot.
 
   This skill writes that style guide first, as six lines: a colour plan, one light setup, one lens feel, two or three surfaces, a small kit of real props and one finish. Every prompt repeats those lines word for word. Then it plans the frames on a grid of job (identity, scale, use and so on), distance and angle, so no two frames are alike. You approve the first frame before the rest are made.
-
 when:
   - You need a set of product photos for a launch, a product page or social, and they must look like one shoot.
   - Your current photos all look different and your grid looks messy.
   - You want a short loop clip of the set for a story or reel.
-
 you_give:
   - Real photos of the exact product and variant
   - Your brand colours as hex codes, your photo style, places and what you never show
@@ -30,14 +26,12 @@ you_get:
   - One prompt per frame, plus a check of the whole set side by side
   - An optional plan for a 6 to 8 second loop clip
   - Any check the set still missed, one line each
-
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Attach your product photos and paste your brand colours with their hex codes.
   - Say where the photos go and in which size, and whether you want the loop clip.
   - Read the style sheet and frame list, change anything you don't want, then say "go ahead".
   - Approve frame 01 (the product alone) before anything else is made.
-
 how_it_works:
   - title: Writes down the product
     text: Records exactly how your product looks from its photos. With no true photo of the exact variant, there's no shoot.
@@ -53,7 +47,6 @@ how_it_works:
     text: Frame 01 first, for your approval. It then joins every later prompt as the look to match.
   - title: Checks the contact sheet
     text: All frames at phone size. Any frame warmer, cooler or brighter than the rest is remade from the style sheet.
-
 output_shape: |
   STYLE SHEET
   Colour plan: <one of five>, <hex codes>
@@ -77,7 +70,6 @@ output_shape: |
   <same product? same light and finish? no two alike?>
 
   CHECKS MISSED: <one line per check still missed, or none>
-
 example:
   business: sprout
   input: |
@@ -148,7 +140,6 @@ example:
     SET CHECK (after frames 01 to 03)
     Same pouch in every frame? Same light and finish? No two frames
     share job, distance and angle?
-
 tweaks:
   - what: The colour plan
     how: Tone on tone floods one brand colour; warm against cool and opposites play the ground against the product; quiet set, loud product suits clothes and hard goods; small splash keeps things neutral with one patch of colour.
@@ -158,36 +149,33 @@ tweaks:
     how: Ask for 6 or 12 instead of 9. The grid rules still hold, so a smaller set keeps its spread of distances and angles.
   - what: The loop clip
     how: Ask for it and you get the frame order for a 6 to 8 second loop that cuts on the product's position and starts and ends on frame 01.
-
 judge:
   - The product looks identical in every frame (label, shape, colours, finish).
   - The light, lens and finish lines are word for word the same in every prompt.
   - No two frames share job, distance and angle.
   - Props are real things the product contains or is used with, with no other brand's mark.
   - There are no words in any photo except those printed on the product.
-
 test:
   - Put frame 01 beside your real product photo at full size before you approve it. If the pouch took on the scene's colour, ask for a different colour plan before the set is made.
   - Ask for the frame list twice. The frames can change, but the style sheet should stay the same. If it drifts, paste your own light line.
   - Lay the finished set out in a grid on your phone. Any frame warmer, cooler or brighter than the rest gets remade from the style sheet.
   - Cover the product in each frame and compare the backgrounds. If two look the same, one of those frames has no job of its own.
-
 improve:
-  - Write your colour plan and hex codes into step 3 of the skill file (for Sprout, cream #FFF7DF and sunflower yellow #FFCC2E behind the green pouch), so every set starts there.
+  - Write your colour plan and hex codes into step 3 of the skill file (for Sprout, cream
   - Save your best light line in step 3 too, so every shoot shares it.
   - "Add your rules for showing the product to step 2 (for Sprout: the daily pack torn straight across the top, gummies poured into a palm)."
   - Save the approved frame 01 in your brand file and attach it to every future set for this product.
   - Pair it with the skill that writes down exactly how your product looks, and the one that plans product page images if the photos are going on your product page.
-
 works_best_with:
   tools:
-    - {name: "Nano Banana", why: "Takes up to 6 product photos plus 3 style references, which suits holding one look across nine frames."}
-    - {name: "GPT Image", why: "Keeps the product close to your reference photos, and holds small edits across rounds."}
+    - name: Nano Banana
+      why: Takes up to 6 product photos plus 3 style references, which suits holding one look across nine frames.
+    - name: GPT Image
+      why: Keeps the product close to your reference photos, and holds small edits across rounds.
   inputs:
-    - "Photos of the real props and surfaces you own, so repeated props look the same in every frame"
-    - "A screenshot of your current feed grid, so the colour plan sits well next to what's already there"
-    - "A close, straight-on photo of the label, so small print stays right in the close frames"
-
+    - Photos of the real props and surfaces you own, so repeated props look the same in every frame
+    - A screenshot of your current feed grid, so the colour plan sits well next to what's already there
+    - A close, straight-on photo of the label, so small print stays right in the close frames
 terms:
   - term: Style sheet
     meaning: A few lines that fix the look of a whole shoot (colours, light, lens, surfaces, props, finish).

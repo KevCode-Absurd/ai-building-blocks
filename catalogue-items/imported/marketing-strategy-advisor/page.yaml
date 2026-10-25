@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It follows set frameworks and tailors them to you.
 new_slug: marketing-strategy-advisor
 name: Marketing strategy advisor
-summary: Describe your growth stage. Get a positioning check, growth model choice and a budget split by channel.
+summary: Describe your growth stage. Get a positioning check, growth model
+  choice and a budget split by channel.
 job: plan-strategy
 headline: Marketing strategy advisor
-subhead: Give it your revenue target, stage, current channels and your spend, lead and customer numbers. It checks your positioning, picks a growth model and works the budget backwards from the target. You get the positioning check, a growth model, a budget split by channel, key numbers and warning signs.
+subhead: Give it your revenue target, stage, current channels and your spend,
+  lead and customer numbers. It checks your positioning, picks a growth model
+  and works the budget backwards from the target. You get the positioning check,
+  a growth model, a budget split by channel, key numbers and warning signs.
 explain: |
   Marketing advice from the seat of a chief marketing officer. You describe your stage and goals, and it checks your positioning, picks a growth model and splits your budget across channels.
 
@@ -27,5 +31,7 @@ you_get:
   - Key numbers to track
   - A list of warning signs
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.

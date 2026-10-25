@@ -1,0 +1,30 @@
+thinking: high
+thinking_why: It weighs real records, missing facts, and choices that affect people or funding.
+new_slug: community-needs-research-planner
+name: Community needs research planner
+summary: Share your community and service idea. Get a research plan, provider map, and gaps to investigate.
+job: research-topics
+headline: Community needs research planner
+subhead: Share the people, area, and need you want to understand. It combines public evidence, community listening, and a map of existing services. You get a research plan or findings report showing specific gaps and whether to build, partner, refer, or reconsider.
+when:
+  - You need this task done for a nonprofit, community program, or donated-goods store.
+you_give:
+  - Population, area, proposed need, existing evidence, research budget, and access or consent limits.
+you_get:
+  - A needs research plan or report, interview or survey questions, provider table, and gap summary.
+how_it_works:
+  - title: Define the community
+    text: Set a precise population, area, and question, then review what reliable public evidence already shows.
+  - title: Listen and map services
+    text: Plan accessible surveys and interviews. Map providers, capacity, local strengths, and barriers to access.
+  - title: Explain the actual gap
+    text: Compare need with current capacity and access. State limits and give leaders clear options.
+works_best_with:
+  tools:
+    - name: A chat AI that can read your files
+      why: The skill works from records and drafts you provide. Research tasks also need current, checked public sources.
+  inputs:
+    - Primary data collection involves human participants and consent.
+how_to_use:
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.

@@ -2,10 +2,14 @@ thinking: low
 thinking_why: It filters orders by dates and status.
 new_slug: survey-ready-order-finder
 name: Survey-ready order finder
-summary: Point it at your store orders. Get buyers delivered 7 to 14 days ago, minus refunds and cancellations.
+summary: Point it at your store orders. Get buyers delivered 7 to 14 days ago,
+  minus refunds and cancellations.
 job: run-your-store
 headline: Survey-ready order finder
-subhead: Point it at your store's order data. It reads orders through the API, keeps those fulfilled 7 to 14 days ago and drops anything refunded or cancelled. It changes nothing in your store. You get the eligible orders and customers, counts of what was excluded, and a read-only log.
+subhead: Point it at your store's order data. It reads orders through the API,
+  keeps those fulfilled 7 to 14 days ago and drops anything refunded or
+  cancelled. It changes nothing in your store. You get the eligible orders and
+  customers, counts of what was excluded, and a read-only log.
 explain: |
   A list of customers who got their order 7 to 14 days ago and are ready for a post-purchase survey, with refunded and cancelled orders left out. It reads your store and changes nothing.
 
@@ -25,6 +29,8 @@ you_get:
   - Counts of orders excluded
   - A read-only session log
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
   - It works best when your AI can access your Shopify admin.

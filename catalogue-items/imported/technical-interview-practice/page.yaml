@@ -1,0 +1,35 @@
+thinking: medium
+thinking_why: It follows a set method and adapts its questions or draft to your evidence.
+new_slug: technical-interview-practice
+name: Technical interview practice
+summary: Choose a topic and pressure level. Practice interview answers, then get
+  scores and focused next steps.
+job: find-a-job
+headline: Technical interview practice
+subhead: Share your interview topic, current level and time limit. It runs a
+  warm-up, core questions and follow-ups before giving feedback. You get scores
+  for your answers, clear gaps and a focused practice plan.
+explain: Share your interview topic, current level and time limit. It runs a
+  warm-up, core questions and follow-ups before giving feedback. You get scores
+  for your answers, clear gaps and a focused practice plan.
+you_give:
+  - Your interview topic and type, such as coding or system design.
+  - Your current level, time limit and areas you want to test.
+you_get:
+  - A practice interview with questions and follow-ups.
+  - Scores from one to five for correctness, clarity, tradeoffs and edge cases.
+  - Specific gaps and the next topic to practice.
+how_it_works:
+  - title: Step 1
+    text: Set the interview scope and start with an easier warm-up.
+  - title: Step 2
+    text: Ask core questions and follow-ups while you explain your reasoning.
+  - title: Step 3
+    text: End the interview, score four areas and suggest practice for weak answers.
+how_to_use:
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
+  - It works best when your AI can read your supplied notes and ask follow-up
+    questions.

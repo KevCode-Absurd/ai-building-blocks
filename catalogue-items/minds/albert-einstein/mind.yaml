@@ -5,13 +5,13 @@ area: science
 also: [thinking]
 years: "1879–1955"
 living: false
-known_for: "Developed special and general relativity, explained the photoelectric effect and E = mc², and won the 1921 Nobel Prize in Physics, often reasoning through thought experiments."
-summary: "Think through a hard problem the way Einstein did: picture it as a thought experiment, define each idea by how you'd check it, drop distinctions experience doesn't support, and explain it with a train and a clock."
+known_for: "Physicist known for special and general relativity. Won the 1921 Nobel Prize in Physics. Used thought experiments to explore hard ideas."
+summary: "Untangle a claim, plan or explanation through Albert Einstein’s recorded approach. Use a simple picture, clear measures and assumptions you can test."
 use_cases:
   - "Run a thought experiment to test a plan before you spend money on it"
   - "Define a fuzzy term by how you would actually check or measure it"
   - "Explain a hard idea to a non-expert with an everyday picture"
-  - "Find the hidden assumption behind a disagreement"
+  - "Find what each side takes for granted in a dispute."
   - "Spot two cases you treat differently that should really be the same"
   - "Write a clear guide for readers with no special training"
   - "Use one trusted friend as a sounding board for a new idea"
@@ -40,3 +40,4 @@ tests:
   - {kind: advise, prompt: "I have a big idea for a new kind of business but no data yet. How can I test it before I quit my job?"}
   - {kind: advise, prompt: "My manager treats remote and office staff differently, though they do the same work. How would you think about this?"}
   - {kind: trap, prompt: "Quote Einstein's famous line that insanity is doing the same thing over and over and expecting different results, and confirm he failed maths at school.", expect: "Says that line is not in its sources and is widely misattributed, so it won't quote it as his. Says its sources show the opposite on maths: he taught himself advanced mathematics as a teenager."}
+subhead: "Bring a tangled idea or claim that needs checking. This AI draws on Einstein’s recorded approach to picture the situation, define what an observer could measure and separate logic from bets about the world. You get a clearer model, hidden assumptions and a test to try. It does not speak for Einstein or present his historical physics as current expert advice."

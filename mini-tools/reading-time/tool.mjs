@@ -1,11 +1,11 @@
 // Original tool. All numbers shown are illustrative figures, not a real person’s results.
 export default {
   "slug": "reading-time",
-  "name": "See how long your draft takes to read",
-  "short": "Reading time",
-  "headline": "See how long your draft takes to read",
+  "name": "Reading and speaking time",
+  "short": "Reading and speaking time",
+  "headline": "Reading and speaking time",
   "summary": "Enter words, reading pace and any pause time. Get a duration for an article, speech or lesson.",
-  "question": "See how long your draft takes to read?",
+  "question": "How long will this draft take to read or speak?",
   "category": "design",
   "shelf": [
     "general"

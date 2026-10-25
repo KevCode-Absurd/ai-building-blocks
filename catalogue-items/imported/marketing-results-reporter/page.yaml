@@ -2,16 +2,21 @@ thinking: medium
 thinking_why: It reads trends and links them to actions.
 new_slug: marketing-results-reporter
 name: Marketing results reporter
-summary: Give it your marketing numbers. Get a report on trends, funnel drop-offs and what to do next.
+summary: Give it your marketing numbers. Get a report on trends, funnel
+  drop-offs and what to do next.
 job: read-ad-results
 headline: Marketing results reporter
-subhead: Give it exports from your analytics and ad tools, the period and your main goal numbers. It compares each metric to last period and shows which channels start sales and which finish them. You get a report with a summary, channel breakdown, funnel drop-off figures and ranked recommendations.
+subhead: Give it exports from your analytics and ad tools, the period and your
+  main goal numbers. It compares each metric to last period and shows which
+  channels start sales and which finish them. You get a report with a summary,
+  channel breakdown, funnel drop-off figures and ranked recommendations.
 explain: |
   Numbers from your ads, site and email turned into a report that says what happened and what to do about it. It looks past last-click credit to show which channels start sales and which ones finish them.
 
   It starts by fixing the goal and the period. Then it collects data from your tools, such as Google Analytics, search console and ad accounts, and compares each metric to the last period and the same period a year ago. It tests several credit models, maps the funnel from first visit to purchase and finds where people drop off. The report ends with a summary, a channel breakdown, key insights and ranked recommendations.
 when:
-  - You think a channel is failing but last-click numbers may be hiding its real role.
+  - You think a channel is failing but last-click numbers may be hiding its real
+    role.
   - You need to find the step where most visitors leave your funnel.
   - You want a monthly report that compares this month to last year.
   - You must decide which ad channel to cut or grow.
@@ -27,5 +32,7 @@ you_get:
   - Credit comparison across channels
   - Ranked recommendations
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.

@@ -1,6 +1,6 @@
 ---
 name: podcast-style-video-prompts
-description: Use when you have a podcast-style ad script, or your own lines for one (a doubting Host on the left, an explaining Guest on the right, the real product on the table), and need it made with AI image and video tools. Runs the whole video process: two cast cards nobody could mix up, reference images, sheets for both people, the product and the room with lock lines, a storyboard of timed turns, then clip prompts, two voices and finishing notes with the disclosure line. Runs its checks before the final hand-back.
+description: "Use when you have a podcast-style ad script, or your own lines for one (a doubting Host on the left, an explaining Guest on the right, the real product on the table), and need it made with AI image and video tools. Runs the whole video process: two cast cards nobody could mix up, reference images, sheets for both people, the product and the room with lock lines, a storyboard of timed turns, then clip prompts, two voices and finishing notes with the disclosure line. Runs its checks before the final hand-back."
 ---
 
 # Podcast-style video clip prompt writer
@@ -167,3 +167,14 @@ Write `MISSING: <what>`. No product photo and no label words anywhere: ask for t
 - A voice copied from a real person, show or creator.
 - Camera sway, focus pulls or brightness changes.
 - Footage from someone else's channel as a cutaway.
+
+
+## Conversation stitch and audio overlap plan
+
+Use this optional mode when it matches the requested job. Keep the core checks above and the decisions already supplied. Full procedure: references/cmo-method-podcast-ad.md.
+
+Map turns before generation: speaker, exact line, duration, entry/exit pose, room tone and neighbouring turn. Forty-to-forty-five words in fifteen seconds is a fast-pace example, not a universal fit; check actual delivery.
+
+A J cut begins the next turn's audio before its picture. An L cut keeps prior audio over the next picture. Use an explicit edit plan with real audio handles, not a model prompt that makes two voices speak over each other. Never cut speech to fabricate an endorsement.
+
+Maintain room tone, voice, microphone level, position, eyeline, wardrobe and product state. Plan pauses and handles. Constant sway or music is unnecessary. Fix drift through the approved fictional direction or authorized voice assets, not an unknown person's clone. Separate written completion from actual sync, mix and level checks.

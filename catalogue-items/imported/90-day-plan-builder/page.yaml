@@ -2,10 +2,14 @@ thinking: low
 thinking_why: It turns one decision into a set plan format.
 new_slug: 90-day-plan-builder
 name: 90-day plan builder
-summary: Give it a decision you made. Get a 12-week plan with owners, check-ins and risks.
+summary: Give it a decision you made. Get a 12-week plan with owners, check-ins
+  and risks.
 job: plan-strategy
 headline: 90-day plan builder
-subhead: Give it a decision, with its success and stop rules, the people who can own each part and your start date. It splits the work into streams, each with one owner and one number to hit. You get a 12-week milestone table, a check-in schedule, dependencies and a risk list with fixes.
+subhead: Give it a decision, with its success and stop rules, the people who can
+  own each part and your start date. It splits the work into streams, each with
+  one owner and one number to hit. You get a 12-week milestone table, a check-in
+  schedule, dependencies and a risk list with fixes.
 explain: |
   A decision only matters once it turns into Monday-morning work, and this skill turns it into a 90-day plan with weekly milestones, a named owner for each, and what done looks like.
 
@@ -27,5 +31,7 @@ you_get:
   - A dependency list
   - A risk list with fixes
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.

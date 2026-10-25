@@ -1,0 +1,51 @@
+/* Use the site's existing palette and fonts. These rules change hierarchy and space. */
+.nav .nav-plain { border: 0; background: transparent; padding: 7px 12px; border-radius: 999px; font-size: 14px; color: var(--muted); white-space: nowrap; }
+.nav .nav-plain:hover { color: var(--text); background: var(--btn-2); }
+.task-start-note { position: relative; z-index: 1; color: var(--muted); background: var(--bg); width: fit-content; max-width: 42em; margin: 20px auto 0; padding: 4px 10px; border-radius: 6px; font-size: 14px; }
+.task-examples { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 24px; }
+.task-example { display: inline-block; border: 1px solid var(--line-2); border-radius: 999px; padding: 8px 14px; font-size: 14px; }
+.task-example:hover { background: var(--raise); }
+.library-options { margin: 16px 0; }
+.library-options > summary { display: inline-flex; gap: 8px; align-items: center; min-height: 44px; padding: 4px 0; color: var(--muted); }
+.library-options[open] > summary { color: var(--text); }
+.library-options .library-filters { margin-top: 8px; flex-wrap: wrap; }
+.library-options .library-more-filters { display: flex; flex-wrap: wrap; }
+.active-filters { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.active-filter { background: var(--btn-2); border: 0; border-radius: 999px; padding: 8px 12px; font-size: 13px; }
+.task-recommendation { padding: 24px; border: 1px solid var(--line-2); border-radius: 16px; margin: 24px 0; }
+.task-recommendation h3 { margin: 0 0 12px; font-size: 21px; }
+.task-recommendation p { margin: 8px 0; }
+.task-recommendation .btn { margin-top: 12px; }
+.task-recommendation + .result-line { margin-top: 24px; }
+.home-explore { padding-top: 32px; padding-bottom: 40px; }
+.home-explore > summary { font-size: 18px; padding: 16px 0; }
+.home-explore .section { padding-left: 0; padding-right: 0; }
+.builder-entry { padding-top: 32px; padding-bottom: 48px; border-top: 1px solid var(--line); }
+.builder-entry p { margin: 8px 0; }
+.saved-group { margin: 24px 0; padding-top: 16px; border-top: 1px solid var(--line); }
+.saved-group h3 { margin: 0 0 12px; }
+.saved-work-link { width: 100%; text-align: left; display: flex; justify-content: space-between; align-items: center; gap: 12px; border: 0; background: transparent; padding: 12px 0; color: var(--text); }
+.saved-work-link:hover { text-decoration: underline; }
+.card .meta.secondary-meta { font-size: 12px; margin-top: auto; }
+.card .requirement { font-size: 12px; color: var(--muted); display: block; margin: 4px 0; }
+.persistence-controls { position: relative; }
+.persistence-controls[open] { flex-basis: 100%; }
+.persistence-controls > summary { cursor: pointer; min-height: 32px; }
+.persistence-panel { display: flex; flex-wrap: wrap; gap: 12px; padding: 12px 0; max-width: 70em; }
+.persistence-status { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.library-recovery { min-height: 180px; }
+@media (max-width: 1024px) {
+  .nav.open { max-height: calc(100dvh - 64px); overflow-y: auto; overscroll-behavior: contain; }
+  .nav.open .nav-more { display: block; }
+  .nav.open .nav-more-btn { display: none; }
+  .nav.open .nav-more-list, .nav.open .nav-more.open .nav-more-list { display: flex; position: static; min-width: 0; max-height: none; overflow: visible; margin: 0; padding: 0; border: 0; border-radius: 0; box-shadow: none; }
+}
+@media (max-width: 760px) {
+  .nav .nav-plain { width: 100%; text-align: left; padding: 12px; }
+  .task-examples { gap: 6px; }
+  .task-example { font-size: 13px; }
+  .task-recommendation { padding: 18px; }
+  .library-options .sel { flex: 1 1 100%; min-width: 0; }
+  .saved-work-link { align-items: flex-start; flex-wrap: wrap; }
+  .hero-actions .btn { max-width: 100%; white-space: normal; }
+}

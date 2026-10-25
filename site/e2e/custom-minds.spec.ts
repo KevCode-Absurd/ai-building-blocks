@@ -1,10 +1,14 @@
+import { choosePlanner, submitPlan, editStepOptions } from "./fixtures/workflow-ui";
 import { test, expect } from "./fixtures/composer-staging-test";
 import fs from "node:fs";
 import { unzipSync, strFromU8 } from "fflate";
 
+test.beforeEach(async ({ page }, info) => { if (info.project.name === "desktop") await page.addInitScript(() => localStorage.setItem("abb:workflow-view", "diagram")); });
+
 const profile = { slug: "my-mind-own-voice", name: "My writing voice", specialty: "Write clear copy", voice: "Warm, brief and specific", principles: "Check every claim", avoid: "Jargon", examples: "A small useful change. Then another." };
 async function createMind(page: any) {
-  const library = page.getByTestId("my-minds"); await library.locator("summary").click();
+  if (new URL(page.url()).pathname === "/compose") await page.getByText("Customize: planner, minds and imports", { exact: true }).click();
+  const library = page.getByTestId("my-minds"); if (!new URL(page.url()).searchParams.has("view")) await library.locator("summary").click();
   await library.getByRole("button", { name: "Create a mind", exact: true }).click();
   await library.getByLabel("Name", { exact: true }).fill(profile.name);
   await library.getByLabel("What should this mind help with?", { exact: true }).fill(profile.specialty);
@@ -25,9 +29,9 @@ test("custom mind plus recommended council survives reload, complete ZIP and imp
   // An unrelated personal sample must never hitchhike in an exported workflow.
   await page.getByLabel("Import mind file").setInputFiles({name:"mind.json", mimeType:"application/json", buffer:Buffer.from(JSON.stringify({format:"ai-blocks-mind/1", mind:{...profile, slug:"my-mind-unrelated", name:"Unrelated private sample", examples:"DO-NOT-EXPORT-THIS-SAMPLE"}}))});
   await page.getByRole("button", {name:"Save mind",exact:true}).click();
-  await page.getByRole("tab", {name:"Free assembly"}).click();
-  await page.getByTestId("compose-goal").fill("Build a landing page from scratch and deliver source code"); await page.getByTestId("compose-submit").click();
-  await page.getByTestId("flow-node").first().click();
+  await choosePlanner(page, "free");
+  await page.getByTestId("compose-goal").fill("Build a landing page from scratch and deliver source code"); await submitPlan(page);
+  await page.getByTestId("flow-node").first().click(); await editStepOptions(page);
   const panel=page.getByTestId("step-mind");
   await panel.getByRole("button", {name:profile.name,exact:true}).click();
   await expect(panel.getByTestId("mind-idea")).toHaveCount(2);
@@ -48,9 +52,11 @@ test("custom mind plus recommended council survives reload, complete ZIP and imp
   expect(Object.values(files).some(bytes=>strFromU8(bytes).includes("DO-NOT-EXPORT-THIS-SAMPLE"))).toBe(false);
   const fresh = await browser.newContext(), imported = await fresh.newPage();
   await imported.goto(new URL("/compose",page.url()).href);
+  await imported.getByText("Customize: planner, minds and imports", { exact: true }).click();
   await imported.getByLabel("Import workflow JSON").setInputFiles({name:"workflow.edit.json",mimeType:"application/json",buffer:Buffer.from(files["workflow.edit.json"])});
+  await imported.getByTestId("workflow-diagram-view").click();
   await expect(imported.getByTestId("flow-node").first()).toContainText("Council of 3");
-  await imported.getByTestId("flow-node").first().click();
+  await imported.getByTestId("flow-node").first().click(); await editStepOptions(imported);
   await expect(imported.getByTestId("step-mind").getByRole("button",{name:`Remove ${profile.name} from task`,exact:true})).toBeVisible();
   await imported.getByTestId("step-panel").getByRole("button",{name:"Close",exact:true}).click();
   const roundtrip=await downloadPack(imported,info); expect(strFromU8(roundtrip["HANDOFF.md"])).toContain(profile.name);
@@ -59,11 +65,13 @@ test("custom mind plus recommended council survives reload, complete ZIP and imp
 });
 
 test("@mobile build a mind in Minds, reuse in Compose and keep councils while reordering tasks", async ({page},info)=>{
-  await page.goto("/minds"); await createMind(page); await page.reload();
-  await page.getByTestId("my-minds").locator("summary").click(); await expect(page.getByTestId("my-minds")).toContainText(profile.name);
-  await page.goto("/compose"); await page.getByRole("tab",{name:"Free assembly"}).click();
-  await page.getByTestId("compose-goal").fill("Build a landing page from scratch and deliver source code"); await page.getByTestId("compose-submit").click();
-  await page.getByTestId("step-open").first().click(); const panel=page.getByTestId("step-mind");
+  // This full create/reuse/reorder/export flow also captures a tall mobile screenshot.
+  test.setTimeout(60_000);
+  await page.goto("/minds?view=my"); await createMind(page); await page.reload();
+  await expect(page.getByTestId("my-minds")).toContainText(profile.name);
+  await page.goto("/compose"); await choosePlanner(page, "free");
+  await page.getByTestId("compose-goal").fill("Build a landing page from scratch and deliver source code"); await submitPlan(page);
+  await page.getByTestId("step-open").first().click(); await editStepOptions(page); const panel=page.getByTestId("step-mind");
   await panel.getByRole("button",{name:profile.name,exact:true}).click(); await panel.getByTestId("mind-idea").first().click();
   await expect(page.getByTestId("task-council")).toContainText("Council of 2");
   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBeTruthy();
@@ -76,7 +84,7 @@ test("@mobile build a mind in Minds, reuse in Compose and keep councils while re
 });
 
 test("mind import errors stay usable and writing sample is reviewed before saving",async({page})=>{
-  await page.goto("/compose"); const library=page.getByTestId("my-minds"); await library.locator("summary").click();
+  await page.goto("/compose"); await page.getByText("Customize: planner, minds and imports", { exact: true }).click(); const library=page.getByTestId("my-minds"); await library.locator("summary").click();
   await page.getByLabel("Import mind file").setInputFiles({name:"wrong.json",mimeType:"application/json",buffer:Buffer.from('{"format":"wrong"}')});
   await expect(library.getByRole("status")).toContainText("exported AI Blocks");
   await page.getByLabel("Import mind file").setInputFiles({name:"My voice.txt",mimeType:"text/plain",buffer:Buffer.from("Here is a sample of my writing.")});

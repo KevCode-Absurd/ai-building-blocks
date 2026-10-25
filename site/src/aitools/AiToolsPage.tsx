@@ -102,7 +102,7 @@ function AiToolsIndex({ d }: { d: AiTools }) {
         <Link to="/" className="back"><span aria-hidden="true">←</span> Home</Link>
         <p className="bp-kicker"><span className="kind">AI tools</span>{d.tools.length} products, {d.useCases.length} jobs</p>
         <h1 className="bp-h1">Find the right AI product for the job</h1>
-        <p className="bp-sub">{d.tools.length} AI products you can use today, filed by what you'd use them for. Each page says what it does, who it suits, what it costs, and which library blocks run on it. Prices for {pricedOn} of them were checked in October 2026; the rest point you to the maker's price page.</p>
+        <p className="bp-sub">Compare {d.tools.length} AI products by the job you need done. Each page explains who it suits, what it costs and which skills fit it. Prices for {pricedOn} products were checked in October 2026. Use the maker's price page for current costs.</p>
       </header>
 
       <div className="wrap at-body">

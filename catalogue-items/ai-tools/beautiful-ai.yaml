@@ -2,7 +2,7 @@ slug: beautiful-ai
 name: Beautiful.ai
 maker: Beautiful.ai
 url: https://www.beautiful.ai
-promise: Slides that fix their own layout, with AI to draft the deck.
+promise: "Draft slide decks from your notes, with layouts that adjust as you edit."
 use_cases: [slides-and-docs]
 categories: [productivity, design]
 what_it_does:
@@ -12,7 +12,7 @@ what_it_does:
   - Builds charts and timelines, and links a spreadsheet for updates.
   - Exports to PowerPoint and PDF, and shares through a protected link.
 benefits:
-  - Stop fixing misaligned boxes and spend the time on the message.
+  - "Spend less time placing slide elements and more time checking the message."
   - Keep a whole team's decks on one set of colours, fonts and logos.
   - See which slides people viewed after you share a deck.
   - Edit in PowerPoint when a colleague needs the file.

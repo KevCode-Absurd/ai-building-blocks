@@ -1,3 +1,4 @@
+# Adapted from the Apache-2.0 source: corrected Excel scale labels and the stated crore error factor.
 thinking: medium
 thinking_why: It applies a fixed list of rules, then judges the fit.
 new_slug: india-modeling-rules-checker
@@ -12,7 +13,7 @@ subhead: "Your Indian company model checked for the quiet mistakes that make
 explain: |
   Your Indian company model checked for the quiet mistakes that make numbers wrong: fiscal years, crore units, accounting standards and listing rules. You get a list of faults and the fix for each.
 
-  The biggest trap is units. In Excel, each trailing comma in a number format divides by a thousand, so no comma pattern gives crore, and the usual attempt shows lakh under a crore heading. The skill checks for that and for bare calendar years where April to March years belong. It also reviews Ind AS conventions and listing-related expectations. Items with no Indian equivalent, like some consensus data, are named as missing, never replaced by a look-alike.
+  The biggest trap is units. In Excel, each trailing comma in a number format divides by a thousand, so no comma pattern gives crore. Two commas scale to millions; under a crore heading, the displayed value is ten times the correct crore figure. The skill checks for that and for bare calendar years where April to March years belong. It also reviews Ind AS conventions and listing-related expectations. Items with no Indian equivalent, like some consensus data, are named as missing, never replaced by a look-alike.
 when:
   - A colleague built a model and the figures look off by a large factor.
   - You are about to send a model to a client or investor.
@@ -29,6 +30,7 @@ you_get:
   - Ind AS and listing checks
   - A list of data that has no Indian equivalent
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
-    or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.

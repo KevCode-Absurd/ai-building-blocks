@@ -488,9 +488,13 @@ pipe = DiffusionPipeline.from_pretrained(model_id, torch_dtype=torch.float16)
 
 **Black/noise images:**
 ```python
-# Check VAE configuration
-# Use safety checker bypass if needed
-pipe.safety_checker = None
+# If the pipeline exposes a safety flag, inspect it without disabling the check.
+result = pipe(prompt)
+flags = getattr(result, "nsfw_content_detected", None)
+print("Safety flag:", flags[0] if flags else "not exposed by this pipeline")
+
+# A flag means review the prompt and follow the model or service policy.
+# If there is no flag, check the VAE configuration and model compatibility.
 
 # Ensure proper dtype consistency
 pipe = pipe.to(dtype=torch.float16)

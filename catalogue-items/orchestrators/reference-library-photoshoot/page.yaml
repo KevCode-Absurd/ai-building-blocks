@@ -1,0 +1,31 @@
+new_slug: reference-library-photoshoot
+name: Reference library product photoshoot
+summary: Pick photo looks for one real product. Get a shot plan, a pilot and checked files in each size you ask for.
+job: product-photos
+headline: Reference library product photoshoot
+subhead: Choose the looks. Keep the real product right.
+explain: Adds a reference-library picker, fit assessment, persistent user directions and review-deck cycle to product-photo production. It changes a reference look when product truth would be lost.
+when:
+  - You want to choose looks from a campaign photo library.
+  - You need one exact product shown consistently across a reviewed set.
+you_give:
+  - Real photos of the exact variant, including how it is worn or used.
+  - Brand art direction and a reference-photo set.
+  - Chosen placements, aspect ratios, count and budget.
+you_get:
+  - A product truth sheet, fit-ranked look selection and shot plan.
+  - A pilot and generated images where tools allow.
+  - A per-ratio QA record, review deck and versioned export set.
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Lock product truth
+    text: Identify exact variant, real anchors, use geometry and what cannot change.
+  - title: Choose transferable looks
+    text: Rank reference fit, keep individual direction and build one shot plan per look.
+  - title: Review every frame
+    text: Make a pilot, adapt sizes, inspect actual outputs and retain revision history.
+thinking: high
+thinking_why: It compares supplied evidence and follows a specific method.

@@ -1,0 +1,102 @@
+import { test, expect, type Page } from "@playwright/test";
+import { generateKeyPairSync, createSign } from "node:crypto";
+import fs from "node:fs";
+import { zipSync, strToU8, unzipSync, strFromU8 } from "fflate";
+import { mockComposerAccount } from "./fixtures/composer-account";
+import { handleCommunity } from "../src/server/community";
+import { memoryCommunity } from "../src/server/community-store";
+import { packFlow } from "../src/lib/plan";
+const { publicKey, privateKey } = generateKeyPairSync("rsa", { modulusLength: 2048 });
+const env = { CLERK_PUBLISHABLE_KEY: `pk_test_${btoa("clerk.example.test$")}`, CLERK_SECRET_KEY: "sk_test_placeholder", CLERK_JWT_KEY: publicKey.export({ type: "spki", format: "pem" }) as string, COMMUNITY_REVIEWER_IDS: "reviewer" };
+const cat = JSON.parse(fs.readFileSync("public/data/blocks.json", "utf8"));
+const content = { kind: "skill", title: "Turn meeting notes into decisions", description: "Turn supplied meeting notes into a clear list of decisions and next actions.", author: "A creator", license: "MIT", instructions: "Read the supplied notes. Extract decisions and action owners. Ask about missing information. Return a concise action list.", files: [] };
+function token(user: string) { const encode = (v: unknown) => Buffer.from(JSON.stringify(v)).toString("base64url"), now = Math.floor(Date.now() / 1000), body = `${encode({ alg: "RS256", typ: "JWT", kid: "test" })}.${encode({ iss: "https://clerk.example.test", sub: user, sid: "sess_test", azp: "https://example.test", iat: now, nbf: now - 10, exp: now + 3600, v: 2, sts: "active" })}`; return body + "." + createSign("RSA-SHA256").update(body).sign(privateKey).toString("base64url"); }
+function fixture() {
+  const store = memoryCommunity();
+  const api = async (path: string, method = "GET", user?: string, body?: unknown) => handleCommunity(new Request(`https://example.test/api/community/${path}`, { method, headers: { ...(user ? { authorization: `Bearer ${token(user)}` } : {}), ...(body ? { "content-type": "application/json" } : {}) }, ...(body ? { body: JSON.stringify(body) } : {}) }), env, store, async () => cat);
+  const attach = async (page: Page, user: string) => {
+    await mockComposerAccount(page, true, user, token(user));
+    await page.route("**/api/library*", route => route.fulfill({ json: { data: {}, revision: 0 } }));
+    await page.route("**/api/community/**", async route => {
+      const request = route.request(), url = new URL(request.url()), headers = { ...request.headers() }; delete headers.origin;
+      const result = await handleCommunity(new Request(`https://example.test${url.pathname}${url.search}`, { method: request.method(), headers, ...(request.postData() ? { body: request.postData()! } : {}) }), env, store, async () => cat);
+      await route.fulfill({ status: result.status, headers: Object.fromEntries(result.headers), body: Buffer.from(await result.arrayBuffer()) });
+    });
+  };
+  const queue = async () => { const id = crypto.randomUUID(); await api(`submissions/${id}`, "PUT", "creator", { revision: 0, content }); return (await (await api(`submissions/${id}/submit`, "POST", "creator", { revision: 1, rightsConfirmed: true })).json()).item; };
+  return { store, api, attach, queue };
+}
+test("creator imports a complete skill, submits for review and tracks private status @mobile", async ({ page }, info) => {
+  const server = fixture(); await server.attach(page, "creator"); await page.goto("/publish");
+  await page.getByLabel("Title", { exact: true }).fill(content.title);
+  await page.getByLabel("Description", { exact: true }).fill(content.description);
+  await page.getByLabel("Creator name", { exact: true }).fill(content.author);
+  const bytes = zipSync({ "SKILL.md": strToU8(content.instructions), "references/example.md": strToU8("A plain, public example for review.") });
+  await page.getByLabel("Upload SKILL.md, a ZIP or supporting text files").setInputFiles({ name: "skill.zip", mimeType: "application/zip", buffer: Buffer.from(bytes) });
+  await expect(page.getByLabel("Main instructions")).toHaveValue(content.instructions);
+  await page.getByLabel("I have the right to publish", { exact: false }).check();
+  await page.getByRole("button", { name: "Submit for review", exact: true }).click();
+  await expect(page.getByRole("status").filter({ hasText: "Submitted for review" })).toBeVisible();
+  await page.getByRole("link", { name: "See your submission status" }).click();
+  await expect(page.locator(".community-status").first()).toHaveText("pending");
+  await page.getByRole("link", { name: "Explore submissions", exact: true }).click();
+  await expect(page.getByRole("heading", { name: "Share the first community submission" })).toBeVisible();
+  await page.screenshot({ path: info.outputPath("community-empty.png"), fullPage: true });
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+});
+test("independent reviewer publishes, user stars, then downloads a checked skill pack @mobile", async ({ page, browser }, info) => {
+  const server = fixture(); const row = await server.queue(); await server.attach(page, "reviewer"); await page.goto("/admin/review");
+  await page.getByRole("button", { name: "Review source and checks" }).click();
+  await page.getByLabel("Review notes and test evidence").fill("Isolated fixture test with public notes produced the expected decisions and actions. Source, destinations and rights checked.");
+  for (const label of ["I reviewed the source", "I verified sharing rights", "I tested behavior in isolation"]) await page.getByLabel(label, { exact: false }).check();
+  await page.getByRole("button", { name: "Publish to community", exact: true }).click();
+  await expect(page.getByText("The review queue is empty.")).toBeVisible();
+  const context = await browser.newContext({ viewport: info.project.name === "mobile" ? { width: 390, height: 844 } : { width: 1440, height: 900 } });
+  const reader = await context.newPage(); await server.attach(reader, "reader"); await reader.goto(new URL(`/community/${row.id}`, page.url()).href);
+  await expect(reader.getByRole("heading", { name: content.title })).toBeVisible();
+  const star = reader.getByRole("button", { name: `Star ${content.title}`, exact: true }); await star.click();
+  await expect(reader.getByRole("button", { name: `Unstar ${content.title}`, exact: true })).toHaveAttribute("aria-pressed", "true");
+  expect((await server.store.stars("reader"))).toHaveLength(1);
+  const event = reader.waitForEvent("download"); await reader.getByRole("button", { name: "Download skill", exact: true }).click(); const downloaded = await event;
+  const file = info.outputPath("community-skill.zip"); await downloaded.saveAs(file); const tree = unzipSync(fs.readFileSync(file)); expect(strFromU8(tree["SKILL.md"])).toContain(content.instructions);
+  await reader.screenshot({ path: info.outputPath("community-published.png"), fullPage: true });
+  expect(await reader.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true); await context.close();
+});
+test("stars live on detail pages and filter the library", async ({ page }) => {
+  const server = fixture(); await server.attach(page, "reader"); await page.goto("/?kind=skill#library");
+  const cards = page.locator('#library [data-testid="block-card"]'); await expect(cards.first()).toBeVisible();
+  await expect(page.locator('.star-card')).toHaveCount(0);
+  const card = cards.nth(3), slug = await card.getAttribute("data-slug"), name = await card.locator(".nm").innerText();
+  await card.click();
+  const star = page.getByRole("button", { name: `Star ${name}`, exact: true }); await star.click();
+  await expect(page.getByRole("button", { name: `Unstar ${name}`, exact: true })).toHaveText("Starred");
+  await page.getByRole("link", { name: "Back to results", exact: true }).click();
+  await page.getByRole("button", { name: "Starred", exact: true }).click();
+  await expect(cards).toHaveCount(1); await expect(cards).toHaveAttribute("data-slug", slug!);
+  await page.reload(); await expect(cards).toHaveCount(1);
+  await cards.click(); await page.getByRole("button", { name: `Unstar ${name}`, exact: true }).click();
+  await page.getByRole("link", { name: "Back to results", exact: true }).click();
+  await expect(page.getByRole("heading", { name: "Keep your next good find" })).toBeVisible();
+});
+test("builder prepares a complete workflow submission while omitting saved business details", async ({ page }) => {
+  const server = fixture(); await server.attach(page, "creator");
+  await page.route("**/api/library*", route => route.fulfill({ json: { data: { "abb:business": JSON.stringify({ name: "CONFIDENTIAL_PROFILE_FIXTURE" }) }, revision: 1 } }));
+  const skill = { slug: "custom-public-notes", name: "Public notes helper", summary: content.description, markdown: content.instructions, role: "make" as const, inputs: [], outputs: [{ type: "text", required: true }] };
+  const flow = { id: "publish-fixture", name: "Public notes workflow", nodes: [{ id: "one", slug: skill.slug, x: 250, y: 100, notes: "Keep this public step note." }], edges: [], customSkills: [skill], goal: "Turn public notes into an action list.", ended: true, updated: Date.now() };
+  await page.goto(`/?flow=${packFlow(flow)}#build`);
+  await page.getByRole("button", { name: "Submit to community", exact: true }).click();
+  await expect(page.getByRole("heading", { name: "Share your skill or workflow" })).toBeVisible();
+  await expect(page.getByRole("combobox", { name: "Format", exact: true })).toHaveValue("workflow");
+  await expect(page.getByLabel("Title", { exact: true })).toHaveValue(flow.name);
+  await page.getByLabel("Description", { exact: true }).fill(content.description);
+  await page.getByLabel("Creator name", { exact: true }).fill(content.author);
+  const staged = JSON.parse((await page.evaluate(() => sessionStorage.getItem("abb:community-import")))!);
+  expect(JSON.stringify(staged)).not.toContain("CONFIDENTIAL_PROFILE_FIXTURE");
+  expect(staged.files.some((f: { path: string }) => f.path === "START_HERE.txt")).toBe(true);
+  expect(staged.files.some((f: { path: string }) => f.path === `skills/${skill.slug}/SKILL.md`)).toBe(true);
+  await page.getByLabel("I have the right to publish", { exact: false }).check();
+  await page.getByRole("button", { name: "Submit for review", exact: true }).click();
+  await expect(page.getByRole("status").filter({ hasText: "Submitted for review" })).toBeVisible();
+  const rows = await server.store.list("mine", "creator", 0);
+  expect(rows[0].scan?.blocked, JSON.stringify(rows[0].scan?.findings)).toBe(false);
+});

@@ -7,12 +7,12 @@
 
 export default {
   slug: "content-cost-per-piece",
-  name: "Know what each post, video or article really costs you",
+  name: "Content production cost calculator",
   /** The plain name, used where the tool talks about itself. */
-  short: "Content cost",
-  headline: "Know what each post, video or article really costs you, and what you pay for each view",
-  summary: "Type how many pieces you make a month, the hours each takes, what your hour is worth, and what you pay freelancers and tools. You get the cost per piece, per 1,000 views and per result.",
-  question: "What does each post, video or article cost me to make, once I count my time, tools and freelancers, and what do I pay for each view and each result?",
+  short: "Content production cost calculator",
+  headline: "Content production cost calculator",
+  summary: "Enter output volume, team hours, hourly cost and spending. Calculate cost per piece, view and result, including the value of staff time.",
+  question: "What does each content piece cost in time, tools and outside help?",
   shelf: ["general"],
   version: "1.0.0",
   updated: "2026-10-21",
@@ -33,8 +33,8 @@ export default {
     { id: "timeShare", label: "Share of the cost that is your time", unit: "percent", formula: "IF(totalMonth > 0, timeCost / totalMonth * 100, 0)", sum: "{timeCost} ÷ {totalMonth} = {=}", means: "When most of the cost is time, handing pieces to a freelancer or a tool can cost less than it looks." },
     { id: "perPiece", label: "Cost per piece", unit: "money", formula: "IF(pieces > 0, totalMonth / pieces, NA())", none: "No pieces yet", sum: "{totalMonth} ÷ {pieces} = {=}", means: "What one post, video or article costs you to put out." },
     { id: "perView", label: "Cost per view", unit: "smallmoney", formula: "IF(AND(HAS(perPiece), viewsPer > 0), perPiece / viewsPer, NA())", none: "No views to divide by", sum: "{perPiece} ÷ {viewsPer} = {=}", means: "Compare it with what your ads pay for a view." },
-    { id: "per1000Views", label: "Cost for every 1,000 views", unit: "money", formula: "IF(HAS(perView), perView * 1000, NA())", none: "No views to divide by", sum: "{perView} × 1,000 = {=}", means: "The same number as an ad's cost per 1,000, so you can compare the two." },
-    { id: "perResult", label: "Cost per result", unit: "money", formula: "IF(AND(HAS(perPiece), resultsPer > 0), perPiece / resultsPer, NA())", none: "No results tracked", sum: "{perPiece} ÷ {resultsPer} = {=}", means: "What one lead, sign-up or sale from content costs you. Compare it with what a sale from ads costs." },
+    { id: "per1000Views", label: "Cost for every 1,000 views", unit: "money", formula: "IF(HAS(perView), perView * 1000, NA())", none: "No views to divide by", sum: "{perView} × 1,000 = {=}", means: "Cost per 1,000 content views. Compare only with ad reports that count a view the same way." },
+    { id: "perResult", label: "Cost per result", unit: "money", formula: "IF(AND(HAS(perPiece), resultsPer > 0), perPiece / resultsPer, NA())", none: "No results tracked", sum: "{perPiece} ÷ {resultsPer} = {=}", means: "Compare the same kind of result and the same time window across channels." },
     { id: "yearCost", label: "What content costs a year", unit: "money", formula: "totalMonth * 12", sum: "{totalMonth} × 12 = {=}", means: "At this pace." },
   ],
   answer: [

@@ -52,7 +52,9 @@ Pause here: Fix the setup problems the check found, then export your last 60 day
 Pause here: Send to the engaged group only for two weeks, then export the quiet subscribers and their open history.
 
 4. **Sunset flow and list cleaner.** Use the skill `sunset-flow-and-list-cleaner`. Writes the sunset flow and the clean-out rule for the people who stayed quiet.
-5. **Email and SMS performance reader.** Use the skill `email-and-sms-performance-reader`. Give it the email flow from the steps before. Reads the sunset flow results to see if opens and revenue per send recovered.
+
+Pause here: The owner reviews and authorizes any sends, live flow changes and suppression rules. Only after an authorized flow has run and recipients have completed the planned observation window, collect the actual dated send, delivery, click, order and revenue results. If no real results exist, hand back the draft and stop; never invent outcomes.
+5. **Email and SMS performance reader.** Use the skill `email-and-sms-performance-reader`. Give it actual dated flow results, the flow version, recipient definitions and matching prior-period evidence. Mark missing measures and stop affected comparisons. Compare supported results, leading with clicks and orders; open-rate changes alone do not prove inbox recovery or an effect caused by the flow.
 6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

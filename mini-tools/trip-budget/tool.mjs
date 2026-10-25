@@ -1,11 +1,11 @@
 // Original tool. All numbers shown are illustrative figures, not a real person’s results.
 export default {
   "slug": "trip-budget",
-  "name": "Build a travel budget with shared costs split out",
-  "short": "Trip budget",
-  "headline": "Build a travel budget with shared costs split out",
-  "summary": "Enter nights, shared lodging, daily spending and transport. Get the group total and equal per-person budget.",
-  "question": "Build a travel budget with shared costs split out?",
+  "name": "Trip budget planner",
+  "short": "Trip budget planner",
+  "headline": "Trip budget planner",
+  "summary": "Enter nights, shared lodging, daily spending and transport. Get the group total and an equal budget per person.",
+  "question": "What is the group travel budget and each person’s equal share?",
   "category": "personal",
   "shelf": [
     "general"

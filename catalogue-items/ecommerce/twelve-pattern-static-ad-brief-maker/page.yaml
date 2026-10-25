@@ -1,0 +1,45 @@
+new_slug: twelve-pattern-static-ad-brief-maker
+name: Twelve-pattern static ad brief maker
+summary: Choose from twelve static ad patterns by buyer stage and proof. Get the copy, layout and image brief.
+job: make-image-ads
+headline: Twelve-pattern static ad brief maker
+subhead: Share product, buyer stage, offer, proof and production limits. Get a selected ad pattern with copy, visual, layout and proof checks.
+explain: |-
+  Choose from twelve static ad patterns by buyer stage and proof. Get the copy, layout and image brief.
+
+  Share product, buyer stage, offer, proof and production limits. Get a selected ad pattern with copy, visual, layout and proof checks.
+when:
+  - You need a selected ad pattern with copy, visual, layout and proof checks.
+  - You need twelve-pattern static ad brief maker for a specific task.
+  - You want the method's decisions and assumptions written down before acting.
+you_give:
+  - Product
+  - Buyer stage
+  - Offer
+  - Proof and production limits
+you_get:
+  - A selected ad pattern with copy, visual, layout and proof checks
+  - The sources used, missing inputs and assumptions
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Check the inputs
+    text: Confirm product, buyer stage, offer, proof and production limits. Mark facts that are missing.
+  - title: Collect Context
+    text: Follow the collect context section in the full method and keep its required fields and decision rules.
+  - title: The 12 Archetypes
+    text: Follow the the 12 archetypes section in the full method and keep its required fields and decision rules.
+  - title: Archetype Selection Flow
+    text: Follow the archetype selection flow section in the full method and keep its required fields and decision rules.
+  - title: Produce the Archetype
+    text: Follow the produce the archetype section in the full method and keep its required fields and decision rules.
+  - title: "Static Ad Brief: [Archetype name]"
+    text: "Follow the static ad brief: [archetype name] section in the full method and keep its required fields and decision rules."
+  - title: Variation (optional)
+    text: Follow the variation (optional) section in the full method and keep its required fields and decision rules.
+  - title: Review the result
+    text: Return a selected ad pattern with copy, visual, layout and proof checks. Check facts, math and the decisions before any action.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

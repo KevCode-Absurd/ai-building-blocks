@@ -1,0 +1,37 @@
+new_slug: meta-manage-ads-on-a-daily-basis-planner
+name: Daily Meta ad review planner
+summary: Review daily Meta results against local baselines. Separate urgent faults from weak signals and rank the next checks.
+job: launch-and-scale-ads
+headline: Daily Meta ad review planner
+subhead: Review daily Meta results against local baselines. Separate urgent faults from weak signals and rank the next checks.
+explain: |-
+  Share campaign settings, dated results, target economics and budget limits. Get a campaign plan with proposed settings and review points.
+
+  Follow the actual current account/project structure rather than source screenshots or fixed historical settings.
+when:
+  - You need a campaign plan with proposed settings and review points.
+you_give:
+  - Campaign settings, dated results, target economics and budget limits
+  - The exact change you want and actions you authorize
+you_get:
+  - A campaign plan with proposed settings and review points
+  - Missing inputs and a bounded verification plan
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Step 1
+    text: Set a review window appropriate to volume and conversion delay, with a recent comparison window. Record account, dates, timezone, currency, attribution and data freshness. Five to seven days is a historical starting example, not enough evidence for every account.
+  - title: Step 2
+    text: Establish the approved decision basis before changing ads. Acquisition CPA limits require contribution per order or an explicitly approved lifetime-value and cash-payback model. A revenue-to-ad-spend ratio of one is not profit break-even when product and operating costs remain.
+  - title: Step 3
+    text: Review campaign purpose first, then ad sets, then individual ads. Compare spend, purchases, revenue and CPA on the same definitions. Separate new tests, evergreen, scaling and retargeting contexts; do not automatically spare retargeting from the same economic and evidence checks.
+  - title: Step 4
+    text: Classify each ad as maintain, gather more evidence, investigate, creative refresh or proposed pause. A zero-purchase spend threshold is an owner-set risk cap, not statistical proof that the creative can never work. Consider sample size, lag and broken tracking before a pause recommendation.
+  - title: Step 5
+    text: Use click, landing-page, cart, frequency, cost and view metrics as diagnostic clues. Strong engagement does not establish profitable acquisition. Create a specific replacement brief when evidence points to a creative gap rather than endlessly changing audiences.
+  - title: Step 6
+    text: Deliver proposed actions with evidence, owner, spend exposure and follow-up date. Make authorized changes only, record exact settings before and after, and verify actual status. On the next review compare outcomes without pretending one platform-allocated observation proves causality.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

@@ -1,0 +1,34 @@
+slug: track-agent-injection-controls-and-retest-evidence
+name: Agent injection evidence review assistant
+summary: Provide an agent boundary map and authorized test scope. Get safe test cases, control gaps and evidence-linked retest records.
+category: agent
+type: agent
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: document
+    required: true
+  - type: codebase
+    required: true
+  - type: question
+    required: true
+outputs:
+  - type: security_report
+  - type: test_report
+  - type: plan
+uses:
+  - prompt-injection-defender
+  - ai-agent-attack-tester
+steps:
+  - uses: prompt-injection-defender
+    note: Use architecture and controls to map untrusted channels, protected assets, sinks and invariants. Record safeguards as missing, planned, implemented or verified with enforcement point and evidence need.
+  - uses: ai-agent-attack-tester
+    note: Use boundary map, exact written scope, fixtures and limits for uniquely identified tests. Run only owner-approved cases in approved environment. Preserve results, blocked/error cases, limits and cleanup.
+  - uses: prompt-injection-defender
+    note: Use observed failures and authorized remediation diff to update control states/regressions. Require fresh evidence for verified state. Return residual paths, monitoring owners and explicit retest handoff.
+execution: coordinator
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

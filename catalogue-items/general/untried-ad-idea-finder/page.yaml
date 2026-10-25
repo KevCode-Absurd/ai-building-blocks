@@ -1,23 +1,19 @@
 new_slug: untried-ad-idea-finder
-name: "Untried ad idea finder"
-summary: "Paste your past ads and brand file. Get a gap map and five untried ad ideas to test."
+name: Untried ad idea finder
+summary: Paste your past ads and brand file. Get a gap map and five untried ad ideas to test.
 job: plan-ad-tests
-thinking: high
-thinking_why: "It judges work against many checks, so a stronger model catches more."
-
-headline: "Untried ad idea finder"
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.
+headline: Untried ad idea finder
 subhead: Give it your past ads and your brand file. It maps every ad through five lenses, ranks the five biggest gaps and writes one idea per gap, each a test. You get a gap map, five ideas and the proof worth collecting.
-
 explain: |
   When ads stop working, most teams make more of the same: a new colour, a new headline, the same opening shot. The account fills up with near-copies while whole areas stay empty. A buying moment nobody speaks to. A reason to buy nobody leads with. Proof you hold that no ad has used.
 
   This skill takes stock first. It places every past ad through five lenses: the buying moment, the value it leads with, how much the buyer knows, how it opens, and its format and product. It lists the proof you hold, such as a demo, a review or a sourced number. Then it ranks the five biggest gaps by reach, proof on hand and cost. Each idea fills one gap and names what you'd learn if it wins. A five-link check covers who it's for, the gain, the proof, the risk and the next step.
-
 when:
   - Your ads have gone stale and every new one looks like the last one.
   - You're planning next month's tests and want each one to answer a different question.
   - You only have an ad library page or your own memory of what you ran, and want a clear view anyway.
-
 you_give:
   - What your ads have done, from an account export, an ad library page or your own list
   - Your brand file, with products, prices, claims, offers and the proof you hold
@@ -30,14 +26,12 @@ you_get:
   - The five biggest gaps, ranked, plus the proof worth collecting
   - Five ad ideas, each with its test question, a five-link check, headlines and an opening
   - Any check the map still missed, one line each
-
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your past ads. An export with spend and purchases is best, but a list of what you ran works too.
   - Paste your brand file underneath, with your approved claims, current offers and any studies, tests or guarantees.
   - Add reviews if you have them. They turn guessed buying moments into real ones.
   - Read the test questions first. Make the ideas whose answers would change what you do next.
-
 how_it_works:
   - title: Grades its evidence
     text: Says whether it works from measured results, the founder's account or an ad library, and claims only what that evidence supports.
@@ -53,7 +47,6 @@ how_it_works:
     text: One per gap, each with "If this wins, we learn ___". Two ideas that answer the same question count as one.
   - title: Checks five links
     text: Who, gain, proof, risk and step, each marked strong, thin or missing. It fixes the weakest link, then sets the final order.
-
 output_shape: |
   EVIDENCE: <measured / reported / observed>, <what it is>
 
@@ -82,7 +75,6 @@ output_shape: |
   (ideas B to E in the same layout)
 
   CHECKS MISSED: <one line per check still missed, or none>
-
 example:
   business: sprout
   input: |
@@ -159,7 +151,6 @@ example:
     MISSING: the powder's current price; recheck $79 before launch.
     (cut for length: the full run also had all 15 record rows, ideas B
     to E with their links, and the note on what to make first)
-
 tweaks:
   - what: The evidence you give
     how: An export with spend and purchases lets it say "tested and lost", and lets ideas be labelled "measured". A library page or your own list only lets it say "ran" or "never ran".
@@ -171,7 +162,6 @@ tweaks:
     how: Add "image ads only" and it judges form inside image formats, so it won't fill the list with video gaps you can't make.
   - what: People and rights
     how: Say who can appear on camera. Ideas that need a person you don't have get marked "needs" instead of recommended.
-
 judge:
   - The first line grades the evidence the map rests on.
   - Nothing is called a winner without numbers and dates. "Still running" isn't treated as a win.
@@ -179,31 +169,30 @@ judge:
   - Every proof named is in what you gave it. Check one review number against your file.
   - Who it's for and what they gain show in the first second of every idea.
   - The ideas use only your claims, prices and offers, and a side by side shows a row where the other option wins.
-
 test:
   - Think of a gap you already know about, such as a buyer you've never spoken to or a product with no ads. Check it shows up in the lenses or the ranked gaps.
   - Run it twice on the same list. The top gaps should mostly match, even if the ideas differ.
   - Read each test question aloud. If you can't say what you'd do differently after a win, ask it to replace that idea.
   - Read "proof worth collecting". On a thin brand file it should list something. If it lists nothing, it's guessing.
-
 improve:
   - Add values your buyers name often to lens 2 in the skill file, in their own words, so the map speaks your market's language.
   - Write your own rule for "tested" into step 1 (for example "spend of at least three times our target cost per sale"), so results are judged your way.
   - Add your own proof kinds to step 3 if you hold one it doesn't list, such as a press review.
   - After each test, write the answer to its test question in your brand file, and paste the gap map back next month so filled gaps drop off.
   - Pair it with a skill that turns a chosen idea into a full brief and versions a designer can build.
-
 works_best_with:
   tools:
-    - {name: "Meta Ads Manager", why: "An export by ad gives the 'measured' grade, with spend and results for each ad over the dates you pick."}
-    - {name: "Meta Ad Library", why: "Shows the ads your page runs now, with start dates, when you have no export to work from."}
-    - {name: "Google Sheets", why: "Keeps one row per past ad, so each lens and the moments grid are filters you can check."}
+    - name: Meta Ads Manager
+      why: An export by ad gives the 'measured' grade, with spend and results for each ad over the dates you pick.
+    - name: Meta Ad Library
+      why: Shows the ads your page runs now, with start dates, when you have no export to work from.
+    - name: Google Sheets
+      why: Keeps one row per past ad, so each lens and the moments grid are filters you can check.
   inputs:
-    - "Notes on ads you paused and why, so the record keeps the losers too"
-    - "Answers from new buyers to 'what made you buy?', so moments come from buyers rather than guesses"
-    - "A list of what you can film or photograph now (people, places, props), so every idea can be made"
-    - "Your last test plan and what it found, so no test question is asked twice"
-
+    - Notes on ads you paused and why, so the record keeps the losers too
+    - Answers from new buyers to 'what made you buy?', so moments come from buyers rather than guesses
+    - A list of what you can film or photograph now (people, places, props), so every idea can be made
+    - Your last test plan and what it found, so no test question is asked twice
 terms:
   - term: Buying moment
     meaning: The situation that sends someone looking for a product like yours.

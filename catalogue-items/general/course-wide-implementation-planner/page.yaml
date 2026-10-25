@@ -1,0 +1,38 @@
+new_slug: course-wide-implementation-planner
+name: Agent worker runtime starter builder
+summary: Adapt a TypeScript agent worker with scoped jobs, Slack messages, monitoring and graceful startup. Get a setup and test plan.
+job: build-software
+headline: Agent worker runtime starter builder
+subhead: Share your runtime, database, queue and Slack setup. Get an adapted worker starter, service config and failure checks.
+explain: |-
+  Share local database and redis requirements, ports and persistence needs. Get a local service configuration and startup check list.
+
+  The complete method and its supporting files are in the download. It marks missing inputs and separates proposed actions from actions that were actually completed.
+when:
+  - You need a complete worker starter with local service config.
+  - You are adding this function to an agent system.
+  - You need to compare an existing version with the supplied starter.
+you_give:
+  - Runtime and package versions
+  - Database schema, Redis setup and Slack app settings
+  - Permitted tools, budget policies and deployment target
+you_get:
+  - A complete worker starter with local service config
+  - A startup, shutdown, recovery and access test plan
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Step 1
+    text: Inspect the Docker services, volumes and environment placeholders.
+  - title: Step 2
+    text: Bind local ports deliberately.
+  - title: Step 3
+    text: Keep secrets outside version control.
+  - title: Step 4
+    text: Check connectivity and persistence with synthetic records.
+  - title: Step 5
+    text: Treat this compose file as local development, not hosted production.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

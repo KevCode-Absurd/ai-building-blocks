@@ -1,11 +1,11 @@
 ---
 name: buyer-problem-list-builder
-description: Use when you are building an offer and need the full list of problems a buyer meets between today and the result they want. Writes the result as a place, lists the stages, finds the reasons a buyer might fail or quit under the four value drivers, and turns each into a promise. Ends with CHECKS MISSED.
+description: Use when building an offer to map possible buyer problems from the starting situation to a desired result. Lists stages, checks doubts about outcome, likelihood, effort and time, labels observed evidence and guesses, and proposes candidate How-to outcomes. A buyer problem is not proof of product capability: verify each proposed promise before use and leave unsupported speed, ease or result claims unapproved. Ends with CHECKS MISSED.
 ---
 
 # Buyer problem list builder
 
-A buyer decides on the whole list of worries in their head, not on the one you thought of. This skill finds that list. It follows the buyer from where they are now to the result they want, and at every stage it asks what could make them stall, doubt or quit. Each answer becomes a promise you could make. The list feeds Delivery option generator.
+A buyer can face several worries between the starting situation and a desired result. This skill maps those possible problems, using actual buyer words where available and clearly labelling guesses. It proposes candidate outcomes for offer design; it does not prove the full contents of a buyer’s mind or establish that the product can deliver a promise. The list feeds Delivery option generator after capability and evidence checks.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -46,12 +46,12 @@ How to start:
 4. **Use their words first.** Where a review, email or call note says it, quote it. Where none does, write the line anyway and mark the evidence GUESS. Do not invent a quote.
 5. **Merge repeats, keep the small ones.** Combine problems that are the same thing. Do not drop one because it seems minor: a single unanswered doubt can lose the sale.
 6. **Count.** Total the problems and split them by driver. If there are fewer than 15, go back to step 2 and split the stages smaller. If one driver has almost none, look harder there, since that is where hidden doubts sit.
-7. **Turn each problem into a promise.** Reverse it into a line that starts with "How to" and ends with a result. Example: the problem "Learning a new booking tool will eat my weekend" becomes "How to run your first booking in under an hour, with nothing to learn first." Keep the same driver tag.
+7. **Propose a candidate outcome, then check its evidence.** Write a possible How-to outcome for each problem and keep the same driver tag. Retain whether the problem came from a quote or a guess; a quoted worry still does not prove product capability. Example: “Learning a new booking tool will eat my weekend” suggests a candidate such as “How to get your first booking set up with clear steps,” not an unsupported “under an hour” or “nothing to learn” promise. Check the product’s actual capability, scope, limits and supporting evidence separately. Mark each candidate supported, needs evidence, outside current capability or for user confirmation. Do not invent a duration, ease, guarantee, health or money result from the problem. Unverified candidates are internal ideas to test, not approved ad claims.
 8. **Check it.** Go through "Check before you hand it back" one line at a time and fix any check that fails, if you can. Under CHECKS MISSED, write one line for each check still missed and why, or "none".
 
 ## What you hand back
 
-The place they arrive. The stages. A table of stage, problem, driver, promise and evidence. The count by driver. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
+The place they arrive. The stages. A table of stage, problem, driver, candidate outcome, problem evidence and separate capability/claim status. The count by driver. Unapproved outcomes and proof needed. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or “none”.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
@@ -69,7 +69,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The arrival line has no product noun in it.
 - Every stage has problems under all four drivers, or a note on why not.
 - Every problem is in the buyer's voice.
-- Every promise starts with "How to" and names a result.
+- Every candidate outcome starts with “How to” and names a proposed result. It retains problem evidence/guess status and a separate capability/claim check; missing proof never becomes an approved promise.
 - No quote is made up; guesses are marked GUESS.
 - There are at least 15 problems.
 
@@ -81,4 +81,4 @@ Write `MISSING: <what> for <where it is needed>`. With no buyer given, ask who i
 
 - Listing features you lack instead of problems the buyer has.
 - Stopping at the three problems you already knew.
-- Writing promises as activities ("how to attend our class") rather than results.
+- Confusing a candidate outcome with a supported promise, inventing speed/ease/results from a buyer worry, or writing only an activity instead of a proposed useful outcome.

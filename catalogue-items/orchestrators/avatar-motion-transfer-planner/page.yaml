@@ -1,0 +1,34 @@
+new_slug: avatar-motion-transfer-planner
+name: Avatar motion transfer planner
+summary: Share an approved avatar and owned performance clip. Get a motion-transfer plan, reference roles and checks for the result.
+job: make-video-ads
+headline: Avatar motion transfer planner
+subhead: Share an approved avatar and owned performance clip. Get a motion-transfer plan, reference roles and checks for the result. Bring the brief and any files you want it to use.
+explain: |-
+  Use this when you need a performance-reference motion transfer plan. Confirm the intended avatar and that the performance footage is owned or authorized for this use. A third-party social video is not automatically an approved motion source.
+
+  Inspect source motion only if footage is accessible. Record framing, camera movement, actor pose range, occlusions, hand/face visibility, ground contact, duration and aspect ratio.
+when:
+  - You need a performance-reference motion transfer plan.
+  - You want a clear draft and checks from the material you already have.
+you_give:
+  - brief
+  - "Optional: footage"
+  - "Optional: avatar sheet"
+you_get:
+  - plan
+  - video prompt
+  - Missing inputs and steps that still need to run
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Read the brief
+    text: Confirm the intended avatar and that the performance footage is owned or authorized for this use. A third-party social video is not automatically an approved motion source.
+  - title: Build the result
+    text: "Assign appearance to the avatar reference and movement to the performance reference. State excluded properties: do not import performer identity, unrequested clothing, text, room or unrelated objects."
+  - title: Check and hand off
+    text: If no compatible motion-control tool is connected, deliver the reference-role map, starting-frame prompt, transfer brief and review checklist. Do not claim a completed transfer.
+thinking: high
+thinking_why: It compares supplied evidence and follows a specific method.

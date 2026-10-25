@@ -2,15 +2,14 @@ thinking: high
 thinking_why: Rules vary by operator type and need careful reading.
 new_slug: transport-cyber-rules-checker
 name: Transport cyber rules checker
-summary: Describe your pipeline or rail operation. Get which TSA security rules
-  apply, your gaps and required plans.
+summary: Describe your US transport operation. Check current TSA sources for
+  possible coverage, requirements and missing facts.
 job: check-contracts
 headline: Transport cyber rules checker
-subhead: For pipeline, freight rail, transit and bus operators in the US, it is
-  hard to tell which TSA security directives cover you. This skill tells you
-  which apply, where your gaps are, and which plans you must write.
+subhead: Share your US transport type and TSA status; check current directives,
+  operator coverage, and facts still needed.
 explain: |
-  For pipeline, freight rail, transit and bus operators in the US, it is hard to tell which TSA security directives cover you. This skill tells you which apply, where your gaps are, and which plans you must write.
+  Share your operator type and TSA status. The skill checks current directives, maps supported requirements and flags open questions.
 
   It asks which sector and directive series you fall under, then matches your operation to the rules. It supports gap tables with status, evidence needed and priority. It drafts the plans the rules call for, such as the cybersecurity implementation plan, operational plan and assessment plan, and lays out the steps and timing for reporting incidents to CISA. It also reviews how your office and operational networks are separated. It is guidance, so check final decisions with counsel or TSA.
 when:
@@ -24,11 +23,12 @@ you_give:
   - Your current security controls
   - Network layout between IT and operations (optional)
 you_get:
-  - Which TSA directives apply
+  - Possible coverage with official sources and check dates
   - A gap table with priorities
   - Draft plan sections
   - An incident reporting procedure
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
-    or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.

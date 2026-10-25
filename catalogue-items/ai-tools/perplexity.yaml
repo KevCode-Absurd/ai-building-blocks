@@ -2,7 +2,7 @@ slug: perplexity
 name: Perplexity
 maker: Perplexity AI
 url: https://www.perplexity.ai
-promise: Sourced answers to questions, with links you can check.
+promise: "Research questions on the web and read answers with source links to check."
 use_cases: [ask-an-assistant, research]
 categories: [chat-assistant]
 what_it_does:
@@ -12,8 +12,8 @@ what_it_does:
   - Reads files you upload and answers from them.
   - Groups related searches into shared spaces.
 benefits:
-  - Check every claim by clicking the source next to it.
-  - Get a first read on a market or competitor in minutes.
+  - "Open the cited pages to check what an answer is based on."
+  - "Get a first overview of a market or competitor, then check the sources."
   - Keep research on one topic in one place.
   - Find out how AI search describes your own brand.
 best_for:

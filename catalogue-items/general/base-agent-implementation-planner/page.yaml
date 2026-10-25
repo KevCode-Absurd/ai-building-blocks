@@ -1,0 +1,37 @@
+new_slug: base-agent-implementation-planner
+name: Scoped base agent builder
+summary: Build a scoped base agent with explicit tools, one bounded task, a response format and a smoke test.
+job: build-software
+headline: Scoped base agent builder
+subhead: Build a scoped base agent with explicit tools, one bounded task, a response format and a smoke test.
+explain: |-
+  Share the selected codebase, schemas and service setup. Get a concrete setup or code-change plan with required files.
+
+  Follow the actual current account/project structure rather than source screenshots or fixed historical settings.
+when:
+  - You need a concrete setup or code-change plan with required files.
+you_give:
+  - The selected codebase, schemas and service setup
+  - The exact change you want and actions you authorize
+you_get:
+  - A concrete setup or code-change plan with required files
+  - Missing inputs and a bounded verification plan
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Step 1
+    text: Inspect the selected runtime, job contract, database client, account scope, shared response layer and current agent registry. Combine the minimal echo example and base class as one starter; the echo mode is a wiring test, not a separate production capability.
+  - title: Step 2
+    text: Define one bounded input and output contract. Keep agent identity, client/account scope, correlation ID and destination explicit. Validate input and scope before reading records or choosing a handler. Unknown scopes and unauthorized destinations fail clearly.
+  - title: Step 3
+    text: Implement shared entry points for job handling and, only if requested, heartbeat handling. Keep status and structured activity logging in the base layer. Put domain-specific work in a subclass or equivalent handler instead of mixing it into transport code.
+  - title: Step 4
+    text: Add an echo handler that returns only safe supplied test input through the shared response filter. Exercise the actual transport and queue path with synthetic data if the environment permits; otherwise provide the exact runnable test plan and mark execution not run.
+  - title: Step 5
+    text: Use finalizers to record completion/failure, reconcile cost and release any locks. Validate duplicate jobs, failed handlers, missing config, rejected account access and response filtering. No paid AI call is required to prove the echo path.
+  - title: Step 6
+    text: Return the base/echo implementation plan or requested code, interface map and smoke-test evidence. An echo pass proves only that limited path; each real agent still needs its own domain, API, permission, cost, failure and output-quality checks.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

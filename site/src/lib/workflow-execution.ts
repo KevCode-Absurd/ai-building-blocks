@@ -70,11 +70,21 @@ export async function sha256(bytes: Uint8Array) {
   return [...new Uint8Array(digest)].map(v => v.toString(16).padStart(2, "0")).join("");
 }
 
-/** Validate concrete local Markdown reference links; prose/conditional resource requirements still need review. */
+// One preserved upstream negative test intentionally points to missing files.
+// Match its complete bytes and path, never an examples/ directory or filename pattern.
+const NEGATIVE_LINK_FIXTURE = "---\nname: wrong-name\ndescription: Checks links. Use when the user wants a link check run on a folder of documents.\n---\n\n# Broken links\n\nSee [the guide](references/guide.md) and `scripts/check.py` for the steps.\n";
+export function referenceFixtureExclusions(files: Record<string, Uint8Array>) {
+  const source = "skills/skill-portability-checker/examples/broken-links/SKILL.md", bytes = files[source];
+  if (!bytes || new TextDecoder().decode(bytes).replace(/\r\n?/g, "\n") !== NEGATIVE_LINK_FIXTURE) return [];
+  return [{ source, classification: "PINNED_INTENTIONAL_NEGATIVE_TEST_FIXTURE", normalized_sha256: "2e2b0991b3a7418ea23b68ae630f5319c03c56b800ad9475ebe8b0df79796099", reason: "Preserved portability-checker regression input expects two errors and a warning. Its original bytes remain bundled; its broken link is test data, not a runtime dependency." }];
+}
+/** Validate concrete operative Markdown links; classify the exact known negative test separately. */
 export function verifyLocalReferences(files: Record<string, Uint8Array>) {
   const resolved: { source: string; target: string }[] = [];
+  const fixtures = new Set(referenceFixtureExclusions(files).map(f => f.source));
   for (const [source, bytes] of Object.entries(files)) {
     if (!source.startsWith("skills/") || !source.endsWith(".md")) continue;
+    if (fixtures.has(source)) continue;
     const text = new TextDecoder().decode(bytes);
     for (const match of text.matchAll(/\]\(<?([^\s)>]+)>?(?:\s+"[^"]*")?\)/g)) {
       const relative = match[1].split(/[?#]/)[0];

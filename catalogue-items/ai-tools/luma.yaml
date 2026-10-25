@@ -2,7 +2,7 @@ slug: luma
 name: Luma
 maker: Luma AI
 url: https://lumalabs.ai
-promise: Video clips and images from a text prompt or a still picture.
+promise: "Turn text or still pictures into short video clips and images."
 use_cases: [make-video, make-images]
 categories: [video, image]
 what_it_does:

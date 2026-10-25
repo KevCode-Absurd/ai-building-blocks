@@ -1,0 +1,40 @@
+new_slug: the-head-agent-strategic-oversight-implementation-planner
+name: Multi-agent findings brief builder
+summary: Build a daily brief from agent findings. Merge duplicates, rank open issues and plan scoped handoffs with owners.
+job: build-software
+headline: Multi-agent findings brief builder
+subhead: Build a daily brief from agent findings. Merge duplicates, rank open issues and plan scoped handoffs with owners.
+explain: |-
+  Share scoped specialist findings, priorities and authority registry. Get a deduplicated daily brief and a dependency-aware delegation plan.
+
+  The complete method and its supporting files are in the download. It marks missing inputs and separates proposed actions from actions that were actually completed.
+when:
+  - You need a deduplicated daily brief and a dependency-aware delegation plan.
+  - You are adding this function to an agent system.
+  - You need to compare an existing version with the supplied starter.
+you_give:
+  - Scoped specialist findings, priorities and authority registry
+you_get:
+  - A deduplicated daily brief and a dependency-aware delegation plan
+  - A failure checklist and synthetic test cases
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Step 1
+    text: Group findings that describe the same issue.
+  - title: Step 2
+    text: Compare evidence and disagreements.
+  - title: Step 3
+    text: Rank by urgency and business impact.
+  - title: Step 4
+    text: Route work through the authority registry and depth limit.
+  - title: Step 5
+    text: Keep blockers attached to child tasks.
+  - title: Step 6
+    text: Escalate unresolved decisions.
+  - title: Step 7
+    text: Synthesize recommendations without changing campaigns directly.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

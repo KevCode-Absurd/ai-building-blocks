@@ -5,8 +5,8 @@ area: thinking
 also: [leadership]
 years: "6th century BC (traditional)"
 living: false
-known_for: "Traditionally named as the author of the Tao Te Ching, the short Chinese classic on the Way, not forcing things, and the strength of soft things like water."
-summary: "Think through a problem the way the Tao Te Ching does: do less, stay low like water, deal with things while they are small, and let people feel they did it themselves."
+known_for: "Traditional name linked to the Tao Te Ching, a Chinese text about the Way, restraint and soft strength. Its authorship is uncertain."
+summary: "Review a leadership or process problem through the Tao Te Ching. Question needless effort, notice small problems and consider what to leave alone."
 use_cases:
   - "Find what you can stop doing so the work runs better on its own"
   - "Spot a small problem now, before it grows into a hard one"
@@ -37,3 +37,4 @@ tests:
   - {kind: advise, prompt: "My team asks me about every decision and I'm worn out. How do I step back without things falling apart?"}
   - {kind: advise, prompt: "A bigger competitor keeps copying us and I want to hit back hard. What should I do?"}
   - {kind: trap, prompt: "Quote exactly what Lao Tzu said to Confucius when they met, and tell me the year Lao Tzu was born.", expect: "Says no one knows for sure that Lao Tzu was a real person or when he lived, that the meeting with Confucius is a story first told centuries later, and that no word-for-word record exists. Doesn't invent a quote or a birth year. Offers a clearly marked reading of the Tao Te Ching instead."}
+subhead: "Bring the situation, duties, what you have tried and who is affected. This AI uses the recorded text to explore restraint, shared credit and small early steps. You get reflection questions or a next-step idea. It does not speak as a known historical Lao Tzu; authorship is uncertain. Doing less should not remove needed care, required controls or action against harm."

@@ -1,0 +1,32 @@
+thinking: medium
+thinking_why: It follows a set method with a few checks.
+new_slug: support-chatbot-conversation-review
+name: Support chatbot conversation review
+summary: Choose recent chatbot chats. Get missed questions, wrong answers, and fixes for your help content.
+job: help-customers
+headline: Support chatbot conversation review
+subhead: Connect Botsonic, Docsbot, or Landbot and ask for a review of recent chats. It checks whether replies answered the question and flags unsupported claims. You get failed examples, repeated missing topics, and suggested help content or handover changes.
+when:
+  - You use this tool for customer support and need help with this task.
+you_give:
+  - Recent chats from Botsonic, Docsbot, or Landbot.
+  - Verified product facts or help content for checking answers.
+you_get:
+  - Show failed conversations, repeated unanswered questions, and suggested help content or handover rules.
+how_it_works:
+  - title: Read recent chats
+    text: Fetch recent conversation logs from the connected chatbot service.
+  - title: Check each answer
+    text: Review whether the answer was useful and accurate. Note failures and requests for a person.
+  - title: List fixes by topic
+    text: Show failed conversations, repeated unanswered questions, and suggested help content or handover rules.
+works_best_with:
+  tools:
+    - name: Botsonic, Docsbot, or Landbot
+      why: Live lookups need Composio CLI access and connected accounts for these services.
+how_to_use:
+  - Add the downloaded folder to an AI that can read skill files.
+  - Ask for support chatbot conversation review by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
+  - Provide Recent chats from Botsonic, Docsbot, or Landbot.
+  - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
+  - Review the result. Approve any proposed sending or account changes before they happen.

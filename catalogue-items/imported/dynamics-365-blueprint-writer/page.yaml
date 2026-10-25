@@ -1,0 +1,30 @@
+new_slug: dynamics-365-blueprint-writer
+name: Plan a Dynamics 365 blueprint
+summary: Plan a D365 system through a staged workshop. Record each choice, its owner, open issues and the next step.
+job: document-work
+headline: Plan a Dynamics 365 blueprint
+subhead: Bring programme goals and known constraints. Work through one section at a time to build an owned system plan.
+explain: Bring programme goals and known constraints. Work through one section at a time to build an owned system plan.
+when:
+  - You want to plan a Dynamics 365 blueprint.
+you_give:
+  - Programme context, business goals, legal entities, scope and architecture participants.
+  - Known requirements, constraints, existing decisions and current Microsoft source evidence when available.
+you_get:
+  - A saved fourteen-section solution blueprint and progress tracker.
+  - A dated decision/assumption/open-item log with downstream implications and review needs.
+how_to_use:
+  - Download the complete skill folder and add it to your AI tool, or copy the instructions into a chat.
+  - Provide the inputs listed here and ask your AI to follow the skill.
+  - Review the result and any missing facts before using it.
+how_it_works:
+  - title: Establish foundations
+    text: Resolve programme context, scope and operating-model decisions before dependent architecture sections.
+  - title: Workshop each section
+    text: Ask a small question set, compare real options and record rationale, rejected choices, owner and date.
+  - title: Preserve unresolved work
+    text: Mark assumptions/open items and provisional dependencies; verify product claims or leave them requiring verification.
+  - title: Consolidate for review
+    text: Save the blueprint, continuity tracker and decision log and request independent architecture review.
+thinking: medium
+thinking_why: It weighs your evidence and follows a specific method.

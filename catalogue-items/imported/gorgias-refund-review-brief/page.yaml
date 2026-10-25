@@ -1,0 +1,32 @@
+thinking: medium
+thinking_why: It follows a set method with a few checks.
+new_slug: gorgias-refund-review-brief
+name: Gorgias refund review brief
+summary: Share a ticket or customer email. Get refund facts, policy checks, a recommendation, and a reply draft.
+job: help-customers
+headline: Gorgias refund review brief
+subhead: Give it a Gorgias ticket number or customer email and your refund policy. It checks the request against past tickets and HubSpot records. You get the facts, policy checks, a proposed decision, and a reply draft for a person to approve.
+when:
+  - You use this tool for customer support and need help with this task.
+you_give:
+  - The request or ticket, customer email, and refund policy.
+  - Gorgias and HubSpot records, including past refunds and usage if available.
+you_get:
+  - Show the facts, recommendation, and reply draft. This skill does not issue the refund.
+how_it_works:
+  - title: Collect the refund facts
+    text: Read the request, account details, past refunds, payment plan, and customer history.
+  - title: Check the policy
+    text: Compare the reason and dates with your policy and flag cases needing manager approval.
+  - title: Prepare the decision brief
+    text: Show the facts, recommendation, and reply draft. This skill does not issue the refund.
+works_best_with:
+  tools:
+    - name: Gorgias and HubSpot
+      why: Live lookups need Composio CLI access and connected accounts for these services.
+how_to_use:
+  - Add the downloaded folder to an AI that can read skill files.
+  - Ask for gorgias refund review brief by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
+  - Provide the request or ticket, customer email, and refund policy.
+  - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
+  - Review the result. Approve any proposed sending or account changes before they happen.

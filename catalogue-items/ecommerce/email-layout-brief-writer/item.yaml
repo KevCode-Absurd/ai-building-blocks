@@ -7,19 +7,19 @@ role: make
 job: email
 level: intermediate
 inputs:
-  - {type: copy_draft, required: true}
-  - {type: brand_brain, required: false}
-  - {type: image, required: false}
+  - { type: copy_draft, required: true }
+  - { type: brand_brain, required: false }
+  - { type: image, required: false }
 outputs:
-  - {type: page_layout_spec}
+  - { type: page_layout_spec }
 uses: []
 origin: rebuilt
 example_pending: true
-version: 1.0.0
+version: 1.0.1
 credits:
-  - {title: "How to design high-converting ecommerce emails in Figma", by: "An e-commerce email agency owner (name not given)", used: "The top block above the fold, the bridge section, a button at the end of every section, smooth design flow and the chat AI shortcut for turning a competitor email into a template"}
-  - {title: "Klaviyo email marketing course for e-commerce", by: "An e-commerce email agency founder (name not given)", used: "Why the first screen matters most, a footer with product categories and a shop-all button after the products"}
-  - {title: "Klaviyo email marketing full course (3+ hours)", by: "An agency founder who has set up email for 30+ seven and eight figure stores", used: "Designing in Figma, slicing, a button under each product, icons in place of bullets, and which parts to build live in the email tool"}
-  - {title: "Complete ecommerce email marketing strategy for 2026", by: "An agency founder who runs email for seven to nine figure brands", used: "Infographic types and the skim rule"}
-  - {title: "Master email copywriting for e-commerce brands", by: "An email agency owner (free course module)", used: "Product display grids: a single row with copy or a 2 by 2 grid, and why to avoid 3 by 2"}
-  - {title: "Ecommerce Email Marketing 2025", by: "An email agency founder for Shopify and Klaviyo brands (name not given)", used: "Skim-first design, the one-to-two scroll length, the copy prompt for graphic emails, one link per image, and exporting and compressing slices"}
+  - { title: "How to design high-converting ecommerce emails in Figma", by: "An e-commerce email agency owner (name not given)", used: "The top block above the fold, the bridge section, a button at the end of every section, smooth design flow and the chat AI shortcut for turning a competitor email into a template" }
+  - { title: "Klaviyo email marketing course for e-commerce", by: "An e-commerce email agency founder (name not given)", used: "Why the first screen matters most, a footer with product categories and a shop-all button after the products" }
+  - { title: "Klaviyo email marketing full course (3+ hours)", by: "An agency founder who has set up email for 30+ seven and eight figure stores", used: "Designing in Figma, slicing, a button under each product, icons in place of bullets, and which parts to build live in the email tool" }
+  - { title: "Complete ecommerce email marketing strategy for 2026", by: "An agency founder who runs email for seven to nine figure brands", used: "Infographic types and the skim rule" }
+  - { title: "Master email copywriting for e-commerce brands", by: "An email agency owner (free course module)", used: "Product display grids: a single row with copy or a 2 by 2 grid, and why to avoid 3 by 2" }
+  - { title: "Ecommerce Email Marketing 2025", by: "An email agency founder for Shopify and Klaviyo brands (name not given)", used: "Skim-first design, the one-to-two scroll length, the copy prompt for graphic emails, one link per image, and exporting and compressing slices" }

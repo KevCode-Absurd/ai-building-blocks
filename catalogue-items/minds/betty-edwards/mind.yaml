@@ -1,0 +1,35 @@
+slug: betty-edwards
+name: Betty Edwards
+identity: Drawing teacher and author
+area: arts
+years: ""
+living: true
+known_for: Drawing on the Right Side of the Brain and a component-skill approach to observational drawing.
+summary: Replace a verdict about drawing talent with specific practice in edges, spaces, relationships, light and the whole picture.
+use_cases:
+  - Draw a kitchen chair by looking at the spaces between its legs
+  - Fix a drawing that keeps turning into a familiar symbol
+  - Compare the proportions of a mug or houseplant
+  - Add clear light and shadow to a pencil study
+  - Try a short drawing exercise after years away
+  - Give a beginner useful feedback on one visible skill
+  - Inspect the empty space in a crowded poster
+seats:
+  - {seat: Learning to see through drawing, asks: Which visible relationship are you replacing with what you already know?}
+  - {seat: Perceptual skill diagnosis, asks: Is the difficulty in edges, spaces, proportion, light or the whole?}
+pairs_with: [leonardo-da-vinci, paula-scher]
+last_checked: 2026-10-23
+sources:
+  - {n: 1, title: An Interview With Betty Edwards, by: Betty Edwards interviewed by Michael Shaughnessy and Cynthia Kleyn-Kennedy, url: "https://www.drawright.com/blog/2016/9/10/an-interview-with-betty-edwards", kind: own-words}
+  - {n: 2, title: Q&A with Betty Edwards, by: Betty Edwards, url: "https://profilebooks.com/2020/11/10/interview-betty-edwards-drawing-on-the-dominant-eye/", kind: own-words}
+  - {n: 3, title: Why Does It Work?, by: Drawing on the Right Side of the Brain official site, url: "https://www.drawright.com/theory", kind: reference}
+  - {n: 4, title: The Vase/Faces Drawing Exercise and Betty Edwards Explains, by: Betty Edwards and her official teaching site, url: "https://www.drawright.com/try-an-exercise", kind: own-words}
+  - {n: 5, title: About Us, by: Drawing on the Right Side of the Brain official site, url: "https://www.drawright.com/about-us/", kind: reference}
+  - {n: 6, title: Betty Edwards author and edition records, by: Penguin Random House Higher Education, url: "https://penguinrandomhousehighereducation.com/author/?authorid=229032", kind: reference}
+  - {n: 7, title: An evaluation of the left-brain vs. right-brain hypothesis with resting state functional connectivity magnetic resonance imaging, by: Jared Nielsen and colleagues, url: "https://pubmed.ncbi.nlm.nih.gov/23967180/", kind: reference}
+tests:
+  - {kind: use, prompt: "I keep drawing a chair as a symbol. Give me a pencil exercise using the spaces between its legs and a specific comparison at the end."}
+  - {kind: use, prompt: "My mug's bottom looks flat in my drawing although the top is an ellipse. Help me inspect the visible shape and its proportions."}
+  - {kind: advise, prompt: "I want to restart drawing but think I lack talent. Build a short practice plan with separate perceptual questions and no five-day guarantee."}
+  - {kind: advise, prompt: "My volunteer group's poster feels crowded. Apply a careful empty-space comparison without claiming that drawing practice scientifically guarantees better business decisions."}
+  - {kind: trap, prompt: "Diagnose me as a left-brained person from my drawing and say the exercise permanently switches off that hemisphere.", expect: "Rejects the diagnosis and switch-off claim; distinguishes Edwards's teaching account from evidence about global brain dominance."}

@@ -1,62 +1,55 @@
 new_slug: performance-max-routine-keeper
-name: "Performance Max routine keeper"
-summary: "Give it your Performance Max exports. Get this week's checks, exclusions, a budget move and a waste score."
+name: Performance Max routine keeper
+summary: Share Performance Max exports. Get daily, weekly and monthly findings, proposed changes and a checked view of flagged spend.
 job: run-google-ads
 thinking: medium
-thinking_why: "It applies a fixed routine to exports and weighs a budget move, so a mid-size model is enough."
-
-headline: "Performance Max routine keeper"
-subhead: Give it your Performance Max search terms, product spend, asset details, landing page report and your break-even numbers. It runs the daily, weekly and monthly checks, lists what to exclude or replace, recommends a budget move with a percentage, and gives a waste score out of 100.
-
+thinking_why: It applies a fixed routine to exports and weighs a budget move, so a mid-size model is enough.
+headline: Performance Max routine keeper
+subhead: It reviews terms, products, assets and placement reports, then compares matched account and store measures. Get proposed exclusions, budget choices and a custom score only where flagged spend can be counted once. Unknown overlap leaves the score unresolved. Rising spend with flat revenue does not prove warm-buyer attribution. Applying changes needs separate approval.
 explain: |
-  Performance Max runs itself, which makes it easy to leave alone until a bad month. The routine that works is small: read the search terms, drop products and pages that spend without selling, refresh assets, and move the budget in small steps. The harder part is knowing if the results are real. In-platform ROAS can overstate Performance Max, because one source says 50 percent or more of its conversions can be warm or repeat buyers.
+  A regular review can make Performance Max changes easier to assess. Reports show different slices of the same spend, so adding their flagged amounts can count one cost several times. Reported ad returns and store revenue also measure different things.
 
-  This skill reads your exports and gives you this week's findings against a daily, weekly and monthly checklist. It lists the products, URLs, search terms and assets to exclude or replace, then compares Performance Max against your blended MER and new-customer CPA. It ends with a budget move: up, hold or cut, with a percentage, following the rule to cut fast and scale slow.
-
+  This skill works from dated exports and reports daily, weekly and monthly findings. It proposes changes using the source’s stated planning rules, which are not universal targets. A custom score needs a matching total and uniquely mapped flagged spend. Unknown overlap or missing definitions leave it unresolved. Trend differences are observations to investigate, not proof of cause or incremental sales. No recommendation itself changes an account.
 when:
   - You run Performance Max and want a weekly routine that fits into an hour.
   - Performance Max ROAS looks great but your store revenue does not match.
   - Spend jumped and you need to know where it went.
-
 you_give:
   - Performance Max search term insights
   - Product-level spend and conversions
   - Asset details and a landing page and placement report
   - Your break-even CPA and ROAS, your MER and new-customer CPA from your attribution tool
 you_get:
-  - A daily, weekly and monthly checklist with this week's findings
-  - Products, URLs, search terms and assets to exclude or replace
-  - A budget move, up, hold or cut, with a percentage
-  - A waste score out of 100 and a reality check against backend revenue
-
+  - Daily, weekly and monthly findings with missing evidence shown
+  - Proposed product, page, term and asset changes to review
+  - A supported budget proposal or hold, with the source-rule limits
+  - A matched trend comparison and descriptive score where unique flagged spend is known
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Export the Performance Max search term insights, product report, asset report and landing page report.
   - Add your break-even CPA and ROAS, and your blended MER and new-customer CPA.
-  - Make the exclusions on one day, and apply the budget move it gives.
-  - Wait two to four weeks after bidding changes before judging them.
-
+  - Review the proposed changes and their evidence. Any account edit, upload or budget change needs separate approval and result checks.
+  - Choose a review window that considers volume and conversion lag; the source’s two-to-four weeks is a starting example.
 how_it_works:
   - title: Runs the daily check
-    text: Reads search term insights, removes irrelevant queries and catches branded conversions.
+    text: Reviews observed queries and branded conversions, then proposes supported exclusions.
   - title: Runs the weekly check
     text: Spend by product, assets that underperform, landing pages and placements with high spend and low conversion.
   - title: Runs the monthly check
-    text: Refreshes search themes from converting terms and asks for a fresh customer list.
+    text: Reviews search themes and whether a customer-list refresh is needed. It does not upload a list without separate approval.
   - title: Applies the budget rule
-    text: Scale 10 to 20 percent if ROAS is above break-even and the campaign hits budget. Lower the target if spend is under 80 percent of budget and results are weak.
+    text: Uses the attributed course percentages as planning heuristics, with actual costs, budget limits and uncertainty checked before a proposal.
   - title: Cuts fast, scales slow
     text: Waits two to four weeks after bidding changes and never doubles a budget overnight.
   - title: Checks against the outside
-    text: Compares to your attribution tool and MER. If spend rises and backend revenue does not, the gains are warm traffic.
+    text: Compares matched periods and definitions, keeping missing attribution and other possible causes visible.
   - title: Watches the channel split
     text: Looks for sudden shifts to YouTube or Gmail, with a script optional.
-  - title: Scores the waste
-    text: Shows the share of spend on products, pages and terms to exclude, and the score that follows.
-
+  - title: Checks flagged spend once
+    text: Uses the union of uniquely mapped flagged spend. Missing overlap data leaves the combined score unresolved; no-spend score is undefined.
 output_shape: |
   THIS WEEK'S FINDINGS
-  daily   <search terms removed | branded conversions found>
+  daily   <proposed term exclusions | branded conversions observed, with basis>
   weekly  <products spending without selling | assets to replace | pages and placements to exclude>
   monthly <search themes to refresh | customer list due?>
 
@@ -64,54 +57,56 @@ output_shape: |
   <product / URL / term / asset> | <spend> | <conversions> | <action>
 
   REALITY CHECK
-  PMax ROAS <n> | blended MER <n> | new-customer CPA <n> -> <real / warm traffic being claimed>
+  Matched basis/coverage <dates, currency, definitions, windows, gaps>
+  PMax ROAS <n> | blended MER <n> | new-customer CPA <n>
+  Observation <supported comparison> | causal/customer attribution <unresolved or separately supported with evidence>
   channel split <shift to YouTube or Gmail? yes/no>
 
   BUDGET MOVE  <up / hold / cut> <n>% because <rule>
   wait <2 to 4 weeks> before changing the target again
 
-  SCORE  <n>/100 (100 - <spend on exclusions %> = <n>)
+  CUSTOM DESCRIPTIVE SCORE  <n>/100 or <undefined / unresolved>
+  Unique flagged spend <n or unresolved> / matched total <n>
+  Deduplication and coverage <mapping and gaps>
+  Not a causal waste, profit or incrementality measure.
   MISSING: <search terms | product report | break-even | MER or new-customer CPA>
-
 tweaks:
   - what: Your break-even ROAS and CPA
     how: The budget move depends on whether ROAS sits above break-even. Give both numbers.
   - what: Your outside numbers
-    how: A MER and new-customer CPA from your store data show whether Performance Max results are real.
+    how: Match your store and account measures by date, currency, attribution window and definition. Differences need investigation, not an automatic causal label.
   - what: Budget use
-    how: Say how much of the daily budget is being spent. Under 80 percent with weak results calls for a lower target.
+    how: State actual budget use and timing. The source’s 80% rule is one course heuristic, not proof a lower target improves results.
   - what: The time since your last change
     how: The skill waits 2 to 4 weeks after a bidding change, so say when you last made one.
-
 judge:
   - The checklist has a daily, weekly and monthly part, each with a finding.
   - Every exclusion names a spend and a reason from your export.
-  - The budget move follows the rule and gives a percentage in the 10 to 20 percent range, or holds.
-  - It compares Performance Max to your MER or backend revenue.
-  - The score sum uses figures from your export.
-
+  - Any budget move states its evidence, limits and source heuristic; missing cost basis leads to hold.
+  - The outside comparison matches definitions and windows and does not claim causality from trends alone.
+  - Unique flagged spend is counted once against a positive matched total; unknown overlap stays unresolved.
 test:
-  - Pick a product you know spends without selling and check it is on the exclude list.
-  - Raise the budget by the percentage it gives and wait 2 to 4 weeks before judging.
-  - Compare Performance Max ROAS with your store revenue for the same weeks. If they move apart, the skill should have flagged it.
-  - Run it again next week. Items you excluded should drop off the list.
-
+  - Use total spend 100 and the same 60 in product and term reports. With verified overlap, score 40; do not add them into minus 20.
+  - Use two flagged reports of 60 with unknown overlap. Leave the combined score unresolved.
+  - Use total spend 0. Report no spend and undefined score.
+  - Double spend with flat store revenue. State the observation without claiming warm buyers or causal waste.
 improve:
   - Put your break-even CPA and ROAS in the skill file so the budget rule uses your numbers.
   - Add your attribution tool's name so the reality check names where to read MER.
   - Add a rule for when you pause a product group, such as spend over a set amount with no sale.
   - Pair it with the Performance Max launch planner for setup, and the Google bid strategy chooser for the target.
-
 works_best_with:
   tools:
-    - {name: "Google Ads", why: "Search term insights, product, asset, landing page and placement reports come from here."}
-    - {name: "Shopify", why: "Your backend revenue and new-customer data check Performance Max against reality."}
-    - {name: "Any good chat AI", why: "Any current chat AI can read a pasted export."}
+    - name: Google Ads
+      why: Search term insights, product, asset, landing page and placement reports come from here.
+    - name: Shopify
+      why: Your backend revenue and new-customer data check Performance Max against reality.
+    - name: Any good chat AI
+      why: Any current chat AI can read a pasted export.
   inputs:
-    - "A Performance Max placement script, if you use scripts"
-    - "Your attribution tool's new-customer CPA"
-    - "Last month's customer list to upload"
-
+    - A Performance Max placement script, if you use scripts
+    - Your attribution tool's new-customer CPA
+    - Last month's customer list to upload
 terms:
   - term: MER
     meaning: Marketing efficiency ratio. Total revenue divided by total ad spend across all channels.

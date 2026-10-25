@@ -1,0 +1,19 @@
+slug: funnel-stage-creative-brief-builder
+name: Funnel-stage creative brief builder
+summary: Turn buyer and product facts into five ad angles and full production briefs for the right funnel stage.
+category: ecommerce
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: brief
+    required: true
+uses: []
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

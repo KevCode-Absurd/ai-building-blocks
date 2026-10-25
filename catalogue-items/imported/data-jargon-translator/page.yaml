@@ -12,7 +12,7 @@ subhead: Paste your technical findings and name the reader. Get jargon found and
 explain: |
   A technical write up becomes something a VP, finance lead or product manager can act on, with the original kept in an appendix for the experts.
 
-  You paste your findings and name the reader. The skill scans for jargon terms, scores reading level before and after, and aims for grade 10 or lower for executives. It picks a reader profile with their typical vocabulary and questions. Then it swaps technical phrases for plain equivalents, such as turning a p-value below 0.05 into confidence that a result is not chance, and adds a simple comparison for hard ideas. Output is a side by side version with the technical text preserved. It runs small scripts in Python.
+  You paste your findings and name the reader. The skill scans for jargon terms, scores reading level before and after, and aims for grade 10 or lower for executives. It picks a reader profile with their typical vocabulary and questions. For a p-value of 0.03, it can say that results this extreme or more would occur about 3% of the time if there were no real effect and the test assumptions held. It does not call this a 97% chance the result is real. Output is a side by side version with the technical text preserved.
 when:
   - Your model results need to go to a non technical executive.
   - You wrote an analysis and suspect it is full of jargon.
@@ -28,6 +28,7 @@ you_get:
   - Plain business version
   - Original text appendix
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
-    or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.

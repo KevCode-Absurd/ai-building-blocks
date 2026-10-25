@@ -2,7 +2,7 @@ slug: grammarly
 name: Grammarly
 maker: Grammarly
 url: https://www.grammarly.com
-promise: Cleaner, clearer writing in every app you type in, with AI rewrites.
+promise: "Check and rewrite your draft for spelling, grammar, clarity and tone."
 use_cases: [write-copy]
 categories: [writing]
 what_it_does:
@@ -12,7 +12,7 @@ what_it_does:
   - Shows how a reader might react to your draft.
   - Flags text that reads as written by AI, and helps you revise it.
 benefits:
-  - Send emails and posts with fewer typos and clearer sentences.
+  - "Review emails and posts for typos, tone and unclear sentences."
   - Fix the tone of a message before the customer sees it.
   - Edit in the app you already use, with no copy and paste.
   - Keep a team writing in one brand tone with shared style guides.

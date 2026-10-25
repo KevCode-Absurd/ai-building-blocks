@@ -1,0 +1,44 @@
+slug: resolve-campaign-brief-conflicts-before-drafting
+name: Ad brief conflict and draft workflow
+summary: Resolve clashing ad briefs into one decision register. Draft only the safe agreed ad copy and return the open decisions with a checkpoint.
+category: orchestrator
+type: workflow
+role: orchestrate
+job: copy
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: document
+    required: true
+  - type: product_data
+    required: false
+  - type: offer
+    required: false
+outputs:
+  - type: brief
+    required: true
+  - type: copy_draft
+    required: true
+  - type: document
+    required: true
+uses:
+  - marketing-evidence-expiry-reviewer
+  - marketing-brief-writer
+  - claim-and-proof-matcher
+  - theme-based-ad-copy-set-writer
+steps:
+  - uses: marketing-evidence-expiry-reviewer
+    note: A conflict register with resolvable facts, open owner decisions and safe independent work.
+  - uses: marketing-brief-writer
+    note: A brief showing selected decisions, factual sources, unchanged constraints and excluded unresolved assertions.
+  - uses: claim-and-proof-matcher
+    note: A claim map and either a safe drafting contract or a precise dependency stop.
+  - uses: theme-based-ad-copy-set-writer
+    note: The bounded draft, decision-to-output check and a portable resume checkpoint.
+execution: coordinator
+package_files: all
+needs_mode: manual
+origin: own
+example_pending: true
+version: 1.0.0

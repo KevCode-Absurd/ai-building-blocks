@@ -1,0 +1,35 @@
+thinking: medium
+thinking_why: It follows a set method and adapts its questions or draft to your evidence.
+new_slug: study-note-diagrams
+name: Study note diagrams
+summary: Share a lesson concept. Get a clear diagram or table placed where it
+  helps the explanation.
+job: study-and-practice
+headline: Study note diagrams
+subhead: Share the lesson section and the idea readers need to see. It chooses a
+  table, flowchart or simple drawing to match the idea. You get a compact visual
+  with a caption, ready to place beside the explanation in your notes.
+explain: Share the lesson section and the idea readers need to see. It chooses a
+  table, flowchart or simple drawing to match the idea. You get a compact visual
+  with a caption, ready to place beside the explanation in your notes.
+you_give:
+  - A lesson section and the concept to explain.
+  - Your note folder and the learner level.
+you_get:
+  - A compact Mermaid diagram, SVG drawing or table.
+  - A caption saying what to notice.
+  - An embed path suited to your local lesson notes.
+how_it_works:
+  - title: Step 1
+    text: Choose the simplest visual form for the concept.
+  - title: Step 2
+    text: Build a small diagram or static drawing with readable labels.
+  - title: Step 3
+    text: Check the visual and add a caption beside the relevant explanation.
+how_to_use:
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.
+  - It works best when your AI can read your supplied notes and ask follow-up
+    questions.

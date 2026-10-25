@@ -1,0 +1,42 @@
+new_slug: five-angle-ad-headline-writer
+name: Five-angle ad headline writer
+summary: Write five short headlines for one ad, each with a new angle. Get word counts and a fair test plan.
+job: write-ad-copy
+headline: Five-angle ad headline writer
+subhead: Share product facts, buyer, offer and one ad concept. Get five benefit, curiosity, question, callout and contrarian headlines.
+explain: |-
+  Write five short headlines for one ad, each with a new angle. Get word counts and a fair test plan.
+
+  Share product facts, buyer, offer and one ad concept. Get five benefit, curiosity, question, callout and contrarian headlines.
+when:
+  - You need five benefit, curiosity, question, callout and contrarian headlines.
+  - You need five-angle ad headline writer for a specific task.
+  - You want the method's decisions and assumptions written down before acting.
+you_give:
+  - Product facts
+  - Buyer
+  - Offer and one ad concept
+you_get:
+  - Five benefit, curiosity, question, callout and contrarian headlines
+  - The sources used, missing inputs and assumptions
+how_to_use:
+  - Download the complete pack and give its instructions to your AI.
+  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - Check the result against the supplied facts before using it.
+how_it_works:
+  - title: Check the inputs
+    text: Confirm product facts, buyer, offer and one ad concept. Mark facts that are missing.
+  - title: Collect Inputs
+    text: Follow the collect inputs section in the full method and keep its required fields and decision rules.
+  - title: The 5 Angles
+    text: Follow the the 5 angles section in the full method and keep its required fields and decision rules.
+  - title: Output
+    text: Follow the output section in the full method and keep its required fields and decision rules.
+  - title: Test Recommendation
+    text: Follow the test recommendation section in the full method and keep its required fields and decision rules.
+  - title: Rules
+    text: Follow the rules section in the full method and keep its required fields and decision rules.
+  - title: Review the result
+    text: Return five benefit, curiosity, question, callout and contrarian headlines. Check facts, math and the decisions before any action.
+thinking: medium
+thinking_why: It compares supplied evidence and follows a specific method.

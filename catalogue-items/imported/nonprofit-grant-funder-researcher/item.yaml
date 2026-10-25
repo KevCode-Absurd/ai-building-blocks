@@ -1,0 +1,40 @@
+slug: nonprofit-grant-funder-researcher
+name: Nonprofit grant funder researcher
+summary: Share your program, location, and funding need. Get a funder shortlist, fit checks, and grant dates.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: document
+    required: false
+outputs:
+  - type: audit_report
+    required: true
+uses: []
+origin: imported
+source:
+  by: Nonprofit Skills
+  repo: sector-skills/nonprofit-skills
+  path: nonprofit-skills-library/skills/fundraising-development/nonprofit-grant-research
+  url: https://github.com/sector-skills/nonprofit-skills/tree/7d8a2ca9d471fc975d0e9ccd02fcdd66520fd1c8/nonprofit-skills-library/skills/fundraising-development/nonprofit-grant-research
+  licence: MIT
+  licence_file: LICENSE
+  commit: 7d8a2ca9d471fc975d0e9ccd02fcdd66520fd1c8
+  original_name: nonprofit-grant-research
+  author: Brendon Connelly
+  imported: 2026-10-23
+version: 1.0.0
+credits:
+  - title: nonprofit-grant-research skill
+    by: Nonprofit Skills
+    url: https://github.com/sector-skills/nonprofit-skills/tree/7d8a2ca9d471fc975d0e9ccd02fcdd66520fd1c8/nonprofit-skills-library/skills/fundraising-development/nonprofit-grant-research
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Brendon Connelly
+    url: https://brendonconnelly.com
+    used: Wrote the skill; Nonprofit Skills shared it in their collection.

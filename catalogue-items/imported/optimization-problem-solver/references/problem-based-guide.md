@@ -155,7 +155,7 @@ Pass options: `[sol, fval] = solve(prob, x0, Options=opts);`
 
 ## Multi-Start and Multi-Objective
 
-For multi-start and multi-objective optimization with problem-based formulations, see [reference/solver-tuning.md](reference/solver-tuning.md).
+For multi-start and multi-objective optimization with problem-based formulations, see [reference/solver-tuning.md](../references/solver-tuning.md).
 
 ---
 Copyright 2026 The MathWorks, Inc.

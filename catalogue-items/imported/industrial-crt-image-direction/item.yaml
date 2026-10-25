@@ -1,0 +1,33 @@
+slug: industrial-crt-image-direction
+name: Plan an archival CRT image
+summary: Write an image prompt with dark light, soft CRT texture and clear subject details.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: image_prompt
+    required: true
+uses: []
+origin: imported
+source:
+  by: magnus919
+  repo: magnus919/agent-skills
+  path: analog-occultism
+  url: https://github.com/magnus919/agent-skills/tree/92c327e525da69c9ad3812fd223a1770e977c2e3/analog-occultism
+  licence: MIT
+  licence_file: LICENSE.md
+  commit: 92c327e525da69c9ad3812fd223a1770e977c2e3
+  original_name: analog-occultism
+  imported: 2026-10-24
+version: 1.0.0
+credits:
+  - title: analog-occultism skill
+    by: magnus919
+    url: https://github.com/magnus919/agent-skills/tree/92c327e525da69c9ad3812fd223a1770e977c2e3/analog-occultism
+    used: Original instructions and supporting files, with attribution and the MIT licence. Display copy describes the task.

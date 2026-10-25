@@ -1,17 +1,17 @@
 new_slug: normal-earnings-estimator
 name: "Normal earnings estimator"
-summary: "Paste cleaned earnings and a reliability rating. Get low, normal and high earnings for an ordinary year."
+summary: "Share cleaned earnings and a reliability rating. Get candidate figures and a range only when source and order checks pass."
 job: money-and-investing
 thinking: high
 thinking_why: "It chooses a window, applies rules about when the latest year can stand alone and builds a range from judgment. That needs careful reasoning."
 
 headline: "Normal earnings estimator"
-subhead: "Paste cleaned earnings for five to ten years and the reliability rating. It restates per share, averages with loss years in and at zero, tests the latest year before leaning on it and caps the result at a normal year. You get low, normal and high earnings per share."
+subhead: "Share five to ten years of cleaned earnings and the reliability rating. It compares averages and candidate low, normal and high figures. You get a range only if the source checks pass and the figures are in order. Conflicting candidates stay unresolved rather than being forced into a valuation."
 
 explain: |
-  Value that follows last year's profit swings with the economy. Value that follows a normal year's profit follows the business. The hard part is deciding which years count and what to do with the bad ones and the best one.
+  It checks the reliability rating, uses a stated share count and compares earnings over five to ten years. It shows averages with actual losses and with loss years at zero. The latest year needs specific evidence before it can stand alone.
 
-  This skill averages five to ten years and shows loss years both ways. It uses the latest year alone only when it was not a boom year, earnings have risen for some years and the industry supports growth. It does not project a trend. A rising line may earn a higher multiple later, but it does not add earnings that have not been earned. It returns a low, normal and high figure with a reason for each. It is a method, not financial advice.
+  The low, normal and high candidates must satisfy LOW <= NORMAL <= HIGH. If they cross, you get the separate calculations and a failed check, not a manufactured range. Do not sort or clamp figures to make them fit. This order guard is a platform adaptation; the historical source credit stays intact. The method gives analysis rather than personal investment advice.
 
 when:
   - You need one earnings figure to value a business and have several years of results.
@@ -26,15 +26,15 @@ you_get:
   - The window and share count used
   - Averages with loss years in and at zero
   - A statement of whether the latest year was used alone, and why
-  - Low, normal and high earnings per share and in total, each with a reason
-  - A note on how sure the range is
+  - Candidate low, normal and high earnings per share and in total, each with a reason
+  - A range-order result and a validated range only after all source and order checks pass
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste the cleaned earnings and the rating from the earlier step.
   - Add the share count for each year if you have it.
   - Read why it did or did not use the latest year.
-  - Take the range to "Earnings value range builder".
+  - Take a validated range to the valuation step only after the source and order checks pass. If they fail, resolve the candidates first.
 
 how_it_works:
   - title: Checks the rating
@@ -49,8 +49,8 @@ how_it_works:
     text: Uses it alone only if three conditions hold.
   - title: Caps the figure
     text: Holds it at what a normal year has already produced.
-  - title: Builds the range
-    text: Low, normal and high, each with a reason.
+  - title: Checks the candidate order
+    text: Keeps low, normal and high statistics separate until LOW <= NORMAL <= HIGH passes. Conflicting candidates stop the range and valuation handoff.
 
 output_shape: |
   BASIS
@@ -62,14 +62,18 @@ output_shape: |
   LATEST YEAR
   Used alone: <yes / no> | Not a boom: <yes / no> | Rising for years: <yes / no> | Industry supports growth: <yes / no>
 
-  NORMAL EARNINGS PER SHARE
+  CANDIDATE EARNINGS PER SHARE
   LOW: <amount> because <reason>
   NORMAL: <amount> because <reason>
   HIGH: <amount> because <reason>
   In total: <low> / <normal> / <high>
 
-  HOW SURE
-  <narrow / wide> | Why: <reason>
+  RANGE ORDER
+  <PASS / FAIL> | <actual inequality>
+  <validated range only after source/order checks pass, or NO VALID ORDERED RANGE>
+
+  LIMITS
+  <source coverage, loss treatment, year selection and unresolved assumptions>
 
   MISSING
   <facts not given>
@@ -93,12 +97,14 @@ judge:
   - The latest year is used alone only when all three conditions are met.
   - No trend is projected past what a normal year has shown.
   - It never says buy or sell and invents no figure.
+  - LOW <= NORMAL <= HIGH is tested. Crossed candidates remain separate and block any approved range or valuation handoff; no sorting or clamping.
 
 test:
   - Give it a record with one loss year and check both averages appear.
   - Give it a record with a record-high last year and see that it is not used alone.
   - Give it a not a guide record and see that it stops.
-  - Run it twice. The range should not change.
+  - Use [1, 2, -1, 3, 2] with GUIDE. Low 2/3, normal 8/5 and high 4/3 must fail order and stop range/valuation. Never reorder them.
+  - Use [1, 2, 1, 3, 4] with GUIDE. The candidate order 4/3 <= 11/5 <= 8/3 passes, subject to source checks.
 
 improve:
   - Add your own rule for which years count as boom years.
@@ -108,9 +114,9 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Any good chat AI", why: "Choosing a window and building a range is text work."}
-    - {name: "A spreadsheet", why: "Handy for averages and the worst and best three-year runs."}
-    - {name: "A licensed financial adviser", why: "Needed for a large or personal decision. This skill is a method, not advice."}
+    - { name: "Any good chat AI", why: "Choosing a window and building a range is text work." }
+    - { name: "A spreadsheet", why: "Handy for averages and the worst and best three-year runs." }
+    - { name: "A licensed financial adviser", why: "Needed for a large or personal decision. This skill is a method, not advice." }
   inputs:
     - "Cleaned earnings by year"
     - "Share counts and any splits"

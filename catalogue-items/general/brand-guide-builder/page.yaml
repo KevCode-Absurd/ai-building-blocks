@@ -1,23 +1,19 @@
 new_slug: brand-guide-builder
-name: "Brand guide builder"
-summary: "Attach your brand file. Get a printable brand guide and a values file to paste into any tool."
+name: Brand guide builder
+summary: Attach your brand file. Get a printable brand guide and a values file to paste into any tool.
 job: brand-file
 thinking: medium
-thinking_why: "It writes or plans with a handful of checks."
-
-headline: "Brand guide builder"
+thinking_why: It compares supplied evidence and follows a specific method.
+headline: Brand guide builder
 subhead: Attach your brand file, plus logo rules and site styles if you have them. It builds a printable guide with a one-page quick sheet and only readable colour pairs. You get the guide, a copy-paste values file and a list of gaps to fill.
-
 explain: |
   When a new designer, editor or freelancer starts, they need your colours, fonts, voice and photo rules. Usually they get a logo file and a vague "keep it clean". Then the work comes back in the wrong green, with a stock photo, yellow text nobody can read and a tagline you'd never say.
 
   This skill turns your brand file into two files. The first is a printable HTML guide in your own colours and fonts. Page 2 is a quick sheet a stranger can work from alone. The pages after it give the reason behind each rule, then the values, then do and don't examples from your real copy. It checks every text colour against every background it sits on, so the guide only shows pairs people can read. The second file holds every value to paste into a design or image tool. Pages with nothing to show are left out, and every blank is listed with the question that would fill it.
-
 when:
   - A designer, freelancer or agency is starting work with you and needs your rules in one place.
   - Your brand rules live across a few files and nobody can find the hex codes.
   - You want a sheet you can paste into an AI image or design tool so it stays on brand.
-
 you_give:
   - Your brand file, mainly voice-and-look.md and proof-and-claims.md
   - Your logo file and its rules, such as clear space and smallest size (optional)
@@ -28,14 +24,12 @@ you_get:
   - A tokens file with every colour, font and rule, plus CSS variables and a design tokens block
   - A two-line note on what was left out and which colour pairs fail for text
   - Any of its seven checks the guide still misses, each named
-
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in. A tool that can write and preview files works best.
   - Attach your brand file. Colours and fonts are the minimum; if either is missing, it asks you for them, then carries on and marks the gaps.
   - Add your logo rules and, for web work, your site's colour variables and button styles.
   - Open the HTML file in a browser and print to PDF with margins set to none.
   - Check "Not yet captured" on the quick sheet and fill those gaps in your brand file.
-
 how_it_works:
   - title: Checks the minimum
     text: Needs colours with hex codes and at least one font, and asks for them if they're missing. Any other topic with nothing on file is left out and listed as a gap.
@@ -49,7 +43,6 @@ how_it_works:
     text: Colour, type, logo, voice, pictures and web parts, each on its own A4 page, skipping topics with nothing on file.
   - title: Builds the tokens file
     text: Every value to copy, CSS variables, and the same colours and sizes in the standard design tokens format.
-
 output_shape: |
   brand-guide.html  (A4, one topic per page)
     1 Cover: <name>, Brand guide, <one line>, <date>
@@ -74,7 +67,6 @@ output_shape: |
   NOTE  Left out: <page>, because <missing what>. Fails for text: <pair>
 
   CHECKS MISSED  <one line each, or none>
-
 example:
   business: sprout
   input: |
@@ -146,7 +138,6 @@ example:
     Fails for text: sunflower on cream.
 
     CHECKS MISSED  none
-
 tweaks:
   - what: Web build or not
     how: Add your site's colour variables, spacing and button styles and you get a web parts page with real rendered buttons and cards. Leave them out for a print and social guide.
@@ -156,7 +147,6 @@ tweaks:
     how: Make sure voice-and-look.md has lines you really use. The voice page's examples come only from those.
   - what: Online store add-on
     how: For physical products it adds a page on how each product must look on camera and a page on your brand's places, light and sound.
-
 judge:
   - The guide uses your colours and fonts, not a generic grey and blue.
   - Page 2 alone is enough to make one on-brand post.
@@ -164,33 +154,31 @@ judge:
   - Voice examples are real lines from your copy, not invented ones.
   - It prints one topic per page with nothing cut off.
   - Every blank in your brand file appears under "Not yet captured".
-
 test:
   - Give only page 2 to someone who has never worked with you and ask for one social post. Every question they ask points to a gap on the quick sheet.
   - Print it to PDF with margins set to none. Each topic should fill its own page, with nothing cut off.
   - Check two of the contrast numbers in a free contrast checker. They should match to one decimal place.
   - Search your site for two of the voice examples. They should be lines you've used.
-
 improve:
   - Add your logo rules to your brand file before you run it. They're the most common gap on the quick sheet.
   - Add a page to the list in step 4 if you need one, such as packaging or post templates, and say what goes on it.
   - Change the paper size in step 4 if you don't print on A4, for example to Letter in the US.
   - Paste brand-tokens.md at the top of every design or image request, so each tool starts from your real values.
   - Pair it with the skill that builds a brand file from your website, and the founder call that fills the gaps the quick sheet lists.
-
 works_best_with:
   tools:
-    - {name: "Claude", why: "Writes the whole guide as one HTML file and shows a live preview, so you can check the pages before printing."}
-    - {name: "Google Chrome", why: "Its Print to PDF follows the A4 page size and page breaks the guide sets."}
+    - name: Claude
+      why: Writes the whole guide as one HTML file and shows a live preview, so you can check the pages before printing.
+    - name: Google Chrome
+      why: Its Print to PDF follows the A4 page size and page breaks the guide sets.
   inputs:
-    - "Your logo files and their rules, so the guide gets a logo page and no gap on the quick sheet"
-    - "Your site's CSS file or theme settings, so the hex codes and fonts match the live site exactly"
-    - "Five of your own best photos, so the pictures page shows your real style"
-    - "Three ads or posts you're proud of, so the voice examples are your best lines"
-
+    - Your logo files and their rules, so the guide gets a logo page and no gap on the quick sheet
+    - Your site's CSS file or theme settings, so the hex codes and fonts match the live site exactly
+    - Five of your own best photos, so the pictures page shows your real style
+    - Three ads or posts you're proud of, so the voice examples are your best lines
 terms:
   - term: Hex code
-    meaning: The six-character code for a colour on screens, such as #1A2B3C.
+    meaning: The six-character code for a colour on screens, such as
   - term: Contrast ratio
     meaning: How much a text colour stands out from its background. The web's accessibility rules ask for at least 4.5 to 1 for normal text.
   - term: Tokens

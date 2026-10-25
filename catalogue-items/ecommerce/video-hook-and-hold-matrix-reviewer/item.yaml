@@ -1,0 +1,19 @@
+slug: video-hook-and-hold-matrix-reviewer
+name: Video hook and hold matrix reviewer
+summary: Use view counts to place video ads in a hook and hold matrix. Get fixes for each weak point.
+category: ecommerce
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: audit_report
+    required: true
+uses: []
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

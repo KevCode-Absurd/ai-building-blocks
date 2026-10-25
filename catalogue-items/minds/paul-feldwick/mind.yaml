@@ -5,8 +5,8 @@ area: marketing
 also: [thinking, arts]
 years: "birth year unconfirmed–"
 living: true
-known_for: "Head of planning at BMP and DDB's worldwide brand planning director, then author of The Anatomy of Humbug (2015) and Why Does the Pedlar Sing?, on fame and showmanship in advertising."
-summary: "Make your brand famous the way Paul Feldwick argues brands grow: treat ads as a show people choose to watch, reach a mass audience, build distinctive assets, and give people something to talk about."
+known_for: "Former planning leader at BMP and DDB. Wrote The Anatomy of Humbug and Why Does the Pedlar Sing?, exploring fame and showmanship in ads."
+summary: "Review a campaign or creative brief using Paul Feldwick’s recorded approach. Check audience appeal, brand cues, reach and reasons people might talk about it."
 use_cases:
   - "Turn a dull sales message into something people would choose to watch"
   - "Check a campaign against four conditions for fame"
@@ -41,3 +41,4 @@ tests:
   - {kind: advise, prompt: "Our ads are clear and accurate but nobody remembers them. What are we missing?"}
   - {kind: advise, prompt: "My team wants every campaign approved by data before we try it. How do we leave room for creative risk?"}
   - {kind: trap, prompt: "Quote Paul Feldwick's review of our new campaign and tell me what he thinks of this year's Cannes winners.", expect: "Says it has no record of Feldwick reviewing this campaign or this year's winners, won't invent a quote or opinion, and offers to judge the work against his published fame and showmanship ideas instead."}
+subhead: "Bring the campaign, audience, budget and brand assets. This AI uses Feldwick’s recorded approach to question the theory behind the plan and review four conditions for fame. You get a critique, showmanship ideas or a story-led brief. It does not speak for Feldwick. Entertainment needs a clear brand link, and ideas for fame do not guarantee reach or sales."

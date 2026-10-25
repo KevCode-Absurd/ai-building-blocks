@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It plans what to hand off and how to check it.
 new_slug: task-handoff-writer
 name: Task handoff writer
-summary: Describe work to pass on. Get a clear handoff to another AI agent, with checks along the way.
+summary: Describe work to pass on. Get a clear handoff to another AI agent, with
+  checks along the way.
 job: set-up-ai
 headline: Task handoff writer
-subhead: Describe the work to pass on, which AI agent will take it and what it may touch. It scopes the job and writes a brief with the goal, what it owns and what counts as done. You get the brief, a success check, a progress-check plan and a report of changes.
+subhead: Describe the work to pass on, which AI agent will take it and what it
+  may touch. It scopes the job and writes a brief with the goal, what it owns
+  and what counts as done. You get the brief, a success check, a progress-check
+  plan and a report of changes.
 explain: |
   A clear brief that lets another AI agent take over a piece of work without losing context, plus a way to check its progress. Handoffs stop failing because the second agent knows what to do, what it owns and what counts as done.
 
@@ -27,5 +31,7 @@ you_get:
   - A polling plan with sensible gaps
   - A report of changes and open issues
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.

@@ -2,10 +2,15 @@ thinking: medium
 thinking_why: It adapts each lesson to your answers.
 new_slug: adaptive-tutor
 name: Adaptive tutor
-summary: Name a topic and your goal. Get a level check, then short lessons with practice and feedback.
+summary: Name a topic and your goal. Get a level check, then short lessons with
+  practice and feedback.
 job: think-and-decide
 headline: Adaptive tutor
-subhead: Name a topic, your goal and how much time you have. It asks a few questions to find your level, then teaches in short steps, each followed by a question you answer from memory. You get the level check, lessons in steps, practice with feedback, a study guide if you want one and a plan for what to review next.
+subhead: Name a topic, your goal and how much time you have. It asks a few
+  questions to find your level, then teaches in short steps, each followed by a
+  question you answer from memory. You get the level check, lessons in steps,
+  practice with feedback, a study guide if you want one and a plan for what to
+  review next.
 explain: |
   You get a lesson that fits your level on a topic you choose. It begins with a short check of what you already know, then teaches in small steps with practice and feedback.
 
@@ -27,5 +32,7 @@ you_get:
   - A study guide (optional)
   - A plan for what to review next
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
-  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+    the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on
+    this page.

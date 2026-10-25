@@ -1,11 +1,11 @@
 // Original tool. All numbers shown are illustrative figures, not a real person’s results.
 export default {
   "slug": "workshop-materials",
-  "name": "Order enough workshop materials with a spare allowance",
+  "name": "Workshop materials planner",
   "short": "Workshop materials planner",
-  "headline": "Order enough workshop materials with a spare allowance",
+  "headline": "Workshop materials planner",
   "summary": "Set attendees, items per person, spare allowance and pack size. Get whole packs, total items and cost.",
-  "question": "Order enough workshop materials with a spare allowance?",
+  "question": "How many whole packs cover our workshop and chosen spares?",
   "category": "operations",
   "shelf": [
     "general"
@@ -28,7 +28,7 @@ export default {
       "max": 10000000,
       "step": 1,
       "integer": true,
-      "help": "Include facilitators if they also need materials.",
+      "help": "Count the people leading the session if they need supplies too.",
       "where": "Your registration list.",
       "tools": []
     },
@@ -41,7 +41,7 @@ export default {
       "max": 100000,
       "step": 1,
       "integer": true,
-      "help": "For example worksheets, cards or consumables.",
+      "help": "For example, worksheets, cards or items used up during the session.",
       "where": "Your session plan.",
       "tools": []
     },

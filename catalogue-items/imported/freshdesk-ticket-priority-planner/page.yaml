@@ -1,0 +1,32 @@
+thinking: medium
+thinking_why: It follows a set method with a few checks.
+new_slug: freshdesk-ticket-priority-planner
+name: Freshdesk ticket priority planner
+summary: Connect Freshdesk. Get open tickets grouped by urgency, issue type, and response deadline.
+job: help-customers
+headline: Freshdesk ticket priority planner
+subhead: Connect Freshdesk and ask which open tickets need attention first. It reads up to fifteen full ticket threads and checks priority, issue type, and response deadlines. You get a queue grouped by urgency with suggested next steps.
+when:
+  - You use this tool for customer support and need help with this task.
+you_give:
+  - Open and pending Freshdesk tickets and their full threads.
+  - Your response targets or recorded ticket due dates.
+you_get:
+  - List urgent tickets first, show response deadline status, and suggest next actions.
+how_it_works:
+  - title: Read open tickets
+    text: Fetch open and pending tickets, then read the full threads for up to fifteen.
+  - title: Sort by urgency
+    text: Classify outages, broken features, billing questions, minor issues, and feedback.
+  - title: Show the queue
+    text: List urgent tickets first, show response deadline status, and suggest next actions.
+works_best_with:
+  tools:
+    - name: Freshdesk
+      why: Live lookups need Composio CLI access and connected accounts for these services.
+how_to_use:
+  - Add the downloaded folder to an AI that can read skill files.
+  - Ask for freshdesk ticket priority planner by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
+  - Provide Open and pending Freshdesk tickets and their full threads.
+  - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
+  - Review the result. Approve any proposed sending or account changes before they happen.

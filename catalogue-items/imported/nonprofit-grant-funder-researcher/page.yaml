@@ -1,0 +1,31 @@
+thinking: high
+thinking_why: It weighs real records, missing facts, and choices that affect people or funding.
+new_slug: nonprofit-grant-funder-researcher
+name: Nonprofit grant funder researcher
+summary: Share your program, location, and funding need. Get a funder shortlist, fit checks, and grant dates.
+job: research-topics
+headline: Nonprofit grant funder researcher
+subhead: Share your program, service area, funding need, and eligibility details. It checks funder rules and past giving before ranking possible matches. You get a shortlist with fit reasons, funder briefs, and a grant calendar. Funding rules draw mainly on US sources.
+when:
+  - You need this task done for a nonprofit, community program, or donated-goods store.
+you_give:
+  - Program description, service area, funding range, charity status, and any current funders.
+you_get:
+  - A funder shortlist, fit ratings with reasons, funder briefs, and grant calendar.
+how_it_works:
+  - title: Define the search
+    text: Confirm the program, place, funding range, and which rules limit who can apply.
+  - title: Check real funder fit
+    text: Read funder rules and past grants. Check location, goals, grant size, dates, and any known links to the funder.
+  - title: Build the grant calendar
+    text: List due dates, reports, and renewal dates. Flag busy writing periods and pass good matches to a proposal writer.
+works_best_with:
+  tools:
+    - name: A chat AI that can read your files
+      why: The skill works from records and drafts you provide. Research tasks also need current, checked public sources.
+  inputs:
+    - Prospect research and calendars; a wrong entry costs a look.
+how_to_use:
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.
+  - It works best when your AI can read current funder rules, public grant records, and any funder databases you choose to use.

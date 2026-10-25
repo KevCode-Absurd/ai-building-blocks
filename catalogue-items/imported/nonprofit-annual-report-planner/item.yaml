@@ -1,0 +1,37 @@
+slug: nonprofit-annual-report-planner
+name: Plan a nonprofit annual report
+summary: Plan a clear yearly report. Check the facts, numbers and names before it goes to print.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: business_profile
+    required: true
+  - type: performance_sheet
+    required: true
+  - type: source_text
+    required: true
+outputs:
+  - type: document
+    required: true
+uses: []
+origin: imported
+source:
+  by: sector-skills
+  repo: sector-skills/nonprofit-skills
+  path: nonprofit-skills-library/skills/communications-marketing/nonprofit-annual-report
+  url: https://github.com/sector-skills/nonprofit-skills/tree/7d8a2ca9d471fc975d0e9ccd02fcdd66520fd1c8/nonprofit-skills-library/skills/communications-marketing/nonprofit-annual-report
+  licence: MIT
+  licence_file: LICENSE
+  commit: 7d8a2ca9d471fc975d0e9ccd02fcdd66520fd1c8
+  original_name: nonprofit-annual-report
+  imported: 2026-10-24
+version: 1.0.0
+credits:
+  - title: nonprofit-annual-report skill
+    by: sector-skills
+    url: https://github.com/sector-skills/nonprofit-skills/tree/7d8a2ca9d471fc975d0e9ccd02fcdd66520fd1c8/nonprofit-skills-library/skills/communications-marketing/nonprofit-annual-report
+    used: Original instructions and supporting files, with attribution and the MIT licence. Display copy describes the task.

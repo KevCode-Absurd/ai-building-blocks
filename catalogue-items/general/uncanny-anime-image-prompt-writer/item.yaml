@@ -1,0 +1,21 @@
+slug: uncanny-anime-image-prompt-writer
+name: Uncanny anime image prompt writer
+summary: Share a strange scene idea. Get a cinematic anime image prompt with a clear visual hook, camera and mood.
+category: general
+type: skill
+role: make
+job: image
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: reference_set
+    required: false
+outputs:
+  - type: image_prompt
+    required: true
+uses: []
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

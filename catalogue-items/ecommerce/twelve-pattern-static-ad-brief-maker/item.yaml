@@ -1,0 +1,19 @@
+slug: twelve-pattern-static-ad-brief-maker
+name: Twelve-pattern static ad brief maker
+summary: Choose from twelve static ad patterns by buyer stage and proof. Get the copy, layout and image brief.
+category: ecommerce
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: brief
+    required: true
+uses: []
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0

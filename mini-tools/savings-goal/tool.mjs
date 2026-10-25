@@ -1,11 +1,11 @@
 // Original tool. All numbers shown are illustrative figures, not a real person’s results.
 export default {
   "slug": "savings-goal",
-  "name": "Find the monthly amount for a savings goal",
-  "short": "Savings goal",
-  "headline": "Find the monthly amount for a savings goal",
+  "name": "Savings goal calculator",
+  "short": "Savings goal calculator",
+  "headline": "Savings goal calculator",
   "summary": "Enter the target, current savings and months remaining. See the monthly amount and your budget gap.",
-  "question": "Find the monthly amount for a savings goal?",
+  "question": "How much must I save each month to reach this goal?",
   "category": "finance",
   "shelf": [
     "general"

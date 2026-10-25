@@ -1,0 +1,19 @@
+slug: five-gate-campaign-scaling-planner
+name: Five-gate campaign scaling planner
+summary: Check five gates before scaling Meta campaigns. Compare pacing, methods and stop rules using your targets and risk limits.
+category: ecommerce
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+    required: true
+uses: []
+package_files: all
+origin: own
+example_pending: true
+version: 1.0.0
